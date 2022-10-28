@@ -2,7 +2,10 @@
 
 ## Synopsis
 
-:warning: This is a work-in-progress.  Feel free to comment on it, but do not use it in production, yet.
+:warning:
+This is a work-in-progress.
+Feel free to comment on it, but do not use it in production, yet.
+:warning:
 
 The repository for Senzing's Protocol Buffer `.proto` files.
 
