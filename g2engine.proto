@@ -7,7 +7,7 @@ option java_package = "com.senzing.g2.engine.grpc.G2Engine";
 option java_outer_classname = "G2EngineProto";
 
 service G2Diagnostic {
-  rpc AddRecord(AddRecordRequestRequest) returns (AddRecordResponseResponse) {}
+  rpc AddRecord(AddRecordRequest) returns (AddRecordResponseResponse) {}
   rpc AddRecordWithInfo(AddRecordWithInfoRequest) returns (AddRecordWithInfoResponse) {}
   rpc AddRecordWithInfoWithReturnedRecordID(AddRecordWithInfoWithReturnedRecordIDRequest) returns (AddRecordWithInfoWithReturnedRecordIDResponse) {}
   rpc AddRecordWithReturnedRecordID(AddRecordWithReturnedRecordIDRequest) returns (AddRecordWithReturnedRecordIDResponse) {}
@@ -86,7 +86,7 @@ service G2Diagnostic {
   rpc WhyRecords_V2(WhyRecords_V2Request) returns (WhyRecords_V2Response) {}
 }
 
-message AddRecordRequestRequest {
+message AddRecordRequest {
   string dataSourceCode = 1;
   string recordID = 2;
   string jsonData = 3;

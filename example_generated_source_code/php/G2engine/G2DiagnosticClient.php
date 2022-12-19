@@ -17,12 +17,12 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \G2engine\AddRecordRequestRequest $argument input argument
+     * @param \G2engine\AddRecordRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function AddRecord(\G2engine\AddRecordRequestRequest $argument,
+    public function AddRecord(\G2engine\AddRecordRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/g2engine.G2Diagnostic/AddRecord',
         $argument,

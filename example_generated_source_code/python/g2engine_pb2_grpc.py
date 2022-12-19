@@ -16,7 +16,7 @@ class G2DiagnosticStub(object):
         """
         self.AddRecord = channel.unary_unary(
                 '/g2engine.G2Diagnostic/AddRecord',
-                request_serializer=g2engine__pb2.AddRecordRequestRequest.SerializeToString,
+                request_serializer=g2engine__pb2.AddRecordRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.AddRecordResponseResponse.FromString,
                 )
         self.AddRecordWithInfo = channel.unary_unary(
@@ -871,7 +871,7 @@ def add_G2DiagnosticServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'AddRecord': grpc.unary_unary_rpc_method_handler(
                     servicer.AddRecord,
-                    request_deserializer=g2engine__pb2.AddRecordRequestRequest.FromString,
+                    request_deserializer=g2engine__pb2.AddRecordRequest.FromString,
                     response_serializer=g2engine__pb2.AddRecordResponseResponse.SerializeToString,
             ),
             'AddRecordWithInfo': grpc.unary_unary_rpc_method_handler(
@@ -1276,7 +1276,7 @@ class G2Diagnostic(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/AddRecord',
-            g2engine__pb2.AddRecordRequestRequest.SerializeToString,
+            g2engine__pb2.AddRecordRequest.SerializeToString,
             g2engine__pb2.AddRecordResponseResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

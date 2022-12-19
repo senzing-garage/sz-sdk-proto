@@ -14,7 +14,7 @@ module G2engine
       self.unmarshal_class_method = :decode
       self.service_name = 'g2engine.G2Diagnostic'
 
-      rpc :AddRecord, ::G2engine::AddRecordRequestRequest, ::G2engine::AddRecordResponseResponse
+      rpc :AddRecord, ::G2engine::AddRecordRequest, ::G2engine::AddRecordResponseResponse
       rpc :AddRecordWithInfo, ::G2engine::AddRecordWithInfoRequest, ::G2engine::AddRecordWithInfoResponse
       rpc :AddRecordWithInfoWithReturnedRecordID, ::G2engine::AddRecordWithInfoWithReturnedRecordIDRequest, ::G2engine::AddRecordWithInfoWithReturnedRecordIDResponse
       rpc :AddRecordWithReturnedRecordID, ::G2engine::AddRecordWithReturnedRecordIDRequest, ::G2engine::AddRecordWithReturnedRecordIDResponse

@@ -187,23 +187,23 @@ G2Diagnostic::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
   , rpcmethod_WhyRecords_V2_(G2Diagnostic_method_names[76], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status G2Diagnostic::Stub::AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequestRequest& request, ::g2engine::AddRecordResponseResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2engine::AddRecordRequestRequest, ::g2engine::AddRecordResponseResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_AddRecord_, context, request, response);
+::grpc::Status G2Diagnostic::Stub::AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::g2engine::AddRecordResponseResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::g2engine::AddRecordRequest, ::g2engine::AddRecordResponseResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_AddRecord_, context, request, response);
 }
 
-void G2Diagnostic::Stub::async::AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequestRequest* request, ::g2engine::AddRecordResponseResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2engine::AddRecordRequestRequest, ::g2engine::AddRecordResponseResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_AddRecord_, context, request, response, std::move(f));
+void G2Diagnostic::Stub::async::AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponseResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::g2engine::AddRecordRequest, ::g2engine::AddRecordResponseResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_AddRecord_, context, request, response, std::move(f));
 }
 
-void G2Diagnostic::Stub::async::AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequestRequest* request, ::g2engine::AddRecordResponseResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void G2Diagnostic::Stub::async::AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponseResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_AddRecord_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordResponseResponse>* G2Diagnostic::Stub::PrepareAsyncAddRecordRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordRequestRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2engine::AddRecordResponseResponse, ::g2engine::AddRecordRequestRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_AddRecord_, context, request);
+::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordResponseResponse>* G2Diagnostic::Stub::PrepareAsyncAddRecordRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2engine::AddRecordResponseResponse, ::g2engine::AddRecordRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_AddRecord_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordResponseResponse>* G2Diagnostic::Stub::AsyncAddRecordRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordRequestRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordResponseResponse>* G2Diagnostic::Stub::AsyncAddRecordRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncAddRecordRaw(context, request, cq);
   result->StartCall();
@@ -1962,10 +1962,10 @@ G2Diagnostic::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       G2Diagnostic_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2engine::AddRecordRequestRequest, ::g2engine::AddRecordResponseResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2engine::AddRecordRequest, ::g2engine::AddRecordResponseResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Diagnostic::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::g2engine::AddRecordRequestRequest* req,
+             const ::g2engine::AddRecordRequest* req,
              ::g2engine::AddRecordResponseResponse* resp) {
                return service->AddRecord(ctx, req, resp);
              }, this)));
@@ -2734,7 +2734,7 @@ G2Diagnostic::Service::Service() {
 G2Diagnostic::Service::~Service() {
 }
 
-::grpc::Status G2Diagnostic::Service::AddRecord(::grpc::ServerContext* context, const ::g2engine::AddRecordRequestRequest* request, ::g2engine::AddRecordResponseResponse* response) {
+::grpc::Status G2Diagnostic::Service::AddRecord(::grpc::ServerContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponseResponse* response) {
   (void) context;
   (void) request;
   (void) response;

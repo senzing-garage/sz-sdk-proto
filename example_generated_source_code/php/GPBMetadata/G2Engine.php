@@ -16,9 +16,9 @@ class G2Engine
         }
         $pool->internalAddGeneratedFile(
             '
-Ä‹
-g2engine.protog2engine"e
-AddRecordRequestRequest
+¶‹
+g2engine.protog2engine"^
+AddRecordRequest
 dataSourceCode (	
 recordID (	
 jsonData (	
@@ -441,9 +441,9 @@ moduleName (	
 	recordID2 (	
 flags ("\'
 WhyRecords_V2Response
-result (	2Ì>
-G2DiagnosticU
-	AddRecord!.g2engine.AddRecordRequestRequest#.g2engine.AddRecordResponseResponse" ^
+result (	2Å>
+G2DiagnosticN
+	AddRecord.g2engine.AddRecordRequest#.g2engine.AddRecordResponseResponse" ^
 AddRecordWithInfo".g2engine.AddRecordWithInfoRequest#.g2engine.AddRecordWithInfoResponse" š
 %AddRecordWithInfoWithReturnedRecordID6.g2engine.AddRecordWithInfoWithReturnedRecordIDRequest7.g2engine.AddRecordWithInfoWithReturnedRecordIDResponse" ‚
 AddRecordWithReturnedRecordID..g2engine.AddRecordWithReturnedRecordIDRequest/.g2engine.AddRecordWithReturnedRecordIDResponse" L

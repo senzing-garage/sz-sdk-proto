@@ -5,7 +5,7 @@ require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("g2engine.proto", :syntax => :proto3) do
-    add_message "g2engine.AddRecordRequestRequest" do
+    add_message "g2engine.AddRecordRequest" do
       optional :dataSourceCode, :string, 1
       optional :recordID, :string, 2
       optional :jsonData, :string, 3
@@ -579,7 +579,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
 end
 
 module G2engine
-  AddRecordRequestRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordRequestRequest").msgclass
+  AddRecordRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordRequest").msgclass
   AddRecordResponseResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordResponseResponse").msgclass
   AddRecordWithInfoRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordWithInfoRequest").msgclass
   AddRecordWithInfoResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordWithInfoResponse").msgclass
