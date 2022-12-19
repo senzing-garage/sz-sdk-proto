@@ -130,30 +130,30 @@ public final class G2ProductProto {
       "est\022\025\n\rlicenseString\030\001 \001(\t\"5\n#ValidateLi" +
       "censeStringBase64Response\022\016\n\006result\030\001 \001(" +
       "\t\"\020\n\016VersionRequest\"!\n\017VersionResponse\022\016" +
-      "\n\006result\030\001 \001(\t2\254\006\n\014G2Diagnostic\022c\n\022Clear" +
-      "LastException\022$.g2product.ClearLastExcep" +
-      "tionRequest\032%.g2product.ClearLastExcepti" +
-      "onResponse\"\000\022B\n\007Destroy\022\031.g2product.Dest" +
-      "royRequest\032\032.g2product.DestroyResponse\"\000" +
-      "\022]\n\020GetLastException\022\".g2product.GetLast" +
-      "ExceptionRequest\032#.g2product.GetLastExce" +
-      "ptionResponse\"\000\022i\n\024GetLastExceptionCode\022" +
-      "&.g2product.GetLastExceptionCodeRequest\032" +
-      "\'.g2product.GetLastExceptionCodeResponse" +
-      "\"\000\0229\n\004Init\022\026.g2product.InitRequest\032\027.g2p" +
-      "roduct.InitResponse\"\000\022B\n\007License\022\031.g2pro" +
-      "duct.LicenseRequest\032\032.g2product.LicenseR" +
-      "esponse\"\000\022f\n\023ValidateLicenseFile\022%.g2pro" +
-      "duct.ValidateLicenseFileRequest\032&.g2prod" +
-      "uct.ValidateLicenseFileResponse\"\000\022~\n\033Val" +
-      "idateLicenseStringBase64\022-.g2product.Val" +
-      "idateLicenseStringBase64Request\032..g2prod" +
-      "uct.ValidateLicenseStringBase64Response\"" +
-      "\000\022B\n\007Version\022\031.g2product.VersionRequest\032" +
-      "\032.g2product.VersionResponse\"\000Be\n$com.sen" +
-      "zing.g2.engine.grpc.G2ProductB\016G2Product" +
-      "ProtoP\001Z+github.com/senzing/g2-sdk-go-gr" +
-      "pc/g2productb\006proto3"
+      "\n\006result\030\001 \001(\t2\251\006\n\tG2Product\022c\n\022ClearLas" +
+      "tException\022$.g2product.ClearLastExceptio" +
+      "nRequest\032%.g2product.ClearLastExceptionR" +
+      "esponse\"\000\022B\n\007Destroy\022\031.g2product.Destroy" +
+      "Request\032\032.g2product.DestroyResponse\"\000\022]\n" +
+      "\020GetLastException\022\".g2product.GetLastExc" +
+      "eptionRequest\032#.g2product.GetLastExcepti" +
+      "onResponse\"\000\022i\n\024GetLastExceptionCode\022&.g" +
+      "2product.GetLastExceptionCodeRequest\032\'.g" +
+      "2product.GetLastExceptionCodeResponse\"\000\022" +
+      "9\n\004Init\022\026.g2product.InitRequest\032\027.g2prod" +
+      "uct.InitResponse\"\000\022B\n\007License\022\031.g2produc" +
+      "t.LicenseRequest\032\032.g2product.LicenseResp" +
+      "onse\"\000\022f\n\023ValidateLicenseFile\022%.g2produc" +
+      "t.ValidateLicenseFileRequest\032&.g2product" +
+      ".ValidateLicenseFileResponse\"\000\022~\n\033Valida" +
+      "teLicenseStringBase64\022-.g2product.Valida" +
+      "teLicenseStringBase64Request\032..g2product" +
+      ".ValidateLicenseStringBase64Response\"\000\022B" +
+      "\n\007Version\022\031.g2product.VersionRequest\032\032.g" +
+      "2product.VersionResponse\"\000Be\n$com.senzin" +
+      "g.g2.engine.grpc.G2ProductB\016G2ProductPro" +
+      "toP\001Z+github.com/senzing/g2-sdk-go-grpc/" +
+      "g2productb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

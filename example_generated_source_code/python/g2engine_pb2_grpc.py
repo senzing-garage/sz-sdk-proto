@@ -5,7 +5,7 @@ import grpc
 import g2engine_pb2 as g2engine__pb2
 
 
-class G2DiagnosticStub(object):
+class G2EngineStub(object):
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -15,393 +15,393 @@ class G2DiagnosticStub(object):
             channel: A grpc.Channel.
         """
         self.AddRecord = channel.unary_unary(
-                '/g2engine.G2Diagnostic/AddRecord',
-                request_serializer=g2engine__pb2.AddRecordRequestRequest.SerializeToString,
-                response_deserializer=g2engine__pb2.AddRecordResponseResponse.FromString,
+                '/g2engine.G2Engine/AddRecord',
+                request_serializer=g2engine__pb2.AddRecordRequest.SerializeToString,
+                response_deserializer=g2engine__pb2.AddRecordResponse.FromString,
                 )
         self.AddRecordWithInfo = channel.unary_unary(
-                '/g2engine.G2Diagnostic/AddRecordWithInfo',
+                '/g2engine.G2Engine/AddRecordWithInfo',
                 request_serializer=g2engine__pb2.AddRecordWithInfoRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.AddRecordWithInfoResponse.FromString,
                 )
         self.AddRecordWithInfoWithReturnedRecordID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/AddRecordWithInfoWithReturnedRecordID',
+                '/g2engine.G2Engine/AddRecordWithInfoWithReturnedRecordID',
                 request_serializer=g2engine__pb2.AddRecordWithInfoWithReturnedRecordIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.AddRecordWithInfoWithReturnedRecordIDResponse.FromString,
                 )
         self.AddRecordWithReturnedRecordID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/AddRecordWithReturnedRecordID',
+                '/g2engine.G2Engine/AddRecordWithReturnedRecordID',
                 request_serializer=g2engine__pb2.AddRecordWithReturnedRecordIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.AddRecordWithReturnedRecordIDResponse.FromString,
                 )
         self.CheckRecord = channel.unary_unary(
-                '/g2engine.G2Diagnostic/CheckRecord',
+                '/g2engine.G2Engine/CheckRecord',
                 request_serializer=g2engine__pb2.CheckRecordRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.CheckRecordResponse.FromString,
                 )
         self.ClearLastException = channel.unary_unary(
-                '/g2engine.G2Diagnostic/ClearLastException',
+                '/g2engine.G2Engine/ClearLastException',
                 request_serializer=g2engine__pb2.ClearLastExceptionRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ClearLastExceptionResponse.FromString,
                 )
         self.CloseExport = channel.unary_unary(
-                '/g2engine.G2Diagnostic/CloseExport',
+                '/g2engine.G2Engine/CloseExport',
                 request_serializer=g2engine__pb2.CloseExportRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.CloseExportResponse.FromString,
                 )
         self.CountRedoRecords = channel.unary_unary(
-                '/g2engine.G2Diagnostic/CountRedoRecords',
+                '/g2engine.G2Engine/CountRedoRecords',
                 request_serializer=g2engine__pb2.CountRedoRecordsRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.CountRedoRecordsResponse.FromString,
                 )
         self.DeleteRecord = channel.unary_unary(
-                '/g2engine.G2Diagnostic/DeleteRecord',
+                '/g2engine.G2Engine/DeleteRecord',
                 request_serializer=g2engine__pb2.DeleteRecordRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.DeleteRecordResponse.FromString,
                 )
         self.DeleteRecordWithInfo = channel.unary_unary(
-                '/g2engine.G2Diagnostic/DeleteRecordWithInfo',
+                '/g2engine.G2Engine/DeleteRecordWithInfo',
                 request_serializer=g2engine__pb2.DeleteRecordWithInfoRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.DeleteRecordWithInfoResponse.FromString,
                 )
         self.Destroy = channel.unary_unary(
-                '/g2engine.G2Diagnostic/Destroy',
+                '/g2engine.G2Engine/Destroy',
                 request_serializer=g2engine__pb2.DestroyRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.DestroyResponse.FromString,
                 )
         self.ExportConfig = channel.unary_unary(
-                '/g2engine.G2Diagnostic/ExportConfig',
+                '/g2engine.G2Engine/ExportConfig',
                 request_serializer=g2engine__pb2.ExportConfigRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ExportConfigResponse.FromString,
                 )
         self.ExportConfigAndConfigID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/ExportConfigAndConfigID',
+                '/g2engine.G2Engine/ExportConfigAndConfigID',
                 request_serializer=g2engine__pb2.ExportConfigAndConfigIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ExportConfigAndConfigIDResponse.FromString,
                 )
         self.ExportCSVEntityReport = channel.unary_unary(
-                '/g2engine.G2Diagnostic/ExportCSVEntityReport',
+                '/g2engine.G2Engine/ExportCSVEntityReport',
                 request_serializer=g2engine__pb2.ExportCSVEntityReportRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ExportCSVEntityReportResponse.FromString,
                 )
         self.ExportJSONEntityReport = channel.unary_unary(
-                '/g2engine.G2Diagnostic/ExportJSONEntityReport',
+                '/g2engine.G2Engine/ExportJSONEntityReport',
                 request_serializer=g2engine__pb2.ExportJSONEntityReportRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ExportJSONEntityReportResponse.FromString,
                 )
         self.FetchNext = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FetchNext',
+                '/g2engine.G2Engine/FetchNext',
                 request_serializer=g2engine__pb2.FetchNextRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.FetchNextResponse.FromString,
                 )
         self.FindInterestingEntitiesByEntityID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindInterestingEntitiesByEntityID',
+                '/g2engine.G2Engine/FindInterestingEntitiesByEntityID',
                 request_serializer=g2engine__pb2.FindInterestingEntitiesByEntityIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.FindInterestingEntitiesByEntityIDResponse.FromString,
                 )
         self.FindInterestingEntitiesByRecordID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindInterestingEntitiesByRecordID',
+                '/g2engine.G2Engine/FindInterestingEntitiesByRecordID',
                 request_serializer=g2engine__pb2.FindInterestingEntitiesByRecordIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.FindInterestingEntitiesByRecordIDResponse.FromString,
                 )
         self.FindNetworkByEntityID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindNetworkByEntityID',
+                '/g2engine.G2Engine/FindNetworkByEntityID',
                 request_serializer=g2engine__pb2.FindNetworkByEntityIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.FindNetworkByEntityIDResponse.FromString,
                 )
         self.FindNetworkByEntityID_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindNetworkByEntityID_V2',
+                '/g2engine.G2Engine/FindNetworkByEntityID_V2',
                 request_serializer=g2engine__pb2.FindNetworkByEntityID_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.FindNetworkByEntityID_V2Response.FromString,
                 )
         self.FindNetworkByRecordID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindNetworkByRecordID',
+                '/g2engine.G2Engine/FindNetworkByRecordID',
                 request_serializer=g2engine__pb2.FindNetworkByRecordIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.FindNetworkByRecordIDResponse.FromString,
                 )
         self.FindNetworkByRecordID_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindNetworkByRecordID_V2',
+                '/g2engine.G2Engine/FindNetworkByRecordID_V2',
                 request_serializer=g2engine__pb2.FindNetworkByRecordID_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.FindNetworkByRecordID_V2Response.FromString,
                 )
         self.FindPathByEntityID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindPathByEntityID',
+                '/g2engine.G2Engine/FindPathByEntityID',
                 request_serializer=g2engine__pb2.FindPathByEntityIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.FindPathByEntityIDResponse.FromString,
                 )
         self.FindPathByEntityID_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindPathByEntityID_V2',
+                '/g2engine.G2Engine/FindPathByEntityID_V2',
                 request_serializer=g2engine__pb2.FindPathByEntityID_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.FindPathByEntityID_V2Response.FromString,
                 )
         self.FindPathByRecordID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindPathByRecordID',
+                '/g2engine.G2Engine/FindPathByRecordID',
                 request_serializer=g2engine__pb2.FindPathByRecordIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.FindPathByRecordIDResponse.FromString,
                 )
         self.FindPathByRecordID_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindPathByRecordID_V2',
+                '/g2engine.G2Engine/FindPathByRecordID_V2',
                 request_serializer=g2engine__pb2.FindPathByRecordID_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.FindPathByRecordID_V2Response.FromString,
                 )
         self.FindPathExcludingByEntityID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindPathExcludingByEntityID',
+                '/g2engine.G2Engine/FindPathExcludingByEntityID',
                 request_serializer=g2engine__pb2.FindPathExcludingByEntityIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.FindPathExcludingByEntityIDResponse.FromString,
                 )
         self.FindPathExcludingByEntityID_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindPathExcludingByEntityID_V2',
+                '/g2engine.G2Engine/FindPathExcludingByEntityID_V2',
                 request_serializer=g2engine__pb2.FindPathExcludingByEntityID_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.FindPathExcludingByEntityID_V2Response.FromString,
                 )
         self.FindPathExcludingByRecordID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindPathExcludingByRecordID',
+                '/g2engine.G2Engine/FindPathExcludingByRecordID',
                 request_serializer=g2engine__pb2.FindPathExcludingByRecordIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.FindPathExcludingByRecordIDResponse.FromString,
                 )
         self.FindPathExcludingByRecordID_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindPathExcludingByRecordID_V2',
+                '/g2engine.G2Engine/FindPathExcludingByRecordID_V2',
                 request_serializer=g2engine__pb2.FindPathExcludingByRecordID_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.FindPathExcludingByRecordID_V2Response.FromString,
                 )
         self.FindPathIncludingSourceByEntityID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindPathIncludingSourceByEntityID',
+                '/g2engine.G2Engine/FindPathIncludingSourceByEntityID',
                 request_serializer=g2engine__pb2.FindPathIncludingSourceByEntityIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.FindPathIncludingSourceByEntityIDResponse.FromString,
                 )
         self.FindPathIncludingSourceByEntityID_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindPathIncludingSourceByEntityID_V2',
+                '/g2engine.G2Engine/FindPathIncludingSourceByEntityID_V2',
                 request_serializer=g2engine__pb2.FindPathIncludingSourceByEntityID_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.FindPathIncludingSourceByEntityID_V2Response.FromString,
                 )
         self.FindPathIncludingSourceByRecordID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindPathIncludingSourceByRecordID',
+                '/g2engine.G2Engine/FindPathIncludingSourceByRecordID',
                 request_serializer=g2engine__pb2.FindPathIncludingSourceByRecordIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.FindPathIncludingSourceByRecordIDResponse.FromString,
                 )
         self.FindPathIncludingSourceByRecordID_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/FindPathIncludingSourceByRecordID_V2',
+                '/g2engine.G2Engine/FindPathIncludingSourceByRecordID_V2',
                 request_serializer=g2engine__pb2.FindPathIncludingSourceByRecordID_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.FindPathIncludingSourceByRecordID_V2Response.FromString,
                 )
         self.GetActiveConfigID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/GetActiveConfigID',
+                '/g2engine.G2Engine/GetActiveConfigID',
                 request_serializer=g2engine__pb2.GetActiveConfigIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.GetActiveConfigIDResponse.FromString,
                 )
         self.GetEntityByEntityID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/GetEntityByEntityID',
+                '/g2engine.G2Engine/GetEntityByEntityID',
                 request_serializer=g2engine__pb2.GetEntityByEntityIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.GetEntityByEntityIDResponse.FromString,
                 )
         self.GetEntityByEntityID_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/GetEntityByEntityID_V2',
+                '/g2engine.G2Engine/GetEntityByEntityID_V2',
                 request_serializer=g2engine__pb2.GetEntityByEntityID_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.GetEntityByEntityID_V2Response.FromString,
                 )
         self.GetEntityByRecordID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/GetEntityByRecordID',
+                '/g2engine.G2Engine/GetEntityByRecordID',
                 request_serializer=g2engine__pb2.GetEntityByRecordIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.GetEntityByRecordIDResponse.FromString,
                 )
         self.GetEntityByRecordID_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/GetEntityByRecordID_V2',
+                '/g2engine.G2Engine/GetEntityByRecordID_V2',
                 request_serializer=g2engine__pb2.GetEntityByRecordID_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.GetEntityByRecordID_V2Response.FromString,
                 )
         self.GetLastException = channel.unary_unary(
-                '/g2engine.G2Diagnostic/GetLastException',
+                '/g2engine.G2Engine/GetLastException',
                 request_serializer=g2engine__pb2.GetLastExceptionRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.GetLastExceptionResponse.FromString,
                 )
         self.GetLastExceptionCode = channel.unary_unary(
-                '/g2engine.G2Diagnostic/GetLastExceptionCode',
+                '/g2engine.G2Engine/GetLastExceptionCode',
                 request_serializer=g2engine__pb2.GetLastExceptionCodeRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.GetLastExceptionCodeResponse.FromString,
                 )
         self.GetRecord = channel.unary_unary(
-                '/g2engine.G2Diagnostic/GetRecord',
+                '/g2engine.G2Engine/GetRecord',
                 request_serializer=g2engine__pb2.GetRecordRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.GetRecordResponse.FromString,
                 )
         self.GetRecord_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/GetRecord_V2',
+                '/g2engine.G2Engine/GetRecord_V2',
                 request_serializer=g2engine__pb2.GetRecord_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.GetRecord_V2Response.FromString,
                 )
         self.GetRedoRecord = channel.unary_unary(
-                '/g2engine.G2Diagnostic/GetRedoRecord',
+                '/g2engine.G2Engine/GetRedoRecord',
                 request_serializer=g2engine__pb2.GetRedoRecordRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.GetRedoRecordResponse.FromString,
                 )
         self.GetRepositoryLastModifiedTime = channel.unary_unary(
-                '/g2engine.G2Diagnostic/GetRepositoryLastModifiedTime',
+                '/g2engine.G2Engine/GetRepositoryLastModifiedTime',
                 request_serializer=g2engine__pb2.GetRepositoryLastModifiedTimeRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.GetRepositoryLastModifiedTimeResponse.FromString,
                 )
         self.GetVirtualEntityByRecordID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/GetVirtualEntityByRecordID',
+                '/g2engine.G2Engine/GetVirtualEntityByRecordID',
                 request_serializer=g2engine__pb2.GetVirtualEntityByRecordIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.GetVirtualEntityByRecordIDResponse.FromString,
                 )
         self.GetVirtualEntityByRecordID_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/GetVirtualEntityByRecordID_V2',
+                '/g2engine.G2Engine/GetVirtualEntityByRecordID_V2',
                 request_serializer=g2engine__pb2.GetVirtualEntityByRecordID_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.GetVirtualEntityByRecordID_V2Response.FromString,
                 )
         self.HowEntityByEntityID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/HowEntityByEntityID',
+                '/g2engine.G2Engine/HowEntityByEntityID',
                 request_serializer=g2engine__pb2.HowEntityByEntityIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.HowEntityByEntityIDResponse.FromString,
                 )
         self.HowEntityByEntityID_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/HowEntityByEntityID_V2',
+                '/g2engine.G2Engine/HowEntityByEntityID_V2',
                 request_serializer=g2engine__pb2.HowEntityByEntityID_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.HowEntityByEntityID_V2Response.FromString,
                 )
         self.Init = channel.unary_unary(
-                '/g2engine.G2Diagnostic/Init',
+                '/g2engine.G2Engine/Init',
                 request_serializer=g2engine__pb2.InitRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.InitResponse.FromString,
                 )
         self.InitWithConfigID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/InitWithConfigID',
+                '/g2engine.G2Engine/InitWithConfigID',
                 request_serializer=g2engine__pb2.InitWithConfigIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.InitWithConfigIDResponse.FromString,
                 )
         self.PrimeEngine = channel.unary_unary(
-                '/g2engine.G2Diagnostic/PrimeEngine',
+                '/g2engine.G2Engine/PrimeEngine',
                 request_serializer=g2engine__pb2.PrimeEngineRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.PrimeEngineResponse.FromString,
                 )
         self.Process = channel.unary_unary(
-                '/g2engine.G2Diagnostic/Process',
+                '/g2engine.G2Engine/Process',
                 request_serializer=g2engine__pb2.ProcessRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ProcessResponse.FromString,
                 )
         self.ProcessRedoRecord = channel.unary_unary(
-                '/g2engine.G2Diagnostic/ProcessRedoRecord',
+                '/g2engine.G2Engine/ProcessRedoRecord',
                 request_serializer=g2engine__pb2.ProcessRedoRecordRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ProcessRedoRecordResponse.FromString,
                 )
         self.ProcessRedoRecordWithInfo = channel.unary_unary(
-                '/g2engine.G2Diagnostic/ProcessRedoRecordWithInfo',
+                '/g2engine.G2Engine/ProcessRedoRecordWithInfo',
                 request_serializer=g2engine__pb2.ProcessRedoRecordWithInfoRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ProcessRedoRecordWithInfoResponse.FromString,
                 )
         self.ProcessWithInfo = channel.unary_unary(
-                '/g2engine.G2Diagnostic/ProcessWithInfo',
+                '/g2engine.G2Engine/ProcessWithInfo',
                 request_serializer=g2engine__pb2.ProcessWithInfoRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ProcessWithInfoResponse.FromString,
                 )
         self.ProcessWithResponse = channel.unary_unary(
-                '/g2engine.G2Diagnostic/ProcessWithResponse',
+                '/g2engine.G2Engine/ProcessWithResponse',
                 request_serializer=g2engine__pb2.ProcessWithResponseRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ProcessWithResponseResponse.FromString,
                 )
         self.ProcessWithResponseResize = channel.unary_unary(
-                '/g2engine.G2Diagnostic/ProcessWithResponseResize',
+                '/g2engine.G2Engine/ProcessWithResponseResize',
                 request_serializer=g2engine__pb2.ProcessWithResponseResizeRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ProcessWithResponseResizeResponse.FromString,
                 )
         self.PurgeRepository = channel.unary_unary(
-                '/g2engine.G2Diagnostic/PurgeRepository',
+                '/g2engine.G2Engine/PurgeRepository',
                 request_serializer=g2engine__pb2.PurgeRepositoryRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.PurgeRepositoryResponse.FromString,
                 )
         self.ReevaluateEntity = channel.unary_unary(
-                '/g2engine.G2Diagnostic/ReevaluateEntity',
+                '/g2engine.G2Engine/ReevaluateEntity',
                 request_serializer=g2engine__pb2.ReevaluateEntityRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ReevaluateEntityResponse.FromString,
                 )
         self.ReevaluateEntityWithInfo = channel.unary_unary(
-                '/g2engine.G2Diagnostic/ReevaluateEntityWithInfo',
+                '/g2engine.G2Engine/ReevaluateEntityWithInfo',
                 request_serializer=g2engine__pb2.ReevaluateEntityWithInfoRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ReevaluateEntityWithInfoResponse.FromString,
                 )
         self.ReevaluateRecord = channel.unary_unary(
-                '/g2engine.G2Diagnostic/ReevaluateRecord',
+                '/g2engine.G2Engine/ReevaluateRecord',
                 request_serializer=g2engine__pb2.ReevaluateRecordRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ReevaluateRecordResponse.FromString,
                 )
         self.ReevaluateRecordWithInfo = channel.unary_unary(
-                '/g2engine.G2Diagnostic/ReevaluateRecordWithInfo',
+                '/g2engine.G2Engine/ReevaluateRecordWithInfo',
                 request_serializer=g2engine__pb2.ReevaluateRecordWithInfoRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ReevaluateRecordWithInfoResponse.FromString,
                 )
         self.Reinit = channel.unary_unary(
-                '/g2engine.G2Diagnostic/Reinit',
+                '/g2engine.G2Engine/Reinit',
                 request_serializer=g2engine__pb2.ReinitRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ReinitResponse.FromString,
                 )
         self.ReplaceRecord = channel.unary_unary(
-                '/g2engine.G2Diagnostic/ReplaceRecord',
+                '/g2engine.G2Engine/ReplaceRecord',
                 request_serializer=g2engine__pb2.ReplaceRecordRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ReplaceRecordResponse.FromString,
                 )
         self.ReplaceRecordWithInfo = channel.unary_unary(
-                '/g2engine.G2Diagnostic/ReplaceRecordWithInfo',
+                '/g2engine.G2Engine/ReplaceRecordWithInfo',
                 request_serializer=g2engine__pb2.ReplaceRecordWithInfoRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.ReplaceRecordWithInfoResponse.FromString,
                 )
         self.SearchByAttributes = channel.unary_unary(
-                '/g2engine.G2Diagnostic/SearchByAttributes',
+                '/g2engine.G2Engine/SearchByAttributes',
                 request_serializer=g2engine__pb2.SearchByAttributesRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.SearchByAttributesResponse.FromString,
                 )
         self.SearchByAttributes_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/SearchByAttributes_V2',
+                '/g2engine.G2Engine/SearchByAttributes_V2',
                 request_serializer=g2engine__pb2.SearchByAttributes_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.SearchByAttributes_V2Response.FromString,
                 )
         self.Stats = channel.unary_unary(
-                '/g2engine.G2Diagnostic/Stats',
+                '/g2engine.G2Engine/Stats',
                 request_serializer=g2engine__pb2.StatsRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.StatsResponse.FromString,
                 )
         self.WhyEntities = channel.unary_unary(
-                '/g2engine.G2Diagnostic/WhyEntities',
+                '/g2engine.G2Engine/WhyEntities',
                 request_serializer=g2engine__pb2.WhyEntitiesRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.WhyEntitiesResponse.FromString,
                 )
         self.WhyEntities_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/WhyEntities_V2',
+                '/g2engine.G2Engine/WhyEntities_V2',
                 request_serializer=g2engine__pb2.WhyEntities_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.WhyEntities_V2Response.FromString,
                 )
         self.WhyEntityByEntityID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/WhyEntityByEntityID',
+                '/g2engine.G2Engine/WhyEntityByEntityID',
                 request_serializer=g2engine__pb2.WhyEntityByEntityIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.WhyEntityByEntityIDResponse.FromString,
                 )
         self.WhyEntityByEntityID_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/WhyEntityByEntityID_V2',
+                '/g2engine.G2Engine/WhyEntityByEntityID_V2',
                 request_serializer=g2engine__pb2.WhyEntityByEntityID_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.WhyEntityByEntityID_V2Response.FromString,
                 )
         self.WhyEntityByRecordID = channel.unary_unary(
-                '/g2engine.G2Diagnostic/WhyEntityByRecordID',
+                '/g2engine.G2Engine/WhyEntityByRecordID',
                 request_serializer=g2engine__pb2.WhyEntityByRecordIDRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.WhyEntityByRecordIDResponse.FromString,
                 )
         self.WhyEntityByRecordID_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/WhyEntityByRecordID_V2',
+                '/g2engine.G2Engine/WhyEntityByRecordID_V2',
                 request_serializer=g2engine__pb2.WhyEntityByRecordID_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.WhyEntityByRecordID_V2Response.FromString,
                 )
         self.WhyRecords = channel.unary_unary(
-                '/g2engine.G2Diagnostic/WhyRecords',
+                '/g2engine.G2Engine/WhyRecords',
                 request_serializer=g2engine__pb2.WhyRecordsRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.WhyRecordsResponse.FromString,
                 )
         self.WhyRecords_V2 = channel.unary_unary(
-                '/g2engine.G2Diagnostic/WhyRecords_V2',
+                '/g2engine.G2Engine/WhyRecords_V2',
                 request_serializer=g2engine__pb2.WhyRecords_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.WhyRecords_V2Response.FromString,
                 )
 
 
-class G2DiagnosticServicer(object):
+class G2EngineServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def AddRecord(self, request, context):
@@ -867,12 +867,12 @@ class G2DiagnosticServicer(object):
         raise NotImplementedError('Method not implemented!')
 
 
-def add_G2DiagnosticServicer_to_server(servicer, server):
+def add_G2EngineServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'AddRecord': grpc.unary_unary_rpc_method_handler(
                     servicer.AddRecord,
-                    request_deserializer=g2engine__pb2.AddRecordRequestRequest.FromString,
-                    response_serializer=g2engine__pb2.AddRecordResponseResponse.SerializeToString,
+                    request_deserializer=g2engine__pb2.AddRecordRequest.FromString,
+                    response_serializer=g2engine__pb2.AddRecordResponse.SerializeToString,
             ),
             'AddRecordWithInfo': grpc.unary_unary_rpc_method_handler(
                     servicer.AddRecordWithInfo,
@@ -1256,12 +1256,12 @@ def add_G2DiagnosticServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'g2engine.G2Diagnostic', rpc_method_handlers)
+            'g2engine.G2Engine', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class G2Diagnostic(object):
+class G2Engine(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
@@ -1275,9 +1275,9 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/AddRecord',
-            g2engine__pb2.AddRecordRequestRequest.SerializeToString,
-            g2engine__pb2.AddRecordResponseResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/AddRecord',
+            g2engine__pb2.AddRecordRequest.SerializeToString,
+            g2engine__pb2.AddRecordResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -1292,7 +1292,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/AddRecordWithInfo',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/AddRecordWithInfo',
             g2engine__pb2.AddRecordWithInfoRequest.SerializeToString,
             g2engine__pb2.AddRecordWithInfoResponse.FromString,
             options, channel_credentials,
@@ -1309,7 +1309,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/AddRecordWithInfoWithReturnedRecordID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/AddRecordWithInfoWithReturnedRecordID',
             g2engine__pb2.AddRecordWithInfoWithReturnedRecordIDRequest.SerializeToString,
             g2engine__pb2.AddRecordWithInfoWithReturnedRecordIDResponse.FromString,
             options, channel_credentials,
@@ -1326,7 +1326,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/AddRecordWithReturnedRecordID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/AddRecordWithReturnedRecordID',
             g2engine__pb2.AddRecordWithReturnedRecordIDRequest.SerializeToString,
             g2engine__pb2.AddRecordWithReturnedRecordIDResponse.FromString,
             options, channel_credentials,
@@ -1343,7 +1343,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/CheckRecord',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/CheckRecord',
             g2engine__pb2.CheckRecordRequest.SerializeToString,
             g2engine__pb2.CheckRecordResponse.FromString,
             options, channel_credentials,
@@ -1360,7 +1360,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/ClearLastException',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/ClearLastException',
             g2engine__pb2.ClearLastExceptionRequest.SerializeToString,
             g2engine__pb2.ClearLastExceptionResponse.FromString,
             options, channel_credentials,
@@ -1377,7 +1377,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/CloseExport',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/CloseExport',
             g2engine__pb2.CloseExportRequest.SerializeToString,
             g2engine__pb2.CloseExportResponse.FromString,
             options, channel_credentials,
@@ -1394,7 +1394,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/CountRedoRecords',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/CountRedoRecords',
             g2engine__pb2.CountRedoRecordsRequest.SerializeToString,
             g2engine__pb2.CountRedoRecordsResponse.FromString,
             options, channel_credentials,
@@ -1411,7 +1411,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/DeleteRecord',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/DeleteRecord',
             g2engine__pb2.DeleteRecordRequest.SerializeToString,
             g2engine__pb2.DeleteRecordResponse.FromString,
             options, channel_credentials,
@@ -1428,7 +1428,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/DeleteRecordWithInfo',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/DeleteRecordWithInfo',
             g2engine__pb2.DeleteRecordWithInfoRequest.SerializeToString,
             g2engine__pb2.DeleteRecordWithInfoResponse.FromString,
             options, channel_credentials,
@@ -1445,7 +1445,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/Destroy',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/Destroy',
             g2engine__pb2.DestroyRequest.SerializeToString,
             g2engine__pb2.DestroyResponse.FromString,
             options, channel_credentials,
@@ -1462,7 +1462,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/ExportConfig',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/ExportConfig',
             g2engine__pb2.ExportConfigRequest.SerializeToString,
             g2engine__pb2.ExportConfigResponse.FromString,
             options, channel_credentials,
@@ -1479,7 +1479,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/ExportConfigAndConfigID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/ExportConfigAndConfigID',
             g2engine__pb2.ExportConfigAndConfigIDRequest.SerializeToString,
             g2engine__pb2.ExportConfigAndConfigIDResponse.FromString,
             options, channel_credentials,
@@ -1496,7 +1496,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/ExportCSVEntityReport',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/ExportCSVEntityReport',
             g2engine__pb2.ExportCSVEntityReportRequest.SerializeToString,
             g2engine__pb2.ExportCSVEntityReportResponse.FromString,
             options, channel_credentials,
@@ -1513,7 +1513,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/ExportJSONEntityReport',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/ExportJSONEntityReport',
             g2engine__pb2.ExportJSONEntityReportRequest.SerializeToString,
             g2engine__pb2.ExportJSONEntityReportResponse.FromString,
             options, channel_credentials,
@@ -1530,7 +1530,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FetchNext',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FetchNext',
             g2engine__pb2.FetchNextRequest.SerializeToString,
             g2engine__pb2.FetchNextResponse.FromString,
             options, channel_credentials,
@@ -1547,7 +1547,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindInterestingEntitiesByEntityID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindInterestingEntitiesByEntityID',
             g2engine__pb2.FindInterestingEntitiesByEntityIDRequest.SerializeToString,
             g2engine__pb2.FindInterestingEntitiesByEntityIDResponse.FromString,
             options, channel_credentials,
@@ -1564,7 +1564,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindInterestingEntitiesByRecordID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindInterestingEntitiesByRecordID',
             g2engine__pb2.FindInterestingEntitiesByRecordIDRequest.SerializeToString,
             g2engine__pb2.FindInterestingEntitiesByRecordIDResponse.FromString,
             options, channel_credentials,
@@ -1581,7 +1581,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindNetworkByEntityID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindNetworkByEntityID',
             g2engine__pb2.FindNetworkByEntityIDRequest.SerializeToString,
             g2engine__pb2.FindNetworkByEntityIDResponse.FromString,
             options, channel_credentials,
@@ -1598,7 +1598,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindNetworkByEntityID_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindNetworkByEntityID_V2',
             g2engine__pb2.FindNetworkByEntityID_V2Request.SerializeToString,
             g2engine__pb2.FindNetworkByEntityID_V2Response.FromString,
             options, channel_credentials,
@@ -1615,7 +1615,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindNetworkByRecordID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindNetworkByRecordID',
             g2engine__pb2.FindNetworkByRecordIDRequest.SerializeToString,
             g2engine__pb2.FindNetworkByRecordIDResponse.FromString,
             options, channel_credentials,
@@ -1632,7 +1632,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindNetworkByRecordID_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindNetworkByRecordID_V2',
             g2engine__pb2.FindNetworkByRecordID_V2Request.SerializeToString,
             g2engine__pb2.FindNetworkByRecordID_V2Response.FromString,
             options, channel_credentials,
@@ -1649,7 +1649,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindPathByEntityID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindPathByEntityID',
             g2engine__pb2.FindPathByEntityIDRequest.SerializeToString,
             g2engine__pb2.FindPathByEntityIDResponse.FromString,
             options, channel_credentials,
@@ -1666,7 +1666,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindPathByEntityID_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindPathByEntityID_V2',
             g2engine__pb2.FindPathByEntityID_V2Request.SerializeToString,
             g2engine__pb2.FindPathByEntityID_V2Response.FromString,
             options, channel_credentials,
@@ -1683,7 +1683,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindPathByRecordID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindPathByRecordID',
             g2engine__pb2.FindPathByRecordIDRequest.SerializeToString,
             g2engine__pb2.FindPathByRecordIDResponse.FromString,
             options, channel_credentials,
@@ -1700,7 +1700,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindPathByRecordID_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindPathByRecordID_V2',
             g2engine__pb2.FindPathByRecordID_V2Request.SerializeToString,
             g2engine__pb2.FindPathByRecordID_V2Response.FromString,
             options, channel_credentials,
@@ -1717,7 +1717,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindPathExcludingByEntityID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindPathExcludingByEntityID',
             g2engine__pb2.FindPathExcludingByEntityIDRequest.SerializeToString,
             g2engine__pb2.FindPathExcludingByEntityIDResponse.FromString,
             options, channel_credentials,
@@ -1734,7 +1734,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindPathExcludingByEntityID_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindPathExcludingByEntityID_V2',
             g2engine__pb2.FindPathExcludingByEntityID_V2Request.SerializeToString,
             g2engine__pb2.FindPathExcludingByEntityID_V2Response.FromString,
             options, channel_credentials,
@@ -1751,7 +1751,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindPathExcludingByRecordID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindPathExcludingByRecordID',
             g2engine__pb2.FindPathExcludingByRecordIDRequest.SerializeToString,
             g2engine__pb2.FindPathExcludingByRecordIDResponse.FromString,
             options, channel_credentials,
@@ -1768,7 +1768,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindPathExcludingByRecordID_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindPathExcludingByRecordID_V2',
             g2engine__pb2.FindPathExcludingByRecordID_V2Request.SerializeToString,
             g2engine__pb2.FindPathExcludingByRecordID_V2Response.FromString,
             options, channel_credentials,
@@ -1785,7 +1785,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindPathIncludingSourceByEntityID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindPathIncludingSourceByEntityID',
             g2engine__pb2.FindPathIncludingSourceByEntityIDRequest.SerializeToString,
             g2engine__pb2.FindPathIncludingSourceByEntityIDResponse.FromString,
             options, channel_credentials,
@@ -1802,7 +1802,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindPathIncludingSourceByEntityID_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindPathIncludingSourceByEntityID_V2',
             g2engine__pb2.FindPathIncludingSourceByEntityID_V2Request.SerializeToString,
             g2engine__pb2.FindPathIncludingSourceByEntityID_V2Response.FromString,
             options, channel_credentials,
@@ -1819,7 +1819,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindPathIncludingSourceByRecordID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindPathIncludingSourceByRecordID',
             g2engine__pb2.FindPathIncludingSourceByRecordIDRequest.SerializeToString,
             g2engine__pb2.FindPathIncludingSourceByRecordIDResponse.FromString,
             options, channel_credentials,
@@ -1836,7 +1836,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/FindPathIncludingSourceByRecordID_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/FindPathIncludingSourceByRecordID_V2',
             g2engine__pb2.FindPathIncludingSourceByRecordID_V2Request.SerializeToString,
             g2engine__pb2.FindPathIncludingSourceByRecordID_V2Response.FromString,
             options, channel_credentials,
@@ -1853,7 +1853,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/GetActiveConfigID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/GetActiveConfigID',
             g2engine__pb2.GetActiveConfigIDRequest.SerializeToString,
             g2engine__pb2.GetActiveConfigIDResponse.FromString,
             options, channel_credentials,
@@ -1870,7 +1870,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/GetEntityByEntityID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/GetEntityByEntityID',
             g2engine__pb2.GetEntityByEntityIDRequest.SerializeToString,
             g2engine__pb2.GetEntityByEntityIDResponse.FromString,
             options, channel_credentials,
@@ -1887,7 +1887,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/GetEntityByEntityID_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/GetEntityByEntityID_V2',
             g2engine__pb2.GetEntityByEntityID_V2Request.SerializeToString,
             g2engine__pb2.GetEntityByEntityID_V2Response.FromString,
             options, channel_credentials,
@@ -1904,7 +1904,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/GetEntityByRecordID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/GetEntityByRecordID',
             g2engine__pb2.GetEntityByRecordIDRequest.SerializeToString,
             g2engine__pb2.GetEntityByRecordIDResponse.FromString,
             options, channel_credentials,
@@ -1921,7 +1921,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/GetEntityByRecordID_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/GetEntityByRecordID_V2',
             g2engine__pb2.GetEntityByRecordID_V2Request.SerializeToString,
             g2engine__pb2.GetEntityByRecordID_V2Response.FromString,
             options, channel_credentials,
@@ -1938,7 +1938,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/GetLastException',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/GetLastException',
             g2engine__pb2.GetLastExceptionRequest.SerializeToString,
             g2engine__pb2.GetLastExceptionResponse.FromString,
             options, channel_credentials,
@@ -1955,7 +1955,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/GetLastExceptionCode',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/GetLastExceptionCode',
             g2engine__pb2.GetLastExceptionCodeRequest.SerializeToString,
             g2engine__pb2.GetLastExceptionCodeResponse.FromString,
             options, channel_credentials,
@@ -1972,7 +1972,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/GetRecord',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/GetRecord',
             g2engine__pb2.GetRecordRequest.SerializeToString,
             g2engine__pb2.GetRecordResponse.FromString,
             options, channel_credentials,
@@ -1989,7 +1989,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/GetRecord_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/GetRecord_V2',
             g2engine__pb2.GetRecord_V2Request.SerializeToString,
             g2engine__pb2.GetRecord_V2Response.FromString,
             options, channel_credentials,
@@ -2006,7 +2006,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/GetRedoRecord',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/GetRedoRecord',
             g2engine__pb2.GetRedoRecordRequest.SerializeToString,
             g2engine__pb2.GetRedoRecordResponse.FromString,
             options, channel_credentials,
@@ -2023,7 +2023,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/GetRepositoryLastModifiedTime',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/GetRepositoryLastModifiedTime',
             g2engine__pb2.GetRepositoryLastModifiedTimeRequest.SerializeToString,
             g2engine__pb2.GetRepositoryLastModifiedTimeResponse.FromString,
             options, channel_credentials,
@@ -2040,7 +2040,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/GetVirtualEntityByRecordID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/GetVirtualEntityByRecordID',
             g2engine__pb2.GetVirtualEntityByRecordIDRequest.SerializeToString,
             g2engine__pb2.GetVirtualEntityByRecordIDResponse.FromString,
             options, channel_credentials,
@@ -2057,7 +2057,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/GetVirtualEntityByRecordID_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/GetVirtualEntityByRecordID_V2',
             g2engine__pb2.GetVirtualEntityByRecordID_V2Request.SerializeToString,
             g2engine__pb2.GetVirtualEntityByRecordID_V2Response.FromString,
             options, channel_credentials,
@@ -2074,7 +2074,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/HowEntityByEntityID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/HowEntityByEntityID',
             g2engine__pb2.HowEntityByEntityIDRequest.SerializeToString,
             g2engine__pb2.HowEntityByEntityIDResponse.FromString,
             options, channel_credentials,
@@ -2091,7 +2091,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/HowEntityByEntityID_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/HowEntityByEntityID_V2',
             g2engine__pb2.HowEntityByEntityID_V2Request.SerializeToString,
             g2engine__pb2.HowEntityByEntityID_V2Response.FromString,
             options, channel_credentials,
@@ -2108,7 +2108,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/Init',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/Init',
             g2engine__pb2.InitRequest.SerializeToString,
             g2engine__pb2.InitResponse.FromString,
             options, channel_credentials,
@@ -2125,7 +2125,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/InitWithConfigID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/InitWithConfigID',
             g2engine__pb2.InitWithConfigIDRequest.SerializeToString,
             g2engine__pb2.InitWithConfigIDResponse.FromString,
             options, channel_credentials,
@@ -2142,7 +2142,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/PrimeEngine',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/PrimeEngine',
             g2engine__pb2.PrimeEngineRequest.SerializeToString,
             g2engine__pb2.PrimeEngineResponse.FromString,
             options, channel_credentials,
@@ -2159,7 +2159,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/Process',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/Process',
             g2engine__pb2.ProcessRequest.SerializeToString,
             g2engine__pb2.ProcessResponse.FromString,
             options, channel_credentials,
@@ -2176,7 +2176,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/ProcessRedoRecord',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/ProcessRedoRecord',
             g2engine__pb2.ProcessRedoRecordRequest.SerializeToString,
             g2engine__pb2.ProcessRedoRecordResponse.FromString,
             options, channel_credentials,
@@ -2193,7 +2193,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/ProcessRedoRecordWithInfo',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/ProcessRedoRecordWithInfo',
             g2engine__pb2.ProcessRedoRecordWithInfoRequest.SerializeToString,
             g2engine__pb2.ProcessRedoRecordWithInfoResponse.FromString,
             options, channel_credentials,
@@ -2210,7 +2210,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/ProcessWithInfo',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/ProcessWithInfo',
             g2engine__pb2.ProcessWithInfoRequest.SerializeToString,
             g2engine__pb2.ProcessWithInfoResponse.FromString,
             options, channel_credentials,
@@ -2227,7 +2227,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/ProcessWithResponse',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/ProcessWithResponse',
             g2engine__pb2.ProcessWithResponseRequest.SerializeToString,
             g2engine__pb2.ProcessWithResponseResponse.FromString,
             options, channel_credentials,
@@ -2244,7 +2244,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/ProcessWithResponseResize',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/ProcessWithResponseResize',
             g2engine__pb2.ProcessWithResponseResizeRequest.SerializeToString,
             g2engine__pb2.ProcessWithResponseResizeResponse.FromString,
             options, channel_credentials,
@@ -2261,7 +2261,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/PurgeRepository',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/PurgeRepository',
             g2engine__pb2.PurgeRepositoryRequest.SerializeToString,
             g2engine__pb2.PurgeRepositoryResponse.FromString,
             options, channel_credentials,
@@ -2278,7 +2278,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/ReevaluateEntity',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/ReevaluateEntity',
             g2engine__pb2.ReevaluateEntityRequest.SerializeToString,
             g2engine__pb2.ReevaluateEntityResponse.FromString,
             options, channel_credentials,
@@ -2295,7 +2295,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/ReevaluateEntityWithInfo',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/ReevaluateEntityWithInfo',
             g2engine__pb2.ReevaluateEntityWithInfoRequest.SerializeToString,
             g2engine__pb2.ReevaluateEntityWithInfoResponse.FromString,
             options, channel_credentials,
@@ -2312,7 +2312,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/ReevaluateRecord',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/ReevaluateRecord',
             g2engine__pb2.ReevaluateRecordRequest.SerializeToString,
             g2engine__pb2.ReevaluateRecordResponse.FromString,
             options, channel_credentials,
@@ -2329,7 +2329,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/ReevaluateRecordWithInfo',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/ReevaluateRecordWithInfo',
             g2engine__pb2.ReevaluateRecordWithInfoRequest.SerializeToString,
             g2engine__pb2.ReevaluateRecordWithInfoResponse.FromString,
             options, channel_credentials,
@@ -2346,7 +2346,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/Reinit',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/Reinit',
             g2engine__pb2.ReinitRequest.SerializeToString,
             g2engine__pb2.ReinitResponse.FromString,
             options, channel_credentials,
@@ -2363,7 +2363,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/ReplaceRecord',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/ReplaceRecord',
             g2engine__pb2.ReplaceRecordRequest.SerializeToString,
             g2engine__pb2.ReplaceRecordResponse.FromString,
             options, channel_credentials,
@@ -2380,7 +2380,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/ReplaceRecordWithInfo',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/ReplaceRecordWithInfo',
             g2engine__pb2.ReplaceRecordWithInfoRequest.SerializeToString,
             g2engine__pb2.ReplaceRecordWithInfoResponse.FromString,
             options, channel_credentials,
@@ -2397,7 +2397,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/SearchByAttributes',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/SearchByAttributes',
             g2engine__pb2.SearchByAttributesRequest.SerializeToString,
             g2engine__pb2.SearchByAttributesResponse.FromString,
             options, channel_credentials,
@@ -2414,7 +2414,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/SearchByAttributes_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/SearchByAttributes_V2',
             g2engine__pb2.SearchByAttributes_V2Request.SerializeToString,
             g2engine__pb2.SearchByAttributes_V2Response.FromString,
             options, channel_credentials,
@@ -2431,7 +2431,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/Stats',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/Stats',
             g2engine__pb2.StatsRequest.SerializeToString,
             g2engine__pb2.StatsResponse.FromString,
             options, channel_credentials,
@@ -2448,7 +2448,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/WhyEntities',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/WhyEntities',
             g2engine__pb2.WhyEntitiesRequest.SerializeToString,
             g2engine__pb2.WhyEntitiesResponse.FromString,
             options, channel_credentials,
@@ -2465,7 +2465,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/WhyEntities_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/WhyEntities_V2',
             g2engine__pb2.WhyEntities_V2Request.SerializeToString,
             g2engine__pb2.WhyEntities_V2Response.FromString,
             options, channel_credentials,
@@ -2482,7 +2482,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/WhyEntityByEntityID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/WhyEntityByEntityID',
             g2engine__pb2.WhyEntityByEntityIDRequest.SerializeToString,
             g2engine__pb2.WhyEntityByEntityIDResponse.FromString,
             options, channel_credentials,
@@ -2499,7 +2499,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/WhyEntityByEntityID_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/WhyEntityByEntityID_V2',
             g2engine__pb2.WhyEntityByEntityID_V2Request.SerializeToString,
             g2engine__pb2.WhyEntityByEntityID_V2Response.FromString,
             options, channel_credentials,
@@ -2516,7 +2516,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/WhyEntityByRecordID',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/WhyEntityByRecordID',
             g2engine__pb2.WhyEntityByRecordIDRequest.SerializeToString,
             g2engine__pb2.WhyEntityByRecordIDResponse.FromString,
             options, channel_credentials,
@@ -2533,7 +2533,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/WhyEntityByRecordID_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/WhyEntityByRecordID_V2',
             g2engine__pb2.WhyEntityByRecordID_V2Request.SerializeToString,
             g2engine__pb2.WhyEntityByRecordID_V2Response.FromString,
             options, channel_credentials,
@@ -2550,7 +2550,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/WhyRecords',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/WhyRecords',
             g2engine__pb2.WhyRecordsRequest.SerializeToString,
             g2engine__pb2.WhyRecordsResponse.FromString,
             options, channel_credentials,
@@ -2567,7 +2567,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Diagnostic/WhyRecords_V2',
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/WhyRecords_V2',
             g2engine__pb2.WhyRecords_V2Request.SerializeToString,
             g2engine__pb2.WhyRecords_V2Response.FromString,
             options, channel_credentials,

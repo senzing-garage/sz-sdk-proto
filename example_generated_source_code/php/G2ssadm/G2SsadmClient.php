@@ -5,7 +5,7 @@ namespace G2ssadm;
 
 /**
  */
-class G2DiagnosticClient extends \Grpc\BaseStub {
+class G2SsadmClient extends \Grpc\BaseStub {
 
     /**
      * @param string $hostname hostname
@@ -24,7 +24,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ClearLastException(\G2ssadm\ClearLastExceptionRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2ssadm.G2Diagnostic/ClearLastException',
+        return $this->_simpleRequest('/g2ssadm.G2Ssadm/ClearLastException',
         $argument,
         ['\G2ssadm\ClearLastExceptionResponse', 'decode'],
         $metadata, $options);
@@ -38,7 +38,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function CreateSaltInStore(\G2ssadm\CreateSaltInStoreRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2ssadm.G2Diagnostic/CreateSaltInStore',
+        return $this->_simpleRequest('/g2ssadm.G2Ssadm/CreateSaltInStore',
         $argument,
         ['\G2ssadm\CreateSaltInStoreResponse', 'decode'],
         $metadata, $options);
@@ -52,7 +52,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function Destroy(\G2ssadm\DestroyRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2ssadm.G2Diagnostic/Destroy',
+        return $this->_simpleRequest('/g2ssadm.G2Ssadm/Destroy',
         $argument,
         ['\G2ssadm\DestroyResponse', 'decode'],
         $metadata, $options);
@@ -66,7 +66,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function GetLastException(\G2ssadm\GetLastExceptionRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2ssadm.G2Diagnostic/GetLastException',
+        return $this->_simpleRequest('/g2ssadm.G2Ssadm/GetLastException',
         $argument,
         ['\G2ssadm\GetLastExceptionResponse', 'decode'],
         $metadata, $options);
@@ -80,7 +80,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function GetLastExceptionCode(\G2ssadm\GetLastExceptionCodeRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2ssadm.G2Diagnostic/GetLastExceptionCode',
+        return $this->_simpleRequest('/g2ssadm.G2Ssadm/GetLastExceptionCode',
         $argument,
         ['\G2ssadm\GetLastExceptionCodeResponse', 'decode'],
         $metadata, $options);
@@ -94,7 +94,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function Init(\G2ssadm\InitRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2ssadm.G2Diagnostic/Init',
+        return $this->_simpleRequest('/g2ssadm.G2Ssadm/Init',
         $argument,
         ['\G2ssadm\InitResponse', 'decode'],
         $metadata, $options);
@@ -108,7 +108,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function InitializeNewToken(\G2ssadm\InitializeNewTokenRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2ssadm.G2Diagnostic/InitializeNewToken',
+        return $this->_simpleRequest('/g2ssadm.G2Ssadm/InitializeNewToken',
         $argument,
         ['\G2ssadm\InitializeNewTokenResponse', 'decode'],
         $metadata, $options);
@@ -122,7 +122,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function List(\G2ssadm\ListRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2ssadm.G2Diagnostic/List',
+        return $this->_simpleRequest('/g2ssadm.G2Ssadm/List',
         $argument,
         ['\G2ssadm\ListResponse', 'decode'],
         $metadata, $options);
@@ -136,7 +136,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function Put(\G2ssadm\PutRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2ssadm.G2Diagnostic/Put',
+        return $this->_simpleRequest('/g2ssadm.G2Ssadm/Put',
         $argument,
         ['\G2ssadm\PutResponse', 'decode'],
         $metadata, $options);
@@ -150,7 +150,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ReinitializeToken(\G2ssadm\ReinitializeTokenRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2ssadm.G2Diagnostic/ReinitializeToken',
+        return $this->_simpleRequest('/g2ssadm.G2Ssadm/ReinitializeToken',
         $argument,
         ['\G2ssadm\ReinitializeTokenResponse', 'decode'],
         $metadata, $options);
@@ -164,7 +164,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function SetupStore(\G2ssadm\SetupStoreRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2ssadm.G2Diagnostic/SetupStore',
+        return $this->_simpleRequest('/g2ssadm.G2Ssadm/SetupStore',
         $argument,
         ['\G2ssadm\SetupStoreResponse', 'decode'],
         $metadata, $options);

@@ -5,7 +5,7 @@ namespace G2hasher;
 
 /**
  */
-class G2DiagnosticClient extends \Grpc\BaseStub {
+class G2HasherClient extends \Grpc\BaseStub {
 
     /**
      * @param string $hostname hostname
@@ -24,7 +24,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ClearLastException(\G2hasher\ClearLastExceptionRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2hasher.G2Diagnostic/ClearLastException',
+        return $this->_simpleRequest('/g2hasher.G2Hasher/ClearLastException',
         $argument,
         ['\G2hasher\ClearLastExceptionResponse', 'decode'],
         $metadata, $options);
@@ -38,7 +38,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function Destroy(\G2hasher\DestroyRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2hasher.G2Diagnostic/Destroy',
+        return $this->_simpleRequest('/g2hasher.G2Hasher/Destroy',
         $argument,
         ['\G2hasher\DestroyResponse', 'decode'],
         $metadata, $options);
@@ -52,7 +52,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ExportTokenLibrary(\G2hasher\ExportTokenLibraryRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2hasher.G2Diagnostic/ExportTokenLibrary',
+        return $this->_simpleRequest('/g2hasher.G2Hasher/ExportTokenLibrary',
         $argument,
         ['\G2hasher\ExportTokenLibraryResponse', 'decode'],
         $metadata, $options);
@@ -66,7 +66,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function GetLastException(\G2hasher\GetLastExceptionRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2hasher.G2Diagnostic/GetLastException',
+        return $this->_simpleRequest('/g2hasher.G2Hasher/GetLastException',
         $argument,
         ['\G2hasher\GetLastExceptionResponse', 'decode'],
         $metadata, $options);
@@ -80,7 +80,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function GetLastExceptionCode(\G2hasher\GetLastExceptionCodeRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2hasher.G2Diagnostic/GetLastExceptionCode',
+        return $this->_simpleRequest('/g2hasher.G2Hasher/GetLastExceptionCode',
         $argument,
         ['\G2hasher\GetLastExceptionCodeResponse', 'decode'],
         $metadata, $options);
@@ -94,7 +94,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function Init(\G2hasher\InitRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2hasher.G2Diagnostic/Init',
+        return $this->_simpleRequest('/g2hasher.G2Hasher/Init',
         $argument,
         ['\G2hasher\InitResponse', 'decode'],
         $metadata, $options);
@@ -108,7 +108,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function InitWithConfig(\G2hasher\InitWithConfigRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2hasher.G2Diagnostic/InitWithConfig',
+        return $this->_simpleRequest('/g2hasher.G2Hasher/InitWithConfig',
         $argument,
         ['\G2hasher\InitWithConfigResponse', 'decode'],
         $metadata, $options);
@@ -122,7 +122,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function Process(\G2hasher\ProcessRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2hasher.G2Diagnostic/Process',
+        return $this->_simpleRequest('/g2hasher.G2Hasher/Process',
         $argument,
         ['\G2hasher\ProcessResponse', 'decode'],
         $metadata, $options);

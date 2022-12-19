@@ -9,9 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>g2engine.AddRecordRequestRequest</code>
+ * Generated from protobuf message <code>g2engine.AddRecordRequest</code>
  */
-class AddRecordRequestRequest extends \Google\Protobuf\Internal\Message
+class AddRecordRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string dataSourceCode = 1;</code>

@@ -27,10 +27,10 @@
 
 namespace g2configmgr {
 
-class G2Diagnostic final {
+class G2ConfigMgr final {
  public:
   static constexpr char const* service_full_name() {
-    return "g2configmgr.G2Diagnostic";
+    return "g2configmgr.G2ConfigMgr";
   }
   class StubInterface {
    public:

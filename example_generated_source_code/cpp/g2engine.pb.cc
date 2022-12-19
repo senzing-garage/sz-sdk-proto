@@ -21,33 +21,33 @@ namespace _pb = ::PROTOBUF_NAMESPACE_ID;
 namespace _pbi = _pb::internal;
 
 namespace g2engine {
-PROTOBUF_CONSTEXPR AddRecordRequestRequest::AddRecordRequestRequest(
+PROTOBUF_CONSTEXPR AddRecordRequest::AddRecordRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.datasourcecode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.recordid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.jsondata_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.loadid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_._cached_size_)*/{}} {}
-struct AddRecordRequestRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR AddRecordRequestRequestDefaultTypeInternal()
+struct AddRecordRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR AddRecordRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~AddRecordRequestRequestDefaultTypeInternal() {}
+  ~AddRecordRequestDefaultTypeInternal() {}
   union {
-    AddRecordRequestRequest _instance;
+    AddRecordRequest _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AddRecordRequestRequestDefaultTypeInternal _AddRecordRequestRequest_default_instance_;
-PROTOBUF_CONSTEXPR AddRecordResponseResponse::AddRecordResponseResponse(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AddRecordRequestDefaultTypeInternal _AddRecordRequest_default_instance_;
+PROTOBUF_CONSTEXPR AddRecordResponse::AddRecordResponse(
     ::_pbi::ConstantInitialized) {}
-struct AddRecordResponseResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR AddRecordResponseResponseDefaultTypeInternal()
+struct AddRecordResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR AddRecordResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~AddRecordResponseResponseDefaultTypeInternal() {}
+  ~AddRecordResponseDefaultTypeInternal() {}
   union {
-    AddRecordResponseResponse _instance;
+    AddRecordResponse _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AddRecordResponseResponseDefaultTypeInternal _AddRecordResponseResponse_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AddRecordResponseDefaultTypeInternal _AddRecordResponse_default_instance_;
 PROTOBUF_CONSTEXPR AddRecordWithInfoRequest::AddRecordWithInfoRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.datasourcecode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -2110,17 +2110,17 @@ static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors
 
 const uint32_t TableStruct_g2engine_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::g2engine::AddRecordRequestRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::g2engine::AddRecordRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::g2engine::AddRecordRequestRequest, _impl_.datasourcecode_),
-  PROTOBUF_FIELD_OFFSET(::g2engine::AddRecordRequestRequest, _impl_.recordid_),
-  PROTOBUF_FIELD_OFFSET(::g2engine::AddRecordRequestRequest, _impl_.jsondata_),
-  PROTOBUF_FIELD_OFFSET(::g2engine::AddRecordRequestRequest, _impl_.loadid_),
+  PROTOBUF_FIELD_OFFSET(::g2engine::AddRecordRequest, _impl_.datasourcecode_),
+  PROTOBUF_FIELD_OFFSET(::g2engine::AddRecordRequest, _impl_.recordid_),
+  PROTOBUF_FIELD_OFFSET(::g2engine::AddRecordRequest, _impl_.jsondata_),
+  PROTOBUF_FIELD_OFFSET(::g2engine::AddRecordRequest, _impl_.loadid_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::g2engine::AddRecordResponseResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::g2engine::AddRecordResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
@@ -3297,8 +3297,8 @@ const uint32_t TableStruct_g2engine_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE
   PROTOBUF_FIELD_OFFSET(::g2engine::WhyRecords_V2Response, _impl_.result_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::g2engine::AddRecordRequestRequest)},
-  { 10, -1, -1, sizeof(::g2engine::AddRecordResponseResponse)},
+  { 0, -1, -1, sizeof(::g2engine::AddRecordRequest)},
+  { 10, -1, -1, sizeof(::g2engine::AddRecordResponse)},
   { 16, -1, -1, sizeof(::g2engine::AddRecordWithInfoRequest)},
   { 27, -1, -1, sizeof(::g2engine::AddRecordWithInfoResponse)},
   { 34, -1, -1, sizeof(::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest)},
@@ -3454,8 +3454,8 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-  &::g2engine::_AddRecordRequestRequest_default_instance_._instance,
-  &::g2engine::_AddRecordResponseResponse_default_instance_._instance,
+  &::g2engine::_AddRecordRequest_default_instance_._instance,
+  &::g2engine::_AddRecordResponse_default_instance_._instance,
   &::g2engine::_AddRecordWithInfoRequest_default_instance_._instance,
   &::g2engine::_AddRecordWithInfoResponse_default_instance_._instance,
   &::g2engine::_AddRecordWithInfoWithReturnedRecordIDRequest_default_instance_._instance,
@@ -3611,457 +3611,456 @@ static const ::_pb::Message* const file_default_instances[] = {
 };
 
 const char descriptor_table_protodef_g2engine_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\016g2engine.proto\022\010g2engine\"e\n\027AddRecordR"
-  "equestRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n"
-  "\010recordID\030\002 \001(\t\022\020\n\010jsonData\030\003 \001(\t\022\016\n\006loa"
-  "dID\030\004 \001(\t\"\033\n\031AddRecordResponseResponse\"u"
-  "\n\030AddRecordWithInfoRequest\022\026\n\016dataSource"
-  "Code\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\022\020\n\010jsonData"
-  "\030\003 \001(\t\022\016\n\006loadID\030\004 \001(\t\022\r\n\005flags\030\005 \001(\003\"+\n"
-  "\031AddRecordWithInfoResponse\022\016\n\006result\030\001 \001"
-  "(\t\"w\n,AddRecordWithInfoWithReturnedRecor"
-  "dIDRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010js"
-  "onData\030\002 \001(\t\022\016\n\006loadID\030\003 \001(\t\022\r\n\005flags\030\004 "
-  "\001(\003\"S\n-AddRecordWithInfoWithReturnedReco"
-  "rdIDResponse\022\020\n\010withInfo\030\001 \001(\t\022\020\n\010record"
-  "ID\030\002 \001(\t\"`\n$AddRecordWithReturnedRecordI"
-  "DRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010json"
-  "Data\030\002 \001(\t\022\016\n\006loadID\030\003 \001(\t\"7\n%AddRecordW"
-  "ithReturnedRecordIDResponse\022\016\n\006result\030\001 "
-  "\001(\t\"=\n\022CheckRecordRequest\022\016\n\006record\030\001 \001("
-  "\t\022\027\n\017recordQueryList\030\002 \001(\t\"%\n\023CheckRecor"
-  "dResponse\022\016\n\006result\030\001 \001(\t\"\033\n\031ClearLastEx"
-  "ceptionRequest\"\034\n\032ClearLastExceptionResp"
-  "onse\",\n\022CloseExportRequest\022\026\n\016responseHa"
-  "ndle\030\001 \001(\t\"\025\n\023CloseExportResponse\"\031\n\027Cou"
-  "ntRedoRecordsRequest\"*\n\030CountRedoRecords"
-  "Response\022\016\n\006result\030\001 \001(\003\"O\n\023DeleteRecord"
-  "Request\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recor"
-  "dID\030\002 \001(\t\022\016\n\006loadID\030\003 \001(\t\"\026\n\024DeleteRecor"
-  "dResponse\"f\n\033DeleteRecordWithInfoRequest"
-  "\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001"
-  "(\t\022\016\n\006loadID\030\003 \001(\t\022\r\n\005flags\030\004 \001(\003\".\n\034Del"
-  "eteRecordWithInfoResponse\022\016\n\006result\030\001 \001("
-  "\t\"\020\n\016DestroyRequest\"\021\n\017DestroyResponse\"\025"
-  "\n\023ExportConfigRequest\"&\n\024ExportConfigRes"
-  "ponse\022\016\n\006result\030\001 \001(\t\" \n\036ExportConfigAnd"
-  "ConfigIDRequest\"C\n\037ExportConfigAndConfig"
-  "IDResponse\022\016\n\006config\030\001 \001(\t\022\020\n\010configID\030\002"
-  " \001(\003\"D\n\034ExportCSVEntityReportRequest\022\025\n\r"
-  "csvColumnList\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"/\n\035Ex"
-  "portCSVEntityReportResponse\022\016\n\006result\030\001 "
-  "\001(\t\".\n\035ExportJSONEntityReportRequest\022\r\n\005"
-  "flags\030\001 \001(\003\"0\n\036ExportJSONEntityReportRes"
-  "ponse\022\016\n\006result\030\001 \001(\t\"*\n\020FetchNextReques"
-  "t\022\026\n\016responseHandle\030\001 \001(\t\"#\n\021FetchNextRe"
-  "sponse\022\016\n\006result\030\001 \001(\t\"K\n(FindInterestin"
-  "gEntitiesByEntityIDRequest\022\020\n\010entityID\030\001"
-  " \001(\003\022\r\n\005flags\030\002 \001(\003\";\n)FindInterestingEn"
-  "titiesByEntityIDResponse\022\016\n\006result\030\001 \001(\t"
-  "\"c\n(FindInterestingEntitiesByRecordIDReq"
-  "uest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordID"
-  "\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\";\n)FindInteresting"
-  "EntitiesByRecordIDResponse\022\016\n\006result\030\001 \001"
-  "(\t\"r\n\034FindNetworkByEntityIDRequest\022\022\n\nen"
-  "tityList\030\001 \001(\t\022\021\n\tmaxDegree\030\002 \001(\005\022\026\n\016bui"
-  "ldOutDegree\030\003 \001(\005\022\023\n\013maxEntities\030\004 \001(\005\"/"
-  "\n\035FindNetworkByEntityIDResponse\022\016\n\006resul"
-  "t\030\001 \001(\t\"\204\001\n\037FindNetworkByEntityID_V2Requ"
-  "est\022\022\n\nentityList\030\001 \001(\t\022\021\n\tmaxDegree\030\002 \001"
-  "(\005\022\026\n\016buildOutDegree\030\003 \001(\005\022\023\n\013maxEntitie"
-  "s\030\004 \001(\005\022\r\n\005flags\030\005 \001(\003\"2\n FindNetworkByE"
-  "ntityID_V2Response\022\016\n\006result\030\001 \001(\t\"r\n\034Fi"
-  "ndNetworkByRecordIDRequest\022\022\n\nrecordList"
-  "\030\001 \001(\t\022\021\n\tmaxDegree\030\002 \001(\005\022\026\n\016buildOutDeg"
-  "ree\030\003 \001(\005\022\023\n\013maxEntities\030\004 \001(\005\"/\n\035FindNe"
-  "tworkByRecordIDResponse\022\016\n\006result\030\001 \001(\t\""
-  "\204\001\n\037FindNetworkByRecordID_V2Request\022\022\n\nr"
-  "ecordList\030\001 \001(\t\022\021\n\tmaxDegree\030\002 \001(\005\022\026\n\016bu"
-  "ildOutDegree\030\003 \001(\005\022\023\n\013maxEntities\030\004 \001(\005\022"
-  "\r\n\005flags\030\005 \001(\003\"2\n FindNetworkByRecordID_"
-  "V2Response\022\016\n\006result\030\001 \001(\t\"T\n\031FindPathBy"
+  "\n\016g2engine.proto\022\010g2engine\"^\n\020AddRecordR"
+  "equest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010record"
+  "ID\030\002 \001(\t\022\020\n\010jsonData\030\003 \001(\t\022\016\n\006loadID\030\004 \001"
+  "(\t\"\023\n\021AddRecordResponse\"u\n\030AddRecordWith"
+  "InfoRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010r"
+  "ecordID\030\002 \001(\t\022\020\n\010jsonData\030\003 \001(\t\022\016\n\006loadI"
+  "D\030\004 \001(\t\022\r\n\005flags\030\005 \001(\003\"+\n\031AddRecordWithI"
+  "nfoResponse\022\016\n\006result\030\001 \001(\t\"w\n,AddRecord"
+  "WithInfoWithReturnedRecordIDRequest\022\026\n\016d"
+  "ataSourceCode\030\001 \001(\t\022\020\n\010jsonData\030\002 \001(\t\022\016\n"
+  "\006loadID\030\003 \001(\t\022\r\n\005flags\030\004 \001(\003\"S\n-AddRecor"
+  "dWithInfoWithReturnedRecordIDResponse\022\020\n"
+  "\010withInfo\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\"`\n$Add"
+  "RecordWithReturnedRecordIDRequest\022\026\n\016dat"
+  "aSourceCode\030\001 \001(\t\022\020\n\010jsonData\030\002 \001(\t\022\016\n\006l"
+  "oadID\030\003 \001(\t\"7\n%AddRecordWithReturnedReco"
+  "rdIDResponse\022\016\n\006result\030\001 \001(\t\"=\n\022CheckRec"
+  "ordRequest\022\016\n\006record\030\001 \001(\t\022\027\n\017recordQuer"
+  "yList\030\002 \001(\t\"%\n\023CheckRecordResponse\022\016\n\006re"
+  "sult\030\001 \001(\t\"\033\n\031ClearLastExceptionRequest\""
+  "\034\n\032ClearLastExceptionResponse\",\n\022CloseEx"
+  "portRequest\022\026\n\016responseHandle\030\001 \001(\t\"\025\n\023C"
+  "loseExportResponse\"\031\n\027CountRedoRecordsRe"
+  "quest\"*\n\030CountRedoRecordsResponse\022\016\n\006res"
+  "ult\030\001 \001(\003\"O\n\023DeleteRecordRequest\022\026\n\016data"
+  "SourceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\022\016\n\006lo"
+  "adID\030\003 \001(\t\"\026\n\024DeleteRecordResponse\"f\n\033De"
+  "leteRecordWithInfoRequest\022\026\n\016dataSourceC"
+  "ode\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\022\016\n\006loadID\030\003 "
+  "\001(\t\022\r\n\005flags\030\004 \001(\003\".\n\034DeleteRecordWithIn"
+  "foResponse\022\016\n\006result\030\001 \001(\t\"\020\n\016DestroyReq"
+  "uest\"\021\n\017DestroyResponse\"\025\n\023ExportConfigR"
+  "equest\"&\n\024ExportConfigResponse\022\016\n\006result"
+  "\030\001 \001(\t\" \n\036ExportConfigAndConfigIDRequest"
+  "\"C\n\037ExportConfigAndConfigIDResponse\022\016\n\006c"
+  "onfig\030\001 \001(\t\022\020\n\010configID\030\002 \001(\003\"D\n\034ExportC"
+  "SVEntityReportRequest\022\025\n\rcsvColumnList\030\001"
+  " \001(\t\022\r\n\005flags\030\002 \001(\003\"/\n\035ExportCSVEntityRe"
+  "portResponse\022\016\n\006result\030\001 \001(\t\".\n\035ExportJS"
+  "ONEntityReportRequest\022\r\n\005flags\030\001 \001(\003\"0\n\036"
+  "ExportJSONEntityReportResponse\022\016\n\006result"
+  "\030\001 \001(\t\"*\n\020FetchNextRequest\022\026\n\016responseHa"
+  "ndle\030\001 \001(\t\"#\n\021FetchNextResponse\022\016\n\006resul"
+  "t\030\001 \001(\t\"K\n(FindInterestingEntitiesByEnti"
+  "tyIDRequest\022\020\n\010entityID\030\001 \001(\003\022\r\n\005flags\030\002"
+  " \001(\003\";\n)FindInterestingEntitiesByEntityI"
+  "DResponse\022\016\n\006result\030\001 \001(\t\"c\n(FindInteres"
+  "tingEntitiesByRecordIDRequest\022\026\n\016dataSou"
+  "rceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\022\r\n\005flags"
+  "\030\003 \001(\003\";\n)FindInterestingEntitiesByRecor"
+  "dIDResponse\022\016\n\006result\030\001 \001(\t\"r\n\034FindNetwo"
+  "rkByEntityIDRequest\022\022\n\nentityList\030\001 \001(\t\022"
+  "\021\n\tmaxDegree\030\002 \001(\005\022\026\n\016buildOutDegree\030\003 \001"
+  "(\005\022\023\n\013maxEntities\030\004 \001(\005\"/\n\035FindNetworkBy"
+  "EntityIDResponse\022\016\n\006result\030\001 \001(\t\"\204\001\n\037Fin"
+  "dNetworkByEntityID_V2Request\022\022\n\nentityLi"
+  "st\030\001 \001(\t\022\021\n\tmaxDegree\030\002 \001(\005\022\026\n\016buildOutD"
+  "egree\030\003 \001(\005\022\023\n\013maxEntities\030\004 \001(\005\022\r\n\005flag"
+  "s\030\005 \001(\003\"2\n FindNetworkByEntityID_V2Respo"
+  "nse\022\016\n\006result\030\001 \001(\t\"r\n\034FindNetworkByReco"
+  "rdIDRequest\022\022\n\nrecordList\030\001 \001(\t\022\021\n\tmaxDe"
+  "gree\030\002 \001(\005\022\026\n\016buildOutDegree\030\003 \001(\005\022\023\n\013ma"
+  "xEntities\030\004 \001(\005\"/\n\035FindNetworkByRecordID"
+  "Response\022\016\n\006result\030\001 \001(\t\"\204\001\n\037FindNetwork"
+  "ByRecordID_V2Request\022\022\n\nrecordList\030\001 \001(\t"
+  "\022\021\n\tmaxDegree\030\002 \001(\005\022\026\n\016buildOutDegree\030\003 "
+  "\001(\005\022\023\n\013maxEntities\030\004 \001(\005\022\r\n\005flags\030\005 \001(\003\""
+  "2\n FindNetworkByRecordID_V2Response\022\016\n\006r"
+  "esult\030\001 \001(\t\"T\n\031FindPathByEntityIDRequest"
+  "\022\021\n\tentityID1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\022\021"
+  "\n\tmaxDegree\030\003 \001(\005\",\n\032FindPathByEntityIDR"
+  "esponse\022\016\n\006result\030\001 \001(\t\"f\n\034FindPathByEnt"
+  "ityID_V2Request\022\021\n\tentityID1\030\001 \001(\003\022\021\n\ten"
+  "tityID2\030\002 \001(\003\022\021\n\tmaxDegree\030\003 \001(\005\022\r\n\005flag"
+  "s\030\004 \001(\003\"/\n\035FindPathByEntityID_V2Response"
+  "\022\016\n\006result\030\001 \001(\t\"\206\001\n\031FindPathByRecordIDR"
+  "equest\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trecor"
+  "dID1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\tr"
+  "ecordID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001(\005\",\n\032Fin"
+  "dPathByRecordIDResponse\022\016\n\006result\030\001 \001(\t\""
+  "\230\001\n\034FindPathByRecordID_V2Request\022\027\n\017data"
+  "SourceCode1\030\001 \001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n\017"
+  "dataSourceCode2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001(\t"
+  "\022\021\n\tmaxDegree\030\005 \001(\005\022\r\n\005flags\030\006 \001(\003\"/\n\035Fi"
+  "ndPathByRecordID_V2Response\022\016\n\006result\030\001 "
+  "\001(\t\"w\n\"FindPathExcludingByEntityIDReques"
+  "t\022\021\n\tentityID1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\022"
+  "\021\n\tmaxDegree\030\003 \001(\005\022\030\n\020excludedEntities\030\004"
+  " \001(\t\"5\n#FindPathExcludingByEntityIDRespo"
+  "nse\022\016\n\006result\030\001 \001(\t\"\211\001\n%FindPathExcludin"
+  "gByEntityID_V2Request\022\021\n\tentityID1\030\001 \001(\003"
+  "\022\021\n\tentityID2\030\002 \001(\003\022\021\n\tmaxDegree\030\003 \001(\005\022\030"
+  "\n\020excludedEntities\030\004 \001(\t\022\r\n\005flags\030\005 \001(\003\""
+  "8\n&FindPathExcludingByEntityID_V2Respons"
+  "e\022\016\n\006result\030\001 \001(\t\"\250\001\n\"FindPathExcludingB"
+  "yRecordIDRequest\022\027\n\017dataSourceCode1\030\001 \001("
+  "\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n\017dataSourceCode2\030"
+  "\003 \001(\t\022\021\n\trecordID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 "
+  "\001(\005\022\027\n\017excludedRecords\030\006 \001(\t\"5\n#FindPath"
+  "ExcludingByRecordIDResponse\022\016\n\006result\030\001 "
+  "\001(\t\"\272\001\n%FindPathExcludingByRecordID_V2Re"
+  "quest\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trecord"
+  "ID1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\tre"
+  "cordID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001(\005\022\027\n\017excl"
+  "udedRecords\030\006 \001(\t\022\r\n\005flags\030\007 \001(\003\"8\n&Find"
+  "PathExcludingByRecordID_V2Response\022\016\n\006re"
+  "sult\030\001 \001(\t\"\224\001\n(FindPathIncludingSourceBy"
   "EntityIDRequest\022\021\n\tentityID1\030\001 \001(\003\022\021\n\ten"
-  "tityID2\030\002 \001(\003\022\021\n\tmaxDegree\030\003 \001(\005\",\n\032Find"
-  "PathByEntityIDResponse\022\016\n\006result\030\001 \001(\t\"f"
-  "\n\034FindPathByEntityID_V2Request\022\021\n\tentity"
-  "ID1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\022\021\n\tmaxDegre"
-  "e\030\003 \001(\005\022\r\n\005flags\030\004 \001(\003\"/\n\035FindPathByEnti"
-  "tyID_V2Response\022\016\n\006result\030\001 \001(\t\"\206\001\n\031Find"
-  "PathByRecordIDRequest\022\027\n\017dataSourceCode1"
-  "\030\001 \001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n\017dataSourceC"
-  "ode2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001(\t\022\021\n\tmaxDegr"
-  "ee\030\005 \001(\005\",\n\032FindPathByRecordIDResponse\022\016"
-  "\n\006result\030\001 \001(\t\"\230\001\n\034FindPathByRecordID_V2"
-  "Request\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\treco"
-  "rdID1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\t"
-  "recordID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001(\005\022\r\n\005fl"
-  "ags\030\006 \001(\003\"/\n\035FindPathByRecordID_V2Respon"
-  "se\022\016\n\006result\030\001 \001(\t\"w\n\"FindPathExcludingB"
-  "yEntityIDRequest\022\021\n\tentityID1\030\001 \001(\003\022\021\n\te"
-  "ntityID2\030\002 \001(\003\022\021\n\tmaxDegree\030\003 \001(\005\022\030\n\020exc"
-  "ludedEntities\030\004 \001(\t\"5\n#FindPathExcluding"
-  "ByEntityIDResponse\022\016\n\006result\030\001 \001(\t\"\211\001\n%F"
-  "indPathExcludingByEntityID_V2Request\022\021\n\t"
-  "entityID1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\022\021\n\tma"
-  "xDegree\030\003 \001(\005\022\030\n\020excludedEntities\030\004 \001(\t\022"
-  "\r\n\005flags\030\005 \001(\003\"8\n&FindPathExcludingByEnt"
-  "ityID_V2Response\022\016\n\006result\030\001 \001(\t\"\250\001\n\"Fin"
-  "dPathExcludingByRecordIDRequest\022\027\n\017dataS"
-  "ourceCode1\030\001 \001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n\017d"
-  "ataSourceCode2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001(\t\022"
-  "\021\n\tmaxDegree\030\005 \001(\005\022\027\n\017excludedRecords\030\006 "
-  "\001(\t\"5\n#FindPathExcludingByRecordIDRespon"
-  "se\022\016\n\006result\030\001 \001(\t\"\272\001\n%FindPathExcluding"
-  "ByRecordID_V2Request\022\027\n\017dataSourceCode1\030"
-  "\001 \001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n\017dataSourceCo"
-  "de2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001(\t\022\021\n\tmaxDegre"
-  "e\030\005 \001(\005\022\027\n\017excludedRecords\030\006 \001(\t\022\r\n\005flag"
-  "s\030\007 \001(\003\"8\n&FindPathExcludingByRecordID_V"
-  "2Response\022\016\n\006result\030\001 \001(\t\"\224\001\n(FindPathIn"
-  "cludingSourceByEntityIDRequest\022\021\n\tentity"
+  "tityID2\030\002 \001(\003\022\021\n\tmaxDegree\030\003 \001(\005\022\030\n\020excl"
+  "udedEntities\030\004 \001(\t\022\025\n\rrequiredDsrcs\030\005 \001("
+  "\t\";\n)FindPathIncludingSourceByEntityIDRe"
+  "sponse\022\016\n\006result\030\001 \001(\t\"\246\001\n+FindPathInclu"
+  "dingSourceByEntityID_V2Request\022\021\n\tentity"
   "ID1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\022\021\n\tmaxDegre"
   "e\030\003 \001(\005\022\030\n\020excludedEntities\030\004 \001(\t\022\025\n\rreq"
-  "uiredDsrcs\030\005 \001(\t\";\n)FindPathIncludingSou"
-  "rceByEntityIDResponse\022\016\n\006result\030\001 \001(\t\"\246\001"
-  "\n+FindPathIncludingSourceByEntityID_V2Re"
-  "quest\022\021\n\tentityID1\030\001 \001(\003\022\021\n\tentityID2\030\002 "
-  "\001(\003\022\021\n\tmaxDegree\030\003 \001(\005\022\030\n\020excludedEntiti"
-  "es\030\004 \001(\t\022\025\n\rrequiredDsrcs\030\005 \001(\t\022\r\n\005flags"
-  "\030\006 \001(\003\">\n,FindPathIncludingSourceByEntit"
-  "yID_V2Response\022\016\n\006result\030\001 \001(\t\"\305\001\n(FindP"
-  "athIncludingSourceByRecordIDRequest\022\027\n\017d"
-  "ataSourceCode1\030\001 \001(\t\022\021\n\trecordID1\030\002 \001(\t\022"
-  "\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\trecordID2\030\004 "
-  "\001(\t\022\021\n\tmaxDegree\030\005 \001(\005\022\027\n\017excludedRecord"
-  "s\030\006 \001(\t\022\025\n\rrequiredDsrcs\030\007 \001(\t\";\n)FindPa"
-  "thIncludingSourceByRecordIDResponse\022\016\n\006r"
-  "esult\030\001 \001(\t\"\327\001\n+FindPathIncludingSourceB"
-  "yRecordID_V2Request\022\027\n\017dataSourceCode1\030\001"
-  " \001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n\017dataSourceCod"
-  "e2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001(\t\022\021\n\tmaxDegree"
-  "\030\005 \001(\005\022\027\n\017excludedRecords\030\006 \001(\t\022\025\n\rrequi"
-  "redDsrcs\030\007 \001(\t\022\r\n\005flags\030\010 \001(\003\">\n,FindPat"
-  "hIncludingSourceByRecordID_V2Response\022\016\n"
-  "\006result\030\001 \001(\t\"\032\n\030GetActiveConfigIDReques"
-  "t\"+\n\031GetActiveConfigIDResponse\022\016\n\006result"
-  "\030\001 \001(\003\".\n\032GetEntityByEntityIDRequest\022\020\n\010"
-  "entityID\030\001 \001(\003\"-\n\033GetEntityByEntityIDRes"
-  "ponse\022\016\n\006result\030\001 \001(\t\"@\n\035GetEntityByEnti"
-  "tyID_V2Request\022\020\n\010entityID\030\001 \001(\003\022\r\n\005flag"
-  "s\030\002 \001(\003\"0\n\036GetEntityByEntityID_V2Respons"
-  "e\022\016\n\006result\030\001 \001(\t\"F\n\032GetEntityByRecordID"
-  "Request\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recor"
-  "dID\030\002 \001(\t\"-\n\033GetEntityByRecordIDResponse"
-  "\022\016\n\006result\030\001 \001(\t\"X\n\035GetEntityByRecordID_"
-  "V2Request\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010rec"
-  "ordID\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"0\n\036GetEntityB"
-  "yRecordID_V2Response\022\016\n\006result\030\001 \001(\t\"\031\n\027"
-  "GetLastExceptionRequest\"*\n\030GetLastExcept"
-  "ionResponse\022\016\n\006result\030\001 \001(\t\"\035\n\033GetLastEx"
-  "ceptionCodeRequest\".\n\034GetLastExceptionCo"
-  "deResponse\022\016\n\006result\030\001 \001(\005\"<\n\020GetRecordR"
-  "equest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010record"
-  "ID\030\002 \001(\t\"#\n\021GetRecordResponse\022\016\n\006result\030"
-  "\001 \001(\t\"N\n\023GetRecord_V2Request\022\026\n\016dataSour"
-  "ceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\022\r\n\005flags\030"
-  "\003 \001(\003\"&\n\024GetRecord_V2Response\022\016\n\006result\030"
-  "\001 \001(\t\"\026\n\024GetRedoRecordRequest\"\'\n\025GetRedo"
-  "RecordResponse\022\016\n\006result\030\001 \001(\t\"&\n$GetRep"
-  "ositoryLastModifiedTimeRequest\"7\n%GetRep"
-  "ositoryLastModifiedTimeResponse\022\016\n\006resul"
-  "t\030\001 \001(\003\"7\n!GetVirtualEntityByRecordIDReq"
-  "uest\022\022\n\nrecordList\030\001 \001(\t\"4\n\"GetVirtualEn"
-  "tityByRecordIDResponse\022\016\n\006result\030\001 \001(\t\"I"
-  "\n$GetVirtualEntityByRecordID_V2Request\022\022"
-  "\n\nrecordList\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"7\n%Get"
-  "VirtualEntityByRecordID_V2Response\022\016\n\006re"
-  "sult\030\001 \001(\t\".\n\032HowEntityByEntityIDRequest"
-  "\022\020\n\010entityID\030\001 \001(\003\"-\n\033HowEntityByEntityI"
-  "DResponse\022\016\n\006result\030\001 \001(\t\"@\n\035HowEntityBy"
-  "EntityID_V2Request\022\020\n\010entityID\030\001 \001(\003\022\r\n\005"
-  "flags\030\002 \001(\003\"0\n\036HowEntityByEntityID_V2Res"
-  "ponse\022\016\n\006result\030\001 \001(\t\"L\n\013InitRequest\022\022\n\n"
-  "moduleName\030\001 \001(\t\022\021\n\tiniParams\030\002 \001(\t\022\026\n\016v"
-  "erboseLogging\030\003 \001(\005\"\016\n\014InitResponse\"n\n\027I"
-  "nitWithConfigIDRequest\022\022\n\nmoduleName\030\001 \001"
-  "(\t\022\021\n\tiniParams\030\002 \001(\t\022\024\n\014initConfigID\030\003 "
-  "\001(\003\022\026\n\016verboseLogging\030\004 \001(\005\"\032\n\030InitWithC"
-  "onfigIDResponse\"\024\n\022PrimeEngineRequest\"\025\n"
-  "\023PrimeEngineResponse\" \n\016ProcessRequest\022\016"
-  "\n\006record\030\001 \001(\t\"\021\n\017ProcessResponse\"\032\n\030Pro"
-  "cessRedoRecordRequest\"+\n\031ProcessRedoReco"
-  "rdResponse\022\016\n\006result\030\001 \001(\t\"1\n ProcessRed"
-  "oRecordWithInfoRequest\022\r\n\005flags\030\001 \001(\003\"E\n"
-  "!ProcessRedoRecordWithInfoResponse\022\016\n\006re"
-  "sult\030\001 \001(\t\022\020\n\010withInfo\030\002 \001(\t\"7\n\026ProcessW"
-  "ithInfoRequest\022\016\n\006record\030\001 \001(\t\022\r\n\005flags\030"
-  "\002 \001(\003\")\n\027ProcessWithInfoResponse\022\016\n\006resu"
-  "lt\030\001 \001(\t\",\n\032ProcessWithResponseRequest\022\016"
-  "\n\006record\030\001 \001(\t\"-\n\033ProcessWithResponseRes"
-  "ponse\022\016\n\006result\030\001 \001(\t\"2\n ProcessWithResp"
-  "onseResizeRequest\022\016\n\006record\030\001 \001(\t\"3\n!Pro"
-  "cessWithResponseResizeResponse\022\016\n\006result"
-  "\030\001 \001(\t\"\030\n\026PurgeRepositoryRequest\"\031\n\027Purg"
-  "eRepositoryResponse\":\n\027ReevaluateEntityR"
-  "equest\022\020\n\010entityID\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\""
-  "\032\n\030ReevaluateEntityResponse\"B\n\037Reevaluat"
-  "eEntityWithInfoRequest\022\020\n\010entityID\030\001 \001(\003"
-  "\022\r\n\005flags\030\002 \001(\003\"2\n ReevaluateEntityWithI"
-  "nfoResponse\022\016\n\006result\030\001 \001(\t\"R\n\027Reevaluat"
-  "eRecordRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020"
-  "\n\010recordID\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"\032\n\030Reeva"
-  "luateRecordResponse\"Z\n\037ReevaluateRecordW"
-  "ithInfoRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020"
-  "\n\010recordID\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"2\n Reeva"
-  "luateRecordWithInfoResponse\022\016\n\006result\030\001 "
-  "\001(\t\"%\n\rReinitRequest\022\024\n\014initConfigID\030\001 \001"
-  "(\003\"\020\n\016ReinitResponse\"b\n\024ReplaceRecordReq"
-  "uest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordID"
-  "\030\002 \001(\t\022\020\n\010jsonData\030\003 \001(\t\022\016\n\006loadID\030\004 \001(\t"
-  "\"\027\n\025ReplaceRecordResponse\"y\n\034ReplaceReco"
-  "rdWithInfoRequest\022\026\n\016dataSourceCode\030\001 \001("
-  "\t\022\020\n\010recordID\030\002 \001(\t\022\020\n\010jsonData\030\003 \001(\t\022\016\n"
-  "\006loadID\030\004 \001(\t\022\r\n\005flags\030\005 \001(\003\"/\n\035ReplaceR"
-  "ecordWithInfoResponse\022\016\n\006result\030\001 \001(\t\"-\n"
-  "\031SearchByAttributesRequest\022\020\n\010jsonData\030\001"
-  " \001(\t\",\n\032SearchByAttributesResponse\022\016\n\006re"
-  "sult\030\001 \001(\t\"\?\n\034SearchByAttributes_V2Reque"
-  "st\022\020\n\010jsonData\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"/\n\035S"
-  "earchByAttributes_V2Response\022\016\n\006result\030\001"
-  " \001(\t\"\016\n\014StatsRequest\"\037\n\rStatsResponse\022\016\n"
-  "\006result\030\001 \001(\t\":\n\022WhyEntitiesRequest\022\021\n\te"
-  "ntityID1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\"%\n\023Why"
-  "EntitiesResponse\022\016\n\006result\030\001 \001(\t\"L\n\025WhyE"
-  "ntities_V2Request\022\021\n\tentityID1\030\001 \001(\003\022\021\n\t"
-  "entityID2\030\002 \001(\003\022\r\n\005flags\030\003 \001(\003\"(\n\026WhyEnt"
-  "ities_V2Response\022\016\n\006result\030\001 \001(\t\".\n\032WhyE"
-  "ntityByEntityIDRequest\022\020\n\010entityID\030\001 \001(\003"
-  "\"-\n\033WhyEntityByEntityIDResponse\022\016\n\006resul"
-  "t\030\001 \001(\t\"@\n\035WhyEntityByEntityID_V2Request"
-  "\022\020\n\010entityID\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"0\n\036Why"
-  "EntityByEntityID_V2Response\022\016\n\006result\030\001 "
-  "\001(\t\"F\n\032WhyEntityByRecordIDRequest\022\026\n\016dat"
-  "aSourceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\"-\n\033W"
-  "hyEntityByRecordIDResponse\022\016\n\006result\030\001 \001"
-  "(\t\"X\n\035WhyEntityByRecordID_V2Request\022\026\n\016d"
-  "ataSourceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\022\r\n"
-  "\005flags\030\003 \001(\003\"0\n\036WhyEntityByRecordID_V2Re"
-  "sponse\022\016\n\006result\030\001 \001(\t\"k\n\021WhyRecordsRequ"
-  "est\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trecordID"
-  "1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\treco"
-  "rdID2\030\004 \001(\t\"$\n\022WhyRecordsResponse\022\016\n\006res"
-  "ult\030\001 \001(\t\"}\n\024WhyRecords_V2Request\022\027\n\017dat"
-  "aSourceCode1\030\001 \001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n"
-  "\017dataSourceCode2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001("
-  "\t\022\r\n\005flags\030\005 \001(\003\"\'\n\025WhyRecords_V2Respons"
-  "e\022\016\n\006result\030\001 \001(\t2\314>\n\014G2Diagnostic\022U\n\tAd"
-  "dRecord\022!.g2engine.AddRecordRequestReque"
-  "st\032#.g2engine.AddRecordResponseResponse\""
-  "\000\022^\n\021AddRecordWithInfo\022\".g2engine.AddRec"
-  "ordWithInfoRequest\032#.g2engine.AddRecordW"
-  "ithInfoResponse\"\000\022\232\001\n%AddRecordWithInfoW"
-  "ithReturnedRecordID\0226.g2engine.AddRecord"
-  "WithInfoWithReturnedRecordIDRequest\0327.g2"
-  "engine.AddRecordWithInfoWithReturnedReco"
-  "rdIDResponse\"\000\022\202\001\n\035AddRecordWithReturned"
-  "RecordID\022..g2engine.AddRecordWithReturne"
-  "dRecordIDRequest\032/.g2engine.AddRecordWit"
-  "hReturnedRecordIDResponse\"\000\022L\n\013CheckReco"
-  "rd\022\034.g2engine.CheckRecordRequest\032\035.g2eng"
-  "ine.CheckRecordResponse\"\000\022a\n\022ClearLastEx"
-  "ception\022#.g2engine.ClearLastExceptionReq"
-  "uest\032$.g2engine.ClearLastExceptionRespon"
-  "se\"\000\022L\n\013CloseExport\022\034.g2engine.CloseExpo"
-  "rtRequest\032\035.g2engine.CloseExportResponse"
-  "\"\000\022[\n\020CountRedoRecords\022!.g2engine.CountR"
-  "edoRecordsRequest\032\".g2engine.CountRedoRe"
-  "cordsResponse\"\000\022O\n\014DeleteRecord\022\035.g2engi"
-  "ne.DeleteRecordRequest\032\036.g2engine.Delete"
-  "RecordResponse\"\000\022g\n\024DeleteRecordWithInfo"
-  "\022%.g2engine.DeleteRecordWithInfoRequest\032"
-  "&.g2engine.DeleteRecordWithInfoResponse\""
-  "\000\022@\n\007Destroy\022\030.g2engine.DestroyRequest\032\031"
-  ".g2engine.DestroyResponse\"\000\022O\n\014ExportCon"
-  "fig\022\035.g2engine.ExportConfigRequest\032\036.g2e"
-  "ngine.ExportConfigResponse\"\000\022p\n\027ExportCo"
-  "nfigAndConfigID\022(.g2engine.ExportConfigA"
-  "ndConfigIDRequest\032).g2engine.ExportConfi"
-  "gAndConfigIDResponse\"\000\022j\n\025ExportCSVEntit"
-  "yReport\022&.g2engine.ExportCSVEntityReport"
-  "Request\032\'.g2engine.ExportCSVEntityReport"
-  "Response\"\000\022m\n\026ExportJSONEntityReport\022\'.g"
-  "2engine.ExportJSONEntityReportRequest\032(."
-  "g2engine.ExportJSONEntityReportResponse\""
-  "\000\022F\n\tFetchNext\022\032.g2engine.FetchNextReque"
-  "st\032\033.g2engine.FetchNextResponse\"\000\022\216\001\n!Fi"
-  "ndInterestingEntitiesByEntityID\0222.g2engi"
-  "ne.FindInterestingEntitiesByEntityIDRequ"
-  "est\0323.g2engine.FindInterestingEntitiesBy"
-  "EntityIDResponse\"\000\022\216\001\n!FindInterestingEn"
-  "titiesByRecordID\0222.g2engine.FindInterest"
-  "ingEntitiesByRecordIDRequest\0323.g2engine."
-  "FindInterestingEntitiesByRecordIDRespons"
-  "e\"\000\022j\n\025FindNetworkByEntityID\022&.g2engine."
-  "FindNetworkByEntityIDRequest\032\'.g2engine."
-  "FindNetworkByEntityIDResponse\"\000\022s\n\030FindN"
-  "etworkByEntityID_V2\022).g2engine.FindNetwo"
-  "rkByEntityID_V2Request\032*.g2engine.FindNe"
-  "tworkByEntityID_V2Response\"\000\022j\n\025FindNetw"
-  "orkByRecordID\022&.g2engine.FindNetworkByRe"
-  "cordIDRequest\032\'.g2engine.FindNetworkByRe"
-  "cordIDResponse\"\000\022s\n\030FindNetworkByRecordI"
-  "D_V2\022).g2engine.FindNetworkByRecordID_V2"
-  "Request\032*.g2engine.FindNetworkByRecordID"
-  "_V2Response\"\000\022a\n\022FindPathByEntityID\022#.g2"
-  "engine.FindPathByEntityIDRequest\032$.g2eng"
-  "ine.FindPathByEntityIDResponse\"\000\022j\n\025Find"
-  "PathByEntityID_V2\022&.g2engine.FindPathByE"
-  "ntityID_V2Request\032\'.g2engine.FindPathByE"
-  "ntityID_V2Response\"\000\022a\n\022FindPathByRecord"
-  "ID\022#.g2engine.FindPathByRecordIDRequest\032"
-  "$.g2engine.FindPathByRecordIDResponse\"\000\022"
-  "j\n\025FindPathByRecordID_V2\022&.g2engine.Find"
-  "PathByRecordID_V2Request\032\'.g2engine.Find"
-  "PathByRecordID_V2Response\"\000\022|\n\033FindPathE"
-  "xcludingByEntityID\022,.g2engine.FindPathEx"
-  "cludingByEntityIDRequest\032-.g2engine.Find"
-  "PathExcludingByEntityIDResponse\"\000\022\205\001\n\036Fi"
-  "ndPathExcludingByEntityID_V2\022/.g2engine."
-  "FindPathExcludingByEntityID_V2Request\0320."
-  "g2engine.FindPathExcludingByEntityID_V2R"
-  "esponse\"\000\022|\n\033FindPathExcludingByRecordID"
-  "\022,.g2engine.FindPathExcludingByRecordIDR"
-  "equest\032-.g2engine.FindPathExcludingByRec"
-  "ordIDResponse\"\000\022\205\001\n\036FindPathExcludingByR"
-  "ecordID_V2\022/.g2engine.FindPathExcludingB"
-  "yRecordID_V2Request\0320.g2engine.FindPathE"
-  "xcludingByRecordID_V2Response\"\000\022\216\001\n!Find"
-  "PathIncludingSourceByEntityID\0222.g2engine"
-  ".FindPathIncludingSourceByEntityIDReques"
-  "t\0323.g2engine.FindPathIncludingSourceByEn"
-  "tityIDResponse\"\000\022\227\001\n$FindPathIncludingSo"
-  "urceByEntityID_V2\0225.g2engine.FindPathInc"
-  "ludingSourceByEntityID_V2Request\0326.g2eng"
-  "ine.FindPathIncludingSourceByEntityID_V2"
-  "Response\"\000\022\216\001\n!FindPathIncludingSourceBy"
-  "RecordID\0222.g2engine.FindPathIncludingSou"
-  "rceByRecordIDRequest\0323.g2engine.FindPath"
-  "IncludingSourceByRecordIDResponse\"\000\022\227\001\n$"
-  "FindPathIncludingSourceByRecordID_V2\0225.g"
-  "2engine.FindPathIncludingSourceByRecordI"
-  "D_V2Request\0326.g2engine.FindPathIncluding"
-  "SourceByRecordID_V2Response\"\000\022^\n\021GetActi"
-  "veConfigID\022\".g2engine.GetActiveConfigIDR"
-  "equest\032#.g2engine.GetActiveConfigIDRespo"
-  "nse\"\000\022d\n\023GetEntityByEntityID\022$.g2engine."
-  "GetEntityByEntityIDRequest\032%.g2engine.Ge"
-  "tEntityByEntityIDResponse\"\000\022m\n\026GetEntity"
-  "ByEntityID_V2\022\'.g2engine.GetEntityByEnti"
-  "tyID_V2Request\032(.g2engine.GetEntityByEnt"
-  "ityID_V2Response\"\000\022d\n\023GetEntityByRecordI"
-  "D\022$.g2engine.GetEntityByRecordIDRequest\032"
-  "%.g2engine.GetEntityByRecordIDResponse\"\000"
-  "\022m\n\026GetEntityByRecordID_V2\022\'.g2engine.Ge"
-  "tEntityByRecordID_V2Request\032(.g2engine.G"
-  "etEntityByRecordID_V2Response\"\000\022[\n\020GetLa"
-  "stException\022!.g2engine.GetLastExceptionR"
-  "equest\032\".g2engine.GetLastExceptionRespon"
-  "se\"\000\022g\n\024GetLastExceptionCode\022%.g2engine."
-  "GetLastExceptionCodeRequest\032&.g2engine.G"
-  "etLastExceptionCodeResponse\"\000\022F\n\tGetReco"
-  "rd\022\032.g2engine.GetRecordRequest\032\033.g2engin"
-  "e.GetRecordResponse\"\000\022O\n\014GetRecord_V2\022\035."
-  "g2engine.GetRecord_V2Request\032\036.g2engine."
-  "GetRecord_V2Response\"\000\022R\n\rGetRedoRecord\022"
-  "\036.g2engine.GetRedoRecordRequest\032\037.g2engi"
-  "ne.GetRedoRecordResponse\"\000\022\202\001\n\035GetReposi"
-  "toryLastModifiedTime\022..g2engine.GetRepos"
-  "itoryLastModifiedTimeRequest\032/.g2engine."
-  "GetRepositoryLastModifiedTimeResponse\"\000\022"
-  "y\n\032GetVirtualEntityByRecordID\022+.g2engine"
-  ".GetVirtualEntityByRecordIDRequest\032,.g2e"
-  "ngine.GetVirtualEntityByRecordIDResponse"
-  "\"\000\022\202\001\n\035GetVirtualEntityByRecordID_V2\022..g"
-  "2engine.GetVirtualEntityByRecordID_V2Req"
-  "uest\032/.g2engine.GetVirtualEntityByRecord"
-  "ID_V2Response\"\000\022d\n\023HowEntityByEntityID\022$"
-  ".g2engine.HowEntityByEntityIDRequest\032%.g"
-  "2engine.HowEntityByEntityIDResponse\"\000\022m\n"
-  "\026HowEntityByEntityID_V2\022\'.g2engine.HowEn"
-  "tityByEntityID_V2Request\032(.g2engine.HowE"
-  "ntityByEntityID_V2Response\"\000\0227\n\004Init\022\025.g"
-  "2engine.InitRequest\032\026.g2engine.InitRespo"
-  "nse\"\000\022[\n\020InitWithConfigID\022!.g2engine.Ini"
-  "tWithConfigIDRequest\032\".g2engine.InitWith"
-  "ConfigIDResponse\"\000\022L\n\013PrimeEngine\022\034.g2en"
-  "gine.PrimeEngineRequest\032\035.g2engine.Prime"
-  "EngineResponse\"\000\022@\n\007Process\022\030.g2engine.P"
-  "rocessRequest\032\031.g2engine.ProcessResponse"
-  "\"\000\022^\n\021ProcessRedoRecord\022\".g2engine.Proce"
-  "ssRedoRecordRequest\032#.g2engine.ProcessRe"
-  "doRecordResponse\"\000\022v\n\031ProcessRedoRecordW"
-  "ithInfo\022*.g2engine.ProcessRedoRecordWith"
-  "InfoRequest\032+.g2engine.ProcessRedoRecord"
-  "WithInfoResponse\"\000\022X\n\017ProcessWithInfo\022 ."
-  "g2engine.ProcessWithInfoRequest\032!.g2engi"
-  "ne.ProcessWithInfoResponse\"\000\022d\n\023ProcessW"
-  "ithResponse\022$.g2engine.ProcessWithRespon"
-  "seRequest\032%.g2engine.ProcessWithResponse"
-  "Response\"\000\022v\n\031ProcessWithResponseResize\022"
-  "*.g2engine.ProcessWithResponseResizeRequ"
-  "est\032+.g2engine.ProcessWithResponseResize"
-  "Response\"\000\022X\n\017PurgeRepository\022 .g2engine"
-  ".PurgeRepositoryRequest\032!.g2engine.Purge"
-  "RepositoryResponse\"\000\022[\n\020ReevaluateEntity"
-  "\022!.g2engine.ReevaluateEntityRequest\032\".g2"
-  "engine.ReevaluateEntityResponse\"\000\022s\n\030Ree"
-  "valuateEntityWithInfo\022).g2engine.Reevalu"
-  "ateEntityWithInfoRequest\032*.g2engine.Reev"
-  "aluateEntityWithInfoResponse\"\000\022[\n\020Reeval"
-  "uateRecord\022!.g2engine.ReevaluateRecordRe"
-  "quest\032\".g2engine.ReevaluateRecordRespons"
-  "e\"\000\022s\n\030ReevaluateRecordWithInfo\022).g2engi"
-  "ne.ReevaluateRecordWithInfoRequest\032*.g2e"
-  "ngine.ReevaluateRecordWithInfoResponse\"\000"
-  "\022=\n\006Reinit\022\027.g2engine.ReinitRequest\032\030.g2"
-  "engine.ReinitResponse\"\000\022R\n\rReplaceRecord"
-  "\022\036.g2engine.ReplaceRecordRequest\032\037.g2eng"
-  "ine.ReplaceRecordResponse\"\000\022j\n\025ReplaceRe"
-  "cordWithInfo\022&.g2engine.ReplaceRecordWit"
-  "hInfoRequest\032\'.g2engine.ReplaceRecordWit"
-  "hInfoResponse\"\000\022a\n\022SearchByAttributes\022#."
-  "g2engine.SearchByAttributesRequest\032$.g2e"
-  "ngine.SearchByAttributesResponse\"\000\022j\n\025Se"
-  "archByAttributes_V2\022&.g2engine.SearchByA"
-  "ttributes_V2Request\032\'.g2engine.SearchByA"
-  "ttributes_V2Response\"\000\022:\n\005Stats\022\026.g2engi"
-  "ne.StatsRequest\032\027.g2engine.StatsResponse"
-  "\"\000\022L\n\013WhyEntities\022\034.g2engine.WhyEntities"
-  "Request\032\035.g2engine.WhyEntitiesResponse\"\000"
-  "\022U\n\016WhyEntities_V2\022\037.g2engine.WhyEntitie"
-  "s_V2Request\032 .g2engine.WhyEntities_V2Res"
-  "ponse\"\000\022d\n\023WhyEntityByEntityID\022$.g2engin"
-  "e.WhyEntityByEntityIDRequest\032%.g2engine."
-  "WhyEntityByEntityIDResponse\"\000\022m\n\026WhyEnti"
-  "tyByEntityID_V2\022\'.g2engine.WhyEntityByEn"
-  "tityID_V2Request\032(.g2engine.WhyEntityByE"
-  "ntityID_V2Response\"\000\022d\n\023WhyEntityByRecor"
-  "dID\022$.g2engine.WhyEntityByRecordIDReques"
-  "t\032%.g2engine.WhyEntityByRecordIDResponse"
-  "\"\000\022m\n\026WhyEntityByRecordID_V2\022\'.g2engine."
-  "WhyEntityByRecordID_V2Request\032(.g2engine"
-  ".WhyEntityByRecordID_V2Response\"\000\022I\n\nWhy"
-  "Records\022\033.g2engine.WhyRecordsRequest\032\034.g"
-  "2engine.WhyRecordsResponse\"\000\022R\n\rWhyRecor"
-  "ds_V2\022\036.g2engine.WhyRecords_V2Request\032\037."
-  "g2engine.WhyRecords_V2Response\"\000Bb\n#com."
-  "senzing.g2.engine.grpc.G2EngineB\rG2Engin"
-  "eProtoP\001Z*github.com/senzing/g2-sdk-go-g"
-  "rpc/g2engineb\006proto3"
+  "uiredDsrcs\030\005 \001(\t\022\r\n\005flags\030\006 \001(\003\">\n,FindP"
+  "athIncludingSourceByEntityID_V2Response\022"
+  "\016\n\006result\030\001 \001(\t\"\305\001\n(FindPathIncludingSou"
+  "rceByRecordIDRequest\022\027\n\017dataSourceCode1\030"
+  "\001 \001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n\017dataSourceCo"
+  "de2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001(\t\022\021\n\tmaxDegre"
+  "e\030\005 \001(\005\022\027\n\017excludedRecords\030\006 \001(\t\022\025\n\rrequ"
+  "iredDsrcs\030\007 \001(\t\";\n)FindPathIncludingSour"
+  "ceByRecordIDResponse\022\016\n\006result\030\001 \001(\t\"\327\001\n"
+  "+FindPathIncludingSourceByRecordID_V2Req"
+  "uest\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trecordI"
+  "D1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\trec"
+  "ordID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001(\005\022\027\n\017exclu"
+  "dedRecords\030\006 \001(\t\022\025\n\rrequiredDsrcs\030\007 \001(\t\022"
+  "\r\n\005flags\030\010 \001(\003\">\n,FindPathIncludingSourc"
+  "eByRecordID_V2Response\022\016\n\006result\030\001 \001(\t\"\032"
+  "\n\030GetActiveConfigIDRequest\"+\n\031GetActiveC"
+  "onfigIDResponse\022\016\n\006result\030\001 \001(\003\".\n\032GetEn"
+  "tityByEntityIDRequest\022\020\n\010entityID\030\001 \001(\003\""
+  "-\n\033GetEntityByEntityIDResponse\022\016\n\006result"
+  "\030\001 \001(\t\"@\n\035GetEntityByEntityID_V2Request\022"
+  "\020\n\010entityID\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"0\n\036GetE"
+  "ntityByEntityID_V2Response\022\016\n\006result\030\001 \001"
+  "(\t\"F\n\032GetEntityByRecordIDRequest\022\026\n\016data"
+  "SourceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\"-\n\033Ge"
+  "tEntityByRecordIDResponse\022\016\n\006result\030\001 \001("
+  "\t\"X\n\035GetEntityByRecordID_V2Request\022\026\n\016da"
+  "taSourceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\022\r\n\005"
+  "flags\030\003 \001(\003\"0\n\036GetEntityByRecordID_V2Res"
+  "ponse\022\016\n\006result\030\001 \001(\t\"\031\n\027GetLastExceptio"
+  "nRequest\"*\n\030GetLastExceptionResponse\022\016\n\006"
+  "result\030\001 \001(\t\"\035\n\033GetLastExceptionCodeRequ"
+  "est\".\n\034GetLastExceptionCodeResponse\022\016\n\006r"
+  "esult\030\001 \001(\005\"<\n\020GetRecordRequest\022\026\n\016dataS"
+  "ourceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\"#\n\021Get"
+  "RecordResponse\022\016\n\006result\030\001 \001(\t\"N\n\023GetRec"
+  "ord_V2Request\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n"
+  "\010recordID\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"&\n\024GetRec"
+  "ord_V2Response\022\016\n\006result\030\001 \001(\t\"\026\n\024GetRed"
+  "oRecordRequest\"\'\n\025GetRedoRecordResponse\022"
+  "\016\n\006result\030\001 \001(\t\"&\n$GetRepositoryLastModi"
+  "fiedTimeRequest\"7\n%GetRepositoryLastModi"
+  "fiedTimeResponse\022\016\n\006result\030\001 \001(\003\"7\n!GetV"
+  "irtualEntityByRecordIDRequest\022\022\n\nrecordL"
+  "ist\030\001 \001(\t\"4\n\"GetVirtualEntityByRecordIDR"
+  "esponse\022\016\n\006result\030\001 \001(\t\"I\n$GetVirtualEnt"
+  "ityByRecordID_V2Request\022\022\n\nrecordList\030\001 "
+  "\001(\t\022\r\n\005flags\030\002 \001(\003\"7\n%GetVirtualEntityBy"
+  "RecordID_V2Response\022\016\n\006result\030\001 \001(\t\".\n\032H"
+  "owEntityByEntityIDRequest\022\020\n\010entityID\030\001 "
+  "\001(\003\"-\n\033HowEntityByEntityIDResponse\022\016\n\006re"
+  "sult\030\001 \001(\t\"@\n\035HowEntityByEntityID_V2Requ"
+  "est\022\020\n\010entityID\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"0\n\036"
+  "HowEntityByEntityID_V2Response\022\016\n\006result"
+  "\030\001 \001(\t\"L\n\013InitRequest\022\022\n\nmoduleName\030\001 \001("
+  "\t\022\021\n\tiniParams\030\002 \001(\t\022\026\n\016verboseLogging\030\003"
+  " \001(\005\"\016\n\014InitResponse\"n\n\027InitWithConfigID"
+  "Request\022\022\n\nmoduleName\030\001 \001(\t\022\021\n\tiniParams"
+  "\030\002 \001(\t\022\024\n\014initConfigID\030\003 \001(\003\022\026\n\016verboseL"
+  "ogging\030\004 \001(\005\"\032\n\030InitWithConfigIDResponse"
+  "\"\024\n\022PrimeEngineRequest\"\025\n\023PrimeEngineRes"
+  "ponse\" \n\016ProcessRequest\022\016\n\006record\030\001 \001(\t\""
+  "\021\n\017ProcessResponse\"\032\n\030ProcessRedoRecordR"
+  "equest\"+\n\031ProcessRedoRecordResponse\022\016\n\006r"
+  "esult\030\001 \001(\t\"1\n ProcessRedoRecordWithInfo"
+  "Request\022\r\n\005flags\030\001 \001(\003\"E\n!ProcessRedoRec"
+  "ordWithInfoResponse\022\016\n\006result\030\001 \001(\t\022\020\n\010w"
+  "ithInfo\030\002 \001(\t\"7\n\026ProcessWithInfoRequest\022"
+  "\016\n\006record\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\")\n\027Proces"
+  "sWithInfoResponse\022\016\n\006result\030\001 \001(\t\",\n\032Pro"
+  "cessWithResponseRequest\022\016\n\006record\030\001 \001(\t\""
+  "-\n\033ProcessWithResponseResponse\022\016\n\006result"
+  "\030\001 \001(\t\"2\n ProcessWithResponseResizeReque"
+  "st\022\016\n\006record\030\001 \001(\t\"3\n!ProcessWithRespons"
+  "eResizeResponse\022\016\n\006result\030\001 \001(\t\"\030\n\026Purge"
+  "RepositoryRequest\"\031\n\027PurgeRepositoryResp"
+  "onse\":\n\027ReevaluateEntityRequest\022\020\n\010entit"
+  "yID\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"\032\n\030ReevaluateEn"
+  "tityResponse\"B\n\037ReevaluateEntityWithInfo"
+  "Request\022\020\n\010entityID\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003"
+  "\"2\n ReevaluateEntityWithInfoResponse\022\016\n\006"
+  "result\030\001 \001(\t\"R\n\027ReevaluateRecordRequest\022"
+  "\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001("
+  "\t\022\r\n\005flags\030\003 \001(\003\"\032\n\030ReevaluateRecordResp"
+  "onse\"Z\n\037ReevaluateRecordWithInfoRequest\022"
+  "\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001("
+  "\t\022\r\n\005flags\030\003 \001(\003\"2\n ReevaluateRecordWith"
+  "InfoResponse\022\016\n\006result\030\001 \001(\t\"%\n\rReinitRe"
+  "quest\022\024\n\014initConfigID\030\001 \001(\003\"\020\n\016ReinitRes"
+  "ponse\"b\n\024ReplaceRecordRequest\022\026\n\016dataSou"
+  "rceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\022\020\n\010jsonD"
+  "ata\030\003 \001(\t\022\016\n\006loadID\030\004 \001(\t\"\027\n\025ReplaceReco"
+  "rdResponse\"y\n\034ReplaceRecordWithInfoReque"
+  "st\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordID\030\002"
+  " \001(\t\022\020\n\010jsonData\030\003 \001(\t\022\016\n\006loadID\030\004 \001(\t\022\r"
+  "\n\005flags\030\005 \001(\003\"/\n\035ReplaceRecordWithInfoRe"
+  "sponse\022\016\n\006result\030\001 \001(\t\"-\n\031SearchByAttrib"
+  "utesRequest\022\020\n\010jsonData\030\001 \001(\t\",\n\032SearchB"
+  "yAttributesResponse\022\016\n\006result\030\001 \001(\t\"\?\n\034S"
+  "earchByAttributes_V2Request\022\020\n\010jsonData\030"
+  "\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"/\n\035SearchByAttribut"
+  "es_V2Response\022\016\n\006result\030\001 \001(\t\"\016\n\014StatsRe"
+  "quest\"\037\n\rStatsResponse\022\016\n\006result\030\001 \001(\t\":"
+  "\n\022WhyEntitiesRequest\022\021\n\tentityID1\030\001 \001(\003\022"
+  "\021\n\tentityID2\030\002 \001(\003\"%\n\023WhyEntitiesRespons"
+  "e\022\016\n\006result\030\001 \001(\t\"L\n\025WhyEntities_V2Reque"
+  "st\022\021\n\tentityID1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003"
+  "\022\r\n\005flags\030\003 \001(\003\"(\n\026WhyEntities_V2Respons"
+  "e\022\016\n\006result\030\001 \001(\t\".\n\032WhyEntityByEntityID"
+  "Request\022\020\n\010entityID\030\001 \001(\003\"-\n\033WhyEntityBy"
+  "EntityIDResponse\022\016\n\006result\030\001 \001(\t\"@\n\035WhyE"
+  "ntityByEntityID_V2Request\022\020\n\010entityID\030\001 "
+  "\001(\003\022\r\n\005flags\030\002 \001(\003\"0\n\036WhyEntityByEntityI"
+  "D_V2Response\022\016\n\006result\030\001 \001(\t\"F\n\032WhyEntit"
+  "yByRecordIDRequest\022\026\n\016dataSourceCode\030\001 \001"
+  "(\t\022\020\n\010recordID\030\002 \001(\t\"-\n\033WhyEntityByRecor"
+  "dIDResponse\022\016\n\006result\030\001 \001(\t\"X\n\035WhyEntity"
+  "ByRecordID_V2Request\022\026\n\016dataSourceCode\030\001"
+  " \001(\t\022\020\n\010recordID\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"0\n"
+  "\036WhyEntityByRecordID_V2Response\022\016\n\006resul"
+  "t\030\001 \001(\t\"k\n\021WhyRecordsRequest\022\027\n\017dataSour"
+  "ceCode1\030\001 \001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n\017data"
+  "SourceCode2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001(\t\"$\n\022"
+  "WhyRecordsResponse\022\016\n\006result\030\001 \001(\t\"}\n\024Wh"
+  "yRecords_V2Request\022\027\n\017dataSourceCode1\030\001 "
+  "\001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n\017dataSourceCode"
+  "2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001(\t\022\r\n\005flags\030\005 \001("
+  "\003\"\'\n\025WhyRecords_V2Response\022\016\n\006result\030\001 \001"
+  "(\t2\271>\n\010G2Engine\022F\n\tAddRecord\022\032.g2engine."
+  "AddRecordRequest\032\033.g2engine.AddRecordRes"
+  "ponse\"\000\022^\n\021AddRecordWithInfo\022\".g2engine."
+  "AddRecordWithInfoRequest\032#.g2engine.AddR"
+  "ecordWithInfoResponse\"\000\022\232\001\n%AddRecordWit"
+  "hInfoWithReturnedRecordID\0226.g2engine.Add"
+  "RecordWithInfoWithReturnedRecordIDReques"
+  "t\0327.g2engine.AddRecordWithInfoWithReturn"
+  "edRecordIDResponse\"\000\022\202\001\n\035AddRecordWithRe"
+  "turnedRecordID\022..g2engine.AddRecordWithR"
+  "eturnedRecordIDRequest\032/.g2engine.AddRec"
+  "ordWithReturnedRecordIDResponse\"\000\022L\n\013Che"
+  "ckRecord\022\034.g2engine.CheckRecordRequest\032\035"
+  ".g2engine.CheckRecordResponse\"\000\022a\n\022Clear"
+  "LastException\022#.g2engine.ClearLastExcept"
+  "ionRequest\032$.g2engine.ClearLastException"
+  "Response\"\000\022L\n\013CloseExport\022\034.g2engine.Clo"
+  "seExportRequest\032\035.g2engine.CloseExportRe"
+  "sponse\"\000\022[\n\020CountRedoRecords\022!.g2engine."
+  "CountRedoRecordsRequest\032\".g2engine.Count"
+  "RedoRecordsResponse\"\000\022O\n\014DeleteRecord\022\035."
+  "g2engine.DeleteRecordRequest\032\036.g2engine."
+  "DeleteRecordResponse\"\000\022g\n\024DeleteRecordWi"
+  "thInfo\022%.g2engine.DeleteRecordWithInfoRe"
+  "quest\032&.g2engine.DeleteRecordWithInfoRes"
+  "ponse\"\000\022@\n\007Destroy\022\030.g2engine.DestroyReq"
+  "uest\032\031.g2engine.DestroyResponse\"\000\022O\n\014Exp"
+  "ortConfig\022\035.g2engine.ExportConfigRequest"
+  "\032\036.g2engine.ExportConfigResponse\"\000\022p\n\027Ex"
+  "portConfigAndConfigID\022(.g2engine.ExportC"
+  "onfigAndConfigIDRequest\032).g2engine.Expor"
+  "tConfigAndConfigIDResponse\"\000\022j\n\025ExportCS"
+  "VEntityReport\022&.g2engine.ExportCSVEntity"
+  "ReportRequest\032\'.g2engine.ExportCSVEntity"
+  "ReportResponse\"\000\022m\n\026ExportJSONEntityRepo"
+  "rt\022\'.g2engine.ExportJSONEntityReportRequ"
+  "est\032(.g2engine.ExportJSONEntityReportRes"
+  "ponse\"\000\022F\n\tFetchNext\022\032.g2engine.FetchNex"
+  "tRequest\032\033.g2engine.FetchNextResponse\"\000\022"
+  "\216\001\n!FindInterestingEntitiesByEntityID\0222."
+  "g2engine.FindInterestingEntitiesByEntity"
+  "IDRequest\0323.g2engine.FindInterestingEnti"
+  "tiesByEntityIDResponse\"\000\022\216\001\n!FindInteres"
+  "tingEntitiesByRecordID\0222.g2engine.FindIn"
+  "terestingEntitiesByRecordIDRequest\0323.g2e"
+  "ngine.FindInterestingEntitiesByRecordIDR"
+  "esponse\"\000\022j\n\025FindNetworkByEntityID\022&.g2e"
+  "ngine.FindNetworkByEntityIDRequest\032\'.g2e"
+  "ngine.FindNetworkByEntityIDResponse\"\000\022s\n"
+  "\030FindNetworkByEntityID_V2\022).g2engine.Fin"
+  "dNetworkByEntityID_V2Request\032*.g2engine."
+  "FindNetworkByEntityID_V2Response\"\000\022j\n\025Fi"
+  "ndNetworkByRecordID\022&.g2engine.FindNetwo"
+  "rkByRecordIDRequest\032\'.g2engine.FindNetwo"
+  "rkByRecordIDResponse\"\000\022s\n\030FindNetworkByR"
+  "ecordID_V2\022).g2engine.FindNetworkByRecor"
+  "dID_V2Request\032*.g2engine.FindNetworkByRe"
+  "cordID_V2Response\"\000\022a\n\022FindPathByEntityI"
+  "D\022#.g2engine.FindPathByEntityIDRequest\032$"
+  ".g2engine.FindPathByEntityIDResponse\"\000\022j"
+  "\n\025FindPathByEntityID_V2\022&.g2engine.FindP"
+  "athByEntityID_V2Request\032\'.g2engine.FindP"
+  "athByEntityID_V2Response\"\000\022a\n\022FindPathBy"
+  "RecordID\022#.g2engine.FindPathByRecordIDRe"
+  "quest\032$.g2engine.FindPathByRecordIDRespo"
+  "nse\"\000\022j\n\025FindPathByRecordID_V2\022&.g2engin"
+  "e.FindPathByRecordID_V2Request\032\'.g2engin"
+  "e.FindPathByRecordID_V2Response\"\000\022|\n\033Fin"
+  "dPathExcludingByEntityID\022,.g2engine.Find"
+  "PathExcludingByEntityIDRequest\032-.g2engin"
+  "e.FindPathExcludingByEntityIDResponse\"\000\022"
+  "\205\001\n\036FindPathExcludingByEntityID_V2\022/.g2e"
+  "ngine.FindPathExcludingByEntityID_V2Requ"
+  "est\0320.g2engine.FindPathExcludingByEntity"
+  "ID_V2Response\"\000\022|\n\033FindPathExcludingByRe"
+  "cordID\022,.g2engine.FindPathExcludingByRec"
+  "ordIDRequest\032-.g2engine.FindPathExcludin"
+  "gByRecordIDResponse\"\000\022\205\001\n\036FindPathExclud"
+  "ingByRecordID_V2\022/.g2engine.FindPathExcl"
+  "udingByRecordID_V2Request\0320.g2engine.Fin"
+  "dPathExcludingByRecordID_V2Response\"\000\022\216\001"
+  "\n!FindPathIncludingSourceByEntityID\0222.g2"
+  "engine.FindPathIncludingSourceByEntityID"
+  "Request\0323.g2engine.FindPathIncludingSour"
+  "ceByEntityIDResponse\"\000\022\227\001\n$FindPathInclu"
+  "dingSourceByEntityID_V2\0225.g2engine.FindP"
+  "athIncludingSourceByEntityID_V2Request\0326"
+  ".g2engine.FindPathIncludingSourceByEntit"
+  "yID_V2Response\"\000\022\216\001\n!FindPathIncludingSo"
+  "urceByRecordID\0222.g2engine.FindPathInclud"
+  "ingSourceByRecordIDRequest\0323.g2engine.Fi"
+  "ndPathIncludingSourceByRecordIDResponse\""
+  "\000\022\227\001\n$FindPathIncludingSourceByRecordID_"
+  "V2\0225.g2engine.FindPathIncludingSourceByR"
+  "ecordID_V2Request\0326.g2engine.FindPathInc"
+  "ludingSourceByRecordID_V2Response\"\000\022^\n\021G"
+  "etActiveConfigID\022\".g2engine.GetActiveCon"
+  "figIDRequest\032#.g2engine.GetActiveConfigI"
+  "DResponse\"\000\022d\n\023GetEntityByEntityID\022$.g2e"
+  "ngine.GetEntityByEntityIDRequest\032%.g2eng"
+  "ine.GetEntityByEntityIDResponse\"\000\022m\n\026Get"
+  "EntityByEntityID_V2\022\'.g2engine.GetEntity"
+  "ByEntityID_V2Request\032(.g2engine.GetEntit"
+  "yByEntityID_V2Response\"\000\022d\n\023GetEntityByR"
+  "ecordID\022$.g2engine.GetEntityByRecordIDRe"
+  "quest\032%.g2engine.GetEntityByRecordIDResp"
+  "onse\"\000\022m\n\026GetEntityByRecordID_V2\022\'.g2eng"
+  "ine.GetEntityByRecordID_V2Request\032(.g2en"
+  "gine.GetEntityByRecordID_V2Response\"\000\022[\n"
+  "\020GetLastException\022!.g2engine.GetLastExce"
+  "ptionRequest\032\".g2engine.GetLastException"
+  "Response\"\000\022g\n\024GetLastExceptionCode\022%.g2e"
+  "ngine.GetLastExceptionCodeRequest\032&.g2en"
+  "gine.GetLastExceptionCodeResponse\"\000\022F\n\tG"
+  "etRecord\022\032.g2engine.GetRecordRequest\032\033.g"
+  "2engine.GetRecordResponse\"\000\022O\n\014GetRecord"
+  "_V2\022\035.g2engine.GetRecord_V2Request\032\036.g2e"
+  "ngine.GetRecord_V2Response\"\000\022R\n\rGetRedoR"
+  "ecord\022\036.g2engine.GetRedoRecordRequest\032\037."
+  "g2engine.GetRedoRecordResponse\"\000\022\202\001\n\035Get"
+  "RepositoryLastModifiedTime\022..g2engine.Ge"
+  "tRepositoryLastModifiedTimeRequest\032/.g2e"
+  "ngine.GetRepositoryLastModifiedTimeRespo"
+  "nse\"\000\022y\n\032GetVirtualEntityByRecordID\022+.g2"
+  "engine.GetVirtualEntityByRecordIDRequest"
+  "\032,.g2engine.GetVirtualEntityByRecordIDRe"
+  "sponse\"\000\022\202\001\n\035GetVirtualEntityByRecordID_"
+  "V2\022..g2engine.GetVirtualEntityByRecordID"
+  "_V2Request\032/.g2engine.GetVirtualEntityBy"
+  "RecordID_V2Response\"\000\022d\n\023HowEntityByEnti"
+  "tyID\022$.g2engine.HowEntityByEntityIDReque"
+  "st\032%.g2engine.HowEntityByEntityIDRespons"
+  "e\"\000\022m\n\026HowEntityByEntityID_V2\022\'.g2engine"
+  ".HowEntityByEntityID_V2Request\032(.g2engin"
+  "e.HowEntityByEntityID_V2Response\"\000\0227\n\004In"
+  "it\022\025.g2engine.InitRequest\032\026.g2engine.Ini"
+  "tResponse\"\000\022[\n\020InitWithConfigID\022!.g2engi"
+  "ne.InitWithConfigIDRequest\032\".g2engine.In"
+  "itWithConfigIDResponse\"\000\022L\n\013PrimeEngine\022"
+  "\034.g2engine.PrimeEngineRequest\032\035.g2engine"
+  ".PrimeEngineResponse\"\000\022@\n\007Process\022\030.g2en"
+  "gine.ProcessRequest\032\031.g2engine.ProcessRe"
+  "sponse\"\000\022^\n\021ProcessRedoRecord\022\".g2engine"
+  ".ProcessRedoRecordRequest\032#.g2engine.Pro"
+  "cessRedoRecordResponse\"\000\022v\n\031ProcessRedoR"
+  "ecordWithInfo\022*.g2engine.ProcessRedoReco"
+  "rdWithInfoRequest\032+.g2engine.ProcessRedo"
+  "RecordWithInfoResponse\"\000\022X\n\017ProcessWithI"
+  "nfo\022 .g2engine.ProcessWithInfoRequest\032!."
+  "g2engine.ProcessWithInfoResponse\"\000\022d\n\023Pr"
+  "ocessWithResponse\022$.g2engine.ProcessWith"
+  "ResponseRequest\032%.g2engine.ProcessWithRe"
+  "sponseResponse\"\000\022v\n\031ProcessWithResponseR"
+  "esize\022*.g2engine.ProcessWithResponseResi"
+  "zeRequest\032+.g2engine.ProcessWithResponse"
+  "ResizeResponse\"\000\022X\n\017PurgeRepository\022 .g2"
+  "engine.PurgeRepositoryRequest\032!.g2engine"
+  ".PurgeRepositoryResponse\"\000\022[\n\020Reevaluate"
+  "Entity\022!.g2engine.ReevaluateEntityReques"
+  "t\032\".g2engine.ReevaluateEntityResponse\"\000\022"
+  "s\n\030ReevaluateEntityWithInfo\022).g2engine.R"
+  "eevaluateEntityWithInfoRequest\032*.g2engin"
+  "e.ReevaluateEntityWithInfoResponse\"\000\022[\n\020"
+  "ReevaluateRecord\022!.g2engine.ReevaluateRe"
+  "cordRequest\032\".g2engine.ReevaluateRecordR"
+  "esponse\"\000\022s\n\030ReevaluateRecordWithInfo\022)."
+  "g2engine.ReevaluateRecordWithInfoRequest"
+  "\032*.g2engine.ReevaluateRecordWithInfoResp"
+  "onse\"\000\022=\n\006Reinit\022\027.g2engine.ReinitReques"
+  "t\032\030.g2engine.ReinitResponse\"\000\022R\n\rReplace"
+  "Record\022\036.g2engine.ReplaceRecordRequest\032\037"
+  ".g2engine.ReplaceRecordResponse\"\000\022j\n\025Rep"
+  "laceRecordWithInfo\022&.g2engine.ReplaceRec"
+  "ordWithInfoRequest\032\'.g2engine.ReplaceRec"
+  "ordWithInfoResponse\"\000\022a\n\022SearchByAttribu"
+  "tes\022#.g2engine.SearchByAttributesRequest"
+  "\032$.g2engine.SearchByAttributesResponse\"\000"
+  "\022j\n\025SearchByAttributes_V2\022&.g2engine.Sea"
+  "rchByAttributes_V2Request\032\'.g2engine.Sea"
+  "rchByAttributes_V2Response\"\000\022:\n\005Stats\022\026."
+  "g2engine.StatsRequest\032\027.g2engine.StatsRe"
+  "sponse\"\000\022L\n\013WhyEntities\022\034.g2engine.WhyEn"
+  "titiesRequest\032\035.g2engine.WhyEntitiesResp"
+  "onse\"\000\022U\n\016WhyEntities_V2\022\037.g2engine.WhyE"
+  "ntities_V2Request\032 .g2engine.WhyEntities"
+  "_V2Response\"\000\022d\n\023WhyEntityByEntityID\022$.g"
+  "2engine.WhyEntityByEntityIDRequest\032%.g2e"
+  "ngine.WhyEntityByEntityIDResponse\"\000\022m\n\026W"
+  "hyEntityByEntityID_V2\022\'.g2engine.WhyEnti"
+  "tyByEntityID_V2Request\032(.g2engine.WhyEnt"
+  "ityByEntityID_V2Response\"\000\022d\n\023WhyEntityB"
+  "yRecordID\022$.g2engine.WhyEntityByRecordID"
+  "Request\032%.g2engine.WhyEntityByRecordIDRe"
+  "sponse\"\000\022m\n\026WhyEntityByRecordID_V2\022\'.g2e"
+  "ngine.WhyEntityByRecordID_V2Request\032(.g2"
+  "engine.WhyEntityByRecordID_V2Response\"\000\022"
+  "I\n\nWhyRecords\022\033.g2engine.WhyRecordsReque"
+  "st\032\034.g2engine.WhyRecordsResponse\"\000\022R\n\rWh"
+  "yRecords_V2\022\036.g2engine.WhyRecords_V2Requ"
+  "est\032\037.g2engine.WhyRecords_V2Response\"\000Bb"
+  "\n#com.senzing.g2.engine.grpc.G2EngineB\rG"
+  "2EngineProtoP\001Z*github.com/senzing/g2-sd"
+  "k-go-grpc/g2engineb\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_g2engine_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_g2engine_2eproto = {
-    false, false, 17860, descriptor_table_protodef_g2engine_2eproto,
+    false, false, 17826, descriptor_table_protodef_g2engine_2eproto,
     "g2engine.proto",
     &descriptor_table_g2engine_2eproto_once, nullptr, 0, 154,
     schemas, file_default_instances, TableStruct_g2engine_2eproto::offsets,
@@ -4078,19 +4077,19 @@ namespace g2engine {
 
 // ===================================================================
 
-class AddRecordRequestRequest::_Internal {
+class AddRecordRequest::_Internal {
  public:
 };
 
-AddRecordRequestRequest::AddRecordRequestRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+AddRecordRequest::AddRecordRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:g2engine.AddRecordRequestRequest)
+  // @@protoc_insertion_point(arena_constructor:g2engine.AddRecordRequest)
 }
-AddRecordRequestRequest::AddRecordRequestRequest(const AddRecordRequestRequest& from)
+AddRecordRequest::AddRecordRequest(const AddRecordRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  AddRecordRequestRequest* const _this = this; (void)_this;
+  AddRecordRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.datasourcecode_){}
     , decltype(_impl_.recordid_){}
@@ -4131,10 +4130,10 @@ AddRecordRequestRequest::AddRecordRequestRequest(const AddRecordRequestRequest& 
     _this->_impl_.loadid_.Set(from._internal_loadid(), 
       _this->GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:g2engine.AddRecordRequestRequest)
+  // @@protoc_insertion_point(copy_constructor:g2engine.AddRecordRequest)
 }
 
-inline void AddRecordRequestRequest::SharedCtor(
+inline void AddRecordRequest::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
@@ -4163,8 +4162,8 @@ inline void AddRecordRequestRequest::SharedCtor(
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
-AddRecordRequestRequest::~AddRecordRequestRequest() {
-  // @@protoc_insertion_point(destructor:g2engine.AddRecordRequestRequest)
+AddRecordRequest::~AddRecordRequest() {
+  // @@protoc_insertion_point(destructor:g2engine.AddRecordRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -4172,7 +4171,7 @@ AddRecordRequestRequest::~AddRecordRequestRequest() {
   SharedDtor();
 }
 
-inline void AddRecordRequestRequest::SharedDtor() {
+inline void AddRecordRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.datasourcecode_.Destroy();
   _impl_.recordid_.Destroy();
@@ -4180,12 +4179,12 @@ inline void AddRecordRequestRequest::SharedDtor() {
   _impl_.loadid_.Destroy();
 }
 
-void AddRecordRequestRequest::SetCachedSize(int size) const {
+void AddRecordRequest::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void AddRecordRequestRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:g2engine.AddRecordRequestRequest)
+void AddRecordRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:g2engine.AddRecordRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4197,7 +4196,7 @@ void AddRecordRequestRequest::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* AddRecordRequestRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* AddRecordRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -4209,7 +4208,7 @@ const char* AddRecordRequestRequest::_InternalParse(const char* ptr, ::_pbi::Par
           auto str = _internal_mutable_datasourcecode();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "g2engine.AddRecordRequestRequest.dataSourceCode"));
+          CHK_(::_pbi::VerifyUTF8(str, "g2engine.AddRecordRequest.dataSourceCode"));
         } else
           goto handle_unusual;
         continue;
@@ -4219,7 +4218,7 @@ const char* AddRecordRequestRequest::_InternalParse(const char* ptr, ::_pbi::Par
           auto str = _internal_mutable_recordid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "g2engine.AddRecordRequestRequest.recordID"));
+          CHK_(::_pbi::VerifyUTF8(str, "g2engine.AddRecordRequest.recordID"));
         } else
           goto handle_unusual;
         continue;
@@ -4229,7 +4228,7 @@ const char* AddRecordRequestRequest::_InternalParse(const char* ptr, ::_pbi::Par
           auto str = _internal_mutable_jsondata();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "g2engine.AddRecordRequestRequest.jsonData"));
+          CHK_(::_pbi::VerifyUTF8(str, "g2engine.AddRecordRequest.jsonData"));
         } else
           goto handle_unusual;
         continue;
@@ -4239,7 +4238,7 @@ const char* AddRecordRequestRequest::_InternalParse(const char* ptr, ::_pbi::Par
           auto str = _internal_mutable_loadid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "g2engine.AddRecordRequestRequest.loadID"));
+          CHK_(::_pbi::VerifyUTF8(str, "g2engine.AddRecordRequest.loadID"));
         } else
           goto handle_unusual;
         continue;
@@ -4266,9 +4265,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* AddRecordRequestRequest::_InternalSerialize(
+uint8_t* AddRecordRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:g2engine.AddRecordRequestRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:g2engine.AddRecordRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4277,7 +4276,7 @@ uint8_t* AddRecordRequestRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_datasourcecode().data(), static_cast<int>(this->_internal_datasourcecode().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "g2engine.AddRecordRequestRequest.dataSourceCode");
+      "g2engine.AddRecordRequest.dataSourceCode");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_datasourcecode(), target);
   }
@@ -4287,7 +4286,7 @@ uint8_t* AddRecordRequestRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_recordid().data(), static_cast<int>(this->_internal_recordid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "g2engine.AddRecordRequestRequest.recordID");
+      "g2engine.AddRecordRequest.recordID");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_recordid(), target);
   }
@@ -4297,7 +4296,7 @@ uint8_t* AddRecordRequestRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_jsondata().data(), static_cast<int>(this->_internal_jsondata().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "g2engine.AddRecordRequestRequest.jsonData");
+      "g2engine.AddRecordRequest.jsonData");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_jsondata(), target);
   }
@@ -4307,7 +4306,7 @@ uint8_t* AddRecordRequestRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_loadid().data(), static_cast<int>(this->_internal_loadid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "g2engine.AddRecordRequestRequest.loadID");
+      "g2engine.AddRecordRequest.loadID");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_loadid(), target);
   }
@@ -4316,12 +4315,12 @@ uint8_t* AddRecordRequestRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:g2engine.AddRecordRequestRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:g2engine.AddRecordRequest)
   return target;
 }
 
-size_t AddRecordRequestRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:g2engine.AddRecordRequestRequest)
+size_t AddRecordRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:g2engine.AddRecordRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -4359,17 +4358,17 @@ size_t AddRecordRequestRequest::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AddRecordRequestRequest::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AddRecordRequest::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    AddRecordRequestRequest::MergeImpl
+    AddRecordRequest::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AddRecordRequestRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AddRecordRequest::GetClassData() const { return &_class_data_; }
 
 
-void AddRecordRequestRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<AddRecordRequestRequest*>(&to_msg);
-  auto& from = static_cast<const AddRecordRequestRequest&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:g2engine.AddRecordRequestRequest)
+void AddRecordRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<AddRecordRequest*>(&to_msg);
+  auto& from = static_cast<const AddRecordRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:g2engine.AddRecordRequest)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4389,18 +4388,18 @@ void AddRecordRequestRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void AddRecordRequestRequest::CopyFrom(const AddRecordRequestRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:g2engine.AddRecordRequestRequest)
+void AddRecordRequest::CopyFrom(const AddRecordRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:g2engine.AddRecordRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool AddRecordRequestRequest::IsInitialized() const {
+bool AddRecordRequest::IsInitialized() const {
   return true;
 }
 
-void AddRecordRequestRequest::InternalSwap(AddRecordRequestRequest* other) {
+void AddRecordRequest::InternalSwap(AddRecordRequest* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
@@ -4423,7 +4422,7 @@ void AddRecordRequestRequest::InternalSwap(AddRecordRequestRequest* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata AddRecordRequestRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata AddRecordRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
       file_level_metadata_g2engine_2eproto[0]);
@@ -4431,31 +4430,31 @@ void AddRecordRequestRequest::InternalSwap(AddRecordRequestRequest* other) {
 
 // ===================================================================
 
-class AddRecordResponseResponse::_Internal {
+class AddRecordResponse::_Internal {
  public:
 };
 
-AddRecordResponseResponse::AddRecordResponseResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+AddRecordResponse::AddRecordResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
-  // @@protoc_insertion_point(arena_constructor:g2engine.AddRecordResponseResponse)
+  // @@protoc_insertion_point(arena_constructor:g2engine.AddRecordResponse)
 }
-AddRecordResponseResponse::AddRecordResponseResponse(const AddRecordResponseResponse& from)
+AddRecordResponse::AddRecordResponse(const AddRecordResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
-  AddRecordResponseResponse* const _this = this; (void)_this;
+  AddRecordResponse* const _this = this; (void)_this;
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:g2engine.AddRecordResponseResponse)
+  // @@protoc_insertion_point(copy_constructor:g2engine.AddRecordResponse)
 }
 
 
 
 
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AddRecordResponseResponse::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AddRecordResponse::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
     ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AddRecordResponseResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AddRecordResponse::GetClassData() const { return &_class_data_; }
 
 
 
@@ -4463,7 +4462,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AddRecordResponseResponse::Get
 
 
 
-::PROTOBUF_NAMESPACE_ID::Metadata AddRecordResponseResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata AddRecordResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
       file_level_metadata_g2engine_2eproto[1]);
@@ -35551,13 +35550,13 @@ void WhyRecords_V2Response::InternalSwap(WhyRecords_V2Response* other) {
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace g2engine
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::g2engine::AddRecordRequestRequest*
-Arena::CreateMaybeMessage< ::g2engine::AddRecordRequestRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::g2engine::AddRecordRequestRequest >(arena);
+template<> PROTOBUF_NOINLINE ::g2engine::AddRecordRequest*
+Arena::CreateMaybeMessage< ::g2engine::AddRecordRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::g2engine::AddRecordRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::g2engine::AddRecordResponseResponse*
-Arena::CreateMaybeMessage< ::g2engine::AddRecordResponseResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::g2engine::AddRecordResponseResponse >(arena);
+template<> PROTOBUF_NOINLINE ::g2engine::AddRecordResponse*
+Arena::CreateMaybeMessage< ::g2engine::AddRecordResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::g2engine::AddRecordResponse >(arena);
 }
 template<> PROTOBUF_NOINLINE ::g2engine::AddRecordWithInfoRequest*
 Arena::CreateMaybeMessage< ::g2engine::AddRecordWithInfoRequest >(Arena* arena) {

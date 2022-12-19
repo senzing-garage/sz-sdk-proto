@@ -6,7 +6,7 @@ option java_multiple_files = true;
 option java_package = "com.senzing.g2.engine.grpc.G2Config";
 option java_outer_classname = "G2ConfigProto";
 
-service G2Diagnostic {
+service G2Config {
   rpc AddDataSource (AddDataSourceRequest) returns (AddDataSourceResponse) {}
   rpc ClearLastException (ClearLastExceptionRequest) returns (ClearLastExceptionResponse) {}
   rpc Close (CloseRequest) returns (CloseResponse) {}

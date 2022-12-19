@@ -27,10 +27,10 @@
 
 namespace g2ssadm {
 
-class G2Diagnostic final {
+class G2Ssadm final {
  public:
   static constexpr char const* service_full_name() {
-    return "g2ssadm.G2Diagnostic";
+    return "g2ssadm.G2Ssadm";
   }
   class StubInterface {
    public:

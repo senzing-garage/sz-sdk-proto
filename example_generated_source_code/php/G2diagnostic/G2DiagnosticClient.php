@@ -31,20 +31,6 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \G2diagnostic\ClearLastExceptionRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function ClearLastException(\G2diagnostic\ClearLastExceptionRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2diagnostic.G2Diagnostic/ClearLastException',
-        $argument,
-        ['\G2diagnostic\ClearLastExceptionResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \G2diagnostic\CloseEntityListBySizeRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -223,34 +209,6 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/g2diagnostic.G2Diagnostic/GetGenericFeatures',
         $argument,
         ['\G2diagnostic\GetGenericFeaturesResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2diagnostic\GetLastExceptionRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function GetLastException(\G2diagnostic\GetLastExceptionRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2diagnostic.G2Diagnostic/GetLastException',
-        $argument,
-        ['\G2diagnostic\GetLastExceptionResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2diagnostic\GetLastExceptionCodeRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function GetLastExceptionCode(\G2diagnostic\GetLastExceptionCodeRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2diagnostic.G2Diagnostic/GetLastExceptionCode',
-        $argument,
-        ['\G2diagnostic\GetLastExceptionCodeResponse', 'decode'],
         $metadata, $options);
     }
 

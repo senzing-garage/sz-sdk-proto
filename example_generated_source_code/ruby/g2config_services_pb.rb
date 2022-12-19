@@ -5,14 +5,14 @@ require 'grpc'
 require 'g2config_pb'
 
 module G2config
-  module G2Diagnostic
+  module G2Config
     class Service
 
       include ::GRPC::GenericService
 
       self.marshal_class_method = :encode
       self.unmarshal_class_method = :decode
-      self.service_name = 'g2config.G2Diagnostic'
+      self.service_name = 'g2config.G2Config'
 
       rpc :AddDataSource, ::G2config::AddDataSourceRequest, ::G2config::AddDataSourceResponse
       rpc :ClearLastException, ::G2config::ClearLastExceptionRequest, ::G2config::ClearLastExceptionResponse

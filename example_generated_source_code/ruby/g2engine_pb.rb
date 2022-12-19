@@ -5,13 +5,13 @@ require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("g2engine.proto", :syntax => :proto3) do
-    add_message "g2engine.AddRecordRequestRequest" do
+    add_message "g2engine.AddRecordRequest" do
       optional :dataSourceCode, :string, 1
       optional :recordID, :string, 2
       optional :jsonData, :string, 3
       optional :loadID, :string, 4
     end
-    add_message "g2engine.AddRecordResponseResponse" do
+    add_message "g2engine.AddRecordResponse" do
     end
     add_message "g2engine.AddRecordWithInfoRequest" do
       optional :dataSourceCode, :string, 1
@@ -579,8 +579,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
 end
 
 module G2engine
-  AddRecordRequestRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordRequestRequest").msgclass
-  AddRecordResponseResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordResponseResponse").msgclass
+  AddRecordRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordRequest").msgclass
+  AddRecordResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordResponse").msgclass
   AddRecordWithInfoRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordWithInfoRequest").msgclass
   AddRecordWithInfoResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordWithInfoResponse").msgclass
   AddRecordWithInfoWithReturnedRecordIDRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordWithInfoWithReturnedRecordIDRequest").msgclass

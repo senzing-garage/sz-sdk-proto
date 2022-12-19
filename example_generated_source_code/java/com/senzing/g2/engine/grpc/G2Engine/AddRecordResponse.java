@@ -4,25 +4,25 @@
 package com.senzing.g2.engine.grpc.G2Engine;
 
 /**
- * Protobuf type {@code g2engine.AddRecordResponseResponse}
+ * Protobuf type {@code g2engine.AddRecordResponse}
  */
-public final class AddRecordResponseResponse extends
+public final class AddRecordResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:g2engine.AddRecordResponseResponse)
-    AddRecordResponseResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:g2engine.AddRecordResponse)
+    AddRecordResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use AddRecordResponseResponse.newBuilder() to construct.
-  private AddRecordResponseResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use AddRecordResponse.newBuilder() to construct.
+  private AddRecordResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private AddRecordResponseResponse() {
+  private AddRecordResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new AddRecordResponseResponse();
+    return new AddRecordResponse();
   }
 
   @java.lang.Override
@@ -30,7 +30,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private AddRecordResponseResponse(
+  private AddRecordResponse(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -71,15 +71,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.senzing.g2.engine.grpc.G2Engine.G2EngineProto.internal_static_g2engine_AddRecordResponseResponse_descriptor;
+    return com.senzing.g2.engine.grpc.G2Engine.G2EngineProto.internal_static_g2engine_AddRecordResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.senzing.g2.engine.grpc.G2Engine.G2EngineProto.internal_static_g2engine_AddRecordResponseResponse_fieldAccessorTable
+    return com.senzing.g2.engine.grpc.G2Engine.G2EngineProto.internal_static_g2engine_AddRecordResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse.class, com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse.Builder.class);
+            com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse.class, com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -115,10 +115,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse)) {
+    if (!(obj instanceof com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse)) {
       return super.equals(obj);
     }
-    com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse other = (com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse) obj;
+    com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse other = (com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse) obj;
 
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
@@ -136,69 +136,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse parseFrom(
+  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse parseFrom(
+  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse parseFrom(
+  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse parseFrom(
+  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse parseFrom(byte[] data)
+  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse parseFrom(
+  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse parseFrom(java.io.InputStream input)
+  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse parseFrom(
+  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse parseDelimitedFrom(
+  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse parseFrom(
+  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse parseFrom(
+  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -211,7 +211,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse prototype) {
+  public static Builder newBuilder(com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -227,26 +227,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code g2engine.AddRecordResponseResponse}
+   * Protobuf type {@code g2engine.AddRecordResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:g2engine.AddRecordResponseResponse)
-      com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:g2engine.AddRecordResponse)
+      com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.g2.engine.grpc.G2Engine.G2EngineProto.internal_static_g2engine_AddRecordResponseResponse_descriptor;
+      return com.senzing.g2.engine.grpc.G2Engine.G2EngineProto.internal_static_g2engine_AddRecordResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.g2.engine.grpc.G2Engine.G2EngineProto.internal_static_g2engine_AddRecordResponseResponse_fieldAccessorTable
+      return com.senzing.g2.engine.grpc.G2Engine.G2EngineProto.internal_static_g2engine_AddRecordResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse.class, com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse.Builder.class);
+              com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse.class, com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse.Builder.class);
     }
 
-    // Construct using com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse.newBuilder()
+    // Construct using com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -270,17 +270,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.senzing.g2.engine.grpc.G2Engine.G2EngineProto.internal_static_g2engine_AddRecordResponseResponse_descriptor;
+      return com.senzing.g2.engine.grpc.G2Engine.G2EngineProto.internal_static_g2engine_AddRecordResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse getDefaultInstanceForType() {
-      return com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse.getDefaultInstance();
+    public com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse getDefaultInstanceForType() {
+      return com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse build() {
-      com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse result = buildPartial();
+    public com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse build() {
+      com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -288,8 +288,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse buildPartial() {
-      com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse result = new com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse(this);
+    public com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse buildPartial() {
+      com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse result = new com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse(this);
       onBuilt();
       return result;
     }
@@ -328,16 +328,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse) {
-        return mergeFrom((com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse)other);
+      if (other instanceof com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse) {
+        return mergeFrom((com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse other) {
-      if (other == com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse other) {
+      if (other == com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -353,11 +353,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse parsedMessage = null;
+      com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse) e.getUnfinishedMessage();
+        parsedMessage = (com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -379,41 +379,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:g2engine.AddRecordResponseResponse)
+    // @@protoc_insertion_point(builder_scope:g2engine.AddRecordResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:g2engine.AddRecordResponseResponse)
-  private static final com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:g2engine.AddRecordResponse)
+  private static final com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse();
+    DEFAULT_INSTANCE = new com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse();
   }
 
-  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse getDefaultInstance() {
+  public static com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<AddRecordResponseResponse>
-      PARSER = new com.google.protobuf.AbstractParser<AddRecordResponseResponse>() {
+  private static final com.google.protobuf.Parser<AddRecordResponse>
+      PARSER = new com.google.protobuf.AbstractParser<AddRecordResponse>() {
     @java.lang.Override
-    public AddRecordResponseResponse parsePartialFrom(
+    public AddRecordResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AddRecordResponseResponse(input, extensionRegistry);
+      return new AddRecordResponse(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<AddRecordResponseResponse> parser() {
+  public static com.google.protobuf.Parser<AddRecordResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<AddRecordResponseResponse> getParserForType() {
+  public com.google.protobuf.Parser<AddRecordResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.senzing.g2.engine.grpc.G2Engine.AddRecordResponseResponse getDefaultInstanceForType() {
+  public com.senzing.g2.engine.grpc.G2Engine.AddRecordResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

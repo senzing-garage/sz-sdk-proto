@@ -27,10 +27,10 @@
 
 namespace g2product {
 
-class G2Diagnostic final {
+class G2Product final {
  public:
   static constexpr char const* service_full_name() {
-    return "g2product.G2Diagnostic";
+    return "g2product.G2Product";
   }
   class StubInterface {
    public:

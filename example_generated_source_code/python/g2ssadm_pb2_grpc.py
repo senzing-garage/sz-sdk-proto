@@ -5,7 +5,7 @@ import grpc
 import g2ssadm_pb2 as g2ssadm__pb2
 
 
-class G2DiagnosticStub(object):
+class G2SsadmStub(object):
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -15,63 +15,63 @@ class G2DiagnosticStub(object):
             channel: A grpc.Channel.
         """
         self.ClearLastException = channel.unary_unary(
-                '/g2ssadm.G2Diagnostic/ClearLastException',
+                '/g2ssadm.G2Ssadm/ClearLastException',
                 request_serializer=g2ssadm__pb2.ClearLastExceptionRequest.SerializeToString,
                 response_deserializer=g2ssadm__pb2.ClearLastExceptionResponse.FromString,
                 )
         self.CreateSaltInStore = channel.unary_unary(
-                '/g2ssadm.G2Diagnostic/CreateSaltInStore',
+                '/g2ssadm.G2Ssadm/CreateSaltInStore',
                 request_serializer=g2ssadm__pb2.CreateSaltInStoreRequest.SerializeToString,
                 response_deserializer=g2ssadm__pb2.CreateSaltInStoreResponse.FromString,
                 )
         self.Destroy = channel.unary_unary(
-                '/g2ssadm.G2Diagnostic/Destroy',
+                '/g2ssadm.G2Ssadm/Destroy',
                 request_serializer=g2ssadm__pb2.DestroyRequest.SerializeToString,
                 response_deserializer=g2ssadm__pb2.DestroyResponse.FromString,
                 )
         self.GetLastException = channel.unary_unary(
-                '/g2ssadm.G2Diagnostic/GetLastException',
+                '/g2ssadm.G2Ssadm/GetLastException',
                 request_serializer=g2ssadm__pb2.GetLastExceptionRequest.SerializeToString,
                 response_deserializer=g2ssadm__pb2.GetLastExceptionResponse.FromString,
                 )
         self.GetLastExceptionCode = channel.unary_unary(
-                '/g2ssadm.G2Diagnostic/GetLastExceptionCode',
+                '/g2ssadm.G2Ssadm/GetLastExceptionCode',
                 request_serializer=g2ssadm__pb2.GetLastExceptionCodeRequest.SerializeToString,
                 response_deserializer=g2ssadm__pb2.GetLastExceptionCodeResponse.FromString,
                 )
         self.Init = channel.unary_unary(
-                '/g2ssadm.G2Diagnostic/Init',
+                '/g2ssadm.G2Ssadm/Init',
                 request_serializer=g2ssadm__pb2.InitRequest.SerializeToString,
                 response_deserializer=g2ssadm__pb2.InitResponse.FromString,
                 )
         self.InitializeNewToken = channel.unary_unary(
-                '/g2ssadm.G2Diagnostic/InitializeNewToken',
+                '/g2ssadm.G2Ssadm/InitializeNewToken',
                 request_serializer=g2ssadm__pb2.InitializeNewTokenRequest.SerializeToString,
                 response_deserializer=g2ssadm__pb2.InitializeNewTokenResponse.FromString,
                 )
         self.List = channel.unary_unary(
-                '/g2ssadm.G2Diagnostic/List',
+                '/g2ssadm.G2Ssadm/List',
                 request_serializer=g2ssadm__pb2.ListRequest.SerializeToString,
                 response_deserializer=g2ssadm__pb2.ListResponse.FromString,
                 )
         self.Put = channel.unary_unary(
-                '/g2ssadm.G2Diagnostic/Put',
+                '/g2ssadm.G2Ssadm/Put',
                 request_serializer=g2ssadm__pb2.PutRequest.SerializeToString,
                 response_deserializer=g2ssadm__pb2.PutResponse.FromString,
                 )
         self.ReinitializeToken = channel.unary_unary(
-                '/g2ssadm.G2Diagnostic/ReinitializeToken',
+                '/g2ssadm.G2Ssadm/ReinitializeToken',
                 request_serializer=g2ssadm__pb2.ReinitializeTokenRequest.SerializeToString,
                 response_deserializer=g2ssadm__pb2.ReinitializeTokenResponse.FromString,
                 )
         self.SetupStore = channel.unary_unary(
-                '/g2ssadm.G2Diagnostic/SetupStore',
+                '/g2ssadm.G2Ssadm/SetupStore',
                 request_serializer=g2ssadm__pb2.SetupStoreRequest.SerializeToString,
                 response_deserializer=g2ssadm__pb2.SetupStoreResponse.FromString,
                 )
 
 
-class G2DiagnosticServicer(object):
+class G2SsadmServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def ClearLastException(self, request, context):
@@ -141,7 +141,7 @@ class G2DiagnosticServicer(object):
         raise NotImplementedError('Method not implemented!')
 
 
-def add_G2DiagnosticServicer_to_server(servicer, server):
+def add_G2SsadmServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'ClearLastException': grpc.unary_unary_rpc_method_handler(
                     servicer.ClearLastException,
@@ -200,12 +200,12 @@ def add_G2DiagnosticServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'g2ssadm.G2Diagnostic', rpc_method_handlers)
+            'g2ssadm.G2Ssadm', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class G2Diagnostic(object):
+class G2Ssadm(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
@@ -219,7 +219,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Diagnostic/ClearLastException',
+        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Ssadm/ClearLastException',
             g2ssadm__pb2.ClearLastExceptionRequest.SerializeToString,
             g2ssadm__pb2.ClearLastExceptionResponse.FromString,
             options, channel_credentials,
@@ -236,7 +236,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Diagnostic/CreateSaltInStore',
+        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Ssadm/CreateSaltInStore',
             g2ssadm__pb2.CreateSaltInStoreRequest.SerializeToString,
             g2ssadm__pb2.CreateSaltInStoreResponse.FromString,
             options, channel_credentials,
@@ -253,7 +253,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Diagnostic/Destroy',
+        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Ssadm/Destroy',
             g2ssadm__pb2.DestroyRequest.SerializeToString,
             g2ssadm__pb2.DestroyResponse.FromString,
             options, channel_credentials,
@@ -270,7 +270,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Diagnostic/GetLastException',
+        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Ssadm/GetLastException',
             g2ssadm__pb2.GetLastExceptionRequest.SerializeToString,
             g2ssadm__pb2.GetLastExceptionResponse.FromString,
             options, channel_credentials,
@@ -287,7 +287,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Diagnostic/GetLastExceptionCode',
+        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Ssadm/GetLastExceptionCode',
             g2ssadm__pb2.GetLastExceptionCodeRequest.SerializeToString,
             g2ssadm__pb2.GetLastExceptionCodeResponse.FromString,
             options, channel_credentials,
@@ -304,7 +304,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Diagnostic/Init',
+        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Ssadm/Init',
             g2ssadm__pb2.InitRequest.SerializeToString,
             g2ssadm__pb2.InitResponse.FromString,
             options, channel_credentials,
@@ -321,7 +321,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Diagnostic/InitializeNewToken',
+        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Ssadm/InitializeNewToken',
             g2ssadm__pb2.InitializeNewTokenRequest.SerializeToString,
             g2ssadm__pb2.InitializeNewTokenResponse.FromString,
             options, channel_credentials,
@@ -338,7 +338,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Diagnostic/List',
+        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Ssadm/List',
             g2ssadm__pb2.ListRequest.SerializeToString,
             g2ssadm__pb2.ListResponse.FromString,
             options, channel_credentials,
@@ -355,7 +355,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Diagnostic/Put',
+        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Ssadm/Put',
             g2ssadm__pb2.PutRequest.SerializeToString,
             g2ssadm__pb2.PutResponse.FromString,
             options, channel_credentials,
@@ -372,7 +372,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Diagnostic/ReinitializeToken',
+        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Ssadm/ReinitializeToken',
             g2ssadm__pb2.ReinitializeTokenRequest.SerializeToString,
             g2ssadm__pb2.ReinitializeTokenResponse.FromString,
             options, channel_credentials,
@@ -389,7 +389,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Diagnostic/SetupStore',
+        return grpc.experimental.unary_unary(request, target, '/g2ssadm.G2Ssadm/SetupStore',
             g2ssadm__pb2.SetupStoreRequest.SerializeToString,
             g2ssadm__pb2.SetupStoreResponse.FromString,
             options, channel_credentials,

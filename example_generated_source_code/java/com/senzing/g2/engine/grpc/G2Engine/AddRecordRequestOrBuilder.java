@@ -3,8 +3,8 @@
 
 package com.senzing.g2.engine.grpc.G2Engine;
 
-public interface AddRecordRequestRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:g2engine.AddRecordRequestRequest)
+public interface AddRecordRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:g2engine.AddRecordRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

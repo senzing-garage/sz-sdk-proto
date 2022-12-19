@@ -6,7 +6,7 @@ option java_multiple_files = true;
 option java_package = "com.senzing.g2.engine.grpc.G2Hasher";
 option java_outer_classname = "G2HasherProto";
 
-service G2Diagnostic {
+service G2Hasher {
   rpc ClearLastException (ClearLastExceptionRequest) returns (ClearLastExceptionResponse) {}
   rpc Destroy (DestroyRequest) returns (DestroyResponse) {}
   rpc ExportTokenLibrary (ExportTokenLibraryRequest) returns (ExportTokenLibraryResponse) {}

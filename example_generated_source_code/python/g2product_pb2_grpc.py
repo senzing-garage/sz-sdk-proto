@@ -5,7 +5,7 @@ import grpc
 import g2product_pb2 as g2product__pb2
 
 
-class G2DiagnosticStub(object):
+class G2ProductStub(object):
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -15,53 +15,53 @@ class G2DiagnosticStub(object):
             channel: A grpc.Channel.
         """
         self.ClearLastException = channel.unary_unary(
-                '/g2product.G2Diagnostic/ClearLastException',
+                '/g2product.G2Product/ClearLastException',
                 request_serializer=g2product__pb2.ClearLastExceptionRequest.SerializeToString,
                 response_deserializer=g2product__pb2.ClearLastExceptionResponse.FromString,
                 )
         self.Destroy = channel.unary_unary(
-                '/g2product.G2Diagnostic/Destroy',
+                '/g2product.G2Product/Destroy',
                 request_serializer=g2product__pb2.DestroyRequest.SerializeToString,
                 response_deserializer=g2product__pb2.DestroyResponse.FromString,
                 )
         self.GetLastException = channel.unary_unary(
-                '/g2product.G2Diagnostic/GetLastException',
+                '/g2product.G2Product/GetLastException',
                 request_serializer=g2product__pb2.GetLastExceptionRequest.SerializeToString,
                 response_deserializer=g2product__pb2.GetLastExceptionResponse.FromString,
                 )
         self.GetLastExceptionCode = channel.unary_unary(
-                '/g2product.G2Diagnostic/GetLastExceptionCode',
+                '/g2product.G2Product/GetLastExceptionCode',
                 request_serializer=g2product__pb2.GetLastExceptionCodeRequest.SerializeToString,
                 response_deserializer=g2product__pb2.GetLastExceptionCodeResponse.FromString,
                 )
         self.Init = channel.unary_unary(
-                '/g2product.G2Diagnostic/Init',
+                '/g2product.G2Product/Init',
                 request_serializer=g2product__pb2.InitRequest.SerializeToString,
                 response_deserializer=g2product__pb2.InitResponse.FromString,
                 )
         self.License = channel.unary_unary(
-                '/g2product.G2Diagnostic/License',
+                '/g2product.G2Product/License',
                 request_serializer=g2product__pb2.LicenseRequest.SerializeToString,
                 response_deserializer=g2product__pb2.LicenseResponse.FromString,
                 )
         self.ValidateLicenseFile = channel.unary_unary(
-                '/g2product.G2Diagnostic/ValidateLicenseFile',
+                '/g2product.G2Product/ValidateLicenseFile',
                 request_serializer=g2product__pb2.ValidateLicenseFileRequest.SerializeToString,
                 response_deserializer=g2product__pb2.ValidateLicenseFileResponse.FromString,
                 )
         self.ValidateLicenseStringBase64 = channel.unary_unary(
-                '/g2product.G2Diagnostic/ValidateLicenseStringBase64',
+                '/g2product.G2Product/ValidateLicenseStringBase64',
                 request_serializer=g2product__pb2.ValidateLicenseStringBase64Request.SerializeToString,
                 response_deserializer=g2product__pb2.ValidateLicenseStringBase64Response.FromString,
                 )
         self.Version = channel.unary_unary(
-                '/g2product.G2Diagnostic/Version',
+                '/g2product.G2Product/Version',
                 request_serializer=g2product__pb2.VersionRequest.SerializeToString,
                 response_deserializer=g2product__pb2.VersionResponse.FromString,
                 )
 
 
-class G2DiagnosticServicer(object):
+class G2ProductServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def ClearLastException(self, request, context):
@@ -119,7 +119,7 @@ class G2DiagnosticServicer(object):
         raise NotImplementedError('Method not implemented!')
 
 
-def add_G2DiagnosticServicer_to_server(servicer, server):
+def add_G2ProductServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'ClearLastException': grpc.unary_unary_rpc_method_handler(
                     servicer.ClearLastException,
@@ -168,12 +168,12 @@ def add_G2DiagnosticServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'g2product.G2Diagnostic', rpc_method_handlers)
+            'g2product.G2Product', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class G2Diagnostic(object):
+class G2Product(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
@@ -187,7 +187,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2product.G2Diagnostic/ClearLastException',
+        return grpc.experimental.unary_unary(request, target, '/g2product.G2Product/ClearLastException',
             g2product__pb2.ClearLastExceptionRequest.SerializeToString,
             g2product__pb2.ClearLastExceptionResponse.FromString,
             options, channel_credentials,
@@ -204,7 +204,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2product.G2Diagnostic/Destroy',
+        return grpc.experimental.unary_unary(request, target, '/g2product.G2Product/Destroy',
             g2product__pb2.DestroyRequest.SerializeToString,
             g2product__pb2.DestroyResponse.FromString,
             options, channel_credentials,
@@ -221,7 +221,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2product.G2Diagnostic/GetLastException',
+        return grpc.experimental.unary_unary(request, target, '/g2product.G2Product/GetLastException',
             g2product__pb2.GetLastExceptionRequest.SerializeToString,
             g2product__pb2.GetLastExceptionResponse.FromString,
             options, channel_credentials,
@@ -238,7 +238,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2product.G2Diagnostic/GetLastExceptionCode',
+        return grpc.experimental.unary_unary(request, target, '/g2product.G2Product/GetLastExceptionCode',
             g2product__pb2.GetLastExceptionCodeRequest.SerializeToString,
             g2product__pb2.GetLastExceptionCodeResponse.FromString,
             options, channel_credentials,
@@ -255,7 +255,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2product.G2Diagnostic/Init',
+        return grpc.experimental.unary_unary(request, target, '/g2product.G2Product/Init',
             g2product__pb2.InitRequest.SerializeToString,
             g2product__pb2.InitResponse.FromString,
             options, channel_credentials,
@@ -272,7 +272,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2product.G2Diagnostic/License',
+        return grpc.experimental.unary_unary(request, target, '/g2product.G2Product/License',
             g2product__pb2.LicenseRequest.SerializeToString,
             g2product__pb2.LicenseResponse.FromString,
             options, channel_credentials,
@@ -289,7 +289,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2product.G2Diagnostic/ValidateLicenseFile',
+        return grpc.experimental.unary_unary(request, target, '/g2product.G2Product/ValidateLicenseFile',
             g2product__pb2.ValidateLicenseFileRequest.SerializeToString,
             g2product__pb2.ValidateLicenseFileResponse.FromString,
             options, channel_credentials,
@@ -306,7 +306,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2product.G2Diagnostic/ValidateLicenseStringBase64',
+        return grpc.experimental.unary_unary(request, target, '/g2product.G2Product/ValidateLicenseStringBase64',
             g2product__pb2.ValidateLicenseStringBase64Request.SerializeToString,
             g2product__pb2.ValidateLicenseStringBase64Response.FromString,
             options, channel_credentials,
@@ -323,7 +323,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2product.G2Diagnostic/Version',
+        return grpc.experimental.unary_unary(request, target, '/g2product.G2Product/Version',
             g2product__pb2.VersionRequest.SerializeToString,
             g2product__pb2.VersionResponse.FromString,
             options, channel_credentials,

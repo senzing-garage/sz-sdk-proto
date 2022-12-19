@@ -27,10 +27,10 @@
 
 namespace g2hasher {
 
-class G2Diagnostic final {
+class G2Hasher final {
  public:
   static constexpr char const* service_full_name() {
-    return "g2hasher.G2Diagnostic";
+    return "g2hasher.G2Hasher";
   }
   class StubInterface {
    public:

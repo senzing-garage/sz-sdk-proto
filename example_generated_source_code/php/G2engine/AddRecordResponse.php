@@ -9,9 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>g2engine.AddRecordResponseResponse</code>
+ * Generated from protobuf message <code>g2engine.AddRecordResponse</code>
  */
-class AddRecordResponseResponse extends \Google\Protobuf\Internal\Message
+class AddRecordResponse extends \Google\Protobuf\Internal\Message
 {
 
     /**
