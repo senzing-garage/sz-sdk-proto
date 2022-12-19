@@ -3,7 +3,7 @@
 
 package com.senzing.g2.engine.grpc.G2Engine;
 
-public interface AddRecordResponseResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:g2engine.AddRecordResponseResponse)
+public interface AddRecordResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:g2engine.AddRecordResponse)
     com.google.protobuf.MessageOrBuilder {
 }

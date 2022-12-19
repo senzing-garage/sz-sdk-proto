@@ -5,7 +5,7 @@ namespace G2engine;
 
 /**
  */
-class G2DiagnosticClient extends \Grpc\BaseStub {
+class G2EngineClient extends \Grpc\BaseStub {
 
     /**
      * @param string $hostname hostname
@@ -24,9 +24,9 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function AddRecord(\G2engine\AddRecordRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/AddRecord',
+        return $this->_simpleRequest('/g2engine.G2Engine/AddRecord',
         $argument,
-        ['\G2engine\AddRecordResponseResponse', 'decode'],
+        ['\G2engine\AddRecordResponse', 'decode'],
         $metadata, $options);
     }
 
@@ -38,7 +38,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function AddRecordWithInfo(\G2engine\AddRecordWithInfoRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/AddRecordWithInfo',
+        return $this->_simpleRequest('/g2engine.G2Engine/AddRecordWithInfo',
         $argument,
         ['\G2engine\AddRecordWithInfoResponse', 'decode'],
         $metadata, $options);
@@ -52,7 +52,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function AddRecordWithInfoWithReturnedRecordID(\G2engine\AddRecordWithInfoWithReturnedRecordIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/AddRecordWithInfoWithReturnedRecordID',
+        return $this->_simpleRequest('/g2engine.G2Engine/AddRecordWithInfoWithReturnedRecordID',
         $argument,
         ['\G2engine\AddRecordWithInfoWithReturnedRecordIDResponse', 'decode'],
         $metadata, $options);
@@ -66,7 +66,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function AddRecordWithReturnedRecordID(\G2engine\AddRecordWithReturnedRecordIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/AddRecordWithReturnedRecordID',
+        return $this->_simpleRequest('/g2engine.G2Engine/AddRecordWithReturnedRecordID',
         $argument,
         ['\G2engine\AddRecordWithReturnedRecordIDResponse', 'decode'],
         $metadata, $options);
@@ -80,7 +80,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function CheckRecord(\G2engine\CheckRecordRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/CheckRecord',
+        return $this->_simpleRequest('/g2engine.G2Engine/CheckRecord',
         $argument,
         ['\G2engine\CheckRecordResponse', 'decode'],
         $metadata, $options);
@@ -94,7 +94,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ClearLastException(\G2engine\ClearLastExceptionRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/ClearLastException',
+        return $this->_simpleRequest('/g2engine.G2Engine/ClearLastException',
         $argument,
         ['\G2engine\ClearLastExceptionResponse', 'decode'],
         $metadata, $options);
@@ -108,7 +108,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function CloseExport(\G2engine\CloseExportRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/CloseExport',
+        return $this->_simpleRequest('/g2engine.G2Engine/CloseExport',
         $argument,
         ['\G2engine\CloseExportResponse', 'decode'],
         $metadata, $options);
@@ -122,7 +122,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function CountRedoRecords(\G2engine\CountRedoRecordsRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/CountRedoRecords',
+        return $this->_simpleRequest('/g2engine.G2Engine/CountRedoRecords',
         $argument,
         ['\G2engine\CountRedoRecordsResponse', 'decode'],
         $metadata, $options);
@@ -136,7 +136,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function DeleteRecord(\G2engine\DeleteRecordRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/DeleteRecord',
+        return $this->_simpleRequest('/g2engine.G2Engine/DeleteRecord',
         $argument,
         ['\G2engine\DeleteRecordResponse', 'decode'],
         $metadata, $options);
@@ -150,7 +150,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function DeleteRecordWithInfo(\G2engine\DeleteRecordWithInfoRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/DeleteRecordWithInfo',
+        return $this->_simpleRequest('/g2engine.G2Engine/DeleteRecordWithInfo',
         $argument,
         ['\G2engine\DeleteRecordWithInfoResponse', 'decode'],
         $metadata, $options);
@@ -164,7 +164,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function Destroy(\G2engine\DestroyRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/Destroy',
+        return $this->_simpleRequest('/g2engine.G2Engine/Destroy',
         $argument,
         ['\G2engine\DestroyResponse', 'decode'],
         $metadata, $options);
@@ -178,7 +178,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ExportConfig(\G2engine\ExportConfigRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/ExportConfig',
+        return $this->_simpleRequest('/g2engine.G2Engine/ExportConfig',
         $argument,
         ['\G2engine\ExportConfigResponse', 'decode'],
         $metadata, $options);
@@ -192,7 +192,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ExportConfigAndConfigID(\G2engine\ExportConfigAndConfigIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/ExportConfigAndConfigID',
+        return $this->_simpleRequest('/g2engine.G2Engine/ExportConfigAndConfigID',
         $argument,
         ['\G2engine\ExportConfigAndConfigIDResponse', 'decode'],
         $metadata, $options);
@@ -206,7 +206,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ExportCSVEntityReport(\G2engine\ExportCSVEntityReportRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/ExportCSVEntityReport',
+        return $this->_simpleRequest('/g2engine.G2Engine/ExportCSVEntityReport',
         $argument,
         ['\G2engine\ExportCSVEntityReportResponse', 'decode'],
         $metadata, $options);
@@ -220,7 +220,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ExportJSONEntityReport(\G2engine\ExportJSONEntityReportRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/ExportJSONEntityReport',
+        return $this->_simpleRequest('/g2engine.G2Engine/ExportJSONEntityReport',
         $argument,
         ['\G2engine\ExportJSONEntityReportResponse', 'decode'],
         $metadata, $options);
@@ -234,7 +234,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FetchNext(\G2engine\FetchNextRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FetchNext',
+        return $this->_simpleRequest('/g2engine.G2Engine/FetchNext',
         $argument,
         ['\G2engine\FetchNextResponse', 'decode'],
         $metadata, $options);
@@ -248,7 +248,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindInterestingEntitiesByEntityID(\G2engine\FindInterestingEntitiesByEntityIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindInterestingEntitiesByEntityID',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindInterestingEntitiesByEntityID',
         $argument,
         ['\G2engine\FindInterestingEntitiesByEntityIDResponse', 'decode'],
         $metadata, $options);
@@ -262,7 +262,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindInterestingEntitiesByRecordID(\G2engine\FindInterestingEntitiesByRecordIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindInterestingEntitiesByRecordID',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindInterestingEntitiesByRecordID',
         $argument,
         ['\G2engine\FindInterestingEntitiesByRecordIDResponse', 'decode'],
         $metadata, $options);
@@ -276,7 +276,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindNetworkByEntityID(\G2engine\FindNetworkByEntityIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindNetworkByEntityID',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindNetworkByEntityID',
         $argument,
         ['\G2engine\FindNetworkByEntityIDResponse', 'decode'],
         $metadata, $options);
@@ -290,7 +290,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindNetworkByEntityID_V2(\G2engine\FindNetworkByEntityID_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindNetworkByEntityID_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindNetworkByEntityID_V2',
         $argument,
         ['\G2engine\FindNetworkByEntityID_V2Response', 'decode'],
         $metadata, $options);
@@ -304,7 +304,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindNetworkByRecordID(\G2engine\FindNetworkByRecordIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindNetworkByRecordID',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindNetworkByRecordID',
         $argument,
         ['\G2engine\FindNetworkByRecordIDResponse', 'decode'],
         $metadata, $options);
@@ -318,7 +318,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindNetworkByRecordID_V2(\G2engine\FindNetworkByRecordID_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindNetworkByRecordID_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindNetworkByRecordID_V2',
         $argument,
         ['\G2engine\FindNetworkByRecordID_V2Response', 'decode'],
         $metadata, $options);
@@ -332,7 +332,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindPathByEntityID(\G2engine\FindPathByEntityIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindPathByEntityID',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindPathByEntityID',
         $argument,
         ['\G2engine\FindPathByEntityIDResponse', 'decode'],
         $metadata, $options);
@@ -346,7 +346,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindPathByEntityID_V2(\G2engine\FindPathByEntityID_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindPathByEntityID_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindPathByEntityID_V2',
         $argument,
         ['\G2engine\FindPathByEntityID_V2Response', 'decode'],
         $metadata, $options);
@@ -360,7 +360,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindPathByRecordID(\G2engine\FindPathByRecordIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindPathByRecordID',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindPathByRecordID',
         $argument,
         ['\G2engine\FindPathByRecordIDResponse', 'decode'],
         $metadata, $options);
@@ -374,7 +374,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindPathByRecordID_V2(\G2engine\FindPathByRecordID_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindPathByRecordID_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindPathByRecordID_V2',
         $argument,
         ['\G2engine\FindPathByRecordID_V2Response', 'decode'],
         $metadata, $options);
@@ -388,7 +388,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindPathExcludingByEntityID(\G2engine\FindPathExcludingByEntityIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindPathExcludingByEntityID',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindPathExcludingByEntityID',
         $argument,
         ['\G2engine\FindPathExcludingByEntityIDResponse', 'decode'],
         $metadata, $options);
@@ -402,7 +402,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindPathExcludingByEntityID_V2(\G2engine\FindPathExcludingByEntityID_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindPathExcludingByEntityID_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindPathExcludingByEntityID_V2',
         $argument,
         ['\G2engine\FindPathExcludingByEntityID_V2Response', 'decode'],
         $metadata, $options);
@@ -416,7 +416,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindPathExcludingByRecordID(\G2engine\FindPathExcludingByRecordIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindPathExcludingByRecordID',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindPathExcludingByRecordID',
         $argument,
         ['\G2engine\FindPathExcludingByRecordIDResponse', 'decode'],
         $metadata, $options);
@@ -430,7 +430,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindPathExcludingByRecordID_V2(\G2engine\FindPathExcludingByRecordID_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindPathExcludingByRecordID_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindPathExcludingByRecordID_V2',
         $argument,
         ['\G2engine\FindPathExcludingByRecordID_V2Response', 'decode'],
         $metadata, $options);
@@ -444,7 +444,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindPathIncludingSourceByEntityID(\G2engine\FindPathIncludingSourceByEntityIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindPathIncludingSourceByEntityID',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindPathIncludingSourceByEntityID',
         $argument,
         ['\G2engine\FindPathIncludingSourceByEntityIDResponse', 'decode'],
         $metadata, $options);
@@ -458,7 +458,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindPathIncludingSourceByEntityID_V2(\G2engine\FindPathIncludingSourceByEntityID_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindPathIncludingSourceByEntityID_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindPathIncludingSourceByEntityID_V2',
         $argument,
         ['\G2engine\FindPathIncludingSourceByEntityID_V2Response', 'decode'],
         $metadata, $options);
@@ -472,7 +472,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindPathIncludingSourceByRecordID(\G2engine\FindPathIncludingSourceByRecordIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindPathIncludingSourceByRecordID',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindPathIncludingSourceByRecordID',
         $argument,
         ['\G2engine\FindPathIncludingSourceByRecordIDResponse', 'decode'],
         $metadata, $options);
@@ -486,7 +486,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function FindPathIncludingSourceByRecordID_V2(\G2engine\FindPathIncludingSourceByRecordID_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/FindPathIncludingSourceByRecordID_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/FindPathIncludingSourceByRecordID_V2',
         $argument,
         ['\G2engine\FindPathIncludingSourceByRecordID_V2Response', 'decode'],
         $metadata, $options);
@@ -500,7 +500,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function GetActiveConfigID(\G2engine\GetActiveConfigIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/GetActiveConfigID',
+        return $this->_simpleRequest('/g2engine.G2Engine/GetActiveConfigID',
         $argument,
         ['\G2engine\GetActiveConfigIDResponse', 'decode'],
         $metadata, $options);
@@ -514,7 +514,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function GetEntityByEntityID(\G2engine\GetEntityByEntityIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/GetEntityByEntityID',
+        return $this->_simpleRequest('/g2engine.G2Engine/GetEntityByEntityID',
         $argument,
         ['\G2engine\GetEntityByEntityIDResponse', 'decode'],
         $metadata, $options);
@@ -528,7 +528,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function GetEntityByEntityID_V2(\G2engine\GetEntityByEntityID_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/GetEntityByEntityID_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/GetEntityByEntityID_V2',
         $argument,
         ['\G2engine\GetEntityByEntityID_V2Response', 'decode'],
         $metadata, $options);
@@ -542,7 +542,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function GetEntityByRecordID(\G2engine\GetEntityByRecordIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/GetEntityByRecordID',
+        return $this->_simpleRequest('/g2engine.G2Engine/GetEntityByRecordID',
         $argument,
         ['\G2engine\GetEntityByRecordIDResponse', 'decode'],
         $metadata, $options);
@@ -556,7 +556,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function GetEntityByRecordID_V2(\G2engine\GetEntityByRecordID_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/GetEntityByRecordID_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/GetEntityByRecordID_V2',
         $argument,
         ['\G2engine\GetEntityByRecordID_V2Response', 'decode'],
         $metadata, $options);
@@ -570,7 +570,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function GetLastException(\G2engine\GetLastExceptionRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/GetLastException',
+        return $this->_simpleRequest('/g2engine.G2Engine/GetLastException',
         $argument,
         ['\G2engine\GetLastExceptionResponse', 'decode'],
         $metadata, $options);
@@ -584,7 +584,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function GetLastExceptionCode(\G2engine\GetLastExceptionCodeRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/GetLastExceptionCode',
+        return $this->_simpleRequest('/g2engine.G2Engine/GetLastExceptionCode',
         $argument,
         ['\G2engine\GetLastExceptionCodeResponse', 'decode'],
         $metadata, $options);
@@ -598,7 +598,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function GetRecord(\G2engine\GetRecordRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/GetRecord',
+        return $this->_simpleRequest('/g2engine.G2Engine/GetRecord',
         $argument,
         ['\G2engine\GetRecordResponse', 'decode'],
         $metadata, $options);
@@ -612,7 +612,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function GetRecord_V2(\G2engine\GetRecord_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/GetRecord_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/GetRecord_V2',
         $argument,
         ['\G2engine\GetRecord_V2Response', 'decode'],
         $metadata, $options);
@@ -626,7 +626,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function GetRedoRecord(\G2engine\GetRedoRecordRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/GetRedoRecord',
+        return $this->_simpleRequest('/g2engine.G2Engine/GetRedoRecord',
         $argument,
         ['\G2engine\GetRedoRecordResponse', 'decode'],
         $metadata, $options);
@@ -640,7 +640,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function GetRepositoryLastModifiedTime(\G2engine\GetRepositoryLastModifiedTimeRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/GetRepositoryLastModifiedTime',
+        return $this->_simpleRequest('/g2engine.G2Engine/GetRepositoryLastModifiedTime',
         $argument,
         ['\G2engine\GetRepositoryLastModifiedTimeResponse', 'decode'],
         $metadata, $options);
@@ -654,7 +654,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function GetVirtualEntityByRecordID(\G2engine\GetVirtualEntityByRecordIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/GetVirtualEntityByRecordID',
+        return $this->_simpleRequest('/g2engine.G2Engine/GetVirtualEntityByRecordID',
         $argument,
         ['\G2engine\GetVirtualEntityByRecordIDResponse', 'decode'],
         $metadata, $options);
@@ -668,7 +668,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function GetVirtualEntityByRecordID_V2(\G2engine\GetVirtualEntityByRecordID_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/GetVirtualEntityByRecordID_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/GetVirtualEntityByRecordID_V2',
         $argument,
         ['\G2engine\GetVirtualEntityByRecordID_V2Response', 'decode'],
         $metadata, $options);
@@ -682,7 +682,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function HowEntityByEntityID(\G2engine\HowEntityByEntityIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/HowEntityByEntityID',
+        return $this->_simpleRequest('/g2engine.G2Engine/HowEntityByEntityID',
         $argument,
         ['\G2engine\HowEntityByEntityIDResponse', 'decode'],
         $metadata, $options);
@@ -696,7 +696,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function HowEntityByEntityID_V2(\G2engine\HowEntityByEntityID_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/HowEntityByEntityID_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/HowEntityByEntityID_V2',
         $argument,
         ['\G2engine\HowEntityByEntityID_V2Response', 'decode'],
         $metadata, $options);
@@ -710,7 +710,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function Init(\G2engine\InitRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/Init',
+        return $this->_simpleRequest('/g2engine.G2Engine/Init',
         $argument,
         ['\G2engine\InitResponse', 'decode'],
         $metadata, $options);
@@ -724,7 +724,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function InitWithConfigID(\G2engine\InitWithConfigIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/InitWithConfigID',
+        return $this->_simpleRequest('/g2engine.G2Engine/InitWithConfigID',
         $argument,
         ['\G2engine\InitWithConfigIDResponse', 'decode'],
         $metadata, $options);
@@ -738,7 +738,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function PrimeEngine(\G2engine\PrimeEngineRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/PrimeEngine',
+        return $this->_simpleRequest('/g2engine.G2Engine/PrimeEngine',
         $argument,
         ['\G2engine\PrimeEngineResponse', 'decode'],
         $metadata, $options);
@@ -752,7 +752,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function Process(\G2engine\ProcessRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/Process',
+        return $this->_simpleRequest('/g2engine.G2Engine/Process',
         $argument,
         ['\G2engine\ProcessResponse', 'decode'],
         $metadata, $options);
@@ -766,7 +766,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ProcessRedoRecord(\G2engine\ProcessRedoRecordRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/ProcessRedoRecord',
+        return $this->_simpleRequest('/g2engine.G2Engine/ProcessRedoRecord',
         $argument,
         ['\G2engine\ProcessRedoRecordResponse', 'decode'],
         $metadata, $options);
@@ -780,7 +780,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ProcessRedoRecordWithInfo(\G2engine\ProcessRedoRecordWithInfoRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/ProcessRedoRecordWithInfo',
+        return $this->_simpleRequest('/g2engine.G2Engine/ProcessRedoRecordWithInfo',
         $argument,
         ['\G2engine\ProcessRedoRecordWithInfoResponse', 'decode'],
         $metadata, $options);
@@ -794,7 +794,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ProcessWithInfo(\G2engine\ProcessWithInfoRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/ProcessWithInfo',
+        return $this->_simpleRequest('/g2engine.G2Engine/ProcessWithInfo',
         $argument,
         ['\G2engine\ProcessWithInfoResponse', 'decode'],
         $metadata, $options);
@@ -808,7 +808,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ProcessWithResponse(\G2engine\ProcessWithResponseRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/ProcessWithResponse',
+        return $this->_simpleRequest('/g2engine.G2Engine/ProcessWithResponse',
         $argument,
         ['\G2engine\ProcessWithResponseResponse', 'decode'],
         $metadata, $options);
@@ -822,7 +822,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ProcessWithResponseResize(\G2engine\ProcessWithResponseResizeRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/ProcessWithResponseResize',
+        return $this->_simpleRequest('/g2engine.G2Engine/ProcessWithResponseResize',
         $argument,
         ['\G2engine\ProcessWithResponseResizeResponse', 'decode'],
         $metadata, $options);
@@ -836,7 +836,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function PurgeRepository(\G2engine\PurgeRepositoryRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/PurgeRepository',
+        return $this->_simpleRequest('/g2engine.G2Engine/PurgeRepository',
         $argument,
         ['\G2engine\PurgeRepositoryResponse', 'decode'],
         $metadata, $options);
@@ -850,7 +850,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ReevaluateEntity(\G2engine\ReevaluateEntityRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/ReevaluateEntity',
+        return $this->_simpleRequest('/g2engine.G2Engine/ReevaluateEntity',
         $argument,
         ['\G2engine\ReevaluateEntityResponse', 'decode'],
         $metadata, $options);
@@ -864,7 +864,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ReevaluateEntityWithInfo(\G2engine\ReevaluateEntityWithInfoRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/ReevaluateEntityWithInfo',
+        return $this->_simpleRequest('/g2engine.G2Engine/ReevaluateEntityWithInfo',
         $argument,
         ['\G2engine\ReevaluateEntityWithInfoResponse', 'decode'],
         $metadata, $options);
@@ -878,7 +878,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ReevaluateRecord(\G2engine\ReevaluateRecordRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/ReevaluateRecord',
+        return $this->_simpleRequest('/g2engine.G2Engine/ReevaluateRecord',
         $argument,
         ['\G2engine\ReevaluateRecordResponse', 'decode'],
         $metadata, $options);
@@ -892,7 +892,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ReevaluateRecordWithInfo(\G2engine\ReevaluateRecordWithInfoRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/ReevaluateRecordWithInfo',
+        return $this->_simpleRequest('/g2engine.G2Engine/ReevaluateRecordWithInfo',
         $argument,
         ['\G2engine\ReevaluateRecordWithInfoResponse', 'decode'],
         $metadata, $options);
@@ -906,7 +906,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function Reinit(\G2engine\ReinitRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/Reinit',
+        return $this->_simpleRequest('/g2engine.G2Engine/Reinit',
         $argument,
         ['\G2engine\ReinitResponse', 'decode'],
         $metadata, $options);
@@ -920,7 +920,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ReplaceRecord(\G2engine\ReplaceRecordRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/ReplaceRecord',
+        return $this->_simpleRequest('/g2engine.G2Engine/ReplaceRecord',
         $argument,
         ['\G2engine\ReplaceRecordResponse', 'decode'],
         $metadata, $options);
@@ -934,7 +934,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function ReplaceRecordWithInfo(\G2engine\ReplaceRecordWithInfoRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/ReplaceRecordWithInfo',
+        return $this->_simpleRequest('/g2engine.G2Engine/ReplaceRecordWithInfo',
         $argument,
         ['\G2engine\ReplaceRecordWithInfoResponse', 'decode'],
         $metadata, $options);
@@ -948,7 +948,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function SearchByAttributes(\G2engine\SearchByAttributesRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/SearchByAttributes',
+        return $this->_simpleRequest('/g2engine.G2Engine/SearchByAttributes',
         $argument,
         ['\G2engine\SearchByAttributesResponse', 'decode'],
         $metadata, $options);
@@ -962,7 +962,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function SearchByAttributes_V2(\G2engine\SearchByAttributes_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/SearchByAttributes_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/SearchByAttributes_V2',
         $argument,
         ['\G2engine\SearchByAttributes_V2Response', 'decode'],
         $metadata, $options);
@@ -976,7 +976,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function Stats(\G2engine\StatsRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/Stats',
+        return $this->_simpleRequest('/g2engine.G2Engine/Stats',
         $argument,
         ['\G2engine\StatsResponse', 'decode'],
         $metadata, $options);
@@ -990,7 +990,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function WhyEntities(\G2engine\WhyEntitiesRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/WhyEntities',
+        return $this->_simpleRequest('/g2engine.G2Engine/WhyEntities',
         $argument,
         ['\G2engine\WhyEntitiesResponse', 'decode'],
         $metadata, $options);
@@ -1004,7 +1004,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function WhyEntities_V2(\G2engine\WhyEntities_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/WhyEntities_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/WhyEntities_V2',
         $argument,
         ['\G2engine\WhyEntities_V2Response', 'decode'],
         $metadata, $options);
@@ -1018,7 +1018,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function WhyEntityByEntityID(\G2engine\WhyEntityByEntityIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/WhyEntityByEntityID',
+        return $this->_simpleRequest('/g2engine.G2Engine/WhyEntityByEntityID',
         $argument,
         ['\G2engine\WhyEntityByEntityIDResponse', 'decode'],
         $metadata, $options);
@@ -1032,7 +1032,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function WhyEntityByEntityID_V2(\G2engine\WhyEntityByEntityID_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/WhyEntityByEntityID_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/WhyEntityByEntityID_V2',
         $argument,
         ['\G2engine\WhyEntityByEntityID_V2Response', 'decode'],
         $metadata, $options);
@@ -1046,7 +1046,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function WhyEntityByRecordID(\G2engine\WhyEntityByRecordIDRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/WhyEntityByRecordID',
+        return $this->_simpleRequest('/g2engine.G2Engine/WhyEntityByRecordID',
         $argument,
         ['\G2engine\WhyEntityByRecordIDResponse', 'decode'],
         $metadata, $options);
@@ -1060,7 +1060,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function WhyEntityByRecordID_V2(\G2engine\WhyEntityByRecordID_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/WhyEntityByRecordID_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/WhyEntityByRecordID_V2',
         $argument,
         ['\G2engine\WhyEntityByRecordID_V2Response', 'decode'],
         $metadata, $options);
@@ -1074,7 +1074,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function WhyRecords(\G2engine\WhyRecordsRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/WhyRecords',
+        return $this->_simpleRequest('/g2engine.G2Engine/WhyRecords',
         $argument,
         ['\G2engine\WhyRecordsResponse', 'decode'],
         $metadata, $options);
@@ -1088,7 +1088,7 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
      */
     public function WhyRecords_V2(\G2engine\WhyRecords_V2Request $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Diagnostic/WhyRecords_V2',
+        return $this->_simpleRequest('/g2engine.G2Engine/WhyRecords_V2',
         $argument,
         ['\G2engine\WhyRecords_V2Response', 'decode'],
         $metadata, $options);

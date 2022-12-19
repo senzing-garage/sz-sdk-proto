@@ -5,7 +5,7 @@ import grpc
 import g2configmgr_pb2 as g2configmgr__pb2
 
 
-class G2DiagnosticStub(object):
+class G2ConfigMgrStub(object):
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -15,63 +15,63 @@ class G2DiagnosticStub(object):
             channel: A grpc.Channel.
         """
         self.AddConfig = channel.unary_unary(
-                '/g2configmgr.G2Diagnostic/AddConfig',
+                '/g2configmgr.G2ConfigMgr/AddConfig',
                 request_serializer=g2configmgr__pb2.AddConfigRequest.SerializeToString,
                 response_deserializer=g2configmgr__pb2.AddConfigResponse.FromString,
                 )
         self.ClearLastException = channel.unary_unary(
-                '/g2configmgr.G2Diagnostic/ClearLastException',
+                '/g2configmgr.G2ConfigMgr/ClearLastException',
                 request_serializer=g2configmgr__pb2.ClearLastExceptionRequest.SerializeToString,
                 response_deserializer=g2configmgr__pb2.ClearLastExceptionResponse.FromString,
                 )
         self.Destroy = channel.unary_unary(
-                '/g2configmgr.G2Diagnostic/Destroy',
+                '/g2configmgr.G2ConfigMgr/Destroy',
                 request_serializer=g2configmgr__pb2.DestroyRequest.SerializeToString,
                 response_deserializer=g2configmgr__pb2.DestroyResponse.FromString,
                 )
         self.GetConfig = channel.unary_unary(
-                '/g2configmgr.G2Diagnostic/GetConfig',
+                '/g2configmgr.G2ConfigMgr/GetConfig',
                 request_serializer=g2configmgr__pb2.GetConfigRequest.SerializeToString,
                 response_deserializer=g2configmgr__pb2.GetConfigResponse.FromString,
                 )
         self.GetConfigList = channel.unary_unary(
-                '/g2configmgr.G2Diagnostic/GetConfigList',
+                '/g2configmgr.G2ConfigMgr/GetConfigList',
                 request_serializer=g2configmgr__pb2.GetConfigListRequest.SerializeToString,
                 response_deserializer=g2configmgr__pb2.GetConfigListResponse.FromString,
                 )
         self.GetDefaultConfigID = channel.unary_unary(
-                '/g2configmgr.G2Diagnostic/GetDefaultConfigID',
+                '/g2configmgr.G2ConfigMgr/GetDefaultConfigID',
                 request_serializer=g2configmgr__pb2.GetDefaultConfigIDRequest.SerializeToString,
                 response_deserializer=g2configmgr__pb2.GetDefaultConfigIDResponse.FromString,
                 )
         self.GetLastException = channel.unary_unary(
-                '/g2configmgr.G2Diagnostic/GetLastException',
+                '/g2configmgr.G2ConfigMgr/GetLastException',
                 request_serializer=g2configmgr__pb2.GetLastExceptionRequest.SerializeToString,
                 response_deserializer=g2configmgr__pb2.GetLastExceptionResponse.FromString,
                 )
         self.GetLastExceptionCode = channel.unary_unary(
-                '/g2configmgr.G2Diagnostic/GetLastExceptionCode',
+                '/g2configmgr.G2ConfigMgr/GetLastExceptionCode',
                 request_serializer=g2configmgr__pb2.GetLastExceptionCodeRequest.SerializeToString,
                 response_deserializer=g2configmgr__pb2.GetLastExceptionCodeResponse.FromString,
                 )
         self.Init = channel.unary_unary(
-                '/g2configmgr.G2Diagnostic/Init',
+                '/g2configmgr.G2ConfigMgr/Init',
                 request_serializer=g2configmgr__pb2.InitRequest.SerializeToString,
                 response_deserializer=g2configmgr__pb2.InitResponse.FromString,
                 )
         self.ReplaceDefaultConfigID = channel.unary_unary(
-                '/g2configmgr.G2Diagnostic/ReplaceDefaultConfigID',
+                '/g2configmgr.G2ConfigMgr/ReplaceDefaultConfigID',
                 request_serializer=g2configmgr__pb2.ReplaceDefaultConfigIDRequest.SerializeToString,
                 response_deserializer=g2configmgr__pb2.ReplaceDefaultConfigIDResponse.FromString,
                 )
         self.SetDefaultConfigID = channel.unary_unary(
-                '/g2configmgr.G2Diagnostic/SetDefaultConfigID',
+                '/g2configmgr.G2ConfigMgr/SetDefaultConfigID',
                 request_serializer=g2configmgr__pb2.SetDefaultConfigIDRequest.SerializeToString,
                 response_deserializer=g2configmgr__pb2.SetDefaultConfigIDResponse.FromString,
                 )
 
 
-class G2DiagnosticServicer(object):
+class G2ConfigMgrServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def AddConfig(self, request, context):
@@ -141,7 +141,7 @@ class G2DiagnosticServicer(object):
         raise NotImplementedError('Method not implemented!')
 
 
-def add_G2DiagnosticServicer_to_server(servicer, server):
+def add_G2ConfigMgrServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'AddConfig': grpc.unary_unary_rpc_method_handler(
                     servicer.AddConfig,
@@ -200,12 +200,12 @@ def add_G2DiagnosticServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'g2configmgr.G2Diagnostic', rpc_method_handlers)
+            'g2configmgr.G2ConfigMgr', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class G2Diagnostic(object):
+class G2ConfigMgr(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
@@ -219,7 +219,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2Diagnostic/AddConfig',
+        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2ConfigMgr/AddConfig',
             g2configmgr__pb2.AddConfigRequest.SerializeToString,
             g2configmgr__pb2.AddConfigResponse.FromString,
             options, channel_credentials,
@@ -236,7 +236,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2Diagnostic/ClearLastException',
+        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2ConfigMgr/ClearLastException',
             g2configmgr__pb2.ClearLastExceptionRequest.SerializeToString,
             g2configmgr__pb2.ClearLastExceptionResponse.FromString,
             options, channel_credentials,
@@ -253,7 +253,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2Diagnostic/Destroy',
+        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2ConfigMgr/Destroy',
             g2configmgr__pb2.DestroyRequest.SerializeToString,
             g2configmgr__pb2.DestroyResponse.FromString,
             options, channel_credentials,
@@ -270,7 +270,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2Diagnostic/GetConfig',
+        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2ConfigMgr/GetConfig',
             g2configmgr__pb2.GetConfigRequest.SerializeToString,
             g2configmgr__pb2.GetConfigResponse.FromString,
             options, channel_credentials,
@@ -287,7 +287,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2Diagnostic/GetConfigList',
+        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2ConfigMgr/GetConfigList',
             g2configmgr__pb2.GetConfigListRequest.SerializeToString,
             g2configmgr__pb2.GetConfigListResponse.FromString,
             options, channel_credentials,
@@ -304,7 +304,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2Diagnostic/GetDefaultConfigID',
+        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2ConfigMgr/GetDefaultConfigID',
             g2configmgr__pb2.GetDefaultConfigIDRequest.SerializeToString,
             g2configmgr__pb2.GetDefaultConfigIDResponse.FromString,
             options, channel_credentials,
@@ -321,7 +321,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2Diagnostic/GetLastException',
+        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2ConfigMgr/GetLastException',
             g2configmgr__pb2.GetLastExceptionRequest.SerializeToString,
             g2configmgr__pb2.GetLastExceptionResponse.FromString,
             options, channel_credentials,
@@ -338,7 +338,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2Diagnostic/GetLastExceptionCode',
+        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2ConfigMgr/GetLastExceptionCode',
             g2configmgr__pb2.GetLastExceptionCodeRequest.SerializeToString,
             g2configmgr__pb2.GetLastExceptionCodeResponse.FromString,
             options, channel_credentials,
@@ -355,7 +355,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2Diagnostic/Init',
+        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2ConfigMgr/Init',
             g2configmgr__pb2.InitRequest.SerializeToString,
             g2configmgr__pb2.InitResponse.FromString,
             options, channel_credentials,
@@ -372,7 +372,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2Diagnostic/ReplaceDefaultConfigID',
+        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2ConfigMgr/ReplaceDefaultConfigID',
             g2configmgr__pb2.ReplaceDefaultConfigIDRequest.SerializeToString,
             g2configmgr__pb2.ReplaceDefaultConfigIDResponse.FromString,
             options, channel_credentials,
@@ -389,7 +389,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2Diagnostic/SetDefaultConfigID',
+        return grpc.experimental.unary_unary(request, target, '/g2configmgr.G2ConfigMgr/SetDefaultConfigID',
             g2configmgr__pb2.SetDefaultConfigIDRequest.SerializeToString,
             g2configmgr__pb2.SetDefaultConfigIDResponse.FromString,
             options, channel_credentials,

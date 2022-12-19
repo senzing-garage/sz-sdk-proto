@@ -5,7 +5,7 @@ import grpc
 import g2hasher_pb2 as g2hasher__pb2
 
 
-class G2DiagnosticStub(object):
+class G2HasherStub(object):
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -15,48 +15,48 @@ class G2DiagnosticStub(object):
             channel: A grpc.Channel.
         """
         self.ClearLastException = channel.unary_unary(
-                '/g2hasher.G2Diagnostic/ClearLastException',
+                '/g2hasher.G2Hasher/ClearLastException',
                 request_serializer=g2hasher__pb2.ClearLastExceptionRequest.SerializeToString,
                 response_deserializer=g2hasher__pb2.ClearLastExceptionResponse.FromString,
                 )
         self.Destroy = channel.unary_unary(
-                '/g2hasher.G2Diagnostic/Destroy',
+                '/g2hasher.G2Hasher/Destroy',
                 request_serializer=g2hasher__pb2.DestroyRequest.SerializeToString,
                 response_deserializer=g2hasher__pb2.DestroyResponse.FromString,
                 )
         self.ExportTokenLibrary = channel.unary_unary(
-                '/g2hasher.G2Diagnostic/ExportTokenLibrary',
+                '/g2hasher.G2Hasher/ExportTokenLibrary',
                 request_serializer=g2hasher__pb2.ExportTokenLibraryRequest.SerializeToString,
                 response_deserializer=g2hasher__pb2.ExportTokenLibraryResponse.FromString,
                 )
         self.GetLastException = channel.unary_unary(
-                '/g2hasher.G2Diagnostic/GetLastException',
+                '/g2hasher.G2Hasher/GetLastException',
                 request_serializer=g2hasher__pb2.GetLastExceptionRequest.SerializeToString,
                 response_deserializer=g2hasher__pb2.GetLastExceptionResponse.FromString,
                 )
         self.GetLastExceptionCode = channel.unary_unary(
-                '/g2hasher.G2Diagnostic/GetLastExceptionCode',
+                '/g2hasher.G2Hasher/GetLastExceptionCode',
                 request_serializer=g2hasher__pb2.GetLastExceptionCodeRequest.SerializeToString,
                 response_deserializer=g2hasher__pb2.GetLastExceptionCodeResponse.FromString,
                 )
         self.Init = channel.unary_unary(
-                '/g2hasher.G2Diagnostic/Init',
+                '/g2hasher.G2Hasher/Init',
                 request_serializer=g2hasher__pb2.InitRequest.SerializeToString,
                 response_deserializer=g2hasher__pb2.InitResponse.FromString,
                 )
         self.InitWithConfig = channel.unary_unary(
-                '/g2hasher.G2Diagnostic/InitWithConfig',
+                '/g2hasher.G2Hasher/InitWithConfig',
                 request_serializer=g2hasher__pb2.InitWithConfigRequest.SerializeToString,
                 response_deserializer=g2hasher__pb2.InitWithConfigResponse.FromString,
                 )
         self.Process = channel.unary_unary(
-                '/g2hasher.G2Diagnostic/Process',
+                '/g2hasher.G2Hasher/Process',
                 request_serializer=g2hasher__pb2.ProcessRequest.SerializeToString,
                 response_deserializer=g2hasher__pb2.ProcessResponse.FromString,
                 )
 
 
-class G2DiagnosticServicer(object):
+class G2HasherServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def ClearLastException(self, request, context):
@@ -108,7 +108,7 @@ class G2DiagnosticServicer(object):
         raise NotImplementedError('Method not implemented!')
 
 
-def add_G2DiagnosticServicer_to_server(servicer, server):
+def add_G2HasherServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'ClearLastException': grpc.unary_unary_rpc_method_handler(
                     servicer.ClearLastException,
@@ -152,12 +152,12 @@ def add_G2DiagnosticServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'g2hasher.G2Diagnostic', rpc_method_handlers)
+            'g2hasher.G2Hasher', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class G2Diagnostic(object):
+class G2Hasher(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
@@ -171,7 +171,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2hasher.G2Diagnostic/ClearLastException',
+        return grpc.experimental.unary_unary(request, target, '/g2hasher.G2Hasher/ClearLastException',
             g2hasher__pb2.ClearLastExceptionRequest.SerializeToString,
             g2hasher__pb2.ClearLastExceptionResponse.FromString,
             options, channel_credentials,
@@ -188,7 +188,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2hasher.G2Diagnostic/Destroy',
+        return grpc.experimental.unary_unary(request, target, '/g2hasher.G2Hasher/Destroy',
             g2hasher__pb2.DestroyRequest.SerializeToString,
             g2hasher__pb2.DestroyResponse.FromString,
             options, channel_credentials,
@@ -205,7 +205,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2hasher.G2Diagnostic/ExportTokenLibrary',
+        return grpc.experimental.unary_unary(request, target, '/g2hasher.G2Hasher/ExportTokenLibrary',
             g2hasher__pb2.ExportTokenLibraryRequest.SerializeToString,
             g2hasher__pb2.ExportTokenLibraryResponse.FromString,
             options, channel_credentials,
@@ -222,7 +222,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2hasher.G2Diagnostic/GetLastException',
+        return grpc.experimental.unary_unary(request, target, '/g2hasher.G2Hasher/GetLastException',
             g2hasher__pb2.GetLastExceptionRequest.SerializeToString,
             g2hasher__pb2.GetLastExceptionResponse.FromString,
             options, channel_credentials,
@@ -239,7 +239,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2hasher.G2Diagnostic/GetLastExceptionCode',
+        return grpc.experimental.unary_unary(request, target, '/g2hasher.G2Hasher/GetLastExceptionCode',
             g2hasher__pb2.GetLastExceptionCodeRequest.SerializeToString,
             g2hasher__pb2.GetLastExceptionCodeResponse.FromString,
             options, channel_credentials,
@@ -256,7 +256,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2hasher.G2Diagnostic/Init',
+        return grpc.experimental.unary_unary(request, target, '/g2hasher.G2Hasher/Init',
             g2hasher__pb2.InitRequest.SerializeToString,
             g2hasher__pb2.InitResponse.FromString,
             options, channel_credentials,
@@ -273,7 +273,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2hasher.G2Diagnostic/InitWithConfig',
+        return grpc.experimental.unary_unary(request, target, '/g2hasher.G2Hasher/InitWithConfig',
             g2hasher__pb2.InitWithConfigRequest.SerializeToString,
             g2hasher__pb2.InitWithConfigResponse.FromString,
             options, channel_credentials,
@@ -290,7 +290,7 @@ class G2Diagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2hasher.G2Diagnostic/Process',
+        return grpc.experimental.unary_unary(request, target, '/g2hasher.G2Hasher/Process',
             g2hasher__pb2.ProcessRequest.SerializeToString,
             g2hasher__pb2.ProcessResponse.FromString,
             options, channel_credentials,

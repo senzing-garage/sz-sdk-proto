@@ -15,7 +15,6 @@ module G2diagnostic
       self.service_name = 'g2diagnostic.G2Diagnostic'
 
       rpc :CheckDBPerf, ::G2diagnostic::CheckDBPerfRequest, ::G2diagnostic::CheckDBPerfResponse
-      rpc :ClearLastException, ::G2diagnostic::ClearLastExceptionRequest, ::G2diagnostic::ClearLastExceptionResponse
       rpc :CloseEntityListBySize, ::G2diagnostic::CloseEntityListBySizeRequest, ::G2diagnostic::CloseEntityListBySizeResponse
       rpc :Destroy, ::G2diagnostic::DestroyRequest, ::G2diagnostic::DestroyResponse
       rpc :FetchNextEntityBySize, ::G2diagnostic::FetchNextEntityBySizeRequest, ::G2diagnostic::FetchNextEntityBySizeResponse
@@ -29,8 +28,6 @@ module G2diagnostic
       rpc :GetEntitySizeBreakdown, ::G2diagnostic::GetEntitySizeBreakdownRequest, ::G2diagnostic::GetEntitySizeBreakdownResponse
       rpc :GetFeature, ::G2diagnostic::GetFeatureRequest, ::G2diagnostic::GetFeatureResponse
       rpc :GetGenericFeatures, ::G2diagnostic::GetGenericFeaturesRequest, ::G2diagnostic::GetGenericFeaturesResponse
-      rpc :GetLastException, ::G2diagnostic::GetLastExceptionRequest, ::G2diagnostic::GetLastExceptionResponse
-      rpc :GetLastExceptionCode, ::G2diagnostic::GetLastExceptionCodeRequest, ::G2diagnostic::GetLastExceptionCodeResponse
       rpc :GetLogicalCores, ::G2diagnostic::GetLogicalCoresRequest, ::G2diagnostic::GetLogicalCoresResponse
       rpc :GetMappingStatistics, ::G2diagnostic::GetMappingStatisticsRequest, ::G2diagnostic::GetMappingStatisticsResponse
       rpc :GetPhysicalCores, ::G2diagnostic::GetPhysicalCoresRequest, ::G2diagnostic::GetPhysicalCoresResponse

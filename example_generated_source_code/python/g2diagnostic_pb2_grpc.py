@@ -19,11 +19,6 @@ class G2DiagnosticStub(object):
                 request_serializer=g2diagnostic__pb2.CheckDBPerfRequest.SerializeToString,
                 response_deserializer=g2diagnostic__pb2.CheckDBPerfResponse.FromString,
                 )
-        self.ClearLastException = channel.unary_unary(
-                '/g2diagnostic.G2Diagnostic/ClearLastException',
-                request_serializer=g2diagnostic__pb2.ClearLastExceptionRequest.SerializeToString,
-                response_deserializer=g2diagnostic__pb2.ClearLastExceptionResponse.FromString,
-                )
         self.CloseEntityListBySize = channel.unary_unary(
                 '/g2diagnostic.G2Diagnostic/CloseEntityListBySize',
                 request_serializer=g2diagnostic__pb2.CloseEntityListBySizeRequest.SerializeToString,
@@ -89,16 +84,6 @@ class G2DiagnosticStub(object):
                 request_serializer=g2diagnostic__pb2.GetGenericFeaturesRequest.SerializeToString,
                 response_deserializer=g2diagnostic__pb2.GetGenericFeaturesResponse.FromString,
                 )
-        self.GetLastException = channel.unary_unary(
-                '/g2diagnostic.G2Diagnostic/GetLastException',
-                request_serializer=g2diagnostic__pb2.GetLastExceptionRequest.SerializeToString,
-                response_deserializer=g2diagnostic__pb2.GetLastExceptionResponse.FromString,
-                )
-        self.GetLastExceptionCode = channel.unary_unary(
-                '/g2diagnostic.G2Diagnostic/GetLastExceptionCode',
-                request_serializer=g2diagnostic__pb2.GetLastExceptionCodeRequest.SerializeToString,
-                response_deserializer=g2diagnostic__pb2.GetLastExceptionCodeResponse.FromString,
-                )
         self.GetLogicalCores = channel.unary_unary(
                 '/g2diagnostic.G2Diagnostic/GetLogicalCores',
                 request_serializer=g2diagnostic__pb2.GetLogicalCoresRequest.SerializeToString,
@@ -150,12 +135,6 @@ class G2DiagnosticServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def CheckDBPerf(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def ClearLastException(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -239,18 +218,6 @@ class G2DiagnosticServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def GetLastException(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def GetLastExceptionCode(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
     def GetLogicalCores(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -312,11 +279,6 @@ def add_G2DiagnosticServicer_to_server(servicer, server):
                     servicer.CheckDBPerf,
                     request_deserializer=g2diagnostic__pb2.CheckDBPerfRequest.FromString,
                     response_serializer=g2diagnostic__pb2.CheckDBPerfResponse.SerializeToString,
-            ),
-            'ClearLastException': grpc.unary_unary_rpc_method_handler(
-                    servicer.ClearLastException,
-                    request_deserializer=g2diagnostic__pb2.ClearLastExceptionRequest.FromString,
-                    response_serializer=g2diagnostic__pb2.ClearLastExceptionResponse.SerializeToString,
             ),
             'CloseEntityListBySize': grpc.unary_unary_rpc_method_handler(
                     servicer.CloseEntityListBySize,
@@ -382,16 +344,6 @@ def add_G2DiagnosticServicer_to_server(servicer, server):
                     servicer.GetGenericFeatures,
                     request_deserializer=g2diagnostic__pb2.GetGenericFeaturesRequest.FromString,
                     response_serializer=g2diagnostic__pb2.GetGenericFeaturesResponse.SerializeToString,
-            ),
-            'GetLastException': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetLastException,
-                    request_deserializer=g2diagnostic__pb2.GetLastExceptionRequest.FromString,
-                    response_serializer=g2diagnostic__pb2.GetLastExceptionResponse.SerializeToString,
-            ),
-            'GetLastExceptionCode': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetLastExceptionCode,
-                    request_deserializer=g2diagnostic__pb2.GetLastExceptionCodeRequest.FromString,
-                    response_serializer=g2diagnostic__pb2.GetLastExceptionCodeResponse.SerializeToString,
             ),
             'GetLogicalCores': grpc.unary_unary_rpc_method_handler(
                     servicer.GetLogicalCores,
@@ -462,23 +414,6 @@ class G2Diagnostic(object):
         return grpc.experimental.unary_unary(request, target, '/g2diagnostic.G2Diagnostic/CheckDBPerf',
             g2diagnostic__pb2.CheckDBPerfRequest.SerializeToString,
             g2diagnostic__pb2.CheckDBPerfResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def ClearLastException(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2diagnostic.G2Diagnostic/ClearLastException',
-            g2diagnostic__pb2.ClearLastExceptionRequest.SerializeToString,
-            g2diagnostic__pb2.ClearLastExceptionResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -700,40 +635,6 @@ class G2Diagnostic(object):
         return grpc.experimental.unary_unary(request, target, '/g2diagnostic.G2Diagnostic/GetGenericFeatures',
             g2diagnostic__pb2.GetGenericFeaturesRequest.SerializeToString,
             g2diagnostic__pb2.GetGenericFeaturesResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def GetLastException(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2diagnostic.G2Diagnostic/GetLastException',
-            g2diagnostic__pb2.GetLastExceptionRequest.SerializeToString,
-            g2diagnostic__pb2.GetLastExceptionResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def GetLastExceptionCode(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2diagnostic.G2Diagnostic/GetLastExceptionCode',
-            g2diagnostic__pb2.GetLastExceptionCodeRequest.SerializeToString,
-            g2diagnostic__pb2.GetLastExceptionCodeResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 

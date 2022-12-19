@@ -5,14 +5,14 @@ require 'grpc'
 require 'g2product_pb'
 
 module G2product
-  module G2Diagnostic
+  module G2Product
     class Service
 
       include ::GRPC::GenericService
 
       self.marshal_class_method = :encode
       self.unmarshal_class_method = :decode
-      self.service_name = 'g2product.G2Diagnostic'
+      self.service_name = 'g2product.G2Product'
 
       rpc :ClearLastException, ::G2product::ClearLastExceptionRequest, ::G2product::ClearLastExceptionResponse
       rpc :Destroy, ::G2product::DestroyRequest, ::G2product::DestroyResponse

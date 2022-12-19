@@ -6,8 +6,8 @@ option java_multiple_files = true;
 option java_package = "com.senzing.g2.engine.grpc.G2Engine";
 option java_outer_classname = "G2EngineProto";
 
-service G2Diagnostic {
-  rpc AddRecord(AddRecordRequest) returns (AddRecordResponseResponse) {}
+service G2Engine {
+  rpc AddRecord(AddRecordRequest) returns (AddRecordResponse) {}
   rpc AddRecordWithInfo(AddRecordWithInfoRequest) returns (AddRecordWithInfoResponse) {}
   rpc AddRecordWithInfoWithReturnedRecordID(AddRecordWithInfoWithReturnedRecordIDRequest) returns (AddRecordWithInfoWithReturnedRecordIDResponse) {}
   rpc AddRecordWithReturnedRecordID(AddRecordWithReturnedRecordIDRequest) returns (AddRecordWithReturnedRecordIDResponse) {}
@@ -93,7 +93,7 @@ message AddRecordRequest {
   string loadID = 4;
 }
 
-message AddRecordResponseResponse {}
+message AddRecordResponse {}
 
 message AddRecordWithInfoRequest {
   string dataSourceCode = 1;

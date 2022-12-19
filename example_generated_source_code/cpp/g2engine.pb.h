@@ -49,9 +49,9 @@ namespace g2engine {
 class AddRecordRequest;
 struct AddRecordRequestDefaultTypeInternal;
 extern AddRecordRequestDefaultTypeInternal _AddRecordRequest_default_instance_;
-class AddRecordResponseResponse;
-struct AddRecordResponseResponseDefaultTypeInternal;
-extern AddRecordResponseResponseDefaultTypeInternal _AddRecordResponseResponse_default_instance_;
+class AddRecordResponse;
+struct AddRecordResponseDefaultTypeInternal;
+extern AddRecordResponseDefaultTypeInternal _AddRecordResponse_default_instance_;
 class AddRecordWithInfoRequest;
 struct AddRecordWithInfoRequestDefaultTypeInternal;
 extern AddRecordWithInfoRequestDefaultTypeInternal _AddRecordWithInfoRequest_default_instance_;
@@ -511,7 +511,7 @@ extern WhyRecords_V2ResponseDefaultTypeInternal _WhyRecords_V2Response_default_i
 }  // namespace g2engine
 PROTOBUF_NAMESPACE_OPEN
 template<> ::g2engine::AddRecordRequest* Arena::CreateMaybeMessage<::g2engine::AddRecordRequest>(Arena*);
-template<> ::g2engine::AddRecordResponseResponse* Arena::CreateMaybeMessage<::g2engine::AddRecordResponseResponse>(Arena*);
+template<> ::g2engine::AddRecordResponse* Arena::CreateMaybeMessage<::g2engine::AddRecordResponse>(Arena*);
 template<> ::g2engine::AddRecordWithInfoRequest* Arena::CreateMaybeMessage<::g2engine::AddRecordWithInfoRequest>(Arena*);
 template<> ::g2engine::AddRecordWithInfoResponse* Arena::CreateMaybeMessage<::g2engine::AddRecordWithInfoResponse>(Arena*);
 template<> ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* Arena::CreateMaybeMessage<::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest>(Arena*);
@@ -870,23 +870,23 @@ class AddRecordRequest final :
 };
 // -------------------------------------------------------------------
 
-class AddRecordResponseResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:g2engine.AddRecordResponseResponse) */ {
+class AddRecordResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:g2engine.AddRecordResponse) */ {
  public:
-  inline AddRecordResponseResponse() : AddRecordResponseResponse(nullptr) {}
-  explicit PROTOBUF_CONSTEXPR AddRecordResponseResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline AddRecordResponse() : AddRecordResponse(nullptr) {}
+  explicit PROTOBUF_CONSTEXPR AddRecordResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  AddRecordResponseResponse(const AddRecordResponseResponse& from);
-  AddRecordResponseResponse(AddRecordResponseResponse&& from) noexcept
-    : AddRecordResponseResponse() {
+  AddRecordResponse(const AddRecordResponse& from);
+  AddRecordResponse(AddRecordResponse&& from) noexcept
+    : AddRecordResponse() {
     *this = ::std::move(from);
   }
 
-  inline AddRecordResponseResponse& operator=(const AddRecordResponseResponse& from) {
+  inline AddRecordResponse& operator=(const AddRecordResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AddRecordResponseResponse& operator=(AddRecordResponseResponse&& from) noexcept {
+  inline AddRecordResponse& operator=(AddRecordResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -909,20 +909,20 @@ class AddRecordResponseResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AddRecordResponseResponse& default_instance() {
+  static const AddRecordResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const AddRecordResponseResponse* internal_default_instance() {
-    return reinterpret_cast<const AddRecordResponseResponse*>(
-               &_AddRecordResponseResponse_default_instance_);
+  static inline const AddRecordResponse* internal_default_instance() {
+    return reinterpret_cast<const AddRecordResponse*>(
+               &_AddRecordResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  friend void swap(AddRecordResponseResponse& a, AddRecordResponseResponse& b) {
+  friend void swap(AddRecordResponse& a, AddRecordResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(AddRecordResponseResponse* other) {
+  inline void Swap(AddRecordResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -935,7 +935,7 @@ class AddRecordResponseResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AddRecordResponseResponse* other) {
+  void UnsafeArenaSwap(AddRecordResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -943,15 +943,15 @@ class AddRecordResponseResponse final :
 
   // implements Message ----------------------------------------------
 
-  AddRecordResponseResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<AddRecordResponseResponse>(arena);
+  AddRecordResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<AddRecordResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const AddRecordResponseResponse& from) {
+  inline void CopyFrom(const AddRecordResponse& from) {
     ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
   }
   using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const AddRecordResponseResponse& from) {
+  void MergeFrom(const AddRecordResponse& from) {
     ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
   }
   public:
@@ -959,10 +959,10 @@ class AddRecordResponseResponse final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "g2engine.AddRecordResponseResponse";
+    return "g2engine.AddRecordResponse";
   }
   protected:
-  explicit AddRecordResponseResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit AddRecordResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -975,7 +975,7 @@ class AddRecordResponseResponse final :
 
   // accessors -------------------------------------------------------
 
-  // @@protoc_insertion_point(class_scope:g2engine.AddRecordResponseResponse)
+  // @@protoc_insertion_point(class_scope:g2engine.AddRecordResponse)
  private:
   class _Internal;
 
@@ -25188,7 +25188,7 @@ inline void AddRecordRequest::set_allocated_loadid(std::string* loadid) {
 
 // -------------------------------------------------------------------
 
-// AddRecordResponseResponse
+// AddRecordResponse
 
 // -------------------------------------------------------------------
 

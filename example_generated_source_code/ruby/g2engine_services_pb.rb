@@ -5,16 +5,16 @@ require 'grpc'
 require 'g2engine_pb'
 
 module G2engine
-  module G2Diagnostic
+  module G2Engine
     class Service
 
       include ::GRPC::GenericService
 
       self.marshal_class_method = :encode
       self.unmarshal_class_method = :decode
-      self.service_name = 'g2engine.G2Diagnostic'
+      self.service_name = 'g2engine.G2Engine'
 
-      rpc :AddRecord, ::G2engine::AddRecordRequest, ::G2engine::AddRecordResponseResponse
+      rpc :AddRecord, ::G2engine::AddRecordRequest, ::G2engine::AddRecordResponse
       rpc :AddRecordWithInfo, ::G2engine::AddRecordWithInfoRequest, ::G2engine::AddRecordWithInfoResponse
       rpc :AddRecordWithInfoWithReturnedRecordID, ::G2engine::AddRecordWithInfoWithReturnedRecordIDRequest, ::G2engine::AddRecordWithInfoWithReturnedRecordIDResponse
       rpc :AddRecordWithReturnedRecordID, ::G2engine::AddRecordWithReturnedRecordIDRequest, ::G2engine::AddRecordWithReturnedRecordIDResponse

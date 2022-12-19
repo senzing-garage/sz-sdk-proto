@@ -11,7 +11,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :jsonData, :string, 3
       optional :loadID, :string, 4
     end
-    add_message "g2engine.AddRecordResponseResponse" do
+    add_message "g2engine.AddRecordResponse" do
     end
     add_message "g2engine.AddRecordWithInfoRequest" do
       optional :dataSourceCode, :string, 1
@@ -580,7 +580,7 @@ end
 
 module G2engine
   AddRecordRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordRequest").msgclass
-  AddRecordResponseResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordResponseResponse").msgclass
+  AddRecordResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordResponse").msgclass
   AddRecordWithInfoRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordWithInfoRequest").msgclass
   AddRecordWithInfoResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordWithInfoResponse").msgclass
   AddRecordWithInfoWithReturnedRecordIDRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordWithInfoWithReturnedRecordIDRequest").msgclass

@@ -165,33 +165,33 @@ public final class G2ConfigProto {
       "\001 \001(\t\"!\n\013LoadRequest\022\022\n\njsonConfig\030\001 \001(\t" +
       "\"\036\n\014LoadResponse\022\016\n\006result\030\001 \001(\003\"#\n\013Save" +
       "Request\022\024\n\014configHandle\030\001 \001(\t\"\036\n\014SaveRes" +
-      "ponse\022\016\n\006result\030\001 \001(\t2\252\007\n\014G2Diagnostic\022R" +
-      "\n\rAddDataSource\022\036.g2config.AddDataSource" +
-      "Request\032\037.g2config.AddDataSourceResponse" +
-      "\"\000\022a\n\022ClearLastException\022#.g2config.Clea" +
-      "rLastExceptionRequest\032$.g2config.ClearLa" +
-      "stExceptionResponse\"\000\022:\n\005Close\022\026.g2confi" +
-      "g.CloseRequest\032\027.g2config.CloseResponse\"" +
-      "\000\022=\n\006Create\022\027.g2config.CreateRequest\032\030.g" +
-      "2config.CreateResponse\"\000\022[\n\020DeleteDataSo" +
-      "urce\022!.g2config.DeleteDataSourceRequest\032" +
-      "\".g2config.DeleteDataSourceResponse\"\000\022@\n" +
-      "\007Destroy\022\030.g2config.DestroyRequest\032\031.g2c" +
-      "onfig.DestroyResponse\"\000\022[\n\020GetLastExcept" +
-      "ion\022!.g2config.GetLastExceptionRequest\032\"" +
-      ".g2config.GetLastExceptionResponse\"\000\022g\n\024" +
-      "GetLastExceptionCode\022%.g2config.GetLastE" +
-      "xceptionCodeRequest\032&.g2config.GetLastEx" +
-      "ceptionCodeResponse\"\000\0227\n\004Init\022\025.g2config" +
-      ".InitRequest\032\026.g2config.InitResponse\"\000\022X" +
-      "\n\017ListDataSources\022 .g2config.ListDataSou" +
-      "rcesRequest\032!.g2config.ListDataSourcesRe" +
-      "sponse\"\000\0227\n\004Load\022\025.g2config.LoadRequest\032" +
-      "\026.g2config.LoadResponse\"\000\0227\n\004Save\022\025.g2co" +
-      "nfig.SaveRequest\032\026.g2config.SaveResponse" +
-      "\"\000Bb\n#com.senzing.g2.engine.grpc.G2Confi" +
-      "gB\rG2ConfigProtoP\001Z*github.com/senzing/g" +
-      "2-sdk-go-grpc/g2configb\006proto3"
+      "ponse\022\016\n\006result\030\001 \001(\t2\246\007\n\010G2Config\022R\n\rAd" +
+      "dDataSource\022\036.g2config.AddDataSourceRequ" +
+      "est\032\037.g2config.AddDataSourceResponse\"\000\022a" +
+      "\n\022ClearLastException\022#.g2config.ClearLas" +
+      "tExceptionRequest\032$.g2config.ClearLastEx" +
+      "ceptionResponse\"\000\022:\n\005Close\022\026.g2config.Cl" +
+      "oseRequest\032\027.g2config.CloseResponse\"\000\022=\n" +
+      "\006Create\022\027.g2config.CreateRequest\032\030.g2con" +
+      "fig.CreateResponse\"\000\022[\n\020DeleteDataSource" +
+      "\022!.g2config.DeleteDataSourceRequest\032\".g2" +
+      "config.DeleteDataSourceResponse\"\000\022@\n\007Des" +
+      "troy\022\030.g2config.DestroyRequest\032\031.g2confi" +
+      "g.DestroyResponse\"\000\022[\n\020GetLastException\022" +
+      "!.g2config.GetLastExceptionRequest\032\".g2c" +
+      "onfig.GetLastExceptionResponse\"\000\022g\n\024GetL" +
+      "astExceptionCode\022%.g2config.GetLastExcep" +
+      "tionCodeRequest\032&.g2config.GetLastExcept" +
+      "ionCodeResponse\"\000\0227\n\004Init\022\025.g2config.Ini" +
+      "tRequest\032\026.g2config.InitResponse\"\000\022X\n\017Li" +
+      "stDataSources\022 .g2config.ListDataSources" +
+      "Request\032!.g2config.ListDataSourcesRespon" +
+      "se\"\000\0227\n\004Load\022\025.g2config.LoadRequest\032\026.g2" +
+      "config.LoadResponse\"\000\0227\n\004Save\022\025.g2config" +
+      ".SaveRequest\032\026.g2config.SaveResponse\"\000Bb" +
+      "\n#com.senzing.g2.engine.grpc.G2ConfigB\rG" +
+      "2ConfigProtoP\001Z*github.com/senzing/g2-sd" +
+      "k-go-grpc/g2configb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

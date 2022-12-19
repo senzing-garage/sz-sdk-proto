@@ -21,434 +21,434 @@
 #include <grpcpp/impl/codegen/sync_stream.h>
 namespace g2config {
 
-static const char* G2Diagnostic_method_names[] = {
-  "/g2config.G2Diagnostic/AddDataSource",
-  "/g2config.G2Diagnostic/ClearLastException",
-  "/g2config.G2Diagnostic/Close",
-  "/g2config.G2Diagnostic/Create",
-  "/g2config.G2Diagnostic/DeleteDataSource",
-  "/g2config.G2Diagnostic/Destroy",
-  "/g2config.G2Diagnostic/GetLastException",
-  "/g2config.G2Diagnostic/GetLastExceptionCode",
-  "/g2config.G2Diagnostic/Init",
-  "/g2config.G2Diagnostic/ListDataSources",
-  "/g2config.G2Diagnostic/Load",
-  "/g2config.G2Diagnostic/Save",
+static const char* G2Config_method_names[] = {
+  "/g2config.G2Config/AddDataSource",
+  "/g2config.G2Config/ClearLastException",
+  "/g2config.G2Config/Close",
+  "/g2config.G2Config/Create",
+  "/g2config.G2Config/DeleteDataSource",
+  "/g2config.G2Config/Destroy",
+  "/g2config.G2Config/GetLastException",
+  "/g2config.G2Config/GetLastExceptionCode",
+  "/g2config.G2Config/Init",
+  "/g2config.G2Config/ListDataSources",
+  "/g2config.G2Config/Load",
+  "/g2config.G2Config/Save",
 };
 
-std::unique_ptr< G2Diagnostic::Stub> G2Diagnostic::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
+std::unique_ptr< G2Config::Stub> G2Config::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
   (void)options;
-  std::unique_ptr< G2Diagnostic::Stub> stub(new G2Diagnostic::Stub(channel, options));
+  std::unique_ptr< G2Config::Stub> stub(new G2Config::Stub(channel, options));
   return stub;
 }
 
-G2Diagnostic::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
-  : channel_(channel), rpcmethod_AddDataSource_(G2Diagnostic_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ClearLastException_(G2Diagnostic_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Close_(G2Diagnostic_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Create_(G2Diagnostic_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_DeleteDataSource_(G2Diagnostic_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Destroy_(G2Diagnostic_method_names[5], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetLastException_(G2Diagnostic_method_names[6], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetLastExceptionCode_(G2Diagnostic_method_names[7], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Init_(G2Diagnostic_method_names[8], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ListDataSources_(G2Diagnostic_method_names[9], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Load_(G2Diagnostic_method_names[10], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Save_(G2Diagnostic_method_names[11], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+G2Config::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
+  : channel_(channel), rpcmethod_AddDataSource_(G2Config_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ClearLastException_(G2Config_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Close_(G2Config_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Create_(G2Config_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_DeleteDataSource_(G2Config_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Destroy_(G2Config_method_names[5], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetLastException_(G2Config_method_names[6], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetLastExceptionCode_(G2Config_method_names[7], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Init_(G2Config_method_names[8], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ListDataSources_(G2Config_method_names[9], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Load_(G2Config_method_names[10], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Save_(G2Config_method_names[11], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status G2Diagnostic::Stub::AddDataSource(::grpc::ClientContext* context, const ::g2config::AddDataSourceRequest& request, ::g2config::AddDataSourceResponse* response) {
+::grpc::Status G2Config::Stub::AddDataSource(::grpc::ClientContext* context, const ::g2config::AddDataSourceRequest& request, ::g2config::AddDataSourceResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2config::AddDataSourceRequest, ::g2config::AddDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_AddDataSource_, context, request, response);
 }
 
-void G2Diagnostic::Stub::async::AddDataSource(::grpc::ClientContext* context, const ::g2config::AddDataSourceRequest* request, ::g2config::AddDataSourceResponse* response, std::function<void(::grpc::Status)> f) {
+void G2Config::Stub::async::AddDataSource(::grpc::ClientContext* context, const ::g2config::AddDataSourceRequest* request, ::g2config::AddDataSourceResponse* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall< ::g2config::AddDataSourceRequest, ::g2config::AddDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_AddDataSource_, context, request, response, std::move(f));
 }
 
-void G2Diagnostic::Stub::async::AddDataSource(::grpc::ClientContext* context, const ::g2config::AddDataSourceRequest* request, ::g2config::AddDataSourceResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void G2Config::Stub::async::AddDataSource(::grpc::ClientContext* context, const ::g2config::AddDataSourceRequest* request, ::g2config::AddDataSourceResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_AddDataSource_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::AddDataSourceResponse>* G2Diagnostic::Stub::PrepareAsyncAddDataSourceRaw(::grpc::ClientContext* context, const ::g2config::AddDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::AddDataSourceResponse>* G2Config::Stub::PrepareAsyncAddDataSourceRaw(::grpc::ClientContext* context, const ::g2config::AddDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2config::AddDataSourceResponse, ::g2config::AddDataSourceRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_AddDataSource_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::AddDataSourceResponse>* G2Diagnostic::Stub::AsyncAddDataSourceRaw(::grpc::ClientContext* context, const ::g2config::AddDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::AddDataSourceResponse>* G2Config::Stub::AsyncAddDataSourceRaw(::grpc::ClientContext* context, const ::g2config::AddDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncAddDataSourceRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status G2Diagnostic::Stub::ClearLastException(::grpc::ClientContext* context, const ::g2config::ClearLastExceptionRequest& request, ::g2config::ClearLastExceptionResponse* response) {
+::grpc::Status G2Config::Stub::ClearLastException(::grpc::ClientContext* context, const ::g2config::ClearLastExceptionRequest& request, ::g2config::ClearLastExceptionResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2config::ClearLastExceptionRequest, ::g2config::ClearLastExceptionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_ClearLastException_, context, request, response);
 }
 
-void G2Diagnostic::Stub::async::ClearLastException(::grpc::ClientContext* context, const ::g2config::ClearLastExceptionRequest* request, ::g2config::ClearLastExceptionResponse* response, std::function<void(::grpc::Status)> f) {
+void G2Config::Stub::async::ClearLastException(::grpc::ClientContext* context, const ::g2config::ClearLastExceptionRequest* request, ::g2config::ClearLastExceptionResponse* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall< ::g2config::ClearLastExceptionRequest, ::g2config::ClearLastExceptionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_ClearLastException_, context, request, response, std::move(f));
 }
 
-void G2Diagnostic::Stub::async::ClearLastException(::grpc::ClientContext* context, const ::g2config::ClearLastExceptionRequest* request, ::g2config::ClearLastExceptionResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void G2Config::Stub::async::ClearLastException(::grpc::ClientContext* context, const ::g2config::ClearLastExceptionRequest* request, ::g2config::ClearLastExceptionResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_ClearLastException_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::ClearLastExceptionResponse>* G2Diagnostic::Stub::PrepareAsyncClearLastExceptionRaw(::grpc::ClientContext* context, const ::g2config::ClearLastExceptionRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::ClearLastExceptionResponse>* G2Config::Stub::PrepareAsyncClearLastExceptionRaw(::grpc::ClientContext* context, const ::g2config::ClearLastExceptionRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2config::ClearLastExceptionResponse, ::g2config::ClearLastExceptionRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_ClearLastException_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::ClearLastExceptionResponse>* G2Diagnostic::Stub::AsyncClearLastExceptionRaw(::grpc::ClientContext* context, const ::g2config::ClearLastExceptionRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::ClearLastExceptionResponse>* G2Config::Stub::AsyncClearLastExceptionRaw(::grpc::ClientContext* context, const ::g2config::ClearLastExceptionRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncClearLastExceptionRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status G2Diagnostic::Stub::Close(::grpc::ClientContext* context, const ::g2config::CloseRequest& request, ::g2config::CloseResponse* response) {
+::grpc::Status G2Config::Stub::Close(::grpc::ClientContext* context, const ::g2config::CloseRequest& request, ::g2config::CloseResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2config::CloseRequest, ::g2config::CloseResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Close_, context, request, response);
 }
 
-void G2Diagnostic::Stub::async::Close(::grpc::ClientContext* context, const ::g2config::CloseRequest* request, ::g2config::CloseResponse* response, std::function<void(::grpc::Status)> f) {
+void G2Config::Stub::async::Close(::grpc::ClientContext* context, const ::g2config::CloseRequest* request, ::g2config::CloseResponse* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall< ::g2config::CloseRequest, ::g2config::CloseResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Close_, context, request, response, std::move(f));
 }
 
-void G2Diagnostic::Stub::async::Close(::grpc::ClientContext* context, const ::g2config::CloseRequest* request, ::g2config::CloseResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void G2Config::Stub::async::Close(::grpc::ClientContext* context, const ::g2config::CloseRequest* request, ::g2config::CloseResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Close_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::CloseResponse>* G2Diagnostic::Stub::PrepareAsyncCloseRaw(::grpc::ClientContext* context, const ::g2config::CloseRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::CloseResponse>* G2Config::Stub::PrepareAsyncCloseRaw(::grpc::ClientContext* context, const ::g2config::CloseRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2config::CloseResponse, ::g2config::CloseRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Close_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::CloseResponse>* G2Diagnostic::Stub::AsyncCloseRaw(::grpc::ClientContext* context, const ::g2config::CloseRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::CloseResponse>* G2Config::Stub::AsyncCloseRaw(::grpc::ClientContext* context, const ::g2config::CloseRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncCloseRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status G2Diagnostic::Stub::Create(::grpc::ClientContext* context, const ::g2config::CreateRequest& request, ::g2config::CreateResponse* response) {
+::grpc::Status G2Config::Stub::Create(::grpc::ClientContext* context, const ::g2config::CreateRequest& request, ::g2config::CreateResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2config::CreateRequest, ::g2config::CreateResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Create_, context, request, response);
 }
 
-void G2Diagnostic::Stub::async::Create(::grpc::ClientContext* context, const ::g2config::CreateRequest* request, ::g2config::CreateResponse* response, std::function<void(::grpc::Status)> f) {
+void G2Config::Stub::async::Create(::grpc::ClientContext* context, const ::g2config::CreateRequest* request, ::g2config::CreateResponse* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall< ::g2config::CreateRequest, ::g2config::CreateResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Create_, context, request, response, std::move(f));
 }
 
-void G2Diagnostic::Stub::async::Create(::grpc::ClientContext* context, const ::g2config::CreateRequest* request, ::g2config::CreateResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void G2Config::Stub::async::Create(::grpc::ClientContext* context, const ::g2config::CreateRequest* request, ::g2config::CreateResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Create_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::CreateResponse>* G2Diagnostic::Stub::PrepareAsyncCreateRaw(::grpc::ClientContext* context, const ::g2config::CreateRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::CreateResponse>* G2Config::Stub::PrepareAsyncCreateRaw(::grpc::ClientContext* context, const ::g2config::CreateRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2config::CreateResponse, ::g2config::CreateRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Create_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::CreateResponse>* G2Diagnostic::Stub::AsyncCreateRaw(::grpc::ClientContext* context, const ::g2config::CreateRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::CreateResponse>* G2Config::Stub::AsyncCreateRaw(::grpc::ClientContext* context, const ::g2config::CreateRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncCreateRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status G2Diagnostic::Stub::DeleteDataSource(::grpc::ClientContext* context, const ::g2config::DeleteDataSourceRequest& request, ::g2config::DeleteDataSourceResponse* response) {
+::grpc::Status G2Config::Stub::DeleteDataSource(::grpc::ClientContext* context, const ::g2config::DeleteDataSourceRequest& request, ::g2config::DeleteDataSourceResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2config::DeleteDataSourceRequest, ::g2config::DeleteDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_DeleteDataSource_, context, request, response);
 }
 
-void G2Diagnostic::Stub::async::DeleteDataSource(::grpc::ClientContext* context, const ::g2config::DeleteDataSourceRequest* request, ::g2config::DeleteDataSourceResponse* response, std::function<void(::grpc::Status)> f) {
+void G2Config::Stub::async::DeleteDataSource(::grpc::ClientContext* context, const ::g2config::DeleteDataSourceRequest* request, ::g2config::DeleteDataSourceResponse* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall< ::g2config::DeleteDataSourceRequest, ::g2config::DeleteDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_DeleteDataSource_, context, request, response, std::move(f));
 }
 
-void G2Diagnostic::Stub::async::DeleteDataSource(::grpc::ClientContext* context, const ::g2config::DeleteDataSourceRequest* request, ::g2config::DeleteDataSourceResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void G2Config::Stub::async::DeleteDataSource(::grpc::ClientContext* context, const ::g2config::DeleteDataSourceRequest* request, ::g2config::DeleteDataSourceResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_DeleteDataSource_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::DeleteDataSourceResponse>* G2Diagnostic::Stub::PrepareAsyncDeleteDataSourceRaw(::grpc::ClientContext* context, const ::g2config::DeleteDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::DeleteDataSourceResponse>* G2Config::Stub::PrepareAsyncDeleteDataSourceRaw(::grpc::ClientContext* context, const ::g2config::DeleteDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2config::DeleteDataSourceResponse, ::g2config::DeleteDataSourceRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_DeleteDataSource_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::DeleteDataSourceResponse>* G2Diagnostic::Stub::AsyncDeleteDataSourceRaw(::grpc::ClientContext* context, const ::g2config::DeleteDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::DeleteDataSourceResponse>* G2Config::Stub::AsyncDeleteDataSourceRaw(::grpc::ClientContext* context, const ::g2config::DeleteDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncDeleteDataSourceRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status G2Diagnostic::Stub::Destroy(::grpc::ClientContext* context, const ::g2config::DestroyRequest& request, ::g2config::DestroyResponse* response) {
+::grpc::Status G2Config::Stub::Destroy(::grpc::ClientContext* context, const ::g2config::DestroyRequest& request, ::g2config::DestroyResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2config::DestroyRequest, ::g2config::DestroyResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Destroy_, context, request, response);
 }
 
-void G2Diagnostic::Stub::async::Destroy(::grpc::ClientContext* context, const ::g2config::DestroyRequest* request, ::g2config::DestroyResponse* response, std::function<void(::grpc::Status)> f) {
+void G2Config::Stub::async::Destroy(::grpc::ClientContext* context, const ::g2config::DestroyRequest* request, ::g2config::DestroyResponse* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall< ::g2config::DestroyRequest, ::g2config::DestroyResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Destroy_, context, request, response, std::move(f));
 }
 
-void G2Diagnostic::Stub::async::Destroy(::grpc::ClientContext* context, const ::g2config::DestroyRequest* request, ::g2config::DestroyResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void G2Config::Stub::async::Destroy(::grpc::ClientContext* context, const ::g2config::DestroyRequest* request, ::g2config::DestroyResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Destroy_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::DestroyResponse>* G2Diagnostic::Stub::PrepareAsyncDestroyRaw(::grpc::ClientContext* context, const ::g2config::DestroyRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::DestroyResponse>* G2Config::Stub::PrepareAsyncDestroyRaw(::grpc::ClientContext* context, const ::g2config::DestroyRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2config::DestroyResponse, ::g2config::DestroyRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Destroy_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::DestroyResponse>* G2Diagnostic::Stub::AsyncDestroyRaw(::grpc::ClientContext* context, const ::g2config::DestroyRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::DestroyResponse>* G2Config::Stub::AsyncDestroyRaw(::grpc::ClientContext* context, const ::g2config::DestroyRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncDestroyRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status G2Diagnostic::Stub::GetLastException(::grpc::ClientContext* context, const ::g2config::GetLastExceptionRequest& request, ::g2config::GetLastExceptionResponse* response) {
+::grpc::Status G2Config::Stub::GetLastException(::grpc::ClientContext* context, const ::g2config::GetLastExceptionRequest& request, ::g2config::GetLastExceptionResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2config::GetLastExceptionRequest, ::g2config::GetLastExceptionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetLastException_, context, request, response);
 }
 
-void G2Diagnostic::Stub::async::GetLastException(::grpc::ClientContext* context, const ::g2config::GetLastExceptionRequest* request, ::g2config::GetLastExceptionResponse* response, std::function<void(::grpc::Status)> f) {
+void G2Config::Stub::async::GetLastException(::grpc::ClientContext* context, const ::g2config::GetLastExceptionRequest* request, ::g2config::GetLastExceptionResponse* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall< ::g2config::GetLastExceptionRequest, ::g2config::GetLastExceptionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetLastException_, context, request, response, std::move(f));
 }
 
-void G2Diagnostic::Stub::async::GetLastException(::grpc::ClientContext* context, const ::g2config::GetLastExceptionRequest* request, ::g2config::GetLastExceptionResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void G2Config::Stub::async::GetLastException(::grpc::ClientContext* context, const ::g2config::GetLastExceptionRequest* request, ::g2config::GetLastExceptionResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetLastException_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::GetLastExceptionResponse>* G2Diagnostic::Stub::PrepareAsyncGetLastExceptionRaw(::grpc::ClientContext* context, const ::g2config::GetLastExceptionRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::GetLastExceptionResponse>* G2Config::Stub::PrepareAsyncGetLastExceptionRaw(::grpc::ClientContext* context, const ::g2config::GetLastExceptionRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2config::GetLastExceptionResponse, ::g2config::GetLastExceptionRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetLastException_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::GetLastExceptionResponse>* G2Diagnostic::Stub::AsyncGetLastExceptionRaw(::grpc::ClientContext* context, const ::g2config::GetLastExceptionRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::GetLastExceptionResponse>* G2Config::Stub::AsyncGetLastExceptionRaw(::grpc::ClientContext* context, const ::g2config::GetLastExceptionRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncGetLastExceptionRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status G2Diagnostic::Stub::GetLastExceptionCode(::grpc::ClientContext* context, const ::g2config::GetLastExceptionCodeRequest& request, ::g2config::GetLastExceptionCodeResponse* response) {
+::grpc::Status G2Config::Stub::GetLastExceptionCode(::grpc::ClientContext* context, const ::g2config::GetLastExceptionCodeRequest& request, ::g2config::GetLastExceptionCodeResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2config::GetLastExceptionCodeRequest, ::g2config::GetLastExceptionCodeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetLastExceptionCode_, context, request, response);
 }
 
-void G2Diagnostic::Stub::async::GetLastExceptionCode(::grpc::ClientContext* context, const ::g2config::GetLastExceptionCodeRequest* request, ::g2config::GetLastExceptionCodeResponse* response, std::function<void(::grpc::Status)> f) {
+void G2Config::Stub::async::GetLastExceptionCode(::grpc::ClientContext* context, const ::g2config::GetLastExceptionCodeRequest* request, ::g2config::GetLastExceptionCodeResponse* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall< ::g2config::GetLastExceptionCodeRequest, ::g2config::GetLastExceptionCodeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetLastExceptionCode_, context, request, response, std::move(f));
 }
 
-void G2Diagnostic::Stub::async::GetLastExceptionCode(::grpc::ClientContext* context, const ::g2config::GetLastExceptionCodeRequest* request, ::g2config::GetLastExceptionCodeResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void G2Config::Stub::async::GetLastExceptionCode(::grpc::ClientContext* context, const ::g2config::GetLastExceptionCodeRequest* request, ::g2config::GetLastExceptionCodeResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetLastExceptionCode_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::GetLastExceptionCodeResponse>* G2Diagnostic::Stub::PrepareAsyncGetLastExceptionCodeRaw(::grpc::ClientContext* context, const ::g2config::GetLastExceptionCodeRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::GetLastExceptionCodeResponse>* G2Config::Stub::PrepareAsyncGetLastExceptionCodeRaw(::grpc::ClientContext* context, const ::g2config::GetLastExceptionCodeRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2config::GetLastExceptionCodeResponse, ::g2config::GetLastExceptionCodeRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetLastExceptionCode_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::GetLastExceptionCodeResponse>* G2Diagnostic::Stub::AsyncGetLastExceptionCodeRaw(::grpc::ClientContext* context, const ::g2config::GetLastExceptionCodeRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::GetLastExceptionCodeResponse>* G2Config::Stub::AsyncGetLastExceptionCodeRaw(::grpc::ClientContext* context, const ::g2config::GetLastExceptionCodeRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncGetLastExceptionCodeRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status G2Diagnostic::Stub::Init(::grpc::ClientContext* context, const ::g2config::InitRequest& request, ::g2config::InitResponse* response) {
+::grpc::Status G2Config::Stub::Init(::grpc::ClientContext* context, const ::g2config::InitRequest& request, ::g2config::InitResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2config::InitRequest, ::g2config::InitResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Init_, context, request, response);
 }
 
-void G2Diagnostic::Stub::async::Init(::grpc::ClientContext* context, const ::g2config::InitRequest* request, ::g2config::InitResponse* response, std::function<void(::grpc::Status)> f) {
+void G2Config::Stub::async::Init(::grpc::ClientContext* context, const ::g2config::InitRequest* request, ::g2config::InitResponse* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall< ::g2config::InitRequest, ::g2config::InitResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Init_, context, request, response, std::move(f));
 }
 
-void G2Diagnostic::Stub::async::Init(::grpc::ClientContext* context, const ::g2config::InitRequest* request, ::g2config::InitResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void G2Config::Stub::async::Init(::grpc::ClientContext* context, const ::g2config::InitRequest* request, ::g2config::InitResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Init_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::InitResponse>* G2Diagnostic::Stub::PrepareAsyncInitRaw(::grpc::ClientContext* context, const ::g2config::InitRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::InitResponse>* G2Config::Stub::PrepareAsyncInitRaw(::grpc::ClientContext* context, const ::g2config::InitRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2config::InitResponse, ::g2config::InitRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Init_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::InitResponse>* G2Diagnostic::Stub::AsyncInitRaw(::grpc::ClientContext* context, const ::g2config::InitRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::InitResponse>* G2Config::Stub::AsyncInitRaw(::grpc::ClientContext* context, const ::g2config::InitRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncInitRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status G2Diagnostic::Stub::ListDataSources(::grpc::ClientContext* context, const ::g2config::ListDataSourcesRequest& request, ::g2config::ListDataSourcesResponse* response) {
+::grpc::Status G2Config::Stub::ListDataSources(::grpc::ClientContext* context, const ::g2config::ListDataSourcesRequest& request, ::g2config::ListDataSourcesResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2config::ListDataSourcesRequest, ::g2config::ListDataSourcesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_ListDataSources_, context, request, response);
 }
 
-void G2Diagnostic::Stub::async::ListDataSources(::grpc::ClientContext* context, const ::g2config::ListDataSourcesRequest* request, ::g2config::ListDataSourcesResponse* response, std::function<void(::grpc::Status)> f) {
+void G2Config::Stub::async::ListDataSources(::grpc::ClientContext* context, const ::g2config::ListDataSourcesRequest* request, ::g2config::ListDataSourcesResponse* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall< ::g2config::ListDataSourcesRequest, ::g2config::ListDataSourcesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_ListDataSources_, context, request, response, std::move(f));
 }
 
-void G2Diagnostic::Stub::async::ListDataSources(::grpc::ClientContext* context, const ::g2config::ListDataSourcesRequest* request, ::g2config::ListDataSourcesResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void G2Config::Stub::async::ListDataSources(::grpc::ClientContext* context, const ::g2config::ListDataSourcesRequest* request, ::g2config::ListDataSourcesResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_ListDataSources_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::ListDataSourcesResponse>* G2Diagnostic::Stub::PrepareAsyncListDataSourcesRaw(::grpc::ClientContext* context, const ::g2config::ListDataSourcesRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::ListDataSourcesResponse>* G2Config::Stub::PrepareAsyncListDataSourcesRaw(::grpc::ClientContext* context, const ::g2config::ListDataSourcesRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2config::ListDataSourcesResponse, ::g2config::ListDataSourcesRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_ListDataSources_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::ListDataSourcesResponse>* G2Diagnostic::Stub::AsyncListDataSourcesRaw(::grpc::ClientContext* context, const ::g2config::ListDataSourcesRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::ListDataSourcesResponse>* G2Config::Stub::AsyncListDataSourcesRaw(::grpc::ClientContext* context, const ::g2config::ListDataSourcesRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncListDataSourcesRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status G2Diagnostic::Stub::Load(::grpc::ClientContext* context, const ::g2config::LoadRequest& request, ::g2config::LoadResponse* response) {
+::grpc::Status G2Config::Stub::Load(::grpc::ClientContext* context, const ::g2config::LoadRequest& request, ::g2config::LoadResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2config::LoadRequest, ::g2config::LoadResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Load_, context, request, response);
 }
 
-void G2Diagnostic::Stub::async::Load(::grpc::ClientContext* context, const ::g2config::LoadRequest* request, ::g2config::LoadResponse* response, std::function<void(::grpc::Status)> f) {
+void G2Config::Stub::async::Load(::grpc::ClientContext* context, const ::g2config::LoadRequest* request, ::g2config::LoadResponse* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall< ::g2config::LoadRequest, ::g2config::LoadResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Load_, context, request, response, std::move(f));
 }
 
-void G2Diagnostic::Stub::async::Load(::grpc::ClientContext* context, const ::g2config::LoadRequest* request, ::g2config::LoadResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void G2Config::Stub::async::Load(::grpc::ClientContext* context, const ::g2config::LoadRequest* request, ::g2config::LoadResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Load_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::LoadResponse>* G2Diagnostic::Stub::PrepareAsyncLoadRaw(::grpc::ClientContext* context, const ::g2config::LoadRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::LoadResponse>* G2Config::Stub::PrepareAsyncLoadRaw(::grpc::ClientContext* context, const ::g2config::LoadRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2config::LoadResponse, ::g2config::LoadRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Load_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::LoadResponse>* G2Diagnostic::Stub::AsyncLoadRaw(::grpc::ClientContext* context, const ::g2config::LoadRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::LoadResponse>* G2Config::Stub::AsyncLoadRaw(::grpc::ClientContext* context, const ::g2config::LoadRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncLoadRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status G2Diagnostic::Stub::Save(::grpc::ClientContext* context, const ::g2config::SaveRequest& request, ::g2config::SaveResponse* response) {
+::grpc::Status G2Config::Stub::Save(::grpc::ClientContext* context, const ::g2config::SaveRequest& request, ::g2config::SaveResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2config::SaveRequest, ::g2config::SaveResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Save_, context, request, response);
 }
 
-void G2Diagnostic::Stub::async::Save(::grpc::ClientContext* context, const ::g2config::SaveRequest* request, ::g2config::SaveResponse* response, std::function<void(::grpc::Status)> f) {
+void G2Config::Stub::async::Save(::grpc::ClientContext* context, const ::g2config::SaveRequest* request, ::g2config::SaveResponse* response, std::function<void(::grpc::Status)> f) {
   ::grpc::internal::CallbackUnaryCall< ::g2config::SaveRequest, ::g2config::SaveResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Save_, context, request, response, std::move(f));
 }
 
-void G2Diagnostic::Stub::async::Save(::grpc::ClientContext* context, const ::g2config::SaveRequest* request, ::g2config::SaveResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void G2Config::Stub::async::Save(::grpc::ClientContext* context, const ::g2config::SaveRequest* request, ::g2config::SaveResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Save_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::SaveResponse>* G2Diagnostic::Stub::PrepareAsyncSaveRaw(::grpc::ClientContext* context, const ::g2config::SaveRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::SaveResponse>* G2Config::Stub::PrepareAsyncSaveRaw(::grpc::ClientContext* context, const ::g2config::SaveRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2config::SaveResponse, ::g2config::SaveRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Save_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::g2config::SaveResponse>* G2Diagnostic::Stub::AsyncSaveRaw(::grpc::ClientContext* context, const ::g2config::SaveRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::g2config::SaveResponse>* G2Config::Stub::AsyncSaveRaw(::grpc::ClientContext* context, const ::g2config::SaveRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncSaveRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-G2Diagnostic::Service::Service() {
+G2Config::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[0],
+      G2Config_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2config::AddDataSourceRequest, ::g2config::AddDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
+      new ::grpc::internal::RpcMethodHandler< G2Config::Service, ::g2config::AddDataSourceRequest, ::g2config::AddDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](G2Config::Service* service,
              ::grpc::ServerContext* ctx,
              const ::g2config::AddDataSourceRequest* req,
              ::g2config::AddDataSourceResponse* resp) {
                return service->AddDataSource(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[1],
+      G2Config_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2config::ClearLastExceptionRequest, ::g2config::ClearLastExceptionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
+      new ::grpc::internal::RpcMethodHandler< G2Config::Service, ::g2config::ClearLastExceptionRequest, ::g2config::ClearLastExceptionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](G2Config::Service* service,
              ::grpc::ServerContext* ctx,
              const ::g2config::ClearLastExceptionRequest* req,
              ::g2config::ClearLastExceptionResponse* resp) {
                return service->ClearLastException(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[2],
+      G2Config_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2config::CloseRequest, ::g2config::CloseResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
+      new ::grpc::internal::RpcMethodHandler< G2Config::Service, ::g2config::CloseRequest, ::g2config::CloseResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](G2Config::Service* service,
              ::grpc::ServerContext* ctx,
              const ::g2config::CloseRequest* req,
              ::g2config::CloseResponse* resp) {
                return service->Close(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[3],
+      G2Config_method_names[3],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2config::CreateRequest, ::g2config::CreateResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
+      new ::grpc::internal::RpcMethodHandler< G2Config::Service, ::g2config::CreateRequest, ::g2config::CreateResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](G2Config::Service* service,
              ::grpc::ServerContext* ctx,
              const ::g2config::CreateRequest* req,
              ::g2config::CreateResponse* resp) {
                return service->Create(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[4],
+      G2Config_method_names[4],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2config::DeleteDataSourceRequest, ::g2config::DeleteDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
+      new ::grpc::internal::RpcMethodHandler< G2Config::Service, ::g2config::DeleteDataSourceRequest, ::g2config::DeleteDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](G2Config::Service* service,
              ::grpc::ServerContext* ctx,
              const ::g2config::DeleteDataSourceRequest* req,
              ::g2config::DeleteDataSourceResponse* resp) {
                return service->DeleteDataSource(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[5],
+      G2Config_method_names[5],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2config::DestroyRequest, ::g2config::DestroyResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
+      new ::grpc::internal::RpcMethodHandler< G2Config::Service, ::g2config::DestroyRequest, ::g2config::DestroyResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](G2Config::Service* service,
              ::grpc::ServerContext* ctx,
              const ::g2config::DestroyRequest* req,
              ::g2config::DestroyResponse* resp) {
                return service->Destroy(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[6],
+      G2Config_method_names[6],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2config::GetLastExceptionRequest, ::g2config::GetLastExceptionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
+      new ::grpc::internal::RpcMethodHandler< G2Config::Service, ::g2config::GetLastExceptionRequest, ::g2config::GetLastExceptionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](G2Config::Service* service,
              ::grpc::ServerContext* ctx,
              const ::g2config::GetLastExceptionRequest* req,
              ::g2config::GetLastExceptionResponse* resp) {
                return service->GetLastException(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[7],
+      G2Config_method_names[7],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2config::GetLastExceptionCodeRequest, ::g2config::GetLastExceptionCodeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
+      new ::grpc::internal::RpcMethodHandler< G2Config::Service, ::g2config::GetLastExceptionCodeRequest, ::g2config::GetLastExceptionCodeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](G2Config::Service* service,
              ::grpc::ServerContext* ctx,
              const ::g2config::GetLastExceptionCodeRequest* req,
              ::g2config::GetLastExceptionCodeResponse* resp) {
                return service->GetLastExceptionCode(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[8],
+      G2Config_method_names[8],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2config::InitRequest, ::g2config::InitResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
+      new ::grpc::internal::RpcMethodHandler< G2Config::Service, ::g2config::InitRequest, ::g2config::InitResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](G2Config::Service* service,
              ::grpc::ServerContext* ctx,
              const ::g2config::InitRequest* req,
              ::g2config::InitResponse* resp) {
                return service->Init(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[9],
+      G2Config_method_names[9],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2config::ListDataSourcesRequest, ::g2config::ListDataSourcesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
+      new ::grpc::internal::RpcMethodHandler< G2Config::Service, ::g2config::ListDataSourcesRequest, ::g2config::ListDataSourcesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](G2Config::Service* service,
              ::grpc::ServerContext* ctx,
              const ::g2config::ListDataSourcesRequest* req,
              ::g2config::ListDataSourcesResponse* resp) {
                return service->ListDataSources(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[10],
+      G2Config_method_names[10],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2config::LoadRequest, ::g2config::LoadResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
+      new ::grpc::internal::RpcMethodHandler< G2Config::Service, ::g2config::LoadRequest, ::g2config::LoadResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](G2Config::Service* service,
              ::grpc::ServerContext* ctx,
              const ::g2config::LoadRequest* req,
              ::g2config::LoadResponse* resp) {
                return service->Load(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[11],
+      G2Config_method_names[11],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2config::SaveRequest, ::g2config::SaveResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
+      new ::grpc::internal::RpcMethodHandler< G2Config::Service, ::g2config::SaveRequest, ::g2config::SaveResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](G2Config::Service* service,
              ::grpc::ServerContext* ctx,
              const ::g2config::SaveRequest* req,
              ::g2config::SaveResponse* resp) {
@@ -456,87 +456,87 @@ G2Diagnostic::Service::Service() {
              }, this)));
 }
 
-G2Diagnostic::Service::~Service() {
+G2Config::Service::~Service() {
 }
 
-::grpc::Status G2Diagnostic::Service::AddDataSource(::grpc::ServerContext* context, const ::g2config::AddDataSourceRequest* request, ::g2config::AddDataSourceResponse* response) {
+::grpc::Status G2Config::Service::AddDataSource(::grpc::ServerContext* context, const ::g2config::AddDataSourceRequest* request, ::g2config::AddDataSourceResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status G2Diagnostic::Service::ClearLastException(::grpc::ServerContext* context, const ::g2config::ClearLastExceptionRequest* request, ::g2config::ClearLastExceptionResponse* response) {
+::grpc::Status G2Config::Service::ClearLastException(::grpc::ServerContext* context, const ::g2config::ClearLastExceptionRequest* request, ::g2config::ClearLastExceptionResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status G2Diagnostic::Service::Close(::grpc::ServerContext* context, const ::g2config::CloseRequest* request, ::g2config::CloseResponse* response) {
+::grpc::Status G2Config::Service::Close(::grpc::ServerContext* context, const ::g2config::CloseRequest* request, ::g2config::CloseResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status G2Diagnostic::Service::Create(::grpc::ServerContext* context, const ::g2config::CreateRequest* request, ::g2config::CreateResponse* response) {
+::grpc::Status G2Config::Service::Create(::grpc::ServerContext* context, const ::g2config::CreateRequest* request, ::g2config::CreateResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status G2Diagnostic::Service::DeleteDataSource(::grpc::ServerContext* context, const ::g2config::DeleteDataSourceRequest* request, ::g2config::DeleteDataSourceResponse* response) {
+::grpc::Status G2Config::Service::DeleteDataSource(::grpc::ServerContext* context, const ::g2config::DeleteDataSourceRequest* request, ::g2config::DeleteDataSourceResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status G2Diagnostic::Service::Destroy(::grpc::ServerContext* context, const ::g2config::DestroyRequest* request, ::g2config::DestroyResponse* response) {
+::grpc::Status G2Config::Service::Destroy(::grpc::ServerContext* context, const ::g2config::DestroyRequest* request, ::g2config::DestroyResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status G2Diagnostic::Service::GetLastException(::grpc::ServerContext* context, const ::g2config::GetLastExceptionRequest* request, ::g2config::GetLastExceptionResponse* response) {
+::grpc::Status G2Config::Service::GetLastException(::grpc::ServerContext* context, const ::g2config::GetLastExceptionRequest* request, ::g2config::GetLastExceptionResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status G2Diagnostic::Service::GetLastExceptionCode(::grpc::ServerContext* context, const ::g2config::GetLastExceptionCodeRequest* request, ::g2config::GetLastExceptionCodeResponse* response) {
+::grpc::Status G2Config::Service::GetLastExceptionCode(::grpc::ServerContext* context, const ::g2config::GetLastExceptionCodeRequest* request, ::g2config::GetLastExceptionCodeResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status G2Diagnostic::Service::Init(::grpc::ServerContext* context, const ::g2config::InitRequest* request, ::g2config::InitResponse* response) {
+::grpc::Status G2Config::Service::Init(::grpc::ServerContext* context, const ::g2config::InitRequest* request, ::g2config::InitResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status G2Diagnostic::Service::ListDataSources(::grpc::ServerContext* context, const ::g2config::ListDataSourcesRequest* request, ::g2config::ListDataSourcesResponse* response) {
+::grpc::Status G2Config::Service::ListDataSources(::grpc::ServerContext* context, const ::g2config::ListDataSourcesRequest* request, ::g2config::ListDataSourcesResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status G2Diagnostic::Service::Load(::grpc::ServerContext* context, const ::g2config::LoadRequest* request, ::g2config::LoadResponse* response) {
+::grpc::Status G2Config::Service::Load(::grpc::ServerContext* context, const ::g2config::LoadRequest* request, ::g2config::LoadResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status G2Diagnostic::Service::Save(::grpc::ServerContext* context, const ::g2config::SaveRequest* request, ::g2config::SaveResponse* response) {
+::grpc::Status G2Config::Service::Save(::grpc::ServerContext* context, const ::g2config::SaveRequest* request, ::g2config::SaveResponse* response) {
   (void) context;
   (void) request;
   (void) response;

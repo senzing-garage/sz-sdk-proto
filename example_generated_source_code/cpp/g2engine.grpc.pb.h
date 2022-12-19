@@ -27,20 +27,20 @@
 
 namespace g2engine {
 
-class G2Diagnostic final {
+class G2Engine final {
  public:
   static constexpr char const* service_full_name() {
-    return "g2engine.G2Diagnostic";
+    return "g2engine.G2Engine";
   }
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    virtual ::grpc::Status AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::g2engine::AddRecordResponseResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordResponseResponse>> AsyncAddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordResponseResponse>>(AsyncAddRecordRaw(context, request, cq));
+    virtual ::grpc::Status AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::g2engine::AddRecordResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordResponse>> AsyncAddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordResponse>>(AsyncAddRecordRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordResponseResponse>> PrepareAsyncAddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordResponseResponse>>(PrepareAsyncAddRecordRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordResponse>> PrepareAsyncAddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordResponse>>(PrepareAsyncAddRecordRaw(context, request, cq));
     }
     virtual ::grpc::Status AddRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest& request, ::g2engine::AddRecordWithInfoResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithInfoResponse>> AsyncAddRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) {
@@ -577,8 +577,8 @@ class G2Diagnostic final {
     class async_interface {
      public:
       virtual ~async_interface() {}
-      virtual void AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponseResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponseResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void AddRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest* request, ::g2engine::AddRecordWithInfoResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void AddRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest* request, ::g2engine::AddRecordWithInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void AddRecordWithInfoWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* request, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* response, std::function<void(::grpc::Status)>) = 0;
@@ -736,8 +736,8 @@ class G2Diagnostic final {
     virtual class async_interface* async() { return nullptr; }
     class async_interface* experimental_async() { return async(); }
    private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordResponseResponse>* AsyncAddRecordRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordResponseResponse>* PrepareAsyncAddRecordRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordResponse>* AsyncAddRecordRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordResponse>* PrepareAsyncAddRecordRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithInfoResponse>* AsyncAddRecordWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithInfoResponse>* PrepareAsyncAddRecordWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>* AsyncAddRecordWithInfoWithReturnedRecordIDRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -894,12 +894,12 @@ class G2Diagnostic final {
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-    ::grpc::Status AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::g2engine::AddRecordResponseResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordResponseResponse>> AsyncAddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordResponseResponse>>(AsyncAddRecordRaw(context, request, cq));
+    ::grpc::Status AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::g2engine::AddRecordResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordResponse>> AsyncAddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordResponse>>(AsyncAddRecordRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordResponseResponse>> PrepareAsyncAddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordResponseResponse>>(PrepareAsyncAddRecordRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordResponse>> PrepareAsyncAddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordResponse>>(PrepareAsyncAddRecordRaw(context, request, cq));
     }
     ::grpc::Status AddRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest& request, ::g2engine::AddRecordWithInfoResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithInfoResponse>> AsyncAddRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) {
@@ -1436,8 +1436,8 @@ class G2Diagnostic final {
     class async final :
       public StubInterface::async_interface {
      public:
-      void AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponseResponse* response, std::function<void(::grpc::Status)>) override;
-      void AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponseResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponse* response, std::function<void(::grpc::Status)>) override;
+      void AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void AddRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest* request, ::g2engine::AddRecordWithInfoResponse* response, std::function<void(::grpc::Status)>) override;
       void AddRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest* request, ::g2engine::AddRecordWithInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void AddRecordWithInfoWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* request, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* response, std::function<void(::grpc::Status)>) override;
@@ -1601,8 +1601,8 @@ class G2Diagnostic final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class async async_stub_{this};
-    ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordResponseResponse>* AsyncAddRecordRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordResponseResponse>* PrepareAsyncAddRecordRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordResponse>* AsyncAddRecordRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordResponse>* PrepareAsyncAddRecordRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithInfoResponse>* AsyncAddRecordWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithInfoResponse>* PrepareAsyncAddRecordWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>* AsyncAddRecordWithInfoWithReturnedRecordIDRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) override;
@@ -1839,7 +1839,7 @@ class G2Diagnostic final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status AddRecord(::grpc::ServerContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponseResponse* response);
+    virtual ::grpc::Status AddRecord(::grpc::ServerContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponse* response);
     virtual ::grpc::Status AddRecordWithInfo(::grpc::ServerContext* context, const ::g2engine::AddRecordWithInfoRequest* request, ::g2engine::AddRecordWithInfoResponse* response);
     virtual ::grpc::Status AddRecordWithInfoWithReturnedRecordID(::grpc::ServerContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* request, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* response);
     virtual ::grpc::Status AddRecordWithReturnedRecordID(::grpc::ServerContext* context, const ::g2engine::AddRecordWithReturnedRecordIDRequest* request, ::g2engine::AddRecordWithReturnedRecordIDResponse* response);
@@ -1929,11 +1929,11 @@ class G2Diagnostic final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AddRecord(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordRequest* /*request*/, ::g2engine::AddRecordResponseResponse* /*response*/) override {
+    ::grpc::Status AddRecord(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordRequest* /*request*/, ::g2engine::AddRecordResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestAddRecord(::grpc::ServerContext* context, ::g2engine::AddRecordRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::AddRecordResponseResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestAddRecord(::grpc::ServerContext* context, ::g2engine::AddRecordRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::AddRecordResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -3465,25 +3465,25 @@ class G2Diagnostic final {
    public:
     WithCallbackMethod_AddRecord() {
       ::grpc::Service::MarkMethodCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::g2engine::AddRecordRequest, ::g2engine::AddRecordResponseResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::g2engine::AddRecordRequest, ::g2engine::AddRecordResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponseResponse* response) { return this->AddRecord(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponse* response) { return this->AddRecord(context, request, response); }));}
     void SetMessageAllocatorFor_AddRecord(
-        ::grpc::MessageAllocator< ::g2engine::AddRecordRequest, ::g2engine::AddRecordResponseResponse>* allocator) {
+        ::grpc::MessageAllocator< ::g2engine::AddRecordRequest, ::g2engine::AddRecordResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::AddRecordRequest, ::g2engine::AddRecordResponseResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::AddRecordRequest, ::g2engine::AddRecordResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~WithCallbackMethod_AddRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AddRecord(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordRequest* /*request*/, ::g2engine::AddRecordResponseResponse* /*response*/) override {
+    ::grpc::Status AddRecord(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordRequest* /*request*/, ::g2engine::AddRecordResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* AddRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2engine::AddRecordRequest* /*request*/, ::g2engine::AddRecordResponseResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::g2engine::AddRecordRequest* /*request*/, ::g2engine::AddRecordResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithCallbackMethod_AddRecordWithInfo : public BaseClass {
@@ -5551,7 +5551,7 @@ class G2Diagnostic final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AddRecord(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordRequest* /*request*/, ::g2engine::AddRecordResponseResponse* /*response*/) override {
+    ::grpc::Status AddRecord(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordRequest* /*request*/, ::g2engine::AddRecordResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -6860,7 +6860,7 @@ class G2Diagnostic final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AddRecord(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordRequest* /*request*/, ::g2engine::AddRecordResponseResponse* /*response*/) override {
+    ::grpc::Status AddRecord(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordRequest* /*request*/, ::g2engine::AddRecordResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -8403,7 +8403,7 @@ class G2Diagnostic final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AddRecord(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordRequest* /*request*/, ::g2engine::AddRecordResponseResponse* /*response*/) override {
+    ::grpc::Status AddRecord(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordRequest* /*request*/, ::g2engine::AddRecordResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -10090,10 +10090,10 @@ class G2Diagnostic final {
     WithStreamedUnaryMethod_AddRecord() {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::g2engine::AddRecordRequest, ::g2engine::AddRecordResponseResponse>(
+          ::g2engine::AddRecordRequest, ::g2engine::AddRecordResponse>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::g2engine::AddRecordRequest, ::g2engine::AddRecordResponseResponse>* streamer) {
+                     ::g2engine::AddRecordRequest, ::g2engine::AddRecordResponse>* streamer) {
                        return this->StreamedAddRecord(context,
                          streamer);
                   }));
@@ -10102,12 +10102,12 @@ class G2Diagnostic final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status AddRecord(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordRequest* /*request*/, ::g2engine::AddRecordResponseResponse* /*response*/) override {
+    ::grpc::Status AddRecord(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordRequest* /*request*/, ::g2engine::AddRecordResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedAddRecord(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2engine::AddRecordRequest,::g2engine::AddRecordResponseResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedAddRecord(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2engine::AddRecordRequest,::g2engine::AddRecordResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_AddRecordWithInfo : public BaseClass {

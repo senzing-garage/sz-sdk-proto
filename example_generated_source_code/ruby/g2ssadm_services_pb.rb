@@ -5,14 +5,14 @@ require 'grpc'
 require 'g2ssadm_pb'
 
 module G2ssadm
-  module G2Diagnostic
+  module G2Ssadm
     class Service
 
       include ::GRPC::GenericService
 
       self.marshal_class_method = :encode
       self.unmarshal_class_method = :decode
-      self.service_name = 'g2ssadm.G2Diagnostic'
+      self.service_name = 'g2ssadm.G2Ssadm'
 
       rpc :ClearLastException, ::G2ssadm::ClearLastExceptionRequest, ::G2ssadm::ClearLastExceptionResponse
       rpc :CreateSaltInStore, ::G2ssadm::CreateSaltInStoreRequest, ::G2ssadm::CreateSaltInStoreResponse

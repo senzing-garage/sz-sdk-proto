@@ -5,14 +5,14 @@ require 'grpc'
 require 'g2hasher_pb'
 
 module G2hasher
-  module G2Diagnostic
+  module G2Hasher
     class Service
 
       include ::GRPC::GenericService
 
       self.marshal_class_method = :encode
       self.unmarshal_class_method = :decode
-      self.service_name = 'g2hasher.G2Diagnostic'
+      self.service_name = 'g2hasher.G2Hasher'
 
       rpc :ClearLastException, ::G2hasher::ClearLastExceptionRequest, ::G2hasher::ClearLastExceptionResponse
       rpc :Destroy, ::G2hasher::DestroyRequest, ::G2hasher::DestroyResponse
