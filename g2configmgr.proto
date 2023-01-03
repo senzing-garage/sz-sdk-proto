@@ -8,13 +8,10 @@ option java_outer_classname = "G2ConfigMgrProto";
 
 service G2ConfigMgr {
   rpc AddConfig (AddConfigRequest) returns (AddConfigResponse) {}
-  rpc ClearLastException (ClearLastExceptionRequest) returns (ClearLastExceptionResponse) {}
   rpc Destroy (DestroyRequest) returns (DestroyResponse) {}
   rpc GetConfig (GetConfigRequest) returns (GetConfigResponse) {}
   rpc GetConfigList (GetConfigListRequest) returns (GetConfigListResponse) {}
   rpc GetDefaultConfigID (GetDefaultConfigIDRequest) returns (GetDefaultConfigIDResponse) {}
-  rpc GetLastException (GetLastExceptionRequest) returns (GetLastExceptionResponse) {}
-  rpc GetLastExceptionCode (GetLastExceptionCodeRequest) returns (GetLastExceptionCodeResponse) {}
   rpc Init (InitRequest) returns (InitResponse) {}
   rpc ReplaceDefaultConfigID (ReplaceDefaultConfigIDRequest) returns (ReplaceDefaultConfigIDResponse) {}
   rpc SetDefaultConfigID (SetDefaultConfigIDRequest) returns (SetDefaultConfigIDResponse) {}
@@ -28,10 +25,6 @@ message AddConfigRequest {
 message AddConfigResponse {
   int64 result = 1;
 }
-
-message ClearLastExceptionRequest {}
-
-message ClearLastExceptionResponse {}
 
 message DestroyRequest {}
 
@@ -55,18 +48,6 @@ message GetDefaultConfigIDRequest {}
 
 message GetDefaultConfigIDResponse {
   int64 configID = 1;
-}
-
-message GetLastExceptionRequest {}
-
-message GetLastExceptionResponse {
-  string result = 1;
-}
-
-message GetLastExceptionCodeRequest {}
-
-message GetLastExceptionCodeResponse {
-  int32 configID = 1;
 }
 
 message InitRequest {

@@ -80,7 +80,26 @@ describing where we can improve.   Now on with the show...
 ## Language
 
 The following instructions were used to create
+[go module](go) and other
 [example generated source code](example_generated_source_code).
+
+### Identify Senzing subcomponents
+
+1. Enumerate the Senzing components for use in language-specific commands below.
+   Example:
+
+    ```console
+    export SENZING_COMPONENTS=( \
+      "g2config" \
+      "g2configmgr" \
+      "g2diagnostic" \
+      "g2engine" \
+      "g2hasher" \
+      "g2product" \
+      "g2ssadm" \
+    )
+
+    ```
 
 ### C++
 
@@ -88,22 +107,20 @@ The following instructions were used to create
 1. Follow the
    [C++ Quick start](https://grpc.io/docs/languages/cpp/quickstart/)
    tutorial to prepare an environment.
+1. [Identify Senzing subcomponents](#identify-senzing-subcomponents)
 1. Generate message handling code.
+   Example:
 
     ```console
-    export SENZING_OUTPUT_DIR=${GIT_REPOSITORY_DIR}/example_generated_source_code/cpp
-    mkdir -p ${SENZING_OUTPUT_DIR}
-
-    protoc \
-        --proto_path=${GIT_REPOSITORY_DIR} \
+    for SENZING_COMPONENT in ${SENZING_COMPONENTS[@]}; \
+    do \
+      export SENZING_OUTPUT_DIR=${GIT_REPOSITORY_DIR}/example_generated_source_code/cpp/${SENZING_COMPONENT}
+      mkdir -p ${SENZING_OUTPUT_DIR}
+      protoc \
+        --proto_path=${GIT_REPOSITORY_DIR}/ \
         --cpp_out=${SENZING_OUTPUT_DIR} \
-        ${GIT_REPOSITORY_DIR}/g2config.proto \
-        ${GIT_REPOSITORY_DIR}/g2configmgr.proto \
-        ${GIT_REPOSITORY_DIR}/g2diagnostic.proto \
-        ${GIT_REPOSITORY_DIR}/g2engine.proto \
-        ${GIT_REPOSITORY_DIR}/g2hasher.proto \
-        ${GIT_REPOSITORY_DIR}/g2product.proto \
-        ${GIT_REPOSITORY_DIR}/g2ssadm.proto
+        ${GIT_REPOSITORY_DIR}/${SENZING_COMPONENT}.proto
+    done
 
     ```
 
@@ -111,20 +128,16 @@ The following instructions were used to create
    Example:
 
     ```console
-    export SENZING_OUTPUT_DIR=${GIT_REPOSITORY_DIR}/example_generated_source_code/cpp
-    mkdir -p ${SENZING_OUTPUT_DIR}
-
-    protoc \
-        --proto_path=${GIT_REPOSITORY_DIR} \
+    for SENZING_COMPONENT in ${SENZING_COMPONENTS[@]}; \
+    do \
+      export SENZING_OUTPUT_DIR=${GIT_REPOSITORY_DIR}/example_generated_source_code/cpp/${SENZING_COMPONENT}
+      mkdir -p ${SENZING_OUTPUT_DIR}
+      protoc \
+        --proto_path=${GIT_REPOSITORY_DIR}/ \
         --grpc_out=${SENZING_OUTPUT_DIR} \
         --plugin=protoc-gen-grpc=`which grpc_cpp_plugin` \
-        ${GIT_REPOSITORY_DIR}/g2config.proto \
-        ${GIT_REPOSITORY_DIR}/g2configmgr.proto \
-        ${GIT_REPOSITORY_DIR}/g2diagnostic.proto \
-        ${GIT_REPOSITORY_DIR}/g2engine.proto \
-        ${GIT_REPOSITORY_DIR}/g2hasher.proto \
-        ${GIT_REPOSITORY_DIR}/g2product.proto \
-        ${GIT_REPOSITORY_DIR}/g2ssadm.proto
+        ${GIT_REPOSITORY_DIR}/${SENZING_COMPONENT}.proto
+    done
 
     ```
 
@@ -134,26 +147,23 @@ The following instructions were used to create
 1. Follow the
    [Go Quick start](https://grpc.io/docs/languages/go/quickstart/)
    tutorial to prepare an environment.
+1. [Identify Senzing subcomponents](#identify-senzing-subcomponents)
 1. [Generating client and server code](https://grpc.io/docs/languages/go/basics/#generating-client-and-server-code).
    Example:
 
     ```console
-    export SENZING_OUTPUT_DIR=${GIT_REPOSITORY_DIR}/example_generated_source_code/go
-    mkdir -p ${SENZING_OUTPUT_DIR}
-
-    protoc \
-        --proto_path=${GIT_REPOSITORY_DIR} \
+    for SENZING_COMPONENT in ${SENZING_COMPONENTS[@]}; \
+    do \
+      export SENZING_OUTPUT_DIR=${GIT_REPOSITORY_DIR}/go/${SENZING_COMPONENT}
+      mkdir -p ${SENZING_OUTPUT_DIR}
+      protoc \
+        --proto_path=${GIT_REPOSITORY_DIR}/ \
         --go_out=${SENZING_OUTPUT_DIR} \
         --go_opt=paths=source_relative \
         --go-grpc_out=${SENZING_OUTPUT_DIR} \
         --go-grpc_opt=paths=source_relative \
-        ${GIT_REPOSITORY_DIR}/g2config.proto \
-        ${GIT_REPOSITORY_DIR}/g2configmgr.proto \
-        ${GIT_REPOSITORY_DIR}/g2diagnostic.proto \
-        ${GIT_REPOSITORY_DIR}/g2engine.proto \
-        ${GIT_REPOSITORY_DIR}/g2hasher.proto \
-        ${GIT_REPOSITORY_DIR}/g2product.proto \
-        ${GIT_REPOSITORY_DIR}/g2ssadm.proto
+        ${GIT_REPOSITORY_DIR}/${SENZING_COMPONENT}.proto
+    done
 
     ```
 
@@ -175,23 +185,20 @@ The following instructions were used to create
 1. Follow the
    [Java Quick start](https://grpc.io/docs/languages/java/quickstart/)
    tutorial to prepare an environment.
+1. [Identify Senzing subcomponents](#identify-senzing-subcomponents)
 1. Generate client and server code.
    Example:
 
     ```console
-    export SENZING_OUTPUT_DIR=${GIT_REPOSITORY_DIR}/example_generated_source_code/java
-    mkdir -p ${SENZING_OUTPUT_DIR}
-
-    protoc \
-        --proto_path=${GIT_REPOSITORY_DIR} \
+    for SENZING_COMPONENT in ${SENZING_COMPONENTS[@]}; \
+    do \
+      export SENZING_OUTPUT_DIR=${GIT_REPOSITORY_DIR}/example_generated_source_code/java/${SENZING_COMPONENT}
+      mkdir -p ${SENZING_OUTPUT_DIR}
+      protoc \
+        --proto_path=${GIT_REPOSITORY_DIR}/ \
         --java_out=${SENZING_OUTPUT_DIR} \
-        ${GIT_REPOSITORY_DIR}/g2config.proto \
-        ${GIT_REPOSITORY_DIR}/g2configmgr.proto \
-        ${GIT_REPOSITORY_DIR}/g2diagnostic.proto \
-        ${GIT_REPOSITORY_DIR}/g2engine.proto \
-        ${GIT_REPOSITORY_DIR}/g2hasher.proto \
-        ${GIT_REPOSITORY_DIR}/g2product.proto \
-        ${GIT_REPOSITORY_DIR}/g2ssadm.proto
+        ${GIT_REPOSITORY_DIR}/${SENZING_COMPONENT}.proto
+    done
 
     ```
 
@@ -201,25 +208,22 @@ The following instructions were used to create
 1. Follow the
    [PHP Quick start](https://grpc.io/docs/languages/php/quickstart/)
    tutorial to prepare an environment.
+1. [Identify Senzing subcomponents](#identify-senzing-subcomponents)
 1. Generate client and server code.
    Example:
 
     ```console
-    export SENZING_OUTPUT_DIR=${GIT_REPOSITORY_DIR}/example_generated_source_code/php
-    mkdir -p ${SENZING_OUTPUT_DIR}
-
-    protoc \
-        --proto_path=${GIT_REPOSITORY_DIR} \
+    for SENZING_COMPONENT in ${SENZING_COMPONENTS[@]}; \
+    do \
+      export SENZING_OUTPUT_DIR=${GIT_REPOSITORY_DIR}/example_generated_source_code/php/${SENZING_COMPONENT}
+      mkdir -p ${SENZING_OUTPUT_DIR}
+      protoc \
+        --proto_path=${GIT_REPOSITORY_DIR}/ \
         --php_out=${SENZING_OUTPUT_DIR} \
         --grpc_out=${SENZING_OUTPUT_DIR} \
         --plugin=protoc-gen-grpc=`which grpc_php_plugin` \
-        ${GIT_REPOSITORY_DIR}/g2config.proto \
-        ${GIT_REPOSITORY_DIR}/g2configmgr.proto \
-        ${GIT_REPOSITORY_DIR}/g2diagnostic.proto \
-        ${GIT_REPOSITORY_DIR}/g2engine.proto \
-        ${GIT_REPOSITORY_DIR}/g2hasher.proto \
-        ${GIT_REPOSITORY_DIR}/g2product.proto \
-        ${GIT_REPOSITORY_DIR}/g2ssadm.proto
+        ${GIT_REPOSITORY_DIR}/${SENZING_COMPONENT}.proto
+    done
 
     ```
 
@@ -229,24 +233,21 @@ The following instructions were used to create
 1. Follow the
    [Python Quick start](https://grpc.io/docs/languages/python/quickstart/)
    tutorial to prepare an environment.
+1. [Identify Senzing subcomponents](#identify-senzing-subcomponents)
 1. Generate client and server code.
    Example:
 
     ```console
-    export SENZING_OUTPUT_DIR=${GIT_REPOSITORY_DIR}/example_generated_source_code/python
-    mkdir -p ${SENZING_OUTPUT_DIR}
-
-    python3 -m grpc_tools.protoc \
+    for SENZING_COMPONENT in ${SENZING_COMPONENTS[@]}; \
+    do \
+      export SENZING_OUTPUT_DIR=${GIT_REPOSITORY_DIR}/example_generated_source_code/python/${SENZING_COMPONENT}
+      mkdir -p ${SENZING_OUTPUT_DIR}
+      python3 -m grpc_tools.protoc \
         --proto_path=${GIT_REPOSITORY_DIR} \
         --python_out=${SENZING_OUTPUT_DIR} \
         --grpc_python_out=${SENZING_OUTPUT_DIR} \
-        ${GIT_REPOSITORY_DIR}/g2config.proto \
-        ${GIT_REPOSITORY_DIR}/g2configmgr.proto \
-        ${GIT_REPOSITORY_DIR}/g2diagnostic.proto \
-        ${GIT_REPOSITORY_DIR}/g2engine.proto \
-        ${GIT_REPOSITORY_DIR}/g2hasher.proto \
-        ${GIT_REPOSITORY_DIR}/g2product.proto \
-        ${GIT_REPOSITORY_DIR}/g2ssadm.proto
+        ${GIT_REPOSITORY_DIR}/${SENZING_COMPONENT}.proto
+    done
 
     ```
 
@@ -256,24 +257,21 @@ The following instructions were used to create
 1. Follow the
    [Ruby Quick start](https://grpc.io/docs/languages/ruby/quickstart/)
    tutorial to prepare an environment.
+1. [Identify Senzing subcomponents](#identify-senzing-subcomponents)
 1. Generate client and server code.
    Example:
 
     ```console
-    export SENZING_OUTPUT_DIR=${GIT_REPOSITORY_DIR}/example_generated_source_code/ruby
-    mkdir -p ${SENZING_OUTPUT_DIR}
-
-    grpc_tools_ruby_protoc \
+    for SENZING_COMPONENT in ${SENZING_COMPONENTS[@]}; \
+    do \
+      export SENZING_OUTPUT_DIR=${GIT_REPOSITORY_DIR}/example_generated_source_code/ruby/${SENZING_COMPONENT}
+      mkdir -p ${SENZING_OUTPUT_DIR}
+      grpc_tools_ruby_protoc \
         --proto_path=${GIT_REPOSITORY_DIR} \
         --ruby_out=${SENZING_OUTPUT_DIR} \
         --grpc_out=${SENZING_OUTPUT_DIR} \
-        ${GIT_REPOSITORY_DIR}/g2config.proto \
-        ${GIT_REPOSITORY_DIR}/g2configmgr.proto \
-        ${GIT_REPOSITORY_DIR}/g2diagnostic.proto \
-        ${GIT_REPOSITORY_DIR}/g2engine.proto \
-        ${GIT_REPOSITORY_DIR}/g2hasher.proto \
-        ${GIT_REPOSITORY_DIR}/g2product.proto \
-        ${GIT_REPOSITORY_DIR}/g2ssadm.proto
+        ${GIT_REPOSITORY_DIR}/${SENZING_COMPONENT}.proto
+    done
 
     ```
 
@@ -294,4 +292,3 @@ The following instructions were used to create
 1. [protoc man page](https://manpages.debian.org/testing/protobuf-compiler/protoc.1.en.html)
 1. gPRC
     1. [Introduction to gRPC](https://grpc.io/docs/what-is-grpc/introduction/)
-
