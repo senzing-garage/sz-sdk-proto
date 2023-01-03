@@ -463,18 +463,6 @@ message GetEntityByRecordID_V2Response {
   string result = 1;
 }
 
-message GetLastExceptionRequest {}
-
-message GetLastExceptionResponse {
-  string result = 1;
-}
-
-message GetLastExceptionCodeRequest {}
-
-message GetLastExceptionCodeResponse {
-  int32 result = 1;
-}
-
 message GetRecordRequest {
   string dataSourceCode = 1;
   string recordID = 2;
