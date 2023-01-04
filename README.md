@@ -17,7 +17,6 @@ Currently this repository is undergoing review.
 
 1. [Preamble](#preamble)
     1. [Legend](#legend)
-1. [Related artifacts](#related-artifacts)
 1. [Expectations](#expectations)
 1. [Clone repository](#clone-repository)
 1. [Language](#language)
@@ -51,17 +50,10 @@ describing where we can improve.   Now on with the show...
 1. :pencil2: - A "pencil" icon means that the instructions may need modification before performing.
 1. :warning: - A "warning" icon means that something tricky is happening, so pay attention.
 
-## Related artifacts
-
-1. [DockerHub](https://hub.docker.com/r/senzing/xxxxxxxx)
-1. [Helm Chart](https://github.com/Senzing/charts/tree/main/charts/xxxxxxxx)
-
 ## Expectations
 
-- **Space:** This repository and demonstration require 6 GB free disk space.
-- **Time:** Budget 40 minutes to get the demonstration up-and-running, depending on CPU and network speeds.
 - **Background knowledge:** This repository assumes a working knowledge of:
-  - [Docker](https://github.com/Senzing/knowledge-base/blob/main/WHATIS/docker.md)
+  - [gRPC](https://github.com/Senzing/knowledge-base/blob/main/WHATIS/grpc.md)
 
 ## Clone repository
 
@@ -79,7 +71,7 @@ describing where we can improve.   Now on with the show...
 
 ## Language
 
-The following instructions were used to create
+The following instructions were used to create a
 [go module](go) and other
 [example generated source code](example_generated_source_code).
 
