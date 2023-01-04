@@ -14,7 +14,6 @@ for use in creating Senzing gRPC clients and servers.
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/senzing/g2-sdk-proto/go.svg)](https://pkg.go.dev/github.com/senzing/g2-sdk-proto/go)
 [![Go Report Card](https://goreportcard.com/badge/github.com/senzing/g2-sdk-proto/go)](https://goreportcard.com/report/github.com/senzing/g2-sdk-proto/go)
-[![go-test.yaml](https://github.com/Senzing/g2-sdk-proto/actions/workflows/go-test.yaml/badge.svg)](https://github.com/Senzing/g2-sdk-proto/actions/workflows/go-test.yaml)
 
 ## Overview
 
