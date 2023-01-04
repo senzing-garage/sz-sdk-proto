@@ -16,13 +16,12 @@ for use in servers and clients of the Senzing engine.
 
 ### Contents
 
-1. [Expectations](#expectations)
 1. [Generated source code](#generated-source-code)
 1. [Development](#development)
 1. [Errors](#errors)
 1. [References](#references)
 
-## Expectations
+### Expectations
 
 - **Background knowledge:** This repository assumes a working knowledge of:
   - [gRPC](https://github.com/Senzing/knowledge-base/blob/main/WHATIS/grpc.md)
