@@ -16,15 +16,8 @@ Currently this repository is undergoing review.
 ### Contents
 
 1. [Expectations](#expectations)
-1. [Clone repository](#clone-repository)
-1. [Language](#language)
-    1. [C++](#c)
-    1. [Go](#go)
-    1. [Java](#java)
-    1. [PHP](#php)
-    1. [Python](#python)
-    1. [Ruby](#ruby)
-    1. [.NET](#net)
+1. [Generated source code](#generated-source-code)
+1. [Development](#development)
 1. [Errors](#errors)
 1. [References](#references)
 
