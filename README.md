@@ -15,8 +15,6 @@ Currently this repository is undergoing review.
 
 ### Contents
 
-1. [Preamble](#preamble)
-    1. [Legend](#legend)
 1. [Expectations](#expectations)
 1. [Clone repository](#clone-repository)
 1. [Language](#language)
@@ -30,32 +28,23 @@ Currently this repository is undergoing review.
 1. [Errors](#errors)
 1. [References](#references)
 
-## Preamble
-
-At [Senzing](http://senzing.com),
-we strive to create GitHub documentation in a
-"[don't make me think](https://github.com/Senzing/knowledge-base/blob/main/WHATIS/dont-make-me-think.md)" style.
-For the most part, instructions are copy and paste.
-Whenever thinking is needed, it's marked with a "thinking" icon :thinking:.
-Whenever customization is needed, it's marked with a "pencil" icon :pencil2:.
-If the instructions are not clear, please let us know by opening a new
-[Documentation issue](https://github.com/Senzing/template-python/issues/new?template=documentation_request.md)
-describing where we can improve.   Now on with the show...
-
-### Legend
-
-1. :thinking: - A "thinker" icon means that a little extra thinking may be required.
-   Perhaps there are some choices to be made.
-   Perhaps it's an optional step.
-1. :pencil2: - A "pencil" icon means that the instructions may need modification before performing.
-1. :warning: - A "warning" icon means that something tricky is happening, so pay attention.
-
 ## Expectations
 
 - **Background knowledge:** This repository assumes a working knowledge of:
   - [gRPC](https://github.com/Senzing/knowledge-base/blob/main/WHATIS/grpc.md)
 
-## Clone repository
+## Generated source code
+
+1. [cpp](example_generated_source_code/cpp)
+1. [go](go)
+1. [java](example_generated_source_code/java)
+1. [php](example_generated_source_code/php)
+1. [python](example_generated_source_code/python)
+1. [ruby](example_generated_source_code/ruby)
+
+## Development
+
+### Clone repository
 
 1. Set these environment variable values:
 
@@ -69,13 +58,13 @@ describing where we can improve.   Now on with the show...
 
 1. Using the environment variables values just set, follow steps in [clone-repository](https://github.com/Senzing/knowledge-base/blob/main/HOWTO/clone-repository.md) to install the Git repository.
 
-## Language
+### Language
 
 The following instructions were used to create a
 [go module](go) and other
 [example generated source code](example_generated_source_code).
 
-### Identify Senzing subcomponents
+#### Identify Senzing subcomponents
 
 1. Enumerate the Senzing components for use in language-specific commands below.
    Example:
@@ -93,7 +82,7 @@ The following instructions were used to create a
 
     ```
 
-### C++
+#### C++
 
 1. [Clone repository](#clone-repository).
 1. Follow the
@@ -133,7 +122,7 @@ The following instructions were used to create a
 
     ```
 
-### Go
+#### Go
 
 1. [Clone repository](#clone-repository).
 1. Follow the
@@ -171,7 +160,7 @@ The following instructions were used to create a
         1. [Go Quick start](https://grpc.io/docs/languages/go/quickstart/)
     1. [Thread safety](https://grpc.io/docs/languages/go/generated-code/)
 
-### Java
+#### Java
 
 1. [Clone repository](#clone-repository).
 1. Follow the
@@ -194,7 +183,7 @@ The following instructions were used to create a
 
     ```
 
-### PHP
+#### PHP
 
 1. [Clone repository](#clone-repository).
 1. Follow the
@@ -219,7 +208,7 @@ The following instructions were used to create a
 
     ```
 
-### Python
+#### Python
 
 1. [Clone repository](#clone-repository).
 1. Follow the
@@ -243,7 +232,7 @@ The following instructions were used to create a
 
     ```
 
-### Ruby
+#### Ruby
 
 1. [Clone repository](#clone-repository).
 1. Follow the
@@ -267,7 +256,7 @@ The following instructions were used to create a
 
     ```
 
-### .NET
+#### .NET
 
 1. **References:**
     1. [Overview for gRPC on .NET](https://learn.microsoft.com/en-us/aspnet/core/grpc)
