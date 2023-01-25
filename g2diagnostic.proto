@@ -204,7 +204,7 @@ message StreamEntityListBySizeRequest {
   int32 entitySize = 1;
 }
 
-message StreamNextEntityBySizeResponse {
+message StreamEntityBySizeResponse {
   string result = 1;
 }
 
