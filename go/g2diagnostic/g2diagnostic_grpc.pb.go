@@ -45,6 +45,7 @@ type G2DiagnosticClient interface {
 	Init(ctx context.Context, in *InitRequest, opts ...grpc.CallOption) (*InitResponse, error)
 	InitWithConfigID(ctx context.Context, in *InitWithConfigIDRequest, opts ...grpc.CallOption) (*InitWithConfigIDResponse, error)
 	Reinit(ctx context.Context, in *ReinitRequest, opts ...grpc.CallOption) (*ReinitResponse, error)
+	StreamEntityListBySize(ctx context.Context, in *StreamEntityListBySizeRequest, opts ...grpc.CallOption) (G2Diagnostic_StreamEntityListBySizeClient, error)
 }
 
 type g2DiagnosticClient struct {
@@ -262,6 +263,38 @@ func (c *g2DiagnosticClient) Reinit(ctx context.Context, in *ReinitRequest, opts
 	return out, nil
 }
 
+func (c *g2DiagnosticClient) StreamEntityListBySize(ctx context.Context, in *StreamEntityListBySizeRequest, opts ...grpc.CallOption) (G2Diagnostic_StreamEntityListBySizeClient, error) {
+	stream, err := c.cc.NewStream(ctx, &G2Diagnostic_ServiceDesc.Streams[0], "/g2diagnostic.G2Diagnostic/StreamEntityListBySize", opts...)
+	if err != nil {
+		return nil, err
+	}
+	x := &g2DiagnosticStreamEntityListBySizeClient{stream}
+	if err := x.ClientStream.SendMsg(in); err != nil {
+		return nil, err
+	}
+	if err := x.ClientStream.CloseSend(); err != nil {
+		return nil, err
+	}
+	return x, nil
+}
+
+type G2Diagnostic_StreamEntityListBySizeClient interface {
+	Recv() (*StreamEntityListBySizeResponse, error)
+	grpc.ClientStream
+}
+
+type g2DiagnosticStreamEntityListBySizeClient struct {
+	grpc.ClientStream
+}
+
+func (x *g2DiagnosticStreamEntityListBySizeClient) Recv() (*StreamEntityListBySizeResponse, error) {
+	m := new(StreamEntityListBySizeResponse)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
 // G2DiagnosticServer is the server API for G2Diagnostic service.
 // All implementations must embed UnimplementedG2DiagnosticServer
 // for forward compatibility
@@ -289,6 +322,7 @@ type G2DiagnosticServer interface {
 	Init(context.Context, *InitRequest) (*InitResponse, error)
 	InitWithConfigID(context.Context, *InitWithConfigIDRequest) (*InitWithConfigIDResponse, error)
 	Reinit(context.Context, *ReinitRequest) (*ReinitResponse, error)
+	StreamEntityListBySize(*StreamEntityListBySizeRequest, G2Diagnostic_StreamEntityListBySizeServer) error
 	mustEmbedUnimplementedG2DiagnosticServer()
 }
 
@@ -364,6 +398,9 @@ func (UnimplementedG2DiagnosticServer) InitWithConfigID(context.Context, *InitWi
 }
 func (UnimplementedG2DiagnosticServer) Reinit(context.Context, *ReinitRequest) (*ReinitResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Reinit not implemented")
+}
+func (UnimplementedG2DiagnosticServer) StreamEntityListBySize(*StreamEntityListBySizeRequest, G2Diagnostic_StreamEntityListBySizeServer) error {
+	return status.Errorf(codes.Unimplemented, "method StreamEntityListBySize not implemented")
 }
 func (UnimplementedG2DiagnosticServer) mustEmbedUnimplementedG2DiagnosticServer() {}
 
@@ -792,6 +829,27 @@ func _G2Diagnostic_Reinit_Handler(srv interface{}, ctx context.Context, dec func
 	return interceptor(ctx, in, info, handler)
 }
 
+func _G2Diagnostic_StreamEntityListBySize_Handler(srv interface{}, stream grpc.ServerStream) error {
+	m := new(StreamEntityListBySizeRequest)
+	if err := stream.RecvMsg(m); err != nil {
+		return err
+	}
+	return srv.(G2DiagnosticServer).StreamEntityListBySize(m, &g2DiagnosticStreamEntityListBySizeServer{stream})
+}
+
+type G2Diagnostic_StreamEntityListBySizeServer interface {
+	Send(*StreamEntityListBySizeResponse) error
+	grpc.ServerStream
+}
+
+type g2DiagnosticStreamEntityListBySizeServer struct {
+	grpc.ServerStream
+}
+
+func (x *g2DiagnosticStreamEntityListBySizeServer) Send(m *StreamEntityListBySizeResponse) error {
+	return x.ServerStream.SendMsg(m)
+}
+
 // G2Diagnostic_ServiceDesc is the grpc.ServiceDesc for G2Diagnostic service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -892,6 +950,12 @@ var G2Diagnostic_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _G2Diagnostic_Reinit_Handler,
 		},
 	},
-	Streams:  []grpc.StreamDesc{},
+	Streams: []grpc.StreamDesc{
+		{
+			StreamName:    "StreamEntityListBySize",
+			Handler:       _G2Diagnostic_StreamEntityListBySize_Handler,
+			ServerStreams: true,
+		},
+	},
 	Metadata: "g2diagnostic.proto",
 }

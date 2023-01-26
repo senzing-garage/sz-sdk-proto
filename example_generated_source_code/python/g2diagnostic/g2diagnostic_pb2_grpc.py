@@ -129,6 +129,11 @@ class G2DiagnosticStub(object):
                 request_serializer=g2diagnostic__pb2.ReinitRequest.SerializeToString,
                 response_deserializer=g2diagnostic__pb2.ReinitResponse.FromString,
                 )
+        self.StreamEntityListBySize = channel.unary_stream(
+                '/g2diagnostic.G2Diagnostic/StreamEntityListBySize',
+                request_serializer=g2diagnostic__pb2.StreamEntityListBySizeRequest.SerializeToString,
+                response_deserializer=g2diagnostic__pb2.StreamEntityListBySizeResponse.FromString,
+                )
 
 
 class G2DiagnosticServicer(object):
@@ -272,6 +277,12 @@ class G2DiagnosticServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def StreamEntityListBySize(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_G2DiagnosticServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -389,6 +400,11 @@ def add_G2DiagnosticServicer_to_server(servicer, server):
                     servicer.Reinit,
                     request_deserializer=g2diagnostic__pb2.ReinitRequest.FromString,
                     response_serializer=g2diagnostic__pb2.ReinitResponse.SerializeToString,
+            ),
+            'StreamEntityListBySize': grpc.unary_stream_rpc_method_handler(
+                    servicer.StreamEntityListBySize,
+                    request_deserializer=g2diagnostic__pb2.StreamEntityListBySizeRequest.FromString,
+                    response_serializer=g2diagnostic__pb2.StreamEntityListBySizeResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -788,5 +804,22 @@ class G2Diagnostic(object):
         return grpc.experimental.unary_unary(request, target, '/g2diagnostic.G2Diagnostic/Reinit',
             g2diagnostic__pb2.ReinitRequest.SerializeToString,
             g2diagnostic__pb2.ReinitResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def StreamEntityListBySize(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_stream(request, target, '/g2diagnostic.G2Diagnostic/StreamEntityListBySize',
+            g2diagnostic__pb2.StreamEntityListBySizeRequest.SerializeToString,
+            g2diagnostic__pb2.StreamEntityListBySizeResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

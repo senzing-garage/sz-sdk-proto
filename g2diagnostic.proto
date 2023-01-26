@@ -30,6 +30,7 @@ service G2Diagnostic {
   rpc Init (InitRequest) returns (InitResponse) {}
   rpc InitWithConfigID (InitWithConfigIDRequest) returns (InitWithConfigIDResponse) {}
   rpc Reinit (ReinitRequest) returns (ReinitResponse) {}
+  rpc StreamEntityListBySize (StreamEntityListBySizeRequest) returns (stream StreamEntityListBySizeResponse) {}
 }
 
 message CheckDBPerfRequest {
@@ -198,3 +199,12 @@ message ReinitRequest {
 }
 
 message ReinitResponse {}
+
+message StreamEntityListBySizeRequest {
+  int32 entitySize = 1;
+}
+
+message StreamEntityListBySizeResponse {
+  string result = 1;
+}
+
