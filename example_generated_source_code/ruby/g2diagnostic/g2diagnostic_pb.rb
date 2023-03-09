@@ -139,6 +139,12 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "g2diagnostic.ReinitResponse" do
     end
+    add_message "g2diagnostic.StreamEntityListBySizeRequest" do
+      optional :entitySize, :int32, 1
+    end
+    add_message "g2diagnostic.StreamEntityListBySizeResponse" do
+      optional :result, :string, 1
+    end
   end
 end
 
@@ -189,4 +195,6 @@ module G2diagnostic
   InitWithConfigIDResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2diagnostic.InitWithConfigIDResponse").msgclass
   ReinitRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2diagnostic.ReinitRequest").msgclass
   ReinitResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2diagnostic.ReinitResponse").msgclass
+  StreamEntityListBySizeRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2diagnostic.StreamEntityListBySizeRequest").msgclass
+  StreamEntityListBySizeResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2diagnostic.StreamEntityListBySizeResponse").msgclass
 end

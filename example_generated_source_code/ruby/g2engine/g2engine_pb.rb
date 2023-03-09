@@ -499,6 +499,20 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "g2engine.StatsResponse" do
       optional :result, :string, 1
     end
+    add_message "g2engine.StreamExportCSVEntityReportRequest" do
+      optional :csvColumnList, :string, 1
+      optional :flags, :int64, 2
+    end
+    add_message "g2engine.StreamExportCSVEntityReportResponse" do
+      optional :result, :int64, 1
+    end
+    add_message "g2engine.StreamExportJSONEntityReportRequest" do
+      optional :csvColumnList, :string, 1
+      optional :flags, :int64, 2
+    end
+    add_message "g2engine.StreamExportJSONEntityReportResponse" do
+      optional :result, :int64, 1
+    end
     add_message "g2engine.WhyEntitiesRequest" do
       optional :entityID1, :int64, 1
       optional :entityID2, :int64, 2
@@ -697,6 +711,10 @@ module G2engine
   SearchByAttributes_V2Response = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.SearchByAttributes_V2Response").msgclass
   StatsRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.StatsRequest").msgclass
   StatsResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.StatsResponse").msgclass
+  StreamExportCSVEntityReportRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.StreamExportCSVEntityReportRequest").msgclass
+  StreamExportCSVEntityReportResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.StreamExportCSVEntityReportResponse").msgclass
+  StreamExportJSONEntityReportRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.StreamExportJSONEntityReportRequest").msgclass
+  StreamExportJSONEntityReportResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.StreamExportJSONEntityReportResponse").msgclass
   WhyEntitiesRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.WhyEntitiesRequest").msgclass
   WhyEntitiesResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.WhyEntitiesResponse").msgclass
   WhyEntities_V2Request = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.WhyEntities_V2Request").msgclass

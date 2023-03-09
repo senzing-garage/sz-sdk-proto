@@ -196,6 +196,15 @@ class G2Diagnostic final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::ReinitResponse>> PrepareAsyncReinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::ReinitResponse>>(PrepareAsyncReinitRaw(context, request, cq));
     }
+    std::unique_ptr< ::grpc::ClientReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>> StreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request) {
+      return std::unique_ptr< ::grpc::ClientReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>>(StreamEntityListBySizeRaw(context, request));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>> AsyncStreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>>(AsyncStreamEntityListBySizeRaw(context, request, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>> PrepareAsyncStreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>>(PrepareAsyncStreamEntityListBySizeRaw(context, request, cq));
+    }
     class async_interface {
      public:
       virtual ~async_interface() {}
@@ -245,6 +254,7 @@ class G2Diagnostic final {
       virtual void InitWithConfigID(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest* request, ::g2diagnostic::InitWithConfigIDResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void Reinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest* request, ::g2diagnostic::ReinitResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Reinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest* request, ::g2diagnostic::ReinitResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void StreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest* request, ::grpc::ClientReadReactor< ::g2diagnostic::StreamEntityListBySizeResponse>* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
@@ -296,6 +306,9 @@ class G2Diagnostic final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::InitWithConfigIDResponse>* PrepareAsyncInitWithConfigIDRaw(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::ReinitResponse>* AsyncReinitRaw(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::ReinitResponse>* PrepareAsyncReinitRaw(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>* StreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>* AsyncStreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>* PrepareAsyncStreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -461,6 +474,15 @@ class G2Diagnostic final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::ReinitResponse>> PrepareAsyncReinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::ReinitResponse>>(PrepareAsyncReinitRaw(context, request, cq));
     }
+    std::unique_ptr< ::grpc::ClientReader< ::g2diagnostic::StreamEntityListBySizeResponse>> StreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request) {
+      return std::unique_ptr< ::grpc::ClientReader< ::g2diagnostic::StreamEntityListBySizeResponse>>(StreamEntityListBySizeRaw(context, request));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::g2diagnostic::StreamEntityListBySizeResponse>> AsyncStreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::g2diagnostic::StreamEntityListBySizeResponse>>(AsyncStreamEntityListBySizeRaw(context, request, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::g2diagnostic::StreamEntityListBySizeResponse>> PrepareAsyncStreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::g2diagnostic::StreamEntityListBySizeResponse>>(PrepareAsyncStreamEntityListBySizeRaw(context, request, cq));
+    }
     class async final :
       public StubInterface::async_interface {
      public:
@@ -510,6 +532,7 @@ class G2Diagnostic final {
       void InitWithConfigID(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest* request, ::g2diagnostic::InitWithConfigIDResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void Reinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest* request, ::g2diagnostic::ReinitResponse* response, std::function<void(::grpc::Status)>) override;
       void Reinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest* request, ::g2diagnostic::ReinitResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void StreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest* request, ::grpc::ClientReadReactor< ::g2diagnostic::StreamEntityListBySizeResponse>* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -567,6 +590,9 @@ class G2Diagnostic final {
     ::grpc::ClientAsyncResponseReader< ::g2diagnostic::InitWithConfigIDResponse>* PrepareAsyncInitWithConfigIDRaw(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2diagnostic::ReinitResponse>* AsyncReinitRaw(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2diagnostic::ReinitResponse>* PrepareAsyncReinitRaw(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReader< ::g2diagnostic::StreamEntityListBySizeResponse>* StreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request) override;
+    ::grpc::ClientAsyncReader< ::g2diagnostic::StreamEntityListBySizeResponse>* AsyncStreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReader< ::g2diagnostic::StreamEntityListBySizeResponse>* PrepareAsyncStreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_CheckDBPerf_;
     const ::grpc::internal::RpcMethod rpcmethod_CloseEntityListBySize_;
     const ::grpc::internal::RpcMethod rpcmethod_Destroy_;
@@ -590,6 +616,7 @@ class G2Diagnostic final {
     const ::grpc::internal::RpcMethod rpcmethod_Init_;
     const ::grpc::internal::RpcMethod rpcmethod_InitWithConfigID_;
     const ::grpc::internal::RpcMethod rpcmethod_Reinit_;
+    const ::grpc::internal::RpcMethod rpcmethod_StreamEntityListBySize_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -620,6 +647,7 @@ class G2Diagnostic final {
     virtual ::grpc::Status Init(::grpc::ServerContext* context, const ::g2diagnostic::InitRequest* request, ::g2diagnostic::InitResponse* response);
     virtual ::grpc::Status InitWithConfigID(::grpc::ServerContext* context, const ::g2diagnostic::InitWithConfigIDRequest* request, ::g2diagnostic::InitWithConfigIDResponse* response);
     virtual ::grpc::Status Reinit(::grpc::ServerContext* context, const ::g2diagnostic::ReinitRequest* request, ::g2diagnostic::ReinitResponse* response);
+    virtual ::grpc::Status StreamEntityListBySize(::grpc::ServerContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest* request, ::grpc::ServerWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* writer);
   };
   template <class BaseClass>
   class WithAsyncMethod_CheckDBPerf : public BaseClass {
@@ -1081,7 +1109,27 @@ class G2Diagnostic final {
       ::grpc::Service::RequestAsyncUnary(22, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_CheckDBPerf<WithAsyncMethod_CloseEntityListBySize<WithAsyncMethod_Destroy<WithAsyncMethod_FetchNextEntityBySize<WithAsyncMethod_FindEntitiesByFeatureIDs<WithAsyncMethod_GetAvailableMemory<WithAsyncMethod_GetDataSourceCounts<WithAsyncMethod_GetDBInfo<WithAsyncMethod_GetEntityDetails<WithAsyncMethod_GetEntityListBySize<WithAsyncMethod_GetEntityResume<WithAsyncMethod_GetEntitySizeBreakdown<WithAsyncMethod_GetFeature<WithAsyncMethod_GetGenericFeatures<WithAsyncMethod_GetLogicalCores<WithAsyncMethod_GetMappingStatistics<WithAsyncMethod_GetPhysicalCores<WithAsyncMethod_GetRelationshipDetails<WithAsyncMethod_GetResolutionStatistics<WithAsyncMethod_GetTotalSystemMemory<WithAsyncMethod_Init<WithAsyncMethod_InitWithConfigID<WithAsyncMethod_Reinit<Service > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_StreamEntityListBySize : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_StreamEntityListBySize() {
+      ::grpc::Service::MarkMethodAsync(23);
+    }
+    ~WithAsyncMethod_StreamEntityListBySize() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status StreamEntityListBySize(::grpc::ServerContext* /*context*/, const ::g2diagnostic::StreamEntityListBySizeRequest* /*request*/, ::grpc::ServerWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* /*writer*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestStreamEntityListBySize(::grpc::ServerContext* context, ::g2diagnostic::StreamEntityListBySizeRequest* request, ::grpc::ServerAsyncWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncServerStreaming(23, context, request, writer, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_CheckDBPerf<WithAsyncMethod_CloseEntityListBySize<WithAsyncMethod_Destroy<WithAsyncMethod_FetchNextEntityBySize<WithAsyncMethod_FindEntitiesByFeatureIDs<WithAsyncMethod_GetAvailableMemory<WithAsyncMethod_GetDataSourceCounts<WithAsyncMethod_GetDBInfo<WithAsyncMethod_GetEntityDetails<WithAsyncMethod_GetEntityListBySize<WithAsyncMethod_GetEntityResume<WithAsyncMethod_GetEntitySizeBreakdown<WithAsyncMethod_GetFeature<WithAsyncMethod_GetGenericFeatures<WithAsyncMethod_GetLogicalCores<WithAsyncMethod_GetMappingStatistics<WithAsyncMethod_GetPhysicalCores<WithAsyncMethod_GetRelationshipDetails<WithAsyncMethod_GetResolutionStatistics<WithAsyncMethod_GetTotalSystemMemory<WithAsyncMethod_Init<WithAsyncMethod_InitWithConfigID<WithAsyncMethod_Reinit<WithAsyncMethod_StreamEntityListBySize<Service > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_CheckDBPerf : public BaseClass {
    private:
@@ -1703,7 +1751,29 @@ class G2Diagnostic final {
     virtual ::grpc::ServerUnaryReactor* Reinit(
       ::grpc::CallbackServerContext* /*context*/, const ::g2diagnostic::ReinitRequest* /*request*/, ::g2diagnostic::ReinitResponse* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_CheckDBPerf<WithCallbackMethod_CloseEntityListBySize<WithCallbackMethod_Destroy<WithCallbackMethod_FetchNextEntityBySize<WithCallbackMethod_FindEntitiesByFeatureIDs<WithCallbackMethod_GetAvailableMemory<WithCallbackMethod_GetDataSourceCounts<WithCallbackMethod_GetDBInfo<WithCallbackMethod_GetEntityDetails<WithCallbackMethod_GetEntityListBySize<WithCallbackMethod_GetEntityResume<WithCallbackMethod_GetEntitySizeBreakdown<WithCallbackMethod_GetFeature<WithCallbackMethod_GetGenericFeatures<WithCallbackMethod_GetLogicalCores<WithCallbackMethod_GetMappingStatistics<WithCallbackMethod_GetPhysicalCores<WithCallbackMethod_GetRelationshipDetails<WithCallbackMethod_GetResolutionStatistics<WithCallbackMethod_GetTotalSystemMemory<WithCallbackMethod_Init<WithCallbackMethod_InitWithConfigID<WithCallbackMethod_Reinit<Service > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
+  template <class BaseClass>
+  class WithCallbackMethod_StreamEntityListBySize : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_StreamEntityListBySize() {
+      ::grpc::Service::MarkMethodCallback(23,
+          new ::grpc::internal::CallbackServerStreamingHandler< ::g2diagnostic::StreamEntityListBySizeRequest, ::g2diagnostic::StreamEntityListBySizeResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest* request) { return this->StreamEntityListBySize(context, request); }));
+    }
+    ~WithCallbackMethod_StreamEntityListBySize() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status StreamEntityListBySize(::grpc::ServerContext* /*context*/, const ::g2diagnostic::StreamEntityListBySizeRequest* /*request*/, ::grpc::ServerWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* /*writer*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerWriteReactor< ::g2diagnostic::StreamEntityListBySizeResponse>* StreamEntityListBySize(
+      ::grpc::CallbackServerContext* /*context*/, const ::g2diagnostic::StreamEntityListBySizeRequest* /*request*/)  { return nullptr; }
+  };
+  typedef WithCallbackMethod_CheckDBPerf<WithCallbackMethod_CloseEntityListBySize<WithCallbackMethod_Destroy<WithCallbackMethod_FetchNextEntityBySize<WithCallbackMethod_FindEntitiesByFeatureIDs<WithCallbackMethod_GetAvailableMemory<WithCallbackMethod_GetDataSourceCounts<WithCallbackMethod_GetDBInfo<WithCallbackMethod_GetEntityDetails<WithCallbackMethod_GetEntityListBySize<WithCallbackMethod_GetEntityResume<WithCallbackMethod_GetEntitySizeBreakdown<WithCallbackMethod_GetFeature<WithCallbackMethod_GetGenericFeatures<WithCallbackMethod_GetLogicalCores<WithCallbackMethod_GetMappingStatistics<WithCallbackMethod_GetPhysicalCores<WithCallbackMethod_GetRelationshipDetails<WithCallbackMethod_GetResolutionStatistics<WithCallbackMethod_GetTotalSystemMemory<WithCallbackMethod_Init<WithCallbackMethod_InitWithConfigID<WithCallbackMethod_Reinit<WithCallbackMethod_StreamEntityListBySize<Service > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_CheckDBPerf : public BaseClass {
@@ -2092,6 +2162,23 @@ class G2Diagnostic final {
     }
     // disable synchronous version of this method
     ::grpc::Status Reinit(::grpc::ServerContext* /*context*/, const ::g2diagnostic::ReinitRequest* /*request*/, ::g2diagnostic::ReinitResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_StreamEntityListBySize : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_StreamEntityListBySize() {
+      ::grpc::Service::MarkMethodGeneric(23);
+    }
+    ~WithGenericMethod_StreamEntityListBySize() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status StreamEntityListBySize(::grpc::ServerContext* /*context*/, const ::g2diagnostic::StreamEntityListBySizeRequest* /*request*/, ::grpc::ServerWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2554,6 +2641,26 @@ class G2Diagnostic final {
     }
     void RequestReinit(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(22, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_StreamEntityListBySize : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_StreamEntityListBySize() {
+      ::grpc::Service::MarkMethodRaw(23);
+    }
+    ~WithRawMethod_StreamEntityListBySize() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status StreamEntityListBySize(::grpc::ServerContext* /*context*/, const ::g2diagnostic::StreamEntityListBySizeRequest* /*request*/, ::grpc::ServerWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* /*writer*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestStreamEntityListBySize(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncWriter< ::grpc::ByteBuffer>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncServerStreaming(23, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3061,6 +3168,28 @@ class G2Diagnostic final {
     }
     virtual ::grpc::ServerUnaryReactor* Reinit(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_StreamEntityListBySize : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_StreamEntityListBySize() {
+      ::grpc::Service::MarkMethodRawCallback(23,
+          new ::grpc::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const::grpc::ByteBuffer* request) { return this->StreamEntityListBySize(context, request); }));
+    }
+    ~WithRawCallbackMethod_StreamEntityListBySize() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status StreamEntityListBySize(::grpc::ServerContext* /*context*/, const ::g2diagnostic::StreamEntityListBySizeRequest* /*request*/, ::grpc::ServerWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* /*writer*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerWriteReactor< ::grpc::ByteBuffer>* StreamEntityListBySize(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_CheckDBPerf : public BaseClass {
@@ -3684,8 +3813,35 @@ class G2Diagnostic final {
     virtual ::grpc::Status StreamedReinit(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2diagnostic::ReinitRequest,::g2diagnostic::ReinitResponse>* server_unary_streamer) = 0;
   };
   typedef WithStreamedUnaryMethod_CheckDBPerf<WithStreamedUnaryMethod_CloseEntityListBySize<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_FetchNextEntityBySize<WithStreamedUnaryMethod_FindEntitiesByFeatureIDs<WithStreamedUnaryMethod_GetAvailableMemory<WithStreamedUnaryMethod_GetDataSourceCounts<WithStreamedUnaryMethod_GetDBInfo<WithStreamedUnaryMethod_GetEntityDetails<WithStreamedUnaryMethod_GetEntityListBySize<WithStreamedUnaryMethod_GetEntityResume<WithStreamedUnaryMethod_GetEntitySizeBreakdown<WithStreamedUnaryMethod_GetFeature<WithStreamedUnaryMethod_GetGenericFeatures<WithStreamedUnaryMethod_GetLogicalCores<WithStreamedUnaryMethod_GetMappingStatistics<WithStreamedUnaryMethod_GetPhysicalCores<WithStreamedUnaryMethod_GetRelationshipDetails<WithStreamedUnaryMethod_GetResolutionStatistics<WithStreamedUnaryMethod_GetTotalSystemMemory<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_Reinit<Service > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
-  typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_CheckDBPerf<WithStreamedUnaryMethod_CloseEntityListBySize<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_FetchNextEntityBySize<WithStreamedUnaryMethod_FindEntitiesByFeatureIDs<WithStreamedUnaryMethod_GetAvailableMemory<WithStreamedUnaryMethod_GetDataSourceCounts<WithStreamedUnaryMethod_GetDBInfo<WithStreamedUnaryMethod_GetEntityDetails<WithStreamedUnaryMethod_GetEntityListBySize<WithStreamedUnaryMethod_GetEntityResume<WithStreamedUnaryMethod_GetEntitySizeBreakdown<WithStreamedUnaryMethod_GetFeature<WithStreamedUnaryMethod_GetGenericFeatures<WithStreamedUnaryMethod_GetLogicalCores<WithStreamedUnaryMethod_GetMappingStatistics<WithStreamedUnaryMethod_GetPhysicalCores<WithStreamedUnaryMethod_GetRelationshipDetails<WithStreamedUnaryMethod_GetResolutionStatistics<WithStreamedUnaryMethod_GetTotalSystemMemory<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_Reinit<Service > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
+  template <class BaseClass>
+  class WithSplitStreamingMethod_StreamEntityListBySize : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithSplitStreamingMethod_StreamEntityListBySize() {
+      ::grpc::Service::MarkMethodStreamed(23,
+        new ::grpc::internal::SplitServerStreamingHandler<
+          ::g2diagnostic::StreamEntityListBySizeRequest, ::g2diagnostic::StreamEntityListBySizeResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerSplitStreamer<
+                     ::g2diagnostic::StreamEntityListBySizeRequest, ::g2diagnostic::StreamEntityListBySizeResponse>* streamer) {
+                       return this->StreamedStreamEntityListBySize(context,
+                         streamer);
+                  }));
+    }
+    ~WithSplitStreamingMethod_StreamEntityListBySize() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status StreamEntityListBySize(::grpc::ServerContext* /*context*/, const ::g2diagnostic::StreamEntityListBySizeRequest* /*request*/, ::grpc::ServerWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* /*writer*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with split streamed
+    virtual ::grpc::Status StreamedStreamEntityListBySize(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::g2diagnostic::StreamEntityListBySizeRequest,::g2diagnostic::StreamEntityListBySizeResponse>* server_split_streamer) = 0;
+  };
+  typedef WithSplitStreamingMethod_StreamEntityListBySize<Service > SplitStreamedService;
+  typedef WithStreamedUnaryMethod_CheckDBPerf<WithStreamedUnaryMethod_CloseEntityListBySize<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_FetchNextEntityBySize<WithStreamedUnaryMethod_FindEntitiesByFeatureIDs<WithStreamedUnaryMethod_GetAvailableMemory<WithStreamedUnaryMethod_GetDataSourceCounts<WithStreamedUnaryMethod_GetDBInfo<WithStreamedUnaryMethod_GetEntityDetails<WithStreamedUnaryMethod_GetEntityListBySize<WithStreamedUnaryMethod_GetEntityResume<WithStreamedUnaryMethod_GetEntitySizeBreakdown<WithStreamedUnaryMethod_GetFeature<WithStreamedUnaryMethod_GetGenericFeatures<WithStreamedUnaryMethod_GetLogicalCores<WithStreamedUnaryMethod_GetMappingStatistics<WithStreamedUnaryMethod_GetPhysicalCores<WithStreamedUnaryMethod_GetRelationshipDetails<WithStreamedUnaryMethod_GetResolutionStatistics<WithStreamedUnaryMethod_GetTotalSystemMemory<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_Reinit<WithSplitStreamingMethod_StreamEntityListBySize<Service > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
 };
 
 }  // namespace g2diagnostic

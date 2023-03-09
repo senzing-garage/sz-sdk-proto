@@ -37,6 +37,7 @@ module G2diagnostic
       rpc :Init, ::G2diagnostic::InitRequest, ::G2diagnostic::InitResponse
       rpc :InitWithConfigID, ::G2diagnostic::InitWithConfigIDRequest, ::G2diagnostic::InitWithConfigIDResponse
       rpc :Reinit, ::G2diagnostic::ReinitRequest, ::G2diagnostic::ReinitResponse
+      rpc :StreamEntityListBySize, ::G2diagnostic::StreamEntityListBySizeRequest, stream(::G2diagnostic::StreamEntityListBySizeResponse)
     end
 
     Stub = Service.rpc_stub_class

@@ -941,6 +941,34 @@ class G2EngineClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \G2engine\StreamExportCSVEntityReportRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function StreamExportCSVEntityReport(\G2engine\StreamExportCSVEntityReportRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/g2engine.G2Engine/StreamExportCSVEntityReport',
+        $argument,
+        ['\G2engine\StreamExportCSVEntityReportResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \G2engine\StreamExportJSONEntityReportRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function StreamExportJSONEntityReport(\G2engine\StreamExportJSONEntityReportRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/g2engine.G2Engine/StreamExportJSONEntityReport',
+        $argument,
+        ['\G2engine\StreamExportJSONEntityReportResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \G2engine\WhyEntitiesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

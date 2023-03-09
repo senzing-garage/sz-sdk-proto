@@ -442,6 +442,18 @@ extern StatsRequestDefaultTypeInternal _StatsRequest_default_instance_;
 class StatsResponse;
 struct StatsResponseDefaultTypeInternal;
 extern StatsResponseDefaultTypeInternal _StatsResponse_default_instance_;
+class StreamExportCSVEntityReportRequest;
+struct StreamExportCSVEntityReportRequestDefaultTypeInternal;
+extern StreamExportCSVEntityReportRequestDefaultTypeInternal _StreamExportCSVEntityReportRequest_default_instance_;
+class StreamExportCSVEntityReportResponse;
+struct StreamExportCSVEntityReportResponseDefaultTypeInternal;
+extern StreamExportCSVEntityReportResponseDefaultTypeInternal _StreamExportCSVEntityReportResponse_default_instance_;
+class StreamExportJSONEntityReportRequest;
+struct StreamExportJSONEntityReportRequestDefaultTypeInternal;
+extern StreamExportJSONEntityReportRequestDefaultTypeInternal _StreamExportJSONEntityReportRequest_default_instance_;
+class StreamExportJSONEntityReportResponse;
+struct StreamExportJSONEntityReportResponseDefaultTypeInternal;
+extern StreamExportJSONEntityReportResponseDefaultTypeInternal _StreamExportJSONEntityReportResponse_default_instance_;
 class WhyEntitiesRequest;
 struct WhyEntitiesRequestDefaultTypeInternal;
 extern WhyEntitiesRequestDefaultTypeInternal _WhyEntitiesRequest_default_instance_;
@@ -624,6 +636,10 @@ template<> ::g2engine::SearchByAttributes_V2Request* Arena::CreateMaybeMessage<:
 template<> ::g2engine::SearchByAttributes_V2Response* Arena::CreateMaybeMessage<::g2engine::SearchByAttributes_V2Response>(Arena*);
 template<> ::g2engine::StatsRequest* Arena::CreateMaybeMessage<::g2engine::StatsRequest>(Arena*);
 template<> ::g2engine::StatsResponse* Arena::CreateMaybeMessage<::g2engine::StatsResponse>(Arena*);
+template<> ::g2engine::StreamExportCSVEntityReportRequest* Arena::CreateMaybeMessage<::g2engine::StreamExportCSVEntityReportRequest>(Arena*);
+template<> ::g2engine::StreamExportCSVEntityReportResponse* Arena::CreateMaybeMessage<::g2engine::StreamExportCSVEntityReportResponse>(Arena*);
+template<> ::g2engine::StreamExportJSONEntityReportRequest* Arena::CreateMaybeMessage<::g2engine::StreamExportJSONEntityReportRequest>(Arena*);
+template<> ::g2engine::StreamExportJSONEntityReportResponse* Arena::CreateMaybeMessage<::g2engine::StreamExportJSONEntityReportResponse>(Arena*);
 template<> ::g2engine::WhyEntitiesRequest* Arena::CreateMaybeMessage<::g2engine::WhyEntitiesRequest>(Arena*);
 template<> ::g2engine::WhyEntitiesResponse* Arena::CreateMaybeMessage<::g2engine::WhyEntitiesResponse>(Arena*);
 template<> ::g2engine::WhyEntities_V2Request* Arena::CreateMaybeMessage<::g2engine::WhyEntities_V2Request>(Arena*);
@@ -21538,6 +21554,630 @@ class StatsResponse final :
 };
 // -------------------------------------------------------------------
 
+class StreamExportCSVEntityReportRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:g2engine.StreamExportCSVEntityReportRequest) */ {
+ public:
+  inline StreamExportCSVEntityReportRequest() : StreamExportCSVEntityReportRequest(nullptr) {}
+  ~StreamExportCSVEntityReportRequest() override;
+  explicit PROTOBUF_CONSTEXPR StreamExportCSVEntityReportRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  StreamExportCSVEntityReportRequest(const StreamExportCSVEntityReportRequest& from);
+  StreamExportCSVEntityReportRequest(StreamExportCSVEntityReportRequest&& from) noexcept
+    : StreamExportCSVEntityReportRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline StreamExportCSVEntityReportRequest& operator=(const StreamExportCSVEntityReportRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline StreamExportCSVEntityReportRequest& operator=(StreamExportCSVEntityReportRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const StreamExportCSVEntityReportRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const StreamExportCSVEntityReportRequest* internal_default_instance() {
+    return reinterpret_cast<const StreamExportCSVEntityReportRequest*>(
+               &_StreamExportCSVEntityReportRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    132;
+
+  friend void swap(StreamExportCSVEntityReportRequest& a, StreamExportCSVEntityReportRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(StreamExportCSVEntityReportRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(StreamExportCSVEntityReportRequest* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  StreamExportCSVEntityReportRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<StreamExportCSVEntityReportRequest>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const StreamExportCSVEntityReportRequest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const StreamExportCSVEntityReportRequest& from) {
+    StreamExportCSVEntityReportRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(StreamExportCSVEntityReportRequest* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "g2engine.StreamExportCSVEntityReportRequest";
+  }
+  protected:
+  explicit StreamExportCSVEntityReportRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kCsvColumnListFieldNumber = 1,
+    kFlagsFieldNumber = 2,
+  };
+  // string csvColumnList = 1;
+  void clear_csvcolumnlist();
+  const std::string& csvcolumnlist() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_csvcolumnlist(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_csvcolumnlist();
+  PROTOBUF_NODISCARD std::string* release_csvcolumnlist();
+  void set_allocated_csvcolumnlist(std::string* csvcolumnlist);
+  private:
+  const std::string& _internal_csvcolumnlist() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_csvcolumnlist(const std::string& value);
+  std::string* _internal_mutable_csvcolumnlist();
+  public:
+
+  // int64 flags = 2;
+  void clear_flags();
+  int64_t flags() const;
+  void set_flags(int64_t value);
+  private:
+  int64_t _internal_flags() const;
+  void _internal_set_flags(int64_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:g2engine.StreamExportCSVEntityReportRequest)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr csvcolumnlist_;
+    int64_t flags_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_g2engine_2eproto;
+};
+// -------------------------------------------------------------------
+
+class StreamExportCSVEntityReportResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:g2engine.StreamExportCSVEntityReportResponse) */ {
+ public:
+  inline StreamExportCSVEntityReportResponse() : StreamExportCSVEntityReportResponse(nullptr) {}
+  ~StreamExportCSVEntityReportResponse() override;
+  explicit PROTOBUF_CONSTEXPR StreamExportCSVEntityReportResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  StreamExportCSVEntityReportResponse(const StreamExportCSVEntityReportResponse& from);
+  StreamExportCSVEntityReportResponse(StreamExportCSVEntityReportResponse&& from) noexcept
+    : StreamExportCSVEntityReportResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline StreamExportCSVEntityReportResponse& operator=(const StreamExportCSVEntityReportResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline StreamExportCSVEntityReportResponse& operator=(StreamExportCSVEntityReportResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const StreamExportCSVEntityReportResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const StreamExportCSVEntityReportResponse* internal_default_instance() {
+    return reinterpret_cast<const StreamExportCSVEntityReportResponse*>(
+               &_StreamExportCSVEntityReportResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    133;
+
+  friend void swap(StreamExportCSVEntityReportResponse& a, StreamExportCSVEntityReportResponse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(StreamExportCSVEntityReportResponse* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(StreamExportCSVEntityReportResponse* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  StreamExportCSVEntityReportResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<StreamExportCSVEntityReportResponse>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const StreamExportCSVEntityReportResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const StreamExportCSVEntityReportResponse& from) {
+    StreamExportCSVEntityReportResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(StreamExportCSVEntityReportResponse* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "g2engine.StreamExportCSVEntityReportResponse";
+  }
+  protected:
+  explicit StreamExportCSVEntityReportResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+  };
+  // int64 result = 1;
+  void clear_result();
+  int64_t result() const;
+  void set_result(int64_t value);
+  private:
+  int64_t _internal_result() const;
+  void _internal_set_result(int64_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:g2engine.StreamExportCSVEntityReportResponse)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    int64_t result_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_g2engine_2eproto;
+};
+// -------------------------------------------------------------------
+
+class StreamExportJSONEntityReportRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:g2engine.StreamExportJSONEntityReportRequest) */ {
+ public:
+  inline StreamExportJSONEntityReportRequest() : StreamExportJSONEntityReportRequest(nullptr) {}
+  ~StreamExportJSONEntityReportRequest() override;
+  explicit PROTOBUF_CONSTEXPR StreamExportJSONEntityReportRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  StreamExportJSONEntityReportRequest(const StreamExportJSONEntityReportRequest& from);
+  StreamExportJSONEntityReportRequest(StreamExportJSONEntityReportRequest&& from) noexcept
+    : StreamExportJSONEntityReportRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline StreamExportJSONEntityReportRequest& operator=(const StreamExportJSONEntityReportRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline StreamExportJSONEntityReportRequest& operator=(StreamExportJSONEntityReportRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const StreamExportJSONEntityReportRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const StreamExportJSONEntityReportRequest* internal_default_instance() {
+    return reinterpret_cast<const StreamExportJSONEntityReportRequest*>(
+               &_StreamExportJSONEntityReportRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    134;
+
+  friend void swap(StreamExportJSONEntityReportRequest& a, StreamExportJSONEntityReportRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(StreamExportJSONEntityReportRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(StreamExportJSONEntityReportRequest* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  StreamExportJSONEntityReportRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<StreamExportJSONEntityReportRequest>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const StreamExportJSONEntityReportRequest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const StreamExportJSONEntityReportRequest& from) {
+    StreamExportJSONEntityReportRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(StreamExportJSONEntityReportRequest* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "g2engine.StreamExportJSONEntityReportRequest";
+  }
+  protected:
+  explicit StreamExportJSONEntityReportRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kCsvColumnListFieldNumber = 1,
+    kFlagsFieldNumber = 2,
+  };
+  // string csvColumnList = 1;
+  void clear_csvcolumnlist();
+  const std::string& csvcolumnlist() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_csvcolumnlist(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_csvcolumnlist();
+  PROTOBUF_NODISCARD std::string* release_csvcolumnlist();
+  void set_allocated_csvcolumnlist(std::string* csvcolumnlist);
+  private:
+  const std::string& _internal_csvcolumnlist() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_csvcolumnlist(const std::string& value);
+  std::string* _internal_mutable_csvcolumnlist();
+  public:
+
+  // int64 flags = 2;
+  void clear_flags();
+  int64_t flags() const;
+  void set_flags(int64_t value);
+  private:
+  int64_t _internal_flags() const;
+  void _internal_set_flags(int64_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:g2engine.StreamExportJSONEntityReportRequest)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr csvcolumnlist_;
+    int64_t flags_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_g2engine_2eproto;
+};
+// -------------------------------------------------------------------
+
+class StreamExportJSONEntityReportResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:g2engine.StreamExportJSONEntityReportResponse) */ {
+ public:
+  inline StreamExportJSONEntityReportResponse() : StreamExportJSONEntityReportResponse(nullptr) {}
+  ~StreamExportJSONEntityReportResponse() override;
+  explicit PROTOBUF_CONSTEXPR StreamExportJSONEntityReportResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  StreamExportJSONEntityReportResponse(const StreamExportJSONEntityReportResponse& from);
+  StreamExportJSONEntityReportResponse(StreamExportJSONEntityReportResponse&& from) noexcept
+    : StreamExportJSONEntityReportResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline StreamExportJSONEntityReportResponse& operator=(const StreamExportJSONEntityReportResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline StreamExportJSONEntityReportResponse& operator=(StreamExportJSONEntityReportResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const StreamExportJSONEntityReportResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const StreamExportJSONEntityReportResponse* internal_default_instance() {
+    return reinterpret_cast<const StreamExportJSONEntityReportResponse*>(
+               &_StreamExportJSONEntityReportResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    135;
+
+  friend void swap(StreamExportJSONEntityReportResponse& a, StreamExportJSONEntityReportResponse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(StreamExportJSONEntityReportResponse* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(StreamExportJSONEntityReportResponse* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  StreamExportJSONEntityReportResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<StreamExportJSONEntityReportResponse>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const StreamExportJSONEntityReportResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const StreamExportJSONEntityReportResponse& from) {
+    StreamExportJSONEntityReportResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(StreamExportJSONEntityReportResponse* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "g2engine.StreamExportJSONEntityReportResponse";
+  }
+  protected:
+  explicit StreamExportJSONEntityReportResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+  };
+  // int64 result = 1;
+  void clear_result();
+  int64_t result() const;
+  void set_result(int64_t value);
+  private:
+  int64_t _internal_result() const;
+  void _internal_set_result(int64_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:g2engine.StreamExportJSONEntityReportResponse)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    int64_t result_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_g2engine_2eproto;
+};
+// -------------------------------------------------------------------
+
 class WhyEntitiesRequest final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:g2engine.WhyEntitiesRequest) */ {
  public:
@@ -21586,7 +22226,7 @@ class WhyEntitiesRequest final :
                &_WhyEntitiesRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    132;
+    136;
 
   friend void swap(WhyEntitiesRequest& a, WhyEntitiesRequest& b) {
     a.Swap(&b);
@@ -21745,7 +22385,7 @@ class WhyEntitiesResponse final :
                &_WhyEntitiesResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    133;
+    137;
 
   friend void swap(WhyEntitiesResponse& a, WhyEntitiesResponse& b) {
     a.Swap(&b);
@@ -21898,7 +22538,7 @@ class WhyEntities_V2Request final :
                &_WhyEntities_V2Request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    134;
+    138;
 
   friend void swap(WhyEntities_V2Request& a, WhyEntities_V2Request& b) {
     a.Swap(&b);
@@ -22068,7 +22708,7 @@ class WhyEntities_V2Response final :
                &_WhyEntities_V2Response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    135;
+    139;
 
   friend void swap(WhyEntities_V2Response& a, WhyEntities_V2Response& b) {
     a.Swap(&b);
@@ -22221,7 +22861,7 @@ class WhyEntityByEntityIDRequest final :
                &_WhyEntityByEntityIDRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    136;
+    140;
 
   friend void swap(WhyEntityByEntityIDRequest& a, WhyEntityByEntityIDRequest& b) {
     a.Swap(&b);
@@ -22369,7 +23009,7 @@ class WhyEntityByEntityIDResponse final :
                &_WhyEntityByEntityIDResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    137;
+    141;
 
   friend void swap(WhyEntityByEntityIDResponse& a, WhyEntityByEntityIDResponse& b) {
     a.Swap(&b);
@@ -22522,7 +23162,7 @@ class WhyEntityByEntityID_V2Request final :
                &_WhyEntityByEntityID_V2Request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    138;
+    142;
 
   friend void swap(WhyEntityByEntityID_V2Request& a, WhyEntityByEntityID_V2Request& b) {
     a.Swap(&b);
@@ -22681,7 +23321,7 @@ class WhyEntityByEntityID_V2Response final :
                &_WhyEntityByEntityID_V2Response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    139;
+    143;
 
   friend void swap(WhyEntityByEntityID_V2Response& a, WhyEntityByEntityID_V2Response& b) {
     a.Swap(&b);
@@ -22834,7 +23474,7 @@ class WhyEntityByRecordIDRequest final :
                &_WhyEntityByRecordIDRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    140;
+    144;
 
   friend void swap(WhyEntityByRecordIDRequest& a, WhyEntityByRecordIDRequest& b) {
     a.Swap(&b);
@@ -23003,7 +23643,7 @@ class WhyEntityByRecordIDResponse final :
                &_WhyEntityByRecordIDResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    141;
+    145;
 
   friend void swap(WhyEntityByRecordIDResponse& a, WhyEntityByRecordIDResponse& b) {
     a.Swap(&b);
@@ -23156,7 +23796,7 @@ class WhyEntityByRecordID_V2Request final :
                &_WhyEntityByRecordID_V2Request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    142;
+    146;
 
   friend void swap(WhyEntityByRecordID_V2Request& a, WhyEntityByRecordID_V2Request& b) {
     a.Swap(&b);
@@ -23336,7 +23976,7 @@ class WhyEntityByRecordID_V2Response final :
                &_WhyEntityByRecordID_V2Response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    143;
+    147;
 
   friend void swap(WhyEntityByRecordID_V2Response& a, WhyEntityByRecordID_V2Response& b) {
     a.Swap(&b);
@@ -23489,7 +24129,7 @@ class WhyRecordsRequest final :
                &_WhyRecordsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    144;
+    148;
 
   friend void swap(WhyRecordsRequest& a, WhyRecordsRequest& b) {
     a.Swap(&b);
@@ -23690,7 +24330,7 @@ class WhyRecordsResponse final :
                &_WhyRecordsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    145;
+    149;
 
   friend void swap(WhyRecordsResponse& a, WhyRecordsResponse& b) {
     a.Swap(&b);
@@ -23843,7 +24483,7 @@ class WhyRecords_V2Request final :
                &_WhyRecords_V2Request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    146;
+    150;
 
   friend void swap(WhyRecords_V2Request& a, WhyRecords_V2Request& b) {
     a.Swap(&b);
@@ -24055,7 +24695,7 @@ class WhyRecords_V2Response final :
                &_WhyRecords_V2Response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    147;
+    151;
 
   friend void swap(WhyRecords_V2Response& a, WhyRecords_V2Response& b) {
     a.Swap(&b);
@@ -33705,6 +34345,202 @@ inline void StatsResponse::set_allocated_result(std::string* result) {
 
 // -------------------------------------------------------------------
 
+// StreamExportCSVEntityReportRequest
+
+// string csvColumnList = 1;
+inline void StreamExportCSVEntityReportRequest::clear_csvcolumnlist() {
+  _impl_.csvcolumnlist_.ClearToEmpty();
+}
+inline const std::string& StreamExportCSVEntityReportRequest::csvcolumnlist() const {
+  // @@protoc_insertion_point(field_get:g2engine.StreamExportCSVEntityReportRequest.csvColumnList)
+  return _internal_csvcolumnlist();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void StreamExportCSVEntityReportRequest::set_csvcolumnlist(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.csvcolumnlist_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:g2engine.StreamExportCSVEntityReportRequest.csvColumnList)
+}
+inline std::string* StreamExportCSVEntityReportRequest::mutable_csvcolumnlist() {
+  std::string* _s = _internal_mutable_csvcolumnlist();
+  // @@protoc_insertion_point(field_mutable:g2engine.StreamExportCSVEntityReportRequest.csvColumnList)
+  return _s;
+}
+inline const std::string& StreamExportCSVEntityReportRequest::_internal_csvcolumnlist() const {
+  return _impl_.csvcolumnlist_.Get();
+}
+inline void StreamExportCSVEntityReportRequest::_internal_set_csvcolumnlist(const std::string& value) {
+  
+  _impl_.csvcolumnlist_.Set(value, GetArenaForAllocation());
+}
+inline std::string* StreamExportCSVEntityReportRequest::_internal_mutable_csvcolumnlist() {
+  
+  return _impl_.csvcolumnlist_.Mutable(GetArenaForAllocation());
+}
+inline std::string* StreamExportCSVEntityReportRequest::release_csvcolumnlist() {
+  // @@protoc_insertion_point(field_release:g2engine.StreamExportCSVEntityReportRequest.csvColumnList)
+  return _impl_.csvcolumnlist_.Release();
+}
+inline void StreamExportCSVEntityReportRequest::set_allocated_csvcolumnlist(std::string* csvcolumnlist) {
+  if (csvcolumnlist != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.csvcolumnlist_.SetAllocated(csvcolumnlist, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.csvcolumnlist_.IsDefault()) {
+    _impl_.csvcolumnlist_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:g2engine.StreamExportCSVEntityReportRequest.csvColumnList)
+}
+
+// int64 flags = 2;
+inline void StreamExportCSVEntityReportRequest::clear_flags() {
+  _impl_.flags_ = int64_t{0};
+}
+inline int64_t StreamExportCSVEntityReportRequest::_internal_flags() const {
+  return _impl_.flags_;
+}
+inline int64_t StreamExportCSVEntityReportRequest::flags() const {
+  // @@protoc_insertion_point(field_get:g2engine.StreamExportCSVEntityReportRequest.flags)
+  return _internal_flags();
+}
+inline void StreamExportCSVEntityReportRequest::_internal_set_flags(int64_t value) {
+  
+  _impl_.flags_ = value;
+}
+inline void StreamExportCSVEntityReportRequest::set_flags(int64_t value) {
+  _internal_set_flags(value);
+  // @@protoc_insertion_point(field_set:g2engine.StreamExportCSVEntityReportRequest.flags)
+}
+
+// -------------------------------------------------------------------
+
+// StreamExportCSVEntityReportResponse
+
+// int64 result = 1;
+inline void StreamExportCSVEntityReportResponse::clear_result() {
+  _impl_.result_ = int64_t{0};
+}
+inline int64_t StreamExportCSVEntityReportResponse::_internal_result() const {
+  return _impl_.result_;
+}
+inline int64_t StreamExportCSVEntityReportResponse::result() const {
+  // @@protoc_insertion_point(field_get:g2engine.StreamExportCSVEntityReportResponse.result)
+  return _internal_result();
+}
+inline void StreamExportCSVEntityReportResponse::_internal_set_result(int64_t value) {
+  
+  _impl_.result_ = value;
+}
+inline void StreamExportCSVEntityReportResponse::set_result(int64_t value) {
+  _internal_set_result(value);
+  // @@protoc_insertion_point(field_set:g2engine.StreamExportCSVEntityReportResponse.result)
+}
+
+// -------------------------------------------------------------------
+
+// StreamExportJSONEntityReportRequest
+
+// string csvColumnList = 1;
+inline void StreamExportJSONEntityReportRequest::clear_csvcolumnlist() {
+  _impl_.csvcolumnlist_.ClearToEmpty();
+}
+inline const std::string& StreamExportJSONEntityReportRequest::csvcolumnlist() const {
+  // @@protoc_insertion_point(field_get:g2engine.StreamExportJSONEntityReportRequest.csvColumnList)
+  return _internal_csvcolumnlist();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void StreamExportJSONEntityReportRequest::set_csvcolumnlist(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.csvcolumnlist_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:g2engine.StreamExportJSONEntityReportRequest.csvColumnList)
+}
+inline std::string* StreamExportJSONEntityReportRequest::mutable_csvcolumnlist() {
+  std::string* _s = _internal_mutable_csvcolumnlist();
+  // @@protoc_insertion_point(field_mutable:g2engine.StreamExportJSONEntityReportRequest.csvColumnList)
+  return _s;
+}
+inline const std::string& StreamExportJSONEntityReportRequest::_internal_csvcolumnlist() const {
+  return _impl_.csvcolumnlist_.Get();
+}
+inline void StreamExportJSONEntityReportRequest::_internal_set_csvcolumnlist(const std::string& value) {
+  
+  _impl_.csvcolumnlist_.Set(value, GetArenaForAllocation());
+}
+inline std::string* StreamExportJSONEntityReportRequest::_internal_mutable_csvcolumnlist() {
+  
+  return _impl_.csvcolumnlist_.Mutable(GetArenaForAllocation());
+}
+inline std::string* StreamExportJSONEntityReportRequest::release_csvcolumnlist() {
+  // @@protoc_insertion_point(field_release:g2engine.StreamExportJSONEntityReportRequest.csvColumnList)
+  return _impl_.csvcolumnlist_.Release();
+}
+inline void StreamExportJSONEntityReportRequest::set_allocated_csvcolumnlist(std::string* csvcolumnlist) {
+  if (csvcolumnlist != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.csvcolumnlist_.SetAllocated(csvcolumnlist, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.csvcolumnlist_.IsDefault()) {
+    _impl_.csvcolumnlist_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:g2engine.StreamExportJSONEntityReportRequest.csvColumnList)
+}
+
+// int64 flags = 2;
+inline void StreamExportJSONEntityReportRequest::clear_flags() {
+  _impl_.flags_ = int64_t{0};
+}
+inline int64_t StreamExportJSONEntityReportRequest::_internal_flags() const {
+  return _impl_.flags_;
+}
+inline int64_t StreamExportJSONEntityReportRequest::flags() const {
+  // @@protoc_insertion_point(field_get:g2engine.StreamExportJSONEntityReportRequest.flags)
+  return _internal_flags();
+}
+inline void StreamExportJSONEntityReportRequest::_internal_set_flags(int64_t value) {
+  
+  _impl_.flags_ = value;
+}
+inline void StreamExportJSONEntityReportRequest::set_flags(int64_t value) {
+  _internal_set_flags(value);
+  // @@protoc_insertion_point(field_set:g2engine.StreamExportJSONEntityReportRequest.flags)
+}
+
+// -------------------------------------------------------------------
+
+// StreamExportJSONEntityReportResponse
+
+// int64 result = 1;
+inline void StreamExportJSONEntityReportResponse::clear_result() {
+  _impl_.result_ = int64_t{0};
+}
+inline int64_t StreamExportJSONEntityReportResponse::_internal_result() const {
+  return _impl_.result_;
+}
+inline int64_t StreamExportJSONEntityReportResponse::result() const {
+  // @@protoc_insertion_point(field_get:g2engine.StreamExportJSONEntityReportResponse.result)
+  return _internal_result();
+}
+inline void StreamExportJSONEntityReportResponse::_internal_set_result(int64_t value) {
+  
+  _impl_.result_ = value;
+}
+inline void StreamExportJSONEntityReportResponse::set_result(int64_t value) {
+  _internal_set_result(value);
+  // @@protoc_insertion_point(field_set:g2engine.StreamExportJSONEntityReportResponse.result)
+}
+
+// -------------------------------------------------------------------
+
 // WhyEntitiesRequest
 
 // int64 entityID1 = 1;
@@ -34970,6 +35806,14 @@ inline void WhyRecords_V2Response::set_allocated_result(std::string* result) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

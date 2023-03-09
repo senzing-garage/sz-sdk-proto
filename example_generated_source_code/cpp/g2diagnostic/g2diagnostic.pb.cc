@@ -602,8 +602,34 @@ struct ReinitResponseDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ReinitResponseDefaultTypeInternal _ReinitResponse_default_instance_;
+PROTOBUF_CONSTEXPR StreamEntityListBySizeRequest::StreamEntityListBySizeRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.entitysize_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct StreamEntityListBySizeRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StreamEntityListBySizeRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~StreamEntityListBySizeRequestDefaultTypeInternal() {}
+  union {
+    StreamEntityListBySizeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StreamEntityListBySizeRequestDefaultTypeInternal _StreamEntityListBySizeRequest_default_instance_;
+PROTOBUF_CONSTEXPR StreamEntityListBySizeResponse::StreamEntityListBySizeResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct StreamEntityListBySizeResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StreamEntityListBySizeResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~StreamEntityListBySizeResponseDefaultTypeInternal() {}
+  union {
+    StreamEntityListBySizeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StreamEntityListBySizeResponseDefaultTypeInternal _StreamEntityListBySizeResponse_default_instance_;
 }  // namespace g2diagnostic
-static ::_pb::Metadata file_level_metadata_g2diagnostic_2eproto[46];
+static ::_pb::Metadata file_level_metadata_g2diagnostic_2eproto[48];
 static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_g2diagnostic_2eproto = nullptr;
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_g2diagnostic_2eproto = nullptr;
 
@@ -926,6 +952,20 @@ const uint32_t TableStruct_g2diagnostic_2eproto::offsets[] PROTOBUF_SECTION_VARI
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::g2diagnostic::StreamEntityListBySizeRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::g2diagnostic::StreamEntityListBySizeRequest, _impl_.entitysize_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::g2diagnostic::StreamEntityListBySizeResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::g2diagnostic::StreamEntityListBySizeResponse, _impl_.result_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::g2diagnostic::CheckDBPerfRequest)},
@@ -974,6 +1014,8 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 299, -1, -1, sizeof(::g2diagnostic::InitWithConfigIDResponse)},
   { 305, -1, -1, sizeof(::g2diagnostic::ReinitRequest)},
   { 312, -1, -1, sizeof(::g2diagnostic::ReinitResponse)},
+  { 318, -1, -1, sizeof(::g2diagnostic::StreamEntityListBySizeRequest)},
+  { 325, -1, -1, sizeof(::g2diagnostic::StreamEntityListBySizeResponse)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -1023,6 +1065,8 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::g2diagnostic::_InitWithConfigIDResponse_default_instance_._instance,
   &::g2diagnostic::_ReinitRequest_default_instance_._instance,
   &::g2diagnostic::_ReinitResponse_default_instance_._instance,
+  &::g2diagnostic::_StreamEntityListBySizeRequest_default_instance_._instance,
+  &::g2diagnostic::_StreamEntityListBySizeResponse_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_g2diagnostic_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -1080,75 +1124,80 @@ const char descriptor_table_protodef_g2diagnostic_2eproto[] PROTOBUF_SECTION_VAR
   "ms\030\002 \001(\t\022\024\n\014initConfigID\030\003 \001(\003\022\026\n\016verbos"
   "eLogging\030\004 \001(\005\"\032\n\030InitWithConfigIDRespon"
   "se\"%\n\rReinitRequest\022\024\n\014initConfigID\030\001 \001("
-  "\003\"\020\n\016ReinitResponse2\255\022\n\014G2Diagnostic\022T\n\013"
-  "CheckDBPerf\022 .g2diagnostic.CheckDBPerfRe"
-  "quest\032!.g2diagnostic.CheckDBPerfResponse"
-  "\"\000\022r\n\025CloseEntityListBySize\022*.g2diagnost"
-  "ic.CloseEntityListBySizeRequest\032+.g2diag"
-  "nostic.CloseEntityListBySizeResponse\"\000\022H"
-  "\n\007Destroy\022\034.g2diagnostic.DestroyRequest\032"
-  "\035.g2diagnostic.DestroyResponse\"\000\022r\n\025Fetc"
-  "hNextEntityBySize\022*.g2diagnostic.FetchNe"
-  "xtEntityBySizeRequest\032+.g2diagnostic.Fet"
-  "chNextEntityBySizeResponse\"\000\022{\n\030FindEnti"
-  "tiesByFeatureIDs\022-.g2diagnostic.FindEnti"
-  "tiesByFeatureIDsRequest\032..g2diagnostic.F"
-  "indEntitiesByFeatureIDsResponse\"\000\022i\n\022Get"
-  "AvailableMemory\022\'.g2diagnostic.GetAvaila"
-  "bleMemoryRequest\032(.g2diagnostic.GetAvail"
-  "ableMemoryResponse\"\000\022l\n\023GetDataSourceCou"
-  "nts\022(.g2diagnostic.GetDataSourceCountsRe"
-  "quest\032).g2diagnostic.GetDataSourceCounts"
-  "Response\"\000\022N\n\tGetDBInfo\022\036.g2diagnostic.G"
-  "etDBInfoRequest\032\037.g2diagnostic.GetDBInfo"
-  "Response\"\000\022c\n\020GetEntityDetails\022%.g2diagn"
-  "ostic.GetEntityDetailsRequest\032&.g2diagno"
-  "stic.GetEntityDetailsResponse\"\000\022l\n\023GetEn"
-  "tityListBySize\022(.g2diagnostic.GetEntityL"
-  "istBySizeRequest\032).g2diagnostic.GetEntit"
-  "yListBySizeResponse\"\000\022`\n\017GetEntityResume"
-  "\022$.g2diagnostic.GetEntityResumeRequest\032%"
-  ".g2diagnostic.GetEntityResumeResponse\"\000\022"
-  "u\n\026GetEntitySizeBreakdown\022+.g2diagnostic"
-  ".GetEntitySizeBreakdownRequest\032,.g2diagn"
-  "ostic.GetEntitySizeBreakdownResponse\"\000\022Q"
-  "\n\nGetFeature\022\037.g2diagnostic.GetFeatureRe"
-  "quest\032 .g2diagnostic.GetFeatureResponse\""
-  "\000\022i\n\022GetGenericFeatures\022\'.g2diagnostic.G"
-  "etGenericFeaturesRequest\032(.g2diagnostic."
-  "GetGenericFeaturesResponse\"\000\022`\n\017GetLogic"
-  "alCores\022$.g2diagnostic.GetLogicalCoresRe"
-  "quest\032%.g2diagnostic.GetLogicalCoresResp"
-  "onse\"\000\022o\n\024GetMappingStatistics\022).g2diagn"
-  "ostic.GetMappingStatisticsRequest\032*.g2di"
-  "agnostic.GetMappingStatisticsResponse\"\000\022"
-  "c\n\020GetPhysicalCores\022%.g2diagnostic.GetPh"
-  "ysicalCoresRequest\032&.g2diagnostic.GetPhy"
-  "sicalCoresResponse\"\000\022u\n\026GetRelationshipD"
-  "etails\022+.g2diagnostic.GetRelationshipDet"
-  "ailsRequest\032,.g2diagnostic.GetRelationsh"
-  "ipDetailsResponse\"\000\022x\n\027GetResolutionStat"
-  "istics\022,.g2diagnostic.GetResolutionStati"
-  "sticsRequest\032-.g2diagnostic.GetResolutio"
-  "nStatisticsResponse\"\000\022o\n\024GetTotalSystemM"
-  "emory\022).g2diagnostic.GetTotalSystemMemor"
-  "yRequest\032*.g2diagnostic.GetTotalSystemMe"
-  "moryResponse\"\000\022\?\n\004Init\022\031.g2diagnostic.In"
-  "itRequest\032\032.g2diagnostic.InitResponse\"\000\022"
-  "c\n\020InitWithConfigID\022%.g2diagnostic.InitW"
-  "ithConfigIDRequest\032&.g2diagnostic.InitWi"
-  "thConfigIDResponse\"\000\022E\n\006Reinit\022\033.g2diagn"
-  "ostic.ReinitRequest\032\034.g2diagnostic.Reini"
-  "tResponse\"\000Bn\n\'com.senzing.g2.engine.grp"
-  "c.G2DiagnosticB\021G2DiagnosticProtoP\001Z.git"
-  "hub.com/senzing/g2-sdk-go-grpc/g2diagnos"
-  "ticb\006proto3"
+  "\003\"\020\n\016ReinitResponse\"3\n\035StreamEntityListB"
+  "ySizeRequest\022\022\n\nentitySize\030\001 \001(\005\"0\n\036Stre"
+  "amEntityListBySizeResponse\022\016\n\006result\030\001 \001"
+  "(\t2\246\023\n\014G2Diagnostic\022T\n\013CheckDBPerf\022 .g2d"
+  "iagnostic.CheckDBPerfRequest\032!.g2diagnos"
+  "tic.CheckDBPerfResponse\"\000\022r\n\025CloseEntity"
+  "ListBySize\022*.g2diagnostic.CloseEntityLis"
+  "tBySizeRequest\032+.g2diagnostic.CloseEntit"
+  "yListBySizeResponse\"\000\022H\n\007Destroy\022\034.g2dia"
+  "gnostic.DestroyRequest\032\035.g2diagnostic.De"
+  "stroyResponse\"\000\022r\n\025FetchNextEntityBySize"
+  "\022*.g2diagnostic.FetchNextEntityBySizeReq"
+  "uest\032+.g2diagnostic.FetchNextEntityBySiz"
+  "eResponse\"\000\022{\n\030FindEntitiesByFeatureIDs\022"
+  "-.g2diagnostic.FindEntitiesByFeatureIDsR"
+  "equest\032..g2diagnostic.FindEntitiesByFeat"
+  "ureIDsResponse\"\000\022i\n\022GetAvailableMemory\022\'"
+  ".g2diagnostic.GetAvailableMemoryRequest\032"
+  "(.g2diagnostic.GetAvailableMemoryRespons"
+  "e\"\000\022l\n\023GetDataSourceCounts\022(.g2diagnosti"
+  "c.GetDataSourceCountsRequest\032).g2diagnos"
+  "tic.GetDataSourceCountsResponse\"\000\022N\n\tGet"
+  "DBInfo\022\036.g2diagnostic.GetDBInfoRequest\032\037"
+  ".g2diagnostic.GetDBInfoResponse\"\000\022c\n\020Get"
+  "EntityDetails\022%.g2diagnostic.GetEntityDe"
+  "tailsRequest\032&.g2diagnostic.GetEntityDet"
+  "ailsResponse\"\000\022l\n\023GetEntityListBySize\022(."
+  "g2diagnostic.GetEntityListBySizeRequest\032"
+  ").g2diagnostic.GetEntityListBySizeRespon"
+  "se\"\000\022`\n\017GetEntityResume\022$.g2diagnostic.G"
+  "etEntityResumeRequest\032%.g2diagnostic.Get"
+  "EntityResumeResponse\"\000\022u\n\026GetEntitySizeB"
+  "reakdown\022+.g2diagnostic.GetEntitySizeBre"
+  "akdownRequest\032,.g2diagnostic.GetEntitySi"
+  "zeBreakdownResponse\"\000\022Q\n\nGetFeature\022\037.g2"
+  "diagnostic.GetFeatureRequest\032 .g2diagnos"
+  "tic.GetFeatureResponse\"\000\022i\n\022GetGenericFe"
+  "atures\022\'.g2diagnostic.GetGenericFeatures"
+  "Request\032(.g2diagnostic.GetGenericFeature"
+  "sResponse\"\000\022`\n\017GetLogicalCores\022$.g2diagn"
+  "ostic.GetLogicalCoresRequest\032%.g2diagnos"
+  "tic.GetLogicalCoresResponse\"\000\022o\n\024GetMapp"
+  "ingStatistics\022).g2diagnostic.GetMappingS"
+  "tatisticsRequest\032*.g2diagnostic.GetMappi"
+  "ngStatisticsResponse\"\000\022c\n\020GetPhysicalCor"
+  "es\022%.g2diagnostic.GetPhysicalCoresReques"
+  "t\032&.g2diagnostic.GetPhysicalCoresRespons"
+  "e\"\000\022u\n\026GetRelationshipDetails\022+.g2diagno"
+  "stic.GetRelationshipDetailsRequest\032,.g2d"
+  "iagnostic.GetRelationshipDetailsResponse"
+  "\"\000\022x\n\027GetResolutionStatistics\022,.g2diagno"
+  "stic.GetResolutionStatisticsRequest\032-.g2"
+  "diagnostic.GetResolutionStatisticsRespon"
+  "se\"\000\022o\n\024GetTotalSystemMemory\022).g2diagnos"
+  "tic.GetTotalSystemMemoryRequest\032*.g2diag"
+  "nostic.GetTotalSystemMemoryResponse\"\000\022\?\n"
+  "\004Init\022\031.g2diagnostic.InitRequest\032\032.g2dia"
+  "gnostic.InitResponse\"\000\022c\n\020InitWithConfig"
+  "ID\022%.g2diagnostic.InitWithConfigIDReques"
+  "t\032&.g2diagnostic.InitWithConfigIDRespons"
+  "e\"\000\022E\n\006Reinit\022\033.g2diagnostic.ReinitReque"
+  "st\032\034.g2diagnostic.ReinitResponse\"\000\022w\n\026St"
+  "reamEntityListBySize\022+.g2diagnostic.Stre"
+  "amEntityListBySizeRequest\032,.g2diagnostic"
+  ".StreamEntityListBySizeResponse\"\0000\001Bn\n\'c"
+  "om.senzing.g2.engine.grpc.G2DiagnosticB\021"
+  "G2DiagnosticProtoP\001Z.github.com/senzing/"
+  "g2-sdk-go-grpc/g2diagnosticb\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_g2diagnostic_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_g2diagnostic_2eproto = {
-    false, false, 4651, descriptor_table_protodef_g2diagnostic_2eproto,
+    false, false, 4875, descriptor_table_protodef_g2diagnostic_2eproto,
     "g2diagnostic.proto",
-    &descriptor_table_g2diagnostic_2eproto_once, nullptr, 0, 46,
+    &descriptor_table_g2diagnostic_2eproto_once, nullptr, 0, 48,
     schemas, file_default_instances, TableStruct_g2diagnostic_2eproto::offsets,
     file_level_metadata_g2diagnostic_2eproto, file_level_enum_descriptors_g2diagnostic_2eproto,
     file_level_service_descriptors_g2diagnostic_2eproto,
@@ -8368,6 +8417,387 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReinitResponse::GetClassData()
       file_level_metadata_g2diagnostic_2eproto[45]);
 }
 
+// ===================================================================
+
+class StreamEntityListBySizeRequest::_Internal {
+ public:
+};
+
+StreamEntityListBySizeRequest::StreamEntityListBySizeRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:g2diagnostic.StreamEntityListBySizeRequest)
+}
+StreamEntityListBySizeRequest::StreamEntityListBySizeRequest(const StreamEntityListBySizeRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  StreamEntityListBySizeRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.entitysize_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.entitysize_ = from._impl_.entitysize_;
+  // @@protoc_insertion_point(copy_constructor:g2diagnostic.StreamEntityListBySizeRequest)
+}
+
+inline void StreamEntityListBySizeRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.entitysize_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+StreamEntityListBySizeRequest::~StreamEntityListBySizeRequest() {
+  // @@protoc_insertion_point(destructor:g2diagnostic.StreamEntityListBySizeRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void StreamEntityListBySizeRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void StreamEntityListBySizeRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void StreamEntityListBySizeRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:g2diagnostic.StreamEntityListBySizeRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.entitysize_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* StreamEntityListBySizeRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int32 entitySize = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.entitysize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* StreamEntityListBySizeRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:g2diagnostic.StreamEntityListBySizeRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 entitySize = 1;
+  if (this->_internal_entitysize() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_entitysize(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:g2diagnostic.StreamEntityListBySizeRequest)
+  return target;
+}
+
+size_t StreamEntityListBySizeRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:g2diagnostic.StreamEntityListBySizeRequest)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int32 entitySize = 1;
+  if (this->_internal_entitysize() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_entitysize());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StreamEntityListBySizeRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    StreamEntityListBySizeRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StreamEntityListBySizeRequest::GetClassData() const { return &_class_data_; }
+
+
+void StreamEntityListBySizeRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<StreamEntityListBySizeRequest*>(&to_msg);
+  auto& from = static_cast<const StreamEntityListBySizeRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:g2diagnostic.StreamEntityListBySizeRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_entitysize() != 0) {
+    _this->_internal_set_entitysize(from._internal_entitysize());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void StreamEntityListBySizeRequest::CopyFrom(const StreamEntityListBySizeRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:g2diagnostic.StreamEntityListBySizeRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool StreamEntityListBySizeRequest::IsInitialized() const {
+  return true;
+}
+
+void StreamEntityListBySizeRequest::InternalSwap(StreamEntityListBySizeRequest* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.entitysize_, other->_impl_.entitysize_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata StreamEntityListBySizeRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_g2diagnostic_2eproto_getter, &descriptor_table_g2diagnostic_2eproto_once,
+      file_level_metadata_g2diagnostic_2eproto[46]);
+}
+
+// ===================================================================
+
+class StreamEntityListBySizeResponse::_Internal {
+ public:
+};
+
+StreamEntityListBySizeResponse::StreamEntityListBySizeResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:g2diagnostic.StreamEntityListBySizeResponse)
+}
+StreamEntityListBySizeResponse::StreamEntityListBySizeResponse(const StreamEntityListBySizeResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  StreamEntityListBySizeResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.result_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.result_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.result_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_result().empty()) {
+    _this->_impl_.result_.Set(from._internal_result(), 
+      _this->GetArenaForAllocation());
+  }
+  // @@protoc_insertion_point(copy_constructor:g2diagnostic.StreamEntityListBySizeResponse)
+}
+
+inline void StreamEntityListBySizeResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.result_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.result_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.result_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+StreamEntityListBySizeResponse::~StreamEntityListBySizeResponse() {
+  // @@protoc_insertion_point(destructor:g2diagnostic.StreamEntityListBySizeResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void StreamEntityListBySizeResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.result_.Destroy();
+}
+
+void StreamEntityListBySizeResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void StreamEntityListBySizeResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:g2diagnostic.StreamEntityListBySizeResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.result_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* StreamEntityListBySizeResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_result();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "g2diagnostic.StreamEntityListBySizeResponse.result"));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* StreamEntityListBySizeResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:g2diagnostic.StreamEntityListBySizeResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string result = 1;
+  if (!this->_internal_result().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_result().data(), static_cast<int>(this->_internal_result().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "g2diagnostic.StreamEntityListBySizeResponse.result");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_result(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:g2diagnostic.StreamEntityListBySizeResponse)
+  return target;
+}
+
+size_t StreamEntityListBySizeResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:g2diagnostic.StreamEntityListBySizeResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string result = 1;
+  if (!this->_internal_result().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_result());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StreamEntityListBySizeResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    StreamEntityListBySizeResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StreamEntityListBySizeResponse::GetClassData() const { return &_class_data_; }
+
+
+void StreamEntityListBySizeResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<StreamEntityListBySizeResponse*>(&to_msg);
+  auto& from = static_cast<const StreamEntityListBySizeResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:g2diagnostic.StreamEntityListBySizeResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_result().empty()) {
+    _this->_internal_set_result(from._internal_result());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void StreamEntityListBySizeResponse::CopyFrom(const StreamEntityListBySizeResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:g2diagnostic.StreamEntityListBySizeResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool StreamEntityListBySizeResponse::IsInitialized() const {
+  return true;
+}
+
+void StreamEntityListBySizeResponse::InternalSwap(StreamEntityListBySizeResponse* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.result_, lhs_arena,
+      &other->_impl_.result_, rhs_arena
+  );
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata StreamEntityListBySizeResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_g2diagnostic_2eproto_getter, &descriptor_table_g2diagnostic_2eproto_once,
+      file_level_metadata_g2diagnostic_2eproto[47]);
+}
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace g2diagnostic
 PROTOBUF_NAMESPACE_OPEN
@@ -8554,6 +8984,14 @@ Arena::CreateMaybeMessage< ::g2diagnostic::ReinitRequest >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::g2diagnostic::ReinitResponse*
 Arena::CreateMaybeMessage< ::g2diagnostic::ReinitResponse >(Arena* arena) {
   return Arena::CreateMessageInternal< ::g2diagnostic::ReinitResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::g2diagnostic::StreamEntityListBySizeRequest*
+Arena::CreateMaybeMessage< ::g2diagnostic::StreamEntityListBySizeRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::g2diagnostic::StreamEntityListBySizeRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::g2diagnostic::StreamEntityListBySizeResponse*
+Arena::CreateMaybeMessage< ::g2diagnostic::StreamEntityListBySizeResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::g2diagnostic::StreamEntityListBySizeResponse >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
