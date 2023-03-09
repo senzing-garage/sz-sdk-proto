@@ -184,6 +184,12 @@ extern ReinitRequestDefaultTypeInternal _ReinitRequest_default_instance_;
 class ReinitResponse;
 struct ReinitResponseDefaultTypeInternal;
 extern ReinitResponseDefaultTypeInternal _ReinitResponse_default_instance_;
+class StreamEntityListBySizeRequest;
+struct StreamEntityListBySizeRequestDefaultTypeInternal;
+extern StreamEntityListBySizeRequestDefaultTypeInternal _StreamEntityListBySizeRequest_default_instance_;
+class StreamEntityListBySizeResponse;
+struct StreamEntityListBySizeResponseDefaultTypeInternal;
+extern StreamEntityListBySizeResponseDefaultTypeInternal _StreamEntityListBySizeResponse_default_instance_;
 }  // namespace g2diagnostic
 PROTOBUF_NAMESPACE_OPEN
 template<> ::g2diagnostic::CheckDBPerfRequest* Arena::CreateMaybeMessage<::g2diagnostic::CheckDBPerfRequest>(Arena*);
@@ -232,6 +238,8 @@ template<> ::g2diagnostic::InitWithConfigIDRequest* Arena::CreateMaybeMessage<::
 template<> ::g2diagnostic::InitWithConfigIDResponse* Arena::CreateMaybeMessage<::g2diagnostic::InitWithConfigIDResponse>(Arena*);
 template<> ::g2diagnostic::ReinitRequest* Arena::CreateMaybeMessage<::g2diagnostic::ReinitRequest>(Arena*);
 template<> ::g2diagnostic::ReinitResponse* Arena::CreateMaybeMessage<::g2diagnostic::ReinitResponse>(Arena*);
+template<> ::g2diagnostic::StreamEntityListBySizeRequest* Arena::CreateMaybeMessage<::g2diagnostic::StreamEntityListBySizeRequest>(Arena*);
+template<> ::g2diagnostic::StreamEntityListBySizeResponse* Arena::CreateMaybeMessage<::g2diagnostic::StreamEntityListBySizeResponse>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace g2diagnostic {
 
@@ -6862,6 +6870,307 @@ class ReinitResponse final :
   };
   friend struct ::TableStruct_g2diagnostic_2eproto;
 };
+// -------------------------------------------------------------------
+
+class StreamEntityListBySizeRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:g2diagnostic.StreamEntityListBySizeRequest) */ {
+ public:
+  inline StreamEntityListBySizeRequest() : StreamEntityListBySizeRequest(nullptr) {}
+  ~StreamEntityListBySizeRequest() override;
+  explicit PROTOBUF_CONSTEXPR StreamEntityListBySizeRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  StreamEntityListBySizeRequest(const StreamEntityListBySizeRequest& from);
+  StreamEntityListBySizeRequest(StreamEntityListBySizeRequest&& from) noexcept
+    : StreamEntityListBySizeRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline StreamEntityListBySizeRequest& operator=(const StreamEntityListBySizeRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline StreamEntityListBySizeRequest& operator=(StreamEntityListBySizeRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const StreamEntityListBySizeRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const StreamEntityListBySizeRequest* internal_default_instance() {
+    return reinterpret_cast<const StreamEntityListBySizeRequest*>(
+               &_StreamEntityListBySizeRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    46;
+
+  friend void swap(StreamEntityListBySizeRequest& a, StreamEntityListBySizeRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(StreamEntityListBySizeRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(StreamEntityListBySizeRequest* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  StreamEntityListBySizeRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<StreamEntityListBySizeRequest>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const StreamEntityListBySizeRequest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const StreamEntityListBySizeRequest& from) {
+    StreamEntityListBySizeRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(StreamEntityListBySizeRequest* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "g2diagnostic.StreamEntityListBySizeRequest";
+  }
+  protected:
+  explicit StreamEntityListBySizeRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kEntitySizeFieldNumber = 1,
+  };
+  // int32 entitySize = 1;
+  void clear_entitysize();
+  int32_t entitysize() const;
+  void set_entitysize(int32_t value);
+  private:
+  int32_t _internal_entitysize() const;
+  void _internal_set_entitysize(int32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:g2diagnostic.StreamEntityListBySizeRequest)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    int32_t entitysize_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_g2diagnostic_2eproto;
+};
+// -------------------------------------------------------------------
+
+class StreamEntityListBySizeResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:g2diagnostic.StreamEntityListBySizeResponse) */ {
+ public:
+  inline StreamEntityListBySizeResponse() : StreamEntityListBySizeResponse(nullptr) {}
+  ~StreamEntityListBySizeResponse() override;
+  explicit PROTOBUF_CONSTEXPR StreamEntityListBySizeResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  StreamEntityListBySizeResponse(const StreamEntityListBySizeResponse& from);
+  StreamEntityListBySizeResponse(StreamEntityListBySizeResponse&& from) noexcept
+    : StreamEntityListBySizeResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline StreamEntityListBySizeResponse& operator=(const StreamEntityListBySizeResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline StreamEntityListBySizeResponse& operator=(StreamEntityListBySizeResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const StreamEntityListBySizeResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const StreamEntityListBySizeResponse* internal_default_instance() {
+    return reinterpret_cast<const StreamEntityListBySizeResponse*>(
+               &_StreamEntityListBySizeResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    47;
+
+  friend void swap(StreamEntityListBySizeResponse& a, StreamEntityListBySizeResponse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(StreamEntityListBySizeResponse* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(StreamEntityListBySizeResponse* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  StreamEntityListBySizeResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<StreamEntityListBySizeResponse>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const StreamEntityListBySizeResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const StreamEntityListBySizeResponse& from) {
+    StreamEntityListBySizeResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(StreamEntityListBySizeResponse* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "g2diagnostic.StreamEntityListBySizeResponse";
+  }
+  protected:
+  explicit StreamEntityListBySizeResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+  };
+  // string result = 1;
+  void clear_result();
+  const std::string& result() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_result(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_result();
+  PROTOBUF_NODISCARD std::string* release_result();
+  void set_allocated_result(std::string* result);
+  private:
+  const std::string& _internal_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
+  std::string* _internal_mutable_result();
+  public:
+
+  // @@protoc_insertion_point(class_scope:g2diagnostic.StreamEntityListBySizeResponse)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr result_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_g2diagnostic_2eproto;
+};
 // ===================================================================
 
 
@@ -8553,9 +8862,91 @@ inline void ReinitRequest::set_initconfigid(int64_t value) {
 
 // ReinitResponse
 
+// -------------------------------------------------------------------
+
+// StreamEntityListBySizeRequest
+
+// int32 entitySize = 1;
+inline void StreamEntityListBySizeRequest::clear_entitysize() {
+  _impl_.entitysize_ = 0;
+}
+inline int32_t StreamEntityListBySizeRequest::_internal_entitysize() const {
+  return _impl_.entitysize_;
+}
+inline int32_t StreamEntityListBySizeRequest::entitysize() const {
+  // @@protoc_insertion_point(field_get:g2diagnostic.StreamEntityListBySizeRequest.entitySize)
+  return _internal_entitysize();
+}
+inline void StreamEntityListBySizeRequest::_internal_set_entitysize(int32_t value) {
+  
+  _impl_.entitysize_ = value;
+}
+inline void StreamEntityListBySizeRequest::set_entitysize(int32_t value) {
+  _internal_set_entitysize(value);
+  // @@protoc_insertion_point(field_set:g2diagnostic.StreamEntityListBySizeRequest.entitySize)
+}
+
+// -------------------------------------------------------------------
+
+// StreamEntityListBySizeResponse
+
+// string result = 1;
+inline void StreamEntityListBySizeResponse::clear_result() {
+  _impl_.result_.ClearToEmpty();
+}
+inline const std::string& StreamEntityListBySizeResponse::result() const {
+  // @@protoc_insertion_point(field_get:g2diagnostic.StreamEntityListBySizeResponse.result)
+  return _internal_result();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void StreamEntityListBySizeResponse::set_result(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.result_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:g2diagnostic.StreamEntityListBySizeResponse.result)
+}
+inline std::string* StreamEntityListBySizeResponse::mutable_result() {
+  std::string* _s = _internal_mutable_result();
+  // @@protoc_insertion_point(field_mutable:g2diagnostic.StreamEntityListBySizeResponse.result)
+  return _s;
+}
+inline const std::string& StreamEntityListBySizeResponse::_internal_result() const {
+  return _impl_.result_.Get();
+}
+inline void StreamEntityListBySizeResponse::_internal_set_result(const std::string& value) {
+  
+  _impl_.result_.Set(value, GetArenaForAllocation());
+}
+inline std::string* StreamEntityListBySizeResponse::_internal_mutable_result() {
+  
+  return _impl_.result_.Mutable(GetArenaForAllocation());
+}
+inline std::string* StreamEntityListBySizeResponse::release_result() {
+  // @@protoc_insertion_point(field_release:g2diagnostic.StreamEntityListBySizeResponse.result)
+  return _impl_.result_.Release();
+}
+inline void StreamEntityListBySizeResponse::set_allocated_result(std::string* result) {
+  if (result != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.result_.SetAllocated(result, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.result_.IsDefault()) {
+    _impl_.result_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:g2diagnostic.StreamEntityListBySizeResponse.result)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

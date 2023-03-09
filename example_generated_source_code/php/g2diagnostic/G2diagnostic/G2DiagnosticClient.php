@@ -338,4 +338,18 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * @param \G2diagnostic\StreamEntityListBySizeRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\ServerStreamingCall
+     */
+    public function StreamEntityListBySize(\G2diagnostic\StreamEntityListBySizeRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_serverStreamRequest('/g2diagnostic.G2Diagnostic/StreamEntityListBySize',
+        $argument,
+        ['\G2diagnostic\StreamEntityListBySizeResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

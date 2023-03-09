@@ -344,6 +344,16 @@ class G2EngineStub(object):
                 request_serializer=g2engine__pb2.StatsRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.StatsResponse.FromString,
                 )
+        self.StreamExportCSVEntityReport = channel.unary_unary(
+                '/g2engine.G2Engine/StreamExportCSVEntityReport',
+                request_serializer=g2engine__pb2.StreamExportCSVEntityReportRequest.SerializeToString,
+                response_deserializer=g2engine__pb2.StreamExportCSVEntityReportResponse.FromString,
+                )
+        self.StreamExportJSONEntityReport = channel.unary_unary(
+                '/g2engine.G2Engine/StreamExportJSONEntityReport',
+                request_serializer=g2engine__pb2.StreamExportJSONEntityReportRequest.SerializeToString,
+                response_deserializer=g2engine__pb2.StreamExportJSONEntityReportResponse.FromString,
+                )
         self.WhyEntities = channel.unary_unary(
                 '/g2engine.G2Engine/WhyEntities',
                 request_serializer=g2engine__pb2.WhyEntitiesRequest.SerializeToString,
@@ -785,6 +795,18 @@ class G2EngineServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def StreamExportCSVEntityReport(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def StreamExportJSONEntityReport(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def WhyEntities(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -1165,6 +1187,16 @@ def add_G2EngineServicer_to_server(servicer, server):
                     servicer.Stats,
                     request_deserializer=g2engine__pb2.StatsRequest.FromString,
                     response_serializer=g2engine__pb2.StatsResponse.SerializeToString,
+            ),
+            'StreamExportCSVEntityReport': grpc.unary_unary_rpc_method_handler(
+                    servicer.StreamExportCSVEntityReport,
+                    request_deserializer=g2engine__pb2.StreamExportCSVEntityReportRequest.FromString,
+                    response_serializer=g2engine__pb2.StreamExportCSVEntityReportResponse.SerializeToString,
+            ),
+            'StreamExportJSONEntityReport': grpc.unary_unary_rpc_method_handler(
+                    servicer.StreamExportJSONEntityReport,
+                    request_deserializer=g2engine__pb2.StreamExportJSONEntityReportRequest.FromString,
+                    response_serializer=g2engine__pb2.StreamExportJSONEntityReportResponse.SerializeToString,
             ),
             'WhyEntities': grpc.unary_unary_rpc_method_handler(
                     servicer.WhyEntities,
@@ -2335,6 +2367,40 @@ class G2Engine(object):
         return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/Stats',
             g2engine__pb2.StatsRequest.SerializeToString,
             g2engine__pb2.StatsResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def StreamExportCSVEntityReport(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/StreamExportCSVEntityReport',
+            g2engine__pb2.StreamExportCSVEntityReportRequest.SerializeToString,
+            g2engine__pb2.StreamExportCSVEntityReportResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def StreamExportJSONEntityReport(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/StreamExportJSONEntityReport',
+            g2engine__pb2.StreamExportJSONEntityReportRequest.SerializeToString,
+            g2engine__pb2.StreamExportJSONEntityReportResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 

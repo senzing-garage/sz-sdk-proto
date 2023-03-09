@@ -244,6 +244,16 @@ public final class G2DiagnosticProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_g2diagnostic_ReinitResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_g2diagnostic_StreamEntityListBySizeRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_g2diagnostic_StreamEntityListBySizeRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_g2diagnostic_StreamEntityListBySizeResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_g2diagnostic_StreamEntityListBySizeResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -307,69 +317,74 @@ public final class G2DiagnosticProto {
       "ms\030\002 \001(\t\022\024\n\014initConfigID\030\003 \001(\003\022\026\n\016verbos" +
       "eLogging\030\004 \001(\005\"\032\n\030InitWithConfigIDRespon" +
       "se\"%\n\rReinitRequest\022\024\n\014initConfigID\030\001 \001(" +
-      "\003\"\020\n\016ReinitResponse2\255\022\n\014G2Diagnostic\022T\n\013" +
-      "CheckDBPerf\022 .g2diagnostic.CheckDBPerfRe" +
-      "quest\032!.g2diagnostic.CheckDBPerfResponse" +
-      "\"\000\022r\n\025CloseEntityListBySize\022*.g2diagnost" +
-      "ic.CloseEntityListBySizeRequest\032+.g2diag" +
-      "nostic.CloseEntityListBySizeResponse\"\000\022H" +
-      "\n\007Destroy\022\034.g2diagnostic.DestroyRequest\032" +
-      "\035.g2diagnostic.DestroyResponse\"\000\022r\n\025Fetc" +
-      "hNextEntityBySize\022*.g2diagnostic.FetchNe" +
-      "xtEntityBySizeRequest\032+.g2diagnostic.Fet" +
-      "chNextEntityBySizeResponse\"\000\022{\n\030FindEnti" +
-      "tiesByFeatureIDs\022-.g2diagnostic.FindEnti" +
-      "tiesByFeatureIDsRequest\032..g2diagnostic.F" +
-      "indEntitiesByFeatureIDsResponse\"\000\022i\n\022Get" +
-      "AvailableMemory\022\'.g2diagnostic.GetAvaila" +
-      "bleMemoryRequest\032(.g2diagnostic.GetAvail" +
-      "ableMemoryResponse\"\000\022l\n\023GetDataSourceCou" +
-      "nts\022(.g2diagnostic.GetDataSourceCountsRe" +
-      "quest\032).g2diagnostic.GetDataSourceCounts" +
-      "Response\"\000\022N\n\tGetDBInfo\022\036.g2diagnostic.G" +
-      "etDBInfoRequest\032\037.g2diagnostic.GetDBInfo" +
-      "Response\"\000\022c\n\020GetEntityDetails\022%.g2diagn" +
-      "ostic.GetEntityDetailsRequest\032&.g2diagno" +
-      "stic.GetEntityDetailsResponse\"\000\022l\n\023GetEn" +
-      "tityListBySize\022(.g2diagnostic.GetEntityL" +
-      "istBySizeRequest\032).g2diagnostic.GetEntit" +
-      "yListBySizeResponse\"\000\022`\n\017GetEntityResume" +
-      "\022$.g2diagnostic.GetEntityResumeRequest\032%" +
-      ".g2diagnostic.GetEntityResumeResponse\"\000\022" +
-      "u\n\026GetEntitySizeBreakdown\022+.g2diagnostic" +
-      ".GetEntitySizeBreakdownRequest\032,.g2diagn" +
-      "ostic.GetEntitySizeBreakdownResponse\"\000\022Q" +
-      "\n\nGetFeature\022\037.g2diagnostic.GetFeatureRe" +
-      "quest\032 .g2diagnostic.GetFeatureResponse\"" +
-      "\000\022i\n\022GetGenericFeatures\022\'.g2diagnostic.G" +
-      "etGenericFeaturesRequest\032(.g2diagnostic." +
-      "GetGenericFeaturesResponse\"\000\022`\n\017GetLogic" +
-      "alCores\022$.g2diagnostic.GetLogicalCoresRe" +
-      "quest\032%.g2diagnostic.GetLogicalCoresResp" +
-      "onse\"\000\022o\n\024GetMappingStatistics\022).g2diagn" +
-      "ostic.GetMappingStatisticsRequest\032*.g2di" +
-      "agnostic.GetMappingStatisticsResponse\"\000\022" +
-      "c\n\020GetPhysicalCores\022%.g2diagnostic.GetPh" +
-      "ysicalCoresRequest\032&.g2diagnostic.GetPhy" +
-      "sicalCoresResponse\"\000\022u\n\026GetRelationshipD" +
-      "etails\022+.g2diagnostic.GetRelationshipDet" +
-      "ailsRequest\032,.g2diagnostic.GetRelationsh" +
-      "ipDetailsResponse\"\000\022x\n\027GetResolutionStat" +
-      "istics\022,.g2diagnostic.GetResolutionStati" +
-      "sticsRequest\032-.g2diagnostic.GetResolutio" +
-      "nStatisticsResponse\"\000\022o\n\024GetTotalSystemM" +
-      "emory\022).g2diagnostic.GetTotalSystemMemor" +
-      "yRequest\032*.g2diagnostic.GetTotalSystemMe" +
-      "moryResponse\"\000\022?\n\004Init\022\031.g2diagnostic.In" +
-      "itRequest\032\032.g2diagnostic.InitResponse\"\000\022" +
-      "c\n\020InitWithConfigID\022%.g2diagnostic.InitW" +
-      "ithConfigIDRequest\032&.g2diagnostic.InitWi" +
-      "thConfigIDResponse\"\000\022E\n\006Reinit\022\033.g2diagn" +
-      "ostic.ReinitRequest\032\034.g2diagnostic.Reini" +
-      "tResponse\"\000Bn\n\'com.senzing.g2.engine.grp" +
-      "c.G2DiagnosticB\021G2DiagnosticProtoP\001Z.git" +
-      "hub.com/senzing/g2-sdk-go-grpc/g2diagnos" +
-      "ticb\006proto3"
+      "\003\"\020\n\016ReinitResponse\"3\n\035StreamEntityListB" +
+      "ySizeRequest\022\022\n\nentitySize\030\001 \001(\005\"0\n\036Stre" +
+      "amEntityListBySizeResponse\022\016\n\006result\030\001 \001" +
+      "(\t2\246\023\n\014G2Diagnostic\022T\n\013CheckDBPerf\022 .g2d" +
+      "iagnostic.CheckDBPerfRequest\032!.g2diagnos" +
+      "tic.CheckDBPerfResponse\"\000\022r\n\025CloseEntity" +
+      "ListBySize\022*.g2diagnostic.CloseEntityLis" +
+      "tBySizeRequest\032+.g2diagnostic.CloseEntit" +
+      "yListBySizeResponse\"\000\022H\n\007Destroy\022\034.g2dia" +
+      "gnostic.DestroyRequest\032\035.g2diagnostic.De" +
+      "stroyResponse\"\000\022r\n\025FetchNextEntityBySize" +
+      "\022*.g2diagnostic.FetchNextEntityBySizeReq" +
+      "uest\032+.g2diagnostic.FetchNextEntityBySiz" +
+      "eResponse\"\000\022{\n\030FindEntitiesByFeatureIDs\022" +
+      "-.g2diagnostic.FindEntitiesByFeatureIDsR" +
+      "equest\032..g2diagnostic.FindEntitiesByFeat" +
+      "ureIDsResponse\"\000\022i\n\022GetAvailableMemory\022\'" +
+      ".g2diagnostic.GetAvailableMemoryRequest\032" +
+      "(.g2diagnostic.GetAvailableMemoryRespons" +
+      "e\"\000\022l\n\023GetDataSourceCounts\022(.g2diagnosti" +
+      "c.GetDataSourceCountsRequest\032).g2diagnos" +
+      "tic.GetDataSourceCountsResponse\"\000\022N\n\tGet" +
+      "DBInfo\022\036.g2diagnostic.GetDBInfoRequest\032\037" +
+      ".g2diagnostic.GetDBInfoResponse\"\000\022c\n\020Get" +
+      "EntityDetails\022%.g2diagnostic.GetEntityDe" +
+      "tailsRequest\032&.g2diagnostic.GetEntityDet" +
+      "ailsResponse\"\000\022l\n\023GetEntityListBySize\022(." +
+      "g2diagnostic.GetEntityListBySizeRequest\032" +
+      ").g2diagnostic.GetEntityListBySizeRespon" +
+      "se\"\000\022`\n\017GetEntityResume\022$.g2diagnostic.G" +
+      "etEntityResumeRequest\032%.g2diagnostic.Get" +
+      "EntityResumeResponse\"\000\022u\n\026GetEntitySizeB" +
+      "reakdown\022+.g2diagnostic.GetEntitySizeBre" +
+      "akdownRequest\032,.g2diagnostic.GetEntitySi" +
+      "zeBreakdownResponse\"\000\022Q\n\nGetFeature\022\037.g2" +
+      "diagnostic.GetFeatureRequest\032 .g2diagnos" +
+      "tic.GetFeatureResponse\"\000\022i\n\022GetGenericFe" +
+      "atures\022\'.g2diagnostic.GetGenericFeatures" +
+      "Request\032(.g2diagnostic.GetGenericFeature" +
+      "sResponse\"\000\022`\n\017GetLogicalCores\022$.g2diagn" +
+      "ostic.GetLogicalCoresRequest\032%.g2diagnos" +
+      "tic.GetLogicalCoresResponse\"\000\022o\n\024GetMapp" +
+      "ingStatistics\022).g2diagnostic.GetMappingS" +
+      "tatisticsRequest\032*.g2diagnostic.GetMappi" +
+      "ngStatisticsResponse\"\000\022c\n\020GetPhysicalCor" +
+      "es\022%.g2diagnostic.GetPhysicalCoresReques" +
+      "t\032&.g2diagnostic.GetPhysicalCoresRespons" +
+      "e\"\000\022u\n\026GetRelationshipDetails\022+.g2diagno" +
+      "stic.GetRelationshipDetailsRequest\032,.g2d" +
+      "iagnostic.GetRelationshipDetailsResponse" +
+      "\"\000\022x\n\027GetResolutionStatistics\022,.g2diagno" +
+      "stic.GetResolutionStatisticsRequest\032-.g2" +
+      "diagnostic.GetResolutionStatisticsRespon" +
+      "se\"\000\022o\n\024GetTotalSystemMemory\022).g2diagnos" +
+      "tic.GetTotalSystemMemoryRequest\032*.g2diag" +
+      "nostic.GetTotalSystemMemoryResponse\"\000\022?\n" +
+      "\004Init\022\031.g2diagnostic.InitRequest\032\032.g2dia" +
+      "gnostic.InitResponse\"\000\022c\n\020InitWithConfig" +
+      "ID\022%.g2diagnostic.InitWithConfigIDReques" +
+      "t\032&.g2diagnostic.InitWithConfigIDRespons" +
+      "e\"\000\022E\n\006Reinit\022\033.g2diagnostic.ReinitReque" +
+      "st\032\034.g2diagnostic.ReinitResponse\"\000\022w\n\026St" +
+      "reamEntityListBySize\022+.g2diagnostic.Stre" +
+      "amEntityListBySizeRequest\032,.g2diagnostic" +
+      ".StreamEntityListBySizeResponse\"\0000\001Bn\n\'c" +
+      "om.senzing.g2.engine.grpc.G2DiagnosticB\021" +
+      "G2DiagnosticProtoP\001Z.github.com/senzing/" +
+      "g2-sdk-go-grpc/g2diagnosticb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -651,6 +666,18 @@ public final class G2DiagnosticProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_ReinitResponse_descriptor,
         new java.lang.String[] { });
+    internal_static_g2diagnostic_StreamEntityListBySizeRequest_descriptor =
+      getDescriptor().getMessageTypes().get(46);
+    internal_static_g2diagnostic_StreamEntityListBySizeRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_g2diagnostic_StreamEntityListBySizeRequest_descriptor,
+        new java.lang.String[] { "EntitySize", });
+    internal_static_g2diagnostic_StreamEntityListBySizeResponse_descriptor =
+      getDescriptor().getMessageTypes().get(47);
+    internal_static_g2diagnostic_StreamEntityListBySizeResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_g2diagnostic_StreamEntityListBySizeResponse_descriptor,
+        new java.lang.String[] { "Result", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

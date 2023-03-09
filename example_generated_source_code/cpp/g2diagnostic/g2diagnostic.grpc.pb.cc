@@ -45,6 +45,7 @@ static const char* G2Diagnostic_method_names[] = {
   "/g2diagnostic.G2Diagnostic/Init",
   "/g2diagnostic.G2Diagnostic/InitWithConfigID",
   "/g2diagnostic.G2Diagnostic/Reinit",
+  "/g2diagnostic.G2Diagnostic/StreamEntityListBySize",
 };
 
 std::unique_ptr< G2Diagnostic::Stub> G2Diagnostic::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -77,6 +78,7 @@ G2Diagnostic::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
   , rpcmethod_Init_(G2Diagnostic_method_names[20], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_InitWithConfigID_(G2Diagnostic_method_names[21], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_Reinit_(G2Diagnostic_method_names[22], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_StreamEntityListBySize_(G2Diagnostic_method_names[23], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
   {}
 
 ::grpc::Status G2Diagnostic::Stub::CheckDBPerf(::grpc::ClientContext* context, const ::g2diagnostic::CheckDBPerfRequest& request, ::g2diagnostic::CheckDBPerfResponse* response) {
@@ -608,6 +610,22 @@ void G2Diagnostic::Stub::async::Reinit(::grpc::ClientContext* context, const ::g
   return result;
 }
 
+::grpc::ClientReader< ::g2diagnostic::StreamEntityListBySizeResponse>* G2Diagnostic::Stub::StreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request) {
+  return ::grpc::internal::ClientReaderFactory< ::g2diagnostic::StreamEntityListBySizeResponse>::Create(channel_.get(), rpcmethod_StreamEntityListBySize_, context, request);
+}
+
+void G2Diagnostic::Stub::async::StreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest* request, ::grpc::ClientReadReactor< ::g2diagnostic::StreamEntityListBySizeResponse>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::g2diagnostic::StreamEntityListBySizeResponse>::Create(stub_->channel_.get(), stub_->rpcmethod_StreamEntityListBySize_, context, request, reactor);
+}
+
+::grpc::ClientAsyncReader< ::g2diagnostic::StreamEntityListBySizeResponse>* G2Diagnostic::Stub::AsyncStreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::g2diagnostic::StreamEntityListBySizeResponse>::Create(channel_.get(), cq, rpcmethod_StreamEntityListBySize_, context, request, true, tag);
+}
+
+::grpc::ClientAsyncReader< ::g2diagnostic::StreamEntityListBySizeResponse>* G2Diagnostic::Stub::PrepareAsyncStreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::g2diagnostic::StreamEntityListBySizeResponse>::Create(channel_.get(), cq, rpcmethod_StreamEntityListBySize_, context, request, false, nullptr);
+}
+
 G2Diagnostic::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       G2Diagnostic_method_names[0],
@@ -839,6 +857,16 @@ G2Diagnostic::Service::Service() {
              ::g2diagnostic::ReinitResponse* resp) {
                return service->Reinit(ctx, req, resp);
              }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      G2Diagnostic_method_names[23],
+      ::grpc::internal::RpcMethod::SERVER_STREAMING,
+      new ::grpc::internal::ServerStreamingHandler< G2Diagnostic::Service, ::g2diagnostic::StreamEntityListBySizeRequest, ::g2diagnostic::StreamEntityListBySizeResponse>(
+          [](G2Diagnostic::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::g2diagnostic::StreamEntityListBySizeRequest* req,
+             ::grpc::ServerWriter<::g2diagnostic::StreamEntityListBySizeResponse>* writer) {
+               return service->StreamEntityListBySize(ctx, req, writer);
+             }, this)));
 }
 
 G2Diagnostic::Service::~Service() {
@@ -1002,6 +1030,13 @@ G2Diagnostic::Service::~Service() {
   (void) context;
   (void) request;
   (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status G2Diagnostic::Service::StreamEntityListBySize(::grpc::ServerContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest* request, ::grpc::ServerWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* writer) {
+  (void) context;
+  (void) request;
+  (void) writer;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 

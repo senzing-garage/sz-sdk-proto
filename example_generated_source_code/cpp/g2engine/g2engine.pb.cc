@@ -1811,6 +1811,60 @@ struct StatsResponseDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StatsResponseDefaultTypeInternal _StatsResponse_default_instance_;
+PROTOBUF_CONSTEXPR StreamExportCSVEntityReportRequest::StreamExportCSVEntityReportRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.csvcolumnlist_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.flags_)*/int64_t{0}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct StreamExportCSVEntityReportRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StreamExportCSVEntityReportRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~StreamExportCSVEntityReportRequestDefaultTypeInternal() {}
+  union {
+    StreamExportCSVEntityReportRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StreamExportCSVEntityReportRequestDefaultTypeInternal _StreamExportCSVEntityReportRequest_default_instance_;
+PROTOBUF_CONSTEXPR StreamExportCSVEntityReportResponse::StreamExportCSVEntityReportResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.result_)*/int64_t{0}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct StreamExportCSVEntityReportResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StreamExportCSVEntityReportResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~StreamExportCSVEntityReportResponseDefaultTypeInternal() {}
+  union {
+    StreamExportCSVEntityReportResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StreamExportCSVEntityReportResponseDefaultTypeInternal _StreamExportCSVEntityReportResponse_default_instance_;
+PROTOBUF_CONSTEXPR StreamExportJSONEntityReportRequest::StreamExportJSONEntityReportRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.csvcolumnlist_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.flags_)*/int64_t{0}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct StreamExportJSONEntityReportRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StreamExportJSONEntityReportRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~StreamExportJSONEntityReportRequestDefaultTypeInternal() {}
+  union {
+    StreamExportJSONEntityReportRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StreamExportJSONEntityReportRequestDefaultTypeInternal _StreamExportJSONEntityReportRequest_default_instance_;
+PROTOBUF_CONSTEXPR StreamExportJSONEntityReportResponse::StreamExportJSONEntityReportResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.result_)*/int64_t{0}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct StreamExportJSONEntityReportResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StreamExportJSONEntityReportResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~StreamExportJSONEntityReportResponseDefaultTypeInternal() {}
+  union {
+    StreamExportJSONEntityReportResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StreamExportJSONEntityReportResponseDefaultTypeInternal _StreamExportJSONEntityReportResponse_default_instance_;
 PROTOBUF_CONSTEXPR WhyEntitiesRequest::WhyEntitiesRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.entityid1_)*/int64_t{0}
@@ -2034,7 +2088,7 @@ struct WhyRecords_V2ResponseDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WhyRecords_V2ResponseDefaultTypeInternal _WhyRecords_V2Response_default_instance_;
 }  // namespace g2engine
-static ::_pb::Metadata file_level_metadata_g2engine_2eproto[148];
+static ::_pb::Metadata file_level_metadata_g2engine_2eproto[152];
 static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_g2engine_2eproto = nullptr;
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_g2engine_2eproto = nullptr;
 
@@ -3062,6 +3116,36 @@ const uint32_t TableStruct_g2engine_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::g2engine::StatsResponse, _impl_.result_),
   ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::g2engine::StreamExportCSVEntityReportRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::g2engine::StreamExportCSVEntityReportRequest, _impl_.csvcolumnlist_),
+  PROTOBUF_FIELD_OFFSET(::g2engine::StreamExportCSVEntityReportRequest, _impl_.flags_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::g2engine::StreamExportCSVEntityReportResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::g2engine::StreamExportCSVEntityReportResponse, _impl_.result_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::g2engine::StreamExportJSONEntityReportRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::g2engine::StreamExportJSONEntityReportRequest, _impl_.csvcolumnlist_),
+  PROTOBUF_FIELD_OFFSET(::g2engine::StreamExportJSONEntityReportRequest, _impl_.flags_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::g2engine::StreamExportJSONEntityReportResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::g2engine::StreamExportJSONEntityReportResponse, _impl_.result_),
+  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::g2engine::WhyEntitiesRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -3321,22 +3405,26 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 1002, -1, -1, sizeof(::g2engine::SearchByAttributes_V2Response)},
   { 1009, -1, -1, sizeof(::g2engine::StatsRequest)},
   { 1015, -1, -1, sizeof(::g2engine::StatsResponse)},
-  { 1022, -1, -1, sizeof(::g2engine::WhyEntitiesRequest)},
-  { 1030, -1, -1, sizeof(::g2engine::WhyEntitiesResponse)},
-  { 1037, -1, -1, sizeof(::g2engine::WhyEntities_V2Request)},
-  { 1046, -1, -1, sizeof(::g2engine::WhyEntities_V2Response)},
-  { 1053, -1, -1, sizeof(::g2engine::WhyEntityByEntityIDRequest)},
-  { 1060, -1, -1, sizeof(::g2engine::WhyEntityByEntityIDResponse)},
-  { 1067, -1, -1, sizeof(::g2engine::WhyEntityByEntityID_V2Request)},
-  { 1075, -1, -1, sizeof(::g2engine::WhyEntityByEntityID_V2Response)},
-  { 1082, -1, -1, sizeof(::g2engine::WhyEntityByRecordIDRequest)},
-  { 1090, -1, -1, sizeof(::g2engine::WhyEntityByRecordIDResponse)},
-  { 1097, -1, -1, sizeof(::g2engine::WhyEntityByRecordID_V2Request)},
-  { 1106, -1, -1, sizeof(::g2engine::WhyEntityByRecordID_V2Response)},
-  { 1113, -1, -1, sizeof(::g2engine::WhyRecordsRequest)},
-  { 1123, -1, -1, sizeof(::g2engine::WhyRecordsResponse)},
-  { 1130, -1, -1, sizeof(::g2engine::WhyRecords_V2Request)},
-  { 1141, -1, -1, sizeof(::g2engine::WhyRecords_V2Response)},
+  { 1022, -1, -1, sizeof(::g2engine::StreamExportCSVEntityReportRequest)},
+  { 1030, -1, -1, sizeof(::g2engine::StreamExportCSVEntityReportResponse)},
+  { 1037, -1, -1, sizeof(::g2engine::StreamExportJSONEntityReportRequest)},
+  { 1045, -1, -1, sizeof(::g2engine::StreamExportJSONEntityReportResponse)},
+  { 1052, -1, -1, sizeof(::g2engine::WhyEntitiesRequest)},
+  { 1060, -1, -1, sizeof(::g2engine::WhyEntitiesResponse)},
+  { 1067, -1, -1, sizeof(::g2engine::WhyEntities_V2Request)},
+  { 1076, -1, -1, sizeof(::g2engine::WhyEntities_V2Response)},
+  { 1083, -1, -1, sizeof(::g2engine::WhyEntityByEntityIDRequest)},
+  { 1090, -1, -1, sizeof(::g2engine::WhyEntityByEntityIDResponse)},
+  { 1097, -1, -1, sizeof(::g2engine::WhyEntityByEntityID_V2Request)},
+  { 1105, -1, -1, sizeof(::g2engine::WhyEntityByEntityID_V2Response)},
+  { 1112, -1, -1, sizeof(::g2engine::WhyEntityByRecordIDRequest)},
+  { 1120, -1, -1, sizeof(::g2engine::WhyEntityByRecordIDResponse)},
+  { 1127, -1, -1, sizeof(::g2engine::WhyEntityByRecordID_V2Request)},
+  { 1136, -1, -1, sizeof(::g2engine::WhyEntityByRecordID_V2Response)},
+  { 1143, -1, -1, sizeof(::g2engine::WhyRecordsRequest)},
+  { 1153, -1, -1, sizeof(::g2engine::WhyRecordsResponse)},
+  { 1160, -1, -1, sizeof(::g2engine::WhyRecords_V2Request)},
+  { 1171, -1, -1, sizeof(::g2engine::WhyRecords_V2Response)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -3472,6 +3560,10 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::g2engine::_SearchByAttributes_V2Response_default_instance_._instance,
   &::g2engine::_StatsRequest_default_instance_._instance,
   &::g2engine::_StatsResponse_default_instance_._instance,
+  &::g2engine::_StreamExportCSVEntityReportRequest_default_instance_._instance,
+  &::g2engine::_StreamExportCSVEntityReportResponse_default_instance_._instance,
+  &::g2engine::_StreamExportJSONEntityReportRequest_default_instance_._instance,
+  &::g2engine::_StreamExportJSONEntityReportResponse_default_instance_._instance,
   &::g2engine::_WhyEntitiesRequest_default_instance_._instance,
   &::g2engine::_WhyEntitiesResponse_default_instance_._instance,
   &::g2engine::_WhyEntities_V2Request_default_instance_._instance,
@@ -3703,233 +3795,246 @@ const char descriptor_table_protodef_g2engine_2eproto[] PROTOBUF_SECTION_VARIABL
   "tributes_V2Request\022\020\n\010jsonData\030\001 \001(\t\022\r\n\005"
   "flags\030\002 \001(\003\"/\n\035SearchByAttributes_V2Resp"
   "onse\022\016\n\006result\030\001 \001(\t\"\016\n\014StatsRequest\"\037\n\r"
-  "StatsResponse\022\016\n\006result\030\001 \001(\t\":\n\022WhyEnti"
-  "tiesRequest\022\021\n\tentityID1\030\001 \001(\003\022\021\n\tentity"
-  "ID2\030\002 \001(\003\"%\n\023WhyEntitiesResponse\022\016\n\006resu"
-  "lt\030\001 \001(\t\"L\n\025WhyEntities_V2Request\022\021\n\tent"
-  "ityID1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\022\r\n\005flags"
-  "\030\003 \001(\003\"(\n\026WhyEntities_V2Response\022\016\n\006resu"
-  "lt\030\001 \001(\t\".\n\032WhyEntityByEntityIDRequest\022\020"
-  "\n\010entityID\030\001 \001(\003\"-\n\033WhyEntityByEntityIDR"
-  "esponse\022\016\n\006result\030\001 \001(\t\"@\n\035WhyEntityByEn"
-  "tityID_V2Request\022\020\n\010entityID\030\001 \001(\003\022\r\n\005fl"
-  "ags\030\002 \001(\003\"0\n\036WhyEntityByEntityID_V2Respo"
-  "nse\022\016\n\006result\030\001 \001(\t\"F\n\032WhyEntityByRecord"
-  "IDRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010rec"
-  "ordID\030\002 \001(\t\"-\n\033WhyEntityByRecordIDRespon"
-  "se\022\016\n\006result\030\001 \001(\t\"X\n\035WhyEntityByRecordI"
-  "D_V2Request\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010r"
-  "ecordID\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"0\n\036WhyEntit"
-  "yByRecordID_V2Response\022\016\n\006result\030\001 \001(\t\"k"
-  "\n\021WhyRecordsRequest\022\027\n\017dataSourceCode1\030\001"
-  " \001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n\017dataSourceCod"
-  "e2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001(\t\"$\n\022WhyRecord"
-  "sResponse\022\016\n\006result\030\001 \001(\t\"}\n\024WhyRecords_"
-  "V2Request\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\tre"
-  "cordID1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021"
-  "\n\trecordID2\030\004 \001(\t\022\r\n\005flags\030\005 \001(\003\"\'\n\025WhyR"
-  "ecords_V2Response\022\016\n\006result\030\001 \001(\t2\220<\n\010G2"
-  "Engine\022F\n\tAddRecord\022\032.g2engine.AddRecord"
-  "Request\032\033.g2engine.AddRecordResponse\"\000\022^"
-  "\n\021AddRecordWithInfo\022\".g2engine.AddRecord"
-  "WithInfoRequest\032#.g2engine.AddRecordWith"
-  "InfoResponse\"\000\022\232\001\n%AddRecordWithInfoWith"
-  "ReturnedRecordID\0226.g2engine.AddRecordWit"
-  "hInfoWithReturnedRecordIDRequest\0327.g2eng"
-  "ine.AddRecordWithInfoWithReturnedRecordI"
-  "DResponse\"\000\022\202\001\n\035AddRecordWithReturnedRec"
-  "ordID\022..g2engine.AddRecordWithReturnedRe"
-  "cordIDRequest\032/.g2engine.AddRecordWithRe"
-  "turnedRecordIDResponse\"\000\022L\n\013CheckRecord\022"
-  "\034.g2engine.CheckRecordRequest\032\035.g2engine"
-  ".CheckRecordResponse\"\000\022L\n\013CloseExport\022\034."
-  "g2engine.CloseExportRequest\032\035.g2engine.C"
-  "loseExportResponse\"\000\022[\n\020CountRedoRecords"
-  "\022!.g2engine.CountRedoRecordsRequest\032\".g2"
-  "engine.CountRedoRecordsResponse\"\000\022O\n\014Del"
-  "eteRecord\022\035.g2engine.DeleteRecordRequest"
-  "\032\036.g2engine.DeleteRecordResponse\"\000\022g\n\024De"
-  "leteRecordWithInfo\022%.g2engine.DeleteReco"
-  "rdWithInfoRequest\032&.g2engine.DeleteRecor"
-  "dWithInfoResponse\"\000\022@\n\007Destroy\022\030.g2engin"
-  "e.DestroyRequest\032\031.g2engine.DestroyRespo"
-  "nse\"\000\022O\n\014ExportConfig\022\035.g2engine.ExportC"
-  "onfigRequest\032\036.g2engine.ExportConfigResp"
-  "onse\"\000\022p\n\027ExportConfigAndConfigID\022(.g2en"
-  "gine.ExportConfigAndConfigIDRequest\032).g2"
-  "engine.ExportConfigAndConfigIDResponse\"\000"
-  "\022j\n\025ExportCSVEntityReport\022&.g2engine.Exp"
-  "ortCSVEntityReportRequest\032\'.g2engine.Exp"
-  "ortCSVEntityReportResponse\"\000\022m\n\026ExportJS"
-  "ONEntityReport\022\'.g2engine.ExportJSONEnti"
-  "tyReportRequest\032(.g2engine.ExportJSONEnt"
-  "ityReportResponse\"\000\022F\n\tFetchNext\022\032.g2eng"
-  "ine.FetchNextRequest\032\033.g2engine.FetchNex"
-  "tResponse\"\000\022\216\001\n!FindInterestingEntitiesB"
-  "yEntityID\0222.g2engine.FindInterestingEnti"
-  "tiesByEntityIDRequest\0323.g2engine.FindInt"
-  "erestingEntitiesByEntityIDResponse\"\000\022\216\001\n"
-  "!FindInterestingEntitiesByRecordID\0222.g2e"
-  "ngine.FindInterestingEntitiesByRecordIDR"
-  "equest\0323.g2engine.FindInterestingEntitie"
-  "sByRecordIDResponse\"\000\022j\n\025FindNetworkByEn"
-  "tityID\022&.g2engine.FindNetworkByEntityIDR"
-  "equest\032\'.g2engine.FindNetworkByEntityIDR"
-  "esponse\"\000\022s\n\030FindNetworkByEntityID_V2\022)."
-  "g2engine.FindNetworkByEntityID_V2Request"
-  "\032*.g2engine.FindNetworkByEntityID_V2Resp"
-  "onse\"\000\022j\n\025FindNetworkByRecordID\022&.g2engi"
-  "ne.FindNetworkByRecordIDRequest\032\'.g2engi"
-  "ne.FindNetworkByRecordIDResponse\"\000\022s\n\030Fi"
-  "ndNetworkByRecordID_V2\022).g2engine.FindNe"
-  "tworkByRecordID_V2Request\032*.g2engine.Fin"
-  "dNetworkByRecordID_V2Response\"\000\022a\n\022FindP"
-  "athByEntityID\022#.g2engine.FindPathByEntit"
-  "yIDRequest\032$.g2engine.FindPathByEntityID"
-  "Response\"\000\022j\n\025FindPathByEntityID_V2\022&.g2"
-  "engine.FindPathByEntityID_V2Request\032\'.g2"
-  "engine.FindPathByEntityID_V2Response\"\000\022a"
-  "\n\022FindPathByRecordID\022#.g2engine.FindPath"
-  "ByRecordIDRequest\032$.g2engine.FindPathByR"
-  "ecordIDResponse\"\000\022j\n\025FindPathByRecordID_"
-  "V2\022&.g2engine.FindPathByRecordID_V2Reque"
-  "st\032\'.g2engine.FindPathByRecordID_V2Respo"
-  "nse\"\000\022|\n\033FindPathExcludingByEntityID\022,.g"
-  "2engine.FindPathExcludingByEntityIDReque"
-  "st\032-.g2engine.FindPathExcludingByEntityI"
-  "DResponse\"\000\022\205\001\n\036FindPathExcludingByEntit"
-  "yID_V2\022/.g2engine.FindPathExcludingByEnt"
-  "ityID_V2Request\0320.g2engine.FindPathExclu"
-  "dingByEntityID_V2Response\"\000\022|\n\033FindPathE"
-  "xcludingByRecordID\022,.g2engine.FindPathEx"
-  "cludingByRecordIDRequest\032-.g2engine.Find"
-  "PathExcludingByRecordIDResponse\"\000\022\205\001\n\036Fi"
-  "ndPathExcludingByRecordID_V2\022/.g2engine."
-  "FindPathExcludingByRecordID_V2Request\0320."
-  "g2engine.FindPathExcludingByRecordID_V2R"
-  "esponse\"\000\022\216\001\n!FindPathIncludingSourceByE"
-  "ntityID\0222.g2engine.FindPathIncludingSour"
-  "ceByEntityIDRequest\0323.g2engine.FindPathI"
-  "ncludingSourceByEntityIDResponse\"\000\022\227\001\n$F"
-  "indPathIncludingSourceByEntityID_V2\0225.g2"
-  "engine.FindPathIncludingSourceByEntityID"
-  "_V2Request\0326.g2engine.FindPathIncludingS"
-  "ourceByEntityID_V2Response\"\000\022\216\001\n!FindPat"
-  "hIncludingSourceByRecordID\0222.g2engine.Fi"
-  "ndPathIncludingSourceByRecordIDRequest\0323"
+  "StatsResponse\022\016\n\006result\030\001 \001(\t\"J\n\"StreamE"
+  "xportCSVEntityReportRequest\022\025\n\rcsvColumn"
+  "List\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"5\n#StreamExpor"
+  "tCSVEntityReportResponse\022\016\n\006result\030\001 \001(\003"
+  "\"K\n#StreamExportJSONEntityReportRequest\022"
+  "\025\n\rcsvColumnList\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"6\n"
+  "$StreamExportJSONEntityReportResponse\022\016\n"
+  "\006result\030\001 \001(\003\":\n\022WhyEntitiesRequest\022\021\n\te"
+  "ntityID1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\"%\n\023Why"
+  "EntitiesResponse\022\016\n\006result\030\001 \001(\t\"L\n\025WhyE"
+  "ntities_V2Request\022\021\n\tentityID1\030\001 \001(\003\022\021\n\t"
+  "entityID2\030\002 \001(\003\022\r\n\005flags\030\003 \001(\003\"(\n\026WhyEnt"
+  "ities_V2Response\022\016\n\006result\030\001 \001(\t\".\n\032WhyE"
+  "ntityByEntityIDRequest\022\020\n\010entityID\030\001 \001(\003"
+  "\"-\n\033WhyEntityByEntityIDResponse\022\016\n\006resul"
+  "t\030\001 \001(\t\"@\n\035WhyEntityByEntityID_V2Request"
+  "\022\020\n\010entityID\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"0\n\036Why"
+  "EntityByEntityID_V2Response\022\016\n\006result\030\001 "
+  "\001(\t\"F\n\032WhyEntityByRecordIDRequest\022\026\n\016dat"
+  "aSourceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\"-\n\033W"
+  "hyEntityByRecordIDResponse\022\016\n\006result\030\001 \001"
+  "(\t\"X\n\035WhyEntityByRecordID_V2Request\022\026\n\016d"
+  "ataSourceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\022\r\n"
+  "\005flags\030\003 \001(\003\"0\n\036WhyEntityByRecordID_V2Re"
+  "sponse\022\016\n\006result\030\001 \001(\t\"k\n\021WhyRecordsRequ"
+  "est\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trecordID"
+  "1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\treco"
+  "rdID2\030\004 \001(\t\"$\n\022WhyRecordsResponse\022\016\n\006res"
+  "ult\030\001 \001(\t\"}\n\024WhyRecords_V2Request\022\027\n\017dat"
+  "aSourceCode1\030\001 \001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n"
+  "\017dataSourceCode2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001("
+  "\t\022\r\n\005flags\030\005 \001(\003\"\'\n\025WhyRecords_V2Respons"
+  "e\022\016\n\006result\030\001 \001(\t2\217>\n\010G2Engine\022F\n\tAddRec"
+  "ord\022\032.g2engine.AddRecordRequest\032\033.g2engi"
+  "ne.AddRecordResponse\"\000\022^\n\021AddRecordWithI"
+  "nfo\022\".g2engine.AddRecordWithInfoRequest\032"
+  "#.g2engine.AddRecordWithInfoResponse\"\000\022\232"
+  "\001\n%AddRecordWithInfoWithReturnedRecordID"
+  "\0226.g2engine.AddRecordWithInfoWithReturne"
+  "dRecordIDRequest\0327.g2engine.AddRecordWit"
+  "hInfoWithReturnedRecordIDResponse\"\000\022\202\001\n\035"
+  "AddRecordWithReturnedRecordID\022..g2engine"
+  ".AddRecordWithReturnedRecordIDRequest\032/."
+  "g2engine.AddRecordWithReturnedRecordIDRe"
+  "sponse\"\000\022L\n\013CheckRecord\022\034.g2engine.Check"
+  "RecordRequest\032\035.g2engine.CheckRecordResp"
+  "onse\"\000\022L\n\013CloseExport\022\034.g2engine.CloseEx"
+  "portRequest\032\035.g2engine.CloseExportRespon"
+  "se\"\000\022[\n\020CountRedoRecords\022!.g2engine.Coun"
+  "tRedoRecordsRequest\032\".g2engine.CountRedo"
+  "RecordsResponse\"\000\022O\n\014DeleteRecord\022\035.g2en"
+  "gine.DeleteRecordRequest\032\036.g2engine.Dele"
+  "teRecordResponse\"\000\022g\n\024DeleteRecordWithIn"
+  "fo\022%.g2engine.DeleteRecordWithInfoReques"
+  "t\032&.g2engine.DeleteRecordWithInfoRespons"
+  "e\"\000\022@\n\007Destroy\022\030.g2engine.DestroyRequest"
+  "\032\031.g2engine.DestroyResponse\"\000\022O\n\014ExportC"
+  "onfig\022\035.g2engine.ExportConfigRequest\032\036.g"
+  "2engine.ExportConfigResponse\"\000\022p\n\027Export"
+  "ConfigAndConfigID\022(.g2engine.ExportConfi"
+  "gAndConfigIDRequest\032).g2engine.ExportCon"
+  "figAndConfigIDResponse\"\000\022j\n\025ExportCSVEnt"
+  "ityReport\022&.g2engine.ExportCSVEntityRepo"
+  "rtRequest\032\'.g2engine.ExportCSVEntityRepo"
+  "rtResponse\"\000\022m\n\026ExportJSONEntityReport\022\'"
+  ".g2engine.ExportJSONEntityReportRequest\032"
+  "(.g2engine.ExportJSONEntityReportRespons"
+  "e\"\000\022F\n\tFetchNext\022\032.g2engine.FetchNextReq"
+  "uest\032\033.g2engine.FetchNextResponse\"\000\022\216\001\n!"
+  "FindInterestingEntitiesByEntityID\0222.g2en"
+  "gine.FindInterestingEntitiesByEntityIDRe"
+  "quest\0323.g2engine.FindInterestingEntities"
+  "ByEntityIDResponse\"\000\022\216\001\n!FindInteresting"
+  "EntitiesByRecordID\0222.g2engine.FindIntere"
+  "stingEntitiesByRecordIDRequest\0323.g2engin"
+  "e.FindInterestingEntitiesByRecordIDRespo"
+  "nse\"\000\022j\n\025FindNetworkByEntityID\022&.g2engin"
+  "e.FindNetworkByEntityIDRequest\032\'.g2engin"
+  "e.FindNetworkByEntityIDResponse\"\000\022s\n\030Fin"
+  "dNetworkByEntityID_V2\022).g2engine.FindNet"
+  "workByEntityID_V2Request\032*.g2engine.Find"
+  "NetworkByEntityID_V2Response\"\000\022j\n\025FindNe"
+  "tworkByRecordID\022&.g2engine.FindNetworkBy"
+  "RecordIDRequest\032\'.g2engine.FindNetworkBy"
+  "RecordIDResponse\"\000\022s\n\030FindNetworkByRecor"
+  "dID_V2\022).g2engine.FindNetworkByRecordID_"
+  "V2Request\032*.g2engine.FindNetworkByRecord"
+  "ID_V2Response\"\000\022a\n\022FindPathByEntityID\022#."
+  "g2engine.FindPathByEntityIDRequest\032$.g2e"
+  "ngine.FindPathByEntityIDResponse\"\000\022j\n\025Fi"
+  "ndPathByEntityID_V2\022&.g2engine.FindPathB"
+  "yEntityID_V2Request\032\'.g2engine.FindPathB"
+  "yEntityID_V2Response\"\000\022a\n\022FindPathByReco"
+  "rdID\022#.g2engine.FindPathByRecordIDReques"
+  "t\032$.g2engine.FindPathByRecordIDResponse\""
+  "\000\022j\n\025FindPathByRecordID_V2\022&.g2engine.Fi"
+  "ndPathByRecordID_V2Request\032\'.g2engine.Fi"
+  "ndPathByRecordID_V2Response\"\000\022|\n\033FindPat"
+  "hExcludingByEntityID\022,.g2engine.FindPath"
+  "ExcludingByEntityIDRequest\032-.g2engine.Fi"
+  "ndPathExcludingByEntityIDResponse\"\000\022\205\001\n\036"
+  "FindPathExcludingByEntityID_V2\022/.g2engin"
+  "e.FindPathExcludingByEntityID_V2Request\032"
+  "0.g2engine.FindPathExcludingByEntityID_V"
+  "2Response\"\000\022|\n\033FindPathExcludingByRecord"
+  "ID\022,.g2engine.FindPathExcludingByRecordI"
+  "DRequest\032-.g2engine.FindPathExcludingByR"
+  "ecordIDResponse\"\000\022\205\001\n\036FindPathExcludingB"
+  "yRecordID_V2\022/.g2engine.FindPathExcludin"
+  "gByRecordID_V2Request\0320.g2engine.FindPat"
+  "hExcludingByRecordID_V2Response\"\000\022\216\001\n!Fi"
+  "ndPathIncludingSourceByEntityID\0222.g2engi"
+  "ne.FindPathIncludingSourceByEntityIDRequ"
+  "est\0323.g2engine.FindPathIncludingSourceBy"
+  "EntityIDResponse\"\000\022\227\001\n$FindPathIncluding"
+  "SourceByEntityID_V2\0225.g2engine.FindPathI"
+  "ncludingSourceByEntityID_V2Request\0326.g2e"
+  "ngine.FindPathIncludingSourceByEntityID_"
+  "V2Response\"\000\022\216\001\n!FindPathIncludingSource"
+  "ByRecordID\0222.g2engine.FindPathIncludingS"
+  "ourceByRecordIDRequest\0323.g2engine.FindPa"
+  "thIncludingSourceByRecordIDResponse\"\000\022\227\001"
+  "\n$FindPathIncludingSourceByRecordID_V2\0225"
   ".g2engine.FindPathIncludingSourceByRecor"
-  "dIDResponse\"\000\022\227\001\n$FindPathIncludingSourc"
-  "eByRecordID_V2\0225.g2engine.FindPathInclud"
-  "ingSourceByRecordID_V2Request\0326.g2engine"
-  ".FindPathIncludingSourceByRecordID_V2Res"
-  "ponse\"\000\022^\n\021GetActiveConfigID\022\".g2engine."
-  "GetActiveConfigIDRequest\032#.g2engine.GetA"
-  "ctiveConfigIDResponse\"\000\022d\n\023GetEntityByEn"
-  "tityID\022$.g2engine.GetEntityByEntityIDReq"
-  "uest\032%.g2engine.GetEntityByEntityIDRespo"
-  "nse\"\000\022m\n\026GetEntityByEntityID_V2\022\'.g2engi"
-  "ne.GetEntityByEntityID_V2Request\032(.g2eng"
-  "ine.GetEntityByEntityID_V2Response\"\000\022d\n\023"
-  "GetEntityByRecordID\022$.g2engine.GetEntity"
-  "ByRecordIDRequest\032%.g2engine.GetEntityBy"
-  "RecordIDResponse\"\000\022m\n\026GetEntityByRecordI"
-  "D_V2\022\'.g2engine.GetEntityByRecordID_V2Re"
-  "quest\032(.g2engine.GetEntityByRecordID_V2R"
-  "esponse\"\000\022F\n\tGetRecord\022\032.g2engine.GetRec"
-  "ordRequest\032\033.g2engine.GetRecordResponse\""
-  "\000\022O\n\014GetRecord_V2\022\035.g2engine.GetRecord_V"
-  "2Request\032\036.g2engine.GetRecord_V2Response"
-  "\"\000\022R\n\rGetRedoRecord\022\036.g2engine.GetRedoRe"
-  "cordRequest\032\037.g2engine.GetRedoRecordResp"
-  "onse\"\000\022\202\001\n\035GetRepositoryLastModifiedTime"
-  "\022..g2engine.GetRepositoryLastModifiedTim"
-  "eRequest\032/.g2engine.GetRepositoryLastMod"
-  "ifiedTimeResponse\"\000\022y\n\032GetVirtualEntityB"
-  "yRecordID\022+.g2engine.GetVirtualEntityByR"
-  "ecordIDRequest\032,.g2engine.GetVirtualEnti"
-  "tyByRecordIDResponse\"\000\022\202\001\n\035GetVirtualEnt"
-  "ityByRecordID_V2\022..g2engine.GetVirtualEn"
-  "tityByRecordID_V2Request\032/.g2engine.GetV"
-  "irtualEntityByRecordID_V2Response\"\000\022d\n\023H"
-  "owEntityByEntityID\022$.g2engine.HowEntityB"
-  "yEntityIDRequest\032%.g2engine.HowEntityByE"
-  "ntityIDResponse\"\000\022m\n\026HowEntityByEntityID"
-  "_V2\022\'.g2engine.HowEntityByEntityID_V2Req"
-  "uest\032(.g2engine.HowEntityByEntityID_V2Re"
-  "sponse\"\000\0227\n\004Init\022\025.g2engine.InitRequest\032"
-  "\026.g2engine.InitResponse\"\000\022[\n\020InitWithCon"
-  "figID\022!.g2engine.InitWithConfigIDRequest"
-  "\032\".g2engine.InitWithConfigIDResponse\"\000\022L"
-  "\n\013PrimeEngine\022\034.g2engine.PrimeEngineRequ"
-  "est\032\035.g2engine.PrimeEngineResponse\"\000\022@\n\007"
-  "Process\022\030.g2engine.ProcessRequest\032\031.g2en"
-  "gine.ProcessResponse\"\000\022^\n\021ProcessRedoRec"
-  "ord\022\".g2engine.ProcessRedoRecordRequest\032"
-  "#.g2engine.ProcessRedoRecordResponse\"\000\022v"
-  "\n\031ProcessRedoRecordWithInfo\022*.g2engine.P"
-  "rocessRedoRecordWithInfoRequest\032+.g2engi"
-  "ne.ProcessRedoRecordWithInfoResponse\"\000\022X"
-  "\n\017ProcessWithInfo\022 .g2engine.ProcessWith"
-  "InfoRequest\032!.g2engine.ProcessWithInfoRe"
-  "sponse\"\000\022d\n\023ProcessWithResponse\022$.g2engi"
-  "ne.ProcessWithResponseRequest\032%.g2engine"
-  ".ProcessWithResponseResponse\"\000\022v\n\031Proces"
-  "sWithResponseResize\022*.g2engine.ProcessWi"
-  "thResponseResizeRequest\032+.g2engine.Proce"
-  "ssWithResponseResizeResponse\"\000\022X\n\017PurgeR"
-  "epository\022 .g2engine.PurgeRepositoryRequ"
-  "est\032!.g2engine.PurgeRepositoryResponse\"\000"
-  "\022[\n\020ReevaluateEntity\022!.g2engine.Reevalua"
-  "teEntityRequest\032\".g2engine.ReevaluateEnt"
-  "ityResponse\"\000\022s\n\030ReevaluateEntityWithInf"
-  "o\022).g2engine.ReevaluateEntityWithInfoReq"
-  "uest\032*.g2engine.ReevaluateEntityWithInfo"
-  "Response\"\000\022[\n\020ReevaluateRecord\022!.g2engin"
-  "e.ReevaluateRecordRequest\032\".g2engine.Ree"
-  "valuateRecordResponse\"\000\022s\n\030ReevaluateRec"
-  "ordWithInfo\022).g2engine.ReevaluateRecordW"
-  "ithInfoRequest\032*.g2engine.ReevaluateReco"
-  "rdWithInfoResponse\"\000\022=\n\006Reinit\022\027.g2engin"
-  "e.ReinitRequest\032\030.g2engine.ReinitRespons"
-  "e\"\000\022R\n\rReplaceRecord\022\036.g2engine.ReplaceR"
-  "ecordRequest\032\037.g2engine.ReplaceRecordRes"
-  "ponse\"\000\022j\n\025ReplaceRecordWithInfo\022&.g2eng"
-  "ine.ReplaceRecordWithInfoRequest\032\'.g2eng"
-  "ine.ReplaceRecordWithInfoResponse\"\000\022a\n\022S"
-  "earchByAttributes\022#.g2engine.SearchByAtt"
-  "ributesRequest\032$.g2engine.SearchByAttrib"
-  "utesResponse\"\000\022j\n\025SearchByAttributes_V2\022"
-  "&.g2engine.SearchByAttributes_V2Request\032"
-  "\'.g2engine.SearchByAttributes_V2Response"
-  "\"\000\022:\n\005Stats\022\026.g2engine.StatsRequest\032\027.g2"
-  "engine.StatsResponse\"\000\022L\n\013WhyEntities\022\034."
-  "g2engine.WhyEntitiesRequest\032\035.g2engine.W"
-  "hyEntitiesResponse\"\000\022U\n\016WhyEntities_V2\022\037"
-  ".g2engine.WhyEntities_V2Request\032 .g2engi"
-  "ne.WhyEntities_V2Response\"\000\022d\n\023WhyEntity"
-  "ByEntityID\022$.g2engine.WhyEntityByEntityI"
-  "DRequest\032%.g2engine.WhyEntityByEntityIDR"
-  "esponse\"\000\022m\n\026WhyEntityByEntityID_V2\022\'.g2"
-  "engine.WhyEntityByEntityID_V2Request\032(.g"
-  "2engine.WhyEntityByEntityID_V2Response\"\000"
-  "\022d\n\023WhyEntityByRecordID\022$.g2engine.WhyEn"
-  "tityByRecordIDRequest\032%.g2engine.WhyEnti"
-  "tyByRecordIDResponse\"\000\022m\n\026WhyEntityByRec"
-  "ordID_V2\022\'.g2engine.WhyEntityByRecordID_"
-  "V2Request\032(.g2engine.WhyEntityByRecordID"
-  "_V2Response\"\000\022I\n\nWhyRecords\022\033.g2engine.W"
-  "hyRecordsRequest\032\034.g2engine.WhyRecordsRe"
-  "sponse\"\000\022R\n\rWhyRecords_V2\022\036.g2engine.Why"
-  "Records_V2Request\032\037.g2engine.WhyRecords_"
-  "V2Response\"\000Bb\n#com.senzing.g2.engine.gr"
-  "pc.G2EngineB\rG2EngineProtoP\001Z*github.com"
-  "/senzing/g2-sdk-go-grpc/g2engineb\006proto3"
+  "dID_V2Request\0326.g2engine.FindPathIncludi"
+  "ngSourceByRecordID_V2Response\"\000\022^\n\021GetAc"
+  "tiveConfigID\022\".g2engine.GetActiveConfigI"
+  "DRequest\032#.g2engine.GetActiveConfigIDRes"
+  "ponse\"\000\022d\n\023GetEntityByEntityID\022$.g2engin"
+  "e.GetEntityByEntityIDRequest\032%.g2engine."
+  "GetEntityByEntityIDResponse\"\000\022m\n\026GetEnti"
+  "tyByEntityID_V2\022\'.g2engine.GetEntityByEn"
+  "tityID_V2Request\032(.g2engine.GetEntityByE"
+  "ntityID_V2Response\"\000\022d\n\023GetEntityByRecor"
+  "dID\022$.g2engine.GetEntityByRecordIDReques"
+  "t\032%.g2engine.GetEntityByRecordIDResponse"
+  "\"\000\022m\n\026GetEntityByRecordID_V2\022\'.g2engine."
+  "GetEntityByRecordID_V2Request\032(.g2engine"
+  ".GetEntityByRecordID_V2Response\"\000\022F\n\tGet"
+  "Record\022\032.g2engine.GetRecordRequest\032\033.g2e"
+  "ngine.GetRecordResponse\"\000\022O\n\014GetRecord_V"
+  "2\022\035.g2engine.GetRecord_V2Request\032\036.g2eng"
+  "ine.GetRecord_V2Response\"\000\022R\n\rGetRedoRec"
+  "ord\022\036.g2engine.GetRedoRecordRequest\032\037.g2"
+  "engine.GetRedoRecordResponse\"\000\022\202\001\n\035GetRe"
+  "positoryLastModifiedTime\022..g2engine.GetR"
+  "epositoryLastModifiedTimeRequest\032/.g2eng"
+  "ine.GetRepositoryLastModifiedTimeRespons"
+  "e\"\000\022y\n\032GetVirtualEntityByRecordID\022+.g2en"
+  "gine.GetVirtualEntityByRecordIDRequest\032,"
+  ".g2engine.GetVirtualEntityByRecordIDResp"
+  "onse\"\000\022\202\001\n\035GetVirtualEntityByRecordID_V2"
+  "\022..g2engine.GetVirtualEntityByRecordID_V"
+  "2Request\032/.g2engine.GetVirtualEntityByRe"
+  "cordID_V2Response\"\000\022d\n\023HowEntityByEntity"
+  "ID\022$.g2engine.HowEntityByEntityIDRequest"
+  "\032%.g2engine.HowEntityByEntityIDResponse\""
+  "\000\022m\n\026HowEntityByEntityID_V2\022\'.g2engine.H"
+  "owEntityByEntityID_V2Request\032(.g2engine."
+  "HowEntityByEntityID_V2Response\"\000\0227\n\004Init"
+  "\022\025.g2engine.InitRequest\032\026.g2engine.InitR"
+  "esponse\"\000\022[\n\020InitWithConfigID\022!.g2engine"
+  ".InitWithConfigIDRequest\032\".g2engine.Init"
+  "WithConfigIDResponse\"\000\022L\n\013PrimeEngine\022\034."
+  "g2engine.PrimeEngineRequest\032\035.g2engine.P"
+  "rimeEngineResponse\"\000\022@\n\007Process\022\030.g2engi"
+  "ne.ProcessRequest\032\031.g2engine.ProcessResp"
+  "onse\"\000\022^\n\021ProcessRedoRecord\022\".g2engine.P"
+  "rocessRedoRecordRequest\032#.g2engine.Proce"
+  "ssRedoRecordResponse\"\000\022v\n\031ProcessRedoRec"
+  "ordWithInfo\022*.g2engine.ProcessRedoRecord"
+  "WithInfoRequest\032+.g2engine.ProcessRedoRe"
+  "cordWithInfoResponse\"\000\022X\n\017ProcessWithInf"
+  "o\022 .g2engine.ProcessWithInfoRequest\032!.g2"
+  "engine.ProcessWithInfoResponse\"\000\022d\n\023Proc"
+  "essWithResponse\022$.g2engine.ProcessWithRe"
+  "sponseRequest\032%.g2engine.ProcessWithResp"
+  "onseResponse\"\000\022v\n\031ProcessWithResponseRes"
+  "ize\022*.g2engine.ProcessWithResponseResize"
+  "Request\032+.g2engine.ProcessWithResponseRe"
+  "sizeResponse\"\000\022X\n\017PurgeRepository\022 .g2en"
+  "gine.PurgeRepositoryRequest\032!.g2engine.P"
+  "urgeRepositoryResponse\"\000\022[\n\020ReevaluateEn"
+  "tity\022!.g2engine.ReevaluateEntityRequest\032"
+  "\".g2engine.ReevaluateEntityResponse\"\000\022s\n"
+  "\030ReevaluateEntityWithInfo\022).g2engine.Ree"
+  "valuateEntityWithInfoRequest\032*.g2engine."
+  "ReevaluateEntityWithInfoResponse\"\000\022[\n\020Re"
+  "evaluateRecord\022!.g2engine.ReevaluateReco"
+  "rdRequest\032\".g2engine.ReevaluateRecordRes"
+  "ponse\"\000\022s\n\030ReevaluateRecordWithInfo\022).g2"
+  "engine.ReevaluateRecordWithInfoRequest\032*"
+  ".g2engine.ReevaluateRecordWithInfoRespon"
+  "se\"\000\022=\n\006Reinit\022\027.g2engine.ReinitRequest\032"
+  "\030.g2engine.ReinitResponse\"\000\022R\n\rReplaceRe"
+  "cord\022\036.g2engine.ReplaceRecordRequest\032\037.g"
+  "2engine.ReplaceRecordResponse\"\000\022j\n\025Repla"
+  "ceRecordWithInfo\022&.g2engine.ReplaceRecor"
+  "dWithInfoRequest\032\'.g2engine.ReplaceRecor"
+  "dWithInfoResponse\"\000\022a\n\022SearchByAttribute"
+  "s\022#.g2engine.SearchByAttributesRequest\032$"
+  ".g2engine.SearchByAttributesResponse\"\000\022j"
+  "\n\025SearchByAttributes_V2\022&.g2engine.Searc"
+  "hByAttributes_V2Request\032\'.g2engine.Searc"
+  "hByAttributes_V2Response\"\000\022:\n\005Stats\022\026.g2"
+  "engine.StatsRequest\032\027.g2engine.StatsResp"
+  "onse\"\000\022|\n\033StreamExportCSVEntityReport\022,."
+  "g2engine.StreamExportCSVEntityReportRequ"
+  "est\032-.g2engine.StreamExportCSVEntityRepo"
+  "rtResponse\"\000\022\177\n\034StreamExportJSONEntityRe"
+  "port\022-.g2engine.StreamExportJSONEntityRe"
+  "portRequest\032..g2engine.StreamExportJSONE"
+  "ntityReportResponse\"\000\022L\n\013WhyEntities\022\034.g"
+  "2engine.WhyEntitiesRequest\032\035.g2engine.Wh"
+  "yEntitiesResponse\"\000\022U\n\016WhyEntities_V2\022\037."
+  "g2engine.WhyEntities_V2Request\032 .g2engin"
+  "e.WhyEntities_V2Response\"\000\022d\n\023WhyEntityB"
+  "yEntityID\022$.g2engine.WhyEntityByEntityID"
+  "Request\032%.g2engine.WhyEntityByEntityIDRe"
+  "sponse\"\000\022m\n\026WhyEntityByEntityID_V2\022\'.g2e"
+  "ngine.WhyEntityByEntityID_V2Request\032(.g2"
+  "engine.WhyEntityByEntityID_V2Response\"\000\022"
+  "d\n\023WhyEntityByRecordID\022$.g2engine.WhyEnt"
+  "ityByRecordIDRequest\032%.g2engine.WhyEntit"
+  "yByRecordIDResponse\"\000\022m\n\026WhyEntityByReco"
+  "rdID_V2\022\'.g2engine.WhyEntityByRecordID_V"
+  "2Request\032(.g2engine.WhyEntityByRecordID_"
+  "V2Response\"\000\022I\n\nWhyRecords\022\033.g2engine.Wh"
+  "yRecordsRequest\032\034.g2engine.WhyRecordsRes"
+  "ponse\"\000\022R\n\rWhyRecords_V2\022\036.g2engine.WhyR"
+  "ecords_V2Request\032\037.g2engine.WhyRecords_V"
+  "2Response\"\000Bb\n#com.senzing.g2.engine.grp"
+  "c.G2EngineB\rG2EngineProtoP\001Z*github.com/"
+  "senzing/g2-sdk-go-grpc/g2engineb\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_g2engine_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_g2engine_2eproto = {
-    false, false, 17320, descriptor_table_protodef_g2engine_2eproto,
+    false, false, 17839, descriptor_table_protodef_g2engine_2eproto,
     "g2engine.proto",
-    &descriptor_table_g2engine_2eproto_once, nullptr, 0, 148,
+    &descriptor_table_g2engine_2eproto_once, nullptr, 0, 152,
     schemas, file_default_instances, TableStruct_g2engine_2eproto::offsets,
     file_level_metadata_g2engine_2eproto, file_level_enum_descriptors_g2engine_2eproto,
     file_level_service_descriptors_g2engine_2eproto,
@@ -31050,6 +31155,822 @@ void StatsResponse::InternalSwap(StatsResponse* other) {
 
 // ===================================================================
 
+class StreamExportCSVEntityReportRequest::_Internal {
+ public:
+};
+
+StreamExportCSVEntityReportRequest::StreamExportCSVEntityReportRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:g2engine.StreamExportCSVEntityReportRequest)
+}
+StreamExportCSVEntityReportRequest::StreamExportCSVEntityReportRequest(const StreamExportCSVEntityReportRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  StreamExportCSVEntityReportRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.csvcolumnlist_){}
+    , decltype(_impl_.flags_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.csvcolumnlist_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.csvcolumnlist_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_csvcolumnlist().empty()) {
+    _this->_impl_.csvcolumnlist_.Set(from._internal_csvcolumnlist(), 
+      _this->GetArenaForAllocation());
+  }
+  _this->_impl_.flags_ = from._impl_.flags_;
+  // @@protoc_insertion_point(copy_constructor:g2engine.StreamExportCSVEntityReportRequest)
+}
+
+inline void StreamExportCSVEntityReportRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.csvcolumnlist_){}
+    , decltype(_impl_.flags_){int64_t{0}}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.csvcolumnlist_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.csvcolumnlist_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+StreamExportCSVEntityReportRequest::~StreamExportCSVEntityReportRequest() {
+  // @@protoc_insertion_point(destructor:g2engine.StreamExportCSVEntityReportRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void StreamExportCSVEntityReportRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.csvcolumnlist_.Destroy();
+}
+
+void StreamExportCSVEntityReportRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void StreamExportCSVEntityReportRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:g2engine.StreamExportCSVEntityReportRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.csvcolumnlist_.ClearToEmpty();
+  _impl_.flags_ = int64_t{0};
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* StreamExportCSVEntityReportRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string csvColumnList = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_csvcolumnlist();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "g2engine.StreamExportCSVEntityReportRequest.csvColumnList"));
+        } else
+          goto handle_unusual;
+        continue;
+      // int64 flags = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.flags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* StreamExportCSVEntityReportRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:g2engine.StreamExportCSVEntityReportRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string csvColumnList = 1;
+  if (!this->_internal_csvcolumnlist().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_csvcolumnlist().data(), static_cast<int>(this->_internal_csvcolumnlist().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "g2engine.StreamExportCSVEntityReportRequest.csvColumnList");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_csvcolumnlist(), target);
+  }
+
+  // int64 flags = 2;
+  if (this->_internal_flags() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_flags(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:g2engine.StreamExportCSVEntityReportRequest)
+  return target;
+}
+
+size_t StreamExportCSVEntityReportRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:g2engine.StreamExportCSVEntityReportRequest)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string csvColumnList = 1;
+  if (!this->_internal_csvcolumnlist().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_csvcolumnlist());
+  }
+
+  // int64 flags = 2;
+  if (this->_internal_flags() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_flags());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StreamExportCSVEntityReportRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    StreamExportCSVEntityReportRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StreamExportCSVEntityReportRequest::GetClassData() const { return &_class_data_; }
+
+
+void StreamExportCSVEntityReportRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<StreamExportCSVEntityReportRequest*>(&to_msg);
+  auto& from = static_cast<const StreamExportCSVEntityReportRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:g2engine.StreamExportCSVEntityReportRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_csvcolumnlist().empty()) {
+    _this->_internal_set_csvcolumnlist(from._internal_csvcolumnlist());
+  }
+  if (from._internal_flags() != 0) {
+    _this->_internal_set_flags(from._internal_flags());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void StreamExportCSVEntityReportRequest::CopyFrom(const StreamExportCSVEntityReportRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:g2engine.StreamExportCSVEntityReportRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool StreamExportCSVEntityReportRequest::IsInitialized() const {
+  return true;
+}
+
+void StreamExportCSVEntityReportRequest::InternalSwap(StreamExportCSVEntityReportRequest* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.csvcolumnlist_, lhs_arena,
+      &other->_impl_.csvcolumnlist_, rhs_arena
+  );
+  swap(_impl_.flags_, other->_impl_.flags_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata StreamExportCSVEntityReportRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
+      file_level_metadata_g2engine_2eproto[132]);
+}
+
+// ===================================================================
+
+class StreamExportCSVEntityReportResponse::_Internal {
+ public:
+};
+
+StreamExportCSVEntityReportResponse::StreamExportCSVEntityReportResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:g2engine.StreamExportCSVEntityReportResponse)
+}
+StreamExportCSVEntityReportResponse::StreamExportCSVEntityReportResponse(const StreamExportCSVEntityReportResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  StreamExportCSVEntityReportResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.result_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.result_ = from._impl_.result_;
+  // @@protoc_insertion_point(copy_constructor:g2engine.StreamExportCSVEntityReportResponse)
+}
+
+inline void StreamExportCSVEntityReportResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.result_){int64_t{0}}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+StreamExportCSVEntityReportResponse::~StreamExportCSVEntityReportResponse() {
+  // @@protoc_insertion_point(destructor:g2engine.StreamExportCSVEntityReportResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void StreamExportCSVEntityReportResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void StreamExportCSVEntityReportResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void StreamExportCSVEntityReportResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:g2engine.StreamExportCSVEntityReportResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.result_ = int64_t{0};
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* StreamExportCSVEntityReportResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int64 result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* StreamExportCSVEntityReportResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:g2engine.StreamExportCSVEntityReportResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 result = 1;
+  if (this->_internal_result() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_result(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:g2engine.StreamExportCSVEntityReportResponse)
+  return target;
+}
+
+size_t StreamExportCSVEntityReportResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:g2engine.StreamExportCSVEntityReportResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int64 result = 1;
+  if (this->_internal_result() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_result());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StreamExportCSVEntityReportResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    StreamExportCSVEntityReportResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StreamExportCSVEntityReportResponse::GetClassData() const { return &_class_data_; }
+
+
+void StreamExportCSVEntityReportResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<StreamExportCSVEntityReportResponse*>(&to_msg);
+  auto& from = static_cast<const StreamExportCSVEntityReportResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:g2engine.StreamExportCSVEntityReportResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_result() != 0) {
+    _this->_internal_set_result(from._internal_result());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void StreamExportCSVEntityReportResponse::CopyFrom(const StreamExportCSVEntityReportResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:g2engine.StreamExportCSVEntityReportResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool StreamExportCSVEntityReportResponse::IsInitialized() const {
+  return true;
+}
+
+void StreamExportCSVEntityReportResponse::InternalSwap(StreamExportCSVEntityReportResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.result_, other->_impl_.result_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata StreamExportCSVEntityReportResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
+      file_level_metadata_g2engine_2eproto[133]);
+}
+
+// ===================================================================
+
+class StreamExportJSONEntityReportRequest::_Internal {
+ public:
+};
+
+StreamExportJSONEntityReportRequest::StreamExportJSONEntityReportRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:g2engine.StreamExportJSONEntityReportRequest)
+}
+StreamExportJSONEntityReportRequest::StreamExportJSONEntityReportRequest(const StreamExportJSONEntityReportRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  StreamExportJSONEntityReportRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.csvcolumnlist_){}
+    , decltype(_impl_.flags_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.csvcolumnlist_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.csvcolumnlist_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_csvcolumnlist().empty()) {
+    _this->_impl_.csvcolumnlist_.Set(from._internal_csvcolumnlist(), 
+      _this->GetArenaForAllocation());
+  }
+  _this->_impl_.flags_ = from._impl_.flags_;
+  // @@protoc_insertion_point(copy_constructor:g2engine.StreamExportJSONEntityReportRequest)
+}
+
+inline void StreamExportJSONEntityReportRequest::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.csvcolumnlist_){}
+    , decltype(_impl_.flags_){int64_t{0}}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.csvcolumnlist_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.csvcolumnlist_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
+StreamExportJSONEntityReportRequest::~StreamExportJSONEntityReportRequest() {
+  // @@protoc_insertion_point(destructor:g2engine.StreamExportJSONEntityReportRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void StreamExportJSONEntityReportRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.csvcolumnlist_.Destroy();
+}
+
+void StreamExportJSONEntityReportRequest::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void StreamExportJSONEntityReportRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:g2engine.StreamExportJSONEntityReportRequest)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.csvcolumnlist_.ClearToEmpty();
+  _impl_.flags_ = int64_t{0};
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* StreamExportJSONEntityReportRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string csvColumnList = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_csvcolumnlist();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "g2engine.StreamExportJSONEntityReportRequest.csvColumnList"));
+        } else
+          goto handle_unusual;
+        continue;
+      // int64 flags = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.flags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* StreamExportJSONEntityReportRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:g2engine.StreamExportJSONEntityReportRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string csvColumnList = 1;
+  if (!this->_internal_csvcolumnlist().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_csvcolumnlist().data(), static_cast<int>(this->_internal_csvcolumnlist().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "g2engine.StreamExportJSONEntityReportRequest.csvColumnList");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_csvcolumnlist(), target);
+  }
+
+  // int64 flags = 2;
+  if (this->_internal_flags() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_flags(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:g2engine.StreamExportJSONEntityReportRequest)
+  return target;
+}
+
+size_t StreamExportJSONEntityReportRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:g2engine.StreamExportJSONEntityReportRequest)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string csvColumnList = 1;
+  if (!this->_internal_csvcolumnlist().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_csvcolumnlist());
+  }
+
+  // int64 flags = 2;
+  if (this->_internal_flags() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_flags());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StreamExportJSONEntityReportRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    StreamExportJSONEntityReportRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StreamExportJSONEntityReportRequest::GetClassData() const { return &_class_data_; }
+
+
+void StreamExportJSONEntityReportRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<StreamExportJSONEntityReportRequest*>(&to_msg);
+  auto& from = static_cast<const StreamExportJSONEntityReportRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:g2engine.StreamExportJSONEntityReportRequest)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_csvcolumnlist().empty()) {
+    _this->_internal_set_csvcolumnlist(from._internal_csvcolumnlist());
+  }
+  if (from._internal_flags() != 0) {
+    _this->_internal_set_flags(from._internal_flags());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void StreamExportJSONEntityReportRequest::CopyFrom(const StreamExportJSONEntityReportRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:g2engine.StreamExportJSONEntityReportRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool StreamExportJSONEntityReportRequest::IsInitialized() const {
+  return true;
+}
+
+void StreamExportJSONEntityReportRequest::InternalSwap(StreamExportJSONEntityReportRequest* other) {
+  using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.csvcolumnlist_, lhs_arena,
+      &other->_impl_.csvcolumnlist_, rhs_arena
+  );
+  swap(_impl_.flags_, other->_impl_.flags_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata StreamExportJSONEntityReportRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
+      file_level_metadata_g2engine_2eproto[134]);
+}
+
+// ===================================================================
+
+class StreamExportJSONEntityReportResponse::_Internal {
+ public:
+};
+
+StreamExportJSONEntityReportResponse::StreamExportJSONEntityReportResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:g2engine.StreamExportJSONEntityReportResponse)
+}
+StreamExportJSONEntityReportResponse::StreamExportJSONEntityReportResponse(const StreamExportJSONEntityReportResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  StreamExportJSONEntityReportResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.result_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.result_ = from._impl_.result_;
+  // @@protoc_insertion_point(copy_constructor:g2engine.StreamExportJSONEntityReportResponse)
+}
+
+inline void StreamExportJSONEntityReportResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.result_){int64_t{0}}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+StreamExportJSONEntityReportResponse::~StreamExportJSONEntityReportResponse() {
+  // @@protoc_insertion_point(destructor:g2engine.StreamExportJSONEntityReportResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void StreamExportJSONEntityReportResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void StreamExportJSONEntityReportResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void StreamExportJSONEntityReportResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:g2engine.StreamExportJSONEntityReportResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.result_ = int64_t{0};
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* StreamExportJSONEntityReportResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int64 result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* StreamExportJSONEntityReportResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:g2engine.StreamExportJSONEntityReportResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 result = 1;
+  if (this->_internal_result() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_result(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:g2engine.StreamExportJSONEntityReportResponse)
+  return target;
+}
+
+size_t StreamExportJSONEntityReportResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:g2engine.StreamExportJSONEntityReportResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int64 result = 1;
+  if (this->_internal_result() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_result());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StreamExportJSONEntityReportResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    StreamExportJSONEntityReportResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StreamExportJSONEntityReportResponse::GetClassData() const { return &_class_data_; }
+
+
+void StreamExportJSONEntityReportResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<StreamExportJSONEntityReportResponse*>(&to_msg);
+  auto& from = static_cast<const StreamExportJSONEntityReportResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:g2engine.StreamExportJSONEntityReportResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_result() != 0) {
+    _this->_internal_set_result(from._internal_result());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void StreamExportJSONEntityReportResponse::CopyFrom(const StreamExportJSONEntityReportResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:g2engine.StreamExportJSONEntityReportResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool StreamExportJSONEntityReportResponse::IsInitialized() const {
+  return true;
+}
+
+void StreamExportJSONEntityReportResponse::InternalSwap(StreamExportJSONEntityReportResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.result_, other->_impl_.result_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata StreamExportJSONEntityReportResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
+      file_level_metadata_g2engine_2eproto[135]);
+}
+
+// ===================================================================
+
 class WhyEntitiesRequest::_Internal {
  public:
 };
@@ -31256,7 +32177,7 @@ void WhyEntitiesRequest::InternalSwap(WhyEntitiesRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata WhyEntitiesRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
-      file_level_metadata_g2engine_2eproto[132]);
+      file_level_metadata_g2engine_2eproto[136]);
 }
 
 // ===================================================================
@@ -31459,7 +32380,7 @@ void WhyEntitiesResponse::InternalSwap(WhyEntitiesResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata WhyEntitiesResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
-      file_level_metadata_g2engine_2eproto[133]);
+      file_level_metadata_g2engine_2eproto[137]);
 }
 
 // ===================================================================
@@ -31694,7 +32615,7 @@ void WhyEntities_V2Request::InternalSwap(WhyEntities_V2Request* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata WhyEntities_V2Request::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
-      file_level_metadata_g2engine_2eproto[134]);
+      file_level_metadata_g2engine_2eproto[138]);
 }
 
 // ===================================================================
@@ -31897,7 +32818,7 @@ void WhyEntities_V2Response::InternalSwap(WhyEntities_V2Response* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata WhyEntities_V2Response::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
-      file_level_metadata_g2engine_2eproto[135]);
+      file_level_metadata_g2engine_2eproto[139]);
 }
 
 // ===================================================================
@@ -32075,7 +32996,7 @@ void WhyEntityByEntityIDRequest::InternalSwap(WhyEntityByEntityIDRequest* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata WhyEntityByEntityIDRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
-      file_level_metadata_g2engine_2eproto[136]);
+      file_level_metadata_g2engine_2eproto[140]);
 }
 
 // ===================================================================
@@ -32278,7 +33199,7 @@ void WhyEntityByEntityIDResponse::InternalSwap(WhyEntityByEntityIDResponse* othe
 ::PROTOBUF_NAMESPACE_ID::Metadata WhyEntityByEntityIDResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
-      file_level_metadata_g2engine_2eproto[137]);
+      file_level_metadata_g2engine_2eproto[141]);
 }
 
 // ===================================================================
@@ -32489,7 +33410,7 @@ void WhyEntityByEntityID_V2Request::InternalSwap(WhyEntityByEntityID_V2Request* 
 ::PROTOBUF_NAMESPACE_ID::Metadata WhyEntityByEntityID_V2Request::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
-      file_level_metadata_g2engine_2eproto[138]);
+      file_level_metadata_g2engine_2eproto[142]);
 }
 
 // ===================================================================
@@ -32692,7 +33613,7 @@ void WhyEntityByEntityID_V2Response::InternalSwap(WhyEntityByEntityID_V2Response
 ::PROTOBUF_NAMESPACE_ID::Metadata WhyEntityByEntityID_V2Response::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
-      file_level_metadata_g2engine_2eproto[139]);
+      file_level_metadata_g2engine_2eproto[143]);
 }
 
 // ===================================================================
@@ -32945,7 +33866,7 @@ void WhyEntityByRecordIDRequest::InternalSwap(WhyEntityByRecordIDRequest* other)
 ::PROTOBUF_NAMESPACE_ID::Metadata WhyEntityByRecordIDRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
-      file_level_metadata_g2engine_2eproto[140]);
+      file_level_metadata_g2engine_2eproto[144]);
 }
 
 // ===================================================================
@@ -33148,7 +34069,7 @@ void WhyEntityByRecordIDResponse::InternalSwap(WhyEntityByRecordIDResponse* othe
 ::PROTOBUF_NAMESPACE_ID::Metadata WhyEntityByRecordIDResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
-      file_level_metadata_g2engine_2eproto[141]);
+      file_level_metadata_g2engine_2eproto[145]);
 }
 
 // ===================================================================
@@ -33428,7 +34349,7 @@ void WhyEntityByRecordID_V2Request::InternalSwap(WhyEntityByRecordID_V2Request* 
 ::PROTOBUF_NAMESPACE_ID::Metadata WhyEntityByRecordID_V2Request::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
-      file_level_metadata_g2engine_2eproto[142]);
+      file_level_metadata_g2engine_2eproto[146]);
 }
 
 // ===================================================================
@@ -33631,7 +34552,7 @@ void WhyEntityByRecordID_V2Response::InternalSwap(WhyEntityByRecordID_V2Response
 ::PROTOBUF_NAMESPACE_ID::Metadata WhyEntityByRecordID_V2Response::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
-      file_level_metadata_g2engine_2eproto[143]);
+      file_level_metadata_g2engine_2eproto[147]);
 }
 
 // ===================================================================
@@ -33984,7 +34905,7 @@ void WhyRecordsRequest::InternalSwap(WhyRecordsRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata WhyRecordsRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
-      file_level_metadata_g2engine_2eproto[144]);
+      file_level_metadata_g2engine_2eproto[148]);
 }
 
 // ===================================================================
@@ -34187,7 +35108,7 @@ void WhyRecordsResponse::InternalSwap(WhyRecordsResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata WhyRecordsResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
-      file_level_metadata_g2engine_2eproto[145]);
+      file_level_metadata_g2engine_2eproto[149]);
 }
 
 // ===================================================================
@@ -34567,7 +35488,7 @@ void WhyRecords_V2Request::InternalSwap(WhyRecords_V2Request* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata WhyRecords_V2Request::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
-      file_level_metadata_g2engine_2eproto[146]);
+      file_level_metadata_g2engine_2eproto[150]);
 }
 
 // ===================================================================
@@ -34770,7 +35691,7 @@ void WhyRecords_V2Response::InternalSwap(WhyRecords_V2Response* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata WhyRecords_V2Response::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2engine_2eproto_getter, &descriptor_table_g2engine_2eproto_once,
-      file_level_metadata_g2engine_2eproto[147]);
+      file_level_metadata_g2engine_2eproto[151]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
@@ -35303,6 +36224,22 @@ Arena::CreateMaybeMessage< ::g2engine::StatsRequest >(Arena* arena) {
 template<> PROTOBUF_NOINLINE ::g2engine::StatsResponse*
 Arena::CreateMaybeMessage< ::g2engine::StatsResponse >(Arena* arena) {
   return Arena::CreateMessageInternal< ::g2engine::StatsResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::g2engine::StreamExportCSVEntityReportRequest*
+Arena::CreateMaybeMessage< ::g2engine::StreamExportCSVEntityReportRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::g2engine::StreamExportCSVEntityReportRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::g2engine::StreamExportCSVEntityReportResponse*
+Arena::CreateMaybeMessage< ::g2engine::StreamExportCSVEntityReportResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::g2engine::StreamExportCSVEntityReportResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::g2engine::StreamExportJSONEntityReportRequest*
+Arena::CreateMaybeMessage< ::g2engine::StreamExportJSONEntityReportRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::g2engine::StreamExportJSONEntityReportRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::g2engine::StreamExportJSONEntityReportResponse*
+Arena::CreateMaybeMessage< ::g2engine::StreamExportJSONEntityReportResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::g2engine::StreamExportJSONEntityReportResponse >(arena);
 }
 template<> PROTOBUF_NOINLINE ::g2engine::WhyEntitiesRequest*
 Arena::CreateMaybeMessage< ::g2engine::WhyEntitiesRequest >(Arena* arena) {

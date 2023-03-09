@@ -10,14 +10,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - ...
 
+## [0.3.0] - 2023-03-09
+
+### Added to 0.3.0
+
+- `StreamExportCSVEntityReport()`
+- `StreamExportJSONEntityReport()`
+
 ## [0.2.0] - 2023-01-04
 
 ### Added to 0.2.0
 
-- Removed `GetLastException()`, `GetLastExceptionCode()`, and `ClearLastException()` methods
 - Extracted `go` directory from `example_generated_source_code`
 - Refactored `example_generated_source_code` directory
 - Simplified documentation for generating source code
+
+### Deleted in 0.2.0
+
+- Removed `GetLastException()`, `GetLastExceptionCode()`, and `ClearLastException()` methods
 
 ## [0.1.0] - 2022-10-28
 
