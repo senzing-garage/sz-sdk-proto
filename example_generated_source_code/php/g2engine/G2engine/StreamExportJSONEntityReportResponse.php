@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class StreamExportJSONEntityReportResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int64 result = 1;</code>
+     * Generated from protobuf field <code>string result = 1;</code>
      */
-    protected $result = 0;
+    protected $result = '';
 
     /**
      * Constructor.
@@ -24,7 +24,7 @@ class StreamExportJSONEntityReportResponse extends \Google\Protobuf\Internal\Mes
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int|string $result
+     *     @type string $result
      * }
      */
     public function __construct($data = NULL) {
@@ -33,8 +33,8 @@ class StreamExportJSONEntityReportResponse extends \Google\Protobuf\Internal\Mes
     }
 
     /**
-     * Generated from protobuf field <code>int64 result = 1;</code>
-     * @return int|string
+     * Generated from protobuf field <code>string result = 1;</code>
+     * @return string
      */
     public function getResult()
     {
@@ -42,13 +42,13 @@ class StreamExportJSONEntityReportResponse extends \Google\Protobuf\Internal\Mes
     }
 
     /**
-     * Generated from protobuf field <code>int64 result = 1;</code>
-     * @param int|string $var
+     * Generated from protobuf field <code>string result = 1;</code>
+     * @param string $var
      * @return $this
      */
     public function setResult($var)
     {
-        GPBUtil::checkInt64($var);
+        GPBUtil::checkString($var, True);
         $this->result = $var;
 
         return $this;

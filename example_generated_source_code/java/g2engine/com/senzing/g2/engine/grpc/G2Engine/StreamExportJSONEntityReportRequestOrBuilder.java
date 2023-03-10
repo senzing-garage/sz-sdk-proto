@@ -8,19 +8,7 @@ public interface StreamExportJSONEntityReportRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string csvColumnList = 1;</code>
-   * @return The csvColumnList.
-   */
-  java.lang.String getCsvColumnList();
-  /**
-   * <code>string csvColumnList = 1;</code>
-   * @return The bytes for csvColumnList.
-   */
-  com.google.protobuf.ByteString
-      getCsvColumnListBytes();
-
-  /**
-   * <code>int64 flags = 2;</code>
+   * <code>int64 flags = 1;</code>
    * @return The flags.
    */
   long getFlags();

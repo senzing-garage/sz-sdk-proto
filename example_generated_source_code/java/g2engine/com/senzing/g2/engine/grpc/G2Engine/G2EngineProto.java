@@ -998,238 +998,237 @@ public final class G2EngineProto {
       "StatsResponse\022\016\n\006result\030\001 \001(\t\"J\n\"StreamE" +
       "xportCSVEntityReportRequest\022\025\n\rcsvColumn" +
       "List\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"5\n#StreamExpor" +
-      "tCSVEntityReportResponse\022\016\n\006result\030\001 \001(\003" +
-      "\"K\n#StreamExportJSONEntityReportRequest\022" +
-      "\025\n\rcsvColumnList\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"6\n" +
-      "$StreamExportJSONEntityReportResponse\022\016\n" +
-      "\006result\030\001 \001(\003\":\n\022WhyEntitiesRequest\022\021\n\te" +
-      "ntityID1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\"%\n\023Why" +
-      "EntitiesResponse\022\016\n\006result\030\001 \001(\t\"L\n\025WhyE" +
-      "ntities_V2Request\022\021\n\tentityID1\030\001 \001(\003\022\021\n\t" +
-      "entityID2\030\002 \001(\003\022\r\n\005flags\030\003 \001(\003\"(\n\026WhyEnt" +
-      "ities_V2Response\022\016\n\006result\030\001 \001(\t\".\n\032WhyE" +
-      "ntityByEntityIDRequest\022\020\n\010entityID\030\001 \001(\003" +
-      "\"-\n\033WhyEntityByEntityIDResponse\022\016\n\006resul" +
-      "t\030\001 \001(\t\"@\n\035WhyEntityByEntityID_V2Request" +
-      "\022\020\n\010entityID\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"0\n\036Why" +
-      "EntityByEntityID_V2Response\022\016\n\006result\030\001 " +
-      "\001(\t\"F\n\032WhyEntityByRecordIDRequest\022\026\n\016dat" +
-      "aSourceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\"-\n\033W" +
-      "hyEntityByRecordIDResponse\022\016\n\006result\030\001 \001" +
-      "(\t\"X\n\035WhyEntityByRecordID_V2Request\022\026\n\016d" +
-      "ataSourceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\022\r\n" +
-      "\005flags\030\003 \001(\003\"0\n\036WhyEntityByRecordID_V2Re" +
-      "sponse\022\016\n\006result\030\001 \001(\t\"k\n\021WhyRecordsRequ" +
-      "est\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trecordID" +
-      "1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\treco" +
-      "rdID2\030\004 \001(\t\"$\n\022WhyRecordsResponse\022\016\n\006res" +
-      "ult\030\001 \001(\t\"}\n\024WhyRecords_V2Request\022\027\n\017dat" +
-      "aSourceCode1\030\001 \001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n" +
-      "\017dataSourceCode2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001(" +
-      "\t\022\r\n\005flags\030\005 \001(\003\"\'\n\025WhyRecords_V2Respons" +
-      "e\022\016\n\006result\030\001 \001(\t2\224>\n\010G2Engine\022F\n\tAddRec" +
-      "ord\022\032.g2engine.AddRecordRequest\032\033.g2engi" +
-      "ne.AddRecordResponse\"\000\022^\n\021AddRecordWithI" +
-      "nfo\022\".g2engine.AddRecordWithInfoRequest\032" +
-      "#.g2engine.AddRecordWithInfoResponse\"\000\022\232" +
-      "\001\n%AddRecordWithInfoWithReturnedRecordID" +
-      "\0226.g2engine.AddRecordWithInfoWithReturne" +
-      "dRecordIDRequest\0327.g2engine.AddRecordWit" +
-      "hInfoWithReturnedRecordIDResponse\"\000\022\202\001\n\035" +
-      "AddRecordWithReturnedRecordID\022..g2engine" +
-      ".AddRecordWithReturnedRecordIDRequest\032/." +
-      "g2engine.AddRecordWithReturnedRecordIDRe" +
-      "sponse\"\000\022L\n\013CheckRecord\022\034.g2engine.Check" +
-      "RecordRequest\032\035.g2engine.CheckRecordResp" +
-      "onse\"\000\022L\n\013CloseExport\022\034.g2engine.CloseEx" +
-      "portRequest\032\035.g2engine.CloseExportRespon" +
-      "se\"\000\022[\n\020CountRedoRecords\022!.g2engine.Coun" +
-      "tRedoRecordsRequest\032\".g2engine.CountRedo" +
-      "RecordsResponse\"\000\022O\n\014DeleteRecord\022\035.g2en" +
-      "gine.DeleteRecordRequest\032\036.g2engine.Dele" +
-      "teRecordResponse\"\000\022g\n\024DeleteRecordWithIn" +
-      "fo\022%.g2engine.DeleteRecordWithInfoReques" +
-      "t\032&.g2engine.DeleteRecordWithInfoRespons" +
-      "e\"\000\022@\n\007Destroy\022\030.g2engine.DestroyRequest" +
-      "\032\031.g2engine.DestroyResponse\"\000\022O\n\014ExportC" +
-      "onfig\022\035.g2engine.ExportConfigRequest\032\036.g" +
-      "2engine.ExportConfigResponse\"\000\022p\n\027Export" +
-      "ConfigAndConfigID\022(.g2engine.ExportConfi" +
-      "gAndConfigIDRequest\032).g2engine.ExportCon" +
-      "figAndConfigIDResponse\"\000\022j\n\025ExportCSVEnt" +
-      "ityReport\022&.g2engine.ExportCSVEntityRepo" +
-      "rtRequest\032\'.g2engine.ExportCSVEntityRepo" +
-      "rtResponse\"\000\022m\n\026ExportJSONEntityReport\022\'" +
-      ".g2engine.ExportJSONEntityReportRequest\032" +
-      "(.g2engine.ExportJSONEntityReportRespons" +
-      "e\"\000\022F\n\tFetchNext\022\032.g2engine.FetchNextReq" +
-      "uest\032\033.g2engine.FetchNextResponse\"\000\022\216\001\n!" +
-      "FindInterestingEntitiesByEntityID\0222.g2en" +
-      "gine.FindInterestingEntitiesByEntityIDRe" +
-      "quest\0323.g2engine.FindInterestingEntities" +
-      "ByEntityIDResponse\"\000\022\216\001\n!FindInteresting" +
-      "EntitiesByRecordID\0222.g2engine.FindIntere" +
-      "stingEntitiesByRecordIDRequest\0323.g2engin" +
-      "e.FindInterestingEntitiesByRecordIDRespo" +
-      "nse\"\000\022j\n\025FindNetworkByEntityID\022&.g2engin" +
-      "e.FindNetworkByEntityIDRequest\032\'.g2engin" +
-      "e.FindNetworkByEntityIDResponse\"\000\022s\n\030Fin" +
-      "dNetworkByEntityID_V2\022).g2engine.FindNet" +
-      "workByEntityID_V2Request\032*.g2engine.Find" +
-      "NetworkByEntityID_V2Response\"\000\022j\n\025FindNe" +
-      "tworkByRecordID\022&.g2engine.FindNetworkBy" +
-      "RecordIDRequest\032\'.g2engine.FindNetworkBy" +
-      "RecordIDResponse\"\000\022s\n\030FindNetworkByRecor" +
-      "dID_V2\022).g2engine.FindNetworkByRecordID_" +
-      "V2Request\032*.g2engine.FindNetworkByRecord" +
-      "ID_V2Response\"\000\022a\n\022FindPathByEntityID\022#." +
-      "g2engine.FindPathByEntityIDRequest\032$.g2e" +
-      "ngine.FindPathByEntityIDResponse\"\000\022j\n\025Fi" +
-      "ndPathByEntityID_V2\022&.g2engine.FindPathB" +
-      "yEntityID_V2Request\032\'.g2engine.FindPathB" +
-      "yEntityID_V2Response\"\000\022a\n\022FindPathByReco" +
-      "rdID\022#.g2engine.FindPathByRecordIDReques" +
-      "t\032$.g2engine.FindPathByRecordIDResponse\"" +
-      "\000\022j\n\025FindPathByRecordID_V2\022&.g2engine.Fi" +
-      "ndPathByRecordID_V2Request\032\'.g2engine.Fi" +
-      "ndPathByRecordID_V2Response\"\000\022|\n\033FindPat" +
-      "hExcludingByEntityID\022,.g2engine.FindPath" +
-      "ExcludingByEntityIDRequest\032-.g2engine.Fi" +
-      "ndPathExcludingByEntityIDResponse\"\000\022\205\001\n\036" +
-      "FindPathExcludingByEntityID_V2\022/.g2engin" +
-      "e.FindPathExcludingByEntityID_V2Request\032" +
-      "0.g2engine.FindPathExcludingByEntityID_V" +
-      "2Response\"\000\022|\n\033FindPathExcludingByRecord" +
-      "ID\022,.g2engine.FindPathExcludingByRecordI" +
-      "DRequest\032-.g2engine.FindPathExcludingByR" +
-      "ecordIDResponse\"\000\022\205\001\n\036FindPathExcludingB" +
-      "yRecordID_V2\022/.g2engine.FindPathExcludin" +
-      "gByRecordID_V2Request\0320.g2engine.FindPat" +
-      "hExcludingByRecordID_V2Response\"\000\022\216\001\n!Fi" +
-      "ndPathIncludingSourceByEntityID\0222.g2engi" +
-      "ne.FindPathIncludingSourceByEntityIDRequ" +
-      "est\0323.g2engine.FindPathIncludingSourceBy" +
-      "EntityIDResponse\"\000\022\227\001\n$FindPathIncluding" +
-      "SourceByEntityID_V2\0225.g2engine.FindPathI" +
-      "ncludingSourceByEntityID_V2Request\0326.g2e" +
-      "ngine.FindPathIncludingSourceByEntityID_" +
-      "V2Response\"\000\022\216\001\n!FindPathIncludingSource" +
-      "ByRecordID\0222.g2engine.FindPathIncludingS" +
-      "ourceByRecordIDRequest\0323.g2engine.FindPa" +
-      "thIncludingSourceByRecordIDResponse\"\000\022\227\001" +
-      "\n$FindPathIncludingSourceByRecordID_V2\0225" +
-      ".g2engine.FindPathIncludingSourceByRecor" +
-      "dID_V2Request\0326.g2engine.FindPathIncludi" +
-      "ngSourceByRecordID_V2Response\"\000\022^\n\021GetAc" +
-      "tiveConfigID\022\".g2engine.GetActiveConfigI" +
-      "DRequest\032#.g2engine.GetActiveConfigIDRes" +
-      "ponse\"\000\022d\n\023GetEntityByEntityID\022$.g2engin" +
-      "e.GetEntityByEntityIDRequest\032%.g2engine." +
-      "GetEntityByEntityIDResponse\"\000\022m\n\026GetEnti" +
-      "tyByEntityID_V2\022\'.g2engine.GetEntityByEn" +
-      "tityID_V2Request\032(.g2engine.GetEntityByE" +
-      "ntityID_V2Response\"\000\022d\n\023GetEntityByRecor" +
-      "dID\022$.g2engine.GetEntityByRecordIDReques" +
-      "t\032%.g2engine.GetEntityByRecordIDResponse" +
-      "\"\000\022m\n\026GetEntityByRecordID_V2\022\'.g2engine." +
-      "GetEntityByRecordID_V2Request\032(.g2engine" +
-      ".GetEntityByRecordID_V2Response\"\000\022F\n\tGet" +
-      "Record\022\032.g2engine.GetRecordRequest\032\033.g2e" +
-      "ngine.GetRecordResponse\"\000\022O\n\014GetRecord_V" +
-      "2\022\035.g2engine.GetRecord_V2Request\032\036.g2eng" +
-      "ine.GetRecord_V2Response\"\000\022R\n\rGetRedoRec" +
-      "ord\022\036.g2engine.GetRedoRecordRequest\032\037.g2" +
-      "engine.GetRedoRecordResponse\"\000\022\202\001\n\035GetRe" +
-      "positoryLastModifiedTime\022..g2engine.GetR" +
-      "epositoryLastModifiedTimeRequest\032/.g2eng" +
-      "ine.GetRepositoryLastModifiedTimeRespons" +
-      "e\"\000\022y\n\032GetVirtualEntityByRecordID\022+.g2en" +
-      "gine.GetVirtualEntityByRecordIDRequest\032," +
-      ".g2engine.GetVirtualEntityByRecordIDResp" +
-      "onse\"\000\022\202\001\n\035GetVirtualEntityByRecordID_V2" +
-      "\022..g2engine.GetVirtualEntityByRecordID_V" +
-      "2Request\032/.g2engine.GetVirtualEntityByRe" +
-      "cordID_V2Response\"\000\022d\n\023HowEntityByEntity" +
-      "ID\022$.g2engine.HowEntityByEntityIDRequest" +
-      "\032%.g2engine.HowEntityByEntityIDResponse\"" +
-      "\000\022m\n\026HowEntityByEntityID_V2\022\'.g2engine.H" +
-      "owEntityByEntityID_V2Request\032(.g2engine." +
-      "HowEntityByEntityID_V2Response\"\000\0227\n\004Init" +
-      "\022\025.g2engine.InitRequest\032\026.g2engine.InitR" +
-      "esponse\"\000\022[\n\020InitWithConfigID\022!.g2engine" +
-      ".InitWithConfigIDRequest\032\".g2engine.Init" +
-      "WithConfigIDResponse\"\000\022L\n\013PrimeEngine\022\034." +
-      "g2engine.PrimeEngineRequest\032\035.g2engine.P" +
-      "rimeEngineResponse\"\000\022@\n\007Process\022\030.g2engi" +
-      "ne.ProcessRequest\032\031.g2engine.ProcessResp" +
-      "onse\"\000\022^\n\021ProcessRedoRecord\022\".g2engine.P" +
-      "rocessRedoRecordRequest\032#.g2engine.Proce" +
-      "ssRedoRecordResponse\"\000\022v\n\031ProcessRedoRec" +
-      "ordWithInfo\022*.g2engine.ProcessRedoRecord" +
-      "WithInfoRequest\032+.g2engine.ProcessRedoRe" +
-      "cordWithInfoResponse\"\000\022X\n\017ProcessWithInf" +
-      "o\022 .g2engine.ProcessWithInfoRequest\032!.g2" +
-      "engine.ProcessWithInfoResponse\"\000\022d\n\023Proc" +
-      "essWithResponse\022$.g2engine.ProcessWithRe" +
-      "sponseRequest\032%.g2engine.ProcessWithResp" +
-      "onseResponse\"\000\022v\n\031ProcessWithResponseRes" +
-      "ize\022*.g2engine.ProcessWithResponseResize" +
-      "Request\032+.g2engine.ProcessWithResponseRe" +
-      "sizeResponse\"\000\022X\n\017PurgeRepository\022 .g2en" +
-      "gine.PurgeRepositoryRequest\032!.g2engine.P" +
-      "urgeRepositoryResponse\"\000\022[\n\020ReevaluateEn" +
-      "tity\022!.g2engine.ReevaluateEntityRequest\032" +
-      "\".g2engine.ReevaluateEntityResponse\"\000\022s\n" +
-      "\030ReevaluateEntityWithInfo\022).g2engine.Ree" +
-      "valuateEntityWithInfoRequest\032*.g2engine." +
-      "ReevaluateEntityWithInfoResponse\"\000\022[\n\020Re",
-      "evaluateRecord\022!.g2engine.ReevaluateReco" +
-      "rdRequest\032\".g2engine.ReevaluateRecordRes" +
-      "ponse\"\000\022s\n\030ReevaluateRecordWithInfo\022).g2" +
-      "engine.ReevaluateRecordWithInfoRequest\032*" +
-      ".g2engine.ReevaluateRecordWithInfoRespon" +
-      "se\"\000\022=\n\006Reinit\022\027.g2engine.ReinitRequest\032" +
-      "\030.g2engine.ReinitResponse\"\000\022R\n\rReplaceRe" +
-      "cord\022\036.g2engine.ReplaceRecordRequest\032\037.g" +
-      "2engine.ReplaceRecordResponse\"\000\022j\n\025Repla" +
-      "ceRecordWithInfo\022&.g2engine.ReplaceRecor" +
-      "dWithInfoRequest\032\'.g2engine.ReplaceRecor" +
-      "dWithInfoResponse\"\000\022a\n\022SearchByAttribute" +
-      "s\022#.g2engine.SearchByAttributesRequest\032$" +
-      ".g2engine.SearchByAttributesResponse\"\000\022j" +
-      "\n\025SearchByAttributes_V2\022&.g2engine.Searc" +
-      "hByAttributes_V2Request\032\'.g2engine.Searc" +
-      "hByAttributes_V2Response\"\000\022:\n\005Stats\022\026.g2" +
-      "engine.StatsRequest\032\027.g2engine.StatsResp" +
-      "onse\"\000\022~\n\033StreamExportCSVEntityReport\022,." +
-      "g2engine.StreamExportCSVEntityReportRequ" +
-      "est\032-.g2engine.StreamExportCSVEntityRepo" +
-      "rtResponse\"\0000\001\022\201\001\n\034StreamExportJSONEntit" +
-      "yReport\022-.g2engine.StreamExportJSONEntit" +
-      "yReportRequest\032..g2engine.StreamExportJS" +
-      "ONEntityReportResponse\"\0000\001\022L\n\013WhyEntitie" +
-      "s\022\034.g2engine.WhyEntitiesRequest\032\035.g2engi" +
-      "ne.WhyEntitiesResponse\"\000\022U\n\016WhyEntities_" +
-      "V2\022\037.g2engine.WhyEntities_V2Request\032 .g2" +
-      "engine.WhyEntities_V2Response\"\000\022d\n\023WhyEn" +
-      "tityByEntityID\022$.g2engine.WhyEntityByEnt" +
-      "ityIDRequest\032%.g2engine.WhyEntityByEntit" +
-      "yIDResponse\"\000\022m\n\026WhyEntityByEntityID_V2\022" +
-      "\'.g2engine.WhyEntityByEntityID_V2Request" +
-      "\032(.g2engine.WhyEntityByEntityID_V2Respon" +
-      "se\"\000\022d\n\023WhyEntityByRecordID\022$.g2engine.W" +
-      "hyEntityByRecordIDRequest\032%.g2engine.Why" +
-      "EntityByRecordIDResponse\"\000\022m\n\026WhyEntityB" +
-      "yRecordID_V2\022\'.g2engine.WhyEntityByRecor" +
-      "dID_V2Request\032(.g2engine.WhyEntityByReco" +
-      "rdID_V2Response\"\000\022I\n\nWhyRecords\022\033.g2engi" +
-      "ne.WhyRecordsRequest\032\034.g2engine.WhyRecor" +
-      "dsResponse\"\000\022R\n\rWhyRecords_V2\022\036.g2engine" +
-      ".WhyRecords_V2Request\032\037.g2engine.WhyReco" +
-      "rds_V2Response\"\000Bb\n#com.senzing.g2.engin" +
-      "e.grpc.G2EngineB\rG2EngineProtoP\001Z*github" +
-      ".com/senzing/g2-sdk-go-grpc/g2engineb\006pr" +
-      "oto3"
+      "tCSVEntityReportResponse\022\016\n\006result\030\001 \001(\t" +
+      "\"4\n#StreamExportJSONEntityReportRequest\022" +
+      "\r\n\005flags\030\001 \001(\003\"6\n$StreamExportJSONEntity" +
+      "ReportResponse\022\016\n\006result\030\001 \001(\t\":\n\022WhyEnt" +
+      "itiesRequest\022\021\n\tentityID1\030\001 \001(\003\022\021\n\tentit" +
+      "yID2\030\002 \001(\003\"%\n\023WhyEntitiesResponse\022\016\n\006res" +
+      "ult\030\001 \001(\t\"L\n\025WhyEntities_V2Request\022\021\n\ten" +
+      "tityID1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\022\r\n\005flag" +
+      "s\030\003 \001(\003\"(\n\026WhyEntities_V2Response\022\016\n\006res" +
+      "ult\030\001 \001(\t\".\n\032WhyEntityByEntityIDRequest\022" +
+      "\020\n\010entityID\030\001 \001(\003\"-\n\033WhyEntityByEntityID" +
+      "Response\022\016\n\006result\030\001 \001(\t\"@\n\035WhyEntityByE" +
+      "ntityID_V2Request\022\020\n\010entityID\030\001 \001(\003\022\r\n\005f" +
+      "lags\030\002 \001(\003\"0\n\036WhyEntityByEntityID_V2Resp" +
+      "onse\022\016\n\006result\030\001 \001(\t\"F\n\032WhyEntityByRecor" +
+      "dIDRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010re" +
+      "cordID\030\002 \001(\t\"-\n\033WhyEntityByRecordIDRespo" +
+      "nse\022\016\n\006result\030\001 \001(\t\"X\n\035WhyEntityByRecord" +
+      "ID_V2Request\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010" +
+      "recordID\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"0\n\036WhyEnti" +
+      "tyByRecordID_V2Response\022\016\n\006result\030\001 \001(\t\"" +
+      "k\n\021WhyRecordsRequest\022\027\n\017dataSourceCode1\030" +
+      "\001 \001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n\017dataSourceCo" +
+      "de2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001(\t\"$\n\022WhyRecor" +
+      "dsResponse\022\016\n\006result\030\001 \001(\t\"}\n\024WhyRecords" +
+      "_V2Request\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\tr" +
+      "ecordID1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022" +
+      "\021\n\trecordID2\030\004 \001(\t\022\r\n\005flags\030\005 \001(\003\"\'\n\025Why" +
+      "Records_V2Response\022\016\n\006result\030\001 \001(\t2\224>\n\010G" +
+      "2Engine\022F\n\tAddRecord\022\032.g2engine.AddRecor" +
+      "dRequest\032\033.g2engine.AddRecordResponse\"\000\022" +
+      "^\n\021AddRecordWithInfo\022\".g2engine.AddRecor" +
+      "dWithInfoRequest\032#.g2engine.AddRecordWit" +
+      "hInfoResponse\"\000\022\232\001\n%AddRecordWithInfoWit" +
+      "hReturnedRecordID\0226.g2engine.AddRecordWi" +
+      "thInfoWithReturnedRecordIDRequest\0327.g2en" +
+      "gine.AddRecordWithInfoWithReturnedRecord" +
+      "IDResponse\"\000\022\202\001\n\035AddRecordWithReturnedRe" +
+      "cordID\022..g2engine.AddRecordWithReturnedR" +
+      "ecordIDRequest\032/.g2engine.AddRecordWithR" +
+      "eturnedRecordIDResponse\"\000\022L\n\013CheckRecord" +
+      "\022\034.g2engine.CheckRecordRequest\032\035.g2engin" +
+      "e.CheckRecordResponse\"\000\022L\n\013CloseExport\022\034" +
+      ".g2engine.CloseExportRequest\032\035.g2engine." +
+      "CloseExportResponse\"\000\022[\n\020CountRedoRecord" +
+      "s\022!.g2engine.CountRedoRecordsRequest\032\".g" +
+      "2engine.CountRedoRecordsResponse\"\000\022O\n\014De" +
+      "leteRecord\022\035.g2engine.DeleteRecordReques" +
+      "t\032\036.g2engine.DeleteRecordResponse\"\000\022g\n\024D" +
+      "eleteRecordWithInfo\022%.g2engine.DeleteRec" +
+      "ordWithInfoRequest\032&.g2engine.DeleteReco" +
+      "rdWithInfoResponse\"\000\022@\n\007Destroy\022\030.g2engi" +
+      "ne.DestroyRequest\032\031.g2engine.DestroyResp" +
+      "onse\"\000\022O\n\014ExportConfig\022\035.g2engine.Export" +
+      "ConfigRequest\032\036.g2engine.ExportConfigRes" +
+      "ponse\"\000\022p\n\027ExportConfigAndConfigID\022(.g2e" +
+      "ngine.ExportConfigAndConfigIDRequest\032).g" +
+      "2engine.ExportConfigAndConfigIDResponse\"" +
+      "\000\022j\n\025ExportCSVEntityReport\022&.g2engine.Ex" +
+      "portCSVEntityReportRequest\032\'.g2engine.Ex" +
+      "portCSVEntityReportResponse\"\000\022m\n\026ExportJ" +
+      "SONEntityReport\022\'.g2engine.ExportJSONEnt" +
+      "ityReportRequest\032(.g2engine.ExportJSONEn" +
+      "tityReportResponse\"\000\022F\n\tFetchNext\022\032.g2en" +
+      "gine.FetchNextRequest\032\033.g2engine.FetchNe" +
+      "xtResponse\"\000\022\216\001\n!FindInterestingEntities" +
+      "ByEntityID\0222.g2engine.FindInterestingEnt" +
+      "itiesByEntityIDRequest\0323.g2engine.FindIn" +
+      "terestingEntitiesByEntityIDResponse\"\000\022\216\001" +
+      "\n!FindInterestingEntitiesByRecordID\0222.g2" +
+      "engine.FindInterestingEntitiesByRecordID" +
+      "Request\0323.g2engine.FindInterestingEntiti" +
+      "esByRecordIDResponse\"\000\022j\n\025FindNetworkByE" +
+      "ntityID\022&.g2engine.FindNetworkByEntityID" +
+      "Request\032\'.g2engine.FindNetworkByEntityID" +
+      "Response\"\000\022s\n\030FindNetworkByEntityID_V2\022)" +
+      ".g2engine.FindNetworkByEntityID_V2Reques" +
+      "t\032*.g2engine.FindNetworkByEntityID_V2Res" +
+      "ponse\"\000\022j\n\025FindNetworkByRecordID\022&.g2eng" +
+      "ine.FindNetworkByRecordIDRequest\032\'.g2eng" +
+      "ine.FindNetworkByRecordIDResponse\"\000\022s\n\030F" +
+      "indNetworkByRecordID_V2\022).g2engine.FindN" +
+      "etworkByRecordID_V2Request\032*.g2engine.Fi" +
+      "ndNetworkByRecordID_V2Response\"\000\022a\n\022Find" +
+      "PathByEntityID\022#.g2engine.FindPathByEnti" +
+      "tyIDRequest\032$.g2engine.FindPathByEntityI" +
+      "DResponse\"\000\022j\n\025FindPathByEntityID_V2\022&.g" +
+      "2engine.FindPathByEntityID_V2Request\032\'.g" +
+      "2engine.FindPathByEntityID_V2Response\"\000\022" +
+      "a\n\022FindPathByRecordID\022#.g2engine.FindPat" +
+      "hByRecordIDRequest\032$.g2engine.FindPathBy" +
+      "RecordIDResponse\"\000\022j\n\025FindPathByRecordID" +
+      "_V2\022&.g2engine.FindPathByRecordID_V2Requ" +
+      "est\032\'.g2engine.FindPathByRecordID_V2Resp" +
+      "onse\"\000\022|\n\033FindPathExcludingByEntityID\022,." +
+      "g2engine.FindPathExcludingByEntityIDRequ" +
+      "est\032-.g2engine.FindPathExcludingByEntity" +
+      "IDResponse\"\000\022\205\001\n\036FindPathExcludingByEnti" +
+      "tyID_V2\022/.g2engine.FindPathExcludingByEn" +
+      "tityID_V2Request\0320.g2engine.FindPathExcl" +
+      "udingByEntityID_V2Response\"\000\022|\n\033FindPath" +
+      "ExcludingByRecordID\022,.g2engine.FindPathE" +
+      "xcludingByRecordIDRequest\032-.g2engine.Fin" +
+      "dPathExcludingByRecordIDResponse\"\000\022\205\001\n\036F" +
+      "indPathExcludingByRecordID_V2\022/.g2engine" +
+      ".FindPathExcludingByRecordID_V2Request\0320" +
+      ".g2engine.FindPathExcludingByRecordID_V2" +
+      "Response\"\000\022\216\001\n!FindPathIncludingSourceBy" +
+      "EntityID\0222.g2engine.FindPathIncludingSou" +
+      "rceByEntityIDRequest\0323.g2engine.FindPath" +
+      "IncludingSourceByEntityIDResponse\"\000\022\227\001\n$" +
+      "FindPathIncludingSourceByEntityID_V2\0225.g" +
+      "2engine.FindPathIncludingSourceByEntityI" +
+      "D_V2Request\0326.g2engine.FindPathIncluding" +
+      "SourceByEntityID_V2Response\"\000\022\216\001\n!FindPa" +
+      "thIncludingSourceByRecordID\0222.g2engine.F" +
+      "indPathIncludingSourceByRecordIDRequest\032" +
+      "3.g2engine.FindPathIncludingSourceByReco" +
+      "rdIDResponse\"\000\022\227\001\n$FindPathIncludingSour" +
+      "ceByRecordID_V2\0225.g2engine.FindPathInclu" +
+      "dingSourceByRecordID_V2Request\0326.g2engin" +
+      "e.FindPathIncludingSourceByRecordID_V2Re" +
+      "sponse\"\000\022^\n\021GetActiveConfigID\022\".g2engine" +
+      ".GetActiveConfigIDRequest\032#.g2engine.Get" +
+      "ActiveConfigIDResponse\"\000\022d\n\023GetEntityByE" +
+      "ntityID\022$.g2engine.GetEntityByEntityIDRe" +
+      "quest\032%.g2engine.GetEntityByEntityIDResp" +
+      "onse\"\000\022m\n\026GetEntityByEntityID_V2\022\'.g2eng" +
+      "ine.GetEntityByEntityID_V2Request\032(.g2en" +
+      "gine.GetEntityByEntityID_V2Response\"\000\022d\n" +
+      "\023GetEntityByRecordID\022$.g2engine.GetEntit" +
+      "yByRecordIDRequest\032%.g2engine.GetEntityB" +
+      "yRecordIDResponse\"\000\022m\n\026GetEntityByRecord" +
+      "ID_V2\022\'.g2engine.GetEntityByRecordID_V2R" +
+      "equest\032(.g2engine.GetEntityByRecordID_V2" +
+      "Response\"\000\022F\n\tGetRecord\022\032.g2engine.GetRe" +
+      "cordRequest\032\033.g2engine.GetRecordResponse" +
+      "\"\000\022O\n\014GetRecord_V2\022\035.g2engine.GetRecord_" +
+      "V2Request\032\036.g2engine.GetRecord_V2Respons" +
+      "e\"\000\022R\n\rGetRedoRecord\022\036.g2engine.GetRedoR" +
+      "ecordRequest\032\037.g2engine.GetRedoRecordRes" +
+      "ponse\"\000\022\202\001\n\035GetRepositoryLastModifiedTim" +
+      "e\022..g2engine.GetRepositoryLastModifiedTi" +
+      "meRequest\032/.g2engine.GetRepositoryLastMo" +
+      "difiedTimeResponse\"\000\022y\n\032GetVirtualEntity" +
+      "ByRecordID\022+.g2engine.GetVirtualEntityBy" +
+      "RecordIDRequest\032,.g2engine.GetVirtualEnt" +
+      "ityByRecordIDResponse\"\000\022\202\001\n\035GetVirtualEn" +
+      "tityByRecordID_V2\022..g2engine.GetVirtualE" +
+      "ntityByRecordID_V2Request\032/.g2engine.Get" +
+      "VirtualEntityByRecordID_V2Response\"\000\022d\n\023" +
+      "HowEntityByEntityID\022$.g2engine.HowEntity" +
+      "ByEntityIDRequest\032%.g2engine.HowEntityBy" +
+      "EntityIDResponse\"\000\022m\n\026HowEntityByEntityI" +
+      "D_V2\022\'.g2engine.HowEntityByEntityID_V2Re" +
+      "quest\032(.g2engine.HowEntityByEntityID_V2R" +
+      "esponse\"\000\0227\n\004Init\022\025.g2engine.InitRequest" +
+      "\032\026.g2engine.InitResponse\"\000\022[\n\020InitWithCo" +
+      "nfigID\022!.g2engine.InitWithConfigIDReques" +
+      "t\032\".g2engine.InitWithConfigIDResponse\"\000\022" +
+      "L\n\013PrimeEngine\022\034.g2engine.PrimeEngineReq" +
+      "uest\032\035.g2engine.PrimeEngineResponse\"\000\022@\n" +
+      "\007Process\022\030.g2engine.ProcessRequest\032\031.g2e" +
+      "ngine.ProcessResponse\"\000\022^\n\021ProcessRedoRe" +
+      "cord\022\".g2engine.ProcessRedoRecordRequest" +
+      "\032#.g2engine.ProcessRedoRecordResponse\"\000\022" +
+      "v\n\031ProcessRedoRecordWithInfo\022*.g2engine." +
+      "ProcessRedoRecordWithInfoRequest\032+.g2eng" +
+      "ine.ProcessRedoRecordWithInfoResponse\"\000\022" +
+      "X\n\017ProcessWithInfo\022 .g2engine.ProcessWit" +
+      "hInfoRequest\032!.g2engine.ProcessWithInfoR" +
+      "esponse\"\000\022d\n\023ProcessWithResponse\022$.g2eng" +
+      "ine.ProcessWithResponseRequest\032%.g2engin" +
+      "e.ProcessWithResponseResponse\"\000\022v\n\031Proce" +
+      "ssWithResponseResize\022*.g2engine.ProcessW" +
+      "ithResponseResizeRequest\032+.g2engine.Proc" +
+      "essWithResponseResizeResponse\"\000\022X\n\017Purge" +
+      "Repository\022 .g2engine.PurgeRepositoryReq" +
+      "uest\032!.g2engine.PurgeRepositoryResponse\"" +
+      "\000\022[\n\020ReevaluateEntity\022!.g2engine.Reevalu" +
+      "ateEntityRequest\032\".g2engine.ReevaluateEn" +
+      "tityResponse\"\000\022s\n\030ReevaluateEntityWithIn" +
+      "fo\022).g2engine.ReevaluateEntityWithInfoRe" +
+      "quest\032*.g2engine.ReevaluateEntityWithInf" +
+      "oResponse\"\000\022[\n\020ReevaluateRecord\022!.g2engi",
+      "ne.ReevaluateRecordRequest\032\".g2engine.Re" +
+      "evaluateRecordResponse\"\000\022s\n\030ReevaluateRe" +
+      "cordWithInfo\022).g2engine.ReevaluateRecord" +
+      "WithInfoRequest\032*.g2engine.ReevaluateRec" +
+      "ordWithInfoResponse\"\000\022=\n\006Reinit\022\027.g2engi" +
+      "ne.ReinitRequest\032\030.g2engine.ReinitRespon" +
+      "se\"\000\022R\n\rReplaceRecord\022\036.g2engine.Replace" +
+      "RecordRequest\032\037.g2engine.ReplaceRecordRe" +
+      "sponse\"\000\022j\n\025ReplaceRecordWithInfo\022&.g2en" +
+      "gine.ReplaceRecordWithInfoRequest\032\'.g2en" +
+      "gine.ReplaceRecordWithInfoResponse\"\000\022a\n\022" +
+      "SearchByAttributes\022#.g2engine.SearchByAt" +
+      "tributesRequest\032$.g2engine.SearchByAttri" +
+      "butesResponse\"\000\022j\n\025SearchByAttributes_V2" +
+      "\022&.g2engine.SearchByAttributes_V2Request" +
+      "\032\'.g2engine.SearchByAttributes_V2Respons" +
+      "e\"\000\022:\n\005Stats\022\026.g2engine.StatsRequest\032\027.g" +
+      "2engine.StatsResponse\"\000\022~\n\033StreamExportC" +
+      "SVEntityReport\022,.g2engine.StreamExportCS" +
+      "VEntityReportRequest\032-.g2engine.StreamEx" +
+      "portCSVEntityReportResponse\"\0000\001\022\201\001\n\034Stre" +
+      "amExportJSONEntityReport\022-.g2engine.Stre" +
+      "amExportJSONEntityReportRequest\032..g2engi" +
+      "ne.StreamExportJSONEntityReportResponse\"" +
+      "\0000\001\022L\n\013WhyEntities\022\034.g2engine.WhyEntitie" +
+      "sRequest\032\035.g2engine.WhyEntitiesResponse\"" +
+      "\000\022U\n\016WhyEntities_V2\022\037.g2engine.WhyEntiti" +
+      "es_V2Request\032 .g2engine.WhyEntities_V2Re" +
+      "sponse\"\000\022d\n\023WhyEntityByEntityID\022$.g2engi" +
+      "ne.WhyEntityByEntityIDRequest\032%.g2engine" +
+      ".WhyEntityByEntityIDResponse\"\000\022m\n\026WhyEnt" +
+      "ityByEntityID_V2\022\'.g2engine.WhyEntityByE" +
+      "ntityID_V2Request\032(.g2engine.WhyEntityBy" +
+      "EntityID_V2Response\"\000\022d\n\023WhyEntityByReco" +
+      "rdID\022$.g2engine.WhyEntityByRecordIDReque" +
+      "st\032%.g2engine.WhyEntityByRecordIDRespons" +
+      "e\"\000\022m\n\026WhyEntityByRecordID_V2\022\'.g2engine" +
+      ".WhyEntityByRecordID_V2Request\032(.g2engin" +
+      "e.WhyEntityByRecordID_V2Response\"\000\022I\n\nWh" +
+      "yRecords\022\033.g2engine.WhyRecordsRequest\032\034." +
+      "g2engine.WhyRecordsResponse\"\000\022R\n\rWhyReco" +
+      "rds_V2\022\036.g2engine.WhyRecords_V2Request\032\037" +
+      ".g2engine.WhyRecords_V2Response\"\000Bb\n#com" +
+      ".senzing.g2.engine.grpc.G2EngineB\rG2Engi" +
+      "neProtoP\001Z*github.com/senzing/g2-sdk-go-" +
+      "grpc/g2engineb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2044,7 +2043,7 @@ public final class G2EngineProto {
     internal_static_g2engine_StreamExportJSONEntityReportRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_StreamExportJSONEntityReportRequest_descriptor,
-        new java.lang.String[] { "CsvColumnList", "Flags", });
+        new java.lang.String[] { "Flags", });
     internal_static_g2engine_StreamExportJSONEntityReportResponse_descriptor =
       getDescriptor().getMessageTypes().get(135);
     internal_static_g2engine_StreamExportJSONEntityReportResponse_fieldAccessorTable = new

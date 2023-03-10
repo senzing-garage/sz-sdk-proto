@@ -14,11 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class StreamExportJSONEntityReportRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string csvColumnList = 1;</code>
-     */
-    protected $csvColumnList = '';
-    /**
-     * Generated from protobuf field <code>int64 flags = 2;</code>
+     * Generated from protobuf field <code>int64 flags = 1;</code>
      */
     protected $flags = 0;
 
@@ -28,7 +24,6 @@ class StreamExportJSONEntityReportRequest extends \Google\Protobuf\Internal\Mess
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $csvColumnList
      *     @type int|string $flags
      * }
      */
@@ -38,29 +33,7 @@ class StreamExportJSONEntityReportRequest extends \Google\Protobuf\Internal\Mess
     }
 
     /**
-     * Generated from protobuf field <code>string csvColumnList = 1;</code>
-     * @return string
-     */
-    public function getCsvColumnList()
-    {
-        return $this->csvColumnList;
-    }
-
-    /**
-     * Generated from protobuf field <code>string csvColumnList = 1;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setCsvColumnList($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->csvColumnList = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>int64 flags = 2;</code>
+     * Generated from protobuf field <code>int64 flags = 1;</code>
      * @return int|string
      */
     public function getFlags()
@@ -69,7 +42,7 @@ class StreamExportJSONEntityReportRequest extends \Google\Protobuf\Internal\Mess
     }
 
     /**
-     * Generated from protobuf field <code>int64 flags = 2;</code>
+     * Generated from protobuf field <code>int64 flags = 1;</code>
      * @param int|string $var
      * @return $this
      */

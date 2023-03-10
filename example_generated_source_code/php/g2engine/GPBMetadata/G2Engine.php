@@ -16,7 +16,7 @@ class G2Engine
         }
         $pool->internalAddGeneratedFile(
             '
-¥ã
+ùã
 g2engine.protog2engine"^
 AddRecordRequest
 dataSourceCode (	
@@ -392,12 +392,11 @@ moduleName (	
 csvColumnList (	
 flags ("5
 #StreamExportCSVEntityReportResponse
-result ("K
-#StreamExportJSONEntityReportRequest
-csvColumnList (	
-flags ("6
+result (	"4
+#StreamExportJSONEntityReportRequest
+flags ("6
 $StreamExportJSONEntityReportResponse
-result (":
+result (	":
 WhyEntitiesRequest
 	entityID1 (
 	entityID2 ("%
