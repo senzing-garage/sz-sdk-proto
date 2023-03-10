@@ -73,8 +73,8 @@ service G2Engine {
   rpc SearchByAttributes(SearchByAttributesRequest) returns (SearchByAttributesResponse) {}
   rpc SearchByAttributes_V2(SearchByAttributes_V2Request) returns (SearchByAttributes_V2Response) {}
   rpc Stats(StatsRequest) returns (StatsResponse) {}
-  rpc StreamExportCSVEntityReport(StreamExportCSVEntityReportRequest) returns (StreamExportCSVEntityReportResponse) {}
-  rpc StreamExportJSONEntityReport(StreamExportJSONEntityReportRequest) returns (StreamExportJSONEntityReportResponse) {}
+  rpc StreamExportCSVEntityReport(StreamExportCSVEntityReportRequest) returns (stream StreamExportCSVEntityReportResponse) {}
+  rpc StreamExportJSONEntityReport(StreamExportJSONEntityReportRequest) returns (stream StreamExportJSONEntityReportResponse) {}
   rpc WhyEntities(WhyEntitiesRequest) returns (WhyEntitiesResponse) {}
   rpc WhyEntities_V2(WhyEntities_V2Request) returns (WhyEntities_V2Response) {}
   rpc WhyEntityByEntityID(WhyEntityByEntityIDRequest) returns (WhyEntityByEntityIDResponse) {}
