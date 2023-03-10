@@ -504,14 +504,13 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :flags, :int64, 2
     end
     add_message "g2engine.StreamExportCSVEntityReportResponse" do
-      optional :result, :int64, 1
+      optional :result, :string, 1
     end
     add_message "g2engine.StreamExportJSONEntityReportRequest" do
-      optional :csvColumnList, :string, 1
-      optional :flags, :int64, 2
+      optional :flags, :int64, 1
     end
     add_message "g2engine.StreamExportJSONEntityReportResponse" do
-      optional :result, :int64, 1
+      optional :result, :string, 1
     end
     add_message "g2engine.WhyEntitiesRequest" do
       optional :entityID1, :int64, 1

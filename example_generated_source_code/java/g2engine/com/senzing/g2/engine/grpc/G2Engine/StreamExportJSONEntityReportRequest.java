@@ -16,7 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private StreamExportJSONEntityReportRequest() {
-    csvColumnList_ = "";
   }
 
   @java.lang.Override
@@ -49,13 +48,7 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            csvColumnList_ = s;
-            break;
-          }
-          case 16: {
+          case 8: {
 
             flags_ = input.readInt64();
             break;
@@ -94,48 +87,10 @@ private static final long serialVersionUID = 0L;
             com.senzing.g2.engine.grpc.G2Engine.StreamExportJSONEntityReportRequest.class, com.senzing.g2.engine.grpc.G2Engine.StreamExportJSONEntityReportRequest.Builder.class);
   }
 
-  public static final int CSVCOLUMNLIST_FIELD_NUMBER = 1;
-  private volatile java.lang.Object csvColumnList_;
-  /**
-   * <code>string csvColumnList = 1;</code>
-   * @return The csvColumnList.
-   */
-  @java.lang.Override
-  public java.lang.String getCsvColumnList() {
-    java.lang.Object ref = csvColumnList_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      csvColumnList_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string csvColumnList = 1;</code>
-   * @return The bytes for csvColumnList.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getCsvColumnListBytes() {
-    java.lang.Object ref = csvColumnList_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      csvColumnList_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int FLAGS_FIELD_NUMBER = 2;
+  public static final int FLAGS_FIELD_NUMBER = 1;
   private long flags_;
   /**
-   * <code>int64 flags = 2;</code>
+   * <code>int64 flags = 1;</code>
    * @return The flags.
    */
   @java.lang.Override
@@ -157,11 +112,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(csvColumnList_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, csvColumnList_);
-    }
     if (flags_ != 0L) {
-      output.writeInt64(2, flags_);
+      output.writeInt64(1, flags_);
     }
     unknownFields.writeTo(output);
   }
@@ -172,12 +124,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(csvColumnList_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, csvColumnList_);
-    }
     if (flags_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(2, flags_);
+        .computeInt64Size(1, flags_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -194,8 +143,6 @@ private static final long serialVersionUID = 0L;
     }
     com.senzing.g2.engine.grpc.G2Engine.StreamExportJSONEntityReportRequest other = (com.senzing.g2.engine.grpc.G2Engine.StreamExportJSONEntityReportRequest) obj;
 
-    if (!getCsvColumnList()
-        .equals(other.getCsvColumnList())) return false;
     if (getFlags()
         != other.getFlags()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -209,8 +156,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + CSVCOLUMNLIST_FIELD_NUMBER;
-    hash = (53 * hash) + getCsvColumnList().hashCode();
     hash = (37 * hash) + FLAGS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getFlags());
@@ -347,8 +292,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      csvColumnList_ = "";
-
       flags_ = 0L;
 
       return this;
@@ -377,7 +320,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.senzing.g2.engine.grpc.G2Engine.StreamExportJSONEntityReportRequest buildPartial() {
       com.senzing.g2.engine.grpc.G2Engine.StreamExportJSONEntityReportRequest result = new com.senzing.g2.engine.grpc.G2Engine.StreamExportJSONEntityReportRequest(this);
-      result.csvColumnList_ = csvColumnList_;
       result.flags_ = flags_;
       onBuilt();
       return result;
@@ -427,10 +369,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.senzing.g2.engine.grpc.G2Engine.StreamExportJSONEntityReportRequest other) {
       if (other == com.senzing.g2.engine.grpc.G2Engine.StreamExportJSONEntityReportRequest.getDefaultInstance()) return this;
-      if (!other.getCsvColumnList().isEmpty()) {
-        csvColumnList_ = other.csvColumnList_;
-        onChanged();
-      }
       if (other.getFlags() != 0L) {
         setFlags(other.getFlags());
       }
@@ -463,85 +401,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object csvColumnList_ = "";
-    /**
-     * <code>string csvColumnList = 1;</code>
-     * @return The csvColumnList.
-     */
-    public java.lang.String getCsvColumnList() {
-      java.lang.Object ref = csvColumnList_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        csvColumnList_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string csvColumnList = 1;</code>
-     * @return The bytes for csvColumnList.
-     */
-    public com.google.protobuf.ByteString
-        getCsvColumnListBytes() {
-      java.lang.Object ref = csvColumnList_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        csvColumnList_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string csvColumnList = 1;</code>
-     * @param value The csvColumnList to set.
-     * @return This builder for chaining.
-     */
-    public Builder setCsvColumnList(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      csvColumnList_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string csvColumnList = 1;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearCsvColumnList() {
-      
-      csvColumnList_ = getDefaultInstance().getCsvColumnList();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string csvColumnList = 1;</code>
-     * @param value The bytes for csvColumnList to set.
-     * @return This builder for chaining.
-     */
-    public Builder setCsvColumnListBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      csvColumnList_ = value;
-      onChanged();
-      return this;
-    }
-
     private long flags_ ;
     /**
-     * <code>int64 flags = 2;</code>
+     * <code>int64 flags = 1;</code>
      * @return The flags.
      */
     @java.lang.Override
@@ -549,7 +411,7 @@ private static final long serialVersionUID = 0L;
       return flags_;
     }
     /**
-     * <code>int64 flags = 2;</code>
+     * <code>int64 flags = 1;</code>
      * @param value The flags to set.
      * @return This builder for chaining.
      */
@@ -560,7 +422,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int64 flags = 2;</code>
+     * <code>int64 flags = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearFlags() {

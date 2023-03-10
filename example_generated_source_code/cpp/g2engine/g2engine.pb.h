@@ -21841,13 +21841,18 @@ class StreamExportCSVEntityReportResponse final :
   enum : int {
     kResultFieldNumber = 1,
   };
-  // int64 result = 1;
+  // string result = 1;
   void clear_result();
-  int64_t result() const;
-  void set_result(int64_t value);
+  const std::string& result() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_result(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_result();
+  PROTOBUF_NODISCARD std::string* release_result();
+  void set_allocated_result(std::string* result);
   private:
-  int64_t _internal_result() const;
-  void _internal_set_result(int64_t value);
+  const std::string& _internal_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
+  std::string* _internal_mutable_result();
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.StreamExportCSVEntityReportResponse)
@@ -21858,7 +21863,7 @@ class StreamExportCSVEntityReportResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    int64_t result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr result_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -21987,24 +21992,9 @@ class StreamExportJSONEntityReportRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCsvColumnListFieldNumber = 1,
-    kFlagsFieldNumber = 2,
+    kFlagsFieldNumber = 1,
   };
-  // string csvColumnList = 1;
-  void clear_csvcolumnlist();
-  const std::string& csvcolumnlist() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_csvcolumnlist(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_csvcolumnlist();
-  PROTOBUF_NODISCARD std::string* release_csvcolumnlist();
-  void set_allocated_csvcolumnlist(std::string* csvcolumnlist);
-  private:
-  const std::string& _internal_csvcolumnlist() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_csvcolumnlist(const std::string& value);
-  std::string* _internal_mutable_csvcolumnlist();
-  public:
-
-  // int64 flags = 2;
+  // int64 flags = 1;
   void clear_flags();
   int64_t flags() const;
   void set_flags(int64_t value);
@@ -22021,7 +22011,6 @@ class StreamExportJSONEntityReportRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr csvcolumnlist_;
     int64_t flags_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -22153,13 +22142,18 @@ class StreamExportJSONEntityReportResponse final :
   enum : int {
     kResultFieldNumber = 1,
   };
-  // int64 result = 1;
+  // string result = 1;
   void clear_result();
-  int64_t result() const;
-  void set_result(int64_t value);
+  const std::string& result() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_result(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_result();
+  PROTOBUF_NODISCARD std::string* release_result();
+  void set_allocated_result(std::string* result);
   private:
-  int64_t _internal_result() const;
-  void _internal_set_result(int64_t value);
+  const std::string& _internal_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
+  std::string* _internal_mutable_result();
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.StreamExportJSONEntityReportResponse)
@@ -22170,7 +22164,7 @@ class StreamExportJSONEntityReportResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    int64_t result_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr result_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -34421,81 +34415,61 @@ inline void StreamExportCSVEntityReportRequest::set_flags(int64_t value) {
 
 // StreamExportCSVEntityReportResponse
 
-// int64 result = 1;
+// string result = 1;
 inline void StreamExportCSVEntityReportResponse::clear_result() {
-  _impl_.result_ = int64_t{0};
+  _impl_.result_.ClearToEmpty();
 }
-inline int64_t StreamExportCSVEntityReportResponse::_internal_result() const {
-  return _impl_.result_;
-}
-inline int64_t StreamExportCSVEntityReportResponse::result() const {
+inline const std::string& StreamExportCSVEntityReportResponse::result() const {
   // @@protoc_insertion_point(field_get:g2engine.StreamExportCSVEntityReportResponse.result)
   return _internal_result();
 }
-inline void StreamExportCSVEntityReportResponse::_internal_set_result(int64_t value) {
-  
-  _impl_.result_ = value;
-}
-inline void StreamExportCSVEntityReportResponse::set_result(int64_t value) {
-  _internal_set_result(value);
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void StreamExportCSVEntityReportResponse::set_result(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.result_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:g2engine.StreamExportCSVEntityReportResponse.result)
+}
+inline std::string* StreamExportCSVEntityReportResponse::mutable_result() {
+  std::string* _s = _internal_mutable_result();
+  // @@protoc_insertion_point(field_mutable:g2engine.StreamExportCSVEntityReportResponse.result)
+  return _s;
+}
+inline const std::string& StreamExportCSVEntityReportResponse::_internal_result() const {
+  return _impl_.result_.Get();
+}
+inline void StreamExportCSVEntityReportResponse::_internal_set_result(const std::string& value) {
+  
+  _impl_.result_.Set(value, GetArenaForAllocation());
+}
+inline std::string* StreamExportCSVEntityReportResponse::_internal_mutable_result() {
+  
+  return _impl_.result_.Mutable(GetArenaForAllocation());
+}
+inline std::string* StreamExportCSVEntityReportResponse::release_result() {
+  // @@protoc_insertion_point(field_release:g2engine.StreamExportCSVEntityReportResponse.result)
+  return _impl_.result_.Release();
+}
+inline void StreamExportCSVEntityReportResponse::set_allocated_result(std::string* result) {
+  if (result != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.result_.SetAllocated(result, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.result_.IsDefault()) {
+    _impl_.result_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:g2engine.StreamExportCSVEntityReportResponse.result)
 }
 
 // -------------------------------------------------------------------
 
 // StreamExportJSONEntityReportRequest
 
-// string csvColumnList = 1;
-inline void StreamExportJSONEntityReportRequest::clear_csvcolumnlist() {
-  _impl_.csvcolumnlist_.ClearToEmpty();
-}
-inline const std::string& StreamExportJSONEntityReportRequest::csvcolumnlist() const {
-  // @@protoc_insertion_point(field_get:g2engine.StreamExportJSONEntityReportRequest.csvColumnList)
-  return _internal_csvcolumnlist();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void StreamExportJSONEntityReportRequest::set_csvcolumnlist(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.csvcolumnlist_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:g2engine.StreamExportJSONEntityReportRequest.csvColumnList)
-}
-inline std::string* StreamExportJSONEntityReportRequest::mutable_csvcolumnlist() {
-  std::string* _s = _internal_mutable_csvcolumnlist();
-  // @@protoc_insertion_point(field_mutable:g2engine.StreamExportJSONEntityReportRequest.csvColumnList)
-  return _s;
-}
-inline const std::string& StreamExportJSONEntityReportRequest::_internal_csvcolumnlist() const {
-  return _impl_.csvcolumnlist_.Get();
-}
-inline void StreamExportJSONEntityReportRequest::_internal_set_csvcolumnlist(const std::string& value) {
-  
-  _impl_.csvcolumnlist_.Set(value, GetArenaForAllocation());
-}
-inline std::string* StreamExportJSONEntityReportRequest::_internal_mutable_csvcolumnlist() {
-  
-  return _impl_.csvcolumnlist_.Mutable(GetArenaForAllocation());
-}
-inline std::string* StreamExportJSONEntityReportRequest::release_csvcolumnlist() {
-  // @@protoc_insertion_point(field_release:g2engine.StreamExportJSONEntityReportRequest.csvColumnList)
-  return _impl_.csvcolumnlist_.Release();
-}
-inline void StreamExportJSONEntityReportRequest::set_allocated_csvcolumnlist(std::string* csvcolumnlist) {
-  if (csvcolumnlist != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.csvcolumnlist_.SetAllocated(csvcolumnlist, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.csvcolumnlist_.IsDefault()) {
-    _impl_.csvcolumnlist_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:g2engine.StreamExportJSONEntityReportRequest.csvColumnList)
-}
-
-// int64 flags = 2;
+// int64 flags = 1;
 inline void StreamExportJSONEntityReportRequest::clear_flags() {
   _impl_.flags_ = int64_t{0};
 }
@@ -34519,24 +34493,54 @@ inline void StreamExportJSONEntityReportRequest::set_flags(int64_t value) {
 
 // StreamExportJSONEntityReportResponse
 
-// int64 result = 1;
+// string result = 1;
 inline void StreamExportJSONEntityReportResponse::clear_result() {
-  _impl_.result_ = int64_t{0};
+  _impl_.result_.ClearToEmpty();
 }
-inline int64_t StreamExportJSONEntityReportResponse::_internal_result() const {
-  return _impl_.result_;
-}
-inline int64_t StreamExportJSONEntityReportResponse::result() const {
+inline const std::string& StreamExportJSONEntityReportResponse::result() const {
   // @@protoc_insertion_point(field_get:g2engine.StreamExportJSONEntityReportResponse.result)
   return _internal_result();
 }
-inline void StreamExportJSONEntityReportResponse::_internal_set_result(int64_t value) {
-  
-  _impl_.result_ = value;
-}
-inline void StreamExportJSONEntityReportResponse::set_result(int64_t value) {
-  _internal_set_result(value);
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void StreamExportJSONEntityReportResponse::set_result(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.result_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:g2engine.StreamExportJSONEntityReportResponse.result)
+}
+inline std::string* StreamExportJSONEntityReportResponse::mutable_result() {
+  std::string* _s = _internal_mutable_result();
+  // @@protoc_insertion_point(field_mutable:g2engine.StreamExportJSONEntityReportResponse.result)
+  return _s;
+}
+inline const std::string& StreamExportJSONEntityReportResponse::_internal_result() const {
+  return _impl_.result_.Get();
+}
+inline void StreamExportJSONEntityReportResponse::_internal_set_result(const std::string& value) {
+  
+  _impl_.result_.Set(value, GetArenaForAllocation());
+}
+inline std::string* StreamExportJSONEntityReportResponse::_internal_mutable_result() {
+  
+  return _impl_.result_.Mutable(GetArenaForAllocation());
+}
+inline std::string* StreamExportJSONEntityReportResponse::release_result() {
+  // @@protoc_insertion_point(field_release:g2engine.StreamExportJSONEntityReportResponse.result)
+  return _impl_.result_.Release();
+}
+inline void StreamExportJSONEntityReportResponse::set_allocated_result(std::string* result) {
+  if (result != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.result_.SetAllocated(result, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.result_.IsDefault()) {
+    _impl_.result_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:g2engine.StreamExportJSONEntityReportResponse.result)
 }
 
 // -------------------------------------------------------------------
