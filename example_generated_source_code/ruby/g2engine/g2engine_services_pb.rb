@@ -80,8 +80,8 @@ module G2engine
       rpc :SearchByAttributes, ::G2engine::SearchByAttributesRequest, ::G2engine::SearchByAttributesResponse
       rpc :SearchByAttributes_V2, ::G2engine::SearchByAttributes_V2Request, ::G2engine::SearchByAttributes_V2Response
       rpc :Stats, ::G2engine::StatsRequest, ::G2engine::StatsResponse
-      rpc :StreamExportCSVEntityReport, ::G2engine::StreamExportCSVEntityReportRequest, ::G2engine::StreamExportCSVEntityReportResponse
-      rpc :StreamExportJSONEntityReport, ::G2engine::StreamExportJSONEntityReportRequest, ::G2engine::StreamExportJSONEntityReportResponse
+      rpc :StreamExportCSVEntityReport, ::G2engine::StreamExportCSVEntityReportRequest, stream(::G2engine::StreamExportCSVEntityReportResponse)
+      rpc :StreamExportJSONEntityReport, ::G2engine::StreamExportJSONEntityReportRequest, stream(::G2engine::StreamExportJSONEntityReportResponse)
       rpc :WhyEntities, ::G2engine::WhyEntitiesRequest, ::G2engine::WhyEntitiesResponse
       rpc :WhyEntities_V2, ::G2engine::WhyEntities_V2Request, ::G2engine::WhyEntities_V2Response
       rpc :WhyEntityByEntityID, ::G2engine::WhyEntityByEntityIDRequest, ::G2engine::WhyEntityByEntityIDResponse

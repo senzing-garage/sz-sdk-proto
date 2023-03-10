@@ -1027,7 +1027,7 @@ public final class G2EngineProto {
       "aSourceCode1\030\001 \001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n" +
       "\017dataSourceCode2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001(" +
       "\t\022\r\n\005flags\030\005 \001(\003\"\'\n\025WhyRecords_V2Respons" +
-      "e\022\016\n\006result\030\001 \001(\t2\217>\n\010G2Engine\022F\n\tAddRec" +
+      "e\022\016\n\006result\030\001 \001(\t2\224>\n\010G2Engine\022F\n\tAddRec" +
       "ord\022\032.g2engine.AddRecordRequest\032\033.g2engi" +
       "ne.AddRecordResponse\"\000\022^\n\021AddRecordWithI" +
       "nfo\022\".g2engine.AddRecordWithInfoRequest\032" +
@@ -1201,34 +1201,35 @@ public final class G2EngineProto {
       "hByAttributes_V2Request\032\'.g2engine.Searc" +
       "hByAttributes_V2Response\"\000\022:\n\005Stats\022\026.g2" +
       "engine.StatsRequest\032\027.g2engine.StatsResp" +
-      "onse\"\000\022|\n\033StreamExportCSVEntityReport\022,." +
+      "onse\"\000\022~\n\033StreamExportCSVEntityReport\022,." +
       "g2engine.StreamExportCSVEntityReportRequ" +
       "est\032-.g2engine.StreamExportCSVEntityRepo" +
-      "rtResponse\"\000\022\177\n\034StreamExportJSONEntityRe" +
-      "port\022-.g2engine.StreamExportJSONEntityRe" +
-      "portRequest\032..g2engine.StreamExportJSONE" +
-      "ntityReportResponse\"\000\022L\n\013WhyEntities\022\034.g" +
-      "2engine.WhyEntitiesRequest\032\035.g2engine.Wh" +
-      "yEntitiesResponse\"\000\022U\n\016WhyEntities_V2\022\037." +
-      "g2engine.WhyEntities_V2Request\032 .g2engin" +
-      "e.WhyEntities_V2Response\"\000\022d\n\023WhyEntityB" +
-      "yEntityID\022$.g2engine.WhyEntityByEntityID" +
-      "Request\032%.g2engine.WhyEntityByEntityIDRe" +
-      "sponse\"\000\022m\n\026WhyEntityByEntityID_V2\022\'.g2e" +
-      "ngine.WhyEntityByEntityID_V2Request\032(.g2" +
-      "engine.WhyEntityByEntityID_V2Response\"\000\022" +
-      "d\n\023WhyEntityByRecordID\022$.g2engine.WhyEnt" +
-      "ityByRecordIDRequest\032%.g2engine.WhyEntit" +
-      "yByRecordIDResponse\"\000\022m\n\026WhyEntityByReco" +
-      "rdID_V2\022\'.g2engine.WhyEntityByRecordID_V" +
-      "2Request\032(.g2engine.WhyEntityByRecordID_" +
-      "V2Response\"\000\022I\n\nWhyRecords\022\033.g2engine.Wh" +
-      "yRecordsRequest\032\034.g2engine.WhyRecordsRes" +
-      "ponse\"\000\022R\n\rWhyRecords_V2\022\036.g2engine.WhyR" +
-      "ecords_V2Request\032\037.g2engine.WhyRecords_V" +
-      "2Response\"\000Bb\n#com.senzing.g2.engine.grp" +
-      "c.G2EngineB\rG2EngineProtoP\001Z*github.com/" +
-      "senzing/g2-sdk-go-grpc/g2engineb\006proto3"
+      "rtResponse\"\0000\001\022\201\001\n\034StreamExportJSONEntit" +
+      "yReport\022-.g2engine.StreamExportJSONEntit" +
+      "yReportRequest\032..g2engine.StreamExportJS" +
+      "ONEntityReportResponse\"\0000\001\022L\n\013WhyEntitie" +
+      "s\022\034.g2engine.WhyEntitiesRequest\032\035.g2engi" +
+      "ne.WhyEntitiesResponse\"\000\022U\n\016WhyEntities_" +
+      "V2\022\037.g2engine.WhyEntities_V2Request\032 .g2" +
+      "engine.WhyEntities_V2Response\"\000\022d\n\023WhyEn" +
+      "tityByEntityID\022$.g2engine.WhyEntityByEnt" +
+      "ityIDRequest\032%.g2engine.WhyEntityByEntit" +
+      "yIDResponse\"\000\022m\n\026WhyEntityByEntityID_V2\022" +
+      "\'.g2engine.WhyEntityByEntityID_V2Request" +
+      "\032(.g2engine.WhyEntityByEntityID_V2Respon" +
+      "se\"\000\022d\n\023WhyEntityByRecordID\022$.g2engine.W" +
+      "hyEntityByRecordIDRequest\032%.g2engine.Why" +
+      "EntityByRecordIDResponse\"\000\022m\n\026WhyEntityB" +
+      "yRecordID_V2\022\'.g2engine.WhyEntityByRecor" +
+      "dID_V2Request\032(.g2engine.WhyEntityByReco" +
+      "rdID_V2Response\"\000\022I\n\nWhyRecords\022\033.g2engi" +
+      "ne.WhyRecordsRequest\032\034.g2engine.WhyRecor" +
+      "dsResponse\"\000\022R\n\rWhyRecords_V2\022\036.g2engine" +
+      ".WhyRecords_V2Request\032\037.g2engine.WhyReco" +
+      "rds_V2Response\"\000Bb\n#com.senzing.g2.engin" +
+      "e.grpc.G2EngineB\rG2EngineProtoP\001Z*github" +
+      ".com/senzing/g2-sdk-go-grpc/g2engineb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
