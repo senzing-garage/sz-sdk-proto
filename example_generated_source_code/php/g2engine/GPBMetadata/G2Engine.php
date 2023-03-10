@@ -16,7 +16,7 @@ class G2Engine
         }
         $pool->internalAddGeneratedFile(
             '
-Øã
+¥ã
 g2engine.protog2engine"^
 AddRecordRequest
 dataSourceCode (	
@@ -443,7 +443,7 @@ $StreamExportJSONEntityReportResponse
 	recordID2 (	
 flags ("\'
 WhyRecords_V2Response
-result (	2è>
+result (	2î>
 G2EngineF
 	AddRecord.g2engine.AddRecordRequest.g2engine.AddRecordResponse" ^
 AddRecordWithInfo".g2engine.AddRecordWithInfoRequest#.g2engine.AddRecordWithInfoResponse" ö
@@ -510,9 +510,9 @@ $FindPathIncludingSourceByRecordID_V25.g2engine.FindPathIncludingSourceByRecord
 ReplaceRecordWithInfo&.g2engine.ReplaceRecordWithInfoRequest\'.g2engine.ReplaceRecordWithInfoResponse" a
 SearchByAttributes#.g2engine.SearchByAttributesRequest$.g2engine.SearchByAttributesResponse" j
 SearchByAttributes_V2&.g2engine.SearchByAttributes_V2Request\'.g2engine.SearchByAttributes_V2Response" :
-Stats.g2engine.StatsRequest.g2engine.StatsResponse" |
-StreamExportCSVEntityReport,.g2engine.StreamExportCSVEntityReportRequest-.g2engine.StreamExportCSVEntityReportResponse" 
-StreamExportJSONEntityReport-.g2engine.StreamExportJSONEntityReportRequest..g2engine.StreamExportJSONEntityReportResponse" L
+Stats.g2engine.StatsRequest.g2engine.StatsResponse" ~
+StreamExportCSVEntityReport,.g2engine.StreamExportCSVEntityReportRequest-.g2engine.StreamExportCSVEntityReportResponse" 0Å
+StreamExportJSONEntityReport-.g2engine.StreamExportJSONEntityReportRequest..g2engine.StreamExportJSONEntityReportResponse" 0L
 WhyEntities.g2engine.WhyEntitiesRequest.g2engine.WhyEntitiesResponse" U
 WhyEntities_V2.g2engine.WhyEntities_V2Request .g2engine.WhyEntities_V2Response" d
 WhyEntityByEntityID$.g2engine.WhyEntityByEntityIDRequest%.g2engine.WhyEntityByEntityIDResponse" m

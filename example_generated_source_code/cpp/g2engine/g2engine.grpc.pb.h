@@ -497,19 +497,23 @@ class G2Engine final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::StatsResponse>> PrepareAsyncStats(::grpc::ClientContext* context, const ::g2engine::StatsRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::StatsResponse>>(PrepareAsyncStatsRaw(context, request, cq));
     }
-    virtual ::grpc::Status StreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::g2engine::StreamExportCSVEntityReportResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::StreamExportCSVEntityReportResponse>> AsyncStreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::StreamExportCSVEntityReportResponse>>(AsyncStreamExportCSVEntityReportRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientReaderInterface< ::g2engine::StreamExportCSVEntityReportResponse>> StreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request) {
+      return std::unique_ptr< ::grpc::ClientReaderInterface< ::g2engine::StreamExportCSVEntityReportResponse>>(StreamExportCSVEntityReportRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::StreamExportCSVEntityReportResponse>> PrepareAsyncStreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::StreamExportCSVEntityReportResponse>>(PrepareAsyncStreamExportCSVEntityReportRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::g2engine::StreamExportCSVEntityReportResponse>> AsyncStreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::g2engine::StreamExportCSVEntityReportResponse>>(AsyncStreamExportCSVEntityReportRaw(context, request, cq, tag));
     }
-    virtual ::grpc::Status StreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::g2engine::StreamExportJSONEntityReportResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::StreamExportJSONEntityReportResponse>> AsyncStreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::StreamExportJSONEntityReportResponse>>(AsyncStreamExportJSONEntityReportRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::g2engine::StreamExportCSVEntityReportResponse>> PrepareAsyncStreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::g2engine::StreamExportCSVEntityReportResponse>>(PrepareAsyncStreamExportCSVEntityReportRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::StreamExportJSONEntityReportResponse>> PrepareAsyncStreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::StreamExportJSONEntityReportResponse>>(PrepareAsyncStreamExportJSONEntityReportRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientReaderInterface< ::g2engine::StreamExportJSONEntityReportResponse>> StreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request) {
+      return std::unique_ptr< ::grpc::ClientReaderInterface< ::g2engine::StreamExportJSONEntityReportResponse>>(StreamExportJSONEntityReportRaw(context, request));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::g2engine::StreamExportJSONEntityReportResponse>> AsyncStreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::g2engine::StreamExportJSONEntityReportResponse>>(AsyncStreamExportJSONEntityReportRaw(context, request, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::g2engine::StreamExportJSONEntityReportResponse>> PrepareAsyncStreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::g2engine::StreamExportJSONEntityReportResponse>>(PrepareAsyncStreamExportJSONEntityReportRaw(context, request, cq));
     }
     virtual ::grpc::Status WhyEntities(::grpc::ClientContext* context, const ::g2engine::WhyEntitiesRequest& request, ::g2engine::WhyEntitiesResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::WhyEntitiesResponse>> AsyncWhyEntities(::grpc::ClientContext* context, const ::g2engine::WhyEntitiesRequest& request, ::grpc::CompletionQueue* cq) {
@@ -702,10 +706,8 @@ class G2Engine final {
       virtual void SearchByAttributes_V2(::grpc::ClientContext* context, const ::g2engine::SearchByAttributes_V2Request* request, ::g2engine::SearchByAttributes_V2Response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void Stats(::grpc::ClientContext* context, const ::g2engine::StatsRequest* request, ::g2engine::StatsResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Stats(::grpc::ClientContext* context, const ::g2engine::StatsRequest* request, ::g2engine::StatsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void StreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest* request, ::g2engine::StreamExportCSVEntityReportResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void StreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest* request, ::g2engine::StreamExportCSVEntityReportResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void StreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest* request, ::g2engine::StreamExportJSONEntityReportResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void StreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest* request, ::g2engine::StreamExportJSONEntityReportResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void StreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest* request, ::grpc::ClientReadReactor< ::g2engine::StreamExportCSVEntityReportResponse>* reactor) = 0;
+      virtual void StreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest* request, ::grpc::ClientReadReactor< ::g2engine::StreamExportJSONEntityReportResponse>* reactor) = 0;
       virtual void WhyEntities(::grpc::ClientContext* context, const ::g2engine::WhyEntitiesRequest* request, ::g2engine::WhyEntitiesResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void WhyEntities(::grpc::ClientContext* context, const ::g2engine::WhyEntitiesRequest* request, ::g2engine::WhyEntitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void WhyEntities_V2(::grpc::ClientContext* context, const ::g2engine::WhyEntities_V2Request* request, ::g2engine::WhyEntities_V2Response* response, std::function<void(::grpc::Status)>) = 0;
@@ -859,10 +861,12 @@ class G2Engine final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::SearchByAttributes_V2Response>* PrepareAsyncSearchByAttributes_V2Raw(::grpc::ClientContext* context, const ::g2engine::SearchByAttributes_V2Request& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::StatsResponse>* AsyncStatsRaw(::grpc::ClientContext* context, const ::g2engine::StatsRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::StatsResponse>* PrepareAsyncStatsRaw(::grpc::ClientContext* context, const ::g2engine::StatsRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::StreamExportCSVEntityReportResponse>* AsyncStreamExportCSVEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::StreamExportCSVEntityReportResponse>* PrepareAsyncStreamExportCSVEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::StreamExportJSONEntityReportResponse>* AsyncStreamExportJSONEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::StreamExportJSONEntityReportResponse>* PrepareAsyncStreamExportJSONEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderInterface< ::g2engine::StreamExportCSVEntityReportResponse>* StreamExportCSVEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::g2engine::StreamExportCSVEntityReportResponse>* AsyncStreamExportCSVEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::g2engine::StreamExportCSVEntityReportResponse>* PrepareAsyncStreamExportCSVEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderInterface< ::g2engine::StreamExportJSONEntityReportResponse>* StreamExportJSONEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::g2engine::StreamExportJSONEntityReportResponse>* AsyncStreamExportJSONEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::g2engine::StreamExportJSONEntityReportResponse>* PrepareAsyncStreamExportJSONEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::WhyEntitiesResponse>* AsyncWhyEntitiesRaw(::grpc::ClientContext* context, const ::g2engine::WhyEntitiesRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::WhyEntitiesResponse>* PrepareAsyncWhyEntitiesRaw(::grpc::ClientContext* context, const ::g2engine::WhyEntitiesRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::WhyEntities_V2Response>* AsyncWhyEntities_V2Raw(::grpc::ClientContext* context, const ::g2engine::WhyEntities_V2Request& request, ::grpc::CompletionQueue* cq) = 0;
@@ -1345,19 +1349,23 @@ class G2Engine final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::StatsResponse>> PrepareAsyncStats(::grpc::ClientContext* context, const ::g2engine::StatsRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::StatsResponse>>(PrepareAsyncStatsRaw(context, request, cq));
     }
-    ::grpc::Status StreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::g2engine::StreamExportCSVEntityReportResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::StreamExportCSVEntityReportResponse>> AsyncStreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::StreamExportCSVEntityReportResponse>>(AsyncStreamExportCSVEntityReportRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientReader< ::g2engine::StreamExportCSVEntityReportResponse>> StreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request) {
+      return std::unique_ptr< ::grpc::ClientReader< ::g2engine::StreamExportCSVEntityReportResponse>>(StreamExportCSVEntityReportRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::StreamExportCSVEntityReportResponse>> PrepareAsyncStreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::StreamExportCSVEntityReportResponse>>(PrepareAsyncStreamExportCSVEntityReportRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::g2engine::StreamExportCSVEntityReportResponse>> AsyncStreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::g2engine::StreamExportCSVEntityReportResponse>>(AsyncStreamExportCSVEntityReportRaw(context, request, cq, tag));
     }
-    ::grpc::Status StreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::g2engine::StreamExportJSONEntityReportResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::StreamExportJSONEntityReportResponse>> AsyncStreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::StreamExportJSONEntityReportResponse>>(AsyncStreamExportJSONEntityReportRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::g2engine::StreamExportCSVEntityReportResponse>> PrepareAsyncStreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::g2engine::StreamExportCSVEntityReportResponse>>(PrepareAsyncStreamExportCSVEntityReportRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::StreamExportJSONEntityReportResponse>> PrepareAsyncStreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::StreamExportJSONEntityReportResponse>>(PrepareAsyncStreamExportJSONEntityReportRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientReader< ::g2engine::StreamExportJSONEntityReportResponse>> StreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request) {
+      return std::unique_ptr< ::grpc::ClientReader< ::g2engine::StreamExportJSONEntityReportResponse>>(StreamExportJSONEntityReportRaw(context, request));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::g2engine::StreamExportJSONEntityReportResponse>> AsyncStreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::g2engine::StreamExportJSONEntityReportResponse>>(AsyncStreamExportJSONEntityReportRaw(context, request, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::g2engine::StreamExportJSONEntityReportResponse>> PrepareAsyncStreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::g2engine::StreamExportJSONEntityReportResponse>>(PrepareAsyncStreamExportJSONEntityReportRaw(context, request, cq));
     }
     ::grpc::Status WhyEntities(::grpc::ClientContext* context, const ::g2engine::WhyEntitiesRequest& request, ::g2engine::WhyEntitiesResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::WhyEntitiesResponse>> AsyncWhyEntities(::grpc::ClientContext* context, const ::g2engine::WhyEntitiesRequest& request, ::grpc::CompletionQueue* cq) {
@@ -1550,10 +1558,8 @@ class G2Engine final {
       void SearchByAttributes_V2(::grpc::ClientContext* context, const ::g2engine::SearchByAttributes_V2Request* request, ::g2engine::SearchByAttributes_V2Response* response, ::grpc::ClientUnaryReactor* reactor) override;
       void Stats(::grpc::ClientContext* context, const ::g2engine::StatsRequest* request, ::g2engine::StatsResponse* response, std::function<void(::grpc::Status)>) override;
       void Stats(::grpc::ClientContext* context, const ::g2engine::StatsRequest* request, ::g2engine::StatsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void StreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest* request, ::g2engine::StreamExportCSVEntityReportResponse* response, std::function<void(::grpc::Status)>) override;
-      void StreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest* request, ::g2engine::StreamExportCSVEntityReportResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void StreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest* request, ::g2engine::StreamExportJSONEntityReportResponse* response, std::function<void(::grpc::Status)>) override;
-      void StreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest* request, ::g2engine::StreamExportJSONEntityReportResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void StreamExportCSVEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest* request, ::grpc::ClientReadReactor< ::g2engine::StreamExportCSVEntityReportResponse>* reactor) override;
+      void StreamExportJSONEntityReport(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest* request, ::grpc::ClientReadReactor< ::g2engine::StreamExportJSONEntityReportResponse>* reactor) override;
       void WhyEntities(::grpc::ClientContext* context, const ::g2engine::WhyEntitiesRequest* request, ::g2engine::WhyEntitiesResponse* response, std::function<void(::grpc::Status)>) override;
       void WhyEntities(::grpc::ClientContext* context, const ::g2engine::WhyEntitiesRequest* request, ::g2engine::WhyEntitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void WhyEntities_V2(::grpc::ClientContext* context, const ::g2engine::WhyEntities_V2Request* request, ::g2engine::WhyEntities_V2Response* response, std::function<void(::grpc::Status)>) override;
@@ -1713,10 +1719,12 @@ class G2Engine final {
     ::grpc::ClientAsyncResponseReader< ::g2engine::SearchByAttributes_V2Response>* PrepareAsyncSearchByAttributes_V2Raw(::grpc::ClientContext* context, const ::g2engine::SearchByAttributes_V2Request& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::StatsResponse>* AsyncStatsRaw(::grpc::ClientContext* context, const ::g2engine::StatsRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::StatsResponse>* PrepareAsyncStatsRaw(::grpc::ClientContext* context, const ::g2engine::StatsRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::StreamExportCSVEntityReportResponse>* AsyncStreamExportCSVEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::StreamExportCSVEntityReportResponse>* PrepareAsyncStreamExportCSVEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::StreamExportJSONEntityReportResponse>* AsyncStreamExportJSONEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::StreamExportJSONEntityReportResponse>* PrepareAsyncStreamExportJSONEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReader< ::g2engine::StreamExportCSVEntityReportResponse>* StreamExportCSVEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request) override;
+    ::grpc::ClientAsyncReader< ::g2engine::StreamExportCSVEntityReportResponse>* AsyncStreamExportCSVEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReader< ::g2engine::StreamExportCSVEntityReportResponse>* PrepareAsyncStreamExportCSVEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportCSVEntityReportRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReader< ::g2engine::StreamExportJSONEntityReportResponse>* StreamExportJSONEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request) override;
+    ::grpc::ClientAsyncReader< ::g2engine::StreamExportJSONEntityReportResponse>* AsyncStreamExportJSONEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReader< ::g2engine::StreamExportJSONEntityReportResponse>* PrepareAsyncStreamExportJSONEntityReportRaw(::grpc::ClientContext* context, const ::g2engine::StreamExportJSONEntityReportRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::WhyEntitiesResponse>* AsyncWhyEntitiesRaw(::grpc::ClientContext* context, const ::g2engine::WhyEntitiesRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::WhyEntitiesResponse>* PrepareAsyncWhyEntitiesRaw(::grpc::ClientContext* context, const ::g2engine::WhyEntitiesRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::WhyEntities_V2Response>* AsyncWhyEntities_V2Raw(::grpc::ClientContext* context, const ::g2engine::WhyEntities_V2Request& request, ::grpc::CompletionQueue* cq) override;
@@ -1882,8 +1890,8 @@ class G2Engine final {
     virtual ::grpc::Status SearchByAttributes(::grpc::ServerContext* context, const ::g2engine::SearchByAttributesRequest* request, ::g2engine::SearchByAttributesResponse* response);
     virtual ::grpc::Status SearchByAttributes_V2(::grpc::ServerContext* context, const ::g2engine::SearchByAttributes_V2Request* request, ::g2engine::SearchByAttributes_V2Response* response);
     virtual ::grpc::Status Stats(::grpc::ServerContext* context, const ::g2engine::StatsRequest* request, ::g2engine::StatsResponse* response);
-    virtual ::grpc::Status StreamExportCSVEntityReport(::grpc::ServerContext* context, const ::g2engine::StreamExportCSVEntityReportRequest* request, ::g2engine::StreamExportCSVEntityReportResponse* response);
-    virtual ::grpc::Status StreamExportJSONEntityReport(::grpc::ServerContext* context, const ::g2engine::StreamExportJSONEntityReportRequest* request, ::g2engine::StreamExportJSONEntityReportResponse* response);
+    virtual ::grpc::Status StreamExportCSVEntityReport(::grpc::ServerContext* context, const ::g2engine::StreamExportCSVEntityReportRequest* request, ::grpc::ServerWriter< ::g2engine::StreamExportCSVEntityReportResponse>* writer);
+    virtual ::grpc::Status StreamExportJSONEntityReport(::grpc::ServerContext* context, const ::g2engine::StreamExportJSONEntityReportRequest* request, ::grpc::ServerWriter< ::g2engine::StreamExportJSONEntityReportResponse>* writer);
     virtual ::grpc::Status WhyEntities(::grpc::ServerContext* context, const ::g2engine::WhyEntitiesRequest* request, ::g2engine::WhyEntitiesResponse* response);
     virtual ::grpc::Status WhyEntities_V2(::grpc::ServerContext* context, const ::g2engine::WhyEntities_V2Request* request, ::g2engine::WhyEntities_V2Response* response);
     virtual ::grpc::Status WhyEntityByEntityID(::grpc::ServerContext* context, const ::g2engine::WhyEntityByEntityIDRequest* request, ::g2engine::WhyEntityByEntityIDResponse* response);
@@ -3225,12 +3233,12 @@ class G2Engine final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status StreamExportCSVEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportCSVEntityReportRequest* /*request*/, ::g2engine::StreamExportCSVEntityReportResponse* /*response*/) override {
+    ::grpc::Status StreamExportCSVEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportCSVEntityReportRequest* /*request*/, ::grpc::ServerWriter< ::g2engine::StreamExportCSVEntityReportResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestStreamExportCSVEntityReport(::grpc::ServerContext* context, ::g2engine::StreamExportCSVEntityReportRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::StreamExportCSVEntityReportResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(66, context, request, response, new_call_cq, notification_cq, tag);
+    void RequestStreamExportCSVEntityReport(::grpc::ServerContext* context, ::g2engine::StreamExportCSVEntityReportRequest* request, ::grpc::ServerAsyncWriter< ::g2engine::StreamExportCSVEntityReportResponse>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncServerStreaming(66, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3245,12 +3253,12 @@ class G2Engine final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status StreamExportJSONEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportJSONEntityReportRequest* /*request*/, ::g2engine::StreamExportJSONEntityReportResponse* /*response*/) override {
+    ::grpc::Status StreamExportJSONEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportJSONEntityReportRequest* /*request*/, ::grpc::ServerWriter< ::g2engine::StreamExportJSONEntityReportResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestStreamExportJSONEntityReport(::grpc::ServerContext* context, ::g2engine::StreamExportJSONEntityReportRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::StreamExportJSONEntityReportResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(67, context, request, response, new_call_cq, notification_cq, tag);
+    void RequestStreamExportJSONEntityReport(::grpc::ServerContext* context, ::g2engine::StreamExportJSONEntityReportRequest* request, ::grpc::ServerAsyncWriter< ::g2engine::StreamExportJSONEntityReportResponse>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncServerStreaming(67, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -5203,25 +5211,20 @@ class G2Engine final {
    public:
     WithCallbackMethod_StreamExportCSVEntityReport() {
       ::grpc::Service::MarkMethodCallback(66,
-          new ::grpc::internal::CallbackUnaryHandler< ::g2engine::StreamExportCSVEntityReportRequest, ::g2engine::StreamExportCSVEntityReportResponse>(
+          new ::grpc::internal::CallbackServerStreamingHandler< ::g2engine::StreamExportCSVEntityReportRequest, ::g2engine::StreamExportCSVEntityReportResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::g2engine::StreamExportCSVEntityReportRequest* request, ::g2engine::StreamExportCSVEntityReportResponse* response) { return this->StreamExportCSVEntityReport(context, request, response); }));}
-    void SetMessageAllocatorFor_StreamExportCSVEntityReport(
-        ::grpc::MessageAllocator< ::g2engine::StreamExportCSVEntityReportRequest, ::g2engine::StreamExportCSVEntityReportResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(66);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::StreamExportCSVEntityReportRequest, ::g2engine::StreamExportCSVEntityReportResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
+                   ::grpc::CallbackServerContext* context, const ::g2engine::StreamExportCSVEntityReportRequest* request) { return this->StreamExportCSVEntityReport(context, request); }));
     }
     ~WithCallbackMethod_StreamExportCSVEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status StreamExportCSVEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportCSVEntityReportRequest* /*request*/, ::g2engine::StreamExportCSVEntityReportResponse* /*response*/) override {
+    ::grpc::Status StreamExportCSVEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportCSVEntityReportRequest* /*request*/, ::grpc::ServerWriter< ::g2engine::StreamExportCSVEntityReportResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* StreamExportCSVEntityReport(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2engine::StreamExportCSVEntityReportRequest* /*request*/, ::g2engine::StreamExportCSVEntityReportResponse* /*response*/)  { return nullptr; }
+    virtual ::grpc::ServerWriteReactor< ::g2engine::StreamExportCSVEntityReportResponse>* StreamExportCSVEntityReport(
+      ::grpc::CallbackServerContext* /*context*/, const ::g2engine::StreamExportCSVEntityReportRequest* /*request*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithCallbackMethod_StreamExportJSONEntityReport : public BaseClass {
@@ -5230,25 +5233,20 @@ class G2Engine final {
    public:
     WithCallbackMethod_StreamExportJSONEntityReport() {
       ::grpc::Service::MarkMethodCallback(67,
-          new ::grpc::internal::CallbackUnaryHandler< ::g2engine::StreamExportJSONEntityReportRequest, ::g2engine::StreamExportJSONEntityReportResponse>(
+          new ::grpc::internal::CallbackServerStreamingHandler< ::g2engine::StreamExportJSONEntityReportRequest, ::g2engine::StreamExportJSONEntityReportResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::g2engine::StreamExportJSONEntityReportRequest* request, ::g2engine::StreamExportJSONEntityReportResponse* response) { return this->StreamExportJSONEntityReport(context, request, response); }));}
-    void SetMessageAllocatorFor_StreamExportJSONEntityReport(
-        ::grpc::MessageAllocator< ::g2engine::StreamExportJSONEntityReportRequest, ::g2engine::StreamExportJSONEntityReportResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(67);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::StreamExportJSONEntityReportRequest, ::g2engine::StreamExportJSONEntityReportResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
+                   ::grpc::CallbackServerContext* context, const ::g2engine::StreamExportJSONEntityReportRequest* request) { return this->StreamExportJSONEntityReport(context, request); }));
     }
     ~WithCallbackMethod_StreamExportJSONEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status StreamExportJSONEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportJSONEntityReportRequest* /*request*/, ::g2engine::StreamExportJSONEntityReportResponse* /*response*/) override {
+    ::grpc::Status StreamExportJSONEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportJSONEntityReportRequest* /*request*/, ::grpc::ServerWriter< ::g2engine::StreamExportJSONEntityReportResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* StreamExportJSONEntityReport(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2engine::StreamExportJSONEntityReportRequest* /*request*/, ::g2engine::StreamExportJSONEntityReportResponse* /*response*/)  { return nullptr; }
+    virtual ::grpc::ServerWriteReactor< ::g2engine::StreamExportJSONEntityReportResponse>* StreamExportJSONEntityReport(
+      ::grpc::CallbackServerContext* /*context*/, const ::g2engine::StreamExportJSONEntityReportRequest* /*request*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithCallbackMethod_WhyEntities : public BaseClass {
@@ -6602,7 +6600,7 @@ class G2Engine final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status StreamExportCSVEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportCSVEntityReportRequest* /*request*/, ::g2engine::StreamExportCSVEntityReportResponse* /*response*/) override {
+    ::grpc::Status StreamExportCSVEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportCSVEntityReportRequest* /*request*/, ::grpc::ServerWriter< ::g2engine::StreamExportCSVEntityReportResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -6619,7 +6617,7 @@ class G2Engine final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status StreamExportJSONEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportJSONEntityReportRequest* /*request*/, ::g2engine::StreamExportJSONEntityReportResponse* /*response*/) override {
+    ::grpc::Status StreamExportJSONEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportJSONEntityReportRequest* /*request*/, ::grpc::ServerWriter< ::g2engine::StreamExportJSONEntityReportResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -8092,12 +8090,12 @@ class G2Engine final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status StreamExportCSVEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportCSVEntityReportRequest* /*request*/, ::g2engine::StreamExportCSVEntityReportResponse* /*response*/) override {
+    ::grpc::Status StreamExportCSVEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportCSVEntityReportRequest* /*request*/, ::grpc::ServerWriter< ::g2engine::StreamExportCSVEntityReportResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestStreamExportCSVEntityReport(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(66, context, request, response, new_call_cq, notification_cq, tag);
+    void RequestStreamExportCSVEntityReport(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncWriter< ::grpc::ByteBuffer>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncServerStreaming(66, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -8112,12 +8110,12 @@ class G2Engine final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status StreamExportJSONEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportJSONEntityReportRequest* /*request*/, ::g2engine::StreamExportJSONEntityReportResponse* /*response*/) override {
+    ::grpc::Status StreamExportJSONEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportJSONEntityReportRequest* /*request*/, ::grpc::ServerWriter< ::g2engine::StreamExportJSONEntityReportResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestStreamExportJSONEntityReport(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(67, context, request, response, new_call_cq, notification_cq, tag);
+    void RequestStreamExportJSONEntityReport(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncWriter< ::grpc::ByteBuffer>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncServerStreaming(67, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -9739,20 +9737,20 @@ class G2Engine final {
    public:
     WithRawCallbackMethod_StreamExportCSVEntityReport() {
       ::grpc::Service::MarkMethodRawCallback(66,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->StreamExportCSVEntityReport(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const::grpc::ByteBuffer* request) { return this->StreamExportCSVEntityReport(context, request); }));
     }
     ~WithRawCallbackMethod_StreamExportCSVEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status StreamExportCSVEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportCSVEntityReportRequest* /*request*/, ::g2engine::StreamExportCSVEntityReportResponse* /*response*/) override {
+    ::grpc::Status StreamExportCSVEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportCSVEntityReportRequest* /*request*/, ::grpc::ServerWriter< ::g2engine::StreamExportCSVEntityReportResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* StreamExportCSVEntityReport(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+    virtual ::grpc::ServerWriteReactor< ::grpc::ByteBuffer>* StreamExportCSVEntityReport(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithRawCallbackMethod_StreamExportJSONEntityReport : public BaseClass {
@@ -9761,20 +9759,20 @@ class G2Engine final {
    public:
     WithRawCallbackMethod_StreamExportJSONEntityReport() {
       ::grpc::Service::MarkMethodRawCallback(67,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->StreamExportJSONEntityReport(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const::grpc::ByteBuffer* request) { return this->StreamExportJSONEntityReport(context, request); }));
     }
     ~WithRawCallbackMethod_StreamExportJSONEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status StreamExportJSONEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportJSONEntityReportRequest* /*request*/, ::g2engine::StreamExportJSONEntityReportResponse* /*response*/) override {
+    ::grpc::Status StreamExportJSONEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportJSONEntityReportRequest* /*request*/, ::grpc::ServerWriter< ::g2engine::StreamExportJSONEntityReportResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* StreamExportJSONEntityReport(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+    virtual ::grpc::ServerWriteReactor< ::grpc::ByteBuffer>* StreamExportJSONEntityReport(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithRawCallbackMethod_WhyEntities : public BaseClass {
@@ -11735,60 +11733,6 @@ class G2Engine final {
     virtual ::grpc::Status StreamedStats(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2engine::StatsRequest,::g2engine::StatsResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_StreamExportCSVEntityReport : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_StreamExportCSVEntityReport() {
-      ::grpc::Service::MarkMethodStreamed(66,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::g2engine::StreamExportCSVEntityReportRequest, ::g2engine::StreamExportCSVEntityReportResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::g2engine::StreamExportCSVEntityReportRequest, ::g2engine::StreamExportCSVEntityReportResponse>* streamer) {
-                       return this->StreamedStreamExportCSVEntityReport(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_StreamExportCSVEntityReport() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status StreamExportCSVEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportCSVEntityReportRequest* /*request*/, ::g2engine::StreamExportCSVEntityReportResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedStreamExportCSVEntityReport(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2engine::StreamExportCSVEntityReportRequest,::g2engine::StreamExportCSVEntityReportResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_StreamExportJSONEntityReport : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_StreamExportJSONEntityReport() {
-      ::grpc::Service::MarkMethodStreamed(67,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::g2engine::StreamExportJSONEntityReportRequest, ::g2engine::StreamExportJSONEntityReportResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::g2engine::StreamExportJSONEntityReportRequest, ::g2engine::StreamExportJSONEntityReportResponse>* streamer) {
-                       return this->StreamedStreamExportJSONEntityReport(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_StreamExportJSONEntityReport() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status StreamExportJSONEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportJSONEntityReportRequest* /*request*/, ::g2engine::StreamExportJSONEntityReportResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedStreamExportJSONEntityReport(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2engine::StreamExportJSONEntityReportRequest,::g2engine::StreamExportJSONEntityReportResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
   class WithStreamedUnaryMethod_WhyEntities : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
@@ -12004,9 +11948,63 @@ class G2Engine final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedWhyRecords_V2(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2engine::WhyRecords_V2Request,::g2engine::WhyRecords_V2Response>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_AddRecord<WithStreamedUnaryMethod_AddRecordWithInfo<WithStreamedUnaryMethod_AddRecordWithInfoWithReturnedRecordID<WithStreamedUnaryMethod_AddRecordWithReturnedRecordID<WithStreamedUnaryMethod_CheckRecord<WithStreamedUnaryMethod_CloseExport<WithStreamedUnaryMethod_CountRedoRecords<WithStreamedUnaryMethod_DeleteRecord<WithStreamedUnaryMethod_DeleteRecordWithInfo<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_ExportConfig<WithStreamedUnaryMethod_ExportConfigAndConfigID<WithStreamedUnaryMethod_ExportCSVEntityReport<WithStreamedUnaryMethod_ExportJSONEntityReport<WithStreamedUnaryMethod_FetchNext<WithStreamedUnaryMethod_FindInterestingEntitiesByEntityID<WithStreamedUnaryMethod_FindInterestingEntitiesByRecordID<WithStreamedUnaryMethod_FindNetworkByEntityID<WithStreamedUnaryMethod_FindNetworkByEntityID_V2<WithStreamedUnaryMethod_FindNetworkByRecordID<WithStreamedUnaryMethod_FindNetworkByRecordID_V2<WithStreamedUnaryMethod_FindPathByEntityID<WithStreamedUnaryMethod_FindPathByEntityID_V2<WithStreamedUnaryMethod_FindPathByRecordID<WithStreamedUnaryMethod_FindPathByRecordID_V2<WithStreamedUnaryMethod_FindPathExcludingByEntityID<WithStreamedUnaryMethod_FindPathExcludingByEntityID_V2<WithStreamedUnaryMethod_FindPathExcludingByRecordID<WithStreamedUnaryMethod_FindPathExcludingByRecordID_V2<WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID<WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID_V2<WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID<WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID_V2<WithStreamedUnaryMethod_GetActiveConfigID<WithStreamedUnaryMethod_GetEntityByEntityID<WithStreamedUnaryMethod_GetEntityByEntityID_V2<WithStreamedUnaryMethod_GetEntityByRecordID<WithStreamedUnaryMethod_GetEntityByRecordID_V2<WithStreamedUnaryMethod_GetRecord<WithStreamedUnaryMethod_GetRecord_V2<WithStreamedUnaryMethod_GetRedoRecord<WithStreamedUnaryMethod_GetRepositoryLastModifiedTime<WithStreamedUnaryMethod_GetVirtualEntityByRecordID<WithStreamedUnaryMethod_GetVirtualEntityByRecordID_V2<WithStreamedUnaryMethod_HowEntityByEntityID<WithStreamedUnaryMethod_HowEntityByEntityID_V2<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_PrimeEngine<WithStreamedUnaryMethod_Process<WithStreamedUnaryMethod_ProcessRedoRecord<WithStreamedUnaryMethod_ProcessRedoRecordWithInfo<WithStreamedUnaryMethod_ProcessWithInfo<WithStreamedUnaryMethod_ProcessWithResponse<WithStreamedUnaryMethod_ProcessWithResponseResize<WithStreamedUnaryMethod_PurgeRepository<WithStreamedUnaryMethod_ReevaluateEntity<WithStreamedUnaryMethod_ReevaluateEntityWithInfo<WithStreamedUnaryMethod_ReevaluateRecord<WithStreamedUnaryMethod_ReevaluateRecordWithInfo<WithStreamedUnaryMethod_Reinit<WithStreamedUnaryMethod_ReplaceRecord<WithStreamedUnaryMethod_ReplaceRecordWithInfo<WithStreamedUnaryMethod_SearchByAttributes<WithStreamedUnaryMethod_SearchByAttributes_V2<WithStreamedUnaryMethod_Stats<WithStreamedUnaryMethod_StreamExportCSVEntityReport<WithStreamedUnaryMethod_StreamExportJSONEntityReport<WithStreamedUnaryMethod_WhyEntities<WithStreamedUnaryMethod_WhyEntities_V2<WithStreamedUnaryMethod_WhyEntityByEntityID<WithStreamedUnaryMethod_WhyEntityByEntityID_V2<WithStreamedUnaryMethod_WhyEntityByRecordID<WithStreamedUnaryMethod_WhyEntityByRecordID_V2<WithStreamedUnaryMethod_WhyRecords<WithStreamedUnaryMethod_WhyRecords_V2<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
-  typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_AddRecord<WithStreamedUnaryMethod_AddRecordWithInfo<WithStreamedUnaryMethod_AddRecordWithInfoWithReturnedRecordID<WithStreamedUnaryMethod_AddRecordWithReturnedRecordID<WithStreamedUnaryMethod_CheckRecord<WithStreamedUnaryMethod_CloseExport<WithStreamedUnaryMethod_CountRedoRecords<WithStreamedUnaryMethod_DeleteRecord<WithStreamedUnaryMethod_DeleteRecordWithInfo<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_ExportConfig<WithStreamedUnaryMethod_ExportConfigAndConfigID<WithStreamedUnaryMethod_ExportCSVEntityReport<WithStreamedUnaryMethod_ExportJSONEntityReport<WithStreamedUnaryMethod_FetchNext<WithStreamedUnaryMethod_FindInterestingEntitiesByEntityID<WithStreamedUnaryMethod_FindInterestingEntitiesByRecordID<WithStreamedUnaryMethod_FindNetworkByEntityID<WithStreamedUnaryMethod_FindNetworkByEntityID_V2<WithStreamedUnaryMethod_FindNetworkByRecordID<WithStreamedUnaryMethod_FindNetworkByRecordID_V2<WithStreamedUnaryMethod_FindPathByEntityID<WithStreamedUnaryMethod_FindPathByEntityID_V2<WithStreamedUnaryMethod_FindPathByRecordID<WithStreamedUnaryMethod_FindPathByRecordID_V2<WithStreamedUnaryMethod_FindPathExcludingByEntityID<WithStreamedUnaryMethod_FindPathExcludingByEntityID_V2<WithStreamedUnaryMethod_FindPathExcludingByRecordID<WithStreamedUnaryMethod_FindPathExcludingByRecordID_V2<WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID<WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID_V2<WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID<WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID_V2<WithStreamedUnaryMethod_GetActiveConfigID<WithStreamedUnaryMethod_GetEntityByEntityID<WithStreamedUnaryMethod_GetEntityByEntityID_V2<WithStreamedUnaryMethod_GetEntityByRecordID<WithStreamedUnaryMethod_GetEntityByRecordID_V2<WithStreamedUnaryMethod_GetRecord<WithStreamedUnaryMethod_GetRecord_V2<WithStreamedUnaryMethod_GetRedoRecord<WithStreamedUnaryMethod_GetRepositoryLastModifiedTime<WithStreamedUnaryMethod_GetVirtualEntityByRecordID<WithStreamedUnaryMethod_GetVirtualEntityByRecordID_V2<WithStreamedUnaryMethod_HowEntityByEntityID<WithStreamedUnaryMethod_HowEntityByEntityID_V2<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_PrimeEngine<WithStreamedUnaryMethod_Process<WithStreamedUnaryMethod_ProcessRedoRecord<WithStreamedUnaryMethod_ProcessRedoRecordWithInfo<WithStreamedUnaryMethod_ProcessWithInfo<WithStreamedUnaryMethod_ProcessWithResponse<WithStreamedUnaryMethod_ProcessWithResponseResize<WithStreamedUnaryMethod_PurgeRepository<WithStreamedUnaryMethod_ReevaluateEntity<WithStreamedUnaryMethod_ReevaluateEntityWithInfo<WithStreamedUnaryMethod_ReevaluateRecord<WithStreamedUnaryMethod_ReevaluateRecordWithInfo<WithStreamedUnaryMethod_Reinit<WithStreamedUnaryMethod_ReplaceRecord<WithStreamedUnaryMethod_ReplaceRecordWithInfo<WithStreamedUnaryMethod_SearchByAttributes<WithStreamedUnaryMethod_SearchByAttributes_V2<WithStreamedUnaryMethod_Stats<WithStreamedUnaryMethod_StreamExportCSVEntityReport<WithStreamedUnaryMethod_StreamExportJSONEntityReport<WithStreamedUnaryMethod_WhyEntities<WithStreamedUnaryMethod_WhyEntities_V2<WithStreamedUnaryMethod_WhyEntityByEntityID<WithStreamedUnaryMethod_WhyEntityByEntityID_V2<WithStreamedUnaryMethod_WhyEntityByRecordID<WithStreamedUnaryMethod_WhyEntityByRecordID_V2<WithStreamedUnaryMethod_WhyRecords<WithStreamedUnaryMethod_WhyRecords_V2<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_AddRecord<WithStreamedUnaryMethod_AddRecordWithInfo<WithStreamedUnaryMethod_AddRecordWithInfoWithReturnedRecordID<WithStreamedUnaryMethod_AddRecordWithReturnedRecordID<WithStreamedUnaryMethod_CheckRecord<WithStreamedUnaryMethod_CloseExport<WithStreamedUnaryMethod_CountRedoRecords<WithStreamedUnaryMethod_DeleteRecord<WithStreamedUnaryMethod_DeleteRecordWithInfo<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_ExportConfig<WithStreamedUnaryMethod_ExportConfigAndConfigID<WithStreamedUnaryMethod_ExportCSVEntityReport<WithStreamedUnaryMethod_ExportJSONEntityReport<WithStreamedUnaryMethod_FetchNext<WithStreamedUnaryMethod_FindInterestingEntitiesByEntityID<WithStreamedUnaryMethod_FindInterestingEntitiesByRecordID<WithStreamedUnaryMethod_FindNetworkByEntityID<WithStreamedUnaryMethod_FindNetworkByEntityID_V2<WithStreamedUnaryMethod_FindNetworkByRecordID<WithStreamedUnaryMethod_FindNetworkByRecordID_V2<WithStreamedUnaryMethod_FindPathByEntityID<WithStreamedUnaryMethod_FindPathByEntityID_V2<WithStreamedUnaryMethod_FindPathByRecordID<WithStreamedUnaryMethod_FindPathByRecordID_V2<WithStreamedUnaryMethod_FindPathExcludingByEntityID<WithStreamedUnaryMethod_FindPathExcludingByEntityID_V2<WithStreamedUnaryMethod_FindPathExcludingByRecordID<WithStreamedUnaryMethod_FindPathExcludingByRecordID_V2<WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID<WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID_V2<WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID<WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID_V2<WithStreamedUnaryMethod_GetActiveConfigID<WithStreamedUnaryMethod_GetEntityByEntityID<WithStreamedUnaryMethod_GetEntityByEntityID_V2<WithStreamedUnaryMethod_GetEntityByRecordID<WithStreamedUnaryMethod_GetEntityByRecordID_V2<WithStreamedUnaryMethod_GetRecord<WithStreamedUnaryMethod_GetRecord_V2<WithStreamedUnaryMethod_GetRedoRecord<WithStreamedUnaryMethod_GetRepositoryLastModifiedTime<WithStreamedUnaryMethod_GetVirtualEntityByRecordID<WithStreamedUnaryMethod_GetVirtualEntityByRecordID_V2<WithStreamedUnaryMethod_HowEntityByEntityID<WithStreamedUnaryMethod_HowEntityByEntityID_V2<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_PrimeEngine<WithStreamedUnaryMethod_Process<WithStreamedUnaryMethod_ProcessRedoRecord<WithStreamedUnaryMethod_ProcessRedoRecordWithInfo<WithStreamedUnaryMethod_ProcessWithInfo<WithStreamedUnaryMethod_ProcessWithResponse<WithStreamedUnaryMethod_ProcessWithResponseResize<WithStreamedUnaryMethod_PurgeRepository<WithStreamedUnaryMethod_ReevaluateEntity<WithStreamedUnaryMethod_ReevaluateEntityWithInfo<WithStreamedUnaryMethod_ReevaluateRecord<WithStreamedUnaryMethod_ReevaluateRecordWithInfo<WithStreamedUnaryMethod_Reinit<WithStreamedUnaryMethod_ReplaceRecord<WithStreamedUnaryMethod_ReplaceRecordWithInfo<WithStreamedUnaryMethod_SearchByAttributes<WithStreamedUnaryMethod_SearchByAttributes_V2<WithStreamedUnaryMethod_Stats<WithStreamedUnaryMethod_WhyEntities<WithStreamedUnaryMethod_WhyEntities_V2<WithStreamedUnaryMethod_WhyEntityByEntityID<WithStreamedUnaryMethod_WhyEntityByEntityID_V2<WithStreamedUnaryMethod_WhyEntityByRecordID<WithStreamedUnaryMethod_WhyEntityByRecordID_V2<WithStreamedUnaryMethod_WhyRecords<WithStreamedUnaryMethod_WhyRecords_V2<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
+  template <class BaseClass>
+  class WithSplitStreamingMethod_StreamExportCSVEntityReport : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithSplitStreamingMethod_StreamExportCSVEntityReport() {
+      ::grpc::Service::MarkMethodStreamed(66,
+        new ::grpc::internal::SplitServerStreamingHandler<
+          ::g2engine::StreamExportCSVEntityReportRequest, ::g2engine::StreamExportCSVEntityReportResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerSplitStreamer<
+                     ::g2engine::StreamExportCSVEntityReportRequest, ::g2engine::StreamExportCSVEntityReportResponse>* streamer) {
+                       return this->StreamedStreamExportCSVEntityReport(context,
+                         streamer);
+                  }));
+    }
+    ~WithSplitStreamingMethod_StreamExportCSVEntityReport() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status StreamExportCSVEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportCSVEntityReportRequest* /*request*/, ::grpc::ServerWriter< ::g2engine::StreamExportCSVEntityReportResponse>* /*writer*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with split streamed
+    virtual ::grpc::Status StreamedStreamExportCSVEntityReport(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::g2engine::StreamExportCSVEntityReportRequest,::g2engine::StreamExportCSVEntityReportResponse>* server_split_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithSplitStreamingMethod_StreamExportJSONEntityReport : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithSplitStreamingMethod_StreamExportJSONEntityReport() {
+      ::grpc::Service::MarkMethodStreamed(67,
+        new ::grpc::internal::SplitServerStreamingHandler<
+          ::g2engine::StreamExportJSONEntityReportRequest, ::g2engine::StreamExportJSONEntityReportResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerSplitStreamer<
+                     ::g2engine::StreamExportJSONEntityReportRequest, ::g2engine::StreamExportJSONEntityReportResponse>* streamer) {
+                       return this->StreamedStreamExportJSONEntityReport(context,
+                         streamer);
+                  }));
+    }
+    ~WithSplitStreamingMethod_StreamExportJSONEntityReport() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status StreamExportJSONEntityReport(::grpc::ServerContext* /*context*/, const ::g2engine::StreamExportJSONEntityReportRequest* /*request*/, ::grpc::ServerWriter< ::g2engine::StreamExportJSONEntityReportResponse>* /*writer*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with split streamed
+    virtual ::grpc::Status StreamedStreamExportJSONEntityReport(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::g2engine::StreamExportJSONEntityReportRequest,::g2engine::StreamExportJSONEntityReportResponse>* server_split_streamer) = 0;
+  };
+  typedef WithSplitStreamingMethod_StreamExportCSVEntityReport<WithSplitStreamingMethod_StreamExportJSONEntityReport<Service > > SplitStreamedService;
+  typedef WithStreamedUnaryMethod_AddRecord<WithStreamedUnaryMethod_AddRecordWithInfo<WithStreamedUnaryMethod_AddRecordWithInfoWithReturnedRecordID<WithStreamedUnaryMethod_AddRecordWithReturnedRecordID<WithStreamedUnaryMethod_CheckRecord<WithStreamedUnaryMethod_CloseExport<WithStreamedUnaryMethod_CountRedoRecords<WithStreamedUnaryMethod_DeleteRecord<WithStreamedUnaryMethod_DeleteRecordWithInfo<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_ExportConfig<WithStreamedUnaryMethod_ExportConfigAndConfigID<WithStreamedUnaryMethod_ExportCSVEntityReport<WithStreamedUnaryMethod_ExportJSONEntityReport<WithStreamedUnaryMethod_FetchNext<WithStreamedUnaryMethod_FindInterestingEntitiesByEntityID<WithStreamedUnaryMethod_FindInterestingEntitiesByRecordID<WithStreamedUnaryMethod_FindNetworkByEntityID<WithStreamedUnaryMethod_FindNetworkByEntityID_V2<WithStreamedUnaryMethod_FindNetworkByRecordID<WithStreamedUnaryMethod_FindNetworkByRecordID_V2<WithStreamedUnaryMethod_FindPathByEntityID<WithStreamedUnaryMethod_FindPathByEntityID_V2<WithStreamedUnaryMethod_FindPathByRecordID<WithStreamedUnaryMethod_FindPathByRecordID_V2<WithStreamedUnaryMethod_FindPathExcludingByEntityID<WithStreamedUnaryMethod_FindPathExcludingByEntityID_V2<WithStreamedUnaryMethod_FindPathExcludingByRecordID<WithStreamedUnaryMethod_FindPathExcludingByRecordID_V2<WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID<WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID_V2<WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID<WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID_V2<WithStreamedUnaryMethod_GetActiveConfigID<WithStreamedUnaryMethod_GetEntityByEntityID<WithStreamedUnaryMethod_GetEntityByEntityID_V2<WithStreamedUnaryMethod_GetEntityByRecordID<WithStreamedUnaryMethod_GetEntityByRecordID_V2<WithStreamedUnaryMethod_GetRecord<WithStreamedUnaryMethod_GetRecord_V2<WithStreamedUnaryMethod_GetRedoRecord<WithStreamedUnaryMethod_GetRepositoryLastModifiedTime<WithStreamedUnaryMethod_GetVirtualEntityByRecordID<WithStreamedUnaryMethod_GetVirtualEntityByRecordID_V2<WithStreamedUnaryMethod_HowEntityByEntityID<WithStreamedUnaryMethod_HowEntityByEntityID_V2<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_PrimeEngine<WithStreamedUnaryMethod_Process<WithStreamedUnaryMethod_ProcessRedoRecord<WithStreamedUnaryMethod_ProcessRedoRecordWithInfo<WithStreamedUnaryMethod_ProcessWithInfo<WithStreamedUnaryMethod_ProcessWithResponse<WithStreamedUnaryMethod_ProcessWithResponseResize<WithStreamedUnaryMethod_PurgeRepository<WithStreamedUnaryMethod_ReevaluateEntity<WithStreamedUnaryMethod_ReevaluateEntityWithInfo<WithStreamedUnaryMethod_ReevaluateRecord<WithStreamedUnaryMethod_ReevaluateRecordWithInfo<WithStreamedUnaryMethod_Reinit<WithStreamedUnaryMethod_ReplaceRecord<WithStreamedUnaryMethod_ReplaceRecordWithInfo<WithStreamedUnaryMethod_SearchByAttributes<WithStreamedUnaryMethod_SearchByAttributes_V2<WithStreamedUnaryMethod_Stats<WithSplitStreamingMethod_StreamExportCSVEntityReport<WithSplitStreamingMethod_StreamExportJSONEntityReport<WithStreamedUnaryMethod_WhyEntities<WithStreamedUnaryMethod_WhyEntities_V2<WithStreamedUnaryMethod_WhyEntityByEntityID<WithStreamedUnaryMethod_WhyEntityByEntityID_V2<WithStreamedUnaryMethod_WhyEntityByRecordID<WithStreamedUnaryMethod_WhyEntityByRecordID_V2<WithStreamedUnaryMethod_WhyRecords<WithStreamedUnaryMethod_WhyRecords_V2<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
 };
 
 }  // namespace g2engine

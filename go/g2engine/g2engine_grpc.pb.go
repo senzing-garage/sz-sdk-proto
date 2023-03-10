@@ -88,8 +88,8 @@ type G2EngineClient interface {
 	SearchByAttributes(ctx context.Context, in *SearchByAttributesRequest, opts ...grpc.CallOption) (*SearchByAttributesResponse, error)
 	SearchByAttributes_V2(ctx context.Context, in *SearchByAttributes_V2Request, opts ...grpc.CallOption) (*SearchByAttributes_V2Response, error)
 	Stats(ctx context.Context, in *StatsRequest, opts ...grpc.CallOption) (*StatsResponse, error)
-	StreamExportCSVEntityReport(ctx context.Context, in *StreamExportCSVEntityReportRequest, opts ...grpc.CallOption) (*StreamExportCSVEntityReportResponse, error)
-	StreamExportJSONEntityReport(ctx context.Context, in *StreamExportJSONEntityReportRequest, opts ...grpc.CallOption) (*StreamExportJSONEntityReportResponse, error)
+	StreamExportCSVEntityReport(ctx context.Context, in *StreamExportCSVEntityReportRequest, opts ...grpc.CallOption) (G2Engine_StreamExportCSVEntityReportClient, error)
+	StreamExportJSONEntityReport(ctx context.Context, in *StreamExportJSONEntityReportRequest, opts ...grpc.CallOption) (G2Engine_StreamExportJSONEntityReportClient, error)
 	WhyEntities(ctx context.Context, in *WhyEntitiesRequest, opts ...grpc.CallOption) (*WhyEntitiesResponse, error)
 	WhyEntities_V2(ctx context.Context, in *WhyEntities_V2Request, opts ...grpc.CallOption) (*WhyEntities_V2Response, error)
 	WhyEntityByEntityID(ctx context.Context, in *WhyEntityByEntityIDRequest, opts ...grpc.CallOption) (*WhyEntityByEntityIDResponse, error)
@@ -702,22 +702,68 @@ func (c *g2EngineClient) Stats(ctx context.Context, in *StatsRequest, opts ...gr
 	return out, nil
 }
 
-func (c *g2EngineClient) StreamExportCSVEntityReport(ctx context.Context, in *StreamExportCSVEntityReportRequest, opts ...grpc.CallOption) (*StreamExportCSVEntityReportResponse, error) {
-	out := new(StreamExportCSVEntityReportResponse)
-	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/StreamExportCSVEntityReport", in, out, opts...)
+func (c *g2EngineClient) StreamExportCSVEntityReport(ctx context.Context, in *StreamExportCSVEntityReportRequest, opts ...grpc.CallOption) (G2Engine_StreamExportCSVEntityReportClient, error) {
+	stream, err := c.cc.NewStream(ctx, &G2Engine_ServiceDesc.Streams[0], "/g2engine.G2Engine/StreamExportCSVEntityReport", opts...)
 	if err != nil {
 		return nil, err
 	}
-	return out, nil
+	x := &g2EngineStreamExportCSVEntityReportClient{stream}
+	if err := x.ClientStream.SendMsg(in); err != nil {
+		return nil, err
+	}
+	if err := x.ClientStream.CloseSend(); err != nil {
+		return nil, err
+	}
+	return x, nil
 }
 
-func (c *g2EngineClient) StreamExportJSONEntityReport(ctx context.Context, in *StreamExportJSONEntityReportRequest, opts ...grpc.CallOption) (*StreamExportJSONEntityReportResponse, error) {
-	out := new(StreamExportJSONEntityReportResponse)
-	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/StreamExportJSONEntityReport", in, out, opts...)
+type G2Engine_StreamExportCSVEntityReportClient interface {
+	Recv() (*StreamExportCSVEntityReportResponse, error)
+	grpc.ClientStream
+}
+
+type g2EngineStreamExportCSVEntityReportClient struct {
+	grpc.ClientStream
+}
+
+func (x *g2EngineStreamExportCSVEntityReportClient) Recv() (*StreamExportCSVEntityReportResponse, error) {
+	m := new(StreamExportCSVEntityReportResponse)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
+func (c *g2EngineClient) StreamExportJSONEntityReport(ctx context.Context, in *StreamExportJSONEntityReportRequest, opts ...grpc.CallOption) (G2Engine_StreamExportJSONEntityReportClient, error) {
+	stream, err := c.cc.NewStream(ctx, &G2Engine_ServiceDesc.Streams[1], "/g2engine.G2Engine/StreamExportJSONEntityReport", opts...)
 	if err != nil {
 		return nil, err
 	}
-	return out, nil
+	x := &g2EngineStreamExportJSONEntityReportClient{stream}
+	if err := x.ClientStream.SendMsg(in); err != nil {
+		return nil, err
+	}
+	if err := x.ClientStream.CloseSend(); err != nil {
+		return nil, err
+	}
+	return x, nil
+}
+
+type G2Engine_StreamExportJSONEntityReportClient interface {
+	Recv() (*StreamExportJSONEntityReportResponse, error)
+	grpc.ClientStream
+}
+
+type g2EngineStreamExportJSONEntityReportClient struct {
+	grpc.ClientStream
+}
+
+func (x *g2EngineStreamExportJSONEntityReportClient) Recv() (*StreamExportJSONEntityReportResponse, error) {
+	m := new(StreamExportJSONEntityReportResponse)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
 }
 
 func (c *g2EngineClient) WhyEntities(ctx context.Context, in *WhyEntitiesRequest, opts ...grpc.CallOption) (*WhyEntitiesResponse, error) {
@@ -862,8 +908,8 @@ type G2EngineServer interface {
 	SearchByAttributes(context.Context, *SearchByAttributesRequest) (*SearchByAttributesResponse, error)
 	SearchByAttributes_V2(context.Context, *SearchByAttributes_V2Request) (*SearchByAttributes_V2Response, error)
 	Stats(context.Context, *StatsRequest) (*StatsResponse, error)
-	StreamExportCSVEntityReport(context.Context, *StreamExportCSVEntityReportRequest) (*StreamExportCSVEntityReportResponse, error)
-	StreamExportJSONEntityReport(context.Context, *StreamExportJSONEntityReportRequest) (*StreamExportJSONEntityReportResponse, error)
+	StreamExportCSVEntityReport(*StreamExportCSVEntityReportRequest, G2Engine_StreamExportCSVEntityReportServer) error
+	StreamExportJSONEntityReport(*StreamExportJSONEntityReportRequest, G2Engine_StreamExportJSONEntityReportServer) error
 	WhyEntities(context.Context, *WhyEntitiesRequest) (*WhyEntitiesResponse, error)
 	WhyEntities_V2(context.Context, *WhyEntities_V2Request) (*WhyEntities_V2Response, error)
 	WhyEntityByEntityID(context.Context, *WhyEntityByEntityIDRequest) (*WhyEntityByEntityIDResponse, error)
@@ -1077,11 +1123,11 @@ func (UnimplementedG2EngineServer) SearchByAttributes_V2(context.Context, *Searc
 func (UnimplementedG2EngineServer) Stats(context.Context, *StatsRequest) (*StatsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Stats not implemented")
 }
-func (UnimplementedG2EngineServer) StreamExportCSVEntityReport(context.Context, *StreamExportCSVEntityReportRequest) (*StreamExportCSVEntityReportResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method StreamExportCSVEntityReport not implemented")
+func (UnimplementedG2EngineServer) StreamExportCSVEntityReport(*StreamExportCSVEntityReportRequest, G2Engine_StreamExportCSVEntityReportServer) error {
+	return status.Errorf(codes.Unimplemented, "method StreamExportCSVEntityReport not implemented")
 }
-func (UnimplementedG2EngineServer) StreamExportJSONEntityReport(context.Context, *StreamExportJSONEntityReportRequest) (*StreamExportJSONEntityReportResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method StreamExportJSONEntityReport not implemented")
+func (UnimplementedG2EngineServer) StreamExportJSONEntityReport(*StreamExportJSONEntityReportRequest, G2Engine_StreamExportJSONEntityReportServer) error {
+	return status.Errorf(codes.Unimplemented, "method StreamExportJSONEntityReport not implemented")
 }
 func (UnimplementedG2EngineServer) WhyEntities(context.Context, *WhyEntitiesRequest) (*WhyEntitiesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method WhyEntities not implemented")
@@ -2308,40 +2354,46 @@ func _G2Engine_Stats_Handler(srv interface{}, ctx context.Context, dec func(inte
 	return interceptor(ctx, in, info, handler)
 }
 
-func _G2Engine_StreamExportCSVEntityReport_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(StreamExportCSVEntityReportRequest)
-	if err := dec(in); err != nil {
-		return nil, err
+func _G2Engine_StreamExportCSVEntityReport_Handler(srv interface{}, stream grpc.ServerStream) error {
+	m := new(StreamExportCSVEntityReportRequest)
+	if err := stream.RecvMsg(m); err != nil {
+		return err
 	}
-	if interceptor == nil {
-		return srv.(G2EngineServer).StreamExportCSVEntityReport(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2engine.G2Engine/StreamExportCSVEntityReport",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2EngineServer).StreamExportCSVEntityReport(ctx, req.(*StreamExportCSVEntityReportRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	return srv.(G2EngineServer).StreamExportCSVEntityReport(m, &g2EngineStreamExportCSVEntityReportServer{stream})
 }
 
-func _G2Engine_StreamExportJSONEntityReport_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(StreamExportJSONEntityReportRequest)
-	if err := dec(in); err != nil {
-		return nil, err
+type G2Engine_StreamExportCSVEntityReportServer interface {
+	Send(*StreamExportCSVEntityReportResponse) error
+	grpc.ServerStream
+}
+
+type g2EngineStreamExportCSVEntityReportServer struct {
+	grpc.ServerStream
+}
+
+func (x *g2EngineStreamExportCSVEntityReportServer) Send(m *StreamExportCSVEntityReportResponse) error {
+	return x.ServerStream.SendMsg(m)
+}
+
+func _G2Engine_StreamExportJSONEntityReport_Handler(srv interface{}, stream grpc.ServerStream) error {
+	m := new(StreamExportJSONEntityReportRequest)
+	if err := stream.RecvMsg(m); err != nil {
+		return err
 	}
-	if interceptor == nil {
-		return srv.(G2EngineServer).StreamExportJSONEntityReport(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2engine.G2Engine/StreamExportJSONEntityReport",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2EngineServer).StreamExportJSONEntityReport(ctx, req.(*StreamExportJSONEntityReportRequest))
-	}
-	return interceptor(ctx, in, info, handler)
+	return srv.(G2EngineServer).StreamExportJSONEntityReport(m, &g2EngineStreamExportJSONEntityReportServer{stream})
+}
+
+type G2Engine_StreamExportJSONEntityReportServer interface {
+	Send(*StreamExportJSONEntityReportResponse) error
+	grpc.ServerStream
+}
+
+type g2EngineStreamExportJSONEntityReportServer struct {
+	grpc.ServerStream
+}
+
+func (x *g2EngineStreamExportJSONEntityReportServer) Send(m *StreamExportJSONEntityReportResponse) error {
+	return x.ServerStream.SendMsg(m)
 }
 
 func _G2Engine_WhyEntities_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -2760,14 +2812,6 @@ var G2Engine_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _G2Engine_Stats_Handler,
 		},
 		{
-			MethodName: "StreamExportCSVEntityReport",
-			Handler:    _G2Engine_StreamExportCSVEntityReport_Handler,
-		},
-		{
-			MethodName: "StreamExportJSONEntityReport",
-			Handler:    _G2Engine_StreamExportJSONEntityReport_Handler,
-		},
-		{
 			MethodName: "WhyEntities",
 			Handler:    _G2Engine_WhyEntities_Handler,
 		},
@@ -2800,6 +2844,17 @@ var G2Engine_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _G2Engine_WhyRecords_V2_Handler,
 		},
 	},
-	Streams:  []grpc.StreamDesc{},
+	Streams: []grpc.StreamDesc{
+		{
+			StreamName:    "StreamExportCSVEntityReport",
+			Handler:       _G2Engine_StreamExportCSVEntityReport_Handler,
+			ServerStreams: true,
+		},
+		{
+			StreamName:    "StreamExportJSONEntityReport",
+			Handler:       _G2Engine_StreamExportJSONEntityReport_Handler,
+			ServerStreams: true,
+		},
+	},
 	Metadata: "g2engine.proto",
 }
