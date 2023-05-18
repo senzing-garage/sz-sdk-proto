@@ -1,5 +1,5 @@
 [project]
-name = "senzing-ce-grpc-protobuf"
+name = "senzing_grpc_protobuf"
 version = "0.0.1"
 authors = [
   { name="Senzing", email="support@senzing.com" },
@@ -7,9 +7,12 @@ authors = [
 description = "auto-generated python protobuf for grpc"
 readme = "README.md"
 requires-python = ">=3.6"
+dependencies = [
+    "protobuf >= 4.21.1"
+]
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: Apache License",
+    "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
 ]
 
