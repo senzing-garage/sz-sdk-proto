@@ -1,0 +1,18 @@
+[project]
+name = "senzing-ce-grpc-protobuf"
+version = "0.0.1"
+authors = [
+  { name="Senzing", email="support@senzing.com" },
+]
+description = "auto-generated python protobuf for grpc"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Senzing/g2-sdk-proto"
+"Bug Tracker" = "https://github.com/Senzing/g2-sdk-proto/issues"
