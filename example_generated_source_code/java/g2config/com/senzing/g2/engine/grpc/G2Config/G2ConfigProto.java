@@ -126,30 +126,29 @@ public final class G2ConfigProto {
       "\030\001 \001(\t\022\021\n\tiniParams\030\002 \001(\t\022\026\n\016verboseLogg" +
       "ing\030\003 \001(\005\"\016\n\014InitResponse\".\n\026ListDataSou" +
       "rcesRequest\022\024\n\014configHandle\030\001 \001(\003\")\n\027Lis" +
-      "tDataSourcesResponse\022\016\n\006result\030\001 \001(\t\"7\n\013" +
-      "LoadRequest\022\024\n\014configHandle\030\001 \001(\003\022\022\n\njso" +
-      "nConfig\030\002 \001(\t\"\016\n\014LoadResponse\"#\n\013SaveReq" +
-      "uest\022\024\n\014configHandle\030\001 \001(\003\"\036\n\014SaveRespon" +
-      "se\022\016\n\006result\030\001 \001(\t2\375\004\n\010G2Config\022R\n\rAddDa" +
-      "taSource\022\036.g2config.AddDataSourceRequest" +
-      "\032\037.g2config.AddDataSourceResponse\"\000\022:\n\005C" +
-      "lose\022\026.g2config.CloseRequest\032\027.g2config." +
-      "CloseResponse\"\000\022=\n\006Create\022\027.g2config.Cre" +
-      "ateRequest\032\030.g2config.CreateResponse\"\000\022[" +
-      "\n\020DeleteDataSource\022!.g2config.DeleteData" +
-      "SourceRequest\032\".g2config.DeleteDataSourc" +
-      "eResponse\"\000\022@\n\007Destroy\022\030.g2config.Destro" +
-      "yRequest\032\031.g2config.DestroyResponse\"\000\0227\n" +
-      "\004Init\022\025.g2config.InitRequest\032\026.g2config." +
-      "InitResponse\"\000\022X\n\017ListDataSources\022 .g2co" +
-      "nfig.ListDataSourcesRequest\032!.g2config.L" +
-      "istDataSourcesResponse\"\000\0227\n\004Load\022\025.g2con" +
-      "fig.LoadRequest\032\026.g2config.LoadResponse\"" +
-      "\000\0227\n\004Save\022\025.g2config.SaveRequest\032\026.g2con" +
-      "fig.SaveResponse\"\000Bb\n#com.senzing.g2.eng" +
-      "ine.grpc.G2ConfigB\rG2ConfigProtoP\001Z*gith" +
-      "ub.com/senzing/g2-sdk-go-grpc/g2configb\006" +
-      "proto3"
+      "tDataSourcesResponse\022\016\n\006result\030\001 \001(\t\"!\n\013" +
+      "LoadRequest\022\022\n\njsonConfig\030\001 \001(\t\"\036\n\014LoadR" +
+      "esponse\022\016\n\006result\030\001 \001(\003\"#\n\013SaveRequest\022\024" +
+      "\n\014configHandle\030\001 \001(\003\"\036\n\014SaveResponse\022\016\n\006" +
+      "result\030\001 \001(\t2\375\004\n\010G2Config\022R\n\rAddDataSour" +
+      "ce\022\036.g2config.AddDataSourceRequest\032\037.g2c" +
+      "onfig.AddDataSourceResponse\"\000\022:\n\005Close\022\026" +
+      ".g2config.CloseRequest\032\027.g2config.CloseR" +
+      "esponse\"\000\022=\n\006Create\022\027.g2config.CreateReq" +
+      "uest\032\030.g2config.CreateResponse\"\000\022[\n\020Dele" +
+      "teDataSource\022!.g2config.DeleteDataSource" +
+      "Request\032\".g2config.DeleteDataSourceRespo" +
+      "nse\"\000\022@\n\007Destroy\022\030.g2config.DestroyReque" +
+      "st\032\031.g2config.DestroyResponse\"\000\0227\n\004Init\022" +
+      "\025.g2config.InitRequest\032\026.g2config.InitRe" +
+      "sponse\"\000\022X\n\017ListDataSources\022 .g2config.L" +
+      "istDataSourcesRequest\032!.g2config.ListDat" +
+      "aSourcesResponse\"\000\0227\n\004Load\022\025.g2config.Lo" +
+      "adRequest\032\026.g2config.LoadResponse\"\000\0227\n\004S" +
+      "ave\022\025.g2config.SaveRequest\032\026.g2config.Sa" +
+      "veResponse\"\000Bb\n#com.senzing.g2.engine.gr" +
+      "pc.G2ConfigB\rG2ConfigProtoP\001Z*github.com" +
+      "/senzing/g2-sdk-go-grpc/g2configb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -244,13 +243,13 @@ public final class G2ConfigProto {
     internal_static_g2config_LoadRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2config_LoadRequest_descriptor,
-        new java.lang.String[] { "ConfigHandle", "JsonConfig", });
+        new java.lang.String[] { "JsonConfig", });
     internal_static_g2config_LoadResponse_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_g2config_LoadResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2config_LoadResponse_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Result", });
     internal_static_g2config_SaveRequest_descriptor =
       getDescriptor().getMessageTypes().get(16);
     internal_static_g2config_SaveRequest_fieldAccessorTable = new

@@ -198,7 +198,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR LoadRequest::LoadRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.jsonconfig_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.confighandle_)*/int64_t{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR LoadRequestDefaultTypeInternal()
@@ -210,7 +209,9 @@ struct LoadRequestDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadRequestDefaultTypeInternal _LoadRequest_default_instance_;
 PROTOBUF_CONSTEXPR LoadResponse::LoadResponse(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.result_)*/int64_t{0}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR LoadResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -354,7 +355,6 @@ const uint32_t TableStruct_g2config_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::g2config::LoadRequest, _impl_.confighandle_),
   PROTOBUF_FIELD_OFFSET(::g2config::LoadRequest, _impl_.jsonconfig_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::g2config::LoadResponse, _internal_metadata_),
@@ -362,6 +362,7 @@ const uint32_t TableStruct_g2config_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::g2config::LoadResponse, _impl_.result_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::g2config::SaveRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -393,7 +394,7 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 82, -1, -1, sizeof(::g2config::ListDataSourcesRequest)},
   { 89, -1, -1, sizeof(::g2config::ListDataSourcesResponse)},
   { 96, -1, -1, sizeof(::g2config::LoadRequest)},
-  { 104, -1, -1, sizeof(::g2config::LoadResponse)},
+  { 103, -1, -1, sizeof(::g2config::LoadResponse)},
   { 110, -1, -1, sizeof(::g2config::SaveRequest)},
   { 117, -1, -1, sizeof(::g2config::SaveResponse)},
 };
@@ -433,34 +434,33 @@ const char descriptor_table_protodef_g2config_2eproto[] PROTOBUF_SECTION_VARIABL
   "\030\001 \001(\t\022\021\n\tiniParams\030\002 \001(\t\022\026\n\016verboseLogg"
   "ing\030\003 \001(\005\"\016\n\014InitResponse\".\n\026ListDataSou"
   "rcesRequest\022\024\n\014configHandle\030\001 \001(\003\")\n\027Lis"
-  "tDataSourcesResponse\022\016\n\006result\030\001 \001(\t\"7\n\013"
-  "LoadRequest\022\024\n\014configHandle\030\001 \001(\003\022\022\n\njso"
-  "nConfig\030\002 \001(\t\"\016\n\014LoadResponse\"#\n\013SaveReq"
-  "uest\022\024\n\014configHandle\030\001 \001(\003\"\036\n\014SaveRespon"
-  "se\022\016\n\006result\030\001 \001(\t2\375\004\n\010G2Config\022R\n\rAddDa"
-  "taSource\022\036.g2config.AddDataSourceRequest"
-  "\032\037.g2config.AddDataSourceResponse\"\000\022:\n\005C"
-  "lose\022\026.g2config.CloseRequest\032\027.g2config."
-  "CloseResponse\"\000\022=\n\006Create\022\027.g2config.Cre"
-  "ateRequest\032\030.g2config.CreateResponse\"\000\022["
-  "\n\020DeleteDataSource\022!.g2config.DeleteData"
-  "SourceRequest\032\".g2config.DeleteDataSourc"
-  "eResponse\"\000\022@\n\007Destroy\022\030.g2config.Destro"
-  "yRequest\032\031.g2config.DestroyResponse\"\000\0227\n"
-  "\004Init\022\025.g2config.InitRequest\032\026.g2config."
-  "InitResponse\"\000\022X\n\017ListDataSources\022 .g2co"
-  "nfig.ListDataSourcesRequest\032!.g2config.L"
-  "istDataSourcesResponse\"\000\0227\n\004Load\022\025.g2con"
-  "fig.LoadRequest\032\026.g2config.LoadResponse\""
-  "\000\0227\n\004Save\022\025.g2config.SaveRequest\032\026.g2con"
-  "fig.SaveResponse\"\000Bb\n#com.senzing.g2.eng"
-  "ine.grpc.G2ConfigB\rG2ConfigProtoP\001Z*gith"
-  "ub.com/senzing/g2-sdk-go-grpc/g2configb\006"
-  "proto3"
+  "tDataSourcesResponse\022\016\n\006result\030\001 \001(\t\"!\n\013"
+  "LoadRequest\022\022\n\njsonConfig\030\001 \001(\t\"\036\n\014LoadR"
+  "esponse\022\016\n\006result\030\001 \001(\003\"#\n\013SaveRequest\022\024"
+  "\n\014configHandle\030\001 \001(\003\"\036\n\014SaveResponse\022\016\n\006"
+  "result\030\001 \001(\t2\375\004\n\010G2Config\022R\n\rAddDataSour"
+  "ce\022\036.g2config.AddDataSourceRequest\032\037.g2c"
+  "onfig.AddDataSourceResponse\"\000\022:\n\005Close\022\026"
+  ".g2config.CloseRequest\032\027.g2config.CloseR"
+  "esponse\"\000\022=\n\006Create\022\027.g2config.CreateReq"
+  "uest\032\030.g2config.CreateResponse\"\000\022[\n\020Dele"
+  "teDataSource\022!.g2config.DeleteDataSource"
+  "Request\032\".g2config.DeleteDataSourceRespo"
+  "nse\"\000\022@\n\007Destroy\022\030.g2config.DestroyReque"
+  "st\032\031.g2config.DestroyResponse\"\000\0227\n\004Init\022"
+  "\025.g2config.InitRequest\032\026.g2config.InitRe"
+  "sponse\"\000\022X\n\017ListDataSources\022 .g2config.L"
+  "istDataSourcesRequest\032!.g2config.ListDat"
+  "aSourcesResponse\"\000\0227\n\004Load\022\025.g2config.Lo"
+  "adRequest\032\026.g2config.LoadResponse\"\000\0227\n\004S"
+  "ave\022\025.g2config.SaveRequest\032\026.g2config.Sa"
+  "veResponse\"\000Bb\n#com.senzing.g2.engine.gr"
+  "pc.G2ConfigB\rG2ConfigProtoP\001Z*github.com"
+  "/senzing/g2-sdk-go-grpc/g2configb\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_g2config_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_g2config_2eproto = {
-    false, false, 1446, descriptor_table_protodef_g2config_2eproto,
+    false, false, 1440, descriptor_table_protodef_g2config_2eproto,
     "g2config.proto",
     &descriptor_table_g2config_2eproto_once, nullptr, 0, 18,
     schemas, file_default_instances, TableStruct_g2config_2eproto::offsets,
@@ -2412,7 +2412,6 @@ LoadRequest::LoadRequest(const LoadRequest& from)
   LoadRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.jsonconfig_){}
-    , decltype(_impl_.confighandle_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -2424,7 +2423,6 @@ LoadRequest::LoadRequest(const LoadRequest& from)
     _this->_impl_.jsonconfig_.Set(from._internal_jsonconfig(), 
       _this->GetArenaForAllocation());
   }
-  _this->_impl_.confighandle_ = from._impl_.confighandle_;
   // @@protoc_insertion_point(copy_constructor:g2config.LoadRequest)
 }
 
@@ -2434,7 +2432,6 @@ inline void LoadRequest::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.jsonconfig_){}
-    , decltype(_impl_.confighandle_){int64_t{0}}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.jsonconfig_.InitDefault();
@@ -2468,7 +2465,6 @@ void LoadRequest::Clear() {
   (void) cached_has_bits;
 
   _impl_.jsonconfig_.ClearToEmpty();
-  _impl_.confighandle_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -2478,17 +2474,9 @@ const char* LoadRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // int64 configHandle = 1;
+      // string jsonConfig = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.confighandle_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      // string jsonConfig = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_jsonconfig();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
@@ -2525,20 +2513,14 @@ uint8_t* LoadRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // int64 configHandle = 1;
-  if (this->_internal_confighandle() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_confighandle(), target);
-  }
-
-  // string jsonConfig = 2;
+  // string jsonConfig = 1;
   if (!this->_internal_jsonconfig().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_jsonconfig().data(), static_cast<int>(this->_internal_jsonconfig().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "g2config.LoadRequest.jsonConfig");
     target = stream->WriteStringMaybeAliased(
-        2, this->_internal_jsonconfig(), target);
+        1, this->_internal_jsonconfig(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2557,16 +2539,11 @@ size_t LoadRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string jsonConfig = 2;
+  // string jsonConfig = 1;
   if (!this->_internal_jsonconfig().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_jsonconfig());
-  }
-
-  // int64 configHandle = 1;
-  if (this->_internal_confighandle() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_confighandle());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -2589,9 +2566,6 @@ void LoadRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PR
 
   if (!from._internal_jsonconfig().empty()) {
     _this->_internal_set_jsonconfig(from._internal_jsonconfig());
-  }
-  if (from._internal_confighandle() != 0) {
-    _this->_internal_set_confighandle(from._internal_confighandle());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -2616,7 +2590,6 @@ void LoadRequest::InternalSwap(LoadRequest* other) {
       &_impl_.jsonconfig_, lhs_arena,
       &other->_impl_.jsonconfig_, rhs_arena
   );
-  swap(_impl_.confighandle_, other->_impl_.confighandle_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadRequest::GetMetadata() const {
@@ -2633,31 +2606,169 @@ class LoadResponse::_Internal {
 
 LoadResponse::LoadResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:g2config.LoadResponse)
 }
 LoadResponse::LoadResponse(const LoadResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   LoadResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.result_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_impl_.result_ = from._impl_.result_;
   // @@protoc_insertion_point(copy_constructor:g2config.LoadResponse)
 }
 
+inline void LoadResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.result_){int64_t{0}}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
 
+LoadResponse::~LoadResponse() {
+  // @@protoc_insertion_point(destructor:g2config.LoadResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
 
+inline void LoadResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
 
+void LoadResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void LoadResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:g2config.LoadResponse)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.result_ = int64_t{0};
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* LoadResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int64 result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* LoadResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:g2config.LoadResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 result = 1;
+  if (this->_internal_result() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_result(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:g2config.LoadResponse)
+  return target;
+}
+
+size_t LoadResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:g2config.LoadResponse)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int64 result = 1;
+  if (this->_internal_result() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_result());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
 
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadResponse::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LoadResponse::MergeImpl
 };
 const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadResponse::GetClassData() const { return &_class_data_; }
 
 
+void LoadResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LoadResponse*>(&to_msg);
+  auto& from = static_cast<const LoadResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:g2config.LoadResponse)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
+  if (from._internal_result() != 0) {
+    _this->_internal_set_result(from._internal_result());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
 
+void LoadResponse::CopyFrom(const LoadResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:g2config.LoadResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
 
+bool LoadResponse::IsInitialized() const {
+  return true;
+}
 
+void LoadResponse::InternalSwap(LoadResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.result_, other->_impl_.result_);
+}
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(

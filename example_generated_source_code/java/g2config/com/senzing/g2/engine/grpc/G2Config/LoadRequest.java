@@ -49,12 +49,7 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 8: {
-
-            configHandle_ = input.readInt64();
-            break;
-          }
-          case 18: {
+          case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
             jsonConfig_ = s;
@@ -94,21 +89,10 @@ private static final long serialVersionUID = 0L;
             com.senzing.g2.engine.grpc.G2Config.LoadRequest.class, com.senzing.g2.engine.grpc.G2Config.LoadRequest.Builder.class);
   }
 
-  public static final int CONFIGHANDLE_FIELD_NUMBER = 1;
-  private long configHandle_;
-  /**
-   * <code>int64 configHandle = 1;</code>
-   * @return The configHandle.
-   */
-  @java.lang.Override
-  public long getConfigHandle() {
-    return configHandle_;
-  }
-
-  public static final int JSONCONFIG_FIELD_NUMBER = 2;
+  public static final int JSONCONFIG_FIELD_NUMBER = 1;
   private volatile java.lang.Object jsonConfig_;
   /**
-   * <code>string jsonConfig = 2;</code>
+   * <code>string jsonConfig = 1;</code>
    * @return The jsonConfig.
    */
   @java.lang.Override
@@ -125,7 +109,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string jsonConfig = 2;</code>
+   * <code>string jsonConfig = 1;</code>
    * @return The bytes for jsonConfig.
    */
   @java.lang.Override
@@ -157,11 +141,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (configHandle_ != 0L) {
-      output.writeInt64(1, configHandle_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonConfig_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, jsonConfig_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, jsonConfig_);
     }
     unknownFields.writeTo(output);
   }
@@ -172,12 +153,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (configHandle_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, configHandle_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonConfig_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, jsonConfig_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, jsonConfig_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -194,8 +171,6 @@ private static final long serialVersionUID = 0L;
     }
     com.senzing.g2.engine.grpc.G2Config.LoadRequest other = (com.senzing.g2.engine.grpc.G2Config.LoadRequest) obj;
 
-    if (getConfigHandle()
-        != other.getConfigHandle()) return false;
     if (!getJsonConfig()
         .equals(other.getJsonConfig())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -209,9 +184,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + CONFIGHANDLE_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getConfigHandle());
     hash = (37 * hash) + JSONCONFIG_FIELD_NUMBER;
     hash = (53 * hash) + getJsonConfig().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
@@ -347,8 +319,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      configHandle_ = 0L;
-
       jsonConfig_ = "";
 
       return this;
@@ -377,7 +347,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.senzing.g2.engine.grpc.G2Config.LoadRequest buildPartial() {
       com.senzing.g2.engine.grpc.G2Config.LoadRequest result = new com.senzing.g2.engine.grpc.G2Config.LoadRequest(this);
-      result.configHandle_ = configHandle_;
       result.jsonConfig_ = jsonConfig_;
       onBuilt();
       return result;
@@ -427,9 +396,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.senzing.g2.engine.grpc.G2Config.LoadRequest other) {
       if (other == com.senzing.g2.engine.grpc.G2Config.LoadRequest.getDefaultInstance()) return this;
-      if (other.getConfigHandle() != 0L) {
-        setConfigHandle(other.getConfigHandle());
-      }
       if (!other.getJsonConfig().isEmpty()) {
         jsonConfig_ = other.jsonConfig_;
         onChanged();
@@ -463,40 +429,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long configHandle_ ;
-    /**
-     * <code>int64 configHandle = 1;</code>
-     * @return The configHandle.
-     */
-    @java.lang.Override
-    public long getConfigHandle() {
-      return configHandle_;
-    }
-    /**
-     * <code>int64 configHandle = 1;</code>
-     * @param value The configHandle to set.
-     * @return This builder for chaining.
-     */
-    public Builder setConfigHandle(long value) {
-      
-      configHandle_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int64 configHandle = 1;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearConfigHandle() {
-      
-      configHandle_ = 0L;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object jsonConfig_ = "";
     /**
-     * <code>string jsonConfig = 2;</code>
+     * <code>string jsonConfig = 1;</code>
      * @return The jsonConfig.
      */
     public java.lang.String getJsonConfig() {
@@ -512,7 +447,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string jsonConfig = 2;</code>
+     * <code>string jsonConfig = 1;</code>
      * @return The bytes for jsonConfig.
      */
     public com.google.protobuf.ByteString
@@ -529,7 +464,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string jsonConfig = 2;</code>
+     * <code>string jsonConfig = 1;</code>
      * @param value The jsonConfig to set.
      * @return This builder for chaining.
      */
@@ -544,7 +479,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string jsonConfig = 2;</code>
+     * <code>string jsonConfig = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearJsonConfig() {
@@ -554,7 +489,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string jsonConfig = 2;</code>
+     * <code>string jsonConfig = 1;</code>
      * @param value The bytes for jsonConfig to set.
      * @return This builder for chaining.
      */

@@ -14,11 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class LoadRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int64 configHandle = 1;</code>
-     */
-    protected $configHandle = 0;
-    /**
-     * Generated from protobuf field <code>string jsonConfig = 2;</code>
+     * Generated from protobuf field <code>string jsonConfig = 1;</code>
      */
     protected $jsonConfig = '';
 
@@ -28,7 +24,6 @@ class LoadRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int|string $configHandle
      *     @type string $jsonConfig
      * }
      */
@@ -38,29 +33,7 @@ class LoadRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 configHandle = 1;</code>
-     * @return int|string
-     */
-    public function getConfigHandle()
-    {
-        return $this->configHandle;
-    }
-
-    /**
-     * Generated from protobuf field <code>int64 configHandle = 1;</code>
-     * @param int|string $var
-     * @return $this
-     */
-    public function setConfigHandle($var)
-    {
-        GPBUtil::checkInt64($var);
-        $this->configHandle = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>string jsonConfig = 2;</code>
+     * Generated from protobuf field <code>string jsonConfig = 1;</code>
      * @return string
      */
     public function getJsonConfig()
@@ -69,7 +42,7 @@ class LoadRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string jsonConfig = 2;</code>
+     * Generated from protobuf field <code>string jsonConfig = 1;</code>
      * @param string $var
      * @return $this
      */
