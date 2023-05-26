@@ -48,6 +48,11 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
+          case 8: {
+
+            result_ = input.readInt64();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -82,6 +87,17 @@ private static final long serialVersionUID = 0L;
             com.senzing.g2.engine.grpc.G2Config.LoadResponse.class, com.senzing.g2.engine.grpc.G2Config.LoadResponse.Builder.class);
   }
 
+  public static final int RESULT_FIELD_NUMBER = 1;
+  private long result_;
+  /**
+   * <code>int64 result = 1;</code>
+   * @return The result.
+   */
+  @java.lang.Override
+  public long getResult() {
+    return result_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -96,6 +112,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (result_ != 0L) {
+      output.writeInt64(1, result_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -105,6 +124,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (result_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(1, result_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -120,6 +143,8 @@ private static final long serialVersionUID = 0L;
     }
     com.senzing.g2.engine.grpc.G2Config.LoadResponse other = (com.senzing.g2.engine.grpc.G2Config.LoadResponse) obj;
 
+    if (getResult()
+        != other.getResult()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -131,6 +156,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + RESULT_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getResult());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -264,6 +292,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      result_ = 0L;
+
       return this;
     }
 
@@ -290,6 +320,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.senzing.g2.engine.grpc.G2Config.LoadResponse buildPartial() {
       com.senzing.g2.engine.grpc.G2Config.LoadResponse result = new com.senzing.g2.engine.grpc.G2Config.LoadResponse(this);
+      result.result_ = result_;
       onBuilt();
       return result;
     }
@@ -338,6 +369,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.senzing.g2.engine.grpc.G2Config.LoadResponse other) {
       if (other == com.senzing.g2.engine.grpc.G2Config.LoadResponse.getDefaultInstance()) return this;
+      if (other.getResult() != 0L) {
+        setResult(other.getResult());
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -364,6 +398,37 @@ private static final long serialVersionUID = 0L;
           mergeFrom(parsedMessage);
         }
       }
+      return this;
+    }
+
+    private long result_ ;
+    /**
+     * <code>int64 result = 1;</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public long getResult() {
+      return result_;
+    }
+    /**
+     * <code>int64 result = 1;</code>
+     * @param value The result to set.
+     * @return This builder for chaining.
+     */
+    public Builder setResult(long value) {
+      
+      result_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 result = 1;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearResult() {
+      
+      result_ = 0L;
+      onChanged();
       return this;
     }
     @java.lang.Override

@@ -66,11 +66,11 @@ message ListDataSourcesResponse {
 }
 
 message LoadRequest {
-  int64 configHandle = 1;
-  string jsonConfig = 2;
+  string jsonConfig = 1;
 }
 
 message LoadResponse {
+  int64 result = 1;
 }
 
 message SaveRequest {

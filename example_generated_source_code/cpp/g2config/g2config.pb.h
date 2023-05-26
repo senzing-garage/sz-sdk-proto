@@ -2212,10 +2212,9 @@ class LoadRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kJsonConfigFieldNumber = 2,
-    kConfigHandleFieldNumber = 1,
+    kJsonConfigFieldNumber = 1,
   };
-  // string jsonConfig = 2;
+  // string jsonConfig = 1;
   void clear_jsonconfig();
   const std::string& jsonconfig() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2229,15 +2228,6 @@ class LoadRequest final :
   std::string* _internal_mutable_jsonconfig();
   public:
 
-  // int64 configHandle = 1;
-  void clear_confighandle();
-  int64_t confighandle() const;
-  void set_confighandle(int64_t value);
-  private:
-  int64_t _internal_confighandle() const;
-  void _internal_set_confighandle(int64_t value);
-  public:
-
   // @@protoc_insertion_point(class_scope:g2config.LoadRequest)
  private:
   class _Internal;
@@ -2247,7 +2237,6 @@ class LoadRequest final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr jsonconfig_;
-    int64_t confighandle_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2256,9 +2245,10 @@ class LoadRequest final :
 // -------------------------------------------------------------------
 
 class LoadResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:g2config.LoadResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:g2config.LoadResponse) */ {
  public:
   inline LoadResponse() : LoadResponse(nullptr) {}
+  ~LoadResponse() override;
   explicit PROTOBUF_CONSTEXPR LoadResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   LoadResponse(const LoadResponse& from);
@@ -2331,15 +2321,29 @@ class LoadResponse final :
   LoadResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<LoadResponse>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const LoadResponse& from) {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const LoadResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const LoadResponse& from) {
+    LoadResponse::MergeImpl(*this, from);
   }
-  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const LoadResponse& from) {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
   public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(LoadResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -2360,6 +2364,18 @@ class LoadResponse final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kResultFieldNumber = 1,
+  };
+  // int64 result = 1;
+  void clear_result();
+  int64_t result() const;
+  void set_result(int64_t value);
+  private:
+  int64_t _internal_result() const;
+  void _internal_set_result(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:g2config.LoadResponse)
  private:
   class _Internal;
@@ -2368,7 +2384,10 @@ class LoadResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    int64_t result_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
+  union { Impl_ _impl_; };
   friend struct ::TableStruct_g2config_2eproto;
 };
 // -------------------------------------------------------------------
@@ -3159,27 +3178,7 @@ inline void ListDataSourcesResponse::set_allocated_result(std::string* result) {
 
 // LoadRequest
 
-// int64 configHandle = 1;
-inline void LoadRequest::clear_confighandle() {
-  _impl_.confighandle_ = int64_t{0};
-}
-inline int64_t LoadRequest::_internal_confighandle() const {
-  return _impl_.confighandle_;
-}
-inline int64_t LoadRequest::confighandle() const {
-  // @@protoc_insertion_point(field_get:g2config.LoadRequest.configHandle)
-  return _internal_confighandle();
-}
-inline void LoadRequest::_internal_set_confighandle(int64_t value) {
-  
-  _impl_.confighandle_ = value;
-}
-inline void LoadRequest::set_confighandle(int64_t value) {
-  _internal_set_confighandle(value);
-  // @@protoc_insertion_point(field_set:g2config.LoadRequest.configHandle)
-}
-
-// string jsonConfig = 2;
+// string jsonConfig = 1;
 inline void LoadRequest::clear_jsonconfig() {
   _impl_.jsonconfig_.ClearToEmpty();
 }
@@ -3232,6 +3231,26 @@ inline void LoadRequest::set_allocated_jsonconfig(std::string* jsonconfig) {
 // -------------------------------------------------------------------
 
 // LoadResponse
+
+// int64 result = 1;
+inline void LoadResponse::clear_result() {
+  _impl_.result_ = int64_t{0};
+}
+inline int64_t LoadResponse::_internal_result() const {
+  return _impl_.result_;
+}
+inline int64_t LoadResponse::result() const {
+  // @@protoc_insertion_point(field_get:g2config.LoadResponse.result)
+  return _internal_result();
+}
+inline void LoadResponse::_internal_set_result(int64_t value) {
+  
+  _impl_.result_ = value;
+}
+inline void LoadResponse::set_result(int64_t value) {
+  _internal_set_result(value);
+  // @@protoc_insertion_point(field_set:g2config.LoadResponse.result)
+}
 
 // -------------------------------------------------------------------
 

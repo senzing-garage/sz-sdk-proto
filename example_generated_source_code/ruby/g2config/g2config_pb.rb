@@ -46,10 +46,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :result, :string, 1
     end
     add_message "g2config.LoadRequest" do
-      optional :configHandle, :int64, 1
-      optional :jsonConfig, :string, 2
+      optional :jsonConfig, :string, 1
     end
     add_message "g2config.LoadResponse" do
+      optional :result, :int64, 1
     end
     add_message "g2config.SaveRequest" do
       optional :configHandle, :int64, 1
