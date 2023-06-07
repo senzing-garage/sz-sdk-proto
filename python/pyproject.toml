@@ -1,6 +1,6 @@
 [project]
 name = "senzing_grpc_protobuf"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="Senzing", email="support@senzing.com" },
 ]
@@ -8,7 +8,8 @@ description = "auto-generated python protobuf for grpc"
 readme = "README.md"
 requires-python = ">=3.6"
 dependencies = [
-    "protobuf >= 4.21.1"
+    "protobuf >= 4.21.1",
+    "grpcio >= 1.54.2"
 ]
 classifiers = [
     "Programming Language :: Python :: 3",

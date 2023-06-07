@@ -26,6 +26,6 @@ It also contains:
    Example:
 
     ```console
-    pip install senzing-ce-grpc-protobuf
+    pip install senzing_grpc_protobuf
     ```
 
