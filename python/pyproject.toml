@@ -1,6 +1,6 @@
 [project]
 name = "senzing_grpc_protobuf"
-version = "0.0.2"
+version = "0.0.3"
 authors = [
   { name="Senzing", email="support@senzing.com" },
 ]
