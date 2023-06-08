@@ -8,18 +8,12 @@ public interface LoadRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 configHandle = 1;</code>
-   * @return The configHandle.
-   */
-  long getConfigHandle();
-
-  /**
-   * <code>string jsonConfig = 2;</code>
+   * <code>string jsonConfig = 1;</code>
    * @return The jsonConfig.
    */
   java.lang.String getJsonConfig();
   /**
-   * <code>string jsonConfig = 2;</code>
+   * <code>string jsonConfig = 1;</code>
    * @return The bytes for jsonConfig.
    */
   com.google.protobuf.ByteString

@@ -6,4 +6,10 @@ package com.senzing.g2.engine.grpc.G2Config;
 public interface LoadResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:g2config.LoadResponse)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <code>int64 result = 1;</code>
+   * @return The result.
+   */
+  long getResult();
 }

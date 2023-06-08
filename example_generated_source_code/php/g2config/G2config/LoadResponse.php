@@ -13,6 +13,10 @@ use Google\Protobuf\Internal\GPBUtil;
  */
 class LoadResponse extends \Google\Protobuf\Internal\Message
 {
+    /**
+     * Generated from protobuf field <code>int64 result = 1;</code>
+     */
+    protected $result = 0;
 
     /**
      * Constructor.
@@ -20,11 +24,34 @@ class LoadResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type int|string $result
      * }
      */
     public function __construct($data = NULL) {
         \GPBMetadata\G2Config::initOnce();
         parent::__construct($data);
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 result = 1;</code>
+     * @return int|string
+     */
+    public function getResult()
+    {
+        return $this->result;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 result = 1;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setResult($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->result = $var;
+
+        return $this;
     }
 
 }
