@@ -45,48 +45,6 @@ class G2EngineClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \G2engine\AddRecordWithInfoWithReturnedRecordIDRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function AddRecordWithInfoWithReturnedRecordID(\G2engine\AddRecordWithInfoWithReturnedRecordIDRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Engine/AddRecordWithInfoWithReturnedRecordID',
-        $argument,
-        ['\G2engine\AddRecordWithInfoWithReturnedRecordIDResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2engine\AddRecordWithReturnedRecordIDRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function AddRecordWithReturnedRecordID(\G2engine\AddRecordWithReturnedRecordIDRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Engine/AddRecordWithReturnedRecordID',
-        $argument,
-        ['\G2engine\AddRecordWithReturnedRecordIDResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2engine\CheckRecordRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function CheckRecord(\G2engine\CheckRecordRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Engine/CheckRecord',
-        $argument,
-        ['\G2engine\CheckRecordResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \G2engine\CloseExportRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -717,34 +675,6 @@ class G2EngineClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \G2engine\ProcessRedoRecordRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function ProcessRedoRecord(\G2engine\ProcessRedoRecordRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Engine/ProcessRedoRecord',
-        $argument,
-        ['\G2engine\ProcessRedoRecordResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2engine\ProcessRedoRecordWithInfoRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function ProcessRedoRecordWithInfo(\G2engine\ProcessRedoRecordWithInfoRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Engine/ProcessRedoRecordWithInfo',
-        $argument,
-        ['\G2engine\ProcessRedoRecordWithInfoResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \G2engine\ProcessWithInfoRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -755,34 +685,6 @@ class G2EngineClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/g2engine.G2Engine/ProcessWithInfo',
         $argument,
         ['\G2engine\ProcessWithInfoResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2engine\ProcessWithResponseRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function ProcessWithResponse(\G2engine\ProcessWithResponseRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Engine/ProcessWithResponse',
-        $argument,
-        ['\G2engine\ProcessWithResponseResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2engine\ProcessWithResponseResizeRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function ProcessWithResponseResize(\G2engine\ProcessWithResponseResizeRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Engine/ProcessWithResponseResize',
-        $argument,
-        ['\G2engine\ProcessWithResponseResizeResponse', 'decode'],
         $metadata, $options);
     }
 

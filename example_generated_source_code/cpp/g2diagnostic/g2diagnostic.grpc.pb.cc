@@ -23,24 +23,11 @@ namespace g2diagnostic {
 
 static const char* G2Diagnostic_method_names[] = {
   "/g2diagnostic.G2Diagnostic/CheckDBPerf",
-  "/g2diagnostic.G2Diagnostic/CloseEntityListBySize",
   "/g2diagnostic.G2Diagnostic/Destroy",
-  "/g2diagnostic.G2Diagnostic/FetchNextEntityBySize",
-  "/g2diagnostic.G2Diagnostic/FindEntitiesByFeatureIDs",
   "/g2diagnostic.G2Diagnostic/GetAvailableMemory",
-  "/g2diagnostic.G2Diagnostic/GetDataSourceCounts",
   "/g2diagnostic.G2Diagnostic/GetDBInfo",
-  "/g2diagnostic.G2Diagnostic/GetEntityDetails",
-  "/g2diagnostic.G2Diagnostic/GetEntityListBySize",
-  "/g2diagnostic.G2Diagnostic/GetEntityResume",
-  "/g2diagnostic.G2Diagnostic/GetEntitySizeBreakdown",
-  "/g2diagnostic.G2Diagnostic/GetFeature",
-  "/g2diagnostic.G2Diagnostic/GetGenericFeatures",
   "/g2diagnostic.G2Diagnostic/GetLogicalCores",
-  "/g2diagnostic.G2Diagnostic/GetMappingStatistics",
   "/g2diagnostic.G2Diagnostic/GetPhysicalCores",
-  "/g2diagnostic.G2Diagnostic/GetRelationshipDetails",
-  "/g2diagnostic.G2Diagnostic/GetResolutionStatistics",
   "/g2diagnostic.G2Diagnostic/GetTotalSystemMemory",
   "/g2diagnostic.G2Diagnostic/Init",
   "/g2diagnostic.G2Diagnostic/InitWithConfigID",
@@ -56,29 +43,16 @@ std::unique_ptr< G2Diagnostic::Stub> G2Diagnostic::NewStub(const std::shared_ptr
 
 G2Diagnostic::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
   : channel_(channel), rpcmethod_CheckDBPerf_(G2Diagnostic_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_CloseEntityListBySize_(G2Diagnostic_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Destroy_(G2Diagnostic_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_FetchNextEntityBySize_(G2Diagnostic_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_FindEntitiesByFeatureIDs_(G2Diagnostic_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetAvailableMemory_(G2Diagnostic_method_names[5], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetDataSourceCounts_(G2Diagnostic_method_names[6], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetDBInfo_(G2Diagnostic_method_names[7], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetEntityDetails_(G2Diagnostic_method_names[8], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetEntityListBySize_(G2Diagnostic_method_names[9], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetEntityResume_(G2Diagnostic_method_names[10], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetEntitySizeBreakdown_(G2Diagnostic_method_names[11], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetFeature_(G2Diagnostic_method_names[12], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetGenericFeatures_(G2Diagnostic_method_names[13], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetLogicalCores_(G2Diagnostic_method_names[14], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetMappingStatistics_(G2Diagnostic_method_names[15], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetPhysicalCores_(G2Diagnostic_method_names[16], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetRelationshipDetails_(G2Diagnostic_method_names[17], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetResolutionStatistics_(G2Diagnostic_method_names[18], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetTotalSystemMemory_(G2Diagnostic_method_names[19], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Init_(G2Diagnostic_method_names[20], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_InitWithConfigID_(G2Diagnostic_method_names[21], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Reinit_(G2Diagnostic_method_names[22], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_StreamEntityListBySize_(G2Diagnostic_method_names[23], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_Destroy_(G2Diagnostic_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetAvailableMemory_(G2Diagnostic_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetDBInfo_(G2Diagnostic_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetLogicalCores_(G2Diagnostic_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetPhysicalCores_(G2Diagnostic_method_names[5], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetTotalSystemMemory_(G2Diagnostic_method_names[6], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Init_(G2Diagnostic_method_names[7], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_InitWithConfigID_(G2Diagnostic_method_names[8], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Reinit_(G2Diagnostic_method_names[9], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_StreamEntityListBySize_(G2Diagnostic_method_names[10], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
   {}
 
 ::grpc::Status G2Diagnostic::Stub::CheckDBPerf(::grpc::ClientContext* context, const ::g2diagnostic::CheckDBPerfRequest& request, ::g2diagnostic::CheckDBPerfResponse* response) {
@@ -100,29 +74,6 @@ void G2Diagnostic::Stub::async::CheckDBPerf(::grpc::ClientContext* context, cons
 ::grpc::ClientAsyncResponseReader< ::g2diagnostic::CheckDBPerfResponse>* G2Diagnostic::Stub::AsyncCheckDBPerfRaw(::grpc::ClientContext* context, const ::g2diagnostic::CheckDBPerfRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncCheckDBPerfRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Diagnostic::Stub::CloseEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::CloseEntityListBySizeRequest& request, ::g2diagnostic::CloseEntityListBySizeResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::CloseEntityListBySizeRequest, ::g2diagnostic::CloseEntityListBySizeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_CloseEntityListBySize_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::CloseEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::CloseEntityListBySizeRequest* request, ::g2diagnostic::CloseEntityListBySizeResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::CloseEntityListBySizeRequest, ::g2diagnostic::CloseEntityListBySizeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CloseEntityListBySize_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::CloseEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::CloseEntityListBySizeRequest* request, ::g2diagnostic::CloseEntityListBySizeResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CloseEntityListBySize_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::CloseEntityListBySizeResponse>* G2Diagnostic::Stub::PrepareAsyncCloseEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::CloseEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::CloseEntityListBySizeResponse, ::g2diagnostic::CloseEntityListBySizeRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_CloseEntityListBySize_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::CloseEntityListBySizeResponse>* G2Diagnostic::Stub::AsyncCloseEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::CloseEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncCloseEntityListBySizeRaw(context, request, cq);
   result->StartCall();
   return result;
 }
@@ -150,52 +101,6 @@ void G2Diagnostic::Stub::async::Destroy(::grpc::ClientContext* context, const ::
   return result;
 }
 
-::grpc::Status G2Diagnostic::Stub::FetchNextEntityBySize(::grpc::ClientContext* context, const ::g2diagnostic::FetchNextEntityBySizeRequest& request, ::g2diagnostic::FetchNextEntityBySizeResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::FetchNextEntityBySizeRequest, ::g2diagnostic::FetchNextEntityBySizeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_FetchNextEntityBySize_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::FetchNextEntityBySize(::grpc::ClientContext* context, const ::g2diagnostic::FetchNextEntityBySizeRequest* request, ::g2diagnostic::FetchNextEntityBySizeResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::FetchNextEntityBySizeRequest, ::g2diagnostic::FetchNextEntityBySizeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_FetchNextEntityBySize_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::FetchNextEntityBySize(::grpc::ClientContext* context, const ::g2diagnostic::FetchNextEntityBySizeRequest* request, ::g2diagnostic::FetchNextEntityBySizeResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_FetchNextEntityBySize_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::FetchNextEntityBySizeResponse>* G2Diagnostic::Stub::PrepareAsyncFetchNextEntityBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::FetchNextEntityBySizeRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::FetchNextEntityBySizeResponse, ::g2diagnostic::FetchNextEntityBySizeRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_FetchNextEntityBySize_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::FetchNextEntityBySizeResponse>* G2Diagnostic::Stub::AsyncFetchNextEntityBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::FetchNextEntityBySizeRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncFetchNextEntityBySizeRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Diagnostic::Stub::FindEntitiesByFeatureIDs(::grpc::ClientContext* context, const ::g2diagnostic::FindEntitiesByFeatureIDsRequest& request, ::g2diagnostic::FindEntitiesByFeatureIDsResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::FindEntitiesByFeatureIDsRequest, ::g2diagnostic::FindEntitiesByFeatureIDsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_FindEntitiesByFeatureIDs_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::FindEntitiesByFeatureIDs(::grpc::ClientContext* context, const ::g2diagnostic::FindEntitiesByFeatureIDsRequest* request, ::g2diagnostic::FindEntitiesByFeatureIDsResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::FindEntitiesByFeatureIDsRequest, ::g2diagnostic::FindEntitiesByFeatureIDsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_FindEntitiesByFeatureIDs_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::FindEntitiesByFeatureIDs(::grpc::ClientContext* context, const ::g2diagnostic::FindEntitiesByFeatureIDsRequest* request, ::g2diagnostic::FindEntitiesByFeatureIDsResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_FindEntitiesByFeatureIDs_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::FindEntitiesByFeatureIDsResponse>* G2Diagnostic::Stub::PrepareAsyncFindEntitiesByFeatureIDsRaw(::grpc::ClientContext* context, const ::g2diagnostic::FindEntitiesByFeatureIDsRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::FindEntitiesByFeatureIDsResponse, ::g2diagnostic::FindEntitiesByFeatureIDsRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_FindEntitiesByFeatureIDs_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::FindEntitiesByFeatureIDsResponse>* G2Diagnostic::Stub::AsyncFindEntitiesByFeatureIDsRaw(::grpc::ClientContext* context, const ::g2diagnostic::FindEntitiesByFeatureIDsRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncFindEntitiesByFeatureIDsRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
 ::grpc::Status G2Diagnostic::Stub::GetAvailableMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest& request, ::g2diagnostic::GetAvailableMemoryResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetAvailableMemoryRequest, ::g2diagnostic::GetAvailableMemoryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetAvailableMemory_, context, request, response);
 }
@@ -215,29 +120,6 @@ void G2Diagnostic::Stub::async::GetAvailableMemory(::grpc::ClientContext* contex
 ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetAvailableMemoryResponse>* G2Diagnostic::Stub::AsyncGetAvailableMemoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncGetAvailableMemoryRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Diagnostic::Stub::GetDataSourceCounts(::grpc::ClientContext* context, const ::g2diagnostic::GetDataSourceCountsRequest& request, ::g2diagnostic::GetDataSourceCountsResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetDataSourceCountsRequest, ::g2diagnostic::GetDataSourceCountsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetDataSourceCounts_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::GetDataSourceCounts(::grpc::ClientContext* context, const ::g2diagnostic::GetDataSourceCountsRequest* request, ::g2diagnostic::GetDataSourceCountsResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::GetDataSourceCountsRequest, ::g2diagnostic::GetDataSourceCountsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetDataSourceCounts_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::GetDataSourceCounts(::grpc::ClientContext* context, const ::g2diagnostic::GetDataSourceCountsRequest* request, ::g2diagnostic::GetDataSourceCountsResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetDataSourceCounts_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetDataSourceCountsResponse>* G2Diagnostic::Stub::PrepareAsyncGetDataSourceCountsRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetDataSourceCountsRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::GetDataSourceCountsResponse, ::g2diagnostic::GetDataSourceCountsRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetDataSourceCounts_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetDataSourceCountsResponse>* G2Diagnostic::Stub::AsyncGetDataSourceCountsRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetDataSourceCountsRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetDataSourceCountsRaw(context, request, cq);
   result->StartCall();
   return result;
 }
@@ -265,144 +147,6 @@ void G2Diagnostic::Stub::async::GetDBInfo(::grpc::ClientContext* context, const 
   return result;
 }
 
-::grpc::Status G2Diagnostic::Stub::GetEntityDetails(::grpc::ClientContext* context, const ::g2diagnostic::GetEntityDetailsRequest& request, ::g2diagnostic::GetEntityDetailsResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetEntityDetailsRequest, ::g2diagnostic::GetEntityDetailsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetEntityDetails_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::GetEntityDetails(::grpc::ClientContext* context, const ::g2diagnostic::GetEntityDetailsRequest* request, ::g2diagnostic::GetEntityDetailsResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::GetEntityDetailsRequest, ::g2diagnostic::GetEntityDetailsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetEntityDetails_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::GetEntityDetails(::grpc::ClientContext* context, const ::g2diagnostic::GetEntityDetailsRequest* request, ::g2diagnostic::GetEntityDetailsResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetEntityDetails_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetEntityDetailsResponse>* G2Diagnostic::Stub::PrepareAsyncGetEntityDetailsRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetEntityDetailsRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::GetEntityDetailsResponse, ::g2diagnostic::GetEntityDetailsRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetEntityDetails_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetEntityDetailsResponse>* G2Diagnostic::Stub::AsyncGetEntityDetailsRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetEntityDetailsRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetEntityDetailsRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Diagnostic::Stub::GetEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::GetEntityListBySizeRequest& request, ::g2diagnostic::GetEntityListBySizeResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetEntityListBySizeRequest, ::g2diagnostic::GetEntityListBySizeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetEntityListBySize_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::GetEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::GetEntityListBySizeRequest* request, ::g2diagnostic::GetEntityListBySizeResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::GetEntityListBySizeRequest, ::g2diagnostic::GetEntityListBySizeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetEntityListBySize_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::GetEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::GetEntityListBySizeRequest* request, ::g2diagnostic::GetEntityListBySizeResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetEntityListBySize_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetEntityListBySizeResponse>* G2Diagnostic::Stub::PrepareAsyncGetEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::GetEntityListBySizeResponse, ::g2diagnostic::GetEntityListBySizeRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetEntityListBySize_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetEntityListBySizeResponse>* G2Diagnostic::Stub::AsyncGetEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetEntityListBySizeRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Diagnostic::Stub::GetEntityResume(::grpc::ClientContext* context, const ::g2diagnostic::GetEntityResumeRequest& request, ::g2diagnostic::GetEntityResumeResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetEntityResumeRequest, ::g2diagnostic::GetEntityResumeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetEntityResume_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::GetEntityResume(::grpc::ClientContext* context, const ::g2diagnostic::GetEntityResumeRequest* request, ::g2diagnostic::GetEntityResumeResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::GetEntityResumeRequest, ::g2diagnostic::GetEntityResumeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetEntityResume_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::GetEntityResume(::grpc::ClientContext* context, const ::g2diagnostic::GetEntityResumeRequest* request, ::g2diagnostic::GetEntityResumeResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetEntityResume_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetEntityResumeResponse>* G2Diagnostic::Stub::PrepareAsyncGetEntityResumeRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetEntityResumeRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::GetEntityResumeResponse, ::g2diagnostic::GetEntityResumeRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetEntityResume_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetEntityResumeResponse>* G2Diagnostic::Stub::AsyncGetEntityResumeRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetEntityResumeRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetEntityResumeRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Diagnostic::Stub::GetEntitySizeBreakdown(::grpc::ClientContext* context, const ::g2diagnostic::GetEntitySizeBreakdownRequest& request, ::g2diagnostic::GetEntitySizeBreakdownResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetEntitySizeBreakdownRequest, ::g2diagnostic::GetEntitySizeBreakdownResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetEntitySizeBreakdown_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::GetEntitySizeBreakdown(::grpc::ClientContext* context, const ::g2diagnostic::GetEntitySizeBreakdownRequest* request, ::g2diagnostic::GetEntitySizeBreakdownResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::GetEntitySizeBreakdownRequest, ::g2diagnostic::GetEntitySizeBreakdownResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetEntitySizeBreakdown_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::GetEntitySizeBreakdown(::grpc::ClientContext* context, const ::g2diagnostic::GetEntitySizeBreakdownRequest* request, ::g2diagnostic::GetEntitySizeBreakdownResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetEntitySizeBreakdown_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetEntitySizeBreakdownResponse>* G2Diagnostic::Stub::PrepareAsyncGetEntitySizeBreakdownRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetEntitySizeBreakdownRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::GetEntitySizeBreakdownResponse, ::g2diagnostic::GetEntitySizeBreakdownRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetEntitySizeBreakdown_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetEntitySizeBreakdownResponse>* G2Diagnostic::Stub::AsyncGetEntitySizeBreakdownRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetEntitySizeBreakdownRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetEntitySizeBreakdownRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Diagnostic::Stub::GetFeature(::grpc::ClientContext* context, const ::g2diagnostic::GetFeatureRequest& request, ::g2diagnostic::GetFeatureResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetFeatureRequest, ::g2diagnostic::GetFeatureResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetFeature_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::GetFeature(::grpc::ClientContext* context, const ::g2diagnostic::GetFeatureRequest* request, ::g2diagnostic::GetFeatureResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::GetFeatureRequest, ::g2diagnostic::GetFeatureResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetFeature_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::GetFeature(::grpc::ClientContext* context, const ::g2diagnostic::GetFeatureRequest* request, ::g2diagnostic::GetFeatureResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetFeature_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetFeatureResponse>* G2Diagnostic::Stub::PrepareAsyncGetFeatureRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetFeatureRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::GetFeatureResponse, ::g2diagnostic::GetFeatureRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetFeature_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetFeatureResponse>* G2Diagnostic::Stub::AsyncGetFeatureRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetFeatureRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetFeatureRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Diagnostic::Stub::GetGenericFeatures(::grpc::ClientContext* context, const ::g2diagnostic::GetGenericFeaturesRequest& request, ::g2diagnostic::GetGenericFeaturesResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetGenericFeaturesRequest, ::g2diagnostic::GetGenericFeaturesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetGenericFeatures_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::GetGenericFeatures(::grpc::ClientContext* context, const ::g2diagnostic::GetGenericFeaturesRequest* request, ::g2diagnostic::GetGenericFeaturesResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::GetGenericFeaturesRequest, ::g2diagnostic::GetGenericFeaturesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetGenericFeatures_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::GetGenericFeatures(::grpc::ClientContext* context, const ::g2diagnostic::GetGenericFeaturesRequest* request, ::g2diagnostic::GetGenericFeaturesResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetGenericFeatures_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetGenericFeaturesResponse>* G2Diagnostic::Stub::PrepareAsyncGetGenericFeaturesRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetGenericFeaturesRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::GetGenericFeaturesResponse, ::g2diagnostic::GetGenericFeaturesRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetGenericFeatures_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetGenericFeaturesResponse>* G2Diagnostic::Stub::AsyncGetGenericFeaturesRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetGenericFeaturesRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetGenericFeaturesRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
 ::grpc::Status G2Diagnostic::Stub::GetLogicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest& request, ::g2diagnostic::GetLogicalCoresResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetLogicalCoresRequest, ::g2diagnostic::GetLogicalCoresResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetLogicalCores_, context, request, response);
 }
@@ -426,29 +170,6 @@ void G2Diagnostic::Stub::async::GetLogicalCores(::grpc::ClientContext* context, 
   return result;
 }
 
-::grpc::Status G2Diagnostic::Stub::GetMappingStatistics(::grpc::ClientContext* context, const ::g2diagnostic::GetMappingStatisticsRequest& request, ::g2diagnostic::GetMappingStatisticsResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetMappingStatisticsRequest, ::g2diagnostic::GetMappingStatisticsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetMappingStatistics_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::GetMappingStatistics(::grpc::ClientContext* context, const ::g2diagnostic::GetMappingStatisticsRequest* request, ::g2diagnostic::GetMappingStatisticsResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::GetMappingStatisticsRequest, ::g2diagnostic::GetMappingStatisticsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetMappingStatistics_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::GetMappingStatistics(::grpc::ClientContext* context, const ::g2diagnostic::GetMappingStatisticsRequest* request, ::g2diagnostic::GetMappingStatisticsResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetMappingStatistics_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetMappingStatisticsResponse>* G2Diagnostic::Stub::PrepareAsyncGetMappingStatisticsRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetMappingStatisticsRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::GetMappingStatisticsResponse, ::g2diagnostic::GetMappingStatisticsRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetMappingStatistics_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetMappingStatisticsResponse>* G2Diagnostic::Stub::AsyncGetMappingStatisticsRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetMappingStatisticsRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetMappingStatisticsRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
 ::grpc::Status G2Diagnostic::Stub::GetPhysicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest& request, ::g2diagnostic::GetPhysicalCoresResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetPhysicalCoresRequest, ::g2diagnostic::GetPhysicalCoresResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetPhysicalCores_, context, request, response);
 }
@@ -468,52 +189,6 @@ void G2Diagnostic::Stub::async::GetPhysicalCores(::grpc::ClientContext* context,
 ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetPhysicalCoresResponse>* G2Diagnostic::Stub::AsyncGetPhysicalCoresRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncGetPhysicalCoresRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Diagnostic::Stub::GetRelationshipDetails(::grpc::ClientContext* context, const ::g2diagnostic::GetRelationshipDetailsRequest& request, ::g2diagnostic::GetRelationshipDetailsResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetRelationshipDetailsRequest, ::g2diagnostic::GetRelationshipDetailsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetRelationshipDetails_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::GetRelationshipDetails(::grpc::ClientContext* context, const ::g2diagnostic::GetRelationshipDetailsRequest* request, ::g2diagnostic::GetRelationshipDetailsResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::GetRelationshipDetailsRequest, ::g2diagnostic::GetRelationshipDetailsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetRelationshipDetails_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::GetRelationshipDetails(::grpc::ClientContext* context, const ::g2diagnostic::GetRelationshipDetailsRequest* request, ::g2diagnostic::GetRelationshipDetailsResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetRelationshipDetails_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetRelationshipDetailsResponse>* G2Diagnostic::Stub::PrepareAsyncGetRelationshipDetailsRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetRelationshipDetailsRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::GetRelationshipDetailsResponse, ::g2diagnostic::GetRelationshipDetailsRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetRelationshipDetails_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetRelationshipDetailsResponse>* G2Diagnostic::Stub::AsyncGetRelationshipDetailsRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetRelationshipDetailsRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetRelationshipDetailsRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Diagnostic::Stub::GetResolutionStatistics(::grpc::ClientContext* context, const ::g2diagnostic::GetResolutionStatisticsRequest& request, ::g2diagnostic::GetResolutionStatisticsResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetResolutionStatisticsRequest, ::g2diagnostic::GetResolutionStatisticsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetResolutionStatistics_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::GetResolutionStatistics(::grpc::ClientContext* context, const ::g2diagnostic::GetResolutionStatisticsRequest* request, ::g2diagnostic::GetResolutionStatisticsResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::GetResolutionStatisticsRequest, ::g2diagnostic::GetResolutionStatisticsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetResolutionStatistics_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::GetResolutionStatistics(::grpc::ClientContext* context, const ::g2diagnostic::GetResolutionStatisticsRequest* request, ::g2diagnostic::GetResolutionStatisticsResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetResolutionStatistics_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetResolutionStatisticsResponse>* G2Diagnostic::Stub::PrepareAsyncGetResolutionStatisticsRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetResolutionStatisticsRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::GetResolutionStatisticsResponse, ::g2diagnostic::GetResolutionStatisticsRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetResolutionStatistics_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetResolutionStatisticsResponse>* G2Diagnostic::Stub::AsyncGetResolutionStatisticsRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetResolutionStatisticsRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetResolutionStatisticsRaw(context, request, cq);
   result->StartCall();
   return result;
 }
@@ -640,16 +315,6 @@ G2Diagnostic::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       G2Diagnostic_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::CloseEntityListBySizeRequest, ::g2diagnostic::CloseEntityListBySizeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::CloseEntityListBySizeRequest* req,
-             ::g2diagnostic::CloseEntityListBySizeResponse* resp) {
-               return service->CloseEntityListBySize(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[2],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::DestroyRequest, ::g2diagnostic::DestroyResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Diagnostic::Service* service,
              ::grpc::ServerContext* ctx,
@@ -658,27 +323,7 @@ G2Diagnostic::Service::Service() {
                return service->Destroy(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[3],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::FetchNextEntityBySizeRequest, ::g2diagnostic::FetchNextEntityBySizeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::FetchNextEntityBySizeRequest* req,
-             ::g2diagnostic::FetchNextEntityBySizeResponse* resp) {
-               return service->FetchNextEntityBySize(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[4],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::FindEntitiesByFeatureIDsRequest, ::g2diagnostic::FindEntitiesByFeatureIDsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::FindEntitiesByFeatureIDsRequest* req,
-             ::g2diagnostic::FindEntitiesByFeatureIDsResponse* resp) {
-               return service->FindEntitiesByFeatureIDs(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[5],
+      G2Diagnostic_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetAvailableMemoryRequest, ::g2diagnostic::GetAvailableMemoryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Diagnostic::Service* service,
@@ -688,17 +333,7 @@ G2Diagnostic::Service::Service() {
                return service->GetAvailableMemory(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[6],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetDataSourceCountsRequest, ::g2diagnostic::GetDataSourceCountsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::GetDataSourceCountsRequest* req,
-             ::g2diagnostic::GetDataSourceCountsResponse* resp) {
-               return service->GetDataSourceCounts(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[7],
+      G2Diagnostic_method_names[3],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetDBInfoRequest, ::g2diagnostic::GetDBInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Diagnostic::Service* service,
@@ -708,67 +343,7 @@ G2Diagnostic::Service::Service() {
                return service->GetDBInfo(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[8],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetEntityDetailsRequest, ::g2diagnostic::GetEntityDetailsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::GetEntityDetailsRequest* req,
-             ::g2diagnostic::GetEntityDetailsResponse* resp) {
-               return service->GetEntityDetails(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[9],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetEntityListBySizeRequest, ::g2diagnostic::GetEntityListBySizeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::GetEntityListBySizeRequest* req,
-             ::g2diagnostic::GetEntityListBySizeResponse* resp) {
-               return service->GetEntityListBySize(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[10],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetEntityResumeRequest, ::g2diagnostic::GetEntityResumeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::GetEntityResumeRequest* req,
-             ::g2diagnostic::GetEntityResumeResponse* resp) {
-               return service->GetEntityResume(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[11],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetEntitySizeBreakdownRequest, ::g2diagnostic::GetEntitySizeBreakdownResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::GetEntitySizeBreakdownRequest* req,
-             ::g2diagnostic::GetEntitySizeBreakdownResponse* resp) {
-               return service->GetEntitySizeBreakdown(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[12],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetFeatureRequest, ::g2diagnostic::GetFeatureResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::GetFeatureRequest* req,
-             ::g2diagnostic::GetFeatureResponse* resp) {
-               return service->GetFeature(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[13],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetGenericFeaturesRequest, ::g2diagnostic::GetGenericFeaturesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::GetGenericFeaturesRequest* req,
-             ::g2diagnostic::GetGenericFeaturesResponse* resp) {
-               return service->GetGenericFeatures(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[14],
+      G2Diagnostic_method_names[4],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetLogicalCoresRequest, ::g2diagnostic::GetLogicalCoresResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Diagnostic::Service* service,
@@ -778,17 +353,7 @@ G2Diagnostic::Service::Service() {
                return service->GetLogicalCores(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[15],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetMappingStatisticsRequest, ::g2diagnostic::GetMappingStatisticsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::GetMappingStatisticsRequest* req,
-             ::g2diagnostic::GetMappingStatisticsResponse* resp) {
-               return service->GetMappingStatistics(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[16],
+      G2Diagnostic_method_names[5],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetPhysicalCoresRequest, ::g2diagnostic::GetPhysicalCoresResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Diagnostic::Service* service,
@@ -798,27 +363,7 @@ G2Diagnostic::Service::Service() {
                return service->GetPhysicalCores(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[17],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetRelationshipDetailsRequest, ::g2diagnostic::GetRelationshipDetailsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::GetRelationshipDetailsRequest* req,
-             ::g2diagnostic::GetRelationshipDetailsResponse* resp) {
-               return service->GetRelationshipDetails(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[18],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetResolutionStatisticsRequest, ::g2diagnostic::GetResolutionStatisticsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::GetResolutionStatisticsRequest* req,
-             ::g2diagnostic::GetResolutionStatisticsResponse* resp) {
-               return service->GetResolutionStatistics(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[19],
+      G2Diagnostic_method_names[6],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetTotalSystemMemoryRequest, ::g2diagnostic::GetTotalSystemMemoryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Diagnostic::Service* service,
@@ -828,7 +373,7 @@ G2Diagnostic::Service::Service() {
                return service->GetTotalSystemMemory(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[20],
+      G2Diagnostic_method_names[7],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::InitRequest, ::g2diagnostic::InitResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Diagnostic::Service* service,
@@ -838,7 +383,7 @@ G2Diagnostic::Service::Service() {
                return service->Init(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[21],
+      G2Diagnostic_method_names[8],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::InitWithConfigIDRequest, ::g2diagnostic::InitWithConfigIDResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Diagnostic::Service* service,
@@ -848,7 +393,7 @@ G2Diagnostic::Service::Service() {
                return service->InitWithConfigID(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[22],
+      G2Diagnostic_method_names[9],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::ReinitRequest, ::g2diagnostic::ReinitResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Diagnostic::Service* service,
@@ -858,7 +403,7 @@ G2Diagnostic::Service::Service() {
                return service->Reinit(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[23],
+      G2Diagnostic_method_names[10],
       ::grpc::internal::RpcMethod::SERVER_STREAMING,
       new ::grpc::internal::ServerStreamingHandler< G2Diagnostic::Service, ::g2diagnostic::StreamEntityListBySizeRequest, ::g2diagnostic::StreamEntityListBySizeResponse>(
           [](G2Diagnostic::Service* service,
@@ -879,28 +424,7 @@ G2Diagnostic::Service::~Service() {
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status G2Diagnostic::Service::CloseEntityListBySize(::grpc::ServerContext* context, const ::g2diagnostic::CloseEntityListBySizeRequest* request, ::g2diagnostic::CloseEntityListBySizeResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
 ::grpc::Status G2Diagnostic::Service::Destroy(::grpc::ServerContext* context, const ::g2diagnostic::DestroyRequest* request, ::g2diagnostic::DestroyResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Diagnostic::Service::FetchNextEntityBySize(::grpc::ServerContext* context, const ::g2diagnostic::FetchNextEntityBySizeRequest* request, ::g2diagnostic::FetchNextEntityBySizeResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Diagnostic::Service::FindEntitiesByFeatureIDs(::grpc::ServerContext* context, const ::g2diagnostic::FindEntitiesByFeatureIDsRequest* request, ::g2diagnostic::FindEntitiesByFeatureIDsResponse* response) {
   (void) context;
   (void) request;
   (void) response;
@@ -914,56 +438,7 @@ G2Diagnostic::Service::~Service() {
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status G2Diagnostic::Service::GetDataSourceCounts(::grpc::ServerContext* context, const ::g2diagnostic::GetDataSourceCountsRequest* request, ::g2diagnostic::GetDataSourceCountsResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
 ::grpc::Status G2Diagnostic::Service::GetDBInfo(::grpc::ServerContext* context, const ::g2diagnostic::GetDBInfoRequest* request, ::g2diagnostic::GetDBInfoResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Diagnostic::Service::GetEntityDetails(::grpc::ServerContext* context, const ::g2diagnostic::GetEntityDetailsRequest* request, ::g2diagnostic::GetEntityDetailsResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Diagnostic::Service::GetEntityListBySize(::grpc::ServerContext* context, const ::g2diagnostic::GetEntityListBySizeRequest* request, ::g2diagnostic::GetEntityListBySizeResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Diagnostic::Service::GetEntityResume(::grpc::ServerContext* context, const ::g2diagnostic::GetEntityResumeRequest* request, ::g2diagnostic::GetEntityResumeResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Diagnostic::Service::GetEntitySizeBreakdown(::grpc::ServerContext* context, const ::g2diagnostic::GetEntitySizeBreakdownRequest* request, ::g2diagnostic::GetEntitySizeBreakdownResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Diagnostic::Service::GetFeature(::grpc::ServerContext* context, const ::g2diagnostic::GetFeatureRequest* request, ::g2diagnostic::GetFeatureResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Diagnostic::Service::GetGenericFeatures(::grpc::ServerContext* context, const ::g2diagnostic::GetGenericFeaturesRequest* request, ::g2diagnostic::GetGenericFeaturesResponse* response) {
   (void) context;
   (void) request;
   (void) response;
@@ -977,28 +452,7 @@ G2Diagnostic::Service::~Service() {
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status G2Diagnostic::Service::GetMappingStatistics(::grpc::ServerContext* context, const ::g2diagnostic::GetMappingStatisticsRequest* request, ::g2diagnostic::GetMappingStatisticsResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
 ::grpc::Status G2Diagnostic::Service::GetPhysicalCores(::grpc::ServerContext* context, const ::g2diagnostic::GetPhysicalCoresRequest* request, ::g2diagnostic::GetPhysicalCoresResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Diagnostic::Service::GetRelationshipDetails(::grpc::ServerContext* context, const ::g2diagnostic::GetRelationshipDetailsRequest* request, ::g2diagnostic::GetRelationshipDetailsResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Diagnostic::Service::GetResolutionStatistics(::grpc::ServerContext* context, const ::g2diagnostic::GetResolutionStatisticsRequest* request, ::g2diagnostic::GetResolutionStatisticsResponse* response) {
   (void) context;
   (void) request;
   (void) response;

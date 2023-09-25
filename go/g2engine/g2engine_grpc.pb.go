@@ -24,9 +24,6 @@ const _ = grpc.SupportPackageIsVersion7
 type G2EngineClient interface {
 	AddRecord(ctx context.Context, in *AddRecordRequest, opts ...grpc.CallOption) (*AddRecordResponse, error)
 	AddRecordWithInfo(ctx context.Context, in *AddRecordWithInfoRequest, opts ...grpc.CallOption) (*AddRecordWithInfoResponse, error)
-	AddRecordWithInfoWithReturnedRecordID(ctx context.Context, in *AddRecordWithInfoWithReturnedRecordIDRequest, opts ...grpc.CallOption) (*AddRecordWithInfoWithReturnedRecordIDResponse, error)
-	AddRecordWithReturnedRecordID(ctx context.Context, in *AddRecordWithReturnedRecordIDRequest, opts ...grpc.CallOption) (*AddRecordWithReturnedRecordIDResponse, error)
-	CheckRecord(ctx context.Context, in *CheckRecordRequest, opts ...grpc.CallOption) (*CheckRecordResponse, error)
 	CloseExport(ctx context.Context, in *CloseExportRequest, opts ...grpc.CallOption) (*CloseExportResponse, error)
 	CountRedoRecords(ctx context.Context, in *CountRedoRecordsRequest, opts ...grpc.CallOption) (*CountRedoRecordsResponse, error)
 	DeleteRecord(ctx context.Context, in *DeleteRecordRequest, opts ...grpc.CallOption) (*DeleteRecordResponse, error)
@@ -72,11 +69,7 @@ type G2EngineClient interface {
 	InitWithConfigID(ctx context.Context, in *InitWithConfigIDRequest, opts ...grpc.CallOption) (*InitWithConfigIDResponse, error)
 	PrimeEngine(ctx context.Context, in *PrimeEngineRequest, opts ...grpc.CallOption) (*PrimeEngineResponse, error)
 	Process(ctx context.Context, in *ProcessRequest, opts ...grpc.CallOption) (*ProcessResponse, error)
-	ProcessRedoRecord(ctx context.Context, in *ProcessRedoRecordRequest, opts ...grpc.CallOption) (*ProcessRedoRecordResponse, error)
-	ProcessRedoRecordWithInfo(ctx context.Context, in *ProcessRedoRecordWithInfoRequest, opts ...grpc.CallOption) (*ProcessRedoRecordWithInfoResponse, error)
 	ProcessWithInfo(ctx context.Context, in *ProcessWithInfoRequest, opts ...grpc.CallOption) (*ProcessWithInfoResponse, error)
-	ProcessWithResponse(ctx context.Context, in *ProcessWithResponseRequest, opts ...grpc.CallOption) (*ProcessWithResponseResponse, error)
-	ProcessWithResponseResize(ctx context.Context, in *ProcessWithResponseResizeRequest, opts ...grpc.CallOption) (*ProcessWithResponseResizeResponse, error)
 	PurgeRepository(ctx context.Context, in *PurgeRepositoryRequest, opts ...grpc.CallOption) (*PurgeRepositoryResponse, error)
 	ReevaluateEntity(ctx context.Context, in *ReevaluateEntityRequest, opts ...grpc.CallOption) (*ReevaluateEntityResponse, error)
 	ReevaluateEntityWithInfo(ctx context.Context, in *ReevaluateEntityWithInfoRequest, opts ...grpc.CallOption) (*ReevaluateEntityWithInfoResponse, error)
@@ -120,33 +113,6 @@ func (c *g2EngineClient) AddRecord(ctx context.Context, in *AddRecordRequest, op
 func (c *g2EngineClient) AddRecordWithInfo(ctx context.Context, in *AddRecordWithInfoRequest, opts ...grpc.CallOption) (*AddRecordWithInfoResponse, error) {
 	out := new(AddRecordWithInfoResponse)
 	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/AddRecordWithInfo", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2EngineClient) AddRecordWithInfoWithReturnedRecordID(ctx context.Context, in *AddRecordWithInfoWithReturnedRecordIDRequest, opts ...grpc.CallOption) (*AddRecordWithInfoWithReturnedRecordIDResponse, error) {
-	out := new(AddRecordWithInfoWithReturnedRecordIDResponse)
-	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/AddRecordWithInfoWithReturnedRecordID", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2EngineClient) AddRecordWithReturnedRecordID(ctx context.Context, in *AddRecordWithReturnedRecordIDRequest, opts ...grpc.CallOption) (*AddRecordWithReturnedRecordIDResponse, error) {
-	out := new(AddRecordWithReturnedRecordIDResponse)
-	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/AddRecordWithReturnedRecordID", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2EngineClient) CheckRecord(ctx context.Context, in *CheckRecordRequest, opts ...grpc.CallOption) (*CheckRecordResponse, error) {
-	out := new(CheckRecordResponse)
-	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/CheckRecord", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -558,45 +524,9 @@ func (c *g2EngineClient) Process(ctx context.Context, in *ProcessRequest, opts .
 	return out, nil
 }
 
-func (c *g2EngineClient) ProcessRedoRecord(ctx context.Context, in *ProcessRedoRecordRequest, opts ...grpc.CallOption) (*ProcessRedoRecordResponse, error) {
-	out := new(ProcessRedoRecordResponse)
-	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/ProcessRedoRecord", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2EngineClient) ProcessRedoRecordWithInfo(ctx context.Context, in *ProcessRedoRecordWithInfoRequest, opts ...grpc.CallOption) (*ProcessRedoRecordWithInfoResponse, error) {
-	out := new(ProcessRedoRecordWithInfoResponse)
-	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/ProcessRedoRecordWithInfo", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *g2EngineClient) ProcessWithInfo(ctx context.Context, in *ProcessWithInfoRequest, opts ...grpc.CallOption) (*ProcessWithInfoResponse, error) {
 	out := new(ProcessWithInfoResponse)
 	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/ProcessWithInfo", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2EngineClient) ProcessWithResponse(ctx context.Context, in *ProcessWithResponseRequest, opts ...grpc.CallOption) (*ProcessWithResponseResponse, error) {
-	out := new(ProcessWithResponseResponse)
-	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/ProcessWithResponse", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2EngineClient) ProcessWithResponseResize(ctx context.Context, in *ProcessWithResponseResizeRequest, opts ...grpc.CallOption) (*ProcessWithResponseResizeResponse, error) {
-	out := new(ProcessWithResponseResizeResponse)
-	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/ProcessWithResponseResize", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -844,9 +774,6 @@ func (c *g2EngineClient) WhyRecords_V2(ctx context.Context, in *WhyRecords_V2Req
 type G2EngineServer interface {
 	AddRecord(context.Context, *AddRecordRequest) (*AddRecordResponse, error)
 	AddRecordWithInfo(context.Context, *AddRecordWithInfoRequest) (*AddRecordWithInfoResponse, error)
-	AddRecordWithInfoWithReturnedRecordID(context.Context, *AddRecordWithInfoWithReturnedRecordIDRequest) (*AddRecordWithInfoWithReturnedRecordIDResponse, error)
-	AddRecordWithReturnedRecordID(context.Context, *AddRecordWithReturnedRecordIDRequest) (*AddRecordWithReturnedRecordIDResponse, error)
-	CheckRecord(context.Context, *CheckRecordRequest) (*CheckRecordResponse, error)
 	CloseExport(context.Context, *CloseExportRequest) (*CloseExportResponse, error)
 	CountRedoRecords(context.Context, *CountRedoRecordsRequest) (*CountRedoRecordsResponse, error)
 	DeleteRecord(context.Context, *DeleteRecordRequest) (*DeleteRecordResponse, error)
@@ -892,11 +819,7 @@ type G2EngineServer interface {
 	InitWithConfigID(context.Context, *InitWithConfigIDRequest) (*InitWithConfigIDResponse, error)
 	PrimeEngine(context.Context, *PrimeEngineRequest) (*PrimeEngineResponse, error)
 	Process(context.Context, *ProcessRequest) (*ProcessResponse, error)
-	ProcessRedoRecord(context.Context, *ProcessRedoRecordRequest) (*ProcessRedoRecordResponse, error)
-	ProcessRedoRecordWithInfo(context.Context, *ProcessRedoRecordWithInfoRequest) (*ProcessRedoRecordWithInfoResponse, error)
 	ProcessWithInfo(context.Context, *ProcessWithInfoRequest) (*ProcessWithInfoResponse, error)
-	ProcessWithResponse(context.Context, *ProcessWithResponseRequest) (*ProcessWithResponseResponse, error)
-	ProcessWithResponseResize(context.Context, *ProcessWithResponseResizeRequest) (*ProcessWithResponseResizeResponse, error)
 	PurgeRepository(context.Context, *PurgeRepositoryRequest) (*PurgeRepositoryResponse, error)
 	ReevaluateEntity(context.Context, *ReevaluateEntityRequest) (*ReevaluateEntityResponse, error)
 	ReevaluateEntityWithInfo(context.Context, *ReevaluateEntityWithInfoRequest) (*ReevaluateEntityWithInfoResponse, error)
@@ -930,15 +853,6 @@ func (UnimplementedG2EngineServer) AddRecord(context.Context, *AddRecordRequest)
 }
 func (UnimplementedG2EngineServer) AddRecordWithInfo(context.Context, *AddRecordWithInfoRequest) (*AddRecordWithInfoResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AddRecordWithInfo not implemented")
-}
-func (UnimplementedG2EngineServer) AddRecordWithInfoWithReturnedRecordID(context.Context, *AddRecordWithInfoWithReturnedRecordIDRequest) (*AddRecordWithInfoWithReturnedRecordIDResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method AddRecordWithInfoWithReturnedRecordID not implemented")
-}
-func (UnimplementedG2EngineServer) AddRecordWithReturnedRecordID(context.Context, *AddRecordWithReturnedRecordIDRequest) (*AddRecordWithReturnedRecordIDResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method AddRecordWithReturnedRecordID not implemented")
-}
-func (UnimplementedG2EngineServer) CheckRecord(context.Context, *CheckRecordRequest) (*CheckRecordResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CheckRecord not implemented")
 }
 func (UnimplementedG2EngineServer) CloseExport(context.Context, *CloseExportRequest) (*CloseExportResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CloseExport not implemented")
@@ -1075,20 +989,8 @@ func (UnimplementedG2EngineServer) PrimeEngine(context.Context, *PrimeEngineRequ
 func (UnimplementedG2EngineServer) Process(context.Context, *ProcessRequest) (*ProcessResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Process not implemented")
 }
-func (UnimplementedG2EngineServer) ProcessRedoRecord(context.Context, *ProcessRedoRecordRequest) (*ProcessRedoRecordResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ProcessRedoRecord not implemented")
-}
-func (UnimplementedG2EngineServer) ProcessRedoRecordWithInfo(context.Context, *ProcessRedoRecordWithInfoRequest) (*ProcessRedoRecordWithInfoResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ProcessRedoRecordWithInfo not implemented")
-}
 func (UnimplementedG2EngineServer) ProcessWithInfo(context.Context, *ProcessWithInfoRequest) (*ProcessWithInfoResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ProcessWithInfo not implemented")
-}
-func (UnimplementedG2EngineServer) ProcessWithResponse(context.Context, *ProcessWithResponseRequest) (*ProcessWithResponseResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ProcessWithResponse not implemented")
-}
-func (UnimplementedG2EngineServer) ProcessWithResponseResize(context.Context, *ProcessWithResponseResizeRequest) (*ProcessWithResponseResizeResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ProcessWithResponseResize not implemented")
 }
 func (UnimplementedG2EngineServer) PurgeRepository(context.Context, *PurgeRepositoryRequest) (*PurgeRepositoryResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PurgeRepository not implemented")
@@ -1198,60 +1100,6 @@ func _G2Engine_AddRecordWithInfo_Handler(srv interface{}, ctx context.Context, d
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(G2EngineServer).AddRecordWithInfo(ctx, req.(*AddRecordWithInfoRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Engine_AddRecordWithInfoWithReturnedRecordID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AddRecordWithInfoWithReturnedRecordIDRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2EngineServer).AddRecordWithInfoWithReturnedRecordID(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2engine.G2Engine/AddRecordWithInfoWithReturnedRecordID",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2EngineServer).AddRecordWithInfoWithReturnedRecordID(ctx, req.(*AddRecordWithInfoWithReturnedRecordIDRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Engine_AddRecordWithReturnedRecordID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AddRecordWithReturnedRecordIDRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2EngineServer).AddRecordWithReturnedRecordID(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2engine.G2Engine/AddRecordWithReturnedRecordID",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2EngineServer).AddRecordWithReturnedRecordID(ctx, req.(*AddRecordWithReturnedRecordIDRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Engine_CheckRecord_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CheckRecordRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2EngineServer).CheckRecord(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2engine.G2Engine/CheckRecord",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2EngineServer).CheckRecord(ctx, req.(*CheckRecordRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -2066,42 +1914,6 @@ func _G2Engine_Process_Handler(srv interface{}, ctx context.Context, dec func(in
 	return interceptor(ctx, in, info, handler)
 }
 
-func _G2Engine_ProcessRedoRecord_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ProcessRedoRecordRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2EngineServer).ProcessRedoRecord(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2engine.G2Engine/ProcessRedoRecord",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2EngineServer).ProcessRedoRecord(ctx, req.(*ProcessRedoRecordRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Engine_ProcessRedoRecordWithInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ProcessRedoRecordWithInfoRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2EngineServer).ProcessRedoRecordWithInfo(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2engine.G2Engine/ProcessRedoRecordWithInfo",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2EngineServer).ProcessRedoRecordWithInfo(ctx, req.(*ProcessRedoRecordWithInfoRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _G2Engine_ProcessWithInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ProcessWithInfoRequest)
 	if err := dec(in); err != nil {
@@ -2116,42 +1928,6 @@ func _G2Engine_ProcessWithInfo_Handler(srv interface{}, ctx context.Context, dec
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(G2EngineServer).ProcessWithInfo(ctx, req.(*ProcessWithInfoRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Engine_ProcessWithResponse_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ProcessWithResponseRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2EngineServer).ProcessWithResponse(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2engine.G2Engine/ProcessWithResponse",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2EngineServer).ProcessWithResponse(ctx, req.(*ProcessWithResponseRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Engine_ProcessWithResponseResize_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ProcessWithResponseResizeRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2EngineServer).ProcessWithResponseResize(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2engine.G2Engine/ProcessWithResponseResize",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2EngineServer).ProcessWithResponseResize(ctx, req.(*ProcessWithResponseResizeRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -2556,18 +2332,6 @@ var G2Engine_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _G2Engine_AddRecordWithInfo_Handler,
 		},
 		{
-			MethodName: "AddRecordWithInfoWithReturnedRecordID",
-			Handler:    _G2Engine_AddRecordWithInfoWithReturnedRecordID_Handler,
-		},
-		{
-			MethodName: "AddRecordWithReturnedRecordID",
-			Handler:    _G2Engine_AddRecordWithReturnedRecordID_Handler,
-		},
-		{
-			MethodName: "CheckRecord",
-			Handler:    _G2Engine_CheckRecord_Handler,
-		},
-		{
 			MethodName: "CloseExport",
 			Handler:    _G2Engine_CloseExport_Handler,
 		},
@@ -2748,24 +2512,8 @@ var G2Engine_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _G2Engine_Process_Handler,
 		},
 		{
-			MethodName: "ProcessRedoRecord",
-			Handler:    _G2Engine_ProcessRedoRecord_Handler,
-		},
-		{
-			MethodName: "ProcessRedoRecordWithInfo",
-			Handler:    _G2Engine_ProcessRedoRecordWithInfo_Handler,
-		},
-		{
 			MethodName: "ProcessWithInfo",
 			Handler:    _G2Engine_ProcessWithInfo_Handler,
-		},
-		{
-			MethodName: "ProcessWithResponse",
-			Handler:    _G2Engine_ProcessWithResponse_Handler,
-		},
-		{
-			MethodName: "ProcessWithResponseResize",
-			Handler:    _G2Engine_ProcessWithResponseResize_Handler,
 		},
 		{
 			MethodName: "PurgeRepository",

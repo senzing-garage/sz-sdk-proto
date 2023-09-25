@@ -23,24 +23,11 @@ const _ = grpc.SupportPackageIsVersion7
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type G2DiagnosticClient interface {
 	CheckDBPerf(ctx context.Context, in *CheckDBPerfRequest, opts ...grpc.CallOption) (*CheckDBPerfResponse, error)
-	CloseEntityListBySize(ctx context.Context, in *CloseEntityListBySizeRequest, opts ...grpc.CallOption) (*CloseEntityListBySizeResponse, error)
 	Destroy(ctx context.Context, in *DestroyRequest, opts ...grpc.CallOption) (*DestroyResponse, error)
-	FetchNextEntityBySize(ctx context.Context, in *FetchNextEntityBySizeRequest, opts ...grpc.CallOption) (*FetchNextEntityBySizeResponse, error)
-	FindEntitiesByFeatureIDs(ctx context.Context, in *FindEntitiesByFeatureIDsRequest, opts ...grpc.CallOption) (*FindEntitiesByFeatureIDsResponse, error)
 	GetAvailableMemory(ctx context.Context, in *GetAvailableMemoryRequest, opts ...grpc.CallOption) (*GetAvailableMemoryResponse, error)
-	GetDataSourceCounts(ctx context.Context, in *GetDataSourceCountsRequest, opts ...grpc.CallOption) (*GetDataSourceCountsResponse, error)
 	GetDBInfo(ctx context.Context, in *GetDBInfoRequest, opts ...grpc.CallOption) (*GetDBInfoResponse, error)
-	GetEntityDetails(ctx context.Context, in *GetEntityDetailsRequest, opts ...grpc.CallOption) (*GetEntityDetailsResponse, error)
-	GetEntityListBySize(ctx context.Context, in *GetEntityListBySizeRequest, opts ...grpc.CallOption) (*GetEntityListBySizeResponse, error)
-	GetEntityResume(ctx context.Context, in *GetEntityResumeRequest, opts ...grpc.CallOption) (*GetEntityResumeResponse, error)
-	GetEntitySizeBreakdown(ctx context.Context, in *GetEntitySizeBreakdownRequest, opts ...grpc.CallOption) (*GetEntitySizeBreakdownResponse, error)
-	GetFeature(ctx context.Context, in *GetFeatureRequest, opts ...grpc.CallOption) (*GetFeatureResponse, error)
-	GetGenericFeatures(ctx context.Context, in *GetGenericFeaturesRequest, opts ...grpc.CallOption) (*GetGenericFeaturesResponse, error)
 	GetLogicalCores(ctx context.Context, in *GetLogicalCoresRequest, opts ...grpc.CallOption) (*GetLogicalCoresResponse, error)
-	GetMappingStatistics(ctx context.Context, in *GetMappingStatisticsRequest, opts ...grpc.CallOption) (*GetMappingStatisticsResponse, error)
 	GetPhysicalCores(ctx context.Context, in *GetPhysicalCoresRequest, opts ...grpc.CallOption) (*GetPhysicalCoresResponse, error)
-	GetRelationshipDetails(ctx context.Context, in *GetRelationshipDetailsRequest, opts ...grpc.CallOption) (*GetRelationshipDetailsResponse, error)
-	GetResolutionStatistics(ctx context.Context, in *GetResolutionStatisticsRequest, opts ...grpc.CallOption) (*GetResolutionStatisticsResponse, error)
 	GetTotalSystemMemory(ctx context.Context, in *GetTotalSystemMemoryRequest, opts ...grpc.CallOption) (*GetTotalSystemMemoryResponse, error)
 	Init(ctx context.Context, in *InitRequest, opts ...grpc.CallOption) (*InitResponse, error)
 	InitWithConfigID(ctx context.Context, in *InitWithConfigIDRequest, opts ...grpc.CallOption) (*InitWithConfigIDResponse, error)
@@ -65,36 +52,9 @@ func (c *g2DiagnosticClient) CheckDBPerf(ctx context.Context, in *CheckDBPerfReq
 	return out, nil
 }
 
-func (c *g2DiagnosticClient) CloseEntityListBySize(ctx context.Context, in *CloseEntityListBySizeRequest, opts ...grpc.CallOption) (*CloseEntityListBySizeResponse, error) {
-	out := new(CloseEntityListBySizeResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/CloseEntityListBySize", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *g2DiagnosticClient) Destroy(ctx context.Context, in *DestroyRequest, opts ...grpc.CallOption) (*DestroyResponse, error) {
 	out := new(DestroyResponse)
 	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/Destroy", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2DiagnosticClient) FetchNextEntityBySize(ctx context.Context, in *FetchNextEntityBySizeRequest, opts ...grpc.CallOption) (*FetchNextEntityBySizeResponse, error) {
-	out := new(FetchNextEntityBySizeResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/FetchNextEntityBySize", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2DiagnosticClient) FindEntitiesByFeatureIDs(ctx context.Context, in *FindEntitiesByFeatureIDsRequest, opts ...grpc.CallOption) (*FindEntitiesByFeatureIDsResponse, error) {
-	out := new(FindEntitiesByFeatureIDsResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/FindEntitiesByFeatureIDs", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -110,72 +70,9 @@ func (c *g2DiagnosticClient) GetAvailableMemory(ctx context.Context, in *GetAvai
 	return out, nil
 }
 
-func (c *g2DiagnosticClient) GetDataSourceCounts(ctx context.Context, in *GetDataSourceCountsRequest, opts ...grpc.CallOption) (*GetDataSourceCountsResponse, error) {
-	out := new(GetDataSourceCountsResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/GetDataSourceCounts", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *g2DiagnosticClient) GetDBInfo(ctx context.Context, in *GetDBInfoRequest, opts ...grpc.CallOption) (*GetDBInfoResponse, error) {
 	out := new(GetDBInfoResponse)
 	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/GetDBInfo", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2DiagnosticClient) GetEntityDetails(ctx context.Context, in *GetEntityDetailsRequest, opts ...grpc.CallOption) (*GetEntityDetailsResponse, error) {
-	out := new(GetEntityDetailsResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/GetEntityDetails", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2DiagnosticClient) GetEntityListBySize(ctx context.Context, in *GetEntityListBySizeRequest, opts ...grpc.CallOption) (*GetEntityListBySizeResponse, error) {
-	out := new(GetEntityListBySizeResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/GetEntityListBySize", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2DiagnosticClient) GetEntityResume(ctx context.Context, in *GetEntityResumeRequest, opts ...grpc.CallOption) (*GetEntityResumeResponse, error) {
-	out := new(GetEntityResumeResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/GetEntityResume", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2DiagnosticClient) GetEntitySizeBreakdown(ctx context.Context, in *GetEntitySizeBreakdownRequest, opts ...grpc.CallOption) (*GetEntitySizeBreakdownResponse, error) {
-	out := new(GetEntitySizeBreakdownResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/GetEntitySizeBreakdown", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2DiagnosticClient) GetFeature(ctx context.Context, in *GetFeatureRequest, opts ...grpc.CallOption) (*GetFeatureResponse, error) {
-	out := new(GetFeatureResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/GetFeature", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2DiagnosticClient) GetGenericFeatures(ctx context.Context, in *GetGenericFeaturesRequest, opts ...grpc.CallOption) (*GetGenericFeaturesResponse, error) {
-	out := new(GetGenericFeaturesResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/GetGenericFeatures", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -191,36 +88,9 @@ func (c *g2DiagnosticClient) GetLogicalCores(ctx context.Context, in *GetLogical
 	return out, nil
 }
 
-func (c *g2DiagnosticClient) GetMappingStatistics(ctx context.Context, in *GetMappingStatisticsRequest, opts ...grpc.CallOption) (*GetMappingStatisticsResponse, error) {
-	out := new(GetMappingStatisticsResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/GetMappingStatistics", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *g2DiagnosticClient) GetPhysicalCores(ctx context.Context, in *GetPhysicalCoresRequest, opts ...grpc.CallOption) (*GetPhysicalCoresResponse, error) {
 	out := new(GetPhysicalCoresResponse)
 	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/GetPhysicalCores", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2DiagnosticClient) GetRelationshipDetails(ctx context.Context, in *GetRelationshipDetailsRequest, opts ...grpc.CallOption) (*GetRelationshipDetailsResponse, error) {
-	out := new(GetRelationshipDetailsResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/GetRelationshipDetails", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2DiagnosticClient) GetResolutionStatistics(ctx context.Context, in *GetResolutionStatisticsRequest, opts ...grpc.CallOption) (*GetResolutionStatisticsResponse, error) {
-	out := new(GetResolutionStatisticsResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/GetResolutionStatistics", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -300,24 +170,11 @@ func (x *g2DiagnosticStreamEntityListBySizeClient) Recv() (*StreamEntityListBySi
 // for forward compatibility
 type G2DiagnosticServer interface {
 	CheckDBPerf(context.Context, *CheckDBPerfRequest) (*CheckDBPerfResponse, error)
-	CloseEntityListBySize(context.Context, *CloseEntityListBySizeRequest) (*CloseEntityListBySizeResponse, error)
 	Destroy(context.Context, *DestroyRequest) (*DestroyResponse, error)
-	FetchNextEntityBySize(context.Context, *FetchNextEntityBySizeRequest) (*FetchNextEntityBySizeResponse, error)
-	FindEntitiesByFeatureIDs(context.Context, *FindEntitiesByFeatureIDsRequest) (*FindEntitiesByFeatureIDsResponse, error)
 	GetAvailableMemory(context.Context, *GetAvailableMemoryRequest) (*GetAvailableMemoryResponse, error)
-	GetDataSourceCounts(context.Context, *GetDataSourceCountsRequest) (*GetDataSourceCountsResponse, error)
 	GetDBInfo(context.Context, *GetDBInfoRequest) (*GetDBInfoResponse, error)
-	GetEntityDetails(context.Context, *GetEntityDetailsRequest) (*GetEntityDetailsResponse, error)
-	GetEntityListBySize(context.Context, *GetEntityListBySizeRequest) (*GetEntityListBySizeResponse, error)
-	GetEntityResume(context.Context, *GetEntityResumeRequest) (*GetEntityResumeResponse, error)
-	GetEntitySizeBreakdown(context.Context, *GetEntitySizeBreakdownRequest) (*GetEntitySizeBreakdownResponse, error)
-	GetFeature(context.Context, *GetFeatureRequest) (*GetFeatureResponse, error)
-	GetGenericFeatures(context.Context, *GetGenericFeaturesRequest) (*GetGenericFeaturesResponse, error)
 	GetLogicalCores(context.Context, *GetLogicalCoresRequest) (*GetLogicalCoresResponse, error)
-	GetMappingStatistics(context.Context, *GetMappingStatisticsRequest) (*GetMappingStatisticsResponse, error)
 	GetPhysicalCores(context.Context, *GetPhysicalCoresRequest) (*GetPhysicalCoresResponse, error)
-	GetRelationshipDetails(context.Context, *GetRelationshipDetailsRequest) (*GetRelationshipDetailsResponse, error)
-	GetResolutionStatistics(context.Context, *GetResolutionStatisticsRequest) (*GetResolutionStatisticsResponse, error)
 	GetTotalSystemMemory(context.Context, *GetTotalSystemMemoryRequest) (*GetTotalSystemMemoryResponse, error)
 	Init(context.Context, *InitRequest) (*InitResponse, error)
 	InitWithConfigID(context.Context, *InitWithConfigIDRequest) (*InitWithConfigIDResponse, error)
@@ -333,59 +190,20 @@ type UnimplementedG2DiagnosticServer struct {
 func (UnimplementedG2DiagnosticServer) CheckDBPerf(context.Context, *CheckDBPerfRequest) (*CheckDBPerfResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CheckDBPerf not implemented")
 }
-func (UnimplementedG2DiagnosticServer) CloseEntityListBySize(context.Context, *CloseEntityListBySizeRequest) (*CloseEntityListBySizeResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CloseEntityListBySize not implemented")
-}
 func (UnimplementedG2DiagnosticServer) Destroy(context.Context, *DestroyRequest) (*DestroyResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Destroy not implemented")
-}
-func (UnimplementedG2DiagnosticServer) FetchNextEntityBySize(context.Context, *FetchNextEntityBySizeRequest) (*FetchNextEntityBySizeResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method FetchNextEntityBySize not implemented")
-}
-func (UnimplementedG2DiagnosticServer) FindEntitiesByFeatureIDs(context.Context, *FindEntitiesByFeatureIDsRequest) (*FindEntitiesByFeatureIDsResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method FindEntitiesByFeatureIDs not implemented")
 }
 func (UnimplementedG2DiagnosticServer) GetAvailableMemory(context.Context, *GetAvailableMemoryRequest) (*GetAvailableMemoryResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAvailableMemory not implemented")
 }
-func (UnimplementedG2DiagnosticServer) GetDataSourceCounts(context.Context, *GetDataSourceCountsRequest) (*GetDataSourceCountsResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetDataSourceCounts not implemented")
-}
 func (UnimplementedG2DiagnosticServer) GetDBInfo(context.Context, *GetDBInfoRequest) (*GetDBInfoResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetDBInfo not implemented")
-}
-func (UnimplementedG2DiagnosticServer) GetEntityDetails(context.Context, *GetEntityDetailsRequest) (*GetEntityDetailsResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetEntityDetails not implemented")
-}
-func (UnimplementedG2DiagnosticServer) GetEntityListBySize(context.Context, *GetEntityListBySizeRequest) (*GetEntityListBySizeResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetEntityListBySize not implemented")
-}
-func (UnimplementedG2DiagnosticServer) GetEntityResume(context.Context, *GetEntityResumeRequest) (*GetEntityResumeResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetEntityResume not implemented")
-}
-func (UnimplementedG2DiagnosticServer) GetEntitySizeBreakdown(context.Context, *GetEntitySizeBreakdownRequest) (*GetEntitySizeBreakdownResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetEntitySizeBreakdown not implemented")
-}
-func (UnimplementedG2DiagnosticServer) GetFeature(context.Context, *GetFeatureRequest) (*GetFeatureResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetFeature not implemented")
-}
-func (UnimplementedG2DiagnosticServer) GetGenericFeatures(context.Context, *GetGenericFeaturesRequest) (*GetGenericFeaturesResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetGenericFeatures not implemented")
 }
 func (UnimplementedG2DiagnosticServer) GetLogicalCores(context.Context, *GetLogicalCoresRequest) (*GetLogicalCoresResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetLogicalCores not implemented")
 }
-func (UnimplementedG2DiagnosticServer) GetMappingStatistics(context.Context, *GetMappingStatisticsRequest) (*GetMappingStatisticsResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetMappingStatistics not implemented")
-}
 func (UnimplementedG2DiagnosticServer) GetPhysicalCores(context.Context, *GetPhysicalCoresRequest) (*GetPhysicalCoresResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetPhysicalCores not implemented")
-}
-func (UnimplementedG2DiagnosticServer) GetRelationshipDetails(context.Context, *GetRelationshipDetailsRequest) (*GetRelationshipDetailsResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetRelationshipDetails not implemented")
-}
-func (UnimplementedG2DiagnosticServer) GetResolutionStatistics(context.Context, *GetResolutionStatisticsRequest) (*GetResolutionStatisticsResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetResolutionStatistics not implemented")
 }
 func (UnimplementedG2DiagnosticServer) GetTotalSystemMemory(context.Context, *GetTotalSystemMemoryRequest) (*GetTotalSystemMemoryResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetTotalSystemMemory not implemented")
@@ -433,24 +251,6 @@ func _G2Diagnostic_CheckDBPerf_Handler(srv interface{}, ctx context.Context, dec
 	return interceptor(ctx, in, info, handler)
 }
 
-func _G2Diagnostic_CloseEntityListBySize_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CloseEntityListBySizeRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).CloseEntityListBySize(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/CloseEntityListBySize",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).CloseEntityListBySize(ctx, req.(*CloseEntityListBySizeRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _G2Diagnostic_Destroy_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DestroyRequest)
 	if err := dec(in); err != nil {
@@ -465,42 +265,6 @@ func _G2Diagnostic_Destroy_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(G2DiagnosticServer).Destroy(ctx, req.(*DestroyRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Diagnostic_FetchNextEntityBySize_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(FetchNextEntityBySizeRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).FetchNextEntityBySize(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/FetchNextEntityBySize",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).FetchNextEntityBySize(ctx, req.(*FetchNextEntityBySizeRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Diagnostic_FindEntitiesByFeatureIDs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(FindEntitiesByFeatureIDsRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).FindEntitiesByFeatureIDs(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/FindEntitiesByFeatureIDs",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).FindEntitiesByFeatureIDs(ctx, req.(*FindEntitiesByFeatureIDsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -523,24 +287,6 @@ func _G2Diagnostic_GetAvailableMemory_Handler(srv interface{}, ctx context.Conte
 	return interceptor(ctx, in, info, handler)
 }
 
-func _G2Diagnostic_GetDataSourceCounts_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetDataSourceCountsRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).GetDataSourceCounts(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/GetDataSourceCounts",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).GetDataSourceCounts(ctx, req.(*GetDataSourceCountsRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _G2Diagnostic_GetDBInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetDBInfoRequest)
 	if err := dec(in); err != nil {
@@ -555,114 +301,6 @@ func _G2Diagnostic_GetDBInfo_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(G2DiagnosticServer).GetDBInfo(ctx, req.(*GetDBInfoRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Diagnostic_GetEntityDetails_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetEntityDetailsRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).GetEntityDetails(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/GetEntityDetails",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).GetEntityDetails(ctx, req.(*GetEntityDetailsRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Diagnostic_GetEntityListBySize_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetEntityListBySizeRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).GetEntityListBySize(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/GetEntityListBySize",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).GetEntityListBySize(ctx, req.(*GetEntityListBySizeRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Diagnostic_GetEntityResume_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetEntityResumeRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).GetEntityResume(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/GetEntityResume",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).GetEntityResume(ctx, req.(*GetEntityResumeRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Diagnostic_GetEntitySizeBreakdown_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetEntitySizeBreakdownRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).GetEntitySizeBreakdown(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/GetEntitySizeBreakdown",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).GetEntitySizeBreakdown(ctx, req.(*GetEntitySizeBreakdownRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Diagnostic_GetFeature_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetFeatureRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).GetFeature(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/GetFeature",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).GetFeature(ctx, req.(*GetFeatureRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Diagnostic_GetGenericFeatures_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetGenericFeaturesRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).GetGenericFeatures(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/GetGenericFeatures",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).GetGenericFeatures(ctx, req.(*GetGenericFeaturesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -685,24 +323,6 @@ func _G2Diagnostic_GetLogicalCores_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
-func _G2Diagnostic_GetMappingStatistics_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetMappingStatisticsRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).GetMappingStatistics(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/GetMappingStatistics",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).GetMappingStatistics(ctx, req.(*GetMappingStatisticsRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _G2Diagnostic_GetPhysicalCores_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetPhysicalCoresRequest)
 	if err := dec(in); err != nil {
@@ -717,42 +337,6 @@ func _G2Diagnostic_GetPhysicalCores_Handler(srv interface{}, ctx context.Context
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(G2DiagnosticServer).GetPhysicalCores(ctx, req.(*GetPhysicalCoresRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Diagnostic_GetRelationshipDetails_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetRelationshipDetailsRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).GetRelationshipDetails(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/GetRelationshipDetails",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).GetRelationshipDetails(ctx, req.(*GetRelationshipDetailsRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Diagnostic_GetResolutionStatistics_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetResolutionStatisticsRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).GetResolutionStatistics(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/GetResolutionStatistics",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).GetResolutionStatistics(ctx, req.(*GetResolutionStatisticsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -862,76 +446,24 @@ var G2Diagnostic_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _G2Diagnostic_CheckDBPerf_Handler,
 		},
 		{
-			MethodName: "CloseEntityListBySize",
-			Handler:    _G2Diagnostic_CloseEntityListBySize_Handler,
-		},
-		{
 			MethodName: "Destroy",
 			Handler:    _G2Diagnostic_Destroy_Handler,
-		},
-		{
-			MethodName: "FetchNextEntityBySize",
-			Handler:    _G2Diagnostic_FetchNextEntityBySize_Handler,
-		},
-		{
-			MethodName: "FindEntitiesByFeatureIDs",
-			Handler:    _G2Diagnostic_FindEntitiesByFeatureIDs_Handler,
 		},
 		{
 			MethodName: "GetAvailableMemory",
 			Handler:    _G2Diagnostic_GetAvailableMemory_Handler,
 		},
 		{
-			MethodName: "GetDataSourceCounts",
-			Handler:    _G2Diagnostic_GetDataSourceCounts_Handler,
-		},
-		{
 			MethodName: "GetDBInfo",
 			Handler:    _G2Diagnostic_GetDBInfo_Handler,
-		},
-		{
-			MethodName: "GetEntityDetails",
-			Handler:    _G2Diagnostic_GetEntityDetails_Handler,
-		},
-		{
-			MethodName: "GetEntityListBySize",
-			Handler:    _G2Diagnostic_GetEntityListBySize_Handler,
-		},
-		{
-			MethodName: "GetEntityResume",
-			Handler:    _G2Diagnostic_GetEntityResume_Handler,
-		},
-		{
-			MethodName: "GetEntitySizeBreakdown",
-			Handler:    _G2Diagnostic_GetEntitySizeBreakdown_Handler,
-		},
-		{
-			MethodName: "GetFeature",
-			Handler:    _G2Diagnostic_GetFeature_Handler,
-		},
-		{
-			MethodName: "GetGenericFeatures",
-			Handler:    _G2Diagnostic_GetGenericFeatures_Handler,
 		},
 		{
 			MethodName: "GetLogicalCores",
 			Handler:    _G2Diagnostic_GetLogicalCores_Handler,
 		},
 		{
-			MethodName: "GetMappingStatistics",
-			Handler:    _G2Diagnostic_GetMappingStatistics_Handler,
-		},
-		{
 			MethodName: "GetPhysicalCores",
 			Handler:    _G2Diagnostic_GetPhysicalCores_Handler,
-		},
-		{
-			MethodName: "GetRelationshipDetails",
-			Handler:    _G2Diagnostic_GetRelationshipDetails_Handler,
-		},
-		{
-			MethodName: "GetResolutionStatistics",
-			Handler:    _G2Diagnostic_GetResolutionStatistics_Handler,
 		},
 		{
 			MethodName: "GetTotalSystemMemory",

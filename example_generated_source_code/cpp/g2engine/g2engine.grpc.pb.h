@@ -49,27 +49,6 @@ class G2Engine final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithInfoResponse>> PrepareAsyncAddRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithInfoResponse>>(PrepareAsyncAddRecordWithInfoRaw(context, request, cq));
     }
-    virtual ::grpc::Status AddRecordWithInfoWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest& request, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>> AsyncAddRecordWithInfoWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>>(AsyncAddRecordWithInfoWithReturnedRecordIDRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>> PrepareAsyncAddRecordWithInfoWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>>(PrepareAsyncAddRecordWithInfoWithReturnedRecordIDRaw(context, request, cq));
-    }
-    virtual ::grpc::Status AddRecordWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithReturnedRecordIDRequest& request, ::g2engine::AddRecordWithReturnedRecordIDResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithReturnedRecordIDResponse>> AsyncAddRecordWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithReturnedRecordIDResponse>>(AsyncAddRecordWithReturnedRecordIDRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithReturnedRecordIDResponse>> PrepareAsyncAddRecordWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithReturnedRecordIDResponse>>(PrepareAsyncAddRecordWithReturnedRecordIDRaw(context, request, cq));
-    }
-    virtual ::grpc::Status CheckRecord(::grpc::ClientContext* context, const ::g2engine::CheckRecordRequest& request, ::g2engine::CheckRecordResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::CheckRecordResponse>> AsyncCheckRecord(::grpc::ClientContext* context, const ::g2engine::CheckRecordRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::CheckRecordResponse>>(AsyncCheckRecordRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::CheckRecordResponse>> PrepareAsyncCheckRecord(::grpc::ClientContext* context, const ::g2engine::CheckRecordRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::CheckRecordResponse>>(PrepareAsyncCheckRecordRaw(context, request, cq));
-    }
     virtual ::grpc::Status CloseExport(::grpc::ClientContext* context, const ::g2engine::CloseExportRequest& request, ::g2engine::CloseExportResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::CloseExportResponse>> AsyncCloseExport(::grpc::ClientContext* context, const ::g2engine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::CloseExportResponse>>(AsyncCloseExportRaw(context, request, cq));
@@ -385,40 +364,12 @@ class G2Engine final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessResponse>> PrepareAsyncProcess(::grpc::ClientContext* context, const ::g2engine::ProcessRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessResponse>>(PrepareAsyncProcessRaw(context, request, cq));
     }
-    virtual ::grpc::Status ProcessRedoRecord(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordRequest& request, ::g2engine::ProcessRedoRecordResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessRedoRecordResponse>> AsyncProcessRedoRecord(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessRedoRecordResponse>>(AsyncProcessRedoRecordRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessRedoRecordResponse>> PrepareAsyncProcessRedoRecord(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessRedoRecordResponse>>(PrepareAsyncProcessRedoRecordRaw(context, request, cq));
-    }
-    virtual ::grpc::Status ProcessRedoRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordWithInfoRequest& request, ::g2engine::ProcessRedoRecordWithInfoResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessRedoRecordWithInfoResponse>> AsyncProcessRedoRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessRedoRecordWithInfoResponse>>(AsyncProcessRedoRecordWithInfoRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessRedoRecordWithInfoResponse>> PrepareAsyncProcessRedoRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessRedoRecordWithInfoResponse>>(PrepareAsyncProcessRedoRecordWithInfoRaw(context, request, cq));
-    }
     virtual ::grpc::Status ProcessWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest& request, ::g2engine::ProcessWithInfoResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithInfoResponse>> AsyncProcessWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithInfoResponse>>(AsyncProcessWithInfoRaw(context, request, cq));
     }
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithInfoResponse>> PrepareAsyncProcessWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithInfoResponse>>(PrepareAsyncProcessWithInfoRaw(context, request, cq));
-    }
-    virtual ::grpc::Status ProcessWithResponse(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseRequest& request, ::g2engine::ProcessWithResponseResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithResponseResponse>> AsyncProcessWithResponse(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithResponseResponse>>(AsyncProcessWithResponseRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithResponseResponse>> PrepareAsyncProcessWithResponse(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithResponseResponse>>(PrepareAsyncProcessWithResponseRaw(context, request, cq));
-    }
-    virtual ::grpc::Status ProcessWithResponseResize(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseResizeRequest& request, ::g2engine::ProcessWithResponseResizeResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithResponseResizeResponse>> AsyncProcessWithResponseResize(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseResizeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithResponseResizeResponse>>(AsyncProcessWithResponseResizeRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithResponseResizeResponse>> PrepareAsyncProcessWithResponseResize(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseResizeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithResponseResizeResponse>>(PrepareAsyncProcessWithResponseResizeRaw(context, request, cq));
     }
     virtual ::grpc::Status PurgeRepository(::grpc::ClientContext* context, const ::g2engine::PurgeRepositoryRequest& request, ::g2engine::PurgeRepositoryResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::PurgeRepositoryResponse>> AsyncPurgeRepository(::grpc::ClientContext* context, const ::g2engine::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) {
@@ -578,12 +529,6 @@ class G2Engine final {
       virtual void AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void AddRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest* request, ::g2engine::AddRecordWithInfoResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void AddRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest* request, ::g2engine::AddRecordWithInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void AddRecordWithInfoWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* request, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void AddRecordWithInfoWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* request, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void AddRecordWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithReturnedRecordIDRequest* request, ::g2engine::AddRecordWithReturnedRecordIDResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void AddRecordWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithReturnedRecordIDRequest* request, ::g2engine::AddRecordWithReturnedRecordIDResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void CheckRecord(::grpc::ClientContext* context, const ::g2engine::CheckRecordRequest* request, ::g2engine::CheckRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void CheckRecord(::grpc::ClientContext* context, const ::g2engine::CheckRecordRequest* request, ::g2engine::CheckRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void CloseExport(::grpc::ClientContext* context, const ::g2engine::CloseExportRequest* request, ::g2engine::CloseExportResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void CloseExport(::grpc::ClientContext* context, const ::g2engine::CloseExportRequest* request, ::g2engine::CloseExportResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void CountRedoRecords(::grpc::ClientContext* context, const ::g2engine::CountRedoRecordsRequest* request, ::g2engine::CountRedoRecordsResponse* response, std::function<void(::grpc::Status)>) = 0;
@@ -674,16 +619,8 @@ class G2Engine final {
       virtual void PrimeEngine(::grpc::ClientContext* context, const ::g2engine::PrimeEngineRequest* request, ::g2engine::PrimeEngineResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void Process(::grpc::ClientContext* context, const ::g2engine::ProcessRequest* request, ::g2engine::ProcessResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Process(::grpc::ClientContext* context, const ::g2engine::ProcessRequest* request, ::g2engine::ProcessResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void ProcessRedoRecord(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordRequest* request, ::g2engine::ProcessRedoRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ProcessRedoRecord(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordRequest* request, ::g2engine::ProcessRedoRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void ProcessRedoRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordWithInfoRequest* request, ::g2engine::ProcessRedoRecordWithInfoResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ProcessRedoRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordWithInfoRequest* request, ::g2engine::ProcessRedoRecordWithInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void ProcessWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest* request, ::g2engine::ProcessWithInfoResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void ProcessWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest* request, ::g2engine::ProcessWithInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void ProcessWithResponse(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseRequest* request, ::g2engine::ProcessWithResponseResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ProcessWithResponse(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseRequest* request, ::g2engine::ProcessWithResponseResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void ProcessWithResponseResize(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseResizeRequest* request, ::g2engine::ProcessWithResponseResizeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ProcessWithResponseResize(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseResizeRequest* request, ::g2engine::ProcessWithResponseResizeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void PurgeRepository(::grpc::ClientContext* context, const ::g2engine::PurgeRepositoryRequest* request, ::g2engine::PurgeRepositoryResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void PurgeRepository(::grpc::ClientContext* context, const ::g2engine::PurgeRepositoryRequest* request, ::g2engine::PurgeRepositoryResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void ReevaluateEntity(::grpc::ClientContext* context, const ::g2engine::ReevaluateEntityRequest* request, ::g2engine::ReevaluateEntityResponse* response, std::function<void(::grpc::Status)>) = 0;
@@ -733,12 +670,6 @@ class G2Engine final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordResponse>* PrepareAsyncAddRecordRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithInfoResponse>* AsyncAddRecordWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithInfoResponse>* PrepareAsyncAddRecordWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>* AsyncAddRecordWithInfoWithReturnedRecordIDRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>* PrepareAsyncAddRecordWithInfoWithReturnedRecordIDRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithReturnedRecordIDResponse>* AsyncAddRecordWithReturnedRecordIDRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::AddRecordWithReturnedRecordIDResponse>* PrepareAsyncAddRecordWithReturnedRecordIDRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::CheckRecordResponse>* AsyncCheckRecordRaw(::grpc::ClientContext* context, const ::g2engine::CheckRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::CheckRecordResponse>* PrepareAsyncCheckRecordRaw(::grpc::ClientContext* context, const ::g2engine::CheckRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::CloseExportResponse>* AsyncCloseExportRaw(::grpc::ClientContext* context, const ::g2engine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::CloseExportResponse>* PrepareAsyncCloseExportRaw(::grpc::ClientContext* context, const ::g2engine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::CountRedoRecordsResponse>* AsyncCountRedoRecordsRaw(::grpc::ClientContext* context, const ::g2engine::CountRedoRecordsRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -829,16 +760,8 @@ class G2Engine final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::PrimeEngineResponse>* PrepareAsyncPrimeEngineRaw(::grpc::ClientContext* context, const ::g2engine::PrimeEngineRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessResponse>* AsyncProcessRaw(::grpc::ClientContext* context, const ::g2engine::ProcessRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessResponse>* PrepareAsyncProcessRaw(::grpc::ClientContext* context, const ::g2engine::ProcessRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessRedoRecordResponse>* AsyncProcessRedoRecordRaw(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessRedoRecordResponse>* PrepareAsyncProcessRedoRecordRaw(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessRedoRecordWithInfoResponse>* AsyncProcessRedoRecordWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessRedoRecordWithInfoResponse>* PrepareAsyncProcessRedoRecordWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithInfoResponse>* AsyncProcessWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithInfoResponse>* PrepareAsyncProcessWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithResponseResponse>* AsyncProcessWithResponseRaw(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithResponseResponse>* PrepareAsyncProcessWithResponseRaw(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithResponseResizeResponse>* AsyncProcessWithResponseResizeRaw(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseResizeRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ProcessWithResponseResizeResponse>* PrepareAsyncProcessWithResponseResizeRaw(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseResizeRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::PurgeRepositoryResponse>* AsyncPurgeRepositoryRaw(::grpc::ClientContext* context, const ::g2engine::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::PurgeRepositoryResponse>* PrepareAsyncPurgeRepositoryRaw(::grpc::ClientContext* context, const ::g2engine::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2engine::ReevaluateEntityResponse>* AsyncReevaluateEntityRaw(::grpc::ClientContext* context, const ::g2engine::ReevaluateEntityRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -900,27 +823,6 @@ class G2Engine final {
     }
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithInfoResponse>> PrepareAsyncAddRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithInfoResponse>>(PrepareAsyncAddRecordWithInfoRaw(context, request, cq));
-    }
-    ::grpc::Status AddRecordWithInfoWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest& request, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>> AsyncAddRecordWithInfoWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>>(AsyncAddRecordWithInfoWithReturnedRecordIDRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>> PrepareAsyncAddRecordWithInfoWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>>(PrepareAsyncAddRecordWithInfoWithReturnedRecordIDRaw(context, request, cq));
-    }
-    ::grpc::Status AddRecordWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithReturnedRecordIDRequest& request, ::g2engine::AddRecordWithReturnedRecordIDResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithReturnedRecordIDResponse>> AsyncAddRecordWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithReturnedRecordIDResponse>>(AsyncAddRecordWithReturnedRecordIDRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithReturnedRecordIDResponse>> PrepareAsyncAddRecordWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithReturnedRecordIDResponse>>(PrepareAsyncAddRecordWithReturnedRecordIDRaw(context, request, cq));
-    }
-    ::grpc::Status CheckRecord(::grpc::ClientContext* context, const ::g2engine::CheckRecordRequest& request, ::g2engine::CheckRecordResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::CheckRecordResponse>> AsyncCheckRecord(::grpc::ClientContext* context, const ::g2engine::CheckRecordRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::CheckRecordResponse>>(AsyncCheckRecordRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::CheckRecordResponse>> PrepareAsyncCheckRecord(::grpc::ClientContext* context, const ::g2engine::CheckRecordRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::CheckRecordResponse>>(PrepareAsyncCheckRecordRaw(context, request, cq));
     }
     ::grpc::Status CloseExport(::grpc::ClientContext* context, const ::g2engine::CloseExportRequest& request, ::g2engine::CloseExportResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::CloseExportResponse>> AsyncCloseExport(::grpc::ClientContext* context, const ::g2engine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) {
@@ -1237,40 +1139,12 @@ class G2Engine final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessResponse>> PrepareAsyncProcess(::grpc::ClientContext* context, const ::g2engine::ProcessRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessResponse>>(PrepareAsyncProcessRaw(context, request, cq));
     }
-    ::grpc::Status ProcessRedoRecord(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordRequest& request, ::g2engine::ProcessRedoRecordResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessRedoRecordResponse>> AsyncProcessRedoRecord(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessRedoRecordResponse>>(AsyncProcessRedoRecordRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessRedoRecordResponse>> PrepareAsyncProcessRedoRecord(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessRedoRecordResponse>>(PrepareAsyncProcessRedoRecordRaw(context, request, cq));
-    }
-    ::grpc::Status ProcessRedoRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordWithInfoRequest& request, ::g2engine::ProcessRedoRecordWithInfoResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessRedoRecordWithInfoResponse>> AsyncProcessRedoRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessRedoRecordWithInfoResponse>>(AsyncProcessRedoRecordWithInfoRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessRedoRecordWithInfoResponse>> PrepareAsyncProcessRedoRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessRedoRecordWithInfoResponse>>(PrepareAsyncProcessRedoRecordWithInfoRaw(context, request, cq));
-    }
     ::grpc::Status ProcessWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest& request, ::g2engine::ProcessWithInfoResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithInfoResponse>> AsyncProcessWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithInfoResponse>>(AsyncProcessWithInfoRaw(context, request, cq));
     }
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithInfoResponse>> PrepareAsyncProcessWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithInfoResponse>>(PrepareAsyncProcessWithInfoRaw(context, request, cq));
-    }
-    ::grpc::Status ProcessWithResponse(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseRequest& request, ::g2engine::ProcessWithResponseResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithResponseResponse>> AsyncProcessWithResponse(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithResponseResponse>>(AsyncProcessWithResponseRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithResponseResponse>> PrepareAsyncProcessWithResponse(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithResponseResponse>>(PrepareAsyncProcessWithResponseRaw(context, request, cq));
-    }
-    ::grpc::Status ProcessWithResponseResize(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseResizeRequest& request, ::g2engine::ProcessWithResponseResizeResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithResponseResizeResponse>> AsyncProcessWithResponseResize(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseResizeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithResponseResizeResponse>>(AsyncProcessWithResponseResizeRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithResponseResizeResponse>> PrepareAsyncProcessWithResponseResize(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseResizeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithResponseResizeResponse>>(PrepareAsyncProcessWithResponseResizeRaw(context, request, cq));
     }
     ::grpc::Status PurgeRepository(::grpc::ClientContext* context, const ::g2engine::PurgeRepositoryRequest& request, ::g2engine::PurgeRepositoryResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2engine::PurgeRepositoryResponse>> AsyncPurgeRepository(::grpc::ClientContext* context, const ::g2engine::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) {
@@ -1430,12 +1304,6 @@ class G2Engine final {
       void AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void AddRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest* request, ::g2engine::AddRecordWithInfoResponse* response, std::function<void(::grpc::Status)>) override;
       void AddRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest* request, ::g2engine::AddRecordWithInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void AddRecordWithInfoWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* request, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* response, std::function<void(::grpc::Status)>) override;
-      void AddRecordWithInfoWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* request, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void AddRecordWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithReturnedRecordIDRequest* request, ::g2engine::AddRecordWithReturnedRecordIDResponse* response, std::function<void(::grpc::Status)>) override;
-      void AddRecordWithReturnedRecordID(::grpc::ClientContext* context, const ::g2engine::AddRecordWithReturnedRecordIDRequest* request, ::g2engine::AddRecordWithReturnedRecordIDResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void CheckRecord(::grpc::ClientContext* context, const ::g2engine::CheckRecordRequest* request, ::g2engine::CheckRecordResponse* response, std::function<void(::grpc::Status)>) override;
-      void CheckRecord(::grpc::ClientContext* context, const ::g2engine::CheckRecordRequest* request, ::g2engine::CheckRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void CloseExport(::grpc::ClientContext* context, const ::g2engine::CloseExportRequest* request, ::g2engine::CloseExportResponse* response, std::function<void(::grpc::Status)>) override;
       void CloseExport(::grpc::ClientContext* context, const ::g2engine::CloseExportRequest* request, ::g2engine::CloseExportResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void CountRedoRecords(::grpc::ClientContext* context, const ::g2engine::CountRedoRecordsRequest* request, ::g2engine::CountRedoRecordsResponse* response, std::function<void(::grpc::Status)>) override;
@@ -1526,16 +1394,8 @@ class G2Engine final {
       void PrimeEngine(::grpc::ClientContext* context, const ::g2engine::PrimeEngineRequest* request, ::g2engine::PrimeEngineResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void Process(::grpc::ClientContext* context, const ::g2engine::ProcessRequest* request, ::g2engine::ProcessResponse* response, std::function<void(::grpc::Status)>) override;
       void Process(::grpc::ClientContext* context, const ::g2engine::ProcessRequest* request, ::g2engine::ProcessResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void ProcessRedoRecord(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordRequest* request, ::g2engine::ProcessRedoRecordResponse* response, std::function<void(::grpc::Status)>) override;
-      void ProcessRedoRecord(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordRequest* request, ::g2engine::ProcessRedoRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void ProcessRedoRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordWithInfoRequest* request, ::g2engine::ProcessRedoRecordWithInfoResponse* response, std::function<void(::grpc::Status)>) override;
-      void ProcessRedoRecordWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordWithInfoRequest* request, ::g2engine::ProcessRedoRecordWithInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void ProcessWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest* request, ::g2engine::ProcessWithInfoResponse* response, std::function<void(::grpc::Status)>) override;
       void ProcessWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest* request, ::g2engine::ProcessWithInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void ProcessWithResponse(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseRequest* request, ::g2engine::ProcessWithResponseResponse* response, std::function<void(::grpc::Status)>) override;
-      void ProcessWithResponse(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseRequest* request, ::g2engine::ProcessWithResponseResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void ProcessWithResponseResize(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseResizeRequest* request, ::g2engine::ProcessWithResponseResizeResponse* response, std::function<void(::grpc::Status)>) override;
-      void ProcessWithResponseResize(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseResizeRequest* request, ::g2engine::ProcessWithResponseResizeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void PurgeRepository(::grpc::ClientContext* context, const ::g2engine::PurgeRepositoryRequest* request, ::g2engine::PurgeRepositoryResponse* response, std::function<void(::grpc::Status)>) override;
       void PurgeRepository(::grpc::ClientContext* context, const ::g2engine::PurgeRepositoryRequest* request, ::g2engine::PurgeRepositoryResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void ReevaluateEntity(::grpc::ClientContext* context, const ::g2engine::ReevaluateEntityRequest* request, ::g2engine::ReevaluateEntityResponse* response, std::function<void(::grpc::Status)>) override;
@@ -1591,12 +1451,6 @@ class G2Engine final {
     ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordResponse>* PrepareAsyncAddRecordRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithInfoResponse>* AsyncAddRecordWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithInfoResponse>* PrepareAsyncAddRecordWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>* AsyncAddRecordWithInfoWithReturnedRecordIDRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>* PrepareAsyncAddRecordWithInfoWithReturnedRecordIDRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithReturnedRecordIDResponse>* AsyncAddRecordWithReturnedRecordIDRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::AddRecordWithReturnedRecordIDResponse>* PrepareAsyncAddRecordWithReturnedRecordIDRaw(::grpc::ClientContext* context, const ::g2engine::AddRecordWithReturnedRecordIDRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::CheckRecordResponse>* AsyncCheckRecordRaw(::grpc::ClientContext* context, const ::g2engine::CheckRecordRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::CheckRecordResponse>* PrepareAsyncCheckRecordRaw(::grpc::ClientContext* context, const ::g2engine::CheckRecordRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::CloseExportResponse>* AsyncCloseExportRaw(::grpc::ClientContext* context, const ::g2engine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::CloseExportResponse>* PrepareAsyncCloseExportRaw(::grpc::ClientContext* context, const ::g2engine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::CountRedoRecordsResponse>* AsyncCountRedoRecordsRaw(::grpc::ClientContext* context, const ::g2engine::CountRedoRecordsRequest& request, ::grpc::CompletionQueue* cq) override;
@@ -1687,16 +1541,8 @@ class G2Engine final {
     ::grpc::ClientAsyncResponseReader< ::g2engine::PrimeEngineResponse>* PrepareAsyncPrimeEngineRaw(::grpc::ClientContext* context, const ::g2engine::PrimeEngineRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessResponse>* AsyncProcessRaw(::grpc::ClientContext* context, const ::g2engine::ProcessRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessResponse>* PrepareAsyncProcessRaw(::grpc::ClientContext* context, const ::g2engine::ProcessRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessRedoRecordResponse>* AsyncProcessRedoRecordRaw(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessRedoRecordResponse>* PrepareAsyncProcessRedoRecordRaw(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessRedoRecordWithInfoResponse>* AsyncProcessRedoRecordWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessRedoRecordWithInfoResponse>* PrepareAsyncProcessRedoRecordWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::ProcessRedoRecordWithInfoRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithInfoResponse>* AsyncProcessWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithInfoResponse>* PrepareAsyncProcessWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithResponseResponse>* AsyncProcessWithResponseRaw(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithResponseResponse>* PrepareAsyncProcessWithResponseRaw(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithResponseResizeResponse>* AsyncProcessWithResponseResizeRaw(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseResizeRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithResponseResizeResponse>* PrepareAsyncProcessWithResponseResizeRaw(::grpc::ClientContext* context, const ::g2engine::ProcessWithResponseResizeRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::PurgeRepositoryResponse>* AsyncPurgeRepositoryRaw(::grpc::ClientContext* context, const ::g2engine::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::PurgeRepositoryResponse>* PrepareAsyncPurgeRepositoryRaw(::grpc::ClientContext* context, const ::g2engine::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2engine::ReevaluateEntityResponse>* AsyncReevaluateEntityRaw(::grpc::ClientContext* context, const ::g2engine::ReevaluateEntityRequest& request, ::grpc::CompletionQueue* cq) override;
@@ -1743,9 +1589,6 @@ class G2Engine final {
     ::grpc::ClientAsyncResponseReader< ::g2engine::WhyRecords_V2Response>* PrepareAsyncWhyRecords_V2Raw(::grpc::ClientContext* context, const ::g2engine::WhyRecords_V2Request& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_AddRecord_;
     const ::grpc::internal::RpcMethod rpcmethod_AddRecordWithInfo_;
-    const ::grpc::internal::RpcMethod rpcmethod_AddRecordWithInfoWithReturnedRecordID_;
-    const ::grpc::internal::RpcMethod rpcmethod_AddRecordWithReturnedRecordID_;
-    const ::grpc::internal::RpcMethod rpcmethod_CheckRecord_;
     const ::grpc::internal::RpcMethod rpcmethod_CloseExport_;
     const ::grpc::internal::RpcMethod rpcmethod_CountRedoRecords_;
     const ::grpc::internal::RpcMethod rpcmethod_DeleteRecord_;
@@ -1791,11 +1634,7 @@ class G2Engine final {
     const ::grpc::internal::RpcMethod rpcmethod_InitWithConfigID_;
     const ::grpc::internal::RpcMethod rpcmethod_PrimeEngine_;
     const ::grpc::internal::RpcMethod rpcmethod_Process_;
-    const ::grpc::internal::RpcMethod rpcmethod_ProcessRedoRecord_;
-    const ::grpc::internal::RpcMethod rpcmethod_ProcessRedoRecordWithInfo_;
     const ::grpc::internal::RpcMethod rpcmethod_ProcessWithInfo_;
-    const ::grpc::internal::RpcMethod rpcmethod_ProcessWithResponse_;
-    const ::grpc::internal::RpcMethod rpcmethod_ProcessWithResponseResize_;
     const ::grpc::internal::RpcMethod rpcmethod_PurgeRepository_;
     const ::grpc::internal::RpcMethod rpcmethod_ReevaluateEntity_;
     const ::grpc::internal::RpcMethod rpcmethod_ReevaluateEntityWithInfo_;
@@ -1826,9 +1665,6 @@ class G2Engine final {
     virtual ~Service();
     virtual ::grpc::Status AddRecord(::grpc::ServerContext* context, const ::g2engine::AddRecordRequest* request, ::g2engine::AddRecordResponse* response);
     virtual ::grpc::Status AddRecordWithInfo(::grpc::ServerContext* context, const ::g2engine::AddRecordWithInfoRequest* request, ::g2engine::AddRecordWithInfoResponse* response);
-    virtual ::grpc::Status AddRecordWithInfoWithReturnedRecordID(::grpc::ServerContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* request, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* response);
-    virtual ::grpc::Status AddRecordWithReturnedRecordID(::grpc::ServerContext* context, const ::g2engine::AddRecordWithReturnedRecordIDRequest* request, ::g2engine::AddRecordWithReturnedRecordIDResponse* response);
-    virtual ::grpc::Status CheckRecord(::grpc::ServerContext* context, const ::g2engine::CheckRecordRequest* request, ::g2engine::CheckRecordResponse* response);
     virtual ::grpc::Status CloseExport(::grpc::ServerContext* context, const ::g2engine::CloseExportRequest* request, ::g2engine::CloseExportResponse* response);
     virtual ::grpc::Status CountRedoRecords(::grpc::ServerContext* context, const ::g2engine::CountRedoRecordsRequest* request, ::g2engine::CountRedoRecordsResponse* response);
     virtual ::grpc::Status DeleteRecord(::grpc::ServerContext* context, const ::g2engine::DeleteRecordRequest* request, ::g2engine::DeleteRecordResponse* response);
@@ -1874,11 +1710,7 @@ class G2Engine final {
     virtual ::grpc::Status InitWithConfigID(::grpc::ServerContext* context, const ::g2engine::InitWithConfigIDRequest* request, ::g2engine::InitWithConfigIDResponse* response);
     virtual ::grpc::Status PrimeEngine(::grpc::ServerContext* context, const ::g2engine::PrimeEngineRequest* request, ::g2engine::PrimeEngineResponse* response);
     virtual ::grpc::Status Process(::grpc::ServerContext* context, const ::g2engine::ProcessRequest* request, ::g2engine::ProcessResponse* response);
-    virtual ::grpc::Status ProcessRedoRecord(::grpc::ServerContext* context, const ::g2engine::ProcessRedoRecordRequest* request, ::g2engine::ProcessRedoRecordResponse* response);
-    virtual ::grpc::Status ProcessRedoRecordWithInfo(::grpc::ServerContext* context, const ::g2engine::ProcessRedoRecordWithInfoRequest* request, ::g2engine::ProcessRedoRecordWithInfoResponse* response);
     virtual ::grpc::Status ProcessWithInfo(::grpc::ServerContext* context, const ::g2engine::ProcessWithInfoRequest* request, ::g2engine::ProcessWithInfoResponse* response);
-    virtual ::grpc::Status ProcessWithResponse(::grpc::ServerContext* context, const ::g2engine::ProcessWithResponseRequest* request, ::g2engine::ProcessWithResponseResponse* response);
-    virtual ::grpc::Status ProcessWithResponseResize(::grpc::ServerContext* context, const ::g2engine::ProcessWithResponseResizeRequest* request, ::g2engine::ProcessWithResponseResizeResponse* response);
     virtual ::grpc::Status PurgeRepository(::grpc::ServerContext* context, const ::g2engine::PurgeRepositoryRequest* request, ::g2engine::PurgeRepositoryResponse* response);
     virtual ::grpc::Status ReevaluateEntity(::grpc::ServerContext* context, const ::g2engine::ReevaluateEntityRequest* request, ::g2engine::ReevaluateEntityResponse* response);
     virtual ::grpc::Status ReevaluateEntityWithInfo(::grpc::ServerContext* context, const ::g2engine::ReevaluateEntityWithInfoRequest* request, ::g2engine::ReevaluateEntityWithInfoResponse* response);
@@ -1942,72 +1774,12 @@ class G2Engine final {
     }
   };
   template <class BaseClass>
-  class WithAsyncMethod_AddRecordWithInfoWithReturnedRecordID : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_AddRecordWithInfoWithReturnedRecordID() {
-      ::grpc::Service::MarkMethodAsync(2);
-    }
-    ~WithAsyncMethod_AddRecordWithInfoWithReturnedRecordID() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status AddRecordWithInfoWithReturnedRecordID(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* /*request*/, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestAddRecordWithInfoWithReturnedRecordID(::grpc::ServerContext* context, ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_AddRecordWithReturnedRecordID : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_AddRecordWithReturnedRecordID() {
-      ::grpc::Service::MarkMethodAsync(3);
-    }
-    ~WithAsyncMethod_AddRecordWithReturnedRecordID() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status AddRecordWithReturnedRecordID(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordWithReturnedRecordIDRequest* /*request*/, ::g2engine::AddRecordWithReturnedRecordIDResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestAddRecordWithReturnedRecordID(::grpc::ServerContext* context, ::g2engine::AddRecordWithReturnedRecordIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::AddRecordWithReturnedRecordIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_CheckRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_CheckRecord() {
-      ::grpc::Service::MarkMethodAsync(4);
-    }
-    ~WithAsyncMethod_CheckRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status CheckRecord(::grpc::ServerContext* /*context*/, const ::g2engine::CheckRecordRequest* /*request*/, ::g2engine::CheckRecordResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestCheckRecord(::grpc::ServerContext* context, ::g2engine::CheckRecordRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::CheckRecordResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
   class WithAsyncMethod_CloseExport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_CloseExport() {
-      ::grpc::Service::MarkMethodAsync(5);
+      ::grpc::Service::MarkMethodAsync(2);
     }
     ~WithAsyncMethod_CloseExport() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2018,7 +1790,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestCloseExport(::grpc::ServerContext* context, ::g2engine::CloseExportRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::CloseExportResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2027,7 +1799,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_CountRedoRecords() {
-      ::grpc::Service::MarkMethodAsync(6);
+      ::grpc::Service::MarkMethodAsync(3);
     }
     ~WithAsyncMethod_CountRedoRecords() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2038,7 +1810,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestCountRedoRecords(::grpc::ServerContext* context, ::g2engine::CountRedoRecordsRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::CountRedoRecordsResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2047,7 +1819,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_DeleteRecord() {
-      ::grpc::Service::MarkMethodAsync(7);
+      ::grpc::Service::MarkMethodAsync(4);
     }
     ~WithAsyncMethod_DeleteRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2058,7 +1830,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestDeleteRecord(::grpc::ServerContext* context, ::g2engine::DeleteRecordRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::DeleteRecordResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2067,7 +1839,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_DeleteRecordWithInfo() {
-      ::grpc::Service::MarkMethodAsync(8);
+      ::grpc::Service::MarkMethodAsync(5);
     }
     ~WithAsyncMethod_DeleteRecordWithInfo() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2078,7 +1850,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestDeleteRecordWithInfo(::grpc::ServerContext* context, ::g2engine::DeleteRecordWithInfoRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::DeleteRecordWithInfoResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2087,7 +1859,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Destroy() {
-      ::grpc::Service::MarkMethodAsync(9);
+      ::grpc::Service::MarkMethodAsync(6);
     }
     ~WithAsyncMethod_Destroy() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2098,7 +1870,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestDestroy(::grpc::ServerContext* context, ::g2engine::DestroyRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::DestroyResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2107,7 +1879,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_ExportConfig() {
-      ::grpc::Service::MarkMethodAsync(10);
+      ::grpc::Service::MarkMethodAsync(7);
     }
     ~WithAsyncMethod_ExportConfig() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2118,7 +1890,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestExportConfig(::grpc::ServerContext* context, ::g2engine::ExportConfigRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::ExportConfigResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2127,7 +1899,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_ExportConfigAndConfigID() {
-      ::grpc::Service::MarkMethodAsync(11);
+      ::grpc::Service::MarkMethodAsync(8);
     }
     ~WithAsyncMethod_ExportConfigAndConfigID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2138,7 +1910,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestExportConfigAndConfigID(::grpc::ServerContext* context, ::g2engine::ExportConfigAndConfigIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::ExportConfigAndConfigIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(11, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2147,7 +1919,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_ExportCSVEntityReport() {
-      ::grpc::Service::MarkMethodAsync(12);
+      ::grpc::Service::MarkMethodAsync(9);
     }
     ~WithAsyncMethod_ExportCSVEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2158,7 +1930,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestExportCSVEntityReport(::grpc::ServerContext* context, ::g2engine::ExportCSVEntityReportRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::ExportCSVEntityReportResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(12, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2167,7 +1939,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_ExportJSONEntityReport() {
-      ::grpc::Service::MarkMethodAsync(13);
+      ::grpc::Service::MarkMethodAsync(10);
     }
     ~WithAsyncMethod_ExportJSONEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2178,7 +1950,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestExportJSONEntityReport(::grpc::ServerContext* context, ::g2engine::ExportJSONEntityReportRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::ExportJSONEntityReportResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(13, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2187,7 +1959,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FetchNext() {
-      ::grpc::Service::MarkMethodAsync(14);
+      ::grpc::Service::MarkMethodAsync(11);
     }
     ~WithAsyncMethod_FetchNext() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2198,7 +1970,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFetchNext(::grpc::ServerContext* context, ::g2engine::FetchNextRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FetchNextResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(14, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(11, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2207,7 +1979,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindInterestingEntitiesByEntityID() {
-      ::grpc::Service::MarkMethodAsync(15);
+      ::grpc::Service::MarkMethodAsync(12);
     }
     ~WithAsyncMethod_FindInterestingEntitiesByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2218,7 +1990,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindInterestingEntitiesByEntityID(::grpc::ServerContext* context, ::g2engine::FindInterestingEntitiesByEntityIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindInterestingEntitiesByEntityIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(15, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(12, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2227,7 +1999,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindInterestingEntitiesByRecordID() {
-      ::grpc::Service::MarkMethodAsync(16);
+      ::grpc::Service::MarkMethodAsync(13);
     }
     ~WithAsyncMethod_FindInterestingEntitiesByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2238,7 +2010,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindInterestingEntitiesByRecordID(::grpc::ServerContext* context, ::g2engine::FindInterestingEntitiesByRecordIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindInterestingEntitiesByRecordIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(16, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(13, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2247,7 +2019,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindNetworkByEntityID() {
-      ::grpc::Service::MarkMethodAsync(17);
+      ::grpc::Service::MarkMethodAsync(14);
     }
     ~WithAsyncMethod_FindNetworkByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2258,7 +2030,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindNetworkByEntityID(::grpc::ServerContext* context, ::g2engine::FindNetworkByEntityIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindNetworkByEntityIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(17, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(14, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2267,7 +2039,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindNetworkByEntityID_V2() {
-      ::grpc::Service::MarkMethodAsync(18);
+      ::grpc::Service::MarkMethodAsync(15);
     }
     ~WithAsyncMethod_FindNetworkByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2278,7 +2050,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindNetworkByEntityID_V2(::grpc::ServerContext* context, ::g2engine::FindNetworkByEntityID_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindNetworkByEntityID_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(18, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(15, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2287,7 +2059,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindNetworkByRecordID() {
-      ::grpc::Service::MarkMethodAsync(19);
+      ::grpc::Service::MarkMethodAsync(16);
     }
     ~WithAsyncMethod_FindNetworkByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2298,7 +2070,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindNetworkByRecordID(::grpc::ServerContext* context, ::g2engine::FindNetworkByRecordIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindNetworkByRecordIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(19, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(16, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2307,7 +2079,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindNetworkByRecordID_V2() {
-      ::grpc::Service::MarkMethodAsync(20);
+      ::grpc::Service::MarkMethodAsync(17);
     }
     ~WithAsyncMethod_FindNetworkByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2318,7 +2090,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindNetworkByRecordID_V2(::grpc::ServerContext* context, ::g2engine::FindNetworkByRecordID_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindNetworkByRecordID_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(20, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(17, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2327,7 +2099,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindPathByEntityID() {
-      ::grpc::Service::MarkMethodAsync(21);
+      ::grpc::Service::MarkMethodAsync(18);
     }
     ~WithAsyncMethod_FindPathByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2338,7 +2110,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathByEntityID(::grpc::ServerContext* context, ::g2engine::FindPathByEntityIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindPathByEntityIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(21, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(18, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2347,7 +2119,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindPathByEntityID_V2() {
-      ::grpc::Service::MarkMethodAsync(22);
+      ::grpc::Service::MarkMethodAsync(19);
     }
     ~WithAsyncMethod_FindPathByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2358,7 +2130,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathByEntityID_V2(::grpc::ServerContext* context, ::g2engine::FindPathByEntityID_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindPathByEntityID_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(22, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(19, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2367,7 +2139,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindPathByRecordID() {
-      ::grpc::Service::MarkMethodAsync(23);
+      ::grpc::Service::MarkMethodAsync(20);
     }
     ~WithAsyncMethod_FindPathByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2378,7 +2150,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathByRecordID(::grpc::ServerContext* context, ::g2engine::FindPathByRecordIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindPathByRecordIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(23, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(20, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2387,7 +2159,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindPathByRecordID_V2() {
-      ::grpc::Service::MarkMethodAsync(24);
+      ::grpc::Service::MarkMethodAsync(21);
     }
     ~WithAsyncMethod_FindPathByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2398,7 +2170,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathByRecordID_V2(::grpc::ServerContext* context, ::g2engine::FindPathByRecordID_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindPathByRecordID_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(24, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(21, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2407,7 +2179,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindPathExcludingByEntityID() {
-      ::grpc::Service::MarkMethodAsync(25);
+      ::grpc::Service::MarkMethodAsync(22);
     }
     ~WithAsyncMethod_FindPathExcludingByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2418,7 +2190,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathExcludingByEntityID(::grpc::ServerContext* context, ::g2engine::FindPathExcludingByEntityIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindPathExcludingByEntityIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(25, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(22, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2427,7 +2199,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindPathExcludingByEntityID_V2() {
-      ::grpc::Service::MarkMethodAsync(26);
+      ::grpc::Service::MarkMethodAsync(23);
     }
     ~WithAsyncMethod_FindPathExcludingByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2438,7 +2210,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathExcludingByEntityID_V2(::grpc::ServerContext* context, ::g2engine::FindPathExcludingByEntityID_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindPathExcludingByEntityID_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(26, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(23, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2447,7 +2219,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindPathExcludingByRecordID() {
-      ::grpc::Service::MarkMethodAsync(27);
+      ::grpc::Service::MarkMethodAsync(24);
     }
     ~WithAsyncMethod_FindPathExcludingByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2458,7 +2230,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathExcludingByRecordID(::grpc::ServerContext* context, ::g2engine::FindPathExcludingByRecordIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindPathExcludingByRecordIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(27, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(24, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2467,7 +2239,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindPathExcludingByRecordID_V2() {
-      ::grpc::Service::MarkMethodAsync(28);
+      ::grpc::Service::MarkMethodAsync(25);
     }
     ~WithAsyncMethod_FindPathExcludingByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2478,7 +2250,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathExcludingByRecordID_V2(::grpc::ServerContext* context, ::g2engine::FindPathExcludingByRecordID_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindPathExcludingByRecordID_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(28, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(25, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2487,7 +2259,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindPathIncludingSourceByEntityID() {
-      ::grpc::Service::MarkMethodAsync(29);
+      ::grpc::Service::MarkMethodAsync(26);
     }
     ~WithAsyncMethod_FindPathIncludingSourceByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2498,7 +2270,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathIncludingSourceByEntityID(::grpc::ServerContext* context, ::g2engine::FindPathIncludingSourceByEntityIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindPathIncludingSourceByEntityIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(29, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(26, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2507,7 +2279,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindPathIncludingSourceByEntityID_V2() {
-      ::grpc::Service::MarkMethodAsync(30);
+      ::grpc::Service::MarkMethodAsync(27);
     }
     ~WithAsyncMethod_FindPathIncludingSourceByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2518,7 +2290,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathIncludingSourceByEntityID_V2(::grpc::ServerContext* context, ::g2engine::FindPathIncludingSourceByEntityID_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindPathIncludingSourceByEntityID_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(30, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(27, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2527,7 +2299,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindPathIncludingSourceByRecordID() {
-      ::grpc::Service::MarkMethodAsync(31);
+      ::grpc::Service::MarkMethodAsync(28);
     }
     ~WithAsyncMethod_FindPathIncludingSourceByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2538,7 +2310,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathIncludingSourceByRecordID(::grpc::ServerContext* context, ::g2engine::FindPathIncludingSourceByRecordIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindPathIncludingSourceByRecordIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(31, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(28, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2547,7 +2319,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_FindPathIncludingSourceByRecordID_V2() {
-      ::grpc::Service::MarkMethodAsync(32);
+      ::grpc::Service::MarkMethodAsync(29);
     }
     ~WithAsyncMethod_FindPathIncludingSourceByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2558,7 +2330,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathIncludingSourceByRecordID_V2(::grpc::ServerContext* context, ::g2engine::FindPathIncludingSourceByRecordID_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::FindPathIncludingSourceByRecordID_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(32, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(29, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2567,7 +2339,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetActiveConfigID() {
-      ::grpc::Service::MarkMethodAsync(33);
+      ::grpc::Service::MarkMethodAsync(30);
     }
     ~WithAsyncMethod_GetActiveConfigID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2578,7 +2350,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetActiveConfigID(::grpc::ServerContext* context, ::g2engine::GetActiveConfigIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::GetActiveConfigIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(33, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(30, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2587,7 +2359,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetEntityByEntityID() {
-      ::grpc::Service::MarkMethodAsync(34);
+      ::grpc::Service::MarkMethodAsync(31);
     }
     ~WithAsyncMethod_GetEntityByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2598,7 +2370,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetEntityByEntityID(::grpc::ServerContext* context, ::g2engine::GetEntityByEntityIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::GetEntityByEntityIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(34, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(31, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2607,7 +2379,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodAsync(35);
+      ::grpc::Service::MarkMethodAsync(32);
     }
     ~WithAsyncMethod_GetEntityByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2618,7 +2390,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetEntityByEntityID_V2(::grpc::ServerContext* context, ::g2engine::GetEntityByEntityID_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::GetEntityByEntityID_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(35, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(32, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2627,7 +2399,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetEntityByRecordID() {
-      ::grpc::Service::MarkMethodAsync(36);
+      ::grpc::Service::MarkMethodAsync(33);
     }
     ~WithAsyncMethod_GetEntityByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2638,7 +2410,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetEntityByRecordID(::grpc::ServerContext* context, ::g2engine::GetEntityByRecordIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::GetEntityByRecordIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(36, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(33, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2647,7 +2419,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodAsync(37);
+      ::grpc::Service::MarkMethodAsync(34);
     }
     ~WithAsyncMethod_GetEntityByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2658,7 +2430,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetEntityByRecordID_V2(::grpc::ServerContext* context, ::g2engine::GetEntityByRecordID_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::GetEntityByRecordID_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(37, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(34, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2667,7 +2439,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetRecord() {
-      ::grpc::Service::MarkMethodAsync(38);
+      ::grpc::Service::MarkMethodAsync(35);
     }
     ~WithAsyncMethod_GetRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2678,7 +2450,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetRecord(::grpc::ServerContext* context, ::g2engine::GetRecordRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::GetRecordResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(38, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(35, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2687,7 +2459,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetRecord_V2() {
-      ::grpc::Service::MarkMethodAsync(39);
+      ::grpc::Service::MarkMethodAsync(36);
     }
     ~WithAsyncMethod_GetRecord_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2698,7 +2470,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetRecord_V2(::grpc::ServerContext* context, ::g2engine::GetRecord_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::GetRecord_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(39, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(36, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2707,7 +2479,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetRedoRecord() {
-      ::grpc::Service::MarkMethodAsync(40);
+      ::grpc::Service::MarkMethodAsync(37);
     }
     ~WithAsyncMethod_GetRedoRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2718,7 +2490,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetRedoRecord(::grpc::ServerContext* context, ::g2engine::GetRedoRecordRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::GetRedoRecordResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(40, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(37, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2727,7 +2499,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetRepositoryLastModifiedTime() {
-      ::grpc::Service::MarkMethodAsync(41);
+      ::grpc::Service::MarkMethodAsync(38);
     }
     ~WithAsyncMethod_GetRepositoryLastModifiedTime() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2738,7 +2510,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetRepositoryLastModifiedTime(::grpc::ServerContext* context, ::g2engine::GetRepositoryLastModifiedTimeRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::GetRepositoryLastModifiedTimeResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(41, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(38, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2747,7 +2519,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetVirtualEntityByRecordID() {
-      ::grpc::Service::MarkMethodAsync(42);
+      ::grpc::Service::MarkMethodAsync(39);
     }
     ~WithAsyncMethod_GetVirtualEntityByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2758,7 +2530,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetVirtualEntityByRecordID(::grpc::ServerContext* context, ::g2engine::GetVirtualEntityByRecordIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::GetVirtualEntityByRecordIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(42, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(39, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2767,7 +2539,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetVirtualEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodAsync(43);
+      ::grpc::Service::MarkMethodAsync(40);
     }
     ~WithAsyncMethod_GetVirtualEntityByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2778,7 +2550,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetVirtualEntityByRecordID_V2(::grpc::ServerContext* context, ::g2engine::GetVirtualEntityByRecordID_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::GetVirtualEntityByRecordID_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(43, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(40, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2787,7 +2559,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_HowEntityByEntityID() {
-      ::grpc::Service::MarkMethodAsync(44);
+      ::grpc::Service::MarkMethodAsync(41);
     }
     ~WithAsyncMethod_HowEntityByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2798,7 +2570,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestHowEntityByEntityID(::grpc::ServerContext* context, ::g2engine::HowEntityByEntityIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::HowEntityByEntityIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(44, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(41, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2807,7 +2579,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_HowEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodAsync(45);
+      ::grpc::Service::MarkMethodAsync(42);
     }
     ~WithAsyncMethod_HowEntityByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2818,7 +2590,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestHowEntityByEntityID_V2(::grpc::ServerContext* context, ::g2engine::HowEntityByEntityID_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::HowEntityByEntityID_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(45, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(42, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2827,7 +2599,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Init() {
-      ::grpc::Service::MarkMethodAsync(46);
+      ::grpc::Service::MarkMethodAsync(43);
     }
     ~WithAsyncMethod_Init() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2838,7 +2610,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestInit(::grpc::ServerContext* context, ::g2engine::InitRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::InitResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(46, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(43, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2847,7 +2619,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_InitWithConfigID() {
-      ::grpc::Service::MarkMethodAsync(47);
+      ::grpc::Service::MarkMethodAsync(44);
     }
     ~WithAsyncMethod_InitWithConfigID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2858,7 +2630,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestInitWithConfigID(::grpc::ServerContext* context, ::g2engine::InitWithConfigIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::InitWithConfigIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(47, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(44, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2867,7 +2639,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_PrimeEngine() {
-      ::grpc::Service::MarkMethodAsync(48);
+      ::grpc::Service::MarkMethodAsync(45);
     }
     ~WithAsyncMethod_PrimeEngine() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2878,7 +2650,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestPrimeEngine(::grpc::ServerContext* context, ::g2engine::PrimeEngineRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::PrimeEngineResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(48, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(45, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2887,7 +2659,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Process() {
-      ::grpc::Service::MarkMethodAsync(49);
+      ::grpc::Service::MarkMethodAsync(46);
     }
     ~WithAsyncMethod_Process() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2898,47 +2670,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestProcess(::grpc::ServerContext* context, ::g2engine::ProcessRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::ProcessResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(49, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_ProcessRedoRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_ProcessRedoRecord() {
-      ::grpc::Service::MarkMethodAsync(50);
-    }
-    ~WithAsyncMethod_ProcessRedoRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessRedoRecord(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessRedoRecordRequest* /*request*/, ::g2engine::ProcessRedoRecordResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestProcessRedoRecord(::grpc::ServerContext* context, ::g2engine::ProcessRedoRecordRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::ProcessRedoRecordResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(50, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_ProcessRedoRecordWithInfo : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_ProcessRedoRecordWithInfo() {
-      ::grpc::Service::MarkMethodAsync(51);
-    }
-    ~WithAsyncMethod_ProcessRedoRecordWithInfo() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessRedoRecordWithInfo(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessRedoRecordWithInfoRequest* /*request*/, ::g2engine::ProcessRedoRecordWithInfoResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestProcessRedoRecordWithInfo(::grpc::ServerContext* context, ::g2engine::ProcessRedoRecordWithInfoRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::ProcessRedoRecordWithInfoResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(51, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(46, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2947,7 +2679,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_ProcessWithInfo() {
-      ::grpc::Service::MarkMethodAsync(52);
+      ::grpc::Service::MarkMethodAsync(47);
     }
     ~WithAsyncMethod_ProcessWithInfo() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2958,47 +2690,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestProcessWithInfo(::grpc::ServerContext* context, ::g2engine::ProcessWithInfoRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::ProcessWithInfoResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(52, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_ProcessWithResponse : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_ProcessWithResponse() {
-      ::grpc::Service::MarkMethodAsync(53);
-    }
-    ~WithAsyncMethod_ProcessWithResponse() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessWithResponse(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessWithResponseRequest* /*request*/, ::g2engine::ProcessWithResponseResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestProcessWithResponse(::grpc::ServerContext* context, ::g2engine::ProcessWithResponseRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::ProcessWithResponseResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(53, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_ProcessWithResponseResize : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_ProcessWithResponseResize() {
-      ::grpc::Service::MarkMethodAsync(54);
-    }
-    ~WithAsyncMethod_ProcessWithResponseResize() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessWithResponseResize(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessWithResponseResizeRequest* /*request*/, ::g2engine::ProcessWithResponseResizeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestProcessWithResponseResize(::grpc::ServerContext* context, ::g2engine::ProcessWithResponseResizeRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::ProcessWithResponseResizeResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(54, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(47, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3007,7 +2699,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_PurgeRepository() {
-      ::grpc::Service::MarkMethodAsync(55);
+      ::grpc::Service::MarkMethodAsync(48);
     }
     ~WithAsyncMethod_PurgeRepository() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3018,7 +2710,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestPurgeRepository(::grpc::ServerContext* context, ::g2engine::PurgeRepositoryRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::PurgeRepositoryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(55, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(48, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3027,7 +2719,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_ReevaluateEntity() {
-      ::grpc::Service::MarkMethodAsync(56);
+      ::grpc::Service::MarkMethodAsync(49);
     }
     ~WithAsyncMethod_ReevaluateEntity() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3038,7 +2730,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReevaluateEntity(::grpc::ServerContext* context, ::g2engine::ReevaluateEntityRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::ReevaluateEntityResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(56, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(49, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3047,7 +2739,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_ReevaluateEntityWithInfo() {
-      ::grpc::Service::MarkMethodAsync(57);
+      ::grpc::Service::MarkMethodAsync(50);
     }
     ~WithAsyncMethod_ReevaluateEntityWithInfo() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3058,7 +2750,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReevaluateEntityWithInfo(::grpc::ServerContext* context, ::g2engine::ReevaluateEntityWithInfoRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::ReevaluateEntityWithInfoResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(57, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(50, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3067,7 +2759,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_ReevaluateRecord() {
-      ::grpc::Service::MarkMethodAsync(58);
+      ::grpc::Service::MarkMethodAsync(51);
     }
     ~WithAsyncMethod_ReevaluateRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3078,7 +2770,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReevaluateRecord(::grpc::ServerContext* context, ::g2engine::ReevaluateRecordRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::ReevaluateRecordResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(58, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(51, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3087,7 +2779,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_ReevaluateRecordWithInfo() {
-      ::grpc::Service::MarkMethodAsync(59);
+      ::grpc::Service::MarkMethodAsync(52);
     }
     ~WithAsyncMethod_ReevaluateRecordWithInfo() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3098,7 +2790,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReevaluateRecordWithInfo(::grpc::ServerContext* context, ::g2engine::ReevaluateRecordWithInfoRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::ReevaluateRecordWithInfoResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(59, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(52, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3107,7 +2799,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Reinit() {
-      ::grpc::Service::MarkMethodAsync(60);
+      ::grpc::Service::MarkMethodAsync(53);
     }
     ~WithAsyncMethod_Reinit() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3118,7 +2810,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReinit(::grpc::ServerContext* context, ::g2engine::ReinitRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::ReinitResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(60, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(53, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3127,7 +2819,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_ReplaceRecord() {
-      ::grpc::Service::MarkMethodAsync(61);
+      ::grpc::Service::MarkMethodAsync(54);
     }
     ~WithAsyncMethod_ReplaceRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3138,7 +2830,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReplaceRecord(::grpc::ServerContext* context, ::g2engine::ReplaceRecordRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::ReplaceRecordResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(61, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(54, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3147,7 +2839,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_ReplaceRecordWithInfo() {
-      ::grpc::Service::MarkMethodAsync(62);
+      ::grpc::Service::MarkMethodAsync(55);
     }
     ~WithAsyncMethod_ReplaceRecordWithInfo() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3158,7 +2850,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReplaceRecordWithInfo(::grpc::ServerContext* context, ::g2engine::ReplaceRecordWithInfoRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::ReplaceRecordWithInfoResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(62, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(55, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3167,7 +2859,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_SearchByAttributes() {
-      ::grpc::Service::MarkMethodAsync(63);
+      ::grpc::Service::MarkMethodAsync(56);
     }
     ~WithAsyncMethod_SearchByAttributes() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3178,7 +2870,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestSearchByAttributes(::grpc::ServerContext* context, ::g2engine::SearchByAttributesRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::SearchByAttributesResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(63, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(56, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3187,7 +2879,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_SearchByAttributes_V2() {
-      ::grpc::Service::MarkMethodAsync(64);
+      ::grpc::Service::MarkMethodAsync(57);
     }
     ~WithAsyncMethod_SearchByAttributes_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3198,7 +2890,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestSearchByAttributes_V2(::grpc::ServerContext* context, ::g2engine::SearchByAttributes_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::SearchByAttributes_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(64, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(57, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3207,7 +2899,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Stats() {
-      ::grpc::Service::MarkMethodAsync(65);
+      ::grpc::Service::MarkMethodAsync(58);
     }
     ~WithAsyncMethod_Stats() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3218,7 +2910,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestStats(::grpc::ServerContext* context, ::g2engine::StatsRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::StatsResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(65, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(58, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3227,7 +2919,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_StreamExportCSVEntityReport() {
-      ::grpc::Service::MarkMethodAsync(66);
+      ::grpc::Service::MarkMethodAsync(59);
     }
     ~WithAsyncMethod_StreamExportCSVEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3238,7 +2930,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestStreamExportCSVEntityReport(::grpc::ServerContext* context, ::g2engine::StreamExportCSVEntityReportRequest* request, ::grpc::ServerAsyncWriter< ::g2engine::StreamExportCSVEntityReportResponse>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(66, context, request, writer, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncServerStreaming(59, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3247,7 +2939,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_StreamExportJSONEntityReport() {
-      ::grpc::Service::MarkMethodAsync(67);
+      ::grpc::Service::MarkMethodAsync(60);
     }
     ~WithAsyncMethod_StreamExportJSONEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3258,7 +2950,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestStreamExportJSONEntityReport(::grpc::ServerContext* context, ::g2engine::StreamExportJSONEntityReportRequest* request, ::grpc::ServerAsyncWriter< ::g2engine::StreamExportJSONEntityReportResponse>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(67, context, request, writer, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncServerStreaming(60, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3267,7 +2959,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_WhyEntities() {
-      ::grpc::Service::MarkMethodAsync(68);
+      ::grpc::Service::MarkMethodAsync(61);
     }
     ~WithAsyncMethod_WhyEntities() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3278,7 +2970,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestWhyEntities(::grpc::ServerContext* context, ::g2engine::WhyEntitiesRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::WhyEntitiesResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(68, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(61, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3287,7 +2979,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_WhyEntities_V2() {
-      ::grpc::Service::MarkMethodAsync(69);
+      ::grpc::Service::MarkMethodAsync(62);
     }
     ~WithAsyncMethod_WhyEntities_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3298,7 +2990,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestWhyEntities_V2(::grpc::ServerContext* context, ::g2engine::WhyEntities_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::WhyEntities_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(69, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(62, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3307,7 +2999,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_WhyEntityByEntityID() {
-      ::grpc::Service::MarkMethodAsync(70);
+      ::grpc::Service::MarkMethodAsync(63);
     }
     ~WithAsyncMethod_WhyEntityByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3318,7 +3010,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestWhyEntityByEntityID(::grpc::ServerContext* context, ::g2engine::WhyEntityByEntityIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::WhyEntityByEntityIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(70, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(63, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3327,7 +3019,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_WhyEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodAsync(71);
+      ::grpc::Service::MarkMethodAsync(64);
     }
     ~WithAsyncMethod_WhyEntityByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3338,7 +3030,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestWhyEntityByEntityID_V2(::grpc::ServerContext* context, ::g2engine::WhyEntityByEntityID_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::WhyEntityByEntityID_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(71, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(64, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3347,7 +3039,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_WhyEntityByRecordID() {
-      ::grpc::Service::MarkMethodAsync(72);
+      ::grpc::Service::MarkMethodAsync(65);
     }
     ~WithAsyncMethod_WhyEntityByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3358,7 +3050,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestWhyEntityByRecordID(::grpc::ServerContext* context, ::g2engine::WhyEntityByRecordIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::WhyEntityByRecordIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(72, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(65, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3367,7 +3059,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_WhyEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodAsync(73);
+      ::grpc::Service::MarkMethodAsync(66);
     }
     ~WithAsyncMethod_WhyEntityByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3378,7 +3070,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestWhyEntityByRecordID_V2(::grpc::ServerContext* context, ::g2engine::WhyEntityByRecordID_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::WhyEntityByRecordID_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(73, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(66, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3387,7 +3079,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_WhyRecords() {
-      ::grpc::Service::MarkMethodAsync(74);
+      ::grpc::Service::MarkMethodAsync(67);
     }
     ~WithAsyncMethod_WhyRecords() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3398,7 +3090,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestWhyRecords(::grpc::ServerContext* context, ::g2engine::WhyRecordsRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::WhyRecordsResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(74, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(67, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3407,7 +3099,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_WhyRecords_V2() {
-      ::grpc::Service::MarkMethodAsync(75);
+      ::grpc::Service::MarkMethodAsync(68);
     }
     ~WithAsyncMethod_WhyRecords_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3418,10 +3110,10 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestWhyRecords_V2(::grpc::ServerContext* context, ::g2engine::WhyRecords_V2Request* request, ::grpc::ServerAsyncResponseWriter< ::g2engine::WhyRecords_V2Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(75, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(68, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_AddRecord<WithAsyncMethod_AddRecordWithInfo<WithAsyncMethod_AddRecordWithInfoWithReturnedRecordID<WithAsyncMethod_AddRecordWithReturnedRecordID<WithAsyncMethod_CheckRecord<WithAsyncMethod_CloseExport<WithAsyncMethod_CountRedoRecords<WithAsyncMethod_DeleteRecord<WithAsyncMethod_DeleteRecordWithInfo<WithAsyncMethod_Destroy<WithAsyncMethod_ExportConfig<WithAsyncMethod_ExportConfigAndConfigID<WithAsyncMethod_ExportCSVEntityReport<WithAsyncMethod_ExportJSONEntityReport<WithAsyncMethod_FetchNext<WithAsyncMethod_FindInterestingEntitiesByEntityID<WithAsyncMethod_FindInterestingEntitiesByRecordID<WithAsyncMethod_FindNetworkByEntityID<WithAsyncMethod_FindNetworkByEntityID_V2<WithAsyncMethod_FindNetworkByRecordID<WithAsyncMethod_FindNetworkByRecordID_V2<WithAsyncMethod_FindPathByEntityID<WithAsyncMethod_FindPathByEntityID_V2<WithAsyncMethod_FindPathByRecordID<WithAsyncMethod_FindPathByRecordID_V2<WithAsyncMethod_FindPathExcludingByEntityID<WithAsyncMethod_FindPathExcludingByEntityID_V2<WithAsyncMethod_FindPathExcludingByRecordID<WithAsyncMethod_FindPathExcludingByRecordID_V2<WithAsyncMethod_FindPathIncludingSourceByEntityID<WithAsyncMethod_FindPathIncludingSourceByEntityID_V2<WithAsyncMethod_FindPathIncludingSourceByRecordID<WithAsyncMethod_FindPathIncludingSourceByRecordID_V2<WithAsyncMethod_GetActiveConfigID<WithAsyncMethod_GetEntityByEntityID<WithAsyncMethod_GetEntityByEntityID_V2<WithAsyncMethod_GetEntityByRecordID<WithAsyncMethod_GetEntityByRecordID_V2<WithAsyncMethod_GetRecord<WithAsyncMethod_GetRecord_V2<WithAsyncMethod_GetRedoRecord<WithAsyncMethod_GetRepositoryLastModifiedTime<WithAsyncMethod_GetVirtualEntityByRecordID<WithAsyncMethod_GetVirtualEntityByRecordID_V2<WithAsyncMethod_HowEntityByEntityID<WithAsyncMethod_HowEntityByEntityID_V2<WithAsyncMethod_Init<WithAsyncMethod_InitWithConfigID<WithAsyncMethod_PrimeEngine<WithAsyncMethod_Process<WithAsyncMethod_ProcessRedoRecord<WithAsyncMethod_ProcessRedoRecordWithInfo<WithAsyncMethod_ProcessWithInfo<WithAsyncMethod_ProcessWithResponse<WithAsyncMethod_ProcessWithResponseResize<WithAsyncMethod_PurgeRepository<WithAsyncMethod_ReevaluateEntity<WithAsyncMethod_ReevaluateEntityWithInfo<WithAsyncMethod_ReevaluateRecord<WithAsyncMethod_ReevaluateRecordWithInfo<WithAsyncMethod_Reinit<WithAsyncMethod_ReplaceRecord<WithAsyncMethod_ReplaceRecordWithInfo<WithAsyncMethod_SearchByAttributes<WithAsyncMethod_SearchByAttributes_V2<WithAsyncMethod_Stats<WithAsyncMethod_StreamExportCSVEntityReport<WithAsyncMethod_StreamExportJSONEntityReport<WithAsyncMethod_WhyEntities<WithAsyncMethod_WhyEntities_V2<WithAsyncMethod_WhyEntityByEntityID<WithAsyncMethod_WhyEntityByEntityID_V2<WithAsyncMethod_WhyEntityByRecordID<WithAsyncMethod_WhyEntityByRecordID_V2<WithAsyncMethod_WhyRecords<WithAsyncMethod_WhyRecords_V2<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
+  typedef WithAsyncMethod_AddRecord<WithAsyncMethod_AddRecordWithInfo<WithAsyncMethod_CloseExport<WithAsyncMethod_CountRedoRecords<WithAsyncMethod_DeleteRecord<WithAsyncMethod_DeleteRecordWithInfo<WithAsyncMethod_Destroy<WithAsyncMethod_ExportConfig<WithAsyncMethod_ExportConfigAndConfigID<WithAsyncMethod_ExportCSVEntityReport<WithAsyncMethod_ExportJSONEntityReport<WithAsyncMethod_FetchNext<WithAsyncMethod_FindInterestingEntitiesByEntityID<WithAsyncMethod_FindInterestingEntitiesByRecordID<WithAsyncMethod_FindNetworkByEntityID<WithAsyncMethod_FindNetworkByEntityID_V2<WithAsyncMethod_FindNetworkByRecordID<WithAsyncMethod_FindNetworkByRecordID_V2<WithAsyncMethod_FindPathByEntityID<WithAsyncMethod_FindPathByEntityID_V2<WithAsyncMethod_FindPathByRecordID<WithAsyncMethod_FindPathByRecordID_V2<WithAsyncMethod_FindPathExcludingByEntityID<WithAsyncMethod_FindPathExcludingByEntityID_V2<WithAsyncMethod_FindPathExcludingByRecordID<WithAsyncMethod_FindPathExcludingByRecordID_V2<WithAsyncMethod_FindPathIncludingSourceByEntityID<WithAsyncMethod_FindPathIncludingSourceByEntityID_V2<WithAsyncMethod_FindPathIncludingSourceByRecordID<WithAsyncMethod_FindPathIncludingSourceByRecordID_V2<WithAsyncMethod_GetActiveConfigID<WithAsyncMethod_GetEntityByEntityID<WithAsyncMethod_GetEntityByEntityID_V2<WithAsyncMethod_GetEntityByRecordID<WithAsyncMethod_GetEntityByRecordID_V2<WithAsyncMethod_GetRecord<WithAsyncMethod_GetRecord_V2<WithAsyncMethod_GetRedoRecord<WithAsyncMethod_GetRepositoryLastModifiedTime<WithAsyncMethod_GetVirtualEntityByRecordID<WithAsyncMethod_GetVirtualEntityByRecordID_V2<WithAsyncMethod_HowEntityByEntityID<WithAsyncMethod_HowEntityByEntityID_V2<WithAsyncMethod_Init<WithAsyncMethod_InitWithConfigID<WithAsyncMethod_PrimeEngine<WithAsyncMethod_Process<WithAsyncMethod_ProcessWithInfo<WithAsyncMethod_PurgeRepository<WithAsyncMethod_ReevaluateEntity<WithAsyncMethod_ReevaluateEntityWithInfo<WithAsyncMethod_ReevaluateRecord<WithAsyncMethod_ReevaluateRecordWithInfo<WithAsyncMethod_Reinit<WithAsyncMethod_ReplaceRecord<WithAsyncMethod_ReplaceRecordWithInfo<WithAsyncMethod_SearchByAttributes<WithAsyncMethod_SearchByAttributes_V2<WithAsyncMethod_Stats<WithAsyncMethod_StreamExportCSVEntityReport<WithAsyncMethod_StreamExportJSONEntityReport<WithAsyncMethod_WhyEntities<WithAsyncMethod_WhyEntities_V2<WithAsyncMethod_WhyEntityByEntityID<WithAsyncMethod_WhyEntityByEntityID_V2<WithAsyncMethod_WhyEntityByRecordID<WithAsyncMethod_WhyEntityByRecordID_V2<WithAsyncMethod_WhyRecords<WithAsyncMethod_WhyRecords_V2<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_AddRecord : public BaseClass {
    private:
@@ -3477,99 +3169,18 @@ class G2Engine final {
       ::grpc::CallbackServerContext* /*context*/, const ::g2engine::AddRecordWithInfoRequest* /*request*/, ::g2engine::AddRecordWithInfoResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_AddRecordWithInfoWithReturnedRecordID : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_AddRecordWithInfoWithReturnedRecordID() {
-      ::grpc::Service::MarkMethodCallback(2,
-          new ::grpc::internal::CallbackUnaryHandler< ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* request, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* response) { return this->AddRecordWithInfoWithReturnedRecordID(context, request, response); }));}
-    void SetMessageAllocatorFor_AddRecordWithInfoWithReturnedRecordID(
-        ::grpc::MessageAllocator< ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_AddRecordWithInfoWithReturnedRecordID() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status AddRecordWithInfoWithReturnedRecordID(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* /*request*/, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* AddRecordWithInfoWithReturnedRecordID(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* /*request*/, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_AddRecordWithReturnedRecordID : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_AddRecordWithReturnedRecordID() {
-      ::grpc::Service::MarkMethodCallback(3,
-          new ::grpc::internal::CallbackUnaryHandler< ::g2engine::AddRecordWithReturnedRecordIDRequest, ::g2engine::AddRecordWithReturnedRecordIDResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::g2engine::AddRecordWithReturnedRecordIDRequest* request, ::g2engine::AddRecordWithReturnedRecordIDResponse* response) { return this->AddRecordWithReturnedRecordID(context, request, response); }));}
-    void SetMessageAllocatorFor_AddRecordWithReturnedRecordID(
-        ::grpc::MessageAllocator< ::g2engine::AddRecordWithReturnedRecordIDRequest, ::g2engine::AddRecordWithReturnedRecordIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::AddRecordWithReturnedRecordIDRequest, ::g2engine::AddRecordWithReturnedRecordIDResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_AddRecordWithReturnedRecordID() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status AddRecordWithReturnedRecordID(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordWithReturnedRecordIDRequest* /*request*/, ::g2engine::AddRecordWithReturnedRecordIDResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* AddRecordWithReturnedRecordID(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2engine::AddRecordWithReturnedRecordIDRequest* /*request*/, ::g2engine::AddRecordWithReturnedRecordIDResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_CheckRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_CheckRecord() {
-      ::grpc::Service::MarkMethodCallback(4,
-          new ::grpc::internal::CallbackUnaryHandler< ::g2engine::CheckRecordRequest, ::g2engine::CheckRecordResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::g2engine::CheckRecordRequest* request, ::g2engine::CheckRecordResponse* response) { return this->CheckRecord(context, request, response); }));}
-    void SetMessageAllocatorFor_CheckRecord(
-        ::grpc::MessageAllocator< ::g2engine::CheckRecordRequest, ::g2engine::CheckRecordResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::CheckRecordRequest, ::g2engine::CheckRecordResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_CheckRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status CheckRecord(::grpc::ServerContext* /*context*/, const ::g2engine::CheckRecordRequest* /*request*/, ::g2engine::CheckRecordResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* CheckRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2engine::CheckRecordRequest* /*request*/, ::g2engine::CheckRecordResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
   class WithCallbackMethod_CloseExport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_CloseExport() {
-      ::grpc::Service::MarkMethodCallback(5,
+      ::grpc::Service::MarkMethodCallback(2,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::CloseExportRequest, ::g2engine::CloseExportResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::CloseExportRequest* request, ::g2engine::CloseExportResponse* response) { return this->CloseExport(context, request, response); }));}
     void SetMessageAllocatorFor_CloseExport(
         ::grpc::MessageAllocator< ::g2engine::CloseExportRequest, ::g2engine::CloseExportResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::CloseExportRequest, ::g2engine::CloseExportResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -3590,13 +3201,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_CountRedoRecords() {
-      ::grpc::Service::MarkMethodCallback(6,
+      ::grpc::Service::MarkMethodCallback(3,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::CountRedoRecordsRequest, ::g2engine::CountRedoRecordsResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::CountRedoRecordsRequest* request, ::g2engine::CountRedoRecordsResponse* response) { return this->CountRedoRecords(context, request, response); }));}
     void SetMessageAllocatorFor_CountRedoRecords(
         ::grpc::MessageAllocator< ::g2engine::CountRedoRecordsRequest, ::g2engine::CountRedoRecordsResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(6);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::CountRedoRecordsRequest, ::g2engine::CountRedoRecordsResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -3617,13 +3228,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_DeleteRecord() {
-      ::grpc::Service::MarkMethodCallback(7,
+      ::grpc::Service::MarkMethodCallback(4,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::DeleteRecordRequest, ::g2engine::DeleteRecordResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::DeleteRecordRequest* request, ::g2engine::DeleteRecordResponse* response) { return this->DeleteRecord(context, request, response); }));}
     void SetMessageAllocatorFor_DeleteRecord(
         ::grpc::MessageAllocator< ::g2engine::DeleteRecordRequest, ::g2engine::DeleteRecordResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(7);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::DeleteRecordRequest, ::g2engine::DeleteRecordResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -3644,13 +3255,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_DeleteRecordWithInfo() {
-      ::grpc::Service::MarkMethodCallback(8,
+      ::grpc::Service::MarkMethodCallback(5,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::DeleteRecordWithInfoRequest, ::g2engine::DeleteRecordWithInfoResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::DeleteRecordWithInfoRequest* request, ::g2engine::DeleteRecordWithInfoResponse* response) { return this->DeleteRecordWithInfo(context, request, response); }));}
     void SetMessageAllocatorFor_DeleteRecordWithInfo(
         ::grpc::MessageAllocator< ::g2engine::DeleteRecordWithInfoRequest, ::g2engine::DeleteRecordWithInfoResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(8);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::DeleteRecordWithInfoRequest, ::g2engine::DeleteRecordWithInfoResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -3671,13 +3282,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_Destroy() {
-      ::grpc::Service::MarkMethodCallback(9,
+      ::grpc::Service::MarkMethodCallback(6,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::DestroyRequest, ::g2engine::DestroyResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::DestroyRequest* request, ::g2engine::DestroyResponse* response) { return this->Destroy(context, request, response); }));}
     void SetMessageAllocatorFor_Destroy(
         ::grpc::MessageAllocator< ::g2engine::DestroyRequest, ::g2engine::DestroyResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(9);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(6);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::DestroyRequest, ::g2engine::DestroyResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -3698,13 +3309,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_ExportConfig() {
-      ::grpc::Service::MarkMethodCallback(10,
+      ::grpc::Service::MarkMethodCallback(7,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::ExportConfigRequest, ::g2engine::ExportConfigResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::ExportConfigRequest* request, ::g2engine::ExportConfigResponse* response) { return this->ExportConfig(context, request, response); }));}
     void SetMessageAllocatorFor_ExportConfig(
         ::grpc::MessageAllocator< ::g2engine::ExportConfigRequest, ::g2engine::ExportConfigResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(10);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(7);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::ExportConfigRequest, ::g2engine::ExportConfigResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -3725,13 +3336,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_ExportConfigAndConfigID() {
-      ::grpc::Service::MarkMethodCallback(11,
+      ::grpc::Service::MarkMethodCallback(8,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::ExportConfigAndConfigIDRequest, ::g2engine::ExportConfigAndConfigIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::ExportConfigAndConfigIDRequest* request, ::g2engine::ExportConfigAndConfigIDResponse* response) { return this->ExportConfigAndConfigID(context, request, response); }));}
     void SetMessageAllocatorFor_ExportConfigAndConfigID(
         ::grpc::MessageAllocator< ::g2engine::ExportConfigAndConfigIDRequest, ::g2engine::ExportConfigAndConfigIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(11);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(8);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::ExportConfigAndConfigIDRequest, ::g2engine::ExportConfigAndConfigIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -3752,13 +3363,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_ExportCSVEntityReport() {
-      ::grpc::Service::MarkMethodCallback(12,
+      ::grpc::Service::MarkMethodCallback(9,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::ExportCSVEntityReportRequest, ::g2engine::ExportCSVEntityReportResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::ExportCSVEntityReportRequest* request, ::g2engine::ExportCSVEntityReportResponse* response) { return this->ExportCSVEntityReport(context, request, response); }));}
     void SetMessageAllocatorFor_ExportCSVEntityReport(
         ::grpc::MessageAllocator< ::g2engine::ExportCSVEntityReportRequest, ::g2engine::ExportCSVEntityReportResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(12);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(9);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::ExportCSVEntityReportRequest, ::g2engine::ExportCSVEntityReportResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -3779,13 +3390,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_ExportJSONEntityReport() {
-      ::grpc::Service::MarkMethodCallback(13,
+      ::grpc::Service::MarkMethodCallback(10,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::ExportJSONEntityReportRequest, ::g2engine::ExportJSONEntityReportResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::ExportJSONEntityReportRequest* request, ::g2engine::ExportJSONEntityReportResponse* response) { return this->ExportJSONEntityReport(context, request, response); }));}
     void SetMessageAllocatorFor_ExportJSONEntityReport(
         ::grpc::MessageAllocator< ::g2engine::ExportJSONEntityReportRequest, ::g2engine::ExportJSONEntityReportResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(13);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(10);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::ExportJSONEntityReportRequest, ::g2engine::ExportJSONEntityReportResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -3806,13 +3417,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FetchNext() {
-      ::grpc::Service::MarkMethodCallback(14,
+      ::grpc::Service::MarkMethodCallback(11,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FetchNextRequest, ::g2engine::FetchNextResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FetchNextRequest* request, ::g2engine::FetchNextResponse* response) { return this->FetchNext(context, request, response); }));}
     void SetMessageAllocatorFor_FetchNext(
         ::grpc::MessageAllocator< ::g2engine::FetchNextRequest, ::g2engine::FetchNextResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(14);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(11);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FetchNextRequest, ::g2engine::FetchNextResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -3833,13 +3444,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindInterestingEntitiesByEntityID() {
-      ::grpc::Service::MarkMethodCallback(15,
+      ::grpc::Service::MarkMethodCallback(12,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindInterestingEntitiesByEntityIDRequest, ::g2engine::FindInterestingEntitiesByEntityIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindInterestingEntitiesByEntityIDRequest* request, ::g2engine::FindInterestingEntitiesByEntityIDResponse* response) { return this->FindInterestingEntitiesByEntityID(context, request, response); }));}
     void SetMessageAllocatorFor_FindInterestingEntitiesByEntityID(
         ::grpc::MessageAllocator< ::g2engine::FindInterestingEntitiesByEntityIDRequest, ::g2engine::FindInterestingEntitiesByEntityIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(15);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(12);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindInterestingEntitiesByEntityIDRequest, ::g2engine::FindInterestingEntitiesByEntityIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -3860,13 +3471,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindInterestingEntitiesByRecordID() {
-      ::grpc::Service::MarkMethodCallback(16,
+      ::grpc::Service::MarkMethodCallback(13,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindInterestingEntitiesByRecordIDRequest, ::g2engine::FindInterestingEntitiesByRecordIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindInterestingEntitiesByRecordIDRequest* request, ::g2engine::FindInterestingEntitiesByRecordIDResponse* response) { return this->FindInterestingEntitiesByRecordID(context, request, response); }));}
     void SetMessageAllocatorFor_FindInterestingEntitiesByRecordID(
         ::grpc::MessageAllocator< ::g2engine::FindInterestingEntitiesByRecordIDRequest, ::g2engine::FindInterestingEntitiesByRecordIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(16);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(13);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindInterestingEntitiesByRecordIDRequest, ::g2engine::FindInterestingEntitiesByRecordIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -3887,13 +3498,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindNetworkByEntityID() {
-      ::grpc::Service::MarkMethodCallback(17,
+      ::grpc::Service::MarkMethodCallback(14,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindNetworkByEntityIDRequest, ::g2engine::FindNetworkByEntityIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindNetworkByEntityIDRequest* request, ::g2engine::FindNetworkByEntityIDResponse* response) { return this->FindNetworkByEntityID(context, request, response); }));}
     void SetMessageAllocatorFor_FindNetworkByEntityID(
         ::grpc::MessageAllocator< ::g2engine::FindNetworkByEntityIDRequest, ::g2engine::FindNetworkByEntityIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(17);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(14);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindNetworkByEntityIDRequest, ::g2engine::FindNetworkByEntityIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -3914,13 +3525,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindNetworkByEntityID_V2() {
-      ::grpc::Service::MarkMethodCallback(18,
+      ::grpc::Service::MarkMethodCallback(15,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindNetworkByEntityID_V2Request, ::g2engine::FindNetworkByEntityID_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindNetworkByEntityID_V2Request* request, ::g2engine::FindNetworkByEntityID_V2Response* response) { return this->FindNetworkByEntityID_V2(context, request, response); }));}
     void SetMessageAllocatorFor_FindNetworkByEntityID_V2(
         ::grpc::MessageAllocator< ::g2engine::FindNetworkByEntityID_V2Request, ::g2engine::FindNetworkByEntityID_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(18);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(15);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindNetworkByEntityID_V2Request, ::g2engine::FindNetworkByEntityID_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -3941,13 +3552,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindNetworkByRecordID() {
-      ::grpc::Service::MarkMethodCallback(19,
+      ::grpc::Service::MarkMethodCallback(16,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindNetworkByRecordIDRequest, ::g2engine::FindNetworkByRecordIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindNetworkByRecordIDRequest* request, ::g2engine::FindNetworkByRecordIDResponse* response) { return this->FindNetworkByRecordID(context, request, response); }));}
     void SetMessageAllocatorFor_FindNetworkByRecordID(
         ::grpc::MessageAllocator< ::g2engine::FindNetworkByRecordIDRequest, ::g2engine::FindNetworkByRecordIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(19);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(16);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindNetworkByRecordIDRequest, ::g2engine::FindNetworkByRecordIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -3968,13 +3579,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindNetworkByRecordID_V2() {
-      ::grpc::Service::MarkMethodCallback(20,
+      ::grpc::Service::MarkMethodCallback(17,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindNetworkByRecordID_V2Request, ::g2engine::FindNetworkByRecordID_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindNetworkByRecordID_V2Request* request, ::g2engine::FindNetworkByRecordID_V2Response* response) { return this->FindNetworkByRecordID_V2(context, request, response); }));}
     void SetMessageAllocatorFor_FindNetworkByRecordID_V2(
         ::grpc::MessageAllocator< ::g2engine::FindNetworkByRecordID_V2Request, ::g2engine::FindNetworkByRecordID_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(20);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(17);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindNetworkByRecordID_V2Request, ::g2engine::FindNetworkByRecordID_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -3995,13 +3606,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindPathByEntityID() {
-      ::grpc::Service::MarkMethodCallback(21,
+      ::grpc::Service::MarkMethodCallback(18,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathByEntityIDRequest, ::g2engine::FindPathByEntityIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindPathByEntityIDRequest* request, ::g2engine::FindPathByEntityIDResponse* response) { return this->FindPathByEntityID(context, request, response); }));}
     void SetMessageAllocatorFor_FindPathByEntityID(
         ::grpc::MessageAllocator< ::g2engine::FindPathByEntityIDRequest, ::g2engine::FindPathByEntityIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(21);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(18);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathByEntityIDRequest, ::g2engine::FindPathByEntityIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4022,13 +3633,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindPathByEntityID_V2() {
-      ::grpc::Service::MarkMethodCallback(22,
+      ::grpc::Service::MarkMethodCallback(19,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathByEntityID_V2Request, ::g2engine::FindPathByEntityID_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindPathByEntityID_V2Request* request, ::g2engine::FindPathByEntityID_V2Response* response) { return this->FindPathByEntityID_V2(context, request, response); }));}
     void SetMessageAllocatorFor_FindPathByEntityID_V2(
         ::grpc::MessageAllocator< ::g2engine::FindPathByEntityID_V2Request, ::g2engine::FindPathByEntityID_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(22);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(19);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathByEntityID_V2Request, ::g2engine::FindPathByEntityID_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4049,13 +3660,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindPathByRecordID() {
-      ::grpc::Service::MarkMethodCallback(23,
+      ::grpc::Service::MarkMethodCallback(20,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathByRecordIDRequest, ::g2engine::FindPathByRecordIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindPathByRecordIDRequest* request, ::g2engine::FindPathByRecordIDResponse* response) { return this->FindPathByRecordID(context, request, response); }));}
     void SetMessageAllocatorFor_FindPathByRecordID(
         ::grpc::MessageAllocator< ::g2engine::FindPathByRecordIDRequest, ::g2engine::FindPathByRecordIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(23);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(20);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathByRecordIDRequest, ::g2engine::FindPathByRecordIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4076,13 +3687,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindPathByRecordID_V2() {
-      ::grpc::Service::MarkMethodCallback(24,
+      ::grpc::Service::MarkMethodCallback(21,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathByRecordID_V2Request, ::g2engine::FindPathByRecordID_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindPathByRecordID_V2Request* request, ::g2engine::FindPathByRecordID_V2Response* response) { return this->FindPathByRecordID_V2(context, request, response); }));}
     void SetMessageAllocatorFor_FindPathByRecordID_V2(
         ::grpc::MessageAllocator< ::g2engine::FindPathByRecordID_V2Request, ::g2engine::FindPathByRecordID_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(24);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(21);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathByRecordID_V2Request, ::g2engine::FindPathByRecordID_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4103,13 +3714,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindPathExcludingByEntityID() {
-      ::grpc::Service::MarkMethodCallback(25,
+      ::grpc::Service::MarkMethodCallback(22,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathExcludingByEntityIDRequest, ::g2engine::FindPathExcludingByEntityIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindPathExcludingByEntityIDRequest* request, ::g2engine::FindPathExcludingByEntityIDResponse* response) { return this->FindPathExcludingByEntityID(context, request, response); }));}
     void SetMessageAllocatorFor_FindPathExcludingByEntityID(
         ::grpc::MessageAllocator< ::g2engine::FindPathExcludingByEntityIDRequest, ::g2engine::FindPathExcludingByEntityIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(25);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(22);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathExcludingByEntityIDRequest, ::g2engine::FindPathExcludingByEntityIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4130,13 +3741,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindPathExcludingByEntityID_V2() {
-      ::grpc::Service::MarkMethodCallback(26,
+      ::grpc::Service::MarkMethodCallback(23,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathExcludingByEntityID_V2Request, ::g2engine::FindPathExcludingByEntityID_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindPathExcludingByEntityID_V2Request* request, ::g2engine::FindPathExcludingByEntityID_V2Response* response) { return this->FindPathExcludingByEntityID_V2(context, request, response); }));}
     void SetMessageAllocatorFor_FindPathExcludingByEntityID_V2(
         ::grpc::MessageAllocator< ::g2engine::FindPathExcludingByEntityID_V2Request, ::g2engine::FindPathExcludingByEntityID_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(26);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(23);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathExcludingByEntityID_V2Request, ::g2engine::FindPathExcludingByEntityID_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4157,13 +3768,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindPathExcludingByRecordID() {
-      ::grpc::Service::MarkMethodCallback(27,
+      ::grpc::Service::MarkMethodCallback(24,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathExcludingByRecordIDRequest, ::g2engine::FindPathExcludingByRecordIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindPathExcludingByRecordIDRequest* request, ::g2engine::FindPathExcludingByRecordIDResponse* response) { return this->FindPathExcludingByRecordID(context, request, response); }));}
     void SetMessageAllocatorFor_FindPathExcludingByRecordID(
         ::grpc::MessageAllocator< ::g2engine::FindPathExcludingByRecordIDRequest, ::g2engine::FindPathExcludingByRecordIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(27);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(24);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathExcludingByRecordIDRequest, ::g2engine::FindPathExcludingByRecordIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4184,13 +3795,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindPathExcludingByRecordID_V2() {
-      ::grpc::Service::MarkMethodCallback(28,
+      ::grpc::Service::MarkMethodCallback(25,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathExcludingByRecordID_V2Request, ::g2engine::FindPathExcludingByRecordID_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindPathExcludingByRecordID_V2Request* request, ::g2engine::FindPathExcludingByRecordID_V2Response* response) { return this->FindPathExcludingByRecordID_V2(context, request, response); }));}
     void SetMessageAllocatorFor_FindPathExcludingByRecordID_V2(
         ::grpc::MessageAllocator< ::g2engine::FindPathExcludingByRecordID_V2Request, ::g2engine::FindPathExcludingByRecordID_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(28);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(25);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathExcludingByRecordID_V2Request, ::g2engine::FindPathExcludingByRecordID_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4211,13 +3822,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindPathIncludingSourceByEntityID() {
-      ::grpc::Service::MarkMethodCallback(29,
+      ::grpc::Service::MarkMethodCallback(26,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathIncludingSourceByEntityIDRequest, ::g2engine::FindPathIncludingSourceByEntityIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindPathIncludingSourceByEntityIDRequest* request, ::g2engine::FindPathIncludingSourceByEntityIDResponse* response) { return this->FindPathIncludingSourceByEntityID(context, request, response); }));}
     void SetMessageAllocatorFor_FindPathIncludingSourceByEntityID(
         ::grpc::MessageAllocator< ::g2engine::FindPathIncludingSourceByEntityIDRequest, ::g2engine::FindPathIncludingSourceByEntityIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(29);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(26);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathIncludingSourceByEntityIDRequest, ::g2engine::FindPathIncludingSourceByEntityIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4238,13 +3849,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindPathIncludingSourceByEntityID_V2() {
-      ::grpc::Service::MarkMethodCallback(30,
+      ::grpc::Service::MarkMethodCallback(27,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathIncludingSourceByEntityID_V2Request, ::g2engine::FindPathIncludingSourceByEntityID_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindPathIncludingSourceByEntityID_V2Request* request, ::g2engine::FindPathIncludingSourceByEntityID_V2Response* response) { return this->FindPathIncludingSourceByEntityID_V2(context, request, response); }));}
     void SetMessageAllocatorFor_FindPathIncludingSourceByEntityID_V2(
         ::grpc::MessageAllocator< ::g2engine::FindPathIncludingSourceByEntityID_V2Request, ::g2engine::FindPathIncludingSourceByEntityID_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(30);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(27);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathIncludingSourceByEntityID_V2Request, ::g2engine::FindPathIncludingSourceByEntityID_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4265,13 +3876,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindPathIncludingSourceByRecordID() {
-      ::grpc::Service::MarkMethodCallback(31,
+      ::grpc::Service::MarkMethodCallback(28,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathIncludingSourceByRecordIDRequest, ::g2engine::FindPathIncludingSourceByRecordIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindPathIncludingSourceByRecordIDRequest* request, ::g2engine::FindPathIncludingSourceByRecordIDResponse* response) { return this->FindPathIncludingSourceByRecordID(context, request, response); }));}
     void SetMessageAllocatorFor_FindPathIncludingSourceByRecordID(
         ::grpc::MessageAllocator< ::g2engine::FindPathIncludingSourceByRecordIDRequest, ::g2engine::FindPathIncludingSourceByRecordIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(31);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(28);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathIncludingSourceByRecordIDRequest, ::g2engine::FindPathIncludingSourceByRecordIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4292,13 +3903,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_FindPathIncludingSourceByRecordID_V2() {
-      ::grpc::Service::MarkMethodCallback(32,
+      ::grpc::Service::MarkMethodCallback(29,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathIncludingSourceByRecordID_V2Request, ::g2engine::FindPathIncludingSourceByRecordID_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::FindPathIncludingSourceByRecordID_V2Request* request, ::g2engine::FindPathIncludingSourceByRecordID_V2Response* response) { return this->FindPathIncludingSourceByRecordID_V2(context, request, response); }));}
     void SetMessageAllocatorFor_FindPathIncludingSourceByRecordID_V2(
         ::grpc::MessageAllocator< ::g2engine::FindPathIncludingSourceByRecordID_V2Request, ::g2engine::FindPathIncludingSourceByRecordID_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(32);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(29);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::FindPathIncludingSourceByRecordID_V2Request, ::g2engine::FindPathIncludingSourceByRecordID_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4319,13 +3930,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_GetActiveConfigID() {
-      ::grpc::Service::MarkMethodCallback(33,
+      ::grpc::Service::MarkMethodCallback(30,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::GetActiveConfigIDRequest, ::g2engine::GetActiveConfigIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::GetActiveConfigIDRequest* request, ::g2engine::GetActiveConfigIDResponse* response) { return this->GetActiveConfigID(context, request, response); }));}
     void SetMessageAllocatorFor_GetActiveConfigID(
         ::grpc::MessageAllocator< ::g2engine::GetActiveConfigIDRequest, ::g2engine::GetActiveConfigIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(33);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(30);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::GetActiveConfigIDRequest, ::g2engine::GetActiveConfigIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4346,13 +3957,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_GetEntityByEntityID() {
-      ::grpc::Service::MarkMethodCallback(34,
+      ::grpc::Service::MarkMethodCallback(31,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::GetEntityByEntityIDRequest, ::g2engine::GetEntityByEntityIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::GetEntityByEntityIDRequest* request, ::g2engine::GetEntityByEntityIDResponse* response) { return this->GetEntityByEntityID(context, request, response); }));}
     void SetMessageAllocatorFor_GetEntityByEntityID(
         ::grpc::MessageAllocator< ::g2engine::GetEntityByEntityIDRequest, ::g2engine::GetEntityByEntityIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(34);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(31);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::GetEntityByEntityIDRequest, ::g2engine::GetEntityByEntityIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4373,13 +3984,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_GetEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodCallback(35,
+      ::grpc::Service::MarkMethodCallback(32,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::GetEntityByEntityID_V2Request, ::g2engine::GetEntityByEntityID_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::GetEntityByEntityID_V2Request* request, ::g2engine::GetEntityByEntityID_V2Response* response) { return this->GetEntityByEntityID_V2(context, request, response); }));}
     void SetMessageAllocatorFor_GetEntityByEntityID_V2(
         ::grpc::MessageAllocator< ::g2engine::GetEntityByEntityID_V2Request, ::g2engine::GetEntityByEntityID_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(35);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(32);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::GetEntityByEntityID_V2Request, ::g2engine::GetEntityByEntityID_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4400,13 +4011,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_GetEntityByRecordID() {
-      ::grpc::Service::MarkMethodCallback(36,
+      ::grpc::Service::MarkMethodCallback(33,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::GetEntityByRecordIDRequest, ::g2engine::GetEntityByRecordIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::GetEntityByRecordIDRequest* request, ::g2engine::GetEntityByRecordIDResponse* response) { return this->GetEntityByRecordID(context, request, response); }));}
     void SetMessageAllocatorFor_GetEntityByRecordID(
         ::grpc::MessageAllocator< ::g2engine::GetEntityByRecordIDRequest, ::g2engine::GetEntityByRecordIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(36);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(33);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::GetEntityByRecordIDRequest, ::g2engine::GetEntityByRecordIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4427,13 +4038,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_GetEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodCallback(37,
+      ::grpc::Service::MarkMethodCallback(34,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::GetEntityByRecordID_V2Request, ::g2engine::GetEntityByRecordID_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::GetEntityByRecordID_V2Request* request, ::g2engine::GetEntityByRecordID_V2Response* response) { return this->GetEntityByRecordID_V2(context, request, response); }));}
     void SetMessageAllocatorFor_GetEntityByRecordID_V2(
         ::grpc::MessageAllocator< ::g2engine::GetEntityByRecordID_V2Request, ::g2engine::GetEntityByRecordID_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(37);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(34);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::GetEntityByRecordID_V2Request, ::g2engine::GetEntityByRecordID_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4454,13 +4065,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_GetRecord() {
-      ::grpc::Service::MarkMethodCallback(38,
+      ::grpc::Service::MarkMethodCallback(35,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::GetRecordRequest, ::g2engine::GetRecordResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::GetRecordRequest* request, ::g2engine::GetRecordResponse* response) { return this->GetRecord(context, request, response); }));}
     void SetMessageAllocatorFor_GetRecord(
         ::grpc::MessageAllocator< ::g2engine::GetRecordRequest, ::g2engine::GetRecordResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(38);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(35);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::GetRecordRequest, ::g2engine::GetRecordResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4481,13 +4092,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_GetRecord_V2() {
-      ::grpc::Service::MarkMethodCallback(39,
+      ::grpc::Service::MarkMethodCallback(36,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::GetRecord_V2Request, ::g2engine::GetRecord_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::GetRecord_V2Request* request, ::g2engine::GetRecord_V2Response* response) { return this->GetRecord_V2(context, request, response); }));}
     void SetMessageAllocatorFor_GetRecord_V2(
         ::grpc::MessageAllocator< ::g2engine::GetRecord_V2Request, ::g2engine::GetRecord_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(39);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(36);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::GetRecord_V2Request, ::g2engine::GetRecord_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4508,13 +4119,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_GetRedoRecord() {
-      ::grpc::Service::MarkMethodCallback(40,
+      ::grpc::Service::MarkMethodCallback(37,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::GetRedoRecordRequest, ::g2engine::GetRedoRecordResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::GetRedoRecordRequest* request, ::g2engine::GetRedoRecordResponse* response) { return this->GetRedoRecord(context, request, response); }));}
     void SetMessageAllocatorFor_GetRedoRecord(
         ::grpc::MessageAllocator< ::g2engine::GetRedoRecordRequest, ::g2engine::GetRedoRecordResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(40);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(37);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::GetRedoRecordRequest, ::g2engine::GetRedoRecordResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4535,13 +4146,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_GetRepositoryLastModifiedTime() {
-      ::grpc::Service::MarkMethodCallback(41,
+      ::grpc::Service::MarkMethodCallback(38,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::GetRepositoryLastModifiedTimeRequest, ::g2engine::GetRepositoryLastModifiedTimeResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::GetRepositoryLastModifiedTimeRequest* request, ::g2engine::GetRepositoryLastModifiedTimeResponse* response) { return this->GetRepositoryLastModifiedTime(context, request, response); }));}
     void SetMessageAllocatorFor_GetRepositoryLastModifiedTime(
         ::grpc::MessageAllocator< ::g2engine::GetRepositoryLastModifiedTimeRequest, ::g2engine::GetRepositoryLastModifiedTimeResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(41);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(38);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::GetRepositoryLastModifiedTimeRequest, ::g2engine::GetRepositoryLastModifiedTimeResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4562,13 +4173,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_GetVirtualEntityByRecordID() {
-      ::grpc::Service::MarkMethodCallback(42,
+      ::grpc::Service::MarkMethodCallback(39,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::GetVirtualEntityByRecordIDRequest, ::g2engine::GetVirtualEntityByRecordIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::GetVirtualEntityByRecordIDRequest* request, ::g2engine::GetVirtualEntityByRecordIDResponse* response) { return this->GetVirtualEntityByRecordID(context, request, response); }));}
     void SetMessageAllocatorFor_GetVirtualEntityByRecordID(
         ::grpc::MessageAllocator< ::g2engine::GetVirtualEntityByRecordIDRequest, ::g2engine::GetVirtualEntityByRecordIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(42);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(39);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::GetVirtualEntityByRecordIDRequest, ::g2engine::GetVirtualEntityByRecordIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4589,13 +4200,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_GetVirtualEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodCallback(43,
+      ::grpc::Service::MarkMethodCallback(40,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::GetVirtualEntityByRecordID_V2Request, ::g2engine::GetVirtualEntityByRecordID_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::GetVirtualEntityByRecordID_V2Request* request, ::g2engine::GetVirtualEntityByRecordID_V2Response* response) { return this->GetVirtualEntityByRecordID_V2(context, request, response); }));}
     void SetMessageAllocatorFor_GetVirtualEntityByRecordID_V2(
         ::grpc::MessageAllocator< ::g2engine::GetVirtualEntityByRecordID_V2Request, ::g2engine::GetVirtualEntityByRecordID_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(43);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(40);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::GetVirtualEntityByRecordID_V2Request, ::g2engine::GetVirtualEntityByRecordID_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4616,13 +4227,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_HowEntityByEntityID() {
-      ::grpc::Service::MarkMethodCallback(44,
+      ::grpc::Service::MarkMethodCallback(41,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::HowEntityByEntityIDRequest, ::g2engine::HowEntityByEntityIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::HowEntityByEntityIDRequest* request, ::g2engine::HowEntityByEntityIDResponse* response) { return this->HowEntityByEntityID(context, request, response); }));}
     void SetMessageAllocatorFor_HowEntityByEntityID(
         ::grpc::MessageAllocator< ::g2engine::HowEntityByEntityIDRequest, ::g2engine::HowEntityByEntityIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(44);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(41);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::HowEntityByEntityIDRequest, ::g2engine::HowEntityByEntityIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4643,13 +4254,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_HowEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodCallback(45,
+      ::grpc::Service::MarkMethodCallback(42,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::HowEntityByEntityID_V2Request, ::g2engine::HowEntityByEntityID_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::HowEntityByEntityID_V2Request* request, ::g2engine::HowEntityByEntityID_V2Response* response) { return this->HowEntityByEntityID_V2(context, request, response); }));}
     void SetMessageAllocatorFor_HowEntityByEntityID_V2(
         ::grpc::MessageAllocator< ::g2engine::HowEntityByEntityID_V2Request, ::g2engine::HowEntityByEntityID_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(45);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(42);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::HowEntityByEntityID_V2Request, ::g2engine::HowEntityByEntityID_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4670,13 +4281,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_Init() {
-      ::grpc::Service::MarkMethodCallback(46,
+      ::grpc::Service::MarkMethodCallback(43,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::InitRequest, ::g2engine::InitResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::InitRequest* request, ::g2engine::InitResponse* response) { return this->Init(context, request, response); }));}
     void SetMessageAllocatorFor_Init(
         ::grpc::MessageAllocator< ::g2engine::InitRequest, ::g2engine::InitResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(46);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(43);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::InitRequest, ::g2engine::InitResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4697,13 +4308,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_InitWithConfigID() {
-      ::grpc::Service::MarkMethodCallback(47,
+      ::grpc::Service::MarkMethodCallback(44,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::InitWithConfigIDRequest, ::g2engine::InitWithConfigIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::InitWithConfigIDRequest* request, ::g2engine::InitWithConfigIDResponse* response) { return this->InitWithConfigID(context, request, response); }));}
     void SetMessageAllocatorFor_InitWithConfigID(
         ::grpc::MessageAllocator< ::g2engine::InitWithConfigIDRequest, ::g2engine::InitWithConfigIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(47);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(44);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::InitWithConfigIDRequest, ::g2engine::InitWithConfigIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4724,13 +4335,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_PrimeEngine() {
-      ::grpc::Service::MarkMethodCallback(48,
+      ::grpc::Service::MarkMethodCallback(45,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::PrimeEngineRequest, ::g2engine::PrimeEngineResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::PrimeEngineRequest* request, ::g2engine::PrimeEngineResponse* response) { return this->PrimeEngine(context, request, response); }));}
     void SetMessageAllocatorFor_PrimeEngine(
         ::grpc::MessageAllocator< ::g2engine::PrimeEngineRequest, ::g2engine::PrimeEngineResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(48);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(45);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::PrimeEngineRequest, ::g2engine::PrimeEngineResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4751,13 +4362,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_Process() {
-      ::grpc::Service::MarkMethodCallback(49,
+      ::grpc::Service::MarkMethodCallback(46,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::ProcessRequest, ::g2engine::ProcessResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::ProcessRequest* request, ::g2engine::ProcessResponse* response) { return this->Process(context, request, response); }));}
     void SetMessageAllocatorFor_Process(
         ::grpc::MessageAllocator< ::g2engine::ProcessRequest, ::g2engine::ProcessResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(49);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(46);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::ProcessRequest, ::g2engine::ProcessResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4773,72 +4384,18 @@ class G2Engine final {
       ::grpc::CallbackServerContext* /*context*/, const ::g2engine::ProcessRequest* /*request*/, ::g2engine::ProcessResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_ProcessRedoRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_ProcessRedoRecord() {
-      ::grpc::Service::MarkMethodCallback(50,
-          new ::grpc::internal::CallbackUnaryHandler< ::g2engine::ProcessRedoRecordRequest, ::g2engine::ProcessRedoRecordResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::g2engine::ProcessRedoRecordRequest* request, ::g2engine::ProcessRedoRecordResponse* response) { return this->ProcessRedoRecord(context, request, response); }));}
-    void SetMessageAllocatorFor_ProcessRedoRecord(
-        ::grpc::MessageAllocator< ::g2engine::ProcessRedoRecordRequest, ::g2engine::ProcessRedoRecordResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(50);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::ProcessRedoRecordRequest, ::g2engine::ProcessRedoRecordResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_ProcessRedoRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessRedoRecord(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessRedoRecordRequest* /*request*/, ::g2engine::ProcessRedoRecordResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* ProcessRedoRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2engine::ProcessRedoRecordRequest* /*request*/, ::g2engine::ProcessRedoRecordResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_ProcessRedoRecordWithInfo : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_ProcessRedoRecordWithInfo() {
-      ::grpc::Service::MarkMethodCallback(51,
-          new ::grpc::internal::CallbackUnaryHandler< ::g2engine::ProcessRedoRecordWithInfoRequest, ::g2engine::ProcessRedoRecordWithInfoResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::g2engine::ProcessRedoRecordWithInfoRequest* request, ::g2engine::ProcessRedoRecordWithInfoResponse* response) { return this->ProcessRedoRecordWithInfo(context, request, response); }));}
-    void SetMessageAllocatorFor_ProcessRedoRecordWithInfo(
-        ::grpc::MessageAllocator< ::g2engine::ProcessRedoRecordWithInfoRequest, ::g2engine::ProcessRedoRecordWithInfoResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(51);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::ProcessRedoRecordWithInfoRequest, ::g2engine::ProcessRedoRecordWithInfoResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_ProcessRedoRecordWithInfo() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessRedoRecordWithInfo(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessRedoRecordWithInfoRequest* /*request*/, ::g2engine::ProcessRedoRecordWithInfoResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* ProcessRedoRecordWithInfo(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2engine::ProcessRedoRecordWithInfoRequest* /*request*/, ::g2engine::ProcessRedoRecordWithInfoResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
   class WithCallbackMethod_ProcessWithInfo : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_ProcessWithInfo() {
-      ::grpc::Service::MarkMethodCallback(52,
+      ::grpc::Service::MarkMethodCallback(47,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::ProcessWithInfoRequest, ::g2engine::ProcessWithInfoResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::ProcessWithInfoRequest* request, ::g2engine::ProcessWithInfoResponse* response) { return this->ProcessWithInfo(context, request, response); }));}
     void SetMessageAllocatorFor_ProcessWithInfo(
         ::grpc::MessageAllocator< ::g2engine::ProcessWithInfoRequest, ::g2engine::ProcessWithInfoResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(52);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(47);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::ProcessWithInfoRequest, ::g2engine::ProcessWithInfoResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4854,72 +4411,18 @@ class G2Engine final {
       ::grpc::CallbackServerContext* /*context*/, const ::g2engine::ProcessWithInfoRequest* /*request*/, ::g2engine::ProcessWithInfoResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_ProcessWithResponse : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_ProcessWithResponse() {
-      ::grpc::Service::MarkMethodCallback(53,
-          new ::grpc::internal::CallbackUnaryHandler< ::g2engine::ProcessWithResponseRequest, ::g2engine::ProcessWithResponseResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::g2engine::ProcessWithResponseRequest* request, ::g2engine::ProcessWithResponseResponse* response) { return this->ProcessWithResponse(context, request, response); }));}
-    void SetMessageAllocatorFor_ProcessWithResponse(
-        ::grpc::MessageAllocator< ::g2engine::ProcessWithResponseRequest, ::g2engine::ProcessWithResponseResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(53);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::ProcessWithResponseRequest, ::g2engine::ProcessWithResponseResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_ProcessWithResponse() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessWithResponse(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessWithResponseRequest* /*request*/, ::g2engine::ProcessWithResponseResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* ProcessWithResponse(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2engine::ProcessWithResponseRequest* /*request*/, ::g2engine::ProcessWithResponseResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_ProcessWithResponseResize : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_ProcessWithResponseResize() {
-      ::grpc::Service::MarkMethodCallback(54,
-          new ::grpc::internal::CallbackUnaryHandler< ::g2engine::ProcessWithResponseResizeRequest, ::g2engine::ProcessWithResponseResizeResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::g2engine::ProcessWithResponseResizeRequest* request, ::g2engine::ProcessWithResponseResizeResponse* response) { return this->ProcessWithResponseResize(context, request, response); }));}
-    void SetMessageAllocatorFor_ProcessWithResponseResize(
-        ::grpc::MessageAllocator< ::g2engine::ProcessWithResponseResizeRequest, ::g2engine::ProcessWithResponseResizeResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(54);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::ProcessWithResponseResizeRequest, ::g2engine::ProcessWithResponseResizeResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_ProcessWithResponseResize() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessWithResponseResize(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessWithResponseResizeRequest* /*request*/, ::g2engine::ProcessWithResponseResizeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* ProcessWithResponseResize(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2engine::ProcessWithResponseResizeRequest* /*request*/, ::g2engine::ProcessWithResponseResizeResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
   class WithCallbackMethod_PurgeRepository : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_PurgeRepository() {
-      ::grpc::Service::MarkMethodCallback(55,
+      ::grpc::Service::MarkMethodCallback(48,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::PurgeRepositoryRequest, ::g2engine::PurgeRepositoryResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::PurgeRepositoryRequest* request, ::g2engine::PurgeRepositoryResponse* response) { return this->PurgeRepository(context, request, response); }));}
     void SetMessageAllocatorFor_PurgeRepository(
         ::grpc::MessageAllocator< ::g2engine::PurgeRepositoryRequest, ::g2engine::PurgeRepositoryResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(55);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(48);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::PurgeRepositoryRequest, ::g2engine::PurgeRepositoryResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4940,13 +4443,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_ReevaluateEntity() {
-      ::grpc::Service::MarkMethodCallback(56,
+      ::grpc::Service::MarkMethodCallback(49,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::ReevaluateEntityRequest, ::g2engine::ReevaluateEntityResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::ReevaluateEntityRequest* request, ::g2engine::ReevaluateEntityResponse* response) { return this->ReevaluateEntity(context, request, response); }));}
     void SetMessageAllocatorFor_ReevaluateEntity(
         ::grpc::MessageAllocator< ::g2engine::ReevaluateEntityRequest, ::g2engine::ReevaluateEntityResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(56);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(49);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::ReevaluateEntityRequest, ::g2engine::ReevaluateEntityResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4967,13 +4470,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_ReevaluateEntityWithInfo() {
-      ::grpc::Service::MarkMethodCallback(57,
+      ::grpc::Service::MarkMethodCallback(50,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::ReevaluateEntityWithInfoRequest, ::g2engine::ReevaluateEntityWithInfoResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::ReevaluateEntityWithInfoRequest* request, ::g2engine::ReevaluateEntityWithInfoResponse* response) { return this->ReevaluateEntityWithInfo(context, request, response); }));}
     void SetMessageAllocatorFor_ReevaluateEntityWithInfo(
         ::grpc::MessageAllocator< ::g2engine::ReevaluateEntityWithInfoRequest, ::g2engine::ReevaluateEntityWithInfoResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(57);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(50);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::ReevaluateEntityWithInfoRequest, ::g2engine::ReevaluateEntityWithInfoResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -4994,13 +4497,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_ReevaluateRecord() {
-      ::grpc::Service::MarkMethodCallback(58,
+      ::grpc::Service::MarkMethodCallback(51,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::ReevaluateRecordRequest, ::g2engine::ReevaluateRecordResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::ReevaluateRecordRequest* request, ::g2engine::ReevaluateRecordResponse* response) { return this->ReevaluateRecord(context, request, response); }));}
     void SetMessageAllocatorFor_ReevaluateRecord(
         ::grpc::MessageAllocator< ::g2engine::ReevaluateRecordRequest, ::g2engine::ReevaluateRecordResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(58);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(51);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::ReevaluateRecordRequest, ::g2engine::ReevaluateRecordResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -5021,13 +4524,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_ReevaluateRecordWithInfo() {
-      ::grpc::Service::MarkMethodCallback(59,
+      ::grpc::Service::MarkMethodCallback(52,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::ReevaluateRecordWithInfoRequest, ::g2engine::ReevaluateRecordWithInfoResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::ReevaluateRecordWithInfoRequest* request, ::g2engine::ReevaluateRecordWithInfoResponse* response) { return this->ReevaluateRecordWithInfo(context, request, response); }));}
     void SetMessageAllocatorFor_ReevaluateRecordWithInfo(
         ::grpc::MessageAllocator< ::g2engine::ReevaluateRecordWithInfoRequest, ::g2engine::ReevaluateRecordWithInfoResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(59);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(52);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::ReevaluateRecordWithInfoRequest, ::g2engine::ReevaluateRecordWithInfoResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -5048,13 +4551,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_Reinit() {
-      ::grpc::Service::MarkMethodCallback(60,
+      ::grpc::Service::MarkMethodCallback(53,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::ReinitRequest, ::g2engine::ReinitResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::ReinitRequest* request, ::g2engine::ReinitResponse* response) { return this->Reinit(context, request, response); }));}
     void SetMessageAllocatorFor_Reinit(
         ::grpc::MessageAllocator< ::g2engine::ReinitRequest, ::g2engine::ReinitResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(60);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(53);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::ReinitRequest, ::g2engine::ReinitResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -5075,13 +4578,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_ReplaceRecord() {
-      ::grpc::Service::MarkMethodCallback(61,
+      ::grpc::Service::MarkMethodCallback(54,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::ReplaceRecordRequest, ::g2engine::ReplaceRecordResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::ReplaceRecordRequest* request, ::g2engine::ReplaceRecordResponse* response) { return this->ReplaceRecord(context, request, response); }));}
     void SetMessageAllocatorFor_ReplaceRecord(
         ::grpc::MessageAllocator< ::g2engine::ReplaceRecordRequest, ::g2engine::ReplaceRecordResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(61);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(54);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::ReplaceRecordRequest, ::g2engine::ReplaceRecordResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -5102,13 +4605,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_ReplaceRecordWithInfo() {
-      ::grpc::Service::MarkMethodCallback(62,
+      ::grpc::Service::MarkMethodCallback(55,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::ReplaceRecordWithInfoRequest, ::g2engine::ReplaceRecordWithInfoResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::ReplaceRecordWithInfoRequest* request, ::g2engine::ReplaceRecordWithInfoResponse* response) { return this->ReplaceRecordWithInfo(context, request, response); }));}
     void SetMessageAllocatorFor_ReplaceRecordWithInfo(
         ::grpc::MessageAllocator< ::g2engine::ReplaceRecordWithInfoRequest, ::g2engine::ReplaceRecordWithInfoResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(62);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(55);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::ReplaceRecordWithInfoRequest, ::g2engine::ReplaceRecordWithInfoResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -5129,13 +4632,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_SearchByAttributes() {
-      ::grpc::Service::MarkMethodCallback(63,
+      ::grpc::Service::MarkMethodCallback(56,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::SearchByAttributesRequest, ::g2engine::SearchByAttributesResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::SearchByAttributesRequest* request, ::g2engine::SearchByAttributesResponse* response) { return this->SearchByAttributes(context, request, response); }));}
     void SetMessageAllocatorFor_SearchByAttributes(
         ::grpc::MessageAllocator< ::g2engine::SearchByAttributesRequest, ::g2engine::SearchByAttributesResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(63);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(56);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::SearchByAttributesRequest, ::g2engine::SearchByAttributesResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -5156,13 +4659,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_SearchByAttributes_V2() {
-      ::grpc::Service::MarkMethodCallback(64,
+      ::grpc::Service::MarkMethodCallback(57,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::SearchByAttributes_V2Request, ::g2engine::SearchByAttributes_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::SearchByAttributes_V2Request* request, ::g2engine::SearchByAttributes_V2Response* response) { return this->SearchByAttributes_V2(context, request, response); }));}
     void SetMessageAllocatorFor_SearchByAttributes_V2(
         ::grpc::MessageAllocator< ::g2engine::SearchByAttributes_V2Request, ::g2engine::SearchByAttributes_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(64);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(57);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::SearchByAttributes_V2Request, ::g2engine::SearchByAttributes_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -5183,13 +4686,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_Stats() {
-      ::grpc::Service::MarkMethodCallback(65,
+      ::grpc::Service::MarkMethodCallback(58,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::StatsRequest, ::g2engine::StatsResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::StatsRequest* request, ::g2engine::StatsResponse* response) { return this->Stats(context, request, response); }));}
     void SetMessageAllocatorFor_Stats(
         ::grpc::MessageAllocator< ::g2engine::StatsRequest, ::g2engine::StatsResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(65);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(58);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::StatsRequest, ::g2engine::StatsResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -5210,7 +4713,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_StreamExportCSVEntityReport() {
-      ::grpc::Service::MarkMethodCallback(66,
+      ::grpc::Service::MarkMethodCallback(59,
           new ::grpc::internal::CallbackServerStreamingHandler< ::g2engine::StreamExportCSVEntityReportRequest, ::g2engine::StreamExportCSVEntityReportResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::StreamExportCSVEntityReportRequest* request) { return this->StreamExportCSVEntityReport(context, request); }));
@@ -5232,7 +4735,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_StreamExportJSONEntityReport() {
-      ::grpc::Service::MarkMethodCallback(67,
+      ::grpc::Service::MarkMethodCallback(60,
           new ::grpc::internal::CallbackServerStreamingHandler< ::g2engine::StreamExportJSONEntityReportRequest, ::g2engine::StreamExportJSONEntityReportResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::StreamExportJSONEntityReportRequest* request) { return this->StreamExportJSONEntityReport(context, request); }));
@@ -5254,13 +4757,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_WhyEntities() {
-      ::grpc::Service::MarkMethodCallback(68,
+      ::grpc::Service::MarkMethodCallback(61,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::WhyEntitiesRequest, ::g2engine::WhyEntitiesResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::WhyEntitiesRequest* request, ::g2engine::WhyEntitiesResponse* response) { return this->WhyEntities(context, request, response); }));}
     void SetMessageAllocatorFor_WhyEntities(
         ::grpc::MessageAllocator< ::g2engine::WhyEntitiesRequest, ::g2engine::WhyEntitiesResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(68);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(61);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::WhyEntitiesRequest, ::g2engine::WhyEntitiesResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -5281,13 +4784,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_WhyEntities_V2() {
-      ::grpc::Service::MarkMethodCallback(69,
+      ::grpc::Service::MarkMethodCallback(62,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::WhyEntities_V2Request, ::g2engine::WhyEntities_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::WhyEntities_V2Request* request, ::g2engine::WhyEntities_V2Response* response) { return this->WhyEntities_V2(context, request, response); }));}
     void SetMessageAllocatorFor_WhyEntities_V2(
         ::grpc::MessageAllocator< ::g2engine::WhyEntities_V2Request, ::g2engine::WhyEntities_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(69);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(62);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::WhyEntities_V2Request, ::g2engine::WhyEntities_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -5308,13 +4811,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_WhyEntityByEntityID() {
-      ::grpc::Service::MarkMethodCallback(70,
+      ::grpc::Service::MarkMethodCallback(63,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::WhyEntityByEntityIDRequest, ::g2engine::WhyEntityByEntityIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::WhyEntityByEntityIDRequest* request, ::g2engine::WhyEntityByEntityIDResponse* response) { return this->WhyEntityByEntityID(context, request, response); }));}
     void SetMessageAllocatorFor_WhyEntityByEntityID(
         ::grpc::MessageAllocator< ::g2engine::WhyEntityByEntityIDRequest, ::g2engine::WhyEntityByEntityIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(70);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(63);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::WhyEntityByEntityIDRequest, ::g2engine::WhyEntityByEntityIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -5335,13 +4838,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_WhyEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodCallback(71,
+      ::grpc::Service::MarkMethodCallback(64,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::WhyEntityByEntityID_V2Request, ::g2engine::WhyEntityByEntityID_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::WhyEntityByEntityID_V2Request* request, ::g2engine::WhyEntityByEntityID_V2Response* response) { return this->WhyEntityByEntityID_V2(context, request, response); }));}
     void SetMessageAllocatorFor_WhyEntityByEntityID_V2(
         ::grpc::MessageAllocator< ::g2engine::WhyEntityByEntityID_V2Request, ::g2engine::WhyEntityByEntityID_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(71);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(64);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::WhyEntityByEntityID_V2Request, ::g2engine::WhyEntityByEntityID_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -5362,13 +4865,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_WhyEntityByRecordID() {
-      ::grpc::Service::MarkMethodCallback(72,
+      ::grpc::Service::MarkMethodCallback(65,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::WhyEntityByRecordIDRequest, ::g2engine::WhyEntityByRecordIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::WhyEntityByRecordIDRequest* request, ::g2engine::WhyEntityByRecordIDResponse* response) { return this->WhyEntityByRecordID(context, request, response); }));}
     void SetMessageAllocatorFor_WhyEntityByRecordID(
         ::grpc::MessageAllocator< ::g2engine::WhyEntityByRecordIDRequest, ::g2engine::WhyEntityByRecordIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(72);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(65);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::WhyEntityByRecordIDRequest, ::g2engine::WhyEntityByRecordIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -5389,13 +4892,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_WhyEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodCallback(73,
+      ::grpc::Service::MarkMethodCallback(66,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::WhyEntityByRecordID_V2Request, ::g2engine::WhyEntityByRecordID_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::WhyEntityByRecordID_V2Request* request, ::g2engine::WhyEntityByRecordID_V2Response* response) { return this->WhyEntityByRecordID_V2(context, request, response); }));}
     void SetMessageAllocatorFor_WhyEntityByRecordID_V2(
         ::grpc::MessageAllocator< ::g2engine::WhyEntityByRecordID_V2Request, ::g2engine::WhyEntityByRecordID_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(73);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(66);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::WhyEntityByRecordID_V2Request, ::g2engine::WhyEntityByRecordID_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -5416,13 +4919,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_WhyRecords() {
-      ::grpc::Service::MarkMethodCallback(74,
+      ::grpc::Service::MarkMethodCallback(67,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::WhyRecordsRequest, ::g2engine::WhyRecordsResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::WhyRecordsRequest* request, ::g2engine::WhyRecordsResponse* response) { return this->WhyRecords(context, request, response); }));}
     void SetMessageAllocatorFor_WhyRecords(
         ::grpc::MessageAllocator< ::g2engine::WhyRecordsRequest, ::g2engine::WhyRecordsResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(74);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(67);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::WhyRecordsRequest, ::g2engine::WhyRecordsResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -5443,13 +4946,13 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_WhyRecords_V2() {
-      ::grpc::Service::MarkMethodCallback(75,
+      ::grpc::Service::MarkMethodCallback(68,
           new ::grpc::internal::CallbackUnaryHandler< ::g2engine::WhyRecords_V2Request, ::g2engine::WhyRecords_V2Response>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2engine::WhyRecords_V2Request* request, ::g2engine::WhyRecords_V2Response* response) { return this->WhyRecords_V2(context, request, response); }));}
     void SetMessageAllocatorFor_WhyRecords_V2(
         ::grpc::MessageAllocator< ::g2engine::WhyRecords_V2Request, ::g2engine::WhyRecords_V2Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(75);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(68);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2engine::WhyRecords_V2Request, ::g2engine::WhyRecords_V2Response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -5464,7 +4967,7 @@ class G2Engine final {
     virtual ::grpc::ServerUnaryReactor* WhyRecords_V2(
       ::grpc::CallbackServerContext* /*context*/, const ::g2engine::WhyRecords_V2Request* /*request*/, ::g2engine::WhyRecords_V2Response* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_AddRecord<WithCallbackMethod_AddRecordWithInfo<WithCallbackMethod_AddRecordWithInfoWithReturnedRecordID<WithCallbackMethod_AddRecordWithReturnedRecordID<WithCallbackMethod_CheckRecord<WithCallbackMethod_CloseExport<WithCallbackMethod_CountRedoRecords<WithCallbackMethod_DeleteRecord<WithCallbackMethod_DeleteRecordWithInfo<WithCallbackMethod_Destroy<WithCallbackMethod_ExportConfig<WithCallbackMethod_ExportConfigAndConfigID<WithCallbackMethod_ExportCSVEntityReport<WithCallbackMethod_ExportJSONEntityReport<WithCallbackMethod_FetchNext<WithCallbackMethod_FindInterestingEntitiesByEntityID<WithCallbackMethod_FindInterestingEntitiesByRecordID<WithCallbackMethod_FindNetworkByEntityID<WithCallbackMethod_FindNetworkByEntityID_V2<WithCallbackMethod_FindNetworkByRecordID<WithCallbackMethod_FindNetworkByRecordID_V2<WithCallbackMethod_FindPathByEntityID<WithCallbackMethod_FindPathByEntityID_V2<WithCallbackMethod_FindPathByRecordID<WithCallbackMethod_FindPathByRecordID_V2<WithCallbackMethod_FindPathExcludingByEntityID<WithCallbackMethod_FindPathExcludingByEntityID_V2<WithCallbackMethod_FindPathExcludingByRecordID<WithCallbackMethod_FindPathExcludingByRecordID_V2<WithCallbackMethod_FindPathIncludingSourceByEntityID<WithCallbackMethod_FindPathIncludingSourceByEntityID_V2<WithCallbackMethod_FindPathIncludingSourceByRecordID<WithCallbackMethod_FindPathIncludingSourceByRecordID_V2<WithCallbackMethod_GetActiveConfigID<WithCallbackMethod_GetEntityByEntityID<WithCallbackMethod_GetEntityByEntityID_V2<WithCallbackMethod_GetEntityByRecordID<WithCallbackMethod_GetEntityByRecordID_V2<WithCallbackMethod_GetRecord<WithCallbackMethod_GetRecord_V2<WithCallbackMethod_GetRedoRecord<WithCallbackMethod_GetRepositoryLastModifiedTime<WithCallbackMethod_GetVirtualEntityByRecordID<WithCallbackMethod_GetVirtualEntityByRecordID_V2<WithCallbackMethod_HowEntityByEntityID<WithCallbackMethod_HowEntityByEntityID_V2<WithCallbackMethod_Init<WithCallbackMethod_InitWithConfigID<WithCallbackMethod_PrimeEngine<WithCallbackMethod_Process<WithCallbackMethod_ProcessRedoRecord<WithCallbackMethod_ProcessRedoRecordWithInfo<WithCallbackMethod_ProcessWithInfo<WithCallbackMethod_ProcessWithResponse<WithCallbackMethod_ProcessWithResponseResize<WithCallbackMethod_PurgeRepository<WithCallbackMethod_ReevaluateEntity<WithCallbackMethod_ReevaluateEntityWithInfo<WithCallbackMethod_ReevaluateRecord<WithCallbackMethod_ReevaluateRecordWithInfo<WithCallbackMethod_Reinit<WithCallbackMethod_ReplaceRecord<WithCallbackMethod_ReplaceRecordWithInfo<WithCallbackMethod_SearchByAttributes<WithCallbackMethod_SearchByAttributes_V2<WithCallbackMethod_Stats<WithCallbackMethod_StreamExportCSVEntityReport<WithCallbackMethod_StreamExportJSONEntityReport<WithCallbackMethod_WhyEntities<WithCallbackMethod_WhyEntities_V2<WithCallbackMethod_WhyEntityByEntityID<WithCallbackMethod_WhyEntityByEntityID_V2<WithCallbackMethod_WhyEntityByRecordID<WithCallbackMethod_WhyEntityByRecordID_V2<WithCallbackMethod_WhyRecords<WithCallbackMethod_WhyRecords_V2<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
+  typedef WithCallbackMethod_AddRecord<WithCallbackMethod_AddRecordWithInfo<WithCallbackMethod_CloseExport<WithCallbackMethod_CountRedoRecords<WithCallbackMethod_DeleteRecord<WithCallbackMethod_DeleteRecordWithInfo<WithCallbackMethod_Destroy<WithCallbackMethod_ExportConfig<WithCallbackMethod_ExportConfigAndConfigID<WithCallbackMethod_ExportCSVEntityReport<WithCallbackMethod_ExportJSONEntityReport<WithCallbackMethod_FetchNext<WithCallbackMethod_FindInterestingEntitiesByEntityID<WithCallbackMethod_FindInterestingEntitiesByRecordID<WithCallbackMethod_FindNetworkByEntityID<WithCallbackMethod_FindNetworkByEntityID_V2<WithCallbackMethod_FindNetworkByRecordID<WithCallbackMethod_FindNetworkByRecordID_V2<WithCallbackMethod_FindPathByEntityID<WithCallbackMethod_FindPathByEntityID_V2<WithCallbackMethod_FindPathByRecordID<WithCallbackMethod_FindPathByRecordID_V2<WithCallbackMethod_FindPathExcludingByEntityID<WithCallbackMethod_FindPathExcludingByEntityID_V2<WithCallbackMethod_FindPathExcludingByRecordID<WithCallbackMethod_FindPathExcludingByRecordID_V2<WithCallbackMethod_FindPathIncludingSourceByEntityID<WithCallbackMethod_FindPathIncludingSourceByEntityID_V2<WithCallbackMethod_FindPathIncludingSourceByRecordID<WithCallbackMethod_FindPathIncludingSourceByRecordID_V2<WithCallbackMethod_GetActiveConfigID<WithCallbackMethod_GetEntityByEntityID<WithCallbackMethod_GetEntityByEntityID_V2<WithCallbackMethod_GetEntityByRecordID<WithCallbackMethod_GetEntityByRecordID_V2<WithCallbackMethod_GetRecord<WithCallbackMethod_GetRecord_V2<WithCallbackMethod_GetRedoRecord<WithCallbackMethod_GetRepositoryLastModifiedTime<WithCallbackMethod_GetVirtualEntityByRecordID<WithCallbackMethod_GetVirtualEntityByRecordID_V2<WithCallbackMethod_HowEntityByEntityID<WithCallbackMethod_HowEntityByEntityID_V2<WithCallbackMethod_Init<WithCallbackMethod_InitWithConfigID<WithCallbackMethod_PrimeEngine<WithCallbackMethod_Process<WithCallbackMethod_ProcessWithInfo<WithCallbackMethod_PurgeRepository<WithCallbackMethod_ReevaluateEntity<WithCallbackMethod_ReevaluateEntityWithInfo<WithCallbackMethod_ReevaluateRecord<WithCallbackMethod_ReevaluateRecordWithInfo<WithCallbackMethod_Reinit<WithCallbackMethod_ReplaceRecord<WithCallbackMethod_ReplaceRecordWithInfo<WithCallbackMethod_SearchByAttributes<WithCallbackMethod_SearchByAttributes_V2<WithCallbackMethod_Stats<WithCallbackMethod_StreamExportCSVEntityReport<WithCallbackMethod_StreamExportJSONEntityReport<WithCallbackMethod_WhyEntities<WithCallbackMethod_WhyEntities_V2<WithCallbackMethod_WhyEntityByEntityID<WithCallbackMethod_WhyEntityByEntityID_V2<WithCallbackMethod_WhyEntityByRecordID<WithCallbackMethod_WhyEntityByRecordID_V2<WithCallbackMethod_WhyRecords<WithCallbackMethod_WhyRecords_V2<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_AddRecord : public BaseClass {
@@ -5501,63 +5004,12 @@ class G2Engine final {
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_AddRecordWithInfoWithReturnedRecordID : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_AddRecordWithInfoWithReturnedRecordID() {
-      ::grpc::Service::MarkMethodGeneric(2);
-    }
-    ~WithGenericMethod_AddRecordWithInfoWithReturnedRecordID() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status AddRecordWithInfoWithReturnedRecordID(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* /*request*/, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_AddRecordWithReturnedRecordID : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_AddRecordWithReturnedRecordID() {
-      ::grpc::Service::MarkMethodGeneric(3);
-    }
-    ~WithGenericMethod_AddRecordWithReturnedRecordID() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status AddRecordWithReturnedRecordID(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordWithReturnedRecordIDRequest* /*request*/, ::g2engine::AddRecordWithReturnedRecordIDResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_CheckRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_CheckRecord() {
-      ::grpc::Service::MarkMethodGeneric(4);
-    }
-    ~WithGenericMethod_CheckRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status CheckRecord(::grpc::ServerContext* /*context*/, const ::g2engine::CheckRecordRequest* /*request*/, ::g2engine::CheckRecordResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
   class WithGenericMethod_CloseExport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_CloseExport() {
-      ::grpc::Service::MarkMethodGeneric(5);
+      ::grpc::Service::MarkMethodGeneric(2);
     }
     ~WithGenericMethod_CloseExport() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5574,7 +5026,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_CountRedoRecords() {
-      ::grpc::Service::MarkMethodGeneric(6);
+      ::grpc::Service::MarkMethodGeneric(3);
     }
     ~WithGenericMethod_CountRedoRecords() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5591,7 +5043,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_DeleteRecord() {
-      ::grpc::Service::MarkMethodGeneric(7);
+      ::grpc::Service::MarkMethodGeneric(4);
     }
     ~WithGenericMethod_DeleteRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5608,7 +5060,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_DeleteRecordWithInfo() {
-      ::grpc::Service::MarkMethodGeneric(8);
+      ::grpc::Service::MarkMethodGeneric(5);
     }
     ~WithGenericMethod_DeleteRecordWithInfo() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5625,7 +5077,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Destroy() {
-      ::grpc::Service::MarkMethodGeneric(9);
+      ::grpc::Service::MarkMethodGeneric(6);
     }
     ~WithGenericMethod_Destroy() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5642,7 +5094,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_ExportConfig() {
-      ::grpc::Service::MarkMethodGeneric(10);
+      ::grpc::Service::MarkMethodGeneric(7);
     }
     ~WithGenericMethod_ExportConfig() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5659,7 +5111,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_ExportConfigAndConfigID() {
-      ::grpc::Service::MarkMethodGeneric(11);
+      ::grpc::Service::MarkMethodGeneric(8);
     }
     ~WithGenericMethod_ExportConfigAndConfigID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5676,7 +5128,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_ExportCSVEntityReport() {
-      ::grpc::Service::MarkMethodGeneric(12);
+      ::grpc::Service::MarkMethodGeneric(9);
     }
     ~WithGenericMethod_ExportCSVEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5693,7 +5145,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_ExportJSONEntityReport() {
-      ::grpc::Service::MarkMethodGeneric(13);
+      ::grpc::Service::MarkMethodGeneric(10);
     }
     ~WithGenericMethod_ExportJSONEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5710,7 +5162,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FetchNext() {
-      ::grpc::Service::MarkMethodGeneric(14);
+      ::grpc::Service::MarkMethodGeneric(11);
     }
     ~WithGenericMethod_FetchNext() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5727,7 +5179,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindInterestingEntitiesByEntityID() {
-      ::grpc::Service::MarkMethodGeneric(15);
+      ::grpc::Service::MarkMethodGeneric(12);
     }
     ~WithGenericMethod_FindInterestingEntitiesByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5744,7 +5196,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindInterestingEntitiesByRecordID() {
-      ::grpc::Service::MarkMethodGeneric(16);
+      ::grpc::Service::MarkMethodGeneric(13);
     }
     ~WithGenericMethod_FindInterestingEntitiesByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5761,7 +5213,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindNetworkByEntityID() {
-      ::grpc::Service::MarkMethodGeneric(17);
+      ::grpc::Service::MarkMethodGeneric(14);
     }
     ~WithGenericMethod_FindNetworkByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5778,7 +5230,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindNetworkByEntityID_V2() {
-      ::grpc::Service::MarkMethodGeneric(18);
+      ::grpc::Service::MarkMethodGeneric(15);
     }
     ~WithGenericMethod_FindNetworkByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5795,7 +5247,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindNetworkByRecordID() {
-      ::grpc::Service::MarkMethodGeneric(19);
+      ::grpc::Service::MarkMethodGeneric(16);
     }
     ~WithGenericMethod_FindNetworkByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5812,7 +5264,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindNetworkByRecordID_V2() {
-      ::grpc::Service::MarkMethodGeneric(20);
+      ::grpc::Service::MarkMethodGeneric(17);
     }
     ~WithGenericMethod_FindNetworkByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5829,7 +5281,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindPathByEntityID() {
-      ::grpc::Service::MarkMethodGeneric(21);
+      ::grpc::Service::MarkMethodGeneric(18);
     }
     ~WithGenericMethod_FindPathByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5846,7 +5298,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindPathByEntityID_V2() {
-      ::grpc::Service::MarkMethodGeneric(22);
+      ::grpc::Service::MarkMethodGeneric(19);
     }
     ~WithGenericMethod_FindPathByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5863,7 +5315,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindPathByRecordID() {
-      ::grpc::Service::MarkMethodGeneric(23);
+      ::grpc::Service::MarkMethodGeneric(20);
     }
     ~WithGenericMethod_FindPathByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5880,7 +5332,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindPathByRecordID_V2() {
-      ::grpc::Service::MarkMethodGeneric(24);
+      ::grpc::Service::MarkMethodGeneric(21);
     }
     ~WithGenericMethod_FindPathByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5897,7 +5349,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindPathExcludingByEntityID() {
-      ::grpc::Service::MarkMethodGeneric(25);
+      ::grpc::Service::MarkMethodGeneric(22);
     }
     ~WithGenericMethod_FindPathExcludingByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5914,7 +5366,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindPathExcludingByEntityID_V2() {
-      ::grpc::Service::MarkMethodGeneric(26);
+      ::grpc::Service::MarkMethodGeneric(23);
     }
     ~WithGenericMethod_FindPathExcludingByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5931,7 +5383,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindPathExcludingByRecordID() {
-      ::grpc::Service::MarkMethodGeneric(27);
+      ::grpc::Service::MarkMethodGeneric(24);
     }
     ~WithGenericMethod_FindPathExcludingByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5948,7 +5400,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindPathExcludingByRecordID_V2() {
-      ::grpc::Service::MarkMethodGeneric(28);
+      ::grpc::Service::MarkMethodGeneric(25);
     }
     ~WithGenericMethod_FindPathExcludingByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5965,7 +5417,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindPathIncludingSourceByEntityID() {
-      ::grpc::Service::MarkMethodGeneric(29);
+      ::grpc::Service::MarkMethodGeneric(26);
     }
     ~WithGenericMethod_FindPathIncludingSourceByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5982,7 +5434,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindPathIncludingSourceByEntityID_V2() {
-      ::grpc::Service::MarkMethodGeneric(30);
+      ::grpc::Service::MarkMethodGeneric(27);
     }
     ~WithGenericMethod_FindPathIncludingSourceByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -5999,7 +5451,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindPathIncludingSourceByRecordID() {
-      ::grpc::Service::MarkMethodGeneric(31);
+      ::grpc::Service::MarkMethodGeneric(28);
     }
     ~WithGenericMethod_FindPathIncludingSourceByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6016,7 +5468,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_FindPathIncludingSourceByRecordID_V2() {
-      ::grpc::Service::MarkMethodGeneric(32);
+      ::grpc::Service::MarkMethodGeneric(29);
     }
     ~WithGenericMethod_FindPathIncludingSourceByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6033,7 +5485,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetActiveConfigID() {
-      ::grpc::Service::MarkMethodGeneric(33);
+      ::grpc::Service::MarkMethodGeneric(30);
     }
     ~WithGenericMethod_GetActiveConfigID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6050,7 +5502,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetEntityByEntityID() {
-      ::grpc::Service::MarkMethodGeneric(34);
+      ::grpc::Service::MarkMethodGeneric(31);
     }
     ~WithGenericMethod_GetEntityByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6067,7 +5519,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodGeneric(35);
+      ::grpc::Service::MarkMethodGeneric(32);
     }
     ~WithGenericMethod_GetEntityByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6084,7 +5536,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetEntityByRecordID() {
-      ::grpc::Service::MarkMethodGeneric(36);
+      ::grpc::Service::MarkMethodGeneric(33);
     }
     ~WithGenericMethod_GetEntityByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6101,7 +5553,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodGeneric(37);
+      ::grpc::Service::MarkMethodGeneric(34);
     }
     ~WithGenericMethod_GetEntityByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6118,7 +5570,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetRecord() {
-      ::grpc::Service::MarkMethodGeneric(38);
+      ::grpc::Service::MarkMethodGeneric(35);
     }
     ~WithGenericMethod_GetRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6135,7 +5587,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetRecord_V2() {
-      ::grpc::Service::MarkMethodGeneric(39);
+      ::grpc::Service::MarkMethodGeneric(36);
     }
     ~WithGenericMethod_GetRecord_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6152,7 +5604,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetRedoRecord() {
-      ::grpc::Service::MarkMethodGeneric(40);
+      ::grpc::Service::MarkMethodGeneric(37);
     }
     ~WithGenericMethod_GetRedoRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6169,7 +5621,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetRepositoryLastModifiedTime() {
-      ::grpc::Service::MarkMethodGeneric(41);
+      ::grpc::Service::MarkMethodGeneric(38);
     }
     ~WithGenericMethod_GetRepositoryLastModifiedTime() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6186,7 +5638,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetVirtualEntityByRecordID() {
-      ::grpc::Service::MarkMethodGeneric(42);
+      ::grpc::Service::MarkMethodGeneric(39);
     }
     ~WithGenericMethod_GetVirtualEntityByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6203,7 +5655,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetVirtualEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodGeneric(43);
+      ::grpc::Service::MarkMethodGeneric(40);
     }
     ~WithGenericMethod_GetVirtualEntityByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6220,7 +5672,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_HowEntityByEntityID() {
-      ::grpc::Service::MarkMethodGeneric(44);
+      ::grpc::Service::MarkMethodGeneric(41);
     }
     ~WithGenericMethod_HowEntityByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6237,7 +5689,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_HowEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodGeneric(45);
+      ::grpc::Service::MarkMethodGeneric(42);
     }
     ~WithGenericMethod_HowEntityByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6254,7 +5706,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Init() {
-      ::grpc::Service::MarkMethodGeneric(46);
+      ::grpc::Service::MarkMethodGeneric(43);
     }
     ~WithGenericMethod_Init() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6271,7 +5723,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_InitWithConfigID() {
-      ::grpc::Service::MarkMethodGeneric(47);
+      ::grpc::Service::MarkMethodGeneric(44);
     }
     ~WithGenericMethod_InitWithConfigID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6288,7 +5740,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_PrimeEngine() {
-      ::grpc::Service::MarkMethodGeneric(48);
+      ::grpc::Service::MarkMethodGeneric(45);
     }
     ~WithGenericMethod_PrimeEngine() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6305,7 +5757,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Process() {
-      ::grpc::Service::MarkMethodGeneric(49);
+      ::grpc::Service::MarkMethodGeneric(46);
     }
     ~WithGenericMethod_Process() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6317,46 +5769,12 @@ class G2Engine final {
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_ProcessRedoRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_ProcessRedoRecord() {
-      ::grpc::Service::MarkMethodGeneric(50);
-    }
-    ~WithGenericMethod_ProcessRedoRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessRedoRecord(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessRedoRecordRequest* /*request*/, ::g2engine::ProcessRedoRecordResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_ProcessRedoRecordWithInfo : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_ProcessRedoRecordWithInfo() {
-      ::grpc::Service::MarkMethodGeneric(51);
-    }
-    ~WithGenericMethod_ProcessRedoRecordWithInfo() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessRedoRecordWithInfo(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessRedoRecordWithInfoRequest* /*request*/, ::g2engine::ProcessRedoRecordWithInfoResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
   class WithGenericMethod_ProcessWithInfo : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_ProcessWithInfo() {
-      ::grpc::Service::MarkMethodGeneric(52);
+      ::grpc::Service::MarkMethodGeneric(47);
     }
     ~WithGenericMethod_ProcessWithInfo() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6368,46 +5786,12 @@ class G2Engine final {
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_ProcessWithResponse : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_ProcessWithResponse() {
-      ::grpc::Service::MarkMethodGeneric(53);
-    }
-    ~WithGenericMethod_ProcessWithResponse() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessWithResponse(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessWithResponseRequest* /*request*/, ::g2engine::ProcessWithResponseResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_ProcessWithResponseResize : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_ProcessWithResponseResize() {
-      ::grpc::Service::MarkMethodGeneric(54);
-    }
-    ~WithGenericMethod_ProcessWithResponseResize() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessWithResponseResize(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessWithResponseResizeRequest* /*request*/, ::g2engine::ProcessWithResponseResizeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
   class WithGenericMethod_PurgeRepository : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_PurgeRepository() {
-      ::grpc::Service::MarkMethodGeneric(55);
+      ::grpc::Service::MarkMethodGeneric(48);
     }
     ~WithGenericMethod_PurgeRepository() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6424,7 +5808,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_ReevaluateEntity() {
-      ::grpc::Service::MarkMethodGeneric(56);
+      ::grpc::Service::MarkMethodGeneric(49);
     }
     ~WithGenericMethod_ReevaluateEntity() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6441,7 +5825,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_ReevaluateEntityWithInfo() {
-      ::grpc::Service::MarkMethodGeneric(57);
+      ::grpc::Service::MarkMethodGeneric(50);
     }
     ~WithGenericMethod_ReevaluateEntityWithInfo() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6458,7 +5842,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_ReevaluateRecord() {
-      ::grpc::Service::MarkMethodGeneric(58);
+      ::grpc::Service::MarkMethodGeneric(51);
     }
     ~WithGenericMethod_ReevaluateRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6475,7 +5859,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_ReevaluateRecordWithInfo() {
-      ::grpc::Service::MarkMethodGeneric(59);
+      ::grpc::Service::MarkMethodGeneric(52);
     }
     ~WithGenericMethod_ReevaluateRecordWithInfo() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6492,7 +5876,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Reinit() {
-      ::grpc::Service::MarkMethodGeneric(60);
+      ::grpc::Service::MarkMethodGeneric(53);
     }
     ~WithGenericMethod_Reinit() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6509,7 +5893,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_ReplaceRecord() {
-      ::grpc::Service::MarkMethodGeneric(61);
+      ::grpc::Service::MarkMethodGeneric(54);
     }
     ~WithGenericMethod_ReplaceRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6526,7 +5910,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_ReplaceRecordWithInfo() {
-      ::grpc::Service::MarkMethodGeneric(62);
+      ::grpc::Service::MarkMethodGeneric(55);
     }
     ~WithGenericMethod_ReplaceRecordWithInfo() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6543,7 +5927,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_SearchByAttributes() {
-      ::grpc::Service::MarkMethodGeneric(63);
+      ::grpc::Service::MarkMethodGeneric(56);
     }
     ~WithGenericMethod_SearchByAttributes() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6560,7 +5944,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_SearchByAttributes_V2() {
-      ::grpc::Service::MarkMethodGeneric(64);
+      ::grpc::Service::MarkMethodGeneric(57);
     }
     ~WithGenericMethod_SearchByAttributes_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6577,7 +5961,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Stats() {
-      ::grpc::Service::MarkMethodGeneric(65);
+      ::grpc::Service::MarkMethodGeneric(58);
     }
     ~WithGenericMethod_Stats() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6594,7 +5978,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_StreamExportCSVEntityReport() {
-      ::grpc::Service::MarkMethodGeneric(66);
+      ::grpc::Service::MarkMethodGeneric(59);
     }
     ~WithGenericMethod_StreamExportCSVEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6611,7 +5995,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_StreamExportJSONEntityReport() {
-      ::grpc::Service::MarkMethodGeneric(67);
+      ::grpc::Service::MarkMethodGeneric(60);
     }
     ~WithGenericMethod_StreamExportJSONEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6628,7 +6012,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_WhyEntities() {
-      ::grpc::Service::MarkMethodGeneric(68);
+      ::grpc::Service::MarkMethodGeneric(61);
     }
     ~WithGenericMethod_WhyEntities() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6645,7 +6029,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_WhyEntities_V2() {
-      ::grpc::Service::MarkMethodGeneric(69);
+      ::grpc::Service::MarkMethodGeneric(62);
     }
     ~WithGenericMethod_WhyEntities_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6662,7 +6046,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_WhyEntityByEntityID() {
-      ::grpc::Service::MarkMethodGeneric(70);
+      ::grpc::Service::MarkMethodGeneric(63);
     }
     ~WithGenericMethod_WhyEntityByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6679,7 +6063,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_WhyEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodGeneric(71);
+      ::grpc::Service::MarkMethodGeneric(64);
     }
     ~WithGenericMethod_WhyEntityByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6696,7 +6080,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_WhyEntityByRecordID() {
-      ::grpc::Service::MarkMethodGeneric(72);
+      ::grpc::Service::MarkMethodGeneric(65);
     }
     ~WithGenericMethod_WhyEntityByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6713,7 +6097,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_WhyEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodGeneric(73);
+      ::grpc::Service::MarkMethodGeneric(66);
     }
     ~WithGenericMethod_WhyEntityByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6730,7 +6114,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_WhyRecords() {
-      ::grpc::Service::MarkMethodGeneric(74);
+      ::grpc::Service::MarkMethodGeneric(67);
     }
     ~WithGenericMethod_WhyRecords() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6747,7 +6131,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_WhyRecords_V2() {
-      ::grpc::Service::MarkMethodGeneric(75);
+      ::grpc::Service::MarkMethodGeneric(68);
     }
     ~WithGenericMethod_WhyRecords_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6799,72 +6183,12 @@ class G2Engine final {
     }
   };
   template <class BaseClass>
-  class WithRawMethod_AddRecordWithInfoWithReturnedRecordID : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_AddRecordWithInfoWithReturnedRecordID() {
-      ::grpc::Service::MarkMethodRaw(2);
-    }
-    ~WithRawMethod_AddRecordWithInfoWithReturnedRecordID() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status AddRecordWithInfoWithReturnedRecordID(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* /*request*/, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestAddRecordWithInfoWithReturnedRecordID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_AddRecordWithReturnedRecordID : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_AddRecordWithReturnedRecordID() {
-      ::grpc::Service::MarkMethodRaw(3);
-    }
-    ~WithRawMethod_AddRecordWithReturnedRecordID() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status AddRecordWithReturnedRecordID(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordWithReturnedRecordIDRequest* /*request*/, ::g2engine::AddRecordWithReturnedRecordIDResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestAddRecordWithReturnedRecordID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_CheckRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_CheckRecord() {
-      ::grpc::Service::MarkMethodRaw(4);
-    }
-    ~WithRawMethod_CheckRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status CheckRecord(::grpc::ServerContext* /*context*/, const ::g2engine::CheckRecordRequest* /*request*/, ::g2engine::CheckRecordResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestCheckRecord(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
   class WithRawMethod_CloseExport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_CloseExport() {
-      ::grpc::Service::MarkMethodRaw(5);
+      ::grpc::Service::MarkMethodRaw(2);
     }
     ~WithRawMethod_CloseExport() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6875,7 +6199,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestCloseExport(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -6884,7 +6208,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_CountRedoRecords() {
-      ::grpc::Service::MarkMethodRaw(6);
+      ::grpc::Service::MarkMethodRaw(3);
     }
     ~WithRawMethod_CountRedoRecords() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6895,7 +6219,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestCountRedoRecords(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -6904,7 +6228,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_DeleteRecord() {
-      ::grpc::Service::MarkMethodRaw(7);
+      ::grpc::Service::MarkMethodRaw(4);
     }
     ~WithRawMethod_DeleteRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6915,7 +6239,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestDeleteRecord(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -6924,7 +6248,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_DeleteRecordWithInfo() {
-      ::grpc::Service::MarkMethodRaw(8);
+      ::grpc::Service::MarkMethodRaw(5);
     }
     ~WithRawMethod_DeleteRecordWithInfo() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6935,7 +6259,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestDeleteRecordWithInfo(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -6944,7 +6268,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Destroy() {
-      ::grpc::Service::MarkMethodRaw(9);
+      ::grpc::Service::MarkMethodRaw(6);
     }
     ~WithRawMethod_Destroy() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6955,7 +6279,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestDestroy(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -6964,7 +6288,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_ExportConfig() {
-      ::grpc::Service::MarkMethodRaw(10);
+      ::grpc::Service::MarkMethodRaw(7);
     }
     ~WithRawMethod_ExportConfig() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6975,7 +6299,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestExportConfig(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -6984,7 +6308,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_ExportConfigAndConfigID() {
-      ::grpc::Service::MarkMethodRaw(11);
+      ::grpc::Service::MarkMethodRaw(8);
     }
     ~WithRawMethod_ExportConfigAndConfigID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -6995,7 +6319,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestExportConfigAndConfigID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(11, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7004,7 +6328,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_ExportCSVEntityReport() {
-      ::grpc::Service::MarkMethodRaw(12);
+      ::grpc::Service::MarkMethodRaw(9);
     }
     ~WithRawMethod_ExportCSVEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7015,7 +6339,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestExportCSVEntityReport(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(12, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7024,7 +6348,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_ExportJSONEntityReport() {
-      ::grpc::Service::MarkMethodRaw(13);
+      ::grpc::Service::MarkMethodRaw(10);
     }
     ~WithRawMethod_ExportJSONEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7035,7 +6359,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestExportJSONEntityReport(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(13, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7044,7 +6368,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FetchNext() {
-      ::grpc::Service::MarkMethodRaw(14);
+      ::grpc::Service::MarkMethodRaw(11);
     }
     ~WithRawMethod_FetchNext() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7055,7 +6379,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFetchNext(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(14, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(11, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7064,7 +6388,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindInterestingEntitiesByEntityID() {
-      ::grpc::Service::MarkMethodRaw(15);
+      ::grpc::Service::MarkMethodRaw(12);
     }
     ~WithRawMethod_FindInterestingEntitiesByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7075,7 +6399,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindInterestingEntitiesByEntityID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(15, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(12, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7084,7 +6408,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindInterestingEntitiesByRecordID() {
-      ::grpc::Service::MarkMethodRaw(16);
+      ::grpc::Service::MarkMethodRaw(13);
     }
     ~WithRawMethod_FindInterestingEntitiesByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7095,7 +6419,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindInterestingEntitiesByRecordID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(16, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(13, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7104,7 +6428,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindNetworkByEntityID() {
-      ::grpc::Service::MarkMethodRaw(17);
+      ::grpc::Service::MarkMethodRaw(14);
     }
     ~WithRawMethod_FindNetworkByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7115,7 +6439,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindNetworkByEntityID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(17, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(14, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7124,7 +6448,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindNetworkByEntityID_V2() {
-      ::grpc::Service::MarkMethodRaw(18);
+      ::grpc::Service::MarkMethodRaw(15);
     }
     ~WithRawMethod_FindNetworkByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7135,7 +6459,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindNetworkByEntityID_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(18, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(15, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7144,7 +6468,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindNetworkByRecordID() {
-      ::grpc::Service::MarkMethodRaw(19);
+      ::grpc::Service::MarkMethodRaw(16);
     }
     ~WithRawMethod_FindNetworkByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7155,7 +6479,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindNetworkByRecordID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(19, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(16, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7164,7 +6488,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindNetworkByRecordID_V2() {
-      ::grpc::Service::MarkMethodRaw(20);
+      ::grpc::Service::MarkMethodRaw(17);
     }
     ~WithRawMethod_FindNetworkByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7175,7 +6499,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindNetworkByRecordID_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(20, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(17, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7184,7 +6508,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindPathByEntityID() {
-      ::grpc::Service::MarkMethodRaw(21);
+      ::grpc::Service::MarkMethodRaw(18);
     }
     ~WithRawMethod_FindPathByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7195,7 +6519,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathByEntityID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(21, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(18, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7204,7 +6528,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindPathByEntityID_V2() {
-      ::grpc::Service::MarkMethodRaw(22);
+      ::grpc::Service::MarkMethodRaw(19);
     }
     ~WithRawMethod_FindPathByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7215,7 +6539,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathByEntityID_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(22, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(19, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7224,7 +6548,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindPathByRecordID() {
-      ::grpc::Service::MarkMethodRaw(23);
+      ::grpc::Service::MarkMethodRaw(20);
     }
     ~WithRawMethod_FindPathByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7235,7 +6559,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathByRecordID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(23, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(20, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7244,7 +6568,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindPathByRecordID_V2() {
-      ::grpc::Service::MarkMethodRaw(24);
+      ::grpc::Service::MarkMethodRaw(21);
     }
     ~WithRawMethod_FindPathByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7255,7 +6579,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathByRecordID_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(24, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(21, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7264,7 +6588,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindPathExcludingByEntityID() {
-      ::grpc::Service::MarkMethodRaw(25);
+      ::grpc::Service::MarkMethodRaw(22);
     }
     ~WithRawMethod_FindPathExcludingByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7275,7 +6599,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathExcludingByEntityID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(25, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(22, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7284,7 +6608,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindPathExcludingByEntityID_V2() {
-      ::grpc::Service::MarkMethodRaw(26);
+      ::grpc::Service::MarkMethodRaw(23);
     }
     ~WithRawMethod_FindPathExcludingByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7295,7 +6619,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathExcludingByEntityID_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(26, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(23, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7304,7 +6628,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindPathExcludingByRecordID() {
-      ::grpc::Service::MarkMethodRaw(27);
+      ::grpc::Service::MarkMethodRaw(24);
     }
     ~WithRawMethod_FindPathExcludingByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7315,7 +6639,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathExcludingByRecordID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(27, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(24, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7324,7 +6648,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindPathExcludingByRecordID_V2() {
-      ::grpc::Service::MarkMethodRaw(28);
+      ::grpc::Service::MarkMethodRaw(25);
     }
     ~WithRawMethod_FindPathExcludingByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7335,7 +6659,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathExcludingByRecordID_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(28, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(25, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7344,7 +6668,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindPathIncludingSourceByEntityID() {
-      ::grpc::Service::MarkMethodRaw(29);
+      ::grpc::Service::MarkMethodRaw(26);
     }
     ~WithRawMethod_FindPathIncludingSourceByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7355,7 +6679,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathIncludingSourceByEntityID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(29, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(26, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7364,7 +6688,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindPathIncludingSourceByEntityID_V2() {
-      ::grpc::Service::MarkMethodRaw(30);
+      ::grpc::Service::MarkMethodRaw(27);
     }
     ~WithRawMethod_FindPathIncludingSourceByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7375,7 +6699,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathIncludingSourceByEntityID_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(30, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(27, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7384,7 +6708,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindPathIncludingSourceByRecordID() {
-      ::grpc::Service::MarkMethodRaw(31);
+      ::grpc::Service::MarkMethodRaw(28);
     }
     ~WithRawMethod_FindPathIncludingSourceByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7395,7 +6719,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathIncludingSourceByRecordID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(31, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(28, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7404,7 +6728,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_FindPathIncludingSourceByRecordID_V2() {
-      ::grpc::Service::MarkMethodRaw(32);
+      ::grpc::Service::MarkMethodRaw(29);
     }
     ~WithRawMethod_FindPathIncludingSourceByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7415,7 +6739,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestFindPathIncludingSourceByRecordID_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(32, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(29, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7424,7 +6748,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetActiveConfigID() {
-      ::grpc::Service::MarkMethodRaw(33);
+      ::grpc::Service::MarkMethodRaw(30);
     }
     ~WithRawMethod_GetActiveConfigID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7435,7 +6759,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetActiveConfigID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(33, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(30, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7444,7 +6768,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetEntityByEntityID() {
-      ::grpc::Service::MarkMethodRaw(34);
+      ::grpc::Service::MarkMethodRaw(31);
     }
     ~WithRawMethod_GetEntityByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7455,7 +6779,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetEntityByEntityID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(34, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(31, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7464,7 +6788,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodRaw(35);
+      ::grpc::Service::MarkMethodRaw(32);
     }
     ~WithRawMethod_GetEntityByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7475,7 +6799,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetEntityByEntityID_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(35, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(32, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7484,7 +6808,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetEntityByRecordID() {
-      ::grpc::Service::MarkMethodRaw(36);
+      ::grpc::Service::MarkMethodRaw(33);
     }
     ~WithRawMethod_GetEntityByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7495,7 +6819,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetEntityByRecordID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(36, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(33, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7504,7 +6828,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodRaw(37);
+      ::grpc::Service::MarkMethodRaw(34);
     }
     ~WithRawMethod_GetEntityByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7515,7 +6839,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetEntityByRecordID_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(37, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(34, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7524,7 +6848,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetRecord() {
-      ::grpc::Service::MarkMethodRaw(38);
+      ::grpc::Service::MarkMethodRaw(35);
     }
     ~WithRawMethod_GetRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7535,7 +6859,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetRecord(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(38, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(35, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7544,7 +6868,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetRecord_V2() {
-      ::grpc::Service::MarkMethodRaw(39);
+      ::grpc::Service::MarkMethodRaw(36);
     }
     ~WithRawMethod_GetRecord_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7555,7 +6879,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetRecord_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(39, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(36, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7564,7 +6888,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetRedoRecord() {
-      ::grpc::Service::MarkMethodRaw(40);
+      ::grpc::Service::MarkMethodRaw(37);
     }
     ~WithRawMethod_GetRedoRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7575,7 +6899,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetRedoRecord(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(40, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(37, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7584,7 +6908,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetRepositoryLastModifiedTime() {
-      ::grpc::Service::MarkMethodRaw(41);
+      ::grpc::Service::MarkMethodRaw(38);
     }
     ~WithRawMethod_GetRepositoryLastModifiedTime() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7595,7 +6919,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetRepositoryLastModifiedTime(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(41, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(38, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7604,7 +6928,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetVirtualEntityByRecordID() {
-      ::grpc::Service::MarkMethodRaw(42);
+      ::grpc::Service::MarkMethodRaw(39);
     }
     ~WithRawMethod_GetVirtualEntityByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7615,7 +6939,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetVirtualEntityByRecordID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(42, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(39, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7624,7 +6948,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetVirtualEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodRaw(43);
+      ::grpc::Service::MarkMethodRaw(40);
     }
     ~WithRawMethod_GetVirtualEntityByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7635,7 +6959,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetVirtualEntityByRecordID_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(43, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(40, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7644,7 +6968,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_HowEntityByEntityID() {
-      ::grpc::Service::MarkMethodRaw(44);
+      ::grpc::Service::MarkMethodRaw(41);
     }
     ~WithRawMethod_HowEntityByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7655,7 +6979,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestHowEntityByEntityID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(44, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(41, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7664,7 +6988,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_HowEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodRaw(45);
+      ::grpc::Service::MarkMethodRaw(42);
     }
     ~WithRawMethod_HowEntityByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7675,7 +6999,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestHowEntityByEntityID_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(45, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(42, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7684,7 +7008,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Init() {
-      ::grpc::Service::MarkMethodRaw(46);
+      ::grpc::Service::MarkMethodRaw(43);
     }
     ~WithRawMethod_Init() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7695,7 +7019,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestInit(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(46, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(43, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7704,7 +7028,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_InitWithConfigID() {
-      ::grpc::Service::MarkMethodRaw(47);
+      ::grpc::Service::MarkMethodRaw(44);
     }
     ~WithRawMethod_InitWithConfigID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7715,7 +7039,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestInitWithConfigID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(47, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(44, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7724,7 +7048,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_PrimeEngine() {
-      ::grpc::Service::MarkMethodRaw(48);
+      ::grpc::Service::MarkMethodRaw(45);
     }
     ~WithRawMethod_PrimeEngine() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7735,7 +7059,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestPrimeEngine(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(48, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(45, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7744,7 +7068,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Process() {
-      ::grpc::Service::MarkMethodRaw(49);
+      ::grpc::Service::MarkMethodRaw(46);
     }
     ~WithRawMethod_Process() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7755,47 +7079,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestProcess(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(49, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_ProcessRedoRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_ProcessRedoRecord() {
-      ::grpc::Service::MarkMethodRaw(50);
-    }
-    ~WithRawMethod_ProcessRedoRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessRedoRecord(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessRedoRecordRequest* /*request*/, ::g2engine::ProcessRedoRecordResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestProcessRedoRecord(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(50, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_ProcessRedoRecordWithInfo : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_ProcessRedoRecordWithInfo() {
-      ::grpc::Service::MarkMethodRaw(51);
-    }
-    ~WithRawMethod_ProcessRedoRecordWithInfo() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessRedoRecordWithInfo(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessRedoRecordWithInfoRequest* /*request*/, ::g2engine::ProcessRedoRecordWithInfoResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestProcessRedoRecordWithInfo(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(51, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(46, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7804,7 +7088,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_ProcessWithInfo() {
-      ::grpc::Service::MarkMethodRaw(52);
+      ::grpc::Service::MarkMethodRaw(47);
     }
     ~WithRawMethod_ProcessWithInfo() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7815,47 +7099,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestProcessWithInfo(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(52, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_ProcessWithResponse : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_ProcessWithResponse() {
-      ::grpc::Service::MarkMethodRaw(53);
-    }
-    ~WithRawMethod_ProcessWithResponse() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessWithResponse(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessWithResponseRequest* /*request*/, ::g2engine::ProcessWithResponseResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestProcessWithResponse(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(53, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_ProcessWithResponseResize : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_ProcessWithResponseResize() {
-      ::grpc::Service::MarkMethodRaw(54);
-    }
-    ~WithRawMethod_ProcessWithResponseResize() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessWithResponseResize(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessWithResponseResizeRequest* /*request*/, ::g2engine::ProcessWithResponseResizeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestProcessWithResponseResize(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(54, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(47, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7864,7 +7108,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_PurgeRepository() {
-      ::grpc::Service::MarkMethodRaw(55);
+      ::grpc::Service::MarkMethodRaw(48);
     }
     ~WithRawMethod_PurgeRepository() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7875,7 +7119,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestPurgeRepository(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(55, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(48, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7884,7 +7128,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_ReevaluateEntity() {
-      ::grpc::Service::MarkMethodRaw(56);
+      ::grpc::Service::MarkMethodRaw(49);
     }
     ~WithRawMethod_ReevaluateEntity() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7895,7 +7139,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReevaluateEntity(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(56, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(49, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7904,7 +7148,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_ReevaluateEntityWithInfo() {
-      ::grpc::Service::MarkMethodRaw(57);
+      ::grpc::Service::MarkMethodRaw(50);
     }
     ~WithRawMethod_ReevaluateEntityWithInfo() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7915,7 +7159,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReevaluateEntityWithInfo(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(57, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(50, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7924,7 +7168,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_ReevaluateRecord() {
-      ::grpc::Service::MarkMethodRaw(58);
+      ::grpc::Service::MarkMethodRaw(51);
     }
     ~WithRawMethod_ReevaluateRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7935,7 +7179,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReevaluateRecord(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(58, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(51, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7944,7 +7188,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_ReevaluateRecordWithInfo() {
-      ::grpc::Service::MarkMethodRaw(59);
+      ::grpc::Service::MarkMethodRaw(52);
     }
     ~WithRawMethod_ReevaluateRecordWithInfo() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7955,7 +7199,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReevaluateRecordWithInfo(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(59, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(52, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7964,7 +7208,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Reinit() {
-      ::grpc::Service::MarkMethodRaw(60);
+      ::grpc::Service::MarkMethodRaw(53);
     }
     ~WithRawMethod_Reinit() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7975,7 +7219,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReinit(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(60, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(53, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -7984,7 +7228,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_ReplaceRecord() {
-      ::grpc::Service::MarkMethodRaw(61);
+      ::grpc::Service::MarkMethodRaw(54);
     }
     ~WithRawMethod_ReplaceRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -7995,7 +7239,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReplaceRecord(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(61, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(54, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -8004,7 +7248,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_ReplaceRecordWithInfo() {
-      ::grpc::Service::MarkMethodRaw(62);
+      ::grpc::Service::MarkMethodRaw(55);
     }
     ~WithRawMethod_ReplaceRecordWithInfo() override {
       BaseClassMustBeDerivedFromService(this);
@@ -8015,7 +7259,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReplaceRecordWithInfo(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(62, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(55, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -8024,7 +7268,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_SearchByAttributes() {
-      ::grpc::Service::MarkMethodRaw(63);
+      ::grpc::Service::MarkMethodRaw(56);
     }
     ~WithRawMethod_SearchByAttributes() override {
       BaseClassMustBeDerivedFromService(this);
@@ -8035,7 +7279,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestSearchByAttributes(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(63, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(56, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -8044,7 +7288,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_SearchByAttributes_V2() {
-      ::grpc::Service::MarkMethodRaw(64);
+      ::grpc::Service::MarkMethodRaw(57);
     }
     ~WithRawMethod_SearchByAttributes_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -8055,7 +7299,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestSearchByAttributes_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(64, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(57, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -8064,7 +7308,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Stats() {
-      ::grpc::Service::MarkMethodRaw(65);
+      ::grpc::Service::MarkMethodRaw(58);
     }
     ~WithRawMethod_Stats() override {
       BaseClassMustBeDerivedFromService(this);
@@ -8075,7 +7319,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestStats(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(65, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(58, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -8084,7 +7328,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_StreamExportCSVEntityReport() {
-      ::grpc::Service::MarkMethodRaw(66);
+      ::grpc::Service::MarkMethodRaw(59);
     }
     ~WithRawMethod_StreamExportCSVEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
@@ -8095,7 +7339,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestStreamExportCSVEntityReport(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncWriter< ::grpc::ByteBuffer>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(66, context, request, writer, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncServerStreaming(59, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -8104,7 +7348,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_StreamExportJSONEntityReport() {
-      ::grpc::Service::MarkMethodRaw(67);
+      ::grpc::Service::MarkMethodRaw(60);
     }
     ~WithRawMethod_StreamExportJSONEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
@@ -8115,7 +7359,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestStreamExportJSONEntityReport(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncWriter< ::grpc::ByteBuffer>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(67, context, request, writer, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncServerStreaming(60, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -8124,7 +7368,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_WhyEntities() {
-      ::grpc::Service::MarkMethodRaw(68);
+      ::grpc::Service::MarkMethodRaw(61);
     }
     ~WithRawMethod_WhyEntities() override {
       BaseClassMustBeDerivedFromService(this);
@@ -8135,7 +7379,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestWhyEntities(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(68, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(61, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -8144,7 +7388,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_WhyEntities_V2() {
-      ::grpc::Service::MarkMethodRaw(69);
+      ::grpc::Service::MarkMethodRaw(62);
     }
     ~WithRawMethod_WhyEntities_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -8155,7 +7399,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestWhyEntities_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(69, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(62, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -8164,7 +7408,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_WhyEntityByEntityID() {
-      ::grpc::Service::MarkMethodRaw(70);
+      ::grpc::Service::MarkMethodRaw(63);
     }
     ~WithRawMethod_WhyEntityByEntityID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -8175,7 +7419,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestWhyEntityByEntityID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(70, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(63, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -8184,7 +7428,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_WhyEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodRaw(71);
+      ::grpc::Service::MarkMethodRaw(64);
     }
     ~WithRawMethod_WhyEntityByEntityID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -8195,7 +7439,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestWhyEntityByEntityID_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(71, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(64, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -8204,7 +7448,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_WhyEntityByRecordID() {
-      ::grpc::Service::MarkMethodRaw(72);
+      ::grpc::Service::MarkMethodRaw(65);
     }
     ~WithRawMethod_WhyEntityByRecordID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -8215,7 +7459,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestWhyEntityByRecordID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(72, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(65, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -8224,7 +7468,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_WhyEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodRaw(73);
+      ::grpc::Service::MarkMethodRaw(66);
     }
     ~WithRawMethod_WhyEntityByRecordID_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -8235,7 +7479,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestWhyEntityByRecordID_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(73, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(66, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -8244,7 +7488,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_WhyRecords() {
-      ::grpc::Service::MarkMethodRaw(74);
+      ::grpc::Service::MarkMethodRaw(67);
     }
     ~WithRawMethod_WhyRecords() override {
       BaseClassMustBeDerivedFromService(this);
@@ -8255,7 +7499,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestWhyRecords(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(74, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(67, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -8264,7 +7508,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_WhyRecords_V2() {
-      ::grpc::Service::MarkMethodRaw(75);
+      ::grpc::Service::MarkMethodRaw(68);
     }
     ~WithRawMethod_WhyRecords_V2() override {
       BaseClassMustBeDerivedFromService(this);
@@ -8275,7 +7519,7 @@ class G2Engine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestWhyRecords_V2(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(75, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(68, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -8323,78 +7567,12 @@ class G2Engine final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_AddRecordWithInfoWithReturnedRecordID : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_AddRecordWithInfoWithReturnedRecordID() {
-      ::grpc::Service::MarkMethodRawCallback(2,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->AddRecordWithInfoWithReturnedRecordID(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_AddRecordWithInfoWithReturnedRecordID() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status AddRecordWithInfoWithReturnedRecordID(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* /*request*/, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* AddRecordWithInfoWithReturnedRecordID(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_AddRecordWithReturnedRecordID : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_AddRecordWithReturnedRecordID() {
-      ::grpc::Service::MarkMethodRawCallback(3,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->AddRecordWithReturnedRecordID(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_AddRecordWithReturnedRecordID() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status AddRecordWithReturnedRecordID(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordWithReturnedRecordIDRequest* /*request*/, ::g2engine::AddRecordWithReturnedRecordIDResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* AddRecordWithReturnedRecordID(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_CheckRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_CheckRecord() {
-      ::grpc::Service::MarkMethodRawCallback(4,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CheckRecord(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_CheckRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status CheckRecord(::grpc::ServerContext* /*context*/, const ::g2engine::CheckRecordRequest* /*request*/, ::g2engine::CheckRecordResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* CheckRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
   class WithRawCallbackMethod_CloseExport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_CloseExport() {
-      ::grpc::Service::MarkMethodRawCallback(5,
+      ::grpc::Service::MarkMethodRawCallback(2,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CloseExport(context, request, response); }));
@@ -8416,7 +7594,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_CountRedoRecords() {
-      ::grpc::Service::MarkMethodRawCallback(6,
+      ::grpc::Service::MarkMethodRawCallback(3,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CountRedoRecords(context, request, response); }));
@@ -8438,7 +7616,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_DeleteRecord() {
-      ::grpc::Service::MarkMethodRawCallback(7,
+      ::grpc::Service::MarkMethodRawCallback(4,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->DeleteRecord(context, request, response); }));
@@ -8460,7 +7638,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_DeleteRecordWithInfo() {
-      ::grpc::Service::MarkMethodRawCallback(8,
+      ::grpc::Service::MarkMethodRawCallback(5,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->DeleteRecordWithInfo(context, request, response); }));
@@ -8482,7 +7660,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_Destroy() {
-      ::grpc::Service::MarkMethodRawCallback(9,
+      ::grpc::Service::MarkMethodRawCallback(6,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Destroy(context, request, response); }));
@@ -8504,7 +7682,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_ExportConfig() {
-      ::grpc::Service::MarkMethodRawCallback(10,
+      ::grpc::Service::MarkMethodRawCallback(7,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ExportConfig(context, request, response); }));
@@ -8526,7 +7704,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_ExportConfigAndConfigID() {
-      ::grpc::Service::MarkMethodRawCallback(11,
+      ::grpc::Service::MarkMethodRawCallback(8,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ExportConfigAndConfigID(context, request, response); }));
@@ -8548,7 +7726,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_ExportCSVEntityReport() {
-      ::grpc::Service::MarkMethodRawCallback(12,
+      ::grpc::Service::MarkMethodRawCallback(9,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ExportCSVEntityReport(context, request, response); }));
@@ -8570,7 +7748,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_ExportJSONEntityReport() {
-      ::grpc::Service::MarkMethodRawCallback(13,
+      ::grpc::Service::MarkMethodRawCallback(10,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ExportJSONEntityReport(context, request, response); }));
@@ -8592,7 +7770,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FetchNext() {
-      ::grpc::Service::MarkMethodRawCallback(14,
+      ::grpc::Service::MarkMethodRawCallback(11,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FetchNext(context, request, response); }));
@@ -8614,7 +7792,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindInterestingEntitiesByEntityID() {
-      ::grpc::Service::MarkMethodRawCallback(15,
+      ::grpc::Service::MarkMethodRawCallback(12,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindInterestingEntitiesByEntityID(context, request, response); }));
@@ -8636,7 +7814,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindInterestingEntitiesByRecordID() {
-      ::grpc::Service::MarkMethodRawCallback(16,
+      ::grpc::Service::MarkMethodRawCallback(13,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindInterestingEntitiesByRecordID(context, request, response); }));
@@ -8658,7 +7836,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindNetworkByEntityID() {
-      ::grpc::Service::MarkMethodRawCallback(17,
+      ::grpc::Service::MarkMethodRawCallback(14,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindNetworkByEntityID(context, request, response); }));
@@ -8680,7 +7858,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindNetworkByEntityID_V2() {
-      ::grpc::Service::MarkMethodRawCallback(18,
+      ::grpc::Service::MarkMethodRawCallback(15,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindNetworkByEntityID_V2(context, request, response); }));
@@ -8702,7 +7880,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindNetworkByRecordID() {
-      ::grpc::Service::MarkMethodRawCallback(19,
+      ::grpc::Service::MarkMethodRawCallback(16,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindNetworkByRecordID(context, request, response); }));
@@ -8724,7 +7902,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindNetworkByRecordID_V2() {
-      ::grpc::Service::MarkMethodRawCallback(20,
+      ::grpc::Service::MarkMethodRawCallback(17,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindNetworkByRecordID_V2(context, request, response); }));
@@ -8746,7 +7924,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindPathByEntityID() {
-      ::grpc::Service::MarkMethodRawCallback(21,
+      ::grpc::Service::MarkMethodRawCallback(18,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindPathByEntityID(context, request, response); }));
@@ -8768,7 +7946,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindPathByEntityID_V2() {
-      ::grpc::Service::MarkMethodRawCallback(22,
+      ::grpc::Service::MarkMethodRawCallback(19,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindPathByEntityID_V2(context, request, response); }));
@@ -8790,7 +7968,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindPathByRecordID() {
-      ::grpc::Service::MarkMethodRawCallback(23,
+      ::grpc::Service::MarkMethodRawCallback(20,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindPathByRecordID(context, request, response); }));
@@ -8812,7 +7990,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindPathByRecordID_V2() {
-      ::grpc::Service::MarkMethodRawCallback(24,
+      ::grpc::Service::MarkMethodRawCallback(21,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindPathByRecordID_V2(context, request, response); }));
@@ -8834,7 +8012,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindPathExcludingByEntityID() {
-      ::grpc::Service::MarkMethodRawCallback(25,
+      ::grpc::Service::MarkMethodRawCallback(22,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindPathExcludingByEntityID(context, request, response); }));
@@ -8856,7 +8034,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindPathExcludingByEntityID_V2() {
-      ::grpc::Service::MarkMethodRawCallback(26,
+      ::grpc::Service::MarkMethodRawCallback(23,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindPathExcludingByEntityID_V2(context, request, response); }));
@@ -8878,7 +8056,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindPathExcludingByRecordID() {
-      ::grpc::Service::MarkMethodRawCallback(27,
+      ::grpc::Service::MarkMethodRawCallback(24,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindPathExcludingByRecordID(context, request, response); }));
@@ -8900,7 +8078,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindPathExcludingByRecordID_V2() {
-      ::grpc::Service::MarkMethodRawCallback(28,
+      ::grpc::Service::MarkMethodRawCallback(25,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindPathExcludingByRecordID_V2(context, request, response); }));
@@ -8922,7 +8100,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindPathIncludingSourceByEntityID() {
-      ::grpc::Service::MarkMethodRawCallback(29,
+      ::grpc::Service::MarkMethodRawCallback(26,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindPathIncludingSourceByEntityID(context, request, response); }));
@@ -8944,7 +8122,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindPathIncludingSourceByEntityID_V2() {
-      ::grpc::Service::MarkMethodRawCallback(30,
+      ::grpc::Service::MarkMethodRawCallback(27,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindPathIncludingSourceByEntityID_V2(context, request, response); }));
@@ -8966,7 +8144,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindPathIncludingSourceByRecordID() {
-      ::grpc::Service::MarkMethodRawCallback(31,
+      ::grpc::Service::MarkMethodRawCallback(28,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindPathIncludingSourceByRecordID(context, request, response); }));
@@ -8988,7 +8166,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_FindPathIncludingSourceByRecordID_V2() {
-      ::grpc::Service::MarkMethodRawCallback(32,
+      ::grpc::Service::MarkMethodRawCallback(29,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindPathIncludingSourceByRecordID_V2(context, request, response); }));
@@ -9010,7 +8188,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_GetActiveConfigID() {
-      ::grpc::Service::MarkMethodRawCallback(33,
+      ::grpc::Service::MarkMethodRawCallback(30,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetActiveConfigID(context, request, response); }));
@@ -9032,7 +8210,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_GetEntityByEntityID() {
-      ::grpc::Service::MarkMethodRawCallback(34,
+      ::grpc::Service::MarkMethodRawCallback(31,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetEntityByEntityID(context, request, response); }));
@@ -9054,7 +8232,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_GetEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodRawCallback(35,
+      ::grpc::Service::MarkMethodRawCallback(32,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetEntityByEntityID_V2(context, request, response); }));
@@ -9076,7 +8254,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_GetEntityByRecordID() {
-      ::grpc::Service::MarkMethodRawCallback(36,
+      ::grpc::Service::MarkMethodRawCallback(33,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetEntityByRecordID(context, request, response); }));
@@ -9098,7 +8276,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_GetEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodRawCallback(37,
+      ::grpc::Service::MarkMethodRawCallback(34,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetEntityByRecordID_V2(context, request, response); }));
@@ -9120,7 +8298,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_GetRecord() {
-      ::grpc::Service::MarkMethodRawCallback(38,
+      ::grpc::Service::MarkMethodRawCallback(35,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetRecord(context, request, response); }));
@@ -9142,7 +8320,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_GetRecord_V2() {
-      ::grpc::Service::MarkMethodRawCallback(39,
+      ::grpc::Service::MarkMethodRawCallback(36,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetRecord_V2(context, request, response); }));
@@ -9164,7 +8342,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_GetRedoRecord() {
-      ::grpc::Service::MarkMethodRawCallback(40,
+      ::grpc::Service::MarkMethodRawCallback(37,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetRedoRecord(context, request, response); }));
@@ -9186,7 +8364,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_GetRepositoryLastModifiedTime() {
-      ::grpc::Service::MarkMethodRawCallback(41,
+      ::grpc::Service::MarkMethodRawCallback(38,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetRepositoryLastModifiedTime(context, request, response); }));
@@ -9208,7 +8386,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_GetVirtualEntityByRecordID() {
-      ::grpc::Service::MarkMethodRawCallback(42,
+      ::grpc::Service::MarkMethodRawCallback(39,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetVirtualEntityByRecordID(context, request, response); }));
@@ -9230,7 +8408,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_GetVirtualEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodRawCallback(43,
+      ::grpc::Service::MarkMethodRawCallback(40,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetVirtualEntityByRecordID_V2(context, request, response); }));
@@ -9252,7 +8430,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_HowEntityByEntityID() {
-      ::grpc::Service::MarkMethodRawCallback(44,
+      ::grpc::Service::MarkMethodRawCallback(41,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->HowEntityByEntityID(context, request, response); }));
@@ -9274,7 +8452,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_HowEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodRawCallback(45,
+      ::grpc::Service::MarkMethodRawCallback(42,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->HowEntityByEntityID_V2(context, request, response); }));
@@ -9296,7 +8474,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_Init() {
-      ::grpc::Service::MarkMethodRawCallback(46,
+      ::grpc::Service::MarkMethodRawCallback(43,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Init(context, request, response); }));
@@ -9318,7 +8496,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_InitWithConfigID() {
-      ::grpc::Service::MarkMethodRawCallback(47,
+      ::grpc::Service::MarkMethodRawCallback(44,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->InitWithConfigID(context, request, response); }));
@@ -9340,7 +8518,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_PrimeEngine() {
-      ::grpc::Service::MarkMethodRawCallback(48,
+      ::grpc::Service::MarkMethodRawCallback(45,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PrimeEngine(context, request, response); }));
@@ -9362,7 +8540,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_Process() {
-      ::grpc::Service::MarkMethodRawCallback(49,
+      ::grpc::Service::MarkMethodRawCallback(46,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Process(context, request, response); }));
@@ -9379,56 +8557,12 @@ class G2Engine final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_ProcessRedoRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_ProcessRedoRecord() {
-      ::grpc::Service::MarkMethodRawCallback(50,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ProcessRedoRecord(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_ProcessRedoRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessRedoRecord(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessRedoRecordRequest* /*request*/, ::g2engine::ProcessRedoRecordResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* ProcessRedoRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_ProcessRedoRecordWithInfo : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_ProcessRedoRecordWithInfo() {
-      ::grpc::Service::MarkMethodRawCallback(51,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ProcessRedoRecordWithInfo(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_ProcessRedoRecordWithInfo() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessRedoRecordWithInfo(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessRedoRecordWithInfoRequest* /*request*/, ::g2engine::ProcessRedoRecordWithInfoResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* ProcessRedoRecordWithInfo(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
   class WithRawCallbackMethod_ProcessWithInfo : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_ProcessWithInfo() {
-      ::grpc::Service::MarkMethodRawCallback(52,
+      ::grpc::Service::MarkMethodRawCallback(47,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ProcessWithInfo(context, request, response); }));
@@ -9445,56 +8579,12 @@ class G2Engine final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_ProcessWithResponse : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_ProcessWithResponse() {
-      ::grpc::Service::MarkMethodRawCallback(53,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ProcessWithResponse(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_ProcessWithResponse() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessWithResponse(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessWithResponseRequest* /*request*/, ::g2engine::ProcessWithResponseResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* ProcessWithResponse(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_ProcessWithResponseResize : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_ProcessWithResponseResize() {
-      ::grpc::Service::MarkMethodRawCallback(54,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ProcessWithResponseResize(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_ProcessWithResponseResize() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ProcessWithResponseResize(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessWithResponseResizeRequest* /*request*/, ::g2engine::ProcessWithResponseResizeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* ProcessWithResponseResize(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
   class WithRawCallbackMethod_PurgeRepository : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_PurgeRepository() {
-      ::grpc::Service::MarkMethodRawCallback(55,
+      ::grpc::Service::MarkMethodRawCallback(48,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PurgeRepository(context, request, response); }));
@@ -9516,7 +8606,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_ReevaluateEntity() {
-      ::grpc::Service::MarkMethodRawCallback(56,
+      ::grpc::Service::MarkMethodRawCallback(49,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ReevaluateEntity(context, request, response); }));
@@ -9538,7 +8628,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_ReevaluateEntityWithInfo() {
-      ::grpc::Service::MarkMethodRawCallback(57,
+      ::grpc::Service::MarkMethodRawCallback(50,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ReevaluateEntityWithInfo(context, request, response); }));
@@ -9560,7 +8650,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_ReevaluateRecord() {
-      ::grpc::Service::MarkMethodRawCallback(58,
+      ::grpc::Service::MarkMethodRawCallback(51,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ReevaluateRecord(context, request, response); }));
@@ -9582,7 +8672,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_ReevaluateRecordWithInfo() {
-      ::grpc::Service::MarkMethodRawCallback(59,
+      ::grpc::Service::MarkMethodRawCallback(52,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ReevaluateRecordWithInfo(context, request, response); }));
@@ -9604,7 +8694,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_Reinit() {
-      ::grpc::Service::MarkMethodRawCallback(60,
+      ::grpc::Service::MarkMethodRawCallback(53,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Reinit(context, request, response); }));
@@ -9626,7 +8716,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_ReplaceRecord() {
-      ::grpc::Service::MarkMethodRawCallback(61,
+      ::grpc::Service::MarkMethodRawCallback(54,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ReplaceRecord(context, request, response); }));
@@ -9648,7 +8738,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_ReplaceRecordWithInfo() {
-      ::grpc::Service::MarkMethodRawCallback(62,
+      ::grpc::Service::MarkMethodRawCallback(55,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ReplaceRecordWithInfo(context, request, response); }));
@@ -9670,7 +8760,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_SearchByAttributes() {
-      ::grpc::Service::MarkMethodRawCallback(63,
+      ::grpc::Service::MarkMethodRawCallback(56,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SearchByAttributes(context, request, response); }));
@@ -9692,7 +8782,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_SearchByAttributes_V2() {
-      ::grpc::Service::MarkMethodRawCallback(64,
+      ::grpc::Service::MarkMethodRawCallback(57,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SearchByAttributes_V2(context, request, response); }));
@@ -9714,7 +8804,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_Stats() {
-      ::grpc::Service::MarkMethodRawCallback(65,
+      ::grpc::Service::MarkMethodRawCallback(58,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Stats(context, request, response); }));
@@ -9736,7 +8826,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_StreamExportCSVEntityReport() {
-      ::grpc::Service::MarkMethodRawCallback(66,
+      ::grpc::Service::MarkMethodRawCallback(59,
           new ::grpc::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const::grpc::ByteBuffer* request) { return this->StreamExportCSVEntityReport(context, request); }));
@@ -9758,7 +8848,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_StreamExportJSONEntityReport() {
-      ::grpc::Service::MarkMethodRawCallback(67,
+      ::grpc::Service::MarkMethodRawCallback(60,
           new ::grpc::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const::grpc::ByteBuffer* request) { return this->StreamExportJSONEntityReport(context, request); }));
@@ -9780,7 +8870,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_WhyEntities() {
-      ::grpc::Service::MarkMethodRawCallback(68,
+      ::grpc::Service::MarkMethodRawCallback(61,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->WhyEntities(context, request, response); }));
@@ -9802,7 +8892,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_WhyEntities_V2() {
-      ::grpc::Service::MarkMethodRawCallback(69,
+      ::grpc::Service::MarkMethodRawCallback(62,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->WhyEntities_V2(context, request, response); }));
@@ -9824,7 +8914,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_WhyEntityByEntityID() {
-      ::grpc::Service::MarkMethodRawCallback(70,
+      ::grpc::Service::MarkMethodRawCallback(63,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->WhyEntityByEntityID(context, request, response); }));
@@ -9846,7 +8936,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_WhyEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodRawCallback(71,
+      ::grpc::Service::MarkMethodRawCallback(64,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->WhyEntityByEntityID_V2(context, request, response); }));
@@ -9868,7 +8958,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_WhyEntityByRecordID() {
-      ::grpc::Service::MarkMethodRawCallback(72,
+      ::grpc::Service::MarkMethodRawCallback(65,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->WhyEntityByRecordID(context, request, response); }));
@@ -9890,7 +8980,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_WhyEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodRawCallback(73,
+      ::grpc::Service::MarkMethodRawCallback(66,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->WhyEntityByRecordID_V2(context, request, response); }));
@@ -9912,7 +9002,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_WhyRecords() {
-      ::grpc::Service::MarkMethodRawCallback(74,
+      ::grpc::Service::MarkMethodRawCallback(67,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->WhyRecords(context, request, response); }));
@@ -9934,7 +9024,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_WhyRecords_V2() {
-      ::grpc::Service::MarkMethodRawCallback(75,
+      ::grpc::Service::MarkMethodRawCallback(68,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->WhyRecords_V2(context, request, response); }));
@@ -10005,93 +9095,12 @@ class G2Engine final {
     virtual ::grpc::Status StreamedAddRecordWithInfo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2engine::AddRecordWithInfoRequest,::g2engine::AddRecordWithInfoResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_AddRecordWithInfoWithReturnedRecordID : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_AddRecordWithInfoWithReturnedRecordID() {
-      ::grpc::Service::MarkMethodStreamed(2,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>* streamer) {
-                       return this->StreamedAddRecordWithInfoWithReturnedRecordID(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_AddRecordWithInfoWithReturnedRecordID() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status AddRecordWithInfoWithReturnedRecordID(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest* /*request*/, ::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedAddRecordWithInfoWithReturnedRecordID(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2engine::AddRecordWithInfoWithReturnedRecordIDRequest,::g2engine::AddRecordWithInfoWithReturnedRecordIDResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_AddRecordWithReturnedRecordID : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_AddRecordWithReturnedRecordID() {
-      ::grpc::Service::MarkMethodStreamed(3,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::g2engine::AddRecordWithReturnedRecordIDRequest, ::g2engine::AddRecordWithReturnedRecordIDResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::g2engine::AddRecordWithReturnedRecordIDRequest, ::g2engine::AddRecordWithReturnedRecordIDResponse>* streamer) {
-                       return this->StreamedAddRecordWithReturnedRecordID(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_AddRecordWithReturnedRecordID() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status AddRecordWithReturnedRecordID(::grpc::ServerContext* /*context*/, const ::g2engine::AddRecordWithReturnedRecordIDRequest* /*request*/, ::g2engine::AddRecordWithReturnedRecordIDResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedAddRecordWithReturnedRecordID(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2engine::AddRecordWithReturnedRecordIDRequest,::g2engine::AddRecordWithReturnedRecordIDResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_CheckRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_CheckRecord() {
-      ::grpc::Service::MarkMethodStreamed(4,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::g2engine::CheckRecordRequest, ::g2engine::CheckRecordResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::g2engine::CheckRecordRequest, ::g2engine::CheckRecordResponse>* streamer) {
-                       return this->StreamedCheckRecord(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_CheckRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status CheckRecord(::grpc::ServerContext* /*context*/, const ::g2engine::CheckRecordRequest* /*request*/, ::g2engine::CheckRecordResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedCheckRecord(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2engine::CheckRecordRequest,::g2engine::CheckRecordResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
   class WithStreamedUnaryMethod_CloseExport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_CloseExport() {
-      ::grpc::Service::MarkMethodStreamed(5,
+      ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::CloseExportRequest, ::g2engine::CloseExportResponse>(
             [this](::grpc::ServerContext* context,
@@ -10118,7 +9127,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_CountRedoRecords() {
-      ::grpc::Service::MarkMethodStreamed(6,
+      ::grpc::Service::MarkMethodStreamed(3,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::CountRedoRecordsRequest, ::g2engine::CountRedoRecordsResponse>(
             [this](::grpc::ServerContext* context,
@@ -10145,7 +9154,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_DeleteRecord() {
-      ::grpc::Service::MarkMethodStreamed(7,
+      ::grpc::Service::MarkMethodStreamed(4,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::DeleteRecordRequest, ::g2engine::DeleteRecordResponse>(
             [this](::grpc::ServerContext* context,
@@ -10172,7 +9181,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_DeleteRecordWithInfo() {
-      ::grpc::Service::MarkMethodStreamed(8,
+      ::grpc::Service::MarkMethodStreamed(5,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::DeleteRecordWithInfoRequest, ::g2engine::DeleteRecordWithInfoResponse>(
             [this](::grpc::ServerContext* context,
@@ -10199,7 +9208,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Destroy() {
-      ::grpc::Service::MarkMethodStreamed(9,
+      ::grpc::Service::MarkMethodStreamed(6,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::DestroyRequest, ::g2engine::DestroyResponse>(
             [this](::grpc::ServerContext* context,
@@ -10226,7 +9235,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_ExportConfig() {
-      ::grpc::Service::MarkMethodStreamed(10,
+      ::grpc::Service::MarkMethodStreamed(7,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::ExportConfigRequest, ::g2engine::ExportConfigResponse>(
             [this](::grpc::ServerContext* context,
@@ -10253,7 +9262,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_ExportConfigAndConfigID() {
-      ::grpc::Service::MarkMethodStreamed(11,
+      ::grpc::Service::MarkMethodStreamed(8,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::ExportConfigAndConfigIDRequest, ::g2engine::ExportConfigAndConfigIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -10280,7 +9289,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_ExportCSVEntityReport() {
-      ::grpc::Service::MarkMethodStreamed(12,
+      ::grpc::Service::MarkMethodStreamed(9,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::ExportCSVEntityReportRequest, ::g2engine::ExportCSVEntityReportResponse>(
             [this](::grpc::ServerContext* context,
@@ -10307,7 +9316,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_ExportJSONEntityReport() {
-      ::grpc::Service::MarkMethodStreamed(13,
+      ::grpc::Service::MarkMethodStreamed(10,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::ExportJSONEntityReportRequest, ::g2engine::ExportJSONEntityReportResponse>(
             [this](::grpc::ServerContext* context,
@@ -10334,7 +9343,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FetchNext() {
-      ::grpc::Service::MarkMethodStreamed(14,
+      ::grpc::Service::MarkMethodStreamed(11,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FetchNextRequest, ::g2engine::FetchNextResponse>(
             [this](::grpc::ServerContext* context,
@@ -10361,7 +9370,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindInterestingEntitiesByEntityID() {
-      ::grpc::Service::MarkMethodStreamed(15,
+      ::grpc::Service::MarkMethodStreamed(12,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindInterestingEntitiesByEntityIDRequest, ::g2engine::FindInterestingEntitiesByEntityIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -10388,7 +9397,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindInterestingEntitiesByRecordID() {
-      ::grpc::Service::MarkMethodStreamed(16,
+      ::grpc::Service::MarkMethodStreamed(13,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindInterestingEntitiesByRecordIDRequest, ::g2engine::FindInterestingEntitiesByRecordIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -10415,7 +9424,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindNetworkByEntityID() {
-      ::grpc::Service::MarkMethodStreamed(17,
+      ::grpc::Service::MarkMethodStreamed(14,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindNetworkByEntityIDRequest, ::g2engine::FindNetworkByEntityIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -10442,7 +9451,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindNetworkByEntityID_V2() {
-      ::grpc::Service::MarkMethodStreamed(18,
+      ::grpc::Service::MarkMethodStreamed(15,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindNetworkByEntityID_V2Request, ::g2engine::FindNetworkByEntityID_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -10469,7 +9478,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindNetworkByRecordID() {
-      ::grpc::Service::MarkMethodStreamed(19,
+      ::grpc::Service::MarkMethodStreamed(16,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindNetworkByRecordIDRequest, ::g2engine::FindNetworkByRecordIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -10496,7 +9505,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindNetworkByRecordID_V2() {
-      ::grpc::Service::MarkMethodStreamed(20,
+      ::grpc::Service::MarkMethodStreamed(17,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindNetworkByRecordID_V2Request, ::g2engine::FindNetworkByRecordID_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -10523,7 +9532,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindPathByEntityID() {
-      ::grpc::Service::MarkMethodStreamed(21,
+      ::grpc::Service::MarkMethodStreamed(18,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindPathByEntityIDRequest, ::g2engine::FindPathByEntityIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -10550,7 +9559,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindPathByEntityID_V2() {
-      ::grpc::Service::MarkMethodStreamed(22,
+      ::grpc::Service::MarkMethodStreamed(19,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindPathByEntityID_V2Request, ::g2engine::FindPathByEntityID_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -10577,7 +9586,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindPathByRecordID() {
-      ::grpc::Service::MarkMethodStreamed(23,
+      ::grpc::Service::MarkMethodStreamed(20,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindPathByRecordIDRequest, ::g2engine::FindPathByRecordIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -10604,7 +9613,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindPathByRecordID_V2() {
-      ::grpc::Service::MarkMethodStreamed(24,
+      ::grpc::Service::MarkMethodStreamed(21,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindPathByRecordID_V2Request, ::g2engine::FindPathByRecordID_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -10631,7 +9640,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindPathExcludingByEntityID() {
-      ::grpc::Service::MarkMethodStreamed(25,
+      ::grpc::Service::MarkMethodStreamed(22,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindPathExcludingByEntityIDRequest, ::g2engine::FindPathExcludingByEntityIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -10658,7 +9667,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindPathExcludingByEntityID_V2() {
-      ::grpc::Service::MarkMethodStreamed(26,
+      ::grpc::Service::MarkMethodStreamed(23,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindPathExcludingByEntityID_V2Request, ::g2engine::FindPathExcludingByEntityID_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -10685,7 +9694,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindPathExcludingByRecordID() {
-      ::grpc::Service::MarkMethodStreamed(27,
+      ::grpc::Service::MarkMethodStreamed(24,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindPathExcludingByRecordIDRequest, ::g2engine::FindPathExcludingByRecordIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -10712,7 +9721,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindPathExcludingByRecordID_V2() {
-      ::grpc::Service::MarkMethodStreamed(28,
+      ::grpc::Service::MarkMethodStreamed(25,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindPathExcludingByRecordID_V2Request, ::g2engine::FindPathExcludingByRecordID_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -10739,7 +9748,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID() {
-      ::grpc::Service::MarkMethodStreamed(29,
+      ::grpc::Service::MarkMethodStreamed(26,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindPathIncludingSourceByEntityIDRequest, ::g2engine::FindPathIncludingSourceByEntityIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -10766,7 +9775,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID_V2() {
-      ::grpc::Service::MarkMethodStreamed(30,
+      ::grpc::Service::MarkMethodStreamed(27,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindPathIncludingSourceByEntityID_V2Request, ::g2engine::FindPathIncludingSourceByEntityID_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -10793,7 +9802,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID() {
-      ::grpc::Service::MarkMethodStreamed(31,
+      ::grpc::Service::MarkMethodStreamed(28,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindPathIncludingSourceByRecordIDRequest, ::g2engine::FindPathIncludingSourceByRecordIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -10820,7 +9829,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID_V2() {
-      ::grpc::Service::MarkMethodStreamed(32,
+      ::grpc::Service::MarkMethodStreamed(29,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::FindPathIncludingSourceByRecordID_V2Request, ::g2engine::FindPathIncludingSourceByRecordID_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -10847,7 +9856,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetActiveConfigID() {
-      ::grpc::Service::MarkMethodStreamed(33,
+      ::grpc::Service::MarkMethodStreamed(30,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::GetActiveConfigIDRequest, ::g2engine::GetActiveConfigIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -10874,7 +9883,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetEntityByEntityID() {
-      ::grpc::Service::MarkMethodStreamed(34,
+      ::grpc::Service::MarkMethodStreamed(31,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::GetEntityByEntityIDRequest, ::g2engine::GetEntityByEntityIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -10901,7 +9910,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodStreamed(35,
+      ::grpc::Service::MarkMethodStreamed(32,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::GetEntityByEntityID_V2Request, ::g2engine::GetEntityByEntityID_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -10928,7 +9937,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetEntityByRecordID() {
-      ::grpc::Service::MarkMethodStreamed(36,
+      ::grpc::Service::MarkMethodStreamed(33,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::GetEntityByRecordIDRequest, ::g2engine::GetEntityByRecordIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -10955,7 +9964,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodStreamed(37,
+      ::grpc::Service::MarkMethodStreamed(34,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::GetEntityByRecordID_V2Request, ::g2engine::GetEntityByRecordID_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -10982,7 +9991,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetRecord() {
-      ::grpc::Service::MarkMethodStreamed(38,
+      ::grpc::Service::MarkMethodStreamed(35,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::GetRecordRequest, ::g2engine::GetRecordResponse>(
             [this](::grpc::ServerContext* context,
@@ -11009,7 +10018,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetRecord_V2() {
-      ::grpc::Service::MarkMethodStreamed(39,
+      ::grpc::Service::MarkMethodStreamed(36,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::GetRecord_V2Request, ::g2engine::GetRecord_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -11036,7 +10045,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetRedoRecord() {
-      ::grpc::Service::MarkMethodStreamed(40,
+      ::grpc::Service::MarkMethodStreamed(37,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::GetRedoRecordRequest, ::g2engine::GetRedoRecordResponse>(
             [this](::grpc::ServerContext* context,
@@ -11063,7 +10072,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetRepositoryLastModifiedTime() {
-      ::grpc::Service::MarkMethodStreamed(41,
+      ::grpc::Service::MarkMethodStreamed(38,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::GetRepositoryLastModifiedTimeRequest, ::g2engine::GetRepositoryLastModifiedTimeResponse>(
             [this](::grpc::ServerContext* context,
@@ -11090,7 +10099,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetVirtualEntityByRecordID() {
-      ::grpc::Service::MarkMethodStreamed(42,
+      ::grpc::Service::MarkMethodStreamed(39,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::GetVirtualEntityByRecordIDRequest, ::g2engine::GetVirtualEntityByRecordIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -11117,7 +10126,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetVirtualEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodStreamed(43,
+      ::grpc::Service::MarkMethodStreamed(40,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::GetVirtualEntityByRecordID_V2Request, ::g2engine::GetVirtualEntityByRecordID_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -11144,7 +10153,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_HowEntityByEntityID() {
-      ::grpc::Service::MarkMethodStreamed(44,
+      ::grpc::Service::MarkMethodStreamed(41,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::HowEntityByEntityIDRequest, ::g2engine::HowEntityByEntityIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -11171,7 +10180,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_HowEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodStreamed(45,
+      ::grpc::Service::MarkMethodStreamed(42,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::HowEntityByEntityID_V2Request, ::g2engine::HowEntityByEntityID_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -11198,7 +10207,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Init() {
-      ::grpc::Service::MarkMethodStreamed(46,
+      ::grpc::Service::MarkMethodStreamed(43,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::InitRequest, ::g2engine::InitResponse>(
             [this](::grpc::ServerContext* context,
@@ -11225,7 +10234,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_InitWithConfigID() {
-      ::grpc::Service::MarkMethodStreamed(47,
+      ::grpc::Service::MarkMethodStreamed(44,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::InitWithConfigIDRequest, ::g2engine::InitWithConfigIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -11252,7 +10261,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_PrimeEngine() {
-      ::grpc::Service::MarkMethodStreamed(48,
+      ::grpc::Service::MarkMethodStreamed(45,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::PrimeEngineRequest, ::g2engine::PrimeEngineResponse>(
             [this](::grpc::ServerContext* context,
@@ -11279,7 +10288,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Process() {
-      ::grpc::Service::MarkMethodStreamed(49,
+      ::grpc::Service::MarkMethodStreamed(46,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::ProcessRequest, ::g2engine::ProcessResponse>(
             [this](::grpc::ServerContext* context,
@@ -11301,66 +10310,12 @@ class G2Engine final {
     virtual ::grpc::Status StreamedProcess(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2engine::ProcessRequest,::g2engine::ProcessResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_ProcessRedoRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_ProcessRedoRecord() {
-      ::grpc::Service::MarkMethodStreamed(50,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::g2engine::ProcessRedoRecordRequest, ::g2engine::ProcessRedoRecordResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::g2engine::ProcessRedoRecordRequest, ::g2engine::ProcessRedoRecordResponse>* streamer) {
-                       return this->StreamedProcessRedoRecord(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_ProcessRedoRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status ProcessRedoRecord(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessRedoRecordRequest* /*request*/, ::g2engine::ProcessRedoRecordResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedProcessRedoRecord(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2engine::ProcessRedoRecordRequest,::g2engine::ProcessRedoRecordResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_ProcessRedoRecordWithInfo : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_ProcessRedoRecordWithInfo() {
-      ::grpc::Service::MarkMethodStreamed(51,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::g2engine::ProcessRedoRecordWithInfoRequest, ::g2engine::ProcessRedoRecordWithInfoResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::g2engine::ProcessRedoRecordWithInfoRequest, ::g2engine::ProcessRedoRecordWithInfoResponse>* streamer) {
-                       return this->StreamedProcessRedoRecordWithInfo(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_ProcessRedoRecordWithInfo() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status ProcessRedoRecordWithInfo(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessRedoRecordWithInfoRequest* /*request*/, ::g2engine::ProcessRedoRecordWithInfoResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedProcessRedoRecordWithInfo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2engine::ProcessRedoRecordWithInfoRequest,::g2engine::ProcessRedoRecordWithInfoResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
   class WithStreamedUnaryMethod_ProcessWithInfo : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_ProcessWithInfo() {
-      ::grpc::Service::MarkMethodStreamed(52,
+      ::grpc::Service::MarkMethodStreamed(47,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::ProcessWithInfoRequest, ::g2engine::ProcessWithInfoResponse>(
             [this](::grpc::ServerContext* context,
@@ -11382,66 +10337,12 @@ class G2Engine final {
     virtual ::grpc::Status StreamedProcessWithInfo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2engine::ProcessWithInfoRequest,::g2engine::ProcessWithInfoResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_ProcessWithResponse : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_ProcessWithResponse() {
-      ::grpc::Service::MarkMethodStreamed(53,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::g2engine::ProcessWithResponseRequest, ::g2engine::ProcessWithResponseResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::g2engine::ProcessWithResponseRequest, ::g2engine::ProcessWithResponseResponse>* streamer) {
-                       return this->StreamedProcessWithResponse(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_ProcessWithResponse() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status ProcessWithResponse(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessWithResponseRequest* /*request*/, ::g2engine::ProcessWithResponseResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedProcessWithResponse(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2engine::ProcessWithResponseRequest,::g2engine::ProcessWithResponseResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_ProcessWithResponseResize : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_ProcessWithResponseResize() {
-      ::grpc::Service::MarkMethodStreamed(54,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::g2engine::ProcessWithResponseResizeRequest, ::g2engine::ProcessWithResponseResizeResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::g2engine::ProcessWithResponseResizeRequest, ::g2engine::ProcessWithResponseResizeResponse>* streamer) {
-                       return this->StreamedProcessWithResponseResize(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_ProcessWithResponseResize() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status ProcessWithResponseResize(::grpc::ServerContext* /*context*/, const ::g2engine::ProcessWithResponseResizeRequest* /*request*/, ::g2engine::ProcessWithResponseResizeResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedProcessWithResponseResize(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2engine::ProcessWithResponseResizeRequest,::g2engine::ProcessWithResponseResizeResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
   class WithStreamedUnaryMethod_PurgeRepository : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_PurgeRepository() {
-      ::grpc::Service::MarkMethodStreamed(55,
+      ::grpc::Service::MarkMethodStreamed(48,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::PurgeRepositoryRequest, ::g2engine::PurgeRepositoryResponse>(
             [this](::grpc::ServerContext* context,
@@ -11468,7 +10369,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_ReevaluateEntity() {
-      ::grpc::Service::MarkMethodStreamed(56,
+      ::grpc::Service::MarkMethodStreamed(49,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::ReevaluateEntityRequest, ::g2engine::ReevaluateEntityResponse>(
             [this](::grpc::ServerContext* context,
@@ -11495,7 +10396,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_ReevaluateEntityWithInfo() {
-      ::grpc::Service::MarkMethodStreamed(57,
+      ::grpc::Service::MarkMethodStreamed(50,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::ReevaluateEntityWithInfoRequest, ::g2engine::ReevaluateEntityWithInfoResponse>(
             [this](::grpc::ServerContext* context,
@@ -11522,7 +10423,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_ReevaluateRecord() {
-      ::grpc::Service::MarkMethodStreamed(58,
+      ::grpc::Service::MarkMethodStreamed(51,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::ReevaluateRecordRequest, ::g2engine::ReevaluateRecordResponse>(
             [this](::grpc::ServerContext* context,
@@ -11549,7 +10450,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_ReevaluateRecordWithInfo() {
-      ::grpc::Service::MarkMethodStreamed(59,
+      ::grpc::Service::MarkMethodStreamed(52,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::ReevaluateRecordWithInfoRequest, ::g2engine::ReevaluateRecordWithInfoResponse>(
             [this](::grpc::ServerContext* context,
@@ -11576,7 +10477,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Reinit() {
-      ::grpc::Service::MarkMethodStreamed(60,
+      ::grpc::Service::MarkMethodStreamed(53,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::ReinitRequest, ::g2engine::ReinitResponse>(
             [this](::grpc::ServerContext* context,
@@ -11603,7 +10504,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_ReplaceRecord() {
-      ::grpc::Service::MarkMethodStreamed(61,
+      ::grpc::Service::MarkMethodStreamed(54,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::ReplaceRecordRequest, ::g2engine::ReplaceRecordResponse>(
             [this](::grpc::ServerContext* context,
@@ -11630,7 +10531,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_ReplaceRecordWithInfo() {
-      ::grpc::Service::MarkMethodStreamed(62,
+      ::grpc::Service::MarkMethodStreamed(55,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::ReplaceRecordWithInfoRequest, ::g2engine::ReplaceRecordWithInfoResponse>(
             [this](::grpc::ServerContext* context,
@@ -11657,7 +10558,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_SearchByAttributes() {
-      ::grpc::Service::MarkMethodStreamed(63,
+      ::grpc::Service::MarkMethodStreamed(56,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::SearchByAttributesRequest, ::g2engine::SearchByAttributesResponse>(
             [this](::grpc::ServerContext* context,
@@ -11684,7 +10585,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_SearchByAttributes_V2() {
-      ::grpc::Service::MarkMethodStreamed(64,
+      ::grpc::Service::MarkMethodStreamed(57,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::SearchByAttributes_V2Request, ::g2engine::SearchByAttributes_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -11711,7 +10612,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Stats() {
-      ::grpc::Service::MarkMethodStreamed(65,
+      ::grpc::Service::MarkMethodStreamed(58,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::StatsRequest, ::g2engine::StatsResponse>(
             [this](::grpc::ServerContext* context,
@@ -11738,7 +10639,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_WhyEntities() {
-      ::grpc::Service::MarkMethodStreamed(68,
+      ::grpc::Service::MarkMethodStreamed(61,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::WhyEntitiesRequest, ::g2engine::WhyEntitiesResponse>(
             [this](::grpc::ServerContext* context,
@@ -11765,7 +10666,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_WhyEntities_V2() {
-      ::grpc::Service::MarkMethodStreamed(69,
+      ::grpc::Service::MarkMethodStreamed(62,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::WhyEntities_V2Request, ::g2engine::WhyEntities_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -11792,7 +10693,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_WhyEntityByEntityID() {
-      ::grpc::Service::MarkMethodStreamed(70,
+      ::grpc::Service::MarkMethodStreamed(63,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::WhyEntityByEntityIDRequest, ::g2engine::WhyEntityByEntityIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -11819,7 +10720,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_WhyEntityByEntityID_V2() {
-      ::grpc::Service::MarkMethodStreamed(71,
+      ::grpc::Service::MarkMethodStreamed(64,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::WhyEntityByEntityID_V2Request, ::g2engine::WhyEntityByEntityID_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -11846,7 +10747,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_WhyEntityByRecordID() {
-      ::grpc::Service::MarkMethodStreamed(72,
+      ::grpc::Service::MarkMethodStreamed(65,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::WhyEntityByRecordIDRequest, ::g2engine::WhyEntityByRecordIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -11873,7 +10774,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_WhyEntityByRecordID_V2() {
-      ::grpc::Service::MarkMethodStreamed(73,
+      ::grpc::Service::MarkMethodStreamed(66,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::WhyEntityByRecordID_V2Request, ::g2engine::WhyEntityByRecordID_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -11900,7 +10801,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_WhyRecords() {
-      ::grpc::Service::MarkMethodStreamed(74,
+      ::grpc::Service::MarkMethodStreamed(67,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::WhyRecordsRequest, ::g2engine::WhyRecordsResponse>(
             [this](::grpc::ServerContext* context,
@@ -11927,7 +10828,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_WhyRecords_V2() {
-      ::grpc::Service::MarkMethodStreamed(75,
+      ::grpc::Service::MarkMethodStreamed(68,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2engine::WhyRecords_V2Request, ::g2engine::WhyRecords_V2Response>(
             [this](::grpc::ServerContext* context,
@@ -11948,14 +10849,14 @@ class G2Engine final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedWhyRecords_V2(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2engine::WhyRecords_V2Request,::g2engine::WhyRecords_V2Response>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_AddRecord<WithStreamedUnaryMethod_AddRecordWithInfo<WithStreamedUnaryMethod_AddRecordWithInfoWithReturnedRecordID<WithStreamedUnaryMethod_AddRecordWithReturnedRecordID<WithStreamedUnaryMethod_CheckRecord<WithStreamedUnaryMethod_CloseExport<WithStreamedUnaryMethod_CountRedoRecords<WithStreamedUnaryMethod_DeleteRecord<WithStreamedUnaryMethod_DeleteRecordWithInfo<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_ExportConfig<WithStreamedUnaryMethod_ExportConfigAndConfigID<WithStreamedUnaryMethod_ExportCSVEntityReport<WithStreamedUnaryMethod_ExportJSONEntityReport<WithStreamedUnaryMethod_FetchNext<WithStreamedUnaryMethod_FindInterestingEntitiesByEntityID<WithStreamedUnaryMethod_FindInterestingEntitiesByRecordID<WithStreamedUnaryMethod_FindNetworkByEntityID<WithStreamedUnaryMethod_FindNetworkByEntityID_V2<WithStreamedUnaryMethod_FindNetworkByRecordID<WithStreamedUnaryMethod_FindNetworkByRecordID_V2<WithStreamedUnaryMethod_FindPathByEntityID<WithStreamedUnaryMethod_FindPathByEntityID_V2<WithStreamedUnaryMethod_FindPathByRecordID<WithStreamedUnaryMethod_FindPathByRecordID_V2<WithStreamedUnaryMethod_FindPathExcludingByEntityID<WithStreamedUnaryMethod_FindPathExcludingByEntityID_V2<WithStreamedUnaryMethod_FindPathExcludingByRecordID<WithStreamedUnaryMethod_FindPathExcludingByRecordID_V2<WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID<WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID_V2<WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID<WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID_V2<WithStreamedUnaryMethod_GetActiveConfigID<WithStreamedUnaryMethod_GetEntityByEntityID<WithStreamedUnaryMethod_GetEntityByEntityID_V2<WithStreamedUnaryMethod_GetEntityByRecordID<WithStreamedUnaryMethod_GetEntityByRecordID_V2<WithStreamedUnaryMethod_GetRecord<WithStreamedUnaryMethod_GetRecord_V2<WithStreamedUnaryMethod_GetRedoRecord<WithStreamedUnaryMethod_GetRepositoryLastModifiedTime<WithStreamedUnaryMethod_GetVirtualEntityByRecordID<WithStreamedUnaryMethod_GetVirtualEntityByRecordID_V2<WithStreamedUnaryMethod_HowEntityByEntityID<WithStreamedUnaryMethod_HowEntityByEntityID_V2<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_PrimeEngine<WithStreamedUnaryMethod_Process<WithStreamedUnaryMethod_ProcessRedoRecord<WithStreamedUnaryMethod_ProcessRedoRecordWithInfo<WithStreamedUnaryMethod_ProcessWithInfo<WithStreamedUnaryMethod_ProcessWithResponse<WithStreamedUnaryMethod_ProcessWithResponseResize<WithStreamedUnaryMethod_PurgeRepository<WithStreamedUnaryMethod_ReevaluateEntity<WithStreamedUnaryMethod_ReevaluateEntityWithInfo<WithStreamedUnaryMethod_ReevaluateRecord<WithStreamedUnaryMethod_ReevaluateRecordWithInfo<WithStreamedUnaryMethod_Reinit<WithStreamedUnaryMethod_ReplaceRecord<WithStreamedUnaryMethod_ReplaceRecordWithInfo<WithStreamedUnaryMethod_SearchByAttributes<WithStreamedUnaryMethod_SearchByAttributes_V2<WithStreamedUnaryMethod_Stats<WithStreamedUnaryMethod_WhyEntities<WithStreamedUnaryMethod_WhyEntities_V2<WithStreamedUnaryMethod_WhyEntityByEntityID<WithStreamedUnaryMethod_WhyEntityByEntityID_V2<WithStreamedUnaryMethod_WhyEntityByRecordID<WithStreamedUnaryMethod_WhyEntityByRecordID_V2<WithStreamedUnaryMethod_WhyRecords<WithStreamedUnaryMethod_WhyRecords_V2<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_AddRecord<WithStreamedUnaryMethod_AddRecordWithInfo<WithStreamedUnaryMethod_CloseExport<WithStreamedUnaryMethod_CountRedoRecords<WithStreamedUnaryMethod_DeleteRecord<WithStreamedUnaryMethod_DeleteRecordWithInfo<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_ExportConfig<WithStreamedUnaryMethod_ExportConfigAndConfigID<WithStreamedUnaryMethod_ExportCSVEntityReport<WithStreamedUnaryMethod_ExportJSONEntityReport<WithStreamedUnaryMethod_FetchNext<WithStreamedUnaryMethod_FindInterestingEntitiesByEntityID<WithStreamedUnaryMethod_FindInterestingEntitiesByRecordID<WithStreamedUnaryMethod_FindNetworkByEntityID<WithStreamedUnaryMethod_FindNetworkByEntityID_V2<WithStreamedUnaryMethod_FindNetworkByRecordID<WithStreamedUnaryMethod_FindNetworkByRecordID_V2<WithStreamedUnaryMethod_FindPathByEntityID<WithStreamedUnaryMethod_FindPathByEntityID_V2<WithStreamedUnaryMethod_FindPathByRecordID<WithStreamedUnaryMethod_FindPathByRecordID_V2<WithStreamedUnaryMethod_FindPathExcludingByEntityID<WithStreamedUnaryMethod_FindPathExcludingByEntityID_V2<WithStreamedUnaryMethod_FindPathExcludingByRecordID<WithStreamedUnaryMethod_FindPathExcludingByRecordID_V2<WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID<WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID_V2<WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID<WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID_V2<WithStreamedUnaryMethod_GetActiveConfigID<WithStreamedUnaryMethod_GetEntityByEntityID<WithStreamedUnaryMethod_GetEntityByEntityID_V2<WithStreamedUnaryMethod_GetEntityByRecordID<WithStreamedUnaryMethod_GetEntityByRecordID_V2<WithStreamedUnaryMethod_GetRecord<WithStreamedUnaryMethod_GetRecord_V2<WithStreamedUnaryMethod_GetRedoRecord<WithStreamedUnaryMethod_GetRepositoryLastModifiedTime<WithStreamedUnaryMethod_GetVirtualEntityByRecordID<WithStreamedUnaryMethod_GetVirtualEntityByRecordID_V2<WithStreamedUnaryMethod_HowEntityByEntityID<WithStreamedUnaryMethod_HowEntityByEntityID_V2<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_PrimeEngine<WithStreamedUnaryMethod_Process<WithStreamedUnaryMethod_ProcessWithInfo<WithStreamedUnaryMethod_PurgeRepository<WithStreamedUnaryMethod_ReevaluateEntity<WithStreamedUnaryMethod_ReevaluateEntityWithInfo<WithStreamedUnaryMethod_ReevaluateRecord<WithStreamedUnaryMethod_ReevaluateRecordWithInfo<WithStreamedUnaryMethod_Reinit<WithStreamedUnaryMethod_ReplaceRecord<WithStreamedUnaryMethod_ReplaceRecordWithInfo<WithStreamedUnaryMethod_SearchByAttributes<WithStreamedUnaryMethod_SearchByAttributes_V2<WithStreamedUnaryMethod_Stats<WithStreamedUnaryMethod_WhyEntities<WithStreamedUnaryMethod_WhyEntities_V2<WithStreamedUnaryMethod_WhyEntityByEntityID<WithStreamedUnaryMethod_WhyEntityByEntityID_V2<WithStreamedUnaryMethod_WhyEntityByRecordID<WithStreamedUnaryMethod_WhyEntityByRecordID_V2<WithStreamedUnaryMethod_WhyRecords<WithStreamedUnaryMethod_WhyRecords_V2<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
   template <class BaseClass>
   class WithSplitStreamingMethod_StreamExportCSVEntityReport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithSplitStreamingMethod_StreamExportCSVEntityReport() {
-      ::grpc::Service::MarkMethodStreamed(66,
+      ::grpc::Service::MarkMethodStreamed(59,
         new ::grpc::internal::SplitServerStreamingHandler<
           ::g2engine::StreamExportCSVEntityReportRequest, ::g2engine::StreamExportCSVEntityReportResponse>(
             [this](::grpc::ServerContext* context,
@@ -11982,7 +10883,7 @@ class G2Engine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithSplitStreamingMethod_StreamExportJSONEntityReport() {
-      ::grpc::Service::MarkMethodStreamed(67,
+      ::grpc::Service::MarkMethodStreamed(60,
         new ::grpc::internal::SplitServerStreamingHandler<
           ::g2engine::StreamExportJSONEntityReportRequest, ::g2engine::StreamExportJSONEntityReportResponse>(
             [this](::grpc::ServerContext* context,
@@ -12004,7 +10905,7 @@ class G2Engine final {
     virtual ::grpc::Status StreamedStreamExportJSONEntityReport(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::g2engine::StreamExportJSONEntityReportRequest,::g2engine::StreamExportJSONEntityReportResponse>* server_split_streamer) = 0;
   };
   typedef WithSplitStreamingMethod_StreamExportCSVEntityReport<WithSplitStreamingMethod_StreamExportJSONEntityReport<Service > > SplitStreamedService;
-  typedef WithStreamedUnaryMethod_AddRecord<WithStreamedUnaryMethod_AddRecordWithInfo<WithStreamedUnaryMethod_AddRecordWithInfoWithReturnedRecordID<WithStreamedUnaryMethod_AddRecordWithReturnedRecordID<WithStreamedUnaryMethod_CheckRecord<WithStreamedUnaryMethod_CloseExport<WithStreamedUnaryMethod_CountRedoRecords<WithStreamedUnaryMethod_DeleteRecord<WithStreamedUnaryMethod_DeleteRecordWithInfo<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_ExportConfig<WithStreamedUnaryMethod_ExportConfigAndConfigID<WithStreamedUnaryMethod_ExportCSVEntityReport<WithStreamedUnaryMethod_ExportJSONEntityReport<WithStreamedUnaryMethod_FetchNext<WithStreamedUnaryMethod_FindInterestingEntitiesByEntityID<WithStreamedUnaryMethod_FindInterestingEntitiesByRecordID<WithStreamedUnaryMethod_FindNetworkByEntityID<WithStreamedUnaryMethod_FindNetworkByEntityID_V2<WithStreamedUnaryMethod_FindNetworkByRecordID<WithStreamedUnaryMethod_FindNetworkByRecordID_V2<WithStreamedUnaryMethod_FindPathByEntityID<WithStreamedUnaryMethod_FindPathByEntityID_V2<WithStreamedUnaryMethod_FindPathByRecordID<WithStreamedUnaryMethod_FindPathByRecordID_V2<WithStreamedUnaryMethod_FindPathExcludingByEntityID<WithStreamedUnaryMethod_FindPathExcludingByEntityID_V2<WithStreamedUnaryMethod_FindPathExcludingByRecordID<WithStreamedUnaryMethod_FindPathExcludingByRecordID_V2<WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID<WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID_V2<WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID<WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID_V2<WithStreamedUnaryMethod_GetActiveConfigID<WithStreamedUnaryMethod_GetEntityByEntityID<WithStreamedUnaryMethod_GetEntityByEntityID_V2<WithStreamedUnaryMethod_GetEntityByRecordID<WithStreamedUnaryMethod_GetEntityByRecordID_V2<WithStreamedUnaryMethod_GetRecord<WithStreamedUnaryMethod_GetRecord_V2<WithStreamedUnaryMethod_GetRedoRecord<WithStreamedUnaryMethod_GetRepositoryLastModifiedTime<WithStreamedUnaryMethod_GetVirtualEntityByRecordID<WithStreamedUnaryMethod_GetVirtualEntityByRecordID_V2<WithStreamedUnaryMethod_HowEntityByEntityID<WithStreamedUnaryMethod_HowEntityByEntityID_V2<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_PrimeEngine<WithStreamedUnaryMethod_Process<WithStreamedUnaryMethod_ProcessRedoRecord<WithStreamedUnaryMethod_ProcessRedoRecordWithInfo<WithStreamedUnaryMethod_ProcessWithInfo<WithStreamedUnaryMethod_ProcessWithResponse<WithStreamedUnaryMethod_ProcessWithResponseResize<WithStreamedUnaryMethod_PurgeRepository<WithStreamedUnaryMethod_ReevaluateEntity<WithStreamedUnaryMethod_ReevaluateEntityWithInfo<WithStreamedUnaryMethod_ReevaluateRecord<WithStreamedUnaryMethod_ReevaluateRecordWithInfo<WithStreamedUnaryMethod_Reinit<WithStreamedUnaryMethod_ReplaceRecord<WithStreamedUnaryMethod_ReplaceRecordWithInfo<WithStreamedUnaryMethod_SearchByAttributes<WithStreamedUnaryMethod_SearchByAttributes_V2<WithStreamedUnaryMethod_Stats<WithSplitStreamingMethod_StreamExportCSVEntityReport<WithSplitStreamingMethod_StreamExportJSONEntityReport<WithStreamedUnaryMethod_WhyEntities<WithStreamedUnaryMethod_WhyEntities_V2<WithStreamedUnaryMethod_WhyEntityByEntityID<WithStreamedUnaryMethod_WhyEntityByEntityID_V2<WithStreamedUnaryMethod_WhyEntityByRecordID<WithStreamedUnaryMethod_WhyEntityByRecordID_V2<WithStreamedUnaryMethod_WhyRecords<WithStreamedUnaryMethod_WhyRecords_V2<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_AddRecord<WithStreamedUnaryMethod_AddRecordWithInfo<WithStreamedUnaryMethod_CloseExport<WithStreamedUnaryMethod_CountRedoRecords<WithStreamedUnaryMethod_DeleteRecord<WithStreamedUnaryMethod_DeleteRecordWithInfo<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_ExportConfig<WithStreamedUnaryMethod_ExportConfigAndConfigID<WithStreamedUnaryMethod_ExportCSVEntityReport<WithStreamedUnaryMethod_ExportJSONEntityReport<WithStreamedUnaryMethod_FetchNext<WithStreamedUnaryMethod_FindInterestingEntitiesByEntityID<WithStreamedUnaryMethod_FindInterestingEntitiesByRecordID<WithStreamedUnaryMethod_FindNetworkByEntityID<WithStreamedUnaryMethod_FindNetworkByEntityID_V2<WithStreamedUnaryMethod_FindNetworkByRecordID<WithStreamedUnaryMethod_FindNetworkByRecordID_V2<WithStreamedUnaryMethod_FindPathByEntityID<WithStreamedUnaryMethod_FindPathByEntityID_V2<WithStreamedUnaryMethod_FindPathByRecordID<WithStreamedUnaryMethod_FindPathByRecordID_V2<WithStreamedUnaryMethod_FindPathExcludingByEntityID<WithStreamedUnaryMethod_FindPathExcludingByEntityID_V2<WithStreamedUnaryMethod_FindPathExcludingByRecordID<WithStreamedUnaryMethod_FindPathExcludingByRecordID_V2<WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID<WithStreamedUnaryMethod_FindPathIncludingSourceByEntityID_V2<WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID<WithStreamedUnaryMethod_FindPathIncludingSourceByRecordID_V2<WithStreamedUnaryMethod_GetActiveConfigID<WithStreamedUnaryMethod_GetEntityByEntityID<WithStreamedUnaryMethod_GetEntityByEntityID_V2<WithStreamedUnaryMethod_GetEntityByRecordID<WithStreamedUnaryMethod_GetEntityByRecordID_V2<WithStreamedUnaryMethod_GetRecord<WithStreamedUnaryMethod_GetRecord_V2<WithStreamedUnaryMethod_GetRedoRecord<WithStreamedUnaryMethod_GetRepositoryLastModifiedTime<WithStreamedUnaryMethod_GetVirtualEntityByRecordID<WithStreamedUnaryMethod_GetVirtualEntityByRecordID_V2<WithStreamedUnaryMethod_HowEntityByEntityID<WithStreamedUnaryMethod_HowEntityByEntityID_V2<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_PrimeEngine<WithStreamedUnaryMethod_Process<WithStreamedUnaryMethod_ProcessWithInfo<WithStreamedUnaryMethod_PurgeRepository<WithStreamedUnaryMethod_ReevaluateEntity<WithStreamedUnaryMethod_ReevaluateEntityWithInfo<WithStreamedUnaryMethod_ReevaluateRecord<WithStreamedUnaryMethod_ReevaluateRecordWithInfo<WithStreamedUnaryMethod_Reinit<WithStreamedUnaryMethod_ReplaceRecord<WithStreamedUnaryMethod_ReplaceRecordWithInfo<WithStreamedUnaryMethod_SearchByAttributes<WithStreamedUnaryMethod_SearchByAttributes_V2<WithStreamedUnaryMethod_Stats<WithSplitStreamingMethod_StreamExportCSVEntityReport<WithSplitStreamingMethod_StreamExportJSONEntityReport<WithStreamedUnaryMethod_WhyEntities<WithStreamedUnaryMethod_WhyEntities_V2<WithStreamedUnaryMethod_WhyEntityByEntityID<WithStreamedUnaryMethod_WhyEntityByEntityID_V2<WithStreamedUnaryMethod_WhyEntityByRecordID<WithStreamedUnaryMethod_WhyEntityByRecordID_V2<WithStreamedUnaryMethod_WhyRecords<WithStreamedUnaryMethod_WhyRecords_V2<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
 };
 
 }  // namespace g2engine
