@@ -25,16 +25,6 @@ public final class G2DiagnosticProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_g2diagnostic_CheckDBPerfResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_CloseEntityListBySizeRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_CloseEntityListBySizeRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_CloseEntityListBySizeResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_CloseEntityListBySizeResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_g2diagnostic_DestroyRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -44,26 +34,6 @@ public final class G2DiagnosticProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_g2diagnostic_DestroyResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_FetchNextEntityBySizeRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_FetchNextEntityBySizeRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_FetchNextEntityBySizeResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_FetchNextEntityBySizeResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_FindEntitiesByFeatureIDsRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_FindEntitiesByFeatureIDsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_FindEntitiesByFeatureIDsResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_FindEntitiesByFeatureIDsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_g2diagnostic_GetAvailableMemoryRequest_descriptor;
   static final 
@@ -75,16 +45,6 @@ public final class G2DiagnosticProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_g2diagnostic_GetAvailableMemoryResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetDataSourceCountsRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetDataSourceCountsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetDataSourceCountsResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetDataSourceCountsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_g2diagnostic_GetDBInfoRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -94,66 +54,6 @@ public final class G2DiagnosticProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_g2diagnostic_GetDBInfoResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetEntityDetailsRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetEntityDetailsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetEntityDetailsResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetEntityDetailsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetEntityListBySizeRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetEntityListBySizeRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetEntityListBySizeResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetEntityListBySizeResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetEntityResumeRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetEntityResumeRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetEntityResumeResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetEntityResumeResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetEntitySizeBreakdownRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetEntitySizeBreakdownRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetEntitySizeBreakdownResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetEntitySizeBreakdownResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetFeatureRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetFeatureRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetFeatureResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetFeatureResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetGenericFeaturesRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetGenericFeaturesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetGenericFeaturesResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetGenericFeaturesResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_g2diagnostic_GetLogicalCoresRequest_descriptor;
   static final 
@@ -165,16 +65,6 @@ public final class G2DiagnosticProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_g2diagnostic_GetLogicalCoresResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetMappingStatisticsRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetMappingStatisticsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetMappingStatisticsResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetMappingStatisticsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_g2diagnostic_GetPhysicalCoresRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -184,26 +74,6 @@ public final class G2DiagnosticProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_g2diagnostic_GetPhysicalCoresResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetRelationshipDetailsRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetRelationshipDetailsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetRelationshipDetailsResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetRelationshipDetailsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetResolutionStatisticsRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetResolutionStatisticsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2diagnostic_GetResolutionStatisticsResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2diagnostic_GetResolutionStatisticsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_g2diagnostic_GetTotalSystemMemoryRequest_descriptor;
   static final 
@@ -265,126 +135,56 @@ public final class G2DiagnosticProto {
     java.lang.String[] descriptorData = {
       "\n\022g2diagnostic.proto\022\014g2diagnostic\"*\n\022Ch" +
       "eckDBPerfRequest\022\024\n\014secondsToRun\030\001 \001(\005\"%" +
-      "\n\023CheckDBPerfResponse\022\016\n\006result\030\001 \001(\t\">\n" +
-      "\034CloseEntityListBySizeRequest\022\036\n\026entityL" +
-      "istBySizeHandle\030\001 \001(\t\"\037\n\035CloseEntityList" +
-      "BySizeResponse\"\020\n\016DestroyRequest\"\021\n\017Dest" +
-      "royResponse\">\n\034FetchNextEntityBySizeRequ" +
-      "est\022\036\n\026entityListBySizeHandle\030\001 \001(\t\"/\n\035F" +
-      "etchNextEntityBySizeResponse\022\016\n\006result\030\001" +
-      " \001(\t\"3\n\037FindEntitiesByFeatureIDsRequest\022" +
-      "\020\n\010features\030\001 \001(\t\"2\n FindEntitiesByFeatu" +
-      "reIDsResponse\022\016\n\006result\030\001 \001(\t\"\033\n\031GetAvai" +
-      "lableMemoryRequest\",\n\032GetAvailableMemory" +
-      "Response\022\016\n\006result\030\001 \001(\003\"\034\n\032GetDataSourc" +
-      "eCountsRequest\"-\n\033GetDataSourceCountsRes" +
-      "ponse\022\016\n\006result\030\001 \001(\t\"\022\n\020GetDBInfoReques" +
-      "t\"#\n\021GetDBInfoResponse\022\016\n\006result\030\001 \001(\t\"L" +
-      "\n\027GetEntityDetailsRequest\022\020\n\010entityID\030\001 " +
-      "\001(\003\022\037\n\027includeInternalFeatures\030\002 \001(\005\"*\n\030" +
-      "GetEntityDetailsResponse\022\016\n\006result\030\001 \001(\t" +
-      "\"0\n\032GetEntityListBySizeRequest\022\022\n\nentity" +
-      "Size\030\001 \001(\005\"-\n\033GetEntityListBySizeRespons" +
-      "e\022\016\n\006result\030\001 \001(\t\"*\n\026GetEntityResumeRequ" +
-      "est\022\020\n\010entityID\030\001 \001(\003\")\n\027GetEntityResume" +
-      "Response\022\016\n\006result\030\001 \001(\t\"[\n\035GetEntitySiz" +
-      "eBreakdownRequest\022\031\n\021minimumEntitySize\030\001" +
-      " \001(\005\022\037\n\027includeInternalFeatures\030\002 \001(\005\"0\n" +
-      "\036GetEntitySizeBreakdownResponse\022\016\n\006resul" +
-      "t\030\001 \001(\t\"&\n\021GetFeatureRequest\022\021\n\tlibFeatI" +
-      "D\030\001 \001(\003\"$\n\022GetFeatureResponse\022\016\n\006result\030" +
-      "\001 \001(\t\"O\n\031GetGenericFeaturesRequest\022\023\n\013fe" +
-      "atureType\030\001 \001(\t\022\035\n\025maximumEstimatedCount" +
-      "\030\002 \001(\005\",\n\032GetGenericFeaturesResponse\022\016\n\006" +
-      "result\030\001 \001(\t\"\030\n\026GetLogicalCoresRequest\")" +
-      "\n\027GetLogicalCoresResponse\022\016\n\006result\030\001 \001(" +
-      "\005\">\n\033GetMappingStatisticsRequest\022\037\n\027incl" +
-      "udeInternalFeatures\030\001 \001(\005\".\n\034GetMappingS" +
-      "tatisticsResponse\022\016\n\006result\030\001 \001(\t\"\031\n\027Get" +
-      "PhysicalCoresRequest\"*\n\030GetPhysicalCores" +
-      "Response\022\016\n\006result\030\001 \001(\005\"X\n\035GetRelations" +
-      "hipDetailsRequest\022\026\n\016relationshipID\030\001 \001(" +
-      "\003\022\037\n\027includeInternalFeatures\030\002 \001(\005\"0\n\036Ge" +
-      "tRelationshipDetailsResponse\022\016\n\006result\030\001" +
-      " \001(\t\" \n\036GetResolutionStatisticsRequest\"1" +
-      "\n\037GetResolutionStatisticsResponse\022\016\n\006res" +
-      "ult\030\001 \001(\t\"\035\n\033GetTotalSystemMemoryRequest" +
-      "\".\n\034GetTotalSystemMemoryResponse\022\016\n\006resu" +
-      "lt\030\001 \001(\003\"L\n\013InitRequest\022\022\n\nmoduleName\030\001 " +
-      "\001(\t\022\021\n\tiniParams\030\002 \001(\t\022\026\n\016verboseLogging" +
-      "\030\003 \001(\005\"\016\n\014InitResponse\"n\n\027InitWithConfig" +
-      "IDRequest\022\022\n\nmoduleName\030\001 \001(\t\022\021\n\tiniPara" +
-      "ms\030\002 \001(\t\022\024\n\014initConfigID\030\003 \001(\003\022\026\n\016verbos" +
-      "eLogging\030\004 \001(\005\"\032\n\030InitWithConfigIDRespon" +
-      "se\"%\n\rReinitRequest\022\024\n\014initConfigID\030\001 \001(" +
-      "\003\"\020\n\016ReinitResponse\"3\n\035StreamEntityListB" +
-      "ySizeRequest\022\022\n\nentitySize\030\001 \001(\005\"0\n\036Stre" +
-      "amEntityListBySizeResponse\022\016\n\006result\030\001 \001" +
-      "(\t2\246\023\n\014G2Diagnostic\022T\n\013CheckDBPerf\022 .g2d" +
-      "iagnostic.CheckDBPerfRequest\032!.g2diagnos" +
-      "tic.CheckDBPerfResponse\"\000\022r\n\025CloseEntity" +
-      "ListBySize\022*.g2diagnostic.CloseEntityLis" +
-      "tBySizeRequest\032+.g2diagnostic.CloseEntit" +
-      "yListBySizeResponse\"\000\022H\n\007Destroy\022\034.g2dia" +
-      "gnostic.DestroyRequest\032\035.g2diagnostic.De" +
-      "stroyResponse\"\000\022r\n\025FetchNextEntityBySize" +
-      "\022*.g2diagnostic.FetchNextEntityBySizeReq" +
-      "uest\032+.g2diagnostic.FetchNextEntityBySiz" +
-      "eResponse\"\000\022{\n\030FindEntitiesByFeatureIDs\022" +
-      "-.g2diagnostic.FindEntitiesByFeatureIDsR" +
-      "equest\032..g2diagnostic.FindEntitiesByFeat" +
-      "ureIDsResponse\"\000\022i\n\022GetAvailableMemory\022\'" +
-      ".g2diagnostic.GetAvailableMemoryRequest\032" +
-      "(.g2diagnostic.GetAvailableMemoryRespons" +
-      "e\"\000\022l\n\023GetDataSourceCounts\022(.g2diagnosti" +
-      "c.GetDataSourceCountsRequest\032).g2diagnos" +
-      "tic.GetDataSourceCountsResponse\"\000\022N\n\tGet" +
-      "DBInfo\022\036.g2diagnostic.GetDBInfoRequest\032\037" +
-      ".g2diagnostic.GetDBInfoResponse\"\000\022c\n\020Get" +
-      "EntityDetails\022%.g2diagnostic.GetEntityDe" +
-      "tailsRequest\032&.g2diagnostic.GetEntityDet" +
-      "ailsResponse\"\000\022l\n\023GetEntityListBySize\022(." +
-      "g2diagnostic.GetEntityListBySizeRequest\032" +
-      ").g2diagnostic.GetEntityListBySizeRespon" +
-      "se\"\000\022`\n\017GetEntityResume\022$.g2diagnostic.G" +
-      "etEntityResumeRequest\032%.g2diagnostic.Get" +
-      "EntityResumeResponse\"\000\022u\n\026GetEntitySizeB" +
-      "reakdown\022+.g2diagnostic.GetEntitySizeBre" +
-      "akdownRequest\032,.g2diagnostic.GetEntitySi" +
-      "zeBreakdownResponse\"\000\022Q\n\nGetFeature\022\037.g2" +
-      "diagnostic.GetFeatureRequest\032 .g2diagnos" +
-      "tic.GetFeatureResponse\"\000\022i\n\022GetGenericFe" +
-      "atures\022\'.g2diagnostic.GetGenericFeatures" +
-      "Request\032(.g2diagnostic.GetGenericFeature" +
-      "sResponse\"\000\022`\n\017GetLogicalCores\022$.g2diagn" +
-      "ostic.GetLogicalCoresRequest\032%.g2diagnos" +
-      "tic.GetLogicalCoresResponse\"\000\022o\n\024GetMapp" +
-      "ingStatistics\022).g2diagnostic.GetMappingS" +
-      "tatisticsRequest\032*.g2diagnostic.GetMappi" +
-      "ngStatisticsResponse\"\000\022c\n\020GetPhysicalCor" +
-      "es\022%.g2diagnostic.GetPhysicalCoresReques" +
-      "t\032&.g2diagnostic.GetPhysicalCoresRespons" +
-      "e\"\000\022u\n\026GetRelationshipDetails\022+.g2diagno" +
-      "stic.GetRelationshipDetailsRequest\032,.g2d" +
-      "iagnostic.GetRelationshipDetailsResponse" +
-      "\"\000\022x\n\027GetResolutionStatistics\022,.g2diagno" +
-      "stic.GetResolutionStatisticsRequest\032-.g2" +
-      "diagnostic.GetResolutionStatisticsRespon" +
-      "se\"\000\022o\n\024GetTotalSystemMemory\022).g2diagnos" +
-      "tic.GetTotalSystemMemoryRequest\032*.g2diag" +
-      "nostic.GetTotalSystemMemoryResponse\"\000\022?\n" +
-      "\004Init\022\031.g2diagnostic.InitRequest\032\032.g2dia" +
-      "gnostic.InitResponse\"\000\022c\n\020InitWithConfig" +
-      "ID\022%.g2diagnostic.InitWithConfigIDReques" +
-      "t\032&.g2diagnostic.InitWithConfigIDRespons" +
-      "e\"\000\022E\n\006Reinit\022\033.g2diagnostic.ReinitReque" +
-      "st\032\034.g2diagnostic.ReinitResponse\"\000\022w\n\026St" +
-      "reamEntityListBySize\022+.g2diagnostic.Stre" +
-      "amEntityListBySizeRequest\032,.g2diagnostic" +
-      ".StreamEntityListBySizeResponse\"\0000\001Bn\n\'c" +
-      "om.senzing.g2.engine.grpc.G2DiagnosticB\021" +
-      "G2DiagnosticProtoP\001Z.github.com/senzing/" +
-      "g2-sdk-go-grpc/g2diagnosticb\006proto3"
+      "\n\023CheckDBPerfResponse\022\016\n\006result\030\001 \001(\t\"\020\n" +
+      "\016DestroyRequest\"\021\n\017DestroyResponse\"\033\n\031Ge" +
+      "tAvailableMemoryRequest\",\n\032GetAvailableM" +
+      "emoryResponse\022\016\n\006result\030\001 \001(\003\"\022\n\020GetDBIn" +
+      "foRequest\"#\n\021GetDBInfoResponse\022\016\n\006result" +
+      "\030\001 \001(\t\"\030\n\026GetLogicalCoresRequest\")\n\027GetL" +
+      "ogicalCoresResponse\022\016\n\006result\030\001 \001(\005\"\031\n\027G" +
+      "etPhysicalCoresRequest\"*\n\030GetPhysicalCor" +
+      "esResponse\022\016\n\006result\030\001 \001(\005\"\035\n\033GetTotalSy" +
+      "stemMemoryRequest\".\n\034GetTotalSystemMemor" +
+      "yResponse\022\016\n\006result\030\001 \001(\003\"L\n\013InitRequest" +
+      "\022\022\n\nmoduleName\030\001 \001(\t\022\021\n\tiniParams\030\002 \001(\t\022" +
+      "\026\n\016verboseLogging\030\003 \001(\005\"\016\n\014InitResponse\"" +
+      "n\n\027InitWithConfigIDRequest\022\022\n\nmoduleName" +
+      "\030\001 \001(\t\022\021\n\tiniParams\030\002 \001(\t\022\024\n\014initConfigI" +
+      "D\030\003 \001(\003\022\026\n\016verboseLogging\030\004 \001(\005\"\032\n\030InitW" +
+      "ithConfigIDResponse\"%\n\rReinitRequest\022\024\n\014" +
+      "initConfigID\030\001 \001(\003\"\020\n\016ReinitResponse\"3\n\035" +
+      "StreamEntityListBySizeRequest\022\022\n\nentityS" +
+      "ize\030\001 \001(\005\"0\n\036StreamEntityListBySizeRespo" +
+      "nse\022\016\n\006result\030\001 \001(\t2\207\010\n\014G2Diagnostic\022T\n\013" +
+      "CheckDBPerf\022 .g2diagnostic.CheckDBPerfRe" +
+      "quest\032!.g2diagnostic.CheckDBPerfResponse" +
+      "\"\000\022H\n\007Destroy\022\034.g2diagnostic.DestroyRequ" +
+      "est\032\035.g2diagnostic.DestroyResponse\"\000\022i\n\022" +
+      "GetAvailableMemory\022\'.g2diagnostic.GetAva" +
+      "ilableMemoryRequest\032(.g2diagnostic.GetAv" +
+      "ailableMemoryResponse\"\000\022N\n\tGetDBInfo\022\036.g" +
+      "2diagnostic.GetDBInfoRequest\032\037.g2diagnos" +
+      "tic.GetDBInfoResponse\"\000\022`\n\017GetLogicalCor" +
+      "es\022$.g2diagnostic.GetLogicalCoresRequest" +
+      "\032%.g2diagnostic.GetLogicalCoresResponse\"" +
+      "\000\022c\n\020GetPhysicalCores\022%.g2diagnostic.Get" +
+      "PhysicalCoresRequest\032&.g2diagnostic.GetP" +
+      "hysicalCoresResponse\"\000\022o\n\024GetTotalSystem" +
+      "Memory\022).g2diagnostic.GetTotalSystemMemo" +
+      "ryRequest\032*.g2diagnostic.GetTotalSystemM" +
+      "emoryResponse\"\000\022?\n\004Init\022\031.g2diagnostic.I" +
+      "nitRequest\032\032.g2diagnostic.InitResponse\"\000" +
+      "\022c\n\020InitWithConfigID\022%.g2diagnostic.Init" +
+      "WithConfigIDRequest\032&.g2diagnostic.InitW" +
+      "ithConfigIDResponse\"\000\022E\n\006Reinit\022\033.g2diag" +
+      "nostic.ReinitRequest\032\034.g2diagnostic.Rein" +
+      "itResponse\"\000\022w\n\026StreamEntityListBySize\022+" +
+      ".g2diagnostic.StreamEntityListBySizeRequ" +
+      "est\032,.g2diagnostic.StreamEntityListBySiz" +
+      "eResponse\"\0000\001Bn\n\'com.senzing.g2.engine.g" +
+      "rpc.G2DiagnosticB\021G2DiagnosticProtoP\001Z.g" +
+      "ithub.com/senzing/g2-sdk-go-grpc/g2diagn" +
+      "osticb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -402,278 +202,122 @@ public final class G2DiagnosticProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_CheckDBPerfResponse_descriptor,
         new java.lang.String[] { "Result", });
-    internal_static_g2diagnostic_CloseEntityListBySizeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_g2diagnostic_CloseEntityListBySizeRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_CloseEntityListBySizeRequest_descriptor,
-        new java.lang.String[] { "EntityListBySizeHandle", });
-    internal_static_g2diagnostic_CloseEntityListBySizeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_g2diagnostic_CloseEntityListBySizeResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_CloseEntityListBySizeResponse_descriptor,
-        new java.lang.String[] { });
     internal_static_g2diagnostic_DestroyRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_g2diagnostic_DestroyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_DestroyRequest_descriptor,
         new java.lang.String[] { });
     internal_static_g2diagnostic_DestroyResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_g2diagnostic_DestroyResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_DestroyResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_g2diagnostic_FetchNextEntityBySizeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_g2diagnostic_FetchNextEntityBySizeRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_FetchNextEntityBySizeRequest_descriptor,
-        new java.lang.String[] { "EntityListBySizeHandle", });
-    internal_static_g2diagnostic_FetchNextEntityBySizeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_g2diagnostic_FetchNextEntityBySizeResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_FetchNextEntityBySizeResponse_descriptor,
-        new java.lang.String[] { "Result", });
-    internal_static_g2diagnostic_FindEntitiesByFeatureIDsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_g2diagnostic_FindEntitiesByFeatureIDsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_FindEntitiesByFeatureIDsRequest_descriptor,
-        new java.lang.String[] { "Features", });
-    internal_static_g2diagnostic_FindEntitiesByFeatureIDsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_g2diagnostic_FindEntitiesByFeatureIDsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_FindEntitiesByFeatureIDsResponse_descriptor,
-        new java.lang.String[] { "Result", });
     internal_static_g2diagnostic_GetAvailableMemoryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_g2diagnostic_GetAvailableMemoryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_GetAvailableMemoryRequest_descriptor,
         new java.lang.String[] { });
     internal_static_g2diagnostic_GetAvailableMemoryResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_g2diagnostic_GetAvailableMemoryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_GetAvailableMemoryResponse_descriptor,
         new java.lang.String[] { "Result", });
-    internal_static_g2diagnostic_GetDataSourceCountsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_g2diagnostic_GetDataSourceCountsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetDataSourceCountsRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_g2diagnostic_GetDataSourceCountsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_g2diagnostic_GetDataSourceCountsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetDataSourceCountsResponse_descriptor,
-        new java.lang.String[] { "Result", });
     internal_static_g2diagnostic_GetDBInfoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_g2diagnostic_GetDBInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_GetDBInfoRequest_descriptor,
         new java.lang.String[] { });
     internal_static_g2diagnostic_GetDBInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_g2diagnostic_GetDBInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_GetDBInfoResponse_descriptor,
         new java.lang.String[] { "Result", });
-    internal_static_g2diagnostic_GetEntityDetailsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
-    internal_static_g2diagnostic_GetEntityDetailsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetEntityDetailsRequest_descriptor,
-        new java.lang.String[] { "EntityID", "IncludeInternalFeatures", });
-    internal_static_g2diagnostic_GetEntityDetailsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
-    internal_static_g2diagnostic_GetEntityDetailsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetEntityDetailsResponse_descriptor,
-        new java.lang.String[] { "Result", });
-    internal_static_g2diagnostic_GetEntityListBySizeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(18);
-    internal_static_g2diagnostic_GetEntityListBySizeRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetEntityListBySizeRequest_descriptor,
-        new java.lang.String[] { "EntitySize", });
-    internal_static_g2diagnostic_GetEntityListBySizeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(19);
-    internal_static_g2diagnostic_GetEntityListBySizeResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetEntityListBySizeResponse_descriptor,
-        new java.lang.String[] { "Result", });
-    internal_static_g2diagnostic_GetEntityResumeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(20);
-    internal_static_g2diagnostic_GetEntityResumeRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetEntityResumeRequest_descriptor,
-        new java.lang.String[] { "EntityID", });
-    internal_static_g2diagnostic_GetEntityResumeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(21);
-    internal_static_g2diagnostic_GetEntityResumeResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetEntityResumeResponse_descriptor,
-        new java.lang.String[] { "Result", });
-    internal_static_g2diagnostic_GetEntitySizeBreakdownRequest_descriptor =
-      getDescriptor().getMessageTypes().get(22);
-    internal_static_g2diagnostic_GetEntitySizeBreakdownRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetEntitySizeBreakdownRequest_descriptor,
-        new java.lang.String[] { "MinimumEntitySize", "IncludeInternalFeatures", });
-    internal_static_g2diagnostic_GetEntitySizeBreakdownResponse_descriptor =
-      getDescriptor().getMessageTypes().get(23);
-    internal_static_g2diagnostic_GetEntitySizeBreakdownResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetEntitySizeBreakdownResponse_descriptor,
-        new java.lang.String[] { "Result", });
-    internal_static_g2diagnostic_GetFeatureRequest_descriptor =
-      getDescriptor().getMessageTypes().get(24);
-    internal_static_g2diagnostic_GetFeatureRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetFeatureRequest_descriptor,
-        new java.lang.String[] { "LibFeatID", });
-    internal_static_g2diagnostic_GetFeatureResponse_descriptor =
-      getDescriptor().getMessageTypes().get(25);
-    internal_static_g2diagnostic_GetFeatureResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetFeatureResponse_descriptor,
-        new java.lang.String[] { "Result", });
-    internal_static_g2diagnostic_GetGenericFeaturesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(26);
-    internal_static_g2diagnostic_GetGenericFeaturesRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetGenericFeaturesRequest_descriptor,
-        new java.lang.String[] { "FeatureType", "MaximumEstimatedCount", });
-    internal_static_g2diagnostic_GetGenericFeaturesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(27);
-    internal_static_g2diagnostic_GetGenericFeaturesResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetGenericFeaturesResponse_descriptor,
-        new java.lang.String[] { "Result", });
     internal_static_g2diagnostic_GetLogicalCoresRequest_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_g2diagnostic_GetLogicalCoresRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_GetLogicalCoresRequest_descriptor,
         new java.lang.String[] { });
     internal_static_g2diagnostic_GetLogicalCoresResponse_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_g2diagnostic_GetLogicalCoresResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_GetLogicalCoresResponse_descriptor,
         new java.lang.String[] { "Result", });
-    internal_static_g2diagnostic_GetMappingStatisticsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(30);
-    internal_static_g2diagnostic_GetMappingStatisticsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetMappingStatisticsRequest_descriptor,
-        new java.lang.String[] { "IncludeInternalFeatures", });
-    internal_static_g2diagnostic_GetMappingStatisticsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(31);
-    internal_static_g2diagnostic_GetMappingStatisticsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetMappingStatisticsResponse_descriptor,
-        new java.lang.String[] { "Result", });
     internal_static_g2diagnostic_GetPhysicalCoresRequest_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_g2diagnostic_GetPhysicalCoresRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_GetPhysicalCoresRequest_descriptor,
         new java.lang.String[] { });
     internal_static_g2diagnostic_GetPhysicalCoresResponse_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_g2diagnostic_GetPhysicalCoresResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_GetPhysicalCoresResponse_descriptor,
         new java.lang.String[] { "Result", });
-    internal_static_g2diagnostic_GetRelationshipDetailsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(34);
-    internal_static_g2diagnostic_GetRelationshipDetailsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetRelationshipDetailsRequest_descriptor,
-        new java.lang.String[] { "RelationshipID", "IncludeInternalFeatures", });
-    internal_static_g2diagnostic_GetRelationshipDetailsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(35);
-    internal_static_g2diagnostic_GetRelationshipDetailsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetRelationshipDetailsResponse_descriptor,
-        new java.lang.String[] { "Result", });
-    internal_static_g2diagnostic_GetResolutionStatisticsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(36);
-    internal_static_g2diagnostic_GetResolutionStatisticsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetResolutionStatisticsRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_g2diagnostic_GetResolutionStatisticsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(37);
-    internal_static_g2diagnostic_GetResolutionStatisticsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2diagnostic_GetResolutionStatisticsResponse_descriptor,
-        new java.lang.String[] { "Result", });
     internal_static_g2diagnostic_GetTotalSystemMemoryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_g2diagnostic_GetTotalSystemMemoryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_GetTotalSystemMemoryRequest_descriptor,
         new java.lang.String[] { });
     internal_static_g2diagnostic_GetTotalSystemMemoryResponse_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_g2diagnostic_GetTotalSystemMemoryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_GetTotalSystemMemoryResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_g2diagnostic_InitRequest_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_g2diagnostic_InitRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_InitRequest_descriptor,
         new java.lang.String[] { "ModuleName", "IniParams", "VerboseLogging", });
     internal_static_g2diagnostic_InitResponse_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_g2diagnostic_InitResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_InitResponse_descriptor,
         new java.lang.String[] { });
     internal_static_g2diagnostic_InitWithConfigIDRequest_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_g2diagnostic_InitWithConfigIDRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_InitWithConfigIDRequest_descriptor,
         new java.lang.String[] { "ModuleName", "IniParams", "InitConfigID", "VerboseLogging", });
     internal_static_g2diagnostic_InitWithConfigIDResponse_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_g2diagnostic_InitWithConfigIDResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_InitWithConfigIDResponse_descriptor,
         new java.lang.String[] { });
     internal_static_g2diagnostic_ReinitRequest_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_g2diagnostic_ReinitRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_ReinitRequest_descriptor,
         new java.lang.String[] { "InitConfigID", });
     internal_static_g2diagnostic_ReinitResponse_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_g2diagnostic_ReinitResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_ReinitResponse_descriptor,
         new java.lang.String[] { });
     internal_static_g2diagnostic_StreamEntityListBySizeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_g2diagnostic_StreamEntityListBySizeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_StreamEntityListBySizeRequest_descriptor,
         new java.lang.String[] { "EntitySize", });
     internal_static_g2diagnostic_StreamEntityListBySizeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_g2diagnostic_StreamEntityListBySizeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_StreamEntityListBySizeResponse_descriptor,

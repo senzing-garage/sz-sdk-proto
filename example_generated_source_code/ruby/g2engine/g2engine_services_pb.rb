@@ -16,9 +16,6 @@ module G2engine
 
       rpc :AddRecord, ::G2engine::AddRecordRequest, ::G2engine::AddRecordResponse
       rpc :AddRecordWithInfo, ::G2engine::AddRecordWithInfoRequest, ::G2engine::AddRecordWithInfoResponse
-      rpc :AddRecordWithInfoWithReturnedRecordID, ::G2engine::AddRecordWithInfoWithReturnedRecordIDRequest, ::G2engine::AddRecordWithInfoWithReturnedRecordIDResponse
-      rpc :AddRecordWithReturnedRecordID, ::G2engine::AddRecordWithReturnedRecordIDRequest, ::G2engine::AddRecordWithReturnedRecordIDResponse
-      rpc :CheckRecord, ::G2engine::CheckRecordRequest, ::G2engine::CheckRecordResponse
       rpc :CloseExport, ::G2engine::CloseExportRequest, ::G2engine::CloseExportResponse
       rpc :CountRedoRecords, ::G2engine::CountRedoRecordsRequest, ::G2engine::CountRedoRecordsResponse
       rpc :DeleteRecord, ::G2engine::DeleteRecordRequest, ::G2engine::DeleteRecordResponse
@@ -64,11 +61,7 @@ module G2engine
       rpc :InitWithConfigID, ::G2engine::InitWithConfigIDRequest, ::G2engine::InitWithConfigIDResponse
       rpc :PrimeEngine, ::G2engine::PrimeEngineRequest, ::G2engine::PrimeEngineResponse
       rpc :Process, ::G2engine::ProcessRequest, ::G2engine::ProcessResponse
-      rpc :ProcessRedoRecord, ::G2engine::ProcessRedoRecordRequest, ::G2engine::ProcessRedoRecordResponse
-      rpc :ProcessRedoRecordWithInfo, ::G2engine::ProcessRedoRecordWithInfoRequest, ::G2engine::ProcessRedoRecordWithInfoResponse
       rpc :ProcessWithInfo, ::G2engine::ProcessWithInfoRequest, ::G2engine::ProcessWithInfoResponse
-      rpc :ProcessWithResponse, ::G2engine::ProcessWithResponseRequest, ::G2engine::ProcessWithResponseResponse
-      rpc :ProcessWithResponseResize, ::G2engine::ProcessWithResponseResizeRequest, ::G2engine::ProcessWithResponseResizeResponse
       rpc :PurgeRepository, ::G2engine::PurgeRepositoryRequest, ::G2engine::PurgeRepositoryResponse
       rpc :ReevaluateEntity, ::G2engine::ReevaluateEntityRequest, ::G2engine::ReevaluateEntityResponse
       rpc :ReevaluateEntityWithInfo, ::G2engine::ReevaluateEntityWithInfoRequest, ::G2engine::ReevaluateEntityWithInfoResponse

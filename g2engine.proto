@@ -9,9 +9,6 @@ option java_outer_classname = "G2EngineProto";
 service G2Engine {
   rpc AddRecord(AddRecordRequest) returns (AddRecordResponse) {}
   rpc AddRecordWithInfo(AddRecordWithInfoRequest) returns (AddRecordWithInfoResponse) {}
-  rpc AddRecordWithInfoWithReturnedRecordID(AddRecordWithInfoWithReturnedRecordIDRequest) returns (AddRecordWithInfoWithReturnedRecordIDResponse) {}
-  rpc AddRecordWithReturnedRecordID(AddRecordWithReturnedRecordIDRequest) returns (AddRecordWithReturnedRecordIDResponse) {}
-  rpc CheckRecord(CheckRecordRequest) returns (CheckRecordResponse) {}
   rpc CloseExport(CloseExportRequest) returns (CloseExportResponse) {}
   rpc CountRedoRecords(CountRedoRecordsRequest) returns (CountRedoRecordsResponse) {}
   rpc DeleteRecord(DeleteRecordRequest) returns (DeleteRecordResponse) {}
@@ -57,11 +54,7 @@ service G2Engine {
   rpc InitWithConfigID(InitWithConfigIDRequest) returns (InitWithConfigIDResponse) {}
   rpc PrimeEngine(PrimeEngineRequest) returns (PrimeEngineResponse) {}
   rpc Process(ProcessRequest) returns (ProcessResponse) {}
-  rpc ProcessRedoRecord(ProcessRedoRecordRequest) returns (ProcessRedoRecordResponse) {}
-  rpc ProcessRedoRecordWithInfo(ProcessRedoRecordWithInfoRequest) returns (ProcessRedoRecordWithInfoResponse) {}
   rpc ProcessWithInfo(ProcessWithInfoRequest) returns (ProcessWithInfoResponse) {}
-  rpc ProcessWithResponse(ProcessWithResponseRequest) returns (ProcessWithResponseResponse) {}
-  rpc ProcessWithResponseResize(ProcessWithResponseResizeRequest) returns (ProcessWithResponseResizeResponse) {}
   rpc PurgeRepository(PurgeRepositoryRequest) returns (PurgeRepositoryResponse) {}
   rpc ReevaluateEntity(ReevaluateEntityRequest) returns (ReevaluateEntityResponse) {}
   rpc ReevaluateEntityWithInfo(ReevaluateEntityWithInfoRequest) returns (ReevaluateEntityWithInfoResponse) {}
@@ -103,37 +96,6 @@ message AddRecordWithInfoRequest {
 }
 
 message AddRecordWithInfoResponse {
-  string result = 1;
-}
-
-message AddRecordWithInfoWithReturnedRecordIDRequest {
-  string dataSourceCode = 1;
-  string jsonData = 2;
-  string loadID = 3;
-  int64 flags = 4;
-}
-
-message AddRecordWithInfoWithReturnedRecordIDResponse {
-  string withInfo = 1;
-  string recordID = 2;
-}
-
-message AddRecordWithReturnedRecordIDRequest {
-  string dataSourceCode = 1;
-  string jsonData = 2;
-  string loadID = 3;
-}
-
-message AddRecordWithReturnedRecordIDResponse {
-  string result = 1;
-}
-
-message CheckRecordRequest {
-  string record = 1;
-  string recordQueryList = 2;
-}
-
-message CheckRecordResponse {
   string result = 1;
 }
 
@@ -214,6 +176,7 @@ message FindInterestingEntitiesByEntityIDRequest {
   int64 entityID = 1;
   int64 flags = 2;
 }
+
 message FindInterestingEntitiesByEntityIDResponse {
   string result = 1;
 }
@@ -283,6 +246,7 @@ message FindPathByEntityIDRequest {
 message FindPathByEntityIDResponse {
   string result = 1;
 }
+
 message FindPathByEntityID_V2Request {
   int64 entityID1 = 1;
   int64 entityID2 = 2;
@@ -556,43 +520,12 @@ message ProcessRequest {
 
 message ProcessResponse {}
 
-message ProcessRedoRecordRequest {}
-
-message ProcessRedoRecordResponse {
-  string result = 1;
-}
-
-message ProcessRedoRecordWithInfoRequest {
-  int64 flags = 1;
-}
-
-message ProcessRedoRecordWithInfoResponse {
-  string result = 1;
-  string withInfo = 2;
-}
-
 message ProcessWithInfoRequest {
   string record = 1;
   int64 flags = 2;
 }
 
 message ProcessWithInfoResponse {
-  string result = 1;
-}
-
-message ProcessWithResponseRequest {
-  string record = 1;
-}
-
-message ProcessWithResponseResponse {
-  string result = 1;
-}
-
-message ProcessWithResponseResizeRequest {
-  string record = 1;
-}
-
-message ProcessWithResponseResizeResponse {
   string result = 1;
 }
 

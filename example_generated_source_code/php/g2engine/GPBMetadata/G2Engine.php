@@ -16,7 +16,7 @@ class G2Engine
         }
         $pool->internalAddGeneratedFile(
             '
-‹
+Ÿ~
 g2engine.protog2engine"^
 AddRecordRequest
 dataSourceCode (	
@@ -31,25 +31,6 @@ class G2Engine
 loadID (	
 flags ("+
 AddRecordWithInfoResponse
-result (	"w
-,AddRecordWithInfoWithReturnedRecordIDRequest
-dataSourceCode (	
-jsonData (	
-loadID (	
-flags ("S
--AddRecordWithInfoWithReturnedRecordIDResponse
-withInfo (	
-recordID (	"`
-$AddRecordWithReturnedRecordIDRequest
-dataSourceCode (	
-jsonData (	
-loadID (	"7
-%AddRecordWithReturnedRecordIDResponse
-result (	"=
-CheckRecordRequest
-record (	
-recordQueryList (	"%
-CheckRecordResponse
 result (	",
 CloseExportRequest
 responseHandle ("
@@ -315,27 +296,11 @@ moduleName (	
 PrimeEngineResponse" 
 ProcessRequest
 record (	"
-ProcessResponse"
-ProcessRedoRecordRequest"+
-ProcessRedoRecordResponse
-result (	"1
- ProcessRedoRecordWithInfoRequest
-flags ("E
-!ProcessRedoRecordWithInfoResponse
-result (	
-withInfo (	"7
+ProcessResponse"7
 ProcessWithInfoRequest
 record (	
 flags (")
 ProcessWithInfoResponse
-result (	",
-ProcessWithResponseRequest
-record (	"-
-ProcessWithResponseResponse
-result (	"2
- ProcessWithResponseResizeRequest
-record (	"3
-!ProcessWithResponseResizeResponse
 result (	"
 PurgeRepositoryRequest"
 PurgeRepositoryResponse":
@@ -442,13 +407,10 @@ $StreamExportJSONEntityReportResponse
 	recordID2 (	
 flags ("\'
 WhyRecords_V2Response
-result (	2”>
+result (	2î7
 G2EngineF
 	AddRecord.g2engine.AddRecordRequest.g2engine.AddRecordResponse" ^
-AddRecordWithInfo".g2engine.AddRecordWithInfoRequest#.g2engine.AddRecordWithInfoResponse" š
-%AddRecordWithInfoWithReturnedRecordID6.g2engine.AddRecordWithInfoWithReturnedRecordIDRequest7.g2engine.AddRecordWithInfoWithReturnedRecordIDResponse" ‚
-AddRecordWithReturnedRecordID..g2engine.AddRecordWithReturnedRecordIDRequest/.g2engine.AddRecordWithReturnedRecordIDResponse" L
-CheckRecord.g2engine.CheckRecordRequest.g2engine.CheckRecordResponse" L
+AddRecordWithInfo".g2engine.AddRecordWithInfoRequest#.g2engine.AddRecordWithInfoResponse" L
 CloseExport.g2engine.CloseExportRequest.g2engine.CloseExportResponse" [
 CountRedoRecords!.g2engine.CountRedoRecordsRequest".g2engine.CountRedoRecordsResponse" O
 DeleteRecord.g2engine.DeleteRecordRequest.g2engine.DeleteRecordResponse" g
@@ -493,12 +455,8 @@ $FindPathIncludingSourceByRecordID_V25.g2engine.FindPathIncludingSourceByRecord
 Init.g2engine.InitRequest.g2engine.InitResponse" [
 InitWithConfigID!.g2engine.InitWithConfigIDRequest".g2engine.InitWithConfigIDResponse" L
 PrimeEngine.g2engine.PrimeEngineRequest.g2engine.PrimeEngineResponse" @
-Process.g2engine.ProcessRequest.g2engine.ProcessResponse" ^
-ProcessRedoRecord".g2engine.ProcessRedoRecordRequest#.g2engine.ProcessRedoRecordResponse" v
-ProcessRedoRecordWithInfo*.g2engine.ProcessRedoRecordWithInfoRequest+.g2engine.ProcessRedoRecordWithInfoResponse" X
-ProcessWithInfo .g2engine.ProcessWithInfoRequest!.g2engine.ProcessWithInfoResponse" d
-ProcessWithResponse$.g2engine.ProcessWithResponseRequest%.g2engine.ProcessWithResponseResponse" v
-ProcessWithResponseResize*.g2engine.ProcessWithResponseResizeRequest+.g2engine.ProcessWithResponseResizeResponse" X
+Process.g2engine.ProcessRequest.g2engine.ProcessResponse" X
+ProcessWithInfo .g2engine.ProcessWithInfoRequest!.g2engine.ProcessWithInfoResponse" X
 PurgeRepository .g2engine.PurgeRepositoryRequest!.g2engine.PurgeRepositoryResponse" [
 ReevaluateEntity!.g2engine.ReevaluateEntityRequest".g2engine.ReevaluateEntityResponse" s
 ReevaluateEntityWithInfo).g2engine.ReevaluateEntityWithInfoRequest*.g2engine.ReevaluateEntityWithInfoResponse" [

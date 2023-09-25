@@ -23,31 +23,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "g2engine.AddRecordWithInfoResponse" do
       optional :result, :string, 1
     end
-    add_message "g2engine.AddRecordWithInfoWithReturnedRecordIDRequest" do
-      optional :dataSourceCode, :string, 1
-      optional :jsonData, :string, 2
-      optional :loadID, :string, 3
-      optional :flags, :int64, 4
-    end
-    add_message "g2engine.AddRecordWithInfoWithReturnedRecordIDResponse" do
-      optional :withInfo, :string, 1
-      optional :recordID, :string, 2
-    end
-    add_message "g2engine.AddRecordWithReturnedRecordIDRequest" do
-      optional :dataSourceCode, :string, 1
-      optional :jsonData, :string, 2
-      optional :loadID, :string, 3
-    end
-    add_message "g2engine.AddRecordWithReturnedRecordIDResponse" do
-      optional :result, :string, 1
-    end
-    add_message "g2engine.CheckRecordRequest" do
-      optional :record, :string, 1
-      optional :recordQueryList, :string, 2
-    end
-    add_message "g2engine.CheckRecordResponse" do
-      optional :result, :string, 1
-    end
     add_message "g2engine.CloseExportRequest" do
       optional :responseHandle, :int64, 1
     end
@@ -395,35 +370,11 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "g2engine.ProcessResponse" do
     end
-    add_message "g2engine.ProcessRedoRecordRequest" do
-    end
-    add_message "g2engine.ProcessRedoRecordResponse" do
-      optional :result, :string, 1
-    end
-    add_message "g2engine.ProcessRedoRecordWithInfoRequest" do
-      optional :flags, :int64, 1
-    end
-    add_message "g2engine.ProcessRedoRecordWithInfoResponse" do
-      optional :result, :string, 1
-      optional :withInfo, :string, 2
-    end
     add_message "g2engine.ProcessWithInfoRequest" do
       optional :record, :string, 1
       optional :flags, :int64, 2
     end
     add_message "g2engine.ProcessWithInfoResponse" do
-      optional :result, :string, 1
-    end
-    add_message "g2engine.ProcessWithResponseRequest" do
-      optional :record, :string, 1
-    end
-    add_message "g2engine.ProcessWithResponseResponse" do
-      optional :result, :string, 1
-    end
-    add_message "g2engine.ProcessWithResponseResizeRequest" do
-      optional :record, :string, 1
-    end
-    add_message "g2engine.ProcessWithResponseResizeResponse" do
       optional :result, :string, 1
     end
     add_message "g2engine.PurgeRepositoryRequest" do
@@ -582,12 +533,6 @@ module G2engine
   AddRecordResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordResponse").msgclass
   AddRecordWithInfoRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordWithInfoRequest").msgclass
   AddRecordWithInfoResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordWithInfoResponse").msgclass
-  AddRecordWithInfoWithReturnedRecordIDRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordWithInfoWithReturnedRecordIDRequest").msgclass
-  AddRecordWithInfoWithReturnedRecordIDResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordWithInfoWithReturnedRecordIDResponse").msgclass
-  AddRecordWithReturnedRecordIDRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordWithReturnedRecordIDRequest").msgclass
-  AddRecordWithReturnedRecordIDResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.AddRecordWithReturnedRecordIDResponse").msgclass
-  CheckRecordRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.CheckRecordRequest").msgclass
-  CheckRecordResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.CheckRecordResponse").msgclass
   CloseExportRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.CloseExportRequest").msgclass
   CloseExportResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.CloseExportResponse").msgclass
   CountRedoRecordsRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.CountRedoRecordsRequest").msgclass
@@ -678,16 +623,8 @@ module G2engine
   PrimeEngineResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.PrimeEngineResponse").msgclass
   ProcessRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ProcessRequest").msgclass
   ProcessResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ProcessResponse").msgclass
-  ProcessRedoRecordRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ProcessRedoRecordRequest").msgclass
-  ProcessRedoRecordResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ProcessRedoRecordResponse").msgclass
-  ProcessRedoRecordWithInfoRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ProcessRedoRecordWithInfoRequest").msgclass
-  ProcessRedoRecordWithInfoResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ProcessRedoRecordWithInfoResponse").msgclass
   ProcessWithInfoRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ProcessWithInfoRequest").msgclass
   ProcessWithInfoResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ProcessWithInfoResponse").msgclass
-  ProcessWithResponseRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ProcessWithResponseRequest").msgclass
-  ProcessWithResponseResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ProcessWithResponseResponse").msgclass
-  ProcessWithResponseResizeRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ProcessWithResponseResizeRequest").msgclass
-  ProcessWithResponseResizeResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ProcessWithResponseResizeResponse").msgclass
   PurgeRepositoryRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.PurgeRepositoryRequest").msgclass
   PurgeRepositoryResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.PurgeRepositoryResponse").msgclass
   ReevaluateEntityRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ReevaluateEntityRequest").msgclass
