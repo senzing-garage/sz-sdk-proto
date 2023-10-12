@@ -57,17 +57,17 @@ private static final long serialVersionUID = 0L;
           }
           case 16: {
 
-            maxDegree_ = input.readInt32();
+            maxDegree_ = input.readInt64();
             break;
           }
           case 24: {
 
-            buildOutDegree_ = input.readInt32();
+            buildOutDegree_ = input.readInt64();
             break;
           }
           case 32: {
 
-            maxEntities_ = input.readInt32();
+            maxEntities_ = input.readInt64();
             break;
           }
           default: {
@@ -143,35 +143,35 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MAXDEGREE_FIELD_NUMBER = 2;
-  private int maxDegree_;
+  private long maxDegree_;
   /**
-   * <code>int32 maxDegree = 2;</code>
+   * <code>int64 maxDegree = 2;</code>
    * @return The maxDegree.
    */
   @java.lang.Override
-  public int getMaxDegree() {
+  public long getMaxDegree() {
     return maxDegree_;
   }
 
   public static final int BUILDOUTDEGREE_FIELD_NUMBER = 3;
-  private int buildOutDegree_;
+  private long buildOutDegree_;
   /**
-   * <code>int32 buildOutDegree = 3;</code>
+   * <code>int64 buildOutDegree = 3;</code>
    * @return The buildOutDegree.
    */
   @java.lang.Override
-  public int getBuildOutDegree() {
+  public long getBuildOutDegree() {
     return buildOutDegree_;
   }
 
   public static final int MAXENTITIES_FIELD_NUMBER = 4;
-  private int maxEntities_;
+  private long maxEntities_;
   /**
-   * <code>int32 maxEntities = 4;</code>
+   * <code>int64 maxEntities = 4;</code>
    * @return The maxEntities.
    */
   @java.lang.Override
-  public int getMaxEntities() {
+  public long getMaxEntities() {
     return maxEntities_;
   }
 
@@ -192,14 +192,14 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityList_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, entityList_);
     }
-    if (maxDegree_ != 0) {
-      output.writeInt32(2, maxDegree_);
+    if (maxDegree_ != 0L) {
+      output.writeInt64(2, maxDegree_);
     }
-    if (buildOutDegree_ != 0) {
-      output.writeInt32(3, buildOutDegree_);
+    if (buildOutDegree_ != 0L) {
+      output.writeInt64(3, buildOutDegree_);
     }
-    if (maxEntities_ != 0) {
-      output.writeInt32(4, maxEntities_);
+    if (maxEntities_ != 0L) {
+      output.writeInt64(4, maxEntities_);
     }
     unknownFields.writeTo(output);
   }
@@ -213,17 +213,17 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityList_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, entityList_);
     }
-    if (maxDegree_ != 0) {
+    if (maxDegree_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(2, maxDegree_);
+        .computeInt64Size(2, maxDegree_);
     }
-    if (buildOutDegree_ != 0) {
+    if (buildOutDegree_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(3, buildOutDegree_);
+        .computeInt64Size(3, buildOutDegree_);
     }
-    if (maxEntities_ != 0) {
+    if (maxEntities_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(4, maxEntities_);
+        .computeInt64Size(4, maxEntities_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -262,11 +262,14 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ENTITYLIST_FIELD_NUMBER;
     hash = (53 * hash) + getEntityList().hashCode();
     hash = (37 * hash) + MAXDEGREE_FIELD_NUMBER;
-    hash = (53 * hash) + getMaxDegree();
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getMaxDegree());
     hash = (37 * hash) + BUILDOUTDEGREE_FIELD_NUMBER;
-    hash = (53 * hash) + getBuildOutDegree();
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getBuildOutDegree());
     hash = (37 * hash) + MAXENTITIES_FIELD_NUMBER;
-    hash = (53 * hash) + getMaxEntities();
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getMaxEntities());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -402,11 +405,11 @@ private static final long serialVersionUID = 0L;
       super.clear();
       entityList_ = "";
 
-      maxDegree_ = 0;
+      maxDegree_ = 0L;
 
-      buildOutDegree_ = 0;
+      buildOutDegree_ = 0L;
 
-      maxEntities_ = 0;
+      maxEntities_ = 0L;
 
       return this;
     }
@@ -490,13 +493,13 @@ private static final long serialVersionUID = 0L;
         entityList_ = other.entityList_;
         onChanged();
       }
-      if (other.getMaxDegree() != 0) {
+      if (other.getMaxDegree() != 0L) {
         setMaxDegree(other.getMaxDegree());
       }
-      if (other.getBuildOutDegree() != 0) {
+      if (other.getBuildOutDegree() != 0L) {
         setBuildOutDegree(other.getBuildOutDegree());
       }
-      if (other.getMaxEntities() != 0) {
+      if (other.getMaxEntities() != 0L) {
         setMaxEntities(other.getMaxEntities());
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -604,95 +607,95 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int maxDegree_ ;
+    private long maxDegree_ ;
     /**
-     * <code>int32 maxDegree = 2;</code>
+     * <code>int64 maxDegree = 2;</code>
      * @return The maxDegree.
      */
     @java.lang.Override
-    public int getMaxDegree() {
+    public long getMaxDegree() {
       return maxDegree_;
     }
     /**
-     * <code>int32 maxDegree = 2;</code>
+     * <code>int64 maxDegree = 2;</code>
      * @param value The maxDegree to set.
      * @return This builder for chaining.
      */
-    public Builder setMaxDegree(int value) {
+    public Builder setMaxDegree(long value) {
       
       maxDegree_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 maxDegree = 2;</code>
+     * <code>int64 maxDegree = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearMaxDegree() {
       
-      maxDegree_ = 0;
+      maxDegree_ = 0L;
       onChanged();
       return this;
     }
 
-    private int buildOutDegree_ ;
+    private long buildOutDegree_ ;
     /**
-     * <code>int32 buildOutDegree = 3;</code>
+     * <code>int64 buildOutDegree = 3;</code>
      * @return The buildOutDegree.
      */
     @java.lang.Override
-    public int getBuildOutDegree() {
+    public long getBuildOutDegree() {
       return buildOutDegree_;
     }
     /**
-     * <code>int32 buildOutDegree = 3;</code>
+     * <code>int64 buildOutDegree = 3;</code>
      * @param value The buildOutDegree to set.
      * @return This builder for chaining.
      */
-    public Builder setBuildOutDegree(int value) {
+    public Builder setBuildOutDegree(long value) {
       
       buildOutDegree_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 buildOutDegree = 3;</code>
+     * <code>int64 buildOutDegree = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearBuildOutDegree() {
       
-      buildOutDegree_ = 0;
+      buildOutDegree_ = 0L;
       onChanged();
       return this;
     }
 
-    private int maxEntities_ ;
+    private long maxEntities_ ;
     /**
-     * <code>int32 maxEntities = 4;</code>
+     * <code>int64 maxEntities = 4;</code>
      * @return The maxEntities.
      */
     @java.lang.Override
-    public int getMaxEntities() {
+    public long getMaxEntities() {
       return maxEntities_;
     }
     /**
-     * <code>int32 maxEntities = 4;</code>
+     * <code>int64 maxEntities = 4;</code>
      * @param value The maxEntities to set.
      * @return This builder for chaining.
      */
-    public Builder setMaxEntities(int value) {
+    public Builder setMaxEntities(long value) {
       
       maxEntities_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 maxEntities = 4;</code>
+     * <code>int64 maxEntities = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearMaxEntities() {
       
-      maxEntities_ = 0;
+      maxEntities_ = 0L;
       onChanged();
       return this;
     }

@@ -193,9 +193,9 @@ message FindInterestingEntitiesByRecordIDResponse {
 
 message FindNetworkByEntityIDRequest {
   string entityList = 1;
-  int32 maxDegree = 2;
-  int32 buildOutDegree = 3;
-  int32 maxEntities = 4;
+  int64 maxDegree = 2;
+  int64 buildOutDegree = 3;
+  int64 maxEntities = 4;
 }
 
 message FindNetworkByEntityIDResponse {
@@ -204,9 +204,9 @@ message FindNetworkByEntityIDResponse {
 
 message FindNetworkByEntityID_V2Request {
   string entityList = 1;
-  int32 maxDegree = 2;
-  int32 buildOutDegree = 3;
-  int32 maxEntities = 4;
+  int64 maxDegree = 2;
+  int64 buildOutDegree = 3;
+  int64 maxEntities = 4;
   int64 flags = 5;
 }
 
@@ -216,9 +216,9 @@ message FindNetworkByEntityID_V2Response {
 
 message FindNetworkByRecordIDRequest {
   string recordList = 1;
-  int32 maxDegree = 2;
-  int32 buildOutDegree = 3;
-  int32 maxEntities = 4;
+  int64 maxDegree = 2;
+  int64 buildOutDegree = 3;
+  int64 maxEntities = 4;
 }
 
 message FindNetworkByRecordIDResponse {
@@ -227,9 +227,9 @@ message FindNetworkByRecordIDResponse {
 
 message FindNetworkByRecordID_V2Request {
   string recordList = 1;
-  int32 maxDegree = 2;
-  int32 buildOutDegree = 3;
-  int32 maxEntities = 4;
+  int64 maxDegree = 2;
+  int64 buildOutDegree = 3;
+  int64 maxEntities = 4;
   int64 flags = 5;
 }
 
@@ -240,7 +240,7 @@ message FindNetworkByRecordID_V2Response {
 message FindPathByEntityIDRequest {
   int64 entityID1 = 1;
   int64 entityID2 = 2;
-  int32 maxDegree = 3;
+  int64 maxDegree = 3;
 }
 
 message FindPathByEntityIDResponse {
@@ -250,7 +250,7 @@ message FindPathByEntityIDResponse {
 message FindPathByEntityID_V2Request {
   int64 entityID1 = 1;
   int64 entityID2 = 2;
-  int32 maxDegree = 3;
+  int64 maxDegree = 3;
   int64 flags = 4;
 }
 
@@ -263,7 +263,7 @@ message FindPathByRecordIDRequest {
   string recordID1 = 2;
   string dataSourceCode2 = 3;
   string recordID2 = 4;
-  int32 maxDegree = 5;
+  int64 maxDegree = 5;
 }
 
 message FindPathByRecordIDResponse {
@@ -275,7 +275,7 @@ message FindPathByRecordID_V2Request {
   string recordID1 = 2;
   string dataSourceCode2 = 3;
   string recordID2 = 4;
-  int32 maxDegree = 5;
+  int64 maxDegree = 5;
   int64 flags = 6;
 }
 
@@ -286,7 +286,7 @@ message FindPathByRecordID_V2Response {
 message FindPathExcludingByEntityIDRequest {
   int64 entityID1 = 1;
   int64 entityID2 = 2;
-  int32 maxDegree = 3;
+  int64 maxDegree = 3;
   string excludedEntities = 4;
 }
 
@@ -297,7 +297,7 @@ message FindPathExcludingByEntityIDResponse {
 message FindPathExcludingByEntityID_V2Request {
   int64 entityID1 = 1;
   int64 entityID2 = 2;
-  int32 maxDegree = 3;
+  int64 maxDegree = 3;
   string excludedEntities = 4;
   int64 flags = 5;
 }
@@ -311,7 +311,7 @@ message FindPathExcludingByRecordIDRequest {
   string recordID1 = 2;
   string dataSourceCode2 = 3;
   string recordID2 = 4;
-  int32 maxDegree = 5;
+  int64 maxDegree = 5;
   string excludedRecords = 6;
 }
 
@@ -324,7 +324,7 @@ message FindPathExcludingByRecordID_V2Request {
   string recordID1 = 2;
   string dataSourceCode2 = 3;
   string recordID2 = 4;
-  int32 maxDegree = 5;
+  int64 maxDegree = 5;
   string excludedRecords = 6;
   int64 flags = 7;
 }
@@ -336,7 +336,7 @@ message FindPathExcludingByRecordID_V2Response {
 message FindPathIncludingSourceByEntityIDRequest {
   int64 entityID1 = 1;
   int64 entityID2 = 2;
-  int32 maxDegree = 3;
+  int64 maxDegree = 3;
   string excludedEntities = 4;
   string requiredDsrcs = 5;
 }
@@ -348,7 +348,7 @@ message FindPathIncludingSourceByEntityIDResponse {
 message FindPathIncludingSourceByEntityID_V2Request {
   int64 entityID1 = 1;
   int64 entityID2 = 2;
-  int32 maxDegree = 3;
+  int64 maxDegree = 3;
   string excludedEntities = 4;
   string requiredDsrcs = 5;
   int64 flags = 6;
@@ -363,7 +363,7 @@ message FindPathIncludingSourceByRecordIDRequest {
   string recordID1 = 2;
   string dataSourceCode2 = 3;
   string recordID2 = 4;
-  int32 maxDegree = 5;
+  int64 maxDegree = 5;
   string excludedRecords = 6;
   string requiredDsrcs = 7;
 }
@@ -377,7 +377,7 @@ message FindPathIncludingSourceByRecordID_V2Request {
   string recordID1 = 2;
   string dataSourceCode2 = 3;
   string recordID2 = 4;
-  int32 maxDegree = 5;
+  int64 maxDegree = 5;
   string excludedRecords = 6;
   string requiredDsrcs = 7;
   int64 flags = 8;
@@ -496,7 +496,7 @@ message HowEntityByEntityID_V2Response {
 message InitRequest {
   string moduleName = 1;
   string iniParams = 2;
-  int32 verboseLogging = 3;
+  int64 verboseLogging = 3;
 }
 
 message InitResponse {}
@@ -505,7 +505,7 @@ message InitWithConfigIDRequest {
   string moduleName = 1;
   string iniParams = 2;
   int64 initConfigID = 3;
-  int32 verboseLogging = 4;
+  int64 verboseLogging = 4;
 }
 
 message InitWithConfigIDResponse {}

@@ -56,10 +56,10 @@ public interface FindPathByRecordID_V2RequestOrBuilder extends
       getRecordID2Bytes();
 
   /**
-   * <code>int32 maxDegree = 5;</code>
+   * <code>int64 maxDegree = 5;</code>
    * @return The maxDegree.
    */
-  int getMaxDegree();
+  long getMaxDegree();
 
   /**
    * <code>int64 flags = 6;</code>

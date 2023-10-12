@@ -114,7 +114,7 @@ public final class G2ConfigMgrProto {
       "ultConfigIDRequest\".\n\032GetDefaultConfigID" +
       "Response\022\020\n\010configID\030\001 \001(\003\"L\n\013InitReques" +
       "t\022\022\n\nmoduleName\030\001 \001(\t\022\021\n\tiniParams\030\002 \001(\t" +
-      "\022\026\n\016verboseLogging\030\003 \001(\005\"\016\n\014InitResponse" +
+      "\022\026\n\016verboseLogging\030\003 \001(\003\"\016\n\014InitResponse" +
       "\"I\n\035ReplaceDefaultConfigIDRequest\022\023\n\013old" +
       "ConfigID\030\001 \001(\003\022\023\n\013newConfigID\030\002 \001(\003\" \n\036R" +
       "eplaceDefaultConfigIDResponse\"-\n\031SetDefa" +

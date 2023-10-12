@@ -389,9 +389,9 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR FindNetworkByEntityIDRequest::FindNetworkByEntityIDRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.entitylist_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.maxdegree_)*/0
-  , /*decltype(_impl_.buildoutdegree_)*/0
-  , /*decltype(_impl_.maxentities_)*/0
+  , /*decltype(_impl_.maxdegree_)*/int64_t{0}
+  , /*decltype(_impl_.buildoutdegree_)*/int64_t{0}
+  , /*decltype(_impl_.maxentities_)*/int64_t{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FindNetworkByEntityIDRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FindNetworkByEntityIDRequestDefaultTypeInternal()
@@ -418,10 +418,10 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR FindNetworkByEntityID_V2Request::FindNetworkByEntityID_V2Request(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.entitylist_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.maxdegree_)*/0
-  , /*decltype(_impl_.buildoutdegree_)*/0
+  , /*decltype(_impl_.maxdegree_)*/int64_t{0}
+  , /*decltype(_impl_.buildoutdegree_)*/int64_t{0}
+  , /*decltype(_impl_.maxentities_)*/int64_t{0}
   , /*decltype(_impl_.flags_)*/int64_t{0}
-  , /*decltype(_impl_.maxentities_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FindNetworkByEntityID_V2RequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FindNetworkByEntityID_V2RequestDefaultTypeInternal()
@@ -448,9 +448,9 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR FindNetworkByRecordIDRequest::FindNetworkByRecordIDRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.recordlist_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.maxdegree_)*/0
-  , /*decltype(_impl_.buildoutdegree_)*/0
-  , /*decltype(_impl_.maxentities_)*/0
+  , /*decltype(_impl_.maxdegree_)*/int64_t{0}
+  , /*decltype(_impl_.buildoutdegree_)*/int64_t{0}
+  , /*decltype(_impl_.maxentities_)*/int64_t{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FindNetworkByRecordIDRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FindNetworkByRecordIDRequestDefaultTypeInternal()
@@ -477,10 +477,10 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR FindNetworkByRecordID_V2Request::FindNetworkByRecordID_V2Request(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.recordlist_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.maxdegree_)*/0
-  , /*decltype(_impl_.buildoutdegree_)*/0
+  , /*decltype(_impl_.maxdegree_)*/int64_t{0}
+  , /*decltype(_impl_.buildoutdegree_)*/int64_t{0}
+  , /*decltype(_impl_.maxentities_)*/int64_t{0}
   , /*decltype(_impl_.flags_)*/int64_t{0}
-  , /*decltype(_impl_.maxentities_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FindNetworkByRecordID_V2RequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FindNetworkByRecordID_V2RequestDefaultTypeInternal()
@@ -508,7 +508,7 @@ PROTOBUF_CONSTEXPR FindPathByEntityIDRequest::FindPathByEntityIDRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.entityid1_)*/int64_t{0}
   , /*decltype(_impl_.entityid2_)*/int64_t{0}
-  , /*decltype(_impl_.maxdegree_)*/0
+  , /*decltype(_impl_.maxdegree_)*/int64_t{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FindPathByEntityIDRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FindPathByEntityIDRequestDefaultTypeInternal()
@@ -536,8 +536,8 @@ PROTOBUF_CONSTEXPR FindPathByEntityID_V2Request::FindPathByEntityID_V2Request(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.entityid1_)*/int64_t{0}
   , /*decltype(_impl_.entityid2_)*/int64_t{0}
+  , /*decltype(_impl_.maxdegree_)*/int64_t{0}
   , /*decltype(_impl_.flags_)*/int64_t{0}
-  , /*decltype(_impl_.maxdegree_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FindPathByEntityID_V2RequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FindPathByEntityID_V2RequestDefaultTypeInternal()
@@ -567,7 +567,7 @@ PROTOBUF_CONSTEXPR FindPathByRecordIDRequest::FindPathByRecordIDRequest(
   , /*decltype(_impl_.recordid1_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.datasourcecode2_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.recordid2_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.maxdegree_)*/0
+  , /*decltype(_impl_.maxdegree_)*/int64_t{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FindPathByRecordIDRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FindPathByRecordIDRequestDefaultTypeInternal()
@@ -597,8 +597,8 @@ PROTOBUF_CONSTEXPR FindPathByRecordID_V2Request::FindPathByRecordID_V2Request(
   , /*decltype(_impl_.recordid1_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.datasourcecode2_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.recordid2_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.maxdegree_)*/int64_t{0}
   , /*decltype(_impl_.flags_)*/int64_t{0}
-  , /*decltype(_impl_.maxdegree_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FindPathByRecordID_V2RequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FindPathByRecordID_V2RequestDefaultTypeInternal()
@@ -627,7 +627,7 @@ PROTOBUF_CONSTEXPR FindPathExcludingByEntityIDRequest::FindPathExcludingByEntity
     /*decltype(_impl_.excludedentities_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.entityid1_)*/int64_t{0}
   , /*decltype(_impl_.entityid2_)*/int64_t{0}
-  , /*decltype(_impl_.maxdegree_)*/0
+  , /*decltype(_impl_.maxdegree_)*/int64_t{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FindPathExcludingByEntityIDRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FindPathExcludingByEntityIDRequestDefaultTypeInternal()
@@ -656,8 +656,8 @@ PROTOBUF_CONSTEXPR FindPathExcludingByEntityID_V2Request::FindPathExcludingByEnt
     /*decltype(_impl_.excludedentities_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.entityid1_)*/int64_t{0}
   , /*decltype(_impl_.entityid2_)*/int64_t{0}
+  , /*decltype(_impl_.maxdegree_)*/int64_t{0}
   , /*decltype(_impl_.flags_)*/int64_t{0}
-  , /*decltype(_impl_.maxdegree_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FindPathExcludingByEntityID_V2RequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FindPathExcludingByEntityID_V2RequestDefaultTypeInternal()
@@ -688,7 +688,7 @@ PROTOBUF_CONSTEXPR FindPathExcludingByRecordIDRequest::FindPathExcludingByRecord
   , /*decltype(_impl_.datasourcecode2_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.recordid2_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.excludedrecords_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.maxdegree_)*/0
+  , /*decltype(_impl_.maxdegree_)*/int64_t{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FindPathExcludingByRecordIDRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FindPathExcludingByRecordIDRequestDefaultTypeInternal()
@@ -719,8 +719,8 @@ PROTOBUF_CONSTEXPR FindPathExcludingByRecordID_V2Request::FindPathExcludingByRec
   , /*decltype(_impl_.datasourcecode2_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.recordid2_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.excludedrecords_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.maxdegree_)*/int64_t{0}
   , /*decltype(_impl_.flags_)*/int64_t{0}
-  , /*decltype(_impl_.maxdegree_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FindPathExcludingByRecordID_V2RequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FindPathExcludingByRecordID_V2RequestDefaultTypeInternal()
@@ -750,7 +750,7 @@ PROTOBUF_CONSTEXPR FindPathIncludingSourceByEntityIDRequest::FindPathIncludingSo
   , /*decltype(_impl_.requireddsrcs_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.entityid1_)*/int64_t{0}
   , /*decltype(_impl_.entityid2_)*/int64_t{0}
-  , /*decltype(_impl_.maxdegree_)*/0
+  , /*decltype(_impl_.maxdegree_)*/int64_t{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FindPathIncludingSourceByEntityIDRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FindPathIncludingSourceByEntityIDRequestDefaultTypeInternal()
@@ -780,8 +780,8 @@ PROTOBUF_CONSTEXPR FindPathIncludingSourceByEntityID_V2Request::FindPathIncludin
   , /*decltype(_impl_.requireddsrcs_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.entityid1_)*/int64_t{0}
   , /*decltype(_impl_.entityid2_)*/int64_t{0}
+  , /*decltype(_impl_.maxdegree_)*/int64_t{0}
   , /*decltype(_impl_.flags_)*/int64_t{0}
-  , /*decltype(_impl_.maxdegree_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FindPathIncludingSourceByEntityID_V2RequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FindPathIncludingSourceByEntityID_V2RequestDefaultTypeInternal()
@@ -813,7 +813,7 @@ PROTOBUF_CONSTEXPR FindPathIncludingSourceByRecordIDRequest::FindPathIncludingSo
   , /*decltype(_impl_.recordid2_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.excludedrecords_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.requireddsrcs_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.maxdegree_)*/0
+  , /*decltype(_impl_.maxdegree_)*/int64_t{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FindPathIncludingSourceByRecordIDRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FindPathIncludingSourceByRecordIDRequestDefaultTypeInternal()
@@ -845,8 +845,8 @@ PROTOBUF_CONSTEXPR FindPathIncludingSourceByRecordID_V2Request::FindPathIncludin
   , /*decltype(_impl_.recordid2_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.excludedrecords_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.requireddsrcs_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.maxdegree_)*/int64_t{0}
   , /*decltype(_impl_.flags_)*/int64_t{0}
-  , /*decltype(_impl_.maxdegree_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FindPathIncludingSourceByRecordID_V2RequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FindPathIncludingSourceByRecordID_V2RequestDefaultTypeInternal()
@@ -1215,7 +1215,7 @@ PROTOBUF_CONSTEXPR InitRequest::InitRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.modulename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.iniparams_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.verboselogging_)*/0
+  , /*decltype(_impl_.verboselogging_)*/int64_t{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct InitRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR InitRequestDefaultTypeInternal()
@@ -1242,7 +1242,7 @@ PROTOBUF_CONSTEXPR InitWithConfigIDRequest::InitWithConfigIDRequest(
     /*decltype(_impl_.modulename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.iniparams_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.initconfigid_)*/int64_t{0}
-  , /*decltype(_impl_.verboselogging_)*/0
+  , /*decltype(_impl_.verboselogging_)*/int64_t{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct InitWithConfigIDRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR InitWithConfigIDRequestDefaultTypeInternal()
@@ -3299,82 +3299,82 @@ const char descriptor_table_protodef_g2engine_2eproto[] PROTOBUF_SECTION_VARIABL
   " \001(\003\";\n)FindInterestingEntitiesByRecordI"
   "DResponse\022\016\n\006result\030\001 \001(\t\"r\n\034FindNetwork"
   "ByEntityIDRequest\022\022\n\nentityList\030\001 \001(\t\022\021\n"
-  "\tmaxDegree\030\002 \001(\005\022\026\n\016buildOutDegree\030\003 \001(\005"
-  "\022\023\n\013maxEntities\030\004 \001(\005\"/\n\035FindNetworkByEn"
+  "\tmaxDegree\030\002 \001(\003\022\026\n\016buildOutDegree\030\003 \001(\003"
+  "\022\023\n\013maxEntities\030\004 \001(\003\"/\n\035FindNetworkByEn"
   "tityIDResponse\022\016\n\006result\030\001 \001(\t\"\204\001\n\037FindN"
   "etworkByEntityID_V2Request\022\022\n\nentityList"
-  "\030\001 \001(\t\022\021\n\tmaxDegree\030\002 \001(\005\022\026\n\016buildOutDeg"
-  "ree\030\003 \001(\005\022\023\n\013maxEntities\030\004 \001(\005\022\r\n\005flags\030"
+  "\030\001 \001(\t\022\021\n\tmaxDegree\030\002 \001(\003\022\026\n\016buildOutDeg"
+  "ree\030\003 \001(\003\022\023\n\013maxEntities\030\004 \001(\003\022\r\n\005flags\030"
   "\005 \001(\003\"2\n FindNetworkByEntityID_V2Respons"
   "e\022\016\n\006result\030\001 \001(\t\"r\n\034FindNetworkByRecord"
   "IDRequest\022\022\n\nrecordList\030\001 \001(\t\022\021\n\tmaxDegr"
-  "ee\030\002 \001(\005\022\026\n\016buildOutDegree\030\003 \001(\005\022\023\n\013maxE"
-  "ntities\030\004 \001(\005\"/\n\035FindNetworkByRecordIDRe"
+  "ee\030\002 \001(\003\022\026\n\016buildOutDegree\030\003 \001(\003\022\023\n\013maxE"
+  "ntities\030\004 \001(\003\"/\n\035FindNetworkByRecordIDRe"
   "sponse\022\016\n\006result\030\001 \001(\t\"\204\001\n\037FindNetworkBy"
   "RecordID_V2Request\022\022\n\nrecordList\030\001 \001(\t\022\021"
-  "\n\tmaxDegree\030\002 \001(\005\022\026\n\016buildOutDegree\030\003 \001("
-  "\005\022\023\n\013maxEntities\030\004 \001(\005\022\r\n\005flags\030\005 \001(\003\"2\n"
+  "\n\tmaxDegree\030\002 \001(\003\022\026\n\016buildOutDegree\030\003 \001("
+  "\003\022\023\n\013maxEntities\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"2\n"
   " FindNetworkByRecordID_V2Response\022\016\n\006res"
   "ult\030\001 \001(\t\"T\n\031FindPathByEntityIDRequest\022\021"
   "\n\tentityID1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\022\021\n\t"
-  "maxDegree\030\003 \001(\005\",\n\032FindPathByEntityIDRes"
+  "maxDegree\030\003 \001(\003\",\n\032FindPathByEntityIDRes"
   "ponse\022\016\n\006result\030\001 \001(\t\"f\n\034FindPathByEntit"
   "yID_V2Request\022\021\n\tentityID1\030\001 \001(\003\022\021\n\tenti"
-  "tyID2\030\002 \001(\003\022\021\n\tmaxDegree\030\003 \001(\005\022\r\n\005flags\030"
+  "tyID2\030\002 \001(\003\022\021\n\tmaxDegree\030\003 \001(\003\022\r\n\005flags\030"
   "\004 \001(\003\"/\n\035FindPathByEntityID_V2Response\022\016"
   "\n\006result\030\001 \001(\t\"\206\001\n\031FindPathByRecordIDReq"
   "uest\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trecordI"
   "D1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\trec"
-  "ordID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001(\005\",\n\032FindP"
+  "ordID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001(\003\",\n\032FindP"
   "athByRecordIDResponse\022\016\n\006result\030\001 \001(\t\"\230\001"
   "\n\034FindPathByRecordID_V2Request\022\027\n\017dataSo"
   "urceCode1\030\001 \001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n\017da"
   "taSourceCode2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001(\t\022\021"
-  "\n\tmaxDegree\030\005 \001(\005\022\r\n\005flags\030\006 \001(\003\"/\n\035Find"
+  "\n\tmaxDegree\030\005 \001(\003\022\r\n\005flags\030\006 \001(\003\"/\n\035Find"
   "PathByRecordID_V2Response\022\016\n\006result\030\001 \001("
   "\t\"w\n\"FindPathExcludingByEntityIDRequest\022"
   "\021\n\tentityID1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\022\021\n"
-  "\tmaxDegree\030\003 \001(\005\022\030\n\020excludedEntities\030\004 \001"
+  "\tmaxDegree\030\003 \001(\003\022\030\n\020excludedEntities\030\004 \001"
   "(\t\"5\n#FindPathExcludingByEntityIDRespons"
   "e\022\016\n\006result\030\001 \001(\t\"\211\001\n%FindPathExcludingB"
   "yEntityID_V2Request\022\021\n\tentityID1\030\001 \001(\003\022\021"
-  "\n\tentityID2\030\002 \001(\003\022\021\n\tmaxDegree\030\003 \001(\005\022\030\n\020"
+  "\n\tentityID2\030\002 \001(\003\022\021\n\tmaxDegree\030\003 \001(\003\022\030\n\020"
   "excludedEntities\030\004 \001(\t\022\r\n\005flags\030\005 \001(\003\"8\n"
   "&FindPathExcludingByEntityID_V2Response\022"
   "\016\n\006result\030\001 \001(\t\"\250\001\n\"FindPathExcludingByR"
   "ecordIDRequest\022\027\n\017dataSourceCode1\030\001 \001(\t\022"
   "\021\n\trecordID1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 "
   "\001(\t\022\021\n\trecordID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001("
-  "\005\022\027\n\017excludedRecords\030\006 \001(\t\"5\n#FindPathEx"
+  "\003\022\027\n\017excludedRecords\030\006 \001(\t\"5\n#FindPathEx"
   "cludingByRecordIDResponse\022\016\n\006result\030\001 \001("
   "\t\"\272\001\n%FindPathExcludingByRecordID_V2Requ"
   "est\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trecordID"
   "1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\treco"
-  "rdID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001(\005\022\027\n\017exclud"
+  "rdID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001(\003\022\027\n\017exclud"
   "edRecords\030\006 \001(\t\022\r\n\005flags\030\007 \001(\003\"8\n&FindPa"
   "thExcludingByRecordID_V2Response\022\016\n\006resu"
   "lt\030\001 \001(\t\"\224\001\n(FindPathIncludingSourceByEn"
   "tityIDRequest\022\021\n\tentityID1\030\001 \001(\003\022\021\n\tenti"
-  "tyID2\030\002 \001(\003\022\021\n\tmaxDegree\030\003 \001(\005\022\030\n\020exclud"
+  "tyID2\030\002 \001(\003\022\021\n\tmaxDegree\030\003 \001(\003\022\030\n\020exclud"
   "edEntities\030\004 \001(\t\022\025\n\rrequiredDsrcs\030\005 \001(\t\""
   ";\n)FindPathIncludingSourceByEntityIDResp"
   "onse\022\016\n\006result\030\001 \001(\t\"\246\001\n+FindPathIncludi"
   "ngSourceByEntityID_V2Request\022\021\n\tentityID"
   "1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\022\021\n\tmaxDegree\030"
-  "\003 \001(\005\022\030\n\020excludedEntities\030\004 \001(\t\022\025\n\rrequi"
+  "\003 \001(\003\022\030\n\020excludedEntities\030\004 \001(\t\022\025\n\rrequi"
   "redDsrcs\030\005 \001(\t\022\r\n\005flags\030\006 \001(\003\">\n,FindPat"
   "hIncludingSourceByEntityID_V2Response\022\016\n"
   "\006result\030\001 \001(\t\"\305\001\n(FindPathIncludingSourc"
   "eByRecordIDRequest\022\027\n\017dataSourceCode1\030\001 "
   "\001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n\017dataSourceCode"
   "2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001(\t\022\021\n\tmaxDegree\030"
-  "\005 \001(\005\022\027\n\017excludedRecords\030\006 \001(\t\022\025\n\rrequir"
+  "\005 \001(\003\022\027\n\017excludedRecords\030\006 \001(\t\022\025\n\rrequir"
   "edDsrcs\030\007 \001(\t\";\n)FindPathIncludingSource"
   "ByRecordIDResponse\022\016\n\006result\030\001 \001(\t\"\327\001\n+F"
   "indPathIncludingSourceByRecordID_V2Reque"
   "st\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trecordID1"
   "\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\trecor"
-  "dID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001(\005\022\027\n\017exclude"
+  "dID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001(\003\022\027\n\017exclude"
   "dRecords\030\006 \001(\t\022\025\n\rrequiredDsrcs\030\007 \001(\t\022\r\n"
   "\005flags\030\010 \001(\003\">\n,FindPathIncludingSourceB"
   "yRecordID_V2Response\022\016\n\006result\030\001 \001(\t\"\032\n\030"
@@ -3414,10 +3414,10 @@ const char descriptor_table_protodef_g2engine_2eproto[] PROTOBUF_SECTION_VARIABL
   " \001(\003\"0\n\036HowEntityByEntityID_V2Response\022\016"
   "\n\006result\030\001 \001(\t\"L\n\013InitRequest\022\022\n\nmoduleN"
   "ame\030\001 \001(\t\022\021\n\tiniParams\030\002 \001(\t\022\026\n\016verboseL"
-  "ogging\030\003 \001(\005\"\016\n\014InitResponse\"n\n\027InitWith"
+  "ogging\030\003 \001(\003\"\016\n\014InitResponse\"n\n\027InitWith"
   "ConfigIDRequest\022\022\n\nmoduleName\030\001 \001(\t\022\021\n\ti"
   "niParams\030\002 \001(\t\022\024\n\014initConfigID\030\003 \001(\003\022\026\n\016"
-  "verboseLogging\030\004 \001(\005\"\032\n\030InitWithConfigID"
+  "verboseLogging\030\004 \001(\003\"\032\n\030InitWithConfigID"
   "Response\"\024\n\022PrimeEngineRequest\"\025\n\023PrimeE"
   "ngineResponse\" \n\016ProcessRequest\022\016\n\006recor"
   "d\030\001 \001(\t\"\021\n\017ProcessResponse\"7\n\026ProcessWit"
@@ -8648,9 +8648,9 @@ inline void FindNetworkByEntityIDRequest::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.entitylist_){}
-    , decltype(_impl_.maxdegree_){0}
-    , decltype(_impl_.buildoutdegree_){0}
-    , decltype(_impl_.maxentities_){0}
+    , decltype(_impl_.maxdegree_){int64_t{0}}
+    , decltype(_impl_.buildoutdegree_){int64_t{0}}
+    , decltype(_impl_.maxentities_){int64_t{0}}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.entitylist_.InitDefault();
@@ -8706,26 +8706,26 @@ const char* FindNetworkByEntityIDRequest::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // int32 maxDegree = 2;
+      // int64 maxDegree = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // int32 buildOutDegree = 3;
+      // int64 buildOutDegree = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.buildoutdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.buildoutdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // int32 maxEntities = 4;
+      // int64 maxEntities = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _impl_.maxentities_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxentities_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -8769,22 +8769,22 @@ uint8_t* FindNetworkByEntityIDRequest::_InternalSerialize(
         1, this->_internal_entitylist(), target);
   }
 
-  // int32 maxDegree = 2;
+  // int64 maxDegree = 2;
   if (this->_internal_maxdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_maxdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_maxdegree(), target);
   }
 
-  // int32 buildOutDegree = 3;
+  // int64 buildOutDegree = 3;
   if (this->_internal_buildoutdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_buildoutdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_buildoutdegree(), target);
   }
 
-  // int32 maxEntities = 4;
+  // int64 maxEntities = 4;
   if (this->_internal_maxentities() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_maxentities(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_maxentities(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8810,19 +8810,19 @@ size_t FindNetworkByEntityIDRequest::ByteSizeLong() const {
         this->_internal_entitylist());
   }
 
-  // int32 maxDegree = 2;
+  // int64 maxDegree = 2;
   if (this->_internal_maxdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxdegree());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxdegree());
   }
 
-  // int32 buildOutDegree = 3;
+  // int64 buildOutDegree = 3;
   if (this->_internal_buildoutdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_buildoutdegree());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_buildoutdegree());
   }
 
-  // int32 maxEntities = 4;
+  // int64 maxEntities = 4;
   if (this->_internal_maxentities() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxentities());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxentities());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -9114,8 +9114,8 @@ FindNetworkByEntityID_V2Request::FindNetworkByEntityID_V2Request(const FindNetwo
       decltype(_impl_.entitylist_){}
     , decltype(_impl_.maxdegree_){}
     , decltype(_impl_.buildoutdegree_){}
-    , decltype(_impl_.flags_){}
     , decltype(_impl_.maxentities_){}
+    , decltype(_impl_.flags_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -9128,8 +9128,8 @@ FindNetworkByEntityID_V2Request::FindNetworkByEntityID_V2Request(const FindNetwo
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.maxdegree_, &from._impl_.maxdegree_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.maxentities_) -
-    reinterpret_cast<char*>(&_impl_.maxdegree_)) + sizeof(_impl_.maxentities_));
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.flags_) -
+    reinterpret_cast<char*>(&_impl_.maxdegree_)) + sizeof(_impl_.flags_));
   // @@protoc_insertion_point(copy_constructor:g2engine.FindNetworkByEntityID_V2Request)
 }
 
@@ -9139,10 +9139,10 @@ inline void FindNetworkByEntityID_V2Request::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.entitylist_){}
-    , decltype(_impl_.maxdegree_){0}
-    , decltype(_impl_.buildoutdegree_){0}
+    , decltype(_impl_.maxdegree_){int64_t{0}}
+    , decltype(_impl_.buildoutdegree_){int64_t{0}}
+    , decltype(_impl_.maxentities_){int64_t{0}}
     , decltype(_impl_.flags_){int64_t{0}}
-    , decltype(_impl_.maxentities_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.entitylist_.InitDefault();
@@ -9177,8 +9177,8 @@ void FindNetworkByEntityID_V2Request::Clear() {
 
   _impl_.entitylist_.ClearToEmpty();
   ::memset(&_impl_.maxdegree_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.maxentities_) -
-      reinterpret_cast<char*>(&_impl_.maxdegree_)) + sizeof(_impl_.maxentities_));
+      reinterpret_cast<char*>(&_impl_.flags_) -
+      reinterpret_cast<char*>(&_impl_.maxdegree_)) + sizeof(_impl_.flags_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -9198,26 +9198,26 @@ const char* FindNetworkByEntityID_V2Request::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
-      // int32 maxDegree = 2;
+      // int64 maxDegree = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // int32 buildOutDegree = 3;
+      // int64 buildOutDegree = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.buildoutdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.buildoutdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // int32 maxEntities = 4;
+      // int64 maxEntities = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _impl_.maxentities_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxentities_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -9269,22 +9269,22 @@ uint8_t* FindNetworkByEntityID_V2Request::_InternalSerialize(
         1, this->_internal_entitylist(), target);
   }
 
-  // int32 maxDegree = 2;
+  // int64 maxDegree = 2;
   if (this->_internal_maxdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_maxdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_maxdegree(), target);
   }
 
-  // int32 buildOutDegree = 3;
+  // int64 buildOutDegree = 3;
   if (this->_internal_buildoutdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_buildoutdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_buildoutdegree(), target);
   }
 
-  // int32 maxEntities = 4;
+  // int64 maxEntities = 4;
   if (this->_internal_maxentities() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_maxentities(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_maxentities(), target);
   }
 
   // int64 flags = 5;
@@ -9316,24 +9316,24 @@ size_t FindNetworkByEntityID_V2Request::ByteSizeLong() const {
         this->_internal_entitylist());
   }
 
-  // int32 maxDegree = 2;
+  // int64 maxDegree = 2;
   if (this->_internal_maxdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxdegree());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxdegree());
   }
 
-  // int32 buildOutDegree = 3;
+  // int64 buildOutDegree = 3;
   if (this->_internal_buildoutdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_buildoutdegree());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_buildoutdegree());
+  }
+
+  // int64 maxEntities = 4;
+  if (this->_internal_maxentities() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxentities());
   }
 
   // int64 flags = 5;
   if (this->_internal_flags() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_flags());
-  }
-
-  // int32 maxEntities = 4;
-  if (this->_internal_maxentities() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxentities());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -9363,11 +9363,11 @@ void FindNetworkByEntityID_V2Request::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message
   if (from._internal_buildoutdegree() != 0) {
     _this->_internal_set_buildoutdegree(from._internal_buildoutdegree());
   }
-  if (from._internal_flags() != 0) {
-    _this->_internal_set_flags(from._internal_flags());
-  }
   if (from._internal_maxentities() != 0) {
     _this->_internal_set_maxentities(from._internal_maxentities());
+  }
+  if (from._internal_flags() != 0) {
+    _this->_internal_set_flags(from._internal_flags());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -9393,8 +9393,8 @@ void FindNetworkByEntityID_V2Request::InternalSwap(FindNetworkByEntityID_V2Reque
       &other->_impl_.entitylist_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FindNetworkByEntityID_V2Request, _impl_.maxentities_)
-      + sizeof(FindNetworkByEntityID_V2Request::_impl_.maxentities_)
+      PROTOBUF_FIELD_OFFSET(FindNetworkByEntityID_V2Request, _impl_.flags_)
+      + sizeof(FindNetworkByEntityID_V2Request::_impl_.flags_)
       - PROTOBUF_FIELD_OFFSET(FindNetworkByEntityID_V2Request, _impl_.maxdegree_)>(
           reinterpret_cast<char*>(&_impl_.maxdegree_),
           reinterpret_cast<char*>(&other->_impl_.maxdegree_));
@@ -9652,9 +9652,9 @@ inline void FindNetworkByRecordIDRequest::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.recordlist_){}
-    , decltype(_impl_.maxdegree_){0}
-    , decltype(_impl_.buildoutdegree_){0}
-    , decltype(_impl_.maxentities_){0}
+    , decltype(_impl_.maxdegree_){int64_t{0}}
+    , decltype(_impl_.buildoutdegree_){int64_t{0}}
+    , decltype(_impl_.maxentities_){int64_t{0}}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.recordlist_.InitDefault();
@@ -9710,26 +9710,26 @@ const char* FindNetworkByRecordIDRequest::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // int32 maxDegree = 2;
+      // int64 maxDegree = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // int32 buildOutDegree = 3;
+      // int64 buildOutDegree = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.buildoutdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.buildoutdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // int32 maxEntities = 4;
+      // int64 maxEntities = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _impl_.maxentities_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxentities_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -9773,22 +9773,22 @@ uint8_t* FindNetworkByRecordIDRequest::_InternalSerialize(
         1, this->_internal_recordlist(), target);
   }
 
-  // int32 maxDegree = 2;
+  // int64 maxDegree = 2;
   if (this->_internal_maxdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_maxdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_maxdegree(), target);
   }
 
-  // int32 buildOutDegree = 3;
+  // int64 buildOutDegree = 3;
   if (this->_internal_buildoutdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_buildoutdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_buildoutdegree(), target);
   }
 
-  // int32 maxEntities = 4;
+  // int64 maxEntities = 4;
   if (this->_internal_maxentities() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_maxentities(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_maxentities(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -9814,19 +9814,19 @@ size_t FindNetworkByRecordIDRequest::ByteSizeLong() const {
         this->_internal_recordlist());
   }
 
-  // int32 maxDegree = 2;
+  // int64 maxDegree = 2;
   if (this->_internal_maxdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxdegree());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxdegree());
   }
 
-  // int32 buildOutDegree = 3;
+  // int64 buildOutDegree = 3;
   if (this->_internal_buildoutdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_buildoutdegree());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_buildoutdegree());
   }
 
-  // int32 maxEntities = 4;
+  // int64 maxEntities = 4;
   if (this->_internal_maxentities() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxentities());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxentities());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -10118,8 +10118,8 @@ FindNetworkByRecordID_V2Request::FindNetworkByRecordID_V2Request(const FindNetwo
       decltype(_impl_.recordlist_){}
     , decltype(_impl_.maxdegree_){}
     , decltype(_impl_.buildoutdegree_){}
-    , decltype(_impl_.flags_){}
     , decltype(_impl_.maxentities_){}
+    , decltype(_impl_.flags_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -10132,8 +10132,8 @@ FindNetworkByRecordID_V2Request::FindNetworkByRecordID_V2Request(const FindNetwo
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.maxdegree_, &from._impl_.maxdegree_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.maxentities_) -
-    reinterpret_cast<char*>(&_impl_.maxdegree_)) + sizeof(_impl_.maxentities_));
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.flags_) -
+    reinterpret_cast<char*>(&_impl_.maxdegree_)) + sizeof(_impl_.flags_));
   // @@protoc_insertion_point(copy_constructor:g2engine.FindNetworkByRecordID_V2Request)
 }
 
@@ -10143,10 +10143,10 @@ inline void FindNetworkByRecordID_V2Request::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.recordlist_){}
-    , decltype(_impl_.maxdegree_){0}
-    , decltype(_impl_.buildoutdegree_){0}
+    , decltype(_impl_.maxdegree_){int64_t{0}}
+    , decltype(_impl_.buildoutdegree_){int64_t{0}}
+    , decltype(_impl_.maxentities_){int64_t{0}}
     , decltype(_impl_.flags_){int64_t{0}}
-    , decltype(_impl_.maxentities_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.recordlist_.InitDefault();
@@ -10181,8 +10181,8 @@ void FindNetworkByRecordID_V2Request::Clear() {
 
   _impl_.recordlist_.ClearToEmpty();
   ::memset(&_impl_.maxdegree_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.maxentities_) -
-      reinterpret_cast<char*>(&_impl_.maxdegree_)) + sizeof(_impl_.maxentities_));
+      reinterpret_cast<char*>(&_impl_.flags_) -
+      reinterpret_cast<char*>(&_impl_.maxdegree_)) + sizeof(_impl_.flags_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -10202,26 +10202,26 @@ const char* FindNetworkByRecordID_V2Request::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
-      // int32 maxDegree = 2;
+      // int64 maxDegree = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // int32 buildOutDegree = 3;
+      // int64 buildOutDegree = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.buildoutdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.buildoutdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // int32 maxEntities = 4;
+      // int64 maxEntities = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _impl_.maxentities_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxentities_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -10273,22 +10273,22 @@ uint8_t* FindNetworkByRecordID_V2Request::_InternalSerialize(
         1, this->_internal_recordlist(), target);
   }
 
-  // int32 maxDegree = 2;
+  // int64 maxDegree = 2;
   if (this->_internal_maxdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_maxdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_maxdegree(), target);
   }
 
-  // int32 buildOutDegree = 3;
+  // int64 buildOutDegree = 3;
   if (this->_internal_buildoutdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_buildoutdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_buildoutdegree(), target);
   }
 
-  // int32 maxEntities = 4;
+  // int64 maxEntities = 4;
   if (this->_internal_maxentities() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_maxentities(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_maxentities(), target);
   }
 
   // int64 flags = 5;
@@ -10320,24 +10320,24 @@ size_t FindNetworkByRecordID_V2Request::ByteSizeLong() const {
         this->_internal_recordlist());
   }
 
-  // int32 maxDegree = 2;
+  // int64 maxDegree = 2;
   if (this->_internal_maxdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxdegree());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxdegree());
   }
 
-  // int32 buildOutDegree = 3;
+  // int64 buildOutDegree = 3;
   if (this->_internal_buildoutdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_buildoutdegree());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_buildoutdegree());
+  }
+
+  // int64 maxEntities = 4;
+  if (this->_internal_maxentities() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxentities());
   }
 
   // int64 flags = 5;
   if (this->_internal_flags() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_flags());
-  }
-
-  // int32 maxEntities = 4;
-  if (this->_internal_maxentities() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxentities());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -10367,11 +10367,11 @@ void FindNetworkByRecordID_V2Request::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message
   if (from._internal_buildoutdegree() != 0) {
     _this->_internal_set_buildoutdegree(from._internal_buildoutdegree());
   }
-  if (from._internal_flags() != 0) {
-    _this->_internal_set_flags(from._internal_flags());
-  }
   if (from._internal_maxentities() != 0) {
     _this->_internal_set_maxentities(from._internal_maxentities());
+  }
+  if (from._internal_flags() != 0) {
+    _this->_internal_set_flags(from._internal_flags());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -10397,8 +10397,8 @@ void FindNetworkByRecordID_V2Request::InternalSwap(FindNetworkByRecordID_V2Reque
       &other->_impl_.recordlist_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FindNetworkByRecordID_V2Request, _impl_.maxentities_)
-      + sizeof(FindNetworkByRecordID_V2Request::_impl_.maxentities_)
+      PROTOBUF_FIELD_OFFSET(FindNetworkByRecordID_V2Request, _impl_.flags_)
+      + sizeof(FindNetworkByRecordID_V2Request::_impl_.flags_)
       - PROTOBUF_FIELD_OFFSET(FindNetworkByRecordID_V2Request, _impl_.maxdegree_)>(
           reinterpret_cast<char*>(&_impl_.maxdegree_),
           reinterpret_cast<char*>(&other->_impl_.maxdegree_));
@@ -10648,7 +10648,7 @@ inline void FindPathByEntityIDRequest::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_.entityid1_){int64_t{0}}
     , decltype(_impl_.entityid2_){int64_t{0}}
-    , decltype(_impl_.maxdegree_){0}
+    , decltype(_impl_.maxdegree_){int64_t{0}}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -10704,10 +10704,10 @@ const char* FindPathByEntityIDRequest::_InternalParse(const char* ptr, ::_pbi::P
         } else
           goto handle_unusual;
         continue;
-      // int32 maxDegree = 3;
+      // int64 maxDegree = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -10753,10 +10753,10 @@ uint8_t* FindPathByEntityIDRequest::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_entityid2(), target);
   }
 
-  // int32 maxDegree = 3;
+  // int64 maxDegree = 3;
   if (this->_internal_maxdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_maxdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_maxdegree(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -10785,9 +10785,9 @@ size_t FindPathByEntityIDRequest::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_entityid2());
   }
 
-  // int32 maxDegree = 3;
+  // int64 maxDegree = 3;
   if (this->_internal_maxdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxdegree());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxdegree());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -11069,14 +11069,14 @@ FindPathByEntityID_V2Request::FindPathByEntityID_V2Request(const FindPathByEntit
   new (&_impl_) Impl_{
       decltype(_impl_.entityid1_){}
     , decltype(_impl_.entityid2_){}
-    , decltype(_impl_.flags_){}
     , decltype(_impl_.maxdegree_){}
+    , decltype(_impl_.flags_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::memcpy(&_impl_.entityid1_, &from._impl_.entityid1_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.maxdegree_) -
-    reinterpret_cast<char*>(&_impl_.entityid1_)) + sizeof(_impl_.maxdegree_));
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.flags_) -
+    reinterpret_cast<char*>(&_impl_.entityid1_)) + sizeof(_impl_.flags_));
   // @@protoc_insertion_point(copy_constructor:g2engine.FindPathByEntityID_V2Request)
 }
 
@@ -11087,8 +11087,8 @@ inline void FindPathByEntityID_V2Request::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_.entityid1_){int64_t{0}}
     , decltype(_impl_.entityid2_){int64_t{0}}
+    , decltype(_impl_.maxdegree_){int64_t{0}}
     , decltype(_impl_.flags_){int64_t{0}}
-    , decltype(_impl_.maxdegree_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -11117,8 +11117,8 @@ void FindPathByEntityID_V2Request::Clear() {
   (void) cached_has_bits;
 
   ::memset(&_impl_.entityid1_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.maxdegree_) -
-      reinterpret_cast<char*>(&_impl_.entityid1_)) + sizeof(_impl_.maxdegree_));
+      reinterpret_cast<char*>(&_impl_.flags_) -
+      reinterpret_cast<char*>(&_impl_.entityid1_)) + sizeof(_impl_.flags_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -11144,10 +11144,10 @@ const char* FindPathByEntityID_V2Request::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // int32 maxDegree = 3;
+      // int64 maxDegree = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -11201,10 +11201,10 @@ uint8_t* FindPathByEntityID_V2Request::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_entityid2(), target);
   }
 
-  // int32 maxDegree = 3;
+  // int64 maxDegree = 3;
   if (this->_internal_maxdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_maxdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_maxdegree(), target);
   }
 
   // int64 flags = 4;
@@ -11239,14 +11239,14 @@ size_t FindPathByEntityID_V2Request::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_entityid2());
   }
 
+  // int64 maxDegree = 3;
+  if (this->_internal_maxdegree() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxdegree());
+  }
+
   // int64 flags = 4;
   if (this->_internal_flags() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_flags());
-  }
-
-  // int32 maxDegree = 3;
-  if (this->_internal_maxdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxdegree());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -11273,11 +11273,11 @@ void FindPathByEntityID_V2Request::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& t
   if (from._internal_entityid2() != 0) {
     _this->_internal_set_entityid2(from._internal_entityid2());
   }
-  if (from._internal_flags() != 0) {
-    _this->_internal_set_flags(from._internal_flags());
-  }
   if (from._internal_maxdegree() != 0) {
     _this->_internal_set_maxdegree(from._internal_maxdegree());
+  }
+  if (from._internal_flags() != 0) {
+    _this->_internal_set_flags(from._internal_flags());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -11297,8 +11297,8 @@ void FindPathByEntityID_V2Request::InternalSwap(FindPathByEntityID_V2Request* ot
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FindPathByEntityID_V2Request, _impl_.maxdegree_)
-      + sizeof(FindPathByEntityID_V2Request::_impl_.maxdegree_)
+      PROTOBUF_FIELD_OFFSET(FindPathByEntityID_V2Request, _impl_.flags_)
+      + sizeof(FindPathByEntityID_V2Request::_impl_.flags_)
       - PROTOBUF_FIELD_OFFSET(FindPathByEntityID_V2Request, _impl_.entityid1_)>(
           reinterpret_cast<char*>(&_impl_.entityid1_),
           reinterpret_cast<char*>(&other->_impl_.entityid1_));
@@ -11582,7 +11582,7 @@ inline void FindPathByRecordIDRequest::SharedCtor(
     , decltype(_impl_.recordid1_){}
     , decltype(_impl_.datasourcecode2_){}
     , decltype(_impl_.recordid2_){}
-    , decltype(_impl_.maxdegree_){0}
+    , decltype(_impl_.maxdegree_){int64_t{0}}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.datasourcecode1_.InitDefault();
@@ -11634,7 +11634,7 @@ void FindPathByRecordIDRequest::Clear() {
   _impl_.recordid1_.ClearToEmpty();
   _impl_.datasourcecode2_.ClearToEmpty();
   _impl_.recordid2_.ClearToEmpty();
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -11684,10 +11684,10 @@ const char* FindPathByRecordIDRequest::_InternalParse(const char* ptr, ::_pbi::P
         } else
           goto handle_unusual;
         continue;
-      // int32 maxDegree = 5;
+      // int64 maxDegree = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -11761,10 +11761,10 @@ uint8_t* FindPathByRecordIDRequest::_InternalSerialize(
         4, this->_internal_recordid2(), target);
   }
 
-  // int32 maxDegree = 5;
+  // int64 maxDegree = 5;
   if (this->_internal_maxdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_maxdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_maxdegree(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -11811,9 +11811,9 @@ size_t FindPathByRecordIDRequest::ByteSizeLong() const {
         this->_internal_recordid2());
   }
 
-  // int32 maxDegree = 5;
+  // int64 maxDegree = 5;
   if (this->_internal_maxdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxdegree());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxdegree());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -12116,8 +12116,8 @@ FindPathByRecordID_V2Request::FindPathByRecordID_V2Request(const FindPathByRecor
     , decltype(_impl_.recordid1_){}
     , decltype(_impl_.datasourcecode2_){}
     , decltype(_impl_.recordid2_){}
-    , decltype(_impl_.flags_){}
     , decltype(_impl_.maxdegree_){}
+    , decltype(_impl_.flags_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -12153,9 +12153,9 @@ FindPathByRecordID_V2Request::FindPathByRecordID_V2Request(const FindPathByRecor
     _this->_impl_.recordid2_.Set(from._internal_recordid2(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.flags_, &from._impl_.flags_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.maxdegree_) -
-    reinterpret_cast<char*>(&_impl_.flags_)) + sizeof(_impl_.maxdegree_));
+  ::memcpy(&_impl_.maxdegree_, &from._impl_.maxdegree_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.flags_) -
+    reinterpret_cast<char*>(&_impl_.maxdegree_)) + sizeof(_impl_.flags_));
   // @@protoc_insertion_point(copy_constructor:g2engine.FindPathByRecordID_V2Request)
 }
 
@@ -12168,8 +12168,8 @@ inline void FindPathByRecordID_V2Request::SharedCtor(
     , decltype(_impl_.recordid1_){}
     , decltype(_impl_.datasourcecode2_){}
     , decltype(_impl_.recordid2_){}
+    , decltype(_impl_.maxdegree_){int64_t{0}}
     , decltype(_impl_.flags_){int64_t{0}}
-    , decltype(_impl_.maxdegree_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.datasourcecode1_.InitDefault();
@@ -12221,9 +12221,9 @@ void FindPathByRecordID_V2Request::Clear() {
   _impl_.recordid1_.ClearToEmpty();
   _impl_.datasourcecode2_.ClearToEmpty();
   _impl_.recordid2_.ClearToEmpty();
-  ::memset(&_impl_.flags_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.maxdegree_) -
-      reinterpret_cast<char*>(&_impl_.flags_)) + sizeof(_impl_.maxdegree_));
+  ::memset(&_impl_.maxdegree_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.flags_) -
+      reinterpret_cast<char*>(&_impl_.maxdegree_)) + sizeof(_impl_.flags_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -12273,10 +12273,10 @@ const char* FindPathByRecordID_V2Request::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // int32 maxDegree = 5;
+      // int64 maxDegree = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -12358,10 +12358,10 @@ uint8_t* FindPathByRecordID_V2Request::_InternalSerialize(
         4, this->_internal_recordid2(), target);
   }
 
-  // int32 maxDegree = 5;
+  // int64 maxDegree = 5;
   if (this->_internal_maxdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_maxdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_maxdegree(), target);
   }
 
   // int64 flags = 6;
@@ -12414,14 +12414,14 @@ size_t FindPathByRecordID_V2Request::ByteSizeLong() const {
         this->_internal_recordid2());
   }
 
+  // int64 maxDegree = 5;
+  if (this->_internal_maxdegree() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxdegree());
+  }
+
   // int64 flags = 6;
   if (this->_internal_flags() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_flags());
-  }
-
-  // int32 maxDegree = 5;
-  if (this->_internal_maxdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxdegree());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -12454,11 +12454,11 @@ void FindPathByRecordID_V2Request::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& t
   if (!from._internal_recordid2().empty()) {
     _this->_internal_set_recordid2(from._internal_recordid2());
   }
-  if (from._internal_flags() != 0) {
-    _this->_internal_set_flags(from._internal_flags());
-  }
   if (from._internal_maxdegree() != 0) {
     _this->_internal_set_maxdegree(from._internal_maxdegree());
+  }
+  if (from._internal_flags() != 0) {
+    _this->_internal_set_flags(from._internal_flags());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -12496,11 +12496,11 @@ void FindPathByRecordID_V2Request::InternalSwap(FindPathByRecordID_V2Request* ot
       &other->_impl_.recordid2_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FindPathByRecordID_V2Request, _impl_.maxdegree_)
-      + sizeof(FindPathByRecordID_V2Request::_impl_.maxdegree_)
-      - PROTOBUF_FIELD_OFFSET(FindPathByRecordID_V2Request, _impl_.flags_)>(
-          reinterpret_cast<char*>(&_impl_.flags_),
-          reinterpret_cast<char*>(&other->_impl_.flags_));
+      PROTOBUF_FIELD_OFFSET(FindPathByRecordID_V2Request, _impl_.flags_)
+      + sizeof(FindPathByRecordID_V2Request::_impl_.flags_)
+      - PROTOBUF_FIELD_OFFSET(FindPathByRecordID_V2Request, _impl_.maxdegree_)>(
+          reinterpret_cast<char*>(&_impl_.maxdegree_),
+          reinterpret_cast<char*>(&other->_impl_.maxdegree_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata FindPathByRecordID_V2Request::GetMetadata() const {
@@ -12757,7 +12757,7 @@ inline void FindPathExcludingByEntityIDRequest::SharedCtor(
       decltype(_impl_.excludedentities_){}
     , decltype(_impl_.entityid1_){int64_t{0}}
     , decltype(_impl_.entityid2_){int64_t{0}}
-    , decltype(_impl_.maxdegree_){0}
+    , decltype(_impl_.maxdegree_){int64_t{0}}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.excludedentities_.InitDefault();
@@ -12819,10 +12819,10 @@ const char* FindPathExcludingByEntityIDRequest::_InternalParse(const char* ptr, 
         } else
           goto handle_unusual;
         continue;
-      // int32 maxDegree = 3;
+      // int64 maxDegree = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -12878,10 +12878,10 @@ uint8_t* FindPathExcludingByEntityIDRequest::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_entityid2(), target);
   }
 
-  // int32 maxDegree = 3;
+  // int64 maxDegree = 3;
   if (this->_internal_maxdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_maxdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_maxdegree(), target);
   }
 
   // string excludedEntities = 4;
@@ -12927,9 +12927,9 @@ size_t FindPathExcludingByEntityIDRequest::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_entityid2());
   }
 
-  // int32 maxDegree = 3;
+  // int64 maxDegree = 3;
   if (this->_internal_maxdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxdegree());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxdegree());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -13221,8 +13221,8 @@ FindPathExcludingByEntityID_V2Request::FindPathExcludingByEntityID_V2Request(con
       decltype(_impl_.excludedentities_){}
     , decltype(_impl_.entityid1_){}
     , decltype(_impl_.entityid2_){}
-    , decltype(_impl_.flags_){}
     , decltype(_impl_.maxdegree_){}
+    , decltype(_impl_.flags_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -13235,8 +13235,8 @@ FindPathExcludingByEntityID_V2Request::FindPathExcludingByEntityID_V2Request(con
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.entityid1_, &from._impl_.entityid1_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.maxdegree_) -
-    reinterpret_cast<char*>(&_impl_.entityid1_)) + sizeof(_impl_.maxdegree_));
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.flags_) -
+    reinterpret_cast<char*>(&_impl_.entityid1_)) + sizeof(_impl_.flags_));
   // @@protoc_insertion_point(copy_constructor:g2engine.FindPathExcludingByEntityID_V2Request)
 }
 
@@ -13248,8 +13248,8 @@ inline void FindPathExcludingByEntityID_V2Request::SharedCtor(
       decltype(_impl_.excludedentities_){}
     , decltype(_impl_.entityid1_){int64_t{0}}
     , decltype(_impl_.entityid2_){int64_t{0}}
+    , decltype(_impl_.maxdegree_){int64_t{0}}
     , decltype(_impl_.flags_){int64_t{0}}
-    , decltype(_impl_.maxdegree_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.excludedentities_.InitDefault();
@@ -13284,8 +13284,8 @@ void FindPathExcludingByEntityID_V2Request::Clear() {
 
   _impl_.excludedentities_.ClearToEmpty();
   ::memset(&_impl_.entityid1_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.maxdegree_) -
-      reinterpret_cast<char*>(&_impl_.entityid1_)) + sizeof(_impl_.maxdegree_));
+      reinterpret_cast<char*>(&_impl_.flags_) -
+      reinterpret_cast<char*>(&_impl_.entityid1_)) + sizeof(_impl_.flags_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -13311,10 +13311,10 @@ const char* FindPathExcludingByEntityID_V2Request::_InternalParse(const char* pt
         } else
           goto handle_unusual;
         continue;
-      // int32 maxDegree = 3;
+      // int64 maxDegree = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -13378,10 +13378,10 @@ uint8_t* FindPathExcludingByEntityID_V2Request::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_entityid2(), target);
   }
 
-  // int32 maxDegree = 3;
+  // int64 maxDegree = 3;
   if (this->_internal_maxdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_maxdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_maxdegree(), target);
   }
 
   // string excludedEntities = 4;
@@ -13433,14 +13433,14 @@ size_t FindPathExcludingByEntityID_V2Request::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_entityid2());
   }
 
+  // int64 maxDegree = 3;
+  if (this->_internal_maxdegree() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxdegree());
+  }
+
   // int64 flags = 5;
   if (this->_internal_flags() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_flags());
-  }
-
-  // int32 maxDegree = 3;
-  if (this->_internal_maxdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxdegree());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -13470,11 +13470,11 @@ void FindPathExcludingByEntityID_V2Request::MergeImpl(::PROTOBUF_NAMESPACE_ID::M
   if (from._internal_entityid2() != 0) {
     _this->_internal_set_entityid2(from._internal_entityid2());
   }
-  if (from._internal_flags() != 0) {
-    _this->_internal_set_flags(from._internal_flags());
-  }
   if (from._internal_maxdegree() != 0) {
     _this->_internal_set_maxdegree(from._internal_maxdegree());
+  }
+  if (from._internal_flags() != 0) {
+    _this->_internal_set_flags(from._internal_flags());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -13500,8 +13500,8 @@ void FindPathExcludingByEntityID_V2Request::InternalSwap(FindPathExcludingByEnti
       &other->_impl_.excludedentities_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FindPathExcludingByEntityID_V2Request, _impl_.maxdegree_)
-      + sizeof(FindPathExcludingByEntityID_V2Request::_impl_.maxdegree_)
+      PROTOBUF_FIELD_OFFSET(FindPathExcludingByEntityID_V2Request, _impl_.flags_)
+      + sizeof(FindPathExcludingByEntityID_V2Request::_impl_.flags_)
       - PROTOBUF_FIELD_OFFSET(FindPathExcludingByEntityID_V2Request, _impl_.entityid1_)>(
           reinterpret_cast<char*>(&_impl_.entityid1_),
           reinterpret_cast<char*>(&other->_impl_.entityid1_));
@@ -13795,7 +13795,7 @@ inline void FindPathExcludingByRecordIDRequest::SharedCtor(
     , decltype(_impl_.datasourcecode2_){}
     , decltype(_impl_.recordid2_){}
     , decltype(_impl_.excludedrecords_){}
-    , decltype(_impl_.maxdegree_){0}
+    , decltype(_impl_.maxdegree_){int64_t{0}}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.datasourcecode1_.InitDefault();
@@ -13853,7 +13853,7 @@ void FindPathExcludingByRecordIDRequest::Clear() {
   _impl_.datasourcecode2_.ClearToEmpty();
   _impl_.recordid2_.ClearToEmpty();
   _impl_.excludedrecords_.ClearToEmpty();
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -13903,10 +13903,10 @@ const char* FindPathExcludingByRecordIDRequest::_InternalParse(const char* ptr, 
         } else
           goto handle_unusual;
         continue;
-      // int32 maxDegree = 5;
+      // int64 maxDegree = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -13990,10 +13990,10 @@ uint8_t* FindPathExcludingByRecordIDRequest::_InternalSerialize(
         4, this->_internal_recordid2(), target);
   }
 
-  // int32 maxDegree = 5;
+  // int64 maxDegree = 5;
   if (this->_internal_maxdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_maxdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_maxdegree(), target);
   }
 
   // string excludedRecords = 6;
@@ -14057,9 +14057,9 @@ size_t FindPathExcludingByRecordIDRequest::ByteSizeLong() const {
         this->_internal_excludedrecords());
   }
 
-  // int32 maxDegree = 5;
+  // int64 maxDegree = 5;
   if (this->_internal_maxdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxdegree());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxdegree());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -14370,8 +14370,8 @@ FindPathExcludingByRecordID_V2Request::FindPathExcludingByRecordID_V2Request(con
     , decltype(_impl_.datasourcecode2_){}
     , decltype(_impl_.recordid2_){}
     , decltype(_impl_.excludedrecords_){}
-    , decltype(_impl_.flags_){}
     , decltype(_impl_.maxdegree_){}
+    , decltype(_impl_.flags_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -14415,9 +14415,9 @@ FindPathExcludingByRecordID_V2Request::FindPathExcludingByRecordID_V2Request(con
     _this->_impl_.excludedrecords_.Set(from._internal_excludedrecords(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.flags_, &from._impl_.flags_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.maxdegree_) -
-    reinterpret_cast<char*>(&_impl_.flags_)) + sizeof(_impl_.maxdegree_));
+  ::memcpy(&_impl_.maxdegree_, &from._impl_.maxdegree_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.flags_) -
+    reinterpret_cast<char*>(&_impl_.maxdegree_)) + sizeof(_impl_.flags_));
   // @@protoc_insertion_point(copy_constructor:g2engine.FindPathExcludingByRecordID_V2Request)
 }
 
@@ -14431,8 +14431,8 @@ inline void FindPathExcludingByRecordID_V2Request::SharedCtor(
     , decltype(_impl_.datasourcecode2_){}
     , decltype(_impl_.recordid2_){}
     , decltype(_impl_.excludedrecords_){}
+    , decltype(_impl_.maxdegree_){int64_t{0}}
     , decltype(_impl_.flags_){int64_t{0}}
-    , decltype(_impl_.maxdegree_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.datasourcecode1_.InitDefault();
@@ -14490,9 +14490,9 @@ void FindPathExcludingByRecordID_V2Request::Clear() {
   _impl_.datasourcecode2_.ClearToEmpty();
   _impl_.recordid2_.ClearToEmpty();
   _impl_.excludedrecords_.ClearToEmpty();
-  ::memset(&_impl_.flags_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.maxdegree_) -
-      reinterpret_cast<char*>(&_impl_.flags_)) + sizeof(_impl_.maxdegree_));
+  ::memset(&_impl_.maxdegree_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.flags_) -
+      reinterpret_cast<char*>(&_impl_.maxdegree_)) + sizeof(_impl_.flags_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -14542,10 +14542,10 @@ const char* FindPathExcludingByRecordID_V2Request::_InternalParse(const char* pt
         } else
           goto handle_unusual;
         continue;
-      // int32 maxDegree = 5;
+      // int64 maxDegree = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -14637,10 +14637,10 @@ uint8_t* FindPathExcludingByRecordID_V2Request::_InternalSerialize(
         4, this->_internal_recordid2(), target);
   }
 
-  // int32 maxDegree = 5;
+  // int64 maxDegree = 5;
   if (this->_internal_maxdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_maxdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_maxdegree(), target);
   }
 
   // string excludedRecords = 6;
@@ -14710,14 +14710,14 @@ size_t FindPathExcludingByRecordID_V2Request::ByteSizeLong() const {
         this->_internal_excludedrecords());
   }
 
+  // int64 maxDegree = 5;
+  if (this->_internal_maxdegree() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxdegree());
+  }
+
   // int64 flags = 7;
   if (this->_internal_flags() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_flags());
-  }
-
-  // int32 maxDegree = 5;
-  if (this->_internal_maxdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxdegree());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -14753,11 +14753,11 @@ void FindPathExcludingByRecordID_V2Request::MergeImpl(::PROTOBUF_NAMESPACE_ID::M
   if (!from._internal_excludedrecords().empty()) {
     _this->_internal_set_excludedrecords(from._internal_excludedrecords());
   }
-  if (from._internal_flags() != 0) {
-    _this->_internal_set_flags(from._internal_flags());
-  }
   if (from._internal_maxdegree() != 0) {
     _this->_internal_set_maxdegree(from._internal_maxdegree());
+  }
+  if (from._internal_flags() != 0) {
+    _this->_internal_set_flags(from._internal_flags());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -14799,11 +14799,11 @@ void FindPathExcludingByRecordID_V2Request::InternalSwap(FindPathExcludingByReco
       &other->_impl_.excludedrecords_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FindPathExcludingByRecordID_V2Request, _impl_.maxdegree_)
-      + sizeof(FindPathExcludingByRecordID_V2Request::_impl_.maxdegree_)
-      - PROTOBUF_FIELD_OFFSET(FindPathExcludingByRecordID_V2Request, _impl_.flags_)>(
-          reinterpret_cast<char*>(&_impl_.flags_),
-          reinterpret_cast<char*>(&other->_impl_.flags_));
+      PROTOBUF_FIELD_OFFSET(FindPathExcludingByRecordID_V2Request, _impl_.flags_)
+      + sizeof(FindPathExcludingByRecordID_V2Request::_impl_.flags_)
+      - PROTOBUF_FIELD_OFFSET(FindPathExcludingByRecordID_V2Request, _impl_.maxdegree_)>(
+          reinterpret_cast<char*>(&_impl_.maxdegree_),
+          reinterpret_cast<char*>(&other->_impl_.maxdegree_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata FindPathExcludingByRecordID_V2Request::GetMetadata() const {
@@ -15070,7 +15070,7 @@ inline void FindPathIncludingSourceByEntityIDRequest::SharedCtor(
     , decltype(_impl_.requireddsrcs_){}
     , decltype(_impl_.entityid1_){int64_t{0}}
     , decltype(_impl_.entityid2_){int64_t{0}}
-    , decltype(_impl_.maxdegree_){0}
+    , decltype(_impl_.maxdegree_){int64_t{0}}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.excludedentities_.InitDefault();
@@ -15138,10 +15138,10 @@ const char* FindPathIncludingSourceByEntityIDRequest::_InternalParse(const char*
         } else
           goto handle_unusual;
         continue;
-      // int32 maxDegree = 3;
+      // int64 maxDegree = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -15207,10 +15207,10 @@ uint8_t* FindPathIncludingSourceByEntityIDRequest::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_entityid2(), target);
   }
 
-  // int32 maxDegree = 3;
+  // int64 maxDegree = 3;
   if (this->_internal_maxdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_maxdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_maxdegree(), target);
   }
 
   // string excludedEntities = 4;
@@ -15273,9 +15273,9 @@ size_t FindPathIncludingSourceByEntityIDRequest::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_entityid2());
   }
 
-  // int32 maxDegree = 3;
+  // int64 maxDegree = 3;
   if (this->_internal_maxdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxdegree());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxdegree());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -15575,8 +15575,8 @@ FindPathIncludingSourceByEntityID_V2Request::FindPathIncludingSourceByEntityID_V
     , decltype(_impl_.requireddsrcs_){}
     , decltype(_impl_.entityid1_){}
     , decltype(_impl_.entityid2_){}
-    , decltype(_impl_.flags_){}
     , decltype(_impl_.maxdegree_){}
+    , decltype(_impl_.flags_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -15597,8 +15597,8 @@ FindPathIncludingSourceByEntityID_V2Request::FindPathIncludingSourceByEntityID_V
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.entityid1_, &from._impl_.entityid1_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.maxdegree_) -
-    reinterpret_cast<char*>(&_impl_.entityid1_)) + sizeof(_impl_.maxdegree_));
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.flags_) -
+    reinterpret_cast<char*>(&_impl_.entityid1_)) + sizeof(_impl_.flags_));
   // @@protoc_insertion_point(copy_constructor:g2engine.FindPathIncludingSourceByEntityID_V2Request)
 }
 
@@ -15611,8 +15611,8 @@ inline void FindPathIncludingSourceByEntityID_V2Request::SharedCtor(
     , decltype(_impl_.requireddsrcs_){}
     , decltype(_impl_.entityid1_){int64_t{0}}
     , decltype(_impl_.entityid2_){int64_t{0}}
+    , decltype(_impl_.maxdegree_){int64_t{0}}
     , decltype(_impl_.flags_){int64_t{0}}
-    , decltype(_impl_.maxdegree_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.excludedentities_.InitDefault();
@@ -15653,8 +15653,8 @@ void FindPathIncludingSourceByEntityID_V2Request::Clear() {
   _impl_.excludedentities_.ClearToEmpty();
   _impl_.requireddsrcs_.ClearToEmpty();
   ::memset(&_impl_.entityid1_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.maxdegree_) -
-      reinterpret_cast<char*>(&_impl_.entityid1_)) + sizeof(_impl_.maxdegree_));
+      reinterpret_cast<char*>(&_impl_.flags_) -
+      reinterpret_cast<char*>(&_impl_.entityid1_)) + sizeof(_impl_.flags_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -15680,10 +15680,10 @@ const char* FindPathIncludingSourceByEntityID_V2Request::_InternalParse(const ch
         } else
           goto handle_unusual;
         continue;
-      // int32 maxDegree = 3;
+      // int64 maxDegree = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -15757,10 +15757,10 @@ uint8_t* FindPathIncludingSourceByEntityID_V2Request::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_entityid2(), target);
   }
 
-  // int32 maxDegree = 3;
+  // int64 maxDegree = 3;
   if (this->_internal_maxdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_maxdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_maxdegree(), target);
   }
 
   // string excludedEntities = 4;
@@ -15829,14 +15829,14 @@ size_t FindPathIncludingSourceByEntityID_V2Request::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_entityid2());
   }
 
+  // int64 maxDegree = 3;
+  if (this->_internal_maxdegree() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxdegree());
+  }
+
   // int64 flags = 6;
   if (this->_internal_flags() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_flags());
-  }
-
-  // int32 maxDegree = 3;
-  if (this->_internal_maxdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxdegree());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -15869,11 +15869,11 @@ void FindPathIncludingSourceByEntityID_V2Request::MergeImpl(::PROTOBUF_NAMESPACE
   if (from._internal_entityid2() != 0) {
     _this->_internal_set_entityid2(from._internal_entityid2());
   }
-  if (from._internal_flags() != 0) {
-    _this->_internal_set_flags(from._internal_flags());
-  }
   if (from._internal_maxdegree() != 0) {
     _this->_internal_set_maxdegree(from._internal_maxdegree());
+  }
+  if (from._internal_flags() != 0) {
+    _this->_internal_set_flags(from._internal_flags());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -15903,8 +15903,8 @@ void FindPathIncludingSourceByEntityID_V2Request::InternalSwap(FindPathIncluding
       &other->_impl_.requireddsrcs_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FindPathIncludingSourceByEntityID_V2Request, _impl_.maxdegree_)
-      + sizeof(FindPathIncludingSourceByEntityID_V2Request::_impl_.maxdegree_)
+      PROTOBUF_FIELD_OFFSET(FindPathIncludingSourceByEntityID_V2Request, _impl_.flags_)
+      + sizeof(FindPathIncludingSourceByEntityID_V2Request::_impl_.flags_)
       - PROTOBUF_FIELD_OFFSET(FindPathIncludingSourceByEntityID_V2Request, _impl_.entityid1_)>(
           reinterpret_cast<char*>(&_impl_.entityid1_),
           reinterpret_cast<char*>(&other->_impl_.entityid1_));
@@ -16208,7 +16208,7 @@ inline void FindPathIncludingSourceByRecordIDRequest::SharedCtor(
     , decltype(_impl_.recordid2_){}
     , decltype(_impl_.excludedrecords_){}
     , decltype(_impl_.requireddsrcs_){}
-    , decltype(_impl_.maxdegree_){0}
+    , decltype(_impl_.maxdegree_){int64_t{0}}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.datasourcecode1_.InitDefault();
@@ -16272,7 +16272,7 @@ void FindPathIncludingSourceByRecordIDRequest::Clear() {
   _impl_.recordid2_.ClearToEmpty();
   _impl_.excludedrecords_.ClearToEmpty();
   _impl_.requireddsrcs_.ClearToEmpty();
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -16322,10 +16322,10 @@ const char* FindPathIncludingSourceByRecordIDRequest::_InternalParse(const char*
         } else
           goto handle_unusual;
         continue;
-      // int32 maxDegree = 5;
+      // int64 maxDegree = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -16419,10 +16419,10 @@ uint8_t* FindPathIncludingSourceByRecordIDRequest::_InternalSerialize(
         4, this->_internal_recordid2(), target);
   }
 
-  // int32 maxDegree = 5;
+  // int64 maxDegree = 5;
   if (this->_internal_maxdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_maxdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_maxdegree(), target);
   }
 
   // string excludedRecords = 6;
@@ -16503,9 +16503,9 @@ size_t FindPathIncludingSourceByRecordIDRequest::ByteSizeLong() const {
         this->_internal_requireddsrcs());
   }
 
-  // int32 maxDegree = 5;
+  // int64 maxDegree = 5;
   if (this->_internal_maxdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxdegree());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxdegree());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -16824,8 +16824,8 @@ FindPathIncludingSourceByRecordID_V2Request::FindPathIncludingSourceByRecordID_V
     , decltype(_impl_.recordid2_){}
     , decltype(_impl_.excludedrecords_){}
     , decltype(_impl_.requireddsrcs_){}
-    , decltype(_impl_.flags_){}
     , decltype(_impl_.maxdegree_){}
+    , decltype(_impl_.flags_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -16877,9 +16877,9 @@ FindPathIncludingSourceByRecordID_V2Request::FindPathIncludingSourceByRecordID_V
     _this->_impl_.requireddsrcs_.Set(from._internal_requireddsrcs(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.flags_, &from._impl_.flags_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.maxdegree_) -
-    reinterpret_cast<char*>(&_impl_.flags_)) + sizeof(_impl_.maxdegree_));
+  ::memcpy(&_impl_.maxdegree_, &from._impl_.maxdegree_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.flags_) -
+    reinterpret_cast<char*>(&_impl_.maxdegree_)) + sizeof(_impl_.flags_));
   // @@protoc_insertion_point(copy_constructor:g2engine.FindPathIncludingSourceByRecordID_V2Request)
 }
 
@@ -16894,8 +16894,8 @@ inline void FindPathIncludingSourceByRecordID_V2Request::SharedCtor(
     , decltype(_impl_.recordid2_){}
     , decltype(_impl_.excludedrecords_){}
     , decltype(_impl_.requireddsrcs_){}
+    , decltype(_impl_.maxdegree_){int64_t{0}}
     , decltype(_impl_.flags_){int64_t{0}}
-    , decltype(_impl_.maxdegree_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.datasourcecode1_.InitDefault();
@@ -16959,9 +16959,9 @@ void FindPathIncludingSourceByRecordID_V2Request::Clear() {
   _impl_.recordid2_.ClearToEmpty();
   _impl_.excludedrecords_.ClearToEmpty();
   _impl_.requireddsrcs_.ClearToEmpty();
-  ::memset(&_impl_.flags_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.maxdegree_) -
-      reinterpret_cast<char*>(&_impl_.flags_)) + sizeof(_impl_.maxdegree_));
+  ::memset(&_impl_.maxdegree_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.flags_) -
+      reinterpret_cast<char*>(&_impl_.maxdegree_)) + sizeof(_impl_.flags_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -17011,10 +17011,10 @@ const char* FindPathIncludingSourceByRecordID_V2Request::_InternalParse(const ch
         } else
           goto handle_unusual;
         continue;
-      // int32 maxDegree = 5;
+      // int64 maxDegree = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.maxdegree_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -17116,10 +17116,10 @@ uint8_t* FindPathIncludingSourceByRecordID_V2Request::_InternalSerialize(
         4, this->_internal_recordid2(), target);
   }
 
-  // int32 maxDegree = 5;
+  // int64 maxDegree = 5;
   if (this->_internal_maxdegree() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_maxdegree(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(5, this->_internal_maxdegree(), target);
   }
 
   // string excludedRecords = 6;
@@ -17206,14 +17206,14 @@ size_t FindPathIncludingSourceByRecordID_V2Request::ByteSizeLong() const {
         this->_internal_requireddsrcs());
   }
 
+  // int64 maxDegree = 5;
+  if (this->_internal_maxdegree() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_maxdegree());
+  }
+
   // int64 flags = 8;
   if (this->_internal_flags() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_flags());
-  }
-
-  // int32 maxDegree = 5;
-  if (this->_internal_maxdegree() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_maxdegree());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -17252,11 +17252,11 @@ void FindPathIncludingSourceByRecordID_V2Request::MergeImpl(::PROTOBUF_NAMESPACE
   if (!from._internal_requireddsrcs().empty()) {
     _this->_internal_set_requireddsrcs(from._internal_requireddsrcs());
   }
-  if (from._internal_flags() != 0) {
-    _this->_internal_set_flags(from._internal_flags());
-  }
   if (from._internal_maxdegree() != 0) {
     _this->_internal_set_maxdegree(from._internal_maxdegree());
+  }
+  if (from._internal_flags() != 0) {
+    _this->_internal_set_flags(from._internal_flags());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -17302,11 +17302,11 @@ void FindPathIncludingSourceByRecordID_V2Request::InternalSwap(FindPathIncluding
       &other->_impl_.requireddsrcs_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FindPathIncludingSourceByRecordID_V2Request, _impl_.maxdegree_)
-      + sizeof(FindPathIncludingSourceByRecordID_V2Request::_impl_.maxdegree_)
-      - PROTOBUF_FIELD_OFFSET(FindPathIncludingSourceByRecordID_V2Request, _impl_.flags_)>(
-          reinterpret_cast<char*>(&_impl_.flags_),
-          reinterpret_cast<char*>(&other->_impl_.flags_));
+      PROTOBUF_FIELD_OFFSET(FindPathIncludingSourceByRecordID_V2Request, _impl_.flags_)
+      + sizeof(FindPathIncludingSourceByRecordID_V2Request::_impl_.flags_)
+      - PROTOBUF_FIELD_OFFSET(FindPathIncludingSourceByRecordID_V2Request, _impl_.maxdegree_)>(
+          reinterpret_cast<char*>(&_impl_.maxdegree_),
+          reinterpret_cast<char*>(&other->_impl_.maxdegree_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata FindPathIncludingSourceByRecordID_V2Request::GetMetadata() const {
@@ -22553,7 +22553,7 @@ inline void InitRequest::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_.modulename_){}
     , decltype(_impl_.iniparams_){}
-    , decltype(_impl_.verboselogging_){0}
+    , decltype(_impl_.verboselogging_){int64_t{0}}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.modulename_.InitDefault();
@@ -22593,7 +22593,7 @@ void InitRequest::Clear() {
 
   _impl_.modulename_.ClearToEmpty();
   _impl_.iniparams_.ClearToEmpty();
-  _impl_.verboselogging_ = 0;
+  _impl_.verboselogging_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -22623,10 +22623,10 @@ const char* InitRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // int32 verboseLogging = 3;
+      // int64 verboseLogging = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.verboselogging_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.verboselogging_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -22680,10 +22680,10 @@ uint8_t* InitRequest::_InternalSerialize(
         2, this->_internal_iniparams(), target);
   }
 
-  // int32 verboseLogging = 3;
+  // int64 verboseLogging = 3;
   if (this->_internal_verboselogging() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_verboselogging(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_verboselogging(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -22716,9 +22716,9 @@ size_t InitRequest::ByteSizeLong() const {
         this->_internal_iniparams());
   }
 
-  // int32 verboseLogging = 3;
+  // int64 verboseLogging = 3;
   if (this->_internal_verboselogging() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_verboselogging());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_verboselogging());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -22877,7 +22877,7 @@ inline void InitWithConfigIDRequest::SharedCtor(
       decltype(_impl_.modulename_){}
     , decltype(_impl_.iniparams_){}
     , decltype(_impl_.initconfigid_){int64_t{0}}
-    , decltype(_impl_.verboselogging_){0}
+    , decltype(_impl_.verboselogging_){int64_t{0}}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.modulename_.InitDefault();
@@ -22957,10 +22957,10 @@ const char* InitWithConfigIDRequest::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // int32 verboseLogging = 4;
+      // int64 verboseLogging = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _impl_.verboselogging_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.verboselogging_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -23020,10 +23020,10 @@ uint8_t* InitWithConfigIDRequest::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_initconfigid(), target);
   }
 
-  // int32 verboseLogging = 4;
+  // int64 verboseLogging = 4;
   if (this->_internal_verboselogging() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_verboselogging(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(4, this->_internal_verboselogging(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -23061,9 +23061,9 @@ size_t InitWithConfigIDRequest::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_initconfigid());
   }
 
-  // int32 verboseLogging = 4;
+  // int64 verboseLogging = 4;
   if (this->_internal_verboselogging() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_verboselogging());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_verboselogging());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);

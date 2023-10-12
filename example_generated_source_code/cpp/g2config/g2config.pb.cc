@@ -147,7 +147,7 @@ PROTOBUF_CONSTEXPR InitRequest::InitRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.modulename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.iniparams_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.verboselogging_)*/0
+  , /*decltype(_impl_.verboselogging_)*/int64_t{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct InitRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR InitRequestDefaultTypeInternal()
@@ -432,7 +432,7 @@ const char descriptor_table_protodef_g2config_2eproto[] PROTOBUF_SECTION_VARIABL
   "SourceResponse\"\020\n\016DestroyRequest\"\021\n\017Dest"
   "royResponse\"L\n\013InitRequest\022\022\n\nmoduleName"
   "\030\001 \001(\t\022\021\n\tiniParams\030\002 \001(\t\022\026\n\016verboseLogg"
-  "ing\030\003 \001(\005\"\016\n\014InitResponse\".\n\026ListDataSou"
+  "ing\030\003 \001(\003\"\016\n\014InitResponse\".\n\026ListDataSou"
   "rcesRequest\022\024\n\014configHandle\030\001 \001(\003\")\n\027Lis"
   "tDataSourcesResponse\022\016\n\006result\030\001 \001(\t\"!\n\013"
   "LoadRequest\022\022\n\njsonConfig\030\001 \001(\t\"\036\n\014LoadR"
@@ -1743,7 +1743,7 @@ inline void InitRequest::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_.modulename_){}
     , decltype(_impl_.iniparams_){}
-    , decltype(_impl_.verboselogging_){0}
+    , decltype(_impl_.verboselogging_){int64_t{0}}
     , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.modulename_.InitDefault();
@@ -1783,7 +1783,7 @@ void InitRequest::Clear() {
 
   _impl_.modulename_.ClearToEmpty();
   _impl_.iniparams_.ClearToEmpty();
-  _impl_.verboselogging_ = 0;
+  _impl_.verboselogging_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1813,10 +1813,10 @@ const char* InitRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // int32 verboseLogging = 3;
+      // int64 verboseLogging = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.verboselogging_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          _impl_.verboselogging_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1870,10 +1870,10 @@ uint8_t* InitRequest::_InternalSerialize(
         2, this->_internal_iniparams(), target);
   }
 
-  // int32 verboseLogging = 3;
+  // int64 verboseLogging = 3;
   if (this->_internal_verboselogging() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_verboselogging(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(3, this->_internal_verboselogging(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1906,9 +1906,9 @@ size_t InitRequest::ByteSizeLong() const {
         this->_internal_iniparams());
   }
 
-  // int32 verboseLogging = 3;
+  // int64 verboseLogging = 3;
   if (this->_internal_verboselogging() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_verboselogging());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_verboselogging());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);

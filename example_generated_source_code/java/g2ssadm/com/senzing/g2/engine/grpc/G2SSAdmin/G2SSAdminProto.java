@@ -109,7 +109,7 @@ public final class G2SSAdminProto {
       "sponse\022\016\n\006result\030\001 \001(\t\"\020\n\016DestroyRequest" +
       "\"\021\n\017DestroyResponse\"L\n\013InitRequest\022\022\n\nmo" +
       "duleName\030\001 \001(\t\022\021\n\tiniParams\030\002 \001(\t\022\026\n\016ver" +
-      "boseLogging\030\003 \001(\005\"\016\n\014InitResponse\"R\n\031Ini" +
+      "boseLogging\030\003 \001(\003\"\016\n\014InitResponse\"R\n\031Ini" +
       "tializeNewTokenRequest\022\024\n\014defaultSOPin\030\001" +
       " \001(\t\022\020\n\010newSOPin\030\002 \001(\t\022\r\n\005label\030\003 \001(\t\"\034\n" +
       "\032InitializeNewTokenResponse\"\r\n\013ListReque" +

@@ -124,7 +124,7 @@ public final class G2ConfigProto {
       "SourceResponse\"\020\n\016DestroyRequest\"\021\n\017Dest" +
       "royResponse\"L\n\013InitRequest\022\022\n\nmoduleName" +
       "\030\001 \001(\t\022\021\n\tiniParams\030\002 \001(\t\022\026\n\016verboseLogg" +
-      "ing\030\003 \001(\005\"\016\n\014InitResponse\".\n\026ListDataSou" +
+      "ing\030\003 \001(\003\"\016\n\014InitResponse\".\n\026ListDataSou" +
       "rcesRequest\022\024\n\014configHandle\030\001 \001(\003\")\n\027Lis" +
       "tDataSourcesResponse\022\016\n\006result\030\001 \001(\t\"!\n\013" +
       "LoadRequest\022\022\n\njsonConfig\030\001 \001(\t\"\036\n\014LoadR" +

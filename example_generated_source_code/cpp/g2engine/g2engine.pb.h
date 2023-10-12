@@ -4956,31 +4956,31 @@ class FindNetworkByEntityIDRequest final :
   std::string* _internal_mutable_entitylist();
   public:
 
-  // int32 maxDegree = 2;
+  // int64 maxDegree = 2;
   void clear_maxdegree();
-  int32_t maxdegree() const;
-  void set_maxdegree(int32_t value);
+  int64_t maxdegree() const;
+  void set_maxdegree(int64_t value);
   private:
-  int32_t _internal_maxdegree() const;
-  void _internal_set_maxdegree(int32_t value);
+  int64_t _internal_maxdegree() const;
+  void _internal_set_maxdegree(int64_t value);
   public:
 
-  // int32 buildOutDegree = 3;
+  // int64 buildOutDegree = 3;
   void clear_buildoutdegree();
-  int32_t buildoutdegree() const;
-  void set_buildoutdegree(int32_t value);
+  int64_t buildoutdegree() const;
+  void set_buildoutdegree(int64_t value);
   private:
-  int32_t _internal_buildoutdegree() const;
-  void _internal_set_buildoutdegree(int32_t value);
+  int64_t _internal_buildoutdegree() const;
+  void _internal_set_buildoutdegree(int64_t value);
   public:
 
-  // int32 maxEntities = 4;
+  // int64 maxEntities = 4;
   void clear_maxentities();
-  int32_t maxentities() const;
-  void set_maxentities(int32_t value);
+  int64_t maxentities() const;
+  void set_maxentities(int64_t value);
   private:
-  int32_t _internal_maxentities() const;
-  void _internal_set_maxentities(int32_t value);
+  int64_t _internal_maxentities() const;
+  void _internal_set_maxentities(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.FindNetworkByEntityIDRequest)
@@ -4992,9 +4992,9 @@ class FindNetworkByEntityIDRequest final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr entitylist_;
-    int32_t maxdegree_;
-    int32_t buildoutdegree_;
-    int32_t maxentities_;
+    int64_t maxdegree_;
+    int64_t buildoutdegree_;
+    int64_t maxentities_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5279,8 +5279,8 @@ class FindNetworkByEntityID_V2Request final :
     kEntityListFieldNumber = 1,
     kMaxDegreeFieldNumber = 2,
     kBuildOutDegreeFieldNumber = 3,
-    kFlagsFieldNumber = 5,
     kMaxEntitiesFieldNumber = 4,
+    kFlagsFieldNumber = 5,
   };
   // string entityList = 1;
   void clear_entitylist();
@@ -5296,22 +5296,31 @@ class FindNetworkByEntityID_V2Request final :
   std::string* _internal_mutable_entitylist();
   public:
 
-  // int32 maxDegree = 2;
+  // int64 maxDegree = 2;
   void clear_maxdegree();
-  int32_t maxdegree() const;
-  void set_maxdegree(int32_t value);
+  int64_t maxdegree() const;
+  void set_maxdegree(int64_t value);
   private:
-  int32_t _internal_maxdegree() const;
-  void _internal_set_maxdegree(int32_t value);
+  int64_t _internal_maxdegree() const;
+  void _internal_set_maxdegree(int64_t value);
   public:
 
-  // int32 buildOutDegree = 3;
+  // int64 buildOutDegree = 3;
   void clear_buildoutdegree();
-  int32_t buildoutdegree() const;
-  void set_buildoutdegree(int32_t value);
+  int64_t buildoutdegree() const;
+  void set_buildoutdegree(int64_t value);
   private:
-  int32_t _internal_buildoutdegree() const;
-  void _internal_set_buildoutdegree(int32_t value);
+  int64_t _internal_buildoutdegree() const;
+  void _internal_set_buildoutdegree(int64_t value);
+  public:
+
+  // int64 maxEntities = 4;
+  void clear_maxentities();
+  int64_t maxentities() const;
+  void set_maxentities(int64_t value);
+  private:
+  int64_t _internal_maxentities() const;
+  void _internal_set_maxentities(int64_t value);
   public:
 
   // int64 flags = 5;
@@ -5323,15 +5332,6 @@ class FindNetworkByEntityID_V2Request final :
   void _internal_set_flags(int64_t value);
   public:
 
-  // int32 maxEntities = 4;
-  void clear_maxentities();
-  int32_t maxentities() const;
-  void set_maxentities(int32_t value);
-  private:
-  int32_t _internal_maxentities() const;
-  void _internal_set_maxentities(int32_t value);
-  public:
-
   // @@protoc_insertion_point(class_scope:g2engine.FindNetworkByEntityID_V2Request)
  private:
   class _Internal;
@@ -5341,10 +5341,10 @@ class FindNetworkByEntityID_V2Request final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr entitylist_;
-    int32_t maxdegree_;
-    int32_t buildoutdegree_;
+    int64_t maxdegree_;
+    int64_t buildoutdegree_;
+    int64_t maxentities_;
     int64_t flags_;
-    int32_t maxentities_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5645,31 +5645,31 @@ class FindNetworkByRecordIDRequest final :
   std::string* _internal_mutable_recordlist();
   public:
 
-  // int32 maxDegree = 2;
+  // int64 maxDegree = 2;
   void clear_maxdegree();
-  int32_t maxdegree() const;
-  void set_maxdegree(int32_t value);
+  int64_t maxdegree() const;
+  void set_maxdegree(int64_t value);
   private:
-  int32_t _internal_maxdegree() const;
-  void _internal_set_maxdegree(int32_t value);
+  int64_t _internal_maxdegree() const;
+  void _internal_set_maxdegree(int64_t value);
   public:
 
-  // int32 buildOutDegree = 3;
+  // int64 buildOutDegree = 3;
   void clear_buildoutdegree();
-  int32_t buildoutdegree() const;
-  void set_buildoutdegree(int32_t value);
+  int64_t buildoutdegree() const;
+  void set_buildoutdegree(int64_t value);
   private:
-  int32_t _internal_buildoutdegree() const;
-  void _internal_set_buildoutdegree(int32_t value);
+  int64_t _internal_buildoutdegree() const;
+  void _internal_set_buildoutdegree(int64_t value);
   public:
 
-  // int32 maxEntities = 4;
+  // int64 maxEntities = 4;
   void clear_maxentities();
-  int32_t maxentities() const;
-  void set_maxentities(int32_t value);
+  int64_t maxentities() const;
+  void set_maxentities(int64_t value);
   private:
-  int32_t _internal_maxentities() const;
-  void _internal_set_maxentities(int32_t value);
+  int64_t _internal_maxentities() const;
+  void _internal_set_maxentities(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.FindNetworkByRecordIDRequest)
@@ -5681,9 +5681,9 @@ class FindNetworkByRecordIDRequest final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr recordlist_;
-    int32_t maxdegree_;
-    int32_t buildoutdegree_;
-    int32_t maxentities_;
+    int64_t maxdegree_;
+    int64_t buildoutdegree_;
+    int64_t maxentities_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5968,8 +5968,8 @@ class FindNetworkByRecordID_V2Request final :
     kRecordListFieldNumber = 1,
     kMaxDegreeFieldNumber = 2,
     kBuildOutDegreeFieldNumber = 3,
-    kFlagsFieldNumber = 5,
     kMaxEntitiesFieldNumber = 4,
+    kFlagsFieldNumber = 5,
   };
   // string recordList = 1;
   void clear_recordlist();
@@ -5985,22 +5985,31 @@ class FindNetworkByRecordID_V2Request final :
   std::string* _internal_mutable_recordlist();
   public:
 
-  // int32 maxDegree = 2;
+  // int64 maxDegree = 2;
   void clear_maxdegree();
-  int32_t maxdegree() const;
-  void set_maxdegree(int32_t value);
+  int64_t maxdegree() const;
+  void set_maxdegree(int64_t value);
   private:
-  int32_t _internal_maxdegree() const;
-  void _internal_set_maxdegree(int32_t value);
+  int64_t _internal_maxdegree() const;
+  void _internal_set_maxdegree(int64_t value);
   public:
 
-  // int32 buildOutDegree = 3;
+  // int64 buildOutDegree = 3;
   void clear_buildoutdegree();
-  int32_t buildoutdegree() const;
-  void set_buildoutdegree(int32_t value);
+  int64_t buildoutdegree() const;
+  void set_buildoutdegree(int64_t value);
   private:
-  int32_t _internal_buildoutdegree() const;
-  void _internal_set_buildoutdegree(int32_t value);
+  int64_t _internal_buildoutdegree() const;
+  void _internal_set_buildoutdegree(int64_t value);
+  public:
+
+  // int64 maxEntities = 4;
+  void clear_maxentities();
+  int64_t maxentities() const;
+  void set_maxentities(int64_t value);
+  private:
+  int64_t _internal_maxentities() const;
+  void _internal_set_maxentities(int64_t value);
   public:
 
   // int64 flags = 5;
@@ -6012,15 +6021,6 @@ class FindNetworkByRecordID_V2Request final :
   void _internal_set_flags(int64_t value);
   public:
 
-  // int32 maxEntities = 4;
-  void clear_maxentities();
-  int32_t maxentities() const;
-  void set_maxentities(int32_t value);
-  private:
-  int32_t _internal_maxentities() const;
-  void _internal_set_maxentities(int32_t value);
-  public:
-
   // @@protoc_insertion_point(class_scope:g2engine.FindNetworkByRecordID_V2Request)
  private:
   class _Internal;
@@ -6030,10 +6030,10 @@ class FindNetworkByRecordID_V2Request final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr recordlist_;
-    int32_t maxdegree_;
-    int32_t buildoutdegree_;
+    int64_t maxdegree_;
+    int64_t buildoutdegree_;
+    int64_t maxentities_;
     int64_t flags_;
-    int32_t maxentities_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6337,13 +6337,13 @@ class FindPathByEntityIDRequest final :
   void _internal_set_entityid2(int64_t value);
   public:
 
-  // int32 maxDegree = 3;
+  // int64 maxDegree = 3;
   void clear_maxdegree();
-  int32_t maxdegree() const;
-  void set_maxdegree(int32_t value);
+  int64_t maxdegree() const;
+  void set_maxdegree(int64_t value);
   private:
-  int32_t _internal_maxdegree() const;
-  void _internal_set_maxdegree(int32_t value);
+  int64_t _internal_maxdegree() const;
+  void _internal_set_maxdegree(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.FindPathByEntityIDRequest)
@@ -6356,7 +6356,7 @@ class FindPathByEntityIDRequest final :
   struct Impl_ {
     int64_t entityid1_;
     int64_t entityid2_;
-    int32_t maxdegree_;
+    int64_t maxdegree_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6640,8 +6640,8 @@ class FindPathByEntityID_V2Request final :
   enum : int {
     kEntityID1FieldNumber = 1,
     kEntityID2FieldNumber = 2,
-    kFlagsFieldNumber = 4,
     kMaxDegreeFieldNumber = 3,
+    kFlagsFieldNumber = 4,
   };
   // int64 entityID1 = 1;
   void clear_entityid1();
@@ -6661,6 +6661,15 @@ class FindPathByEntityID_V2Request final :
   void _internal_set_entityid2(int64_t value);
   public:
 
+  // int64 maxDegree = 3;
+  void clear_maxdegree();
+  int64_t maxdegree() const;
+  void set_maxdegree(int64_t value);
+  private:
+  int64_t _internal_maxdegree() const;
+  void _internal_set_maxdegree(int64_t value);
+  public:
+
   // int64 flags = 4;
   void clear_flags();
   int64_t flags() const;
@@ -6668,15 +6677,6 @@ class FindPathByEntityID_V2Request final :
   private:
   int64_t _internal_flags() const;
   void _internal_set_flags(int64_t value);
-  public:
-
-  // int32 maxDegree = 3;
-  void clear_maxdegree();
-  int32_t maxdegree() const;
-  void set_maxdegree(int32_t value);
-  private:
-  int32_t _internal_maxdegree() const;
-  void _internal_set_maxdegree(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.FindPathByEntityID_V2Request)
@@ -6689,8 +6689,8 @@ class FindPathByEntityID_V2Request final :
   struct Impl_ {
     int64_t entityid1_;
     int64_t entityid2_;
+    int64_t maxdegree_;
     int64_t flags_;
-    int32_t maxdegree_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7034,13 +7034,13 @@ class FindPathByRecordIDRequest final :
   std::string* _internal_mutable_recordid2();
   public:
 
-  // int32 maxDegree = 5;
+  // int64 maxDegree = 5;
   void clear_maxdegree();
-  int32_t maxdegree() const;
-  void set_maxdegree(int32_t value);
+  int64_t maxdegree() const;
+  void set_maxdegree(int64_t value);
   private:
-  int32_t _internal_maxdegree() const;
-  void _internal_set_maxdegree(int32_t value);
+  int64_t _internal_maxdegree() const;
+  void _internal_set_maxdegree(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.FindPathByRecordIDRequest)
@@ -7055,7 +7055,7 @@ class FindPathByRecordIDRequest final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr recordid1_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr datasourcecode2_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr recordid2_;
-    int32_t maxdegree_;
+    int64_t maxdegree_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7341,8 +7341,8 @@ class FindPathByRecordID_V2Request final :
     kRecordID1FieldNumber = 2,
     kDataSourceCode2FieldNumber = 3,
     kRecordID2FieldNumber = 4,
-    kFlagsFieldNumber = 6,
     kMaxDegreeFieldNumber = 5,
+    kFlagsFieldNumber = 6,
   };
   // string dataSourceCode1 = 1;
   void clear_datasourcecode1();
@@ -7400,6 +7400,15 @@ class FindPathByRecordID_V2Request final :
   std::string* _internal_mutable_recordid2();
   public:
 
+  // int64 maxDegree = 5;
+  void clear_maxdegree();
+  int64_t maxdegree() const;
+  void set_maxdegree(int64_t value);
+  private:
+  int64_t _internal_maxdegree() const;
+  void _internal_set_maxdegree(int64_t value);
+  public:
+
   // int64 flags = 6;
   void clear_flags();
   int64_t flags() const;
@@ -7407,15 +7416,6 @@ class FindPathByRecordID_V2Request final :
   private:
   int64_t _internal_flags() const;
   void _internal_set_flags(int64_t value);
-  public:
-
-  // int32 maxDegree = 5;
-  void clear_maxdegree();
-  int32_t maxdegree() const;
-  void set_maxdegree(int32_t value);
-  private:
-  int32_t _internal_maxdegree() const;
-  void _internal_set_maxdegree(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.FindPathByRecordID_V2Request)
@@ -7430,8 +7430,8 @@ class FindPathByRecordID_V2Request final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr recordid1_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr datasourcecode2_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr recordid2_;
+    int64_t maxdegree_;
     int64_t flags_;
-    int32_t maxdegree_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7750,13 +7750,13 @@ class FindPathExcludingByEntityIDRequest final :
   void _internal_set_entityid2(int64_t value);
   public:
 
-  // int32 maxDegree = 3;
+  // int64 maxDegree = 3;
   void clear_maxdegree();
-  int32_t maxdegree() const;
-  void set_maxdegree(int32_t value);
+  int64_t maxdegree() const;
+  void set_maxdegree(int64_t value);
   private:
-  int32_t _internal_maxdegree() const;
-  void _internal_set_maxdegree(int32_t value);
+  int64_t _internal_maxdegree() const;
+  void _internal_set_maxdegree(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.FindPathExcludingByEntityIDRequest)
@@ -7770,7 +7770,7 @@ class FindPathExcludingByEntityIDRequest final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr excludedentities_;
     int64_t entityid1_;
     int64_t entityid2_;
-    int32_t maxdegree_;
+    int64_t maxdegree_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -8055,8 +8055,8 @@ class FindPathExcludingByEntityID_V2Request final :
     kExcludedEntitiesFieldNumber = 4,
     kEntityID1FieldNumber = 1,
     kEntityID2FieldNumber = 2,
-    kFlagsFieldNumber = 5,
     kMaxDegreeFieldNumber = 3,
+    kFlagsFieldNumber = 5,
   };
   // string excludedEntities = 4;
   void clear_excludedentities();
@@ -8090,6 +8090,15 @@ class FindPathExcludingByEntityID_V2Request final :
   void _internal_set_entityid2(int64_t value);
   public:
 
+  // int64 maxDegree = 3;
+  void clear_maxdegree();
+  int64_t maxdegree() const;
+  void set_maxdegree(int64_t value);
+  private:
+  int64_t _internal_maxdegree() const;
+  void _internal_set_maxdegree(int64_t value);
+  public:
+
   // int64 flags = 5;
   void clear_flags();
   int64_t flags() const;
@@ -8097,15 +8106,6 @@ class FindPathExcludingByEntityID_V2Request final :
   private:
   int64_t _internal_flags() const;
   void _internal_set_flags(int64_t value);
-  public:
-
-  // int32 maxDegree = 3;
-  void clear_maxdegree();
-  int32_t maxdegree() const;
-  void set_maxdegree(int32_t value);
-  private:
-  int32_t _internal_maxdegree() const;
-  void _internal_set_maxdegree(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.FindPathExcludingByEntityID_V2Request)
@@ -8119,8 +8119,8 @@ class FindPathExcludingByEntityID_V2Request final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr excludedentities_;
     int64_t entityid1_;
     int64_t entityid2_;
+    int64_t maxdegree_;
     int64_t flags_;
-    int32_t maxdegree_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -8479,13 +8479,13 @@ class FindPathExcludingByRecordIDRequest final :
   std::string* _internal_mutable_excludedrecords();
   public:
 
-  // int32 maxDegree = 5;
+  // int64 maxDegree = 5;
   void clear_maxdegree();
-  int32_t maxdegree() const;
-  void set_maxdegree(int32_t value);
+  int64_t maxdegree() const;
+  void set_maxdegree(int64_t value);
   private:
-  int32_t _internal_maxdegree() const;
-  void _internal_set_maxdegree(int32_t value);
+  int64_t _internal_maxdegree() const;
+  void _internal_set_maxdegree(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.FindPathExcludingByRecordIDRequest)
@@ -8501,7 +8501,7 @@ class FindPathExcludingByRecordIDRequest final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr datasourcecode2_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr recordid2_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr excludedrecords_;
-    int32_t maxdegree_;
+    int64_t maxdegree_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -8788,8 +8788,8 @@ class FindPathExcludingByRecordID_V2Request final :
     kDataSourceCode2FieldNumber = 3,
     kRecordID2FieldNumber = 4,
     kExcludedRecordsFieldNumber = 6,
-    kFlagsFieldNumber = 7,
     kMaxDegreeFieldNumber = 5,
+    kFlagsFieldNumber = 7,
   };
   // string dataSourceCode1 = 1;
   void clear_datasourcecode1();
@@ -8861,6 +8861,15 @@ class FindPathExcludingByRecordID_V2Request final :
   std::string* _internal_mutable_excludedrecords();
   public:
 
+  // int64 maxDegree = 5;
+  void clear_maxdegree();
+  int64_t maxdegree() const;
+  void set_maxdegree(int64_t value);
+  private:
+  int64_t _internal_maxdegree() const;
+  void _internal_set_maxdegree(int64_t value);
+  public:
+
   // int64 flags = 7;
   void clear_flags();
   int64_t flags() const;
@@ -8868,15 +8877,6 @@ class FindPathExcludingByRecordID_V2Request final :
   private:
   int64_t _internal_flags() const;
   void _internal_set_flags(int64_t value);
-  public:
-
-  // int32 maxDegree = 5;
-  void clear_maxdegree();
-  int32_t maxdegree() const;
-  void set_maxdegree(int32_t value);
-  private:
-  int32_t _internal_maxdegree() const;
-  void _internal_set_maxdegree(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.FindPathExcludingByRecordID_V2Request)
@@ -8892,8 +8892,8 @@ class FindPathExcludingByRecordID_V2Request final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr datasourcecode2_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr recordid2_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr excludedrecords_;
+    int64_t maxdegree_;
     int64_t flags_;
-    int32_t maxdegree_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -9227,13 +9227,13 @@ class FindPathIncludingSourceByEntityIDRequest final :
   void _internal_set_entityid2(int64_t value);
   public:
 
-  // int32 maxDegree = 3;
+  // int64 maxDegree = 3;
   void clear_maxdegree();
-  int32_t maxdegree() const;
-  void set_maxdegree(int32_t value);
+  int64_t maxdegree() const;
+  void set_maxdegree(int64_t value);
   private:
-  int32_t _internal_maxdegree() const;
-  void _internal_set_maxdegree(int32_t value);
+  int64_t _internal_maxdegree() const;
+  void _internal_set_maxdegree(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.FindPathIncludingSourceByEntityIDRequest)
@@ -9248,7 +9248,7 @@ class FindPathIncludingSourceByEntityIDRequest final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr requireddsrcs_;
     int64_t entityid1_;
     int64_t entityid2_;
-    int32_t maxdegree_;
+    int64_t maxdegree_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -9534,8 +9534,8 @@ class FindPathIncludingSourceByEntityID_V2Request final :
     kRequiredDsrcsFieldNumber = 5,
     kEntityID1FieldNumber = 1,
     kEntityID2FieldNumber = 2,
-    kFlagsFieldNumber = 6,
     kMaxDegreeFieldNumber = 3,
+    kFlagsFieldNumber = 6,
   };
   // string excludedEntities = 4;
   void clear_excludedentities();
@@ -9583,6 +9583,15 @@ class FindPathIncludingSourceByEntityID_V2Request final :
   void _internal_set_entityid2(int64_t value);
   public:
 
+  // int64 maxDegree = 3;
+  void clear_maxdegree();
+  int64_t maxdegree() const;
+  void set_maxdegree(int64_t value);
+  private:
+  int64_t _internal_maxdegree() const;
+  void _internal_set_maxdegree(int64_t value);
+  public:
+
   // int64 flags = 6;
   void clear_flags();
   int64_t flags() const;
@@ -9590,15 +9599,6 @@ class FindPathIncludingSourceByEntityID_V2Request final :
   private:
   int64_t _internal_flags() const;
   void _internal_set_flags(int64_t value);
-  public:
-
-  // int32 maxDegree = 3;
-  void clear_maxdegree();
-  int32_t maxdegree() const;
-  void set_maxdegree(int32_t value);
-  private:
-  int32_t _internal_maxdegree() const;
-  void _internal_set_maxdegree(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.FindPathIncludingSourceByEntityID_V2Request)
@@ -9613,8 +9613,8 @@ class FindPathIncludingSourceByEntityID_V2Request final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr requireddsrcs_;
     int64_t entityid1_;
     int64_t entityid2_;
+    int64_t maxdegree_;
     int64_t flags_;
-    int32_t maxdegree_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -9988,13 +9988,13 @@ class FindPathIncludingSourceByRecordIDRequest final :
   std::string* _internal_mutable_requireddsrcs();
   public:
 
-  // int32 maxDegree = 5;
+  // int64 maxDegree = 5;
   void clear_maxdegree();
-  int32_t maxdegree() const;
-  void set_maxdegree(int32_t value);
+  int64_t maxdegree() const;
+  void set_maxdegree(int64_t value);
   private:
-  int32_t _internal_maxdegree() const;
-  void _internal_set_maxdegree(int32_t value);
+  int64_t _internal_maxdegree() const;
+  void _internal_set_maxdegree(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.FindPathIncludingSourceByRecordIDRequest)
@@ -10011,7 +10011,7 @@ class FindPathIncludingSourceByRecordIDRequest final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr recordid2_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr excludedrecords_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr requireddsrcs_;
-    int32_t maxdegree_;
+    int64_t maxdegree_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -10299,8 +10299,8 @@ class FindPathIncludingSourceByRecordID_V2Request final :
     kRecordID2FieldNumber = 4,
     kExcludedRecordsFieldNumber = 6,
     kRequiredDsrcsFieldNumber = 7,
-    kFlagsFieldNumber = 8,
     kMaxDegreeFieldNumber = 5,
+    kFlagsFieldNumber = 8,
   };
   // string dataSourceCode1 = 1;
   void clear_datasourcecode1();
@@ -10386,6 +10386,15 @@ class FindPathIncludingSourceByRecordID_V2Request final :
   std::string* _internal_mutable_requireddsrcs();
   public:
 
+  // int64 maxDegree = 5;
+  void clear_maxdegree();
+  int64_t maxdegree() const;
+  void set_maxdegree(int64_t value);
+  private:
+  int64_t _internal_maxdegree() const;
+  void _internal_set_maxdegree(int64_t value);
+  public:
+
   // int64 flags = 8;
   void clear_flags();
   int64_t flags() const;
@@ -10393,15 +10402,6 @@ class FindPathIncludingSourceByRecordID_V2Request final :
   private:
   int64_t _internal_flags() const;
   void _internal_set_flags(int64_t value);
-  public:
-
-  // int32 maxDegree = 5;
-  void clear_maxdegree();
-  int32_t maxdegree() const;
-  void set_maxdegree(int32_t value);
-  private:
-  int32_t _internal_maxdegree() const;
-  void _internal_set_maxdegree(int32_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.FindPathIncludingSourceByRecordID_V2Request)
@@ -10418,8 +10418,8 @@ class FindPathIncludingSourceByRecordID_V2Request final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr recordid2_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr excludedrecords_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr requireddsrcs_;
+    int64_t maxdegree_;
     int64_t flags_;
-    int32_t maxdegree_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -14695,13 +14695,13 @@ class InitRequest final :
   std::string* _internal_mutable_iniparams();
   public:
 
-  // int32 verboseLogging = 3;
+  // int64 verboseLogging = 3;
   void clear_verboselogging();
-  int32_t verboselogging() const;
-  void set_verboselogging(int32_t value);
+  int64_t verboselogging() const;
+  void set_verboselogging(int64_t value);
   private:
-  int32_t _internal_verboselogging() const;
-  void _internal_set_verboselogging(int32_t value);
+  int64_t _internal_verboselogging() const;
+  void _internal_set_verboselogging(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.InitRequest)
@@ -14714,7 +14714,7 @@ class InitRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr modulename_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr iniparams_;
-    int32_t verboselogging_;
+    int64_t verboselogging_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -15003,13 +15003,13 @@ class InitWithConfigIDRequest final :
   void _internal_set_initconfigid(int64_t value);
   public:
 
-  // int32 verboseLogging = 4;
+  // int64 verboseLogging = 4;
   void clear_verboselogging();
-  int32_t verboselogging() const;
-  void set_verboselogging(int32_t value);
+  int64_t verboselogging() const;
+  void set_verboselogging(int64_t value);
   private:
-  int32_t _internal_verboselogging() const;
-  void _internal_set_verboselogging(int32_t value);
+  int64_t _internal_verboselogging() const;
+  void _internal_set_verboselogging(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:g2engine.InitWithConfigIDRequest)
@@ -15023,7 +15023,7 @@ class InitWithConfigIDRequest final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr modulename_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr iniparams_;
     int64_t initconfigid_;
-    int32_t verboselogging_;
+    int64_t verboselogging_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -24144,62 +24144,62 @@ inline void FindNetworkByEntityIDRequest::set_allocated_entitylist(std::string* 
   // @@protoc_insertion_point(field_set_allocated:g2engine.FindNetworkByEntityIDRequest.entityList)
 }
 
-// int32 maxDegree = 2;
+// int64 maxDegree = 2;
 inline void FindNetworkByEntityIDRequest::clear_maxdegree() {
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
 }
-inline int32_t FindNetworkByEntityIDRequest::_internal_maxdegree() const {
+inline int64_t FindNetworkByEntityIDRequest::_internal_maxdegree() const {
   return _impl_.maxdegree_;
 }
-inline int32_t FindNetworkByEntityIDRequest::maxdegree() const {
+inline int64_t FindNetworkByEntityIDRequest::maxdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindNetworkByEntityIDRequest.maxDegree)
   return _internal_maxdegree();
 }
-inline void FindNetworkByEntityIDRequest::_internal_set_maxdegree(int32_t value) {
+inline void FindNetworkByEntityIDRequest::_internal_set_maxdegree(int64_t value) {
   
   _impl_.maxdegree_ = value;
 }
-inline void FindNetworkByEntityIDRequest::set_maxdegree(int32_t value) {
+inline void FindNetworkByEntityIDRequest::set_maxdegree(int64_t value) {
   _internal_set_maxdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindNetworkByEntityIDRequest.maxDegree)
 }
 
-// int32 buildOutDegree = 3;
+// int64 buildOutDegree = 3;
 inline void FindNetworkByEntityIDRequest::clear_buildoutdegree() {
-  _impl_.buildoutdegree_ = 0;
+  _impl_.buildoutdegree_ = int64_t{0};
 }
-inline int32_t FindNetworkByEntityIDRequest::_internal_buildoutdegree() const {
+inline int64_t FindNetworkByEntityIDRequest::_internal_buildoutdegree() const {
   return _impl_.buildoutdegree_;
 }
-inline int32_t FindNetworkByEntityIDRequest::buildoutdegree() const {
+inline int64_t FindNetworkByEntityIDRequest::buildoutdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindNetworkByEntityIDRequest.buildOutDegree)
   return _internal_buildoutdegree();
 }
-inline void FindNetworkByEntityIDRequest::_internal_set_buildoutdegree(int32_t value) {
+inline void FindNetworkByEntityIDRequest::_internal_set_buildoutdegree(int64_t value) {
   
   _impl_.buildoutdegree_ = value;
 }
-inline void FindNetworkByEntityIDRequest::set_buildoutdegree(int32_t value) {
+inline void FindNetworkByEntityIDRequest::set_buildoutdegree(int64_t value) {
   _internal_set_buildoutdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindNetworkByEntityIDRequest.buildOutDegree)
 }
 
-// int32 maxEntities = 4;
+// int64 maxEntities = 4;
 inline void FindNetworkByEntityIDRequest::clear_maxentities() {
-  _impl_.maxentities_ = 0;
+  _impl_.maxentities_ = int64_t{0};
 }
-inline int32_t FindNetworkByEntityIDRequest::_internal_maxentities() const {
+inline int64_t FindNetworkByEntityIDRequest::_internal_maxentities() const {
   return _impl_.maxentities_;
 }
-inline int32_t FindNetworkByEntityIDRequest::maxentities() const {
+inline int64_t FindNetworkByEntityIDRequest::maxentities() const {
   // @@protoc_insertion_point(field_get:g2engine.FindNetworkByEntityIDRequest.maxEntities)
   return _internal_maxentities();
 }
-inline void FindNetworkByEntityIDRequest::_internal_set_maxentities(int32_t value) {
+inline void FindNetworkByEntityIDRequest::_internal_set_maxentities(int64_t value) {
   
   _impl_.maxentities_ = value;
 }
-inline void FindNetworkByEntityIDRequest::set_maxentities(int32_t value) {
+inline void FindNetworkByEntityIDRequest::set_maxentities(int64_t value) {
   _internal_set_maxentities(value);
   // @@protoc_insertion_point(field_set:g2engine.FindNetworkByEntityIDRequest.maxEntities)
 }
@@ -24312,62 +24312,62 @@ inline void FindNetworkByEntityID_V2Request::set_allocated_entitylist(std::strin
   // @@protoc_insertion_point(field_set_allocated:g2engine.FindNetworkByEntityID_V2Request.entityList)
 }
 
-// int32 maxDegree = 2;
+// int64 maxDegree = 2;
 inline void FindNetworkByEntityID_V2Request::clear_maxdegree() {
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
 }
-inline int32_t FindNetworkByEntityID_V2Request::_internal_maxdegree() const {
+inline int64_t FindNetworkByEntityID_V2Request::_internal_maxdegree() const {
   return _impl_.maxdegree_;
 }
-inline int32_t FindNetworkByEntityID_V2Request::maxdegree() const {
+inline int64_t FindNetworkByEntityID_V2Request::maxdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindNetworkByEntityID_V2Request.maxDegree)
   return _internal_maxdegree();
 }
-inline void FindNetworkByEntityID_V2Request::_internal_set_maxdegree(int32_t value) {
+inline void FindNetworkByEntityID_V2Request::_internal_set_maxdegree(int64_t value) {
   
   _impl_.maxdegree_ = value;
 }
-inline void FindNetworkByEntityID_V2Request::set_maxdegree(int32_t value) {
+inline void FindNetworkByEntityID_V2Request::set_maxdegree(int64_t value) {
   _internal_set_maxdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindNetworkByEntityID_V2Request.maxDegree)
 }
 
-// int32 buildOutDegree = 3;
+// int64 buildOutDegree = 3;
 inline void FindNetworkByEntityID_V2Request::clear_buildoutdegree() {
-  _impl_.buildoutdegree_ = 0;
+  _impl_.buildoutdegree_ = int64_t{0};
 }
-inline int32_t FindNetworkByEntityID_V2Request::_internal_buildoutdegree() const {
+inline int64_t FindNetworkByEntityID_V2Request::_internal_buildoutdegree() const {
   return _impl_.buildoutdegree_;
 }
-inline int32_t FindNetworkByEntityID_V2Request::buildoutdegree() const {
+inline int64_t FindNetworkByEntityID_V2Request::buildoutdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindNetworkByEntityID_V2Request.buildOutDegree)
   return _internal_buildoutdegree();
 }
-inline void FindNetworkByEntityID_V2Request::_internal_set_buildoutdegree(int32_t value) {
+inline void FindNetworkByEntityID_V2Request::_internal_set_buildoutdegree(int64_t value) {
   
   _impl_.buildoutdegree_ = value;
 }
-inline void FindNetworkByEntityID_V2Request::set_buildoutdegree(int32_t value) {
+inline void FindNetworkByEntityID_V2Request::set_buildoutdegree(int64_t value) {
   _internal_set_buildoutdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindNetworkByEntityID_V2Request.buildOutDegree)
 }
 
-// int32 maxEntities = 4;
+// int64 maxEntities = 4;
 inline void FindNetworkByEntityID_V2Request::clear_maxentities() {
-  _impl_.maxentities_ = 0;
+  _impl_.maxentities_ = int64_t{0};
 }
-inline int32_t FindNetworkByEntityID_V2Request::_internal_maxentities() const {
+inline int64_t FindNetworkByEntityID_V2Request::_internal_maxentities() const {
   return _impl_.maxentities_;
 }
-inline int32_t FindNetworkByEntityID_V2Request::maxentities() const {
+inline int64_t FindNetworkByEntityID_V2Request::maxentities() const {
   // @@protoc_insertion_point(field_get:g2engine.FindNetworkByEntityID_V2Request.maxEntities)
   return _internal_maxentities();
 }
-inline void FindNetworkByEntityID_V2Request::_internal_set_maxentities(int32_t value) {
+inline void FindNetworkByEntityID_V2Request::_internal_set_maxentities(int64_t value) {
   
   _impl_.maxentities_ = value;
 }
-inline void FindNetworkByEntityID_V2Request::set_maxentities(int32_t value) {
+inline void FindNetworkByEntityID_V2Request::set_maxentities(int64_t value) {
   _internal_set_maxentities(value);
   // @@protoc_insertion_point(field_set:g2engine.FindNetworkByEntityID_V2Request.maxEntities)
 }
@@ -24500,62 +24500,62 @@ inline void FindNetworkByRecordIDRequest::set_allocated_recordlist(std::string* 
   // @@protoc_insertion_point(field_set_allocated:g2engine.FindNetworkByRecordIDRequest.recordList)
 }
 
-// int32 maxDegree = 2;
+// int64 maxDegree = 2;
 inline void FindNetworkByRecordIDRequest::clear_maxdegree() {
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
 }
-inline int32_t FindNetworkByRecordIDRequest::_internal_maxdegree() const {
+inline int64_t FindNetworkByRecordIDRequest::_internal_maxdegree() const {
   return _impl_.maxdegree_;
 }
-inline int32_t FindNetworkByRecordIDRequest::maxdegree() const {
+inline int64_t FindNetworkByRecordIDRequest::maxdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindNetworkByRecordIDRequest.maxDegree)
   return _internal_maxdegree();
 }
-inline void FindNetworkByRecordIDRequest::_internal_set_maxdegree(int32_t value) {
+inline void FindNetworkByRecordIDRequest::_internal_set_maxdegree(int64_t value) {
   
   _impl_.maxdegree_ = value;
 }
-inline void FindNetworkByRecordIDRequest::set_maxdegree(int32_t value) {
+inline void FindNetworkByRecordIDRequest::set_maxdegree(int64_t value) {
   _internal_set_maxdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindNetworkByRecordIDRequest.maxDegree)
 }
 
-// int32 buildOutDegree = 3;
+// int64 buildOutDegree = 3;
 inline void FindNetworkByRecordIDRequest::clear_buildoutdegree() {
-  _impl_.buildoutdegree_ = 0;
+  _impl_.buildoutdegree_ = int64_t{0};
 }
-inline int32_t FindNetworkByRecordIDRequest::_internal_buildoutdegree() const {
+inline int64_t FindNetworkByRecordIDRequest::_internal_buildoutdegree() const {
   return _impl_.buildoutdegree_;
 }
-inline int32_t FindNetworkByRecordIDRequest::buildoutdegree() const {
+inline int64_t FindNetworkByRecordIDRequest::buildoutdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindNetworkByRecordIDRequest.buildOutDegree)
   return _internal_buildoutdegree();
 }
-inline void FindNetworkByRecordIDRequest::_internal_set_buildoutdegree(int32_t value) {
+inline void FindNetworkByRecordIDRequest::_internal_set_buildoutdegree(int64_t value) {
   
   _impl_.buildoutdegree_ = value;
 }
-inline void FindNetworkByRecordIDRequest::set_buildoutdegree(int32_t value) {
+inline void FindNetworkByRecordIDRequest::set_buildoutdegree(int64_t value) {
   _internal_set_buildoutdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindNetworkByRecordIDRequest.buildOutDegree)
 }
 
-// int32 maxEntities = 4;
+// int64 maxEntities = 4;
 inline void FindNetworkByRecordIDRequest::clear_maxentities() {
-  _impl_.maxentities_ = 0;
+  _impl_.maxentities_ = int64_t{0};
 }
-inline int32_t FindNetworkByRecordIDRequest::_internal_maxentities() const {
+inline int64_t FindNetworkByRecordIDRequest::_internal_maxentities() const {
   return _impl_.maxentities_;
 }
-inline int32_t FindNetworkByRecordIDRequest::maxentities() const {
+inline int64_t FindNetworkByRecordIDRequest::maxentities() const {
   // @@protoc_insertion_point(field_get:g2engine.FindNetworkByRecordIDRequest.maxEntities)
   return _internal_maxentities();
 }
-inline void FindNetworkByRecordIDRequest::_internal_set_maxentities(int32_t value) {
+inline void FindNetworkByRecordIDRequest::_internal_set_maxentities(int64_t value) {
   
   _impl_.maxentities_ = value;
 }
-inline void FindNetworkByRecordIDRequest::set_maxentities(int32_t value) {
+inline void FindNetworkByRecordIDRequest::set_maxentities(int64_t value) {
   _internal_set_maxentities(value);
   // @@protoc_insertion_point(field_set:g2engine.FindNetworkByRecordIDRequest.maxEntities)
 }
@@ -24668,62 +24668,62 @@ inline void FindNetworkByRecordID_V2Request::set_allocated_recordlist(std::strin
   // @@protoc_insertion_point(field_set_allocated:g2engine.FindNetworkByRecordID_V2Request.recordList)
 }
 
-// int32 maxDegree = 2;
+// int64 maxDegree = 2;
 inline void FindNetworkByRecordID_V2Request::clear_maxdegree() {
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
 }
-inline int32_t FindNetworkByRecordID_V2Request::_internal_maxdegree() const {
+inline int64_t FindNetworkByRecordID_V2Request::_internal_maxdegree() const {
   return _impl_.maxdegree_;
 }
-inline int32_t FindNetworkByRecordID_V2Request::maxdegree() const {
+inline int64_t FindNetworkByRecordID_V2Request::maxdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindNetworkByRecordID_V2Request.maxDegree)
   return _internal_maxdegree();
 }
-inline void FindNetworkByRecordID_V2Request::_internal_set_maxdegree(int32_t value) {
+inline void FindNetworkByRecordID_V2Request::_internal_set_maxdegree(int64_t value) {
   
   _impl_.maxdegree_ = value;
 }
-inline void FindNetworkByRecordID_V2Request::set_maxdegree(int32_t value) {
+inline void FindNetworkByRecordID_V2Request::set_maxdegree(int64_t value) {
   _internal_set_maxdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindNetworkByRecordID_V2Request.maxDegree)
 }
 
-// int32 buildOutDegree = 3;
+// int64 buildOutDegree = 3;
 inline void FindNetworkByRecordID_V2Request::clear_buildoutdegree() {
-  _impl_.buildoutdegree_ = 0;
+  _impl_.buildoutdegree_ = int64_t{0};
 }
-inline int32_t FindNetworkByRecordID_V2Request::_internal_buildoutdegree() const {
+inline int64_t FindNetworkByRecordID_V2Request::_internal_buildoutdegree() const {
   return _impl_.buildoutdegree_;
 }
-inline int32_t FindNetworkByRecordID_V2Request::buildoutdegree() const {
+inline int64_t FindNetworkByRecordID_V2Request::buildoutdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindNetworkByRecordID_V2Request.buildOutDegree)
   return _internal_buildoutdegree();
 }
-inline void FindNetworkByRecordID_V2Request::_internal_set_buildoutdegree(int32_t value) {
+inline void FindNetworkByRecordID_V2Request::_internal_set_buildoutdegree(int64_t value) {
   
   _impl_.buildoutdegree_ = value;
 }
-inline void FindNetworkByRecordID_V2Request::set_buildoutdegree(int32_t value) {
+inline void FindNetworkByRecordID_V2Request::set_buildoutdegree(int64_t value) {
   _internal_set_buildoutdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindNetworkByRecordID_V2Request.buildOutDegree)
 }
 
-// int32 maxEntities = 4;
+// int64 maxEntities = 4;
 inline void FindNetworkByRecordID_V2Request::clear_maxentities() {
-  _impl_.maxentities_ = 0;
+  _impl_.maxentities_ = int64_t{0};
 }
-inline int32_t FindNetworkByRecordID_V2Request::_internal_maxentities() const {
+inline int64_t FindNetworkByRecordID_V2Request::_internal_maxentities() const {
   return _impl_.maxentities_;
 }
-inline int32_t FindNetworkByRecordID_V2Request::maxentities() const {
+inline int64_t FindNetworkByRecordID_V2Request::maxentities() const {
   // @@protoc_insertion_point(field_get:g2engine.FindNetworkByRecordID_V2Request.maxEntities)
   return _internal_maxentities();
 }
-inline void FindNetworkByRecordID_V2Request::_internal_set_maxentities(int32_t value) {
+inline void FindNetworkByRecordID_V2Request::_internal_set_maxentities(int64_t value) {
   
   _impl_.maxentities_ = value;
 }
-inline void FindNetworkByRecordID_V2Request::set_maxentities(int32_t value) {
+inline void FindNetworkByRecordID_V2Request::set_maxentities(int64_t value) {
   _internal_set_maxentities(value);
   // @@protoc_insertion_point(field_set:g2engine.FindNetworkByRecordID_V2Request.maxEntities)
 }
@@ -24846,22 +24846,22 @@ inline void FindPathByEntityIDRequest::set_entityid2(int64_t value) {
   // @@protoc_insertion_point(field_set:g2engine.FindPathByEntityIDRequest.entityID2)
 }
 
-// int32 maxDegree = 3;
+// int64 maxDegree = 3;
 inline void FindPathByEntityIDRequest::clear_maxdegree() {
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
 }
-inline int32_t FindPathByEntityIDRequest::_internal_maxdegree() const {
+inline int64_t FindPathByEntityIDRequest::_internal_maxdegree() const {
   return _impl_.maxdegree_;
 }
-inline int32_t FindPathByEntityIDRequest::maxdegree() const {
+inline int64_t FindPathByEntityIDRequest::maxdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindPathByEntityIDRequest.maxDegree)
   return _internal_maxdegree();
 }
-inline void FindPathByEntityIDRequest::_internal_set_maxdegree(int32_t value) {
+inline void FindPathByEntityIDRequest::_internal_set_maxdegree(int64_t value) {
   
   _impl_.maxdegree_ = value;
 }
-inline void FindPathByEntityIDRequest::set_maxdegree(int32_t value) {
+inline void FindPathByEntityIDRequest::set_maxdegree(int64_t value) {
   _internal_set_maxdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindPathByEntityIDRequest.maxDegree)
 }
@@ -24964,22 +24964,22 @@ inline void FindPathByEntityID_V2Request::set_entityid2(int64_t value) {
   // @@protoc_insertion_point(field_set:g2engine.FindPathByEntityID_V2Request.entityID2)
 }
 
-// int32 maxDegree = 3;
+// int64 maxDegree = 3;
 inline void FindPathByEntityID_V2Request::clear_maxdegree() {
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
 }
-inline int32_t FindPathByEntityID_V2Request::_internal_maxdegree() const {
+inline int64_t FindPathByEntityID_V2Request::_internal_maxdegree() const {
   return _impl_.maxdegree_;
 }
-inline int32_t FindPathByEntityID_V2Request::maxdegree() const {
+inline int64_t FindPathByEntityID_V2Request::maxdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindPathByEntityID_V2Request.maxDegree)
   return _internal_maxdegree();
 }
-inline void FindPathByEntityID_V2Request::_internal_set_maxdegree(int32_t value) {
+inline void FindPathByEntityID_V2Request::_internal_set_maxdegree(int64_t value) {
   
   _impl_.maxdegree_ = value;
 }
-inline void FindPathByEntityID_V2Request::set_maxdegree(int32_t value) {
+inline void FindPathByEntityID_V2Request::set_maxdegree(int64_t value) {
   _internal_set_maxdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindPathByEntityID_V2Request.maxDegree)
 }
@@ -25262,22 +25262,22 @@ inline void FindPathByRecordIDRequest::set_allocated_recordid2(std::string* reco
   // @@protoc_insertion_point(field_set_allocated:g2engine.FindPathByRecordIDRequest.recordID2)
 }
 
-// int32 maxDegree = 5;
+// int64 maxDegree = 5;
 inline void FindPathByRecordIDRequest::clear_maxdegree() {
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
 }
-inline int32_t FindPathByRecordIDRequest::_internal_maxdegree() const {
+inline int64_t FindPathByRecordIDRequest::_internal_maxdegree() const {
   return _impl_.maxdegree_;
 }
-inline int32_t FindPathByRecordIDRequest::maxdegree() const {
+inline int64_t FindPathByRecordIDRequest::maxdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindPathByRecordIDRequest.maxDegree)
   return _internal_maxdegree();
 }
-inline void FindPathByRecordIDRequest::_internal_set_maxdegree(int32_t value) {
+inline void FindPathByRecordIDRequest::_internal_set_maxdegree(int64_t value) {
   
   _impl_.maxdegree_ = value;
 }
-inline void FindPathByRecordIDRequest::set_maxdegree(int32_t value) {
+inline void FindPathByRecordIDRequest::set_maxdegree(int64_t value) {
   _internal_set_maxdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindPathByRecordIDRequest.maxDegree)
 }
@@ -25540,22 +25540,22 @@ inline void FindPathByRecordID_V2Request::set_allocated_recordid2(std::string* r
   // @@protoc_insertion_point(field_set_allocated:g2engine.FindPathByRecordID_V2Request.recordID2)
 }
 
-// int32 maxDegree = 5;
+// int64 maxDegree = 5;
 inline void FindPathByRecordID_V2Request::clear_maxdegree() {
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
 }
-inline int32_t FindPathByRecordID_V2Request::_internal_maxdegree() const {
+inline int64_t FindPathByRecordID_V2Request::_internal_maxdegree() const {
   return _impl_.maxdegree_;
 }
-inline int32_t FindPathByRecordID_V2Request::maxdegree() const {
+inline int64_t FindPathByRecordID_V2Request::maxdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindPathByRecordID_V2Request.maxDegree)
   return _internal_maxdegree();
 }
-inline void FindPathByRecordID_V2Request::_internal_set_maxdegree(int32_t value) {
+inline void FindPathByRecordID_V2Request::_internal_set_maxdegree(int64_t value) {
   
   _impl_.maxdegree_ = value;
 }
-inline void FindPathByRecordID_V2Request::set_maxdegree(int32_t value) {
+inline void FindPathByRecordID_V2Request::set_maxdegree(int64_t value) {
   _internal_set_maxdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindPathByRecordID_V2Request.maxDegree)
 }
@@ -25678,22 +25678,22 @@ inline void FindPathExcludingByEntityIDRequest::set_entityid2(int64_t value) {
   // @@protoc_insertion_point(field_set:g2engine.FindPathExcludingByEntityIDRequest.entityID2)
 }
 
-// int32 maxDegree = 3;
+// int64 maxDegree = 3;
 inline void FindPathExcludingByEntityIDRequest::clear_maxdegree() {
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
 }
-inline int32_t FindPathExcludingByEntityIDRequest::_internal_maxdegree() const {
+inline int64_t FindPathExcludingByEntityIDRequest::_internal_maxdegree() const {
   return _impl_.maxdegree_;
 }
-inline int32_t FindPathExcludingByEntityIDRequest::maxdegree() const {
+inline int64_t FindPathExcludingByEntityIDRequest::maxdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindPathExcludingByEntityIDRequest.maxDegree)
   return _internal_maxdegree();
 }
-inline void FindPathExcludingByEntityIDRequest::_internal_set_maxdegree(int32_t value) {
+inline void FindPathExcludingByEntityIDRequest::_internal_set_maxdegree(int64_t value) {
   
   _impl_.maxdegree_ = value;
 }
-inline void FindPathExcludingByEntityIDRequest::set_maxdegree(int32_t value) {
+inline void FindPathExcludingByEntityIDRequest::set_maxdegree(int64_t value) {
   _internal_set_maxdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindPathExcludingByEntityIDRequest.maxDegree)
 }
@@ -25846,22 +25846,22 @@ inline void FindPathExcludingByEntityID_V2Request::set_entityid2(int64_t value) 
   // @@protoc_insertion_point(field_set:g2engine.FindPathExcludingByEntityID_V2Request.entityID2)
 }
 
-// int32 maxDegree = 3;
+// int64 maxDegree = 3;
 inline void FindPathExcludingByEntityID_V2Request::clear_maxdegree() {
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
 }
-inline int32_t FindPathExcludingByEntityID_V2Request::_internal_maxdegree() const {
+inline int64_t FindPathExcludingByEntityID_V2Request::_internal_maxdegree() const {
   return _impl_.maxdegree_;
 }
-inline int32_t FindPathExcludingByEntityID_V2Request::maxdegree() const {
+inline int64_t FindPathExcludingByEntityID_V2Request::maxdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindPathExcludingByEntityID_V2Request.maxDegree)
   return _internal_maxdegree();
 }
-inline void FindPathExcludingByEntityID_V2Request::_internal_set_maxdegree(int32_t value) {
+inline void FindPathExcludingByEntityID_V2Request::_internal_set_maxdegree(int64_t value) {
   
   _impl_.maxdegree_ = value;
 }
-inline void FindPathExcludingByEntityID_V2Request::set_maxdegree(int32_t value) {
+inline void FindPathExcludingByEntityID_V2Request::set_maxdegree(int64_t value) {
   _internal_set_maxdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindPathExcludingByEntityID_V2Request.maxDegree)
 }
@@ -26194,22 +26194,22 @@ inline void FindPathExcludingByRecordIDRequest::set_allocated_recordid2(std::str
   // @@protoc_insertion_point(field_set_allocated:g2engine.FindPathExcludingByRecordIDRequest.recordID2)
 }
 
-// int32 maxDegree = 5;
+// int64 maxDegree = 5;
 inline void FindPathExcludingByRecordIDRequest::clear_maxdegree() {
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
 }
-inline int32_t FindPathExcludingByRecordIDRequest::_internal_maxdegree() const {
+inline int64_t FindPathExcludingByRecordIDRequest::_internal_maxdegree() const {
   return _impl_.maxdegree_;
 }
-inline int32_t FindPathExcludingByRecordIDRequest::maxdegree() const {
+inline int64_t FindPathExcludingByRecordIDRequest::maxdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindPathExcludingByRecordIDRequest.maxDegree)
   return _internal_maxdegree();
 }
-inline void FindPathExcludingByRecordIDRequest::_internal_set_maxdegree(int32_t value) {
+inline void FindPathExcludingByRecordIDRequest::_internal_set_maxdegree(int64_t value) {
   
   _impl_.maxdegree_ = value;
 }
-inline void FindPathExcludingByRecordIDRequest::set_maxdegree(int32_t value) {
+inline void FindPathExcludingByRecordIDRequest::set_maxdegree(int64_t value) {
   _internal_set_maxdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindPathExcludingByRecordIDRequest.maxDegree)
 }
@@ -26522,22 +26522,22 @@ inline void FindPathExcludingByRecordID_V2Request::set_allocated_recordid2(std::
   // @@protoc_insertion_point(field_set_allocated:g2engine.FindPathExcludingByRecordID_V2Request.recordID2)
 }
 
-// int32 maxDegree = 5;
+// int64 maxDegree = 5;
 inline void FindPathExcludingByRecordID_V2Request::clear_maxdegree() {
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
 }
-inline int32_t FindPathExcludingByRecordID_V2Request::_internal_maxdegree() const {
+inline int64_t FindPathExcludingByRecordID_V2Request::_internal_maxdegree() const {
   return _impl_.maxdegree_;
 }
-inline int32_t FindPathExcludingByRecordID_V2Request::maxdegree() const {
+inline int64_t FindPathExcludingByRecordID_V2Request::maxdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindPathExcludingByRecordID_V2Request.maxDegree)
   return _internal_maxdegree();
 }
-inline void FindPathExcludingByRecordID_V2Request::_internal_set_maxdegree(int32_t value) {
+inline void FindPathExcludingByRecordID_V2Request::_internal_set_maxdegree(int64_t value) {
   
   _impl_.maxdegree_ = value;
 }
-inline void FindPathExcludingByRecordID_V2Request::set_maxdegree(int32_t value) {
+inline void FindPathExcludingByRecordID_V2Request::set_maxdegree(int64_t value) {
   _internal_set_maxdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindPathExcludingByRecordID_V2Request.maxDegree)
 }
@@ -26710,22 +26710,22 @@ inline void FindPathIncludingSourceByEntityIDRequest::set_entityid2(int64_t valu
   // @@protoc_insertion_point(field_set:g2engine.FindPathIncludingSourceByEntityIDRequest.entityID2)
 }
 
-// int32 maxDegree = 3;
+// int64 maxDegree = 3;
 inline void FindPathIncludingSourceByEntityIDRequest::clear_maxdegree() {
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
 }
-inline int32_t FindPathIncludingSourceByEntityIDRequest::_internal_maxdegree() const {
+inline int64_t FindPathIncludingSourceByEntityIDRequest::_internal_maxdegree() const {
   return _impl_.maxdegree_;
 }
-inline int32_t FindPathIncludingSourceByEntityIDRequest::maxdegree() const {
+inline int64_t FindPathIncludingSourceByEntityIDRequest::maxdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindPathIncludingSourceByEntityIDRequest.maxDegree)
   return _internal_maxdegree();
 }
-inline void FindPathIncludingSourceByEntityIDRequest::_internal_set_maxdegree(int32_t value) {
+inline void FindPathIncludingSourceByEntityIDRequest::_internal_set_maxdegree(int64_t value) {
   
   _impl_.maxdegree_ = value;
 }
-inline void FindPathIncludingSourceByEntityIDRequest::set_maxdegree(int32_t value) {
+inline void FindPathIncludingSourceByEntityIDRequest::set_maxdegree(int64_t value) {
   _internal_set_maxdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindPathIncludingSourceByEntityIDRequest.maxDegree)
 }
@@ -26928,22 +26928,22 @@ inline void FindPathIncludingSourceByEntityID_V2Request::set_entityid2(int64_t v
   // @@protoc_insertion_point(field_set:g2engine.FindPathIncludingSourceByEntityID_V2Request.entityID2)
 }
 
-// int32 maxDegree = 3;
+// int64 maxDegree = 3;
 inline void FindPathIncludingSourceByEntityID_V2Request::clear_maxdegree() {
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
 }
-inline int32_t FindPathIncludingSourceByEntityID_V2Request::_internal_maxdegree() const {
+inline int64_t FindPathIncludingSourceByEntityID_V2Request::_internal_maxdegree() const {
   return _impl_.maxdegree_;
 }
-inline int32_t FindPathIncludingSourceByEntityID_V2Request::maxdegree() const {
+inline int64_t FindPathIncludingSourceByEntityID_V2Request::maxdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindPathIncludingSourceByEntityID_V2Request.maxDegree)
   return _internal_maxdegree();
 }
-inline void FindPathIncludingSourceByEntityID_V2Request::_internal_set_maxdegree(int32_t value) {
+inline void FindPathIncludingSourceByEntityID_V2Request::_internal_set_maxdegree(int64_t value) {
   
   _impl_.maxdegree_ = value;
 }
-inline void FindPathIncludingSourceByEntityID_V2Request::set_maxdegree(int32_t value) {
+inline void FindPathIncludingSourceByEntityID_V2Request::set_maxdegree(int64_t value) {
   _internal_set_maxdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindPathIncludingSourceByEntityID_V2Request.maxDegree)
 }
@@ -27326,22 +27326,22 @@ inline void FindPathIncludingSourceByRecordIDRequest::set_allocated_recordid2(st
   // @@protoc_insertion_point(field_set_allocated:g2engine.FindPathIncludingSourceByRecordIDRequest.recordID2)
 }
 
-// int32 maxDegree = 5;
+// int64 maxDegree = 5;
 inline void FindPathIncludingSourceByRecordIDRequest::clear_maxdegree() {
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
 }
-inline int32_t FindPathIncludingSourceByRecordIDRequest::_internal_maxdegree() const {
+inline int64_t FindPathIncludingSourceByRecordIDRequest::_internal_maxdegree() const {
   return _impl_.maxdegree_;
 }
-inline int32_t FindPathIncludingSourceByRecordIDRequest::maxdegree() const {
+inline int64_t FindPathIncludingSourceByRecordIDRequest::maxdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindPathIncludingSourceByRecordIDRequest.maxDegree)
   return _internal_maxdegree();
 }
-inline void FindPathIncludingSourceByRecordIDRequest::_internal_set_maxdegree(int32_t value) {
+inline void FindPathIncludingSourceByRecordIDRequest::_internal_set_maxdegree(int64_t value) {
   
   _impl_.maxdegree_ = value;
 }
-inline void FindPathIncludingSourceByRecordIDRequest::set_maxdegree(int32_t value) {
+inline void FindPathIncludingSourceByRecordIDRequest::set_maxdegree(int64_t value) {
   _internal_set_maxdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindPathIncludingSourceByRecordIDRequest.maxDegree)
 }
@@ -27704,22 +27704,22 @@ inline void FindPathIncludingSourceByRecordID_V2Request::set_allocated_recordid2
   // @@protoc_insertion_point(field_set_allocated:g2engine.FindPathIncludingSourceByRecordID_V2Request.recordID2)
 }
 
-// int32 maxDegree = 5;
+// int64 maxDegree = 5;
 inline void FindPathIncludingSourceByRecordID_V2Request::clear_maxdegree() {
-  _impl_.maxdegree_ = 0;
+  _impl_.maxdegree_ = int64_t{0};
 }
-inline int32_t FindPathIncludingSourceByRecordID_V2Request::_internal_maxdegree() const {
+inline int64_t FindPathIncludingSourceByRecordID_V2Request::_internal_maxdegree() const {
   return _impl_.maxdegree_;
 }
-inline int32_t FindPathIncludingSourceByRecordID_V2Request::maxdegree() const {
+inline int64_t FindPathIncludingSourceByRecordID_V2Request::maxdegree() const {
   // @@protoc_insertion_point(field_get:g2engine.FindPathIncludingSourceByRecordID_V2Request.maxDegree)
   return _internal_maxdegree();
 }
-inline void FindPathIncludingSourceByRecordID_V2Request::_internal_set_maxdegree(int32_t value) {
+inline void FindPathIncludingSourceByRecordID_V2Request::_internal_set_maxdegree(int64_t value) {
   
   _impl_.maxdegree_ = value;
 }
-inline void FindPathIncludingSourceByRecordID_V2Request::set_maxdegree(int32_t value) {
+inline void FindPathIncludingSourceByRecordID_V2Request::set_maxdegree(int64_t value) {
   _internal_set_maxdegree(value);
   // @@protoc_insertion_point(field_set:g2engine.FindPathIncludingSourceByRecordID_V2Request.maxDegree)
 }
@@ -29376,22 +29376,22 @@ inline void InitRequest::set_allocated_iniparams(std::string* iniparams) {
   // @@protoc_insertion_point(field_set_allocated:g2engine.InitRequest.iniParams)
 }
 
-// int32 verboseLogging = 3;
+// int64 verboseLogging = 3;
 inline void InitRequest::clear_verboselogging() {
-  _impl_.verboselogging_ = 0;
+  _impl_.verboselogging_ = int64_t{0};
 }
-inline int32_t InitRequest::_internal_verboselogging() const {
+inline int64_t InitRequest::_internal_verboselogging() const {
   return _impl_.verboselogging_;
 }
-inline int32_t InitRequest::verboselogging() const {
+inline int64_t InitRequest::verboselogging() const {
   // @@protoc_insertion_point(field_get:g2engine.InitRequest.verboseLogging)
   return _internal_verboselogging();
 }
-inline void InitRequest::_internal_set_verboselogging(int32_t value) {
+inline void InitRequest::_internal_set_verboselogging(int64_t value) {
   
   _impl_.verboselogging_ = value;
 }
-inline void InitRequest::set_verboselogging(int32_t value) {
+inline void InitRequest::set_verboselogging(int64_t value) {
   _internal_set_verboselogging(value);
   // @@protoc_insertion_point(field_set:g2engine.InitRequest.verboseLogging)
 }
@@ -29524,22 +29524,22 @@ inline void InitWithConfigIDRequest::set_initconfigid(int64_t value) {
   // @@protoc_insertion_point(field_set:g2engine.InitWithConfigIDRequest.initConfigID)
 }
 
-// int32 verboseLogging = 4;
+// int64 verboseLogging = 4;
 inline void InitWithConfigIDRequest::clear_verboselogging() {
-  _impl_.verboselogging_ = 0;
+  _impl_.verboselogging_ = int64_t{0};
 }
-inline int32_t InitWithConfigIDRequest::_internal_verboselogging() const {
+inline int64_t InitWithConfigIDRequest::_internal_verboselogging() const {
   return _impl_.verboselogging_;
 }
-inline int32_t InitWithConfigIDRequest::verboselogging() const {
+inline int64_t InitWithConfigIDRequest::verboselogging() const {
   // @@protoc_insertion_point(field_get:g2engine.InitWithConfigIDRequest.verboseLogging)
   return _internal_verboselogging();
 }
-inline void InitWithConfigIDRequest::_internal_set_verboselogging(int32_t value) {
+inline void InitWithConfigIDRequest::_internal_set_verboselogging(int64_t value) {
   
   _impl_.verboselogging_ = value;
 }
-inline void InitWithConfigIDRequest::set_verboselogging(int32_t value) {
+inline void InitWithConfigIDRequest::set_verboselogging(int64_t value) {
   _internal_set_verboselogging(value);
   // @@protoc_insertion_point(field_set:g2engine.InitWithConfigIDRequest.verboseLogging)
 }

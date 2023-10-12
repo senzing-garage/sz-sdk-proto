@@ -86,47 +86,47 @@ class G2Engine
 FindNetworkByEntityIDRequest
 
 entityList (	
-	maxDegree (
-buildOutDegree (
-maxEntities ("/
+	maxDegree (
+buildOutDegree (
+maxEntities ("/
 FindNetworkByEntityIDResponse
 result (	"„
 FindNetworkByEntityID_V2Request
 
 entityList (	
-	maxDegree (
-buildOutDegree (
-maxEntities (
+	maxDegree (
+buildOutDegree (
+maxEntities (
 flags ("2
  FindNetworkByEntityID_V2Response
 result (	"r
 FindNetworkByRecordIDRequest
 
 recordList (	
-	maxDegree (
-buildOutDegree (
-maxEntities ("/
+	maxDegree (
+buildOutDegree (
+maxEntities ("/
 FindNetworkByRecordIDResponse
 result (	"„
 FindNetworkByRecordID_V2Request
 
 recordList (	
-	maxDegree (
-buildOutDegree (
-maxEntities (
+	maxDegree (
+buildOutDegree (
+maxEntities (
 flags ("2
  FindNetworkByRecordID_V2Response
 result (	"T
 FindPathByEntityIDRequest
 	entityID1 (
 	entityID2 (
-	maxDegree (",
+	maxDegree (",
 FindPathByEntityIDResponse
 result (	"f
 FindPathByEntityID_V2Request
 	entityID1 (
 	entityID2 (
-	maxDegree (
+	maxDegree (
 flags ("/
 FindPathByEntityID_V2Response
 result (	"†
@@ -135,7 +135,7 @@ recordList (	
 	recordID1 (	
 dataSourceCode2 (	
 	recordID2 (	
-	maxDegree (",
+	maxDegree (",
 FindPathByRecordIDResponse
 result (	"˜
 FindPathByRecordID_V2Request
@@ -143,21 +143,21 @@ recordList (	
 	recordID1 (	
 dataSourceCode2 (	
 	recordID2 (	
-	maxDegree (
+	maxDegree (
 flags ("/
 FindPathByRecordID_V2Response
 result (	"w
 "FindPathExcludingByEntityIDRequest
 	entityID1 (
 	entityID2 (
-	maxDegree (
+	maxDegree (
 excludedEntities (	"5
 #FindPathExcludingByEntityIDResponse
 result (	"‰
 %FindPathExcludingByEntityID_V2Request
 	entityID1 (
 	entityID2 (
-	maxDegree (
+	maxDegree (
 excludedEntities (	
 flags ("8
 &FindPathExcludingByEntityID_V2Response
@@ -167,7 +167,7 @@ recordList (	
 	recordID1 (	
 dataSourceCode2 (	
 	recordID2 (	
-	maxDegree (
+	maxDegree (
 excludedRecords (	"5
 #FindPathExcludingByRecordIDResponse
 result (	"º
@@ -176,7 +176,7 @@ recordList (	
 	recordID1 (	
 dataSourceCode2 (	
 	recordID2 (	
-	maxDegree (
+	maxDegree (
 excludedRecords (	
 flags ("8
 &FindPathExcludingByRecordID_V2Response
@@ -184,7 +184,7 @@ recordList (	
 (FindPathIncludingSourceByEntityIDRequest
 	entityID1 (
 	entityID2 (
-	maxDegree (
+	maxDegree (
 excludedEntities (	
 requiredDsrcs (	";
 )FindPathIncludingSourceByEntityIDResponse
@@ -192,7 +192,7 @@ recordList (	
 +FindPathIncludingSourceByEntityID_V2Request
 	entityID1 (
 	entityID2 (
-	maxDegree (
+	maxDegree (
 excludedEntities (	
 requiredDsrcs (	
 flags (">
@@ -203,7 +203,7 @@ recordList (	
 	recordID1 (	
 dataSourceCode2 (	
 	recordID2 (	
-	maxDegree (
+	maxDegree (
 excludedRecords (	
 requiredDsrcs (	";
 )FindPathIncludingSourceByRecordIDResponse
@@ -213,7 +213,7 @@ recordList (	
 	recordID1 (	
 dataSourceCode2 (	
 	recordID2 (	
-	maxDegree (
+	maxDegree (
 excludedRecords (	
 requiredDsrcs (	
 flags (">
@@ -283,14 +283,14 @@ recordList (	
 
 moduleName (	
 	iniParams (	
-verboseLogging ("
+verboseLogging ("
 InitResponse"n
 InitWithConfigIDRequest
 
 moduleName (	
 	iniParams (	
 initConfigID (
-verboseLogging ("
+verboseLogging ("
 InitWithConfigIDResponse"
 PrimeEngineRequest"
 PrimeEngineResponse" 

@@ -22,7 +22,7 @@ class FindPathIncludingSourceByEntityID_V2Request extends \Google\Protobuf\Inter
      */
     protected $entityID2 = 0;
     /**
-     * Generated from protobuf field <code>int32 maxDegree = 3;</code>
+     * Generated from protobuf field <code>int64 maxDegree = 3;</code>
      */
     protected $maxDegree = 0;
     /**
@@ -46,7 +46,7 @@ class FindPathIncludingSourceByEntityID_V2Request extends \Google\Protobuf\Inter
      *
      *     @type int|string $entityID1
      *     @type int|string $entityID2
-     *     @type int $maxDegree
+     *     @type int|string $maxDegree
      *     @type string $excludedEntities
      *     @type string $requiredDsrcs
      *     @type int|string $flags
@@ -102,8 +102,8 @@ class FindPathIncludingSourceByEntityID_V2Request extends \Google\Protobuf\Inter
     }
 
     /**
-     * Generated from protobuf field <code>int32 maxDegree = 3;</code>
-     * @return int
+     * Generated from protobuf field <code>int64 maxDegree = 3;</code>
+     * @return int|string
      */
     public function getMaxDegree()
     {
@@ -111,13 +111,13 @@ class FindPathIncludingSourceByEntityID_V2Request extends \Google\Protobuf\Inter
     }
 
     /**
-     * Generated from protobuf field <code>int32 maxDegree = 3;</code>
-     * @param int $var
+     * Generated from protobuf field <code>int64 maxDegree = 3;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setMaxDegree($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkInt64($var);
         $this->maxDegree = $var;
 
         return $this;

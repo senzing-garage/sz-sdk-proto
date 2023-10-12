@@ -100,18 +100,18 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "g2engine.FindNetworkByEntityIDRequest" do
       optional :entityList, :string, 1
-      optional :maxDegree, :int32, 2
-      optional :buildOutDegree, :int32, 3
-      optional :maxEntities, :int32, 4
+      optional :maxDegree, :int64, 2
+      optional :buildOutDegree, :int64, 3
+      optional :maxEntities, :int64, 4
     end
     add_message "g2engine.FindNetworkByEntityIDResponse" do
       optional :result, :string, 1
     end
     add_message "g2engine.FindNetworkByEntityID_V2Request" do
       optional :entityList, :string, 1
-      optional :maxDegree, :int32, 2
-      optional :buildOutDegree, :int32, 3
-      optional :maxEntities, :int32, 4
+      optional :maxDegree, :int64, 2
+      optional :buildOutDegree, :int64, 3
+      optional :maxEntities, :int64, 4
       optional :flags, :int64, 5
     end
     add_message "g2engine.FindNetworkByEntityID_V2Response" do
@@ -119,18 +119,18 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "g2engine.FindNetworkByRecordIDRequest" do
       optional :recordList, :string, 1
-      optional :maxDegree, :int32, 2
-      optional :buildOutDegree, :int32, 3
-      optional :maxEntities, :int32, 4
+      optional :maxDegree, :int64, 2
+      optional :buildOutDegree, :int64, 3
+      optional :maxEntities, :int64, 4
     end
     add_message "g2engine.FindNetworkByRecordIDResponse" do
       optional :result, :string, 1
     end
     add_message "g2engine.FindNetworkByRecordID_V2Request" do
       optional :recordList, :string, 1
-      optional :maxDegree, :int32, 2
-      optional :buildOutDegree, :int32, 3
-      optional :maxEntities, :int32, 4
+      optional :maxDegree, :int64, 2
+      optional :buildOutDegree, :int64, 3
+      optional :maxEntities, :int64, 4
       optional :flags, :int64, 5
     end
     add_message "g2engine.FindNetworkByRecordID_V2Response" do
@@ -139,7 +139,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "g2engine.FindPathByEntityIDRequest" do
       optional :entityID1, :int64, 1
       optional :entityID2, :int64, 2
-      optional :maxDegree, :int32, 3
+      optional :maxDegree, :int64, 3
     end
     add_message "g2engine.FindPathByEntityIDResponse" do
       optional :result, :string, 1
@@ -147,7 +147,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "g2engine.FindPathByEntityID_V2Request" do
       optional :entityID1, :int64, 1
       optional :entityID2, :int64, 2
-      optional :maxDegree, :int32, 3
+      optional :maxDegree, :int64, 3
       optional :flags, :int64, 4
     end
     add_message "g2engine.FindPathByEntityID_V2Response" do
@@ -158,7 +158,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :recordID1, :string, 2
       optional :dataSourceCode2, :string, 3
       optional :recordID2, :string, 4
-      optional :maxDegree, :int32, 5
+      optional :maxDegree, :int64, 5
     end
     add_message "g2engine.FindPathByRecordIDResponse" do
       optional :result, :string, 1
@@ -168,7 +168,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :recordID1, :string, 2
       optional :dataSourceCode2, :string, 3
       optional :recordID2, :string, 4
-      optional :maxDegree, :int32, 5
+      optional :maxDegree, :int64, 5
       optional :flags, :int64, 6
     end
     add_message "g2engine.FindPathByRecordID_V2Response" do
@@ -177,7 +177,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "g2engine.FindPathExcludingByEntityIDRequest" do
       optional :entityID1, :int64, 1
       optional :entityID2, :int64, 2
-      optional :maxDegree, :int32, 3
+      optional :maxDegree, :int64, 3
       optional :excludedEntities, :string, 4
     end
     add_message "g2engine.FindPathExcludingByEntityIDResponse" do
@@ -186,7 +186,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "g2engine.FindPathExcludingByEntityID_V2Request" do
       optional :entityID1, :int64, 1
       optional :entityID2, :int64, 2
-      optional :maxDegree, :int32, 3
+      optional :maxDegree, :int64, 3
       optional :excludedEntities, :string, 4
       optional :flags, :int64, 5
     end
@@ -198,7 +198,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :recordID1, :string, 2
       optional :dataSourceCode2, :string, 3
       optional :recordID2, :string, 4
-      optional :maxDegree, :int32, 5
+      optional :maxDegree, :int64, 5
       optional :excludedRecords, :string, 6
     end
     add_message "g2engine.FindPathExcludingByRecordIDResponse" do
@@ -209,7 +209,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :recordID1, :string, 2
       optional :dataSourceCode2, :string, 3
       optional :recordID2, :string, 4
-      optional :maxDegree, :int32, 5
+      optional :maxDegree, :int64, 5
       optional :excludedRecords, :string, 6
       optional :flags, :int64, 7
     end
@@ -219,7 +219,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "g2engine.FindPathIncludingSourceByEntityIDRequest" do
       optional :entityID1, :int64, 1
       optional :entityID2, :int64, 2
-      optional :maxDegree, :int32, 3
+      optional :maxDegree, :int64, 3
       optional :excludedEntities, :string, 4
       optional :requiredDsrcs, :string, 5
     end
@@ -229,7 +229,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "g2engine.FindPathIncludingSourceByEntityID_V2Request" do
       optional :entityID1, :int64, 1
       optional :entityID2, :int64, 2
-      optional :maxDegree, :int32, 3
+      optional :maxDegree, :int64, 3
       optional :excludedEntities, :string, 4
       optional :requiredDsrcs, :string, 5
       optional :flags, :int64, 6
@@ -242,7 +242,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :recordID1, :string, 2
       optional :dataSourceCode2, :string, 3
       optional :recordID2, :string, 4
-      optional :maxDegree, :int32, 5
+      optional :maxDegree, :int64, 5
       optional :excludedRecords, :string, 6
       optional :requiredDsrcs, :string, 7
     end
@@ -254,7 +254,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :recordID1, :string, 2
       optional :dataSourceCode2, :string, 3
       optional :recordID2, :string, 4
-      optional :maxDegree, :int32, 5
+      optional :maxDegree, :int64, 5
       optional :excludedRecords, :string, 6
       optional :requiredDsrcs, :string, 7
       optional :flags, :int64, 8
@@ -349,7 +349,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "g2engine.InitRequest" do
       optional :moduleName, :string, 1
       optional :iniParams, :string, 2
-      optional :verboseLogging, :int32, 3
+      optional :verboseLogging, :int64, 3
     end
     add_message "g2engine.InitResponse" do
     end
@@ -357,7 +357,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :moduleName, :string, 1
       optional :iniParams, :string, 2
       optional :initConfigID, :int64, 3
-      optional :verboseLogging, :int32, 4
+      optional :verboseLogging, :int64, 4
     end
     add_message "g2engine.InitWithConfigIDResponse" do
     end

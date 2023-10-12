@@ -38,8 +38,8 @@ public interface InitWithConfigIDRequestOrBuilder extends
   long getInitConfigID();
 
   /**
-   * <code>int32 verboseLogging = 4;</code>
+   * <code>int64 verboseLogging = 4;</code>
    * @return The verboseLogging.
    */
-  int getVerboseLogging();
+  long getVerboseLogging();
 }

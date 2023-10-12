@@ -86,7 +86,7 @@ public final class G2ProductProto {
       "\n\017g2product.proto\022\tg2product\"\020\n\016DestroyR" +
       "equest\"\021\n\017DestroyResponse\"L\n\013InitRequest" +
       "\022\022\n\nmoduleName\030\001 \001(\t\022\021\n\tiniParams\030\002 \001(\t\022" +
-      "\026\n\016verboseLogging\030\003 \001(\005\"\016\n\014InitResponse\"" +
+      "\026\n\016verboseLogging\030\003 \001(\003\"\016\n\014InitResponse\"" +
       "\020\n\016LicenseRequest\"!\n\017LicenseResponse\022\016\n\006" +
       "result\030\001 \001(\t\"5\n\032ValidateLicenseFileReque" +
       "st\022\027\n\017licenseFilePath\030\001 \001(\t\"-\n\033ValidateL" +

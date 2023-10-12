@@ -1645,13 +1645,13 @@ class InitRequest final :
   std::string* _internal_mutable_iniparams();
   public:
 
-  // int32 verboseLogging = 3;
+  // int64 verboseLogging = 3;
   void clear_verboselogging();
-  int32_t verboselogging() const;
-  void set_verboselogging(int32_t value);
+  int64_t verboselogging() const;
+  void set_verboselogging(int64_t value);
   private:
-  int32_t _internal_verboselogging() const;
-  void _internal_set_verboselogging(int32_t value);
+  int64_t _internal_verboselogging() const;
+  void _internal_set_verboselogging(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:g2config.InitRequest)
@@ -1664,7 +1664,7 @@ class InitRequest final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr modulename_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr iniparams_;
-    int32_t verboselogging_;
+    int64_t verboselogging_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3072,22 +3072,22 @@ inline void InitRequest::set_allocated_iniparams(std::string* iniparams) {
   // @@protoc_insertion_point(field_set_allocated:g2config.InitRequest.iniParams)
 }
 
-// int32 verboseLogging = 3;
+// int64 verboseLogging = 3;
 inline void InitRequest::clear_verboselogging() {
-  _impl_.verboselogging_ = 0;
+  _impl_.verboselogging_ = int64_t{0};
 }
-inline int32_t InitRequest::_internal_verboselogging() const {
+inline int64_t InitRequest::_internal_verboselogging() const {
   return _impl_.verboselogging_;
 }
-inline int32_t InitRequest::verboselogging() const {
+inline int64_t InitRequest::verboselogging() const {
   // @@protoc_insertion_point(field_get:g2config.InitRequest.verboseLogging)
   return _internal_verboselogging();
 }
-inline void InitRequest::_internal_set_verboselogging(int32_t value) {
+inline void InitRequest::_internal_set_verboselogging(int64_t value) {
   
   _impl_.verboselogging_ = value;
 }
-inline void InitRequest::set_verboselogging(int32_t value) {
+inline void InitRequest::set_verboselogging(int64_t value) {
   _internal_set_verboselogging(value);
   // @@protoc_insertion_point(field_set:g2config.InitRequest.verboseLogging)
 }

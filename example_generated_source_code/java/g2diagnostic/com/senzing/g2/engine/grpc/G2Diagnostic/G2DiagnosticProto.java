@@ -147,10 +147,10 @@ public final class G2DiagnosticProto {
       "stemMemoryRequest\".\n\034GetTotalSystemMemor" +
       "yResponse\022\016\n\006result\030\001 \001(\003\"L\n\013InitRequest" +
       "\022\022\n\nmoduleName\030\001 \001(\t\022\021\n\tiniParams\030\002 \001(\t\022" +
-      "\026\n\016verboseLogging\030\003 \001(\005\"\016\n\014InitResponse\"" +
+      "\026\n\016verboseLogging\030\003 \001(\003\"\016\n\014InitResponse\"" +
       "n\n\027InitWithConfigIDRequest\022\022\n\nmoduleName" +
       "\030\001 \001(\t\022\021\n\tiniParams\030\002 \001(\t\022\024\n\014initConfigI" +
-      "D\030\003 \001(\003\022\026\n\016verboseLogging\030\004 \001(\005\"\032\n\030InitW" +
+      "D\030\003 \001(\003\022\026\n\016verboseLogging\030\004 \001(\003\"\032\n\030InitW" +
       "ithConfigIDResponse\"%\n\rReinitRequest\022\024\n\014" +
       "initConfigID\030\001 \001(\003\"\020\n\016ReinitResponse\"3\n\035" +
       "StreamEntityListBySizeRequest\022\022\n\nentityS" +
