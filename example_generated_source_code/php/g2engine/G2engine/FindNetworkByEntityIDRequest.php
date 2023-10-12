@@ -18,15 +18,15 @@ class FindNetworkByEntityIDRequest extends \Google\Protobuf\Internal\Message
      */
     protected $entityList = '';
     /**
-     * Generated from protobuf field <code>int32 maxDegree = 2;</code>
+     * Generated from protobuf field <code>int64 maxDegree = 2;</code>
      */
     protected $maxDegree = 0;
     /**
-     * Generated from protobuf field <code>int32 buildOutDegree = 3;</code>
+     * Generated from protobuf field <code>int64 buildOutDegree = 3;</code>
      */
     protected $buildOutDegree = 0;
     /**
-     * Generated from protobuf field <code>int32 maxEntities = 4;</code>
+     * Generated from protobuf field <code>int64 maxEntities = 4;</code>
      */
     protected $maxEntities = 0;
 
@@ -37,9 +37,9 @@ class FindNetworkByEntityIDRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $entityList
-     *     @type int $maxDegree
-     *     @type int $buildOutDegree
-     *     @type int $maxEntities
+     *     @type int|string $maxDegree
+     *     @type int|string $buildOutDegree
+     *     @type int|string $maxEntities
      * }
      */
     public function __construct($data = NULL) {
@@ -70,8 +70,8 @@ class FindNetworkByEntityIDRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 maxDegree = 2;</code>
-     * @return int
+     * Generated from protobuf field <code>int64 maxDegree = 2;</code>
+     * @return int|string
      */
     public function getMaxDegree()
     {
@@ -79,21 +79,21 @@ class FindNetworkByEntityIDRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 maxDegree = 2;</code>
-     * @param int $var
+     * Generated from protobuf field <code>int64 maxDegree = 2;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setMaxDegree($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkInt64($var);
         $this->maxDegree = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>int32 buildOutDegree = 3;</code>
-     * @return int
+     * Generated from protobuf field <code>int64 buildOutDegree = 3;</code>
+     * @return int|string
      */
     public function getBuildOutDegree()
     {
@@ -101,21 +101,21 @@ class FindNetworkByEntityIDRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 buildOutDegree = 3;</code>
-     * @param int $var
+     * Generated from protobuf field <code>int64 buildOutDegree = 3;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setBuildOutDegree($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkInt64($var);
         $this->buildOutDegree = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>int32 maxEntities = 4;</code>
-     * @return int
+     * Generated from protobuf field <code>int64 maxEntities = 4;</code>
+     * @return int|string
      */
     public function getMaxEntities()
     {
@@ -123,13 +123,13 @@ class FindNetworkByEntityIDRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 maxEntities = 4;</code>
-     * @param int $var
+     * Generated from protobuf field <code>int64 maxEntities = 4;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setMaxEntities($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkInt64($var);
         $this->maxEntities = $var;
 
         return $this;

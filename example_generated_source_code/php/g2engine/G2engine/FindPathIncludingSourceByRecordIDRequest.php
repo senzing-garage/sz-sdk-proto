@@ -30,7 +30,7 @@ class FindPathIncludingSourceByRecordIDRequest extends \Google\Protobuf\Internal
      */
     protected $recordID2 = '';
     /**
-     * Generated from protobuf field <code>int32 maxDegree = 5;</code>
+     * Generated from protobuf field <code>int64 maxDegree = 5;</code>
      */
     protected $maxDegree = 0;
     /**
@@ -52,7 +52,7 @@ class FindPathIncludingSourceByRecordIDRequest extends \Google\Protobuf\Internal
      *     @type string $recordID1
      *     @type string $dataSourceCode2
      *     @type string $recordID2
-     *     @type int $maxDegree
+     *     @type int|string $maxDegree
      *     @type string $excludedRecords
      *     @type string $requiredDsrcs
      * }
@@ -151,8 +151,8 @@ class FindPathIncludingSourceByRecordIDRequest extends \Google\Protobuf\Internal
     }
 
     /**
-     * Generated from protobuf field <code>int32 maxDegree = 5;</code>
-     * @return int
+     * Generated from protobuf field <code>int64 maxDegree = 5;</code>
+     * @return int|string
      */
     public function getMaxDegree()
     {
@@ -160,13 +160,13 @@ class FindPathIncludingSourceByRecordIDRequest extends \Google\Protobuf\Internal
     }
 
     /**
-     * Generated from protobuf field <code>int32 maxDegree = 5;</code>
-     * @param int $var
+     * Generated from protobuf field <code>int64 maxDegree = 5;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setMaxDegree($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkInt64($var);
         $this->maxDegree = $var;
 
         return $this;

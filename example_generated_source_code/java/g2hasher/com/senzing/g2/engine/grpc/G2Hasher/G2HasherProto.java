@@ -78,10 +78,10 @@ public final class G2HasherProto {
       "braryRequest\",\n\032ExportTokenLibraryRespon" +
       "se\022\016\n\006result\030\001 \001(\t\"L\n\013InitRequest\022\022\n\nmod" +
       "uleName\030\001 \001(\t\022\021\n\tiniParams\030\002 \001(\t\022\026\n\016verb" +
-      "oseLogging\030\003 \001(\005\"\016\n\014InitResponse\"j\n\025Init" +
+      "oseLogging\030\003 \001(\003\"\016\n\014InitResponse\"j\n\025Init" +
       "WithConfigRequest\022\022\n\nmoduleName\030\001 \001(\t\022\021\n" +
       "\tiniParams\030\002 \001(\t\022\022\n\nconfigJson\030\003 \001(\t\022\026\n\016" +
-      "verboseLogging\030\004 \001(\005\"\030\n\026InitWithConfigRe" +
+      "verboseLogging\030\004 \001(\003\"\030\n\026InitWithConfigRe" +
       "sponse\" \n\016ProcessRequest\022\016\n\006record\030\001 \001(\t" +
       "\"!\n\017ProcessResponse\022\016\n\006result\030\001 \001(\t2\201\003\n\010" +
       "G2Hasher\022@\n\007Destroy\022\030.g2hasher.DestroyRe" +

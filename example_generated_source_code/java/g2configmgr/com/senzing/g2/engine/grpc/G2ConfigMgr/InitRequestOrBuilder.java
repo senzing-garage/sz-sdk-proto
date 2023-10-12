@@ -32,8 +32,8 @@ public interface InitRequestOrBuilder extends
       getIniParamsBytes();
 
   /**
-   * <code>int32 verboseLogging = 3;</code>
+   * <code>int64 verboseLogging = 3;</code>
    * @return The verboseLogging.
    */
-  int getVerboseLogging();
+  long getVerboseLogging();
 }

@@ -79,7 +79,7 @@ private static final long serialVersionUID = 0L;
           }
           case 40: {
 
-            maxDegree_ = input.readInt32();
+            maxDegree_ = input.readInt64();
             break;
           }
           case 50: {
@@ -275,13 +275,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MAXDEGREE_FIELD_NUMBER = 5;
-  private int maxDegree_;
+  private long maxDegree_;
   /**
-   * <code>int32 maxDegree = 5;</code>
+   * <code>int64 maxDegree = 5;</code>
    * @return The maxDegree.
    */
   @java.lang.Override
-  public int getMaxDegree() {
+  public long getMaxDegree() {
     return maxDegree_;
   }
 
@@ -349,8 +349,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordID2_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, recordID2_);
     }
-    if (maxDegree_ != 0) {
-      output.writeInt32(5, maxDegree_);
+    if (maxDegree_ != 0L) {
+      output.writeInt64(5, maxDegree_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(excludedRecords_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, excludedRecords_);
@@ -376,9 +376,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordID2_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, recordID2_);
     }
-    if (maxDegree_ != 0) {
+    if (maxDegree_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(5, maxDegree_);
+        .computeInt64Size(5, maxDegree_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(excludedRecords_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, excludedRecords_);
@@ -430,7 +430,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + RECORDID2_FIELD_NUMBER;
     hash = (53 * hash) + getRecordID2().hashCode();
     hash = (37 * hash) + MAXDEGREE_FIELD_NUMBER;
-    hash = (53 * hash) + getMaxDegree();
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getMaxDegree());
     hash = (37 * hash) + EXCLUDEDRECORDS_FIELD_NUMBER;
     hash = (53 * hash) + getExcludedRecords().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
@@ -574,7 +575,7 @@ private static final long serialVersionUID = 0L;
 
       recordID2_ = "";
 
-      maxDegree_ = 0;
+      maxDegree_ = 0L;
 
       excludedRecords_ = "";
 
@@ -674,7 +675,7 @@ private static final long serialVersionUID = 0L;
         recordID2_ = other.recordID2_;
         onChanged();
       }
-      if (other.getMaxDegree() != 0) {
+      if (other.getMaxDegree() != 0L) {
         setMaxDegree(other.getMaxDegree());
       }
       if (!other.getExcludedRecords().isEmpty()) {
@@ -1014,33 +1015,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int maxDegree_ ;
+    private long maxDegree_ ;
     /**
-     * <code>int32 maxDegree = 5;</code>
+     * <code>int64 maxDegree = 5;</code>
      * @return The maxDegree.
      */
     @java.lang.Override
-    public int getMaxDegree() {
+    public long getMaxDegree() {
       return maxDegree_;
     }
     /**
-     * <code>int32 maxDegree = 5;</code>
+     * <code>int64 maxDegree = 5;</code>
      * @param value The maxDegree to set.
      * @return This builder for chaining.
      */
-    public Builder setMaxDegree(int value) {
+    public Builder setMaxDegree(long value) {
       
       maxDegree_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 maxDegree = 5;</code>
+     * <code>int64 maxDegree = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearMaxDegree() {
       
-      maxDegree_ = 0;
+      maxDegree_ = 0L;
       onChanged();
       return this;
     }

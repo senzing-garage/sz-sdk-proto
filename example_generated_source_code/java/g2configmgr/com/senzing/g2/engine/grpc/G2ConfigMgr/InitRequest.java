@@ -64,7 +64,7 @@ private static final long serialVersionUID = 0L;
           }
           case 24: {
 
-            verboseLogging_ = input.readInt32();
+            verboseLogging_ = input.readInt64();
             break;
           }
           default: {
@@ -178,13 +178,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VERBOSELOGGING_FIELD_NUMBER = 3;
-  private int verboseLogging_;
+  private long verboseLogging_;
   /**
-   * <code>int32 verboseLogging = 3;</code>
+   * <code>int64 verboseLogging = 3;</code>
    * @return The verboseLogging.
    */
   @java.lang.Override
-  public int getVerboseLogging() {
+  public long getVerboseLogging() {
     return verboseLogging_;
   }
 
@@ -208,8 +208,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iniParams_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, iniParams_);
     }
-    if (verboseLogging_ != 0) {
-      output.writeInt32(3, verboseLogging_);
+    if (verboseLogging_ != 0L) {
+      output.writeInt64(3, verboseLogging_);
     }
     unknownFields.writeTo(output);
   }
@@ -226,9 +226,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iniParams_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, iniParams_);
     }
-    if (verboseLogging_ != 0) {
+    if (verboseLogging_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(3, verboseLogging_);
+        .computeInt64Size(3, verboseLogging_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -267,7 +267,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + INIPARAMS_FIELD_NUMBER;
     hash = (53 * hash) + getIniParams().hashCode();
     hash = (37 * hash) + VERBOSELOGGING_FIELD_NUMBER;
-    hash = (53 * hash) + getVerboseLogging();
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getVerboseLogging());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -405,7 +406,7 @@ private static final long serialVersionUID = 0L;
 
       iniParams_ = "";
 
-      verboseLogging_ = 0;
+      verboseLogging_ = 0L;
 
       return this;
     }
@@ -492,7 +493,7 @@ private static final long serialVersionUID = 0L;
         iniParams_ = other.iniParams_;
         onChanged();
       }
-      if (other.getVerboseLogging() != 0) {
+      if (other.getVerboseLogging() != 0L) {
         setVerboseLogging(other.getVerboseLogging());
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -676,33 +677,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int verboseLogging_ ;
+    private long verboseLogging_ ;
     /**
-     * <code>int32 verboseLogging = 3;</code>
+     * <code>int64 verboseLogging = 3;</code>
      * @return The verboseLogging.
      */
     @java.lang.Override
-    public int getVerboseLogging() {
+    public long getVerboseLogging() {
       return verboseLogging_;
     }
     /**
-     * <code>int32 verboseLogging = 3;</code>
+     * <code>int64 verboseLogging = 3;</code>
      * @param value The verboseLogging to set.
      * @return This builder for chaining.
      */
-    public Builder setVerboseLogging(int value) {
+    public Builder setVerboseLogging(long value) {
       
       verboseLogging_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 verboseLogging = 3;</code>
+     * <code>int64 verboseLogging = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearVerboseLogging() {
       
-      verboseLogging_ = 0;
+      verboseLogging_ = 0L;
       onChanged();
       return this;
     }

@@ -17,7 +17,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "g2hasher.InitRequest" do
       optional :moduleName, :string, 1
       optional :iniParams, :string, 2
-      optional :verboseLogging, :int32, 3
+      optional :verboseLogging, :int64, 3
     end
     add_message "g2hasher.InitResponse" do
     end
@@ -25,7 +25,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :moduleName, :string, 1
       optional :iniParams, :string, 2
       optional :configJson, :string, 3
-      optional :verboseLogging, :int32, 4
+      optional :verboseLogging, :int64, 4
     end
     add_message "g2hasher.InitWithConfigResponse" do
     end

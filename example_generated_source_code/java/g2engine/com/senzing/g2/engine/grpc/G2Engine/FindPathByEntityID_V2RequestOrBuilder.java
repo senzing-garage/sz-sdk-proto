@@ -20,10 +20,10 @@ public interface FindPathByEntityID_V2RequestOrBuilder extends
   long getEntityID2();
 
   /**
-   * <code>int32 maxDegree = 3;</code>
+   * <code>int64 maxDegree = 3;</code>
    * @return The maxDegree.
    */
-  int getMaxDegree();
+  long getMaxDegree();
 
   /**
    * <code>int64 flags = 4;</code>

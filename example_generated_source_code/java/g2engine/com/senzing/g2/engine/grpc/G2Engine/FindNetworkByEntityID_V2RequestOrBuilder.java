@@ -20,22 +20,22 @@ public interface FindNetworkByEntityID_V2RequestOrBuilder extends
       getEntityListBytes();
 
   /**
-   * <code>int32 maxDegree = 2;</code>
+   * <code>int64 maxDegree = 2;</code>
    * @return The maxDegree.
    */
-  int getMaxDegree();
+  long getMaxDegree();
 
   /**
-   * <code>int32 buildOutDegree = 3;</code>
+   * <code>int64 buildOutDegree = 3;</code>
    * @return The buildOutDegree.
    */
-  int getBuildOutDegree();
+  long getBuildOutDegree();
 
   /**
-   * <code>int32 maxEntities = 4;</code>
+   * <code>int64 maxEntities = 4;</code>
    * @return The maxEntities.
    */
-  int getMaxEntities();
+  long getMaxEntities();
 
   /**
    * <code>int64 flags = 5;</code>

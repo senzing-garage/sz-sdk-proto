@@ -752,82 +752,82 @@ public final class G2EngineProto {
       " \001(\003\";\n)FindInterestingEntitiesByRecordI" +
       "DResponse\022\016\n\006result\030\001 \001(\t\"r\n\034FindNetwork" +
       "ByEntityIDRequest\022\022\n\nentityList\030\001 \001(\t\022\021\n" +
-      "\tmaxDegree\030\002 \001(\005\022\026\n\016buildOutDegree\030\003 \001(\005" +
-      "\022\023\n\013maxEntities\030\004 \001(\005\"/\n\035FindNetworkByEn" +
+      "\tmaxDegree\030\002 \001(\003\022\026\n\016buildOutDegree\030\003 \001(\003" +
+      "\022\023\n\013maxEntities\030\004 \001(\003\"/\n\035FindNetworkByEn" +
       "tityIDResponse\022\016\n\006result\030\001 \001(\t\"\204\001\n\037FindN" +
       "etworkByEntityID_V2Request\022\022\n\nentityList" +
-      "\030\001 \001(\t\022\021\n\tmaxDegree\030\002 \001(\005\022\026\n\016buildOutDeg" +
-      "ree\030\003 \001(\005\022\023\n\013maxEntities\030\004 \001(\005\022\r\n\005flags\030" +
+      "\030\001 \001(\t\022\021\n\tmaxDegree\030\002 \001(\003\022\026\n\016buildOutDeg" +
+      "ree\030\003 \001(\003\022\023\n\013maxEntities\030\004 \001(\003\022\r\n\005flags\030" +
       "\005 \001(\003\"2\n FindNetworkByEntityID_V2Respons" +
       "e\022\016\n\006result\030\001 \001(\t\"r\n\034FindNetworkByRecord" +
       "IDRequest\022\022\n\nrecordList\030\001 \001(\t\022\021\n\tmaxDegr" +
-      "ee\030\002 \001(\005\022\026\n\016buildOutDegree\030\003 \001(\005\022\023\n\013maxE" +
-      "ntities\030\004 \001(\005\"/\n\035FindNetworkByRecordIDRe" +
+      "ee\030\002 \001(\003\022\026\n\016buildOutDegree\030\003 \001(\003\022\023\n\013maxE" +
+      "ntities\030\004 \001(\003\"/\n\035FindNetworkByRecordIDRe" +
       "sponse\022\016\n\006result\030\001 \001(\t\"\204\001\n\037FindNetworkBy" +
       "RecordID_V2Request\022\022\n\nrecordList\030\001 \001(\t\022\021" +
-      "\n\tmaxDegree\030\002 \001(\005\022\026\n\016buildOutDegree\030\003 \001(" +
-      "\005\022\023\n\013maxEntities\030\004 \001(\005\022\r\n\005flags\030\005 \001(\003\"2\n" +
+      "\n\tmaxDegree\030\002 \001(\003\022\026\n\016buildOutDegree\030\003 \001(" +
+      "\003\022\023\n\013maxEntities\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"2\n" +
       " FindNetworkByRecordID_V2Response\022\016\n\006res" +
       "ult\030\001 \001(\t\"T\n\031FindPathByEntityIDRequest\022\021" +
       "\n\tentityID1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\022\021\n\t" +
-      "maxDegree\030\003 \001(\005\",\n\032FindPathByEntityIDRes" +
+      "maxDegree\030\003 \001(\003\",\n\032FindPathByEntityIDRes" +
       "ponse\022\016\n\006result\030\001 \001(\t\"f\n\034FindPathByEntit" +
       "yID_V2Request\022\021\n\tentityID1\030\001 \001(\003\022\021\n\tenti" +
-      "tyID2\030\002 \001(\003\022\021\n\tmaxDegree\030\003 \001(\005\022\r\n\005flags\030" +
+      "tyID2\030\002 \001(\003\022\021\n\tmaxDegree\030\003 \001(\003\022\r\n\005flags\030" +
       "\004 \001(\003\"/\n\035FindPathByEntityID_V2Response\022\016" +
       "\n\006result\030\001 \001(\t\"\206\001\n\031FindPathByRecordIDReq" +
       "uest\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trecordI" +
       "D1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\trec" +
-      "ordID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001(\005\",\n\032FindP" +
+      "ordID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001(\003\",\n\032FindP" +
       "athByRecordIDResponse\022\016\n\006result\030\001 \001(\t\"\230\001" +
       "\n\034FindPathByRecordID_V2Request\022\027\n\017dataSo" +
       "urceCode1\030\001 \001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n\017da" +
       "taSourceCode2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001(\t\022\021" +
-      "\n\tmaxDegree\030\005 \001(\005\022\r\n\005flags\030\006 \001(\003\"/\n\035Find" +
+      "\n\tmaxDegree\030\005 \001(\003\022\r\n\005flags\030\006 \001(\003\"/\n\035Find" +
       "PathByRecordID_V2Response\022\016\n\006result\030\001 \001(" +
       "\t\"w\n\"FindPathExcludingByEntityIDRequest\022" +
       "\021\n\tentityID1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\022\021\n" +
-      "\tmaxDegree\030\003 \001(\005\022\030\n\020excludedEntities\030\004 \001" +
+      "\tmaxDegree\030\003 \001(\003\022\030\n\020excludedEntities\030\004 \001" +
       "(\t\"5\n#FindPathExcludingByEntityIDRespons" +
       "e\022\016\n\006result\030\001 \001(\t\"\211\001\n%FindPathExcludingB" +
       "yEntityID_V2Request\022\021\n\tentityID1\030\001 \001(\003\022\021" +
-      "\n\tentityID2\030\002 \001(\003\022\021\n\tmaxDegree\030\003 \001(\005\022\030\n\020" +
+      "\n\tentityID2\030\002 \001(\003\022\021\n\tmaxDegree\030\003 \001(\003\022\030\n\020" +
       "excludedEntities\030\004 \001(\t\022\r\n\005flags\030\005 \001(\003\"8\n" +
       "&FindPathExcludingByEntityID_V2Response\022" +
       "\016\n\006result\030\001 \001(\t\"\250\001\n\"FindPathExcludingByR" +
       "ecordIDRequest\022\027\n\017dataSourceCode1\030\001 \001(\t\022" +
       "\021\n\trecordID1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 " +
       "\001(\t\022\021\n\trecordID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001(" +
-      "\005\022\027\n\017excludedRecords\030\006 \001(\t\"5\n#FindPathEx" +
+      "\003\022\027\n\017excludedRecords\030\006 \001(\t\"5\n#FindPathEx" +
       "cludingByRecordIDResponse\022\016\n\006result\030\001 \001(" +
       "\t\"\272\001\n%FindPathExcludingByRecordID_V2Requ" +
       "est\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trecordID" +
       "1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\treco" +
-      "rdID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001(\005\022\027\n\017exclud" +
+      "rdID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001(\003\022\027\n\017exclud" +
       "edRecords\030\006 \001(\t\022\r\n\005flags\030\007 \001(\003\"8\n&FindPa" +
       "thExcludingByRecordID_V2Response\022\016\n\006resu" +
       "lt\030\001 \001(\t\"\224\001\n(FindPathIncludingSourceByEn" +
       "tityIDRequest\022\021\n\tentityID1\030\001 \001(\003\022\021\n\tenti" +
-      "tyID2\030\002 \001(\003\022\021\n\tmaxDegree\030\003 \001(\005\022\030\n\020exclud" +
+      "tyID2\030\002 \001(\003\022\021\n\tmaxDegree\030\003 \001(\003\022\030\n\020exclud" +
       "edEntities\030\004 \001(\t\022\025\n\rrequiredDsrcs\030\005 \001(\t\"" +
       ";\n)FindPathIncludingSourceByEntityIDResp" +
       "onse\022\016\n\006result\030\001 \001(\t\"\246\001\n+FindPathIncludi" +
       "ngSourceByEntityID_V2Request\022\021\n\tentityID" +
       "1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\022\021\n\tmaxDegree\030" +
-      "\003 \001(\005\022\030\n\020excludedEntities\030\004 \001(\t\022\025\n\rrequi" +
+      "\003 \001(\003\022\030\n\020excludedEntities\030\004 \001(\t\022\025\n\rrequi" +
       "redDsrcs\030\005 \001(\t\022\r\n\005flags\030\006 \001(\003\">\n,FindPat" +
       "hIncludingSourceByEntityID_V2Response\022\016\n" +
       "\006result\030\001 \001(\t\"\305\001\n(FindPathIncludingSourc" +
       "eByRecordIDRequest\022\027\n\017dataSourceCode1\030\001 " +
       "\001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027\n\017dataSourceCode" +
       "2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001(\t\022\021\n\tmaxDegree\030" +
-      "\005 \001(\005\022\027\n\017excludedRecords\030\006 \001(\t\022\025\n\rrequir" +
+      "\005 \001(\003\022\027\n\017excludedRecords\030\006 \001(\t\022\025\n\rrequir" +
       "edDsrcs\030\007 \001(\t\";\n)FindPathIncludingSource" +
       "ByRecordIDResponse\022\016\n\006result\030\001 \001(\t\"\327\001\n+F" +
       "indPathIncludingSourceByRecordID_V2Reque" +
       "st\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trecordID1" +
       "\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\trecor" +
-      "dID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001(\005\022\027\n\017exclude" +
+      "dID2\030\004 \001(\t\022\021\n\tmaxDegree\030\005 \001(\003\022\027\n\017exclude" +
       "dRecords\030\006 \001(\t\022\025\n\rrequiredDsrcs\030\007 \001(\t\022\r\n" +
       "\005flags\030\010 \001(\003\">\n,FindPathIncludingSourceB" +
       "yRecordID_V2Response\022\016\n\006result\030\001 \001(\t\"\032\n\030" +
@@ -867,10 +867,10 @@ public final class G2EngineProto {
       " \001(\003\"0\n\036HowEntityByEntityID_V2Response\022\016" +
       "\n\006result\030\001 \001(\t\"L\n\013InitRequest\022\022\n\nmoduleN" +
       "ame\030\001 \001(\t\022\021\n\tiniParams\030\002 \001(\t\022\026\n\016verboseL" +
-      "ogging\030\003 \001(\005\"\016\n\014InitResponse\"n\n\027InitWith" +
+      "ogging\030\003 \001(\003\"\016\n\014InitResponse\"n\n\027InitWith" +
       "ConfigIDRequest\022\022\n\nmoduleName\030\001 \001(\t\022\021\n\ti" +
       "niParams\030\002 \001(\t\022\024\n\014initConfigID\030\003 \001(\003\022\026\n\016" +
-      "verboseLogging\030\004 \001(\005\"\032\n\030InitWithConfigID" +
+      "verboseLogging\030\004 \001(\003\"\032\n\030InitWithConfigID" +
       "Response\"\024\n\022PrimeEngineRequest\"\025\n\023PrimeE" +
       "ngineResponse\" \n\016ProcessRequest\022\016\n\006recor" +
       "d\030\001 \001(\t\"\021\n\017ProcessResponse\"7\n\026ProcessWit" +

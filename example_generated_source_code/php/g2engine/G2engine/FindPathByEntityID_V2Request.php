@@ -22,7 +22,7 @@ class FindPathByEntityID_V2Request extends \Google\Protobuf\Internal\Message
      */
     protected $entityID2 = 0;
     /**
-     * Generated from protobuf field <code>int32 maxDegree = 3;</code>
+     * Generated from protobuf field <code>int64 maxDegree = 3;</code>
      */
     protected $maxDegree = 0;
     /**
@@ -38,7 +38,7 @@ class FindPathByEntityID_V2Request extends \Google\Protobuf\Internal\Message
      *
      *     @type int|string $entityID1
      *     @type int|string $entityID2
-     *     @type int $maxDegree
+     *     @type int|string $maxDegree
      *     @type int|string $flags
      * }
      */
@@ -92,8 +92,8 @@ class FindPathByEntityID_V2Request extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 maxDegree = 3;</code>
-     * @return int
+     * Generated from protobuf field <code>int64 maxDegree = 3;</code>
+     * @return int|string
      */
     public function getMaxDegree()
     {
@@ -101,13 +101,13 @@ class FindPathByEntityID_V2Request extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 maxDegree = 3;</code>
-     * @param int $var
+     * Generated from protobuf field <code>int64 maxDegree = 3;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setMaxDegree($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkInt64($var);
         $this->maxDegree = $var;
 
         return $this;

@@ -22,7 +22,7 @@ class InitRequest extends \Google\Protobuf\Internal\Message
      */
     protected $iniParams = '';
     /**
-     * Generated from protobuf field <code>int32 verboseLogging = 3;</code>
+     * Generated from protobuf field <code>int64 verboseLogging = 3;</code>
      */
     protected $verboseLogging = 0;
 
@@ -34,7 +34,7 @@ class InitRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $moduleName
      *     @type string $iniParams
-     *     @type int $verboseLogging
+     *     @type int|string $verboseLogging
      * }
      */
     public function __construct($data = NULL) {
@@ -87,8 +87,8 @@ class InitRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 verboseLogging = 3;</code>
-     * @return int
+     * Generated from protobuf field <code>int64 verboseLogging = 3;</code>
+     * @return int|string
      */
     public function getVerboseLogging()
     {
@@ -96,13 +96,13 @@ class InitRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 verboseLogging = 3;</code>
-     * @param int $var
+     * Generated from protobuf field <code>int64 verboseLogging = 3;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setVerboseLogging($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkInt64($var);
         $this->verboseLogging = $var;
 
         return $this;

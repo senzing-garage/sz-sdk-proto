@@ -35,7 +35,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "g2config.InitRequest" do
       optional :moduleName, :string, 1
       optional :iniParams, :string, 2
-      optional :verboseLogging, :int32, 3
+      optional :verboseLogging, :int64, 3
     end
     add_message "g2config.InitResponse" do
     end
