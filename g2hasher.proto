@@ -27,7 +27,7 @@ message ExportTokenLibraryResponse {
 message InitRequest {
   string moduleName = 1;
   string iniParams = 2;
-  int32 verboseLogging = 3;
+  int64 verboseLogging = 3;
 }
 
 message InitResponse {}
@@ -36,7 +36,7 @@ message InitWithConfigRequest {
   string moduleName = 1;
   string iniParams = 2;
   string configJson = 3;
-  int32 verboseLogging = 4;
+  int64 verboseLogging = 4;
 }
 
 message InitWithConfigResponse {}

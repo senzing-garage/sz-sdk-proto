@@ -65,7 +65,7 @@ message GetTotalSystemMemoryResponse {
 message InitRequest {
   string moduleName = 1;
   string iniParams = 2;
-  int32 verboseLogging = 3;
+  int64 verboseLogging = 3;
 }
 
 message InitResponse {}
@@ -74,7 +74,7 @@ message InitWithConfigIDRequest {
   string moduleName = 1;
   string iniParams = 2;
   int64 initConfigID = 3;
-  int32 verboseLogging = 4;
+  int64 verboseLogging = 4;
 }
 
 message InitWithConfigIDResponse {}

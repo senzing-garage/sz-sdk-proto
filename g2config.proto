@@ -52,7 +52,7 @@ message DestroyResponse {}
 message InitRequest {
   string moduleName = 1;
   string iniParams = 2;
-  int32 verboseLogging = 3;
+  int64 verboseLogging = 3;
 }
 
 message InitResponse {}
