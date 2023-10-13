@@ -56,20 +56,6 @@ class G2Product final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2product::LicenseResponse>> PrepareAsyncLicense(::grpc::ClientContext* context, const ::g2product::LicenseRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2product::LicenseResponse>>(PrepareAsyncLicenseRaw(context, request, cq));
     }
-    virtual ::grpc::Status ValidateLicenseFile(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest& request, ::g2product::ValidateLicenseFileResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2product::ValidateLicenseFileResponse>> AsyncValidateLicenseFile(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2product::ValidateLicenseFileResponse>>(AsyncValidateLicenseFileRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2product::ValidateLicenseFileResponse>> PrepareAsyncValidateLicenseFile(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2product::ValidateLicenseFileResponse>>(PrepareAsyncValidateLicenseFileRaw(context, request, cq));
-    }
-    virtual ::grpc::Status ValidateLicenseStringBase64(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request& request, ::g2product::ValidateLicenseStringBase64Response* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2product::ValidateLicenseStringBase64Response>> AsyncValidateLicenseStringBase64(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2product::ValidateLicenseStringBase64Response>>(AsyncValidateLicenseStringBase64Raw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2product::ValidateLicenseStringBase64Response>> PrepareAsyncValidateLicenseStringBase64(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2product::ValidateLicenseStringBase64Response>>(PrepareAsyncValidateLicenseStringBase64Raw(context, request, cq));
-    }
     virtual ::grpc::Status Version(::grpc::ClientContext* context, const ::g2product::VersionRequest& request, ::g2product::VersionResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2product::VersionResponse>> AsyncVersion(::grpc::ClientContext* context, const ::g2product::VersionRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2product::VersionResponse>>(AsyncVersionRaw(context, request, cq));
@@ -86,10 +72,6 @@ class G2Product final {
       virtual void Init(::grpc::ClientContext* context, const ::g2product::InitRequest* request, ::g2product::InitResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void License(::grpc::ClientContext* context, const ::g2product::LicenseRequest* request, ::g2product::LicenseResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void License(::grpc::ClientContext* context, const ::g2product::LicenseRequest* request, ::g2product::LicenseResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void ValidateLicenseFile(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest* request, ::g2product::ValidateLicenseFileResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ValidateLicenseFile(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest* request, ::g2product::ValidateLicenseFileResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void ValidateLicenseStringBase64(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request* request, ::g2product::ValidateLicenseStringBase64Response* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ValidateLicenseStringBase64(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request* request, ::g2product::ValidateLicenseStringBase64Response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void Version(::grpc::ClientContext* context, const ::g2product::VersionRequest* request, ::g2product::VersionResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Version(::grpc::ClientContext* context, const ::g2product::VersionRequest* request, ::g2product::VersionResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
@@ -103,10 +85,6 @@ class G2Product final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2product::InitResponse>* PrepareAsyncInitRaw(::grpc::ClientContext* context, const ::g2product::InitRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2product::LicenseResponse>* AsyncLicenseRaw(::grpc::ClientContext* context, const ::g2product::LicenseRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2product::LicenseResponse>* PrepareAsyncLicenseRaw(::grpc::ClientContext* context, const ::g2product::LicenseRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2product::ValidateLicenseFileResponse>* AsyncValidateLicenseFileRaw(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2product::ValidateLicenseFileResponse>* PrepareAsyncValidateLicenseFileRaw(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2product::ValidateLicenseStringBase64Response>* AsyncValidateLicenseStringBase64Raw(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2product::ValidateLicenseStringBase64Response>* PrepareAsyncValidateLicenseStringBase64Raw(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2product::VersionResponse>* AsyncVersionRaw(::grpc::ClientContext* context, const ::g2product::VersionRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2product::VersionResponse>* PrepareAsyncVersionRaw(::grpc::ClientContext* context, const ::g2product::VersionRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
@@ -134,20 +112,6 @@ class G2Product final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2product::LicenseResponse>> PrepareAsyncLicense(::grpc::ClientContext* context, const ::g2product::LicenseRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2product::LicenseResponse>>(PrepareAsyncLicenseRaw(context, request, cq));
     }
-    ::grpc::Status ValidateLicenseFile(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest& request, ::g2product::ValidateLicenseFileResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2product::ValidateLicenseFileResponse>> AsyncValidateLicenseFile(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2product::ValidateLicenseFileResponse>>(AsyncValidateLicenseFileRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2product::ValidateLicenseFileResponse>> PrepareAsyncValidateLicenseFile(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2product::ValidateLicenseFileResponse>>(PrepareAsyncValidateLicenseFileRaw(context, request, cq));
-    }
-    ::grpc::Status ValidateLicenseStringBase64(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request& request, ::g2product::ValidateLicenseStringBase64Response* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2product::ValidateLicenseStringBase64Response>> AsyncValidateLicenseStringBase64(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2product::ValidateLicenseStringBase64Response>>(AsyncValidateLicenseStringBase64Raw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2product::ValidateLicenseStringBase64Response>> PrepareAsyncValidateLicenseStringBase64(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2product::ValidateLicenseStringBase64Response>>(PrepareAsyncValidateLicenseStringBase64Raw(context, request, cq));
-    }
     ::grpc::Status Version(::grpc::ClientContext* context, const ::g2product::VersionRequest& request, ::g2product::VersionResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2product::VersionResponse>> AsyncVersion(::grpc::ClientContext* context, const ::g2product::VersionRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2product::VersionResponse>>(AsyncVersionRaw(context, request, cq));
@@ -164,10 +128,6 @@ class G2Product final {
       void Init(::grpc::ClientContext* context, const ::g2product::InitRequest* request, ::g2product::InitResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void License(::grpc::ClientContext* context, const ::g2product::LicenseRequest* request, ::g2product::LicenseResponse* response, std::function<void(::grpc::Status)>) override;
       void License(::grpc::ClientContext* context, const ::g2product::LicenseRequest* request, ::g2product::LicenseResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void ValidateLicenseFile(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest* request, ::g2product::ValidateLicenseFileResponse* response, std::function<void(::grpc::Status)>) override;
-      void ValidateLicenseFile(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest* request, ::g2product::ValidateLicenseFileResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void ValidateLicenseStringBase64(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request* request, ::g2product::ValidateLicenseStringBase64Response* response, std::function<void(::grpc::Status)>) override;
-      void ValidateLicenseStringBase64(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request* request, ::g2product::ValidateLicenseStringBase64Response* response, ::grpc::ClientUnaryReactor* reactor) override;
       void Version(::grpc::ClientContext* context, const ::g2product::VersionRequest* request, ::g2product::VersionResponse* response, std::function<void(::grpc::Status)>) override;
       void Version(::grpc::ClientContext* context, const ::g2product::VersionRequest* request, ::g2product::VersionResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
      private:
@@ -187,17 +147,11 @@ class G2Product final {
     ::grpc::ClientAsyncResponseReader< ::g2product::InitResponse>* PrepareAsyncInitRaw(::grpc::ClientContext* context, const ::g2product::InitRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2product::LicenseResponse>* AsyncLicenseRaw(::grpc::ClientContext* context, const ::g2product::LicenseRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2product::LicenseResponse>* PrepareAsyncLicenseRaw(::grpc::ClientContext* context, const ::g2product::LicenseRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2product::ValidateLicenseFileResponse>* AsyncValidateLicenseFileRaw(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2product::ValidateLicenseFileResponse>* PrepareAsyncValidateLicenseFileRaw(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2product::ValidateLicenseStringBase64Response>* AsyncValidateLicenseStringBase64Raw(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2product::ValidateLicenseStringBase64Response>* PrepareAsyncValidateLicenseStringBase64Raw(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2product::VersionResponse>* AsyncVersionRaw(::grpc::ClientContext* context, const ::g2product::VersionRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2product::VersionResponse>* PrepareAsyncVersionRaw(::grpc::ClientContext* context, const ::g2product::VersionRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_Destroy_;
     const ::grpc::internal::RpcMethod rpcmethod_Init_;
     const ::grpc::internal::RpcMethod rpcmethod_License_;
-    const ::grpc::internal::RpcMethod rpcmethod_ValidateLicenseFile_;
-    const ::grpc::internal::RpcMethod rpcmethod_ValidateLicenseStringBase64_;
     const ::grpc::internal::RpcMethod rpcmethod_Version_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
@@ -209,8 +163,6 @@ class G2Product final {
     virtual ::grpc::Status Destroy(::grpc::ServerContext* context, const ::g2product::DestroyRequest* request, ::g2product::DestroyResponse* response);
     virtual ::grpc::Status Init(::grpc::ServerContext* context, const ::g2product::InitRequest* request, ::g2product::InitResponse* response);
     virtual ::grpc::Status License(::grpc::ServerContext* context, const ::g2product::LicenseRequest* request, ::g2product::LicenseResponse* response);
-    virtual ::grpc::Status ValidateLicenseFile(::grpc::ServerContext* context, const ::g2product::ValidateLicenseFileRequest* request, ::g2product::ValidateLicenseFileResponse* response);
-    virtual ::grpc::Status ValidateLicenseStringBase64(::grpc::ServerContext* context, const ::g2product::ValidateLicenseStringBase64Request* request, ::g2product::ValidateLicenseStringBase64Response* response);
     virtual ::grpc::Status Version(::grpc::ServerContext* context, const ::g2product::VersionRequest* request, ::g2product::VersionResponse* response);
   };
   template <class BaseClass>
@@ -274,52 +226,12 @@ class G2Product final {
     }
   };
   template <class BaseClass>
-  class WithAsyncMethod_ValidateLicenseFile : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_ValidateLicenseFile() {
-      ::grpc::Service::MarkMethodAsync(3);
-    }
-    ~WithAsyncMethod_ValidateLicenseFile() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ValidateLicenseFile(::grpc::ServerContext* /*context*/, const ::g2product::ValidateLicenseFileRequest* /*request*/, ::g2product::ValidateLicenseFileResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestValidateLicenseFile(::grpc::ServerContext* context, ::g2product::ValidateLicenseFileRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2product::ValidateLicenseFileResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_ValidateLicenseStringBase64 : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_ValidateLicenseStringBase64() {
-      ::grpc::Service::MarkMethodAsync(4);
-    }
-    ~WithAsyncMethod_ValidateLicenseStringBase64() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ValidateLicenseStringBase64(::grpc::ServerContext* /*context*/, const ::g2product::ValidateLicenseStringBase64Request* /*request*/, ::g2product::ValidateLicenseStringBase64Response* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestValidateLicenseStringBase64(::grpc::ServerContext* context, ::g2product::ValidateLicenseStringBase64Request* request, ::grpc::ServerAsyncResponseWriter< ::g2product::ValidateLicenseStringBase64Response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
   class WithAsyncMethod_Version : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Version() {
-      ::grpc::Service::MarkMethodAsync(5);
+      ::grpc::Service::MarkMethodAsync(3);
     }
     ~WithAsyncMethod_Version() override {
       BaseClassMustBeDerivedFromService(this);
@@ -330,10 +242,10 @@ class G2Product final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestVersion(::grpc::ServerContext* context, ::g2product::VersionRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2product::VersionResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_Destroy<WithAsyncMethod_Init<WithAsyncMethod_License<WithAsyncMethod_ValidateLicenseFile<WithAsyncMethod_ValidateLicenseStringBase64<WithAsyncMethod_Version<Service > > > > > > AsyncService;
+  typedef WithAsyncMethod_Destroy<WithAsyncMethod_Init<WithAsyncMethod_License<WithAsyncMethod_Version<Service > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_Destroy : public BaseClass {
    private:
@@ -416,72 +328,18 @@ class G2Product final {
       ::grpc::CallbackServerContext* /*context*/, const ::g2product::LicenseRequest* /*request*/, ::g2product::LicenseResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_ValidateLicenseFile : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_ValidateLicenseFile() {
-      ::grpc::Service::MarkMethodCallback(3,
-          new ::grpc::internal::CallbackUnaryHandler< ::g2product::ValidateLicenseFileRequest, ::g2product::ValidateLicenseFileResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::g2product::ValidateLicenseFileRequest* request, ::g2product::ValidateLicenseFileResponse* response) { return this->ValidateLicenseFile(context, request, response); }));}
-    void SetMessageAllocatorFor_ValidateLicenseFile(
-        ::grpc::MessageAllocator< ::g2product::ValidateLicenseFileRequest, ::g2product::ValidateLicenseFileResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2product::ValidateLicenseFileRequest, ::g2product::ValidateLicenseFileResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_ValidateLicenseFile() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ValidateLicenseFile(::grpc::ServerContext* /*context*/, const ::g2product::ValidateLicenseFileRequest* /*request*/, ::g2product::ValidateLicenseFileResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* ValidateLicenseFile(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2product::ValidateLicenseFileRequest* /*request*/, ::g2product::ValidateLicenseFileResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_ValidateLicenseStringBase64 : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_ValidateLicenseStringBase64() {
-      ::grpc::Service::MarkMethodCallback(4,
-          new ::grpc::internal::CallbackUnaryHandler< ::g2product::ValidateLicenseStringBase64Request, ::g2product::ValidateLicenseStringBase64Response>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::g2product::ValidateLicenseStringBase64Request* request, ::g2product::ValidateLicenseStringBase64Response* response) { return this->ValidateLicenseStringBase64(context, request, response); }));}
-    void SetMessageAllocatorFor_ValidateLicenseStringBase64(
-        ::grpc::MessageAllocator< ::g2product::ValidateLicenseStringBase64Request, ::g2product::ValidateLicenseStringBase64Response>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2product::ValidateLicenseStringBase64Request, ::g2product::ValidateLicenseStringBase64Response>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_ValidateLicenseStringBase64() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ValidateLicenseStringBase64(::grpc::ServerContext* /*context*/, const ::g2product::ValidateLicenseStringBase64Request* /*request*/, ::g2product::ValidateLicenseStringBase64Response* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* ValidateLicenseStringBase64(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2product::ValidateLicenseStringBase64Request* /*request*/, ::g2product::ValidateLicenseStringBase64Response* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
   class WithCallbackMethod_Version : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_Version() {
-      ::grpc::Service::MarkMethodCallback(5,
+      ::grpc::Service::MarkMethodCallback(3,
           new ::grpc::internal::CallbackUnaryHandler< ::g2product::VersionRequest, ::g2product::VersionResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2product::VersionRequest* request, ::g2product::VersionResponse* response) { return this->Version(context, request, response); }));}
     void SetMessageAllocatorFor_Version(
         ::grpc::MessageAllocator< ::g2product::VersionRequest, ::g2product::VersionResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2product::VersionRequest, ::g2product::VersionResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -496,7 +354,7 @@ class G2Product final {
     virtual ::grpc::ServerUnaryReactor* Version(
       ::grpc::CallbackServerContext* /*context*/, const ::g2product::VersionRequest* /*request*/, ::g2product::VersionResponse* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_Destroy<WithCallbackMethod_Init<WithCallbackMethod_License<WithCallbackMethod_ValidateLicenseFile<WithCallbackMethod_ValidateLicenseStringBase64<WithCallbackMethod_Version<Service > > > > > > CallbackService;
+  typedef WithCallbackMethod_Destroy<WithCallbackMethod_Init<WithCallbackMethod_License<WithCallbackMethod_Version<Service > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_Destroy : public BaseClass {
@@ -550,46 +408,12 @@ class G2Product final {
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_ValidateLicenseFile : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_ValidateLicenseFile() {
-      ::grpc::Service::MarkMethodGeneric(3);
-    }
-    ~WithGenericMethod_ValidateLicenseFile() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ValidateLicenseFile(::grpc::ServerContext* /*context*/, const ::g2product::ValidateLicenseFileRequest* /*request*/, ::g2product::ValidateLicenseFileResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_ValidateLicenseStringBase64 : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_ValidateLicenseStringBase64() {
-      ::grpc::Service::MarkMethodGeneric(4);
-    }
-    ~WithGenericMethod_ValidateLicenseStringBase64() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ValidateLicenseStringBase64(::grpc::ServerContext* /*context*/, const ::g2product::ValidateLicenseStringBase64Request* /*request*/, ::g2product::ValidateLicenseStringBase64Response* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
   class WithGenericMethod_Version : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Version() {
-      ::grpc::Service::MarkMethodGeneric(5);
+      ::grpc::Service::MarkMethodGeneric(3);
     }
     ~WithGenericMethod_Version() override {
       BaseClassMustBeDerivedFromService(this);
@@ -661,52 +485,12 @@ class G2Product final {
     }
   };
   template <class BaseClass>
-  class WithRawMethod_ValidateLicenseFile : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_ValidateLicenseFile() {
-      ::grpc::Service::MarkMethodRaw(3);
-    }
-    ~WithRawMethod_ValidateLicenseFile() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ValidateLicenseFile(::grpc::ServerContext* /*context*/, const ::g2product::ValidateLicenseFileRequest* /*request*/, ::g2product::ValidateLicenseFileResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestValidateLicenseFile(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_ValidateLicenseStringBase64 : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_ValidateLicenseStringBase64() {
-      ::grpc::Service::MarkMethodRaw(4);
-    }
-    ~WithRawMethod_ValidateLicenseStringBase64() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ValidateLicenseStringBase64(::grpc::ServerContext* /*context*/, const ::g2product::ValidateLicenseStringBase64Request* /*request*/, ::g2product::ValidateLicenseStringBase64Response* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestValidateLicenseStringBase64(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
   class WithRawMethod_Version : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Version() {
-      ::grpc::Service::MarkMethodRaw(5);
+      ::grpc::Service::MarkMethodRaw(3);
     }
     ~WithRawMethod_Version() override {
       BaseClassMustBeDerivedFromService(this);
@@ -717,7 +501,7 @@ class G2Product final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestVersion(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -787,56 +571,12 @@ class G2Product final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_ValidateLicenseFile : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_ValidateLicenseFile() {
-      ::grpc::Service::MarkMethodRawCallback(3,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ValidateLicenseFile(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_ValidateLicenseFile() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ValidateLicenseFile(::grpc::ServerContext* /*context*/, const ::g2product::ValidateLicenseFileRequest* /*request*/, ::g2product::ValidateLicenseFileResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* ValidateLicenseFile(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_ValidateLicenseStringBase64 : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_ValidateLicenseStringBase64() {
-      ::grpc::Service::MarkMethodRawCallback(4,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ValidateLicenseStringBase64(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_ValidateLicenseStringBase64() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ValidateLicenseStringBase64(::grpc::ServerContext* /*context*/, const ::g2product::ValidateLicenseStringBase64Request* /*request*/, ::g2product::ValidateLicenseStringBase64Response* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* ValidateLicenseStringBase64(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
   class WithRawCallbackMethod_Version : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_Version() {
-      ::grpc::Service::MarkMethodRawCallback(5,
+      ::grpc::Service::MarkMethodRawCallback(3,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Version(context, request, response); }));
@@ -934,66 +674,12 @@ class G2Product final {
     virtual ::grpc::Status StreamedLicense(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2product::LicenseRequest,::g2product::LicenseResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_ValidateLicenseFile : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_ValidateLicenseFile() {
-      ::grpc::Service::MarkMethodStreamed(3,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::g2product::ValidateLicenseFileRequest, ::g2product::ValidateLicenseFileResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::g2product::ValidateLicenseFileRequest, ::g2product::ValidateLicenseFileResponse>* streamer) {
-                       return this->StreamedValidateLicenseFile(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_ValidateLicenseFile() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status ValidateLicenseFile(::grpc::ServerContext* /*context*/, const ::g2product::ValidateLicenseFileRequest* /*request*/, ::g2product::ValidateLicenseFileResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedValidateLicenseFile(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2product::ValidateLicenseFileRequest,::g2product::ValidateLicenseFileResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_ValidateLicenseStringBase64 : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_ValidateLicenseStringBase64() {
-      ::grpc::Service::MarkMethodStreamed(4,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::g2product::ValidateLicenseStringBase64Request, ::g2product::ValidateLicenseStringBase64Response>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::g2product::ValidateLicenseStringBase64Request, ::g2product::ValidateLicenseStringBase64Response>* streamer) {
-                       return this->StreamedValidateLicenseStringBase64(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_ValidateLicenseStringBase64() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status ValidateLicenseStringBase64(::grpc::ServerContext* /*context*/, const ::g2product::ValidateLicenseStringBase64Request* /*request*/, ::g2product::ValidateLicenseStringBase64Response* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedValidateLicenseStringBase64(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2product::ValidateLicenseStringBase64Request,::g2product::ValidateLicenseStringBase64Response>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
   class WithStreamedUnaryMethod_Version : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Version() {
-      ::grpc::Service::MarkMethodStreamed(5,
+      ::grpc::Service::MarkMethodStreamed(3,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2product::VersionRequest, ::g2product::VersionResponse>(
             [this](::grpc::ServerContext* context,
@@ -1014,9 +700,9 @@ class G2Product final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedVersion(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2product::VersionRequest,::g2product::VersionResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_License<WithStreamedUnaryMethod_ValidateLicenseFile<WithStreamedUnaryMethod_ValidateLicenseStringBase64<WithStreamedUnaryMethod_Version<Service > > > > > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_License<WithStreamedUnaryMethod_Version<Service > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_License<WithStreamedUnaryMethod_ValidateLicenseFile<WithStreamedUnaryMethod_ValidateLicenseStringBase64<WithStreamedUnaryMethod_Version<Service > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_License<WithStreamedUnaryMethod_Version<Service > > > > StreamedService;
 };
 
 }  // namespace g2product

@@ -59,34 +59,6 @@ class G2ProductClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \G2product\ValidateLicenseFileRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function ValidateLicenseFile(\G2product\ValidateLicenseFileRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2product.G2Product/ValidateLicenseFile',
-        $argument,
-        ['\G2product\ValidateLicenseFileResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2product\ValidateLicenseStringBase64Request $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function ValidateLicenseStringBase64(\G2product\ValidateLicenseStringBase64Request $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2product.G2Product/ValidateLicenseStringBase64',
-        $argument,
-        ['\G2product\ValidateLicenseStringBase64Response', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \G2product\VersionRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

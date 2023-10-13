@@ -29,16 +29,6 @@ class G2ProductStub(object):
                 request_serializer=g2product__pb2.LicenseRequest.SerializeToString,
                 response_deserializer=g2product__pb2.LicenseResponse.FromString,
                 )
-        self.ValidateLicenseFile = channel.unary_unary(
-                '/g2product.G2Product/ValidateLicenseFile',
-                request_serializer=g2product__pb2.ValidateLicenseFileRequest.SerializeToString,
-                response_deserializer=g2product__pb2.ValidateLicenseFileResponse.FromString,
-                )
-        self.ValidateLicenseStringBase64 = channel.unary_unary(
-                '/g2product.G2Product/ValidateLicenseStringBase64',
-                request_serializer=g2product__pb2.ValidateLicenseStringBase64Request.SerializeToString,
-                response_deserializer=g2product__pb2.ValidateLicenseStringBase64Response.FromString,
-                )
         self.Version = channel.unary_unary(
                 '/g2product.G2Product/Version',
                 request_serializer=g2product__pb2.VersionRequest.SerializeToString,
@@ -67,18 +57,6 @@ class G2ProductServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def ValidateLicenseFile(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def ValidateLicenseStringBase64(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
     def Version(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -102,16 +80,6 @@ def add_G2ProductServicer_to_server(servicer, server):
                     servicer.License,
                     request_deserializer=g2product__pb2.LicenseRequest.FromString,
                     response_serializer=g2product__pb2.LicenseResponse.SerializeToString,
-            ),
-            'ValidateLicenseFile': grpc.unary_unary_rpc_method_handler(
-                    servicer.ValidateLicenseFile,
-                    request_deserializer=g2product__pb2.ValidateLicenseFileRequest.FromString,
-                    response_serializer=g2product__pb2.ValidateLicenseFileResponse.SerializeToString,
-            ),
-            'ValidateLicenseStringBase64': grpc.unary_unary_rpc_method_handler(
-                    servicer.ValidateLicenseStringBase64,
-                    request_deserializer=g2product__pb2.ValidateLicenseStringBase64Request.FromString,
-                    response_serializer=g2product__pb2.ValidateLicenseStringBase64Response.SerializeToString,
             ),
             'Version': grpc.unary_unary_rpc_method_handler(
                     servicer.Version,
@@ -176,40 +144,6 @@ class G2Product(object):
         return grpc.experimental.unary_unary(request, target, '/g2product.G2Product/License',
             g2product__pb2.LicenseRequest.SerializeToString,
             g2product__pb2.LicenseResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def ValidateLicenseFile(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2product.G2Product/ValidateLicenseFile',
-            g2product__pb2.ValidateLicenseFileRequest.SerializeToString,
-            g2product__pb2.ValidateLicenseFileResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def ValidateLicenseStringBase64(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2product.G2Product/ValidateLicenseStringBase64',
-            g2product__pb2.ValidateLicenseStringBase64Request.SerializeToString,
-            g2product__pb2.ValidateLicenseStringBase64Response.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
