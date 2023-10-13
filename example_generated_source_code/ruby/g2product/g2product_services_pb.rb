@@ -17,8 +17,6 @@ module G2product
       rpc :Destroy, ::G2product::DestroyRequest, ::G2product::DestroyResponse
       rpc :Init, ::G2product::InitRequest, ::G2product::InitResponse
       rpc :License, ::G2product::LicenseRequest, ::G2product::LicenseResponse
-      rpc :ValidateLicenseFile, ::G2product::ValidateLicenseFileRequest, ::G2product::ValidateLicenseFileResponse
-      rpc :ValidateLicenseStringBase64, ::G2product::ValidateLicenseStringBase64Request, ::G2product::ValidateLicenseStringBase64Response
       rpc :Version, ::G2product::VersionRequest, ::G2product::VersionResponse
     end
 

@@ -21,18 +21,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "g2product.LicenseResponse" do
       optional :result, :string, 1
     end
-    add_message "g2product.ValidateLicenseFileRequest" do
-      optional :licenseFilePath, :string, 1
-    end
-    add_message "g2product.ValidateLicenseFileResponse" do
-      optional :result, :string, 1
-    end
-    add_message "g2product.ValidateLicenseStringBase64Request" do
-      optional :licenseString, :string, 1
-    end
-    add_message "g2product.ValidateLicenseStringBase64Response" do
-      optional :result, :string, 1
-    end
     add_message "g2product.VersionRequest" do
     end
     add_message "g2product.VersionResponse" do
@@ -48,10 +36,6 @@ module G2product
   InitResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2product.InitResponse").msgclass
   LicenseRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2product.LicenseRequest").msgclass
   LicenseResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2product.LicenseResponse").msgclass
-  ValidateLicenseFileRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2product.ValidateLicenseFileRequest").msgclass
-  ValidateLicenseFileResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2product.ValidateLicenseFileResponse").msgclass
-  ValidateLicenseStringBase64Request = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2product.ValidateLicenseStringBase64Request").msgclass
-  ValidateLicenseStringBase64Response = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2product.ValidateLicenseStringBase64Response").msgclass
   VersionRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2product.VersionRequest").msgclass
   VersionResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2product.VersionResponse").msgclass
 end

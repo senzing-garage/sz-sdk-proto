@@ -25,8 +25,6 @@ static const char* G2Product_method_names[] = {
   "/g2product.G2Product/Destroy",
   "/g2product.G2Product/Init",
   "/g2product.G2Product/License",
-  "/g2product.G2Product/ValidateLicenseFile",
-  "/g2product.G2Product/ValidateLicenseStringBase64",
   "/g2product.G2Product/Version",
 };
 
@@ -40,9 +38,7 @@ G2Product::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel,
   : channel_(channel), rpcmethod_Destroy_(G2Product_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_Init_(G2Product_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_License_(G2Product_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ValidateLicenseFile_(G2Product_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ValidateLicenseStringBase64_(G2Product_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Version_(G2Product_method_names[5], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Version_(G2Product_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status G2Product::Stub::Destroy(::grpc::ClientContext* context, const ::g2product::DestroyRequest& request, ::g2product::DestroyResponse* response) {
@@ -114,52 +110,6 @@ void G2Product::Stub::async::License(::grpc::ClientContext* context, const ::g2p
   return result;
 }
 
-::grpc::Status G2Product::Stub::ValidateLicenseFile(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest& request, ::g2product::ValidateLicenseFileResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2product::ValidateLicenseFileRequest, ::g2product::ValidateLicenseFileResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_ValidateLicenseFile_, context, request, response);
-}
-
-void G2Product::Stub::async::ValidateLicenseFile(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest* request, ::g2product::ValidateLicenseFileResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2product::ValidateLicenseFileRequest, ::g2product::ValidateLicenseFileResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_ValidateLicenseFile_, context, request, response, std::move(f));
-}
-
-void G2Product::Stub::async::ValidateLicenseFile(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest* request, ::g2product::ValidateLicenseFileResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_ValidateLicenseFile_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2product::ValidateLicenseFileResponse>* G2Product::Stub::PrepareAsyncValidateLicenseFileRaw(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2product::ValidateLicenseFileResponse, ::g2product::ValidateLicenseFileRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_ValidateLicenseFile_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2product::ValidateLicenseFileResponse>* G2Product::Stub::AsyncValidateLicenseFileRaw(::grpc::ClientContext* context, const ::g2product::ValidateLicenseFileRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncValidateLicenseFileRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Product::Stub::ValidateLicenseStringBase64(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request& request, ::g2product::ValidateLicenseStringBase64Response* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2product::ValidateLicenseStringBase64Request, ::g2product::ValidateLicenseStringBase64Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_ValidateLicenseStringBase64_, context, request, response);
-}
-
-void G2Product::Stub::async::ValidateLicenseStringBase64(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request* request, ::g2product::ValidateLicenseStringBase64Response* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2product::ValidateLicenseStringBase64Request, ::g2product::ValidateLicenseStringBase64Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_ValidateLicenseStringBase64_, context, request, response, std::move(f));
-}
-
-void G2Product::Stub::async::ValidateLicenseStringBase64(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request* request, ::g2product::ValidateLicenseStringBase64Response* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_ValidateLicenseStringBase64_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2product::ValidateLicenseStringBase64Response>* G2Product::Stub::PrepareAsyncValidateLicenseStringBase64Raw(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2product::ValidateLicenseStringBase64Response, ::g2product::ValidateLicenseStringBase64Request, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_ValidateLicenseStringBase64_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2product::ValidateLicenseStringBase64Response>* G2Product::Stub::AsyncValidateLicenseStringBase64Raw(::grpc::ClientContext* context, const ::g2product::ValidateLicenseStringBase64Request& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncValidateLicenseStringBase64Raw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
 ::grpc::Status G2Product::Stub::Version(::grpc::ClientContext* context, const ::g2product::VersionRequest& request, ::g2product::VersionResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2product::VersionRequest, ::g2product::VersionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Version_, context, request, response);
 }
@@ -217,26 +167,6 @@ G2Product::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       G2Product_method_names[3],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Product::Service, ::g2product::ValidateLicenseFileRequest, ::g2product::ValidateLicenseFileResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Product::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2product::ValidateLicenseFileRequest* req,
-             ::g2product::ValidateLicenseFileResponse* resp) {
-               return service->ValidateLicenseFile(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Product_method_names[4],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Product::Service, ::g2product::ValidateLicenseStringBase64Request, ::g2product::ValidateLicenseStringBase64Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Product::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2product::ValidateLicenseStringBase64Request* req,
-             ::g2product::ValidateLicenseStringBase64Response* resp) {
-               return service->ValidateLicenseStringBase64(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Product_method_names[5],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Product::Service, ::g2product::VersionRequest, ::g2product::VersionResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Product::Service* service,
              ::grpc::ServerContext* ctx,
@@ -264,20 +194,6 @@ G2Product::Service::~Service() {
 }
 
 ::grpc::Status G2Product::Service::License(::grpc::ServerContext* context, const ::g2product::LicenseRequest* request, ::g2product::LicenseResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Product::Service::ValidateLicenseFile(::grpc::ServerContext* context, const ::g2product::ValidateLicenseFileRequest* request, ::g2product::ValidateLicenseFileResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Product::Service::ValidateLicenseStringBase64(::grpc::ServerContext* context, const ::g2product::ValidateLicenseStringBase64Request* request, ::g2product::ValidateLicenseStringBase64Response* response) {
   (void) context;
   (void) request;
   (void) response;

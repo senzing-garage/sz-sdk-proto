@@ -25,8 +25,6 @@ type G2ProductClient interface {
 	Destroy(ctx context.Context, in *DestroyRequest, opts ...grpc.CallOption) (*DestroyResponse, error)
 	Init(ctx context.Context, in *InitRequest, opts ...grpc.CallOption) (*InitResponse, error)
 	License(ctx context.Context, in *LicenseRequest, opts ...grpc.CallOption) (*LicenseResponse, error)
-	ValidateLicenseFile(ctx context.Context, in *ValidateLicenseFileRequest, opts ...grpc.CallOption) (*ValidateLicenseFileResponse, error)
-	ValidateLicenseStringBase64(ctx context.Context, in *ValidateLicenseStringBase64Request, opts ...grpc.CallOption) (*ValidateLicenseStringBase64Response, error)
 	Version(ctx context.Context, in *VersionRequest, opts ...grpc.CallOption) (*VersionResponse, error)
 }
 
@@ -65,24 +63,6 @@ func (c *g2ProductClient) License(ctx context.Context, in *LicenseRequest, opts 
 	return out, nil
 }
 
-func (c *g2ProductClient) ValidateLicenseFile(ctx context.Context, in *ValidateLicenseFileRequest, opts ...grpc.CallOption) (*ValidateLicenseFileResponse, error) {
-	out := new(ValidateLicenseFileResponse)
-	err := c.cc.Invoke(ctx, "/g2product.G2Product/ValidateLicenseFile", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2ProductClient) ValidateLicenseStringBase64(ctx context.Context, in *ValidateLicenseStringBase64Request, opts ...grpc.CallOption) (*ValidateLicenseStringBase64Response, error) {
-	out := new(ValidateLicenseStringBase64Response)
-	err := c.cc.Invoke(ctx, "/g2product.G2Product/ValidateLicenseStringBase64", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *g2ProductClient) Version(ctx context.Context, in *VersionRequest, opts ...grpc.CallOption) (*VersionResponse, error) {
 	out := new(VersionResponse)
 	err := c.cc.Invoke(ctx, "/g2product.G2Product/Version", in, out, opts...)
@@ -99,8 +79,6 @@ type G2ProductServer interface {
 	Destroy(context.Context, *DestroyRequest) (*DestroyResponse, error)
 	Init(context.Context, *InitRequest) (*InitResponse, error)
 	License(context.Context, *LicenseRequest) (*LicenseResponse, error)
-	ValidateLicenseFile(context.Context, *ValidateLicenseFileRequest) (*ValidateLicenseFileResponse, error)
-	ValidateLicenseStringBase64(context.Context, *ValidateLicenseStringBase64Request) (*ValidateLicenseStringBase64Response, error)
 	Version(context.Context, *VersionRequest) (*VersionResponse, error)
 	mustEmbedUnimplementedG2ProductServer()
 }
@@ -117,12 +95,6 @@ func (UnimplementedG2ProductServer) Init(context.Context, *InitRequest) (*InitRe
 }
 func (UnimplementedG2ProductServer) License(context.Context, *LicenseRequest) (*LicenseResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method License not implemented")
-}
-func (UnimplementedG2ProductServer) ValidateLicenseFile(context.Context, *ValidateLicenseFileRequest) (*ValidateLicenseFileResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ValidateLicenseFile not implemented")
-}
-func (UnimplementedG2ProductServer) ValidateLicenseStringBase64(context.Context, *ValidateLicenseStringBase64Request) (*ValidateLicenseStringBase64Response, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ValidateLicenseStringBase64 not implemented")
 }
 func (UnimplementedG2ProductServer) Version(context.Context, *VersionRequest) (*VersionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Version not implemented")
@@ -194,42 +166,6 @@ func _G2Product_License_Handler(srv interface{}, ctx context.Context, dec func(i
 	return interceptor(ctx, in, info, handler)
 }
 
-func _G2Product_ValidateLicenseFile_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ValidateLicenseFileRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2ProductServer).ValidateLicenseFile(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2product.G2Product/ValidateLicenseFile",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2ProductServer).ValidateLicenseFile(ctx, req.(*ValidateLicenseFileRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Product_ValidateLicenseStringBase64_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ValidateLicenseStringBase64Request)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2ProductServer).ValidateLicenseStringBase64(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2product.G2Product/ValidateLicenseStringBase64",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2ProductServer).ValidateLicenseStringBase64(ctx, req.(*ValidateLicenseStringBase64Request))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _G2Product_Version_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(VersionRequest)
 	if err := dec(in); err != nil {
@@ -266,14 +202,6 @@ var G2Product_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "License",
 			Handler:    _G2Product_License_Handler,
-		},
-		{
-			MethodName: "ValidateLicenseFile",
-			Handler:    _G2Product_ValidateLicenseFile_Handler,
-		},
-		{
-			MethodName: "ValidateLicenseStringBase64",
-			Handler:    _G2Product_ValidateLicenseStringBase64_Handler,
 		},
 		{
 			MethodName: "Version",
