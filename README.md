@@ -37,6 +37,10 @@ for use in servers and clients of the Senzing engine.
 
 ## Development
 
+### Prerequisites
+
+1. [protoc](https://github.com/Senzing/knowledge-base/blob/main/WHATIS/protoc.md)
+
 ### Clone repository
 
 1. Set these environment variable values:
