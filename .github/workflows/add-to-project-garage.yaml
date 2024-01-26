@@ -1,4 +1,4 @@
-name: add-to-project-garage.yaml
+name: 'add to project garage'
 
 on:
   issues:
