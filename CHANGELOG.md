@@ -15,6 +15,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed in 0.5.0
 
 - Renamed module to `github.com/senzing-garage/g2-sdk-proto`
+- Update dependencies
+  - google.golang.org/grpc v1.61.0
+  - google.golang.org/protobuf v1.32.0
 
 ## [0.4.3] - 2023-10-15
 
