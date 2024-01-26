@@ -1114,9 +1114,10 @@ public final class G2EngineProto {
       "yRecordsRequest\032\034.g2engine.WhyRecordsRes" +
       "ponse\"\000\022R\n\rWhyRecords_V2\022\036.g2engine.WhyR",
       "ecords_V2Request\032\037.g2engine.WhyRecords_V" +
-      "2Response\"\000Bb\n#com.senzing.g2.engine.grp" +
-      "c.G2EngineB\rG2EngineProtoP\001Z*github.com/" +
-      "senzing/g2-sdk-go-grpc/g2engineb\006proto3"
+      "2Response\"\000Bi\n#com.senzing.g2.engine.grp" +
+      "c.G2EngineB\rG2EngineProtoP\001Z1github.com/" +
+      "senzing-garage/g2-sdk-go-grpc/g2engineb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

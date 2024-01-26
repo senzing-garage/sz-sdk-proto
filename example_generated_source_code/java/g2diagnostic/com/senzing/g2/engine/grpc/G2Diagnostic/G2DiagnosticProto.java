@@ -181,10 +181,10 @@ public final class G2DiagnosticProto {
       "itResponse\"\000\022w\n\026StreamEntityListBySize\022+" +
       ".g2diagnostic.StreamEntityListBySizeRequ" +
       "est\032,.g2diagnostic.StreamEntityListBySiz" +
-      "eResponse\"\0000\001Bn\n\'com.senzing.g2.engine.g" +
-      "rpc.G2DiagnosticB\021G2DiagnosticProtoP\001Z.g" +
-      "ithub.com/senzing/g2-sdk-go-grpc/g2diagn" +
-      "osticb\006proto3"
+      "eResponse\"\0000\001Bu\n\'com.senzing.g2.engine.g" +
+      "rpc.G2DiagnosticB\021G2DiagnosticProtoP\001Z5g" +
+      "ithub.com/senzing-garage/g2-sdk-go-grpc/" +
+      "g2diagnosticb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

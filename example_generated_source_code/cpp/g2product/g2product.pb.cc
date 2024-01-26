@@ -213,14 +213,14 @@ const char descriptor_table_protodef_g2product_2eproto[] PROTOBUF_SECTION_VARIAB
   "onse\"\000\022B\n\007License\022\031.g2product.LicenseReq"
   "uest\032\032.g2product.LicenseResponse\"\000\022B\n\007Ve"
   "rsion\022\031.g2product.VersionRequest\032\032.g2pro"
-  "duct.VersionResponse\"\000Be\n$com.senzing.g2"
+  "duct.VersionResponse\"\000Bl\n$com.senzing.g2"
   ".engine.grpc.G2ProductB\016G2ProductProtoP\001"
-  "Z+github.com/senzing/g2-sdk-go-grpc/g2pr"
-  "oductb\006proto3"
+  "Z2github.com/senzing-garage/g2-sdk-go-gr"
+  "pc/g2productb\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_g2product_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_g2product_2eproto = {
-    false, false, 653, descriptor_table_protodef_g2product_2eproto,
+    false, false, 660, descriptor_table_protodef_g2product_2eproto,
     "g2product.proto",
     &descriptor_table_g2product_2eproto_once, nullptr, 0, 8,
     schemas, file_default_instances, TableStruct_g2product_2eproto::offsets,

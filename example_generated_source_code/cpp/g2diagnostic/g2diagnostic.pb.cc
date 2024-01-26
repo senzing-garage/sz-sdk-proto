@@ -547,14 +547,14 @@ const char descriptor_table_protodef_g2diagnostic_2eproto[] PROTOBUF_SECTION_VAR
   "itResponse\"\000\022w\n\026StreamEntityListBySize\022+"
   ".g2diagnostic.StreamEntityListBySizeRequ"
   "est\032,.g2diagnostic.StreamEntityListBySiz"
-  "eResponse\"\0000\001Bn\n\'com.senzing.g2.engine.g"
-  "rpc.G2DiagnosticB\021G2DiagnosticProtoP\001Z.g"
-  "ithub.com/senzing/g2-sdk-go-grpc/g2diagn"
-  "osticb\006proto3"
+  "eResponse\"\0000\001Bu\n\'com.senzing.g2.engine.g"
+  "rpc.G2DiagnosticB\021G2DiagnosticProtoP\001Z5g"
+  "ithub.com/senzing-garage/g2-sdk-go-grpc/"
+  "g2diagnosticb\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_g2diagnostic_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_g2diagnostic_2eproto = {
-    false, false, 2053, descriptor_table_protodef_g2diagnostic_2eproto,
+    false, false, 2060, descriptor_table_protodef_g2diagnostic_2eproto,
     "g2diagnostic.proto",
     &descriptor_table_g2diagnostic_2eproto_once, nullptr, 0, 22,
     schemas, file_default_instances, TableStruct_g2diagnostic_2eproto::offsets,
