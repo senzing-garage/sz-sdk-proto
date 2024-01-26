@@ -16,7 +16,7 @@ class G2Engine
         }
         $pool->internalAddGeneratedFile(
             '
-Ÿ~
+¦~
 g2engine.protog2engine"^
 AddRecordRequest
 dataSourceCode (	
@@ -478,8 +478,8 @@ $FindPathIncludingSourceByRecordID_V25.g2engine.FindPathIncludingSourceByRecord
 WhyEntityByRecordID_V2\'.g2engine.WhyEntityByRecordID_V2Request(.g2engine.WhyEntityByRecordID_V2Response" I
 
 WhyRecords.g2engine.WhyRecordsRequest.g2engine.WhyRecordsResponse" R
-WhyRecords_V2.g2engine.WhyRecords_V2Request.g2engine.WhyRecords_V2Response" Bb
-#com.senzing.g2.engine.grpc.G2EngineBG2EngineProtoPZ*github.com/senzing/g2-sdk-go-grpc/g2enginebproto3'
+WhyRecords_V2.g2engine.WhyRecords_V2Request.g2engine.WhyRecords_V2Response" Bi
+#com.senzing.g2.engine.grpc.G2EngineBG2EngineProtoPZ1github.com/senzing-garage/g2-sdk-go-grpc/g2enginebproto3'
         , true);
 
         static::$is_initialized = true;

@@ -3661,13 +3661,14 @@ const char descriptor_table_protodef_g2engine_2eproto[] PROTOBUF_SECTION_VARIABL
   "yRecordsRequest\032\034.g2engine.WhyRecordsRes"
   "ponse\"\000\022R\n\rWhyRecords_V2\022\036.g2engine.WhyR"
   "ecords_V2Request\032\037.g2engine.WhyRecords_V"
-  "2Response\"\000Bb\n#com.senzing.g2.engine.grp"
-  "c.G2EngineB\rG2EngineProtoP\001Z*github.com/"
-  "senzing/g2-sdk-go-grpc/g2engineb\006proto3"
+  "2Response\"\000Bi\n#com.senzing.g2.engine.grp"
+  "c.G2EngineB\rG2EngineProtoP\001Z1github.com/"
+  "senzing-garage/g2-sdk-go-grpc/g2engineb\006"
+  "proto3"
   ;
 static ::_pbi::once_flag descriptor_table_g2engine_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_g2engine_2eproto = {
-    false, false, 16159, descriptor_table_protodef_g2engine_2eproto,
+    false, false, 16166, descriptor_table_protodef_g2engine_2eproto,
     "g2engine.proto",
     &descriptor_table_g2engine_2eproto_once, nullptr, 0, 138,
     schemas, file_default_instances, TableStruct_g2engine_2eproto::offsets,

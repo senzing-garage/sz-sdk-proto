@@ -408,14 +408,14 @@ const char descriptor_table_protodef_g2configmgr_2eproto[] PROTOBUF_SECTION_VARI
   ".g2configmgr.ReplaceDefaultConfigIDRespo"
   "nse\"\000\022g\n\022SetDefaultConfigID\022&.g2configmg"
   "r.SetDefaultConfigIDRequest\032\'.g2configmg"
-  "r.SetDefaultConfigIDResponse\"\000Bk\n&com.se"
+  "r.SetDefaultConfigIDResponse\"\000Br\n&com.se"
   "nzing.g2.engine.grpc.G2ConfigMgrB\020G2Conf"
-  "igMgrProtoP\001Z-github.com/senzing/g2-sdk-"
-  "go-grpc/g2configmgrb\006proto3"
+  "igMgrProtoP\001Z4github.com/senzing-garage/"
+  "g2-sdk-go-grpc/g2configmgrb\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_g2configmgr_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_g2configmgr_2eproto = {
-    false, false, 1507, descriptor_table_protodef_g2configmgr_2eproto,
+    false, false, 1514, descriptor_table_protodef_g2configmgr_2eproto,
     "g2configmgr.proto",
     &descriptor_table_g2configmgr_2eproto_once, nullptr, 0, 16,
     schemas, file_default_instances, TableStruct_g2configmgr_2eproto::offsets,

@@ -412,13 +412,14 @@ const char descriptor_table_protodef_g2ssadm_2eproto[] PROTOBUF_SECTION_VARIABLE
   "ializeTokenRequest\032\".g2ssadm.Reinitializ"
   "eTokenResponse\"\000\022G\n\nSetupStore\022\032.g2ssadm"
   ".SetupStoreRequest\032\033.g2ssadm.SetupStoreR"
-  "esponse\"\000Bc\n$com.senzing.g2.engine.grpc."
-  "G2SSAdminB\016G2SSAdminProtoP\001Z)github.com/"
-  "senzing/g2-sdk-go-grpc/g2ssadmb\006proto3"
+  "esponse\"\000Bj\n$com.senzing.g2.engine.grpc."
+  "G2SSAdminB\016G2SSAdminProtoP\001Z0github.com/"
+  "senzing-garage/g2-sdk-go-grpc/g2ssadmb\006p"
+  "roto3"
   ;
 static ::_pbi::once_flag descriptor_table_g2ssadm_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_g2ssadm_2eproto = {
-    false, false, 1358, descriptor_table_protodef_g2ssadm_2eproto,
+    false, false, 1365, descriptor_table_protodef_g2ssadm_2eproto,
     "g2ssadm.proto",
     &descriptor_table_g2ssadm_2eproto_once, nullptr, 0, 16,
     schemas, file_default_instances, TableStruct_g2ssadm_2eproto::offsets,

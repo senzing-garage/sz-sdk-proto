@@ -1,7 +1,7 @@
 syntax = "proto3";
 package g2product;
 
-option go_package = "github.com/senzing/g2-sdk-go-grpc/g2product";
+option go_package = "github.com/senzing-garage/g2-sdk-go-grpc/g2product";
 option java_multiple_files = true;
 option java_package = "com.senzing.g2.engine.grpc.G2Product";
 option java_outer_classname = "G2ProductProto";

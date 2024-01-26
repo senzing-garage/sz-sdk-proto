@@ -93,10 +93,10 @@ public final class G2HasherProto {
       "thConfig\022\037.g2hasher.InitWithConfigReques" +
       "t\032 .g2hasher.InitWithConfigResponse\"\000\022@\n" +
       "\007Process\022\030.g2hasher.ProcessRequest\032\031.g2h" +
-      "asher.ProcessResponse\"\000Bb\n#com.senzing.g" +
+      "asher.ProcessResponse\"\000Bi\n#com.senzing.g" +
       "2.engine.grpc.G2HasherB\rG2HasherProtoP\001Z" +
-      "*github.com/senzing/g2-sdk-go-grpc/g2has" +
-      "herb\006proto3"
+      "1github.com/senzing-garage/g2-sdk-go-grp" +
+      "c/g2hasherb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

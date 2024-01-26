@@ -134,9 +134,10 @@ public final class G2SSAdminProto {
       "ializeTokenRequest\032\".g2ssadm.Reinitializ" +
       "eTokenResponse\"\000\022G\n\nSetupStore\022\032.g2ssadm" +
       ".SetupStoreRequest\032\033.g2ssadm.SetupStoreR" +
-      "esponse\"\000Bc\n$com.senzing.g2.engine.grpc." +
-      "G2SSAdminB\016G2SSAdminProtoP\001Z)github.com/" +
-      "senzing/g2-sdk-go-grpc/g2ssadmb\006proto3"
+      "esponse\"\000Bj\n$com.senzing.g2.engine.grpc." +
+      "G2SSAdminB\016G2SSAdminProtoP\001Z0github.com/" +
+      "senzing-garage/g2-sdk-go-grpc/g2ssadmb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

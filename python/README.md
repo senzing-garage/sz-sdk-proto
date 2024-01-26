@@ -7,7 +7,7 @@ Auto-generated python protobuf source for calling Senzing through grpc
 ## Overview
 
 The git repository at
-[github.com/Senzing/senzing-ce-grpc-protobuf](https://github.com/senzing-garage/g2-sdk-proto)
+[github.com/senzing-garage/senzing-ce-grpc-protobuf](https://github.com/senzing-garage/g2-sdk-proto)
 contains the .proto files and generated code for many languages
 
 It also contains:

@@ -76,10 +76,10 @@ public final class G2ProductProto {
       "onse\"\000\022B\n\007License\022\031.g2product.LicenseReq" +
       "uest\032\032.g2product.LicenseResponse\"\000\022B\n\007Ve" +
       "rsion\022\031.g2product.VersionRequest\032\032.g2pro" +
-      "duct.VersionResponse\"\000Be\n$com.senzing.g2" +
+      "duct.VersionResponse\"\000Bl\n$com.senzing.g2" +
       ".engine.grpc.G2ProductB\016G2ProductProtoP\001" +
-      "Z+github.com/senzing/g2-sdk-go-grpc/g2pr" +
-      "oductb\006proto3"
+      "Z2github.com/senzing-garage/g2-sdk-go-gr" +
+      "pc/g2productb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

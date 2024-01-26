@@ -137,10 +137,10 @@ public final class G2ConfigMgrProto {
       ".g2configmgr.ReplaceDefaultConfigIDRespo" +
       "nse\"\000\022g\n\022SetDefaultConfigID\022&.g2configmg" +
       "r.SetDefaultConfigIDRequest\032\'.g2configmg" +
-      "r.SetDefaultConfigIDResponse\"\000Bk\n&com.se" +
+      "r.SetDefaultConfigIDResponse\"\000Br\n&com.se" +
       "nzing.g2.engine.grpc.G2ConfigMgrB\020G2Conf" +
-      "igMgrProtoP\001Z-github.com/senzing/g2-sdk-" +
-      "go-grpc/g2configmgrb\006proto3"
+      "igMgrProtoP\001Z4github.com/senzing-garage/" +
+      "g2-sdk-go-grpc/g2configmgrb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

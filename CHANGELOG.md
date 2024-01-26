@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - ...
 
+## [0.5.0] - 2024-01-26
+
+### Changed in 0.5.0
+
+- Renamed module to `github.com/senzing-garage/g2-sdk-proto`
+
 ## [0.4.3] - 2023-10-15
 
 ### Changed in 0.4.3
@@ -39,7 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed in 0.4.0
 
 - Remove deprecated functions
-  See commented functions in [g2api](https://github.com/Senzing/g2-sdk-go/blob/495326c4451851f9e9a04ac23a150b3d48bc2ad1/g2api/main.go).
+  See commented functions in [g2api](https://github.com/senzing-garage/g2-sdk-go/blob/495326c4451851f9e9a04ac23a150b3d48bc2ad1/g2api/main.go).
 
 ## [0.3.3] - 2023-05-26
 
