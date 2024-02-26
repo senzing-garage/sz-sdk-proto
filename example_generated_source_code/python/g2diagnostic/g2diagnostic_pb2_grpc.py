@@ -24,31 +24,6 @@ class G2DiagnosticStub(object):
                 request_serializer=g2diagnostic__pb2.DestroyRequest.SerializeToString,
                 response_deserializer=g2diagnostic__pb2.DestroyResponse.FromString,
                 )
-        self.GetAvailableMemory = channel.unary_unary(
-                '/g2diagnostic.G2Diagnostic/GetAvailableMemory',
-                request_serializer=g2diagnostic__pb2.GetAvailableMemoryRequest.SerializeToString,
-                response_deserializer=g2diagnostic__pb2.GetAvailableMemoryResponse.FromString,
-                )
-        self.GetDBInfo = channel.unary_unary(
-                '/g2diagnostic.G2Diagnostic/GetDBInfo',
-                request_serializer=g2diagnostic__pb2.GetDBInfoRequest.SerializeToString,
-                response_deserializer=g2diagnostic__pb2.GetDBInfoResponse.FromString,
-                )
-        self.GetLogicalCores = channel.unary_unary(
-                '/g2diagnostic.G2Diagnostic/GetLogicalCores',
-                request_serializer=g2diagnostic__pb2.GetLogicalCoresRequest.SerializeToString,
-                response_deserializer=g2diagnostic__pb2.GetLogicalCoresResponse.FromString,
-                )
-        self.GetPhysicalCores = channel.unary_unary(
-                '/g2diagnostic.G2Diagnostic/GetPhysicalCores',
-                request_serializer=g2diagnostic__pb2.GetPhysicalCoresRequest.SerializeToString,
-                response_deserializer=g2diagnostic__pb2.GetPhysicalCoresResponse.FromString,
-                )
-        self.GetTotalSystemMemory = channel.unary_unary(
-                '/g2diagnostic.G2Diagnostic/GetTotalSystemMemory',
-                request_serializer=g2diagnostic__pb2.GetTotalSystemMemoryRequest.SerializeToString,
-                response_deserializer=g2diagnostic__pb2.GetTotalSystemMemoryResponse.FromString,
-                )
         self.Init = channel.unary_unary(
                 '/g2diagnostic.G2Diagnostic/Init',
                 request_serializer=g2diagnostic__pb2.InitRequest.SerializeToString,
@@ -64,11 +39,6 @@ class G2DiagnosticStub(object):
                 request_serializer=g2diagnostic__pb2.ReinitRequest.SerializeToString,
                 response_deserializer=g2diagnostic__pb2.ReinitResponse.FromString,
                 )
-        self.StreamEntityListBySize = channel.unary_stream(
-                '/g2diagnostic.G2Diagnostic/StreamEntityListBySize',
-                request_serializer=g2diagnostic__pb2.StreamEntityListBySizeRequest.SerializeToString,
-                response_deserializer=g2diagnostic__pb2.StreamEntityListBySizeResponse.FromString,
-                )
 
 
 class G2DiagnosticServicer(object):
@@ -81,36 +51,6 @@ class G2DiagnosticServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def Destroy(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def GetAvailableMemory(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def GetDBInfo(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def GetLogicalCores(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def GetPhysicalCores(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def GetTotalSystemMemory(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -134,12 +74,6 @@ class G2DiagnosticServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def StreamEntityListBySize(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
 
 def add_G2DiagnosticServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -152,31 +86,6 @@ def add_G2DiagnosticServicer_to_server(servicer, server):
                     servicer.Destroy,
                     request_deserializer=g2diagnostic__pb2.DestroyRequest.FromString,
                     response_serializer=g2diagnostic__pb2.DestroyResponse.SerializeToString,
-            ),
-            'GetAvailableMemory': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetAvailableMemory,
-                    request_deserializer=g2diagnostic__pb2.GetAvailableMemoryRequest.FromString,
-                    response_serializer=g2diagnostic__pb2.GetAvailableMemoryResponse.SerializeToString,
-            ),
-            'GetDBInfo': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetDBInfo,
-                    request_deserializer=g2diagnostic__pb2.GetDBInfoRequest.FromString,
-                    response_serializer=g2diagnostic__pb2.GetDBInfoResponse.SerializeToString,
-            ),
-            'GetLogicalCores': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetLogicalCores,
-                    request_deserializer=g2diagnostic__pb2.GetLogicalCoresRequest.FromString,
-                    response_serializer=g2diagnostic__pb2.GetLogicalCoresResponse.SerializeToString,
-            ),
-            'GetPhysicalCores': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetPhysicalCores,
-                    request_deserializer=g2diagnostic__pb2.GetPhysicalCoresRequest.FromString,
-                    response_serializer=g2diagnostic__pb2.GetPhysicalCoresResponse.SerializeToString,
-            ),
-            'GetTotalSystemMemory': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetTotalSystemMemory,
-                    request_deserializer=g2diagnostic__pb2.GetTotalSystemMemoryRequest.FromString,
-                    response_serializer=g2diagnostic__pb2.GetTotalSystemMemoryResponse.SerializeToString,
             ),
             'Init': grpc.unary_unary_rpc_method_handler(
                     servicer.Init,
@@ -192,11 +101,6 @@ def add_G2DiagnosticServicer_to_server(servicer, server):
                     servicer.Reinit,
                     request_deserializer=g2diagnostic__pb2.ReinitRequest.FromString,
                     response_serializer=g2diagnostic__pb2.ReinitResponse.SerializeToString,
-            ),
-            'StreamEntityListBySize': grpc.unary_stream_rpc_method_handler(
-                    servicer.StreamEntityListBySize,
-                    request_deserializer=g2diagnostic__pb2.StreamEntityListBySizeRequest.FromString,
-                    response_serializer=g2diagnostic__pb2.StreamEntityListBySizeResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -239,91 +143,6 @@ class G2Diagnostic(object):
         return grpc.experimental.unary_unary(request, target, '/g2diagnostic.G2Diagnostic/Destroy',
             g2diagnostic__pb2.DestroyRequest.SerializeToString,
             g2diagnostic__pb2.DestroyResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def GetAvailableMemory(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2diagnostic.G2Diagnostic/GetAvailableMemory',
-            g2diagnostic__pb2.GetAvailableMemoryRequest.SerializeToString,
-            g2diagnostic__pb2.GetAvailableMemoryResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def GetDBInfo(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2diagnostic.G2Diagnostic/GetDBInfo',
-            g2diagnostic__pb2.GetDBInfoRequest.SerializeToString,
-            g2diagnostic__pb2.GetDBInfoResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def GetLogicalCores(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2diagnostic.G2Diagnostic/GetLogicalCores',
-            g2diagnostic__pb2.GetLogicalCoresRequest.SerializeToString,
-            g2diagnostic__pb2.GetLogicalCoresResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def GetPhysicalCores(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2diagnostic.G2Diagnostic/GetPhysicalCores',
-            g2diagnostic__pb2.GetPhysicalCoresRequest.SerializeToString,
-            g2diagnostic__pb2.GetPhysicalCoresResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def GetTotalSystemMemory(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2diagnostic.G2Diagnostic/GetTotalSystemMemory',
-            g2diagnostic__pb2.GetTotalSystemMemoryRequest.SerializeToString,
-            g2diagnostic__pb2.GetTotalSystemMemoryResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -375,22 +194,5 @@ class G2Diagnostic(object):
         return grpc.experimental.unary_unary(request, target, '/g2diagnostic.G2Diagnostic/Reinit',
             g2diagnostic__pb2.ReinitRequest.SerializeToString,
             g2diagnostic__pb2.ReinitResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def StreamEntityListBySize(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/g2diagnostic.G2Diagnostic/StreamEntityListBySize',
-            g2diagnostic__pb2.StreamEntityListBySizeRequest.SerializeToString,
-            g2diagnostic__pb2.StreamEntityListBySizeResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

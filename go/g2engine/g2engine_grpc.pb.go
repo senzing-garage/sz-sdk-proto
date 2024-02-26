@@ -68,9 +68,6 @@ type G2EngineClient interface {
 	Init(ctx context.Context, in *InitRequest, opts ...grpc.CallOption) (*InitResponse, error)
 	InitWithConfigID(ctx context.Context, in *InitWithConfigIDRequest, opts ...grpc.CallOption) (*InitWithConfigIDResponse, error)
 	PrimeEngine(ctx context.Context, in *PrimeEngineRequest, opts ...grpc.CallOption) (*PrimeEngineResponse, error)
-	Process(ctx context.Context, in *ProcessRequest, opts ...grpc.CallOption) (*ProcessResponse, error)
-	ProcessWithInfo(ctx context.Context, in *ProcessWithInfoRequest, opts ...grpc.CallOption) (*ProcessWithInfoResponse, error)
-	PurgeRepository(ctx context.Context, in *PurgeRepositoryRequest, opts ...grpc.CallOption) (*PurgeRepositoryResponse, error)
 	ReevaluateEntity(ctx context.Context, in *ReevaluateEntityRequest, opts ...grpc.CallOption) (*ReevaluateEntityResponse, error)
 	ReevaluateEntityWithInfo(ctx context.Context, in *ReevaluateEntityWithInfoRequest, opts ...grpc.CallOption) (*ReevaluateEntityWithInfoResponse, error)
 	ReevaluateRecord(ctx context.Context, in *ReevaluateRecordRequest, opts ...grpc.CallOption) (*ReevaluateRecordResponse, error)
@@ -85,10 +82,6 @@ type G2EngineClient interface {
 	StreamExportJSONEntityReport(ctx context.Context, in *StreamExportJSONEntityReportRequest, opts ...grpc.CallOption) (G2Engine_StreamExportJSONEntityReportClient, error)
 	WhyEntities(ctx context.Context, in *WhyEntitiesRequest, opts ...grpc.CallOption) (*WhyEntitiesResponse, error)
 	WhyEntities_V2(ctx context.Context, in *WhyEntities_V2Request, opts ...grpc.CallOption) (*WhyEntities_V2Response, error)
-	WhyEntityByEntityID(ctx context.Context, in *WhyEntityByEntityIDRequest, opts ...grpc.CallOption) (*WhyEntityByEntityIDResponse, error)
-	WhyEntityByEntityID_V2(ctx context.Context, in *WhyEntityByEntityID_V2Request, opts ...grpc.CallOption) (*WhyEntityByEntityID_V2Response, error)
-	WhyEntityByRecordID(ctx context.Context, in *WhyEntityByRecordIDRequest, opts ...grpc.CallOption) (*WhyEntityByRecordIDResponse, error)
-	WhyEntityByRecordID_V2(ctx context.Context, in *WhyEntityByRecordID_V2Request, opts ...grpc.CallOption) (*WhyEntityByRecordID_V2Response, error)
 	WhyRecords(ctx context.Context, in *WhyRecordsRequest, opts ...grpc.CallOption) (*WhyRecordsResponse, error)
 	WhyRecords_V2(ctx context.Context, in *WhyRecords_V2Request, opts ...grpc.CallOption) (*WhyRecords_V2Response, error)
 }
@@ -515,33 +508,6 @@ func (c *g2EngineClient) PrimeEngine(ctx context.Context, in *PrimeEngineRequest
 	return out, nil
 }
 
-func (c *g2EngineClient) Process(ctx context.Context, in *ProcessRequest, opts ...grpc.CallOption) (*ProcessResponse, error) {
-	out := new(ProcessResponse)
-	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/Process", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2EngineClient) ProcessWithInfo(ctx context.Context, in *ProcessWithInfoRequest, opts ...grpc.CallOption) (*ProcessWithInfoResponse, error) {
-	out := new(ProcessWithInfoResponse)
-	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/ProcessWithInfo", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2EngineClient) PurgeRepository(ctx context.Context, in *PurgeRepositoryRequest, opts ...grpc.CallOption) (*PurgeRepositoryResponse, error) {
-	out := new(PurgeRepositoryResponse)
-	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/PurgeRepository", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *g2EngineClient) ReevaluateEntity(ctx context.Context, in *ReevaluateEntityRequest, opts ...grpc.CallOption) (*ReevaluateEntityResponse, error) {
 	out := new(ReevaluateEntityResponse)
 	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/ReevaluateEntity", in, out, opts...)
@@ -714,42 +680,6 @@ func (c *g2EngineClient) WhyEntities_V2(ctx context.Context, in *WhyEntities_V2R
 	return out, nil
 }
 
-func (c *g2EngineClient) WhyEntityByEntityID(ctx context.Context, in *WhyEntityByEntityIDRequest, opts ...grpc.CallOption) (*WhyEntityByEntityIDResponse, error) {
-	out := new(WhyEntityByEntityIDResponse)
-	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/WhyEntityByEntityID", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2EngineClient) WhyEntityByEntityID_V2(ctx context.Context, in *WhyEntityByEntityID_V2Request, opts ...grpc.CallOption) (*WhyEntityByEntityID_V2Response, error) {
-	out := new(WhyEntityByEntityID_V2Response)
-	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/WhyEntityByEntityID_V2", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2EngineClient) WhyEntityByRecordID(ctx context.Context, in *WhyEntityByRecordIDRequest, opts ...grpc.CallOption) (*WhyEntityByRecordIDResponse, error) {
-	out := new(WhyEntityByRecordIDResponse)
-	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/WhyEntityByRecordID", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2EngineClient) WhyEntityByRecordID_V2(ctx context.Context, in *WhyEntityByRecordID_V2Request, opts ...grpc.CallOption) (*WhyEntityByRecordID_V2Response, error) {
-	out := new(WhyEntityByRecordID_V2Response)
-	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/WhyEntityByRecordID_V2", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *g2EngineClient) WhyRecords(ctx context.Context, in *WhyRecordsRequest, opts ...grpc.CallOption) (*WhyRecordsResponse, error) {
 	out := new(WhyRecordsResponse)
 	err := c.cc.Invoke(ctx, "/g2engine.G2Engine/WhyRecords", in, out, opts...)
@@ -818,9 +748,6 @@ type G2EngineServer interface {
 	Init(context.Context, *InitRequest) (*InitResponse, error)
 	InitWithConfigID(context.Context, *InitWithConfigIDRequest) (*InitWithConfigIDResponse, error)
 	PrimeEngine(context.Context, *PrimeEngineRequest) (*PrimeEngineResponse, error)
-	Process(context.Context, *ProcessRequest) (*ProcessResponse, error)
-	ProcessWithInfo(context.Context, *ProcessWithInfoRequest) (*ProcessWithInfoResponse, error)
-	PurgeRepository(context.Context, *PurgeRepositoryRequest) (*PurgeRepositoryResponse, error)
 	ReevaluateEntity(context.Context, *ReevaluateEntityRequest) (*ReevaluateEntityResponse, error)
 	ReevaluateEntityWithInfo(context.Context, *ReevaluateEntityWithInfoRequest) (*ReevaluateEntityWithInfoResponse, error)
 	ReevaluateRecord(context.Context, *ReevaluateRecordRequest) (*ReevaluateRecordResponse, error)
@@ -835,10 +762,6 @@ type G2EngineServer interface {
 	StreamExportJSONEntityReport(*StreamExportJSONEntityReportRequest, G2Engine_StreamExportJSONEntityReportServer) error
 	WhyEntities(context.Context, *WhyEntitiesRequest) (*WhyEntitiesResponse, error)
 	WhyEntities_V2(context.Context, *WhyEntities_V2Request) (*WhyEntities_V2Response, error)
-	WhyEntityByEntityID(context.Context, *WhyEntityByEntityIDRequest) (*WhyEntityByEntityIDResponse, error)
-	WhyEntityByEntityID_V2(context.Context, *WhyEntityByEntityID_V2Request) (*WhyEntityByEntityID_V2Response, error)
-	WhyEntityByRecordID(context.Context, *WhyEntityByRecordIDRequest) (*WhyEntityByRecordIDResponse, error)
-	WhyEntityByRecordID_V2(context.Context, *WhyEntityByRecordID_V2Request) (*WhyEntityByRecordID_V2Response, error)
 	WhyRecords(context.Context, *WhyRecordsRequest) (*WhyRecordsResponse, error)
 	WhyRecords_V2(context.Context, *WhyRecords_V2Request) (*WhyRecords_V2Response, error)
 	mustEmbedUnimplementedG2EngineServer()
@@ -986,15 +909,6 @@ func (UnimplementedG2EngineServer) InitWithConfigID(context.Context, *InitWithCo
 func (UnimplementedG2EngineServer) PrimeEngine(context.Context, *PrimeEngineRequest) (*PrimeEngineResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PrimeEngine not implemented")
 }
-func (UnimplementedG2EngineServer) Process(context.Context, *ProcessRequest) (*ProcessResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Process not implemented")
-}
-func (UnimplementedG2EngineServer) ProcessWithInfo(context.Context, *ProcessWithInfoRequest) (*ProcessWithInfoResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ProcessWithInfo not implemented")
-}
-func (UnimplementedG2EngineServer) PurgeRepository(context.Context, *PurgeRepositoryRequest) (*PurgeRepositoryResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method PurgeRepository not implemented")
-}
 func (UnimplementedG2EngineServer) ReevaluateEntity(context.Context, *ReevaluateEntityRequest) (*ReevaluateEntityResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ReevaluateEntity not implemented")
 }
@@ -1036,18 +950,6 @@ func (UnimplementedG2EngineServer) WhyEntities(context.Context, *WhyEntitiesRequ
 }
 func (UnimplementedG2EngineServer) WhyEntities_V2(context.Context, *WhyEntities_V2Request) (*WhyEntities_V2Response, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method WhyEntities_V2 not implemented")
-}
-func (UnimplementedG2EngineServer) WhyEntityByEntityID(context.Context, *WhyEntityByEntityIDRequest) (*WhyEntityByEntityIDResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method WhyEntityByEntityID not implemented")
-}
-func (UnimplementedG2EngineServer) WhyEntityByEntityID_V2(context.Context, *WhyEntityByEntityID_V2Request) (*WhyEntityByEntityID_V2Response, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method WhyEntityByEntityID_V2 not implemented")
-}
-func (UnimplementedG2EngineServer) WhyEntityByRecordID(context.Context, *WhyEntityByRecordIDRequest) (*WhyEntityByRecordIDResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method WhyEntityByRecordID not implemented")
-}
-func (UnimplementedG2EngineServer) WhyEntityByRecordID_V2(context.Context, *WhyEntityByRecordID_V2Request) (*WhyEntityByRecordID_V2Response, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method WhyEntityByRecordID_V2 not implemented")
 }
 func (UnimplementedG2EngineServer) WhyRecords(context.Context, *WhyRecordsRequest) (*WhyRecordsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method WhyRecords not implemented")
@@ -1896,60 +1798,6 @@ func _G2Engine_PrimeEngine_Handler(srv interface{}, ctx context.Context, dec fun
 	return interceptor(ctx, in, info, handler)
 }
 
-func _G2Engine_Process_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ProcessRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2EngineServer).Process(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2engine.G2Engine/Process",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2EngineServer).Process(ctx, req.(*ProcessRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Engine_ProcessWithInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ProcessWithInfoRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2EngineServer).ProcessWithInfo(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2engine.G2Engine/ProcessWithInfo",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2EngineServer).ProcessWithInfo(ctx, req.(*ProcessWithInfoRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Engine_PurgeRepository_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PurgeRepositoryRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2EngineServer).PurgeRepository(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2engine.G2Engine/PurgeRepository",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2EngineServer).PurgeRepository(ctx, req.(*PurgeRepositoryRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _G2Engine_ReevaluateEntity_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ReevaluateEntityRequest)
 	if err := dec(in); err != nil {
@@ -2208,78 +2056,6 @@ func _G2Engine_WhyEntities_V2_Handler(srv interface{}, ctx context.Context, dec 
 	return interceptor(ctx, in, info, handler)
 }
 
-func _G2Engine_WhyEntityByEntityID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(WhyEntityByEntityIDRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2EngineServer).WhyEntityByEntityID(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2engine.G2Engine/WhyEntityByEntityID",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2EngineServer).WhyEntityByEntityID(ctx, req.(*WhyEntityByEntityIDRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Engine_WhyEntityByEntityID_V2_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(WhyEntityByEntityID_V2Request)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2EngineServer).WhyEntityByEntityID_V2(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2engine.G2Engine/WhyEntityByEntityID_V2",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2EngineServer).WhyEntityByEntityID_V2(ctx, req.(*WhyEntityByEntityID_V2Request))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Engine_WhyEntityByRecordID_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(WhyEntityByRecordIDRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2EngineServer).WhyEntityByRecordID(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2engine.G2Engine/WhyEntityByRecordID",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2EngineServer).WhyEntityByRecordID(ctx, req.(*WhyEntityByRecordIDRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Engine_WhyEntityByRecordID_V2_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(WhyEntityByRecordID_V2Request)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2EngineServer).WhyEntityByRecordID_V2(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2engine.G2Engine/WhyEntityByRecordID_V2",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2EngineServer).WhyEntityByRecordID_V2(ctx, req.(*WhyEntityByRecordID_V2Request))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _G2Engine_WhyRecords_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(WhyRecordsRequest)
 	if err := dec(in); err != nil {
@@ -2508,18 +2284,6 @@ var G2Engine_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _G2Engine_PrimeEngine_Handler,
 		},
 		{
-			MethodName: "Process",
-			Handler:    _G2Engine_Process_Handler,
-		},
-		{
-			MethodName: "ProcessWithInfo",
-			Handler:    _G2Engine_ProcessWithInfo_Handler,
-		},
-		{
-			MethodName: "PurgeRepository",
-			Handler:    _G2Engine_PurgeRepository_Handler,
-		},
-		{
 			MethodName: "ReevaluateEntity",
 			Handler:    _G2Engine_ReevaluateEntity_Handler,
 		},
@@ -2566,22 +2330,6 @@ var G2Engine_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "WhyEntities_V2",
 			Handler:    _G2Engine_WhyEntities_V2_Handler,
-		},
-		{
-			MethodName: "WhyEntityByEntityID",
-			Handler:    _G2Engine_WhyEntityByEntityID_Handler,
-		},
-		{
-			MethodName: "WhyEntityByEntityID_V2",
-			Handler:    _G2Engine_WhyEntityByEntityID_V2_Handler,
-		},
-		{
-			MethodName: "WhyEntityByRecordID",
-			Handler:    _G2Engine_WhyEntityByRecordID_Handler,
-		},
-		{
-			MethodName: "WhyEntityByRecordID_V2",
-			Handler:    _G2Engine_WhyEntityByRecordID_V2_Handler,
 		},
 		{
 			MethodName: "WhyRecords",

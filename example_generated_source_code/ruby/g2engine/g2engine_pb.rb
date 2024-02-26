@@ -365,22 +365,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "g2engine.PrimeEngineResponse" do
     end
-    add_message "g2engine.ProcessRequest" do
-      optional :record, :string, 1
-    end
-    add_message "g2engine.ProcessResponse" do
-    end
-    add_message "g2engine.ProcessWithInfoRequest" do
-      optional :record, :string, 1
-      optional :flags, :int64, 2
-    end
-    add_message "g2engine.ProcessWithInfoResponse" do
-      optional :result, :string, 1
-    end
-    add_message "g2engine.PurgeRepositoryRequest" do
-    end
-    add_message "g2engine.PurgeRepositoryResponse" do
-    end
     add_message "g2engine.ReevaluateEntityRequest" do
       optional :entityID, :int64, 1
       optional :flags, :int64, 2
@@ -476,34 +460,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :flags, :int64, 3
     end
     add_message "g2engine.WhyEntities_V2Response" do
-      optional :result, :string, 1
-    end
-    add_message "g2engine.WhyEntityByEntityIDRequest" do
-      optional :entityID, :int64, 1
-    end
-    add_message "g2engine.WhyEntityByEntityIDResponse" do
-      optional :result, :string, 1
-    end
-    add_message "g2engine.WhyEntityByEntityID_V2Request" do
-      optional :entityID, :int64, 1
-      optional :flags, :int64, 2
-    end
-    add_message "g2engine.WhyEntityByEntityID_V2Response" do
-      optional :result, :string, 1
-    end
-    add_message "g2engine.WhyEntityByRecordIDRequest" do
-      optional :dataSourceCode, :string, 1
-      optional :recordID, :string, 2
-    end
-    add_message "g2engine.WhyEntityByRecordIDResponse" do
-      optional :result, :string, 1
-    end
-    add_message "g2engine.WhyEntityByRecordID_V2Request" do
-      optional :dataSourceCode, :string, 1
-      optional :recordID, :string, 2
-      optional :flags, :int64, 3
-    end
-    add_message "g2engine.WhyEntityByRecordID_V2Response" do
       optional :result, :string, 1
     end
     add_message "g2engine.WhyRecordsRequest" do
@@ -621,12 +577,6 @@ module G2engine
   InitWithConfigIDResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.InitWithConfigIDResponse").msgclass
   PrimeEngineRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.PrimeEngineRequest").msgclass
   PrimeEngineResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.PrimeEngineResponse").msgclass
-  ProcessRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ProcessRequest").msgclass
-  ProcessResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ProcessResponse").msgclass
-  ProcessWithInfoRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ProcessWithInfoRequest").msgclass
-  ProcessWithInfoResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ProcessWithInfoResponse").msgclass
-  PurgeRepositoryRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.PurgeRepositoryRequest").msgclass
-  PurgeRepositoryResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.PurgeRepositoryResponse").msgclass
   ReevaluateEntityRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ReevaluateEntityRequest").msgclass
   ReevaluateEntityResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ReevaluateEntityResponse").msgclass
   ReevaluateEntityWithInfoRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.ReevaluateEntityWithInfoRequest").msgclass
@@ -655,14 +605,6 @@ module G2engine
   WhyEntitiesResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.WhyEntitiesResponse").msgclass
   WhyEntities_V2Request = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.WhyEntities_V2Request").msgclass
   WhyEntities_V2Response = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.WhyEntities_V2Response").msgclass
-  WhyEntityByEntityIDRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.WhyEntityByEntityIDRequest").msgclass
-  WhyEntityByEntityIDResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.WhyEntityByEntityIDResponse").msgclass
-  WhyEntityByEntityID_V2Request = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.WhyEntityByEntityID_V2Request").msgclass
-  WhyEntityByEntityID_V2Response = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.WhyEntityByEntityID_V2Response").msgclass
-  WhyEntityByRecordIDRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.WhyEntityByRecordIDRequest").msgclass
-  WhyEntityByRecordIDResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.WhyEntityByRecordIDResponse").msgclass
-  WhyEntityByRecordID_V2Request = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.WhyEntityByRecordID_V2Request").msgclass
-  WhyEntityByRecordID_V2Response = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.WhyEntityByRecordID_V2Response").msgclass
   WhyRecordsRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.WhyRecordsRequest").msgclass
   WhyRecordsResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.WhyRecordsResponse").msgclass
   WhyRecords_V2Request = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2engine.WhyRecords_V2Request").msgclass

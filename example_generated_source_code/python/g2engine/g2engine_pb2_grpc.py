@@ -244,21 +244,6 @@ class G2EngineStub(object):
                 request_serializer=g2engine__pb2.PrimeEngineRequest.SerializeToString,
                 response_deserializer=g2engine__pb2.PrimeEngineResponse.FromString,
                 )
-        self.Process = channel.unary_unary(
-                '/g2engine.G2Engine/Process',
-                request_serializer=g2engine__pb2.ProcessRequest.SerializeToString,
-                response_deserializer=g2engine__pb2.ProcessResponse.FromString,
-                )
-        self.ProcessWithInfo = channel.unary_unary(
-                '/g2engine.G2Engine/ProcessWithInfo',
-                request_serializer=g2engine__pb2.ProcessWithInfoRequest.SerializeToString,
-                response_deserializer=g2engine__pb2.ProcessWithInfoResponse.FromString,
-                )
-        self.PurgeRepository = channel.unary_unary(
-                '/g2engine.G2Engine/PurgeRepository',
-                request_serializer=g2engine__pb2.PurgeRepositoryRequest.SerializeToString,
-                response_deserializer=g2engine__pb2.PurgeRepositoryResponse.FromString,
-                )
         self.ReevaluateEntity = channel.unary_unary(
                 '/g2engine.G2Engine/ReevaluateEntity',
                 request_serializer=g2engine__pb2.ReevaluateEntityRequest.SerializeToString,
@@ -328,26 +313,6 @@ class G2EngineStub(object):
                 '/g2engine.G2Engine/WhyEntities_V2',
                 request_serializer=g2engine__pb2.WhyEntities_V2Request.SerializeToString,
                 response_deserializer=g2engine__pb2.WhyEntities_V2Response.FromString,
-                )
-        self.WhyEntityByEntityID = channel.unary_unary(
-                '/g2engine.G2Engine/WhyEntityByEntityID',
-                request_serializer=g2engine__pb2.WhyEntityByEntityIDRequest.SerializeToString,
-                response_deserializer=g2engine__pb2.WhyEntityByEntityIDResponse.FromString,
-                )
-        self.WhyEntityByEntityID_V2 = channel.unary_unary(
-                '/g2engine.G2Engine/WhyEntityByEntityID_V2',
-                request_serializer=g2engine__pb2.WhyEntityByEntityID_V2Request.SerializeToString,
-                response_deserializer=g2engine__pb2.WhyEntityByEntityID_V2Response.FromString,
-                )
-        self.WhyEntityByRecordID = channel.unary_unary(
-                '/g2engine.G2Engine/WhyEntityByRecordID',
-                request_serializer=g2engine__pb2.WhyEntityByRecordIDRequest.SerializeToString,
-                response_deserializer=g2engine__pb2.WhyEntityByRecordIDResponse.FromString,
-                )
-        self.WhyEntityByRecordID_V2 = channel.unary_unary(
-                '/g2engine.G2Engine/WhyEntityByRecordID_V2',
-                request_serializer=g2engine__pb2.WhyEntityByRecordID_V2Request.SerializeToString,
-                response_deserializer=g2engine__pb2.WhyEntityByRecordID_V2Response.FromString,
                 )
         self.WhyRecords = channel.unary_unary(
                 '/g2engine.G2Engine/WhyRecords',
@@ -640,24 +605,6 @@ class G2EngineServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def Process(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def ProcessWithInfo(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def PurgeRepository(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
     def ReevaluateEntity(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -737,30 +684,6 @@ class G2EngineServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def WhyEntities_V2(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def WhyEntityByEntityID(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def WhyEntityByEntityID_V2(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def WhyEntityByRecordID(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def WhyEntityByRecordID_V2(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -1011,21 +934,6 @@ def add_G2EngineServicer_to_server(servicer, server):
                     request_deserializer=g2engine__pb2.PrimeEngineRequest.FromString,
                     response_serializer=g2engine__pb2.PrimeEngineResponse.SerializeToString,
             ),
-            'Process': grpc.unary_unary_rpc_method_handler(
-                    servicer.Process,
-                    request_deserializer=g2engine__pb2.ProcessRequest.FromString,
-                    response_serializer=g2engine__pb2.ProcessResponse.SerializeToString,
-            ),
-            'ProcessWithInfo': grpc.unary_unary_rpc_method_handler(
-                    servicer.ProcessWithInfo,
-                    request_deserializer=g2engine__pb2.ProcessWithInfoRequest.FromString,
-                    response_serializer=g2engine__pb2.ProcessWithInfoResponse.SerializeToString,
-            ),
-            'PurgeRepository': grpc.unary_unary_rpc_method_handler(
-                    servicer.PurgeRepository,
-                    request_deserializer=g2engine__pb2.PurgeRepositoryRequest.FromString,
-                    response_serializer=g2engine__pb2.PurgeRepositoryResponse.SerializeToString,
-            ),
             'ReevaluateEntity': grpc.unary_unary_rpc_method_handler(
                     servicer.ReevaluateEntity,
                     request_deserializer=g2engine__pb2.ReevaluateEntityRequest.FromString,
@@ -1095,26 +1003,6 @@ def add_G2EngineServicer_to_server(servicer, server):
                     servicer.WhyEntities_V2,
                     request_deserializer=g2engine__pb2.WhyEntities_V2Request.FromString,
                     response_serializer=g2engine__pb2.WhyEntities_V2Response.SerializeToString,
-            ),
-            'WhyEntityByEntityID': grpc.unary_unary_rpc_method_handler(
-                    servicer.WhyEntityByEntityID,
-                    request_deserializer=g2engine__pb2.WhyEntityByEntityIDRequest.FromString,
-                    response_serializer=g2engine__pb2.WhyEntityByEntityIDResponse.SerializeToString,
-            ),
-            'WhyEntityByEntityID_V2': grpc.unary_unary_rpc_method_handler(
-                    servicer.WhyEntityByEntityID_V2,
-                    request_deserializer=g2engine__pb2.WhyEntityByEntityID_V2Request.FromString,
-                    response_serializer=g2engine__pb2.WhyEntityByEntityID_V2Response.SerializeToString,
-            ),
-            'WhyEntityByRecordID': grpc.unary_unary_rpc_method_handler(
-                    servicer.WhyEntityByRecordID,
-                    request_deserializer=g2engine__pb2.WhyEntityByRecordIDRequest.FromString,
-                    response_serializer=g2engine__pb2.WhyEntityByRecordIDResponse.SerializeToString,
-            ),
-            'WhyEntityByRecordID_V2': grpc.unary_unary_rpc_method_handler(
-                    servicer.WhyEntityByRecordID_V2,
-                    request_deserializer=g2engine__pb2.WhyEntityByRecordID_V2Request.FromString,
-                    response_serializer=g2engine__pb2.WhyEntityByRecordID_V2Response.SerializeToString,
             ),
             'WhyRecords': grpc.unary_unary_rpc_method_handler(
                     servicer.WhyRecords,
@@ -1919,57 +1807,6 @@ class G2Engine(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def Process(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/Process',
-            g2engine__pb2.ProcessRequest.SerializeToString,
-            g2engine__pb2.ProcessResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def ProcessWithInfo(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/ProcessWithInfo',
-            g2engine__pb2.ProcessWithInfoRequest.SerializeToString,
-            g2engine__pb2.ProcessWithInfoResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def PurgeRepository(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/PurgeRepository',
-            g2engine__pb2.PurgeRepositoryRequest.SerializeToString,
-            g2engine__pb2.PurgeRepositoryResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
     def ReevaluateEntity(request,
             target,
             options=(),
@@ -2204,74 +2041,6 @@ class G2Engine(object):
         return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/WhyEntities_V2',
             g2engine__pb2.WhyEntities_V2Request.SerializeToString,
             g2engine__pb2.WhyEntities_V2Response.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def WhyEntityByEntityID(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/WhyEntityByEntityID',
-            g2engine__pb2.WhyEntityByEntityIDRequest.SerializeToString,
-            g2engine__pb2.WhyEntityByEntityIDResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def WhyEntityByEntityID_V2(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/WhyEntityByEntityID_V2',
-            g2engine__pb2.WhyEntityByEntityID_V2Request.SerializeToString,
-            g2engine__pb2.WhyEntityByEntityID_V2Response.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def WhyEntityByRecordID(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/WhyEntityByRecordID',
-            g2engine__pb2.WhyEntityByRecordIDRequest.SerializeToString,
-            g2engine__pb2.WhyEntityByRecordIDResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def WhyEntityByRecordID_V2(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/g2engine.G2Engine/WhyEntityByRecordID_V2',
-            g2engine__pb2.WhyEntityByRecordID_V2Request.SerializeToString,
-            g2engine__pb2.WhyEntityByRecordID_V2Response.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 

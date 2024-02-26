@@ -49,41 +49,6 @@ class G2Diagnostic final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::DestroyResponse>> PrepareAsyncDestroy(::grpc::ClientContext* context, const ::g2diagnostic::DestroyRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::DestroyResponse>>(PrepareAsyncDestroyRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetAvailableMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest& request, ::g2diagnostic::GetAvailableMemoryResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetAvailableMemoryResponse>> AsyncGetAvailableMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetAvailableMemoryResponse>>(AsyncGetAvailableMemoryRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetAvailableMemoryResponse>> PrepareAsyncGetAvailableMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetAvailableMemoryResponse>>(PrepareAsyncGetAvailableMemoryRaw(context, request, cq));
-    }
-    virtual ::grpc::Status GetDBInfo(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest& request, ::g2diagnostic::GetDBInfoResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetDBInfoResponse>> AsyncGetDBInfo(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetDBInfoResponse>>(AsyncGetDBInfoRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetDBInfoResponse>> PrepareAsyncGetDBInfo(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetDBInfoResponse>>(PrepareAsyncGetDBInfoRaw(context, request, cq));
-    }
-    virtual ::grpc::Status GetLogicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest& request, ::g2diagnostic::GetLogicalCoresResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetLogicalCoresResponse>> AsyncGetLogicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetLogicalCoresResponse>>(AsyncGetLogicalCoresRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetLogicalCoresResponse>> PrepareAsyncGetLogicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetLogicalCoresResponse>>(PrepareAsyncGetLogicalCoresRaw(context, request, cq));
-    }
-    virtual ::grpc::Status GetPhysicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest& request, ::g2diagnostic::GetPhysicalCoresResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetPhysicalCoresResponse>> AsyncGetPhysicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetPhysicalCoresResponse>>(AsyncGetPhysicalCoresRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetPhysicalCoresResponse>> PrepareAsyncGetPhysicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetPhysicalCoresResponse>>(PrepareAsyncGetPhysicalCoresRaw(context, request, cq));
-    }
-    virtual ::grpc::Status GetTotalSystemMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest& request, ::g2diagnostic::GetTotalSystemMemoryResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetTotalSystemMemoryResponse>> AsyncGetTotalSystemMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetTotalSystemMemoryResponse>>(AsyncGetTotalSystemMemoryRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetTotalSystemMemoryResponse>> PrepareAsyncGetTotalSystemMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetTotalSystemMemoryResponse>>(PrepareAsyncGetTotalSystemMemoryRaw(context, request, cq));
-    }
     virtual ::grpc::Status Init(::grpc::ClientContext* context, const ::g2diagnostic::InitRequest& request, ::g2diagnostic::InitResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::InitResponse>> AsyncInit(::grpc::ClientContext* context, const ::g2diagnostic::InitRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::InitResponse>>(AsyncInitRaw(context, request, cq));
@@ -105,15 +70,6 @@ class G2Diagnostic final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::ReinitResponse>> PrepareAsyncReinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::ReinitResponse>>(PrepareAsyncReinitRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>> StreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request) {
-      return std::unique_ptr< ::grpc::ClientReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>>(StreamEntityListBySizeRaw(context, request));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>> AsyncStreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>>(AsyncStreamEntityListBySizeRaw(context, request, cq, tag));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>> PrepareAsyncStreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>>(PrepareAsyncStreamEntityListBySizeRaw(context, request, cq));
-    }
     class async_interface {
      public:
       virtual ~async_interface() {}
@@ -121,23 +77,12 @@ class G2Diagnostic final {
       virtual void CheckDBPerf(::grpc::ClientContext* context, const ::g2diagnostic::CheckDBPerfRequest* request, ::g2diagnostic::CheckDBPerfResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void Destroy(::grpc::ClientContext* context, const ::g2diagnostic::DestroyRequest* request, ::g2diagnostic::DestroyResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Destroy(::grpc::ClientContext* context, const ::g2diagnostic::DestroyRequest* request, ::g2diagnostic::DestroyResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void GetAvailableMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest* request, ::g2diagnostic::GetAvailableMemoryResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetAvailableMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest* request, ::g2diagnostic::GetAvailableMemoryResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void GetDBInfo(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest* request, ::g2diagnostic::GetDBInfoResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetDBInfo(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest* request, ::g2diagnostic::GetDBInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void GetLogicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest* request, ::g2diagnostic::GetLogicalCoresResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetLogicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest* request, ::g2diagnostic::GetLogicalCoresResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void GetPhysicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest* request, ::g2diagnostic::GetPhysicalCoresResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetPhysicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest* request, ::g2diagnostic::GetPhysicalCoresResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void GetTotalSystemMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest* request, ::g2diagnostic::GetTotalSystemMemoryResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetTotalSystemMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest* request, ::g2diagnostic::GetTotalSystemMemoryResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void Init(::grpc::ClientContext* context, const ::g2diagnostic::InitRequest* request, ::g2diagnostic::InitResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Init(::grpc::ClientContext* context, const ::g2diagnostic::InitRequest* request, ::g2diagnostic::InitResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void InitWithConfigID(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest* request, ::g2diagnostic::InitWithConfigIDResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void InitWithConfigID(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest* request, ::g2diagnostic::InitWithConfigIDResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void Reinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest* request, ::g2diagnostic::ReinitResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Reinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest* request, ::g2diagnostic::ReinitResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void StreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest* request, ::grpc::ClientReadReactor< ::g2diagnostic::StreamEntityListBySizeResponse>* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
@@ -147,25 +92,12 @@ class G2Diagnostic final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::CheckDBPerfResponse>* PrepareAsyncCheckDBPerfRaw(::grpc::ClientContext* context, const ::g2diagnostic::CheckDBPerfRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::DestroyResponse>* AsyncDestroyRaw(::grpc::ClientContext* context, const ::g2diagnostic::DestroyRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::DestroyResponse>* PrepareAsyncDestroyRaw(::grpc::ClientContext* context, const ::g2diagnostic::DestroyRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetAvailableMemoryResponse>* AsyncGetAvailableMemoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetAvailableMemoryResponse>* PrepareAsyncGetAvailableMemoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetDBInfoResponse>* AsyncGetDBInfoRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetDBInfoResponse>* PrepareAsyncGetDBInfoRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetLogicalCoresResponse>* AsyncGetLogicalCoresRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetLogicalCoresResponse>* PrepareAsyncGetLogicalCoresRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetPhysicalCoresResponse>* AsyncGetPhysicalCoresRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetPhysicalCoresResponse>* PrepareAsyncGetPhysicalCoresRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetTotalSystemMemoryResponse>* AsyncGetTotalSystemMemoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::GetTotalSystemMemoryResponse>* PrepareAsyncGetTotalSystemMemoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::InitResponse>* AsyncInitRaw(::grpc::ClientContext* context, const ::g2diagnostic::InitRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::InitResponse>* PrepareAsyncInitRaw(::grpc::ClientContext* context, const ::g2diagnostic::InitRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::InitWithConfigIDResponse>* AsyncInitWithConfigIDRaw(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::InitWithConfigIDResponse>* PrepareAsyncInitWithConfigIDRaw(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::ReinitResponse>* AsyncReinitRaw(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::ReinitResponse>* PrepareAsyncReinitRaw(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>* StreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>* AsyncStreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::g2diagnostic::StreamEntityListBySizeResponse>* PrepareAsyncStreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -183,41 +115,6 @@ class G2Diagnostic final {
     }
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::DestroyResponse>> PrepareAsyncDestroy(::grpc::ClientContext* context, const ::g2diagnostic::DestroyRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::DestroyResponse>>(PrepareAsyncDestroyRaw(context, request, cq));
-    }
-    ::grpc::Status GetAvailableMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest& request, ::g2diagnostic::GetAvailableMemoryResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetAvailableMemoryResponse>> AsyncGetAvailableMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetAvailableMemoryResponse>>(AsyncGetAvailableMemoryRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetAvailableMemoryResponse>> PrepareAsyncGetAvailableMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetAvailableMemoryResponse>>(PrepareAsyncGetAvailableMemoryRaw(context, request, cq));
-    }
-    ::grpc::Status GetDBInfo(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest& request, ::g2diagnostic::GetDBInfoResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetDBInfoResponse>> AsyncGetDBInfo(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetDBInfoResponse>>(AsyncGetDBInfoRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetDBInfoResponse>> PrepareAsyncGetDBInfo(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetDBInfoResponse>>(PrepareAsyncGetDBInfoRaw(context, request, cq));
-    }
-    ::grpc::Status GetLogicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest& request, ::g2diagnostic::GetLogicalCoresResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetLogicalCoresResponse>> AsyncGetLogicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetLogicalCoresResponse>>(AsyncGetLogicalCoresRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetLogicalCoresResponse>> PrepareAsyncGetLogicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetLogicalCoresResponse>>(PrepareAsyncGetLogicalCoresRaw(context, request, cq));
-    }
-    ::grpc::Status GetPhysicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest& request, ::g2diagnostic::GetPhysicalCoresResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetPhysicalCoresResponse>> AsyncGetPhysicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetPhysicalCoresResponse>>(AsyncGetPhysicalCoresRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetPhysicalCoresResponse>> PrepareAsyncGetPhysicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetPhysicalCoresResponse>>(PrepareAsyncGetPhysicalCoresRaw(context, request, cq));
-    }
-    ::grpc::Status GetTotalSystemMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest& request, ::g2diagnostic::GetTotalSystemMemoryResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetTotalSystemMemoryResponse>> AsyncGetTotalSystemMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetTotalSystemMemoryResponse>>(AsyncGetTotalSystemMemoryRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetTotalSystemMemoryResponse>> PrepareAsyncGetTotalSystemMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetTotalSystemMemoryResponse>>(PrepareAsyncGetTotalSystemMemoryRaw(context, request, cq));
     }
     ::grpc::Status Init(::grpc::ClientContext* context, const ::g2diagnostic::InitRequest& request, ::g2diagnostic::InitResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::InitResponse>> AsyncInit(::grpc::ClientContext* context, const ::g2diagnostic::InitRequest& request, ::grpc::CompletionQueue* cq) {
@@ -240,15 +137,6 @@ class G2Diagnostic final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::ReinitResponse>> PrepareAsyncReinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::ReinitResponse>>(PrepareAsyncReinitRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientReader< ::g2diagnostic::StreamEntityListBySizeResponse>> StreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request) {
-      return std::unique_ptr< ::grpc::ClientReader< ::g2diagnostic::StreamEntityListBySizeResponse>>(StreamEntityListBySizeRaw(context, request));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::g2diagnostic::StreamEntityListBySizeResponse>> AsyncStreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::g2diagnostic::StreamEntityListBySizeResponse>>(AsyncStreamEntityListBySizeRaw(context, request, cq, tag));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::g2diagnostic::StreamEntityListBySizeResponse>> PrepareAsyncStreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::g2diagnostic::StreamEntityListBySizeResponse>>(PrepareAsyncStreamEntityListBySizeRaw(context, request, cq));
-    }
     class async final :
       public StubInterface::async_interface {
      public:
@@ -256,23 +144,12 @@ class G2Diagnostic final {
       void CheckDBPerf(::grpc::ClientContext* context, const ::g2diagnostic::CheckDBPerfRequest* request, ::g2diagnostic::CheckDBPerfResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void Destroy(::grpc::ClientContext* context, const ::g2diagnostic::DestroyRequest* request, ::g2diagnostic::DestroyResponse* response, std::function<void(::grpc::Status)>) override;
       void Destroy(::grpc::ClientContext* context, const ::g2diagnostic::DestroyRequest* request, ::g2diagnostic::DestroyResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void GetAvailableMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest* request, ::g2diagnostic::GetAvailableMemoryResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetAvailableMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest* request, ::g2diagnostic::GetAvailableMemoryResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void GetDBInfo(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest* request, ::g2diagnostic::GetDBInfoResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetDBInfo(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest* request, ::g2diagnostic::GetDBInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void GetLogicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest* request, ::g2diagnostic::GetLogicalCoresResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetLogicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest* request, ::g2diagnostic::GetLogicalCoresResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void GetPhysicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest* request, ::g2diagnostic::GetPhysicalCoresResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetPhysicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest* request, ::g2diagnostic::GetPhysicalCoresResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void GetTotalSystemMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest* request, ::g2diagnostic::GetTotalSystemMemoryResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetTotalSystemMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest* request, ::g2diagnostic::GetTotalSystemMemoryResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void Init(::grpc::ClientContext* context, const ::g2diagnostic::InitRequest* request, ::g2diagnostic::InitResponse* response, std::function<void(::grpc::Status)>) override;
       void Init(::grpc::ClientContext* context, const ::g2diagnostic::InitRequest* request, ::g2diagnostic::InitResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void InitWithConfigID(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest* request, ::g2diagnostic::InitWithConfigIDResponse* response, std::function<void(::grpc::Status)>) override;
       void InitWithConfigID(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest* request, ::g2diagnostic::InitWithConfigIDResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void Reinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest* request, ::g2diagnostic::ReinitResponse* response, std::function<void(::grpc::Status)>) override;
       void Reinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest* request, ::g2diagnostic::ReinitResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void StreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest* request, ::grpc::ClientReadReactor< ::g2diagnostic::StreamEntityListBySizeResponse>* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -288,36 +165,17 @@ class G2Diagnostic final {
     ::grpc::ClientAsyncResponseReader< ::g2diagnostic::CheckDBPerfResponse>* PrepareAsyncCheckDBPerfRaw(::grpc::ClientContext* context, const ::g2diagnostic::CheckDBPerfRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2diagnostic::DestroyResponse>* AsyncDestroyRaw(::grpc::ClientContext* context, const ::g2diagnostic::DestroyRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2diagnostic::DestroyResponse>* PrepareAsyncDestroyRaw(::grpc::ClientContext* context, const ::g2diagnostic::DestroyRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetAvailableMemoryResponse>* AsyncGetAvailableMemoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetAvailableMemoryResponse>* PrepareAsyncGetAvailableMemoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetDBInfoResponse>* AsyncGetDBInfoRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetDBInfoResponse>* PrepareAsyncGetDBInfoRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetLogicalCoresResponse>* AsyncGetLogicalCoresRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetLogicalCoresResponse>* PrepareAsyncGetLogicalCoresRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetPhysicalCoresResponse>* AsyncGetPhysicalCoresRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetPhysicalCoresResponse>* PrepareAsyncGetPhysicalCoresRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetTotalSystemMemoryResponse>* AsyncGetTotalSystemMemoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetTotalSystemMemoryResponse>* PrepareAsyncGetTotalSystemMemoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2diagnostic::InitResponse>* AsyncInitRaw(::grpc::ClientContext* context, const ::g2diagnostic::InitRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2diagnostic::InitResponse>* PrepareAsyncInitRaw(::grpc::ClientContext* context, const ::g2diagnostic::InitRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2diagnostic::InitWithConfigIDResponse>* AsyncInitWithConfigIDRaw(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2diagnostic::InitWithConfigIDResponse>* PrepareAsyncInitWithConfigIDRaw(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2diagnostic::ReinitResponse>* AsyncReinitRaw(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2diagnostic::ReinitResponse>* PrepareAsyncReinitRaw(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientReader< ::g2diagnostic::StreamEntityListBySizeResponse>* StreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request) override;
-    ::grpc::ClientAsyncReader< ::g2diagnostic::StreamEntityListBySizeResponse>* AsyncStreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq, void* tag) override;
-    ::grpc::ClientAsyncReader< ::g2diagnostic::StreamEntityListBySizeResponse>* PrepareAsyncStreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_CheckDBPerf_;
     const ::grpc::internal::RpcMethod rpcmethod_Destroy_;
-    const ::grpc::internal::RpcMethod rpcmethod_GetAvailableMemory_;
-    const ::grpc::internal::RpcMethod rpcmethod_GetDBInfo_;
-    const ::grpc::internal::RpcMethod rpcmethod_GetLogicalCores_;
-    const ::grpc::internal::RpcMethod rpcmethod_GetPhysicalCores_;
-    const ::grpc::internal::RpcMethod rpcmethod_GetTotalSystemMemory_;
     const ::grpc::internal::RpcMethod rpcmethod_Init_;
     const ::grpc::internal::RpcMethod rpcmethod_InitWithConfigID_;
     const ::grpc::internal::RpcMethod rpcmethod_Reinit_;
-    const ::grpc::internal::RpcMethod rpcmethod_StreamEntityListBySize_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -327,15 +185,9 @@ class G2Diagnostic final {
     virtual ~Service();
     virtual ::grpc::Status CheckDBPerf(::grpc::ServerContext* context, const ::g2diagnostic::CheckDBPerfRequest* request, ::g2diagnostic::CheckDBPerfResponse* response);
     virtual ::grpc::Status Destroy(::grpc::ServerContext* context, const ::g2diagnostic::DestroyRequest* request, ::g2diagnostic::DestroyResponse* response);
-    virtual ::grpc::Status GetAvailableMemory(::grpc::ServerContext* context, const ::g2diagnostic::GetAvailableMemoryRequest* request, ::g2diagnostic::GetAvailableMemoryResponse* response);
-    virtual ::grpc::Status GetDBInfo(::grpc::ServerContext* context, const ::g2diagnostic::GetDBInfoRequest* request, ::g2diagnostic::GetDBInfoResponse* response);
-    virtual ::grpc::Status GetLogicalCores(::grpc::ServerContext* context, const ::g2diagnostic::GetLogicalCoresRequest* request, ::g2diagnostic::GetLogicalCoresResponse* response);
-    virtual ::grpc::Status GetPhysicalCores(::grpc::ServerContext* context, const ::g2diagnostic::GetPhysicalCoresRequest* request, ::g2diagnostic::GetPhysicalCoresResponse* response);
-    virtual ::grpc::Status GetTotalSystemMemory(::grpc::ServerContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest* request, ::g2diagnostic::GetTotalSystemMemoryResponse* response);
     virtual ::grpc::Status Init(::grpc::ServerContext* context, const ::g2diagnostic::InitRequest* request, ::g2diagnostic::InitResponse* response);
     virtual ::grpc::Status InitWithConfigID(::grpc::ServerContext* context, const ::g2diagnostic::InitWithConfigIDRequest* request, ::g2diagnostic::InitWithConfigIDResponse* response);
     virtual ::grpc::Status Reinit(::grpc::ServerContext* context, const ::g2diagnostic::ReinitRequest* request, ::g2diagnostic::ReinitResponse* response);
-    virtual ::grpc::Status StreamEntityListBySize(::grpc::ServerContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest* request, ::grpc::ServerWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* writer);
   };
   template <class BaseClass>
   class WithAsyncMethod_CheckDBPerf : public BaseClass {
@@ -378,112 +230,12 @@ class G2Diagnostic final {
     }
   };
   template <class BaseClass>
-  class WithAsyncMethod_GetAvailableMemory : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_GetAvailableMemory() {
-      ::grpc::Service::MarkMethodAsync(2);
-    }
-    ~WithAsyncMethod_GetAvailableMemory() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetAvailableMemory(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetAvailableMemoryRequest* /*request*/, ::g2diagnostic::GetAvailableMemoryResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestGetAvailableMemory(::grpc::ServerContext* context, ::g2diagnostic::GetAvailableMemoryRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2diagnostic::GetAvailableMemoryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_GetDBInfo : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_GetDBInfo() {
-      ::grpc::Service::MarkMethodAsync(3);
-    }
-    ~WithAsyncMethod_GetDBInfo() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetDBInfo(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetDBInfoRequest* /*request*/, ::g2diagnostic::GetDBInfoResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestGetDBInfo(::grpc::ServerContext* context, ::g2diagnostic::GetDBInfoRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2diagnostic::GetDBInfoResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_GetLogicalCores : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_GetLogicalCores() {
-      ::grpc::Service::MarkMethodAsync(4);
-    }
-    ~WithAsyncMethod_GetLogicalCores() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetLogicalCores(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetLogicalCoresRequest* /*request*/, ::g2diagnostic::GetLogicalCoresResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestGetLogicalCores(::grpc::ServerContext* context, ::g2diagnostic::GetLogicalCoresRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2diagnostic::GetLogicalCoresResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_GetPhysicalCores : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_GetPhysicalCores() {
-      ::grpc::Service::MarkMethodAsync(5);
-    }
-    ~WithAsyncMethod_GetPhysicalCores() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetPhysicalCores(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetPhysicalCoresRequest* /*request*/, ::g2diagnostic::GetPhysicalCoresResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestGetPhysicalCores(::grpc::ServerContext* context, ::g2diagnostic::GetPhysicalCoresRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2diagnostic::GetPhysicalCoresResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_GetTotalSystemMemory : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_GetTotalSystemMemory() {
-      ::grpc::Service::MarkMethodAsync(6);
-    }
-    ~WithAsyncMethod_GetTotalSystemMemory() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetTotalSystemMemory(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetTotalSystemMemoryRequest* /*request*/, ::g2diagnostic::GetTotalSystemMemoryResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestGetTotalSystemMemory(::grpc::ServerContext* context, ::g2diagnostic::GetTotalSystemMemoryRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2diagnostic::GetTotalSystemMemoryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
   class WithAsyncMethod_Init : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Init() {
-      ::grpc::Service::MarkMethodAsync(7);
+      ::grpc::Service::MarkMethodAsync(2);
     }
     ~WithAsyncMethod_Init() override {
       BaseClassMustBeDerivedFromService(this);
@@ -494,7 +246,7 @@ class G2Diagnostic final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestInit(::grpc::ServerContext* context, ::g2diagnostic::InitRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2diagnostic::InitResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -503,7 +255,7 @@ class G2Diagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_InitWithConfigID() {
-      ::grpc::Service::MarkMethodAsync(8);
+      ::grpc::Service::MarkMethodAsync(3);
     }
     ~WithAsyncMethod_InitWithConfigID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -514,7 +266,7 @@ class G2Diagnostic final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestInitWithConfigID(::grpc::ServerContext* context, ::g2diagnostic::InitWithConfigIDRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2diagnostic::InitWithConfigIDResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -523,7 +275,7 @@ class G2Diagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Reinit() {
-      ::grpc::Service::MarkMethodAsync(9);
+      ::grpc::Service::MarkMethodAsync(4);
     }
     ~WithAsyncMethod_Reinit() override {
       BaseClassMustBeDerivedFromService(this);
@@ -534,30 +286,10 @@ class G2Diagnostic final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReinit(::grpc::ServerContext* context, ::g2diagnostic::ReinitRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2diagnostic::ReinitResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  template <class BaseClass>
-  class WithAsyncMethod_StreamEntityListBySize : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_StreamEntityListBySize() {
-      ::grpc::Service::MarkMethodAsync(10);
-    }
-    ~WithAsyncMethod_StreamEntityListBySize() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status StreamEntityListBySize(::grpc::ServerContext* /*context*/, const ::g2diagnostic::StreamEntityListBySizeRequest* /*request*/, ::grpc::ServerWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* /*writer*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestStreamEntityListBySize(::grpc::ServerContext* context, ::g2diagnostic::StreamEntityListBySizeRequest* request, ::grpc::ServerAsyncWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(10, context, request, writer, new_call_cq, notification_cq, tag);
-    }
-  };
-  typedef WithAsyncMethod_CheckDBPerf<WithAsyncMethod_Destroy<WithAsyncMethod_GetAvailableMemory<WithAsyncMethod_GetDBInfo<WithAsyncMethod_GetLogicalCores<WithAsyncMethod_GetPhysicalCores<WithAsyncMethod_GetTotalSystemMemory<WithAsyncMethod_Init<WithAsyncMethod_InitWithConfigID<WithAsyncMethod_Reinit<WithAsyncMethod_StreamEntityListBySize<Service > > > > > > > > > > > AsyncService;
+  typedef WithAsyncMethod_CheckDBPerf<WithAsyncMethod_Destroy<WithAsyncMethod_Init<WithAsyncMethod_InitWithConfigID<WithAsyncMethod_Reinit<Service > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_CheckDBPerf : public BaseClass {
    private:
@@ -613,153 +345,18 @@ class G2Diagnostic final {
       ::grpc::CallbackServerContext* /*context*/, const ::g2diagnostic::DestroyRequest* /*request*/, ::g2diagnostic::DestroyResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_GetAvailableMemory : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_GetAvailableMemory() {
-      ::grpc::Service::MarkMethodCallback(2,
-          new ::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::GetAvailableMemoryRequest, ::g2diagnostic::GetAvailableMemoryResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::g2diagnostic::GetAvailableMemoryRequest* request, ::g2diagnostic::GetAvailableMemoryResponse* response) { return this->GetAvailableMemory(context, request, response); }));}
-    void SetMessageAllocatorFor_GetAvailableMemory(
-        ::grpc::MessageAllocator< ::g2diagnostic::GetAvailableMemoryRequest, ::g2diagnostic::GetAvailableMemoryResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::GetAvailableMemoryRequest, ::g2diagnostic::GetAvailableMemoryResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_GetAvailableMemory() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetAvailableMemory(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetAvailableMemoryRequest* /*request*/, ::g2diagnostic::GetAvailableMemoryResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* GetAvailableMemory(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2diagnostic::GetAvailableMemoryRequest* /*request*/, ::g2diagnostic::GetAvailableMemoryResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_GetDBInfo : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_GetDBInfo() {
-      ::grpc::Service::MarkMethodCallback(3,
-          new ::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::GetDBInfoRequest, ::g2diagnostic::GetDBInfoResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::g2diagnostic::GetDBInfoRequest* request, ::g2diagnostic::GetDBInfoResponse* response) { return this->GetDBInfo(context, request, response); }));}
-    void SetMessageAllocatorFor_GetDBInfo(
-        ::grpc::MessageAllocator< ::g2diagnostic::GetDBInfoRequest, ::g2diagnostic::GetDBInfoResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::GetDBInfoRequest, ::g2diagnostic::GetDBInfoResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_GetDBInfo() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetDBInfo(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetDBInfoRequest* /*request*/, ::g2diagnostic::GetDBInfoResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* GetDBInfo(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2diagnostic::GetDBInfoRequest* /*request*/, ::g2diagnostic::GetDBInfoResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_GetLogicalCores : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_GetLogicalCores() {
-      ::grpc::Service::MarkMethodCallback(4,
-          new ::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::GetLogicalCoresRequest, ::g2diagnostic::GetLogicalCoresResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::g2diagnostic::GetLogicalCoresRequest* request, ::g2diagnostic::GetLogicalCoresResponse* response) { return this->GetLogicalCores(context, request, response); }));}
-    void SetMessageAllocatorFor_GetLogicalCores(
-        ::grpc::MessageAllocator< ::g2diagnostic::GetLogicalCoresRequest, ::g2diagnostic::GetLogicalCoresResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::GetLogicalCoresRequest, ::g2diagnostic::GetLogicalCoresResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_GetLogicalCores() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetLogicalCores(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetLogicalCoresRequest* /*request*/, ::g2diagnostic::GetLogicalCoresResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* GetLogicalCores(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2diagnostic::GetLogicalCoresRequest* /*request*/, ::g2diagnostic::GetLogicalCoresResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_GetPhysicalCores : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_GetPhysicalCores() {
-      ::grpc::Service::MarkMethodCallback(5,
-          new ::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::GetPhysicalCoresRequest, ::g2diagnostic::GetPhysicalCoresResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::g2diagnostic::GetPhysicalCoresRequest* request, ::g2diagnostic::GetPhysicalCoresResponse* response) { return this->GetPhysicalCores(context, request, response); }));}
-    void SetMessageAllocatorFor_GetPhysicalCores(
-        ::grpc::MessageAllocator< ::g2diagnostic::GetPhysicalCoresRequest, ::g2diagnostic::GetPhysicalCoresResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::GetPhysicalCoresRequest, ::g2diagnostic::GetPhysicalCoresResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_GetPhysicalCores() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetPhysicalCores(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetPhysicalCoresRequest* /*request*/, ::g2diagnostic::GetPhysicalCoresResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* GetPhysicalCores(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2diagnostic::GetPhysicalCoresRequest* /*request*/, ::g2diagnostic::GetPhysicalCoresResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_GetTotalSystemMemory : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_GetTotalSystemMemory() {
-      ::grpc::Service::MarkMethodCallback(6,
-          new ::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::GetTotalSystemMemoryRequest, ::g2diagnostic::GetTotalSystemMemoryResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest* request, ::g2diagnostic::GetTotalSystemMemoryResponse* response) { return this->GetTotalSystemMemory(context, request, response); }));}
-    void SetMessageAllocatorFor_GetTotalSystemMemory(
-        ::grpc::MessageAllocator< ::g2diagnostic::GetTotalSystemMemoryRequest, ::g2diagnostic::GetTotalSystemMemoryResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(6);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::GetTotalSystemMemoryRequest, ::g2diagnostic::GetTotalSystemMemoryResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_GetTotalSystemMemory() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetTotalSystemMemory(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetTotalSystemMemoryRequest* /*request*/, ::g2diagnostic::GetTotalSystemMemoryResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* GetTotalSystemMemory(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2diagnostic::GetTotalSystemMemoryRequest* /*request*/, ::g2diagnostic::GetTotalSystemMemoryResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
   class WithCallbackMethod_Init : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_Init() {
-      ::grpc::Service::MarkMethodCallback(7,
+      ::grpc::Service::MarkMethodCallback(2,
           new ::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::InitRequest, ::g2diagnostic::InitResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2diagnostic::InitRequest* request, ::g2diagnostic::InitResponse* response) { return this->Init(context, request, response); }));}
     void SetMessageAllocatorFor_Init(
         ::grpc::MessageAllocator< ::g2diagnostic::InitRequest, ::g2diagnostic::InitResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(7);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::InitRequest, ::g2diagnostic::InitResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -780,13 +377,13 @@ class G2Diagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_InitWithConfigID() {
-      ::grpc::Service::MarkMethodCallback(8,
+      ::grpc::Service::MarkMethodCallback(3,
           new ::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::InitWithConfigIDRequest, ::g2diagnostic::InitWithConfigIDResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2diagnostic::InitWithConfigIDRequest* request, ::g2diagnostic::InitWithConfigIDResponse* response) { return this->InitWithConfigID(context, request, response); }));}
     void SetMessageAllocatorFor_InitWithConfigID(
         ::grpc::MessageAllocator< ::g2diagnostic::InitWithConfigIDRequest, ::g2diagnostic::InitWithConfigIDResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(8);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::InitWithConfigIDRequest, ::g2diagnostic::InitWithConfigIDResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -807,13 +404,13 @@ class G2Diagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_Reinit() {
-      ::grpc::Service::MarkMethodCallback(9,
+      ::grpc::Service::MarkMethodCallback(4,
           new ::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::ReinitRequest, ::g2diagnostic::ReinitResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2diagnostic::ReinitRequest* request, ::g2diagnostic::ReinitResponse* response) { return this->Reinit(context, request, response); }));}
     void SetMessageAllocatorFor_Reinit(
         ::grpc::MessageAllocator< ::g2diagnostic::ReinitRequest, ::g2diagnostic::ReinitResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(9);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::ReinitRequest, ::g2diagnostic::ReinitResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -828,29 +425,7 @@ class G2Diagnostic final {
     virtual ::grpc::ServerUnaryReactor* Reinit(
       ::grpc::CallbackServerContext* /*context*/, const ::g2diagnostic::ReinitRequest* /*request*/, ::g2diagnostic::ReinitResponse* /*response*/)  { return nullptr; }
   };
-  template <class BaseClass>
-  class WithCallbackMethod_StreamEntityListBySize : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_StreamEntityListBySize() {
-      ::grpc::Service::MarkMethodCallback(10,
-          new ::grpc::internal::CallbackServerStreamingHandler< ::g2diagnostic::StreamEntityListBySizeRequest, ::g2diagnostic::StreamEntityListBySizeResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest* request) { return this->StreamEntityListBySize(context, request); }));
-    }
-    ~WithCallbackMethod_StreamEntityListBySize() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status StreamEntityListBySize(::grpc::ServerContext* /*context*/, const ::g2diagnostic::StreamEntityListBySizeRequest* /*request*/, ::grpc::ServerWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* /*writer*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerWriteReactor< ::g2diagnostic::StreamEntityListBySizeResponse>* StreamEntityListBySize(
-      ::grpc::CallbackServerContext* /*context*/, const ::g2diagnostic::StreamEntityListBySizeRequest* /*request*/)  { return nullptr; }
-  };
-  typedef WithCallbackMethod_CheckDBPerf<WithCallbackMethod_Destroy<WithCallbackMethod_GetAvailableMemory<WithCallbackMethod_GetDBInfo<WithCallbackMethod_GetLogicalCores<WithCallbackMethod_GetPhysicalCores<WithCallbackMethod_GetTotalSystemMemory<WithCallbackMethod_Init<WithCallbackMethod_InitWithConfigID<WithCallbackMethod_Reinit<WithCallbackMethod_StreamEntityListBySize<Service > > > > > > > > > > > CallbackService;
+  typedef WithCallbackMethod_CheckDBPerf<WithCallbackMethod_Destroy<WithCallbackMethod_Init<WithCallbackMethod_InitWithConfigID<WithCallbackMethod_Reinit<Service > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_CheckDBPerf : public BaseClass {
@@ -887,97 +462,12 @@ class G2Diagnostic final {
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_GetAvailableMemory : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_GetAvailableMemory() {
-      ::grpc::Service::MarkMethodGeneric(2);
-    }
-    ~WithGenericMethod_GetAvailableMemory() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetAvailableMemory(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetAvailableMemoryRequest* /*request*/, ::g2diagnostic::GetAvailableMemoryResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_GetDBInfo : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_GetDBInfo() {
-      ::grpc::Service::MarkMethodGeneric(3);
-    }
-    ~WithGenericMethod_GetDBInfo() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetDBInfo(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetDBInfoRequest* /*request*/, ::g2diagnostic::GetDBInfoResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_GetLogicalCores : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_GetLogicalCores() {
-      ::grpc::Service::MarkMethodGeneric(4);
-    }
-    ~WithGenericMethod_GetLogicalCores() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetLogicalCores(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetLogicalCoresRequest* /*request*/, ::g2diagnostic::GetLogicalCoresResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_GetPhysicalCores : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_GetPhysicalCores() {
-      ::grpc::Service::MarkMethodGeneric(5);
-    }
-    ~WithGenericMethod_GetPhysicalCores() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetPhysicalCores(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetPhysicalCoresRequest* /*request*/, ::g2diagnostic::GetPhysicalCoresResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_GetTotalSystemMemory : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_GetTotalSystemMemory() {
-      ::grpc::Service::MarkMethodGeneric(6);
-    }
-    ~WithGenericMethod_GetTotalSystemMemory() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetTotalSystemMemory(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetTotalSystemMemoryRequest* /*request*/, ::g2diagnostic::GetTotalSystemMemoryResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
   class WithGenericMethod_Init : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Init() {
-      ::grpc::Service::MarkMethodGeneric(7);
+      ::grpc::Service::MarkMethodGeneric(2);
     }
     ~WithGenericMethod_Init() override {
       BaseClassMustBeDerivedFromService(this);
@@ -994,7 +484,7 @@ class G2Diagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_InitWithConfigID() {
-      ::grpc::Service::MarkMethodGeneric(8);
+      ::grpc::Service::MarkMethodGeneric(3);
     }
     ~WithGenericMethod_InitWithConfigID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1011,30 +501,13 @@ class G2Diagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Reinit() {
-      ::grpc::Service::MarkMethodGeneric(9);
+      ::grpc::Service::MarkMethodGeneric(4);
     }
     ~WithGenericMethod_Reinit() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
     ::grpc::Status Reinit(::grpc::ServerContext* /*context*/, const ::g2diagnostic::ReinitRequest* /*request*/, ::g2diagnostic::ReinitResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_StreamEntityListBySize : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_StreamEntityListBySize() {
-      ::grpc::Service::MarkMethodGeneric(10);
-    }
-    ~WithGenericMethod_StreamEntityListBySize() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status StreamEntityListBySize(::grpc::ServerContext* /*context*/, const ::g2diagnostic::StreamEntityListBySizeRequest* /*request*/, ::grpc::ServerWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1080,112 +553,12 @@ class G2Diagnostic final {
     }
   };
   template <class BaseClass>
-  class WithRawMethod_GetAvailableMemory : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_GetAvailableMemory() {
-      ::grpc::Service::MarkMethodRaw(2);
-    }
-    ~WithRawMethod_GetAvailableMemory() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetAvailableMemory(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetAvailableMemoryRequest* /*request*/, ::g2diagnostic::GetAvailableMemoryResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestGetAvailableMemory(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_GetDBInfo : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_GetDBInfo() {
-      ::grpc::Service::MarkMethodRaw(3);
-    }
-    ~WithRawMethod_GetDBInfo() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetDBInfo(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetDBInfoRequest* /*request*/, ::g2diagnostic::GetDBInfoResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestGetDBInfo(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_GetLogicalCores : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_GetLogicalCores() {
-      ::grpc::Service::MarkMethodRaw(4);
-    }
-    ~WithRawMethod_GetLogicalCores() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetLogicalCores(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetLogicalCoresRequest* /*request*/, ::g2diagnostic::GetLogicalCoresResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestGetLogicalCores(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_GetPhysicalCores : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_GetPhysicalCores() {
-      ::grpc::Service::MarkMethodRaw(5);
-    }
-    ~WithRawMethod_GetPhysicalCores() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetPhysicalCores(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetPhysicalCoresRequest* /*request*/, ::g2diagnostic::GetPhysicalCoresResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestGetPhysicalCores(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_GetTotalSystemMemory : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_GetTotalSystemMemory() {
-      ::grpc::Service::MarkMethodRaw(6);
-    }
-    ~WithRawMethod_GetTotalSystemMemory() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetTotalSystemMemory(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetTotalSystemMemoryRequest* /*request*/, ::g2diagnostic::GetTotalSystemMemoryResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestGetTotalSystemMemory(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
   class WithRawMethod_Init : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Init() {
-      ::grpc::Service::MarkMethodRaw(7);
+      ::grpc::Service::MarkMethodRaw(2);
     }
     ~WithRawMethod_Init() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1196,7 +569,7 @@ class G2Diagnostic final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestInit(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1205,7 +578,7 @@ class G2Diagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_InitWithConfigID() {
-      ::grpc::Service::MarkMethodRaw(8);
+      ::grpc::Service::MarkMethodRaw(3);
     }
     ~WithRawMethod_InitWithConfigID() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1216,7 +589,7 @@ class G2Diagnostic final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestInitWithConfigID(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1225,7 +598,7 @@ class G2Diagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Reinit() {
-      ::grpc::Service::MarkMethodRaw(9);
+      ::grpc::Service::MarkMethodRaw(4);
     }
     ~WithRawMethod_Reinit() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1236,27 +609,7 @@ class G2Diagnostic final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReinit(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_StreamEntityListBySize : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_StreamEntityListBySize() {
-      ::grpc::Service::MarkMethodRaw(10);
-    }
-    ~WithRawMethod_StreamEntityListBySize() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status StreamEntityListBySize(::grpc::ServerContext* /*context*/, const ::g2diagnostic::StreamEntityListBySizeRequest* /*request*/, ::grpc::ServerWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* /*writer*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestStreamEntityListBySize(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncWriter< ::grpc::ByteBuffer>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(10, context, request, writer, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1304,122 +657,12 @@ class G2Diagnostic final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_GetAvailableMemory : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_GetAvailableMemory() {
-      ::grpc::Service::MarkMethodRawCallback(2,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetAvailableMemory(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_GetAvailableMemory() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetAvailableMemory(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetAvailableMemoryRequest* /*request*/, ::g2diagnostic::GetAvailableMemoryResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* GetAvailableMemory(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_GetDBInfo : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_GetDBInfo() {
-      ::grpc::Service::MarkMethodRawCallback(3,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetDBInfo(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_GetDBInfo() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetDBInfo(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetDBInfoRequest* /*request*/, ::g2diagnostic::GetDBInfoResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* GetDBInfo(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_GetLogicalCores : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_GetLogicalCores() {
-      ::grpc::Service::MarkMethodRawCallback(4,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetLogicalCores(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_GetLogicalCores() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetLogicalCores(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetLogicalCoresRequest* /*request*/, ::g2diagnostic::GetLogicalCoresResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* GetLogicalCores(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_GetPhysicalCores : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_GetPhysicalCores() {
-      ::grpc::Service::MarkMethodRawCallback(5,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetPhysicalCores(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_GetPhysicalCores() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetPhysicalCores(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetPhysicalCoresRequest* /*request*/, ::g2diagnostic::GetPhysicalCoresResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* GetPhysicalCores(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_GetTotalSystemMemory : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_GetTotalSystemMemory() {
-      ::grpc::Service::MarkMethodRawCallback(6,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetTotalSystemMemory(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_GetTotalSystemMemory() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status GetTotalSystemMemory(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetTotalSystemMemoryRequest* /*request*/, ::g2diagnostic::GetTotalSystemMemoryResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* GetTotalSystemMemory(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
   class WithRawCallbackMethod_Init : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_Init() {
-      ::grpc::Service::MarkMethodRawCallback(7,
+      ::grpc::Service::MarkMethodRawCallback(2,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Init(context, request, response); }));
@@ -1441,7 +684,7 @@ class G2Diagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_InitWithConfigID() {
-      ::grpc::Service::MarkMethodRawCallback(8,
+      ::grpc::Service::MarkMethodRawCallback(3,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->InitWithConfigID(context, request, response); }));
@@ -1463,7 +706,7 @@ class G2Diagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_Reinit() {
-      ::grpc::Service::MarkMethodRawCallback(9,
+      ::grpc::Service::MarkMethodRawCallback(4,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Reinit(context, request, response); }));
@@ -1478,28 +721,6 @@ class G2Diagnostic final {
     }
     virtual ::grpc::ServerUnaryReactor* Reinit(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_StreamEntityListBySize : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_StreamEntityListBySize() {
-      ::grpc::Service::MarkMethodRawCallback(10,
-          new ::grpc::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const::grpc::ByteBuffer* request) { return this->StreamEntityListBySize(context, request); }));
-    }
-    ~WithRawCallbackMethod_StreamEntityListBySize() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status StreamEntityListBySize(::grpc::ServerContext* /*context*/, const ::g2diagnostic::StreamEntityListBySizeRequest* /*request*/, ::grpc::ServerWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* /*writer*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerWriteReactor< ::grpc::ByteBuffer>* StreamEntityListBySize(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_CheckDBPerf : public BaseClass {
@@ -1556,147 +777,12 @@ class G2Diagnostic final {
     virtual ::grpc::Status StreamedDestroy(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2diagnostic::DestroyRequest,::g2diagnostic::DestroyResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_GetAvailableMemory : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_GetAvailableMemory() {
-      ::grpc::Service::MarkMethodStreamed(2,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::g2diagnostic::GetAvailableMemoryRequest, ::g2diagnostic::GetAvailableMemoryResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::g2diagnostic::GetAvailableMemoryRequest, ::g2diagnostic::GetAvailableMemoryResponse>* streamer) {
-                       return this->StreamedGetAvailableMemory(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_GetAvailableMemory() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status GetAvailableMemory(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetAvailableMemoryRequest* /*request*/, ::g2diagnostic::GetAvailableMemoryResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetAvailableMemory(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2diagnostic::GetAvailableMemoryRequest,::g2diagnostic::GetAvailableMemoryResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_GetDBInfo : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_GetDBInfo() {
-      ::grpc::Service::MarkMethodStreamed(3,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::g2diagnostic::GetDBInfoRequest, ::g2diagnostic::GetDBInfoResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::g2diagnostic::GetDBInfoRequest, ::g2diagnostic::GetDBInfoResponse>* streamer) {
-                       return this->StreamedGetDBInfo(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_GetDBInfo() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status GetDBInfo(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetDBInfoRequest* /*request*/, ::g2diagnostic::GetDBInfoResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetDBInfo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2diagnostic::GetDBInfoRequest,::g2diagnostic::GetDBInfoResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_GetLogicalCores : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_GetLogicalCores() {
-      ::grpc::Service::MarkMethodStreamed(4,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::g2diagnostic::GetLogicalCoresRequest, ::g2diagnostic::GetLogicalCoresResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::g2diagnostic::GetLogicalCoresRequest, ::g2diagnostic::GetLogicalCoresResponse>* streamer) {
-                       return this->StreamedGetLogicalCores(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_GetLogicalCores() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status GetLogicalCores(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetLogicalCoresRequest* /*request*/, ::g2diagnostic::GetLogicalCoresResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetLogicalCores(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2diagnostic::GetLogicalCoresRequest,::g2diagnostic::GetLogicalCoresResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_GetPhysicalCores : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_GetPhysicalCores() {
-      ::grpc::Service::MarkMethodStreamed(5,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::g2diagnostic::GetPhysicalCoresRequest, ::g2diagnostic::GetPhysicalCoresResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::g2diagnostic::GetPhysicalCoresRequest, ::g2diagnostic::GetPhysicalCoresResponse>* streamer) {
-                       return this->StreamedGetPhysicalCores(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_GetPhysicalCores() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status GetPhysicalCores(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetPhysicalCoresRequest* /*request*/, ::g2diagnostic::GetPhysicalCoresResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetPhysicalCores(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2diagnostic::GetPhysicalCoresRequest,::g2diagnostic::GetPhysicalCoresResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_GetTotalSystemMemory : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_GetTotalSystemMemory() {
-      ::grpc::Service::MarkMethodStreamed(6,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::g2diagnostic::GetTotalSystemMemoryRequest, ::g2diagnostic::GetTotalSystemMemoryResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::g2diagnostic::GetTotalSystemMemoryRequest, ::g2diagnostic::GetTotalSystemMemoryResponse>* streamer) {
-                       return this->StreamedGetTotalSystemMemory(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_GetTotalSystemMemory() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status GetTotalSystemMemory(::grpc::ServerContext* /*context*/, const ::g2diagnostic::GetTotalSystemMemoryRequest* /*request*/, ::g2diagnostic::GetTotalSystemMemoryResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetTotalSystemMemory(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2diagnostic::GetTotalSystemMemoryRequest,::g2diagnostic::GetTotalSystemMemoryResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
   class WithStreamedUnaryMethod_Init : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Init() {
-      ::grpc::Service::MarkMethodStreamed(7,
+      ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2diagnostic::InitRequest, ::g2diagnostic::InitResponse>(
             [this](::grpc::ServerContext* context,
@@ -1723,7 +809,7 @@ class G2Diagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_InitWithConfigID() {
-      ::grpc::Service::MarkMethodStreamed(8,
+      ::grpc::Service::MarkMethodStreamed(3,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2diagnostic::InitWithConfigIDRequest, ::g2diagnostic::InitWithConfigIDResponse>(
             [this](::grpc::ServerContext* context,
@@ -1750,7 +836,7 @@ class G2Diagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Reinit() {
-      ::grpc::Service::MarkMethodStreamed(9,
+      ::grpc::Service::MarkMethodStreamed(4,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2diagnostic::ReinitRequest, ::g2diagnostic::ReinitResponse>(
             [this](::grpc::ServerContext* context,
@@ -1771,36 +857,9 @@ class G2Diagnostic final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedReinit(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2diagnostic::ReinitRequest,::g2diagnostic::ReinitResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_CheckDBPerf<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_GetAvailableMemory<WithStreamedUnaryMethod_GetDBInfo<WithStreamedUnaryMethod_GetLogicalCores<WithStreamedUnaryMethod_GetPhysicalCores<WithStreamedUnaryMethod_GetTotalSystemMemory<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_Reinit<Service > > > > > > > > > > StreamedUnaryService;
-  template <class BaseClass>
-  class WithSplitStreamingMethod_StreamEntityListBySize : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithSplitStreamingMethod_StreamEntityListBySize() {
-      ::grpc::Service::MarkMethodStreamed(10,
-        new ::grpc::internal::SplitServerStreamingHandler<
-          ::g2diagnostic::StreamEntityListBySizeRequest, ::g2diagnostic::StreamEntityListBySizeResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerSplitStreamer<
-                     ::g2diagnostic::StreamEntityListBySizeRequest, ::g2diagnostic::StreamEntityListBySizeResponse>* streamer) {
-                       return this->StreamedStreamEntityListBySize(context,
-                         streamer);
-                  }));
-    }
-    ~WithSplitStreamingMethod_StreamEntityListBySize() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status StreamEntityListBySize(::grpc::ServerContext* /*context*/, const ::g2diagnostic::StreamEntityListBySizeRequest* /*request*/, ::grpc::ServerWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* /*writer*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with split streamed
-    virtual ::grpc::Status StreamedStreamEntityListBySize(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::g2diagnostic::StreamEntityListBySizeRequest,::g2diagnostic::StreamEntityListBySizeResponse>* server_split_streamer) = 0;
-  };
-  typedef WithSplitStreamingMethod_StreamEntityListBySize<Service > SplitStreamedService;
-  typedef WithStreamedUnaryMethod_CheckDBPerf<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_GetAvailableMemory<WithStreamedUnaryMethod_GetDBInfo<WithStreamedUnaryMethod_GetLogicalCores<WithStreamedUnaryMethod_GetPhysicalCores<WithStreamedUnaryMethod_GetTotalSystemMemory<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_Reinit<WithSplitStreamingMethod_StreamEntityListBySize<Service > > > > > > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_CheckDBPerf<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_Reinit<Service > > > > > StreamedUnaryService;
+  typedef Service SplitStreamedService;
+  typedef WithStreamedUnaryMethod_CheckDBPerf<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_Reinit<Service > > > > > StreamedService;
 };
 
 }  // namespace g2diagnostic

@@ -45,76 +45,6 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \G2diagnostic\GetAvailableMemoryRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function GetAvailableMemory(\G2diagnostic\GetAvailableMemoryRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2diagnostic.G2Diagnostic/GetAvailableMemory',
-        $argument,
-        ['\G2diagnostic\GetAvailableMemoryResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2diagnostic\GetDBInfoRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function GetDBInfo(\G2diagnostic\GetDBInfoRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2diagnostic.G2Diagnostic/GetDBInfo',
-        $argument,
-        ['\G2diagnostic\GetDBInfoResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2diagnostic\GetLogicalCoresRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function GetLogicalCores(\G2diagnostic\GetLogicalCoresRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2diagnostic.G2Diagnostic/GetLogicalCores',
-        $argument,
-        ['\G2diagnostic\GetLogicalCoresResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2diagnostic\GetPhysicalCoresRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function GetPhysicalCores(\G2diagnostic\GetPhysicalCoresRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2diagnostic.G2Diagnostic/GetPhysicalCores',
-        $argument,
-        ['\G2diagnostic\GetPhysicalCoresResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2diagnostic\GetTotalSystemMemoryRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function GetTotalSystemMemory(\G2diagnostic\GetTotalSystemMemoryRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2diagnostic.G2Diagnostic/GetTotalSystemMemory',
-        $argument,
-        ['\G2diagnostic\GetTotalSystemMemoryResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \G2diagnostic\InitRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -153,20 +83,6 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/g2diagnostic.G2Diagnostic/Reinit',
         $argument,
         ['\G2diagnostic\ReinitResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2diagnostic\StreamEntityListBySizeRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\ServerStreamingCall
-     */
-    public function StreamEntityListBySize(\G2diagnostic\StreamEntityListBySizeRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_serverStreamRequest('/g2diagnostic.G2Diagnostic/StreamEntityListBySize',
-        $argument,
-        ['\G2diagnostic\StreamEntityListBySizeResponse', 'decode'],
         $metadata, $options);
     }
 

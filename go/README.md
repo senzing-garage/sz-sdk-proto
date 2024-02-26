@@ -62,9 +62,7 @@ command.
       "g2configmgr" \
       "g2diagnostic" \
       "g2engine" \
-      "g2hasher" \
       "g2product" \
-      "g2ssadm" \
     )
 
     ```

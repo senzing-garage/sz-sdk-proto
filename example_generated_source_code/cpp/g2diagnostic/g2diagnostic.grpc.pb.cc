@@ -24,15 +24,9 @@ namespace g2diagnostic {
 static const char* G2Diagnostic_method_names[] = {
   "/g2diagnostic.G2Diagnostic/CheckDBPerf",
   "/g2diagnostic.G2Diagnostic/Destroy",
-  "/g2diagnostic.G2Diagnostic/GetAvailableMemory",
-  "/g2diagnostic.G2Diagnostic/GetDBInfo",
-  "/g2diagnostic.G2Diagnostic/GetLogicalCores",
-  "/g2diagnostic.G2Diagnostic/GetPhysicalCores",
-  "/g2diagnostic.G2Diagnostic/GetTotalSystemMemory",
   "/g2diagnostic.G2Diagnostic/Init",
   "/g2diagnostic.G2Diagnostic/InitWithConfigID",
   "/g2diagnostic.G2Diagnostic/Reinit",
-  "/g2diagnostic.G2Diagnostic/StreamEntityListBySize",
 };
 
 std::unique_ptr< G2Diagnostic::Stub> G2Diagnostic::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -44,15 +38,9 @@ std::unique_ptr< G2Diagnostic::Stub> G2Diagnostic::NewStub(const std::shared_ptr
 G2Diagnostic::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
   : channel_(channel), rpcmethod_CheckDBPerf_(G2Diagnostic_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_Destroy_(G2Diagnostic_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetAvailableMemory_(G2Diagnostic_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetDBInfo_(G2Diagnostic_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetLogicalCores_(G2Diagnostic_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetPhysicalCores_(G2Diagnostic_method_names[5], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetTotalSystemMemory_(G2Diagnostic_method_names[6], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Init_(G2Diagnostic_method_names[7], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_InitWithConfigID_(G2Diagnostic_method_names[8], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Reinit_(G2Diagnostic_method_names[9], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_StreamEntityListBySize_(G2Diagnostic_method_names[10], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_Init_(G2Diagnostic_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_InitWithConfigID_(G2Diagnostic_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Reinit_(G2Diagnostic_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status G2Diagnostic::Stub::CheckDBPerf(::grpc::ClientContext* context, const ::g2diagnostic::CheckDBPerfRequest& request, ::g2diagnostic::CheckDBPerfResponse* response) {
@@ -97,121 +85,6 @@ void G2Diagnostic::Stub::async::Destroy(::grpc::ClientContext* context, const ::
 ::grpc::ClientAsyncResponseReader< ::g2diagnostic::DestroyResponse>* G2Diagnostic::Stub::AsyncDestroyRaw(::grpc::ClientContext* context, const ::g2diagnostic::DestroyRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncDestroyRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Diagnostic::Stub::GetAvailableMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest& request, ::g2diagnostic::GetAvailableMemoryResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetAvailableMemoryRequest, ::g2diagnostic::GetAvailableMemoryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetAvailableMemory_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::GetAvailableMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest* request, ::g2diagnostic::GetAvailableMemoryResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::GetAvailableMemoryRequest, ::g2diagnostic::GetAvailableMemoryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetAvailableMemory_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::GetAvailableMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest* request, ::g2diagnostic::GetAvailableMemoryResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetAvailableMemory_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetAvailableMemoryResponse>* G2Diagnostic::Stub::PrepareAsyncGetAvailableMemoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::GetAvailableMemoryResponse, ::g2diagnostic::GetAvailableMemoryRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetAvailableMemory_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetAvailableMemoryResponse>* G2Diagnostic::Stub::AsyncGetAvailableMemoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetAvailableMemoryRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetAvailableMemoryRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Diagnostic::Stub::GetDBInfo(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest& request, ::g2diagnostic::GetDBInfoResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetDBInfoRequest, ::g2diagnostic::GetDBInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetDBInfo_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::GetDBInfo(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest* request, ::g2diagnostic::GetDBInfoResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::GetDBInfoRequest, ::g2diagnostic::GetDBInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetDBInfo_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::GetDBInfo(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest* request, ::g2diagnostic::GetDBInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetDBInfo_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetDBInfoResponse>* G2Diagnostic::Stub::PrepareAsyncGetDBInfoRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::GetDBInfoResponse, ::g2diagnostic::GetDBInfoRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetDBInfo_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetDBInfoResponse>* G2Diagnostic::Stub::AsyncGetDBInfoRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetDBInfoRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetDBInfoRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Diagnostic::Stub::GetLogicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest& request, ::g2diagnostic::GetLogicalCoresResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetLogicalCoresRequest, ::g2diagnostic::GetLogicalCoresResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetLogicalCores_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::GetLogicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest* request, ::g2diagnostic::GetLogicalCoresResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::GetLogicalCoresRequest, ::g2diagnostic::GetLogicalCoresResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetLogicalCores_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::GetLogicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest* request, ::g2diagnostic::GetLogicalCoresResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetLogicalCores_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetLogicalCoresResponse>* G2Diagnostic::Stub::PrepareAsyncGetLogicalCoresRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::GetLogicalCoresResponse, ::g2diagnostic::GetLogicalCoresRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetLogicalCores_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetLogicalCoresResponse>* G2Diagnostic::Stub::AsyncGetLogicalCoresRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetLogicalCoresRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetLogicalCoresRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Diagnostic::Stub::GetPhysicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest& request, ::g2diagnostic::GetPhysicalCoresResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetPhysicalCoresRequest, ::g2diagnostic::GetPhysicalCoresResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetPhysicalCores_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::GetPhysicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest* request, ::g2diagnostic::GetPhysicalCoresResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::GetPhysicalCoresRequest, ::g2diagnostic::GetPhysicalCoresResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetPhysicalCores_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::GetPhysicalCores(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest* request, ::g2diagnostic::GetPhysicalCoresResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetPhysicalCores_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetPhysicalCoresResponse>* G2Diagnostic::Stub::PrepareAsyncGetPhysicalCoresRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::GetPhysicalCoresResponse, ::g2diagnostic::GetPhysicalCoresRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetPhysicalCores_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetPhysicalCoresResponse>* G2Diagnostic::Stub::AsyncGetPhysicalCoresRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetPhysicalCoresRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetPhysicalCoresRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Diagnostic::Stub::GetTotalSystemMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest& request, ::g2diagnostic::GetTotalSystemMemoryResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::GetTotalSystemMemoryRequest, ::g2diagnostic::GetTotalSystemMemoryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetTotalSystemMemory_, context, request, response);
-}
-
-void G2Diagnostic::Stub::async::GetTotalSystemMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest* request, ::g2diagnostic::GetTotalSystemMemoryResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::GetTotalSystemMemoryRequest, ::g2diagnostic::GetTotalSystemMemoryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetTotalSystemMemory_, context, request, response, std::move(f));
-}
-
-void G2Diagnostic::Stub::async::GetTotalSystemMemory(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest* request, ::g2diagnostic::GetTotalSystemMemoryResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetTotalSystemMemory_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetTotalSystemMemoryResponse>* G2Diagnostic::Stub::PrepareAsyncGetTotalSystemMemoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::GetTotalSystemMemoryResponse, ::g2diagnostic::GetTotalSystemMemoryRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetTotalSystemMemory_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2diagnostic::GetTotalSystemMemoryResponse>* G2Diagnostic::Stub::AsyncGetTotalSystemMemoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetTotalSystemMemoryRaw(context, request, cq);
   result->StartCall();
   return result;
 }
@@ -285,22 +158,6 @@ void G2Diagnostic::Stub::async::Reinit(::grpc::ClientContext* context, const ::g
   return result;
 }
 
-::grpc::ClientReader< ::g2diagnostic::StreamEntityListBySizeResponse>* G2Diagnostic::Stub::StreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request) {
-  return ::grpc::internal::ClientReaderFactory< ::g2diagnostic::StreamEntityListBySizeResponse>::Create(channel_.get(), rpcmethod_StreamEntityListBySize_, context, request);
-}
-
-void G2Diagnostic::Stub::async::StreamEntityListBySize(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest* request, ::grpc::ClientReadReactor< ::g2diagnostic::StreamEntityListBySizeResponse>* reactor) {
-  ::grpc::internal::ClientCallbackReaderFactory< ::g2diagnostic::StreamEntityListBySizeResponse>::Create(stub_->channel_.get(), stub_->rpcmethod_StreamEntityListBySize_, context, request, reactor);
-}
-
-::grpc::ClientAsyncReader< ::g2diagnostic::StreamEntityListBySizeResponse>* G2Diagnostic::Stub::AsyncStreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
-  return ::grpc::internal::ClientAsyncReaderFactory< ::g2diagnostic::StreamEntityListBySizeResponse>::Create(channel_.get(), cq, rpcmethod_StreamEntityListBySize_, context, request, true, tag);
-}
-
-::grpc::ClientAsyncReader< ::g2diagnostic::StreamEntityListBySizeResponse>* G2Diagnostic::Stub::PrepareAsyncStreamEntityListBySizeRaw(::grpc::ClientContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncReaderFactory< ::g2diagnostic::StreamEntityListBySizeResponse>::Create(channel_.get(), cq, rpcmethod_StreamEntityListBySize_, context, request, false, nullptr);
-}
-
 G2Diagnostic::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       G2Diagnostic_method_names[0],
@@ -325,56 +182,6 @@ G2Diagnostic::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       G2Diagnostic_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetAvailableMemoryRequest, ::g2diagnostic::GetAvailableMemoryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::GetAvailableMemoryRequest* req,
-             ::g2diagnostic::GetAvailableMemoryResponse* resp) {
-               return service->GetAvailableMemory(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[3],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetDBInfoRequest, ::g2diagnostic::GetDBInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::GetDBInfoRequest* req,
-             ::g2diagnostic::GetDBInfoResponse* resp) {
-               return service->GetDBInfo(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[4],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetLogicalCoresRequest, ::g2diagnostic::GetLogicalCoresResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::GetLogicalCoresRequest* req,
-             ::g2diagnostic::GetLogicalCoresResponse* resp) {
-               return service->GetLogicalCores(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[5],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetPhysicalCoresRequest, ::g2diagnostic::GetPhysicalCoresResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::GetPhysicalCoresRequest* req,
-             ::g2diagnostic::GetPhysicalCoresResponse* resp) {
-               return service->GetPhysicalCores(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[6],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::GetTotalSystemMemoryRequest, ::g2diagnostic::GetTotalSystemMemoryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::GetTotalSystemMemoryRequest* req,
-             ::g2diagnostic::GetTotalSystemMemoryResponse* resp) {
-               return service->GetTotalSystemMemory(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[7],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::InitRequest, ::g2diagnostic::InitResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Diagnostic::Service* service,
              ::grpc::ServerContext* ctx,
@@ -383,7 +190,7 @@ G2Diagnostic::Service::Service() {
                return service->Init(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[8],
+      G2Diagnostic_method_names[3],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::InitWithConfigIDRequest, ::g2diagnostic::InitWithConfigIDResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Diagnostic::Service* service,
@@ -393,7 +200,7 @@ G2Diagnostic::Service::Service() {
                return service->InitWithConfigID(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[9],
+      G2Diagnostic_method_names[4],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::ReinitRequest, ::g2diagnostic::ReinitResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Diagnostic::Service* service,
@@ -401,16 +208,6 @@ G2Diagnostic::Service::Service() {
              const ::g2diagnostic::ReinitRequest* req,
              ::g2diagnostic::ReinitResponse* resp) {
                return service->Reinit(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Diagnostic_method_names[10],
-      ::grpc::internal::RpcMethod::SERVER_STREAMING,
-      new ::grpc::internal::ServerStreamingHandler< G2Diagnostic::Service, ::g2diagnostic::StreamEntityListBySizeRequest, ::g2diagnostic::StreamEntityListBySizeResponse>(
-          [](G2Diagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2diagnostic::StreamEntityListBySizeRequest* req,
-             ::grpc::ServerWriter<::g2diagnostic::StreamEntityListBySizeResponse>* writer) {
-               return service->StreamEntityListBySize(ctx, req, writer);
              }, this)));
 }
 
@@ -425,41 +222,6 @@ G2Diagnostic::Service::~Service() {
 }
 
 ::grpc::Status G2Diagnostic::Service::Destroy(::grpc::ServerContext* context, const ::g2diagnostic::DestroyRequest* request, ::g2diagnostic::DestroyResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Diagnostic::Service::GetAvailableMemory(::grpc::ServerContext* context, const ::g2diagnostic::GetAvailableMemoryRequest* request, ::g2diagnostic::GetAvailableMemoryResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Diagnostic::Service::GetDBInfo(::grpc::ServerContext* context, const ::g2diagnostic::GetDBInfoRequest* request, ::g2diagnostic::GetDBInfoResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Diagnostic::Service::GetLogicalCores(::grpc::ServerContext* context, const ::g2diagnostic::GetLogicalCoresRequest* request, ::g2diagnostic::GetLogicalCoresResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Diagnostic::Service::GetPhysicalCores(::grpc::ServerContext* context, const ::g2diagnostic::GetPhysicalCoresRequest* request, ::g2diagnostic::GetPhysicalCoresResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Diagnostic::Service::GetTotalSystemMemory(::grpc::ServerContext* context, const ::g2diagnostic::GetTotalSystemMemoryRequest* request, ::g2diagnostic::GetTotalSystemMemoryResponse* response) {
   (void) context;
   (void) request;
   (void) response;
@@ -484,13 +246,6 @@ G2Diagnostic::Service::~Service() {
   (void) context;
   (void) request;
   (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Diagnostic::Service::StreamEntityListBySize(::grpc::ServerContext* context, const ::g2diagnostic::StreamEntityListBySizeRequest* request, ::grpc::ServerWriter< ::g2diagnostic::StreamEntityListBySizeResponse>* writer) {
-  (void) context;
-  (void) request;
-  (void) writer;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
