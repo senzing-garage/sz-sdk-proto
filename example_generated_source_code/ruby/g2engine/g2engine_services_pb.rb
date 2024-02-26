@@ -60,9 +60,6 @@ module G2engine
       rpc :Init, ::G2engine::InitRequest, ::G2engine::InitResponse
       rpc :InitWithConfigID, ::G2engine::InitWithConfigIDRequest, ::G2engine::InitWithConfigIDResponse
       rpc :PrimeEngine, ::G2engine::PrimeEngineRequest, ::G2engine::PrimeEngineResponse
-      rpc :Process, ::G2engine::ProcessRequest, ::G2engine::ProcessResponse
-      rpc :ProcessWithInfo, ::G2engine::ProcessWithInfoRequest, ::G2engine::ProcessWithInfoResponse
-      rpc :PurgeRepository, ::G2engine::PurgeRepositoryRequest, ::G2engine::PurgeRepositoryResponse
       rpc :ReevaluateEntity, ::G2engine::ReevaluateEntityRequest, ::G2engine::ReevaluateEntityResponse
       rpc :ReevaluateEntityWithInfo, ::G2engine::ReevaluateEntityWithInfoRequest, ::G2engine::ReevaluateEntityWithInfoResponse
       rpc :ReevaluateRecord, ::G2engine::ReevaluateRecordRequest, ::G2engine::ReevaluateRecordResponse
@@ -77,10 +74,6 @@ module G2engine
       rpc :StreamExportJSONEntityReport, ::G2engine::StreamExportJSONEntityReportRequest, stream(::G2engine::StreamExportJSONEntityReportResponse)
       rpc :WhyEntities, ::G2engine::WhyEntitiesRequest, ::G2engine::WhyEntitiesResponse
       rpc :WhyEntities_V2, ::G2engine::WhyEntities_V2Request, ::G2engine::WhyEntities_V2Response
-      rpc :WhyEntityByEntityID, ::G2engine::WhyEntityByEntityIDRequest, ::G2engine::WhyEntityByEntityIDResponse
-      rpc :WhyEntityByEntityID_V2, ::G2engine::WhyEntityByEntityID_V2Request, ::G2engine::WhyEntityByEntityID_V2Response
-      rpc :WhyEntityByRecordID, ::G2engine::WhyEntityByRecordIDRequest, ::G2engine::WhyEntityByRecordIDResponse
-      rpc :WhyEntityByRecordID_V2, ::G2engine::WhyEntityByRecordID_V2Request, ::G2engine::WhyEntityByRecordID_V2Response
       rpc :WhyRecords, ::G2engine::WhyRecordsRequest, ::G2engine::WhyRecordsResponse
       rpc :WhyRecords_V2, ::G2engine::WhyRecords_V2Request, ::G2engine::WhyRecords_V2Response
     end

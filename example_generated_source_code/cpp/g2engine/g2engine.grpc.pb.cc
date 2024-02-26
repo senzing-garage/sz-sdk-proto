@@ -68,9 +68,6 @@ static const char* G2Engine_method_names[] = {
   "/g2engine.G2Engine/Init",
   "/g2engine.G2Engine/InitWithConfigID",
   "/g2engine.G2Engine/PrimeEngine",
-  "/g2engine.G2Engine/Process",
-  "/g2engine.G2Engine/ProcessWithInfo",
-  "/g2engine.G2Engine/PurgeRepository",
   "/g2engine.G2Engine/ReevaluateEntity",
   "/g2engine.G2Engine/ReevaluateEntityWithInfo",
   "/g2engine.G2Engine/ReevaluateRecord",
@@ -85,10 +82,6 @@ static const char* G2Engine_method_names[] = {
   "/g2engine.G2Engine/StreamExportJSONEntityReport",
   "/g2engine.G2Engine/WhyEntities",
   "/g2engine.G2Engine/WhyEntities_V2",
-  "/g2engine.G2Engine/WhyEntityByEntityID",
-  "/g2engine.G2Engine/WhyEntityByEntityID_V2",
-  "/g2engine.G2Engine/WhyEntityByRecordID",
-  "/g2engine.G2Engine/WhyEntityByRecordID_V2",
   "/g2engine.G2Engine/WhyRecords",
   "/g2engine.G2Engine/WhyRecords_V2",
 };
@@ -146,29 +139,22 @@ G2Engine::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, 
   , rpcmethod_Init_(G2Engine_method_names[43], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_InitWithConfigID_(G2Engine_method_names[44], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_PrimeEngine_(G2Engine_method_names[45], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Process_(G2Engine_method_names[46], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ProcessWithInfo_(G2Engine_method_names[47], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_PurgeRepository_(G2Engine_method_names[48], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ReevaluateEntity_(G2Engine_method_names[49], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ReevaluateEntityWithInfo_(G2Engine_method_names[50], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ReevaluateRecord_(G2Engine_method_names[51], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ReevaluateRecordWithInfo_(G2Engine_method_names[52], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Reinit_(G2Engine_method_names[53], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ReplaceRecord_(G2Engine_method_names[54], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ReplaceRecordWithInfo_(G2Engine_method_names[55], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_SearchByAttributes_(G2Engine_method_names[56], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_SearchByAttributes_V2_(G2Engine_method_names[57], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Stats_(G2Engine_method_names[58], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_StreamExportCSVEntityReport_(G2Engine_method_names[59], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
-  , rpcmethod_StreamExportJSONEntityReport_(G2Engine_method_names[60], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
-  , rpcmethod_WhyEntities_(G2Engine_method_names[61], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WhyEntities_V2_(G2Engine_method_names[62], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WhyEntityByEntityID_(G2Engine_method_names[63], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WhyEntityByEntityID_V2_(G2Engine_method_names[64], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WhyEntityByRecordID_(G2Engine_method_names[65], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WhyEntityByRecordID_V2_(G2Engine_method_names[66], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WhyRecords_(G2Engine_method_names[67], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WhyRecords_V2_(G2Engine_method_names[68], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ReevaluateEntity_(G2Engine_method_names[46], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ReevaluateEntityWithInfo_(G2Engine_method_names[47], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ReevaluateRecord_(G2Engine_method_names[48], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ReevaluateRecordWithInfo_(G2Engine_method_names[49], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Reinit_(G2Engine_method_names[50], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ReplaceRecord_(G2Engine_method_names[51], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ReplaceRecordWithInfo_(G2Engine_method_names[52], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_SearchByAttributes_(G2Engine_method_names[53], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_SearchByAttributes_V2_(G2Engine_method_names[54], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Stats_(G2Engine_method_names[55], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_StreamExportCSVEntityReport_(G2Engine_method_names[56], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_StreamExportJSONEntityReport_(G2Engine_method_names[57], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_WhyEntities_(G2Engine_method_names[58], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_WhyEntities_V2_(G2Engine_method_names[59], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_WhyRecords_(G2Engine_method_names[60], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_WhyRecords_V2_(G2Engine_method_names[61], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status G2Engine::Stub::AddRecord(::grpc::ClientContext* context, const ::g2engine::AddRecordRequest& request, ::g2engine::AddRecordResponse* response) {
@@ -1229,75 +1215,6 @@ void G2Engine::Stub::async::PrimeEngine(::grpc::ClientContext* context, const ::
   return result;
 }
 
-::grpc::Status G2Engine::Stub::Process(::grpc::ClientContext* context, const ::g2engine::ProcessRequest& request, ::g2engine::ProcessResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2engine::ProcessRequest, ::g2engine::ProcessResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Process_, context, request, response);
-}
-
-void G2Engine::Stub::async::Process(::grpc::ClientContext* context, const ::g2engine::ProcessRequest* request, ::g2engine::ProcessResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2engine::ProcessRequest, ::g2engine::ProcessResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Process_, context, request, response, std::move(f));
-}
-
-void G2Engine::Stub::async::Process(::grpc::ClientContext* context, const ::g2engine::ProcessRequest* request, ::g2engine::ProcessResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Process_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2engine::ProcessResponse>* G2Engine::Stub::PrepareAsyncProcessRaw(::grpc::ClientContext* context, const ::g2engine::ProcessRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2engine::ProcessResponse, ::g2engine::ProcessRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Process_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2engine::ProcessResponse>* G2Engine::Stub::AsyncProcessRaw(::grpc::ClientContext* context, const ::g2engine::ProcessRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncProcessRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Engine::Stub::ProcessWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest& request, ::g2engine::ProcessWithInfoResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2engine::ProcessWithInfoRequest, ::g2engine::ProcessWithInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_ProcessWithInfo_, context, request, response);
-}
-
-void G2Engine::Stub::async::ProcessWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest* request, ::g2engine::ProcessWithInfoResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2engine::ProcessWithInfoRequest, ::g2engine::ProcessWithInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_ProcessWithInfo_, context, request, response, std::move(f));
-}
-
-void G2Engine::Stub::async::ProcessWithInfo(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest* request, ::g2engine::ProcessWithInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_ProcessWithInfo_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithInfoResponse>* G2Engine::Stub::PrepareAsyncProcessWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2engine::ProcessWithInfoResponse, ::g2engine::ProcessWithInfoRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_ProcessWithInfo_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2engine::ProcessWithInfoResponse>* G2Engine::Stub::AsyncProcessWithInfoRaw(::grpc::ClientContext* context, const ::g2engine::ProcessWithInfoRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncProcessWithInfoRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Engine::Stub::PurgeRepository(::grpc::ClientContext* context, const ::g2engine::PurgeRepositoryRequest& request, ::g2engine::PurgeRepositoryResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2engine::PurgeRepositoryRequest, ::g2engine::PurgeRepositoryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_PurgeRepository_, context, request, response);
-}
-
-void G2Engine::Stub::async::PurgeRepository(::grpc::ClientContext* context, const ::g2engine::PurgeRepositoryRequest* request, ::g2engine::PurgeRepositoryResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2engine::PurgeRepositoryRequest, ::g2engine::PurgeRepositoryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_PurgeRepository_, context, request, response, std::move(f));
-}
-
-void G2Engine::Stub::async::PurgeRepository(::grpc::ClientContext* context, const ::g2engine::PurgeRepositoryRequest* request, ::g2engine::PurgeRepositoryResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_PurgeRepository_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2engine::PurgeRepositoryResponse>* G2Engine::Stub::PrepareAsyncPurgeRepositoryRaw(::grpc::ClientContext* context, const ::g2engine::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2engine::PurgeRepositoryResponse, ::g2engine::PurgeRepositoryRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_PurgeRepository_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2engine::PurgeRepositoryResponse>* G2Engine::Stub::AsyncPurgeRepositoryRaw(::grpc::ClientContext* context, const ::g2engine::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncPurgeRepositoryRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
 ::grpc::Status G2Engine::Stub::ReevaluateEntity(::grpc::ClientContext* context, const ::g2engine::ReevaluateEntityRequest& request, ::g2engine::ReevaluateEntityResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2engine::ReevaluateEntityRequest, ::g2engine::ReevaluateEntityResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_ReevaluateEntity_, context, request, response);
 }
@@ -1602,98 +1519,6 @@ void G2Engine::Stub::async::WhyEntities_V2(::grpc::ClientContext* context, const
 ::grpc::ClientAsyncResponseReader< ::g2engine::WhyEntities_V2Response>* G2Engine::Stub::AsyncWhyEntities_V2Raw(::grpc::ClientContext* context, const ::g2engine::WhyEntities_V2Request& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncWhyEntities_V2Raw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Engine::Stub::WhyEntityByEntityID(::grpc::ClientContext* context, const ::g2engine::WhyEntityByEntityIDRequest& request, ::g2engine::WhyEntityByEntityIDResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2engine::WhyEntityByEntityIDRequest, ::g2engine::WhyEntityByEntityIDResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_WhyEntityByEntityID_, context, request, response);
-}
-
-void G2Engine::Stub::async::WhyEntityByEntityID(::grpc::ClientContext* context, const ::g2engine::WhyEntityByEntityIDRequest* request, ::g2engine::WhyEntityByEntityIDResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2engine::WhyEntityByEntityIDRequest, ::g2engine::WhyEntityByEntityIDResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WhyEntityByEntityID_, context, request, response, std::move(f));
-}
-
-void G2Engine::Stub::async::WhyEntityByEntityID(::grpc::ClientContext* context, const ::g2engine::WhyEntityByEntityIDRequest* request, ::g2engine::WhyEntityByEntityIDResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WhyEntityByEntityID_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2engine::WhyEntityByEntityIDResponse>* G2Engine::Stub::PrepareAsyncWhyEntityByEntityIDRaw(::grpc::ClientContext* context, const ::g2engine::WhyEntityByEntityIDRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2engine::WhyEntityByEntityIDResponse, ::g2engine::WhyEntityByEntityIDRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_WhyEntityByEntityID_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2engine::WhyEntityByEntityIDResponse>* G2Engine::Stub::AsyncWhyEntityByEntityIDRaw(::grpc::ClientContext* context, const ::g2engine::WhyEntityByEntityIDRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncWhyEntityByEntityIDRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Engine::Stub::WhyEntityByEntityID_V2(::grpc::ClientContext* context, const ::g2engine::WhyEntityByEntityID_V2Request& request, ::g2engine::WhyEntityByEntityID_V2Response* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2engine::WhyEntityByEntityID_V2Request, ::g2engine::WhyEntityByEntityID_V2Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_WhyEntityByEntityID_V2_, context, request, response);
-}
-
-void G2Engine::Stub::async::WhyEntityByEntityID_V2(::grpc::ClientContext* context, const ::g2engine::WhyEntityByEntityID_V2Request* request, ::g2engine::WhyEntityByEntityID_V2Response* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2engine::WhyEntityByEntityID_V2Request, ::g2engine::WhyEntityByEntityID_V2Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WhyEntityByEntityID_V2_, context, request, response, std::move(f));
-}
-
-void G2Engine::Stub::async::WhyEntityByEntityID_V2(::grpc::ClientContext* context, const ::g2engine::WhyEntityByEntityID_V2Request* request, ::g2engine::WhyEntityByEntityID_V2Response* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WhyEntityByEntityID_V2_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2engine::WhyEntityByEntityID_V2Response>* G2Engine::Stub::PrepareAsyncWhyEntityByEntityID_V2Raw(::grpc::ClientContext* context, const ::g2engine::WhyEntityByEntityID_V2Request& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2engine::WhyEntityByEntityID_V2Response, ::g2engine::WhyEntityByEntityID_V2Request, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_WhyEntityByEntityID_V2_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2engine::WhyEntityByEntityID_V2Response>* G2Engine::Stub::AsyncWhyEntityByEntityID_V2Raw(::grpc::ClientContext* context, const ::g2engine::WhyEntityByEntityID_V2Request& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncWhyEntityByEntityID_V2Raw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Engine::Stub::WhyEntityByRecordID(::grpc::ClientContext* context, const ::g2engine::WhyEntityByRecordIDRequest& request, ::g2engine::WhyEntityByRecordIDResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2engine::WhyEntityByRecordIDRequest, ::g2engine::WhyEntityByRecordIDResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_WhyEntityByRecordID_, context, request, response);
-}
-
-void G2Engine::Stub::async::WhyEntityByRecordID(::grpc::ClientContext* context, const ::g2engine::WhyEntityByRecordIDRequest* request, ::g2engine::WhyEntityByRecordIDResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2engine::WhyEntityByRecordIDRequest, ::g2engine::WhyEntityByRecordIDResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WhyEntityByRecordID_, context, request, response, std::move(f));
-}
-
-void G2Engine::Stub::async::WhyEntityByRecordID(::grpc::ClientContext* context, const ::g2engine::WhyEntityByRecordIDRequest* request, ::g2engine::WhyEntityByRecordIDResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WhyEntityByRecordID_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2engine::WhyEntityByRecordIDResponse>* G2Engine::Stub::PrepareAsyncWhyEntityByRecordIDRaw(::grpc::ClientContext* context, const ::g2engine::WhyEntityByRecordIDRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2engine::WhyEntityByRecordIDResponse, ::g2engine::WhyEntityByRecordIDRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_WhyEntityByRecordID_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2engine::WhyEntityByRecordIDResponse>* G2Engine::Stub::AsyncWhyEntityByRecordIDRaw(::grpc::ClientContext* context, const ::g2engine::WhyEntityByRecordIDRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncWhyEntityByRecordIDRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status G2Engine::Stub::WhyEntityByRecordID_V2(::grpc::ClientContext* context, const ::g2engine::WhyEntityByRecordID_V2Request& request, ::g2engine::WhyEntityByRecordID_V2Response* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::g2engine::WhyEntityByRecordID_V2Request, ::g2engine::WhyEntityByRecordID_V2Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_WhyEntityByRecordID_V2_, context, request, response);
-}
-
-void G2Engine::Stub::async::WhyEntityByRecordID_V2(::grpc::ClientContext* context, const ::g2engine::WhyEntityByRecordID_V2Request* request, ::g2engine::WhyEntityByRecordID_V2Response* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::g2engine::WhyEntityByRecordID_V2Request, ::g2engine::WhyEntityByRecordID_V2Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WhyEntityByRecordID_V2_, context, request, response, std::move(f));
-}
-
-void G2Engine::Stub::async::WhyEntityByRecordID_V2(::grpc::ClientContext* context, const ::g2engine::WhyEntityByRecordID_V2Request* request, ::g2engine::WhyEntityByRecordID_V2Response* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WhyEntityByRecordID_V2_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2engine::WhyEntityByRecordID_V2Response>* G2Engine::Stub::PrepareAsyncWhyEntityByRecordID_V2Raw(::grpc::ClientContext* context, const ::g2engine::WhyEntityByRecordID_V2Request& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2engine::WhyEntityByRecordID_V2Response, ::g2engine::WhyEntityByRecordID_V2Request, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_WhyEntityByRecordID_V2_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::g2engine::WhyEntityByRecordID_V2Response>* G2Engine::Stub::AsyncWhyEntityByRecordID_V2Raw(::grpc::ClientContext* context, const ::g2engine::WhyEntityByRecordID_V2Request& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncWhyEntityByRecordID_V2Raw(context, request, cq);
   result->StartCall();
   return result;
 }
@@ -2208,36 +2033,6 @@ G2Engine::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       G2Engine_method_names[46],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::ProcessRequest, ::g2engine::ProcessResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Engine::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2engine::ProcessRequest* req,
-             ::g2engine::ProcessResponse* resp) {
-               return service->Process(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[47],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::ProcessWithInfoRequest, ::g2engine::ProcessWithInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Engine::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2engine::ProcessWithInfoRequest* req,
-             ::g2engine::ProcessWithInfoResponse* resp) {
-               return service->ProcessWithInfo(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[48],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::PurgeRepositoryRequest, ::g2engine::PurgeRepositoryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Engine::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2engine::PurgeRepositoryRequest* req,
-             ::g2engine::PurgeRepositoryResponse* resp) {
-               return service->PurgeRepository(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[49],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::ReevaluateEntityRequest, ::g2engine::ReevaluateEntityResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Engine::Service* service,
              ::grpc::ServerContext* ctx,
@@ -2246,7 +2041,7 @@ G2Engine::Service::Service() {
                return service->ReevaluateEntity(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[50],
+      G2Engine_method_names[47],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::ReevaluateEntityWithInfoRequest, ::g2engine::ReevaluateEntityWithInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Engine::Service* service,
@@ -2256,7 +2051,7 @@ G2Engine::Service::Service() {
                return service->ReevaluateEntityWithInfo(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[51],
+      G2Engine_method_names[48],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::ReevaluateRecordRequest, ::g2engine::ReevaluateRecordResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Engine::Service* service,
@@ -2266,7 +2061,7 @@ G2Engine::Service::Service() {
                return service->ReevaluateRecord(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[52],
+      G2Engine_method_names[49],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::ReevaluateRecordWithInfoRequest, ::g2engine::ReevaluateRecordWithInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Engine::Service* service,
@@ -2276,7 +2071,7 @@ G2Engine::Service::Service() {
                return service->ReevaluateRecordWithInfo(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[53],
+      G2Engine_method_names[50],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::ReinitRequest, ::g2engine::ReinitResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Engine::Service* service,
@@ -2286,7 +2081,7 @@ G2Engine::Service::Service() {
                return service->Reinit(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[54],
+      G2Engine_method_names[51],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::ReplaceRecordRequest, ::g2engine::ReplaceRecordResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Engine::Service* service,
@@ -2296,7 +2091,7 @@ G2Engine::Service::Service() {
                return service->ReplaceRecord(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[55],
+      G2Engine_method_names[52],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::ReplaceRecordWithInfoRequest, ::g2engine::ReplaceRecordWithInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Engine::Service* service,
@@ -2306,7 +2101,7 @@ G2Engine::Service::Service() {
                return service->ReplaceRecordWithInfo(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[56],
+      G2Engine_method_names[53],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::SearchByAttributesRequest, ::g2engine::SearchByAttributesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Engine::Service* service,
@@ -2316,7 +2111,7 @@ G2Engine::Service::Service() {
                return service->SearchByAttributes(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[57],
+      G2Engine_method_names[54],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::SearchByAttributes_V2Request, ::g2engine::SearchByAttributes_V2Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Engine::Service* service,
@@ -2326,7 +2121,7 @@ G2Engine::Service::Service() {
                return service->SearchByAttributes_V2(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[58],
+      G2Engine_method_names[55],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::StatsRequest, ::g2engine::StatsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Engine::Service* service,
@@ -2336,7 +2131,7 @@ G2Engine::Service::Service() {
                return service->Stats(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[59],
+      G2Engine_method_names[56],
       ::grpc::internal::RpcMethod::SERVER_STREAMING,
       new ::grpc::internal::ServerStreamingHandler< G2Engine::Service, ::g2engine::StreamExportCSVEntityReportRequest, ::g2engine::StreamExportCSVEntityReportResponse>(
           [](G2Engine::Service* service,
@@ -2346,7 +2141,7 @@ G2Engine::Service::Service() {
                return service->StreamExportCSVEntityReport(ctx, req, writer);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[60],
+      G2Engine_method_names[57],
       ::grpc::internal::RpcMethod::SERVER_STREAMING,
       new ::grpc::internal::ServerStreamingHandler< G2Engine::Service, ::g2engine::StreamExportJSONEntityReportRequest, ::g2engine::StreamExportJSONEntityReportResponse>(
           [](G2Engine::Service* service,
@@ -2356,7 +2151,7 @@ G2Engine::Service::Service() {
                return service->StreamExportJSONEntityReport(ctx, req, writer);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[61],
+      G2Engine_method_names[58],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::WhyEntitiesRequest, ::g2engine::WhyEntitiesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Engine::Service* service,
@@ -2366,7 +2161,7 @@ G2Engine::Service::Service() {
                return service->WhyEntities(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[62],
+      G2Engine_method_names[59],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::WhyEntities_V2Request, ::g2engine::WhyEntities_V2Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Engine::Service* service,
@@ -2376,47 +2171,7 @@ G2Engine::Service::Service() {
                return service->WhyEntities_V2(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[63],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::WhyEntityByEntityIDRequest, ::g2engine::WhyEntityByEntityIDResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Engine::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2engine::WhyEntityByEntityIDRequest* req,
-             ::g2engine::WhyEntityByEntityIDResponse* resp) {
-               return service->WhyEntityByEntityID(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[64],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::WhyEntityByEntityID_V2Request, ::g2engine::WhyEntityByEntityID_V2Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Engine::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2engine::WhyEntityByEntityID_V2Request* req,
-             ::g2engine::WhyEntityByEntityID_V2Response* resp) {
-               return service->WhyEntityByEntityID_V2(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[65],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::WhyEntityByRecordIDRequest, ::g2engine::WhyEntityByRecordIDResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Engine::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2engine::WhyEntityByRecordIDRequest* req,
-             ::g2engine::WhyEntityByRecordIDResponse* resp) {
-               return service->WhyEntityByRecordID(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[66],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::WhyEntityByRecordID_V2Request, ::g2engine::WhyEntityByRecordID_V2Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](G2Engine::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::g2engine::WhyEntityByRecordID_V2Request* req,
-             ::g2engine::WhyEntityByRecordID_V2Response* resp) {
-               return service->WhyEntityByRecordID_V2(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[67],
+      G2Engine_method_names[60],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::WhyRecordsRequest, ::g2engine::WhyRecordsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Engine::Service* service,
@@ -2426,7 +2181,7 @@ G2Engine::Service::Service() {
                return service->WhyRecords(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      G2Engine_method_names[68],
+      G2Engine_method_names[61],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Engine::Service, ::g2engine::WhyRecords_V2Request, ::g2engine::WhyRecords_V2Response, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Engine::Service* service,
@@ -2762,27 +2517,6 @@ G2Engine::Service::~Service() {
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status G2Engine::Service::Process(::grpc::ServerContext* context, const ::g2engine::ProcessRequest* request, ::g2engine::ProcessResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Engine::Service::ProcessWithInfo(::grpc::ServerContext* context, const ::g2engine::ProcessWithInfoRequest* request, ::g2engine::ProcessWithInfoResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Engine::Service::PurgeRepository(::grpc::ServerContext* context, const ::g2engine::PurgeRepositoryRequest* request, ::g2engine::PurgeRepositoryResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
 ::grpc::Status G2Engine::Service::ReevaluateEntity(::grpc::ServerContext* context, const ::g2engine::ReevaluateEntityRequest* request, ::g2engine::ReevaluateEntityResponse* response) {
   (void) context;
   (void) request;
@@ -2875,34 +2609,6 @@ G2Engine::Service::~Service() {
 }
 
 ::grpc::Status G2Engine::Service::WhyEntities_V2(::grpc::ServerContext* context, const ::g2engine::WhyEntities_V2Request* request, ::g2engine::WhyEntities_V2Response* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Engine::Service::WhyEntityByEntityID(::grpc::ServerContext* context, const ::g2engine::WhyEntityByEntityIDRequest* request, ::g2engine::WhyEntityByEntityIDResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Engine::Service::WhyEntityByEntityID_V2(::grpc::ServerContext* context, const ::g2engine::WhyEntityByEntityID_V2Request* request, ::g2engine::WhyEntityByEntityID_V2Response* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Engine::Service::WhyEntityByRecordID(::grpc::ServerContext* context, const ::g2engine::WhyEntityByRecordIDRequest* request, ::g2engine::WhyEntityByRecordIDResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status G2Engine::Service::WhyEntityByRecordID_V2(::grpc::ServerContext* context, const ::g2engine::WhyEntityByRecordID_V2Request* request, ::g2engine::WhyEntityByRecordID_V2Response* response) {
   (void) context;
   (void) request;
   (void) response;

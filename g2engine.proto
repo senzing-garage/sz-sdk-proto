@@ -53,9 +53,6 @@ service G2Engine {
   rpc Init(InitRequest) returns (InitResponse) {}
   rpc InitWithConfigID(InitWithConfigIDRequest) returns (InitWithConfigIDResponse) {}
   rpc PrimeEngine(PrimeEngineRequest) returns (PrimeEngineResponse) {}
-  rpc Process(ProcessRequest) returns (ProcessResponse) {}
-  rpc ProcessWithInfo(ProcessWithInfoRequest) returns (ProcessWithInfoResponse) {}
-  rpc PurgeRepository(PurgeRepositoryRequest) returns (PurgeRepositoryResponse) {}
   rpc ReevaluateEntity(ReevaluateEntityRequest) returns (ReevaluateEntityResponse) {}
   rpc ReevaluateEntityWithInfo(ReevaluateEntityWithInfoRequest) returns (ReevaluateEntityWithInfoResponse) {}
   rpc ReevaluateRecord(ReevaluateRecordRequest) returns (ReevaluateRecordResponse) {}
@@ -70,10 +67,6 @@ service G2Engine {
   rpc StreamExportJSONEntityReport(StreamExportJSONEntityReportRequest) returns (stream StreamExportJSONEntityReportResponse) {}
   rpc WhyEntities(WhyEntitiesRequest) returns (WhyEntitiesResponse) {}
   rpc WhyEntities_V2(WhyEntities_V2Request) returns (WhyEntities_V2Response) {}
-  rpc WhyEntityByEntityID(WhyEntityByEntityIDRequest) returns (WhyEntityByEntityIDResponse) {}
-  rpc WhyEntityByEntityID_V2(WhyEntityByEntityID_V2Request) returns (WhyEntityByEntityID_V2Response) {}
-  rpc WhyEntityByRecordID(WhyEntityByRecordIDRequest) returns (WhyEntityByRecordIDResponse) {}
-  rpc WhyEntityByRecordID_V2(WhyEntityByRecordID_V2Request) returns (WhyEntityByRecordID_V2Response) {}
   rpc WhyRecords(WhyRecordsRequest) returns (WhyRecordsResponse) {}
   rpc WhyRecords_V2(WhyRecords_V2Request) returns (WhyRecords_V2Response) {}
 }
@@ -514,25 +507,6 @@ message PrimeEngineRequest {}
 
 message PrimeEngineResponse {}
 
-message ProcessRequest {
-  string record = 1;
-}
-
-message ProcessResponse {}
-
-message ProcessWithInfoRequest {
-  string record = 1;
-  int64 flags = 2;
-}
-
-message ProcessWithInfoResponse {
-  string result = 1;
-}
-
-message PurgeRepositoryRequest {}
-
-message PurgeRepositoryResponse {}
-
 message ReevaluateEntityRequest {
   int64 entityID = 1;
   int64 flags = 2;
@@ -650,41 +624,6 @@ message WhyEntities_V2Request {
 }
 
 message WhyEntities_V2Response {
-  string result = 1;
-}
-
-message WhyEntityByEntityIDRequest {
-  int64 entityID = 1;
-}
-
-message WhyEntityByEntityIDResponse {
-  string result = 1;
-}
-
-message WhyEntityByEntityID_V2Request {
-  int64 entityID = 1;
-  int64 flags = 2;
-}
-
-message WhyEntityByEntityID_V2Response {
-  string result = 1;
-}
-
-message WhyEntityByRecordIDRequest {
-  string dataSourceCode = 1;
-  string recordID = 2;
-}
-
-message WhyEntityByRecordIDResponse {
-  string result = 1;
-}
-
-message WhyEntityByRecordID_V2Request {
-  string dataSourceCode = 1;
-  string recordID = 2;
-  int64 flags = 3;
-}
-message WhyEntityByRecordID_V2Response {
   string result = 1;
 }
 

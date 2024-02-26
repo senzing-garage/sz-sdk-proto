@@ -24,15 +24,9 @@ const _ = grpc.SupportPackageIsVersion7
 type G2DiagnosticClient interface {
 	CheckDBPerf(ctx context.Context, in *CheckDBPerfRequest, opts ...grpc.CallOption) (*CheckDBPerfResponse, error)
 	Destroy(ctx context.Context, in *DestroyRequest, opts ...grpc.CallOption) (*DestroyResponse, error)
-	GetAvailableMemory(ctx context.Context, in *GetAvailableMemoryRequest, opts ...grpc.CallOption) (*GetAvailableMemoryResponse, error)
-	GetDBInfo(ctx context.Context, in *GetDBInfoRequest, opts ...grpc.CallOption) (*GetDBInfoResponse, error)
-	GetLogicalCores(ctx context.Context, in *GetLogicalCoresRequest, opts ...grpc.CallOption) (*GetLogicalCoresResponse, error)
-	GetPhysicalCores(ctx context.Context, in *GetPhysicalCoresRequest, opts ...grpc.CallOption) (*GetPhysicalCoresResponse, error)
-	GetTotalSystemMemory(ctx context.Context, in *GetTotalSystemMemoryRequest, opts ...grpc.CallOption) (*GetTotalSystemMemoryResponse, error)
 	Init(ctx context.Context, in *InitRequest, opts ...grpc.CallOption) (*InitResponse, error)
 	InitWithConfigID(ctx context.Context, in *InitWithConfigIDRequest, opts ...grpc.CallOption) (*InitWithConfigIDResponse, error)
 	Reinit(ctx context.Context, in *ReinitRequest, opts ...grpc.CallOption) (*ReinitResponse, error)
-	StreamEntityListBySize(ctx context.Context, in *StreamEntityListBySizeRequest, opts ...grpc.CallOption) (G2Diagnostic_StreamEntityListBySizeClient, error)
 }
 
 type g2DiagnosticClient struct {
@@ -55,51 +49,6 @@ func (c *g2DiagnosticClient) CheckDBPerf(ctx context.Context, in *CheckDBPerfReq
 func (c *g2DiagnosticClient) Destroy(ctx context.Context, in *DestroyRequest, opts ...grpc.CallOption) (*DestroyResponse, error) {
 	out := new(DestroyResponse)
 	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/Destroy", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2DiagnosticClient) GetAvailableMemory(ctx context.Context, in *GetAvailableMemoryRequest, opts ...grpc.CallOption) (*GetAvailableMemoryResponse, error) {
-	out := new(GetAvailableMemoryResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/GetAvailableMemory", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2DiagnosticClient) GetDBInfo(ctx context.Context, in *GetDBInfoRequest, opts ...grpc.CallOption) (*GetDBInfoResponse, error) {
-	out := new(GetDBInfoResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/GetDBInfo", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2DiagnosticClient) GetLogicalCores(ctx context.Context, in *GetLogicalCoresRequest, opts ...grpc.CallOption) (*GetLogicalCoresResponse, error) {
-	out := new(GetLogicalCoresResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/GetLogicalCores", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2DiagnosticClient) GetPhysicalCores(ctx context.Context, in *GetPhysicalCoresRequest, opts ...grpc.CallOption) (*GetPhysicalCoresResponse, error) {
-	out := new(GetPhysicalCoresResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/GetPhysicalCores", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *g2DiagnosticClient) GetTotalSystemMemory(ctx context.Context, in *GetTotalSystemMemoryRequest, opts ...grpc.CallOption) (*GetTotalSystemMemoryResponse, error) {
-	out := new(GetTotalSystemMemoryResponse)
-	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/GetTotalSystemMemory", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -133,53 +82,15 @@ func (c *g2DiagnosticClient) Reinit(ctx context.Context, in *ReinitRequest, opts
 	return out, nil
 }
 
-func (c *g2DiagnosticClient) StreamEntityListBySize(ctx context.Context, in *StreamEntityListBySizeRequest, opts ...grpc.CallOption) (G2Diagnostic_StreamEntityListBySizeClient, error) {
-	stream, err := c.cc.NewStream(ctx, &G2Diagnostic_ServiceDesc.Streams[0], "/g2diagnostic.G2Diagnostic/StreamEntityListBySize", opts...)
-	if err != nil {
-		return nil, err
-	}
-	x := &g2DiagnosticStreamEntityListBySizeClient{stream}
-	if err := x.ClientStream.SendMsg(in); err != nil {
-		return nil, err
-	}
-	if err := x.ClientStream.CloseSend(); err != nil {
-		return nil, err
-	}
-	return x, nil
-}
-
-type G2Diagnostic_StreamEntityListBySizeClient interface {
-	Recv() (*StreamEntityListBySizeResponse, error)
-	grpc.ClientStream
-}
-
-type g2DiagnosticStreamEntityListBySizeClient struct {
-	grpc.ClientStream
-}
-
-func (x *g2DiagnosticStreamEntityListBySizeClient) Recv() (*StreamEntityListBySizeResponse, error) {
-	m := new(StreamEntityListBySizeResponse)
-	if err := x.ClientStream.RecvMsg(m); err != nil {
-		return nil, err
-	}
-	return m, nil
-}
-
 // G2DiagnosticServer is the server API for G2Diagnostic service.
 // All implementations must embed UnimplementedG2DiagnosticServer
 // for forward compatibility
 type G2DiagnosticServer interface {
 	CheckDBPerf(context.Context, *CheckDBPerfRequest) (*CheckDBPerfResponse, error)
 	Destroy(context.Context, *DestroyRequest) (*DestroyResponse, error)
-	GetAvailableMemory(context.Context, *GetAvailableMemoryRequest) (*GetAvailableMemoryResponse, error)
-	GetDBInfo(context.Context, *GetDBInfoRequest) (*GetDBInfoResponse, error)
-	GetLogicalCores(context.Context, *GetLogicalCoresRequest) (*GetLogicalCoresResponse, error)
-	GetPhysicalCores(context.Context, *GetPhysicalCoresRequest) (*GetPhysicalCoresResponse, error)
-	GetTotalSystemMemory(context.Context, *GetTotalSystemMemoryRequest) (*GetTotalSystemMemoryResponse, error)
 	Init(context.Context, *InitRequest) (*InitResponse, error)
 	InitWithConfigID(context.Context, *InitWithConfigIDRequest) (*InitWithConfigIDResponse, error)
 	Reinit(context.Context, *ReinitRequest) (*ReinitResponse, error)
-	StreamEntityListBySize(*StreamEntityListBySizeRequest, G2Diagnostic_StreamEntityListBySizeServer) error
 	mustEmbedUnimplementedG2DiagnosticServer()
 }
 
@@ -193,21 +104,6 @@ func (UnimplementedG2DiagnosticServer) CheckDBPerf(context.Context, *CheckDBPerf
 func (UnimplementedG2DiagnosticServer) Destroy(context.Context, *DestroyRequest) (*DestroyResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Destroy not implemented")
 }
-func (UnimplementedG2DiagnosticServer) GetAvailableMemory(context.Context, *GetAvailableMemoryRequest) (*GetAvailableMemoryResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetAvailableMemory not implemented")
-}
-func (UnimplementedG2DiagnosticServer) GetDBInfo(context.Context, *GetDBInfoRequest) (*GetDBInfoResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetDBInfo not implemented")
-}
-func (UnimplementedG2DiagnosticServer) GetLogicalCores(context.Context, *GetLogicalCoresRequest) (*GetLogicalCoresResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetLogicalCores not implemented")
-}
-func (UnimplementedG2DiagnosticServer) GetPhysicalCores(context.Context, *GetPhysicalCoresRequest) (*GetPhysicalCoresResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetPhysicalCores not implemented")
-}
-func (UnimplementedG2DiagnosticServer) GetTotalSystemMemory(context.Context, *GetTotalSystemMemoryRequest) (*GetTotalSystemMemoryResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetTotalSystemMemory not implemented")
-}
 func (UnimplementedG2DiagnosticServer) Init(context.Context, *InitRequest) (*InitResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Init not implemented")
 }
@@ -216,9 +112,6 @@ func (UnimplementedG2DiagnosticServer) InitWithConfigID(context.Context, *InitWi
 }
 func (UnimplementedG2DiagnosticServer) Reinit(context.Context, *ReinitRequest) (*ReinitResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Reinit not implemented")
-}
-func (UnimplementedG2DiagnosticServer) StreamEntityListBySize(*StreamEntityListBySizeRequest, G2Diagnostic_StreamEntityListBySizeServer) error {
-	return status.Errorf(codes.Unimplemented, "method StreamEntityListBySize not implemented")
 }
 func (UnimplementedG2DiagnosticServer) mustEmbedUnimplementedG2DiagnosticServer() {}
 
@@ -265,96 +158,6 @@ func _G2Diagnostic_Destroy_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(G2DiagnosticServer).Destroy(ctx, req.(*DestroyRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Diagnostic_GetAvailableMemory_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetAvailableMemoryRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).GetAvailableMemory(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/GetAvailableMemory",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).GetAvailableMemory(ctx, req.(*GetAvailableMemoryRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Diagnostic_GetDBInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetDBInfoRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).GetDBInfo(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/GetDBInfo",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).GetDBInfo(ctx, req.(*GetDBInfoRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Diagnostic_GetLogicalCores_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetLogicalCoresRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).GetLogicalCores(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/GetLogicalCores",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).GetLogicalCores(ctx, req.(*GetLogicalCoresRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Diagnostic_GetPhysicalCores_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetPhysicalCoresRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).GetPhysicalCores(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/GetPhysicalCores",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).GetPhysicalCores(ctx, req.(*GetPhysicalCoresRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _G2Diagnostic_GetTotalSystemMemory_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetTotalSystemMemoryRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(G2DiagnosticServer).GetTotalSystemMemory(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/g2diagnostic.G2Diagnostic/GetTotalSystemMemory",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(G2DiagnosticServer).GetTotalSystemMemory(ctx, req.(*GetTotalSystemMemoryRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -413,27 +216,6 @@ func _G2Diagnostic_Reinit_Handler(srv interface{}, ctx context.Context, dec func
 	return interceptor(ctx, in, info, handler)
 }
 
-func _G2Diagnostic_StreamEntityListBySize_Handler(srv interface{}, stream grpc.ServerStream) error {
-	m := new(StreamEntityListBySizeRequest)
-	if err := stream.RecvMsg(m); err != nil {
-		return err
-	}
-	return srv.(G2DiagnosticServer).StreamEntityListBySize(m, &g2DiagnosticStreamEntityListBySizeServer{stream})
-}
-
-type G2Diagnostic_StreamEntityListBySizeServer interface {
-	Send(*StreamEntityListBySizeResponse) error
-	grpc.ServerStream
-}
-
-type g2DiagnosticStreamEntityListBySizeServer struct {
-	grpc.ServerStream
-}
-
-func (x *g2DiagnosticStreamEntityListBySizeServer) Send(m *StreamEntityListBySizeResponse) error {
-	return x.ServerStream.SendMsg(m)
-}
-
 // G2Diagnostic_ServiceDesc is the grpc.ServiceDesc for G2Diagnostic service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -450,26 +232,6 @@ var G2Diagnostic_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _G2Diagnostic_Destroy_Handler,
 		},
 		{
-			MethodName: "GetAvailableMemory",
-			Handler:    _G2Diagnostic_GetAvailableMemory_Handler,
-		},
-		{
-			MethodName: "GetDBInfo",
-			Handler:    _G2Diagnostic_GetDBInfo_Handler,
-		},
-		{
-			MethodName: "GetLogicalCores",
-			Handler:    _G2Diagnostic_GetLogicalCores_Handler,
-		},
-		{
-			MethodName: "GetPhysicalCores",
-			Handler:    _G2Diagnostic_GetPhysicalCores_Handler,
-		},
-		{
-			MethodName: "GetTotalSystemMemory",
-			Handler:    _G2Diagnostic_GetTotalSystemMemory_Handler,
-		},
-		{
 			MethodName: "Init",
 			Handler:    _G2Diagnostic_Init_Handler,
 		},
@@ -482,12 +244,6 @@ var G2Diagnostic_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _G2Diagnostic_Reinit_Handler,
 		},
 	},
-	Streams: []grpc.StreamDesc{
-		{
-			StreamName:    "StreamEntityListBySize",
-			Handler:       _G2Diagnostic_StreamEntityListBySize_Handler,
-			ServerStreams: true,
-		},
-	},
+	Streams:  []grpc.StreamDesc{},
 	Metadata: "g2diagnostic.proto",
 }

@@ -16,15 +16,9 @@ module G2diagnostic
 
       rpc :CheckDBPerf, ::G2diagnostic::CheckDBPerfRequest, ::G2diagnostic::CheckDBPerfResponse
       rpc :Destroy, ::G2diagnostic::DestroyRequest, ::G2diagnostic::DestroyResponse
-      rpc :GetAvailableMemory, ::G2diagnostic::GetAvailableMemoryRequest, ::G2diagnostic::GetAvailableMemoryResponse
-      rpc :GetDBInfo, ::G2diagnostic::GetDBInfoRequest, ::G2diagnostic::GetDBInfoResponse
-      rpc :GetLogicalCores, ::G2diagnostic::GetLogicalCoresRequest, ::G2diagnostic::GetLogicalCoresResponse
-      rpc :GetPhysicalCores, ::G2diagnostic::GetPhysicalCoresRequest, ::G2diagnostic::GetPhysicalCoresResponse
-      rpc :GetTotalSystemMemory, ::G2diagnostic::GetTotalSystemMemoryRequest, ::G2diagnostic::GetTotalSystemMemoryResponse
       rpc :Init, ::G2diagnostic::InitRequest, ::G2diagnostic::InitResponse
       rpc :InitWithConfigID, ::G2diagnostic::InitWithConfigIDRequest, ::G2diagnostic::InitWithConfigIDResponse
       rpc :Reinit, ::G2diagnostic::ReinitRequest, ::G2diagnostic::ReinitResponse
-      rpc :StreamEntityListBySize, ::G2diagnostic::StreamEntityListBySizeRequest, stream(::G2diagnostic::StreamEntityListBySizeResponse)
     end
 
     Stub = Service.rpc_stub_class

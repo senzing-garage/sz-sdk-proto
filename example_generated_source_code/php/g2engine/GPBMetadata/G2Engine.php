@@ -16,7 +16,7 @@ class G2Engine
         }
         $pool->internalAddGeneratedFile(
             '
-¶~
+‚s
 g2engine.protog2engine"^
 AddRecordRequest
 dataSourceCode (	
@@ -293,17 +293,7 @@ moduleName (	
 verboseLogging ("
 InitWithConfigIDResponse"
 PrimeEngineRequest"
-PrimeEngineResponse" 
-ProcessRequest
-record (	"
-ProcessResponse"7
-ProcessWithInfoRequest
-record (	
-flags (")
-ProcessWithInfoResponse
-result (	"
-PurgeRepositoryRequest"
-PurgeRepositoryResponse":
+PrimeEngineResponse":
 ReevaluateEntityRequest
 entityID (
 flags ("
@@ -372,26 +362,6 @@ $StreamExportJSONEntityReportResponse
 	entityID2 (
 flags ("(
 WhyEntities_V2Response
-result (	".
-WhyEntityByEntityIDRequest
-entityID ("-
-WhyEntityByEntityIDResponse
-result (	"@
-WhyEntityByEntityID_V2Request
-entityID (
-flags ("0
-WhyEntityByEntityID_V2Response
-result (	"F
-WhyEntityByRecordIDRequest
-dataSourceCode (	
-recordID (	"-
-WhyEntityByRecordIDResponse
-result (	"X
-WhyEntityByRecordID_V2Request
-dataSourceCode (	
-recordID (	
-flags ("0
-WhyEntityByRecordID_V2Response
 result (	"k
 WhyRecordsRequest
 dataSourceCode1 (	
@@ -407,7 +377,7 @@ $StreamExportJSONEntityReportResponse
 	recordID2 (	
 flags ("\'
 WhyRecords_V2Response
-result (	2Ó7
+result (	2Œ2
 G2EngineF
 	AddRecord.g2engine.AddRecordRequest.g2engine.AddRecordResponse" ^
 AddRecordWithInfo".g2engine.AddRecordWithInfoRequest#.g2engine.AddRecordWithInfoResponse" L
@@ -454,10 +424,7 @@ $FindPathIncludingSourceByRecordID_V25.g2engine.FindPathIncludingSourceByRecord
 HowEntityByEntityID_V2\'.g2engine.HowEntityByEntityID_V2Request(.g2engine.HowEntityByEntityID_V2Response" 7
 Init.g2engine.InitRequest.g2engine.InitResponse" [
 InitWithConfigID!.g2engine.InitWithConfigIDRequest".g2engine.InitWithConfigIDResponse" L
-PrimeEngine.g2engine.PrimeEngineRequest.g2engine.PrimeEngineResponse" @
-Process.g2engine.ProcessRequest.g2engine.ProcessResponse" X
-ProcessWithInfo .g2engine.ProcessWithInfoRequest!.g2engine.ProcessWithInfoResponse" X
-PurgeRepository .g2engine.PurgeRepositoryRequest!.g2engine.PurgeRepositoryResponse" [
+PrimeEngine.g2engine.PrimeEngineRequest.g2engine.PrimeEngineResponse" [
 ReevaluateEntity!.g2engine.ReevaluateEntityRequest".g2engine.ReevaluateEntityResponse" s
 ReevaluateEntityWithInfo).g2engine.ReevaluateEntityWithInfoRequest*.g2engine.ReevaluateEntityWithInfoResponse" [
 ReevaluateRecord!.g2engine.ReevaluateRecordRequest".g2engine.ReevaluateRecordResponse" s
@@ -471,11 +438,7 @@ $FindPathIncludingSourceByRecordID_V25.g2engine.FindPathIncludingSourceByRecord
 StreamExportCSVEntityReport,.g2engine.StreamExportCSVEntityReportRequest-.g2engine.StreamExportCSVEntityReportResponse" 0Å
 StreamExportJSONEntityReport-.g2engine.StreamExportJSONEntityReportRequest..g2engine.StreamExportJSONEntityReportResponse" 0L
 WhyEntities.g2engine.WhyEntitiesRequest.g2engine.WhyEntitiesResponse" U
-WhyEntities_V2.g2engine.WhyEntities_V2Request .g2engine.WhyEntities_V2Response" d
-WhyEntityByEntityID$.g2engine.WhyEntityByEntityIDRequest%.g2engine.WhyEntityByEntityIDResponse" m
-WhyEntityByEntityID_V2\'.g2engine.WhyEntityByEntityID_V2Request(.g2engine.WhyEntityByEntityID_V2Response" d
-WhyEntityByRecordID$.g2engine.WhyEntityByRecordIDRequest%.g2engine.WhyEntityByRecordIDResponse" m
-WhyEntityByRecordID_V2\'.g2engine.WhyEntityByRecordID_V2Request(.g2engine.WhyEntityByRecordID_V2Response" I
+WhyEntities_V2.g2engine.WhyEntities_V2Request .g2engine.WhyEntities_V2Response" I
 
 WhyRecords.g2engine.WhyRecordsRequest.g2engine.WhyRecordsResponse" R
 WhyRecords_V2.g2engine.WhyRecords_V2Request.g2engine.WhyRecords_V2Response" Bi

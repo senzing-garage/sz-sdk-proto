@@ -475,36 +475,6 @@ public final class G2EngineProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_g2engine_PrimeEngineResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2engine_ProcessRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2engine_ProcessRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2engine_ProcessResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2engine_ProcessResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2engine_ProcessWithInfoRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2engine_ProcessWithInfoRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2engine_ProcessWithInfoResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2engine_ProcessWithInfoResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2engine_PurgeRepositoryRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2engine_PurgeRepositoryRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2engine_PurgeRepositoryResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2engine_PurgeRepositoryResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_g2engine_ReevaluateEntityRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -644,46 +614,6 @@ public final class G2EngineProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_g2engine_WhyEntities_V2Response_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2engine_WhyEntityByEntityIDRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2engine_WhyEntityByEntityIDRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2engine_WhyEntityByEntityIDResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2engine_WhyEntityByEntityIDResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2engine_WhyEntityByEntityID_V2Request_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2engine_WhyEntityByEntityID_V2Request_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2engine_WhyEntityByEntityID_V2Response_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2engine_WhyEntityByEntityID_V2Response_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2engine_WhyEntityByRecordIDRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2engine_WhyEntityByRecordIDRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2engine_WhyEntityByRecordIDResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2engine_WhyEntityByRecordIDResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2engine_WhyEntityByRecordID_V2Request_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2engine_WhyEntityByRecordID_V2Request_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_g2engine_WhyEntityByRecordID_V2Response_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_g2engine_WhyEntityByRecordID_V2Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_g2engine_WhyRecordsRequest_descriptor;
   static final 
@@ -872,252 +802,218 @@ public final class G2EngineProto {
       "niParams\030\002 \001(\t\022\024\n\014initConfigID\030\003 \001(\003\022\026\n\016" +
       "verboseLogging\030\004 \001(\003\"\032\n\030InitWithConfigID" +
       "Response\"\024\n\022PrimeEngineRequest\"\025\n\023PrimeE" +
-      "ngineResponse\" \n\016ProcessRequest\022\016\n\006recor" +
-      "d\030\001 \001(\t\"\021\n\017ProcessResponse\"7\n\026ProcessWit" +
-      "hInfoRequest\022\016\n\006record\030\001 \001(\t\022\r\n\005flags\030\002 " +
-      "\001(\003\")\n\027ProcessWithInfoResponse\022\016\n\006result" +
-      "\030\001 \001(\t\"\030\n\026PurgeRepositoryRequest\"\031\n\027Purg" +
-      "eRepositoryResponse\":\n\027ReevaluateEntityR" +
-      "equest\022\020\n\010entityID\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"" +
-      "\032\n\030ReevaluateEntityResponse\"B\n\037Reevaluat" +
-      "eEntityWithInfoRequest\022\020\n\010entityID\030\001 \001(\003" +
-      "\022\r\n\005flags\030\002 \001(\003\"2\n ReevaluateEntityWithI" +
-      "nfoResponse\022\016\n\006result\030\001 \001(\t\"R\n\027Reevaluat" +
-      "eRecordRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020" +
-      "\n\010recordID\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"\032\n\030Reeva" +
-      "luateRecordResponse\"Z\n\037ReevaluateRecordW" +
-      "ithInfoRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020" +
-      "\n\010recordID\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"2\n Reeva" +
-      "luateRecordWithInfoResponse\022\016\n\006result\030\001 " +
-      "\001(\t\"%\n\rReinitRequest\022\024\n\014initConfigID\030\001 \001" +
-      "(\003\"\020\n\016ReinitResponse\"b\n\024ReplaceRecordReq" +
-      "uest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordID" +
-      "\030\002 \001(\t\022\020\n\010jsonData\030\003 \001(\t\022\016\n\006loadID\030\004 \001(\t" +
-      "\"\027\n\025ReplaceRecordResponse\"y\n\034ReplaceReco" +
-      "rdWithInfoRequest\022\026\n\016dataSourceCode\030\001 \001(" +
-      "\t\022\020\n\010recordID\030\002 \001(\t\022\020\n\010jsonData\030\003 \001(\t\022\016\n" +
-      "\006loadID\030\004 \001(\t\022\r\n\005flags\030\005 \001(\003\"/\n\035ReplaceR" +
-      "ecordWithInfoResponse\022\016\n\006result\030\001 \001(\t\"-\n" +
-      "\031SearchByAttributesRequest\022\020\n\010jsonData\030\001" +
-      " \001(\t\",\n\032SearchByAttributesResponse\022\016\n\006re" +
-      "sult\030\001 \001(\t\"?\n\034SearchByAttributes_V2Reque" +
-      "st\022\020\n\010jsonData\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"/\n\035S" +
-      "earchByAttributes_V2Response\022\016\n\006result\030\001" +
-      " \001(\t\"\016\n\014StatsRequest\"\037\n\rStatsResponse\022\016\n" +
-      "\006result\030\001 \001(\t\"J\n\"StreamExportCSVEntityRe" +
-      "portRequest\022\025\n\rcsvColumnList\030\001 \001(\t\022\r\n\005fl" +
-      "ags\030\002 \001(\003\"5\n#StreamExportCSVEntityReport" +
-      "Response\022\016\n\006result\030\001 \001(\t\"4\n#StreamExport" +
-      "JSONEntityReportRequest\022\r\n\005flags\030\001 \001(\003\"6" +
-      "\n$StreamExportJSONEntityReportResponse\022\016" +
-      "\n\006result\030\001 \001(\t\":\n\022WhyEntitiesRequest\022\021\n\t" +
-      "entityID1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\"%\n\023Wh" +
-      "yEntitiesResponse\022\016\n\006result\030\001 \001(\t\"L\n\025Why" +
-      "Entities_V2Request\022\021\n\tentityID1\030\001 \001(\003\022\021\n" +
-      "\tentityID2\030\002 \001(\003\022\r\n\005flags\030\003 \001(\003\"(\n\026WhyEn" +
-      "tities_V2Response\022\016\n\006result\030\001 \001(\t\".\n\032Why" +
-      "EntityByEntityIDRequest\022\020\n\010entityID\030\001 \001(" +
-      "\003\"-\n\033WhyEntityByEntityIDResponse\022\016\n\006resu" +
-      "lt\030\001 \001(\t\"@\n\035WhyEntityByEntityID_V2Reques" +
-      "t\022\020\n\010entityID\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"0\n\036Wh" +
-      "yEntityByEntityID_V2Response\022\016\n\006result\030\001" +
-      " \001(\t\"F\n\032WhyEntityByRecordIDRequest\022\026\n\016da" +
-      "taSourceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\"-\n\033" +
-      "WhyEntityByRecordIDResponse\022\016\n\006result\030\001 " +
-      "\001(\t\"X\n\035WhyEntityByRecordID_V2Request\022\026\n\016" +
-      "dataSourceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t\022\r" +
-      "\n\005flags\030\003 \001(\003\"0\n\036WhyEntityByRecordID_V2R" +
-      "esponse\022\016\n\006result\030\001 \001(\t\"k\n\021WhyRecordsReq" +
-      "uest\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trecordI" +
-      "D1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\trec" +
-      "ordID2\030\004 \001(\t\"$\n\022WhyRecordsResponse\022\016\n\006re" +
-      "sult\030\001 \001(\t\"}\n\024WhyRecords_V2Request\022\027\n\017da" +
-      "taSourceCode1\030\001 \001(\t\022\021\n\trecordID1\030\002 \001(\t\022\027" +
-      "\n\017dataSourceCode2\030\003 \001(\t\022\021\n\trecordID2\030\004 \001" +
-      "(\t\022\r\n\005flags\030\005 \001(\003\"\'\n\025WhyRecords_V2Respon" +
-      "se\022\016\n\006result\030\001 \001(\t2\3567\n\010G2Engine\022F\n\tAddRe" +
-      "cord\022\032.g2engine.AddRecordRequest\032\033.g2eng" +
-      "ine.AddRecordResponse\"\000\022^\n\021AddRecordWith" +
-      "Info\022\".g2engine.AddRecordWithInfoRequest" +
-      "\032#.g2engine.AddRecordWithInfoResponse\"\000\022" +
-      "L\n\013CloseExport\022\034.g2engine.CloseExportReq" +
-      "uest\032\035.g2engine.CloseExportResponse\"\000\022[\n" +
-      "\020CountRedoRecords\022!.g2engine.CountRedoRe" +
-      "cordsRequest\032\".g2engine.CountRedoRecords" +
-      "Response\"\000\022O\n\014DeleteRecord\022\035.g2engine.De" +
-      "leteRecordRequest\032\036.g2engine.DeleteRecor" +
-      "dResponse\"\000\022g\n\024DeleteRecordWithInfo\022%.g2" +
-      "engine.DeleteRecordWithInfoRequest\032&.g2e" +
-      "ngine.DeleteRecordWithInfoResponse\"\000\022@\n\007" +
-      "Destroy\022\030.g2engine.DestroyRequest\032\031.g2en" +
-      "gine.DestroyResponse\"\000\022O\n\014ExportConfig\022\035" +
-      ".g2engine.ExportConfigRequest\032\036.g2engine" +
-      ".ExportConfigResponse\"\000\022p\n\027ExportConfigA" +
-      "ndConfigID\022(.g2engine.ExportConfigAndCon" +
-      "figIDRequest\032).g2engine.ExportConfigAndC" +
-      "onfigIDResponse\"\000\022j\n\025ExportCSVEntityRepo" +
-      "rt\022&.g2engine.ExportCSVEntityReportReque" +
-      "st\032\'.g2engine.ExportCSVEntityReportRespo" +
-      "nse\"\000\022m\n\026ExportJSONEntityReport\022\'.g2engi" +
-      "ne.ExportJSONEntityReportRequest\032(.g2eng" +
-      "ine.ExportJSONEntityReportResponse\"\000\022F\n\t" +
-      "FetchNext\022\032.g2engine.FetchNextRequest\032\033." +
-      "g2engine.FetchNextResponse\"\000\022\216\001\n!FindInt" +
-      "erestingEntitiesByEntityID\0222.g2engine.Fi" +
-      "ndInterestingEntitiesByEntityIDRequest\0323" +
-      ".g2engine.FindInterestingEntitiesByEntit" +
-      "yIDResponse\"\000\022\216\001\n!FindInterestingEntitie" +
-      "sByRecordID\0222.g2engine.FindInterestingEn" +
-      "titiesByRecordIDRequest\0323.g2engine.FindI" +
-      "nterestingEntitiesByRecordIDResponse\"\000\022j" +
-      "\n\025FindNetworkByEntityID\022&.g2engine.FindN" +
-      "etworkByEntityIDRequest\032\'.g2engine.FindN" +
-      "etworkByEntityIDResponse\"\000\022s\n\030FindNetwor" +
-      "kByEntityID_V2\022).g2engine.FindNetworkByE" +
-      "ntityID_V2Request\032*.g2engine.FindNetwork" +
-      "ByEntityID_V2Response\"\000\022j\n\025FindNetworkBy" +
-      "RecordID\022&.g2engine.FindNetworkByRecordI" +
-      "DRequest\032\'.g2engine.FindNetworkByRecordI" +
-      "DResponse\"\000\022s\n\030FindNetworkByRecordID_V2\022" +
-      ").g2engine.FindNetworkByRecordID_V2Reque" +
-      "st\032*.g2engine.FindNetworkByRecordID_V2Re" +
-      "sponse\"\000\022a\n\022FindPathByEntityID\022#.g2engin" +
-      "e.FindPathByEntityIDRequest\032$.g2engine.F" +
-      "indPathByEntityIDResponse\"\000\022j\n\025FindPathB" +
-      "yEntityID_V2\022&.g2engine.FindPathByEntity" +
-      "ID_V2Request\032\'.g2engine.FindPathByEntity" +
-      "ID_V2Response\"\000\022a\n\022FindPathByRecordID\022#." +
-      "g2engine.FindPathByRecordIDRequest\032$.g2e" +
-      "ngine.FindPathByRecordIDResponse\"\000\022j\n\025Fi" +
-      "ndPathByRecordID_V2\022&.g2engine.FindPathB" +
-      "yRecordID_V2Request\032\'.g2engine.FindPathB" +
-      "yRecordID_V2Response\"\000\022|\n\033FindPathExclud" +
-      "ingByEntityID\022,.g2engine.FindPathExcludi" +
-      "ngByEntityIDRequest\032-.g2engine.FindPathE" +
-      "xcludingByEntityIDResponse\"\000\022\205\001\n\036FindPat" +
-      "hExcludingByEntityID_V2\022/.g2engine.FindP" +
-      "athExcludingByEntityID_V2Request\0320.g2eng" +
-      "ine.FindPathExcludingByEntityID_V2Respon" +
-      "se\"\000\022|\n\033FindPathExcludingByRecordID\022,.g2" +
-      "engine.FindPathExcludingByRecordIDReques" +
-      "t\032-.g2engine.FindPathExcludingByRecordID" +
-      "Response\"\000\022\205\001\n\036FindPathExcludingByRecord" +
-      "ID_V2\022/.g2engine.FindPathExcludingByReco" +
-      "rdID_V2Request\0320.g2engine.FindPathExclud" +
-      "ingByRecordID_V2Response\"\000\022\216\001\n!FindPathI" +
-      "ncludingSourceByEntityID\0222.g2engine.Find" +
-      "PathIncludingSourceByEntityIDRequest\0323.g" +
-      "2engine.FindPathIncludingSourceByEntityI" +
-      "DResponse\"\000\022\227\001\n$FindPathIncludingSourceB" +
-      "yEntityID_V2\0225.g2engine.FindPathIncludin" +
-      "gSourceByEntityID_V2Request\0326.g2engine.F" +
-      "indPathIncludingSourceByEntityID_V2Respo" +
-      "nse\"\000\022\216\001\n!FindPathIncludingSourceByRecor" +
-      "dID\0222.g2engine.FindPathIncludingSourceBy" +
-      "RecordIDRequest\0323.g2engine.FindPathInclu" +
-      "dingSourceByRecordIDResponse\"\000\022\227\001\n$FindP" +
-      "athIncludingSourceByRecordID_V2\0225.g2engi" +
-      "ne.FindPathIncludingSourceByRecordID_V2R" +
-      "equest\0326.g2engine.FindPathIncludingSourc" +
-      "eByRecordID_V2Response\"\000\022^\n\021GetActiveCon" +
-      "figID\022\".g2engine.GetActiveConfigIDReques" +
-      "t\032#.g2engine.GetActiveConfigIDResponse\"\000" +
-      "\022d\n\023GetEntityByEntityID\022$.g2engine.GetEn" +
-      "tityByEntityIDRequest\032%.g2engine.GetEnti" +
-      "tyByEntityIDResponse\"\000\022m\n\026GetEntityByEnt" +
-      "ityID_V2\022\'.g2engine.GetEntityByEntityID_" +
-      "V2Request\032(.g2engine.GetEntityByEntityID" +
-      "_V2Response\"\000\022d\n\023GetEntityByRecordID\022$.g" +
-      "2engine.GetEntityByRecordIDRequest\032%.g2e" +
-      "ngine.GetEntityByRecordIDResponse\"\000\022m\n\026G" +
-      "etEntityByRecordID_V2\022\'.g2engine.GetEnti" +
-      "tyByRecordID_V2Request\032(.g2engine.GetEnt" +
-      "ityByRecordID_V2Response\"\000\022F\n\tGetRecord\022" +
-      "\032.g2engine.GetRecordRequest\032\033.g2engine.G" +
-      "etRecordResponse\"\000\022O\n\014GetRecord_V2\022\035.g2e" +
-      "ngine.GetRecord_V2Request\032\036.g2engine.Get" +
-      "Record_V2Response\"\000\022R\n\rGetRedoRecord\022\036.g" +
-      "2engine.GetRedoRecordRequest\032\037.g2engine." +
-      "GetRedoRecordResponse\"\000\022\202\001\n\035GetRepositor" +
-      "yLastModifiedTime\022..g2engine.GetReposito" +
-      "ryLastModifiedTimeRequest\032/.g2engine.Get" +
-      "RepositoryLastModifiedTimeResponse\"\000\022y\n\032" +
-      "GetVirtualEntityByRecordID\022+.g2engine.Ge" +
-      "tVirtualEntityByRecordIDRequest\032,.g2engi" +
-      "ne.GetVirtualEntityByRecordIDResponse\"\000\022" +
-      "\202\001\n\035GetVirtualEntityByRecordID_V2\022..g2en" +
-      "gine.GetVirtualEntityByRecordID_V2Reques" +
-      "t\032/.g2engine.GetVirtualEntityByRecordID_" +
-      "V2Response\"\000\022d\n\023HowEntityByEntityID\022$.g2" +
-      "engine.HowEntityByEntityIDRequest\032%.g2en" +
-      "gine.HowEntityByEntityIDResponse\"\000\022m\n\026Ho" +
-      "wEntityByEntityID_V2\022\'.g2engine.HowEntit" +
-      "yByEntityID_V2Request\032(.g2engine.HowEnti" +
-      "tyByEntityID_V2Response\"\000\0227\n\004Init\022\025.g2en" +
-      "gine.InitRequest\032\026.g2engine.InitResponse" +
-      "\"\000\022[\n\020InitWithConfigID\022!.g2engine.InitWi" +
-      "thConfigIDRequest\032\".g2engine.InitWithCon" +
-      "figIDResponse\"\000\022L\n\013PrimeEngine\022\034.g2engin" +
-      "e.PrimeEngineRequest\032\035.g2engine.PrimeEng" +
-      "ineResponse\"\000\022@\n\007Process\022\030.g2engine.Proc" +
-      "essRequest\032\031.g2engine.ProcessResponse\"\000\022" +
-      "X\n\017ProcessWithInfo\022 .g2engine.ProcessWit" +
-      "hInfoRequest\032!.g2engine.ProcessWithInfoR" +
-      "esponse\"\000\022X\n\017PurgeRepository\022 .g2engine." +
-      "PurgeRepositoryRequest\032!.g2engine.PurgeR" +
-      "epositoryResponse\"\000\022[\n\020ReevaluateEntity\022" +
-      "!.g2engine.ReevaluateEntityRequest\032\".g2e" +
-      "ngine.ReevaluateEntityResponse\"\000\022s\n\030Reev" +
-      "aluateEntityWithInfo\022).g2engine.Reevalua" +
-      "teEntityWithInfoRequest\032*.g2engine.Reeva" +
-      "luateEntityWithInfoResponse\"\000\022[\n\020Reevalu" +
-      "ateRecord\022!.g2engine.ReevaluateRecordReq" +
-      "uest\032\".g2engine.ReevaluateRecordResponse" +
-      "\"\000\022s\n\030ReevaluateRecordWithInfo\022).g2engin" +
-      "e.ReevaluateRecordWithInfoRequest\032*.g2en" +
-      "gine.ReevaluateRecordWithInfoResponse\"\000\022" +
-      "=\n\006Reinit\022\027.g2engine.ReinitRequest\032\030.g2e" +
-      "ngine.ReinitResponse\"\000\022R\n\rReplaceRecord\022" +
-      "\036.g2engine.ReplaceRecordRequest\032\037.g2engi" +
-      "ne.ReplaceRecordResponse\"\000\022j\n\025ReplaceRec" +
-      "ordWithInfo\022&.g2engine.ReplaceRecordWith" +
-      "InfoRequest\032\'.g2engine.ReplaceRecordWith" +
-      "InfoResponse\"\000\022a\n\022SearchByAttributes\022#.g" +
-      "2engine.SearchByAttributesRequest\032$.g2en" +
-      "gine.SearchByAttributesResponse\"\000\022j\n\025Sea" +
-      "rchByAttributes_V2\022&.g2engine.SearchByAt" +
-      "tributes_V2Request\032\'.g2engine.SearchByAt" +
-      "tributes_V2Response\"\000\022:\n\005Stats\022\026.g2engin" +
-      "e.StatsRequest\032\027.g2engine.StatsResponse\"" +
-      "\000\022~\n\033StreamExportCSVEntityReport\022,.g2eng" +
-      "ine.StreamExportCSVEntityReportRequest\032-" +
-      ".g2engine.StreamExportCSVEntityReportRes" +
-      "ponse\"\0000\001\022\201\001\n\034StreamExportJSONEntityRepo" +
-      "rt\022-.g2engine.StreamExportJSONEntityRepo" +
-      "rtRequest\032..g2engine.StreamExportJSONEnt" +
-      "ityReportResponse\"\0000\001\022L\n\013WhyEntities\022\034.g" +
-      "2engine.WhyEntitiesRequest\032\035.g2engine.Wh" +
-      "yEntitiesResponse\"\000\022U\n\016WhyEntities_V2\022\037." +
-      "g2engine.WhyEntities_V2Request\032 .g2engin" +
-      "e.WhyEntities_V2Response\"\000\022d\n\023WhyEntityB" +
-      "yEntityID\022$.g2engine.WhyEntityByEntityID" +
-      "Request\032%.g2engine.WhyEntityByEntityIDRe" +
-      "sponse\"\000\022m\n\026WhyEntityByEntityID_V2\022\'.g2e" +
-      "ngine.WhyEntityByEntityID_V2Request\032(.g2" +
-      "engine.WhyEntityByEntityID_V2Response\"\000\022" +
-      "d\n\023WhyEntityByRecordID\022$.g2engine.WhyEnt" +
-      "ityByRecordIDRequest\032%.g2engine.WhyEntit" +
-      "yByRecordIDResponse\"\000\022m\n\026WhyEntityByReco" +
-      "rdID_V2\022\'.g2engine.WhyEntityByRecordID_V" +
-      "2Request\032(.g2engine.WhyEntityByRecordID_" +
-      "V2Response\"\000\022I\n\nWhyRecords\022\033.g2engine.Wh" +
-      "yRecordsRequest\032\034.g2engine.WhyRecordsRes" +
-      "ponse\"\000\022R\n\rWhyRecords_V2\022\036.g2engine.WhyR",
-      "ecords_V2Request\032\037.g2engine.WhyRecords_V" +
-      "2Response\"\000Bi\n#com.senzing.g2.engine.grp" +
-      "c.G2EngineB\rG2EngineProtoP\001Z1github.com/" +
-      "senzing-garage/g2-sdk-go-grpc/g2engineb\006" +
-      "proto3"
+      "ngineResponse\":\n\027ReevaluateEntityRequest" +
+      "\022\020\n\010entityID\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"\032\n\030Ree" +
+      "valuateEntityResponse\"B\n\037ReevaluateEntit" +
+      "yWithInfoRequest\022\020\n\010entityID\030\001 \001(\003\022\r\n\005fl" +
+      "ags\030\002 \001(\003\"2\n ReevaluateEntityWithInfoRes" +
+      "ponse\022\016\n\006result\030\001 \001(\t\"R\n\027ReevaluateRecor" +
+      "dRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010reco" +
+      "rdID\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"\032\n\030ReevaluateR" +
+      "ecordResponse\"Z\n\037ReevaluateRecordWithInf" +
+      "oRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010reco" +
+      "rdID\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"2\n ReevaluateR" +
+      "ecordWithInfoResponse\022\016\n\006result\030\001 \001(\t\"%\n" +
+      "\rReinitRequest\022\024\n\014initConfigID\030\001 \001(\003\"\020\n\016" +
+      "ReinitResponse\"b\n\024ReplaceRecordRequest\022\026" +
+      "\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordID\030\002 \001(\t" +
+      "\022\020\n\010jsonData\030\003 \001(\t\022\016\n\006loadID\030\004 \001(\t\"\027\n\025Re" +
+      "placeRecordResponse\"y\n\034ReplaceRecordWith" +
+      "InfoRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010r" +
+      "ecordID\030\002 \001(\t\022\020\n\010jsonData\030\003 \001(\t\022\016\n\006loadI" +
+      "D\030\004 \001(\t\022\r\n\005flags\030\005 \001(\003\"/\n\035ReplaceRecordW" +
+      "ithInfoResponse\022\016\n\006result\030\001 \001(\t\"-\n\031Searc" +
+      "hByAttributesRequest\022\020\n\010jsonData\030\001 \001(\t\"," +
+      "\n\032SearchByAttributesResponse\022\016\n\006result\030\001" +
+      " \001(\t\"?\n\034SearchByAttributes_V2Request\022\020\n\010" +
+      "jsonData\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"/\n\035SearchB" +
+      "yAttributes_V2Response\022\016\n\006result\030\001 \001(\t\"\016" +
+      "\n\014StatsRequest\"\037\n\rStatsResponse\022\016\n\006resul" +
+      "t\030\001 \001(\t\"J\n\"StreamExportCSVEntityReportRe" +
+      "quest\022\025\n\rcsvColumnList\030\001 \001(\t\022\r\n\005flags\030\002 " +
+      "\001(\003\"5\n#StreamExportCSVEntityReportRespon" +
+      "se\022\016\n\006result\030\001 \001(\t\"4\n#StreamExportJSONEn" +
+      "tityReportRequest\022\r\n\005flags\030\001 \001(\003\"6\n$Stre" +
+      "amExportJSONEntityReportResponse\022\016\n\006resu" +
+      "lt\030\001 \001(\t\":\n\022WhyEntitiesRequest\022\021\n\tentity" +
+      "ID1\030\001 \001(\003\022\021\n\tentityID2\030\002 \001(\003\"%\n\023WhyEntit" +
+      "iesResponse\022\016\n\006result\030\001 \001(\t\"L\n\025WhyEntiti" +
+      "es_V2Request\022\021\n\tentityID1\030\001 \001(\003\022\021\n\tentit" +
+      "yID2\030\002 \001(\003\022\r\n\005flags\030\003 \001(\003\"(\n\026WhyEntities" +
+      "_V2Response\022\016\n\006result\030\001 \001(\t\"k\n\021WhyRecord" +
+      "sRequest\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trec" +
+      "ordID1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n" +
+      "\trecordID2\030\004 \001(\t\"$\n\022WhyRecordsResponse\022\016" +
+      "\n\006result\030\001 \001(\t\"}\n\024WhyRecords_V2Request\022\027" +
+      "\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trecordID1\030\002 \001" +
+      "(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\trecordID2" +
+      "\030\004 \001(\t\022\r\n\005flags\030\005 \001(\003\"\'\n\025WhyRecords_V2Re" +
+      "sponse\022\016\n\006result\030\001 \001(\t2\3162\n\010G2Engine\022F\n\tA" +
+      "ddRecord\022\032.g2engine.AddRecordRequest\032\033.g" +
+      "2engine.AddRecordResponse\"\000\022^\n\021AddRecord" +
+      "WithInfo\022\".g2engine.AddRecordWithInfoReq" +
+      "uest\032#.g2engine.AddRecordWithInfoRespons" +
+      "e\"\000\022L\n\013CloseExport\022\034.g2engine.CloseExpor" +
+      "tRequest\032\035.g2engine.CloseExportResponse\"" +
+      "\000\022[\n\020CountRedoRecords\022!.g2engine.CountRe" +
+      "doRecordsRequest\032\".g2engine.CountRedoRec" +
+      "ordsResponse\"\000\022O\n\014DeleteRecord\022\035.g2engin" +
+      "e.DeleteRecordRequest\032\036.g2engine.DeleteR" +
+      "ecordResponse\"\000\022g\n\024DeleteRecordWithInfo\022" +
+      "%.g2engine.DeleteRecordWithInfoRequest\032&" +
+      ".g2engine.DeleteRecordWithInfoResponse\"\000" +
+      "\022@\n\007Destroy\022\030.g2engine.DestroyRequest\032\031." +
+      "g2engine.DestroyResponse\"\000\022O\n\014ExportConf" +
+      "ig\022\035.g2engine.ExportConfigRequest\032\036.g2en" +
+      "gine.ExportConfigResponse\"\000\022p\n\027ExportCon" +
+      "figAndConfigID\022(.g2engine.ExportConfigAn" +
+      "dConfigIDRequest\032).g2engine.ExportConfig" +
+      "AndConfigIDResponse\"\000\022j\n\025ExportCSVEntity" +
+      "Report\022&.g2engine.ExportCSVEntityReportR" +
+      "equest\032\'.g2engine.ExportCSVEntityReportR" +
+      "esponse\"\000\022m\n\026ExportJSONEntityReport\022\'.g2" +
+      "engine.ExportJSONEntityReportRequest\032(.g" +
+      "2engine.ExportJSONEntityReportResponse\"\000" +
+      "\022F\n\tFetchNext\022\032.g2engine.FetchNextReques" +
+      "t\032\033.g2engine.FetchNextResponse\"\000\022\216\001\n!Fin" +
+      "dInterestingEntitiesByEntityID\0222.g2engin" +
+      "e.FindInterestingEntitiesByEntityIDReque" +
+      "st\0323.g2engine.FindInterestingEntitiesByE" +
+      "ntityIDResponse\"\000\022\216\001\n!FindInterestingEnt" +
+      "itiesByRecordID\0222.g2engine.FindInteresti" +
+      "ngEntitiesByRecordIDRequest\0323.g2engine.F" +
+      "indInterestingEntitiesByRecordIDResponse" +
+      "\"\000\022j\n\025FindNetworkByEntityID\022&.g2engine.F" +
+      "indNetworkByEntityIDRequest\032\'.g2engine.F" +
+      "indNetworkByEntityIDResponse\"\000\022s\n\030FindNe" +
+      "tworkByEntityID_V2\022).g2engine.FindNetwor" +
+      "kByEntityID_V2Request\032*.g2engine.FindNet" +
+      "workByEntityID_V2Response\"\000\022j\n\025FindNetwo" +
+      "rkByRecordID\022&.g2engine.FindNetworkByRec" +
+      "ordIDRequest\032\'.g2engine.FindNetworkByRec" +
+      "ordIDResponse\"\000\022s\n\030FindNetworkByRecordID" +
+      "_V2\022).g2engine.FindNetworkByRecordID_V2R" +
+      "equest\032*.g2engine.FindNetworkByRecordID_" +
+      "V2Response\"\000\022a\n\022FindPathByEntityID\022#.g2e" +
+      "ngine.FindPathByEntityIDRequest\032$.g2engi" +
+      "ne.FindPathByEntityIDResponse\"\000\022j\n\025FindP" +
+      "athByEntityID_V2\022&.g2engine.FindPathByEn" +
+      "tityID_V2Request\032\'.g2engine.FindPathByEn" +
+      "tityID_V2Response\"\000\022a\n\022FindPathByRecordI" +
+      "D\022#.g2engine.FindPathByRecordIDRequest\032$" +
+      ".g2engine.FindPathByRecordIDResponse\"\000\022j" +
+      "\n\025FindPathByRecordID_V2\022&.g2engine.FindP" +
+      "athByRecordID_V2Request\032\'.g2engine.FindP" +
+      "athByRecordID_V2Response\"\000\022|\n\033FindPathEx" +
+      "cludingByEntityID\022,.g2engine.FindPathExc" +
+      "ludingByEntityIDRequest\032-.g2engine.FindP" +
+      "athExcludingByEntityIDResponse\"\000\022\205\001\n\036Fin" +
+      "dPathExcludingByEntityID_V2\022/.g2engine.F" +
+      "indPathExcludingByEntityID_V2Request\0320.g" +
+      "2engine.FindPathExcludingByEntityID_V2Re" +
+      "sponse\"\000\022|\n\033FindPathExcludingByRecordID\022" +
+      ",.g2engine.FindPathExcludingByRecordIDRe" +
+      "quest\032-.g2engine.FindPathExcludingByReco" +
+      "rdIDResponse\"\000\022\205\001\n\036FindPathExcludingByRe" +
+      "cordID_V2\022/.g2engine.FindPathExcludingBy" +
+      "RecordID_V2Request\0320.g2engine.FindPathEx" +
+      "cludingByRecordID_V2Response\"\000\022\216\001\n!FindP" +
+      "athIncludingSourceByEntityID\0222.g2engine." +
+      "FindPathIncludingSourceByEntityIDRequest" +
+      "\0323.g2engine.FindPathIncludingSourceByEnt" +
+      "ityIDResponse\"\000\022\227\001\n$FindPathIncludingSou" +
+      "rceByEntityID_V2\0225.g2engine.FindPathIncl" +
+      "udingSourceByEntityID_V2Request\0326.g2engi" +
+      "ne.FindPathIncludingSourceByEntityID_V2R" +
+      "esponse\"\000\022\216\001\n!FindPathIncludingSourceByR" +
+      "ecordID\0222.g2engine.FindPathIncludingSour" +
+      "ceByRecordIDRequest\0323.g2engine.FindPathI" +
+      "ncludingSourceByRecordIDResponse\"\000\022\227\001\n$F" +
+      "indPathIncludingSourceByRecordID_V2\0225.g2" +
+      "engine.FindPathIncludingSourceByRecordID" +
+      "_V2Request\0326.g2engine.FindPathIncludingS" +
+      "ourceByRecordID_V2Response\"\000\022^\n\021GetActiv" +
+      "eConfigID\022\".g2engine.GetActiveConfigIDRe" +
+      "quest\032#.g2engine.GetActiveConfigIDRespon" +
+      "se\"\000\022d\n\023GetEntityByEntityID\022$.g2engine.G" +
+      "etEntityByEntityIDRequest\032%.g2engine.Get" +
+      "EntityByEntityIDResponse\"\000\022m\n\026GetEntityB" +
+      "yEntityID_V2\022\'.g2engine.GetEntityByEntit" +
+      "yID_V2Request\032(.g2engine.GetEntityByEnti" +
+      "tyID_V2Response\"\000\022d\n\023GetEntityByRecordID" +
+      "\022$.g2engine.GetEntityByRecordIDRequest\032%" +
+      ".g2engine.GetEntityByRecordIDResponse\"\000\022" +
+      "m\n\026GetEntityByRecordID_V2\022\'.g2engine.Get" +
+      "EntityByRecordID_V2Request\032(.g2engine.Ge" +
+      "tEntityByRecordID_V2Response\"\000\022F\n\tGetRec" +
+      "ord\022\032.g2engine.GetRecordRequest\032\033.g2engi" +
+      "ne.GetRecordResponse\"\000\022O\n\014GetRecord_V2\022\035" +
+      ".g2engine.GetRecord_V2Request\032\036.g2engine" +
+      ".GetRecord_V2Response\"\000\022R\n\rGetRedoRecord" +
+      "\022\036.g2engine.GetRedoRecordRequest\032\037.g2eng" +
+      "ine.GetRedoRecordResponse\"\000\022\202\001\n\035GetRepos" +
+      "itoryLastModifiedTime\022..g2engine.GetRepo" +
+      "sitoryLastModifiedTimeRequest\032/.g2engine" +
+      ".GetRepositoryLastModifiedTimeResponse\"\000" +
+      "\022y\n\032GetVirtualEntityByRecordID\022+.g2engin" +
+      "e.GetVirtualEntityByRecordIDRequest\032,.g2" +
+      "engine.GetVirtualEntityByRecordIDRespons" +
+      "e\"\000\022\202\001\n\035GetVirtualEntityByRecordID_V2\022.." +
+      "g2engine.GetVirtualEntityByRecordID_V2Re" +
+      "quest\032/.g2engine.GetVirtualEntityByRecor" +
+      "dID_V2Response\"\000\022d\n\023HowEntityByEntityID\022" +
+      "$.g2engine.HowEntityByEntityIDRequest\032%." +
+      "g2engine.HowEntityByEntityIDResponse\"\000\022m" +
+      "\n\026HowEntityByEntityID_V2\022\'.g2engine.HowE" +
+      "ntityByEntityID_V2Request\032(.g2engine.How" +
+      "EntityByEntityID_V2Response\"\000\0227\n\004Init\022\025." +
+      "g2engine.InitRequest\032\026.g2engine.InitResp" +
+      "onse\"\000\022[\n\020InitWithConfigID\022!.g2engine.In" +
+      "itWithConfigIDRequest\032\".g2engine.InitWit" +
+      "hConfigIDResponse\"\000\022L\n\013PrimeEngine\022\034.g2e" +
+      "ngine.PrimeEngineRequest\032\035.g2engine.Prim" +
+      "eEngineResponse\"\000\022[\n\020ReevaluateEntity\022!." +
+      "g2engine.ReevaluateEntityRequest\032\".g2eng" +
+      "ine.ReevaluateEntityResponse\"\000\022s\n\030Reeval" +
+      "uateEntityWithInfo\022).g2engine.Reevaluate" +
+      "EntityWithInfoRequest\032*.g2engine.Reevalu" +
+      "ateEntityWithInfoResponse\"\000\022[\n\020Reevaluat" +
+      "eRecord\022!.g2engine.ReevaluateRecordReque" +
+      "st\032\".g2engine.ReevaluateRecordResponse\"\000" +
+      "\022s\n\030ReevaluateRecordWithInfo\022).g2engine." +
+      "ReevaluateRecordWithInfoRequest\032*.g2engi" +
+      "ne.ReevaluateRecordWithInfoResponse\"\000\022=\n" +
+      "\006Reinit\022\027.g2engine.ReinitRequest\032\030.g2eng" +
+      "ine.ReinitResponse\"\000\022R\n\rReplaceRecord\022\036." +
+      "g2engine.ReplaceRecordRequest\032\037.g2engine" +
+      ".ReplaceRecordResponse\"\000\022j\n\025ReplaceRecor" +
+      "dWithInfo\022&.g2engine.ReplaceRecordWithIn" +
+      "foRequest\032\'.g2engine.ReplaceRecordWithIn" +
+      "foResponse\"\000\022a\n\022SearchByAttributes\022#.g2e" +
+      "ngine.SearchByAttributesRequest\032$.g2engi" +
+      "ne.SearchByAttributesResponse\"\000\022j\n\025Searc" +
+      "hByAttributes_V2\022&.g2engine.SearchByAttr" +
+      "ibutes_V2Request\032\'.g2engine.SearchByAttr" +
+      "ibutes_V2Response\"\000\022:\n\005Stats\022\026.g2engine." +
+      "StatsRequest\032\027.g2engine.StatsResponse\"\000\022" +
+      "~\n\033StreamExportCSVEntityReport\022,.g2engin" +
+      "e.StreamExportCSVEntityReportRequest\032-.g" +
+      "2engine.StreamExportCSVEntityReportRespo" +
+      "nse\"\0000\001\022\201\001\n\034StreamExportJSONEntityReport" +
+      "\022-.g2engine.StreamExportJSONEntityReport" +
+      "Request\032..g2engine.StreamExportJSONEntit" +
+      "yReportResponse\"\0000\001\022L\n\013WhyEntities\022\034.g2e" +
+      "ngine.WhyEntitiesRequest\032\035.g2engine.WhyE" +
+      "ntitiesResponse\"\000\022U\n\016WhyEntities_V2\022\037.g2" +
+      "engine.WhyEntities_V2Request\032 .g2engine." +
+      "WhyEntities_V2Response\"\000\022I\n\nWhyRecords\022\033" +
+      ".g2engine.WhyRecordsRequest\032\034.g2engine.W" +
+      "hyRecordsResponse\"\000\022R\n\rWhyRecords_V2\022\036.g" +
+      "2engine.WhyRecords_V2Request\032\037.g2engine." +
+      "WhyRecords_V2Response\"\000Bi\n#com.senzing.g" +
+      "2.engine.grpc.G2EngineB\rG2EngineProtoP\001Z" +
+      "1github.com/senzing-garage/g2-sdk-go-grp" +
+      "c/g2engineb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1675,278 +1571,194 @@ public final class G2EngineProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_PrimeEngineResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_g2engine_ProcessRequest_descriptor =
-      getDescriptor().getMessageTypes().get(92);
-    internal_static_g2engine_ProcessRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2engine_ProcessRequest_descriptor,
-        new java.lang.String[] { "Record", });
-    internal_static_g2engine_ProcessResponse_descriptor =
-      getDescriptor().getMessageTypes().get(93);
-    internal_static_g2engine_ProcessResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2engine_ProcessResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_g2engine_ProcessWithInfoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(94);
-    internal_static_g2engine_ProcessWithInfoRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2engine_ProcessWithInfoRequest_descriptor,
-        new java.lang.String[] { "Record", "Flags", });
-    internal_static_g2engine_ProcessWithInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(95);
-    internal_static_g2engine_ProcessWithInfoResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2engine_ProcessWithInfoResponse_descriptor,
-        new java.lang.String[] { "Result", });
-    internal_static_g2engine_PurgeRepositoryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(96);
-    internal_static_g2engine_PurgeRepositoryRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2engine_PurgeRepositoryRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_g2engine_PurgeRepositoryResponse_descriptor =
-      getDescriptor().getMessageTypes().get(97);
-    internal_static_g2engine_PurgeRepositoryResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2engine_PurgeRepositoryResponse_descriptor,
-        new java.lang.String[] { });
     internal_static_g2engine_ReevaluateEntityRequest_descriptor =
-      getDescriptor().getMessageTypes().get(98);
+      getDescriptor().getMessageTypes().get(92);
     internal_static_g2engine_ReevaluateEntityRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_ReevaluateEntityRequest_descriptor,
         new java.lang.String[] { "EntityID", "Flags", });
     internal_static_g2engine_ReevaluateEntityResponse_descriptor =
-      getDescriptor().getMessageTypes().get(99);
+      getDescriptor().getMessageTypes().get(93);
     internal_static_g2engine_ReevaluateEntityResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_ReevaluateEntityResponse_descriptor,
         new java.lang.String[] { });
     internal_static_g2engine_ReevaluateEntityWithInfoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(100);
+      getDescriptor().getMessageTypes().get(94);
     internal_static_g2engine_ReevaluateEntityWithInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_ReevaluateEntityWithInfoRequest_descriptor,
         new java.lang.String[] { "EntityID", "Flags", });
     internal_static_g2engine_ReevaluateEntityWithInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(101);
+      getDescriptor().getMessageTypes().get(95);
     internal_static_g2engine_ReevaluateEntityWithInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_ReevaluateEntityWithInfoResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_g2engine_ReevaluateRecordRequest_descriptor =
-      getDescriptor().getMessageTypes().get(102);
+      getDescriptor().getMessageTypes().get(96);
     internal_static_g2engine_ReevaluateRecordRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_ReevaluateRecordRequest_descriptor,
         new java.lang.String[] { "DataSourceCode", "RecordID", "Flags", });
     internal_static_g2engine_ReevaluateRecordResponse_descriptor =
-      getDescriptor().getMessageTypes().get(103);
+      getDescriptor().getMessageTypes().get(97);
     internal_static_g2engine_ReevaluateRecordResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_ReevaluateRecordResponse_descriptor,
         new java.lang.String[] { });
     internal_static_g2engine_ReevaluateRecordWithInfoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(104);
+      getDescriptor().getMessageTypes().get(98);
     internal_static_g2engine_ReevaluateRecordWithInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_ReevaluateRecordWithInfoRequest_descriptor,
         new java.lang.String[] { "DataSourceCode", "RecordID", "Flags", });
     internal_static_g2engine_ReevaluateRecordWithInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(105);
+      getDescriptor().getMessageTypes().get(99);
     internal_static_g2engine_ReevaluateRecordWithInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_ReevaluateRecordWithInfoResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_g2engine_ReinitRequest_descriptor =
-      getDescriptor().getMessageTypes().get(106);
+      getDescriptor().getMessageTypes().get(100);
     internal_static_g2engine_ReinitRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_ReinitRequest_descriptor,
         new java.lang.String[] { "InitConfigID", });
     internal_static_g2engine_ReinitResponse_descriptor =
-      getDescriptor().getMessageTypes().get(107);
+      getDescriptor().getMessageTypes().get(101);
     internal_static_g2engine_ReinitResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_ReinitResponse_descriptor,
         new java.lang.String[] { });
     internal_static_g2engine_ReplaceRecordRequest_descriptor =
-      getDescriptor().getMessageTypes().get(108);
+      getDescriptor().getMessageTypes().get(102);
     internal_static_g2engine_ReplaceRecordRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_ReplaceRecordRequest_descriptor,
         new java.lang.String[] { "DataSourceCode", "RecordID", "JsonData", "LoadID", });
     internal_static_g2engine_ReplaceRecordResponse_descriptor =
-      getDescriptor().getMessageTypes().get(109);
+      getDescriptor().getMessageTypes().get(103);
     internal_static_g2engine_ReplaceRecordResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_ReplaceRecordResponse_descriptor,
         new java.lang.String[] { });
     internal_static_g2engine_ReplaceRecordWithInfoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(110);
+      getDescriptor().getMessageTypes().get(104);
     internal_static_g2engine_ReplaceRecordWithInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_ReplaceRecordWithInfoRequest_descriptor,
         new java.lang.String[] { "DataSourceCode", "RecordID", "JsonData", "LoadID", "Flags", });
     internal_static_g2engine_ReplaceRecordWithInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(111);
+      getDescriptor().getMessageTypes().get(105);
     internal_static_g2engine_ReplaceRecordWithInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_ReplaceRecordWithInfoResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_g2engine_SearchByAttributesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(112);
+      getDescriptor().getMessageTypes().get(106);
     internal_static_g2engine_SearchByAttributesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_SearchByAttributesRequest_descriptor,
         new java.lang.String[] { "JsonData", });
     internal_static_g2engine_SearchByAttributesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(113);
+      getDescriptor().getMessageTypes().get(107);
     internal_static_g2engine_SearchByAttributesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_SearchByAttributesResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_g2engine_SearchByAttributes_V2Request_descriptor =
-      getDescriptor().getMessageTypes().get(114);
+      getDescriptor().getMessageTypes().get(108);
     internal_static_g2engine_SearchByAttributes_V2Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_SearchByAttributes_V2Request_descriptor,
         new java.lang.String[] { "JsonData", "Flags", });
     internal_static_g2engine_SearchByAttributes_V2Response_descriptor =
-      getDescriptor().getMessageTypes().get(115);
+      getDescriptor().getMessageTypes().get(109);
     internal_static_g2engine_SearchByAttributes_V2Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_SearchByAttributes_V2Response_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_g2engine_StatsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(116);
+      getDescriptor().getMessageTypes().get(110);
     internal_static_g2engine_StatsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_StatsRequest_descriptor,
         new java.lang.String[] { });
     internal_static_g2engine_StatsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(117);
+      getDescriptor().getMessageTypes().get(111);
     internal_static_g2engine_StatsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_StatsResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_g2engine_StreamExportCSVEntityReportRequest_descriptor =
-      getDescriptor().getMessageTypes().get(118);
+      getDescriptor().getMessageTypes().get(112);
     internal_static_g2engine_StreamExportCSVEntityReportRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_StreamExportCSVEntityReportRequest_descriptor,
         new java.lang.String[] { "CsvColumnList", "Flags", });
     internal_static_g2engine_StreamExportCSVEntityReportResponse_descriptor =
-      getDescriptor().getMessageTypes().get(119);
+      getDescriptor().getMessageTypes().get(113);
     internal_static_g2engine_StreamExportCSVEntityReportResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_StreamExportCSVEntityReportResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_g2engine_StreamExportJSONEntityReportRequest_descriptor =
-      getDescriptor().getMessageTypes().get(120);
+      getDescriptor().getMessageTypes().get(114);
     internal_static_g2engine_StreamExportJSONEntityReportRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_StreamExportJSONEntityReportRequest_descriptor,
         new java.lang.String[] { "Flags", });
     internal_static_g2engine_StreamExportJSONEntityReportResponse_descriptor =
-      getDescriptor().getMessageTypes().get(121);
+      getDescriptor().getMessageTypes().get(115);
     internal_static_g2engine_StreamExportJSONEntityReportResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_StreamExportJSONEntityReportResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_g2engine_WhyEntitiesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(122);
+      getDescriptor().getMessageTypes().get(116);
     internal_static_g2engine_WhyEntitiesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_WhyEntitiesRequest_descriptor,
         new java.lang.String[] { "EntityID1", "EntityID2", });
     internal_static_g2engine_WhyEntitiesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(123);
+      getDescriptor().getMessageTypes().get(117);
     internal_static_g2engine_WhyEntitiesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_WhyEntitiesResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_g2engine_WhyEntities_V2Request_descriptor =
-      getDescriptor().getMessageTypes().get(124);
+      getDescriptor().getMessageTypes().get(118);
     internal_static_g2engine_WhyEntities_V2Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_WhyEntities_V2Request_descriptor,
         new java.lang.String[] { "EntityID1", "EntityID2", "Flags", });
     internal_static_g2engine_WhyEntities_V2Response_descriptor =
-      getDescriptor().getMessageTypes().get(125);
+      getDescriptor().getMessageTypes().get(119);
     internal_static_g2engine_WhyEntities_V2Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_WhyEntities_V2Response_descriptor,
         new java.lang.String[] { "Result", });
-    internal_static_g2engine_WhyEntityByEntityIDRequest_descriptor =
-      getDescriptor().getMessageTypes().get(126);
-    internal_static_g2engine_WhyEntityByEntityIDRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2engine_WhyEntityByEntityIDRequest_descriptor,
-        new java.lang.String[] { "EntityID", });
-    internal_static_g2engine_WhyEntityByEntityIDResponse_descriptor =
-      getDescriptor().getMessageTypes().get(127);
-    internal_static_g2engine_WhyEntityByEntityIDResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2engine_WhyEntityByEntityIDResponse_descriptor,
-        new java.lang.String[] { "Result", });
-    internal_static_g2engine_WhyEntityByEntityID_V2Request_descriptor =
-      getDescriptor().getMessageTypes().get(128);
-    internal_static_g2engine_WhyEntityByEntityID_V2Request_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2engine_WhyEntityByEntityID_V2Request_descriptor,
-        new java.lang.String[] { "EntityID", "Flags", });
-    internal_static_g2engine_WhyEntityByEntityID_V2Response_descriptor =
-      getDescriptor().getMessageTypes().get(129);
-    internal_static_g2engine_WhyEntityByEntityID_V2Response_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2engine_WhyEntityByEntityID_V2Response_descriptor,
-        new java.lang.String[] { "Result", });
-    internal_static_g2engine_WhyEntityByRecordIDRequest_descriptor =
-      getDescriptor().getMessageTypes().get(130);
-    internal_static_g2engine_WhyEntityByRecordIDRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2engine_WhyEntityByRecordIDRequest_descriptor,
-        new java.lang.String[] { "DataSourceCode", "RecordID", });
-    internal_static_g2engine_WhyEntityByRecordIDResponse_descriptor =
-      getDescriptor().getMessageTypes().get(131);
-    internal_static_g2engine_WhyEntityByRecordIDResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2engine_WhyEntityByRecordIDResponse_descriptor,
-        new java.lang.String[] { "Result", });
-    internal_static_g2engine_WhyEntityByRecordID_V2Request_descriptor =
-      getDescriptor().getMessageTypes().get(132);
-    internal_static_g2engine_WhyEntityByRecordID_V2Request_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2engine_WhyEntityByRecordID_V2Request_descriptor,
-        new java.lang.String[] { "DataSourceCode", "RecordID", "Flags", });
-    internal_static_g2engine_WhyEntityByRecordID_V2Response_descriptor =
-      getDescriptor().getMessageTypes().get(133);
-    internal_static_g2engine_WhyEntityByRecordID_V2Response_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_g2engine_WhyEntityByRecordID_V2Response_descriptor,
-        new java.lang.String[] { "Result", });
     internal_static_g2engine_WhyRecordsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(134);
+      getDescriptor().getMessageTypes().get(120);
     internal_static_g2engine_WhyRecordsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_WhyRecordsRequest_descriptor,
         new java.lang.String[] { "DataSourceCode1", "RecordID1", "DataSourceCode2", "RecordID2", });
     internal_static_g2engine_WhyRecordsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(135);
+      getDescriptor().getMessageTypes().get(121);
     internal_static_g2engine_WhyRecordsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_WhyRecordsResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_g2engine_WhyRecords_V2Request_descriptor =
-      getDescriptor().getMessageTypes().get(136);
+      getDescriptor().getMessageTypes().get(122);
     internal_static_g2engine_WhyRecords_V2Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_WhyRecords_V2Request_descriptor,
         new java.lang.String[] { "DataSourceCode1", "RecordID1", "DataSourceCode2", "RecordID2", "Flags", });
     internal_static_g2engine_WhyRecords_V2Response_descriptor =
-      getDescriptor().getMessageTypes().get(137);
+      getDescriptor().getMessageTypes().get(123);
     internal_static_g2engine_WhyRecords_V2Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2engine_WhyRecords_V2Response_descriptor,

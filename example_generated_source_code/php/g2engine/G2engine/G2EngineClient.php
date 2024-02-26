@@ -661,48 +661,6 @@ class G2EngineClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \G2engine\ProcessRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function Process(\G2engine\ProcessRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Engine/Process',
-        $argument,
-        ['\G2engine\ProcessResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2engine\ProcessWithInfoRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function ProcessWithInfo(\G2engine\ProcessWithInfoRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Engine/ProcessWithInfo',
-        $argument,
-        ['\G2engine\ProcessWithInfoResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2engine\PurgeRepositoryRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function PurgeRepository(\G2engine\PurgeRepositoryRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Engine/PurgeRepository',
-        $argument,
-        ['\G2engine\PurgeRepositoryResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \G2engine\ReevaluateEntityRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -895,62 +853,6 @@ class G2EngineClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/g2engine.G2Engine/WhyEntities_V2',
         $argument,
         ['\G2engine\WhyEntities_V2Response', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2engine\WhyEntityByEntityIDRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function WhyEntityByEntityID(\G2engine\WhyEntityByEntityIDRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Engine/WhyEntityByEntityID',
-        $argument,
-        ['\G2engine\WhyEntityByEntityIDResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2engine\WhyEntityByEntityID_V2Request $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function WhyEntityByEntityID_V2(\G2engine\WhyEntityByEntityID_V2Request $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Engine/WhyEntityByEntityID_V2',
-        $argument,
-        ['\G2engine\WhyEntityByEntityID_V2Response', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2engine\WhyEntityByRecordIDRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function WhyEntityByRecordID(\G2engine\WhyEntityByRecordIDRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Engine/WhyEntityByRecordID',
-        $argument,
-        ['\G2engine\WhyEntityByRecordIDResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \G2engine\WhyEntityByRecordID_V2Request $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function WhyEntityByRecordID_V2(\G2engine\WhyEntityByRecordID_V2Request $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/g2engine.G2Engine/WhyEntityByRecordID_V2',
-        $argument,
-        ['\G2engine\WhyEntityByRecordID_V2Response', 'decode'],
         $metadata, $options);
     }
 
