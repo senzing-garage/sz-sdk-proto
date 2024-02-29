@@ -26,6 +26,7 @@ static const char* G2Diagnostic_method_names[] = {
   "/g2diagnostic.G2Diagnostic/Destroy",
   "/g2diagnostic.G2Diagnostic/Init",
   "/g2diagnostic.G2Diagnostic/InitWithConfigID",
+  "/g2diagnostic.G2Diagnostic/PurgeRepository",
   "/g2diagnostic.G2Diagnostic/Reinit",
 };
 
@@ -40,7 +41,8 @@ G2Diagnostic::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
   , rpcmethod_Destroy_(G2Diagnostic_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_Init_(G2Diagnostic_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_InitWithConfigID_(G2Diagnostic_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Reinit_(G2Diagnostic_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_PurgeRepository_(G2Diagnostic_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Reinit_(G2Diagnostic_method_names[5], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status G2Diagnostic::Stub::CheckDBPerf(::grpc::ClientContext* context, const ::g2diagnostic::CheckDBPerfRequest& request, ::g2diagnostic::CheckDBPerfResponse* response) {
@@ -135,6 +137,29 @@ void G2Diagnostic::Stub::async::InitWithConfigID(::grpc::ClientContext* context,
   return result;
 }
 
+::grpc::Status G2Diagnostic::Stub::PurgeRepository(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest& request, ::g2diagnostic::PurgeRepositoryResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::PurgeRepositoryRequest, ::g2diagnostic::PurgeRepositoryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_PurgeRepository_, context, request, response);
+}
+
+void G2Diagnostic::Stub::async::PurgeRepository(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest* request, ::g2diagnostic::PurgeRepositoryResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::g2diagnostic::PurgeRepositoryRequest, ::g2diagnostic::PurgeRepositoryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_PurgeRepository_, context, request, response, std::move(f));
+}
+
+void G2Diagnostic::Stub::async::PurgeRepository(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest* request, ::g2diagnostic::PurgeRepositoryResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_PurgeRepository_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::g2diagnostic::PurgeRepositoryResponse>* G2Diagnostic::Stub::PrepareAsyncPurgeRepositoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::g2diagnostic::PurgeRepositoryResponse, ::g2diagnostic::PurgeRepositoryRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_PurgeRepository_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::g2diagnostic::PurgeRepositoryResponse>* G2Diagnostic::Stub::AsyncPurgeRepositoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncPurgeRepositoryRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
 ::grpc::Status G2Diagnostic::Stub::Reinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::g2diagnostic::ReinitResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::g2diagnostic::ReinitRequest, ::g2diagnostic::ReinitResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Reinit_, context, request, response);
 }
@@ -202,6 +227,16 @@ G2Diagnostic::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       G2Diagnostic_method_names[4],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::PurgeRepositoryRequest, ::g2diagnostic::PurgeRepositoryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](G2Diagnostic::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::g2diagnostic::PurgeRepositoryRequest* req,
+             ::g2diagnostic::PurgeRepositoryResponse* resp) {
+               return service->PurgeRepository(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      G2Diagnostic_method_names[5],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< G2Diagnostic::Service, ::g2diagnostic::ReinitRequest, ::g2diagnostic::ReinitResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](G2Diagnostic::Service* service,
              ::grpc::ServerContext* ctx,
@@ -236,6 +271,13 @@ G2Diagnostic::Service::~Service() {
 }
 
 ::grpc::Status G2Diagnostic::Service::InitWithConfigID(::grpc::ServerContext* context, const ::g2diagnostic::InitWithConfigIDRequest* request, ::g2diagnostic::InitWithConfigIDResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status G2Diagnostic::Service::PurgeRepository(::grpc::ServerContext* context, const ::g2diagnostic::PurgeRepositoryRequest* request, ::g2diagnostic::PurgeRepositoryResponse* response) {
   (void) context;
   (void) request;
   (void) response;

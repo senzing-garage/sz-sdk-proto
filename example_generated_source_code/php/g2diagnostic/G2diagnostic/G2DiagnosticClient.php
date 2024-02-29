@@ -73,6 +73,20 @@ class G2DiagnosticClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \G2diagnostic\PurgeRepositoryRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function PurgeRepository(\G2diagnostic\PurgeRepositoryRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/g2diagnostic.G2Diagnostic/PurgeRepository',
+        $argument,
+        ['\G2diagnostic\PurgeRepositoryResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \G2diagnostic\ReinitRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

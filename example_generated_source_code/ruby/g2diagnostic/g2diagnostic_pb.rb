@@ -30,6 +30,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "g2diagnostic.InitWithConfigIDResponse" do
     end
+    add_message "g2diagnostic.PurgeRepositoryRequest" do
+    end
+    add_message "g2diagnostic.PurgeRepositoryResponse" do
+    end
     add_message "g2diagnostic.ReinitRequest" do
       optional :initConfigID, :int64, 1
     end
@@ -47,6 +51,8 @@ module G2diagnostic
   InitResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2diagnostic.InitResponse").msgclass
   InitWithConfigIDRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2diagnostic.InitWithConfigIDRequest").msgclass
   InitWithConfigIDResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2diagnostic.InitWithConfigIDResponse").msgclass
+  PurgeRepositoryRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2diagnostic.PurgeRepositoryRequest").msgclass
+  PurgeRepositoryResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2diagnostic.PurgeRepositoryResponse").msgclass
   ReinitRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2diagnostic.ReinitRequest").msgclass
   ReinitResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("g2diagnostic.ReinitResponse").msgclass
 end

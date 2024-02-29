@@ -11,6 +11,7 @@ service G2Diagnostic {
   rpc Destroy (DestroyRequest) returns (DestroyResponse) {}
   rpc Init (InitRequest) returns (InitResponse) {}
   rpc InitWithConfigID (InitWithConfigIDRequest) returns (InitWithConfigIDResponse) {}
+  rpc PurgeRepository(PurgeRepositoryRequest) returns (PurgeRepositoryResponse) {}
   rpc Reinit (ReinitRequest) returns (ReinitResponse) {}
 }
 
@@ -42,6 +43,10 @@ message InitWithConfigIDRequest {
 }
 
 message InitWithConfigIDResponse {}
+
+message PurgeRepositoryRequest {}
+
+message PurgeRepositoryResponse {}
 
 message ReinitRequest {
   int64 initConfigID = 1;

@@ -63,6 +63,13 @@ class G2Diagnostic final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::InitWithConfigIDResponse>> PrepareAsyncInitWithConfigID(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::InitWithConfigIDResponse>>(PrepareAsyncInitWithConfigIDRaw(context, request, cq));
     }
+    virtual ::grpc::Status PurgeRepository(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest& request, ::g2diagnostic::PurgeRepositoryResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::PurgeRepositoryResponse>> AsyncPurgeRepository(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::PurgeRepositoryResponse>>(AsyncPurgeRepositoryRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::PurgeRepositoryResponse>> PrepareAsyncPurgeRepository(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::PurgeRepositoryResponse>>(PrepareAsyncPurgeRepositoryRaw(context, request, cq));
+    }
     virtual ::grpc::Status Reinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::g2diagnostic::ReinitResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::ReinitResponse>> AsyncReinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::ReinitResponse>>(AsyncReinitRaw(context, request, cq));
@@ -81,6 +88,8 @@ class G2Diagnostic final {
       virtual void Init(::grpc::ClientContext* context, const ::g2diagnostic::InitRequest* request, ::g2diagnostic::InitResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void InitWithConfigID(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest* request, ::g2diagnostic::InitWithConfigIDResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void InitWithConfigID(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest* request, ::g2diagnostic::InitWithConfigIDResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void PurgeRepository(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest* request, ::g2diagnostic::PurgeRepositoryResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void PurgeRepository(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest* request, ::g2diagnostic::PurgeRepositoryResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void Reinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest* request, ::g2diagnostic::ReinitResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Reinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest* request, ::g2diagnostic::ReinitResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
@@ -96,6 +105,8 @@ class G2Diagnostic final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::InitResponse>* PrepareAsyncInitRaw(::grpc::ClientContext* context, const ::g2diagnostic::InitRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::InitWithConfigIDResponse>* AsyncInitWithConfigIDRaw(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::InitWithConfigIDResponse>* PrepareAsyncInitWithConfigIDRaw(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::PurgeRepositoryResponse>* AsyncPurgeRepositoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::PurgeRepositoryResponse>* PrepareAsyncPurgeRepositoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::ReinitResponse>* AsyncReinitRaw(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::g2diagnostic::ReinitResponse>* PrepareAsyncReinitRaw(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
@@ -130,6 +141,13 @@ class G2Diagnostic final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::InitWithConfigIDResponse>> PrepareAsyncInitWithConfigID(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::InitWithConfigIDResponse>>(PrepareAsyncInitWithConfigIDRaw(context, request, cq));
     }
+    ::grpc::Status PurgeRepository(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest& request, ::g2diagnostic::PurgeRepositoryResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::PurgeRepositoryResponse>> AsyncPurgeRepository(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::PurgeRepositoryResponse>>(AsyncPurgeRepositoryRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::PurgeRepositoryResponse>> PrepareAsyncPurgeRepository(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::PurgeRepositoryResponse>>(PrepareAsyncPurgeRepositoryRaw(context, request, cq));
+    }
     ::grpc::Status Reinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::g2diagnostic::ReinitResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::ReinitResponse>> AsyncReinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::g2diagnostic::ReinitResponse>>(AsyncReinitRaw(context, request, cq));
@@ -148,6 +166,8 @@ class G2Diagnostic final {
       void Init(::grpc::ClientContext* context, const ::g2diagnostic::InitRequest* request, ::g2diagnostic::InitResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void InitWithConfigID(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest* request, ::g2diagnostic::InitWithConfigIDResponse* response, std::function<void(::grpc::Status)>) override;
       void InitWithConfigID(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest* request, ::g2diagnostic::InitWithConfigIDResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void PurgeRepository(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest* request, ::g2diagnostic::PurgeRepositoryResponse* response, std::function<void(::grpc::Status)>) override;
+      void PurgeRepository(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest* request, ::g2diagnostic::PurgeRepositoryResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void Reinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest* request, ::g2diagnostic::ReinitResponse* response, std::function<void(::grpc::Status)>) override;
       void Reinit(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest* request, ::g2diagnostic::ReinitResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
      private:
@@ -169,12 +189,15 @@ class G2Diagnostic final {
     ::grpc::ClientAsyncResponseReader< ::g2diagnostic::InitResponse>* PrepareAsyncInitRaw(::grpc::ClientContext* context, const ::g2diagnostic::InitRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2diagnostic::InitWithConfigIDResponse>* AsyncInitWithConfigIDRaw(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2diagnostic::InitWithConfigIDResponse>* PrepareAsyncInitWithConfigIDRaw(::grpc::ClientContext* context, const ::g2diagnostic::InitWithConfigIDRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::g2diagnostic::PurgeRepositoryResponse>* AsyncPurgeRepositoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::g2diagnostic::PurgeRepositoryResponse>* PrepareAsyncPurgeRepositoryRaw(::grpc::ClientContext* context, const ::g2diagnostic::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2diagnostic::ReinitResponse>* AsyncReinitRaw(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::g2diagnostic::ReinitResponse>* PrepareAsyncReinitRaw(::grpc::ClientContext* context, const ::g2diagnostic::ReinitRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_CheckDBPerf_;
     const ::grpc::internal::RpcMethod rpcmethod_Destroy_;
     const ::grpc::internal::RpcMethod rpcmethod_Init_;
     const ::grpc::internal::RpcMethod rpcmethod_InitWithConfigID_;
+    const ::grpc::internal::RpcMethod rpcmethod_PurgeRepository_;
     const ::grpc::internal::RpcMethod rpcmethod_Reinit_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
@@ -187,6 +210,7 @@ class G2Diagnostic final {
     virtual ::grpc::Status Destroy(::grpc::ServerContext* context, const ::g2diagnostic::DestroyRequest* request, ::g2diagnostic::DestroyResponse* response);
     virtual ::grpc::Status Init(::grpc::ServerContext* context, const ::g2diagnostic::InitRequest* request, ::g2diagnostic::InitResponse* response);
     virtual ::grpc::Status InitWithConfigID(::grpc::ServerContext* context, const ::g2diagnostic::InitWithConfigIDRequest* request, ::g2diagnostic::InitWithConfigIDResponse* response);
+    virtual ::grpc::Status PurgeRepository(::grpc::ServerContext* context, const ::g2diagnostic::PurgeRepositoryRequest* request, ::g2diagnostic::PurgeRepositoryResponse* response);
     virtual ::grpc::Status Reinit(::grpc::ServerContext* context, const ::g2diagnostic::ReinitRequest* request, ::g2diagnostic::ReinitResponse* response);
   };
   template <class BaseClass>
@@ -270,12 +294,32 @@ class G2Diagnostic final {
     }
   };
   template <class BaseClass>
+  class WithAsyncMethod_PurgeRepository : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_PurgeRepository() {
+      ::grpc::Service::MarkMethodAsync(4);
+    }
+    ~WithAsyncMethod_PurgeRepository() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status PurgeRepository(::grpc::ServerContext* /*context*/, const ::g2diagnostic::PurgeRepositoryRequest* /*request*/, ::g2diagnostic::PurgeRepositoryResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestPurgeRepository(::grpc::ServerContext* context, ::g2diagnostic::PurgeRepositoryRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2diagnostic::PurgeRepositoryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
   class WithAsyncMethod_Reinit : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Reinit() {
-      ::grpc::Service::MarkMethodAsync(4);
+      ::grpc::Service::MarkMethodAsync(5);
     }
     ~WithAsyncMethod_Reinit() override {
       BaseClassMustBeDerivedFromService(this);
@@ -286,10 +330,10 @@ class G2Diagnostic final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReinit(::grpc::ServerContext* context, ::g2diagnostic::ReinitRequest* request, ::grpc::ServerAsyncResponseWriter< ::g2diagnostic::ReinitResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_CheckDBPerf<WithAsyncMethod_Destroy<WithAsyncMethod_Init<WithAsyncMethod_InitWithConfigID<WithAsyncMethod_Reinit<Service > > > > > AsyncService;
+  typedef WithAsyncMethod_CheckDBPerf<WithAsyncMethod_Destroy<WithAsyncMethod_Init<WithAsyncMethod_InitWithConfigID<WithAsyncMethod_PurgeRepository<WithAsyncMethod_Reinit<Service > > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_CheckDBPerf : public BaseClass {
    private:
@@ -399,18 +443,45 @@ class G2Diagnostic final {
       ::grpc::CallbackServerContext* /*context*/, const ::g2diagnostic::InitWithConfigIDRequest* /*request*/, ::g2diagnostic::InitWithConfigIDResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
+  class WithCallbackMethod_PurgeRepository : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_PurgeRepository() {
+      ::grpc::Service::MarkMethodCallback(4,
+          new ::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::PurgeRepositoryRequest, ::g2diagnostic::PurgeRepositoryResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::g2diagnostic::PurgeRepositoryRequest* request, ::g2diagnostic::PurgeRepositoryResponse* response) { return this->PurgeRepository(context, request, response); }));}
+    void SetMessageAllocatorFor_PurgeRepository(
+        ::grpc::MessageAllocator< ::g2diagnostic::PurgeRepositoryRequest, ::g2diagnostic::PurgeRepositoryResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::PurgeRepositoryRequest, ::g2diagnostic::PurgeRepositoryResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_PurgeRepository() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status PurgeRepository(::grpc::ServerContext* /*context*/, const ::g2diagnostic::PurgeRepositoryRequest* /*request*/, ::g2diagnostic::PurgeRepositoryResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* PurgeRepository(
+      ::grpc::CallbackServerContext* /*context*/, const ::g2diagnostic::PurgeRepositoryRequest* /*request*/, ::g2diagnostic::PurgeRepositoryResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
   class WithCallbackMethod_Reinit : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_Reinit() {
-      ::grpc::Service::MarkMethodCallback(4,
+      ::grpc::Service::MarkMethodCallback(5,
           new ::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::ReinitRequest, ::g2diagnostic::ReinitResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::g2diagnostic::ReinitRequest* request, ::g2diagnostic::ReinitResponse* response) { return this->Reinit(context, request, response); }));}
     void SetMessageAllocatorFor_Reinit(
         ::grpc::MessageAllocator< ::g2diagnostic::ReinitRequest, ::g2diagnostic::ReinitResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::g2diagnostic::ReinitRequest, ::g2diagnostic::ReinitResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -425,7 +496,7 @@ class G2Diagnostic final {
     virtual ::grpc::ServerUnaryReactor* Reinit(
       ::grpc::CallbackServerContext* /*context*/, const ::g2diagnostic::ReinitRequest* /*request*/, ::g2diagnostic::ReinitResponse* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_CheckDBPerf<WithCallbackMethod_Destroy<WithCallbackMethod_Init<WithCallbackMethod_InitWithConfigID<WithCallbackMethod_Reinit<Service > > > > > CallbackService;
+  typedef WithCallbackMethod_CheckDBPerf<WithCallbackMethod_Destroy<WithCallbackMethod_Init<WithCallbackMethod_InitWithConfigID<WithCallbackMethod_PurgeRepository<WithCallbackMethod_Reinit<Service > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_CheckDBPerf : public BaseClass {
@@ -496,12 +567,29 @@ class G2Diagnostic final {
     }
   };
   template <class BaseClass>
+  class WithGenericMethod_PurgeRepository : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_PurgeRepository() {
+      ::grpc::Service::MarkMethodGeneric(4);
+    }
+    ~WithGenericMethod_PurgeRepository() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status PurgeRepository(::grpc::ServerContext* /*context*/, const ::g2diagnostic::PurgeRepositoryRequest* /*request*/, ::g2diagnostic::PurgeRepositoryResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
   class WithGenericMethod_Reinit : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Reinit() {
-      ::grpc::Service::MarkMethodGeneric(4);
+      ::grpc::Service::MarkMethodGeneric(5);
     }
     ~WithGenericMethod_Reinit() override {
       BaseClassMustBeDerivedFromService(this);
@@ -593,12 +681,32 @@ class G2Diagnostic final {
     }
   };
   template <class BaseClass>
+  class WithRawMethod_PurgeRepository : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_PurgeRepository() {
+      ::grpc::Service::MarkMethodRaw(4);
+    }
+    ~WithRawMethod_PurgeRepository() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status PurgeRepository(::grpc::ServerContext* /*context*/, const ::g2diagnostic::PurgeRepositoryRequest* /*request*/, ::g2diagnostic::PurgeRepositoryResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestPurgeRepository(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
   class WithRawMethod_Reinit : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Reinit() {
-      ::grpc::Service::MarkMethodRaw(4);
+      ::grpc::Service::MarkMethodRaw(5);
     }
     ~WithRawMethod_Reinit() override {
       BaseClassMustBeDerivedFromService(this);
@@ -609,7 +717,7 @@ class G2Diagnostic final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReinit(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -701,12 +809,34 @@ class G2Diagnostic final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
+  class WithRawCallbackMethod_PurgeRepository : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_PurgeRepository() {
+      ::grpc::Service::MarkMethodRawCallback(4,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PurgeRepository(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_PurgeRepository() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status PurgeRepository(::grpc::ServerContext* /*context*/, const ::g2diagnostic::PurgeRepositoryRequest* /*request*/, ::g2diagnostic::PurgeRepositoryResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* PurgeRepository(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
   class WithRawCallbackMethod_Reinit : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_Reinit() {
-      ::grpc::Service::MarkMethodRawCallback(4,
+      ::grpc::Service::MarkMethodRawCallback(5,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Reinit(context, request, response); }));
@@ -831,12 +961,39 @@ class G2Diagnostic final {
     virtual ::grpc::Status StreamedInitWithConfigID(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2diagnostic::InitWithConfigIDRequest,::g2diagnostic::InitWithConfigIDResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
+  class WithStreamedUnaryMethod_PurgeRepository : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_PurgeRepository() {
+      ::grpc::Service::MarkMethodStreamed(4,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::g2diagnostic::PurgeRepositoryRequest, ::g2diagnostic::PurgeRepositoryResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::g2diagnostic::PurgeRepositoryRequest, ::g2diagnostic::PurgeRepositoryResponse>* streamer) {
+                       return this->StreamedPurgeRepository(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_PurgeRepository() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status PurgeRepository(::grpc::ServerContext* /*context*/, const ::g2diagnostic::PurgeRepositoryRequest* /*request*/, ::g2diagnostic::PurgeRepositoryResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedPurgeRepository(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2diagnostic::PurgeRepositoryRequest,::g2diagnostic::PurgeRepositoryResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
   class WithStreamedUnaryMethod_Reinit : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Reinit() {
-      ::grpc::Service::MarkMethodStreamed(4,
+      ::grpc::Service::MarkMethodStreamed(5,
         new ::grpc::internal::StreamedUnaryHandler<
           ::g2diagnostic::ReinitRequest, ::g2diagnostic::ReinitResponse>(
             [this](::grpc::ServerContext* context,
@@ -857,9 +1014,9 @@ class G2Diagnostic final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedReinit(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::g2diagnostic::ReinitRequest,::g2diagnostic::ReinitResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_CheckDBPerf<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_Reinit<Service > > > > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_CheckDBPerf<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_PurgeRepository<WithStreamedUnaryMethod_Reinit<Service > > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_CheckDBPerf<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_Reinit<Service > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_CheckDBPerf<WithStreamedUnaryMethod_Destroy<WithStreamedUnaryMethod_Init<WithStreamedUnaryMethod_InitWithConfigID<WithStreamedUnaryMethod_PurgeRepository<WithStreamedUnaryMethod_Reinit<Service > > > > > > StreamedService;
 };
 
 }  // namespace g2diagnostic
