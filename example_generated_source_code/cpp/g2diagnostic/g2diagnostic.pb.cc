@@ -122,6 +122,28 @@ struct InitWithConfigIDResponseDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 InitWithConfigIDResponseDefaultTypeInternal _InitWithConfigIDResponse_default_instance_;
+PROTOBUF_CONSTEXPR PurgeRepositoryRequest::PurgeRepositoryRequest(
+    ::_pbi::ConstantInitialized) {}
+struct PurgeRepositoryRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PurgeRepositoryRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PurgeRepositoryRequestDefaultTypeInternal() {}
+  union {
+    PurgeRepositoryRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PurgeRepositoryRequestDefaultTypeInternal _PurgeRepositoryRequest_default_instance_;
+PROTOBUF_CONSTEXPR PurgeRepositoryResponse::PurgeRepositoryResponse(
+    ::_pbi::ConstantInitialized) {}
+struct PurgeRepositoryResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PurgeRepositoryResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PurgeRepositoryResponseDefaultTypeInternal() {}
+  union {
+    PurgeRepositoryResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PurgeRepositoryResponseDefaultTypeInternal _PurgeRepositoryResponse_default_instance_;
 PROTOBUF_CONSTEXPR ReinitRequest::ReinitRequest(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.initconfigid_)*/int64_t{0}
@@ -147,7 +169,7 @@ struct ReinitResponseDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ReinitResponseDefaultTypeInternal _ReinitResponse_default_instance_;
 }  // namespace g2diagnostic
-static ::_pb::Metadata file_level_metadata_g2diagnostic_2eproto[10];
+static ::_pb::Metadata file_level_metadata_g2diagnostic_2eproto[12];
 static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_g2diagnostic_2eproto = nullptr;
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_g2diagnostic_2eproto = nullptr;
 
@@ -210,6 +232,18 @@ const uint32_t TableStruct_g2diagnostic_2eproto::offsets[] PROTOBUF_SECTION_VARI
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
   ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::g2diagnostic::PurgeRepositoryRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::g2diagnostic::PurgeRepositoryResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::g2diagnostic::ReinitRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -232,8 +266,10 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 35, -1, -1, sizeof(::g2diagnostic::InitResponse)},
   { 41, -1, -1, sizeof(::g2diagnostic::InitWithConfigIDRequest)},
   { 51, -1, -1, sizeof(::g2diagnostic::InitWithConfigIDResponse)},
-  { 57, -1, -1, sizeof(::g2diagnostic::ReinitRequest)},
-  { 64, -1, -1, sizeof(::g2diagnostic::ReinitResponse)},
+  { 57, -1, -1, sizeof(::g2diagnostic::PurgeRepositoryRequest)},
+  { 63, -1, -1, sizeof(::g2diagnostic::PurgeRepositoryResponse)},
+  { 69, -1, -1, sizeof(::g2diagnostic::ReinitRequest)},
+  { 76, -1, -1, sizeof(::g2diagnostic::ReinitResponse)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -245,6 +281,8 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::g2diagnostic::_InitResponse_default_instance_._instance,
   &::g2diagnostic::_InitWithConfigIDRequest_default_instance_._instance,
   &::g2diagnostic::_InitWithConfigIDResponse_default_instance_._instance,
+  &::g2diagnostic::_PurgeRepositoryRequest_default_instance_._instance,
+  &::g2diagnostic::_PurgeRepositoryResponse_default_instance_._instance,
   &::g2diagnostic::_ReinitRequest_default_instance_._instance,
   &::g2diagnostic::_ReinitResponse_default_instance_._instance,
 };
@@ -259,28 +297,32 @@ const char descriptor_table_protodef_g2diagnostic_2eproto[] PROTOBUF_SECTION_VAR
   "Response\"n\n\027InitWithConfigIDRequest\022\022\n\nm"
   "oduleName\030\001 \001(\t\022\021\n\tiniParams\030\002 \001(\t\022\024\n\014in"
   "itConfigID\030\003 \001(\003\022\026\n\016verboseLogging\030\004 \001(\003"
-  "\"\032\n\030InitWithConfigIDResponse\"%\n\rReinitRe"
-  "quest\022\024\n\014initConfigID\030\001 \001(\003\"\020\n\016ReinitRes"
-  "ponse2\233\003\n\014G2Diagnostic\022T\n\013CheckDBPerf\022 ."
-  "g2diagnostic.CheckDBPerfRequest\032!.g2diag"
-  "nostic.CheckDBPerfResponse\"\000\022H\n\007Destroy\022"
-  "\034.g2diagnostic.DestroyRequest\032\035.g2diagno"
-  "stic.DestroyResponse\"\000\022\?\n\004Init\022\031.g2diagn"
-  "ostic.InitRequest\032\032.g2diagnostic.InitRes"
-  "ponse\"\000\022c\n\020InitWithConfigID\022%.g2diagnost"
-  "ic.InitWithConfigIDRequest\032&.g2diagnosti"
-  "c.InitWithConfigIDResponse\"\000\022E\n\006Reinit\022\033"
-  ".g2diagnostic.ReinitRequest\032\034.g2diagnost"
-  "ic.ReinitResponse\"\000Bu\n\'com.senzing.g2.en"
-  "gine.grpc.G2DiagnosticB\021G2DiagnosticProt"
-  "oP\001Z5github.com/senzing-garage/g2-sdk-go"
-  "-grpc/g2diagnosticb\006proto3"
+  "\"\032\n\030InitWithConfigIDResponse\"\030\n\026PurgeRep"
+  "ositoryRequest\"\031\n\027PurgeRepositoryRespons"
+  "e\"%\n\rReinitRequest\022\024\n\014initConfigID\030\001 \001(\003"
+  "\"\020\n\016ReinitResponse2\375\003\n\014G2Diagnostic\022T\n\013C"
+  "heckDBPerf\022 .g2diagnostic.CheckDBPerfReq"
+  "uest\032!.g2diagnostic.CheckDBPerfResponse\""
+  "\000\022H\n\007Destroy\022\034.g2diagnostic.DestroyReque"
+  "st\032\035.g2diagnostic.DestroyResponse\"\000\022\?\n\004I"
+  "nit\022\031.g2diagnostic.InitRequest\032\032.g2diagn"
+  "ostic.InitResponse\"\000\022c\n\020InitWithConfigID"
+  "\022%.g2diagnostic.InitWithConfigIDRequest\032"
+  "&.g2diagnostic.InitWithConfigIDResponse\""
+  "\000\022`\n\017PurgeRepository\022$.g2diagnostic.Purg"
+  "eRepositoryRequest\032%.g2diagnostic.PurgeR"
+  "epositoryResponse\"\000\022E\n\006Reinit\022\033.g2diagno"
+  "stic.ReinitRequest\032\034.g2diagnostic.Reinit"
+  "Response\"\000Bu\n\'com.senzing.g2.engine.grpc"
+  ".G2DiagnosticB\021G2DiagnosticProtoP\001Z5gith"
+  "ub.com/senzing-garage/g2-sdk-go-grpc/g2d"
+  "iagnosticb\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_g2diagnostic_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_g2diagnostic_2eproto = {
-    false, false, 986, descriptor_table_protodef_g2diagnostic_2eproto,
+    false, false, 1137, descriptor_table_protodef_g2diagnostic_2eproto,
     "g2diagnostic.proto",
-    &descriptor_table_g2diagnostic_2eproto_once, nullptr, 0, 10,
+    &descriptor_table_g2diagnostic_2eproto_once, nullptr, 0, 12,
     schemas, file_default_instances, TableStruct_g2diagnostic_2eproto::offsets,
     file_level_metadata_g2diagnostic_2eproto, file_level_enum_descriptors_g2diagnostic_2eproto,
     file_level_service_descriptors_g2diagnostic_2eproto,
@@ -1429,6 +1471,86 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*InitWithConfigIDResponse::GetC
 
 // ===================================================================
 
+class PurgeRepositoryRequest::_Internal {
+ public:
+};
+
+PurgeRepositoryRequest::PurgeRepositoryRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  // @@protoc_insertion_point(arena_constructor:g2diagnostic.PurgeRepositoryRequest)
+}
+PurgeRepositoryRequest::PurgeRepositoryRequest(const PurgeRepositoryRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  PurgeRepositoryRequest* const _this = this; (void)_this;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:g2diagnostic.PurgeRepositoryRequest)
+}
+
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PurgeRepositoryRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PurgeRepositoryRequest::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata PurgeRepositoryRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_g2diagnostic_2eproto_getter, &descriptor_table_g2diagnostic_2eproto_once,
+      file_level_metadata_g2diagnostic_2eproto[8]);
+}
+
+// ===================================================================
+
+class PurgeRepositoryResponse::_Internal {
+ public:
+};
+
+PurgeRepositoryResponse::PurgeRepositoryResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  // @@protoc_insertion_point(arena_constructor:g2diagnostic.PurgeRepositoryResponse)
+}
+PurgeRepositoryResponse::PurgeRepositoryResponse(const PurgeRepositoryResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  PurgeRepositoryResponse* const _this = this; (void)_this;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:g2diagnostic.PurgeRepositoryResponse)
+}
+
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PurgeRepositoryResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PurgeRepositoryResponse::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata PurgeRepositoryResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_g2diagnostic_2eproto_getter, &descriptor_table_g2diagnostic_2eproto_once,
+      file_level_metadata_g2diagnostic_2eproto[9]);
+}
+
+// ===================================================================
+
 class ReinitRequest::_Internal {
  public:
 };
@@ -1602,7 +1724,7 @@ void ReinitRequest::InternalSwap(ReinitRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ReinitRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2diagnostic_2eproto_getter, &descriptor_table_g2diagnostic_2eproto_once,
-      file_level_metadata_g2diagnostic_2eproto[8]);
+      file_level_metadata_g2diagnostic_2eproto[10]);
 }
 
 // ===================================================================
@@ -1642,7 +1764,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReinitResponse::GetClassData()
 ::PROTOBUF_NAMESPACE_ID::Metadata ReinitResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_g2diagnostic_2eproto_getter, &descriptor_table_g2diagnostic_2eproto_once,
-      file_level_metadata_g2diagnostic_2eproto[9]);
+      file_level_metadata_g2diagnostic_2eproto[11]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
@@ -1679,6 +1801,14 @@ Arena::CreateMaybeMessage< ::g2diagnostic::InitWithConfigIDRequest >(Arena* aren
 template<> PROTOBUF_NOINLINE ::g2diagnostic::InitWithConfigIDResponse*
 Arena::CreateMaybeMessage< ::g2diagnostic::InitWithConfigIDResponse >(Arena* arena) {
   return Arena::CreateMessageInternal< ::g2diagnostic::InitWithConfigIDResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::g2diagnostic::PurgeRepositoryRequest*
+Arena::CreateMaybeMessage< ::g2diagnostic::PurgeRepositoryRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::g2diagnostic::PurgeRepositoryRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::g2diagnostic::PurgeRepositoryResponse*
+Arena::CreateMaybeMessage< ::g2diagnostic::PurgeRepositoryResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::g2diagnostic::PurgeRepositoryResponse >(arena);
 }
 template<> PROTOBUF_NOINLINE ::g2diagnostic::ReinitRequest*
 Arena::CreateMaybeMessage< ::g2diagnostic::ReinitRequest >(Arena* arena) {

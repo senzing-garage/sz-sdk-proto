@@ -55,6 +55,16 @@ public final class G2DiagnosticProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_g2diagnostic_InitWithConfigIDResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_g2diagnostic_PurgeRepositoryRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_g2diagnostic_PurgeRepositoryRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_g2diagnostic_PurgeRepositoryResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_g2diagnostic_PurgeRepositoryResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_g2diagnostic_ReinitRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -82,22 +92,26 @@ public final class G2DiagnosticProto {
       "Response\"n\n\027InitWithConfigIDRequest\022\022\n\nm" +
       "oduleName\030\001 \001(\t\022\021\n\tiniParams\030\002 \001(\t\022\024\n\014in" +
       "itConfigID\030\003 \001(\003\022\026\n\016verboseLogging\030\004 \001(\003" +
-      "\"\032\n\030InitWithConfigIDResponse\"%\n\rReinitRe" +
-      "quest\022\024\n\014initConfigID\030\001 \001(\003\"\020\n\016ReinitRes" +
-      "ponse2\233\003\n\014G2Diagnostic\022T\n\013CheckDBPerf\022 ." +
-      "g2diagnostic.CheckDBPerfRequest\032!.g2diag" +
-      "nostic.CheckDBPerfResponse\"\000\022H\n\007Destroy\022" +
-      "\034.g2diagnostic.DestroyRequest\032\035.g2diagno" +
-      "stic.DestroyResponse\"\000\022?\n\004Init\022\031.g2diagn" +
-      "ostic.InitRequest\032\032.g2diagnostic.InitRes" +
-      "ponse\"\000\022c\n\020InitWithConfigID\022%.g2diagnost" +
-      "ic.InitWithConfigIDRequest\032&.g2diagnosti" +
-      "c.InitWithConfigIDResponse\"\000\022E\n\006Reinit\022\033" +
-      ".g2diagnostic.ReinitRequest\032\034.g2diagnost" +
-      "ic.ReinitResponse\"\000Bu\n\'com.senzing.g2.en" +
-      "gine.grpc.G2DiagnosticB\021G2DiagnosticProt" +
-      "oP\001Z5github.com/senzing-garage/g2-sdk-go" +
-      "-grpc/g2diagnosticb\006proto3"
+      "\"\032\n\030InitWithConfigIDResponse\"\030\n\026PurgeRep" +
+      "ositoryRequest\"\031\n\027PurgeRepositoryRespons" +
+      "e\"%\n\rReinitRequest\022\024\n\014initConfigID\030\001 \001(\003" +
+      "\"\020\n\016ReinitResponse2\375\003\n\014G2Diagnostic\022T\n\013C" +
+      "heckDBPerf\022 .g2diagnostic.CheckDBPerfReq" +
+      "uest\032!.g2diagnostic.CheckDBPerfResponse\"" +
+      "\000\022H\n\007Destroy\022\034.g2diagnostic.DestroyReque" +
+      "st\032\035.g2diagnostic.DestroyResponse\"\000\022?\n\004I" +
+      "nit\022\031.g2diagnostic.InitRequest\032\032.g2diagn" +
+      "ostic.InitResponse\"\000\022c\n\020InitWithConfigID" +
+      "\022%.g2diagnostic.InitWithConfigIDRequest\032" +
+      "&.g2diagnostic.InitWithConfigIDResponse\"" +
+      "\000\022`\n\017PurgeRepository\022$.g2diagnostic.Purg" +
+      "eRepositoryRequest\032%.g2diagnostic.PurgeR" +
+      "epositoryResponse\"\000\022E\n\006Reinit\022\033.g2diagno" +
+      "stic.ReinitRequest\032\034.g2diagnostic.Reinit" +
+      "Response\"\000Bu\n\'com.senzing.g2.engine.grpc" +
+      ".G2DiagnosticB\021G2DiagnosticProtoP\001Z5gith" +
+      "ub.com/senzing-garage/g2-sdk-go-grpc/g2d" +
+      "iagnosticb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -151,14 +165,26 @@ public final class G2DiagnosticProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_InitWithConfigIDResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_g2diagnostic_ReinitRequest_descriptor =
+    internal_static_g2diagnostic_PurgeRepositoryRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
+    internal_static_g2diagnostic_PurgeRepositoryRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_g2diagnostic_PurgeRepositoryRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_g2diagnostic_PurgeRepositoryResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_g2diagnostic_PurgeRepositoryResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_g2diagnostic_PurgeRepositoryResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_g2diagnostic_ReinitRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
     internal_static_g2diagnostic_ReinitRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_ReinitRequest_descriptor,
         new java.lang.String[] { "InitConfigID", });
     internal_static_g2diagnostic_ReinitResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_g2diagnostic_ReinitResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_g2diagnostic_ReinitResponse_descriptor,

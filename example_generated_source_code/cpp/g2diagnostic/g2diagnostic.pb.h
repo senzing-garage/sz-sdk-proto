@@ -70,6 +70,12 @@ extern InitWithConfigIDRequestDefaultTypeInternal _InitWithConfigIDRequest_defau
 class InitWithConfigIDResponse;
 struct InitWithConfigIDResponseDefaultTypeInternal;
 extern InitWithConfigIDResponseDefaultTypeInternal _InitWithConfigIDResponse_default_instance_;
+class PurgeRepositoryRequest;
+struct PurgeRepositoryRequestDefaultTypeInternal;
+extern PurgeRepositoryRequestDefaultTypeInternal _PurgeRepositoryRequest_default_instance_;
+class PurgeRepositoryResponse;
+struct PurgeRepositoryResponseDefaultTypeInternal;
+extern PurgeRepositoryResponseDefaultTypeInternal _PurgeRepositoryResponse_default_instance_;
 class ReinitRequest;
 struct ReinitRequestDefaultTypeInternal;
 extern ReinitRequestDefaultTypeInternal _ReinitRequest_default_instance_;
@@ -86,6 +92,8 @@ template<> ::g2diagnostic::InitRequest* Arena::CreateMaybeMessage<::g2diagnostic
 template<> ::g2diagnostic::InitResponse* Arena::CreateMaybeMessage<::g2diagnostic::InitResponse>(Arena*);
 template<> ::g2diagnostic::InitWithConfigIDRequest* Arena::CreateMaybeMessage<::g2diagnostic::InitWithConfigIDRequest>(Arena*);
 template<> ::g2diagnostic::InitWithConfigIDResponse* Arena::CreateMaybeMessage<::g2diagnostic::InitWithConfigIDResponse>(Arena*);
+template<> ::g2diagnostic::PurgeRepositoryRequest* Arena::CreateMaybeMessage<::g2diagnostic::PurgeRepositoryRequest>(Arena*);
+template<> ::g2diagnostic::PurgeRepositoryResponse* Arena::CreateMaybeMessage<::g2diagnostic::PurgeRepositoryResponse>(Arena*);
 template<> ::g2diagnostic::ReinitRequest* Arena::CreateMaybeMessage<::g2diagnostic::ReinitRequest>(Arena*);
 template<> ::g2diagnostic::ReinitResponse* Arena::CreateMaybeMessage<::g2diagnostic::ReinitResponse>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
@@ -1237,6 +1245,242 @@ class InitWithConfigIDResponse final :
 };
 // -------------------------------------------------------------------
 
+class PurgeRepositoryRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:g2diagnostic.PurgeRepositoryRequest) */ {
+ public:
+  inline PurgeRepositoryRequest() : PurgeRepositoryRequest(nullptr) {}
+  explicit PROTOBUF_CONSTEXPR PurgeRepositoryRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  PurgeRepositoryRequest(const PurgeRepositoryRequest& from);
+  PurgeRepositoryRequest(PurgeRepositoryRequest&& from) noexcept
+    : PurgeRepositoryRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline PurgeRepositoryRequest& operator=(const PurgeRepositoryRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline PurgeRepositoryRequest& operator=(PurgeRepositoryRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const PurgeRepositoryRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const PurgeRepositoryRequest* internal_default_instance() {
+    return reinterpret_cast<const PurgeRepositoryRequest*>(
+               &_PurgeRepositoryRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    8;
+
+  friend void swap(PurgeRepositoryRequest& a, PurgeRepositoryRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(PurgeRepositoryRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(PurgeRepositoryRequest* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  PurgeRepositoryRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PurgeRepositoryRequest>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const PurgeRepositoryRequest& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const PurgeRepositoryRequest& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "g2diagnostic.PurgeRepositoryRequest";
+  }
+  protected:
+  explicit PurgeRepositoryRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:g2diagnostic.PurgeRepositoryRequest)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+  };
+  friend struct ::TableStruct_g2diagnostic_2eproto;
+};
+// -------------------------------------------------------------------
+
+class PurgeRepositoryResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:g2diagnostic.PurgeRepositoryResponse) */ {
+ public:
+  inline PurgeRepositoryResponse() : PurgeRepositoryResponse(nullptr) {}
+  explicit PROTOBUF_CONSTEXPR PurgeRepositoryResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  PurgeRepositoryResponse(const PurgeRepositoryResponse& from);
+  PurgeRepositoryResponse(PurgeRepositoryResponse&& from) noexcept
+    : PurgeRepositoryResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline PurgeRepositoryResponse& operator=(const PurgeRepositoryResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline PurgeRepositoryResponse& operator=(PurgeRepositoryResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const PurgeRepositoryResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const PurgeRepositoryResponse* internal_default_instance() {
+    return reinterpret_cast<const PurgeRepositoryResponse*>(
+               &_PurgeRepositoryResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    9;
+
+  friend void swap(PurgeRepositoryResponse& a, PurgeRepositoryResponse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(PurgeRepositoryResponse* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(PurgeRepositoryResponse* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  PurgeRepositoryResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PurgeRepositoryResponse>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const PurgeRepositoryResponse& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const PurgeRepositoryResponse& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "g2diagnostic.PurgeRepositoryResponse";
+  }
+  protected:
+  explicit PurgeRepositoryResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:g2diagnostic.PurgeRepositoryResponse)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+  };
+  friend struct ::TableStruct_g2diagnostic_2eproto;
+};
+// -------------------------------------------------------------------
+
 class ReinitRequest final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:g2diagnostic.ReinitRequest) */ {
  public:
@@ -1285,7 +1529,7 @@ class ReinitRequest final :
                &_ReinitRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    10;
 
   friend void swap(ReinitRequest& a, ReinitRequest& b) {
     a.Swap(&b);
@@ -1432,7 +1676,7 @@ class ReinitResponse final :
                &_ReinitResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    11;
 
   friend void swap(ReinitResponse& a, ReinitResponse& b) {
     a.Swap(&b);
@@ -1872,6 +2116,14 @@ inline void InitWithConfigIDRequest::set_verboselogging(int64_t value) {
 
 // -------------------------------------------------------------------
 
+// PurgeRepositoryRequest
+
+// -------------------------------------------------------------------
+
+// PurgeRepositoryResponse
+
+// -------------------------------------------------------------------
+
 // ReinitRequest
 
 // int64 initConfigID = 1;
@@ -1901,6 +2153,10 @@ inline void ReinitRequest::set_initconfigid(int64_t value) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

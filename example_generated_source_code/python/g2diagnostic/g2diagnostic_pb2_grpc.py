@@ -34,6 +34,11 @@ class G2DiagnosticStub(object):
                 request_serializer=g2diagnostic__pb2.InitWithConfigIDRequest.SerializeToString,
                 response_deserializer=g2diagnostic__pb2.InitWithConfigIDResponse.FromString,
                 )
+        self.PurgeRepository = channel.unary_unary(
+                '/g2diagnostic.G2Diagnostic/PurgeRepository',
+                request_serializer=g2diagnostic__pb2.PurgeRepositoryRequest.SerializeToString,
+                response_deserializer=g2diagnostic__pb2.PurgeRepositoryResponse.FromString,
+                )
         self.Reinit = channel.unary_unary(
                 '/g2diagnostic.G2Diagnostic/Reinit',
                 request_serializer=g2diagnostic__pb2.ReinitRequest.SerializeToString,
@@ -68,6 +73,12 @@ class G2DiagnosticServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def PurgeRepository(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def Reinit(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -96,6 +107,11 @@ def add_G2DiagnosticServicer_to_server(servicer, server):
                     servicer.InitWithConfigID,
                     request_deserializer=g2diagnostic__pb2.InitWithConfigIDRequest.FromString,
                     response_serializer=g2diagnostic__pb2.InitWithConfigIDResponse.SerializeToString,
+            ),
+            'PurgeRepository': grpc.unary_unary_rpc_method_handler(
+                    servicer.PurgeRepository,
+                    request_deserializer=g2diagnostic__pb2.PurgeRepositoryRequest.FromString,
+                    response_serializer=g2diagnostic__pb2.PurgeRepositoryResponse.SerializeToString,
             ),
             'Reinit': grpc.unary_unary_rpc_method_handler(
                     servicer.Reinit,
@@ -177,6 +193,23 @@ class G2Diagnostic(object):
         return grpc.experimental.unary_unary(request, target, '/g2diagnostic.G2Diagnostic/InitWithConfigID',
             g2diagnostic__pb2.InitWithConfigIDRequest.SerializeToString,
             g2diagnostic__pb2.InitWithConfigIDResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def PurgeRepository(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/g2diagnostic.G2Diagnostic/PurgeRepository',
+            g2diagnostic__pb2.PurgeRepositoryRequest.SerializeToString,
+            g2diagnostic__pb2.PurgeRepositoryResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 

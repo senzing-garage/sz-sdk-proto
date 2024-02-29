@@ -18,6 +18,7 @@ module G2diagnostic
       rpc :Destroy, ::G2diagnostic::DestroyRequest, ::G2diagnostic::DestroyResponse
       rpc :Init, ::G2diagnostic::InitRequest, ::G2diagnostic::InitResponse
       rpc :InitWithConfigID, ::G2diagnostic::InitWithConfigIDRequest, ::G2diagnostic::InitWithConfigIDResponse
+      rpc :PurgeRepository, ::G2diagnostic::PurgeRepositoryRequest, ::G2diagnostic::PurgeRepositoryResponse
       rpc :Reinit, ::G2diagnostic::ReinitRequest, ::G2diagnostic::ReinitResponse
     end
 

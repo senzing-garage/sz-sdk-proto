@@ -26,6 +26,7 @@ type G2DiagnosticClient interface {
 	Destroy(ctx context.Context, in *DestroyRequest, opts ...grpc.CallOption) (*DestroyResponse, error)
 	Init(ctx context.Context, in *InitRequest, opts ...grpc.CallOption) (*InitResponse, error)
 	InitWithConfigID(ctx context.Context, in *InitWithConfigIDRequest, opts ...grpc.CallOption) (*InitWithConfigIDResponse, error)
+	PurgeRepository(ctx context.Context, in *PurgeRepositoryRequest, opts ...grpc.CallOption) (*PurgeRepositoryResponse, error)
 	Reinit(ctx context.Context, in *ReinitRequest, opts ...grpc.CallOption) (*ReinitResponse, error)
 }
 
@@ -73,6 +74,15 @@ func (c *g2DiagnosticClient) InitWithConfigID(ctx context.Context, in *InitWithC
 	return out, nil
 }
 
+func (c *g2DiagnosticClient) PurgeRepository(ctx context.Context, in *PurgeRepositoryRequest, opts ...grpc.CallOption) (*PurgeRepositoryResponse, error) {
+	out := new(PurgeRepositoryResponse)
+	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/PurgeRepository", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *g2DiagnosticClient) Reinit(ctx context.Context, in *ReinitRequest, opts ...grpc.CallOption) (*ReinitResponse, error) {
 	out := new(ReinitResponse)
 	err := c.cc.Invoke(ctx, "/g2diagnostic.G2Diagnostic/Reinit", in, out, opts...)
@@ -90,6 +100,7 @@ type G2DiagnosticServer interface {
 	Destroy(context.Context, *DestroyRequest) (*DestroyResponse, error)
 	Init(context.Context, *InitRequest) (*InitResponse, error)
 	InitWithConfigID(context.Context, *InitWithConfigIDRequest) (*InitWithConfigIDResponse, error)
+	PurgeRepository(context.Context, *PurgeRepositoryRequest) (*PurgeRepositoryResponse, error)
 	Reinit(context.Context, *ReinitRequest) (*ReinitResponse, error)
 	mustEmbedUnimplementedG2DiagnosticServer()
 }
@@ -109,6 +120,9 @@ func (UnimplementedG2DiagnosticServer) Init(context.Context, *InitRequest) (*Ini
 }
 func (UnimplementedG2DiagnosticServer) InitWithConfigID(context.Context, *InitWithConfigIDRequest) (*InitWithConfigIDResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method InitWithConfigID not implemented")
+}
+func (UnimplementedG2DiagnosticServer) PurgeRepository(context.Context, *PurgeRepositoryRequest) (*PurgeRepositoryResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PurgeRepository not implemented")
 }
 func (UnimplementedG2DiagnosticServer) Reinit(context.Context, *ReinitRequest) (*ReinitResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Reinit not implemented")
@@ -198,6 +212,24 @@ func _G2Diagnostic_InitWithConfigID_Handler(srv interface{}, ctx context.Context
 	return interceptor(ctx, in, info, handler)
 }
 
+func _G2Diagnostic_PurgeRepository_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PurgeRepositoryRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(G2DiagnosticServer).PurgeRepository(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/g2diagnostic.G2Diagnostic/PurgeRepository",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(G2DiagnosticServer).PurgeRepository(ctx, req.(*PurgeRepositoryRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _G2Diagnostic_Reinit_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ReinitRequest)
 	if err := dec(in); err != nil {
@@ -238,6 +270,10 @@ var G2Diagnostic_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "InitWithConfigID",
 			Handler:    _G2Diagnostic_InitWithConfigID_Handler,
+		},
+		{
+			MethodName: "PurgeRepository",
+			Handler:    _G2Diagnostic_PurgeRepository_Handler,
 		},
 		{
 			MethodName: "Reinit",
