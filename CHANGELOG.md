@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - ...
 
+## [0.6.2] - 2024-02-29
+
+### Changed in 0.6.2
+
+- Fix go package structure
+
 ## [0.6.1] - 2024-02-29
 
 ### Changed in 0.6.1
