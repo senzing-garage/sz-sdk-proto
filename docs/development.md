@@ -31,11 +31,11 @@ The following instructions were used to create a
 
     ```console
     export SENZING_COMPONENTS=( \
-      "g2config" \
-      "g2configmgr" \
-      "g2diagnostic" \
-      "g2engine" \
-      "g2product" \
+      "szconfig" \
+      "szconfigmgr" \
+      "szdiagnostic" \
+      "szengine" \
+      "szproduct" \
     )
 
     ```

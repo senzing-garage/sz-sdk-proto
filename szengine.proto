@@ -166,7 +166,7 @@ message GetEntityByEntityIdResponse {
 
 message GetEntityByRecordIdRequest {
   string dataSourceCode = 1;
-  string recordID = 2;
+  string recordId = 2;
   int64 flags = 3;
 }
 
@@ -206,7 +206,7 @@ message GetVirtualEntityByRecordIdResponse {
 }
 
 message HowEntityByEntityIdRequest {
-  int64 entityID = 1;
+  int64 entityId = 1;
   int64 flags = 2;
 }
 
@@ -291,8 +291,8 @@ message StreamExportJsonEntityReportResponse {
 }
 
 message WhyEntitiesRequest {
-  int64 entityID1 = 1;
-  int64 entityID2 = 2;
+  int64 entityId1 = 1;
+  int64 entityId2 = 2;
   int64 flags = 3;
 }
 
