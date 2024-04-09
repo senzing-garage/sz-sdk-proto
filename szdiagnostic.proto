@@ -1,0 +1,23 @@
+syntax = "proto3";
+package szdiagnostic;
+
+option go_package = "github.com/senzing-garage/sz-sdk-go-grpc/szdiagnostic";
+option java_package = "com.senzing.sz.engine.grpc.SzDiagnostic";
+option java_outer_classname = "SzDiagnosticProto";
+
+service SzDiagnostic {
+  rpc CheckDatabasePerformance (CheckDatabasePerformanceRequest) returns (CheckDatabasePerformanceResponse) {}
+  rpc PurgeRepository(PurgeRepositoryRequest) returns (PurgeRepositoryResponse) {}
+}
+
+message CheckDatabasePerformanceRequest {
+  int32 secondsToRun = 1;
+}
+
+message CheckDatabasePerformanceResponse {
+  string result = 1;
+}
+
+message PurgeRepositoryRequest {}
+
+message PurgeRepositoryResponse {}
