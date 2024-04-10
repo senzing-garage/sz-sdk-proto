@@ -39,6 +39,7 @@ type SzEngineClient interface {
 	GetRecord(ctx context.Context, in *GetRecordRequest, opts ...grpc.CallOption) (*GetRecordResponse, error)
 	GetRedoRecord(ctx context.Context, in *GetRedoRecordRequest, opts ...grpc.CallOption) (*GetRedoRecordResponse, error)
 	GetRepositoryLastModifiedTime(ctx context.Context, in *GetRepositoryLastModifiedTimeRequest, opts ...grpc.CallOption) (*GetRepositoryLastModifiedTimeResponse, error)
+	GetStats(ctx context.Context, in *GetStatsRequest, opts ...grpc.CallOption) (*GetStatsResponse, error)
 	GetVirtualEntityByRecordId(ctx context.Context, in *GetVirtualEntityByRecordIdRequest, opts ...grpc.CallOption) (*GetVirtualEntityByRecordIdResponse, error)
 	HowEntityByEntityId(ctx context.Context, in *HowEntityByEntityIdRequest, opts ...grpc.CallOption) (*HowEntityByEntityIdResponse, error)
 	PrimeEngine(ctx context.Context, in *PrimeEngineRequest, opts ...grpc.CallOption) (*PrimeEngineResponse, error)
@@ -47,7 +48,6 @@ type SzEngineClient interface {
 	ReevaluateRecord(ctx context.Context, in *ReevaluateRecordRequest, opts ...grpc.CallOption) (*ReevaluateRecordResponse, error)
 	ReplaceRecord(ctx context.Context, in *ReplaceRecordRequest, opts ...grpc.CallOption) (*ReplaceRecordResponse, error)
 	SearchByAttributes(ctx context.Context, in *SearchByAttributesRequest, opts ...grpc.CallOption) (*SearchByAttributesResponse, error)
-	GetStats(ctx context.Context, in *GetStatsRequest, opts ...grpc.CallOption) (*GetStatsResponse, error)
 	StreamExportCsvEntityReport(ctx context.Context, in *StreamExportCsvEntityReportRequest, opts ...grpc.CallOption) (SzEngine_StreamExportCsvEntityReportClient, error)
 	StreamExportJsonEntityReport(ctx context.Context, in *StreamExportJsonEntityReportRequest, opts ...grpc.CallOption) (SzEngine_StreamExportJsonEntityReportClient, error)
 	WhyEntities(ctx context.Context, in *WhyEntitiesRequest, opts ...grpc.CallOption) (*WhyEntitiesResponse, error)
@@ -216,6 +216,15 @@ func (c *szEngineClient) GetRepositoryLastModifiedTime(ctx context.Context, in *
 	return out, nil
 }
 
+func (c *szEngineClient) GetStats(ctx context.Context, in *GetStatsRequest, opts ...grpc.CallOption) (*GetStatsResponse, error) {
+	out := new(GetStatsResponse)
+	err := c.cc.Invoke(ctx, "/szengine.SzEngine/GetStats", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *szEngineClient) GetVirtualEntityByRecordId(ctx context.Context, in *GetVirtualEntityByRecordIdRequest, opts ...grpc.CallOption) (*GetVirtualEntityByRecordIdResponse, error) {
 	out := new(GetVirtualEntityByRecordIdResponse)
 	err := c.cc.Invoke(ctx, "/szengine.SzEngine/GetVirtualEntityByRecordId", in, out, opts...)
@@ -282,15 +291,6 @@ func (c *szEngineClient) ReplaceRecord(ctx context.Context, in *ReplaceRecordReq
 func (c *szEngineClient) SearchByAttributes(ctx context.Context, in *SearchByAttributesRequest, opts ...grpc.CallOption) (*SearchByAttributesResponse, error) {
 	out := new(SearchByAttributesResponse)
 	err := c.cc.Invoke(ctx, "/szengine.SzEngine/SearchByAttributes", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *szEngineClient) GetStats(ctx context.Context, in *GetStatsRequest, opts ...grpc.CallOption) (*GetStatsResponse, error) {
-	out := new(GetStatsResponse)
-	err := c.cc.Invoke(ctx, "/szengine.SzEngine/GetStats", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -409,6 +409,7 @@ type SzEngineServer interface {
 	GetRecord(context.Context, *GetRecordRequest) (*GetRecordResponse, error)
 	GetRedoRecord(context.Context, *GetRedoRecordRequest) (*GetRedoRecordResponse, error)
 	GetRepositoryLastModifiedTime(context.Context, *GetRepositoryLastModifiedTimeRequest) (*GetRepositoryLastModifiedTimeResponse, error)
+	GetStats(context.Context, *GetStatsRequest) (*GetStatsResponse, error)
 	GetVirtualEntityByRecordId(context.Context, *GetVirtualEntityByRecordIdRequest) (*GetVirtualEntityByRecordIdResponse, error)
 	HowEntityByEntityId(context.Context, *HowEntityByEntityIdRequest) (*HowEntityByEntityIdResponse, error)
 	PrimeEngine(context.Context, *PrimeEngineRequest) (*PrimeEngineResponse, error)
@@ -417,7 +418,6 @@ type SzEngineServer interface {
 	ReevaluateRecord(context.Context, *ReevaluateRecordRequest) (*ReevaluateRecordResponse, error)
 	ReplaceRecord(context.Context, *ReplaceRecordRequest) (*ReplaceRecordResponse, error)
 	SearchByAttributes(context.Context, *SearchByAttributesRequest) (*SearchByAttributesResponse, error)
-	GetStats(context.Context, *GetStatsRequest) (*GetStatsResponse, error)
 	StreamExportCsvEntityReport(*StreamExportCsvEntityReportRequest, SzEngine_StreamExportCsvEntityReportServer) error
 	StreamExportJsonEntityReport(*StreamExportJsonEntityReportRequest, SzEngine_StreamExportJsonEntityReportServer) error
 	WhyEntities(context.Context, *WhyEntitiesRequest) (*WhyEntitiesResponse, error)
@@ -481,6 +481,9 @@ func (UnimplementedSzEngineServer) GetRedoRecord(context.Context, *GetRedoRecord
 func (UnimplementedSzEngineServer) GetRepositoryLastModifiedTime(context.Context, *GetRepositoryLastModifiedTimeRequest) (*GetRepositoryLastModifiedTimeResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetRepositoryLastModifiedTime not implemented")
 }
+func (UnimplementedSzEngineServer) GetStats(context.Context, *GetStatsRequest) (*GetStatsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetStats not implemented")
+}
 func (UnimplementedSzEngineServer) GetVirtualEntityByRecordId(context.Context, *GetVirtualEntityByRecordIdRequest) (*GetVirtualEntityByRecordIdResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetVirtualEntityByRecordId not implemented")
 }
@@ -504,9 +507,6 @@ func (UnimplementedSzEngineServer) ReplaceRecord(context.Context, *ReplaceRecord
 }
 func (UnimplementedSzEngineServer) SearchByAttributes(context.Context, *SearchByAttributesRequest) (*SearchByAttributesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SearchByAttributes not implemented")
-}
-func (UnimplementedSzEngineServer) GetStats(context.Context, *GetStatsRequest) (*GetStatsResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetStats not implemented")
 }
 func (UnimplementedSzEngineServer) StreamExportCsvEntityReport(*StreamExportCsvEntityReportRequest, SzEngine_StreamExportCsvEntityReportServer) error {
 	return status.Errorf(codes.Unimplemented, "method StreamExportCsvEntityReport not implemented")
@@ -842,6 +842,24 @@ func _SzEngine_GetRepositoryLastModifiedTime_Handler(srv interface{}, ctx contex
 	return interceptor(ctx, in, info, handler)
 }
 
+func _SzEngine_GetStats_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetStatsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(SzEngineServer).GetStats(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/szengine.SzEngine/GetStats",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(SzEngineServer).GetStats(ctx, req.(*GetStatsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _SzEngine_GetVirtualEntityByRecordId_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetVirtualEntityByRecordIdRequest)
 	if err := dec(in); err != nil {
@@ -982,24 +1000,6 @@ func _SzEngine_SearchByAttributes_Handler(srv interface{}, ctx context.Context, 
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(SzEngineServer).SearchByAttributes(ctx, req.(*SearchByAttributesRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _SzEngine_GetStats_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetStatsRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(SzEngineServer).GetStats(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/szengine.SzEngine/GetStats",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzEngineServer).GetStats(ctx, req.(*GetStatsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1176,6 +1176,10 @@ var SzEngine_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _SzEngine_GetRepositoryLastModifiedTime_Handler,
 		},
 		{
+			MethodName: "GetStats",
+			Handler:    _SzEngine_GetStats_Handler,
+		},
+		{
 			MethodName: "GetVirtualEntityByRecordId",
 			Handler:    _SzEngine_GetVirtualEntityByRecordId_Handler,
 		},
@@ -1206,10 +1210,6 @@ var SzEngine_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "SearchByAttributes",
 			Handler:    _SzEngine_SearchByAttributes_Handler,
-		},
-		{
-			MethodName: "GetStats",
-			Handler:    _SzEngine_GetStats_Handler,
 		},
 		{
 			MethodName: "WhyEntities",

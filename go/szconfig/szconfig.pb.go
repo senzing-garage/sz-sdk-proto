@@ -385,194 +385,6 @@ func (*DeleteDataSourceResponse) Descriptor() ([]byte, []int) {
 	return file_szconfig_proto_rawDescGZIP(), []int{7}
 }
 
-type GetDataSourcesRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	ConfigHandle int64 `protobuf:"varint,1,opt,name=configHandle,proto3" json:"configHandle,omitempty"`
-}
-
-func (x *GetDataSourcesRequest) Reset() {
-	*x = GetDataSourcesRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_szconfig_proto_msgTypes[8]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *GetDataSourcesRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*GetDataSourcesRequest) ProtoMessage() {}
-
-func (x *GetDataSourcesRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szconfig_proto_msgTypes[8]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use GetDataSourcesRequest.ProtoReflect.Descriptor instead.
-func (*GetDataSourcesRequest) Descriptor() ([]byte, []int) {
-	return file_szconfig_proto_rawDescGZIP(), []int{8}
-}
-
-func (x *GetDataSourcesRequest) GetConfigHandle() int64 {
-	if x != nil {
-		return x.ConfigHandle
-	}
-	return 0
-}
-
-type GetDataSourcesResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Result string `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
-}
-
-func (x *GetDataSourcesResponse) Reset() {
-	*x = GetDataSourcesResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_szconfig_proto_msgTypes[9]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *GetDataSourcesResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*GetDataSourcesResponse) ProtoMessage() {}
-
-func (x *GetDataSourcesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szconfig_proto_msgTypes[9]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use GetDataSourcesResponse.ProtoReflect.Descriptor instead.
-func (*GetDataSourcesResponse) Descriptor() ([]byte, []int) {
-	return file_szconfig_proto_rawDescGZIP(), []int{9}
-}
-
-func (x *GetDataSourcesResponse) GetResult() string {
-	if x != nil {
-		return x.Result
-	}
-	return ""
-}
-
-type ImportConfigRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	ConfigDefinition string `protobuf:"bytes,1,opt,name=configDefinition,proto3" json:"configDefinition,omitempty"`
-}
-
-func (x *ImportConfigRequest) Reset() {
-	*x = ImportConfigRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_szconfig_proto_msgTypes[10]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *ImportConfigRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*ImportConfigRequest) ProtoMessage() {}
-
-func (x *ImportConfigRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szconfig_proto_msgTypes[10]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use ImportConfigRequest.ProtoReflect.Descriptor instead.
-func (*ImportConfigRequest) Descriptor() ([]byte, []int) {
-	return file_szconfig_proto_rawDescGZIP(), []int{10}
-}
-
-func (x *ImportConfigRequest) GetConfigDefinition() string {
-	if x != nil {
-		return x.ConfigDefinition
-	}
-	return ""
-}
-
-type ImportConfigResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Result int64 `protobuf:"varint,1,opt,name=result,proto3" json:"result,omitempty"`
-}
-
-func (x *ImportConfigResponse) Reset() {
-	*x = ImportConfigResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_szconfig_proto_msgTypes[11]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *ImportConfigResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*ImportConfigResponse) ProtoMessage() {}
-
-func (x *ImportConfigResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szconfig_proto_msgTypes[11]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use ImportConfigResponse.ProtoReflect.Descriptor instead.
-func (*ImportConfigResponse) Descriptor() ([]byte, []int) {
-	return file_szconfig_proto_rawDescGZIP(), []int{11}
-}
-
-func (x *ImportConfigResponse) GetResult() int64 {
-	if x != nil {
-		return x.Result
-	}
-	return 0
-}
-
 type ExportConfigRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -584,7 +396,7 @@ type ExportConfigRequest struct {
 func (x *ExportConfigRequest) Reset() {
 	*x = ExportConfigRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szconfig_proto_msgTypes[12]
+		mi := &file_szconfig_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -597,7 +409,7 @@ func (x *ExportConfigRequest) String() string {
 func (*ExportConfigRequest) ProtoMessage() {}
 
 func (x *ExportConfigRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szconfig_proto_msgTypes[12]
+	mi := &file_szconfig_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -610,7 +422,7 @@ func (x *ExportConfigRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ExportConfigRequest.ProtoReflect.Descriptor instead.
 func (*ExportConfigRequest) Descriptor() ([]byte, []int) {
-	return file_szconfig_proto_rawDescGZIP(), []int{12}
+	return file_szconfig_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *ExportConfigRequest) GetConfigHandle() int64 {
@@ -631,7 +443,7 @@ type ExportConfigResponse struct {
 func (x *ExportConfigResponse) Reset() {
 	*x = ExportConfigResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szconfig_proto_msgTypes[13]
+		mi := &file_szconfig_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -644,7 +456,7 @@ func (x *ExportConfigResponse) String() string {
 func (*ExportConfigResponse) ProtoMessage() {}
 
 func (x *ExportConfigResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szconfig_proto_msgTypes[13]
+	mi := &file_szconfig_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -657,7 +469,7 @@ func (x *ExportConfigResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ExportConfigResponse.ProtoReflect.Descriptor instead.
 func (*ExportConfigResponse) Descriptor() ([]byte, []int) {
-	return file_szconfig_proto_rawDescGZIP(), []int{13}
+	return file_szconfig_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *ExportConfigResponse) GetResult() string {
@@ -665,6 +477,194 @@ func (x *ExportConfigResponse) GetResult() string {
 		return x.Result
 	}
 	return ""
+}
+
+type GetDataSourcesRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	ConfigHandle int64 `protobuf:"varint,1,opt,name=configHandle,proto3" json:"configHandle,omitempty"`
+}
+
+func (x *GetDataSourcesRequest) Reset() {
+	*x = GetDataSourcesRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_szconfig_proto_msgTypes[10]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetDataSourcesRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetDataSourcesRequest) ProtoMessage() {}
+
+func (x *GetDataSourcesRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_szconfig_proto_msgTypes[10]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetDataSourcesRequest.ProtoReflect.Descriptor instead.
+func (*GetDataSourcesRequest) Descriptor() ([]byte, []int) {
+	return file_szconfig_proto_rawDescGZIP(), []int{10}
+}
+
+func (x *GetDataSourcesRequest) GetConfigHandle() int64 {
+	if x != nil {
+		return x.ConfigHandle
+	}
+	return 0
+}
+
+type GetDataSourcesResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Result string `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
+}
+
+func (x *GetDataSourcesResponse) Reset() {
+	*x = GetDataSourcesResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_szconfig_proto_msgTypes[11]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetDataSourcesResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetDataSourcesResponse) ProtoMessage() {}
+
+func (x *GetDataSourcesResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_szconfig_proto_msgTypes[11]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetDataSourcesResponse.ProtoReflect.Descriptor instead.
+func (*GetDataSourcesResponse) Descriptor() ([]byte, []int) {
+	return file_szconfig_proto_rawDescGZIP(), []int{11}
+}
+
+func (x *GetDataSourcesResponse) GetResult() string {
+	if x != nil {
+		return x.Result
+	}
+	return ""
+}
+
+type ImportConfigRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	ConfigDefinition string `protobuf:"bytes,1,opt,name=configDefinition,proto3" json:"configDefinition,omitempty"`
+}
+
+func (x *ImportConfigRequest) Reset() {
+	*x = ImportConfigRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_szconfig_proto_msgTypes[12]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ImportConfigRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ImportConfigRequest) ProtoMessage() {}
+
+func (x *ImportConfigRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_szconfig_proto_msgTypes[12]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ImportConfigRequest.ProtoReflect.Descriptor instead.
+func (*ImportConfigRequest) Descriptor() ([]byte, []int) {
+	return file_szconfig_proto_rawDescGZIP(), []int{12}
+}
+
+func (x *ImportConfigRequest) GetConfigDefinition() string {
+	if x != nil {
+		return x.ConfigDefinition
+	}
+	return ""
+}
+
+type ImportConfigResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Result int64 `protobuf:"varint,1,opt,name=result,proto3" json:"result,omitempty"`
+}
+
+func (x *ImportConfigResponse) Reset() {
+	*x = ImportConfigResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_szconfig_proto_msgTypes[13]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ImportConfigResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ImportConfigResponse) ProtoMessage() {}
+
+func (x *ImportConfigResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_szconfig_proto_msgTypes[13]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ImportConfigResponse.ProtoReflect.Descriptor instead.
+func (*ImportConfigResponse) Descriptor() ([]byte, []int) {
+	return file_szconfig_proto_rawDescGZIP(), []int{13}
+}
+
+func (x *ImportConfigResponse) GetResult() int64 {
+	if x != nil {
+		return x.Result
+	}
+	return 0
 }
 
 var File_szconfig_proto protoreflect.FileDescriptor
@@ -698,27 +698,27 @@ var file_szconfig_proto_rawDesc = []byte{
 	0x75, 0x72, 0x63, 0x65, 0x43, 0x6f, 0x64, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0e,
 	0x64, 0x61, 0x74, 0x61, 0x53, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x43, 0x6f, 0x64, 0x65, 0x22, 0x1a,
 	0x0a, 0x18, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x44, 0x61, 0x74, 0x61, 0x53, 0x6f, 0x75, 0x72,
-	0x63, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x3b, 0x0a, 0x15, 0x47, 0x65,
-	0x74, 0x44, 0x61, 0x74, 0x61, 0x53, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x12, 0x22, 0x0a, 0x0c, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x48, 0x61, 0x6e,
-	0x64, 0x6c, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0c, 0x63, 0x6f, 0x6e, 0x66, 0x69,
-	0x67, 0x48, 0x61, 0x6e, 0x64, 0x6c, 0x65, 0x22, 0x30, 0x0a, 0x16, 0x47, 0x65, 0x74, 0x44, 0x61,
-	0x74, 0x61, 0x53, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x12, 0x16, 0x0a, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28,
-	0x09, 0x52, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x41, 0x0a, 0x13, 0x49, 0x6d, 0x70,
-	0x6f, 0x72, 0x74, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
-	0x12, 0x2a, 0x0a, 0x10, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69,
-	0x74, 0x69, 0x6f, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x10, 0x63, 0x6f, 0x6e, 0x66,
-	0x69, 0x67, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x2e, 0x0a, 0x14,
-	0x49, 0x6d, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x73, 0x70,
-	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01,
-	0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x39, 0x0a, 0x13,
-	0x45, 0x78, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x12, 0x22, 0x0a, 0x0c, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x48, 0x61, 0x6e,
-	0x64, 0x6c, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0c, 0x63, 0x6f, 0x6e, 0x66, 0x69,
-	0x67, 0x48, 0x61, 0x6e, 0x64, 0x6c, 0x65, 0x22, 0x2e, 0x0a, 0x14, 0x45, 0x78, 0x70, 0x6f, 0x72,
+	0x63, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x39, 0x0a, 0x13, 0x45, 0x78,
+	0x70, 0x6f, 0x72, 0x74, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x12, 0x22, 0x0a, 0x0c, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x48, 0x61, 0x6e, 0x64, 0x6c,
+	0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0c, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x48,
+	0x61, 0x6e, 0x64, 0x6c, 0x65, 0x22, 0x2e, 0x0a, 0x14, 0x45, 0x78, 0x70, 0x6f, 0x72, 0x74, 0x43,
+	0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x16, 0x0a,
+	0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x72,
+	0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x3b, 0x0a, 0x15, 0x47, 0x65, 0x74, 0x44, 0x61, 0x74, 0x61,
+	0x53, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x22,
+	0x0a, 0x0c, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x48, 0x61, 0x6e, 0x64, 0x6c, 0x65, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x03, 0x52, 0x0c, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x48, 0x61, 0x6e, 0x64,
+	0x6c, 0x65, 0x22, 0x30, 0x0a, 0x16, 0x47, 0x65, 0x74, 0x44, 0x61, 0x74, 0x61, 0x53, 0x6f, 0x75,
+	0x72, 0x63, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x16, 0x0a, 0x06,
+	0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x72, 0x65,
+	0x73, 0x75, 0x6c, 0x74, 0x22, 0x41, 0x0a, 0x13, 0x49, 0x6d, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x6f,
+	0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x2a, 0x0a, 0x10, 0x63,
+	0x6f, 0x6e, 0x66, 0x69, 0x67, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x10, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x44, 0x65, 0x66,
+	0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x2e, 0x0a, 0x14, 0x49, 0x6d, 0x70, 0x6f, 0x72,
 	0x74, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12,
-	0x16, 0x0a, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x16, 0x0a, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52,
 	0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x32, 0xd3, 0x04, 0x0a, 0x08, 0x53, 0x7a, 0x43, 0x6f,
 	0x6e, 0x66, 0x69, 0x67, 0x12, 0x52, 0x0a, 0x0d, 0x41, 0x64, 0x64, 0x44, 0x61, 0x74, 0x61, 0x53,
 	0x6f, 0x75, 0x72, 0x63, 0x65, 0x12, 0x1e, 0x2e, 0x73, 0x7a, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67,
@@ -741,21 +741,21 @@ var file_szconfig_proto_rawDesc = []byte{
 	0x61, 0x53, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x22,
 	0x2e, 0x73, 0x7a, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x2e, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65,
 	0x44, 0x61, 0x74, 0x61, 0x53, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
-	0x73, 0x65, 0x22, 0x00, 0x12, 0x55, 0x0a, 0x0e, 0x47, 0x65, 0x74, 0x44, 0x61, 0x74, 0x61, 0x53,
-	0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x12, 0x1f, 0x2e, 0x73, 0x7a, 0x63, 0x6f, 0x6e, 0x66, 0x69,
-	0x67, 0x2e, 0x47, 0x65, 0x74, 0x44, 0x61, 0x74, 0x61, 0x53, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73,
-	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x20, 0x2e, 0x73, 0x7a, 0x63, 0x6f, 0x6e, 0x66,
+	0x73, 0x65, 0x22, 0x00, 0x12, 0x4f, 0x0a, 0x0c, 0x45, 0x78, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x6f,
+	0x6e, 0x66, 0x69, 0x67, 0x12, 0x1d, 0x2e, 0x73, 0x7a, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x2e,
+	0x45, 0x78, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x1a, 0x1e, 0x2e, 0x73, 0x7a, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x2e, 0x45,
+	0x78, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x55, 0x0a, 0x0e, 0x47, 0x65, 0x74, 0x44, 0x61, 0x74, 0x61,
+	0x53, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x12, 0x1f, 0x2e, 0x73, 0x7a, 0x63, 0x6f, 0x6e, 0x66,
 	0x69, 0x67, 0x2e, 0x47, 0x65, 0x74, 0x44, 0x61, 0x74, 0x61, 0x53, 0x6f, 0x75, 0x72, 0x63, 0x65,
-	0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x4f, 0x0a, 0x0c, 0x49,
-	0x6d, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x12, 0x1d, 0x2e, 0x73, 0x7a,
-	0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x2e, 0x49, 0x6d, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x6f, 0x6e,
-	0x66, 0x69, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1e, 0x2e, 0x73, 0x7a, 0x63,
-	0x6f, 0x6e, 0x66, 0x69, 0x67, 0x2e, 0x49, 0x6d, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x6f, 0x6e, 0x66,
-	0x69, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x4f, 0x0a, 0x0c,
-	0x45, 0x78, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x12, 0x1d, 0x2e, 0x73,
-	0x7a, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x2e, 0x45, 0x78, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x6f,
+	0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x20, 0x2e, 0x73, 0x7a, 0x63, 0x6f, 0x6e,
+	0x66, 0x69, 0x67, 0x2e, 0x47, 0x65, 0x74, 0x44, 0x61, 0x74, 0x61, 0x53, 0x6f, 0x75, 0x72, 0x63,
+	0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x4f, 0x0a, 0x0c,
+	0x49, 0x6d, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x12, 0x1d, 0x2e, 0x73,
+	0x7a, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x2e, 0x49, 0x6d, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x6f,
 	0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1e, 0x2e, 0x73, 0x7a,
-	0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x2e, 0x45, 0x78, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x6f, 0x6e,
+	0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x2e, 0x49, 0x6d, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x6f, 0x6e,
 	0x66, 0x69, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x67, 0x0a,
 	0x23, 0x63, 0x6f, 0x6d, 0x2e, 0x73, 0x65, 0x6e, 0x7a, 0x69, 0x6e, 0x67, 0x2e, 0x73, 0x7a, 0x2e,
 	0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x67, 0x72, 0x70, 0x63, 0x2e, 0x53, 0x7a, 0x43, 0x6f,
@@ -788,28 +788,28 @@ var file_szconfig_proto_goTypes = []interface{}{
 	(*CreateConfigResponse)(nil),     // 5: szconfig.CreateConfigResponse
 	(*DeleteDataSourceRequest)(nil),  // 6: szconfig.DeleteDataSourceRequest
 	(*DeleteDataSourceResponse)(nil), // 7: szconfig.DeleteDataSourceResponse
-	(*GetDataSourcesRequest)(nil),    // 8: szconfig.GetDataSourcesRequest
-	(*GetDataSourcesResponse)(nil),   // 9: szconfig.GetDataSourcesResponse
-	(*ImportConfigRequest)(nil),      // 10: szconfig.ImportConfigRequest
-	(*ImportConfigResponse)(nil),     // 11: szconfig.ImportConfigResponse
-	(*ExportConfigRequest)(nil),      // 12: szconfig.ExportConfigRequest
-	(*ExportConfigResponse)(nil),     // 13: szconfig.ExportConfigResponse
+	(*ExportConfigRequest)(nil),      // 8: szconfig.ExportConfigRequest
+	(*ExportConfigResponse)(nil),     // 9: szconfig.ExportConfigResponse
+	(*GetDataSourcesRequest)(nil),    // 10: szconfig.GetDataSourcesRequest
+	(*GetDataSourcesResponse)(nil),   // 11: szconfig.GetDataSourcesResponse
+	(*ImportConfigRequest)(nil),      // 12: szconfig.ImportConfigRequest
+	(*ImportConfigResponse)(nil),     // 13: szconfig.ImportConfigResponse
 }
 var file_szconfig_proto_depIdxs = []int32{
 	0,  // 0: szconfig.SzConfig.AddDataSource:input_type -> szconfig.AddDataSourceRequest
 	2,  // 1: szconfig.SzConfig.CloseConfig:input_type -> szconfig.CloseConfigRequest
 	4,  // 2: szconfig.SzConfig.CreateConfig:input_type -> szconfig.CreateConfigRequest
 	6,  // 3: szconfig.SzConfig.DeleteDataSource:input_type -> szconfig.DeleteDataSourceRequest
-	8,  // 4: szconfig.SzConfig.GetDataSources:input_type -> szconfig.GetDataSourcesRequest
-	10, // 5: szconfig.SzConfig.ImportConfig:input_type -> szconfig.ImportConfigRequest
-	12, // 6: szconfig.SzConfig.ExportConfig:input_type -> szconfig.ExportConfigRequest
+	8,  // 4: szconfig.SzConfig.ExportConfig:input_type -> szconfig.ExportConfigRequest
+	10, // 5: szconfig.SzConfig.GetDataSources:input_type -> szconfig.GetDataSourcesRequest
+	12, // 6: szconfig.SzConfig.ImportConfig:input_type -> szconfig.ImportConfigRequest
 	1,  // 7: szconfig.SzConfig.AddDataSource:output_type -> szconfig.AddDataSourceResponse
 	3,  // 8: szconfig.SzConfig.CloseConfig:output_type -> szconfig.CloseConfigResponse
 	5,  // 9: szconfig.SzConfig.CreateConfig:output_type -> szconfig.CreateConfigResponse
 	7,  // 10: szconfig.SzConfig.DeleteDataSource:output_type -> szconfig.DeleteDataSourceResponse
-	9,  // 11: szconfig.SzConfig.GetDataSources:output_type -> szconfig.GetDataSourcesResponse
-	11, // 12: szconfig.SzConfig.ImportConfig:output_type -> szconfig.ImportConfigResponse
-	13, // 13: szconfig.SzConfig.ExportConfig:output_type -> szconfig.ExportConfigResponse
+	9,  // 11: szconfig.SzConfig.ExportConfig:output_type -> szconfig.ExportConfigResponse
+	11, // 12: szconfig.SzConfig.GetDataSources:output_type -> szconfig.GetDataSourcesResponse
+	13, // 13: szconfig.SzConfig.ImportConfig:output_type -> szconfig.ImportConfigResponse
 	7,  // [7:14] is the sub-list for method output_type
 	0,  // [0:7] is the sub-list for method input_type
 	0,  // [0:0] is the sub-list for extension type_name
@@ -920,54 +920,6 @@ func file_szconfig_proto_init() {
 			}
 		}
 		file_szconfig_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetDataSourcesRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_szconfig_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetDataSourcesResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_szconfig_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ImportConfigRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_szconfig_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ImportConfigResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_szconfig_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ExportConfigRequest); i {
 			case 0:
 				return &v.state
@@ -979,8 +931,56 @@ func file_szconfig_proto_init() {
 				return nil
 			}
 		}
-		file_szconfig_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+		file_szconfig_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ExportConfigResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_szconfig_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetDataSourcesRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_szconfig_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetDataSourcesResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_szconfig_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ImportConfigRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_szconfig_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ImportConfigResponse); i {
 			case 0:
 				return &v.state
 			case 1:

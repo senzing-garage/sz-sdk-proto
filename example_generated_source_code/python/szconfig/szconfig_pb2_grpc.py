@@ -34,6 +34,11 @@ class SzConfigStub(object):
                 request_serializer=szconfig__pb2.DeleteDataSourceRequest.SerializeToString,
                 response_deserializer=szconfig__pb2.DeleteDataSourceResponse.FromString,
                 )
+        self.ExportConfig = channel.unary_unary(
+                '/szconfig.SzConfig/ExportConfig',
+                request_serializer=szconfig__pb2.ExportConfigRequest.SerializeToString,
+                response_deserializer=szconfig__pb2.ExportConfigResponse.FromString,
+                )
         self.GetDataSources = channel.unary_unary(
                 '/szconfig.SzConfig/GetDataSources',
                 request_serializer=szconfig__pb2.GetDataSourcesRequest.SerializeToString,
@@ -43,11 +48,6 @@ class SzConfigStub(object):
                 '/szconfig.SzConfig/ImportConfig',
                 request_serializer=szconfig__pb2.ImportConfigRequest.SerializeToString,
                 response_deserializer=szconfig__pb2.ImportConfigResponse.FromString,
-                )
-        self.ExportConfig = channel.unary_unary(
-                '/szconfig.SzConfig/ExportConfig',
-                request_serializer=szconfig__pb2.ExportConfigRequest.SerializeToString,
-                response_deserializer=szconfig__pb2.ExportConfigResponse.FromString,
                 )
 
 
@@ -78,6 +78,12 @@ class SzConfigServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def ExportConfig(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def GetDataSources(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -85,12 +91,6 @@ class SzConfigServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def ImportConfig(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def ExportConfig(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -119,6 +119,11 @@ def add_SzConfigServicer_to_server(servicer, server):
                     request_deserializer=szconfig__pb2.DeleteDataSourceRequest.FromString,
                     response_serializer=szconfig__pb2.DeleteDataSourceResponse.SerializeToString,
             ),
+            'ExportConfig': grpc.unary_unary_rpc_method_handler(
+                    servicer.ExportConfig,
+                    request_deserializer=szconfig__pb2.ExportConfigRequest.FromString,
+                    response_serializer=szconfig__pb2.ExportConfigResponse.SerializeToString,
+            ),
             'GetDataSources': grpc.unary_unary_rpc_method_handler(
                     servicer.GetDataSources,
                     request_deserializer=szconfig__pb2.GetDataSourcesRequest.FromString,
@@ -128,11 +133,6 @@ def add_SzConfigServicer_to_server(servicer, server):
                     servicer.ImportConfig,
                     request_deserializer=szconfig__pb2.ImportConfigRequest.FromString,
                     response_serializer=szconfig__pb2.ImportConfigResponse.SerializeToString,
-            ),
-            'ExportConfig': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExportConfig,
-                    request_deserializer=szconfig__pb2.ExportConfigRequest.FromString,
-                    response_serializer=szconfig__pb2.ExportConfigResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -213,6 +213,23 @@ class SzConfig(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
+    def ExportConfig(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/szconfig.SzConfig/ExportConfig',
+            szconfig__pb2.ExportConfigRequest.SerializeToString,
+            szconfig__pb2.ExportConfigResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
     def GetDataSources(request,
             target,
             options=(),
@@ -243,22 +260,5 @@ class SzConfig(object):
         return grpc.experimental.unary_unary(request, target, '/szconfig.SzConfig/ImportConfig',
             szconfig__pb2.ImportConfigRequest.SerializeToString,
             szconfig__pb2.ImportConfigResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def ExportConfig(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/szconfig.SzConfig/ExportConfig',
-            szconfig__pb2.ExportConfigRequest.SerializeToString,
-            szconfig__pb2.ExportConfigResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

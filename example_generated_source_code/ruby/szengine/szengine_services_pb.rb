@@ -31,6 +31,7 @@ module Szengine
       rpc :GetRecord, ::Szengine::GetRecordRequest, ::Szengine::GetRecordResponse
       rpc :GetRedoRecord, ::Szengine::GetRedoRecordRequest, ::Szengine::GetRedoRecordResponse
       rpc :GetRepositoryLastModifiedTime, ::Szengine::GetRepositoryLastModifiedTimeRequest, ::Szengine::GetRepositoryLastModifiedTimeResponse
+      rpc :GetStats, ::Szengine::GetStatsRequest, ::Szengine::GetStatsResponse
       rpc :GetVirtualEntityByRecordId, ::Szengine::GetVirtualEntityByRecordIdRequest, ::Szengine::GetVirtualEntityByRecordIdResponse
       rpc :HowEntityByEntityId, ::Szengine::HowEntityByEntityIdRequest, ::Szengine::HowEntityByEntityIdResponse
       rpc :PrimeEngine, ::Szengine::PrimeEngineRequest, ::Szengine::PrimeEngineResponse
@@ -39,7 +40,6 @@ module Szengine
       rpc :ReevaluateRecord, ::Szengine::ReevaluateRecordRequest, ::Szengine::ReevaluateRecordResponse
       rpc :ReplaceRecord, ::Szengine::ReplaceRecordRequest, ::Szengine::ReplaceRecordResponse
       rpc :SearchByAttributes, ::Szengine::SearchByAttributesRequest, ::Szengine::SearchByAttributesResponse
-      rpc :GetStats, ::Szengine::GetStatsRequest, ::Szengine::GetStatsResponse
       rpc :StreamExportCsvEntityReport, ::Szengine::StreamExportCsvEntityReportRequest, stream(::Szengine::StreamExportCsvEntityReportResponse)
       rpc :StreamExportJsonEntityReport, ::Szengine::StreamExportJsonEntityReportRequest, stream(::Szengine::StreamExportJsonEntityReportResponse)
       rpc :WhyEntities, ::Szengine::WhyEntitiesRequest, ::Szengine::WhyEntitiesResponse

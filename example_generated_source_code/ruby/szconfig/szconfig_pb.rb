@@ -28,6 +28,12 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "szconfig.DeleteDataSourceResponse" do
     end
+    add_message "szconfig.ExportConfigRequest" do
+      optional :configHandle, :int64, 1
+    end
+    add_message "szconfig.ExportConfigResponse" do
+      optional :result, :string, 1
+    end
     add_message "szconfig.GetDataSourcesRequest" do
       optional :configHandle, :int64, 1
     end
@@ -39,12 +45,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "szconfig.ImportConfigResponse" do
       optional :result, :int64, 1
-    end
-    add_message "szconfig.ExportConfigRequest" do
-      optional :configHandle, :int64, 1
-    end
-    add_message "szconfig.ExportConfigResponse" do
-      optional :result, :string, 1
     end
   end
 end
@@ -58,10 +58,10 @@ module Szconfig
   CreateConfigResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.CreateConfigResponse").msgclass
   DeleteDataSourceRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.DeleteDataSourceRequest").msgclass
   DeleteDataSourceResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.DeleteDataSourceResponse").msgclass
+  ExportConfigRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.ExportConfigRequest").msgclass
+  ExportConfigResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.ExportConfigResponse").msgclass
   GetDataSourcesRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.GetDataSourcesRequest").msgclass
   GetDataSourcesResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.GetDataSourcesResponse").msgclass
   ImportConfigRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.ImportConfigRequest").msgclass
   ImportConfigResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.ImportConfigResponse").msgclass
-  ExportConfigRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.ExportConfigRequest").msgclass
-  ExportConfigResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.ExportConfigResponse").msgclass
 end

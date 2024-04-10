@@ -255,6 +255,20 @@ class SzEngineClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Szengine\GetStatsRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetStats(\Szengine\GetStatsRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szengine.SzEngine/GetStats',
+        $argument,
+        ['\Szengine\GetStatsResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Szengine\GetVirtualEntityByRecordIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -363,20 +377,6 @@ class SzEngineClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/szengine.SzEngine/SearchByAttributes',
         $argument,
         ['\Szengine\SearchByAttributesResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Szengine\GetStatsRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function GetStats(\Szengine\GetStatsRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szengine.SzEngine/GetStats',
-        $argument,
-        ['\Szengine\GetStatsResponse', 'decode'],
         $metadata, $options);
     }
 

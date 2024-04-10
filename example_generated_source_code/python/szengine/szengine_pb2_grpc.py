@@ -99,6 +99,11 @@ class SzEngineStub(object):
                 request_serializer=szengine__pb2.GetRepositoryLastModifiedTimeRequest.SerializeToString,
                 response_deserializer=szengine__pb2.GetRepositoryLastModifiedTimeResponse.FromString,
                 )
+        self.GetStats = channel.unary_unary(
+                '/szengine.SzEngine/GetStats',
+                request_serializer=szengine__pb2.GetStatsRequest.SerializeToString,
+                response_deserializer=szengine__pb2.GetStatsResponse.FromString,
+                )
         self.GetVirtualEntityByRecordId = channel.unary_unary(
                 '/szengine.SzEngine/GetVirtualEntityByRecordId',
                 request_serializer=szengine__pb2.GetVirtualEntityByRecordIdRequest.SerializeToString,
@@ -138,11 +143,6 @@ class SzEngineStub(object):
                 '/szengine.SzEngine/SearchByAttributes',
                 request_serializer=szengine__pb2.SearchByAttributesRequest.SerializeToString,
                 response_deserializer=szengine__pb2.SearchByAttributesResponse.FromString,
-                )
-        self.GetStats = channel.unary_unary(
-                '/szengine.SzEngine/GetStats',
-                request_serializer=szengine__pb2.GetStatsRequest.SerializeToString,
-                response_deserializer=szengine__pb2.GetStatsResponse.FromString,
                 )
         self.StreamExportCsvEntityReport = channel.unary_stream(
                 '/szengine.SzEngine/StreamExportCsvEntityReport',
@@ -276,6 +276,12 @@ class SzEngineServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GetStats(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def GetVirtualEntityByRecordId(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -319,12 +325,6 @@ class SzEngineServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def SearchByAttributes(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def GetStats(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -448,6 +448,11 @@ def add_SzEngineServicer_to_server(servicer, server):
                     request_deserializer=szengine__pb2.GetRepositoryLastModifiedTimeRequest.FromString,
                     response_serializer=szengine__pb2.GetRepositoryLastModifiedTimeResponse.SerializeToString,
             ),
+            'GetStats': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetStats,
+                    request_deserializer=szengine__pb2.GetStatsRequest.FromString,
+                    response_serializer=szengine__pb2.GetStatsResponse.SerializeToString,
+            ),
             'GetVirtualEntityByRecordId': grpc.unary_unary_rpc_method_handler(
                     servicer.GetVirtualEntityByRecordId,
                     request_deserializer=szengine__pb2.GetVirtualEntityByRecordIdRequest.FromString,
@@ -487,11 +492,6 @@ def add_SzEngineServicer_to_server(servicer, server):
                     servicer.SearchByAttributes,
                     request_deserializer=szengine__pb2.SearchByAttributesRequest.FromString,
                     response_serializer=szengine__pb2.SearchByAttributesResponse.SerializeToString,
-            ),
-            'GetStats': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetStats,
-                    request_deserializer=szengine__pb2.GetStatsRequest.FromString,
-                    response_serializer=szengine__pb2.GetStatsResponse.SerializeToString,
             ),
             'StreamExportCsvEntityReport': grpc.unary_stream_rpc_method_handler(
                     servicer.StreamExportCsvEntityReport,
@@ -818,6 +818,23 @@ class SzEngine(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
+    def GetStats(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/szengine.SzEngine/GetStats',
+            szengine__pb2.GetStatsRequest.SerializeToString,
+            szengine__pb2.GetStatsResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
     def GetVirtualEntityByRecordId(request,
             target,
             options=(),
@@ -950,23 +967,6 @@ class SzEngine(object):
         return grpc.experimental.unary_unary(request, target, '/szengine.SzEngine/SearchByAttributes',
             szengine__pb2.SearchByAttributesRequest.SerializeToString,
             szengine__pb2.SearchByAttributesResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def GetStats(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/szengine.SzEngine/GetStats',
-            szengine__pb2.GetStatsRequest.SerializeToString,
-            szengine__pb2.GetStatsResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 

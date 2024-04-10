@@ -23,6 +23,7 @@ service SzEngine {
   rpc GetRecord(GetRecordRequest) returns (GetRecordResponse) {}
   rpc GetRedoRecord(GetRedoRecordRequest) returns (GetRedoRecordResponse) {}
   rpc GetRepositoryLastModifiedTime(GetRepositoryLastModifiedTimeRequest) returns (GetRepositoryLastModifiedTimeResponse) {}
+  rpc GetStats(GetStatsRequest) returns (GetStatsResponse) {}
   rpc GetVirtualEntityByRecordId(GetVirtualEntityByRecordIdRequest) returns (GetVirtualEntityByRecordIdResponse) {}
   rpc HowEntityByEntityId(HowEntityByEntityIdRequest) returns (HowEntityByEntityIdResponse) {}
   rpc PrimeEngine(PrimeEngineRequest) returns (PrimeEngineResponse) {}
@@ -31,7 +32,6 @@ service SzEngine {
   rpc ReevaluateRecord(ReevaluateRecordRequest) returns (ReevaluateRecordResponse) {}
   rpc ReplaceRecord(ReplaceRecordRequest) returns (ReplaceRecordResponse) {}
   rpc SearchByAttributes(SearchByAttributesRequest) returns (SearchByAttributesResponse) {}
-  rpc GetStats(GetStatsRequest) returns (GetStatsResponse) {}
   rpc StreamExportCsvEntityReport(StreamExportCsvEntityReportRequest) returns (stream StreamExportCsvEntityReportResponse) {}
   rpc StreamExportJsonEntityReport(StreamExportJsonEntityReportRequest) returns (stream StreamExportJsonEntityReportResponse) {}
   rpc WhyEntities(WhyEntitiesRequest) returns (WhyEntitiesResponse) {}

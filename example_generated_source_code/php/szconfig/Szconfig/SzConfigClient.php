@@ -73,6 +73,20 @@ class SzConfigClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Szconfig\ExportConfigRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function ExportConfig(\Szconfig\ExportConfigRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szconfig.SzConfig/ExportConfig',
+        $argument,
+        ['\Szconfig\ExportConfigResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Szconfig\GetDataSourcesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -97,20 +111,6 @@ class SzConfigClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/szconfig.SzConfig/ImportConfig',
         $argument,
         ['\Szconfig\ImportConfigResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Szconfig\ExportConfigRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function ExportConfig(\Szconfig\ExportConfigRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szconfig.SzConfig/ExportConfig',
-        $argument,
-        ['\Szconfig\ExportConfigResponse', 'decode'],
         $metadata, $options);
     }
 
