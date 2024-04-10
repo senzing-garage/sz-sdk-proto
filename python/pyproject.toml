@@ -18,5 +18,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/senzing-garage/g2-sdk-proto"
-"Bug Tracker" = "https://github.com/senzing-garage/g2-sdk-proto/issues"
+"Homepage" = "https://github.com/senzing-garage/sz-sdk-proto"
+"Bug Tracker" = "https://github.com/senzing-garage/sz-sdk-proto/issues"

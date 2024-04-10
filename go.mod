@@ -1,4 +1,4 @@
-module github.com/senzing-garage/g2-sdk-proto
+module github.com/senzing-garage/sz-sdk-proto
 
 go 1.21
 

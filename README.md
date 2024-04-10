@@ -1,4 +1,4 @@
-# g2-sdk-proto
+# sz-sdk-proto
 
 If you are beginning your journey with
 [Senzing](https://senzing.com/),
@@ -44,7 +44,7 @@ for use in servers and clients of the Senzing engine.
 
 1. [Development](docs/development.md)
 1. [Errors](docs/errors.md)
-1. [Package reference](https://pkg.go.dev/github.com/senzing-garage/g2-sdk-proto/go)
+1. [Package reference](https://pkg.go.dev/github.com/senzing-garage/sz-sdk-proto/go)
 1. [Protocol Buffers Overview](https://developers.google.com/protocol-buffers/docs/overview)
     1. [Language Guide for proto3](https://developers.google.com/protocol-buffers/docs/proto3)
 1. [Protocol buffers](https://developers.google.com/protocol-buffers)
