@@ -27098,1479 +27098,6 @@ public final class SzEngineProto {
 
   }
 
-  public interface ReplaceRecordRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szengine.ReplaceRecordRequest)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string dataSourceCode = 1;</code>
-     * @return The dataSourceCode.
-     */
-    java.lang.String getDataSourceCode();
-    /**
-     * <code>string dataSourceCode = 1;</code>
-     * @return The bytes for dataSourceCode.
-     */
-    com.google.protobuf.ByteString
-        getDataSourceCodeBytes();
-
-    /**
-     * <code>string recordId = 2;</code>
-     * @return The recordId.
-     */
-    java.lang.String getRecordId();
-    /**
-     * <code>string recordId = 2;</code>
-     * @return The bytes for recordId.
-     */
-    com.google.protobuf.ByteString
-        getRecordIdBytes();
-
-    /**
-     * <code>string recordDefinition = 3;</code>
-     * @return The recordDefinition.
-     */
-    java.lang.String getRecordDefinition();
-    /**
-     * <code>string recordDefinition = 3;</code>
-     * @return The bytes for recordDefinition.
-     */
-    com.google.protobuf.ByteString
-        getRecordDefinitionBytes();
-
-    /**
-     * <code>int64 flags = 4;</code>
-     * @return The flags.
-     */
-    long getFlags();
-  }
-  /**
-   * Protobuf type {@code szengine.ReplaceRecordRequest}
-   */
-  public static final class ReplaceRecordRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:szengine.ReplaceRecordRequest)
-      ReplaceRecordRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ReplaceRecordRequest.newBuilder() to construct.
-    private ReplaceRecordRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ReplaceRecordRequest() {
-      dataSourceCode_ = "";
-      recordId_ = "";
-      recordDefinition_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ReplaceRecordRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReplaceRecordRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReplaceRecordRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest.Builder.class);
-    }
-
-    public static final int DATASOURCECODE_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object dataSourceCode_ = "";
-    /**
-     * <code>string dataSourceCode = 1;</code>
-     * @return The dataSourceCode.
-     */
-    @java.lang.Override
-    public java.lang.String getDataSourceCode() {
-      java.lang.Object ref = dataSourceCode_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        dataSourceCode_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string dataSourceCode = 1;</code>
-     * @return The bytes for dataSourceCode.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDataSourceCodeBytes() {
-      java.lang.Object ref = dataSourceCode_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        dataSourceCode_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int RECORDID_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object recordId_ = "";
-    /**
-     * <code>string recordId = 2;</code>
-     * @return The recordId.
-     */
-    @java.lang.Override
-    public java.lang.String getRecordId() {
-      java.lang.Object ref = recordId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        recordId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string recordId = 2;</code>
-     * @return The bytes for recordId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getRecordIdBytes() {
-      java.lang.Object ref = recordId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        recordId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int RECORDDEFINITION_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object recordDefinition_ = "";
-    /**
-     * <code>string recordDefinition = 3;</code>
-     * @return The recordDefinition.
-     */
-    @java.lang.Override
-    public java.lang.String getRecordDefinition() {
-      java.lang.Object ref = recordDefinition_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        recordDefinition_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string recordDefinition = 3;</code>
-     * @return The bytes for recordDefinition.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getRecordDefinitionBytes() {
-      java.lang.Object ref = recordDefinition_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        recordDefinition_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int FLAGS_FIELD_NUMBER = 4;
-    private long flags_ = 0L;
-    /**
-     * <code>int64 flags = 4;</code>
-     * @return The flags.
-     */
-    @java.lang.Override
-    public long getFlags() {
-      return flags_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataSourceCode_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dataSourceCode_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, recordId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordDefinition_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, recordDefinition_);
-      }
-      if (flags_ != 0L) {
-        output.writeInt64(4, flags_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataSourceCode_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dataSourceCode_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, recordId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordDefinition_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, recordDefinition_);
-      }
-      if (flags_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, flags_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest)) {
-        return super.equals(obj);
-      }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest) obj;
-
-      if (!getDataSourceCode()
-          .equals(other.getDataSourceCode())) return false;
-      if (!getRecordId()
-          .equals(other.getRecordId())) return false;
-      if (!getRecordDefinition()
-          .equals(other.getRecordDefinition())) return false;
-      if (getFlags()
-          != other.getFlags()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASOURCECODE_FIELD_NUMBER;
-      hash = (53 * hash) + getDataSourceCode().hashCode();
-      hash = (37 * hash) + RECORDID_FIELD_NUMBER;
-      hash = (53 * hash) + getRecordId().hashCode();
-      hash = (37 * hash) + RECORDDEFINITION_FIELD_NUMBER;
-      hash = (53 * hash) + getRecordDefinition().hashCode();
-      hash = (37 * hash) + FLAGS_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getFlags());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code szengine.ReplaceRecordRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szengine.ReplaceRecordRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReplaceRecordRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReplaceRecordRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest.Builder.class);
-      }
-
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        dataSourceCode_ = "";
-        recordId_ = "";
-        recordDefinition_ = "";
-        flags_ = 0L;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReplaceRecordRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.dataSourceCode_ = dataSourceCode_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.recordId_ = recordId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.recordDefinition_ = recordDefinition_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.flags_ = flags_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest.getDefaultInstance()) return this;
-        if (!other.getDataSourceCode().isEmpty()) {
-          dataSourceCode_ = other.dataSourceCode_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getRecordId().isEmpty()) {
-          recordId_ = other.recordId_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getRecordDefinition().isEmpty()) {
-          recordDefinition_ = other.recordDefinition_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (other.getFlags() != 0L) {
-          setFlags(other.getFlags());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                dataSourceCode_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                recordId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                recordDefinition_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 32: {
-                flags_ = input.readInt64();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object dataSourceCode_ = "";
-      /**
-       * <code>string dataSourceCode = 1;</code>
-       * @return The dataSourceCode.
-       */
-      public java.lang.String getDataSourceCode() {
-        java.lang.Object ref = dataSourceCode_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          dataSourceCode_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string dataSourceCode = 1;</code>
-       * @return The bytes for dataSourceCode.
-       */
-      public com.google.protobuf.ByteString
-          getDataSourceCodeBytes() {
-        java.lang.Object ref = dataSourceCode_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          dataSourceCode_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string dataSourceCode = 1;</code>
-       * @param value The dataSourceCode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDataSourceCode(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        dataSourceCode_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string dataSourceCode = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDataSourceCode() {
-        dataSourceCode_ = getDefaultInstance().getDataSourceCode();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string dataSourceCode = 1;</code>
-       * @param value The bytes for dataSourceCode to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDataSourceCodeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        dataSourceCode_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object recordId_ = "";
-      /**
-       * <code>string recordId = 2;</code>
-       * @return The recordId.
-       */
-      public java.lang.String getRecordId() {
-        java.lang.Object ref = recordId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          recordId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string recordId = 2;</code>
-       * @return The bytes for recordId.
-       */
-      public com.google.protobuf.ByteString
-          getRecordIdBytes() {
-        java.lang.Object ref = recordId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          recordId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string recordId = 2;</code>
-       * @param value The recordId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRecordId(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        recordId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string recordId = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRecordId() {
-        recordId_ = getDefaultInstance().getRecordId();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string recordId = 2;</code>
-       * @param value The bytes for recordId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRecordIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        recordId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object recordDefinition_ = "";
-      /**
-       * <code>string recordDefinition = 3;</code>
-       * @return The recordDefinition.
-       */
-      public java.lang.String getRecordDefinition() {
-        java.lang.Object ref = recordDefinition_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          recordDefinition_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string recordDefinition = 3;</code>
-       * @return The bytes for recordDefinition.
-       */
-      public com.google.protobuf.ByteString
-          getRecordDefinitionBytes() {
-        java.lang.Object ref = recordDefinition_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          recordDefinition_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string recordDefinition = 3;</code>
-       * @param value The recordDefinition to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRecordDefinition(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        recordDefinition_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string recordDefinition = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRecordDefinition() {
-        recordDefinition_ = getDefaultInstance().getRecordDefinition();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string recordDefinition = 3;</code>
-       * @param value The bytes for recordDefinition to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRecordDefinitionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        recordDefinition_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-
-      private long flags_ ;
-      /**
-       * <code>int64 flags = 4;</code>
-       * @return The flags.
-       */
-      @java.lang.Override
-      public long getFlags() {
-        return flags_;
-      }
-      /**
-       * <code>int64 flags = 4;</code>
-       * @param value The flags to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFlags(long value) {
-
-        flags_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 flags = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFlags() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        flags_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:szengine.ReplaceRecordRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:szengine.ReplaceRecordRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest();
-    }
-
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ReplaceRecordRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ReplaceRecordRequest>() {
-      @java.lang.Override
-      public ReplaceRecordRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<ReplaceRecordRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ReplaceRecordRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface ReplaceRecordResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szengine.ReplaceRecordResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string result = 1;</code>
-     * @return The result.
-     */
-    java.lang.String getResult();
-    /**
-     * <code>string result = 1;</code>
-     * @return The bytes for result.
-     */
-    com.google.protobuf.ByteString
-        getResultBytes();
-  }
-  /**
-   * Protobuf type {@code szengine.ReplaceRecordResponse}
-   */
-  public static final class ReplaceRecordResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:szengine.ReplaceRecordResponse)
-      ReplaceRecordResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ReplaceRecordResponse.newBuilder() to construct.
-    private ReplaceRecordResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ReplaceRecordResponse() {
-      result_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ReplaceRecordResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReplaceRecordResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReplaceRecordResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse.Builder.class);
-    }
-
-    public static final int RESULT_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object result_ = "";
-    /**
-     * <code>string result = 1;</code>
-     * @return The result.
-     */
-    @java.lang.Override
-    public java.lang.String getResult() {
-      java.lang.Object ref = result_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        result_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string result = 1;</code>
-     * @return The bytes for result.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getResultBytes() {
-      java.lang.Object ref = result_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        result_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, result_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, result_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse)) {
-        return super.equals(obj);
-      }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse) obj;
-
-      if (!getResult()
-          .equals(other.getResult())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RESULT_FIELD_NUMBER;
-      hash = (53 * hash) + getResult().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code szengine.ReplaceRecordResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szengine.ReplaceRecordResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReplaceRecordResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReplaceRecordResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse.Builder.class);
-      }
-
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        result_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReplaceRecordResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.result_ = result_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse.getDefaultInstance()) return this;
-        if (!other.getResult().isEmpty()) {
-          result_ = other.result_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                result_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object result_ = "";
-      /**
-       * <code>string result = 1;</code>
-       * @return The result.
-       */
-      public java.lang.String getResult() {
-        java.lang.Object ref = result_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          result_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string result = 1;</code>
-       * @return The bytes for result.
-       */
-      public com.google.protobuf.ByteString
-          getResultBytes() {
-        java.lang.Object ref = result_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          result_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string result = 1;</code>
-       * @param value The result to set.
-       * @return This builder for chaining.
-       */
-      public Builder setResult(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        result_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string result = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearResult() {
-        result_ = getDefaultInstance().getResult();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string result = 1;</code>
-       * @param value The bytes for result to set.
-       * @return This builder for chaining.
-       */
-      public Builder setResultBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        result_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:szengine.ReplaceRecordResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:szengine.ReplaceRecordResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse();
-    }
-
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ReplaceRecordResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ReplaceRecordResponse>() {
-      @java.lang.Override
-      public ReplaceRecordResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<ReplaceRecordResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ReplaceRecordResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReplaceRecordResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface SearchByAttributesRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:szengine.SearchByAttributesRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -37403,16 +35930,6 @@ public final class SzEngineProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_szengine_ReevaluateRecordResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szengine_ReplaceRecordRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_szengine_ReplaceRecordRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szengine_ReplaceRecordResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_szengine_ReplaceRecordResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_szengine_SearchByAttributesRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -37560,108 +36077,103 @@ public final class SzEngineProto {
       "\n\027ReevaluateRecordRequest\022\026\n\016dataSourceC" +
       "ode\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001" +
       "(\003\"*\n\030ReevaluateRecordResponse\022\016\n\006result" +
-      "\030\001 \001(\t\"i\n\024ReplaceRecordRequest\022\026\n\016dataSo" +
-      "urceCode\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\030\n\020reco" +
-      "rdDefinition\030\003 \001(\t\022\r\n\005flags\030\004 \001(\003\"\'\n\025Rep" +
-      "laceRecordResponse\022\016\n\006result\030\001 \001(\t\"U\n\031Se" +
-      "archByAttributesRequest\022\022\n\nattributes\030\001 " +
-      "\001(\t\022\025\n\rsearchProfile\030\002 \001(\t\022\r\n\005flags\030\003 \001(" +
-      "\003\",\n\032SearchByAttributesResponse\022\016\n\006resul" +
-      "t\030\001 \001(\t\"\021\n\017GetStatsRequest\"\"\n\020GetStatsRe" +
-      "sponse\022\016\n\006result\030\001 \001(\t\"J\n\"StreamExportCs" +
-      "vEntityReportRequest\022\025\n\rcsvColumnList\030\001 " +
-      "\001(\t\022\r\n\005flags\030\002 \001(\003\"5\n#StreamExportCsvEnt" +
-      "ityReportResponse\022\016\n\006result\030\001 \001(\t\"4\n#Str" +
-      "eamExportJsonEntityReportRequest\022\r\n\005flag" +
-      "s\030\001 \001(\003\"6\n$StreamExportJsonEntityReportR" +
-      "esponse\022\016\n\006result\030\001 \001(\t\"I\n\022WhyEntitiesRe" +
-      "quest\022\021\n\tentityId1\030\001 \001(\003\022\021\n\tentityId2\030\002 " +
-      "\001(\003\022\r\n\005flags\030\003 \001(\003\"%\n\023WhyEntitiesRespons" +
-      "e\022\016\n\006result\030\001 \001(\t\"S\n\030WhyRecordInEntityRe" +
-      "quest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordI" +
-      "d\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"+\n\031WhyRecordInEnt" +
-      "ityResponse\022\016\n\006result\030\001 \001(\t\"z\n\021WhyRecord" +
-      "sRequest\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trec" +
-      "ordId1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n" +
-      "\trecordId2\030\004 \001(\t\022\r\n\005flags\030\005 \001(\003\"$\n\022WhyRe" +
-      "cordsResponse\022\016\n\006result\030\001 \001(\t2\236\027\n\010SzEngi" +
-      "ne\022F\n\tAddRecord\022\032.szengine.AddRecordRequ" +
-      "est\032\033.szengine.AddRecordResponse\"\000\022L\n\013Cl" +
-      "oseExport\022\034.szengine.CloseExportRequest\032" +
-      "\035.szengine.CloseExportResponse\"\000\022[\n\020Coun" +
-      "tRedoRecords\022!.szengine.CountRedoRecords" +
-      "Request\032\".szengine.CountRedoRecordsRespo" +
-      "nse\"\000\022O\n\014DeleteRecord\022\035.szengine.DeleteR" +
-      "ecordRequest\032\036.szengine.DeleteRecordResp" +
-      "onse\"\000\022j\n\025ExportCsvEntityReport\022&.szengi" +
-      "ne.ExportCsvEntityReportRequest\032\'.szengi" +
-      "ne.ExportCsvEntityReportResponse\"\000\022m\n\026Ex" +
-      "portJsonEntityReport\022\'.szengine.ExportJs" +
-      "onEntityReportRequest\032(.szengine.ExportJ" +
-      "sonEntityReportResponse\"\000\022F\n\tFetchNext\022\032" +
-      ".szengine.FetchNextRequest\032\033.szengine.Fe" +
-      "tchNextResponse\"\000\022j\n\025FindNetworkByEntity" +
-      "Id\022&.szengine.FindNetworkByEntityIdReque" +
-      "st\032\'.szengine.FindNetworkByEntityIdRespo" +
-      "nse\"\000\022j\n\025FindNetworkByRecordId\022&.szengin" +
-      "e.FindNetworkByRecordIdRequest\032\'.szengin" +
-      "e.FindNetworkByRecordIdResponse\"\000\022a\n\022Fin" +
-      "dPathByEntityId\022#.szengine.FindPathByEnt" +
-      "ityIdRequest\032$.szengine.FindPathByEntity" +
-      "IdResponse\"\000\022a\n\022FindPathByRecordId\022#.sze" +
-      "ngine.FindPathByRecordIdRequest\032$.szengi" +
-      "ne.FindPathByRecordIdResponse\"\000\022^\n\021GetAc" +
-      "tiveConfigId\022\".szengine.GetActiveConfigI" +
-      "dRequest\032#.szengine.GetActiveConfigIdRes" +
-      "ponse\"\000\022d\n\023GetEntityByEntityId\022$.szengin" +
-      "e.GetEntityByEntityIdRequest\032%.szengine." +
-      "GetEntityByEntityIdResponse\"\000\022d\n\023GetEnti" +
-      "tyByRecordId\022$.szengine.GetEntityByRecor" +
-      "dIdRequest\032%.szengine.GetEntityByRecordI" +
-      "dResponse\"\000\022F\n\tGetRecord\022\032.szengine.GetR" +
-      "ecordRequest\032\033.szengine.GetRecordRespons" +
-      "e\"\000\022R\n\rGetRedoRecord\022\036.szengine.GetRedoR" +
-      "ecordRequest\032\037.szengine.GetRedoRecordRes" +
-      "ponse\"\000\022\202\001\n\035GetRepositoryLastModifiedTim" +
-      "e\022..szengine.GetRepositoryLastModifiedTi" +
-      "meRequest\032/.szengine.GetRepositoryLastMo" +
-      "difiedTimeResponse\"\000\022C\n\010GetStats\022\031.szeng" +
-      "ine.GetStatsRequest\032\032.szengine.GetStatsR" +
-      "esponse\"\000\022y\n\032GetVirtualEntityByRecordId\022" +
-      "+.szengine.GetVirtualEntityByRecordIdReq" +
-      "uest\032,.szengine.GetVirtualEntityByRecord" +
-      "IdResponse\"\000\022d\n\023HowEntityByEntityId\022$.sz" +
-      "engine.HowEntityByEntityIdRequest\032%.szen" +
-      "gine.HowEntityByEntityIdResponse\"\000\022L\n\013Pr" +
-      "imeEngine\022\034.szengine.PrimeEngineRequest\032" +
-      "\035.szengine.PrimeEngineResponse\"\000\022^\n\021Proc" +
-      "essRedoRecord\022\".szengine.ProcessRedoReco" +
-      "rdRequest\032#.szengine.ProcessRedoRecordRe" +
-      "sponse\"\000\022[\n\020ReevaluateEntity\022!.szengine." +
-      "ReevaluateEntityRequest\032\".szengine.Reeva" +
-      "luateEntityResponse\"\000\022[\n\020ReevaluateRecor" +
-      "d\022!.szengine.ReevaluateRecordRequest\032\".s" +
-      "zengine.ReevaluateRecordResponse\"\000\022R\n\rRe" +
-      "placeRecord\022\036.szengine.ReplaceRecordRequ" +
-      "est\032\037.szengine.ReplaceRecordResponse\"\000\022a" +
-      "\n\022SearchByAttributes\022#.szengine.SearchBy" +
-      "AttributesRequest\032$.szengine.SearchByAtt" +
-      "ributesResponse\"\000\022~\n\033StreamExportCsvEnti" +
-      "tyReport\022,.szengine.StreamExportCsvEntit" +
-      "yReportRequest\032-.szengine.StreamExportCs" +
-      "vEntityReportResponse\"\0000\001\022\201\001\n\034StreamExpo" +
-      "rtJsonEntityReport\022-.szengine.StreamExpo" +
-      "rtJsonEntityReportRequest\032..szengine.Str" +
-      "eamExportJsonEntityReportResponse\"\0000\001\022L\n" +
-      "\013WhyEntities\022\034.szengine.WhyEntitiesReque" +
-      "st\032\035.szengine.WhyEntitiesResponse\"\000\022^\n\021W" +
-      "hyRecordInEntity\022\".szengine.WhyRecordInE" +
-      "ntityRequest\032#.szengine.WhyRecordInEntit" +
-      "yResponse\"\000\022I\n\nWhyRecords\022\033.szengine.Why" +
-      "RecordsRequest\032\034.szengine.WhyRecordsResp" +
-      "onse\"\000Bg\n#com.senzing.sz.engine.grpc.SzE" +
-      "ngineB\rSzEngineProtoZ1github.com/senzing" +
-      "-garage/sz-sdk-go-grpc/szengineb\006proto3"
+      "\030\001 \001(\t\"U\n\031SearchByAttributesRequest\022\022\n\na" +
+      "ttributes\030\001 \001(\t\022\025\n\rsearchProfile\030\002 \001(\t\022\r" +
+      "\n\005flags\030\003 \001(\003\",\n\032SearchByAttributesRespo" +
+      "nse\022\016\n\006result\030\001 \001(\t\"\021\n\017GetStatsRequest\"\"" +
+      "\n\020GetStatsResponse\022\016\n\006result\030\001 \001(\t\"J\n\"St" +
+      "reamExportCsvEntityReportRequest\022\025\n\rcsvC" +
+      "olumnList\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"5\n#Stream" +
+      "ExportCsvEntityReportResponse\022\016\n\006result\030" +
+      "\001 \001(\t\"4\n#StreamExportJsonEntityReportReq" +
+      "uest\022\r\n\005flags\030\001 \001(\003\"6\n$StreamExportJsonE" +
+      "ntityReportResponse\022\016\n\006result\030\001 \001(\t\"I\n\022W" +
+      "hyEntitiesRequest\022\021\n\tentityId1\030\001 \001(\003\022\021\n\t" +
+      "entityId2\030\002 \001(\003\022\r\n\005flags\030\003 \001(\003\"%\n\023WhyEnt" +
+      "itiesResponse\022\016\n\006result\030\001 \001(\t\"S\n\030WhyReco" +
+      "rdInEntityRequest\022\026\n\016dataSourceCode\030\001 \001(" +
+      "\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"+\n\031Wh" +
+      "yRecordInEntityResponse\022\016\n\006result\030\001 \001(\t\"" +
+      "z\n\021WhyRecordsRequest\022\027\n\017dataSourceCode1\030" +
+      "\001 \001(\t\022\021\n\trecordId1\030\002 \001(\t\022\027\n\017dataSourceCo" +
+      "de2\030\003 \001(\t\022\021\n\trecordId2\030\004 \001(\t\022\r\n\005flags\030\005 " +
+      "\001(\003\"$\n\022WhyRecordsResponse\022\016\n\006result\030\001 \001(" +
+      "\t2\312\026\n\010SzEngine\022F\n\tAddRecord\022\032.szengine.A" +
+      "ddRecordRequest\032\033.szengine.AddRecordResp" +
+      "onse\"\000\022L\n\013CloseExport\022\034.szengine.CloseEx" +
+      "portRequest\032\035.szengine.CloseExportRespon" +
+      "se\"\000\022[\n\020CountRedoRecords\022!.szengine.Coun" +
+      "tRedoRecordsRequest\032\".szengine.CountRedo" +
+      "RecordsResponse\"\000\022O\n\014DeleteRecord\022\035.szen" +
+      "gine.DeleteRecordRequest\032\036.szengine.Dele" +
+      "teRecordResponse\"\000\022j\n\025ExportCsvEntityRep" +
+      "ort\022&.szengine.ExportCsvEntityReportRequ" +
+      "est\032\'.szengine.ExportCsvEntityReportResp" +
+      "onse\"\000\022m\n\026ExportJsonEntityReport\022\'.szeng" +
+      "ine.ExportJsonEntityReportRequest\032(.szen" +
+      "gine.ExportJsonEntityReportResponse\"\000\022F\n" +
+      "\tFetchNext\022\032.szengine.FetchNextRequest\032\033" +
+      ".szengine.FetchNextResponse\"\000\022j\n\025FindNet" +
+      "workByEntityId\022&.szengine.FindNetworkByE" +
+      "ntityIdRequest\032\'.szengine.FindNetworkByE" +
+      "ntityIdResponse\"\000\022j\n\025FindNetworkByRecord" +
+      "Id\022&.szengine.FindNetworkByRecordIdReque" +
+      "st\032\'.szengine.FindNetworkByRecordIdRespo" +
+      "nse\"\000\022a\n\022FindPathByEntityId\022#.szengine.F" +
+      "indPathByEntityIdRequest\032$.szengine.Find" +
+      "PathByEntityIdResponse\"\000\022a\n\022FindPathByRe" +
+      "cordId\022#.szengine.FindPathByRecordIdRequ" +
+      "est\032$.szengine.FindPathByRecordIdRespons" +
+      "e\"\000\022^\n\021GetActiveConfigId\022\".szengine.GetA" +
+      "ctiveConfigIdRequest\032#.szengine.GetActiv" +
+      "eConfigIdResponse\"\000\022d\n\023GetEntityByEntity" +
+      "Id\022$.szengine.GetEntityByEntityIdRequest" +
+      "\032%.szengine.GetEntityByEntityIdResponse\"" +
+      "\000\022d\n\023GetEntityByRecordId\022$.szengine.GetE" +
+      "ntityByRecordIdRequest\032%.szengine.GetEnt" +
+      "ityByRecordIdResponse\"\000\022F\n\tGetRecord\022\032.s" +
+      "zengine.GetRecordRequest\032\033.szengine.GetR" +
+      "ecordResponse\"\000\022R\n\rGetRedoRecord\022\036.szeng" +
+      "ine.GetRedoRecordRequest\032\037.szengine.GetR" +
+      "edoRecordResponse\"\000\022\202\001\n\035GetRepositoryLas" +
+      "tModifiedTime\022..szengine.GetRepositoryLa" +
+      "stModifiedTimeRequest\032/.szengine.GetRepo" +
+      "sitoryLastModifiedTimeResponse\"\000\022C\n\010GetS" +
+      "tats\022\031.szengine.GetStatsRequest\032\032.szengi" +
+      "ne.GetStatsResponse\"\000\022y\n\032GetVirtualEntit" +
+      "yByRecordId\022+.szengine.GetVirtualEntityB" +
+      "yRecordIdRequest\032,.szengine.GetVirtualEn" +
+      "tityByRecordIdResponse\"\000\022d\n\023HowEntityByE" +
+      "ntityId\022$.szengine.HowEntityByEntityIdRe" +
+      "quest\032%.szengine.HowEntityByEntityIdResp" +
+      "onse\"\000\022L\n\013PrimeEngine\022\034.szengine.PrimeEn" +
+      "gineRequest\032\035.szengine.PrimeEngineRespon" +
+      "se\"\000\022^\n\021ProcessRedoRecord\022\".szengine.Pro" +
+      "cessRedoRecordRequest\032#.szengine.Process" +
+      "RedoRecordResponse\"\000\022[\n\020ReevaluateEntity" +
+      "\022!.szengine.ReevaluateEntityRequest\032\".sz" +
+      "engine.ReevaluateEntityResponse\"\000\022[\n\020Ree" +
+      "valuateRecord\022!.szengine.ReevaluateRecor" +
+      "dRequest\032\".szengine.ReevaluateRecordResp" +
+      "onse\"\000\022a\n\022SearchByAttributes\022#.szengine." +
+      "SearchByAttributesRequest\032$.szengine.Sea" +
+      "rchByAttributesResponse\"\000\022~\n\033StreamExpor" +
+      "tCsvEntityReport\022,.szengine.StreamExport" +
+      "CsvEntityReportRequest\032-.szengine.Stream" +
+      "ExportCsvEntityReportResponse\"\0000\001\022\201\001\n\034St" +
+      "reamExportJsonEntityReport\022-.szengine.St" +
+      "reamExportJsonEntityReportRequest\032..szen" +
+      "gine.StreamExportJsonEntityReportRespons" +
+      "e\"\0000\001\022L\n\013WhyEntities\022\034.szengine.WhyEntit" +
+      "iesRequest\032\035.szengine.WhyEntitiesRespons" +
+      "e\"\000\022^\n\021WhyRecordInEntity\022\".szengine.WhyR" +
+      "ecordInEntityRequest\032#.szengine.WhyRecor" +
+      "dInEntityResponse\"\000\022I\n\nWhyRecords\022\033.szen" +
+      "gine.WhyRecordsRequest\032\034.szengine.WhyRec" +
+      "ordsResponse\"\000Bg\n#com.senzing.sz.engine." +
+      "grpc.SzEngineB\rSzEngineProtoZ1github.com" +
+      "/senzing-garage/sz-sdk-go-grpc/szengineb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -37943,98 +36455,86 @@ public final class SzEngineProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_ReevaluateRecordResponse_descriptor,
         new java.lang.String[] { "Result", });
-    internal_static_szengine_ReplaceRecordRequest_descriptor =
-      getDescriptor().getMessageTypes().get(46);
-    internal_static_szengine_ReplaceRecordRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_szengine_ReplaceRecordRequest_descriptor,
-        new java.lang.String[] { "DataSourceCode", "RecordId", "RecordDefinition", "Flags", });
-    internal_static_szengine_ReplaceRecordResponse_descriptor =
-      getDescriptor().getMessageTypes().get(47);
-    internal_static_szengine_ReplaceRecordResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_szengine_ReplaceRecordResponse_descriptor,
-        new java.lang.String[] { "Result", });
     internal_static_szengine_SearchByAttributesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_szengine_SearchByAttributesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_SearchByAttributesRequest_descriptor,
         new java.lang.String[] { "Attributes", "SearchProfile", "Flags", });
     internal_static_szengine_SearchByAttributesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_szengine_SearchByAttributesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_SearchByAttributesResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_GetStatsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_szengine_GetStatsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_GetStatsRequest_descriptor,
         new java.lang.String[] { });
     internal_static_szengine_GetStatsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_szengine_GetStatsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_GetStatsResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_StreamExportCsvEntityReportRequest_descriptor =
-      getDescriptor().getMessageTypes().get(52);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_szengine_StreamExportCsvEntityReportRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_StreamExportCsvEntityReportRequest_descriptor,
         new java.lang.String[] { "CsvColumnList", "Flags", });
     internal_static_szengine_StreamExportCsvEntityReportResponse_descriptor =
-      getDescriptor().getMessageTypes().get(53);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_szengine_StreamExportCsvEntityReportResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_StreamExportCsvEntityReportResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_StreamExportJsonEntityReportRequest_descriptor =
-      getDescriptor().getMessageTypes().get(54);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_szengine_StreamExportJsonEntityReportRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_StreamExportJsonEntityReportRequest_descriptor,
         new java.lang.String[] { "Flags", });
     internal_static_szengine_StreamExportJsonEntityReportResponse_descriptor =
-      getDescriptor().getMessageTypes().get(55);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_szengine_StreamExportJsonEntityReportResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_StreamExportJsonEntityReportResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_WhyEntitiesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(56);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_szengine_WhyEntitiesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_WhyEntitiesRequest_descriptor,
         new java.lang.String[] { "EntityId1", "EntityId2", "Flags", });
     internal_static_szengine_WhyEntitiesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(57);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_szengine_WhyEntitiesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_WhyEntitiesResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_WhyRecordInEntityRequest_descriptor =
-      getDescriptor().getMessageTypes().get(58);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_szengine_WhyRecordInEntityRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_WhyRecordInEntityRequest_descriptor,
         new java.lang.String[] { "DataSourceCode", "RecordId", "Flags", });
     internal_static_szengine_WhyRecordInEntityResponse_descriptor =
-      getDescriptor().getMessageTypes().get(59);
+      getDescriptor().getMessageTypes().get(57);
     internal_static_szengine_WhyRecordInEntityResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_WhyRecordInEntityResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_WhyRecordsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(60);
+      getDescriptor().getMessageTypes().get(58);
     internal_static_szengine_WhyRecordsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_WhyRecordsRequest_descriptor,
         new java.lang.String[] { "DataSourceCode1", "RecordId1", "DataSourceCode2", "RecordId2", "Flags", });
     internal_static_szengine_WhyRecordsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(61);
+      getDescriptor().getMessageTypes().get(59);
     internal_static_szengine_WhyRecordsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_WhyRecordsResponse_descriptor,

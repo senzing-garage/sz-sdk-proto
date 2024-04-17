@@ -2415,124 +2415,6 @@ func (x *ReevaluateRecordResponse) GetResult() string {
 	return ""
 }
 
-type ReplaceRecordRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	DataSourceCode   string `protobuf:"bytes,1,opt,name=dataSourceCode,proto3" json:"dataSourceCode,omitempty"`
-	RecordId         string `protobuf:"bytes,2,opt,name=recordId,proto3" json:"recordId,omitempty"`
-	RecordDefinition string `protobuf:"bytes,3,opt,name=recordDefinition,proto3" json:"recordDefinition,omitempty"`
-	Flags            int64  `protobuf:"varint,4,opt,name=flags,proto3" json:"flags,omitempty"`
-}
-
-func (x *ReplaceRecordRequest) Reset() {
-	*x = ReplaceRecordRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[46]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *ReplaceRecordRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*ReplaceRecordRequest) ProtoMessage() {}
-
-func (x *ReplaceRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[46]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use ReplaceRecordRequest.ProtoReflect.Descriptor instead.
-func (*ReplaceRecordRequest) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{46}
-}
-
-func (x *ReplaceRecordRequest) GetDataSourceCode() string {
-	if x != nil {
-		return x.DataSourceCode
-	}
-	return ""
-}
-
-func (x *ReplaceRecordRequest) GetRecordId() string {
-	if x != nil {
-		return x.RecordId
-	}
-	return ""
-}
-
-func (x *ReplaceRecordRequest) GetRecordDefinition() string {
-	if x != nil {
-		return x.RecordDefinition
-	}
-	return ""
-}
-
-func (x *ReplaceRecordRequest) GetFlags() int64 {
-	if x != nil {
-		return x.Flags
-	}
-	return 0
-}
-
-type ReplaceRecordResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Result string `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
-}
-
-func (x *ReplaceRecordResponse) Reset() {
-	*x = ReplaceRecordResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[47]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *ReplaceRecordResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*ReplaceRecordResponse) ProtoMessage() {}
-
-func (x *ReplaceRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[47]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use ReplaceRecordResponse.ProtoReflect.Descriptor instead.
-func (*ReplaceRecordResponse) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{47}
-}
-
-func (x *ReplaceRecordResponse) GetResult() string {
-	if x != nil {
-		return x.Result
-	}
-	return ""
-}
-
 type SearchByAttributesRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -2546,7 +2428,7 @@ type SearchByAttributesRequest struct {
 func (x *SearchByAttributesRequest) Reset() {
 	*x = SearchByAttributesRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[48]
+		mi := &file_szengine_proto_msgTypes[46]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2559,7 +2441,7 @@ func (x *SearchByAttributesRequest) String() string {
 func (*SearchByAttributesRequest) ProtoMessage() {}
 
 func (x *SearchByAttributesRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[48]
+	mi := &file_szengine_proto_msgTypes[46]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2572,7 +2454,7 @@ func (x *SearchByAttributesRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SearchByAttributesRequest.ProtoReflect.Descriptor instead.
 func (*SearchByAttributesRequest) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{48}
+	return file_szengine_proto_rawDescGZIP(), []int{46}
 }
 
 func (x *SearchByAttributesRequest) GetAttributes() string {
@@ -2607,7 +2489,7 @@ type SearchByAttributesResponse struct {
 func (x *SearchByAttributesResponse) Reset() {
 	*x = SearchByAttributesResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[49]
+		mi := &file_szengine_proto_msgTypes[47]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2620,7 +2502,7 @@ func (x *SearchByAttributesResponse) String() string {
 func (*SearchByAttributesResponse) ProtoMessage() {}
 
 func (x *SearchByAttributesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[49]
+	mi := &file_szengine_proto_msgTypes[47]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2633,7 +2515,7 @@ func (x *SearchByAttributesResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SearchByAttributesResponse.ProtoReflect.Descriptor instead.
 func (*SearchByAttributesResponse) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{49}
+	return file_szengine_proto_rawDescGZIP(), []int{47}
 }
 
 func (x *SearchByAttributesResponse) GetResult() string {
@@ -2652,7 +2534,7 @@ type GetStatsRequest struct {
 func (x *GetStatsRequest) Reset() {
 	*x = GetStatsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[50]
+		mi := &file_szengine_proto_msgTypes[48]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2665,7 +2547,7 @@ func (x *GetStatsRequest) String() string {
 func (*GetStatsRequest) ProtoMessage() {}
 
 func (x *GetStatsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[50]
+	mi := &file_szengine_proto_msgTypes[48]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2678,7 +2560,7 @@ func (x *GetStatsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetStatsRequest.ProtoReflect.Descriptor instead.
 func (*GetStatsRequest) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{50}
+	return file_szengine_proto_rawDescGZIP(), []int{48}
 }
 
 type GetStatsResponse struct {
@@ -2692,7 +2574,7 @@ type GetStatsResponse struct {
 func (x *GetStatsResponse) Reset() {
 	*x = GetStatsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[51]
+		mi := &file_szengine_proto_msgTypes[49]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2705,7 +2587,7 @@ func (x *GetStatsResponse) String() string {
 func (*GetStatsResponse) ProtoMessage() {}
 
 func (x *GetStatsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[51]
+	mi := &file_szengine_proto_msgTypes[49]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2718,7 +2600,7 @@ func (x *GetStatsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetStatsResponse.ProtoReflect.Descriptor instead.
 func (*GetStatsResponse) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{51}
+	return file_szengine_proto_rawDescGZIP(), []int{49}
 }
 
 func (x *GetStatsResponse) GetResult() string {
@@ -2740,7 +2622,7 @@ type StreamExportCsvEntityReportRequest struct {
 func (x *StreamExportCsvEntityReportRequest) Reset() {
 	*x = StreamExportCsvEntityReportRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[52]
+		mi := &file_szengine_proto_msgTypes[50]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2753,7 +2635,7 @@ func (x *StreamExportCsvEntityReportRequest) String() string {
 func (*StreamExportCsvEntityReportRequest) ProtoMessage() {}
 
 func (x *StreamExportCsvEntityReportRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[52]
+	mi := &file_szengine_proto_msgTypes[50]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2766,7 +2648,7 @@ func (x *StreamExportCsvEntityReportRequest) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use StreamExportCsvEntityReportRequest.ProtoReflect.Descriptor instead.
 func (*StreamExportCsvEntityReportRequest) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{52}
+	return file_szengine_proto_rawDescGZIP(), []int{50}
 }
 
 func (x *StreamExportCsvEntityReportRequest) GetCsvColumnList() string {
@@ -2794,7 +2676,7 @@ type StreamExportCsvEntityReportResponse struct {
 func (x *StreamExportCsvEntityReportResponse) Reset() {
 	*x = StreamExportCsvEntityReportResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[53]
+		mi := &file_szengine_proto_msgTypes[51]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2807,7 +2689,7 @@ func (x *StreamExportCsvEntityReportResponse) String() string {
 func (*StreamExportCsvEntityReportResponse) ProtoMessage() {}
 
 func (x *StreamExportCsvEntityReportResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[53]
+	mi := &file_szengine_proto_msgTypes[51]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2820,7 +2702,7 @@ func (x *StreamExportCsvEntityReportResponse) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use StreamExportCsvEntityReportResponse.ProtoReflect.Descriptor instead.
 func (*StreamExportCsvEntityReportResponse) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{53}
+	return file_szengine_proto_rawDescGZIP(), []int{51}
 }
 
 func (x *StreamExportCsvEntityReportResponse) GetResult() string {
@@ -2841,7 +2723,7 @@ type StreamExportJsonEntityReportRequest struct {
 func (x *StreamExportJsonEntityReportRequest) Reset() {
 	*x = StreamExportJsonEntityReportRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[54]
+		mi := &file_szengine_proto_msgTypes[52]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2854,7 +2736,7 @@ func (x *StreamExportJsonEntityReportRequest) String() string {
 func (*StreamExportJsonEntityReportRequest) ProtoMessage() {}
 
 func (x *StreamExportJsonEntityReportRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[54]
+	mi := &file_szengine_proto_msgTypes[52]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2867,7 +2749,7 @@ func (x *StreamExportJsonEntityReportRequest) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use StreamExportJsonEntityReportRequest.ProtoReflect.Descriptor instead.
 func (*StreamExportJsonEntityReportRequest) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{54}
+	return file_szengine_proto_rawDescGZIP(), []int{52}
 }
 
 func (x *StreamExportJsonEntityReportRequest) GetFlags() int64 {
@@ -2888,7 +2770,7 @@ type StreamExportJsonEntityReportResponse struct {
 func (x *StreamExportJsonEntityReportResponse) Reset() {
 	*x = StreamExportJsonEntityReportResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[55]
+		mi := &file_szengine_proto_msgTypes[53]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2901,7 +2783,7 @@ func (x *StreamExportJsonEntityReportResponse) String() string {
 func (*StreamExportJsonEntityReportResponse) ProtoMessage() {}
 
 func (x *StreamExportJsonEntityReportResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[55]
+	mi := &file_szengine_proto_msgTypes[53]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2914,7 +2796,7 @@ func (x *StreamExportJsonEntityReportResponse) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use StreamExportJsonEntityReportResponse.ProtoReflect.Descriptor instead.
 func (*StreamExportJsonEntityReportResponse) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{55}
+	return file_szengine_proto_rawDescGZIP(), []int{53}
 }
 
 func (x *StreamExportJsonEntityReportResponse) GetResult() string {
@@ -2937,7 +2819,7 @@ type WhyEntitiesRequest struct {
 func (x *WhyEntitiesRequest) Reset() {
 	*x = WhyEntitiesRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[56]
+		mi := &file_szengine_proto_msgTypes[54]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2950,7 +2832,7 @@ func (x *WhyEntitiesRequest) String() string {
 func (*WhyEntitiesRequest) ProtoMessage() {}
 
 func (x *WhyEntitiesRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[56]
+	mi := &file_szengine_proto_msgTypes[54]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2963,7 +2845,7 @@ func (x *WhyEntitiesRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use WhyEntitiesRequest.ProtoReflect.Descriptor instead.
 func (*WhyEntitiesRequest) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{56}
+	return file_szengine_proto_rawDescGZIP(), []int{54}
 }
 
 func (x *WhyEntitiesRequest) GetEntityId1() int64 {
@@ -2998,7 +2880,7 @@ type WhyEntitiesResponse struct {
 func (x *WhyEntitiesResponse) Reset() {
 	*x = WhyEntitiesResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[57]
+		mi := &file_szengine_proto_msgTypes[55]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3011,7 +2893,7 @@ func (x *WhyEntitiesResponse) String() string {
 func (*WhyEntitiesResponse) ProtoMessage() {}
 
 func (x *WhyEntitiesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[57]
+	mi := &file_szengine_proto_msgTypes[55]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3024,7 +2906,7 @@ func (x *WhyEntitiesResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use WhyEntitiesResponse.ProtoReflect.Descriptor instead.
 func (*WhyEntitiesResponse) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{57}
+	return file_szengine_proto_rawDescGZIP(), []int{55}
 }
 
 func (x *WhyEntitiesResponse) GetResult() string {
@@ -3047,7 +2929,7 @@ type WhyRecordInEntityRequest struct {
 func (x *WhyRecordInEntityRequest) Reset() {
 	*x = WhyRecordInEntityRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[58]
+		mi := &file_szengine_proto_msgTypes[56]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3060,7 +2942,7 @@ func (x *WhyRecordInEntityRequest) String() string {
 func (*WhyRecordInEntityRequest) ProtoMessage() {}
 
 func (x *WhyRecordInEntityRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[58]
+	mi := &file_szengine_proto_msgTypes[56]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3073,7 +2955,7 @@ func (x *WhyRecordInEntityRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use WhyRecordInEntityRequest.ProtoReflect.Descriptor instead.
 func (*WhyRecordInEntityRequest) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{58}
+	return file_szengine_proto_rawDescGZIP(), []int{56}
 }
 
 func (x *WhyRecordInEntityRequest) GetDataSourceCode() string {
@@ -3108,7 +2990,7 @@ type WhyRecordInEntityResponse struct {
 func (x *WhyRecordInEntityResponse) Reset() {
 	*x = WhyRecordInEntityResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[59]
+		mi := &file_szengine_proto_msgTypes[57]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3121,7 +3003,7 @@ func (x *WhyRecordInEntityResponse) String() string {
 func (*WhyRecordInEntityResponse) ProtoMessage() {}
 
 func (x *WhyRecordInEntityResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[59]
+	mi := &file_szengine_proto_msgTypes[57]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3134,7 +3016,7 @@ func (x *WhyRecordInEntityResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use WhyRecordInEntityResponse.ProtoReflect.Descriptor instead.
 func (*WhyRecordInEntityResponse) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{59}
+	return file_szengine_proto_rawDescGZIP(), []int{57}
 }
 
 func (x *WhyRecordInEntityResponse) GetResult() string {
@@ -3159,7 +3041,7 @@ type WhyRecordsRequest struct {
 func (x *WhyRecordsRequest) Reset() {
 	*x = WhyRecordsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[60]
+		mi := &file_szengine_proto_msgTypes[58]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3172,7 +3054,7 @@ func (x *WhyRecordsRequest) String() string {
 func (*WhyRecordsRequest) ProtoMessage() {}
 
 func (x *WhyRecordsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[60]
+	mi := &file_szengine_proto_msgTypes[58]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3185,7 +3067,7 @@ func (x *WhyRecordsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use WhyRecordsRequest.ProtoReflect.Descriptor instead.
 func (*WhyRecordsRequest) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{60}
+	return file_szengine_proto_rawDescGZIP(), []int{58}
 }
 
 func (x *WhyRecordsRequest) GetDataSourceCode1() string {
@@ -3234,7 +3116,7 @@ type WhyRecordsResponse struct {
 func (x *WhyRecordsResponse) Reset() {
 	*x = WhyRecordsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[61]
+		mi := &file_szengine_proto_msgTypes[59]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3247,7 +3129,7 @@ func (x *WhyRecordsResponse) String() string {
 func (*WhyRecordsResponse) ProtoMessage() {}
 
 func (x *WhyRecordsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[61]
+	mi := &file_szengine_proto_msgTypes[59]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3260,7 +3142,7 @@ func (x *WhyRecordsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use WhyRecordsResponse.ProtoReflect.Descriptor instead.
 func (*WhyRecordsResponse) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{61}
+	return file_szengine_proto_rawDescGZIP(), []int{59}
 }
 
 func (x *WhyRecordsResponse) GetResult() string {
@@ -3497,19 +3379,6 @@ var file_szengine_proto_rawDesc = []byte{
 	0x22, 0x32, 0x0a, 0x18, 0x52, 0x65, 0x65, 0x76, 0x61, 0x6c, 0x75, 0x61, 0x74, 0x65, 0x52, 0x65,
 	0x63, 0x6f, 0x72, 0x64, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x16, 0x0a, 0x06,
 	0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x72, 0x65,
-	0x73, 0x75, 0x6c, 0x74, 0x22, 0x9c, 0x01, 0x0a, 0x14, 0x52, 0x65, 0x70, 0x6c, 0x61, 0x63, 0x65,
-	0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x26, 0x0a,
-	0x0e, 0x64, 0x61, 0x74, 0x61, 0x53, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x43, 0x6f, 0x64, 0x65, 0x18,
-	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0e, 0x64, 0x61, 0x74, 0x61, 0x53, 0x6f, 0x75, 0x72, 0x63,
-	0x65, 0x43, 0x6f, 0x64, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x49,
-	0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x49,
-	0x64, 0x12, 0x2a, 0x0a, 0x10, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x44, 0x65, 0x66, 0x69, 0x6e,
-	0x69, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x10, 0x72, 0x65, 0x63,
-	0x6f, 0x72, 0x64, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x14, 0x0a,
-	0x05, 0x66, 0x6c, 0x61, 0x67, 0x73, 0x18, 0x04, 0x20, 0x01, 0x28, 0x03, 0x52, 0x05, 0x66, 0x6c,
-	0x61, 0x67, 0x73, 0x22, 0x2f, 0x0a, 0x15, 0x52, 0x65, 0x70, 0x6c, 0x61, 0x63, 0x65, 0x52, 0x65,
-	0x63, 0x6f, 0x72, 0x64, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x16, 0x0a, 0x06,
-	0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x72, 0x65,
 	0x73, 0x75, 0x6c, 0x74, 0x22, 0x77, 0x0a, 0x19, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x42, 0x79,
 	0x41, 0x74, 0x74, 0x72, 0x69, 0x62, 0x75, 0x74, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
 	0x74, 0x12, 0x1e, 0x0a, 0x0a, 0x61, 0x74, 0x74, 0x72, 0x69, 0x62, 0x75, 0x74, 0x65, 0x73, 0x18,
@@ -3577,7 +3446,7 @@ var file_szengine_proto_rawDesc = []byte{
 	0x73, 0x18, 0x05, 0x20, 0x01, 0x28, 0x03, 0x52, 0x05, 0x66, 0x6c, 0x61, 0x67, 0x73, 0x22, 0x2c,
 	0x0a, 0x12, 0x57, 0x68, 0x79, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x52, 0x65, 0x73, 0x70,
 	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01,
-	0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x32, 0x9e, 0x17, 0x0a,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x32, 0xca, 0x16, 0x0a,
 	0x08, 0x53, 0x7a, 0x45, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x12, 0x46, 0x0a, 0x09, 0x41, 0x64, 0x64,
 	0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x12, 0x1a, 0x2e, 0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e,
 	0x65, 0x2e, 0x41, 0x64, 0x64, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65,
@@ -3720,57 +3589,52 @@ var file_szengine_proto_rawDesc = []byte{
 	0x61, 0x6c, 0x75, 0x61, 0x74, 0x65, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x52, 0x65, 0x71, 0x75,
 	0x65, 0x73, 0x74, 0x1a, 0x22, 0x2e, 0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x52,
 	0x65, 0x65, 0x76, 0x61, 0x6c, 0x75, 0x61, 0x74, 0x65, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x52, 0x0a, 0x0d, 0x52, 0x65, 0x70,
-	0x6c, 0x61, 0x63, 0x65, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x12, 0x1e, 0x2e, 0x73, 0x7a, 0x65,
-	0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x52, 0x65, 0x70, 0x6c, 0x61, 0x63, 0x65, 0x52, 0x65, 0x63,
-	0x6f, 0x72, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1f, 0x2e, 0x73, 0x7a, 0x65,
-	0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x52, 0x65, 0x70, 0x6c, 0x61, 0x63, 0x65, 0x52, 0x65, 0x63,
-	0x6f, 0x72, 0x64, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x61, 0x0a,
-	0x12, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x42, 0x79, 0x41, 0x74, 0x74, 0x72, 0x69, 0x62, 0x75,
-	0x74, 0x65, 0x73, 0x12, 0x23, 0x2e, 0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x53,
-	0x65, 0x61, 0x72, 0x63, 0x68, 0x42, 0x79, 0x41, 0x74, 0x74, 0x72, 0x69, 0x62, 0x75, 0x74, 0x65,
-	0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x24, 0x2e, 0x73, 0x7a, 0x65, 0x6e, 0x67,
-	0x69, 0x6e, 0x65, 0x2e, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x42, 0x79, 0x41, 0x74, 0x74, 0x72,
-	0x69, 0x62, 0x75, 0x74, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00,
-	0x12, 0x7e, 0x0a, 0x1b, 0x53, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x45, 0x78, 0x70, 0x6f, 0x72, 0x74,
-	0x43, 0x73, 0x76, 0x45, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x52, 0x65, 0x70, 0x6f, 0x72, 0x74, 0x12,
-	0x2c, 0x2e, 0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x53, 0x74, 0x72, 0x65, 0x61,
-	0x6d, 0x45, 0x78, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x73, 0x76, 0x45, 0x6e, 0x74, 0x69, 0x74, 0x79,
-	0x52, 0x65, 0x70, 0x6f, 0x72, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2d, 0x2e,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x61, 0x0a, 0x12, 0x53, 0x65, 0x61,
+	0x72, 0x63, 0x68, 0x42, 0x79, 0x41, 0x74, 0x74, 0x72, 0x69, 0x62, 0x75, 0x74, 0x65, 0x73, 0x12,
+	0x23, 0x2e, 0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x53, 0x65, 0x61, 0x72, 0x63,
+	0x68, 0x42, 0x79, 0x41, 0x74, 0x74, 0x72, 0x69, 0x62, 0x75, 0x74, 0x65, 0x73, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x1a, 0x24, 0x2e, 0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e,
+	0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x42, 0x79, 0x41, 0x74, 0x74, 0x72, 0x69, 0x62, 0x75, 0x74,
+	0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x7e, 0x0a, 0x1b,
+	0x53, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x45, 0x78, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x73, 0x76, 0x45,
+	0x6e, 0x74, 0x69, 0x74, 0x79, 0x52, 0x65, 0x70, 0x6f, 0x72, 0x74, 0x12, 0x2c, 0x2e, 0x73, 0x7a,
+	0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x53, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x45, 0x78, 0x70,
+	0x6f, 0x72, 0x74, 0x43, 0x73, 0x76, 0x45, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x52, 0x65, 0x70, 0x6f,
+	0x72, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2d, 0x2e, 0x73, 0x7a, 0x65, 0x6e,
+	0x67, 0x69, 0x6e, 0x65, 0x2e, 0x53, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x45, 0x78, 0x70, 0x6f, 0x72,
+	0x74, 0x43, 0x73, 0x76, 0x45, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x52, 0x65, 0x70, 0x6f, 0x72, 0x74,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x30, 0x01, 0x12, 0x81, 0x01, 0x0a,
+	0x1c, 0x53, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x45, 0x78, 0x70, 0x6f, 0x72, 0x74, 0x4a, 0x73, 0x6f,
+	0x6e, 0x45, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x52, 0x65, 0x70, 0x6f, 0x72, 0x74, 0x12, 0x2d, 0x2e,
 	0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x53, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x45,
-	0x78, 0x70, 0x6f, 0x72, 0x74, 0x43, 0x73, 0x76, 0x45, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x52, 0x65,
+	0x78, 0x70, 0x6f, 0x72, 0x74, 0x4a, 0x73, 0x6f, 0x6e, 0x45, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x52,
+	0x65, 0x70, 0x6f, 0x72, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2e, 0x2e, 0x73,
+	0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x53, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x45, 0x78,
+	0x70, 0x6f, 0x72, 0x74, 0x4a, 0x73, 0x6f, 0x6e, 0x45, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x52, 0x65,
 	0x70, 0x6f, 0x72, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x30, 0x01,
-	0x12, 0x81, 0x01, 0x0a, 0x1c, 0x53, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x45, 0x78, 0x70, 0x6f, 0x72,
-	0x74, 0x4a, 0x73, 0x6f, 0x6e, 0x45, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x52, 0x65, 0x70, 0x6f, 0x72,
-	0x74, 0x12, 0x2d, 0x2e, 0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x53, 0x74, 0x72,
-	0x65, 0x61, 0x6d, 0x45, 0x78, 0x70, 0x6f, 0x72, 0x74, 0x4a, 0x73, 0x6f, 0x6e, 0x45, 0x6e, 0x74,
-	0x69, 0x74, 0x79, 0x52, 0x65, 0x70, 0x6f, 0x72, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
-	0x1a, 0x2e, 0x2e, 0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x53, 0x74, 0x72, 0x65,
-	0x61, 0x6d, 0x45, 0x78, 0x70, 0x6f, 0x72, 0x74, 0x4a, 0x73, 0x6f, 0x6e, 0x45, 0x6e, 0x74, 0x69,
-	0x74, 0x79, 0x52, 0x65, 0x70, 0x6f, 0x72, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x22, 0x00, 0x30, 0x01, 0x12, 0x4c, 0x0a, 0x0b, 0x57, 0x68, 0x79, 0x45, 0x6e, 0x74, 0x69, 0x74,
-	0x69, 0x65, 0x73, 0x12, 0x1c, 0x2e, 0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x57,
-	0x68, 0x79, 0x45, 0x6e, 0x74, 0x69, 0x74, 0x69, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x1a, 0x1d, 0x2e, 0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x57, 0x68, 0x79,
-	0x45, 0x6e, 0x74, 0x69, 0x74, 0x69, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x22, 0x00, 0x12, 0x5e, 0x0a, 0x11, 0x57, 0x68, 0x79, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x49,
-	0x6e, 0x45, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x12, 0x22, 0x2e, 0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69,
+	0x12, 0x4c, 0x0a, 0x0b, 0x57, 0x68, 0x79, 0x45, 0x6e, 0x74, 0x69, 0x74, 0x69, 0x65, 0x73, 0x12,
+	0x1c, 0x2e, 0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x57, 0x68, 0x79, 0x45, 0x6e,
+	0x74, 0x69, 0x74, 0x69, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1d, 0x2e,
+	0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x57, 0x68, 0x79, 0x45, 0x6e, 0x74, 0x69,
+	0x74, 0x69, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x5e,
+	0x0a, 0x11, 0x57, 0x68, 0x79, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x49, 0x6e, 0x45, 0x6e, 0x74,
+	0x69, 0x74, 0x79, 0x12, 0x22, 0x2e, 0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x57,
+	0x68, 0x79, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x49, 0x6e, 0x45, 0x6e, 0x74, 0x69, 0x74, 0x79,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x23, 0x2e, 0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69,
 	0x6e, 0x65, 0x2e, 0x57, 0x68, 0x79, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x49, 0x6e, 0x45, 0x6e,
-	0x74, 0x69, 0x74, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x23, 0x2e, 0x73, 0x7a,
-	0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x57, 0x68, 0x79, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64,
-	0x49, 0x6e, 0x45, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x22, 0x00, 0x12, 0x49, 0x0a, 0x0a, 0x57, 0x68, 0x79, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73,
-	0x12, 0x1b, 0x2e, 0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x57, 0x68, 0x79, 0x52,
-	0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1c, 0x2e,
-	0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x57, 0x68, 0x79, 0x52, 0x65, 0x63, 0x6f,
-	0x72, 0x64, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x67, 0x0a,
-	0x23, 0x63, 0x6f, 0x6d, 0x2e, 0x73, 0x65, 0x6e, 0x7a, 0x69, 0x6e, 0x67, 0x2e, 0x73, 0x7a, 0x2e,
-	0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x67, 0x72, 0x70, 0x63, 0x2e, 0x53, 0x7a, 0x45, 0x6e,
-	0x67, 0x69, 0x6e, 0x65, 0x42, 0x0d, 0x53, 0x7a, 0x45, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x50, 0x72,
-	0x6f, 0x74, 0x6f, 0x5a, 0x31, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f,
-	0x73, 0x65, 0x6e, 0x7a, 0x69, 0x6e, 0x67, 0x2d, 0x67, 0x61, 0x72, 0x61, 0x67, 0x65, 0x2f, 0x73,
-	0x7a, 0x2d, 0x73, 0x64, 0x6b, 0x2d, 0x67, 0x6f, 0x2d, 0x67, 0x72, 0x70, 0x63, 0x2f, 0x73, 0x7a,
-	0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x74, 0x69, 0x74, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x49,
+	0x0a, 0x0a, 0x57, 0x68, 0x79, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x12, 0x1b, 0x2e, 0x73,
+	0x7a, 0x65, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x2e, 0x57, 0x68, 0x79, 0x52, 0x65, 0x63, 0x6f, 0x72,
+	0x64, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1c, 0x2e, 0x73, 0x7a, 0x65, 0x6e,
+	0x67, 0x69, 0x6e, 0x65, 0x2e, 0x57, 0x68, 0x79, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x67, 0x0a, 0x23, 0x63, 0x6f, 0x6d,
+	0x2e, 0x73, 0x65, 0x6e, 0x7a, 0x69, 0x6e, 0x67, 0x2e, 0x73, 0x7a, 0x2e, 0x65, 0x6e, 0x67, 0x69,
+	0x6e, 0x65, 0x2e, 0x67, 0x72, 0x70, 0x63, 0x2e, 0x53, 0x7a, 0x45, 0x6e, 0x67, 0x69, 0x6e, 0x65,
+	0x42, 0x0d, 0x53, 0x7a, 0x45, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x5a,
+	0x31, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x73, 0x65, 0x6e, 0x7a,
+	0x69, 0x6e, 0x67, 0x2d, 0x67, 0x61, 0x72, 0x61, 0x67, 0x65, 0x2f, 0x73, 0x7a, 0x2d, 0x73, 0x64,
+	0x6b, 0x2d, 0x67, 0x6f, 0x2d, 0x67, 0x72, 0x70, 0x63, 0x2f, 0x73, 0x7a, 0x65, 0x6e, 0x67, 0x69,
+	0x6e, 0x65, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -3785,7 +3649,7 @@ func file_szengine_proto_rawDescGZIP() []byte {
 	return file_szengine_proto_rawDescData
 }
 
-var file_szengine_proto_msgTypes = make([]protoimpl.MessageInfo, 62)
+var file_szengine_proto_msgTypes = make([]protoimpl.MessageInfo, 60)
 var file_szengine_proto_goTypes = []interface{}{
 	(*AddRecordRequest)(nil),                      // 0: szengine.AddRecordRequest
 	(*AddRecordResponse)(nil),                     // 1: szengine.AddRecordResponse
@@ -3833,22 +3697,20 @@ var file_szengine_proto_goTypes = []interface{}{
 	(*ReevaluateEntityResponse)(nil),              // 43: szengine.ReevaluateEntityResponse
 	(*ReevaluateRecordRequest)(nil),               // 44: szengine.ReevaluateRecordRequest
 	(*ReevaluateRecordResponse)(nil),              // 45: szengine.ReevaluateRecordResponse
-	(*ReplaceRecordRequest)(nil),                  // 46: szengine.ReplaceRecordRequest
-	(*ReplaceRecordResponse)(nil),                 // 47: szengine.ReplaceRecordResponse
-	(*SearchByAttributesRequest)(nil),             // 48: szengine.SearchByAttributesRequest
-	(*SearchByAttributesResponse)(nil),            // 49: szengine.SearchByAttributesResponse
-	(*GetStatsRequest)(nil),                       // 50: szengine.GetStatsRequest
-	(*GetStatsResponse)(nil),                      // 51: szengine.GetStatsResponse
-	(*StreamExportCsvEntityReportRequest)(nil),    // 52: szengine.StreamExportCsvEntityReportRequest
-	(*StreamExportCsvEntityReportResponse)(nil),   // 53: szengine.StreamExportCsvEntityReportResponse
-	(*StreamExportJsonEntityReportRequest)(nil),   // 54: szengine.StreamExportJsonEntityReportRequest
-	(*StreamExportJsonEntityReportResponse)(nil),  // 55: szengine.StreamExportJsonEntityReportResponse
-	(*WhyEntitiesRequest)(nil),                    // 56: szengine.WhyEntitiesRequest
-	(*WhyEntitiesResponse)(nil),                   // 57: szengine.WhyEntitiesResponse
-	(*WhyRecordInEntityRequest)(nil),              // 58: szengine.WhyRecordInEntityRequest
-	(*WhyRecordInEntityResponse)(nil),             // 59: szengine.WhyRecordInEntityResponse
-	(*WhyRecordsRequest)(nil),                     // 60: szengine.WhyRecordsRequest
-	(*WhyRecordsResponse)(nil),                    // 61: szengine.WhyRecordsResponse
+	(*SearchByAttributesRequest)(nil),             // 46: szengine.SearchByAttributesRequest
+	(*SearchByAttributesResponse)(nil),            // 47: szengine.SearchByAttributesResponse
+	(*GetStatsRequest)(nil),                       // 48: szengine.GetStatsRequest
+	(*GetStatsResponse)(nil),                      // 49: szengine.GetStatsResponse
+	(*StreamExportCsvEntityReportRequest)(nil),    // 50: szengine.StreamExportCsvEntityReportRequest
+	(*StreamExportCsvEntityReportResponse)(nil),   // 51: szengine.StreamExportCsvEntityReportResponse
+	(*StreamExportJsonEntityReportRequest)(nil),   // 52: szengine.StreamExportJsonEntityReportRequest
+	(*StreamExportJsonEntityReportResponse)(nil),  // 53: szengine.StreamExportJsonEntityReportResponse
+	(*WhyEntitiesRequest)(nil),                    // 54: szengine.WhyEntitiesRequest
+	(*WhyEntitiesResponse)(nil),                   // 55: szengine.WhyEntitiesResponse
+	(*WhyRecordInEntityRequest)(nil),              // 56: szengine.WhyRecordInEntityRequest
+	(*WhyRecordInEntityResponse)(nil),             // 57: szengine.WhyRecordInEntityResponse
+	(*WhyRecordsRequest)(nil),                     // 58: szengine.WhyRecordsRequest
+	(*WhyRecordsResponse)(nil),                    // 59: szengine.WhyRecordsResponse
 }
 var file_szengine_proto_depIdxs = []int32{
 	0,  // 0: szengine.SzEngine.AddRecord:input_type -> szengine.AddRecordRequest
@@ -3868,53 +3730,51 @@ var file_szengine_proto_depIdxs = []int32{
 	28, // 14: szengine.SzEngine.GetRecord:input_type -> szengine.GetRecordRequest
 	30, // 15: szengine.SzEngine.GetRedoRecord:input_type -> szengine.GetRedoRecordRequest
 	32, // 16: szengine.SzEngine.GetRepositoryLastModifiedTime:input_type -> szengine.GetRepositoryLastModifiedTimeRequest
-	50, // 17: szengine.SzEngine.GetStats:input_type -> szengine.GetStatsRequest
+	48, // 17: szengine.SzEngine.GetStats:input_type -> szengine.GetStatsRequest
 	34, // 18: szengine.SzEngine.GetVirtualEntityByRecordId:input_type -> szengine.GetVirtualEntityByRecordIdRequest
 	36, // 19: szengine.SzEngine.HowEntityByEntityId:input_type -> szengine.HowEntityByEntityIdRequest
 	38, // 20: szengine.SzEngine.PrimeEngine:input_type -> szengine.PrimeEngineRequest
 	40, // 21: szengine.SzEngine.ProcessRedoRecord:input_type -> szengine.ProcessRedoRecordRequest
 	42, // 22: szengine.SzEngine.ReevaluateEntity:input_type -> szengine.ReevaluateEntityRequest
 	44, // 23: szengine.SzEngine.ReevaluateRecord:input_type -> szengine.ReevaluateRecordRequest
-	46, // 24: szengine.SzEngine.ReplaceRecord:input_type -> szengine.ReplaceRecordRequest
-	48, // 25: szengine.SzEngine.SearchByAttributes:input_type -> szengine.SearchByAttributesRequest
-	52, // 26: szengine.SzEngine.StreamExportCsvEntityReport:input_type -> szengine.StreamExportCsvEntityReportRequest
-	54, // 27: szengine.SzEngine.StreamExportJsonEntityReport:input_type -> szengine.StreamExportJsonEntityReportRequest
-	56, // 28: szengine.SzEngine.WhyEntities:input_type -> szengine.WhyEntitiesRequest
-	58, // 29: szengine.SzEngine.WhyRecordInEntity:input_type -> szengine.WhyRecordInEntityRequest
-	60, // 30: szengine.SzEngine.WhyRecords:input_type -> szengine.WhyRecordsRequest
-	1,  // 31: szengine.SzEngine.AddRecord:output_type -> szengine.AddRecordResponse
-	3,  // 32: szengine.SzEngine.CloseExport:output_type -> szengine.CloseExportResponse
-	5,  // 33: szengine.SzEngine.CountRedoRecords:output_type -> szengine.CountRedoRecordsResponse
-	7,  // 34: szengine.SzEngine.DeleteRecord:output_type -> szengine.DeleteRecordResponse
-	9,  // 35: szengine.SzEngine.ExportCsvEntityReport:output_type -> szengine.ExportCsvEntityReportResponse
-	11, // 36: szengine.SzEngine.ExportJsonEntityReport:output_type -> szengine.ExportJsonEntityReportResponse
-	13, // 37: szengine.SzEngine.FetchNext:output_type -> szengine.FetchNextResponse
-	15, // 38: szengine.SzEngine.FindNetworkByEntityId:output_type -> szengine.FindNetworkByEntityIdResponse
-	17, // 39: szengine.SzEngine.FindNetworkByRecordId:output_type -> szengine.FindNetworkByRecordIdResponse
-	19, // 40: szengine.SzEngine.FindPathByEntityId:output_type -> szengine.FindPathByEntityIdResponse
-	21, // 41: szengine.SzEngine.FindPathByRecordId:output_type -> szengine.FindPathByRecordIdResponse
-	23, // 42: szengine.SzEngine.GetActiveConfigId:output_type -> szengine.GetActiveConfigIdResponse
-	25, // 43: szengine.SzEngine.GetEntityByEntityId:output_type -> szengine.GetEntityByEntityIdResponse
-	27, // 44: szengine.SzEngine.GetEntityByRecordId:output_type -> szengine.GetEntityByRecordIdResponse
-	29, // 45: szengine.SzEngine.GetRecord:output_type -> szengine.GetRecordResponse
-	31, // 46: szengine.SzEngine.GetRedoRecord:output_type -> szengine.GetRedoRecordResponse
-	33, // 47: szengine.SzEngine.GetRepositoryLastModifiedTime:output_type -> szengine.GetRepositoryLastModifiedTimeResponse
-	51, // 48: szengine.SzEngine.GetStats:output_type -> szengine.GetStatsResponse
-	35, // 49: szengine.SzEngine.GetVirtualEntityByRecordId:output_type -> szengine.GetVirtualEntityByRecordIdResponse
-	37, // 50: szengine.SzEngine.HowEntityByEntityId:output_type -> szengine.HowEntityByEntityIdResponse
-	39, // 51: szengine.SzEngine.PrimeEngine:output_type -> szengine.PrimeEngineResponse
-	41, // 52: szengine.SzEngine.ProcessRedoRecord:output_type -> szengine.ProcessRedoRecordResponse
-	43, // 53: szengine.SzEngine.ReevaluateEntity:output_type -> szengine.ReevaluateEntityResponse
-	45, // 54: szengine.SzEngine.ReevaluateRecord:output_type -> szengine.ReevaluateRecordResponse
-	47, // 55: szengine.SzEngine.ReplaceRecord:output_type -> szengine.ReplaceRecordResponse
-	49, // 56: szengine.SzEngine.SearchByAttributes:output_type -> szengine.SearchByAttributesResponse
-	53, // 57: szengine.SzEngine.StreamExportCsvEntityReport:output_type -> szengine.StreamExportCsvEntityReportResponse
-	55, // 58: szengine.SzEngine.StreamExportJsonEntityReport:output_type -> szengine.StreamExportJsonEntityReportResponse
-	57, // 59: szengine.SzEngine.WhyEntities:output_type -> szengine.WhyEntitiesResponse
-	59, // 60: szengine.SzEngine.WhyRecordInEntity:output_type -> szengine.WhyRecordInEntityResponse
-	61, // 61: szengine.SzEngine.WhyRecords:output_type -> szengine.WhyRecordsResponse
-	31, // [31:62] is the sub-list for method output_type
-	0,  // [0:31] is the sub-list for method input_type
+	46, // 24: szengine.SzEngine.SearchByAttributes:input_type -> szengine.SearchByAttributesRequest
+	50, // 25: szengine.SzEngine.StreamExportCsvEntityReport:input_type -> szengine.StreamExportCsvEntityReportRequest
+	52, // 26: szengine.SzEngine.StreamExportJsonEntityReport:input_type -> szengine.StreamExportJsonEntityReportRequest
+	54, // 27: szengine.SzEngine.WhyEntities:input_type -> szengine.WhyEntitiesRequest
+	56, // 28: szengine.SzEngine.WhyRecordInEntity:input_type -> szengine.WhyRecordInEntityRequest
+	58, // 29: szengine.SzEngine.WhyRecords:input_type -> szengine.WhyRecordsRequest
+	1,  // 30: szengine.SzEngine.AddRecord:output_type -> szengine.AddRecordResponse
+	3,  // 31: szengine.SzEngine.CloseExport:output_type -> szengine.CloseExportResponse
+	5,  // 32: szengine.SzEngine.CountRedoRecords:output_type -> szengine.CountRedoRecordsResponse
+	7,  // 33: szengine.SzEngine.DeleteRecord:output_type -> szengine.DeleteRecordResponse
+	9,  // 34: szengine.SzEngine.ExportCsvEntityReport:output_type -> szengine.ExportCsvEntityReportResponse
+	11, // 35: szengine.SzEngine.ExportJsonEntityReport:output_type -> szengine.ExportJsonEntityReportResponse
+	13, // 36: szengine.SzEngine.FetchNext:output_type -> szengine.FetchNextResponse
+	15, // 37: szengine.SzEngine.FindNetworkByEntityId:output_type -> szengine.FindNetworkByEntityIdResponse
+	17, // 38: szengine.SzEngine.FindNetworkByRecordId:output_type -> szengine.FindNetworkByRecordIdResponse
+	19, // 39: szengine.SzEngine.FindPathByEntityId:output_type -> szengine.FindPathByEntityIdResponse
+	21, // 40: szengine.SzEngine.FindPathByRecordId:output_type -> szengine.FindPathByRecordIdResponse
+	23, // 41: szengine.SzEngine.GetActiveConfigId:output_type -> szengine.GetActiveConfigIdResponse
+	25, // 42: szengine.SzEngine.GetEntityByEntityId:output_type -> szengine.GetEntityByEntityIdResponse
+	27, // 43: szengine.SzEngine.GetEntityByRecordId:output_type -> szengine.GetEntityByRecordIdResponse
+	29, // 44: szengine.SzEngine.GetRecord:output_type -> szengine.GetRecordResponse
+	31, // 45: szengine.SzEngine.GetRedoRecord:output_type -> szengine.GetRedoRecordResponse
+	33, // 46: szengine.SzEngine.GetRepositoryLastModifiedTime:output_type -> szengine.GetRepositoryLastModifiedTimeResponse
+	49, // 47: szengine.SzEngine.GetStats:output_type -> szengine.GetStatsResponse
+	35, // 48: szengine.SzEngine.GetVirtualEntityByRecordId:output_type -> szengine.GetVirtualEntityByRecordIdResponse
+	37, // 49: szengine.SzEngine.HowEntityByEntityId:output_type -> szengine.HowEntityByEntityIdResponse
+	39, // 50: szengine.SzEngine.PrimeEngine:output_type -> szengine.PrimeEngineResponse
+	41, // 51: szengine.SzEngine.ProcessRedoRecord:output_type -> szengine.ProcessRedoRecordResponse
+	43, // 52: szengine.SzEngine.ReevaluateEntity:output_type -> szengine.ReevaluateEntityResponse
+	45, // 53: szengine.SzEngine.ReevaluateRecord:output_type -> szengine.ReevaluateRecordResponse
+	47, // 54: szengine.SzEngine.SearchByAttributes:output_type -> szengine.SearchByAttributesResponse
+	51, // 55: szengine.SzEngine.StreamExportCsvEntityReport:output_type -> szengine.StreamExportCsvEntityReportResponse
+	53, // 56: szengine.SzEngine.StreamExportJsonEntityReport:output_type -> szengine.StreamExportJsonEntityReportResponse
+	55, // 57: szengine.SzEngine.WhyEntities:output_type -> szengine.WhyEntitiesResponse
+	57, // 58: szengine.SzEngine.WhyRecordInEntity:output_type -> szengine.WhyRecordInEntityResponse
+	59, // 59: szengine.SzEngine.WhyRecords:output_type -> szengine.WhyRecordsResponse
+	30, // [30:60] is the sub-list for method output_type
+	0,  // [0:30] is the sub-list for method input_type
 	0,  // [0:0] is the sub-list for extension type_name
 	0,  // [0:0] is the sub-list for extension extendee
 	0,  // [0:0] is the sub-list for field type_name
@@ -4479,30 +4339,6 @@ func file_szengine_proto_init() {
 			}
 		}
 		file_szengine_proto_msgTypes[46].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReplaceRecordRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_szengine_proto_msgTypes[47].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReplaceRecordResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_szengine_proto_msgTypes[48].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SearchByAttributesRequest); i {
 			case 0:
 				return &v.state
@@ -4514,7 +4350,7 @@ func file_szengine_proto_init() {
 				return nil
 			}
 		}
-		file_szengine_proto_msgTypes[49].Exporter = func(v interface{}, i int) interface{} {
+		file_szengine_proto_msgTypes[47].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SearchByAttributesResponse); i {
 			case 0:
 				return &v.state
@@ -4526,7 +4362,7 @@ func file_szengine_proto_init() {
 				return nil
 			}
 		}
-		file_szengine_proto_msgTypes[50].Exporter = func(v interface{}, i int) interface{} {
+		file_szengine_proto_msgTypes[48].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetStatsRequest); i {
 			case 0:
 				return &v.state
@@ -4538,7 +4374,7 @@ func file_szengine_proto_init() {
 				return nil
 			}
 		}
-		file_szengine_proto_msgTypes[51].Exporter = func(v interface{}, i int) interface{} {
+		file_szengine_proto_msgTypes[49].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetStatsResponse); i {
 			case 0:
 				return &v.state
@@ -4550,7 +4386,7 @@ func file_szengine_proto_init() {
 				return nil
 			}
 		}
-		file_szengine_proto_msgTypes[52].Exporter = func(v interface{}, i int) interface{} {
+		file_szengine_proto_msgTypes[50].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*StreamExportCsvEntityReportRequest); i {
 			case 0:
 				return &v.state
@@ -4562,7 +4398,7 @@ func file_szengine_proto_init() {
 				return nil
 			}
 		}
-		file_szengine_proto_msgTypes[53].Exporter = func(v interface{}, i int) interface{} {
+		file_szengine_proto_msgTypes[51].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*StreamExportCsvEntityReportResponse); i {
 			case 0:
 				return &v.state
@@ -4574,7 +4410,7 @@ func file_szengine_proto_init() {
 				return nil
 			}
 		}
-		file_szengine_proto_msgTypes[54].Exporter = func(v interface{}, i int) interface{} {
+		file_szengine_proto_msgTypes[52].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*StreamExportJsonEntityReportRequest); i {
 			case 0:
 				return &v.state
@@ -4586,7 +4422,7 @@ func file_szengine_proto_init() {
 				return nil
 			}
 		}
-		file_szengine_proto_msgTypes[55].Exporter = func(v interface{}, i int) interface{} {
+		file_szengine_proto_msgTypes[53].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*StreamExportJsonEntityReportResponse); i {
 			case 0:
 				return &v.state
@@ -4598,7 +4434,7 @@ func file_szengine_proto_init() {
 				return nil
 			}
 		}
-		file_szengine_proto_msgTypes[56].Exporter = func(v interface{}, i int) interface{} {
+		file_szengine_proto_msgTypes[54].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*WhyEntitiesRequest); i {
 			case 0:
 				return &v.state
@@ -4610,7 +4446,7 @@ func file_szengine_proto_init() {
 				return nil
 			}
 		}
-		file_szengine_proto_msgTypes[57].Exporter = func(v interface{}, i int) interface{} {
+		file_szengine_proto_msgTypes[55].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*WhyEntitiesResponse); i {
 			case 0:
 				return &v.state
@@ -4622,7 +4458,7 @@ func file_szengine_proto_init() {
 				return nil
 			}
 		}
-		file_szengine_proto_msgTypes[58].Exporter = func(v interface{}, i int) interface{} {
+		file_szengine_proto_msgTypes[56].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*WhyRecordInEntityRequest); i {
 			case 0:
 				return &v.state
@@ -4634,7 +4470,7 @@ func file_szengine_proto_init() {
 				return nil
 			}
 		}
-		file_szengine_proto_msgTypes[59].Exporter = func(v interface{}, i int) interface{} {
+		file_szengine_proto_msgTypes[57].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*WhyRecordInEntityResponse); i {
 			case 0:
 				return &v.state
@@ -4646,7 +4482,7 @@ func file_szengine_proto_init() {
 				return nil
 			}
 		}
-		file_szengine_proto_msgTypes[60].Exporter = func(v interface{}, i int) interface{} {
+		file_szengine_proto_msgTypes[58].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*WhyRecordsRequest); i {
 			case 0:
 				return &v.state
@@ -4658,7 +4494,7 @@ func file_szengine_proto_init() {
 				return nil
 			}
 		}
-		file_szengine_proto_msgTypes[61].Exporter = func(v interface{}, i int) interface{} {
+		file_szengine_proto_msgTypes[59].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*WhyRecordsResponse); i {
 			case 0:
 				return &v.state
@@ -4677,7 +4513,7 @@ func file_szengine_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_szengine_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   62,
+			NumMessages:   60,
 			NumExtensions: 0,
 			NumServices:   1,
 		},

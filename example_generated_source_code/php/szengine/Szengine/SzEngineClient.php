@@ -353,20 +353,6 @@ class SzEngineClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Szengine\ReplaceRecordRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function ReplaceRecord(\Szengine\ReplaceRecordRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szengine.SzEngine/ReplaceRecord',
-        $argument,
-        ['\Szengine\ReplaceRecordResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \Szengine\SearchByAttributesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

@@ -30,7 +30,6 @@ service SzEngine {
   rpc ProcessRedoRecord(ProcessRedoRecordRequest) returns (ProcessRedoRecordResponse) {}
   rpc ReevaluateEntity(ReevaluateEntityRequest) returns (ReevaluateEntityResponse) {}
   rpc ReevaluateRecord(ReevaluateRecordRequest) returns (ReevaluateRecordResponse) {}
-  rpc ReplaceRecord(ReplaceRecordRequest) returns (ReplaceRecordResponse) {}
   rpc SearchByAttributes(SearchByAttributesRequest) returns (SearchByAttributesResponse) {}
   rpc StreamExportCsvEntityReport(StreamExportCsvEntityReportRequest) returns (stream StreamExportCsvEntityReportResponse) {}
   rpc StreamExportJsonEntityReport(StreamExportJsonEntityReportRequest) returns (stream StreamExportJsonEntityReportResponse) {}
@@ -243,17 +242,6 @@ message ReevaluateRecordRequest {
 }
 
 message ReevaluateRecordResponse {
-  string result = 1;
-}
-
-message ReplaceRecordRequest {
-  string dataSourceCode = 1;
-  string recordId = 2;
-  string recordDefinition = 3;
-  int64 flags = 4;
-}
-
-message ReplaceRecordResponse {
   string result = 1;
 }
 

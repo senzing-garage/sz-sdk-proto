@@ -201,12 +201,6 @@ extern ReevaluateRecordRequestDefaultTypeInternal _ReevaluateRecordRequest_defau
 class ReevaluateRecordResponse;
 struct ReevaluateRecordResponseDefaultTypeInternal;
 extern ReevaluateRecordResponseDefaultTypeInternal _ReevaluateRecordResponse_default_instance_;
-class ReplaceRecordRequest;
-struct ReplaceRecordRequestDefaultTypeInternal;
-extern ReplaceRecordRequestDefaultTypeInternal _ReplaceRecordRequest_default_instance_;
-class ReplaceRecordResponse;
-struct ReplaceRecordResponseDefaultTypeInternal;
-extern ReplaceRecordResponseDefaultTypeInternal _ReplaceRecordResponse_default_instance_;
 class SearchByAttributesRequest;
 struct SearchByAttributesRequestDefaultTypeInternal;
 extern SearchByAttributesRequestDefaultTypeInternal _SearchByAttributesRequest_default_instance_;
@@ -315,7 +309,7 @@ class WhyRecordsResponse final :
                &_WhyRecordsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    61;
+    59;
 
   friend void swap(WhyRecordsResponse& a, WhyRecordsResponse& b) {
     a.Swap(&b);
@@ -496,7 +490,7 @@ class WhyRecordsRequest final :
                &_WhyRecordsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    60;
+    58;
 
   friend void swap(WhyRecordsRequest& a, WhyRecordsRequest& b) {
     a.Swap(&b);
@@ -743,7 +737,7 @@ class WhyRecordInEntityResponse final :
                &_WhyRecordInEntityResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    59;
+    57;
 
   friend void swap(WhyRecordInEntityResponse& a, WhyRecordInEntityResponse& b) {
     a.Swap(&b);
@@ -924,7 +918,7 @@ class WhyRecordInEntityRequest final :
                &_WhyRecordInEntityRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    58;
+    56;
 
   friend void swap(WhyRecordInEntityRequest& a, WhyRecordInEntityRequest& b) {
     a.Swap(&b);
@@ -1135,7 +1129,7 @@ class WhyEntitiesResponse final :
                &_WhyEntitiesResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    57;
+    55;
 
   friend void swap(WhyEntitiesResponse& a, WhyEntitiesResponse& b) {
     a.Swap(&b);
@@ -1316,7 +1310,7 @@ class WhyEntitiesRequest final :
                &_WhyEntitiesRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    56;
+    54;
 
   friend void swap(WhyEntitiesRequest& a, WhyEntitiesRequest& b) {
     a.Swap(&b);
@@ -1515,7 +1509,7 @@ class StreamExportJsonEntityReportResponse final :
                &_StreamExportJsonEntityReportResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    55;
+    53;
 
   friend void swap(StreamExportJsonEntityReportResponse& a, StreamExportJsonEntityReportResponse& b) {
     a.Swap(&b);
@@ -1696,7 +1690,7 @@ class StreamExportJsonEntityReportRequest final :
                &_StreamExportJsonEntityReportRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    54;
+    52;
 
   friend void swap(StreamExportJsonEntityReportRequest& a, StreamExportJsonEntityReportRequest& b) {
     a.Swap(&b);
@@ -1871,7 +1865,7 @@ class StreamExportCsvEntityReportResponse final :
                &_StreamExportCsvEntityReportResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    53;
+    51;
 
   friend void swap(StreamExportCsvEntityReportResponse& a, StreamExportCsvEntityReportResponse& b) {
     a.Swap(&b);
@@ -2052,7 +2046,7 @@ class StreamExportCsvEntityReportRequest final :
                &_StreamExportCsvEntityReportRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    52;
+    50;
 
   friend void swap(StreamExportCsvEntityReportRequest& a, StreamExportCsvEntityReportRequest& b) {
     a.Swap(&b);
@@ -2245,7 +2239,7 @@ class SearchByAttributesResponse final :
                &_SearchByAttributesResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    49;
+    47;
 
   friend void swap(SearchByAttributesResponse& a, SearchByAttributesResponse& b) {
     a.Swap(&b);
@@ -2426,7 +2420,7 @@ class SearchByAttributesRequest final :
                &_SearchByAttributesRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    48;
+    46;
 
   friend void swap(SearchByAttributesRequest& a, SearchByAttributesRequest& b) {
     a.Swap(&b);
@@ -2570,416 +2564,6 @@ class SearchByAttributesRequest final :
                               ::google::protobuf::Arena* arena, const Impl_& from);
     ::google::protobuf::internal::ArenaStringPtr attributes_;
     ::google::protobuf::internal::ArenaStringPtr searchprofile_;
-    ::int64_t flags_;
-    mutable ::google::protobuf::internal::CachedSize _cached_size_;
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_szengine_2eproto;
-};// -------------------------------------------------------------------
-
-class ReplaceRecordResponse final :
-    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szengine.ReplaceRecordResponse) */ {
- public:
-  inline ReplaceRecordResponse() : ReplaceRecordResponse(nullptr) {}
-  ~ReplaceRecordResponse() override;
-  template<typename = void>
-  explicit PROTOBUF_CONSTEXPR ReplaceRecordResponse(::google::protobuf::internal::ConstantInitialized);
-
-  inline ReplaceRecordResponse(const ReplaceRecordResponse& from)
-      : ReplaceRecordResponse(nullptr, from) {}
-  ReplaceRecordResponse(ReplaceRecordResponse&& from) noexcept
-    : ReplaceRecordResponse() {
-    *this = ::std::move(from);
-  }
-
-  inline ReplaceRecordResponse& operator=(const ReplaceRecordResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline ReplaceRecordResponse& operator=(ReplaceRecordResponse&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetArena() == from.GetArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const ReplaceRecordResponse& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const ReplaceRecordResponse* internal_default_instance() {
-    return reinterpret_cast<const ReplaceRecordResponse*>(
-               &_ReplaceRecordResponse_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    47;
-
-  friend void swap(ReplaceRecordResponse& a, ReplaceRecordResponse& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(ReplaceRecordResponse* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() != nullptr &&
-        GetArena() == other->GetArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() == other->GetArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(ReplaceRecordResponse* other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  ReplaceRecordResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<ReplaceRecordResponse>(arena);
-  }
-  using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const ReplaceRecordResponse& from);
-  using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom( const ReplaceRecordResponse& from) {
-    ReplaceRecordResponse::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  ::size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
-  ::uint8_t* _InternalSerialize(
-      ::uint8_t* target, ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
-
-  private:
-  ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
-  void SharedCtor(::google::protobuf::Arena* arena);
-  void SharedDtor();
-  void InternalSwap(ReplaceRecordResponse* other);
-
-  private:
-  friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() {
-    return "szengine.ReplaceRecordResponse";
-  }
-  protected:
-  explicit ReplaceRecordResponse(::google::protobuf::Arena* arena);
-  ReplaceRecordResponse(::google::protobuf::Arena* arena, const ReplaceRecordResponse& from);
-  public:
-
-  static const ClassData _class_data_;
-  const ::google::protobuf::Message::ClassData*GetClassData() const final;
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kResultFieldNumber = 1,
-  };
-  // string result = 1;
-  void clear_result() ;
-  const std::string& result() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_result(Arg_&& arg, Args_... args);
-  std::string* mutable_result();
-  PROTOBUF_NODISCARD std::string* release_result();
-  void set_allocated_result(std::string* value);
-
-  private:
-  const std::string& _internal_result() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(
-      const std::string& value);
-  std::string* _internal_mutable_result();
-
-  public:
-  // @@protoc_insertion_point(class_scope:szengine.ReplaceRecordResponse)
- private:
-  class _Internal;
-
-  friend class ::google::protobuf::internal::TcParser;
-  static const ::google::protobuf::internal::TcParseTable<
-      0, 1, 0,
-      45, 2>
-      _table_;
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-
-        inline explicit constexpr Impl_(
-            ::google::protobuf::internal::ConstantInitialized) noexcept;
-        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                              ::google::protobuf::Arena* arena);
-        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                              ::google::protobuf::Arena* arena, const Impl_& from);
-    ::google::protobuf::internal::ArenaStringPtr result_;
-    mutable ::google::protobuf::internal::CachedSize _cached_size_;
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_szengine_2eproto;
-};// -------------------------------------------------------------------
-
-class ReplaceRecordRequest final :
-    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szengine.ReplaceRecordRequest) */ {
- public:
-  inline ReplaceRecordRequest() : ReplaceRecordRequest(nullptr) {}
-  ~ReplaceRecordRequest() override;
-  template<typename = void>
-  explicit PROTOBUF_CONSTEXPR ReplaceRecordRequest(::google::protobuf::internal::ConstantInitialized);
-
-  inline ReplaceRecordRequest(const ReplaceRecordRequest& from)
-      : ReplaceRecordRequest(nullptr, from) {}
-  ReplaceRecordRequest(ReplaceRecordRequest&& from) noexcept
-    : ReplaceRecordRequest() {
-    *this = ::std::move(from);
-  }
-
-  inline ReplaceRecordRequest& operator=(const ReplaceRecordRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline ReplaceRecordRequest& operator=(ReplaceRecordRequest&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetArena() == from.GetArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const ReplaceRecordRequest& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const ReplaceRecordRequest* internal_default_instance() {
-    return reinterpret_cast<const ReplaceRecordRequest*>(
-               &_ReplaceRecordRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    46;
-
-  friend void swap(ReplaceRecordRequest& a, ReplaceRecordRequest& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(ReplaceRecordRequest* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() != nullptr &&
-        GetArena() == other->GetArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() == other->GetArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(ReplaceRecordRequest* other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  ReplaceRecordRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<ReplaceRecordRequest>(arena);
-  }
-  using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const ReplaceRecordRequest& from);
-  using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom( const ReplaceRecordRequest& from) {
-    ReplaceRecordRequest::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  ::size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
-  ::uint8_t* _InternalSerialize(
-      ::uint8_t* target, ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
-
-  private:
-  ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
-  void SharedCtor(::google::protobuf::Arena* arena);
-  void SharedDtor();
-  void InternalSwap(ReplaceRecordRequest* other);
-
-  private:
-  friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() {
-    return "szengine.ReplaceRecordRequest";
-  }
-  protected:
-  explicit ReplaceRecordRequest(::google::protobuf::Arena* arena);
-  ReplaceRecordRequest(::google::protobuf::Arena* arena, const ReplaceRecordRequest& from);
-  public:
-
-  static const ClassData _class_data_;
-  const ::google::protobuf::Message::ClassData*GetClassData() const final;
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kDataSourceCodeFieldNumber = 1,
-    kRecordIdFieldNumber = 2,
-    kRecordDefinitionFieldNumber = 3,
-    kFlagsFieldNumber = 4,
-  };
-  // string dataSourceCode = 1;
-  void clear_datasourcecode() ;
-  const std::string& datasourcecode() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_datasourcecode(Arg_&& arg, Args_... args);
-  std::string* mutable_datasourcecode();
-  PROTOBUF_NODISCARD std::string* release_datasourcecode();
-  void set_allocated_datasourcecode(std::string* value);
-
-  private:
-  const std::string& _internal_datasourcecode() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_datasourcecode(
-      const std::string& value);
-  std::string* _internal_mutable_datasourcecode();
-
-  public:
-  // string recordId = 2;
-  void clear_recordid() ;
-  const std::string& recordid() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_recordid(Arg_&& arg, Args_... args);
-  std::string* mutable_recordid();
-  PROTOBUF_NODISCARD std::string* release_recordid();
-  void set_allocated_recordid(std::string* value);
-
-  private:
-  const std::string& _internal_recordid() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_recordid(
-      const std::string& value);
-  std::string* _internal_mutable_recordid();
-
-  public:
-  // string recordDefinition = 3;
-  void clear_recorddefinition() ;
-  const std::string& recorddefinition() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_recorddefinition(Arg_&& arg, Args_... args);
-  std::string* mutable_recorddefinition();
-  PROTOBUF_NODISCARD std::string* release_recorddefinition();
-  void set_allocated_recorddefinition(std::string* value);
-
-  private:
-  const std::string& _internal_recorddefinition() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_recorddefinition(
-      const std::string& value);
-  std::string* _internal_mutable_recorddefinition();
-
-  public:
-  // int64 flags = 4;
-  void clear_flags() ;
-  ::int64_t flags() const;
-  void set_flags(::int64_t value);
-
-  private:
-  ::int64_t _internal_flags() const;
-  void _internal_set_flags(::int64_t value);
-
-  public:
-  // @@protoc_insertion_point(class_scope:szengine.ReplaceRecordRequest)
- private:
-  class _Internal;
-
-  friend class ::google::protobuf::internal::TcParser;
-  static const ::google::protobuf::internal::TcParseTable<
-      2, 4, 0,
-      76, 2>
-      _table_;
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-
-        inline explicit constexpr Impl_(
-            ::google::protobuf::internal::ConstantInitialized) noexcept;
-        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                              ::google::protobuf::Arena* arena);
-        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                              ::google::protobuf::Arena* arena, const Impl_& from);
-    ::google::protobuf::internal::ArenaStringPtr datasourcecode_;
-    ::google::protobuf::internal::ArenaStringPtr recordid_;
-    ::google::protobuf::internal::ArenaStringPtr recorddefinition_;
     ::int64_t flags_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -5195,7 +4779,7 @@ class GetStatsResponse final :
                &_GetStatsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    51;
+    49;
 
   friend void swap(GetStatsResponse& a, GetStatsResponse& b) {
     a.Swap(&b);
@@ -5375,7 +4959,7 @@ class GetStatsRequest final :
                &_GetStatsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    50;
+    48;
 
   friend void swap(GetStatsRequest& a, GetStatsRequest& b) {
     a.Swap(&b);
@@ -14908,249 +14492,6 @@ inline void ReevaluateRecordResponse::set_allocated_result(std::string* value) {
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:szengine.ReevaluateRecordResponse.result)
-}
-
-// -------------------------------------------------------------------
-
-// ReplaceRecordRequest
-
-// string dataSourceCode = 1;
-inline void ReplaceRecordRequest::clear_datasourcecode() {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.datasourcecode_.ClearToEmpty();
-}
-inline const std::string& ReplaceRecordRequest::datasourcecode() const
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szengine.ReplaceRecordRequest.dataSourceCode)
-  return _internal_datasourcecode();
-}
-template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void ReplaceRecordRequest::set_datasourcecode(Arg_&& arg,
-                                                     Args_... args) {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ;
-  _impl_.datasourcecode_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szengine.ReplaceRecordRequest.dataSourceCode)
-}
-inline std::string* ReplaceRecordRequest::mutable_datasourcecode() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_datasourcecode();
-  // @@protoc_insertion_point(field_mutable:szengine.ReplaceRecordRequest.dataSourceCode)
-  return _s;
-}
-inline const std::string& ReplaceRecordRequest::_internal_datasourcecode() const {
-  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.datasourcecode_.Get();
-}
-inline void ReplaceRecordRequest::_internal_set_datasourcecode(const std::string& value) {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ;
-  _impl_.datasourcecode_.Set(value, GetArena());
-}
-inline std::string* ReplaceRecordRequest::_internal_mutable_datasourcecode() {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ;
-  return _impl_.datasourcecode_.Mutable( GetArena());
-}
-inline std::string* ReplaceRecordRequest::release_datasourcecode() {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  // @@protoc_insertion_point(field_release:szengine.ReplaceRecordRequest.dataSourceCode)
-  return _impl_.datasourcecode_.Release();
-}
-inline void ReplaceRecordRequest::set_allocated_datasourcecode(std::string* value) {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.datasourcecode_.SetAllocated(value, GetArena());
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.datasourcecode_.IsDefault()) {
-          _impl_.datasourcecode_.Set("", GetArena());
-        }
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:szengine.ReplaceRecordRequest.dataSourceCode)
-}
-
-// string recordId = 2;
-inline void ReplaceRecordRequest::clear_recordid() {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.recordid_.ClearToEmpty();
-}
-inline const std::string& ReplaceRecordRequest::recordid() const
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szengine.ReplaceRecordRequest.recordId)
-  return _internal_recordid();
-}
-template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void ReplaceRecordRequest::set_recordid(Arg_&& arg,
-                                                     Args_... args) {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ;
-  _impl_.recordid_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szengine.ReplaceRecordRequest.recordId)
-}
-inline std::string* ReplaceRecordRequest::mutable_recordid() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_recordid();
-  // @@protoc_insertion_point(field_mutable:szengine.ReplaceRecordRequest.recordId)
-  return _s;
-}
-inline const std::string& ReplaceRecordRequest::_internal_recordid() const {
-  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.recordid_.Get();
-}
-inline void ReplaceRecordRequest::_internal_set_recordid(const std::string& value) {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ;
-  _impl_.recordid_.Set(value, GetArena());
-}
-inline std::string* ReplaceRecordRequest::_internal_mutable_recordid() {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ;
-  return _impl_.recordid_.Mutable( GetArena());
-}
-inline std::string* ReplaceRecordRequest::release_recordid() {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  // @@protoc_insertion_point(field_release:szengine.ReplaceRecordRequest.recordId)
-  return _impl_.recordid_.Release();
-}
-inline void ReplaceRecordRequest::set_allocated_recordid(std::string* value) {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.recordid_.SetAllocated(value, GetArena());
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.recordid_.IsDefault()) {
-          _impl_.recordid_.Set("", GetArena());
-        }
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:szengine.ReplaceRecordRequest.recordId)
-}
-
-// string recordDefinition = 3;
-inline void ReplaceRecordRequest::clear_recorddefinition() {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.recorddefinition_.ClearToEmpty();
-}
-inline const std::string& ReplaceRecordRequest::recorddefinition() const
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szengine.ReplaceRecordRequest.recordDefinition)
-  return _internal_recorddefinition();
-}
-template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void ReplaceRecordRequest::set_recorddefinition(Arg_&& arg,
-                                                     Args_... args) {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ;
-  _impl_.recorddefinition_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szengine.ReplaceRecordRequest.recordDefinition)
-}
-inline std::string* ReplaceRecordRequest::mutable_recorddefinition() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_recorddefinition();
-  // @@protoc_insertion_point(field_mutable:szengine.ReplaceRecordRequest.recordDefinition)
-  return _s;
-}
-inline const std::string& ReplaceRecordRequest::_internal_recorddefinition() const {
-  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.recorddefinition_.Get();
-}
-inline void ReplaceRecordRequest::_internal_set_recorddefinition(const std::string& value) {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ;
-  _impl_.recorddefinition_.Set(value, GetArena());
-}
-inline std::string* ReplaceRecordRequest::_internal_mutable_recorddefinition() {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ;
-  return _impl_.recorddefinition_.Mutable( GetArena());
-}
-inline std::string* ReplaceRecordRequest::release_recorddefinition() {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  // @@protoc_insertion_point(field_release:szengine.ReplaceRecordRequest.recordDefinition)
-  return _impl_.recorddefinition_.Release();
-}
-inline void ReplaceRecordRequest::set_allocated_recorddefinition(std::string* value) {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.recorddefinition_.SetAllocated(value, GetArena());
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.recorddefinition_.IsDefault()) {
-          _impl_.recorddefinition_.Set("", GetArena());
-        }
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:szengine.ReplaceRecordRequest.recordDefinition)
-}
-
-// int64 flags = 4;
-inline void ReplaceRecordRequest::clear_flags() {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.flags_ = ::int64_t{0};
-}
-inline ::int64_t ReplaceRecordRequest::flags() const {
-  // @@protoc_insertion_point(field_get:szengine.ReplaceRecordRequest.flags)
-  return _internal_flags();
-}
-inline void ReplaceRecordRequest::set_flags(::int64_t value) {
-  _internal_set_flags(value);
-  // @@protoc_insertion_point(field_set:szengine.ReplaceRecordRequest.flags)
-}
-inline ::int64_t ReplaceRecordRequest::_internal_flags() const {
-  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.flags_;
-}
-inline void ReplaceRecordRequest::_internal_set_flags(::int64_t value) {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ;
-  _impl_.flags_ = value;
-}
-
-// -------------------------------------------------------------------
-
-// ReplaceRecordResponse
-
-// string result = 1;
-inline void ReplaceRecordResponse::clear_result() {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.result_.ClearToEmpty();
-}
-inline const std::string& ReplaceRecordResponse::result() const
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szengine.ReplaceRecordResponse.result)
-  return _internal_result();
-}
-template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void ReplaceRecordResponse::set_result(Arg_&& arg,
-                                                     Args_... args) {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ;
-  _impl_.result_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szengine.ReplaceRecordResponse.result)
-}
-inline std::string* ReplaceRecordResponse::mutable_result() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:szengine.ReplaceRecordResponse.result)
-  return _s;
-}
-inline const std::string& ReplaceRecordResponse::_internal_result() const {
-  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.result_.Get();
-}
-inline void ReplaceRecordResponse::_internal_set_result(const std::string& value) {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ;
-  _impl_.result_.Set(value, GetArena());
-}
-inline std::string* ReplaceRecordResponse::_internal_mutable_result() {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ;
-  return _impl_.result_.Mutable( GetArena());
-}
-inline std::string* ReplaceRecordResponse::release_result() {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  // @@protoc_insertion_point(field_release:szengine.ReplaceRecordResponse.result)
-  return _impl_.result_.Release();
-}
-inline void ReplaceRecordResponse::set_allocated_result(std::string* value) {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.result_.SetAllocated(value, GetArena());
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.result_.IsDefault()) {
-          _impl_.result_.Set("", GetArena());
-        }
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:szengine.ReplaceRecordResponse.result)
 }
 
 // -------------------------------------------------------------------

@@ -46,7 +46,6 @@ type SzEngineClient interface {
 	ProcessRedoRecord(ctx context.Context, in *ProcessRedoRecordRequest, opts ...grpc.CallOption) (*ProcessRedoRecordResponse, error)
 	ReevaluateEntity(ctx context.Context, in *ReevaluateEntityRequest, opts ...grpc.CallOption) (*ReevaluateEntityResponse, error)
 	ReevaluateRecord(ctx context.Context, in *ReevaluateRecordRequest, opts ...grpc.CallOption) (*ReevaluateRecordResponse, error)
-	ReplaceRecord(ctx context.Context, in *ReplaceRecordRequest, opts ...grpc.CallOption) (*ReplaceRecordResponse, error)
 	SearchByAttributes(ctx context.Context, in *SearchByAttributesRequest, opts ...grpc.CallOption) (*SearchByAttributesResponse, error)
 	StreamExportCsvEntityReport(ctx context.Context, in *StreamExportCsvEntityReportRequest, opts ...grpc.CallOption) (SzEngine_StreamExportCsvEntityReportClient, error)
 	StreamExportJsonEntityReport(ctx context.Context, in *StreamExportJsonEntityReportRequest, opts ...grpc.CallOption) (SzEngine_StreamExportJsonEntityReportClient, error)
@@ -279,15 +278,6 @@ func (c *szEngineClient) ReevaluateRecord(ctx context.Context, in *ReevaluateRec
 	return out, nil
 }
 
-func (c *szEngineClient) ReplaceRecord(ctx context.Context, in *ReplaceRecordRequest, opts ...grpc.CallOption) (*ReplaceRecordResponse, error) {
-	out := new(ReplaceRecordResponse)
-	err := c.cc.Invoke(ctx, "/szengine.SzEngine/ReplaceRecord", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *szEngineClient) SearchByAttributes(ctx context.Context, in *SearchByAttributesRequest, opts ...grpc.CallOption) (*SearchByAttributesResponse, error) {
 	out := new(SearchByAttributesResponse)
 	err := c.cc.Invoke(ctx, "/szengine.SzEngine/SearchByAttributes", in, out, opts...)
@@ -416,7 +406,6 @@ type SzEngineServer interface {
 	ProcessRedoRecord(context.Context, *ProcessRedoRecordRequest) (*ProcessRedoRecordResponse, error)
 	ReevaluateEntity(context.Context, *ReevaluateEntityRequest) (*ReevaluateEntityResponse, error)
 	ReevaluateRecord(context.Context, *ReevaluateRecordRequest) (*ReevaluateRecordResponse, error)
-	ReplaceRecord(context.Context, *ReplaceRecordRequest) (*ReplaceRecordResponse, error)
 	SearchByAttributes(context.Context, *SearchByAttributesRequest) (*SearchByAttributesResponse, error)
 	StreamExportCsvEntityReport(*StreamExportCsvEntityReportRequest, SzEngine_StreamExportCsvEntityReportServer) error
 	StreamExportJsonEntityReport(*StreamExportJsonEntityReportRequest, SzEngine_StreamExportJsonEntityReportServer) error
@@ -501,9 +490,6 @@ func (UnimplementedSzEngineServer) ReevaluateEntity(context.Context, *Reevaluate
 }
 func (UnimplementedSzEngineServer) ReevaluateRecord(context.Context, *ReevaluateRecordRequest) (*ReevaluateRecordResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ReevaluateRecord not implemented")
-}
-func (UnimplementedSzEngineServer) ReplaceRecord(context.Context, *ReplaceRecordRequest) (*ReplaceRecordResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ReplaceRecord not implemented")
 }
 func (UnimplementedSzEngineServer) SearchByAttributes(context.Context, *SearchByAttributesRequest) (*SearchByAttributesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SearchByAttributes not implemented")
@@ -968,24 +954,6 @@ func _SzEngine_ReevaluateRecord_Handler(srv interface{}, ctx context.Context, de
 	return interceptor(ctx, in, info, handler)
 }
 
-func _SzEngine_ReplaceRecord_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ReplaceRecordRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(SzEngineServer).ReplaceRecord(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/szengine.SzEngine/ReplaceRecord",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzEngineServer).ReplaceRecord(ctx, req.(*ReplaceRecordRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _SzEngine_SearchByAttributes_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SearchByAttributesRequest)
 	if err := dec(in); err != nil {
@@ -1202,10 +1170,6 @@ var SzEngine_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ReevaluateRecord",
 			Handler:    _SzEngine_ReevaluateRecord_Handler,
-		},
-		{
-			MethodName: "ReplaceRecord",
-			Handler:    _SzEngine_ReplaceRecord_Handler,
 		},
 		{
 			MethodName: "SearchByAttributes",

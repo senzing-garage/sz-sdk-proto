@@ -46,7 +46,6 @@ static const char* SzEngine_method_names[] = {
   "/szengine.SzEngine/ProcessRedoRecord",
   "/szengine.SzEngine/ReevaluateEntity",
   "/szengine.SzEngine/ReevaluateRecord",
-  "/szengine.SzEngine/ReplaceRecord",
   "/szengine.SzEngine/SearchByAttributes",
   "/szengine.SzEngine/StreamExportCsvEntityReport",
   "/szengine.SzEngine/StreamExportJsonEntityReport",
@@ -86,13 +85,12 @@ SzEngine::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, 
   , rpcmethod_ProcessRedoRecord_(SzEngine_method_names[21], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_ReevaluateEntity_(SzEngine_method_names[22], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_ReevaluateRecord_(SzEngine_method_names[23], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ReplaceRecord_(SzEngine_method_names[24], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_SearchByAttributes_(SzEngine_method_names[25], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_StreamExportCsvEntityReport_(SzEngine_method_names[26], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
-  , rpcmethod_StreamExportJsonEntityReport_(SzEngine_method_names[27], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
-  , rpcmethod_WhyEntities_(SzEngine_method_names[28], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WhyRecordInEntity_(SzEngine_method_names[29], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WhyRecords_(SzEngine_method_names[30], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_SearchByAttributes_(SzEngine_method_names[24], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_StreamExportCsvEntityReport_(SzEngine_method_names[25], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_StreamExportJsonEntityReport_(SzEngine_method_names[26], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_WhyEntities_(SzEngine_method_names[27], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_WhyRecordInEntity_(SzEngine_method_names[28], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_WhyRecords_(SzEngine_method_names[29], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status SzEngine::Stub::AddRecord(::grpc::ClientContext* context, const ::szengine::AddRecordRequest& request, ::szengine::AddRecordResponse* response) {
@@ -647,29 +645,6 @@ void SzEngine::Stub::async::ReevaluateRecord(::grpc::ClientContext* context, con
   return result;
 }
 
-::grpc::Status SzEngine::Stub::ReplaceRecord(::grpc::ClientContext* context, const ::szengine::ReplaceRecordRequest& request, ::szengine::ReplaceRecordResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::szengine::ReplaceRecordRequest, ::szengine::ReplaceRecordResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_ReplaceRecord_, context, request, response);
-}
-
-void SzEngine::Stub::async::ReplaceRecord(::grpc::ClientContext* context, const ::szengine::ReplaceRecordRequest* request, ::szengine::ReplaceRecordResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::szengine::ReplaceRecordRequest, ::szengine::ReplaceRecordResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_ReplaceRecord_, context, request, response, std::move(f));
-}
-
-void SzEngine::Stub::async::ReplaceRecord(::grpc::ClientContext* context, const ::szengine::ReplaceRecordRequest* request, ::szengine::ReplaceRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_ReplaceRecord_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::szengine::ReplaceRecordResponse>* SzEngine::Stub::PrepareAsyncReplaceRecordRaw(::grpc::ClientContext* context, const ::szengine::ReplaceRecordRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szengine::ReplaceRecordResponse, ::szengine::ReplaceRecordRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_ReplaceRecord_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::szengine::ReplaceRecordResponse>* SzEngine::Stub::AsyncReplaceRecordRaw(::grpc::ClientContext* context, const ::szengine::ReplaceRecordRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncReplaceRecordRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
 ::grpc::Status SzEngine::Stub::SearchByAttributes(::grpc::ClientContext* context, const ::szengine::SearchByAttributesRequest& request, ::szengine::SearchByAttributesResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::szengine::SearchByAttributesRequest, ::szengine::SearchByAttributesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_SearchByAttributes_, context, request, response);
 }
@@ -1038,16 +1013,6 @@ SzEngine::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzEngine_method_names[24],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SzEngine::Service, ::szengine::ReplaceRecordRequest, ::szengine::ReplaceRecordResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](SzEngine::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::szengine::ReplaceRecordRequest* req,
-             ::szengine::ReplaceRecordResponse* resp) {
-               return service->ReplaceRecord(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      SzEngine_method_names[25],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< SzEngine::Service, ::szengine::SearchByAttributesRequest, ::szengine::SearchByAttributesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SzEngine::Service* service,
              ::grpc::ServerContext* ctx,
@@ -1056,7 +1021,7 @@ SzEngine::Service::Service() {
                return service->SearchByAttributes(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      SzEngine_method_names[26],
+      SzEngine_method_names[25],
       ::grpc::internal::RpcMethod::SERVER_STREAMING,
       new ::grpc::internal::ServerStreamingHandler< SzEngine::Service, ::szengine::StreamExportCsvEntityReportRequest, ::szengine::StreamExportCsvEntityReportResponse>(
           [](SzEngine::Service* service,
@@ -1066,7 +1031,7 @@ SzEngine::Service::Service() {
                return service->StreamExportCsvEntityReport(ctx, req, writer);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      SzEngine_method_names[27],
+      SzEngine_method_names[26],
       ::grpc::internal::RpcMethod::SERVER_STREAMING,
       new ::grpc::internal::ServerStreamingHandler< SzEngine::Service, ::szengine::StreamExportJsonEntityReportRequest, ::szengine::StreamExportJsonEntityReportResponse>(
           [](SzEngine::Service* service,
@@ -1076,7 +1041,7 @@ SzEngine::Service::Service() {
                return service->StreamExportJsonEntityReport(ctx, req, writer);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      SzEngine_method_names[28],
+      SzEngine_method_names[27],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< SzEngine::Service, ::szengine::WhyEntitiesRequest, ::szengine::WhyEntitiesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SzEngine::Service* service,
@@ -1086,7 +1051,7 @@ SzEngine::Service::Service() {
                return service->WhyEntities(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      SzEngine_method_names[29],
+      SzEngine_method_names[28],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< SzEngine::Service, ::szengine::WhyRecordInEntityRequest, ::szengine::WhyRecordInEntityResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SzEngine::Service* service,
@@ -1096,7 +1061,7 @@ SzEngine::Service::Service() {
                return service->WhyRecordInEntity(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      SzEngine_method_names[30],
+      SzEngine_method_names[29],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< SzEngine::Service, ::szengine::WhyRecordsRequest, ::szengine::WhyRecordsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SzEngine::Service* service,
@@ -1272,13 +1237,6 @@ SzEngine::Service::~Service() {
 }
 
 ::grpc::Status SzEngine::Service::ReevaluateRecord(::grpc::ServerContext* context, const ::szengine::ReevaluateRecordRequest* request, ::szengine::ReevaluateRecordResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status SzEngine::Service::ReplaceRecord(::grpc::ServerContext* context, const ::szengine::ReplaceRecordRequest* request, ::szengine::ReplaceRecordResponse* response) {
   (void) context;
   (void) request;
   (void) response;
