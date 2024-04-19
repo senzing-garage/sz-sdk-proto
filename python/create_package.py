@@ -5,11 +5,11 @@ import subprocess
 import tempfile
 
 proto_files = [
-    "g2configmgr.proto",
-    "g2config.proto",
-    "g2diagnostic.proto",
-    "g2engine.proto",
-    "g2product.proto",
+    "szconfigmgr.proto",
+    "szconfig.proto",
+    "szdiagnostic.proto",
+    "szengine.proto",
+    "szproduct.proto",
 ]
 
 package_name = "senzing_grpc_protobuf"

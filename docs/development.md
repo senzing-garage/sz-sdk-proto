@@ -1,4 +1,4 @@
-# g2-sdk-proto development
+# sz-sdk-proto development
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@
 
     ```console
     export GIT_ACCOUNT=senzing-garage
-    export GIT_REPOSITORY=g2-sdk-proto
+    export GIT_REPOSITORY=sz-sdk-proto
     export GIT_ACCOUNT_DIR=~/${GIT_ACCOUNT}.git
     export GIT_REPOSITORY_DIR="${GIT_ACCOUNT_DIR}/${GIT_REPOSITORY}"
 
@@ -31,11 +31,11 @@ The following instructions were used to create a
 
     ```console
     export SENZING_COMPONENTS=( \
-      "g2config" \
-      "g2configmgr" \
-      "g2diagnostic" \
-      "g2engine" \
-      "g2product" \
+      "szconfig" \
+      "szconfigmgr" \
+      "szdiagnostic" \
+      "szengine" \
+      "szproduct" \
     )
 
     ```
