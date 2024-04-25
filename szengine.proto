@@ -30,6 +30,7 @@ service SzEngine {
   rpc ProcessRedoRecord(ProcessRedoRecordRequest) returns (ProcessRedoRecordResponse) {}
   rpc ReevaluateEntity(ReevaluateEntityRequest) returns (ReevaluateEntityResponse) {}
   rpc ReevaluateRecord(ReevaluateRecordRequest) returns (ReevaluateRecordResponse) {}
+  rpc Reinitialize (ReinitializeRequest) returns (ReinitializeResponse) {}
   rpc SearchByAttributes(SearchByAttributesRequest) returns (SearchByAttributesResponse) {}
   rpc StreamExportCsvEntityReport(StreamExportCsvEntityReportRequest) returns (stream StreamExportCsvEntityReportResponse) {}
   rpc StreamExportJsonEntityReport(StreamExportJsonEntityReportRequest) returns (stream StreamExportJsonEntityReportResponse) {}
@@ -244,6 +245,12 @@ message ReevaluateRecordRequest {
 message ReevaluateRecordResponse {
   string result = 1;
 }
+
+message ReinitializeRequest {
+  int64 configId = 1;
+}
+
+message ReinitializeResponse {}
 
 message SearchByAttributesRequest {
   string attributes = 1;

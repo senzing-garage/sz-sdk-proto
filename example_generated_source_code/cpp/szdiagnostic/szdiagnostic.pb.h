@@ -69,6 +69,12 @@ extern PurgeRepositoryRequestDefaultTypeInternal _PurgeRepositoryRequest_default
 class PurgeRepositoryResponse;
 struct PurgeRepositoryResponseDefaultTypeInternal;
 extern PurgeRepositoryResponseDefaultTypeInternal _PurgeRepositoryResponse_default_instance_;
+class ReinitializeRequest;
+struct ReinitializeRequestDefaultTypeInternal;
+extern ReinitializeRequestDefaultTypeInternal _ReinitializeRequest_default_instance_;
+class ReinitializeResponse;
+struct ReinitializeResponseDefaultTypeInternal;
+extern ReinitializeResponseDefaultTypeInternal _ReinitializeResponse_default_instance_;
 }  // namespace szdiagnostic
 namespace google {
 namespace protobuf {
@@ -81,6 +87,317 @@ namespace szdiagnostic {
 
 
 // -------------------------------------------------------------------
+
+class ReinitializeResponse final :
+    public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:szdiagnostic.ReinitializeResponse) */ {
+ public:
+  inline ReinitializeResponse() : ReinitializeResponse(nullptr) {}
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR ReinitializeResponse(::google::protobuf::internal::ConstantInitialized);
+
+  inline ReinitializeResponse(const ReinitializeResponse& from)
+      : ReinitializeResponse(nullptr, from) {}
+  ReinitializeResponse(ReinitializeResponse&& from) noexcept
+    : ReinitializeResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline ReinitializeResponse& operator=(const ReinitializeResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ReinitializeResponse& operator=(ReinitializeResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ReinitializeResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ReinitializeResponse* internal_default_instance() {
+    return reinterpret_cast<const ReinitializeResponse*>(
+               &_ReinitializeResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  friend void swap(ReinitializeResponse& a, ReinitializeResponse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ReinitializeResponse* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr &&
+        GetArena() == other->GetArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ReinitializeResponse* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ReinitializeResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ReinitializeResponse>(arena);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const ReinitializeResponse& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const ReinitializeResponse& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
+
+  private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "szdiagnostic.ReinitializeResponse";
+  }
+  protected:
+  explicit ReinitializeResponse(::google::protobuf::Arena* arena);
+  ReinitializeResponse(::google::protobuf::Arena* arena, const ReinitializeResponse& from);
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:szdiagnostic.ReinitializeResponse)
+ private:
+  class _Internal;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+
+        inline explicit constexpr Impl_(
+            ::google::protobuf::internal::ConstantInitialized) noexcept;
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena);
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena, const Impl_& from);
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  friend struct ::TableStruct_szdiagnostic_2eproto;
+};// -------------------------------------------------------------------
+
+class ReinitializeRequest final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szdiagnostic.ReinitializeRequest) */ {
+ public:
+  inline ReinitializeRequest() : ReinitializeRequest(nullptr) {}
+  ~ReinitializeRequest() override;
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR ReinitializeRequest(::google::protobuf::internal::ConstantInitialized);
+
+  inline ReinitializeRequest(const ReinitializeRequest& from)
+      : ReinitializeRequest(nullptr, from) {}
+  ReinitializeRequest(ReinitializeRequest&& from) noexcept
+    : ReinitializeRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline ReinitializeRequest& operator=(const ReinitializeRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ReinitializeRequest& operator=(ReinitializeRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ReinitializeRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ReinitializeRequest* internal_default_instance() {
+    return reinterpret_cast<const ReinitializeRequest*>(
+               &_ReinitializeRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  friend void swap(ReinitializeRequest& a, ReinitializeRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ReinitializeRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr &&
+        GetArena() == other->GetArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ReinitializeRequest* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  ReinitializeRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ReinitializeRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const ReinitializeRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom( const ReinitializeRequest& from) {
+    ReinitializeRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  ::size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target, ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(ReinitializeRequest* other);
+
+  private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "szdiagnostic.ReinitializeRequest";
+  }
+  protected:
+  explicit ReinitializeRequest(::google::protobuf::Arena* arena);
+  ReinitializeRequest(::google::protobuf::Arena* arena, const ReinitializeRequest& from);
+  public:
+
+  static const ClassData _class_data_;
+  const ::google::protobuf::Message::ClassData*GetClassData() const final;
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kConfigIdFieldNumber = 1,
+  };
+  // int64 configId = 1;
+  void clear_configid() ;
+  ::int64_t configid() const;
+  void set_configid(::int64_t value);
+
+  private:
+  ::int64_t _internal_configid() const;
+  void _internal_set_configid(::int64_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:szdiagnostic.ReinitializeRequest)
+ private:
+  class _Internal;
+
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 0,
+      0, 2>
+      _table_;
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+
+        inline explicit constexpr Impl_(
+            ::google::protobuf::internal::ConstantInitialized) noexcept;
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena);
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena, const Impl_& from);
+    ::int64_t configid_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_szdiagnostic_2eproto;
+};// -------------------------------------------------------------------
 
 class PurgeRepositoryResponse final :
     public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:szdiagnostic.PurgeRepositoryResponse) */ {
@@ -813,6 +1130,37 @@ inline void CheckDatabasePerformanceResponse::set_allocated_result(std::string* 
 // -------------------------------------------------------------------
 
 // PurgeRepositoryResponse
+
+// -------------------------------------------------------------------
+
+// ReinitializeRequest
+
+// int64 configId = 1;
+inline void ReinitializeRequest::clear_configid() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.configid_ = ::int64_t{0};
+}
+inline ::int64_t ReinitializeRequest::configid() const {
+  // @@protoc_insertion_point(field_get:szdiagnostic.ReinitializeRequest.configId)
+  return _internal_configid();
+}
+inline void ReinitializeRequest::set_configid(::int64_t value) {
+  _internal_set_configid(value);
+  // @@protoc_insertion_point(field_set:szdiagnostic.ReinitializeRequest.configId)
+}
+inline ::int64_t ReinitializeRequest::_internal_configid() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.configid_;
+}
+inline void ReinitializeRequest::_internal_set_configid(::int64_t value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.configid_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// ReinitializeResponse
 
 #ifdef __GNUC__
 #pragma GCC diagnostic pop

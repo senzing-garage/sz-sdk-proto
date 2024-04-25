@@ -32,7 +32,7 @@ The following instructions were used to create a
     ```console
     export SENZING_COMPONENTS=( \
       "szconfig" \
-      "szconfigmgr" \
+      "szconfigmanager" \
       "szdiagnostic" \
       "szengine" \
       "szproduct" \
