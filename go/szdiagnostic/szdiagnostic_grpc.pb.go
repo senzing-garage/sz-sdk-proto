@@ -24,6 +24,7 @@ const _ = grpc.SupportPackageIsVersion7
 type SzDiagnosticClient interface {
 	CheckDatabasePerformance(ctx context.Context, in *CheckDatabasePerformanceRequest, opts ...grpc.CallOption) (*CheckDatabasePerformanceResponse, error)
 	PurgeRepository(ctx context.Context, in *PurgeRepositoryRequest, opts ...grpc.CallOption) (*PurgeRepositoryResponse, error)
+	Reinitialize(ctx context.Context, in *ReinitializeRequest, opts ...grpc.CallOption) (*ReinitializeResponse, error)
 }
 
 type szDiagnosticClient struct {
@@ -52,12 +53,22 @@ func (c *szDiagnosticClient) PurgeRepository(ctx context.Context, in *PurgeRepos
 	return out, nil
 }
 
+func (c *szDiagnosticClient) Reinitialize(ctx context.Context, in *ReinitializeRequest, opts ...grpc.CallOption) (*ReinitializeResponse, error) {
+	out := new(ReinitializeResponse)
+	err := c.cc.Invoke(ctx, "/szdiagnostic.SzDiagnostic/Reinitialize", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // SzDiagnosticServer is the server API for SzDiagnostic service.
 // All implementations must embed UnimplementedSzDiagnosticServer
 // for forward compatibility
 type SzDiagnosticServer interface {
 	CheckDatabasePerformance(context.Context, *CheckDatabasePerformanceRequest) (*CheckDatabasePerformanceResponse, error)
 	PurgeRepository(context.Context, *PurgeRepositoryRequest) (*PurgeRepositoryResponse, error)
+	Reinitialize(context.Context, *ReinitializeRequest) (*ReinitializeResponse, error)
 	mustEmbedUnimplementedSzDiagnosticServer()
 }
 
@@ -70,6 +81,9 @@ func (UnimplementedSzDiagnosticServer) CheckDatabasePerformance(context.Context,
 }
 func (UnimplementedSzDiagnosticServer) PurgeRepository(context.Context, *PurgeRepositoryRequest) (*PurgeRepositoryResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PurgeRepository not implemented")
+}
+func (UnimplementedSzDiagnosticServer) Reinitialize(context.Context, *ReinitializeRequest) (*ReinitializeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Reinitialize not implemented")
 }
 func (UnimplementedSzDiagnosticServer) mustEmbedUnimplementedSzDiagnosticServer() {}
 
@@ -120,6 +134,24 @@ func _SzDiagnostic_PurgeRepository_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
+func _SzDiagnostic_Reinitialize_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ReinitializeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(SzDiagnosticServer).Reinitialize(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/szdiagnostic.SzDiagnostic/Reinitialize",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(SzDiagnosticServer).Reinitialize(ctx, req.(*ReinitializeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // SzDiagnostic_ServiceDesc is the grpc.ServiceDesc for SzDiagnostic service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -134,6 +166,10 @@ var SzDiagnostic_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "PurgeRepository",
 			Handler:    _SzDiagnostic_PurgeRepository_Handler,
+		},
+		{
+			MethodName: "Reinitialize",
+			Handler:    _SzDiagnostic_Reinitialize_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

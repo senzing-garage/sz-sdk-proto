@@ -44,4 +44,18 @@ class SzDiagnosticClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * @param \Szdiagnostic\ReinitializeRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function Reinitialize(\Szdiagnostic\ReinitializeRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szdiagnostic.SzDiagnostic/Reinitialize',
+        $argument,
+        ['\Szdiagnostic\ReinitializeResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

@@ -15,6 +15,11 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "szdiagnostic.PurgeRepositoryResponse" do
     end
+    add_message "szdiagnostic.ReinitializeRequest" do
+      optional :configId, :int64, 1
+    end
+    add_message "szdiagnostic.ReinitializeResponse" do
+    end
   end
 end
 
@@ -23,4 +28,6 @@ module Szdiagnostic
   CheckDatabasePerformanceResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.CheckDatabasePerformanceResponse").msgclass
   PurgeRepositoryRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.PurgeRepositoryRequest").msgclass
   PurgeRepositoryResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.PurgeRepositoryResponse").msgclass
+  ReinitializeRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.ReinitializeRequest").msgclass
+  ReinitializeResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.ReinitializeResponse").msgclass
 end

@@ -16,6 +16,7 @@ module Szdiagnostic
 
       rpc :CheckDatabasePerformance, ::Szdiagnostic::CheckDatabasePerformanceRequest, ::Szdiagnostic::CheckDatabasePerformanceResponse
       rpc :PurgeRepository, ::Szdiagnostic::PurgeRepositoryRequest, ::Szdiagnostic::PurgeRepositoryResponse
+      rpc :Reinitialize, ::Szdiagnostic::ReinitializeRequest, ::Szdiagnostic::ReinitializeResponse
     end
 
     Stub = Service.rpc_stub_class

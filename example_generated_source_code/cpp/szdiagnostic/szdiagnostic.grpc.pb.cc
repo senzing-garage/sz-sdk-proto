@@ -24,6 +24,7 @@ namespace szdiagnostic {
 static const char* SzDiagnostic_method_names[] = {
   "/szdiagnostic.SzDiagnostic/CheckDatabasePerformance",
   "/szdiagnostic.SzDiagnostic/PurgeRepository",
+  "/szdiagnostic.SzDiagnostic/Reinitialize",
 };
 
 std::unique_ptr< SzDiagnostic::Stub> SzDiagnostic::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -35,6 +36,7 @@ std::unique_ptr< SzDiagnostic::Stub> SzDiagnostic::NewStub(const std::shared_ptr
 SzDiagnostic::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
   : channel_(channel), rpcmethod_CheckDatabasePerformance_(SzDiagnostic_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_PurgeRepository_(SzDiagnostic_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Reinitialize_(SzDiagnostic_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status SzDiagnostic::Stub::CheckDatabasePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest& request, ::szdiagnostic::CheckDatabasePerformanceResponse* response) {
@@ -83,6 +85,29 @@ void SzDiagnostic::Stub::async::PurgeRepository(::grpc::ClientContext* context, 
   return result;
 }
 
+::grpc::Status SzDiagnostic::Stub::Reinitialize(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest& request, ::szdiagnostic::ReinitializeResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::szdiagnostic::ReinitializeRequest, ::szdiagnostic::ReinitializeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Reinitialize_, context, request, response);
+}
+
+void SzDiagnostic::Stub::async::Reinitialize(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest* request, ::szdiagnostic::ReinitializeResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::szdiagnostic::ReinitializeRequest, ::szdiagnostic::ReinitializeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Reinitialize_, context, request, response, std::move(f));
+}
+
+void SzDiagnostic::Stub::async::Reinitialize(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest* request, ::szdiagnostic::ReinitializeResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Reinitialize_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::szdiagnostic::ReinitializeResponse>* SzDiagnostic::Stub::PrepareAsyncReinitializeRaw(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szdiagnostic::ReinitializeResponse, ::szdiagnostic::ReinitializeRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Reinitialize_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::szdiagnostic::ReinitializeResponse>* SzDiagnostic::Stub::AsyncReinitializeRaw(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncReinitializeRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
 SzDiagnostic::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzDiagnostic_method_names[0],
@@ -104,6 +129,16 @@ SzDiagnostic::Service::Service() {
              ::szdiagnostic::PurgeRepositoryResponse* resp) {
                return service->PurgeRepository(ctx, req, resp);
              }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      SzDiagnostic_method_names[2],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< SzDiagnostic::Service, ::szdiagnostic::ReinitializeRequest, ::szdiagnostic::ReinitializeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](SzDiagnostic::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::szdiagnostic::ReinitializeRequest* req,
+             ::szdiagnostic::ReinitializeResponse* resp) {
+               return service->Reinitialize(ctx, req, resp);
+             }, this)));
 }
 
 SzDiagnostic::Service::~Service() {
@@ -117,6 +152,13 @@ SzDiagnostic::Service::~Service() {
 }
 
 ::grpc::Status SzDiagnostic::Service::PurgeRepository(::grpc::ServerContext* context, const ::szdiagnostic::PurgeRepositoryRequest* request, ::szdiagnostic::PurgeRepositoryResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status SzDiagnostic::Service::Reinitialize(::grpc::ServerContext* context, const ::szdiagnostic::ReinitializeRequest* request, ::szdiagnostic::ReinitializeResponse* response) {
   (void) context;
   (void) request;
   (void) response;

@@ -173,6 +173,11 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "szengine.ReevaluateRecordResponse" do
       optional :result, :string, 1
     end
+    add_message "szengine.ReinitializeRequest" do
+      optional :configId, :int64, 1
+    end
+    add_message "szengine.ReinitializeResponse" do
+    end
     add_message "szengine.SearchByAttributesRequest" do
       optional :attributes, :string, 1
       optional :searchProfile, :string, 2
@@ -275,6 +280,8 @@ module Szengine
   ReevaluateEntityResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.ReevaluateEntityResponse").msgclass
   ReevaluateRecordRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.ReevaluateRecordRequest").msgclass
   ReevaluateRecordResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.ReevaluateRecordResponse").msgclass
+  ReinitializeRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.ReinitializeRequest").msgclass
+  ReinitializeResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.ReinitializeResponse").msgclass
   SearchByAttributesRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.SearchByAttributesRequest").msgclass
   SearchByAttributesResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.SearchByAttributesResponse").msgclass
   GetStatsRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetStatsRequest").msgclass

@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12szdiagnostic.proto\x12\x0cszdiagnostic\"7\n\x1f\x43heckDatabasePerformanceRequest\x12\x14\n\x0csecondsToRun\x18\x01 \x01(\x05\"2\n CheckDatabasePerformanceResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\"\x18\n\x16PurgeRepositoryRequest\"\x19\n\x17PurgeRepositoryResponse2\xed\x01\n\x0cSzDiagnostic\x12{\n\x18\x43heckDatabasePerformance\x12-.szdiagnostic.CheckDatabasePerformanceRequest\x1a..szdiagnostic.CheckDatabasePerformanceResponse\"\x00\x12`\n\x0fPurgeRepository\x12$.szdiagnostic.PurgeRepositoryRequest\x1a%.szdiagnostic.PurgeRepositoryResponse\"\x00\x42s\n\'com.senzing.sz.engine.grpc.SzDiagnosticB\x11SzDiagnosticProtoZ5github.com/senzing-garage/sz-sdk-go-grpc/szdiagnosticb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12szdiagnostic.proto\x12\x0cszdiagnostic\"7\n\x1f\x43heckDatabasePerformanceRequest\x12\x14\n\x0csecondsToRun\x18\x01 \x01(\x05\"2\n CheckDatabasePerformanceResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\"\x18\n\x16PurgeRepositoryRequest\"\x19\n\x17PurgeRepositoryResponse\"\'\n\x13ReinitializeRequest\x12\x10\n\x08\x63onfigId\x18\x01 \x01(\x03\"\x16\n\x14ReinitializeResponse2\xc6\x02\n\x0cSzDiagnostic\x12{\n\x18\x43heckDatabasePerformance\x12-.szdiagnostic.CheckDatabasePerformanceRequest\x1a..szdiagnostic.CheckDatabasePerformanceResponse\"\x00\x12`\n\x0fPurgeRepository\x12$.szdiagnostic.PurgeRepositoryRequest\x1a%.szdiagnostic.PurgeRepositoryResponse\"\x00\x12W\n\x0cReinitialize\x12!.szdiagnostic.ReinitializeRequest\x1a\".szdiagnostic.ReinitializeResponse\"\x00\x42s\n\'com.senzing.sz.engine.grpc.SzDiagnosticB\x11SzDiagnosticProtoZ5github.com/senzing-garage/sz-sdk-go-grpc/szdiagnosticb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -30,6 +30,10 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _globals['_PURGEREPOSITORYREQUEST']._serialized_end=169
   _globals['_PURGEREPOSITORYRESPONSE']._serialized_start=171
   _globals['_PURGEREPOSITORYRESPONSE']._serialized_end=196
-  _globals['_SZDIAGNOSTIC']._serialized_start=199
-  _globals['_SZDIAGNOSTIC']._serialized_end=436
+  _globals['_REINITIALIZEREQUEST']._serialized_start=198
+  _globals['_REINITIALIZEREQUEST']._serialized_end=237
+  _globals['_REINITIALIZERESPONSE']._serialized_start=239
+  _globals['_REINITIALIZERESPONSE']._serialized_end=261
+  _globals['_SZDIAGNOSTIC']._serialized_start=264
+  _globals['_SZDIAGNOSTIC']._serialized_end=590
 # @@protoc_insertion_point(module_scope)
