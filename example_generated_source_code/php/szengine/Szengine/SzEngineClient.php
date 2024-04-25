@@ -353,6 +353,20 @@ class SzEngineClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Szengine\ReinitializeRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function Reinitialize(\Szengine\ReinitializeRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szengine.SzEngine/Reinitialize',
+        $argument,
+        ['\Szengine\ReinitializeResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Szengine\SearchByAttributesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

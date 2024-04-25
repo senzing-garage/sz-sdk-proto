@@ -38,6 +38,7 @@ module Szengine
       rpc :ProcessRedoRecord, ::Szengine::ProcessRedoRecordRequest, ::Szengine::ProcessRedoRecordResponse
       rpc :ReevaluateEntity, ::Szengine::ReevaluateEntityRequest, ::Szengine::ReevaluateEntityResponse
       rpc :ReevaluateRecord, ::Szengine::ReevaluateRecordRequest, ::Szengine::ReevaluateRecordResponse
+      rpc :Reinitialize, ::Szengine::ReinitializeRequest, ::Szengine::ReinitializeResponse
       rpc :SearchByAttributes, ::Szengine::SearchByAttributesRequest, ::Szengine::SearchByAttributesResponse
       rpc :StreamExportCsvEntityReport, ::Szengine::StreamExportCsvEntityReportRequest, stream(::Szengine::StreamExportCsvEntityReportResponse)
       rpc :StreamExportJsonEntityReport, ::Szengine::StreamExportJsonEntityReportRequest, stream(::Szengine::StreamExportJsonEntityReportResponse)
