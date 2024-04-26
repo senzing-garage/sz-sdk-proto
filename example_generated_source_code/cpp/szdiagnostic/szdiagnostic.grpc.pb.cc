@@ -22,7 +22,8 @@
 namespace szdiagnostic {
 
 static const char* SzDiagnostic_method_names[] = {
-  "/szdiagnostic.SzDiagnostic/CheckDatabasePerformance",
+  "/szdiagnostic.SzDiagnostic/CheckDatastorePerformance",
+  "/szdiagnostic.SzDiagnostic/GetDatastoreInfo",
   "/szdiagnostic.SzDiagnostic/PurgeRepository",
   "/szdiagnostic.SzDiagnostic/Reinitialize",
 };
@@ -34,30 +35,54 @@ std::unique_ptr< SzDiagnostic::Stub> SzDiagnostic::NewStub(const std::shared_ptr
 }
 
 SzDiagnostic::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
-  : channel_(channel), rpcmethod_CheckDatabasePerformance_(SzDiagnostic_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_PurgeRepository_(SzDiagnostic_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Reinitialize_(SzDiagnostic_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  : channel_(channel), rpcmethod_CheckDatastorePerformance_(SzDiagnostic_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetDatastoreInfo_(SzDiagnostic_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_PurgeRepository_(SzDiagnostic_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Reinitialize_(SzDiagnostic_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status SzDiagnostic::Stub::CheckDatabasePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest& request, ::szdiagnostic::CheckDatabasePerformanceResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::szdiagnostic::CheckDatabasePerformanceRequest, ::szdiagnostic::CheckDatabasePerformanceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_CheckDatabasePerformance_, context, request, response);
+::grpc::Status SzDiagnostic::Stub::CheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::szdiagnostic::CheckDatastorePerformanceResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::szdiagnostic::CheckDatastorePerformanceRequest, ::szdiagnostic::CheckDatastorePerformanceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_CheckDatastorePerformance_, context, request, response);
 }
 
-void SzDiagnostic::Stub::async::CheckDatabasePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest* request, ::szdiagnostic::CheckDatabasePerformanceResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::szdiagnostic::CheckDatabasePerformanceRequest, ::szdiagnostic::CheckDatabasePerformanceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CheckDatabasePerformance_, context, request, response, std::move(f));
+void SzDiagnostic::Stub::async::CheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::szdiagnostic::CheckDatastorePerformanceRequest, ::szdiagnostic::CheckDatastorePerformanceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CheckDatastorePerformance_, context, request, response, std::move(f));
 }
 
-void SzDiagnostic::Stub::async::CheckDatabasePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest* request, ::szdiagnostic::CheckDatabasePerformanceResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CheckDatabasePerformance_, context, request, response, reactor);
+void SzDiagnostic::Stub::async::CheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CheckDatastorePerformance_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatabasePerformanceResponse>* SzDiagnostic::Stub::PrepareAsyncCheckDatabasePerformanceRaw(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szdiagnostic::CheckDatabasePerformanceResponse, ::szdiagnostic::CheckDatabasePerformanceRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_CheckDatabasePerformance_, context, request);
+::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatastorePerformanceResponse>* SzDiagnostic::Stub::PrepareAsyncCheckDatastorePerformanceRaw(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szdiagnostic::CheckDatastorePerformanceResponse, ::szdiagnostic::CheckDatastorePerformanceRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_CheckDatastorePerformance_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatabasePerformanceResponse>* SzDiagnostic::Stub::AsyncCheckDatabasePerformanceRaw(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatastorePerformanceResponse>* SzDiagnostic::Stub::AsyncCheckDatastorePerformanceRaw(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncCheckDatabasePerformanceRaw(context, request, cq);
+    this->PrepareAsyncCheckDatastorePerformanceRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
+::grpc::Status SzDiagnostic::Stub::GetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest& request, ::szdiagnostic::GetDatastoreInfoResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::szdiagnostic::GetDatastoreInfoRequest, ::szdiagnostic::GetDatastoreInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetDatastoreInfo_, context, request, response);
+}
+
+void SzDiagnostic::Stub::async::GetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest* request, ::szdiagnostic::GetDatastoreInfoResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::szdiagnostic::GetDatastoreInfoRequest, ::szdiagnostic::GetDatastoreInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetDatastoreInfo_, context, request, response, std::move(f));
+}
+
+void SzDiagnostic::Stub::async::GetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest* request, ::szdiagnostic::GetDatastoreInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetDatastoreInfo_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::szdiagnostic::GetDatastoreInfoResponse>* SzDiagnostic::Stub::PrepareAsyncGetDatastoreInfoRaw(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szdiagnostic::GetDatastoreInfoResponse, ::szdiagnostic::GetDatastoreInfoRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetDatastoreInfo_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::szdiagnostic::GetDatastoreInfoResponse>* SzDiagnostic::Stub::AsyncGetDatastoreInfoRaw(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncGetDatastoreInfoRaw(context, request, cq);
   result->StartCall();
   return result;
 }
@@ -112,15 +137,25 @@ SzDiagnostic::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzDiagnostic_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SzDiagnostic::Service, ::szdiagnostic::CheckDatabasePerformanceRequest, ::szdiagnostic::CheckDatabasePerformanceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SzDiagnostic::Service, ::szdiagnostic::CheckDatastorePerformanceRequest, ::szdiagnostic::CheckDatastorePerformanceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SzDiagnostic::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::szdiagnostic::CheckDatabasePerformanceRequest* req,
-             ::szdiagnostic::CheckDatabasePerformanceResponse* resp) {
-               return service->CheckDatabasePerformance(ctx, req, resp);
+             const ::szdiagnostic::CheckDatastorePerformanceRequest* req,
+             ::szdiagnostic::CheckDatastorePerformanceResponse* resp) {
+               return service->CheckDatastorePerformance(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzDiagnostic_method_names[1],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< SzDiagnostic::Service, ::szdiagnostic::GetDatastoreInfoRequest, ::szdiagnostic::GetDatastoreInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](SzDiagnostic::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::szdiagnostic::GetDatastoreInfoRequest* req,
+             ::szdiagnostic::GetDatastoreInfoResponse* resp) {
+               return service->GetDatastoreInfo(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      SzDiagnostic_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< SzDiagnostic::Service, ::szdiagnostic::PurgeRepositoryRequest, ::szdiagnostic::PurgeRepositoryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SzDiagnostic::Service* service,
@@ -130,7 +165,7 @@ SzDiagnostic::Service::Service() {
                return service->PurgeRepository(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      SzDiagnostic_method_names[2],
+      SzDiagnostic_method_names[3],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< SzDiagnostic::Service, ::szdiagnostic::ReinitializeRequest, ::szdiagnostic::ReinitializeResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SzDiagnostic::Service* service,
@@ -144,7 +179,14 @@ SzDiagnostic::Service::Service() {
 SzDiagnostic::Service::~Service() {
 }
 
-::grpc::Status SzDiagnostic::Service::CheckDatabasePerformance(::grpc::ServerContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest* request, ::szdiagnostic::CheckDatabasePerformanceResponse* response) {
+::grpc::Status SzDiagnostic::Service::CheckDatastorePerformance(::grpc::ServerContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status SzDiagnostic::Service::GetDatastoreInfo(::grpc::ServerContext* context, const ::szdiagnostic::GetDatastoreInfoRequest* request, ::szdiagnostic::GetDatastoreInfoResponse* response) {
   (void) context;
   (void) request;
   (void) response;
