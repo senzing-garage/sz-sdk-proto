@@ -17,16 +17,30 @@ class SzDiagnosticClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Szdiagnostic\CheckDatabasePerformanceRequest $argument input argument
+     * @param \Szdiagnostic\CheckDatastorePerformanceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function CheckDatabasePerformance(\Szdiagnostic\CheckDatabasePerformanceRequest $argument,
+    public function CheckDatastorePerformance(\Szdiagnostic\CheckDatastorePerformanceRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szdiagnostic.SzDiagnostic/CheckDatabasePerformance',
+        return $this->_simpleRequest('/szdiagnostic.SzDiagnostic/CheckDatastorePerformance',
         $argument,
-        ['\Szdiagnostic\CheckDatabasePerformanceResponse', 'decode'],
+        ['\Szdiagnostic\CheckDatastorePerformanceResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Szdiagnostic\GetDatastoreInfoRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetDatastoreInfo(\Szdiagnostic\GetDatastoreInfoRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szdiagnostic.SzDiagnostic/GetDatastoreInfo',
+        $argument,
+        ['\Szdiagnostic\GetDatastoreInfoResponse', 'decode'],
         $metadata, $options);
     }
 

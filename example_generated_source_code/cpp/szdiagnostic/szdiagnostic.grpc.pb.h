@@ -35,12 +35,19 @@ class SzDiagnostic final {
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    virtual ::grpc::Status CheckDatabasePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest& request, ::szdiagnostic::CheckDatabasePerformanceResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::CheckDatabasePerformanceResponse>> AsyncCheckDatabasePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::CheckDatabasePerformanceResponse>>(AsyncCheckDatabasePerformanceRaw(context, request, cq));
+    virtual ::grpc::Status CheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::szdiagnostic::CheckDatastorePerformanceResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::CheckDatastorePerformanceResponse>> AsyncCheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::CheckDatastorePerformanceResponse>>(AsyncCheckDatastorePerformanceRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::CheckDatabasePerformanceResponse>> PrepareAsyncCheckDatabasePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::CheckDatabasePerformanceResponse>>(PrepareAsyncCheckDatabasePerformanceRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::CheckDatastorePerformanceResponse>> PrepareAsyncCheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::CheckDatastorePerformanceResponse>>(PrepareAsyncCheckDatastorePerformanceRaw(context, request, cq));
+    }
+    virtual ::grpc::Status GetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest& request, ::szdiagnostic::GetDatastoreInfoResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::GetDatastoreInfoResponse>> AsyncGetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::GetDatastoreInfoResponse>>(AsyncGetDatastoreInfoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::GetDatastoreInfoResponse>> PrepareAsyncGetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::GetDatastoreInfoResponse>>(PrepareAsyncGetDatastoreInfoRaw(context, request, cq));
     }
     virtual ::grpc::Status PurgeRepository(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest& request, ::szdiagnostic::PurgeRepositoryResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::PurgeRepositoryResponse>> AsyncPurgeRepository(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) {
@@ -59,8 +66,10 @@ class SzDiagnostic final {
     class async_interface {
      public:
       virtual ~async_interface() {}
-      virtual void CheckDatabasePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest* request, ::szdiagnostic::CheckDatabasePerformanceResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void CheckDatabasePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest* request, ::szdiagnostic::CheckDatabasePerformanceResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void CheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void CheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest* request, ::szdiagnostic::GetDatastoreInfoResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest* request, ::szdiagnostic::GetDatastoreInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void PurgeRepository(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest* request, ::szdiagnostic::PurgeRepositoryResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void PurgeRepository(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest* request, ::szdiagnostic::PurgeRepositoryResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void Reinitialize(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest* request, ::szdiagnostic::ReinitializeResponse* response, std::function<void(::grpc::Status)>) = 0;
@@ -70,8 +79,10 @@ class SzDiagnostic final {
     virtual class async_interface* async() { return nullptr; }
     class async_interface* experimental_async() { return async(); }
    private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::CheckDatabasePerformanceResponse>* AsyncCheckDatabasePerformanceRaw(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::CheckDatabasePerformanceResponse>* PrepareAsyncCheckDatabasePerformanceRaw(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::CheckDatastorePerformanceResponse>* AsyncCheckDatastorePerformanceRaw(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::CheckDatastorePerformanceResponse>* PrepareAsyncCheckDatastorePerformanceRaw(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::GetDatastoreInfoResponse>* AsyncGetDatastoreInfoRaw(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::GetDatastoreInfoResponse>* PrepareAsyncGetDatastoreInfoRaw(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::PurgeRepositoryResponse>* AsyncPurgeRepositoryRaw(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::PurgeRepositoryResponse>* PrepareAsyncPurgeRepositoryRaw(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::ReinitializeResponse>* AsyncReinitializeRaw(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -80,12 +91,19 @@ class SzDiagnostic final {
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-    ::grpc::Status CheckDatabasePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest& request, ::szdiagnostic::CheckDatabasePerformanceResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatabasePerformanceResponse>> AsyncCheckDatabasePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatabasePerformanceResponse>>(AsyncCheckDatabasePerformanceRaw(context, request, cq));
+    ::grpc::Status CheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::szdiagnostic::CheckDatastorePerformanceResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatastorePerformanceResponse>> AsyncCheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatastorePerformanceResponse>>(AsyncCheckDatastorePerformanceRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatabasePerformanceResponse>> PrepareAsyncCheckDatabasePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatabasePerformanceResponse>>(PrepareAsyncCheckDatabasePerformanceRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatastorePerformanceResponse>> PrepareAsyncCheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatastorePerformanceResponse>>(PrepareAsyncCheckDatastorePerformanceRaw(context, request, cq));
+    }
+    ::grpc::Status GetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest& request, ::szdiagnostic::GetDatastoreInfoResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szdiagnostic::GetDatastoreInfoResponse>> AsyncGetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szdiagnostic::GetDatastoreInfoResponse>>(AsyncGetDatastoreInfoRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szdiagnostic::GetDatastoreInfoResponse>> PrepareAsyncGetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szdiagnostic::GetDatastoreInfoResponse>>(PrepareAsyncGetDatastoreInfoRaw(context, request, cq));
     }
     ::grpc::Status PurgeRepository(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest& request, ::szdiagnostic::PurgeRepositoryResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szdiagnostic::PurgeRepositoryResponse>> AsyncPurgeRepository(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) {
@@ -104,8 +122,10 @@ class SzDiagnostic final {
     class async final :
       public StubInterface::async_interface {
      public:
-      void CheckDatabasePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest* request, ::szdiagnostic::CheckDatabasePerformanceResponse* response, std::function<void(::grpc::Status)>) override;
-      void CheckDatabasePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest* request, ::szdiagnostic::CheckDatabasePerformanceResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void CheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, std::function<void(::grpc::Status)>) override;
+      void CheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest* request, ::szdiagnostic::GetDatastoreInfoResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest* request, ::szdiagnostic::GetDatastoreInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void PurgeRepository(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest* request, ::szdiagnostic::PurgeRepositoryResponse* response, std::function<void(::grpc::Status)>) override;
       void PurgeRepository(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest* request, ::szdiagnostic::PurgeRepositoryResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void Reinitialize(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest* request, ::szdiagnostic::ReinitializeResponse* response, std::function<void(::grpc::Status)>) override;
@@ -121,13 +141,16 @@ class SzDiagnostic final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class async async_stub_{this};
-    ::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatabasePerformanceResponse>* AsyncCheckDatabasePerformanceRaw(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatabasePerformanceResponse>* PrepareAsyncCheckDatabasePerformanceRaw(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatastorePerformanceResponse>* AsyncCheckDatastorePerformanceRaw(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatastorePerformanceResponse>* PrepareAsyncCheckDatastorePerformanceRaw(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::szdiagnostic::GetDatastoreInfoResponse>* AsyncGetDatastoreInfoRaw(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::szdiagnostic::GetDatastoreInfoResponse>* PrepareAsyncGetDatastoreInfoRaw(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szdiagnostic::PurgeRepositoryResponse>* AsyncPurgeRepositoryRaw(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szdiagnostic::PurgeRepositoryResponse>* PrepareAsyncPurgeRepositoryRaw(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szdiagnostic::ReinitializeResponse>* AsyncReinitializeRaw(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szdiagnostic::ReinitializeResponse>* PrepareAsyncReinitializeRaw(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest& request, ::grpc::CompletionQueue* cq) override;
-    const ::grpc::internal::RpcMethod rpcmethod_CheckDatabasePerformance_;
+    const ::grpc::internal::RpcMethod rpcmethod_CheckDatastorePerformance_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetDatastoreInfo_;
     const ::grpc::internal::RpcMethod rpcmethod_PurgeRepository_;
     const ::grpc::internal::RpcMethod rpcmethod_Reinitialize_;
   };
@@ -137,28 +160,49 @@ class SzDiagnostic final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status CheckDatabasePerformance(::grpc::ServerContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest* request, ::szdiagnostic::CheckDatabasePerformanceResponse* response);
+    virtual ::grpc::Status CheckDatastorePerformance(::grpc::ServerContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response);
+    virtual ::grpc::Status GetDatastoreInfo(::grpc::ServerContext* context, const ::szdiagnostic::GetDatastoreInfoRequest* request, ::szdiagnostic::GetDatastoreInfoResponse* response);
     virtual ::grpc::Status PurgeRepository(::grpc::ServerContext* context, const ::szdiagnostic::PurgeRepositoryRequest* request, ::szdiagnostic::PurgeRepositoryResponse* response);
     virtual ::grpc::Status Reinitialize(::grpc::ServerContext* context, const ::szdiagnostic::ReinitializeRequest* request, ::szdiagnostic::ReinitializeResponse* response);
   };
   template <class BaseClass>
-  class WithAsyncMethod_CheckDatabasePerformance : public BaseClass {
+  class WithAsyncMethod_CheckDatastorePerformance : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithAsyncMethod_CheckDatabasePerformance() {
+    WithAsyncMethod_CheckDatastorePerformance() {
       ::grpc::Service::MarkMethodAsync(0);
     }
-    ~WithAsyncMethod_CheckDatabasePerformance() override {
+    ~WithAsyncMethod_CheckDatastorePerformance() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CheckDatabasePerformance(::grpc::ServerContext* /*context*/, const ::szdiagnostic::CheckDatabasePerformanceRequest* /*request*/, ::szdiagnostic::CheckDatabasePerformanceResponse* /*response*/) override {
+    ::grpc::Status CheckDatastorePerformance(::grpc::ServerContext* /*context*/, const ::szdiagnostic::CheckDatastorePerformanceRequest* /*request*/, ::szdiagnostic::CheckDatastorePerformanceResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestCheckDatabasePerformance(::grpc::ServerContext* context, ::szdiagnostic::CheckDatabasePerformanceRequest* request, ::grpc::ServerAsyncResponseWriter< ::szdiagnostic::CheckDatabasePerformanceResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestCheckDatastorePerformance(::grpc::ServerContext* context, ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::grpc::ServerAsyncResponseWriter< ::szdiagnostic::CheckDatastorePerformanceResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_GetDatastoreInfo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetDatastoreInfo() {
+      ::grpc::Service::MarkMethodAsync(1);
+    }
+    ~WithAsyncMethod_GetDatastoreInfo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetDatastoreInfo(::grpc::ServerContext* /*context*/, const ::szdiagnostic::GetDatastoreInfoRequest* /*request*/, ::szdiagnostic::GetDatastoreInfoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetDatastoreInfo(::grpc::ServerContext* context, ::szdiagnostic::GetDatastoreInfoRequest* request, ::grpc::ServerAsyncResponseWriter< ::szdiagnostic::GetDatastoreInfoResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -167,7 +211,7 @@ class SzDiagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_PurgeRepository() {
-      ::grpc::Service::MarkMethodAsync(1);
+      ::grpc::Service::MarkMethodAsync(2);
     }
     ~WithAsyncMethod_PurgeRepository() override {
       BaseClassMustBeDerivedFromService(this);
@@ -178,7 +222,7 @@ class SzDiagnostic final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestPurgeRepository(::grpc::ServerContext* context, ::szdiagnostic::PurgeRepositoryRequest* request, ::grpc::ServerAsyncResponseWriter< ::szdiagnostic::PurgeRepositoryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -187,7 +231,7 @@ class SzDiagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Reinitialize() {
-      ::grpc::Service::MarkMethodAsync(2);
+      ::grpc::Service::MarkMethodAsync(3);
     }
     ~WithAsyncMethod_Reinitialize() override {
       BaseClassMustBeDerivedFromService(this);
@@ -198,36 +242,63 @@ class SzDiagnostic final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReinitialize(::grpc::ServerContext* context, ::szdiagnostic::ReinitializeRequest* request, ::grpc::ServerAsyncResponseWriter< ::szdiagnostic::ReinitializeResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_CheckDatabasePerformance<WithAsyncMethod_PurgeRepository<WithAsyncMethod_Reinitialize<Service > > > AsyncService;
+  typedef WithAsyncMethod_CheckDatastorePerformance<WithAsyncMethod_GetDatastoreInfo<WithAsyncMethod_PurgeRepository<WithAsyncMethod_Reinitialize<Service > > > > AsyncService;
   template <class BaseClass>
-  class WithCallbackMethod_CheckDatabasePerformance : public BaseClass {
+  class WithCallbackMethod_CheckDatastorePerformance : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_CheckDatabasePerformance() {
+    WithCallbackMethod_CheckDatastorePerformance() {
       ::grpc::Service::MarkMethodCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::CheckDatabasePerformanceRequest, ::szdiagnostic::CheckDatabasePerformanceResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::CheckDatastorePerformanceRequest, ::szdiagnostic::CheckDatastorePerformanceResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szdiagnostic::CheckDatabasePerformanceRequest* request, ::szdiagnostic::CheckDatabasePerformanceResponse* response) { return this->CheckDatabasePerformance(context, request, response); }));}
-    void SetMessageAllocatorFor_CheckDatabasePerformance(
-        ::grpc::MessageAllocator< ::szdiagnostic::CheckDatabasePerformanceRequest, ::szdiagnostic::CheckDatabasePerformanceResponse>* allocator) {
+                   ::grpc::CallbackServerContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response) { return this->CheckDatastorePerformance(context, request, response); }));}
+    void SetMessageAllocatorFor_CheckDatastorePerformance(
+        ::grpc::MessageAllocator< ::szdiagnostic::CheckDatastorePerformanceRequest, ::szdiagnostic::CheckDatastorePerformanceResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::CheckDatabasePerformanceRequest, ::szdiagnostic::CheckDatabasePerformanceResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::CheckDatastorePerformanceRequest, ::szdiagnostic::CheckDatastorePerformanceResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_CheckDatabasePerformance() override {
+    ~WithCallbackMethod_CheckDatastorePerformance() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CheckDatabasePerformance(::grpc::ServerContext* /*context*/, const ::szdiagnostic::CheckDatabasePerformanceRequest* /*request*/, ::szdiagnostic::CheckDatabasePerformanceResponse* /*response*/) override {
+    ::grpc::Status CheckDatastorePerformance(::grpc::ServerContext* /*context*/, const ::szdiagnostic::CheckDatastorePerformanceRequest* /*request*/, ::szdiagnostic::CheckDatastorePerformanceResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* CheckDatabasePerformance(
-      ::grpc::CallbackServerContext* /*context*/, const ::szdiagnostic::CheckDatabasePerformanceRequest* /*request*/, ::szdiagnostic::CheckDatabasePerformanceResponse* /*response*/)  { return nullptr; }
+    virtual ::grpc::ServerUnaryReactor* CheckDatastorePerformance(
+      ::grpc::CallbackServerContext* /*context*/, const ::szdiagnostic::CheckDatastorePerformanceRequest* /*request*/, ::szdiagnostic::CheckDatastorePerformanceResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_GetDatastoreInfo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetDatastoreInfo() {
+      ::grpc::Service::MarkMethodCallback(1,
+          new ::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::GetDatastoreInfoRequest, ::szdiagnostic::GetDatastoreInfoResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::szdiagnostic::GetDatastoreInfoRequest* request, ::szdiagnostic::GetDatastoreInfoResponse* response) { return this->GetDatastoreInfo(context, request, response); }));}
+    void SetMessageAllocatorFor_GetDatastoreInfo(
+        ::grpc::MessageAllocator< ::szdiagnostic::GetDatastoreInfoRequest, ::szdiagnostic::GetDatastoreInfoResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::GetDatastoreInfoRequest, ::szdiagnostic::GetDatastoreInfoResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_GetDatastoreInfo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetDatastoreInfo(::grpc::ServerContext* /*context*/, const ::szdiagnostic::GetDatastoreInfoRequest* /*request*/, ::szdiagnostic::GetDatastoreInfoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetDatastoreInfo(
+      ::grpc::CallbackServerContext* /*context*/, const ::szdiagnostic::GetDatastoreInfoRequest* /*request*/, ::szdiagnostic::GetDatastoreInfoResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithCallbackMethod_PurgeRepository : public BaseClass {
@@ -235,13 +306,13 @@ class SzDiagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_PurgeRepository() {
-      ::grpc::Service::MarkMethodCallback(1,
+      ::grpc::Service::MarkMethodCallback(2,
           new ::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::PurgeRepositoryRequest, ::szdiagnostic::PurgeRepositoryResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::szdiagnostic::PurgeRepositoryRequest* request, ::szdiagnostic::PurgeRepositoryResponse* response) { return this->PurgeRepository(context, request, response); }));}
     void SetMessageAllocatorFor_PurgeRepository(
         ::grpc::MessageAllocator< ::szdiagnostic::PurgeRepositoryRequest, ::szdiagnostic::PurgeRepositoryResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::PurgeRepositoryRequest, ::szdiagnostic::PurgeRepositoryResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -262,13 +333,13 @@ class SzDiagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_Reinitialize() {
-      ::grpc::Service::MarkMethodCallback(2,
+      ::grpc::Service::MarkMethodCallback(3,
           new ::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::ReinitializeRequest, ::szdiagnostic::ReinitializeResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::szdiagnostic::ReinitializeRequest* request, ::szdiagnostic::ReinitializeResponse* response) { return this->Reinitialize(context, request, response); }));}
     void SetMessageAllocatorFor_Reinitialize(
         ::grpc::MessageAllocator< ::szdiagnostic::ReinitializeRequest, ::szdiagnostic::ReinitializeResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::ReinitializeRequest, ::szdiagnostic::ReinitializeResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -283,21 +354,38 @@ class SzDiagnostic final {
     virtual ::grpc::ServerUnaryReactor* Reinitialize(
       ::grpc::CallbackServerContext* /*context*/, const ::szdiagnostic::ReinitializeRequest* /*request*/, ::szdiagnostic::ReinitializeResponse* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_CheckDatabasePerformance<WithCallbackMethod_PurgeRepository<WithCallbackMethod_Reinitialize<Service > > > CallbackService;
+  typedef WithCallbackMethod_CheckDatastorePerformance<WithCallbackMethod_GetDatastoreInfo<WithCallbackMethod_PurgeRepository<WithCallbackMethod_Reinitialize<Service > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
-  class WithGenericMethod_CheckDatabasePerformance : public BaseClass {
+  class WithGenericMethod_CheckDatastorePerformance : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithGenericMethod_CheckDatabasePerformance() {
+    WithGenericMethod_CheckDatastorePerformance() {
       ::grpc::Service::MarkMethodGeneric(0);
     }
-    ~WithGenericMethod_CheckDatabasePerformance() override {
+    ~WithGenericMethod_CheckDatastorePerformance() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CheckDatabasePerformance(::grpc::ServerContext* /*context*/, const ::szdiagnostic::CheckDatabasePerformanceRequest* /*request*/, ::szdiagnostic::CheckDatabasePerformanceResponse* /*response*/) override {
+    ::grpc::Status CheckDatastorePerformance(::grpc::ServerContext* /*context*/, const ::szdiagnostic::CheckDatastorePerformanceRequest* /*request*/, ::szdiagnostic::CheckDatastorePerformanceResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetDatastoreInfo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetDatastoreInfo() {
+      ::grpc::Service::MarkMethodGeneric(1);
+    }
+    ~WithGenericMethod_GetDatastoreInfo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetDatastoreInfo(::grpc::ServerContext* /*context*/, const ::szdiagnostic::GetDatastoreInfoRequest* /*request*/, ::szdiagnostic::GetDatastoreInfoResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -308,7 +396,7 @@ class SzDiagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_PurgeRepository() {
-      ::grpc::Service::MarkMethodGeneric(1);
+      ::grpc::Service::MarkMethodGeneric(2);
     }
     ~WithGenericMethod_PurgeRepository() override {
       BaseClassMustBeDerivedFromService(this);
@@ -325,7 +413,7 @@ class SzDiagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Reinitialize() {
-      ::grpc::Service::MarkMethodGeneric(2);
+      ::grpc::Service::MarkMethodGeneric(3);
     }
     ~WithGenericMethod_Reinitialize() override {
       BaseClassMustBeDerivedFromService(this);
@@ -337,23 +425,43 @@ class SzDiagnostic final {
     }
   };
   template <class BaseClass>
-  class WithRawMethod_CheckDatabasePerformance : public BaseClass {
+  class WithRawMethod_CheckDatastorePerformance : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawMethod_CheckDatabasePerformance() {
+    WithRawMethod_CheckDatastorePerformance() {
       ::grpc::Service::MarkMethodRaw(0);
     }
-    ~WithRawMethod_CheckDatabasePerformance() override {
+    ~WithRawMethod_CheckDatastorePerformance() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CheckDatabasePerformance(::grpc::ServerContext* /*context*/, const ::szdiagnostic::CheckDatabasePerformanceRequest* /*request*/, ::szdiagnostic::CheckDatabasePerformanceResponse* /*response*/) override {
+    ::grpc::Status CheckDatastorePerformance(::grpc::ServerContext* /*context*/, const ::szdiagnostic::CheckDatastorePerformanceRequest* /*request*/, ::szdiagnostic::CheckDatastorePerformanceResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestCheckDatabasePerformance(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestCheckDatastorePerformance(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetDatastoreInfo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetDatastoreInfo() {
+      ::grpc::Service::MarkMethodRaw(1);
+    }
+    ~WithRawMethod_GetDatastoreInfo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetDatastoreInfo(::grpc::ServerContext* /*context*/, const ::szdiagnostic::GetDatastoreInfoRequest* /*request*/, ::szdiagnostic::GetDatastoreInfoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetDatastoreInfo(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -362,7 +470,7 @@ class SzDiagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_PurgeRepository() {
-      ::grpc::Service::MarkMethodRaw(1);
+      ::grpc::Service::MarkMethodRaw(2);
     }
     ~WithRawMethod_PurgeRepository() override {
       BaseClassMustBeDerivedFromService(this);
@@ -373,7 +481,7 @@ class SzDiagnostic final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestPurgeRepository(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -382,7 +490,7 @@ class SzDiagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Reinitialize() {
-      ::grpc::Service::MarkMethodRaw(2);
+      ::grpc::Service::MarkMethodRaw(3);
     }
     ~WithRawMethod_Reinitialize() override {
       BaseClassMustBeDerivedFromService(this);
@@ -393,29 +501,51 @@ class SzDiagnostic final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestReinitialize(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_CheckDatabasePerformance : public BaseClass {
+  class WithRawCallbackMethod_CheckDatastorePerformance : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_CheckDatabasePerformance() {
+    WithRawCallbackMethod_CheckDatastorePerformance() {
       ::grpc::Service::MarkMethodRawCallback(0,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CheckDatabasePerformance(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CheckDatastorePerformance(context, request, response); }));
     }
-    ~WithRawCallbackMethod_CheckDatabasePerformance() override {
+    ~WithRawCallbackMethod_CheckDatastorePerformance() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CheckDatabasePerformance(::grpc::ServerContext* /*context*/, const ::szdiagnostic::CheckDatabasePerformanceRequest* /*request*/, ::szdiagnostic::CheckDatabasePerformanceResponse* /*response*/) override {
+    ::grpc::Status CheckDatastorePerformance(::grpc::ServerContext* /*context*/, const ::szdiagnostic::CheckDatastorePerformanceRequest* /*request*/, ::szdiagnostic::CheckDatastorePerformanceResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* CheckDatabasePerformance(
+    virtual ::grpc::ServerUnaryReactor* CheckDatastorePerformance(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetDatastoreInfo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetDatastoreInfo() {
+      ::grpc::Service::MarkMethodRawCallback(1,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetDatastoreInfo(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_GetDatastoreInfo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetDatastoreInfo(::grpc::ServerContext* /*context*/, const ::szdiagnostic::GetDatastoreInfoRequest* /*request*/, ::szdiagnostic::GetDatastoreInfoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetDatastoreInfo(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
@@ -424,7 +554,7 @@ class SzDiagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_PurgeRepository() {
-      ::grpc::Service::MarkMethodRawCallback(1,
+      ::grpc::Service::MarkMethodRawCallback(2,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PurgeRepository(context, request, response); }));
@@ -446,7 +576,7 @@ class SzDiagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_Reinitialize() {
-      ::grpc::Service::MarkMethodRawCallback(2,
+      ::grpc::Service::MarkMethodRawCallback(3,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Reinitialize(context, request, response); }));
@@ -463,31 +593,58 @@ class SzDiagnostic final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_CheckDatabasePerformance : public BaseClass {
+  class WithStreamedUnaryMethod_CheckDatastorePerformance : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithStreamedUnaryMethod_CheckDatabasePerformance() {
+    WithStreamedUnaryMethod_CheckDatastorePerformance() {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::szdiagnostic::CheckDatabasePerformanceRequest, ::szdiagnostic::CheckDatabasePerformanceResponse>(
+          ::szdiagnostic::CheckDatastorePerformanceRequest, ::szdiagnostic::CheckDatastorePerformanceResponse>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::szdiagnostic::CheckDatabasePerformanceRequest, ::szdiagnostic::CheckDatabasePerformanceResponse>* streamer) {
-                       return this->StreamedCheckDatabasePerformance(context,
+                     ::szdiagnostic::CheckDatastorePerformanceRequest, ::szdiagnostic::CheckDatastorePerformanceResponse>* streamer) {
+                       return this->StreamedCheckDatastorePerformance(context,
                          streamer);
                   }));
     }
-    ~WithStreamedUnaryMethod_CheckDatabasePerformance() override {
+    ~WithStreamedUnaryMethod_CheckDatastorePerformance() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status CheckDatabasePerformance(::grpc::ServerContext* /*context*/, const ::szdiagnostic::CheckDatabasePerformanceRequest* /*request*/, ::szdiagnostic::CheckDatabasePerformanceResponse* /*response*/) override {
+    ::grpc::Status CheckDatastorePerformance(::grpc::ServerContext* /*context*/, const ::szdiagnostic::CheckDatastorePerformanceRequest* /*request*/, ::szdiagnostic::CheckDatastorePerformanceResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedCheckDatabasePerformance(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szdiagnostic::CheckDatabasePerformanceRequest,::szdiagnostic::CheckDatabasePerformanceResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedCheckDatastorePerformance(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szdiagnostic::CheckDatastorePerformanceRequest,::szdiagnostic::CheckDatastorePerformanceResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_GetDatastoreInfo : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_GetDatastoreInfo() {
+      ::grpc::Service::MarkMethodStreamed(1,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::szdiagnostic::GetDatastoreInfoRequest, ::szdiagnostic::GetDatastoreInfoResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::szdiagnostic::GetDatastoreInfoRequest, ::szdiagnostic::GetDatastoreInfoResponse>* streamer) {
+                       return this->StreamedGetDatastoreInfo(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_GetDatastoreInfo() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status GetDatastoreInfo(::grpc::ServerContext* /*context*/, const ::szdiagnostic::GetDatastoreInfoRequest* /*request*/, ::szdiagnostic::GetDatastoreInfoResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedGetDatastoreInfo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szdiagnostic::GetDatastoreInfoRequest,::szdiagnostic::GetDatastoreInfoResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_PurgeRepository : public BaseClass {
@@ -495,7 +652,7 @@ class SzDiagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_PurgeRepository() {
-      ::grpc::Service::MarkMethodStreamed(1,
+      ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szdiagnostic::PurgeRepositoryRequest, ::szdiagnostic::PurgeRepositoryResponse>(
             [this](::grpc::ServerContext* context,
@@ -522,7 +679,7 @@ class SzDiagnostic final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Reinitialize() {
-      ::grpc::Service::MarkMethodStreamed(2,
+      ::grpc::Service::MarkMethodStreamed(3,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szdiagnostic::ReinitializeRequest, ::szdiagnostic::ReinitializeResponse>(
             [this](::grpc::ServerContext* context,
@@ -543,9 +700,9 @@ class SzDiagnostic final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedReinitialize(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szdiagnostic::ReinitializeRequest,::szdiagnostic::ReinitializeResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_CheckDatabasePerformance<WithStreamedUnaryMethod_PurgeRepository<WithStreamedUnaryMethod_Reinitialize<Service > > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_CheckDatastorePerformance<WithStreamedUnaryMethod_GetDatastoreInfo<WithStreamedUnaryMethod_PurgeRepository<WithStreamedUnaryMethod_Reinitialize<Service > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_CheckDatabasePerformance<WithStreamedUnaryMethod_PurgeRepository<WithStreamedUnaryMethod_Reinitialize<Service > > > StreamedService;
+  typedef WithStreamedUnaryMethod_CheckDatastorePerformance<WithStreamedUnaryMethod_GetDatastoreInfo<WithStreamedUnaryMethod_PurgeRepository<WithStreamedUnaryMethod_Reinitialize<Service > > > > StreamedService;
 };
 
 }  // namespace szdiagnostic

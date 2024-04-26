@@ -57,12 +57,18 @@ struct TableStruct_szdiagnostic_2eproto {
 extern const ::google::protobuf::internal::DescriptorTable
     descriptor_table_szdiagnostic_2eproto;
 namespace szdiagnostic {
-class CheckDatabasePerformanceRequest;
-struct CheckDatabasePerformanceRequestDefaultTypeInternal;
-extern CheckDatabasePerformanceRequestDefaultTypeInternal _CheckDatabasePerformanceRequest_default_instance_;
-class CheckDatabasePerformanceResponse;
-struct CheckDatabasePerformanceResponseDefaultTypeInternal;
-extern CheckDatabasePerformanceResponseDefaultTypeInternal _CheckDatabasePerformanceResponse_default_instance_;
+class CheckDatastorePerformanceRequest;
+struct CheckDatastorePerformanceRequestDefaultTypeInternal;
+extern CheckDatastorePerformanceRequestDefaultTypeInternal _CheckDatastorePerformanceRequest_default_instance_;
+class CheckDatastorePerformanceResponse;
+struct CheckDatastorePerformanceResponseDefaultTypeInternal;
+extern CheckDatastorePerformanceResponseDefaultTypeInternal _CheckDatastorePerformanceResponse_default_instance_;
+class GetDatastoreInfoRequest;
+struct GetDatastoreInfoRequestDefaultTypeInternal;
+extern GetDatastoreInfoRequestDefaultTypeInternal _GetDatastoreInfoRequest_default_instance_;
+class GetDatastoreInfoResponse;
+struct GetDatastoreInfoResponseDefaultTypeInternal;
+extern GetDatastoreInfoResponseDefaultTypeInternal _GetDatastoreInfoResponse_default_instance_;
 class PurgeRepositoryRequest;
 struct PurgeRepositoryRequestDefaultTypeInternal;
 extern PurgeRepositoryRequestDefaultTypeInternal _PurgeRepositoryRequest_default_instance_;
@@ -146,7 +152,7 @@ class ReinitializeResponse final :
                &_ReinitializeResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    7;
 
   friend void swap(ReinitializeResponse& a, ReinitializeResponse& b) {
     a.Swap(&b);
@@ -283,7 +289,7 @@ class ReinitializeRequest final :
                &_ReinitializeRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    6;
 
   friend void swap(ReinitializeRequest& a, ReinitializeRequest& b) {
     a.Swap(&b);
@@ -457,7 +463,7 @@ class PurgeRepositoryResponse final :
                &_PurgeRepositoryResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    5;
 
   friend void swap(PurgeRepositoryResponse& a, PurgeRepositoryResponse& b) {
     a.Swap(&b);
@@ -593,7 +599,7 @@ class PurgeRepositoryRequest final :
                &_PurgeRepositoryRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    4;
 
   friend void swap(PurgeRepositoryRequest& a, PurgeRepositoryRequest& b) {
     a.Swap(&b);
@@ -671,26 +677,26 @@ class PurgeRepositoryRequest final :
   friend struct ::TableStruct_szdiagnostic_2eproto;
 };// -------------------------------------------------------------------
 
-class CheckDatabasePerformanceResponse final :
-    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szdiagnostic.CheckDatabasePerformanceResponse) */ {
+class GetDatastoreInfoResponse final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szdiagnostic.GetDatastoreInfoResponse) */ {
  public:
-  inline CheckDatabasePerformanceResponse() : CheckDatabasePerformanceResponse(nullptr) {}
-  ~CheckDatabasePerformanceResponse() override;
+  inline GetDatastoreInfoResponse() : GetDatastoreInfoResponse(nullptr) {}
+  ~GetDatastoreInfoResponse() override;
   template<typename = void>
-  explicit PROTOBUF_CONSTEXPR CheckDatabasePerformanceResponse(::google::protobuf::internal::ConstantInitialized);
+  explicit PROTOBUF_CONSTEXPR GetDatastoreInfoResponse(::google::protobuf::internal::ConstantInitialized);
 
-  inline CheckDatabasePerformanceResponse(const CheckDatabasePerformanceResponse& from)
-      : CheckDatabasePerformanceResponse(nullptr, from) {}
-  CheckDatabasePerformanceResponse(CheckDatabasePerformanceResponse&& from) noexcept
-    : CheckDatabasePerformanceResponse() {
+  inline GetDatastoreInfoResponse(const GetDatastoreInfoResponse& from)
+      : GetDatastoreInfoResponse(nullptr, from) {}
+  GetDatastoreInfoResponse(GetDatastoreInfoResponse&& from) noexcept
+    : GetDatastoreInfoResponse() {
     *this = ::std::move(from);
   }
 
-  inline CheckDatabasePerformanceResponse& operator=(const CheckDatabasePerformanceResponse& from) {
+  inline GetDatastoreInfoResponse& operator=(const GetDatastoreInfoResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline CheckDatabasePerformanceResponse& operator=(CheckDatabasePerformanceResponse&& from) noexcept {
+  inline GetDatastoreInfoResponse& operator=(GetDatastoreInfoResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetArena() == from.GetArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -722,20 +728,20 @@ class CheckDatabasePerformanceResponse final :
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const CheckDatabasePerformanceResponse& default_instance() {
+  static const GetDatastoreInfoResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const CheckDatabasePerformanceResponse* internal_default_instance() {
-    return reinterpret_cast<const CheckDatabasePerformanceResponse*>(
-               &_CheckDatabasePerformanceResponse_default_instance_);
+  static inline const GetDatastoreInfoResponse* internal_default_instance() {
+    return reinterpret_cast<const GetDatastoreInfoResponse*>(
+               &_GetDatastoreInfoResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    3;
 
-  friend void swap(CheckDatabasePerformanceResponse& a, CheckDatabasePerformanceResponse& b) {
+  friend void swap(GetDatastoreInfoResponse& a, GetDatastoreInfoResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(CheckDatabasePerformanceResponse* other) {
+  inline void Swap(GetDatastoreInfoResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetArena() != nullptr &&
@@ -748,7 +754,7 @@ class CheckDatabasePerformanceResponse final :
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(CheckDatabasePerformanceResponse* other) {
+  void UnsafeArenaSwap(GetDatastoreInfoResponse* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -756,14 +762,14 @@ class CheckDatabasePerformanceResponse final :
 
   // implements Message ----------------------------------------------
 
-  CheckDatabasePerformanceResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<CheckDatabasePerformanceResponse>(arena);
+  GetDatastoreInfoResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetDatastoreInfoResponse>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const CheckDatabasePerformanceResponse& from);
+  void CopyFrom(const GetDatastoreInfoResponse& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom( const CheckDatabasePerformanceResponse& from) {
-    CheckDatabasePerformanceResponse::MergeImpl(*this, from);
+  void MergeFrom( const GetDatastoreInfoResponse& from) {
+    GetDatastoreInfoResponse::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
@@ -781,16 +787,16 @@ class CheckDatabasePerformanceResponse final :
   ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
   void SharedCtor(::google::protobuf::Arena* arena);
   void SharedDtor();
-  void InternalSwap(CheckDatabasePerformanceResponse* other);
+  void InternalSwap(GetDatastoreInfoResponse* other);
 
   private:
   friend class ::google::protobuf::internal::AnyMetadata;
   static ::absl::string_view FullMessageName() {
-    return "szdiagnostic.CheckDatabasePerformanceResponse";
+    return "szdiagnostic.GetDatastoreInfoResponse";
   }
   protected:
-  explicit CheckDatabasePerformanceResponse(::google::protobuf::Arena* arena);
-  CheckDatabasePerformanceResponse(::google::protobuf::Arena* arena, const CheckDatabasePerformanceResponse& from);
+  explicit GetDatastoreInfoResponse(::google::protobuf::Arena* arena);
+  GetDatastoreInfoResponse(::google::protobuf::Arena* arena, const GetDatastoreInfoResponse& from);
   public:
 
   static const ClassData _class_data_;
@@ -821,14 +827,14 @@ class CheckDatabasePerformanceResponse final :
   std::string* _internal_mutable_result();
 
   public:
-  // @@protoc_insertion_point(class_scope:szdiagnostic.CheckDatabasePerformanceResponse)
+  // @@protoc_insertion_point(class_scope:szdiagnostic.GetDatastoreInfoResponse)
  private:
   class _Internal;
 
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       0, 1, 0,
-      60, 2>
+      52, 2>
       _table_;
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -852,26 +858,25 @@ class CheckDatabasePerformanceResponse final :
   friend struct ::TableStruct_szdiagnostic_2eproto;
 };// -------------------------------------------------------------------
 
-class CheckDatabasePerformanceRequest final :
-    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szdiagnostic.CheckDatabasePerformanceRequest) */ {
+class GetDatastoreInfoRequest final :
+    public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:szdiagnostic.GetDatastoreInfoRequest) */ {
  public:
-  inline CheckDatabasePerformanceRequest() : CheckDatabasePerformanceRequest(nullptr) {}
-  ~CheckDatabasePerformanceRequest() override;
+  inline GetDatastoreInfoRequest() : GetDatastoreInfoRequest(nullptr) {}
   template<typename = void>
-  explicit PROTOBUF_CONSTEXPR CheckDatabasePerformanceRequest(::google::protobuf::internal::ConstantInitialized);
+  explicit PROTOBUF_CONSTEXPR GetDatastoreInfoRequest(::google::protobuf::internal::ConstantInitialized);
 
-  inline CheckDatabasePerformanceRequest(const CheckDatabasePerformanceRequest& from)
-      : CheckDatabasePerformanceRequest(nullptr, from) {}
-  CheckDatabasePerformanceRequest(CheckDatabasePerformanceRequest&& from) noexcept
-    : CheckDatabasePerformanceRequest() {
+  inline GetDatastoreInfoRequest(const GetDatastoreInfoRequest& from)
+      : GetDatastoreInfoRequest(nullptr, from) {}
+  GetDatastoreInfoRequest(GetDatastoreInfoRequest&& from) noexcept
+    : GetDatastoreInfoRequest() {
     *this = ::std::move(from);
   }
 
-  inline CheckDatabasePerformanceRequest& operator=(const CheckDatabasePerformanceRequest& from) {
+  inline GetDatastoreInfoRequest& operator=(const GetDatastoreInfoRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline CheckDatabasePerformanceRequest& operator=(CheckDatabasePerformanceRequest&& from) noexcept {
+  inline GetDatastoreInfoRequest& operator=(GetDatastoreInfoRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetArena() == from.GetArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -903,20 +908,20 @@ class CheckDatabasePerformanceRequest final :
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const CheckDatabasePerformanceRequest& default_instance() {
+  static const GetDatastoreInfoRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const CheckDatabasePerformanceRequest* internal_default_instance() {
-    return reinterpret_cast<const CheckDatabasePerformanceRequest*>(
-               &_CheckDatabasePerformanceRequest_default_instance_);
+  static inline const GetDatastoreInfoRequest* internal_default_instance() {
+    return reinterpret_cast<const GetDatastoreInfoRequest*>(
+               &_GetDatastoreInfoRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    0;
+    2;
 
-  friend void swap(CheckDatabasePerformanceRequest& a, CheckDatabasePerformanceRequest& b) {
+  friend void swap(GetDatastoreInfoRequest& a, GetDatastoreInfoRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(CheckDatabasePerformanceRequest* other) {
+  inline void Swap(GetDatastoreInfoRequest* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetArena() != nullptr &&
@@ -929,7 +934,7 @@ class CheckDatabasePerformanceRequest final :
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(CheckDatabasePerformanceRequest* other) {
+  void UnsafeArenaSwap(GetDatastoreInfoRequest* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -937,14 +942,151 @@ class CheckDatabasePerformanceRequest final :
 
   // implements Message ----------------------------------------------
 
-  CheckDatabasePerformanceRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<CheckDatabasePerformanceRequest>(arena);
+  GetDatastoreInfoRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetDatastoreInfoRequest>(arena);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const GetDatastoreInfoRequest& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const GetDatastoreInfoRequest& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
+
+  private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "szdiagnostic.GetDatastoreInfoRequest";
+  }
+  protected:
+  explicit GetDatastoreInfoRequest(::google::protobuf::Arena* arena);
+  GetDatastoreInfoRequest(::google::protobuf::Arena* arena, const GetDatastoreInfoRequest& from);
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:szdiagnostic.GetDatastoreInfoRequest)
+ private:
+  class _Internal;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+
+        inline explicit constexpr Impl_(
+            ::google::protobuf::internal::ConstantInitialized) noexcept;
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena);
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena, const Impl_& from);
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  friend struct ::TableStruct_szdiagnostic_2eproto;
+};// -------------------------------------------------------------------
+
+class CheckDatastorePerformanceResponse final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szdiagnostic.CheckDatastorePerformanceResponse) */ {
+ public:
+  inline CheckDatastorePerformanceResponse() : CheckDatastorePerformanceResponse(nullptr) {}
+  ~CheckDatastorePerformanceResponse() override;
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR CheckDatastorePerformanceResponse(::google::protobuf::internal::ConstantInitialized);
+
+  inline CheckDatastorePerformanceResponse(const CheckDatastorePerformanceResponse& from)
+      : CheckDatastorePerformanceResponse(nullptr, from) {}
+  CheckDatastorePerformanceResponse(CheckDatastorePerformanceResponse&& from) noexcept
+    : CheckDatastorePerformanceResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline CheckDatastorePerformanceResponse& operator=(const CheckDatastorePerformanceResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CheckDatastorePerformanceResponse& operator=(CheckDatastorePerformanceResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const CheckDatastorePerformanceResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const CheckDatastorePerformanceResponse* internal_default_instance() {
+    return reinterpret_cast<const CheckDatastorePerformanceResponse*>(
+               &_CheckDatastorePerformanceResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  friend void swap(CheckDatastorePerformanceResponse& a, CheckDatastorePerformanceResponse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CheckDatastorePerformanceResponse* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr &&
+        GetArena() == other->GetArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CheckDatastorePerformanceResponse* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  CheckDatastorePerformanceResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CheckDatastorePerformanceResponse>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const CheckDatabasePerformanceRequest& from);
+  void CopyFrom(const CheckDatastorePerformanceResponse& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom( const CheckDatabasePerformanceRequest& from) {
-    CheckDatabasePerformanceRequest::MergeImpl(*this, from);
+  void MergeFrom( const CheckDatastorePerformanceResponse& from) {
+    CheckDatastorePerformanceResponse::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
@@ -962,16 +1104,197 @@ class CheckDatabasePerformanceRequest final :
   ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
   void SharedCtor(::google::protobuf::Arena* arena);
   void SharedDtor();
-  void InternalSwap(CheckDatabasePerformanceRequest* other);
+  void InternalSwap(CheckDatastorePerformanceResponse* other);
 
   private:
   friend class ::google::protobuf::internal::AnyMetadata;
   static ::absl::string_view FullMessageName() {
-    return "szdiagnostic.CheckDatabasePerformanceRequest";
+    return "szdiagnostic.CheckDatastorePerformanceResponse";
   }
   protected:
-  explicit CheckDatabasePerformanceRequest(::google::protobuf::Arena* arena);
-  CheckDatabasePerformanceRequest(::google::protobuf::Arena* arena, const CheckDatabasePerformanceRequest& from);
+  explicit CheckDatastorePerformanceResponse(::google::protobuf::Arena* arena);
+  CheckDatastorePerformanceResponse(::google::protobuf::Arena* arena, const CheckDatastorePerformanceResponse& from);
+  public:
+
+  static const ClassData _class_data_;
+  const ::google::protobuf::Message::ClassData*GetClassData() const final;
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+  };
+  // string result = 1;
+  void clear_result() ;
+  const std::string& result() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_result(Arg_&& arg, Args_... args);
+  std::string* mutable_result();
+  PROTOBUF_NODISCARD std::string* release_result();
+  void set_allocated_result(std::string* value);
+
+  private:
+  const std::string& _internal_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(
+      const std::string& value);
+  std::string* _internal_mutable_result();
+
+  public:
+  // @@protoc_insertion_point(class_scope:szdiagnostic.CheckDatastorePerformanceResponse)
+ private:
+  class _Internal;
+
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 0,
+      61, 2>
+      _table_;
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+
+        inline explicit constexpr Impl_(
+            ::google::protobuf::internal::ConstantInitialized) noexcept;
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena);
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena, const Impl_& from);
+    ::google::protobuf::internal::ArenaStringPtr result_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_szdiagnostic_2eproto;
+};// -------------------------------------------------------------------
+
+class CheckDatastorePerformanceRequest final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szdiagnostic.CheckDatastorePerformanceRequest) */ {
+ public:
+  inline CheckDatastorePerformanceRequest() : CheckDatastorePerformanceRequest(nullptr) {}
+  ~CheckDatastorePerformanceRequest() override;
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR CheckDatastorePerformanceRequest(::google::protobuf::internal::ConstantInitialized);
+
+  inline CheckDatastorePerformanceRequest(const CheckDatastorePerformanceRequest& from)
+      : CheckDatastorePerformanceRequest(nullptr, from) {}
+  CheckDatastorePerformanceRequest(CheckDatastorePerformanceRequest&& from) noexcept
+    : CheckDatastorePerformanceRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline CheckDatastorePerformanceRequest& operator=(const CheckDatastorePerformanceRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CheckDatastorePerformanceRequest& operator=(CheckDatastorePerformanceRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const CheckDatastorePerformanceRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const CheckDatastorePerformanceRequest* internal_default_instance() {
+    return reinterpret_cast<const CheckDatastorePerformanceRequest*>(
+               &_CheckDatastorePerformanceRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    0;
+
+  friend void swap(CheckDatastorePerformanceRequest& a, CheckDatastorePerformanceRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CheckDatastorePerformanceRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr &&
+        GetArena() == other->GetArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CheckDatastorePerformanceRequest* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  CheckDatastorePerformanceRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CheckDatastorePerformanceRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const CheckDatastorePerformanceRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom( const CheckDatastorePerformanceRequest& from) {
+    CheckDatastorePerformanceRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  ::size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target, ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(CheckDatastorePerformanceRequest* other);
+
+  private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "szdiagnostic.CheckDatastorePerformanceRequest";
+  }
+  protected:
+  explicit CheckDatastorePerformanceRequest(::google::protobuf::Arena* arena);
+  CheckDatastorePerformanceRequest(::google::protobuf::Arena* arena, const CheckDatastorePerformanceRequest& from);
   public:
 
   static const ClassData _class_data_;
@@ -996,7 +1319,7 @@ class CheckDatabasePerformanceRequest final :
   void _internal_set_secondstorun(::int32_t value);
 
   public:
-  // @@protoc_insertion_point(class_scope:szdiagnostic.CheckDatabasePerformanceRequest)
+  // @@protoc_insertion_point(class_scope:szdiagnostic.CheckDatastorePerformanceRequest)
  private:
   class _Internal;
 
@@ -1041,26 +1364,26 @@ class CheckDatabasePerformanceRequest final :
 #endif  // __GNUC__
 // -------------------------------------------------------------------
 
-// CheckDatabasePerformanceRequest
+// CheckDatastorePerformanceRequest
 
 // int32 secondsToRun = 1;
-inline void CheckDatabasePerformanceRequest::clear_secondstorun() {
+inline void CheckDatastorePerformanceRequest::clear_secondstorun() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   _impl_.secondstorun_ = 0;
 }
-inline ::int32_t CheckDatabasePerformanceRequest::secondstorun() const {
-  // @@protoc_insertion_point(field_get:szdiagnostic.CheckDatabasePerformanceRequest.secondsToRun)
+inline ::int32_t CheckDatastorePerformanceRequest::secondstorun() const {
+  // @@protoc_insertion_point(field_get:szdiagnostic.CheckDatastorePerformanceRequest.secondsToRun)
   return _internal_secondstorun();
 }
-inline void CheckDatabasePerformanceRequest::set_secondstorun(::int32_t value) {
+inline void CheckDatastorePerformanceRequest::set_secondstorun(::int32_t value) {
   _internal_set_secondstorun(value);
-  // @@protoc_insertion_point(field_set:szdiagnostic.CheckDatabasePerformanceRequest.secondsToRun)
+  // @@protoc_insertion_point(field_set:szdiagnostic.CheckDatastorePerformanceRequest.secondsToRun)
 }
-inline ::int32_t CheckDatabasePerformanceRequest::_internal_secondstorun() const {
+inline ::int32_t CheckDatastorePerformanceRequest::_internal_secondstorun() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
   return _impl_.secondstorun_;
 }
-inline void CheckDatabasePerformanceRequest::_internal_set_secondstorun(::int32_t value) {
+inline void CheckDatastorePerformanceRequest::_internal_set_secondstorun(::int32_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
   _impl_.secondstorun_ = value;
@@ -1068,51 +1391,51 @@ inline void CheckDatabasePerformanceRequest::_internal_set_secondstorun(::int32_
 
 // -------------------------------------------------------------------
 
-// CheckDatabasePerformanceResponse
+// CheckDatastorePerformanceResponse
 
 // string result = 1;
-inline void CheckDatabasePerformanceResponse::clear_result() {
+inline void CheckDatastorePerformanceResponse::clear_result() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   _impl_.result_.ClearToEmpty();
 }
-inline const std::string& CheckDatabasePerformanceResponse::result() const
+inline const std::string& CheckDatastorePerformanceResponse::result() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szdiagnostic.CheckDatabasePerformanceResponse.result)
+  // @@protoc_insertion_point(field_get:szdiagnostic.CheckDatastorePerformanceResponse.result)
   return _internal_result();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void CheckDatabasePerformanceResponse::set_result(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void CheckDatastorePerformanceResponse::set_result(Arg_&& arg,
                                                      Args_... args) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
   _impl_.result_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szdiagnostic.CheckDatabasePerformanceResponse.result)
+  // @@protoc_insertion_point(field_set:szdiagnostic.CheckDatastorePerformanceResponse.result)
 }
-inline std::string* CheckDatabasePerformanceResponse::mutable_result() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* CheckDatastorePerformanceResponse::mutable_result() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:szdiagnostic.CheckDatabasePerformanceResponse.result)
+  // @@protoc_insertion_point(field_mutable:szdiagnostic.CheckDatastorePerformanceResponse.result)
   return _s;
 }
-inline const std::string& CheckDatabasePerformanceResponse::_internal_result() const {
+inline const std::string& CheckDatastorePerformanceResponse::_internal_result() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
   return _impl_.result_.Get();
 }
-inline void CheckDatabasePerformanceResponse::_internal_set_result(const std::string& value) {
+inline void CheckDatastorePerformanceResponse::_internal_set_result(const std::string& value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
   _impl_.result_.Set(value, GetArena());
 }
-inline std::string* CheckDatabasePerformanceResponse::_internal_mutable_result() {
+inline std::string* CheckDatastorePerformanceResponse::_internal_mutable_result() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
   return _impl_.result_.Mutable( GetArena());
 }
-inline std::string* CheckDatabasePerformanceResponse::release_result() {
+inline std::string* CheckDatastorePerformanceResponse::release_result() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  // @@protoc_insertion_point(field_release:szdiagnostic.CheckDatabasePerformanceResponse.result)
+  // @@protoc_insertion_point(field_release:szdiagnostic.CheckDatastorePerformanceResponse.result)
   return _impl_.result_.Release();
 }
-inline void CheckDatabasePerformanceResponse::set_allocated_result(std::string* value) {
+inline void CheckDatastorePerformanceResponse::set_allocated_result(std::string* value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   _impl_.result_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1120,7 +1443,68 @@ inline void CheckDatabasePerformanceResponse::set_allocated_result(std::string* 
           _impl_.result_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:szdiagnostic.CheckDatabasePerformanceResponse.result)
+  // @@protoc_insertion_point(field_set_allocated:szdiagnostic.CheckDatastorePerformanceResponse.result)
+}
+
+// -------------------------------------------------------------------
+
+// GetDatastoreInfoRequest
+
+// -------------------------------------------------------------------
+
+// GetDatastoreInfoResponse
+
+// string result = 1;
+inline void GetDatastoreInfoResponse::clear_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.result_.ClearToEmpty();
+}
+inline const std::string& GetDatastoreInfoResponse::result() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:szdiagnostic.GetDatastoreInfoResponse.result)
+  return _internal_result();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void GetDatastoreInfoResponse::set_result(Arg_&& arg,
+                                                     Args_... args) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.result_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szdiagnostic.GetDatastoreInfoResponse.result)
+}
+inline std::string* GetDatastoreInfoResponse::mutable_result() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_result();
+  // @@protoc_insertion_point(field_mutable:szdiagnostic.GetDatastoreInfoResponse.result)
+  return _s;
+}
+inline const std::string& GetDatastoreInfoResponse::_internal_result() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.result_.Get();
+}
+inline void GetDatastoreInfoResponse::_internal_set_result(const std::string& value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.result_.Set(value, GetArena());
+}
+inline std::string* GetDatastoreInfoResponse::_internal_mutable_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  return _impl_.result_.Mutable( GetArena());
+}
+inline std::string* GetDatastoreInfoResponse::release_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  // @@protoc_insertion_point(field_release:szdiagnostic.GetDatastoreInfoResponse.result)
+  return _impl_.result_.Release();
+}
+inline void GetDatastoreInfoResponse::set_allocated_result(std::string* value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.result_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.result_.IsDefault()) {
+          _impl_.result_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:szdiagnostic.GetDatastoreInfoResponse.result)
 }
 
 // -------------------------------------------------------------------

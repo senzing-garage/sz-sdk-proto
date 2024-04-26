@@ -5,10 +5,15 @@ require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("szdiagnostic.proto", :syntax => :proto3) do
-    add_message "szdiagnostic.CheckDatabasePerformanceRequest" do
+    add_message "szdiagnostic.CheckDatastorePerformanceRequest" do
       optional :secondsToRun, :int32, 1
     end
-    add_message "szdiagnostic.CheckDatabasePerformanceResponse" do
+    add_message "szdiagnostic.CheckDatastorePerformanceResponse" do
+      optional :result, :string, 1
+    end
+    add_message "szdiagnostic.GetDatastoreInfoRequest" do
+    end
+    add_message "szdiagnostic.GetDatastoreInfoResponse" do
       optional :result, :string, 1
     end
     add_message "szdiagnostic.PurgeRepositoryRequest" do
@@ -24,8 +29,10 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
 end
 
 module Szdiagnostic
-  CheckDatabasePerformanceRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.CheckDatabasePerformanceRequest").msgclass
-  CheckDatabasePerformanceResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.CheckDatabasePerformanceResponse").msgclass
+  CheckDatastorePerformanceRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.CheckDatastorePerformanceRequest").msgclass
+  CheckDatastorePerformanceResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.CheckDatastorePerformanceResponse").msgclass
+  GetDatastoreInfoRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.GetDatastoreInfoRequest").msgclass
+  GetDatastoreInfoResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.GetDatastoreInfoResponse").msgclass
   PurgeRepositoryRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.PurgeRepositoryRequest").msgclass
   PurgeRepositoryResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.PurgeRepositoryResponse").msgclass
   ReinitializeRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.ReinitializeRequest").msgclass

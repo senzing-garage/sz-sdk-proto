@@ -14,10 +14,15 @@ class SzDiagnosticStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.CheckDatabasePerformance = channel.unary_unary(
-                '/szdiagnostic.SzDiagnostic/CheckDatabasePerformance',
-                request_serializer=szdiagnostic__pb2.CheckDatabasePerformanceRequest.SerializeToString,
-                response_deserializer=szdiagnostic__pb2.CheckDatabasePerformanceResponse.FromString,
+        self.CheckDatastorePerformance = channel.unary_unary(
+                '/szdiagnostic.SzDiagnostic/CheckDatastorePerformance',
+                request_serializer=szdiagnostic__pb2.CheckDatastorePerformanceRequest.SerializeToString,
+                response_deserializer=szdiagnostic__pb2.CheckDatastorePerformanceResponse.FromString,
+                )
+        self.GetDatastoreInfo = channel.unary_unary(
+                '/szdiagnostic.SzDiagnostic/GetDatastoreInfo',
+                request_serializer=szdiagnostic__pb2.GetDatastoreInfoRequest.SerializeToString,
+                response_deserializer=szdiagnostic__pb2.GetDatastoreInfoResponse.FromString,
                 )
         self.PurgeRepository = channel.unary_unary(
                 '/szdiagnostic.SzDiagnostic/PurgeRepository',
@@ -34,7 +39,13 @@ class SzDiagnosticStub(object):
 class SzDiagnosticServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def CheckDatabasePerformance(self, request, context):
+    def CheckDatastorePerformance(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetDatastoreInfo(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -55,10 +66,15 @@ class SzDiagnosticServicer(object):
 
 def add_SzDiagnosticServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'CheckDatabasePerformance': grpc.unary_unary_rpc_method_handler(
-                    servicer.CheckDatabasePerformance,
-                    request_deserializer=szdiagnostic__pb2.CheckDatabasePerformanceRequest.FromString,
-                    response_serializer=szdiagnostic__pb2.CheckDatabasePerformanceResponse.SerializeToString,
+            'CheckDatastorePerformance': grpc.unary_unary_rpc_method_handler(
+                    servicer.CheckDatastorePerformance,
+                    request_deserializer=szdiagnostic__pb2.CheckDatastorePerformanceRequest.FromString,
+                    response_serializer=szdiagnostic__pb2.CheckDatastorePerformanceResponse.SerializeToString,
+            ),
+            'GetDatastoreInfo': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetDatastoreInfo,
+                    request_deserializer=szdiagnostic__pb2.GetDatastoreInfoRequest.FromString,
+                    response_serializer=szdiagnostic__pb2.GetDatastoreInfoResponse.SerializeToString,
             ),
             'PurgeRepository': grpc.unary_unary_rpc_method_handler(
                     servicer.PurgeRepository,
@@ -81,7 +97,7 @@ class SzDiagnostic(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def CheckDatabasePerformance(request,
+    def CheckDatastorePerformance(request,
             target,
             options=(),
             channel_credentials=None,
@@ -91,9 +107,26 @@ class SzDiagnostic(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/szdiagnostic.SzDiagnostic/CheckDatabasePerformance',
-            szdiagnostic__pb2.CheckDatabasePerformanceRequest.SerializeToString,
-            szdiagnostic__pb2.CheckDatabasePerformanceResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/szdiagnostic.SzDiagnostic/CheckDatastorePerformance',
+            szdiagnostic__pb2.CheckDatastorePerformanceRequest.SerializeToString,
+            szdiagnostic__pb2.CheckDatastorePerformanceResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetDatastoreInfo(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/szdiagnostic.SzDiagnostic/GetDatastoreInfo',
+            szdiagnostic__pb2.GetDatastoreInfoRequest.SerializeToString,
+            szdiagnostic__pb2.GetDatastoreInfoResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
