@@ -94,11 +94,6 @@ class SzEngineStub(object):
                 request_serializer=szengine__pb2.GetRedoRecordRequest.SerializeToString,
                 response_deserializer=szengine__pb2.GetRedoRecordResponse.FromString,
                 )
-        self.GetRepositoryLastModifiedTime = channel.unary_unary(
-                '/szengine.SzEngine/GetRepositoryLastModifiedTime',
-                request_serializer=szengine__pb2.GetRepositoryLastModifiedTimeRequest.SerializeToString,
-                response_deserializer=szengine__pb2.GetRepositoryLastModifiedTimeResponse.FromString,
-                )
         self.GetStats = channel.unary_unary(
                 '/szengine.SzEngine/GetStats',
                 request_serializer=szengine__pb2.GetStatsRequest.SerializeToString,
@@ -270,12 +265,6 @@ class SzEngineServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def GetRepositoryLastModifiedTime(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
     def GetStats(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -442,11 +431,6 @@ def add_SzEngineServicer_to_server(servicer, server):
                     servicer.GetRedoRecord,
                     request_deserializer=szengine__pb2.GetRedoRecordRequest.FromString,
                     response_serializer=szengine__pb2.GetRedoRecordResponse.SerializeToString,
-            ),
-            'GetRepositoryLastModifiedTime': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetRepositoryLastModifiedTime,
-                    request_deserializer=szengine__pb2.GetRepositoryLastModifiedTimeRequest.FromString,
-                    response_serializer=szengine__pb2.GetRepositoryLastModifiedTimeResponse.SerializeToString,
             ),
             'GetStats': grpc.unary_unary_rpc_method_handler(
                     servicer.GetStats,
@@ -797,23 +781,6 @@ class SzEngine(object):
         return grpc.experimental.unary_unary(request, target, '/szengine.SzEngine/GetRedoRecord',
             szengine__pb2.GetRedoRecordRequest.SerializeToString,
             szengine__pb2.GetRedoRecordResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def GetRepositoryLastModifiedTime(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/szengine.SzEngine/GetRepositoryLastModifiedTime',
-            szengine__pb2.GetRepositoryLastModifiedTimeRequest.SerializeToString,
-            szengine__pb2.GetRepositoryLastModifiedTimeResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 

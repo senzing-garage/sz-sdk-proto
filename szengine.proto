@@ -22,7 +22,6 @@ service SzEngine {
   rpc GetEntityByRecordId(GetEntityByRecordIdRequest) returns (GetEntityByRecordIdResponse) {}
   rpc GetRecord(GetRecordRequest) returns (GetRecordResponse) {}
   rpc GetRedoRecord(GetRedoRecordRequest) returns (GetRedoRecordResponse) {}
-  rpc GetRepositoryLastModifiedTime(GetRepositoryLastModifiedTimeRequest) returns (GetRepositoryLastModifiedTimeResponse) {}
   rpc GetStats(GetStatsRequest) returns (GetStatsResponse) {}
   rpc GetVirtualEntityByRecordId(GetVirtualEntityByRecordIdRequest) returns (GetVirtualEntityByRecordIdResponse) {}
   rpc HowEntityByEntityId(HowEntityByEntityIdRequest) returns (HowEntityByEntityIdResponse) {}
@@ -188,12 +187,6 @@ message GetRedoRecordRequest {}
 
 message GetRedoRecordResponse {
   string result = 1;
-}
-
-message GetRepositoryLastModifiedTimeRequest {}
-
-message GetRepositoryLastModifiedTimeResponse {
-  int64 result = 1;
 }
 
 message GetVirtualEntityByRecordIdRequest {

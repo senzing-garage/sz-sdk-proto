@@ -30,7 +30,6 @@ module Szengine
       rpc :GetEntityByRecordId, ::Szengine::GetEntityByRecordIdRequest, ::Szengine::GetEntityByRecordIdResponse
       rpc :GetRecord, ::Szengine::GetRecordRequest, ::Szengine::GetRecordResponse
       rpc :GetRedoRecord, ::Szengine::GetRedoRecordRequest, ::Szengine::GetRedoRecordResponse
-      rpc :GetRepositoryLastModifiedTime, ::Szengine::GetRepositoryLastModifiedTimeRequest, ::Szengine::GetRepositoryLastModifiedTimeResponse
       rpc :GetStats, ::Szengine::GetStatsRequest, ::Szengine::GetStatsResponse
       rpc :GetVirtualEntityByRecordId, ::Szengine::GetVirtualEntityByRecordIdRequest, ::Szengine::GetVirtualEntityByRecordIdResponse
       rpc :HowEntityByEntityId, ::Szengine::HowEntityByEntityIdRequest, ::Szengine::HowEntityByEntityIdResponse

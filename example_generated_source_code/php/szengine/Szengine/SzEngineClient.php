@@ -241,20 +241,6 @@ class SzEngineClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Szengine\GetRepositoryLastModifiedTimeRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function GetRepositoryLastModifiedTime(\Szengine\GetRepositoryLastModifiedTimeRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szengine.SzEngine/GetRepositoryLastModifiedTime',
-        $argument,
-        ['\Szengine\GetRepositoryLastModifiedTimeResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \Szengine\GetStatsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

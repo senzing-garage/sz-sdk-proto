@@ -153,12 +153,6 @@ extern GetRedoRecordRequestDefaultTypeInternal _GetRedoRecordRequest_default_ins
 class GetRedoRecordResponse;
 struct GetRedoRecordResponseDefaultTypeInternal;
 extern GetRedoRecordResponseDefaultTypeInternal _GetRedoRecordResponse_default_instance_;
-class GetRepositoryLastModifiedTimeRequest;
-struct GetRepositoryLastModifiedTimeRequestDefaultTypeInternal;
-extern GetRepositoryLastModifiedTimeRequestDefaultTypeInternal _GetRepositoryLastModifiedTimeRequest_default_instance_;
-class GetRepositoryLastModifiedTimeResponse;
-struct GetRepositoryLastModifiedTimeResponseDefaultTypeInternal;
-extern GetRepositoryLastModifiedTimeResponseDefaultTypeInternal _GetRepositoryLastModifiedTimeResponse_default_instance_;
 class GetStatsRequest;
 struct GetStatsRequestDefaultTypeInternal;
 extern GetStatsRequestDefaultTypeInternal _GetStatsRequest_default_instance_;
@@ -315,7 +309,7 @@ class WhyRecordsResponse final :
                &_WhyRecordsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    61;
+    59;
 
   friend void swap(WhyRecordsResponse& a, WhyRecordsResponse& b) {
     a.Swap(&b);
@@ -496,7 +490,7 @@ class WhyRecordsRequest final :
                &_WhyRecordsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    60;
+    58;
 
   friend void swap(WhyRecordsRequest& a, WhyRecordsRequest& b) {
     a.Swap(&b);
@@ -743,7 +737,7 @@ class WhyRecordInEntityResponse final :
                &_WhyRecordInEntityResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    59;
+    57;
 
   friend void swap(WhyRecordInEntityResponse& a, WhyRecordInEntityResponse& b) {
     a.Swap(&b);
@@ -924,7 +918,7 @@ class WhyRecordInEntityRequest final :
                &_WhyRecordInEntityRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    58;
+    56;
 
   friend void swap(WhyRecordInEntityRequest& a, WhyRecordInEntityRequest& b) {
     a.Swap(&b);
@@ -1135,7 +1129,7 @@ class WhyEntitiesResponse final :
                &_WhyEntitiesResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    57;
+    55;
 
   friend void swap(WhyEntitiesResponse& a, WhyEntitiesResponse& b) {
     a.Swap(&b);
@@ -1316,7 +1310,7 @@ class WhyEntitiesRequest final :
                &_WhyEntitiesRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    56;
+    54;
 
   friend void swap(WhyEntitiesRequest& a, WhyEntitiesRequest& b) {
     a.Swap(&b);
@@ -1515,7 +1509,7 @@ class StreamExportJsonEntityReportResponse final :
                &_StreamExportJsonEntityReportResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    55;
+    53;
 
   friend void swap(StreamExportJsonEntityReportResponse& a, StreamExportJsonEntityReportResponse& b) {
     a.Swap(&b);
@@ -1696,7 +1690,7 @@ class StreamExportJsonEntityReportRequest final :
                &_StreamExportJsonEntityReportRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    54;
+    52;
 
   friend void swap(StreamExportJsonEntityReportRequest& a, StreamExportJsonEntityReportRequest& b) {
     a.Swap(&b);
@@ -1871,7 +1865,7 @@ class StreamExportCsvEntityReportResponse final :
                &_StreamExportCsvEntityReportResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    53;
+    51;
 
   friend void swap(StreamExportCsvEntityReportResponse& a, StreamExportCsvEntityReportResponse& b) {
     a.Swap(&b);
@@ -2052,7 +2046,7 @@ class StreamExportCsvEntityReportRequest final :
                &_StreamExportCsvEntityReportRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    52;
+    50;
 
   friend void swap(StreamExportCsvEntityReportRequest& a, StreamExportCsvEntityReportRequest& b) {
     a.Swap(&b);
@@ -2245,7 +2239,7 @@ class SearchByAttributesResponse final :
                &_SearchByAttributesResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    49;
+    47;
 
   friend void swap(SearchByAttributesResponse& a, SearchByAttributesResponse& b) {
     a.Swap(&b);
@@ -2426,7 +2420,7 @@ class SearchByAttributesRequest final :
                &_SearchByAttributesRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    48;
+    46;
 
   friend void swap(SearchByAttributesRequest& a, SearchByAttributesRequest& b) {
     a.Swap(&b);
@@ -2636,7 +2630,7 @@ class ReinitializeResponse final :
                &_ReinitializeResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    47;
+    45;
 
   friend void swap(ReinitializeResponse& a, ReinitializeResponse& b) {
     a.Swap(&b);
@@ -2773,7 +2767,7 @@ class ReinitializeRequest final :
                &_ReinitializeRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    46;
+    44;
 
   friend void swap(ReinitializeRequest& a, ReinitializeRequest& b) {
     a.Swap(&b);
@@ -2948,7 +2942,7 @@ class ReevaluateRecordResponse final :
                &_ReevaluateRecordResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    45;
+    43;
 
   friend void swap(ReevaluateRecordResponse& a, ReevaluateRecordResponse& b) {
     a.Swap(&b);
@@ -3129,7 +3123,7 @@ class ReevaluateRecordRequest final :
                &_ReevaluateRecordRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    44;
+    42;
 
   friend void swap(ReevaluateRecordRequest& a, ReevaluateRecordRequest& b) {
     a.Swap(&b);
@@ -3340,7 +3334,7 @@ class ReevaluateEntityResponse final :
                &_ReevaluateEntityResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    43;
+    41;
 
   friend void swap(ReevaluateEntityResponse& a, ReevaluateEntityResponse& b) {
     a.Swap(&b);
@@ -3521,7 +3515,7 @@ class ReevaluateEntityRequest final :
                &_ReevaluateEntityRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    42;
+    40;
 
   friend void swap(ReevaluateEntityRequest& a, ReevaluateEntityRequest& b) {
     a.Swap(&b);
@@ -3708,7 +3702,7 @@ class ProcessRedoRecordResponse final :
                &_ProcessRedoRecordResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    41;
+    39;
 
   friend void swap(ProcessRedoRecordResponse& a, ProcessRedoRecordResponse& b) {
     a.Swap(&b);
@@ -3889,7 +3883,7 @@ class ProcessRedoRecordRequest final :
                &_ProcessRedoRecordRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    40;
+    38;
 
   friend void swap(ProcessRedoRecordRequest& a, ProcessRedoRecordRequest& b) {
     a.Swap(&b);
@@ -4081,7 +4075,7 @@ class PrimeEngineResponse final :
                &_PrimeEngineResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    39;
+    37;
 
   friend void swap(PrimeEngineResponse& a, PrimeEngineResponse& b) {
     a.Swap(&b);
@@ -4217,7 +4211,7 @@ class PrimeEngineRequest final :
                &_PrimeEngineRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    38;
+    36;
 
   friend void swap(PrimeEngineRequest& a, PrimeEngineRequest& b) {
     a.Swap(&b);
@@ -4354,7 +4348,7 @@ class HowEntityByEntityIdResponse final :
                &_HowEntityByEntityIdResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    37;
+    35;
 
   friend void swap(HowEntityByEntityIdResponse& a, HowEntityByEntityIdResponse& b) {
     a.Swap(&b);
@@ -4535,7 +4529,7 @@ class HowEntityByEntityIdRequest final :
                &_HowEntityByEntityIdRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    36;
+    34;
 
   friend void swap(HowEntityByEntityIdRequest& a, HowEntityByEntityIdRequest& b) {
     a.Swap(&b);
@@ -4722,7 +4716,7 @@ class GetVirtualEntityByRecordIdResponse final :
                &_GetVirtualEntityByRecordIdResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    35;
+    33;
 
   friend void swap(GetVirtualEntityByRecordIdResponse& a, GetVirtualEntityByRecordIdResponse& b) {
     a.Swap(&b);
@@ -4903,7 +4897,7 @@ class GetVirtualEntityByRecordIdRequest final :
                &_GetVirtualEntityByRecordIdRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    34;
+    32;
 
   friend void swap(GetVirtualEntityByRecordIdRequest& a, GetVirtualEntityByRecordIdRequest& b) {
     a.Swap(&b);
@@ -5096,7 +5090,7 @@ class GetStatsResponse final :
                &_GetStatsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    51;
+    49;
 
   friend void swap(GetStatsResponse& a, GetStatsResponse& b) {
     a.Swap(&b);
@@ -5276,7 +5270,7 @@ class GetStatsRequest final :
                &_GetStatsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    50;
+    48;
 
   friend void swap(GetStatsRequest& a, GetStatsRequest& b) {
     a.Swap(&b);
@@ -5332,317 +5326,6 @@ class GetStatsRequest final :
   // accessors -------------------------------------------------------
 
   // @@protoc_insertion_point(class_scope:szengine.GetStatsRequest)
- private:
-  class _Internal;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-
-        inline explicit constexpr Impl_(
-            ::google::protobuf::internal::ConstantInitialized) noexcept;
-        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                              ::google::protobuf::Arena* arena);
-        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                              ::google::protobuf::Arena* arena, const Impl_& from);
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  friend struct ::TableStruct_szengine_2eproto;
-};// -------------------------------------------------------------------
-
-class GetRepositoryLastModifiedTimeResponse final :
-    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szengine.GetRepositoryLastModifiedTimeResponse) */ {
- public:
-  inline GetRepositoryLastModifiedTimeResponse() : GetRepositoryLastModifiedTimeResponse(nullptr) {}
-  ~GetRepositoryLastModifiedTimeResponse() override;
-  template<typename = void>
-  explicit PROTOBUF_CONSTEXPR GetRepositoryLastModifiedTimeResponse(::google::protobuf::internal::ConstantInitialized);
-
-  inline GetRepositoryLastModifiedTimeResponse(const GetRepositoryLastModifiedTimeResponse& from)
-      : GetRepositoryLastModifiedTimeResponse(nullptr, from) {}
-  GetRepositoryLastModifiedTimeResponse(GetRepositoryLastModifiedTimeResponse&& from) noexcept
-    : GetRepositoryLastModifiedTimeResponse() {
-    *this = ::std::move(from);
-  }
-
-  inline GetRepositoryLastModifiedTimeResponse& operator=(const GetRepositoryLastModifiedTimeResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline GetRepositoryLastModifiedTimeResponse& operator=(GetRepositoryLastModifiedTimeResponse&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetArena() == from.GetArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const GetRepositoryLastModifiedTimeResponse& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const GetRepositoryLastModifiedTimeResponse* internal_default_instance() {
-    return reinterpret_cast<const GetRepositoryLastModifiedTimeResponse*>(
-               &_GetRepositoryLastModifiedTimeResponse_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    33;
-
-  friend void swap(GetRepositoryLastModifiedTimeResponse& a, GetRepositoryLastModifiedTimeResponse& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(GetRepositoryLastModifiedTimeResponse* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() != nullptr &&
-        GetArena() == other->GetArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() == other->GetArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(GetRepositoryLastModifiedTimeResponse* other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  GetRepositoryLastModifiedTimeResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<GetRepositoryLastModifiedTimeResponse>(arena);
-  }
-  using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const GetRepositoryLastModifiedTimeResponse& from);
-  using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom( const GetRepositoryLastModifiedTimeResponse& from) {
-    GetRepositoryLastModifiedTimeResponse::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  ::size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
-  ::uint8_t* _InternalSerialize(
-      ::uint8_t* target, ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
-
-  private:
-  ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
-  void SharedCtor(::google::protobuf::Arena* arena);
-  void SharedDtor();
-  void InternalSwap(GetRepositoryLastModifiedTimeResponse* other);
-
-  private:
-  friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() {
-    return "szengine.GetRepositoryLastModifiedTimeResponse";
-  }
-  protected:
-  explicit GetRepositoryLastModifiedTimeResponse(::google::protobuf::Arena* arena);
-  GetRepositoryLastModifiedTimeResponse(::google::protobuf::Arena* arena, const GetRepositoryLastModifiedTimeResponse& from);
-  public:
-
-  static const ClassData _class_data_;
-  const ::google::protobuf::Message::ClassData*GetClassData() const final;
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kResultFieldNumber = 1,
-  };
-  // int64 result = 1;
-  void clear_result() ;
-  ::int64_t result() const;
-  void set_result(::int64_t value);
-
-  private:
-  ::int64_t _internal_result() const;
-  void _internal_set_result(::int64_t value);
-
-  public:
-  // @@protoc_insertion_point(class_scope:szengine.GetRepositoryLastModifiedTimeResponse)
- private:
-  class _Internal;
-
-  friend class ::google::protobuf::internal::TcParser;
-  static const ::google::protobuf::internal::TcParseTable<
-      0, 1, 0,
-      0, 2>
-      _table_;
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-
-        inline explicit constexpr Impl_(
-            ::google::protobuf::internal::ConstantInitialized) noexcept;
-        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                              ::google::protobuf::Arena* arena);
-        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-                              ::google::protobuf::Arena* arena, const Impl_& from);
-    ::int64_t result_;
-    mutable ::google::protobuf::internal::CachedSize _cached_size_;
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_szengine_2eproto;
-};// -------------------------------------------------------------------
-
-class GetRepositoryLastModifiedTimeRequest final :
-    public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:szengine.GetRepositoryLastModifiedTimeRequest) */ {
- public:
-  inline GetRepositoryLastModifiedTimeRequest() : GetRepositoryLastModifiedTimeRequest(nullptr) {}
-  template<typename = void>
-  explicit PROTOBUF_CONSTEXPR GetRepositoryLastModifiedTimeRequest(::google::protobuf::internal::ConstantInitialized);
-
-  inline GetRepositoryLastModifiedTimeRequest(const GetRepositoryLastModifiedTimeRequest& from)
-      : GetRepositoryLastModifiedTimeRequest(nullptr, from) {}
-  GetRepositoryLastModifiedTimeRequest(GetRepositoryLastModifiedTimeRequest&& from) noexcept
-    : GetRepositoryLastModifiedTimeRequest() {
-    *this = ::std::move(from);
-  }
-
-  inline GetRepositoryLastModifiedTimeRequest& operator=(const GetRepositoryLastModifiedTimeRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline GetRepositoryLastModifiedTimeRequest& operator=(GetRepositoryLastModifiedTimeRequest&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetArena() == from.GetArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const GetRepositoryLastModifiedTimeRequest& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const GetRepositoryLastModifiedTimeRequest* internal_default_instance() {
-    return reinterpret_cast<const GetRepositoryLastModifiedTimeRequest*>(
-               &_GetRepositoryLastModifiedTimeRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    32;
-
-  friend void swap(GetRepositoryLastModifiedTimeRequest& a, GetRepositoryLastModifiedTimeRequest& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(GetRepositoryLastModifiedTimeRequest* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() != nullptr &&
-        GetArena() == other->GetArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetArena() == other->GetArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(GetRepositoryLastModifiedTimeRequest* other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  GetRepositoryLastModifiedTimeRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<GetRepositoryLastModifiedTimeRequest>(arena);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const GetRepositoryLastModifiedTimeRequest& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const GetRepositoryLastModifiedTimeRequest& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
-  public:
-
-  private:
-  friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() {
-    return "szengine.GetRepositoryLastModifiedTimeRequest";
-  }
-  protected:
-  explicit GetRepositoryLastModifiedTimeRequest(::google::protobuf::Arena* arena);
-  GetRepositoryLastModifiedTimeRequest(::google::protobuf::Arena* arena, const GetRepositoryLastModifiedTimeRequest& from);
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // @@protoc_insertion_point(class_scope:szengine.GetRepositoryLastModifiedTimeRequest)
  private:
   class _Internal;
 
@@ -14092,37 +13775,6 @@ inline void GetRedoRecordResponse::set_allocated_result(std::string* value) {
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:szengine.GetRedoRecordResponse.result)
-}
-
-// -------------------------------------------------------------------
-
-// GetRepositoryLastModifiedTimeRequest
-
-// -------------------------------------------------------------------
-
-// GetRepositoryLastModifiedTimeResponse
-
-// int64 result = 1;
-inline void GetRepositoryLastModifiedTimeResponse::clear_result() {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.result_ = ::int64_t{0};
-}
-inline ::int64_t GetRepositoryLastModifiedTimeResponse::result() const {
-  // @@protoc_insertion_point(field_get:szengine.GetRepositoryLastModifiedTimeResponse.result)
-  return _internal_result();
-}
-inline void GetRepositoryLastModifiedTimeResponse::set_result(::int64_t value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:szengine.GetRepositoryLastModifiedTimeResponse.result)
-}
-inline ::int64_t GetRepositoryLastModifiedTimeResponse::_internal_result() const {
-  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.result_;
-}
-inline void GetRepositoryLastModifiedTimeResponse::_internal_set_result(::int64_t value) {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ;
-  _impl_.result_ = value;
 }
 
 // -------------------------------------------------------------------

@@ -38,7 +38,6 @@ type SzEngineClient interface {
 	GetEntityByRecordId(ctx context.Context, in *GetEntityByRecordIdRequest, opts ...grpc.CallOption) (*GetEntityByRecordIdResponse, error)
 	GetRecord(ctx context.Context, in *GetRecordRequest, opts ...grpc.CallOption) (*GetRecordResponse, error)
 	GetRedoRecord(ctx context.Context, in *GetRedoRecordRequest, opts ...grpc.CallOption) (*GetRedoRecordResponse, error)
-	GetRepositoryLastModifiedTime(ctx context.Context, in *GetRepositoryLastModifiedTimeRequest, opts ...grpc.CallOption) (*GetRepositoryLastModifiedTimeResponse, error)
 	GetStats(ctx context.Context, in *GetStatsRequest, opts ...grpc.CallOption) (*GetStatsResponse, error)
 	GetVirtualEntityByRecordId(ctx context.Context, in *GetVirtualEntityByRecordIdRequest, opts ...grpc.CallOption) (*GetVirtualEntityByRecordIdResponse, error)
 	HowEntityByEntityId(ctx context.Context, in *HowEntityByEntityIdRequest, opts ...grpc.CallOption) (*HowEntityByEntityIdResponse, error)
@@ -201,15 +200,6 @@ func (c *szEngineClient) GetRecord(ctx context.Context, in *GetRecordRequest, op
 func (c *szEngineClient) GetRedoRecord(ctx context.Context, in *GetRedoRecordRequest, opts ...grpc.CallOption) (*GetRedoRecordResponse, error) {
 	out := new(GetRedoRecordResponse)
 	err := c.cc.Invoke(ctx, "/szengine.SzEngine/GetRedoRecord", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *szEngineClient) GetRepositoryLastModifiedTime(ctx context.Context, in *GetRepositoryLastModifiedTimeRequest, opts ...grpc.CallOption) (*GetRepositoryLastModifiedTimeResponse, error) {
-	out := new(GetRepositoryLastModifiedTimeResponse)
-	err := c.cc.Invoke(ctx, "/szengine.SzEngine/GetRepositoryLastModifiedTime", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -408,7 +398,6 @@ type SzEngineServer interface {
 	GetEntityByRecordId(context.Context, *GetEntityByRecordIdRequest) (*GetEntityByRecordIdResponse, error)
 	GetRecord(context.Context, *GetRecordRequest) (*GetRecordResponse, error)
 	GetRedoRecord(context.Context, *GetRedoRecordRequest) (*GetRedoRecordResponse, error)
-	GetRepositoryLastModifiedTime(context.Context, *GetRepositoryLastModifiedTimeRequest) (*GetRepositoryLastModifiedTimeResponse, error)
 	GetStats(context.Context, *GetStatsRequest) (*GetStatsResponse, error)
 	GetVirtualEntityByRecordId(context.Context, *GetVirtualEntityByRecordIdRequest) (*GetVirtualEntityByRecordIdResponse, error)
 	HowEntityByEntityId(context.Context, *HowEntityByEntityIdRequest) (*HowEntityByEntityIdResponse, error)
@@ -477,9 +466,6 @@ func (UnimplementedSzEngineServer) GetRecord(context.Context, *GetRecordRequest)
 }
 func (UnimplementedSzEngineServer) GetRedoRecord(context.Context, *GetRedoRecordRequest) (*GetRedoRecordResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetRedoRecord not implemented")
-}
-func (UnimplementedSzEngineServer) GetRepositoryLastModifiedTime(context.Context, *GetRepositoryLastModifiedTimeRequest) (*GetRepositoryLastModifiedTimeResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetRepositoryLastModifiedTime not implemented")
 }
 func (UnimplementedSzEngineServer) GetStats(context.Context, *GetStatsRequest) (*GetStatsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetStats not implemented")
@@ -824,24 +810,6 @@ func _SzEngine_GetRedoRecord_Handler(srv interface{}, ctx context.Context, dec f
 	return interceptor(ctx, in, info, handler)
 }
 
-func _SzEngine_GetRepositoryLastModifiedTime_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetRepositoryLastModifiedTimeRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(SzEngineServer).GetRepositoryLastModifiedTime(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/szengine.SzEngine/GetRepositoryLastModifiedTime",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzEngineServer).GetRepositoryLastModifiedTime(ctx, req.(*GetRepositoryLastModifiedTimeRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _SzEngine_GetStats_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetStatsRequest)
 	if err := dec(in); err != nil {
@@ -1170,10 +1138,6 @@ var SzEngine_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetRedoRecord",
 			Handler:    _SzEngine_GetRedoRecord_Handler,
-		},
-		{
-			MethodName: "GetRepositoryLastModifiedTime",
-			Handler:    _SzEngine_GetRepositoryLastModifiedTime_Handler,
 		},
 		{
 			MethodName: "GetStats",
