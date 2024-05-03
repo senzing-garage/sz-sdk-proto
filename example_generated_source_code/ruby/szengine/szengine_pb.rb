@@ -128,11 +128,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "szengine.GetRedoRecordResponse" do
       optional :result, :string, 1
     end
-    add_message "szengine.GetRepositoryLastModifiedTimeRequest" do
-    end
-    add_message "szengine.GetRepositoryLastModifiedTimeResponse" do
-      optional :result, :int64, 1
-    end
     add_message "szengine.GetVirtualEntityByRecordIdRequest" do
       optional :recordList, :string, 1
       optional :flags, :int64, 2
@@ -266,8 +261,6 @@ module Szengine
   GetRecordResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetRecordResponse").msgclass
   GetRedoRecordRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetRedoRecordRequest").msgclass
   GetRedoRecordResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetRedoRecordResponse").msgclass
-  GetRepositoryLastModifiedTimeRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetRepositoryLastModifiedTimeRequest").msgclass
-  GetRepositoryLastModifiedTimeResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetRepositoryLastModifiedTimeResponse").msgclass
   GetVirtualEntityByRecordIdRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetVirtualEntityByRecordIdRequest").msgclass
   GetVirtualEntityByRecordIdResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetVirtualEntityByRecordIdResponse").msgclass
   HowEntityByEntityIdRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.HowEntityByEntityIdRequest").msgclass
