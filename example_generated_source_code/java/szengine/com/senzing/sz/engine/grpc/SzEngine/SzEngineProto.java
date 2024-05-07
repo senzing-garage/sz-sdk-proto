@@ -7646,6 +7646,2433 @@ public final class SzEngineProto {
 
   }
 
+  public interface FindInterestingEntitiesByEntityIdRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:szengine.FindInterestingEntitiesByEntityIdRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 entityId = 1;</code>
+     * @return The entityId.
+     */
+    long getEntityId();
+
+    /**
+     * <code>int64 flags = 2;</code>
+     * @return The flags.
+     */
+    long getFlags();
+  }
+  /**
+   * Protobuf type {@code szengine.FindInterestingEntitiesByEntityIdRequest}
+   */
+  public static final class FindInterestingEntitiesByEntityIdRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:szengine.FindInterestingEntitiesByEntityIdRequest)
+      FindInterestingEntitiesByEntityIdRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FindInterestingEntitiesByEntityIdRequest.newBuilder() to construct.
+    private FindInterestingEntitiesByEntityIdRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FindInterestingEntitiesByEntityIdRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FindInterestingEntitiesByEntityIdRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.Builder.class);
+    }
+
+    public static final int ENTITYID_FIELD_NUMBER = 1;
+    private long entityId_ = 0L;
+    /**
+     * <code>int64 entityId = 1;</code>
+     * @return The entityId.
+     */
+    @java.lang.Override
+    public long getEntityId() {
+      return entityId_;
+    }
+
+    public static final int FLAGS_FIELD_NUMBER = 2;
+    private long flags_ = 0L;
+    /**
+     * <code>int64 flags = 2;</code>
+     * @return The flags.
+     */
+    @java.lang.Override
+    public long getFlags() {
+      return flags_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (entityId_ != 0L) {
+        output.writeInt64(1, entityId_);
+      }
+      if (flags_ != 0L) {
+        output.writeInt64(2, flags_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (entityId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, entityId_);
+      }
+      if (flags_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, flags_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest)) {
+        return super.equals(obj);
+      }
+      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest) obj;
+
+      if (getEntityId()
+          != other.getEntityId()) return false;
+      if (getFlags()
+          != other.getFlags()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENTITYID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEntityId());
+      hash = (37 * hash) + FLAGS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFlags());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code szengine.FindInterestingEntitiesByEntityIdRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:szengine.FindInterestingEntitiesByEntityIdRequest)
+        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.Builder.class);
+      }
+
+      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        entityId_ = 0L;
+        flags_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest getDefaultInstanceForType() {
+        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest build() {
+        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest buildPartial() {
+        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.entityId_ = entityId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.flags_ = flags_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest) {
+          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest other) {
+        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.getDefaultInstance()) return this;
+        if (other.getEntityId() != 0L) {
+          setEntityId(other.getEntityId());
+        }
+        if (other.getFlags() != 0L) {
+          setFlags(other.getFlags());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                entityId_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                flags_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long entityId_ ;
+      /**
+       * <code>int64 entityId = 1;</code>
+       * @return The entityId.
+       */
+      @java.lang.Override
+      public long getEntityId() {
+        return entityId_;
+      }
+      /**
+       * <code>int64 entityId = 1;</code>
+       * @param value The entityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityId(long value) {
+
+        entityId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 entityId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntityId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        entityId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long flags_ ;
+      /**
+       * <code>int64 flags = 2;</code>
+       * @return The flags.
+       */
+      @java.lang.Override
+      public long getFlags() {
+        return flags_;
+      }
+      /**
+       * <code>int64 flags = 2;</code>
+       * @param value The flags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlags(long value) {
+
+        flags_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 flags = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFlags() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        flags_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:szengine.FindInterestingEntitiesByEntityIdRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:szengine.FindInterestingEntitiesByEntityIdRequest)
+    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest();
+    }
+
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FindInterestingEntitiesByEntityIdRequest>
+        PARSER = new com.google.protobuf.AbstractParser<FindInterestingEntitiesByEntityIdRequest>() {
+      @java.lang.Override
+      public FindInterestingEntitiesByEntityIdRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FindInterestingEntitiesByEntityIdRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FindInterestingEntitiesByEntityIdRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FindInterestingEntitiesByEntityIdResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:szengine.FindInterestingEntitiesByEntityIdResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string result = 1;</code>
+     * @return The result.
+     */
+    java.lang.String getResult();
+    /**
+     * <code>string result = 1;</code>
+     * @return The bytes for result.
+     */
+    com.google.protobuf.ByteString
+        getResultBytes();
+  }
+  /**
+   * Protobuf type {@code szengine.FindInterestingEntitiesByEntityIdResponse}
+   */
+  public static final class FindInterestingEntitiesByEntityIdResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:szengine.FindInterestingEntitiesByEntityIdResponse)
+      FindInterestingEntitiesByEntityIdResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FindInterestingEntitiesByEntityIdResponse.newBuilder() to construct.
+    private FindInterestingEntitiesByEntityIdResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FindInterestingEntitiesByEntityIdResponse() {
+      result_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FindInterestingEntitiesByEntityIdResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.Builder.class);
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object result_ = "";
+    /**
+     * <code>string result = 1;</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public java.lang.String getResult() {
+      java.lang.Object ref = result_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        result_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string result = 1;</code>
+     * @return The bytes for result.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResultBytes() {
+      java.lang.Object ref = result_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        result_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, result_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, result_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse)) {
+        return super.equals(obj);
+      }
+      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse) obj;
+
+      if (!getResult()
+          .equals(other.getResult())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESULT_FIELD_NUMBER;
+      hash = (53 * hash) + getResult().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code szengine.FindInterestingEntitiesByEntityIdResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:szengine.FindInterestingEntitiesByEntityIdResponse)
+        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.Builder.class);
+      }
+
+      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        result_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse getDefaultInstanceForType() {
+        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse build() {
+        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse buildPartial() {
+        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.result_ = result_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse) {
+          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse other) {
+        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.getDefaultInstance()) return this;
+        if (!other.getResult().isEmpty()) {
+          result_ = other.result_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                result_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object result_ = "";
+      /**
+       * <code>string result = 1;</code>
+       * @return The result.
+       */
+      public java.lang.String getResult() {
+        java.lang.Object ref = result_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          result_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string result = 1;</code>
+       * @return The bytes for result.
+       */
+      public com.google.protobuf.ByteString
+          getResultBytes() {
+        java.lang.Object ref = result_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          result_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string result = 1;</code>
+       * @param value The result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResult(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        result_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string result = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResult() {
+        result_ = getDefaultInstance().getResult();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string result = 1;</code>
+       * @param value The bytes for result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResultBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        result_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:szengine.FindInterestingEntitiesByEntityIdResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:szengine.FindInterestingEntitiesByEntityIdResponse)
+    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse();
+    }
+
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FindInterestingEntitiesByEntityIdResponse>
+        PARSER = new com.google.protobuf.AbstractParser<FindInterestingEntitiesByEntityIdResponse>() {
+      @java.lang.Override
+      public FindInterestingEntitiesByEntityIdResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FindInterestingEntitiesByEntityIdResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FindInterestingEntitiesByEntityIdResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FindInterestingEntitiesByRecordIdRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:szengine.FindInterestingEntitiesByRecordIdRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string dataSourceCode = 1;</code>
+     * @return The dataSourceCode.
+     */
+    java.lang.String getDataSourceCode();
+    /**
+     * <code>string dataSourceCode = 1;</code>
+     * @return The bytes for dataSourceCode.
+     */
+    com.google.protobuf.ByteString
+        getDataSourceCodeBytes();
+
+    /**
+     * <code>string recordId = 2;</code>
+     * @return The recordId.
+     */
+    java.lang.String getRecordId();
+    /**
+     * <code>string recordId = 2;</code>
+     * @return The bytes for recordId.
+     */
+    com.google.protobuf.ByteString
+        getRecordIdBytes();
+
+    /**
+     * <code>int64 flags = 3;</code>
+     * @return The flags.
+     */
+    long getFlags();
+  }
+  /**
+   * Protobuf type {@code szengine.FindInterestingEntitiesByRecordIdRequest}
+   */
+  public static final class FindInterestingEntitiesByRecordIdRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:szengine.FindInterestingEntitiesByRecordIdRequest)
+      FindInterestingEntitiesByRecordIdRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FindInterestingEntitiesByRecordIdRequest.newBuilder() to construct.
+    private FindInterestingEntitiesByRecordIdRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FindInterestingEntitiesByRecordIdRequest() {
+      dataSourceCode_ = "";
+      recordId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FindInterestingEntitiesByRecordIdRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.Builder.class);
+    }
+
+    public static final int DATASOURCECODE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object dataSourceCode_ = "";
+    /**
+     * <code>string dataSourceCode = 1;</code>
+     * @return The dataSourceCode.
+     */
+    @java.lang.Override
+    public java.lang.String getDataSourceCode() {
+      java.lang.Object ref = dataSourceCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dataSourceCode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string dataSourceCode = 1;</code>
+     * @return The bytes for dataSourceCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDataSourceCodeBytes() {
+      java.lang.Object ref = dataSourceCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dataSourceCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECORDID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recordId_ = "";
+    /**
+     * <code>string recordId = 2;</code>
+     * @return The recordId.
+     */
+    @java.lang.Override
+    public java.lang.String getRecordId() {
+      java.lang.Object ref = recordId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recordId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string recordId = 2;</code>
+     * @return The bytes for recordId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecordIdBytes() {
+      java.lang.Object ref = recordId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recordId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FLAGS_FIELD_NUMBER = 3;
+    private long flags_ = 0L;
+    /**
+     * <code>int64 flags = 3;</code>
+     * @return The flags.
+     */
+    @java.lang.Override
+    public long getFlags() {
+      return flags_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataSourceCode_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dataSourceCode_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, recordId_);
+      }
+      if (flags_ != 0L) {
+        output.writeInt64(3, flags_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataSourceCode_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dataSourceCode_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, recordId_);
+      }
+      if (flags_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, flags_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest)) {
+        return super.equals(obj);
+      }
+      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest) obj;
+
+      if (!getDataSourceCode()
+          .equals(other.getDataSourceCode())) return false;
+      if (!getRecordId()
+          .equals(other.getRecordId())) return false;
+      if (getFlags()
+          != other.getFlags()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATASOURCECODE_FIELD_NUMBER;
+      hash = (53 * hash) + getDataSourceCode().hashCode();
+      hash = (37 * hash) + RECORDID_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordId().hashCode();
+      hash = (37 * hash) + FLAGS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFlags());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code szengine.FindInterestingEntitiesByRecordIdRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:szengine.FindInterestingEntitiesByRecordIdRequest)
+        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.Builder.class);
+      }
+
+      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        dataSourceCode_ = "";
+        recordId_ = "";
+        flags_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest getDefaultInstanceForType() {
+        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest build() {
+        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest buildPartial() {
+        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dataSourceCode_ = dataSourceCode_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.recordId_ = recordId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.flags_ = flags_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest) {
+          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest other) {
+        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.getDefaultInstance()) return this;
+        if (!other.getDataSourceCode().isEmpty()) {
+          dataSourceCode_ = other.dataSourceCode_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getRecordId().isEmpty()) {
+          recordId_ = other.recordId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getFlags() != 0L) {
+          setFlags(other.getFlags());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                dataSourceCode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                recordId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                flags_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object dataSourceCode_ = "";
+      /**
+       * <code>string dataSourceCode = 1;</code>
+       * @return The dataSourceCode.
+       */
+      public java.lang.String getDataSourceCode() {
+        java.lang.Object ref = dataSourceCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dataSourceCode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string dataSourceCode = 1;</code>
+       * @return The bytes for dataSourceCode.
+       */
+      public com.google.protobuf.ByteString
+          getDataSourceCodeBytes() {
+        java.lang.Object ref = dataSourceCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dataSourceCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string dataSourceCode = 1;</code>
+       * @param value The dataSourceCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataSourceCode(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        dataSourceCode_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dataSourceCode = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataSourceCode() {
+        dataSourceCode_ = getDefaultInstance().getDataSourceCode();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dataSourceCode = 1;</code>
+       * @param value The bytes for dataSourceCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataSourceCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        dataSourceCode_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object recordId_ = "";
+      /**
+       * <code>string recordId = 2;</code>
+       * @return The recordId.
+       */
+      public java.lang.String getRecordId() {
+        java.lang.Object ref = recordId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recordId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string recordId = 2;</code>
+       * @return The bytes for recordId.
+       */
+      public com.google.protobuf.ByteString
+          getRecordIdBytes() {
+        java.lang.Object ref = recordId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recordId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string recordId = 2;</code>
+       * @param value The recordId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recordId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string recordId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecordId() {
+        recordId_ = getDefaultInstance().getRecordId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string recordId = 2;</code>
+       * @param value The bytes for recordId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecordIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recordId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long flags_ ;
+      /**
+       * <code>int64 flags = 3;</code>
+       * @return The flags.
+       */
+      @java.lang.Override
+      public long getFlags() {
+        return flags_;
+      }
+      /**
+       * <code>int64 flags = 3;</code>
+       * @param value The flags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlags(long value) {
+
+        flags_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 flags = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFlags() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        flags_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:szengine.FindInterestingEntitiesByRecordIdRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:szengine.FindInterestingEntitiesByRecordIdRequest)
+    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest();
+    }
+
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FindInterestingEntitiesByRecordIdRequest>
+        PARSER = new com.google.protobuf.AbstractParser<FindInterestingEntitiesByRecordIdRequest>() {
+      @java.lang.Override
+      public FindInterestingEntitiesByRecordIdRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FindInterestingEntitiesByRecordIdRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FindInterestingEntitiesByRecordIdRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FindInterestingEntitiesByRecordIdResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:szengine.FindInterestingEntitiesByRecordIdResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string result = 1;</code>
+     * @return The result.
+     */
+    java.lang.String getResult();
+    /**
+     * <code>string result = 1;</code>
+     * @return The bytes for result.
+     */
+    com.google.protobuf.ByteString
+        getResultBytes();
+  }
+  /**
+   * Protobuf type {@code szengine.FindInterestingEntitiesByRecordIdResponse}
+   */
+  public static final class FindInterestingEntitiesByRecordIdResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:szengine.FindInterestingEntitiesByRecordIdResponse)
+      FindInterestingEntitiesByRecordIdResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FindInterestingEntitiesByRecordIdResponse.newBuilder() to construct.
+    private FindInterestingEntitiesByRecordIdResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FindInterestingEntitiesByRecordIdResponse() {
+      result_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FindInterestingEntitiesByRecordIdResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.Builder.class);
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object result_ = "";
+    /**
+     * <code>string result = 1;</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public java.lang.String getResult() {
+      java.lang.Object ref = result_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        result_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string result = 1;</code>
+     * @return The bytes for result.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResultBytes() {
+      java.lang.Object ref = result_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        result_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, result_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, result_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse)) {
+        return super.equals(obj);
+      }
+      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse) obj;
+
+      if (!getResult()
+          .equals(other.getResult())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESULT_FIELD_NUMBER;
+      hash = (53 * hash) + getResult().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code szengine.FindInterestingEntitiesByRecordIdResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:szengine.FindInterestingEntitiesByRecordIdResponse)
+        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.Builder.class);
+      }
+
+      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        result_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse getDefaultInstanceForType() {
+        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse build() {
+        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse buildPartial() {
+        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.result_ = result_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse) {
+          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse other) {
+        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.getDefaultInstance()) return this;
+        if (!other.getResult().isEmpty()) {
+          result_ = other.result_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                result_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object result_ = "";
+      /**
+       * <code>string result = 1;</code>
+       * @return The result.
+       */
+      public java.lang.String getResult() {
+        java.lang.Object ref = result_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          result_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string result = 1;</code>
+       * @return The bytes for result.
+       */
+      public com.google.protobuf.ByteString
+          getResultBytes() {
+        java.lang.Object ref = result_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          result_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string result = 1;</code>
+       * @param value The result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResult(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        result_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string result = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResult() {
+        result_ = getDefaultInstance().getResult();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string result = 1;</code>
+       * @param value The bytes for result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResultBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        result_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:szengine.FindInterestingEntitiesByRecordIdResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:szengine.FindInterestingEntitiesByRecordIdResponse)
+    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse();
+    }
+
+    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FindInterestingEntitiesByRecordIdResponse>
+        PARSER = new com.google.protobuf.AbstractParser<FindInterestingEntitiesByRecordIdResponse>() {
+      @java.lang.Override
+      public FindInterestingEntitiesByRecordIdResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<FindInterestingEntitiesByRecordIdResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FindInterestingEntitiesByRecordIdResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface FindNetworkByEntityIdRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:szengine.FindNetworkByEntityIdRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -35770,6 +38197,26 @@ public final class SzEngineProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_szengine_FetchNextResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_szengine_FindNetworkByEntityIdRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -36026,152 +38473,166 @@ public final class SzEngineProto {
       "ortJsonEntityReportResponse\022\016\n\006result\030\001 " +
       "\001(\003\"*\n\020FetchNextRequest\022\026\n\016responseHandl" +
       "e\030\001 \001(\003\"#\n\021FetchNextResponse\022\016\n\006result\030\001" +
-      " \001(\t\"\202\001\n\034FindNetworkByEntityIdRequest\022\022\n" +
-      "\nentityList\030\001 \001(\t\022\022\n\nmaxDegrees\030\002 \001(\003\022\026\n" +
-      "\016buildOutDegree\030\003 \001(\003\022\023\n\013maxEntities\030\004 \001" +
-      "(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035FindNetworkByEntity" +
-      "IdResponse\022\016\n\006result\030\001 \001(\t\"\202\001\n\034FindNetwo" +
-      "rkByRecordIdRequest\022\022\n\nrecordList\030\001 \001(\t\022" +
-      "\022\n\nmaxDegrees\030\002 \001(\003\022\026\n\016buildOutDegree\030\003 " +
-      "\001(\003\022\023\n\013maxEntities\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"" +
-      "/\n\035FindNetworkByRecordIdResponse\022\016\n\006resu" +
-      "lt\030\001 \001(\t\"\233\001\n\031FindPathByEntityIdRequest\022\025" +
-      "\n\rstartEntityId\030\001 \001(\003\022\023\n\013endEntityId\030\002 \001" +
-      "(\003\022\022\n\nmaxDegrees\030\003 \001(\003\022\022\n\nexclusions\030\004 \001" +
-      "(\t\022\033\n\023requiredDataSources\030\005 \001(\t\022\r\n\005flags" +
-      "\030\006 \001(\003\",\n\032FindPathByEntityIdResponse\022\016\n\006" +
-      "result\030\001 \001(\t\"\323\001\n\031FindPathByRecordIdReque" +
-      "st\022\033\n\023startDataSourceCode\030\001 \001(\t\022\025\n\rstart" +
-      "RecordId\030\002 \001(\t\022\031\n\021endDataSourceCode\030\003 \001(" +
-      "\t\022\023\n\013endRecordId\030\004 \001(\t\022\022\n\nmaxDegrees\030\005 \001" +
-      "(\003\022\022\n\nexclusions\030\006 \001(\t\022\033\n\023requiredDataSo" +
-      "urces\030\007 \001(\t\022\r\n\005flags\030\010 \001(\003\",\n\032FindPathBy" +
-      "RecordIdResponse\022\016\n\006result\030\001 \001(\t\"\032\n\030GetA" +
-      "ctiveConfigIdRequest\"+\n\031GetActiveConfigI" +
-      "dResponse\022\016\n\006result\030\001 \001(\003\"=\n\032GetEntityBy" +
-      "EntityIdRequest\022\020\n\010entityId\030\001 \001(\003\022\r\n\005fla" +
-      "gs\030\002 \001(\003\"-\n\033GetEntityByEntityIdResponse\022" +
-      "\016\n\006result\030\001 \001(\t\"U\n\032GetEntityByRecordIdRe" +
-      "quest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordI" +
-      "d\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"-\n\033GetEntityByRec" +
-      "ordIdResponse\022\016\n\006result\030\001 \001(\t\"K\n\020GetReco" +
-      "rdRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010rec" +
-      "ordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"#\n\021GetRecordR" +
-      "esponse\022\016\n\006result\030\001 \001(\t\"\026\n\024GetRedoRecord" +
-      "Request\"\'\n\025GetRedoRecordResponse\022\016\n\006resu" +
-      "lt\030\001 \001(\t\"F\n!GetVirtualEntityByRecordIdRe" +
-      "quest\022\022\n\nrecordList\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003" +
-      "\"4\n\"GetVirtualEntityByRecordIdResponse\022\016" +
-      "\n\006result\030\001 \001(\t\"=\n\032HowEntityByEntityIdReq" +
-      "uest\022\020\n\010entityId\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"-\n" +
-      "\033HowEntityByEntityIdResponse\022\016\n\006result\030\001" +
-      " \001(\t\"\024\n\022PrimeEngineRequest\"\025\n\023PrimeEngin" +
-      "eResponse\"=\n\030ProcessRedoRecordRequest\022\022\n" +
-      "\nredoRecord\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"+\n\031Proc" +
-      "essRedoRecordResponse\022\016\n\006result\030\001 \001(\t\":\n" +
-      "\027ReevaluateEntityRequest\022\020\n\010entityId\030\001 \001" +
-      "(\003\022\r\n\005flags\030\002 \001(\003\"*\n\030ReevaluateEntityRes" +
-      "ponse\022\016\n\006result\030\001 \001(\t\"R\n\027ReevaluateRecor" +
-      "dRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010reco" +
-      "rdId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"*\n\030ReevaluateR" +
-      "ecordResponse\022\016\n\006result\030\001 \001(\t\"\'\n\023Reiniti" +
-      "alizeRequest\022\020\n\010configId\030\001 \001(\003\"\026\n\024Reinit" +
-      "ializeResponse\"U\n\031SearchByAttributesRequ" +
-      "est\022\022\n\nattributes\030\001 \001(\t\022\025\n\rsearchProfile" +
-      "\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\",\n\032SearchByAttribu" +
-      "tesResponse\022\016\n\006result\030\001 \001(\t\"\021\n\017GetStatsR" +
-      "equest\"\"\n\020GetStatsResponse\022\016\n\006result\030\001 \001" +
-      "(\t\"J\n\"StreamExportCsvEntityReportRequest" +
-      "\022\025\n\rcsvColumnList\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"5" +
-      "\n#StreamExportCsvEntityReportResponse\022\016\n" +
-      "\006result\030\001 \001(\t\"4\n#StreamExportJsonEntityR" +
-      "eportRequest\022\r\n\005flags\030\001 \001(\003\"6\n$StreamExp" +
-      "ortJsonEntityReportResponse\022\016\n\006result\030\001 " +
-      "\001(\t\"I\n\022WhyEntitiesRequest\022\021\n\tentityId1\030\001" +
-      " \001(\003\022\021\n\tentityId2\030\002 \001(\003\022\r\n\005flags\030\003 \001(\003\"%" +
-      "\n\023WhyEntitiesResponse\022\016\n\006result\030\001 \001(\t\"S\n" +
-      "\030WhyRecordInEntityRequest\022\026\n\016dataSourceC" +
+      " \001(\t\"K\n(FindInterestingEntitiesByEntityI" +
+      "dRequest\022\020\n\010entityId\030\001 \001(\003\022\r\n\005flags\030\002 \001(" +
+      "\003\";\n)FindInterestingEntitiesByEntityIdRe" +
+      "sponse\022\016\n\006result\030\001 \001(\t\"c\n(FindInterestin" +
+      "gEntitiesByRecordIdRequest\022\026\n\016dataSource" +
+      "Code\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 " +
+      "\001(\003\";\n)FindInterestingEntitiesByRecordId" +
+      "Response\022\016\n\006result\030\001 \001(\t\"\202\001\n\034FindNetwork" +
+      "ByEntityIdRequest\022\022\n\nentityList\030\001 \001(\t\022\022\n" +
+      "\nmaxDegrees\030\002 \001(\003\022\026\n\016buildOutDegree\030\003 \001(" +
+      "\003\022\023\n\013maxEntities\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n" +
+      "\035FindNetworkByEntityIdResponse\022\016\n\006result" +
+      "\030\001 \001(\t\"\202\001\n\034FindNetworkByRecordIdRequest\022" +
+      "\022\n\nrecordList\030\001 \001(\t\022\022\n\nmaxDegrees\030\002 \001(\003\022" +
+      "\026\n\016buildOutDegree\030\003 \001(\003\022\023\n\013maxEntities\030\004" +
+      " \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035FindNetworkByReco" +
+      "rdIdResponse\022\016\n\006result\030\001 \001(\t\"\233\001\n\031FindPat" +
+      "hByEntityIdRequest\022\025\n\rstartEntityId\030\001 \001(" +
+      "\003\022\023\n\013endEntityId\030\002 \001(\003\022\022\n\nmaxDegrees\030\003 \001" +
+      "(\003\022\022\n\nexclusions\030\004 \001(\t\022\033\n\023requiredDataSo" +
+      "urces\030\005 \001(\t\022\r\n\005flags\030\006 \001(\003\",\n\032FindPathBy" +
+      "EntityIdResponse\022\016\n\006result\030\001 \001(\t\"\323\001\n\031Fin" +
+      "dPathByRecordIdRequest\022\033\n\023startDataSourc" +
+      "eCode\030\001 \001(\t\022\025\n\rstartRecordId\030\002 \001(\t\022\031\n\021en" +
+      "dDataSourceCode\030\003 \001(\t\022\023\n\013endRecordId\030\004 \001" +
+      "(\t\022\022\n\nmaxDegrees\030\005 \001(\003\022\022\n\nexclusions\030\006 \001" +
+      "(\t\022\033\n\023requiredDataSources\030\007 \001(\t\022\r\n\005flags" +
+      "\030\010 \001(\003\",\n\032FindPathByRecordIdResponse\022\016\n\006" +
+      "result\030\001 \001(\t\"\032\n\030GetActiveConfigIdRequest" +
+      "\"+\n\031GetActiveConfigIdResponse\022\016\n\006result\030" +
+      "\001 \001(\003\"=\n\032GetEntityByEntityIdRequest\022\020\n\010e" +
+      "ntityId\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"-\n\033GetEntit" +
+      "yByEntityIdResponse\022\016\n\006result\030\001 \001(\t\"U\n\032G" +
+      "etEntityByRecordIdRequest\022\026\n\016dataSourceC" +
       "ode\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001" +
-      "(\003\"+\n\031WhyRecordInEntityResponse\022\016\n\006resul" +
-      "t\030\001 \001(\t\"z\n\021WhyRecordsRequest\022\027\n\017dataSour" +
-      "ceCode1\030\001 \001(\t\022\021\n\trecordId1\030\002 \001(\t\022\027\n\017data" +
-      "SourceCode2\030\003 \001(\t\022\021\n\trecordId2\030\004 \001(\t\022\r\n\005" +
-      "flags\030\005 \001(\003\"$\n\022WhyRecordsResponse\022\016\n\006res" +
-      "ult\030\001 \001(\t2\226\026\n\010SzEngine\022F\n\tAddRecord\022\032.sz" +
-      "engine.AddRecordRequest\032\033.szengine.AddRe" +
-      "cordResponse\"\000\022L\n\013CloseExport\022\034.szengine" +
-      ".CloseExportRequest\032\035.szengine.CloseExpo" +
-      "rtResponse\"\000\022[\n\020CountRedoRecords\022!.szeng" +
-      "ine.CountRedoRecordsRequest\032\".szengine.C" +
-      "ountRedoRecordsResponse\"\000\022O\n\014DeleteRecor" +
-      "d\022\035.szengine.DeleteRecordRequest\032\036.szeng" +
-      "ine.DeleteRecordResponse\"\000\022j\n\025ExportCsvE" +
-      "ntityReport\022&.szengine.ExportCsvEntityRe" +
-      "portRequest\032\'.szengine.ExportCsvEntityRe" +
-      "portResponse\"\000\022m\n\026ExportJsonEntityReport" +
-      "\022\'.szengine.ExportJsonEntityReportReques" +
-      "t\032(.szengine.ExportJsonEntityReportRespo" +
-      "nse\"\000\022F\n\tFetchNext\022\032.szengine.FetchNextR" +
-      "equest\032\033.szengine.FetchNextResponse\"\000\022j\n" +
-      "\025FindNetworkByEntityId\022&.szengine.FindNe" +
-      "tworkByEntityIdRequest\032\'.szengine.FindNe" +
-      "tworkByEntityIdResponse\"\000\022j\n\025FindNetwork" +
-      "ByRecordId\022&.szengine.FindNetworkByRecor" +
-      "dIdRequest\032\'.szengine.FindNetworkByRecor" +
-      "dIdResponse\"\000\022a\n\022FindPathByEntityId\022#.sz" +
-      "engine.FindPathByEntityIdRequest\032$.szeng" +
-      "ine.FindPathByEntityIdResponse\"\000\022a\n\022Find" +
-      "PathByRecordId\022#.szengine.FindPathByReco" +
-      "rdIdRequest\032$.szengine.FindPathByRecordI" +
-      "dResponse\"\000\022^\n\021GetActiveConfigId\022\".szeng" +
-      "ine.GetActiveConfigIdRequest\032#.szengine." +
-      "GetActiveConfigIdResponse\"\000\022d\n\023GetEntity" +
-      "ByEntityId\022$.szengine.GetEntityByEntityI" +
-      "dRequest\032%.szengine.GetEntityByEntityIdR" +
-      "esponse\"\000\022d\n\023GetEntityByRecordId\022$.szeng" +
-      "ine.GetEntityByRecordIdRequest\032%.szengin" +
-      "e.GetEntityByRecordIdResponse\"\000\022F\n\tGetRe" +
-      "cord\022\032.szengine.GetRecordRequest\032\033.szeng" +
-      "ine.GetRecordResponse\"\000\022R\n\rGetRedoRecord" +
-      "\022\036.szengine.GetRedoRecordRequest\032\037.szeng" +
-      "ine.GetRedoRecordResponse\"\000\022C\n\010GetStats\022" +
-      "\031.szengine.GetStatsRequest\032\032.szengine.Ge" +
-      "tStatsResponse\"\000\022y\n\032GetVirtualEntityByRe" +
-      "cordId\022+.szengine.GetVirtualEntityByReco" +
-      "rdIdRequest\032,.szengine.GetVirtualEntityB" +
-      "yRecordIdResponse\"\000\022d\n\023HowEntityByEntity" +
-      "Id\022$.szengine.HowEntityByEntityIdRequest" +
-      "\032%.szengine.HowEntityByEntityIdResponse\"" +
-      "\000\022L\n\013PrimeEngine\022\034.szengine.PrimeEngineR" +
-      "equest\032\035.szengine.PrimeEngineResponse\"\000\022" +
-      "^\n\021ProcessRedoRecord\022\".szengine.ProcessR" +
-      "edoRecordRequest\032#.szengine.ProcessRedoR" +
-      "ecordResponse\"\000\022[\n\020ReevaluateEntity\022!.sz" +
-      "engine.ReevaluateEntityRequest\032\".szengin" +
-      "e.ReevaluateEntityResponse\"\000\022[\n\020Reevalua" +
-      "teRecord\022!.szengine.ReevaluateRecordRequ" +
-      "est\032\".szengine.ReevaluateRecordResponse\"" +
-      "\000\022O\n\014Reinitialize\022\035.szengine.Reinitializ" +
-      "eRequest\032\036.szengine.ReinitializeResponse" +
-      "\"\000\022a\n\022SearchByAttributes\022#.szengine.Sear" +
-      "chByAttributesRequest\032$.szengine.SearchB" +
-      "yAttributesResponse\"\000\022~\n\033StreamExportCsv" +
-      "EntityReport\022,.szengine.StreamExportCsvE" +
-      "ntityReportRequest\032-.szengine.StreamExpo" +
-      "rtCsvEntityReportResponse\"\0000\001\022\201\001\n\034Stream" +
-      "ExportJsonEntityReport\022-.szengine.Stream" +
-      "ExportJsonEntityReportRequest\032..szengine" +
-      ".StreamExportJsonEntityReportResponse\"\0000" +
-      "\001\022L\n\013WhyEntities\022\034.szengine.WhyEntitiesR" +
-      "equest\032\035.szengine.WhyEntitiesResponse\"\000\022" +
-      "^\n\021WhyRecordInEntity\022\".szengine.WhyRecor" +
-      "dInEntityRequest\032#.szengine.WhyRecordInE" +
-      "ntityResponse\"\000\022I\n\nWhyRecords\022\033.szengine" +
-      ".WhyRecordsRequest\032\034.szengine.WhyRecords" +
-      "Response\"\000Bg\n#com.senzing.sz.engine.grpc" +
-      ".SzEngineB\rSzEngineProtoZ1github.com/sen" +
-      "zing-garage/sz-sdk-go-grpc/szengineb\006pro" +
-      "to3"
+      "(\003\"-\n\033GetEntityByRecordIdResponse\022\016\n\006res" +
+      "ult\030\001 \001(\t\"K\n\020GetRecordRequest\022\026\n\016dataSou" +
+      "rceCode\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags" +
+      "\030\003 \001(\003\"#\n\021GetRecordResponse\022\016\n\006result\030\001 " +
+      "\001(\t\"\026\n\024GetRedoRecordRequest\"\'\n\025GetRedoRe" +
+      "cordResponse\022\016\n\006result\030\001 \001(\t\"F\n!GetVirtu" +
+      "alEntityByRecordIdRequest\022\022\n\nrecordList\030" +
+      "\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"4\n\"GetVirtualEntity" +
+      "ByRecordIdResponse\022\016\n\006result\030\001 \001(\t\"=\n\032Ho" +
+      "wEntityByEntityIdRequest\022\020\n\010entityId\030\001 \001" +
+      "(\003\022\r\n\005flags\030\002 \001(\003\"-\n\033HowEntityByEntityId" +
+      "Response\022\016\n\006result\030\001 \001(\t\"\024\n\022PrimeEngineR" +
+      "equest\"\025\n\023PrimeEngineResponse\"=\n\030Process" +
+      "RedoRecordRequest\022\022\n\nredoRecord\030\001 \001(\t\022\r\n" +
+      "\005flags\030\002 \001(\003\"+\n\031ProcessRedoRecordRespons" +
+      "e\022\016\n\006result\030\001 \001(\t\":\n\027ReevaluateEntityReq" +
+      "uest\022\020\n\010entityId\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"*\n" +
+      "\030ReevaluateEntityResponse\022\016\n\006result\030\001 \001(" +
+      "\t\"R\n\027ReevaluateRecordRequest\022\026\n\016dataSour" +
+      "ceCode\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030" +
+      "\003 \001(\003\"*\n\030ReevaluateRecordResponse\022\016\n\006res" +
+      "ult\030\001 \001(\t\"\'\n\023ReinitializeRequest\022\020\n\010conf" +
+      "igId\030\001 \001(\003\"\026\n\024ReinitializeResponse\"U\n\031Se" +
+      "archByAttributesRequest\022\022\n\nattributes\030\001 " +
+      "\001(\t\022\025\n\rsearchProfile\030\002 \001(\t\022\r\n\005flags\030\003 \001(" +
+      "\003\",\n\032SearchByAttributesResponse\022\016\n\006resul" +
+      "t\030\001 \001(\t\"\021\n\017GetStatsRequest\"\"\n\020GetStatsRe" +
+      "sponse\022\016\n\006result\030\001 \001(\t\"J\n\"StreamExportCs" +
+      "vEntityReportRequest\022\025\n\rcsvColumnList\030\001 " +
+      "\001(\t\022\r\n\005flags\030\002 \001(\003\"5\n#StreamExportCsvEnt" +
+      "ityReportResponse\022\016\n\006result\030\001 \001(\t\"4\n#Str" +
+      "eamExportJsonEntityReportRequest\022\r\n\005flag" +
+      "s\030\001 \001(\003\"6\n$StreamExportJsonEntityReportR" +
+      "esponse\022\016\n\006result\030\001 \001(\t\"I\n\022WhyEntitiesRe" +
+      "quest\022\021\n\tentityId1\030\001 \001(\003\022\021\n\tentityId2\030\002 " +
+      "\001(\003\022\r\n\005flags\030\003 \001(\003\"%\n\023WhyEntitiesRespons" +
+      "e\022\016\n\006result\030\001 \001(\t\"S\n\030WhyRecordInEntityRe" +
+      "quest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordI" +
+      "d\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"+\n\031WhyRecordInEnt" +
+      "ityResponse\022\016\n\006result\030\001 \001(\t\"z\n\021WhyRecord" +
+      "sRequest\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trec" +
+      "ordId1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n" +
+      "\trecordId2\030\004 \001(\t\022\r\n\005flags\030\005 \001(\003\"$\n\022WhyRe" +
+      "cordsResponse\022\016\n\006result\030\001 \001(\t2\270\030\n\010SzEngi" +
+      "ne\022F\n\tAddRecord\022\032.szengine.AddRecordRequ" +
+      "est\032\033.szengine.AddRecordResponse\"\000\022L\n\013Cl" +
+      "oseExport\022\034.szengine.CloseExportRequest\032" +
+      "\035.szengine.CloseExportResponse\"\000\022[\n\020Coun" +
+      "tRedoRecords\022!.szengine.CountRedoRecords" +
+      "Request\032\".szengine.CountRedoRecordsRespo" +
+      "nse\"\000\022O\n\014DeleteRecord\022\035.szengine.DeleteR" +
+      "ecordRequest\032\036.szengine.DeleteRecordResp" +
+      "onse\"\000\022j\n\025ExportCsvEntityReport\022&.szengi" +
+      "ne.ExportCsvEntityReportRequest\032\'.szengi" +
+      "ne.ExportCsvEntityReportResponse\"\000\022m\n\026Ex" +
+      "portJsonEntityReport\022\'.szengine.ExportJs" +
+      "onEntityReportRequest\032(.szengine.ExportJ" +
+      "sonEntityReportResponse\"\000\022F\n\tFetchNext\022\032" +
+      ".szengine.FetchNextRequest\032\033.szengine.Fe" +
+      "tchNextResponse\"\000\022\216\001\n!FindInterestingEnt" +
+      "itiesByEntityId\0222.szengine.FindInteresti" +
+      "ngEntitiesByEntityIdRequest\0323.szengine.F" +
+      "indInterestingEntitiesByEntityIdResponse" +
+      "\"\000\022\216\001\n!FindInterestingEntitiesByRecordId" +
+      "\0222.szengine.FindInterestingEntitiesByRec" +
+      "ordIdRequest\0323.szengine.FindInterestingE" +
+      "ntitiesByRecordIdResponse\"\000\022j\n\025FindNetwo" +
+      "rkByEntityId\022&.szengine.FindNetworkByEnt" +
+      "ityIdRequest\032\'.szengine.FindNetworkByEnt" +
+      "ityIdResponse\"\000\022j\n\025FindNetworkByRecordId" +
+      "\022&.szengine.FindNetworkByRecordIdRequest" +
+      "\032\'.szengine.FindNetworkByRecordIdRespons" +
+      "e\"\000\022a\n\022FindPathByEntityId\022#.szengine.Fin" +
+      "dPathByEntityIdRequest\032$.szengine.FindPa" +
+      "thByEntityIdResponse\"\000\022a\n\022FindPathByReco" +
+      "rdId\022#.szengine.FindPathByRecordIdReques" +
+      "t\032$.szengine.FindPathByRecordIdResponse\"" +
+      "\000\022^\n\021GetActiveConfigId\022\".szengine.GetAct" +
+      "iveConfigIdRequest\032#.szengine.GetActiveC" +
+      "onfigIdResponse\"\000\022d\n\023GetEntityByEntityId" +
+      "\022$.szengine.GetEntityByEntityIdRequest\032%" +
+      ".szengine.GetEntityByEntityIdResponse\"\000\022" +
+      "d\n\023GetEntityByRecordId\022$.szengine.GetEnt" +
+      "ityByRecordIdRequest\032%.szengine.GetEntit" +
+      "yByRecordIdResponse\"\000\022F\n\tGetRecord\022\032.sze" +
+      "ngine.GetRecordRequest\032\033.szengine.GetRec" +
+      "ordResponse\"\000\022R\n\rGetRedoRecord\022\036.szengin" +
+      "e.GetRedoRecordRequest\032\037.szengine.GetRed" +
+      "oRecordResponse\"\000\022C\n\010GetStats\022\031.szengine" +
+      ".GetStatsRequest\032\032.szengine.GetStatsResp" +
+      "onse\"\000\022y\n\032GetVirtualEntityByRecordId\022+.s" +
+      "zengine.GetVirtualEntityByRecordIdReques" +
+      "t\032,.szengine.GetVirtualEntityByRecordIdR" +
+      "esponse\"\000\022d\n\023HowEntityByEntityId\022$.szeng" +
+      "ine.HowEntityByEntityIdRequest\032%.szengin" +
+      "e.HowEntityByEntityIdResponse\"\000\022L\n\013Prime" +
+      "Engine\022\034.szengine.PrimeEngineRequest\032\035.s" +
+      "zengine.PrimeEngineResponse\"\000\022^\n\021Process" +
+      "RedoRecord\022\".szengine.ProcessRedoRecordR" +
+      "equest\032#.szengine.ProcessRedoRecordRespo" +
+      "nse\"\000\022[\n\020ReevaluateEntity\022!.szengine.Ree" +
+      "valuateEntityRequest\032\".szengine.Reevalua" +
+      "teEntityResponse\"\000\022[\n\020ReevaluateRecord\022!" +
+      ".szengine.ReevaluateRecordRequest\032\".szen" +
+      "gine.ReevaluateRecordResponse\"\000\022O\n\014Reini" +
+      "tialize\022\035.szengine.ReinitializeRequest\032\036" +
+      ".szengine.ReinitializeResponse\"\000\022a\n\022Sear" +
+      "chByAttributes\022#.szengine.SearchByAttrib" +
+      "utesRequest\032$.szengine.SearchByAttribute" +
+      "sResponse\"\000\022~\n\033StreamExportCsvEntityRepo" +
+      "rt\022,.szengine.StreamExportCsvEntityRepor" +
+      "tRequest\032-.szengine.StreamExportCsvEntit" +
+      "yReportResponse\"\0000\001\022\201\001\n\034StreamExportJson" +
+      "EntityReport\022-.szengine.StreamExportJson" +
+      "EntityReportRequest\032..szengine.StreamExp" +
+      "ortJsonEntityReportResponse\"\0000\001\022L\n\013WhyEn" +
+      "tities\022\034.szengine.WhyEntitiesRequest\032\035.s" +
+      "zengine.WhyEntitiesResponse\"\000\022^\n\021WhyReco" +
+      "rdInEntity\022\".szengine.WhyRecordInEntityR" +
+      "equest\032#.szengine.WhyRecordInEntityRespo" +
+      "nse\"\000\022I\n\nWhyRecords\022\033.szengine.WhyRecord" +
+      "sRequest\032\034.szengine.WhyRecordsResponse\"\000" +
+      "Bg\n#com.senzing.sz.engine.grpc.SzEngineB" +
+      "\rSzEngineProtoZ1github.com/senzing-garag" +
+      "e/sz-sdk-go-grpc/szengineb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -36261,278 +38722,302 @@ public final class SzEngineProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_FetchNextResponse_descriptor,
         new java.lang.String[] { "Result", });
-    internal_static_szengine_FindNetworkByEntityIdRequest_descriptor =
+    internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_descriptor =
       getDescriptor().getMessageTypes().get(14);
+    internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_descriptor,
+        new java.lang.String[] { "EntityId", "Flags", });
+    internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_descriptor,
+        new java.lang.String[] { "DataSourceCode", "RecordId", "Flags", });
+    internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_szengine_FindNetworkByEntityIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(18);
     internal_static_szengine_FindNetworkByEntityIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_FindNetworkByEntityIdRequest_descriptor,
         new java.lang.String[] { "EntityList", "MaxDegrees", "BuildOutDegree", "MaxEntities", "Flags", });
     internal_static_szengine_FindNetworkByEntityIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_szengine_FindNetworkByEntityIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_FindNetworkByEntityIdResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_FindNetworkByRecordIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_szengine_FindNetworkByRecordIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_FindNetworkByRecordIdRequest_descriptor,
         new java.lang.String[] { "RecordList", "MaxDegrees", "BuildOutDegree", "MaxEntities", "Flags", });
     internal_static_szengine_FindNetworkByRecordIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_szengine_FindNetworkByRecordIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_FindNetworkByRecordIdResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_FindPathByEntityIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_szengine_FindPathByEntityIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_FindPathByEntityIdRequest_descriptor,
         new java.lang.String[] { "StartEntityId", "EndEntityId", "MaxDegrees", "Exclusions", "RequiredDataSources", "Flags", });
     internal_static_szengine_FindPathByEntityIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_szengine_FindPathByEntityIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_FindPathByEntityIdResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_FindPathByRecordIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_szengine_FindPathByRecordIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_FindPathByRecordIdRequest_descriptor,
         new java.lang.String[] { "StartDataSourceCode", "StartRecordId", "EndDataSourceCode", "EndRecordId", "MaxDegrees", "Exclusions", "RequiredDataSources", "Flags", });
     internal_static_szengine_FindPathByRecordIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_szengine_FindPathByRecordIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_FindPathByRecordIdResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_GetActiveConfigIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_szengine_GetActiveConfigIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_GetActiveConfigIdRequest_descriptor,
         new java.lang.String[] { });
     internal_static_szengine_GetActiveConfigIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_szengine_GetActiveConfigIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_GetActiveConfigIdResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_GetEntityByEntityIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_szengine_GetEntityByEntityIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_GetEntityByEntityIdRequest_descriptor,
         new java.lang.String[] { "EntityId", "Flags", });
     internal_static_szengine_GetEntityByEntityIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_szengine_GetEntityByEntityIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_GetEntityByEntityIdResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_GetEntityByRecordIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_szengine_GetEntityByRecordIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_GetEntityByRecordIdRequest_descriptor,
         new java.lang.String[] { "DataSourceCode", "RecordId", "Flags", });
     internal_static_szengine_GetEntityByRecordIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_szengine_GetEntityByRecordIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_GetEntityByRecordIdResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_GetRecordRequest_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_szengine_GetRecordRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_GetRecordRequest_descriptor,
         new java.lang.String[] { "DataSourceCode", "RecordId", "Flags", });
     internal_static_szengine_GetRecordResponse_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_szengine_GetRecordResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_GetRecordResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_GetRedoRecordRequest_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_szengine_GetRedoRecordRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_GetRedoRecordRequest_descriptor,
         new java.lang.String[] { });
     internal_static_szengine_GetRedoRecordResponse_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_szengine_GetRedoRecordResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_GetRedoRecordResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_GetVirtualEntityByRecordIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_szengine_GetVirtualEntityByRecordIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_GetVirtualEntityByRecordIdRequest_descriptor,
         new java.lang.String[] { "RecordList", "Flags", });
     internal_static_szengine_GetVirtualEntityByRecordIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_szengine_GetVirtualEntityByRecordIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_GetVirtualEntityByRecordIdResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_HowEntityByEntityIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_szengine_HowEntityByEntityIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_HowEntityByEntityIdRequest_descriptor,
         new java.lang.String[] { "EntityId", "Flags", });
     internal_static_szengine_HowEntityByEntityIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_szengine_HowEntityByEntityIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_HowEntityByEntityIdResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_PrimeEngineRequest_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_szengine_PrimeEngineRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_PrimeEngineRequest_descriptor,
         new java.lang.String[] { });
     internal_static_szengine_PrimeEngineResponse_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_szengine_PrimeEngineResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_PrimeEngineResponse_descriptor,
         new java.lang.String[] { });
     internal_static_szengine_ProcessRedoRecordRequest_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_szengine_ProcessRedoRecordRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_ProcessRedoRecordRequest_descriptor,
         new java.lang.String[] { "RedoRecord", "Flags", });
     internal_static_szengine_ProcessRedoRecordResponse_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_szengine_ProcessRedoRecordResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_ProcessRedoRecordResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_ReevaluateEntityRequest_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_szengine_ReevaluateEntityRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_ReevaluateEntityRequest_descriptor,
         new java.lang.String[] { "EntityId", "Flags", });
     internal_static_szengine_ReevaluateEntityResponse_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_szengine_ReevaluateEntityResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_ReevaluateEntityResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_ReevaluateRecordRequest_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_szengine_ReevaluateRecordRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_ReevaluateRecordRequest_descriptor,
         new java.lang.String[] { "DataSourceCode", "RecordId", "Flags", });
     internal_static_szengine_ReevaluateRecordResponse_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_szengine_ReevaluateRecordResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_ReevaluateRecordResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_ReinitializeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_szengine_ReinitializeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_ReinitializeRequest_descriptor,
         new java.lang.String[] { "ConfigId", });
     internal_static_szengine_ReinitializeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_szengine_ReinitializeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_ReinitializeResponse_descriptor,
         new java.lang.String[] { });
     internal_static_szengine_SearchByAttributesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_szengine_SearchByAttributesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_SearchByAttributesRequest_descriptor,
         new java.lang.String[] { "Attributes", "SearchProfile", "Flags", });
     internal_static_szengine_SearchByAttributesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_szengine_SearchByAttributesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_SearchByAttributesResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_GetStatsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_szengine_GetStatsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_GetStatsRequest_descriptor,
         new java.lang.String[] { });
     internal_static_szengine_GetStatsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_szengine_GetStatsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_GetStatsResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_StreamExportCsvEntityReportRequest_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_szengine_StreamExportCsvEntityReportRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_StreamExportCsvEntityReportRequest_descriptor,
         new java.lang.String[] { "CsvColumnList", "Flags", });
     internal_static_szengine_StreamExportCsvEntityReportResponse_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_szengine_StreamExportCsvEntityReportResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_StreamExportCsvEntityReportResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_StreamExportJsonEntityReportRequest_descriptor =
-      getDescriptor().getMessageTypes().get(52);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_szengine_StreamExportJsonEntityReportRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_StreamExportJsonEntityReportRequest_descriptor,
         new java.lang.String[] { "Flags", });
     internal_static_szengine_StreamExportJsonEntityReportResponse_descriptor =
-      getDescriptor().getMessageTypes().get(53);
+      getDescriptor().getMessageTypes().get(57);
     internal_static_szengine_StreamExportJsonEntityReportResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_StreamExportJsonEntityReportResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_WhyEntitiesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(54);
+      getDescriptor().getMessageTypes().get(58);
     internal_static_szengine_WhyEntitiesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_WhyEntitiesRequest_descriptor,
         new java.lang.String[] { "EntityId1", "EntityId2", "Flags", });
     internal_static_szengine_WhyEntitiesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(55);
+      getDescriptor().getMessageTypes().get(59);
     internal_static_szengine_WhyEntitiesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_WhyEntitiesResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_WhyRecordInEntityRequest_descriptor =
-      getDescriptor().getMessageTypes().get(56);
+      getDescriptor().getMessageTypes().get(60);
     internal_static_szengine_WhyRecordInEntityRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_WhyRecordInEntityRequest_descriptor,
         new java.lang.String[] { "DataSourceCode", "RecordId", "Flags", });
     internal_static_szengine_WhyRecordInEntityResponse_descriptor =
-      getDescriptor().getMessageTypes().get(57);
+      getDescriptor().getMessageTypes().get(61);
     internal_static_szengine_WhyRecordInEntityResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_WhyRecordInEntityResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szengine_WhyRecordsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(58);
+      getDescriptor().getMessageTypes().get(62);
     internal_static_szengine_WhyRecordsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_WhyRecordsRequest_descriptor,
         new java.lang.String[] { "DataSourceCode1", "RecordId1", "DataSourceCode2", "RecordId2", "Flags", });
     internal_static_szengine_WhyRecordsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(59);
+      getDescriptor().getMessageTypes().get(63);
     internal_static_szengine_WhyRecordsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_WhyRecordsResponse_descriptor,

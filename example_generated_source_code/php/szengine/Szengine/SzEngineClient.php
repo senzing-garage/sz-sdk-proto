@@ -115,6 +115,34 @@ class SzEngineClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Szengine\FindInterestingEntitiesByEntityIdRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function FindInterestingEntitiesByEntityId(\Szengine\FindInterestingEntitiesByEntityIdRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szengine.SzEngine/FindInterestingEntitiesByEntityId',
+        $argument,
+        ['\Szengine\FindInterestingEntitiesByEntityIdResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Szengine\FindInterestingEntitiesByRecordIdRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function FindInterestingEntitiesByRecordId(\Szengine\FindInterestingEntitiesByRecordIdRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szengine.SzEngine/FindInterestingEntitiesByRecordId',
+        $argument,
+        ['\Szengine\FindInterestingEntitiesByRecordIdResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Szengine\FindNetworkByEntityIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

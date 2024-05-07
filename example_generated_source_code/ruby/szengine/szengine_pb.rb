@@ -51,6 +51,21 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "szengine.FetchNextResponse" do
       optional :result, :string, 1
     end
+    add_message "szengine.FindInterestingEntitiesByEntityIdRequest" do
+      optional :entityId, :int64, 1
+      optional :flags, :int64, 2
+    end
+    add_message "szengine.FindInterestingEntitiesByEntityIdResponse" do
+      optional :result, :string, 1
+    end
+    add_message "szengine.FindInterestingEntitiesByRecordIdRequest" do
+      optional :dataSourceCode, :string, 1
+      optional :recordId, :string, 2
+      optional :flags, :int64, 3
+    end
+    add_message "szengine.FindInterestingEntitiesByRecordIdResponse" do
+      optional :result, :string, 1
+    end
     add_message "szengine.FindNetworkByEntityIdRequest" do
       optional :entityList, :string, 1
       optional :maxDegrees, :int64, 2
@@ -243,6 +258,10 @@ module Szengine
   ExportJsonEntityReportResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.ExportJsonEntityReportResponse").msgclass
   FetchNextRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.FetchNextRequest").msgclass
   FetchNextResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.FetchNextResponse").msgclass
+  FindInterestingEntitiesByEntityIdRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.FindInterestingEntitiesByEntityIdRequest").msgclass
+  FindInterestingEntitiesByEntityIdResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.FindInterestingEntitiesByEntityIdResponse").msgclass
+  FindInterestingEntitiesByRecordIdRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.FindInterestingEntitiesByRecordIdRequest").msgclass
+  FindInterestingEntitiesByRecordIdResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.FindInterestingEntitiesByRecordIdResponse").msgclass
   FindNetworkByEntityIdRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.FindNetworkByEntityIdRequest").msgclass
   FindNetworkByEntityIdResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.FindNetworkByEntityIdResponse").msgclass
   FindNetworkByRecordIdRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.FindNetworkByRecordIdRequest").msgclass

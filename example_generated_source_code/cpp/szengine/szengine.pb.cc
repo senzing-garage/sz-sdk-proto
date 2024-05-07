@@ -990,6 +990,93 @@ struct FindNetworkByEntityIdRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FindNetworkByEntityIdRequestDefaultTypeInternal _FindNetworkByEntityIdRequest_default_instance_;
 
+inline constexpr FindInterestingEntitiesByRecordIdResponse::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : result_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR FindInterestingEntitiesByRecordIdResponse::FindInterestingEntitiesByRecordIdResponse(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct FindInterestingEntitiesByRecordIdResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR FindInterestingEntitiesByRecordIdResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~FindInterestingEntitiesByRecordIdResponseDefaultTypeInternal() {}
+  union {
+    FindInterestingEntitiesByRecordIdResponse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FindInterestingEntitiesByRecordIdResponseDefaultTypeInternal _FindInterestingEntitiesByRecordIdResponse_default_instance_;
+
+inline constexpr FindInterestingEntitiesByRecordIdRequest::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : datasourcecode_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        recordid_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        flags_{::int64_t{0}},
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR FindInterestingEntitiesByRecordIdRequest::FindInterestingEntitiesByRecordIdRequest(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct FindInterestingEntitiesByRecordIdRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR FindInterestingEntitiesByRecordIdRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~FindInterestingEntitiesByRecordIdRequestDefaultTypeInternal() {}
+  union {
+    FindInterestingEntitiesByRecordIdRequest _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FindInterestingEntitiesByRecordIdRequestDefaultTypeInternal _FindInterestingEntitiesByRecordIdRequest_default_instance_;
+
+inline constexpr FindInterestingEntitiesByEntityIdResponse::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : result_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR FindInterestingEntitiesByEntityIdResponse::FindInterestingEntitiesByEntityIdResponse(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct FindInterestingEntitiesByEntityIdResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR FindInterestingEntitiesByEntityIdResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~FindInterestingEntitiesByEntityIdResponseDefaultTypeInternal() {}
+  union {
+    FindInterestingEntitiesByEntityIdResponse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FindInterestingEntitiesByEntityIdResponseDefaultTypeInternal _FindInterestingEntitiesByEntityIdResponse_default_instance_;
+
+inline constexpr FindInterestingEntitiesByEntityIdRequest::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : entityid_{::int64_t{0}},
+        flags_{::int64_t{0}},
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR FindInterestingEntitiesByEntityIdRequest::FindInterestingEntitiesByEntityIdRequest(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct FindInterestingEntitiesByEntityIdRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR FindInterestingEntitiesByEntityIdRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~FindInterestingEntitiesByEntityIdRequestDefaultTypeInternal() {}
+  union {
+    FindInterestingEntitiesByEntityIdRequest _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FindInterestingEntitiesByEntityIdRequestDefaultTypeInternal _FindInterestingEntitiesByEntityIdRequest_default_instance_;
+
 inline constexpr FetchNextResponse::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : result_(
@@ -1266,7 +1353,7 @@ struct AddRecordRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AddRecordRequestDefaultTypeInternal _AddRecordRequest_default_instance_;
 }  // namespace szengine
-static ::_pb::Metadata file_level_metadata_szengine_2eproto[60];
+static ::_pb::Metadata file_level_metadata_szengine_2eproto[64];
 static constexpr const ::_pb::EnumDescriptor**
     file_level_enum_descriptors_szengine_2eproto = nullptr;
 static constexpr const ::_pb::ServiceDescriptor**
@@ -1403,6 +1490,45 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
     PROTOBUF_FIELD_OFFSET(::szengine::FetchNextResponse, _impl_.result_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByEntityIdRequest, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByEntityIdRequest, _impl_.entityid_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByEntityIdRequest, _impl_.flags_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByEntityIdResponse, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByEntityIdResponse, _impl_.result_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByRecordIdRequest, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByRecordIdRequest, _impl_.datasourcecode_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByRecordIdRequest, _impl_.recordid_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByRecordIdRequest, _impl_.flags_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByRecordIdResponse, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByRecordIdResponse, _impl_.result_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdRequest, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -1871,52 +1997,56 @@ static const ::_pbi::MigrationSchema
         {103, -1, -1, sizeof(::szengine::ExportJsonEntityReportResponse)},
         {112, -1, -1, sizeof(::szengine::FetchNextRequest)},
         {121, -1, -1, sizeof(::szengine::FetchNextResponse)},
-        {130, -1, -1, sizeof(::szengine::FindNetworkByEntityIdRequest)},
-        {143, -1, -1, sizeof(::szengine::FindNetworkByEntityIdResponse)},
-        {152, -1, -1, sizeof(::szengine::FindNetworkByRecordIdRequest)},
-        {165, -1, -1, sizeof(::szengine::FindNetworkByRecordIdResponse)},
-        {174, -1, -1, sizeof(::szengine::FindPathByEntityIdRequest)},
-        {188, -1, -1, sizeof(::szengine::FindPathByEntityIdResponse)},
-        {197, -1, -1, sizeof(::szengine::FindPathByRecordIdRequest)},
-        {213, -1, -1, sizeof(::szengine::FindPathByRecordIdResponse)},
-        {222, -1, -1, sizeof(::szengine::GetActiveConfigIdRequest)},
-        {230, -1, -1, sizeof(::szengine::GetActiveConfigIdResponse)},
-        {239, -1, -1, sizeof(::szengine::GetEntityByEntityIdRequest)},
-        {249, -1, -1, sizeof(::szengine::GetEntityByEntityIdResponse)},
-        {258, -1, -1, sizeof(::szengine::GetEntityByRecordIdRequest)},
-        {269, -1, -1, sizeof(::szengine::GetEntityByRecordIdResponse)},
-        {278, -1, -1, sizeof(::szengine::GetRecordRequest)},
-        {289, -1, -1, sizeof(::szengine::GetRecordResponse)},
-        {298, -1, -1, sizeof(::szengine::GetRedoRecordRequest)},
-        {306, -1, -1, sizeof(::szengine::GetRedoRecordResponse)},
-        {315, -1, -1, sizeof(::szengine::GetVirtualEntityByRecordIdRequest)},
-        {325, -1, -1, sizeof(::szengine::GetVirtualEntityByRecordIdResponse)},
-        {334, -1, -1, sizeof(::szengine::HowEntityByEntityIdRequest)},
-        {344, -1, -1, sizeof(::szengine::HowEntityByEntityIdResponse)},
-        {353, -1, -1, sizeof(::szengine::PrimeEngineRequest)},
-        {361, -1, -1, sizeof(::szengine::PrimeEngineResponse)},
-        {369, -1, -1, sizeof(::szengine::ProcessRedoRecordRequest)},
-        {379, -1, -1, sizeof(::szengine::ProcessRedoRecordResponse)},
-        {388, -1, -1, sizeof(::szengine::ReevaluateEntityRequest)},
-        {398, -1, -1, sizeof(::szengine::ReevaluateEntityResponse)},
-        {407, -1, -1, sizeof(::szengine::ReevaluateRecordRequest)},
-        {418, -1, -1, sizeof(::szengine::ReevaluateRecordResponse)},
-        {427, -1, -1, sizeof(::szengine::ReinitializeRequest)},
-        {436, -1, -1, sizeof(::szengine::ReinitializeResponse)},
-        {444, -1, -1, sizeof(::szengine::SearchByAttributesRequest)},
-        {455, -1, -1, sizeof(::szengine::SearchByAttributesResponse)},
-        {464, -1, -1, sizeof(::szengine::GetStatsRequest)},
-        {472, -1, -1, sizeof(::szengine::GetStatsResponse)},
-        {481, -1, -1, sizeof(::szengine::StreamExportCsvEntityReportRequest)},
-        {491, -1, -1, sizeof(::szengine::StreamExportCsvEntityReportResponse)},
-        {500, -1, -1, sizeof(::szengine::StreamExportJsonEntityReportRequest)},
-        {509, -1, -1, sizeof(::szengine::StreamExportJsonEntityReportResponse)},
-        {518, -1, -1, sizeof(::szengine::WhyEntitiesRequest)},
-        {529, -1, -1, sizeof(::szengine::WhyEntitiesResponse)},
-        {538, -1, -1, sizeof(::szengine::WhyRecordInEntityRequest)},
-        {549, -1, -1, sizeof(::szengine::WhyRecordInEntityResponse)},
-        {558, -1, -1, sizeof(::szengine::WhyRecordsRequest)},
-        {571, -1, -1, sizeof(::szengine::WhyRecordsResponse)},
+        {130, -1, -1, sizeof(::szengine::FindInterestingEntitiesByEntityIdRequest)},
+        {140, -1, -1, sizeof(::szengine::FindInterestingEntitiesByEntityIdResponse)},
+        {149, -1, -1, sizeof(::szengine::FindInterestingEntitiesByRecordIdRequest)},
+        {160, -1, -1, sizeof(::szengine::FindInterestingEntitiesByRecordIdResponse)},
+        {169, -1, -1, sizeof(::szengine::FindNetworkByEntityIdRequest)},
+        {182, -1, -1, sizeof(::szengine::FindNetworkByEntityIdResponse)},
+        {191, -1, -1, sizeof(::szengine::FindNetworkByRecordIdRequest)},
+        {204, -1, -1, sizeof(::szengine::FindNetworkByRecordIdResponse)},
+        {213, -1, -1, sizeof(::szengine::FindPathByEntityIdRequest)},
+        {227, -1, -1, sizeof(::szengine::FindPathByEntityIdResponse)},
+        {236, -1, -1, sizeof(::szengine::FindPathByRecordIdRequest)},
+        {252, -1, -1, sizeof(::szengine::FindPathByRecordIdResponse)},
+        {261, -1, -1, sizeof(::szengine::GetActiveConfigIdRequest)},
+        {269, -1, -1, sizeof(::szengine::GetActiveConfigIdResponse)},
+        {278, -1, -1, sizeof(::szengine::GetEntityByEntityIdRequest)},
+        {288, -1, -1, sizeof(::szengine::GetEntityByEntityIdResponse)},
+        {297, -1, -1, sizeof(::szengine::GetEntityByRecordIdRequest)},
+        {308, -1, -1, sizeof(::szengine::GetEntityByRecordIdResponse)},
+        {317, -1, -1, sizeof(::szengine::GetRecordRequest)},
+        {328, -1, -1, sizeof(::szengine::GetRecordResponse)},
+        {337, -1, -1, sizeof(::szengine::GetRedoRecordRequest)},
+        {345, -1, -1, sizeof(::szengine::GetRedoRecordResponse)},
+        {354, -1, -1, sizeof(::szengine::GetVirtualEntityByRecordIdRequest)},
+        {364, -1, -1, sizeof(::szengine::GetVirtualEntityByRecordIdResponse)},
+        {373, -1, -1, sizeof(::szengine::HowEntityByEntityIdRequest)},
+        {383, -1, -1, sizeof(::szengine::HowEntityByEntityIdResponse)},
+        {392, -1, -1, sizeof(::szengine::PrimeEngineRequest)},
+        {400, -1, -1, sizeof(::szengine::PrimeEngineResponse)},
+        {408, -1, -1, sizeof(::szengine::ProcessRedoRecordRequest)},
+        {418, -1, -1, sizeof(::szengine::ProcessRedoRecordResponse)},
+        {427, -1, -1, sizeof(::szengine::ReevaluateEntityRequest)},
+        {437, -1, -1, sizeof(::szengine::ReevaluateEntityResponse)},
+        {446, -1, -1, sizeof(::szengine::ReevaluateRecordRequest)},
+        {457, -1, -1, sizeof(::szengine::ReevaluateRecordResponse)},
+        {466, -1, -1, sizeof(::szengine::ReinitializeRequest)},
+        {475, -1, -1, sizeof(::szengine::ReinitializeResponse)},
+        {483, -1, -1, sizeof(::szengine::SearchByAttributesRequest)},
+        {494, -1, -1, sizeof(::szengine::SearchByAttributesResponse)},
+        {503, -1, -1, sizeof(::szengine::GetStatsRequest)},
+        {511, -1, -1, sizeof(::szengine::GetStatsResponse)},
+        {520, -1, -1, sizeof(::szengine::StreamExportCsvEntityReportRequest)},
+        {530, -1, -1, sizeof(::szengine::StreamExportCsvEntityReportResponse)},
+        {539, -1, -1, sizeof(::szengine::StreamExportJsonEntityReportRequest)},
+        {548, -1, -1, sizeof(::szengine::StreamExportJsonEntityReportResponse)},
+        {557, -1, -1, sizeof(::szengine::WhyEntitiesRequest)},
+        {568, -1, -1, sizeof(::szengine::WhyEntitiesResponse)},
+        {577, -1, -1, sizeof(::szengine::WhyRecordInEntityRequest)},
+        {588, -1, -1, sizeof(::szengine::WhyRecordInEntityResponse)},
+        {597, -1, -1, sizeof(::szengine::WhyRecordsRequest)},
+        {610, -1, -1, sizeof(::szengine::WhyRecordsResponse)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -1934,6 +2064,10 @@ static const ::_pb::Message* const file_default_instances[] = {
     &::szengine::_ExportJsonEntityReportResponse_default_instance_._instance,
     &::szengine::_FetchNextRequest_default_instance_._instance,
     &::szengine::_FetchNextResponse_default_instance_._instance,
+    &::szengine::_FindInterestingEntitiesByEntityIdRequest_default_instance_._instance,
+    &::szengine::_FindInterestingEntitiesByEntityIdResponse_default_instance_._instance,
+    &::szengine::_FindInterestingEntitiesByRecordIdRequest_default_instance_._instance,
+    &::szengine::_FindInterestingEntitiesByRecordIdResponse_default_instance_._instance,
     &::szengine::_FindNetworkByEntityIdRequest_default_instance_._instance,
     &::szengine::_FindNetworkByEntityIdResponse_default_instance_._instance,
     &::szengine::_FindNetworkByRecordIdRequest_default_instance_._instance,
@@ -2000,164 +2134,178 @@ const char descriptor_table_protodef_szengine_2eproto[] PROTOBUF_SECTION_VARIABL
     "ortJsonEntityReportResponse\022\016\n\006result\030\001 "
     "\001(\003\"*\n\020FetchNextRequest\022\026\n\016responseHandl"
     "e\030\001 \001(\003\"#\n\021FetchNextResponse\022\016\n\006result\030\001"
-    " \001(\t\"\202\001\n\034FindNetworkByEntityIdRequest\022\022\n"
-    "\nentityList\030\001 \001(\t\022\022\n\nmaxDegrees\030\002 \001(\003\022\026\n"
-    "\016buildOutDegree\030\003 \001(\003\022\023\n\013maxEntities\030\004 \001"
-    "(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035FindNetworkByEntity"
-    "IdResponse\022\016\n\006result\030\001 \001(\t\"\202\001\n\034FindNetwo"
-    "rkByRecordIdRequest\022\022\n\nrecordList\030\001 \001(\t\022"
-    "\022\n\nmaxDegrees\030\002 \001(\003\022\026\n\016buildOutDegree\030\003 "
-    "\001(\003\022\023\n\013maxEntities\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\""
-    "/\n\035FindNetworkByRecordIdResponse\022\016\n\006resu"
-    "lt\030\001 \001(\t\"\233\001\n\031FindPathByEntityIdRequest\022\025"
-    "\n\rstartEntityId\030\001 \001(\003\022\023\n\013endEntityId\030\002 \001"
-    "(\003\022\022\n\nmaxDegrees\030\003 \001(\003\022\022\n\nexclusions\030\004 \001"
-    "(\t\022\033\n\023requiredDataSources\030\005 \001(\t\022\r\n\005flags"
-    "\030\006 \001(\003\",\n\032FindPathByEntityIdResponse\022\016\n\006"
-    "result\030\001 \001(\t\"\323\001\n\031FindPathByRecordIdReque"
-    "st\022\033\n\023startDataSourceCode\030\001 \001(\t\022\025\n\rstart"
-    "RecordId\030\002 \001(\t\022\031\n\021endDataSourceCode\030\003 \001("
-    "\t\022\023\n\013endRecordId\030\004 \001(\t\022\022\n\nmaxDegrees\030\005 \001"
-    "(\003\022\022\n\nexclusions\030\006 \001(\t\022\033\n\023requiredDataSo"
-    "urces\030\007 \001(\t\022\r\n\005flags\030\010 \001(\003\",\n\032FindPathBy"
-    "RecordIdResponse\022\016\n\006result\030\001 \001(\t\"\032\n\030GetA"
-    "ctiveConfigIdRequest\"+\n\031GetActiveConfigI"
-    "dResponse\022\016\n\006result\030\001 \001(\003\"=\n\032GetEntityBy"
-    "EntityIdRequest\022\020\n\010entityId\030\001 \001(\003\022\r\n\005fla"
-    "gs\030\002 \001(\003\"-\n\033GetEntityByEntityIdResponse\022"
-    "\016\n\006result\030\001 \001(\t\"U\n\032GetEntityByRecordIdRe"
-    "quest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordI"
-    "d\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"-\n\033GetEntityByRec"
-    "ordIdResponse\022\016\n\006result\030\001 \001(\t\"K\n\020GetReco"
-    "rdRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010rec"
-    "ordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"#\n\021GetRecordR"
-    "esponse\022\016\n\006result\030\001 \001(\t\"\026\n\024GetRedoRecord"
-    "Request\"\'\n\025GetRedoRecordResponse\022\016\n\006resu"
-    "lt\030\001 \001(\t\"F\n!GetVirtualEntityByRecordIdRe"
-    "quest\022\022\n\nrecordList\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003"
-    "\"4\n\"GetVirtualEntityByRecordIdResponse\022\016"
-    "\n\006result\030\001 \001(\t\"=\n\032HowEntityByEntityIdReq"
-    "uest\022\020\n\010entityId\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"-\n"
-    "\033HowEntityByEntityIdResponse\022\016\n\006result\030\001"
-    " \001(\t\"\024\n\022PrimeEngineRequest\"\025\n\023PrimeEngin"
-    "eResponse\"=\n\030ProcessRedoRecordRequest\022\022\n"
-    "\nredoRecord\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"+\n\031Proc"
-    "essRedoRecordResponse\022\016\n\006result\030\001 \001(\t\":\n"
-    "\027ReevaluateEntityRequest\022\020\n\010entityId\030\001 \001"
-    "(\003\022\r\n\005flags\030\002 \001(\003\"*\n\030ReevaluateEntityRes"
-    "ponse\022\016\n\006result\030\001 \001(\t\"R\n\027ReevaluateRecor"
-    "dRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010reco"
-    "rdId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"*\n\030ReevaluateR"
-    "ecordResponse\022\016\n\006result\030\001 \001(\t\"\'\n\023Reiniti"
-    "alizeRequest\022\020\n\010configId\030\001 \001(\003\"\026\n\024Reinit"
-    "ializeResponse\"U\n\031SearchByAttributesRequ"
-    "est\022\022\n\nattributes\030\001 \001(\t\022\025\n\rsearchProfile"
-    "\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\",\n\032SearchByAttribu"
-    "tesResponse\022\016\n\006result\030\001 \001(\t\"\021\n\017GetStatsR"
-    "equest\"\"\n\020GetStatsResponse\022\016\n\006result\030\001 \001"
-    "(\t\"J\n\"StreamExportCsvEntityReportRequest"
-    "\022\025\n\rcsvColumnList\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"5"
-    "\n#StreamExportCsvEntityReportResponse\022\016\n"
-    "\006result\030\001 \001(\t\"4\n#StreamExportJsonEntityR"
-    "eportRequest\022\r\n\005flags\030\001 \001(\003\"6\n$StreamExp"
-    "ortJsonEntityReportResponse\022\016\n\006result\030\001 "
-    "\001(\t\"I\n\022WhyEntitiesRequest\022\021\n\tentityId1\030\001"
-    " \001(\003\022\021\n\tentityId2\030\002 \001(\003\022\r\n\005flags\030\003 \001(\003\"%"
-    "\n\023WhyEntitiesResponse\022\016\n\006result\030\001 \001(\t\"S\n"
-    "\030WhyRecordInEntityRequest\022\026\n\016dataSourceC"
+    " \001(\t\"K\n(FindInterestingEntitiesByEntityI"
+    "dRequest\022\020\n\010entityId\030\001 \001(\003\022\r\n\005flags\030\002 \001("
+    "\003\";\n)FindInterestingEntitiesByEntityIdRe"
+    "sponse\022\016\n\006result\030\001 \001(\t\"c\n(FindInterestin"
+    "gEntitiesByRecordIdRequest\022\026\n\016dataSource"
+    "Code\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 "
+    "\001(\003\";\n)FindInterestingEntitiesByRecordId"
+    "Response\022\016\n\006result\030\001 \001(\t\"\202\001\n\034FindNetwork"
+    "ByEntityIdRequest\022\022\n\nentityList\030\001 \001(\t\022\022\n"
+    "\nmaxDegrees\030\002 \001(\003\022\026\n\016buildOutDegree\030\003 \001("
+    "\003\022\023\n\013maxEntities\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n"
+    "\035FindNetworkByEntityIdResponse\022\016\n\006result"
+    "\030\001 \001(\t\"\202\001\n\034FindNetworkByRecordIdRequest\022"
+    "\022\n\nrecordList\030\001 \001(\t\022\022\n\nmaxDegrees\030\002 \001(\003\022"
+    "\026\n\016buildOutDegree\030\003 \001(\003\022\023\n\013maxEntities\030\004"
+    " \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035FindNetworkByReco"
+    "rdIdResponse\022\016\n\006result\030\001 \001(\t\"\233\001\n\031FindPat"
+    "hByEntityIdRequest\022\025\n\rstartEntityId\030\001 \001("
+    "\003\022\023\n\013endEntityId\030\002 \001(\003\022\022\n\nmaxDegrees\030\003 \001"
+    "(\003\022\022\n\nexclusions\030\004 \001(\t\022\033\n\023requiredDataSo"
+    "urces\030\005 \001(\t\022\r\n\005flags\030\006 \001(\003\",\n\032FindPathBy"
+    "EntityIdResponse\022\016\n\006result\030\001 \001(\t\"\323\001\n\031Fin"
+    "dPathByRecordIdRequest\022\033\n\023startDataSourc"
+    "eCode\030\001 \001(\t\022\025\n\rstartRecordId\030\002 \001(\t\022\031\n\021en"
+    "dDataSourceCode\030\003 \001(\t\022\023\n\013endRecordId\030\004 \001"
+    "(\t\022\022\n\nmaxDegrees\030\005 \001(\003\022\022\n\nexclusions\030\006 \001"
+    "(\t\022\033\n\023requiredDataSources\030\007 \001(\t\022\r\n\005flags"
+    "\030\010 \001(\003\",\n\032FindPathByRecordIdResponse\022\016\n\006"
+    "result\030\001 \001(\t\"\032\n\030GetActiveConfigIdRequest"
+    "\"+\n\031GetActiveConfigIdResponse\022\016\n\006result\030"
+    "\001 \001(\003\"=\n\032GetEntityByEntityIdRequest\022\020\n\010e"
+    "ntityId\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"-\n\033GetEntit"
+    "yByEntityIdResponse\022\016\n\006result\030\001 \001(\t\"U\n\032G"
+    "etEntityByRecordIdRequest\022\026\n\016dataSourceC"
     "ode\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001"
-    "(\003\"+\n\031WhyRecordInEntityResponse\022\016\n\006resul"
-    "t\030\001 \001(\t\"z\n\021WhyRecordsRequest\022\027\n\017dataSour"
-    "ceCode1\030\001 \001(\t\022\021\n\trecordId1\030\002 \001(\t\022\027\n\017data"
-    "SourceCode2\030\003 \001(\t\022\021\n\trecordId2\030\004 \001(\t\022\r\n\005"
-    "flags\030\005 \001(\003\"$\n\022WhyRecordsResponse\022\016\n\006res"
-    "ult\030\001 \001(\t2\226\026\n\010SzEngine\022F\n\tAddRecord\022\032.sz"
-    "engine.AddRecordRequest\032\033.szengine.AddRe"
-    "cordResponse\"\000\022L\n\013CloseExport\022\034.szengine"
-    ".CloseExportRequest\032\035.szengine.CloseExpo"
-    "rtResponse\"\000\022[\n\020CountRedoRecords\022!.szeng"
-    "ine.CountRedoRecordsRequest\032\".szengine.C"
-    "ountRedoRecordsResponse\"\000\022O\n\014DeleteRecor"
-    "d\022\035.szengine.DeleteRecordRequest\032\036.szeng"
-    "ine.DeleteRecordResponse\"\000\022j\n\025ExportCsvE"
-    "ntityReport\022&.szengine.ExportCsvEntityRe"
-    "portRequest\032\'.szengine.ExportCsvEntityRe"
-    "portResponse\"\000\022m\n\026ExportJsonEntityReport"
-    "\022\'.szengine.ExportJsonEntityReportReques"
-    "t\032(.szengine.ExportJsonEntityReportRespo"
-    "nse\"\000\022F\n\tFetchNext\022\032.szengine.FetchNextR"
-    "equest\032\033.szengine.FetchNextResponse\"\000\022j\n"
-    "\025FindNetworkByEntityId\022&.szengine.FindNe"
-    "tworkByEntityIdRequest\032\'.szengine.FindNe"
-    "tworkByEntityIdResponse\"\000\022j\n\025FindNetwork"
-    "ByRecordId\022&.szengine.FindNetworkByRecor"
-    "dIdRequest\032\'.szengine.FindNetworkByRecor"
-    "dIdResponse\"\000\022a\n\022FindPathByEntityId\022#.sz"
-    "engine.FindPathByEntityIdRequest\032$.szeng"
-    "ine.FindPathByEntityIdResponse\"\000\022a\n\022Find"
-    "PathByRecordId\022#.szengine.FindPathByReco"
-    "rdIdRequest\032$.szengine.FindPathByRecordI"
-    "dResponse\"\000\022^\n\021GetActiveConfigId\022\".szeng"
-    "ine.GetActiveConfigIdRequest\032#.szengine."
-    "GetActiveConfigIdResponse\"\000\022d\n\023GetEntity"
-    "ByEntityId\022$.szengine.GetEntityByEntityI"
-    "dRequest\032%.szengine.GetEntityByEntityIdR"
-    "esponse\"\000\022d\n\023GetEntityByRecordId\022$.szeng"
-    "ine.GetEntityByRecordIdRequest\032%.szengin"
-    "e.GetEntityByRecordIdResponse\"\000\022F\n\tGetRe"
-    "cord\022\032.szengine.GetRecordRequest\032\033.szeng"
-    "ine.GetRecordResponse\"\000\022R\n\rGetRedoRecord"
-    "\022\036.szengine.GetRedoRecordRequest\032\037.szeng"
-    "ine.GetRedoRecordResponse\"\000\022C\n\010GetStats\022"
-    "\031.szengine.GetStatsRequest\032\032.szengine.Ge"
-    "tStatsResponse\"\000\022y\n\032GetVirtualEntityByRe"
-    "cordId\022+.szengine.GetVirtualEntityByReco"
-    "rdIdRequest\032,.szengine.GetVirtualEntityB"
-    "yRecordIdResponse\"\000\022d\n\023HowEntityByEntity"
-    "Id\022$.szengine.HowEntityByEntityIdRequest"
-    "\032%.szengine.HowEntityByEntityIdResponse\""
-    "\000\022L\n\013PrimeEngine\022\034.szengine.PrimeEngineR"
-    "equest\032\035.szengine.PrimeEngineResponse\"\000\022"
-    "^\n\021ProcessRedoRecord\022\".szengine.ProcessR"
-    "edoRecordRequest\032#.szengine.ProcessRedoR"
-    "ecordResponse\"\000\022[\n\020ReevaluateEntity\022!.sz"
-    "engine.ReevaluateEntityRequest\032\".szengin"
-    "e.ReevaluateEntityResponse\"\000\022[\n\020Reevalua"
-    "teRecord\022!.szengine.ReevaluateRecordRequ"
-    "est\032\".szengine.ReevaluateRecordResponse\""
-    "\000\022O\n\014Reinitialize\022\035.szengine.Reinitializ"
-    "eRequest\032\036.szengine.ReinitializeResponse"
-    "\"\000\022a\n\022SearchByAttributes\022#.szengine.Sear"
-    "chByAttributesRequest\032$.szengine.SearchB"
-    "yAttributesResponse\"\000\022~\n\033StreamExportCsv"
-    "EntityReport\022,.szengine.StreamExportCsvE"
-    "ntityReportRequest\032-.szengine.StreamExpo"
-    "rtCsvEntityReportResponse\"\0000\001\022\201\001\n\034Stream"
-    "ExportJsonEntityReport\022-.szengine.Stream"
-    "ExportJsonEntityReportRequest\032..szengine"
-    ".StreamExportJsonEntityReportResponse\"\0000"
-    "\001\022L\n\013WhyEntities\022\034.szengine.WhyEntitiesR"
-    "equest\032\035.szengine.WhyEntitiesResponse\"\000\022"
-    "^\n\021WhyRecordInEntity\022\".szengine.WhyRecor"
-    "dInEntityRequest\032#.szengine.WhyRecordInE"
-    "ntityResponse\"\000\022I\n\nWhyRecords\022\033.szengine"
-    ".WhyRecordsRequest\032\034.szengine.WhyRecords"
-    "Response\"\000Bg\n#com.senzing.sz.engine.grpc"
-    ".SzEngineB\rSzEngineProtoZ1github.com/sen"
-    "zing-garage/sz-sdk-go-grpc/szengineb\006pro"
-    "to3"
+    "(\003\"-\n\033GetEntityByRecordIdResponse\022\016\n\006res"
+    "ult\030\001 \001(\t\"K\n\020GetRecordRequest\022\026\n\016dataSou"
+    "rceCode\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags"
+    "\030\003 \001(\003\"#\n\021GetRecordResponse\022\016\n\006result\030\001 "
+    "\001(\t\"\026\n\024GetRedoRecordRequest\"\'\n\025GetRedoRe"
+    "cordResponse\022\016\n\006result\030\001 \001(\t\"F\n!GetVirtu"
+    "alEntityByRecordIdRequest\022\022\n\nrecordList\030"
+    "\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"4\n\"GetVirtualEntity"
+    "ByRecordIdResponse\022\016\n\006result\030\001 \001(\t\"=\n\032Ho"
+    "wEntityByEntityIdRequest\022\020\n\010entityId\030\001 \001"
+    "(\003\022\r\n\005flags\030\002 \001(\003\"-\n\033HowEntityByEntityId"
+    "Response\022\016\n\006result\030\001 \001(\t\"\024\n\022PrimeEngineR"
+    "equest\"\025\n\023PrimeEngineResponse\"=\n\030Process"
+    "RedoRecordRequest\022\022\n\nredoRecord\030\001 \001(\t\022\r\n"
+    "\005flags\030\002 \001(\003\"+\n\031ProcessRedoRecordRespons"
+    "e\022\016\n\006result\030\001 \001(\t\":\n\027ReevaluateEntityReq"
+    "uest\022\020\n\010entityId\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"*\n"
+    "\030ReevaluateEntityResponse\022\016\n\006result\030\001 \001("
+    "\t\"R\n\027ReevaluateRecordRequest\022\026\n\016dataSour"
+    "ceCode\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030"
+    "\003 \001(\003\"*\n\030ReevaluateRecordResponse\022\016\n\006res"
+    "ult\030\001 \001(\t\"\'\n\023ReinitializeRequest\022\020\n\010conf"
+    "igId\030\001 \001(\003\"\026\n\024ReinitializeResponse\"U\n\031Se"
+    "archByAttributesRequest\022\022\n\nattributes\030\001 "
+    "\001(\t\022\025\n\rsearchProfile\030\002 \001(\t\022\r\n\005flags\030\003 \001("
+    "\003\",\n\032SearchByAttributesResponse\022\016\n\006resul"
+    "t\030\001 \001(\t\"\021\n\017GetStatsRequest\"\"\n\020GetStatsRe"
+    "sponse\022\016\n\006result\030\001 \001(\t\"J\n\"StreamExportCs"
+    "vEntityReportRequest\022\025\n\rcsvColumnList\030\001 "
+    "\001(\t\022\r\n\005flags\030\002 \001(\003\"5\n#StreamExportCsvEnt"
+    "ityReportResponse\022\016\n\006result\030\001 \001(\t\"4\n#Str"
+    "eamExportJsonEntityReportRequest\022\r\n\005flag"
+    "s\030\001 \001(\003\"6\n$StreamExportJsonEntityReportR"
+    "esponse\022\016\n\006result\030\001 \001(\t\"I\n\022WhyEntitiesRe"
+    "quest\022\021\n\tentityId1\030\001 \001(\003\022\021\n\tentityId2\030\002 "
+    "\001(\003\022\r\n\005flags\030\003 \001(\003\"%\n\023WhyEntitiesRespons"
+    "e\022\016\n\006result\030\001 \001(\t\"S\n\030WhyRecordInEntityRe"
+    "quest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordI"
+    "d\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"+\n\031WhyRecordInEnt"
+    "ityResponse\022\016\n\006result\030\001 \001(\t\"z\n\021WhyRecord"
+    "sRequest\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trec"
+    "ordId1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n"
+    "\trecordId2\030\004 \001(\t\022\r\n\005flags\030\005 \001(\003\"$\n\022WhyRe"
+    "cordsResponse\022\016\n\006result\030\001 \001(\t2\270\030\n\010SzEngi"
+    "ne\022F\n\tAddRecord\022\032.szengine.AddRecordRequ"
+    "est\032\033.szengine.AddRecordResponse\"\000\022L\n\013Cl"
+    "oseExport\022\034.szengine.CloseExportRequest\032"
+    "\035.szengine.CloseExportResponse\"\000\022[\n\020Coun"
+    "tRedoRecords\022!.szengine.CountRedoRecords"
+    "Request\032\".szengine.CountRedoRecordsRespo"
+    "nse\"\000\022O\n\014DeleteRecord\022\035.szengine.DeleteR"
+    "ecordRequest\032\036.szengine.DeleteRecordResp"
+    "onse\"\000\022j\n\025ExportCsvEntityReport\022&.szengi"
+    "ne.ExportCsvEntityReportRequest\032\'.szengi"
+    "ne.ExportCsvEntityReportResponse\"\000\022m\n\026Ex"
+    "portJsonEntityReport\022\'.szengine.ExportJs"
+    "onEntityReportRequest\032(.szengine.ExportJ"
+    "sonEntityReportResponse\"\000\022F\n\tFetchNext\022\032"
+    ".szengine.FetchNextRequest\032\033.szengine.Fe"
+    "tchNextResponse\"\000\022\216\001\n!FindInterestingEnt"
+    "itiesByEntityId\0222.szengine.FindInteresti"
+    "ngEntitiesByEntityIdRequest\0323.szengine.F"
+    "indInterestingEntitiesByEntityIdResponse"
+    "\"\000\022\216\001\n!FindInterestingEntitiesByRecordId"
+    "\0222.szengine.FindInterestingEntitiesByRec"
+    "ordIdRequest\0323.szengine.FindInterestingE"
+    "ntitiesByRecordIdResponse\"\000\022j\n\025FindNetwo"
+    "rkByEntityId\022&.szengine.FindNetworkByEnt"
+    "ityIdRequest\032\'.szengine.FindNetworkByEnt"
+    "ityIdResponse\"\000\022j\n\025FindNetworkByRecordId"
+    "\022&.szengine.FindNetworkByRecordIdRequest"
+    "\032\'.szengine.FindNetworkByRecordIdRespons"
+    "e\"\000\022a\n\022FindPathByEntityId\022#.szengine.Fin"
+    "dPathByEntityIdRequest\032$.szengine.FindPa"
+    "thByEntityIdResponse\"\000\022a\n\022FindPathByReco"
+    "rdId\022#.szengine.FindPathByRecordIdReques"
+    "t\032$.szengine.FindPathByRecordIdResponse\""
+    "\000\022^\n\021GetActiveConfigId\022\".szengine.GetAct"
+    "iveConfigIdRequest\032#.szengine.GetActiveC"
+    "onfigIdResponse\"\000\022d\n\023GetEntityByEntityId"
+    "\022$.szengine.GetEntityByEntityIdRequest\032%"
+    ".szengine.GetEntityByEntityIdResponse\"\000\022"
+    "d\n\023GetEntityByRecordId\022$.szengine.GetEnt"
+    "ityByRecordIdRequest\032%.szengine.GetEntit"
+    "yByRecordIdResponse\"\000\022F\n\tGetRecord\022\032.sze"
+    "ngine.GetRecordRequest\032\033.szengine.GetRec"
+    "ordResponse\"\000\022R\n\rGetRedoRecord\022\036.szengin"
+    "e.GetRedoRecordRequest\032\037.szengine.GetRed"
+    "oRecordResponse\"\000\022C\n\010GetStats\022\031.szengine"
+    ".GetStatsRequest\032\032.szengine.GetStatsResp"
+    "onse\"\000\022y\n\032GetVirtualEntityByRecordId\022+.s"
+    "zengine.GetVirtualEntityByRecordIdReques"
+    "t\032,.szengine.GetVirtualEntityByRecordIdR"
+    "esponse\"\000\022d\n\023HowEntityByEntityId\022$.szeng"
+    "ine.HowEntityByEntityIdRequest\032%.szengin"
+    "e.HowEntityByEntityIdResponse\"\000\022L\n\013Prime"
+    "Engine\022\034.szengine.PrimeEngineRequest\032\035.s"
+    "zengine.PrimeEngineResponse\"\000\022^\n\021Process"
+    "RedoRecord\022\".szengine.ProcessRedoRecordR"
+    "equest\032#.szengine.ProcessRedoRecordRespo"
+    "nse\"\000\022[\n\020ReevaluateEntity\022!.szengine.Ree"
+    "valuateEntityRequest\032\".szengine.Reevalua"
+    "teEntityResponse\"\000\022[\n\020ReevaluateRecord\022!"
+    ".szengine.ReevaluateRecordRequest\032\".szen"
+    "gine.ReevaluateRecordResponse\"\000\022O\n\014Reini"
+    "tialize\022\035.szengine.ReinitializeRequest\032\036"
+    ".szengine.ReinitializeResponse\"\000\022a\n\022Sear"
+    "chByAttributes\022#.szengine.SearchByAttrib"
+    "utesRequest\032$.szengine.SearchByAttribute"
+    "sResponse\"\000\022~\n\033StreamExportCsvEntityRepo"
+    "rt\022,.szengine.StreamExportCsvEntityRepor"
+    "tRequest\032-.szengine.StreamExportCsvEntit"
+    "yReportResponse\"\0000\001\022\201\001\n\034StreamExportJson"
+    "EntityReport\022-.szengine.StreamExportJson"
+    "EntityReportRequest\032..szengine.StreamExp"
+    "ortJsonEntityReportResponse\"\0000\001\022L\n\013WhyEn"
+    "tities\022\034.szengine.WhyEntitiesRequest\032\035.s"
+    "zengine.WhyEntitiesResponse\"\000\022^\n\021WhyReco"
+    "rdInEntity\022\".szengine.WhyRecordInEntityR"
+    "equest\032#.szengine.WhyRecordInEntityRespo"
+    "nse\"\000\022I\n\nWhyRecords\022\033.szengine.WhyRecord"
+    "sRequest\032\034.szengine.WhyRecordsResponse\"\000"
+    "Bg\n#com.senzing.sz.engine.grpc.SzEngineB"
+    "\rSzEngineProtoZ1github.com/senzing-garag"
+    "e/sz-sdk-go-grpc/szengineb\006proto3"
 };
 static ::absl::once_flag descriptor_table_szengine_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_szengine_2eproto = {
     false,
     false,
-    6523,
+    7113,
     descriptor_table_protodef_szengine_2eproto,
     "szengine.proto",
     &descriptor_table_szengine_2eproto_once,
     nullptr,
     0,
-    60,
+    64,
     schemas,
     file_default_instances,
     TableStruct_szengine_2eproto::offsets,
@@ -4582,6 +4730,836 @@ void FetchNextResponse::InternalSwap(FetchNextResponse* PROTOBUF_RESTRICT other)
 }
 // ===================================================================
 
+class FindInterestingEntitiesByEntityIdRequest::_Internal {
+ public:
+};
+
+FindInterestingEntitiesByEntityIdRequest::FindInterestingEntitiesByEntityIdRequest(::google::protobuf::Arena* arena)
+    : ::google::protobuf::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:szengine.FindInterestingEntitiesByEntityIdRequest)
+}
+FindInterestingEntitiesByEntityIdRequest::FindInterestingEntitiesByEntityIdRequest(
+    ::google::protobuf::Arena* arena, const FindInterestingEntitiesByEntityIdRequest& from)
+    : FindInterestingEntitiesByEntityIdRequest(arena) {
+  MergeFrom(from);
+}
+inline PROTOBUF_NDEBUG_INLINE FindInterestingEntitiesByEntityIdRequest::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0} {}
+
+inline void FindInterestingEntitiesByEntityIdRequest::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, entityid_),
+           0,
+           offsetof(Impl_, flags_) -
+               offsetof(Impl_, entityid_) +
+               sizeof(Impl_::flags_));
+}
+FindInterestingEntitiesByEntityIdRequest::~FindInterestingEntitiesByEntityIdRequest() {
+  // @@protoc_insertion_point(destructor:szengine.FindInterestingEntitiesByEntityIdRequest)
+  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  SharedDtor();
+}
+inline void FindInterestingEntitiesByEntityIdRequest::SharedDtor() {
+  ABSL_DCHECK(GetArena() == nullptr);
+  _impl_.~Impl_();
+}
+
+PROTOBUF_NOINLINE void FindInterestingEntitiesByEntityIdRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:szengine.FindInterestingEntitiesByEntityIdRequest)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&_impl_.entityid_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.flags_) -
+      reinterpret_cast<char*>(&_impl_.entityid_)) + sizeof(_impl_.flags_));
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+const char* FindInterestingEntitiesByEntityIdRequest::_InternalParse(
+    const char* ptr, ::_pbi::ParseContext* ctx) {
+  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+  return ptr;
+}
+
+
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<1, 2, 0, 0, 2> FindInterestingEntitiesByEntityIdRequest::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    2, 8,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967292,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    2,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    &_FindInterestingEntitiesByEntityIdRequest_default_instance_._instance,
+    ::_pbi::TcParser::GenericFallback,  // fallback
+  }, {{
+    // int64 flags = 2;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindInterestingEntitiesByEntityIdRequest, _impl_.flags_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByEntityIdRequest, _impl_.flags_)}},
+    // int64 entityId = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindInterestingEntitiesByEntityIdRequest, _impl_.entityid_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByEntityIdRequest, _impl_.entityid_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // int64 entityId = 1;
+    {PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByEntityIdRequest, _impl_.entityid_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
+    // int64 flags = 2;
+    {PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByEntityIdRequest, _impl_.flags_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
+  }},
+  // no aux_entries
+  {{
+  }},
+};
+
+::uint8_t* FindInterestingEntitiesByEntityIdRequest::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:szengine.FindInterestingEntitiesByEntityIdRequest)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  // int64 entityId = 1;
+  if (this->_internal_entityid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::
+        WriteInt64ToArrayWithField<1>(
+            stream, this->_internal_entityid(), target);
+  }
+
+  // int64 flags = 2;
+  if (this->_internal_flags() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::
+        WriteInt64ToArrayWithField<2>(
+            stream, this->_internal_flags(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:szengine.FindInterestingEntitiesByEntityIdRequest)
+  return target;
+}
+
+::size_t FindInterestingEntitiesByEntityIdRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:szengine.FindInterestingEntitiesByEntityIdRequest)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int64 entityId = 1;
+  if (this->_internal_entityid() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+        this->_internal_entityid());
+  }
+
+  // int64 flags = 2;
+  if (this->_internal_flags() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+        this->_internal_flags());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::google::protobuf::Message::ClassData FindInterestingEntitiesByEntityIdRequest::_class_data_ = {
+    FindInterestingEntitiesByEntityIdRequest::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
+};
+const ::google::protobuf::Message::ClassData* FindInterestingEntitiesByEntityIdRequest::GetClassData() const {
+  return &_class_data_;
+}
+
+void FindInterestingEntitiesByEntityIdRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+  auto* const _this = static_cast<FindInterestingEntitiesByEntityIdRequest*>(&to_msg);
+  auto& from = static_cast<const FindInterestingEntitiesByEntityIdRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szengine.FindInterestingEntitiesByEntityIdRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_entityid() != 0) {
+    _this->_internal_set_entityid(from._internal_entityid());
+  }
+  if (from._internal_flags() != 0) {
+    _this->_internal_set_flags(from._internal_flags());
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void FindInterestingEntitiesByEntityIdRequest::CopyFrom(const FindInterestingEntitiesByEntityIdRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szengine.FindInterestingEntitiesByEntityIdRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+PROTOBUF_NOINLINE bool FindInterestingEntitiesByEntityIdRequest::IsInitialized() const {
+  return true;
+}
+
+::_pbi::CachedSize* FindInterestingEntitiesByEntityIdRequest::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void FindInterestingEntitiesByEntityIdRequest::InternalSwap(FindInterestingEntitiesByEntityIdRequest* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByEntityIdRequest, _impl_.flags_)
+      + sizeof(FindInterestingEntitiesByEntityIdRequest::_impl_.flags_)
+      - PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByEntityIdRequest, _impl_.entityid_)>(
+          reinterpret_cast<char*>(&_impl_.entityid_),
+          reinterpret_cast<char*>(&other->_impl_.entityid_));
+}
+
+::google::protobuf::Metadata FindInterestingEntitiesByEntityIdRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
+      file_level_metadata_szengine_2eproto[14]);
+}
+// ===================================================================
+
+class FindInterestingEntitiesByEntityIdResponse::_Internal {
+ public:
+};
+
+FindInterestingEntitiesByEntityIdResponse::FindInterestingEntitiesByEntityIdResponse(::google::protobuf::Arena* arena)
+    : ::google::protobuf::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:szengine.FindInterestingEntitiesByEntityIdResponse)
+}
+inline PROTOBUF_NDEBUG_INLINE FindInterestingEntitiesByEntityIdResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : result_(arena, from.result_),
+        _cached_size_{0} {}
+
+FindInterestingEntitiesByEntityIdResponse::FindInterestingEntitiesByEntityIdResponse(
+    ::google::protobuf::Arena* arena,
+    const FindInterestingEntitiesByEntityIdResponse& from)
+    : ::google::protobuf::Message(arena) {
+  FindInterestingEntitiesByEntityIdResponse* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+
+  // @@protoc_insertion_point(copy_constructor:szengine.FindInterestingEntitiesByEntityIdResponse)
+}
+inline PROTOBUF_NDEBUG_INLINE FindInterestingEntitiesByEntityIdResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : result_(arena),
+        _cached_size_{0} {}
+
+inline void FindInterestingEntitiesByEntityIdResponse::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+FindInterestingEntitiesByEntityIdResponse::~FindInterestingEntitiesByEntityIdResponse() {
+  // @@protoc_insertion_point(destructor:szengine.FindInterestingEntitiesByEntityIdResponse)
+  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  SharedDtor();
+}
+inline void FindInterestingEntitiesByEntityIdResponse::SharedDtor() {
+  ABSL_DCHECK(GetArena() == nullptr);
+  _impl_.result_.Destroy();
+  _impl_.~Impl_();
+}
+
+PROTOBUF_NOINLINE void FindInterestingEntitiesByEntityIdResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:szengine.FindInterestingEntitiesByEntityIdResponse)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.result_.ClearToEmpty();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+const char* FindInterestingEntitiesByEntityIdResponse::_InternalParse(
+    const char* ptr, ::_pbi::ParseContext* ctx) {
+  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+  return ptr;
+}
+
+
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<0, 1, 0, 65, 2> FindInterestingEntitiesByEntityIdResponse::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    1, 0,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967294,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    1,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    &_FindInterestingEntitiesByEntityIdResponse_default_instance_._instance,
+    ::_pbi::TcParser::GenericFallback,  // fallback
+  }, {{
+    // string result = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByEntityIdResponse, _impl_.result_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string result = 1;
+    {PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByEntityIdResponse, _impl_.result_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+  }},
+  // no aux_entries
+  {{
+    "\62\6\0\0\0\0\0\0"
+    "szengine.FindInterestingEntitiesByEntityIdResponse"
+    "result"
+  }},
+};
+
+::uint8_t* FindInterestingEntitiesByEntityIdResponse::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:szengine.FindInterestingEntitiesByEntityIdResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  // string result = 1;
+  if (!this->_internal_result().empty()) {
+    const std::string& _s = this->_internal_result();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindInterestingEntitiesByEntityIdResponse.result");
+    target = stream->WriteStringMaybeAliased(1, _s, target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:szengine.FindInterestingEntitiesByEntityIdResponse)
+  return target;
+}
+
+::size_t FindInterestingEntitiesByEntityIdResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:szengine.FindInterestingEntitiesByEntityIdResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string result = 1;
+  if (!this->_internal_result().empty()) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_result());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::google::protobuf::Message::ClassData FindInterestingEntitiesByEntityIdResponse::_class_data_ = {
+    FindInterestingEntitiesByEntityIdResponse::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
+};
+const ::google::protobuf::Message::ClassData* FindInterestingEntitiesByEntityIdResponse::GetClassData() const {
+  return &_class_data_;
+}
+
+void FindInterestingEntitiesByEntityIdResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+  auto* const _this = static_cast<FindInterestingEntitiesByEntityIdResponse*>(&to_msg);
+  auto& from = static_cast<const FindInterestingEntitiesByEntityIdResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szengine.FindInterestingEntitiesByEntityIdResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_result().empty()) {
+    _this->_internal_set_result(from._internal_result());
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void FindInterestingEntitiesByEntityIdResponse::CopyFrom(const FindInterestingEntitiesByEntityIdResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szengine.FindInterestingEntitiesByEntityIdResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+PROTOBUF_NOINLINE bool FindInterestingEntitiesByEntityIdResponse::IsInitialized() const {
+  return true;
+}
+
+::_pbi::CachedSize* FindInterestingEntitiesByEntityIdResponse::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void FindInterestingEntitiesByEntityIdResponse::InternalSwap(FindInterestingEntitiesByEntityIdResponse* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.result_, &other->_impl_.result_, arena);
+}
+
+::google::protobuf::Metadata FindInterestingEntitiesByEntityIdResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
+      file_level_metadata_szengine_2eproto[15]);
+}
+// ===================================================================
+
+class FindInterestingEntitiesByRecordIdRequest::_Internal {
+ public:
+};
+
+FindInterestingEntitiesByRecordIdRequest::FindInterestingEntitiesByRecordIdRequest(::google::protobuf::Arena* arena)
+    : ::google::protobuf::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:szengine.FindInterestingEntitiesByRecordIdRequest)
+}
+inline PROTOBUF_NDEBUG_INLINE FindInterestingEntitiesByRecordIdRequest::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : datasourcecode_(arena, from.datasourcecode_),
+        recordid_(arena, from.recordid_),
+        _cached_size_{0} {}
+
+FindInterestingEntitiesByRecordIdRequest::FindInterestingEntitiesByRecordIdRequest(
+    ::google::protobuf::Arena* arena,
+    const FindInterestingEntitiesByRecordIdRequest& from)
+    : ::google::protobuf::Message(arena) {
+  FindInterestingEntitiesByRecordIdRequest* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+  _impl_.flags_ = from._impl_.flags_;
+
+  // @@protoc_insertion_point(copy_constructor:szengine.FindInterestingEntitiesByRecordIdRequest)
+}
+inline PROTOBUF_NDEBUG_INLINE FindInterestingEntitiesByRecordIdRequest::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : datasourcecode_(arena),
+        recordid_(arena),
+        _cached_size_{0} {}
+
+inline void FindInterestingEntitiesByRecordIdRequest::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.flags_ = {};
+}
+FindInterestingEntitiesByRecordIdRequest::~FindInterestingEntitiesByRecordIdRequest() {
+  // @@protoc_insertion_point(destructor:szengine.FindInterestingEntitiesByRecordIdRequest)
+  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  SharedDtor();
+}
+inline void FindInterestingEntitiesByRecordIdRequest::SharedDtor() {
+  ABSL_DCHECK(GetArena() == nullptr);
+  _impl_.datasourcecode_.Destroy();
+  _impl_.recordid_.Destroy();
+  _impl_.~Impl_();
+}
+
+PROTOBUF_NOINLINE void FindInterestingEntitiesByRecordIdRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:szengine.FindInterestingEntitiesByRecordIdRequest)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.datasourcecode_.ClearToEmpty();
+  _impl_.recordid_.ClearToEmpty();
+  _impl_.flags_ = ::int64_t{0};
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+const char* FindInterestingEntitiesByRecordIdRequest::_InternalParse(
+    const char* ptr, ::_pbi::ParseContext* ctx) {
+  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+  return ptr;
+}
+
+
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<2, 3, 0, 80, 2> FindInterestingEntitiesByRecordIdRequest::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    3, 24,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967288,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    3,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    &_FindInterestingEntitiesByRecordIdRequest_default_instance_._instance,
+    ::_pbi::TcParser::GenericFallback,  // fallback
+  }, {{
+    {::_pbi::TcParser::MiniParse, {}},
+    // string dataSourceCode = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdRequest, _impl_.datasourcecode_)}},
+    // string recordId = 2;
+    {::_pbi::TcParser::FastUS1,
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdRequest, _impl_.recordid_)}},
+    // int64 flags = 3;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindInterestingEntitiesByRecordIdRequest, _impl_.flags_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdRequest, _impl_.flags_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string dataSourceCode = 1;
+    {PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdRequest, _impl_.datasourcecode_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // string recordId = 2;
+    {PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdRequest, _impl_.recordid_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // int64 flags = 3;
+    {PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdRequest, _impl_.flags_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
+  }},
+  // no aux_entries
+  {{
+    "\61\16\10\0\0\0\0\0"
+    "szengine.FindInterestingEntitiesByRecordIdRequest"
+    "dataSourceCode"
+    "recordId"
+  }},
+};
+
+::uint8_t* FindInterestingEntitiesByRecordIdRequest::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:szengine.FindInterestingEntitiesByRecordIdRequest)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  // string dataSourceCode = 1;
+  if (!this->_internal_datasourcecode().empty()) {
+    const std::string& _s = this->_internal_datasourcecode();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindInterestingEntitiesByRecordIdRequest.dataSourceCode");
+    target = stream->WriteStringMaybeAliased(1, _s, target);
+  }
+
+  // string recordId = 2;
+  if (!this->_internal_recordid().empty()) {
+    const std::string& _s = this->_internal_recordid();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindInterestingEntitiesByRecordIdRequest.recordId");
+    target = stream->WriteStringMaybeAliased(2, _s, target);
+  }
+
+  // int64 flags = 3;
+  if (this->_internal_flags() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::
+        WriteInt64ToArrayWithField<3>(
+            stream, this->_internal_flags(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:szengine.FindInterestingEntitiesByRecordIdRequest)
+  return target;
+}
+
+::size_t FindInterestingEntitiesByRecordIdRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:szengine.FindInterestingEntitiesByRecordIdRequest)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string dataSourceCode = 1;
+  if (!this->_internal_datasourcecode().empty()) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_datasourcecode());
+  }
+
+  // string recordId = 2;
+  if (!this->_internal_recordid().empty()) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_recordid());
+  }
+
+  // int64 flags = 3;
+  if (this->_internal_flags() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+        this->_internal_flags());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::google::protobuf::Message::ClassData FindInterestingEntitiesByRecordIdRequest::_class_data_ = {
+    FindInterestingEntitiesByRecordIdRequest::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
+};
+const ::google::protobuf::Message::ClassData* FindInterestingEntitiesByRecordIdRequest::GetClassData() const {
+  return &_class_data_;
+}
+
+void FindInterestingEntitiesByRecordIdRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+  auto* const _this = static_cast<FindInterestingEntitiesByRecordIdRequest*>(&to_msg);
+  auto& from = static_cast<const FindInterestingEntitiesByRecordIdRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szengine.FindInterestingEntitiesByRecordIdRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_datasourcecode().empty()) {
+    _this->_internal_set_datasourcecode(from._internal_datasourcecode());
+  }
+  if (!from._internal_recordid().empty()) {
+    _this->_internal_set_recordid(from._internal_recordid());
+  }
+  if (from._internal_flags() != 0) {
+    _this->_internal_set_flags(from._internal_flags());
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void FindInterestingEntitiesByRecordIdRequest::CopyFrom(const FindInterestingEntitiesByRecordIdRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szengine.FindInterestingEntitiesByRecordIdRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+PROTOBUF_NOINLINE bool FindInterestingEntitiesByRecordIdRequest::IsInitialized() const {
+  return true;
+}
+
+::_pbi::CachedSize* FindInterestingEntitiesByRecordIdRequest::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void FindInterestingEntitiesByRecordIdRequest::InternalSwap(FindInterestingEntitiesByRecordIdRequest* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.datasourcecode_, &other->_impl_.datasourcecode_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recordid_, &other->_impl_.recordid_, arena);
+        swap(_impl_.flags_, other->_impl_.flags_);
+}
+
+::google::protobuf::Metadata FindInterestingEntitiesByRecordIdRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
+      file_level_metadata_szengine_2eproto[16]);
+}
+// ===================================================================
+
+class FindInterestingEntitiesByRecordIdResponse::_Internal {
+ public:
+};
+
+FindInterestingEntitiesByRecordIdResponse::FindInterestingEntitiesByRecordIdResponse(::google::protobuf::Arena* arena)
+    : ::google::protobuf::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:szengine.FindInterestingEntitiesByRecordIdResponse)
+}
+inline PROTOBUF_NDEBUG_INLINE FindInterestingEntitiesByRecordIdResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : result_(arena, from.result_),
+        _cached_size_{0} {}
+
+FindInterestingEntitiesByRecordIdResponse::FindInterestingEntitiesByRecordIdResponse(
+    ::google::protobuf::Arena* arena,
+    const FindInterestingEntitiesByRecordIdResponse& from)
+    : ::google::protobuf::Message(arena) {
+  FindInterestingEntitiesByRecordIdResponse* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+
+  // @@protoc_insertion_point(copy_constructor:szengine.FindInterestingEntitiesByRecordIdResponse)
+}
+inline PROTOBUF_NDEBUG_INLINE FindInterestingEntitiesByRecordIdResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : result_(arena),
+        _cached_size_{0} {}
+
+inline void FindInterestingEntitiesByRecordIdResponse::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+FindInterestingEntitiesByRecordIdResponse::~FindInterestingEntitiesByRecordIdResponse() {
+  // @@protoc_insertion_point(destructor:szengine.FindInterestingEntitiesByRecordIdResponse)
+  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  SharedDtor();
+}
+inline void FindInterestingEntitiesByRecordIdResponse::SharedDtor() {
+  ABSL_DCHECK(GetArena() == nullptr);
+  _impl_.result_.Destroy();
+  _impl_.~Impl_();
+}
+
+PROTOBUF_NOINLINE void FindInterestingEntitiesByRecordIdResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:szengine.FindInterestingEntitiesByRecordIdResponse)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.result_.ClearToEmpty();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+const char* FindInterestingEntitiesByRecordIdResponse::_InternalParse(
+    const char* ptr, ::_pbi::ParseContext* ctx) {
+  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+  return ptr;
+}
+
+
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<0, 1, 0, 65, 2> FindInterestingEntitiesByRecordIdResponse::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    1, 0,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967294,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    1,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    &_FindInterestingEntitiesByRecordIdResponse_default_instance_._instance,
+    ::_pbi::TcParser::GenericFallback,  // fallback
+  }, {{
+    // string result = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdResponse, _impl_.result_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string result = 1;
+    {PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdResponse, _impl_.result_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+  }},
+  // no aux_entries
+  {{
+    "\62\6\0\0\0\0\0\0"
+    "szengine.FindInterestingEntitiesByRecordIdResponse"
+    "result"
+  }},
+};
+
+::uint8_t* FindInterestingEntitiesByRecordIdResponse::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:szengine.FindInterestingEntitiesByRecordIdResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  // string result = 1;
+  if (!this->_internal_result().empty()) {
+    const std::string& _s = this->_internal_result();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindInterestingEntitiesByRecordIdResponse.result");
+    target = stream->WriteStringMaybeAliased(1, _s, target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:szengine.FindInterestingEntitiesByRecordIdResponse)
+  return target;
+}
+
+::size_t FindInterestingEntitiesByRecordIdResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:szengine.FindInterestingEntitiesByRecordIdResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string result = 1;
+  if (!this->_internal_result().empty()) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_result());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::google::protobuf::Message::ClassData FindInterestingEntitiesByRecordIdResponse::_class_data_ = {
+    FindInterestingEntitiesByRecordIdResponse::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
+};
+const ::google::protobuf::Message::ClassData* FindInterestingEntitiesByRecordIdResponse::GetClassData() const {
+  return &_class_data_;
+}
+
+void FindInterestingEntitiesByRecordIdResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+  auto* const _this = static_cast<FindInterestingEntitiesByRecordIdResponse*>(&to_msg);
+  auto& from = static_cast<const FindInterestingEntitiesByRecordIdResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szengine.FindInterestingEntitiesByRecordIdResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_result().empty()) {
+    _this->_internal_set_result(from._internal_result());
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void FindInterestingEntitiesByRecordIdResponse::CopyFrom(const FindInterestingEntitiesByRecordIdResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szengine.FindInterestingEntitiesByRecordIdResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+PROTOBUF_NOINLINE bool FindInterestingEntitiesByRecordIdResponse::IsInitialized() const {
+  return true;
+}
+
+::_pbi::CachedSize* FindInterestingEntitiesByRecordIdResponse::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void FindInterestingEntitiesByRecordIdResponse::InternalSwap(FindInterestingEntitiesByRecordIdResponse* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.result_, &other->_impl_.result_, arena);
+}
+
+::google::protobuf::Metadata FindInterestingEntitiesByRecordIdResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
+      file_level_metadata_szengine_2eproto[17]);
+}
+// ===================================================================
+
 class FindNetworkByEntityIdRequest::_Internal {
  public:
 };
@@ -4881,7 +5859,7 @@ void FindNetworkByEntityIdRequest::InternalSwap(FindNetworkByEntityIdRequest* PR
 ::google::protobuf::Metadata FindNetworkByEntityIdRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[14]);
+      file_level_metadata_szengine_2eproto[18]);
 }
 // ===================================================================
 
@@ -5071,7 +6049,7 @@ void FindNetworkByEntityIdResponse::InternalSwap(FindNetworkByEntityIdResponse* 
 ::google::protobuf::Metadata FindNetworkByEntityIdResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[15]);
+      file_level_metadata_szengine_2eproto[19]);
 }
 // ===================================================================
 
@@ -5374,7 +6352,7 @@ void FindNetworkByRecordIdRequest::InternalSwap(FindNetworkByRecordIdRequest* PR
 ::google::protobuf::Metadata FindNetworkByRecordIdRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[16]);
+      file_level_metadata_szengine_2eproto[20]);
 }
 // ===================================================================
 
@@ -5564,7 +6542,7 @@ void FindNetworkByRecordIdResponse::InternalSwap(FindNetworkByRecordIdResponse* 
 ::google::protobuf::Metadata FindNetworkByRecordIdResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[17]);
+      file_level_metadata_szengine_2eproto[21]);
 }
 // ===================================================================
 
@@ -5895,7 +6873,7 @@ void FindPathByEntityIdRequest::InternalSwap(FindPathByEntityIdRequest* PROTOBUF
 ::google::protobuf::Metadata FindPathByEntityIdRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[18]);
+      file_level_metadata_szengine_2eproto[22]);
 }
 // ===================================================================
 
@@ -6085,7 +7063,7 @@ void FindPathByEntityIdResponse::InternalSwap(FindPathByEntityIdResponse* PROTOB
 ::google::protobuf::Metadata FindPathByEntityIdResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[19]);
+      file_level_metadata_szengine_2eproto[23]);
 }
 // ===================================================================
 
@@ -6486,7 +7464,7 @@ void FindPathByRecordIdRequest::InternalSwap(FindPathByRecordIdRequest* PROTOBUF
 ::google::protobuf::Metadata FindPathByRecordIdRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[20]);
+      file_level_metadata_szengine_2eproto[24]);
 }
 // ===================================================================
 
@@ -6676,7 +7654,7 @@ void FindPathByRecordIdResponse::InternalSwap(FindPathByRecordIdResponse* PROTOB
 ::google::protobuf::Metadata FindPathByRecordIdResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[21]);
+      file_level_metadata_szengine_2eproto[25]);
 }
 // ===================================================================
 
@@ -6711,7 +7689,7 @@ GetActiveConfigIdRequest::GetActiveConfigIdRequest(
 ::google::protobuf::Metadata GetActiveConfigIdRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[22]);
+      file_level_metadata_szengine_2eproto[26]);
 }
 // ===================================================================
 
@@ -6881,7 +7859,7 @@ void GetActiveConfigIdResponse::InternalSwap(GetActiveConfigIdResponse* PROTOBUF
 ::google::protobuf::Metadata GetActiveConfigIdResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[23]);
+      file_level_metadata_szengine_2eproto[27]);
 }
 // ===================================================================
 
@@ -7085,7 +8063,7 @@ void GetEntityByEntityIdRequest::InternalSwap(GetEntityByEntityIdRequest* PROTOB
 ::google::protobuf::Metadata GetEntityByEntityIdRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[24]);
+      file_level_metadata_szengine_2eproto[28]);
 }
 // ===================================================================
 
@@ -7275,7 +8253,7 @@ void GetEntityByEntityIdResponse::InternalSwap(GetEntityByEntityIdResponse* PROT
 ::google::protobuf::Metadata GetEntityByEntityIdResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[25]);
+      file_level_metadata_szengine_2eproto[29]);
 }
 // ===================================================================
 
@@ -7521,7 +8499,7 @@ void GetEntityByRecordIdRequest::InternalSwap(GetEntityByRecordIdRequest* PROTOB
 ::google::protobuf::Metadata GetEntityByRecordIdRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[26]);
+      file_level_metadata_szengine_2eproto[30]);
 }
 // ===================================================================
 
@@ -7711,7 +8689,7 @@ void GetEntityByRecordIdResponse::InternalSwap(GetEntityByRecordIdResponse* PROT
 ::google::protobuf::Metadata GetEntityByRecordIdResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[27]);
+      file_level_metadata_szengine_2eproto[31]);
 }
 // ===================================================================
 
@@ -7957,7 +8935,7 @@ void GetRecordRequest::InternalSwap(GetRecordRequest* PROTOBUF_RESTRICT other) {
 ::google::protobuf::Metadata GetRecordRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[28]);
+      file_level_metadata_szengine_2eproto[32]);
 }
 // ===================================================================
 
@@ -8147,7 +9125,7 @@ void GetRecordResponse::InternalSwap(GetRecordResponse* PROTOBUF_RESTRICT other)
 ::google::protobuf::Metadata GetRecordResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[29]);
+      file_level_metadata_szengine_2eproto[33]);
 }
 // ===================================================================
 
@@ -8182,7 +9160,7 @@ GetRedoRecordRequest::GetRedoRecordRequest(
 ::google::protobuf::Metadata GetRedoRecordRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[30]);
+      file_level_metadata_szengine_2eproto[34]);
 }
 // ===================================================================
 
@@ -8372,7 +9350,7 @@ void GetRedoRecordResponse::InternalSwap(GetRedoRecordResponse* PROTOBUF_RESTRIC
 ::google::protobuf::Metadata GetRedoRecordResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[31]);
+      file_level_metadata_szengine_2eproto[35]);
 }
 // ===================================================================
 
@@ -8588,7 +9566,7 @@ void GetVirtualEntityByRecordIdRequest::InternalSwap(GetVirtualEntityByRecordIdR
 ::google::protobuf::Metadata GetVirtualEntityByRecordIdRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[32]);
+      file_level_metadata_szengine_2eproto[36]);
 }
 // ===================================================================
 
@@ -8778,7 +9756,7 @@ void GetVirtualEntityByRecordIdResponse::InternalSwap(GetVirtualEntityByRecordId
 ::google::protobuf::Metadata GetVirtualEntityByRecordIdResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[33]);
+      file_level_metadata_szengine_2eproto[37]);
 }
 // ===================================================================
 
@@ -8982,7 +9960,7 @@ void HowEntityByEntityIdRequest::InternalSwap(HowEntityByEntityIdRequest* PROTOB
 ::google::protobuf::Metadata HowEntityByEntityIdRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[34]);
+      file_level_metadata_szengine_2eproto[38]);
 }
 // ===================================================================
 
@@ -9172,7 +10150,7 @@ void HowEntityByEntityIdResponse::InternalSwap(HowEntityByEntityIdResponse* PROT
 ::google::protobuf::Metadata HowEntityByEntityIdResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[35]);
+      file_level_metadata_szengine_2eproto[39]);
 }
 // ===================================================================
 
@@ -9207,7 +10185,7 @@ PrimeEngineRequest::PrimeEngineRequest(
 ::google::protobuf::Metadata PrimeEngineRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[36]);
+      file_level_metadata_szengine_2eproto[40]);
 }
 // ===================================================================
 
@@ -9242,7 +10220,7 @@ PrimeEngineResponse::PrimeEngineResponse(
 ::google::protobuf::Metadata PrimeEngineResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[37]);
+      file_level_metadata_szengine_2eproto[41]);
 }
 // ===================================================================
 
@@ -9458,7 +10436,7 @@ void ProcessRedoRecordRequest::InternalSwap(ProcessRedoRecordRequest* PROTOBUF_R
 ::google::protobuf::Metadata ProcessRedoRecordRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[38]);
+      file_level_metadata_szengine_2eproto[42]);
 }
 // ===================================================================
 
@@ -9648,7 +10626,7 @@ void ProcessRedoRecordResponse::InternalSwap(ProcessRedoRecordResponse* PROTOBUF
 ::google::protobuf::Metadata ProcessRedoRecordResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[39]);
+      file_level_metadata_szengine_2eproto[43]);
 }
 // ===================================================================
 
@@ -9852,7 +10830,7 @@ void ReevaluateEntityRequest::InternalSwap(ReevaluateEntityRequest* PROTOBUF_RES
 ::google::protobuf::Metadata ReevaluateEntityRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[40]);
+      file_level_metadata_szengine_2eproto[44]);
 }
 // ===================================================================
 
@@ -10042,7 +11020,7 @@ void ReevaluateEntityResponse::InternalSwap(ReevaluateEntityResponse* PROTOBUF_R
 ::google::protobuf::Metadata ReevaluateEntityResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[41]);
+      file_level_metadata_szengine_2eproto[45]);
 }
 // ===================================================================
 
@@ -10288,7 +11266,7 @@ void ReevaluateRecordRequest::InternalSwap(ReevaluateRecordRequest* PROTOBUF_RES
 ::google::protobuf::Metadata ReevaluateRecordRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[42]);
+      file_level_metadata_szengine_2eproto[46]);
 }
 // ===================================================================
 
@@ -10478,7 +11456,7 @@ void ReevaluateRecordResponse::InternalSwap(ReevaluateRecordResponse* PROTOBUF_R
 ::google::protobuf::Metadata ReevaluateRecordResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[43]);
+      file_level_metadata_szengine_2eproto[47]);
 }
 // ===================================================================
 
@@ -10648,7 +11626,7 @@ void ReinitializeRequest::InternalSwap(ReinitializeRequest* PROTOBUF_RESTRICT ot
 ::google::protobuf::Metadata ReinitializeRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[44]);
+      file_level_metadata_szengine_2eproto[48]);
 }
 // ===================================================================
 
@@ -10683,7 +11661,7 @@ ReinitializeResponse::ReinitializeResponse(
 ::google::protobuf::Metadata ReinitializeResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[45]);
+      file_level_metadata_szengine_2eproto[49]);
 }
 // ===================================================================
 
@@ -10929,7 +11907,7 @@ void SearchByAttributesRequest::InternalSwap(SearchByAttributesRequest* PROTOBUF
 ::google::protobuf::Metadata SearchByAttributesRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[46]);
+      file_level_metadata_szengine_2eproto[50]);
 }
 // ===================================================================
 
@@ -11119,7 +12097,7 @@ void SearchByAttributesResponse::InternalSwap(SearchByAttributesResponse* PROTOB
 ::google::protobuf::Metadata SearchByAttributesResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[47]);
+      file_level_metadata_szengine_2eproto[51]);
 }
 // ===================================================================
 
@@ -11154,7 +12132,7 @@ GetStatsRequest::GetStatsRequest(
 ::google::protobuf::Metadata GetStatsRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[48]);
+      file_level_metadata_szengine_2eproto[52]);
 }
 // ===================================================================
 
@@ -11344,7 +12322,7 @@ void GetStatsResponse::InternalSwap(GetStatsResponse* PROTOBUF_RESTRICT other) {
 ::google::protobuf::Metadata GetStatsResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[49]);
+      file_level_metadata_szengine_2eproto[53]);
 }
 // ===================================================================
 
@@ -11560,7 +12538,7 @@ void StreamExportCsvEntityReportRequest::InternalSwap(StreamExportCsvEntityRepor
 ::google::protobuf::Metadata StreamExportCsvEntityReportRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[50]);
+      file_level_metadata_szengine_2eproto[54]);
 }
 // ===================================================================
 
@@ -11750,7 +12728,7 @@ void StreamExportCsvEntityReportResponse::InternalSwap(StreamExportCsvEntityRepo
 ::google::protobuf::Metadata StreamExportCsvEntityReportResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[51]);
+      file_level_metadata_szengine_2eproto[55]);
 }
 // ===================================================================
 
@@ -11920,7 +12898,7 @@ void StreamExportJsonEntityReportRequest::InternalSwap(StreamExportJsonEntityRep
 ::google::protobuf::Metadata StreamExportJsonEntityReportRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[52]);
+      file_level_metadata_szengine_2eproto[56]);
 }
 // ===================================================================
 
@@ -12110,7 +13088,7 @@ void StreamExportJsonEntityReportResponse::InternalSwap(StreamExportJsonEntityRe
 ::google::protobuf::Metadata StreamExportJsonEntityReportResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[53]);
+      file_level_metadata_szengine_2eproto[57]);
 }
 // ===================================================================
 
@@ -12337,7 +13315,7 @@ void WhyEntitiesRequest::InternalSwap(WhyEntitiesRequest* PROTOBUF_RESTRICT othe
 ::google::protobuf::Metadata WhyEntitiesRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[54]);
+      file_level_metadata_szengine_2eproto[58]);
 }
 // ===================================================================
 
@@ -12527,7 +13505,7 @@ void WhyEntitiesResponse::InternalSwap(WhyEntitiesResponse* PROTOBUF_RESTRICT ot
 ::google::protobuf::Metadata WhyEntitiesResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[55]);
+      file_level_metadata_szengine_2eproto[59]);
 }
 // ===================================================================
 
@@ -12773,7 +13751,7 @@ void WhyRecordInEntityRequest::InternalSwap(WhyRecordInEntityRequest* PROTOBUF_R
 ::google::protobuf::Metadata WhyRecordInEntityRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[56]);
+      file_level_metadata_szengine_2eproto[60]);
 }
 // ===================================================================
 
@@ -12963,7 +13941,7 @@ void WhyRecordInEntityResponse::InternalSwap(WhyRecordInEntityResponse* PROTOBUF
 ::google::protobuf::Metadata WhyRecordInEntityResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[57]);
+      file_level_metadata_szengine_2eproto[61]);
 }
 // ===================================================================
 
@@ -13269,7 +14247,7 @@ void WhyRecordsRequest::InternalSwap(WhyRecordsRequest* PROTOBUF_RESTRICT other)
 ::google::protobuf::Metadata WhyRecordsRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[58]);
+      file_level_metadata_szengine_2eproto[62]);
 }
 // ===================================================================
 
@@ -13459,7 +14437,7 @@ void WhyRecordsResponse::InternalSwap(WhyRecordsResponse* PROTOBUF_RESTRICT othe
 ::google::protobuf::Metadata WhyRecordsResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[59]);
+      file_level_metadata_szengine_2eproto[63]);
 }
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace szengine
