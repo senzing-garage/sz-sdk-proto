@@ -49,6 +49,16 @@ class SzEngineStub(object):
                 request_serializer=szengine__pb2.FetchNextRequest.SerializeToString,
                 response_deserializer=szengine__pb2.FetchNextResponse.FromString,
                 )
+        self.FindInterestingEntitiesByEntityId = channel.unary_unary(
+                '/szengine.SzEngine/FindInterestingEntitiesByEntityId',
+                request_serializer=szengine__pb2.FindInterestingEntitiesByEntityIdRequest.SerializeToString,
+                response_deserializer=szengine__pb2.FindInterestingEntitiesByEntityIdResponse.FromString,
+                )
+        self.FindInterestingEntitiesByRecordId = channel.unary_unary(
+                '/szengine.SzEngine/FindInterestingEntitiesByRecordId',
+                request_serializer=szengine__pb2.FindInterestingEntitiesByRecordIdRequest.SerializeToString,
+                response_deserializer=szengine__pb2.FindInterestingEntitiesByRecordIdResponse.FromString,
+                )
         self.FindNetworkByEntityId = channel.unary_unary(
                 '/szengine.SzEngine/FindNetworkByEntityId',
                 request_serializer=szengine__pb2.FindNetworkByEntityIdRequest.SerializeToString,
@@ -206,6 +216,18 @@ class SzEngineServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def FetchNext(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def FindInterestingEntitiesByEntityId(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def FindInterestingEntitiesByRecordId(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -386,6 +408,16 @@ def add_SzEngineServicer_to_server(servicer, server):
                     servicer.FetchNext,
                     request_deserializer=szengine__pb2.FetchNextRequest.FromString,
                     response_serializer=szengine__pb2.FetchNextResponse.SerializeToString,
+            ),
+            'FindInterestingEntitiesByEntityId': grpc.unary_unary_rpc_method_handler(
+                    servicer.FindInterestingEntitiesByEntityId,
+                    request_deserializer=szengine__pb2.FindInterestingEntitiesByEntityIdRequest.FromString,
+                    response_serializer=szengine__pb2.FindInterestingEntitiesByEntityIdResponse.SerializeToString,
+            ),
+            'FindInterestingEntitiesByRecordId': grpc.unary_unary_rpc_method_handler(
+                    servicer.FindInterestingEntitiesByRecordId,
+                    request_deserializer=szengine__pb2.FindInterestingEntitiesByRecordIdRequest.FromString,
+                    response_serializer=szengine__pb2.FindInterestingEntitiesByRecordIdResponse.SerializeToString,
             ),
             'FindNetworkByEntityId': grpc.unary_unary_rpc_method_handler(
                     servicer.FindNetworkByEntityId,
@@ -628,6 +660,40 @@ class SzEngine(object):
         return grpc.experimental.unary_unary(request, target, '/szengine.SzEngine/FetchNext',
             szengine__pb2.FetchNextRequest.SerializeToString,
             szengine__pb2.FetchNextResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def FindInterestingEntitiesByEntityId(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/szengine.SzEngine/FindInterestingEntitiesByEntityId',
+            szengine__pb2.FindInterestingEntitiesByEntityIdRequest.SerializeToString,
+            szengine__pb2.FindInterestingEntitiesByEntityIdResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def FindInterestingEntitiesByRecordId(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/szengine.SzEngine/FindInterestingEntitiesByRecordId',
+            szengine__pb2.FindInterestingEntitiesByRecordIdRequest.SerializeToString,
+            szengine__pb2.FindInterestingEntitiesByRecordIdResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 

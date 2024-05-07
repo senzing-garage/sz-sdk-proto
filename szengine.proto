@@ -13,6 +13,8 @@ service SzEngine {
   rpc ExportCsvEntityReport(ExportCsvEntityReportRequest) returns (ExportCsvEntityReportResponse) {}
   rpc ExportJsonEntityReport(ExportJsonEntityReportRequest) returns (ExportJsonEntityReportResponse) {}
   rpc FetchNext(FetchNextRequest) returns (FetchNextResponse) {}
+  rpc FindInterestingEntitiesByEntityId(FindInterestingEntitiesByEntityIdRequest) returns (FindInterestingEntitiesByEntityIdResponse) {}
+  rpc FindInterestingEntitiesByRecordId(FindInterestingEntitiesByRecordIdRequest) returns (FindInterestingEntitiesByRecordIdResponse) {}
   rpc FindNetworkByEntityId(FindNetworkByEntityIdRequest) returns (FindNetworkByEntityIdResponse) {}
   rpc FindNetworkByRecordId(FindNetworkByRecordIdRequest) returns (FindNetworkByRecordIdResponse) {}
   rpc FindPathByEntityId(FindPathByEntityIdRequest) returns (FindPathByEntityIdResponse) {}
@@ -93,6 +95,25 @@ message FetchNextRequest {
 }
 
 message FetchNextResponse {
+  string result = 1;
+}
+
+message FindInterestingEntitiesByEntityIdRequest {
+  int64 entityId = 1;
+  int64 flags = 2;
+}
+
+message FindInterestingEntitiesByEntityIdResponse {
+  string result = 1;
+}
+
+message FindInterestingEntitiesByRecordIdRequest {
+  string dataSourceCode = 1;
+  string recordId = 2;
+  int64 flags = 3;
+}
+
+message FindInterestingEntitiesByRecordIdResponse {
   string result = 1;
 }
 

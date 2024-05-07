@@ -29,6 +29,8 @@ type SzEngineClient interface {
 	ExportCsvEntityReport(ctx context.Context, in *ExportCsvEntityReportRequest, opts ...grpc.CallOption) (*ExportCsvEntityReportResponse, error)
 	ExportJsonEntityReport(ctx context.Context, in *ExportJsonEntityReportRequest, opts ...grpc.CallOption) (*ExportJsonEntityReportResponse, error)
 	FetchNext(ctx context.Context, in *FetchNextRequest, opts ...grpc.CallOption) (*FetchNextResponse, error)
+	FindInterestingEntitiesByEntityId(ctx context.Context, in *FindInterestingEntitiesByEntityIdRequest, opts ...grpc.CallOption) (*FindInterestingEntitiesByEntityIdResponse, error)
+	FindInterestingEntitiesByRecordId(ctx context.Context, in *FindInterestingEntitiesByRecordIdRequest, opts ...grpc.CallOption) (*FindInterestingEntitiesByRecordIdResponse, error)
 	FindNetworkByEntityId(ctx context.Context, in *FindNetworkByEntityIdRequest, opts ...grpc.CallOption) (*FindNetworkByEntityIdResponse, error)
 	FindNetworkByRecordId(ctx context.Context, in *FindNetworkByRecordIdRequest, opts ...grpc.CallOption) (*FindNetworkByRecordIdResponse, error)
 	FindPathByEntityId(ctx context.Context, in *FindPathByEntityIdRequest, opts ...grpc.CallOption) (*FindPathByEntityIdResponse, error)
@@ -119,6 +121,24 @@ func (c *szEngineClient) ExportJsonEntityReport(ctx context.Context, in *ExportJ
 func (c *szEngineClient) FetchNext(ctx context.Context, in *FetchNextRequest, opts ...grpc.CallOption) (*FetchNextResponse, error) {
 	out := new(FetchNextResponse)
 	err := c.cc.Invoke(ctx, "/szengine.SzEngine/FetchNext", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *szEngineClient) FindInterestingEntitiesByEntityId(ctx context.Context, in *FindInterestingEntitiesByEntityIdRequest, opts ...grpc.CallOption) (*FindInterestingEntitiesByEntityIdResponse, error) {
+	out := new(FindInterestingEntitiesByEntityIdResponse)
+	err := c.cc.Invoke(ctx, "/szengine.SzEngine/FindInterestingEntitiesByEntityId", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *szEngineClient) FindInterestingEntitiesByRecordId(ctx context.Context, in *FindInterestingEntitiesByRecordIdRequest, opts ...grpc.CallOption) (*FindInterestingEntitiesByRecordIdResponse, error) {
+	out := new(FindInterestingEntitiesByRecordIdResponse)
+	err := c.cc.Invoke(ctx, "/szengine.SzEngine/FindInterestingEntitiesByRecordId", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -389,6 +409,8 @@ type SzEngineServer interface {
 	ExportCsvEntityReport(context.Context, *ExportCsvEntityReportRequest) (*ExportCsvEntityReportResponse, error)
 	ExportJsonEntityReport(context.Context, *ExportJsonEntityReportRequest) (*ExportJsonEntityReportResponse, error)
 	FetchNext(context.Context, *FetchNextRequest) (*FetchNextResponse, error)
+	FindInterestingEntitiesByEntityId(context.Context, *FindInterestingEntitiesByEntityIdRequest) (*FindInterestingEntitiesByEntityIdResponse, error)
+	FindInterestingEntitiesByRecordId(context.Context, *FindInterestingEntitiesByRecordIdRequest) (*FindInterestingEntitiesByRecordIdResponse, error)
 	FindNetworkByEntityId(context.Context, *FindNetworkByEntityIdRequest) (*FindNetworkByEntityIdResponse, error)
 	FindNetworkByRecordId(context.Context, *FindNetworkByRecordIdRequest) (*FindNetworkByRecordIdResponse, error)
 	FindPathByEntityId(context.Context, *FindPathByEntityIdRequest) (*FindPathByEntityIdResponse, error)
@@ -439,6 +461,12 @@ func (UnimplementedSzEngineServer) ExportJsonEntityReport(context.Context, *Expo
 }
 func (UnimplementedSzEngineServer) FetchNext(context.Context, *FetchNextRequest) (*FetchNextResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FetchNext not implemented")
+}
+func (UnimplementedSzEngineServer) FindInterestingEntitiesByEntityId(context.Context, *FindInterestingEntitiesByEntityIdRequest) (*FindInterestingEntitiesByEntityIdResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method FindInterestingEntitiesByEntityId not implemented")
+}
+func (UnimplementedSzEngineServer) FindInterestingEntitiesByRecordId(context.Context, *FindInterestingEntitiesByRecordIdRequest) (*FindInterestingEntitiesByRecordIdResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method FindInterestingEntitiesByRecordId not implemented")
 }
 func (UnimplementedSzEngineServer) FindNetworkByEntityId(context.Context, *FindNetworkByEntityIdRequest) (*FindNetworkByEntityIdResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FindNetworkByEntityId not implemented")
@@ -644,6 +672,42 @@ func _SzEngine_FetchNext_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(SzEngineServer).FetchNext(ctx, req.(*FetchNextRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _SzEngine_FindInterestingEntitiesByEntityId_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(FindInterestingEntitiesByEntityIdRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(SzEngineServer).FindInterestingEntitiesByEntityId(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/szengine.SzEngine/FindInterestingEntitiesByEntityId",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(SzEngineServer).FindInterestingEntitiesByEntityId(ctx, req.(*FindInterestingEntitiesByEntityIdRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _SzEngine_FindInterestingEntitiesByRecordId_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(FindInterestingEntitiesByRecordIdRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(SzEngineServer).FindInterestingEntitiesByRecordId(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/szengine.SzEngine/FindInterestingEntitiesByRecordId",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(SzEngineServer).FindInterestingEntitiesByRecordId(ctx, req.(*FindInterestingEntitiesByRecordIdRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1102,6 +1166,14 @@ var SzEngine_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "FetchNext",
 			Handler:    _SzEngine_FetchNext_Handler,
+		},
+		{
+			MethodName: "FindInterestingEntitiesByEntityId",
+			Handler:    _SzEngine_FindInterestingEntitiesByEntityId_Handler,
+		},
+		{
+			MethodName: "FindInterestingEntitiesByRecordId",
+			Handler:    _SzEngine_FindInterestingEntitiesByRecordId_Handler,
 		},
 		{
 			MethodName: "FindNetworkByEntityId",

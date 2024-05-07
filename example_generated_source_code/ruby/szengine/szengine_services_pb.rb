@@ -21,6 +21,8 @@ module Szengine
       rpc :ExportCsvEntityReport, ::Szengine::ExportCsvEntityReportRequest, ::Szengine::ExportCsvEntityReportResponse
       rpc :ExportJsonEntityReport, ::Szengine::ExportJsonEntityReportRequest, ::Szengine::ExportJsonEntityReportResponse
       rpc :FetchNext, ::Szengine::FetchNextRequest, ::Szengine::FetchNextResponse
+      rpc :FindInterestingEntitiesByEntityId, ::Szengine::FindInterestingEntitiesByEntityIdRequest, ::Szengine::FindInterestingEntitiesByEntityIdResponse
+      rpc :FindInterestingEntitiesByRecordId, ::Szengine::FindInterestingEntitiesByRecordIdRequest, ::Szengine::FindInterestingEntitiesByRecordIdResponse
       rpc :FindNetworkByEntityId, ::Szengine::FindNetworkByEntityIdRequest, ::Szengine::FindNetworkByEntityIdResponse
       rpc :FindNetworkByRecordId, ::Szengine::FindNetworkByRecordIdRequest, ::Szengine::FindNetworkByRecordIdResponse
       rpc :FindPathByEntityId, ::Szengine::FindPathByEntityIdRequest, ::Szengine::FindPathByEntityIdResponse

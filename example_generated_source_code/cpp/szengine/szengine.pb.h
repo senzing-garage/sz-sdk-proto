@@ -99,6 +99,18 @@ extern FetchNextRequestDefaultTypeInternal _FetchNextRequest_default_instance_;
 class FetchNextResponse;
 struct FetchNextResponseDefaultTypeInternal;
 extern FetchNextResponseDefaultTypeInternal _FetchNextResponse_default_instance_;
+class FindInterestingEntitiesByEntityIdRequest;
+struct FindInterestingEntitiesByEntityIdRequestDefaultTypeInternal;
+extern FindInterestingEntitiesByEntityIdRequestDefaultTypeInternal _FindInterestingEntitiesByEntityIdRequest_default_instance_;
+class FindInterestingEntitiesByEntityIdResponse;
+struct FindInterestingEntitiesByEntityIdResponseDefaultTypeInternal;
+extern FindInterestingEntitiesByEntityIdResponseDefaultTypeInternal _FindInterestingEntitiesByEntityIdResponse_default_instance_;
+class FindInterestingEntitiesByRecordIdRequest;
+struct FindInterestingEntitiesByRecordIdRequestDefaultTypeInternal;
+extern FindInterestingEntitiesByRecordIdRequestDefaultTypeInternal _FindInterestingEntitiesByRecordIdRequest_default_instance_;
+class FindInterestingEntitiesByRecordIdResponse;
+struct FindInterestingEntitiesByRecordIdResponseDefaultTypeInternal;
+extern FindInterestingEntitiesByRecordIdResponseDefaultTypeInternal _FindInterestingEntitiesByRecordIdResponse_default_instance_;
 class FindNetworkByEntityIdRequest;
 struct FindNetworkByEntityIdRequestDefaultTypeInternal;
 extern FindNetworkByEntityIdRequestDefaultTypeInternal _FindNetworkByEntityIdRequest_default_instance_;
@@ -309,7 +321,7 @@ class WhyRecordsResponse final :
                &_WhyRecordsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    59;
+    63;
 
   friend void swap(WhyRecordsResponse& a, WhyRecordsResponse& b) {
     a.Swap(&b);
@@ -490,7 +502,7 @@ class WhyRecordsRequest final :
                &_WhyRecordsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    58;
+    62;
 
   friend void swap(WhyRecordsRequest& a, WhyRecordsRequest& b) {
     a.Swap(&b);
@@ -737,7 +749,7 @@ class WhyRecordInEntityResponse final :
                &_WhyRecordInEntityResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    57;
+    61;
 
   friend void swap(WhyRecordInEntityResponse& a, WhyRecordInEntityResponse& b) {
     a.Swap(&b);
@@ -918,7 +930,7 @@ class WhyRecordInEntityRequest final :
                &_WhyRecordInEntityRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    56;
+    60;
 
   friend void swap(WhyRecordInEntityRequest& a, WhyRecordInEntityRequest& b) {
     a.Swap(&b);
@@ -1129,7 +1141,7 @@ class WhyEntitiesResponse final :
                &_WhyEntitiesResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    55;
+    59;
 
   friend void swap(WhyEntitiesResponse& a, WhyEntitiesResponse& b) {
     a.Swap(&b);
@@ -1310,7 +1322,7 @@ class WhyEntitiesRequest final :
                &_WhyEntitiesRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    54;
+    58;
 
   friend void swap(WhyEntitiesRequest& a, WhyEntitiesRequest& b) {
     a.Swap(&b);
@@ -1509,7 +1521,7 @@ class StreamExportJsonEntityReportResponse final :
                &_StreamExportJsonEntityReportResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    53;
+    57;
 
   friend void swap(StreamExportJsonEntityReportResponse& a, StreamExportJsonEntityReportResponse& b) {
     a.Swap(&b);
@@ -1690,7 +1702,7 @@ class StreamExportJsonEntityReportRequest final :
                &_StreamExportJsonEntityReportRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    52;
+    56;
 
   friend void swap(StreamExportJsonEntityReportRequest& a, StreamExportJsonEntityReportRequest& b) {
     a.Swap(&b);
@@ -1865,7 +1877,7 @@ class StreamExportCsvEntityReportResponse final :
                &_StreamExportCsvEntityReportResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    51;
+    55;
 
   friend void swap(StreamExportCsvEntityReportResponse& a, StreamExportCsvEntityReportResponse& b) {
     a.Swap(&b);
@@ -2046,7 +2058,7 @@ class StreamExportCsvEntityReportRequest final :
                &_StreamExportCsvEntityReportRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    50;
+    54;
 
   friend void swap(StreamExportCsvEntityReportRequest& a, StreamExportCsvEntityReportRequest& b) {
     a.Swap(&b);
@@ -2239,7 +2251,7 @@ class SearchByAttributesResponse final :
                &_SearchByAttributesResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    47;
+    51;
 
   friend void swap(SearchByAttributesResponse& a, SearchByAttributesResponse& b) {
     a.Swap(&b);
@@ -2420,7 +2432,7 @@ class SearchByAttributesRequest final :
                &_SearchByAttributesRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    46;
+    50;
 
   friend void swap(SearchByAttributesRequest& a, SearchByAttributesRequest& b) {
     a.Swap(&b);
@@ -2630,7 +2642,7 @@ class ReinitializeResponse final :
                &_ReinitializeResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    45;
+    49;
 
   friend void swap(ReinitializeResponse& a, ReinitializeResponse& b) {
     a.Swap(&b);
@@ -2767,7 +2779,7 @@ class ReinitializeRequest final :
                &_ReinitializeRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    44;
+    48;
 
   friend void swap(ReinitializeRequest& a, ReinitializeRequest& b) {
     a.Swap(&b);
@@ -2942,7 +2954,7 @@ class ReevaluateRecordResponse final :
                &_ReevaluateRecordResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    43;
+    47;
 
   friend void swap(ReevaluateRecordResponse& a, ReevaluateRecordResponse& b) {
     a.Swap(&b);
@@ -3123,7 +3135,7 @@ class ReevaluateRecordRequest final :
                &_ReevaluateRecordRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    42;
+    46;
 
   friend void swap(ReevaluateRecordRequest& a, ReevaluateRecordRequest& b) {
     a.Swap(&b);
@@ -3334,7 +3346,7 @@ class ReevaluateEntityResponse final :
                &_ReevaluateEntityResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    41;
+    45;
 
   friend void swap(ReevaluateEntityResponse& a, ReevaluateEntityResponse& b) {
     a.Swap(&b);
@@ -3515,7 +3527,7 @@ class ReevaluateEntityRequest final :
                &_ReevaluateEntityRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    40;
+    44;
 
   friend void swap(ReevaluateEntityRequest& a, ReevaluateEntityRequest& b) {
     a.Swap(&b);
@@ -3702,7 +3714,7 @@ class ProcessRedoRecordResponse final :
                &_ProcessRedoRecordResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    39;
+    43;
 
   friend void swap(ProcessRedoRecordResponse& a, ProcessRedoRecordResponse& b) {
     a.Swap(&b);
@@ -3883,7 +3895,7 @@ class ProcessRedoRecordRequest final :
                &_ProcessRedoRecordRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    38;
+    42;
 
   friend void swap(ProcessRedoRecordRequest& a, ProcessRedoRecordRequest& b) {
     a.Swap(&b);
@@ -4075,7 +4087,7 @@ class PrimeEngineResponse final :
                &_PrimeEngineResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    37;
+    41;
 
   friend void swap(PrimeEngineResponse& a, PrimeEngineResponse& b) {
     a.Swap(&b);
@@ -4211,7 +4223,7 @@ class PrimeEngineRequest final :
                &_PrimeEngineRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    36;
+    40;
 
   friend void swap(PrimeEngineRequest& a, PrimeEngineRequest& b) {
     a.Swap(&b);
@@ -4348,7 +4360,7 @@ class HowEntityByEntityIdResponse final :
                &_HowEntityByEntityIdResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    35;
+    39;
 
   friend void swap(HowEntityByEntityIdResponse& a, HowEntityByEntityIdResponse& b) {
     a.Swap(&b);
@@ -4529,7 +4541,7 @@ class HowEntityByEntityIdRequest final :
                &_HowEntityByEntityIdRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    34;
+    38;
 
   friend void swap(HowEntityByEntityIdRequest& a, HowEntityByEntityIdRequest& b) {
     a.Swap(&b);
@@ -4716,7 +4728,7 @@ class GetVirtualEntityByRecordIdResponse final :
                &_GetVirtualEntityByRecordIdResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    33;
+    37;
 
   friend void swap(GetVirtualEntityByRecordIdResponse& a, GetVirtualEntityByRecordIdResponse& b) {
     a.Swap(&b);
@@ -4897,7 +4909,7 @@ class GetVirtualEntityByRecordIdRequest final :
                &_GetVirtualEntityByRecordIdRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    32;
+    36;
 
   friend void swap(GetVirtualEntityByRecordIdRequest& a, GetVirtualEntityByRecordIdRequest& b) {
     a.Swap(&b);
@@ -5090,7 +5102,7 @@ class GetStatsResponse final :
                &_GetStatsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    49;
+    53;
 
   friend void swap(GetStatsResponse& a, GetStatsResponse& b) {
     a.Swap(&b);
@@ -5270,7 +5282,7 @@ class GetStatsRequest final :
                &_GetStatsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    48;
+    52;
 
   friend void swap(GetStatsRequest& a, GetStatsRequest& b) {
     a.Swap(&b);
@@ -5407,7 +5419,7 @@ class GetRedoRecordResponse final :
                &_GetRedoRecordResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    31;
+    35;
 
   friend void swap(GetRedoRecordResponse& a, GetRedoRecordResponse& b) {
     a.Swap(&b);
@@ -5587,7 +5599,7 @@ class GetRedoRecordRequest final :
                &_GetRedoRecordRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    30;
+    34;
 
   friend void swap(GetRedoRecordRequest& a, GetRedoRecordRequest& b) {
     a.Swap(&b);
@@ -5724,7 +5736,7 @@ class GetRecordResponse final :
                &_GetRecordResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    29;
+    33;
 
   friend void swap(GetRecordResponse& a, GetRecordResponse& b) {
     a.Swap(&b);
@@ -5905,7 +5917,7 @@ class GetRecordRequest final :
                &_GetRecordRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    28;
+    32;
 
   friend void swap(GetRecordRequest& a, GetRecordRequest& b) {
     a.Swap(&b);
@@ -6116,7 +6128,7 @@ class GetEntityByRecordIdResponse final :
                &_GetEntityByRecordIdResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    27;
+    31;
 
   friend void swap(GetEntityByRecordIdResponse& a, GetEntityByRecordIdResponse& b) {
     a.Swap(&b);
@@ -6297,7 +6309,7 @@ class GetEntityByRecordIdRequest final :
                &_GetEntityByRecordIdRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    26;
+    30;
 
   friend void swap(GetEntityByRecordIdRequest& a, GetEntityByRecordIdRequest& b) {
     a.Swap(&b);
@@ -6508,7 +6520,7 @@ class GetEntityByEntityIdResponse final :
                &_GetEntityByEntityIdResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    25;
+    29;
 
   friend void swap(GetEntityByEntityIdResponse& a, GetEntityByEntityIdResponse& b) {
     a.Swap(&b);
@@ -6689,7 +6701,7 @@ class GetEntityByEntityIdRequest final :
                &_GetEntityByEntityIdRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    24;
+    28;
 
   friend void swap(GetEntityByEntityIdRequest& a, GetEntityByEntityIdRequest& b) {
     a.Swap(&b);
@@ -6876,7 +6888,7 @@ class GetActiveConfigIdResponse final :
                &_GetActiveConfigIdResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    23;
+    27;
 
   friend void swap(GetActiveConfigIdResponse& a, GetActiveConfigIdResponse& b) {
     a.Swap(&b);
@@ -7050,7 +7062,7 @@ class GetActiveConfigIdRequest final :
                &_GetActiveConfigIdRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    22;
+    26;
 
   friend void swap(GetActiveConfigIdRequest& a, GetActiveConfigIdRequest& b) {
     a.Swap(&b);
@@ -7187,7 +7199,7 @@ class FindPathByRecordIdResponse final :
                &_FindPathByRecordIdResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    21;
+    25;
 
   friend void swap(FindPathByRecordIdResponse& a, FindPathByRecordIdResponse& b) {
     a.Swap(&b);
@@ -7368,7 +7380,7 @@ class FindPathByRecordIdRequest final :
                &_FindPathByRecordIdRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    20;
+    24;
 
   friend void swap(FindPathByRecordIdRequest& a, FindPathByRecordIdRequest& b) {
     a.Swap(&b);
@@ -7663,7 +7675,7 @@ class FindPathByEntityIdResponse final :
                &_FindPathByEntityIdResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    19;
+    23;
 
   friend void swap(FindPathByEntityIdResponse& a, FindPathByEntityIdResponse& b) {
     a.Swap(&b);
@@ -7844,7 +7856,7 @@ class FindPathByEntityIdRequest final :
                &_FindPathByEntityIdRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    18;
+    22;
 
   friend void swap(FindPathByEntityIdRequest& a, FindPathByEntityIdRequest& b) {
     a.Swap(&b);
@@ -8091,7 +8103,7 @@ class FindNetworkByRecordIdResponse final :
                &_FindNetworkByRecordIdResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    21;
 
   friend void swap(FindNetworkByRecordIdResponse& a, FindNetworkByRecordIdResponse& b) {
     a.Swap(&b);
@@ -8272,7 +8284,7 @@ class FindNetworkByRecordIdRequest final :
                &_FindNetworkByRecordIdRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    20;
 
   friend void swap(FindNetworkByRecordIdRequest& a, FindNetworkByRecordIdRequest& b) {
     a.Swap(&b);
@@ -8501,7 +8513,7 @@ class FindNetworkByEntityIdResponse final :
                &_FindNetworkByEntityIdResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    19;
 
   friend void swap(FindNetworkByEntityIdResponse& a, FindNetworkByEntityIdResponse& b) {
     a.Swap(&b);
@@ -8682,7 +8694,7 @@ class FindNetworkByEntityIdRequest final :
                &_FindNetworkByEntityIdRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    18;
 
   friend void swap(FindNetworkByEntityIdRequest& a, FindNetworkByEntityIdRequest& b) {
     a.Swap(&b);
@@ -8844,6 +8856,766 @@ class FindNetworkByEntityIdRequest final :
     ::int64_t maxdegrees_;
     ::int64_t buildoutdegree_;
     ::int64_t maxentities_;
+    ::int64_t flags_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_szengine_2eproto;
+};// -------------------------------------------------------------------
+
+class FindInterestingEntitiesByRecordIdResponse final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szengine.FindInterestingEntitiesByRecordIdResponse) */ {
+ public:
+  inline FindInterestingEntitiesByRecordIdResponse() : FindInterestingEntitiesByRecordIdResponse(nullptr) {}
+  ~FindInterestingEntitiesByRecordIdResponse() override;
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR FindInterestingEntitiesByRecordIdResponse(::google::protobuf::internal::ConstantInitialized);
+
+  inline FindInterestingEntitiesByRecordIdResponse(const FindInterestingEntitiesByRecordIdResponse& from)
+      : FindInterestingEntitiesByRecordIdResponse(nullptr, from) {}
+  FindInterestingEntitiesByRecordIdResponse(FindInterestingEntitiesByRecordIdResponse&& from) noexcept
+    : FindInterestingEntitiesByRecordIdResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline FindInterestingEntitiesByRecordIdResponse& operator=(const FindInterestingEntitiesByRecordIdResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline FindInterestingEntitiesByRecordIdResponse& operator=(FindInterestingEntitiesByRecordIdResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const FindInterestingEntitiesByRecordIdResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const FindInterestingEntitiesByRecordIdResponse* internal_default_instance() {
+    return reinterpret_cast<const FindInterestingEntitiesByRecordIdResponse*>(
+               &_FindInterestingEntitiesByRecordIdResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    17;
+
+  friend void swap(FindInterestingEntitiesByRecordIdResponse& a, FindInterestingEntitiesByRecordIdResponse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(FindInterestingEntitiesByRecordIdResponse* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr &&
+        GetArena() == other->GetArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(FindInterestingEntitiesByRecordIdResponse* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  FindInterestingEntitiesByRecordIdResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<FindInterestingEntitiesByRecordIdResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const FindInterestingEntitiesByRecordIdResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom( const FindInterestingEntitiesByRecordIdResponse& from) {
+    FindInterestingEntitiesByRecordIdResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  ::size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target, ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(FindInterestingEntitiesByRecordIdResponse* other);
+
+  private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "szengine.FindInterestingEntitiesByRecordIdResponse";
+  }
+  protected:
+  explicit FindInterestingEntitiesByRecordIdResponse(::google::protobuf::Arena* arena);
+  FindInterestingEntitiesByRecordIdResponse(::google::protobuf::Arena* arena, const FindInterestingEntitiesByRecordIdResponse& from);
+  public:
+
+  static const ClassData _class_data_;
+  const ::google::protobuf::Message::ClassData*GetClassData() const final;
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+  };
+  // string result = 1;
+  void clear_result() ;
+  const std::string& result() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_result(Arg_&& arg, Args_... args);
+  std::string* mutable_result();
+  PROTOBUF_NODISCARD std::string* release_result();
+  void set_allocated_result(std::string* value);
+
+  private:
+  const std::string& _internal_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(
+      const std::string& value);
+  std::string* _internal_mutable_result();
+
+  public:
+  // @@protoc_insertion_point(class_scope:szengine.FindInterestingEntitiesByRecordIdResponse)
+ private:
+  class _Internal;
+
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 0,
+      65, 2>
+      _table_;
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+
+        inline explicit constexpr Impl_(
+            ::google::protobuf::internal::ConstantInitialized) noexcept;
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena);
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena, const Impl_& from);
+    ::google::protobuf::internal::ArenaStringPtr result_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_szengine_2eproto;
+};// -------------------------------------------------------------------
+
+class FindInterestingEntitiesByRecordIdRequest final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szengine.FindInterestingEntitiesByRecordIdRequest) */ {
+ public:
+  inline FindInterestingEntitiesByRecordIdRequest() : FindInterestingEntitiesByRecordIdRequest(nullptr) {}
+  ~FindInterestingEntitiesByRecordIdRequest() override;
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR FindInterestingEntitiesByRecordIdRequest(::google::protobuf::internal::ConstantInitialized);
+
+  inline FindInterestingEntitiesByRecordIdRequest(const FindInterestingEntitiesByRecordIdRequest& from)
+      : FindInterestingEntitiesByRecordIdRequest(nullptr, from) {}
+  FindInterestingEntitiesByRecordIdRequest(FindInterestingEntitiesByRecordIdRequest&& from) noexcept
+    : FindInterestingEntitiesByRecordIdRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline FindInterestingEntitiesByRecordIdRequest& operator=(const FindInterestingEntitiesByRecordIdRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline FindInterestingEntitiesByRecordIdRequest& operator=(FindInterestingEntitiesByRecordIdRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const FindInterestingEntitiesByRecordIdRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const FindInterestingEntitiesByRecordIdRequest* internal_default_instance() {
+    return reinterpret_cast<const FindInterestingEntitiesByRecordIdRequest*>(
+               &_FindInterestingEntitiesByRecordIdRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    16;
+
+  friend void swap(FindInterestingEntitiesByRecordIdRequest& a, FindInterestingEntitiesByRecordIdRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(FindInterestingEntitiesByRecordIdRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr &&
+        GetArena() == other->GetArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(FindInterestingEntitiesByRecordIdRequest* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  FindInterestingEntitiesByRecordIdRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<FindInterestingEntitiesByRecordIdRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const FindInterestingEntitiesByRecordIdRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom( const FindInterestingEntitiesByRecordIdRequest& from) {
+    FindInterestingEntitiesByRecordIdRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  ::size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target, ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(FindInterestingEntitiesByRecordIdRequest* other);
+
+  private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "szengine.FindInterestingEntitiesByRecordIdRequest";
+  }
+  protected:
+  explicit FindInterestingEntitiesByRecordIdRequest(::google::protobuf::Arena* arena);
+  FindInterestingEntitiesByRecordIdRequest(::google::protobuf::Arena* arena, const FindInterestingEntitiesByRecordIdRequest& from);
+  public:
+
+  static const ClassData _class_data_;
+  const ::google::protobuf::Message::ClassData*GetClassData() const final;
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kDataSourceCodeFieldNumber = 1,
+    kRecordIdFieldNumber = 2,
+    kFlagsFieldNumber = 3,
+  };
+  // string dataSourceCode = 1;
+  void clear_datasourcecode() ;
+  const std::string& datasourcecode() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_datasourcecode(Arg_&& arg, Args_... args);
+  std::string* mutable_datasourcecode();
+  PROTOBUF_NODISCARD std::string* release_datasourcecode();
+  void set_allocated_datasourcecode(std::string* value);
+
+  private:
+  const std::string& _internal_datasourcecode() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_datasourcecode(
+      const std::string& value);
+  std::string* _internal_mutable_datasourcecode();
+
+  public:
+  // string recordId = 2;
+  void clear_recordid() ;
+  const std::string& recordid() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_recordid(Arg_&& arg, Args_... args);
+  std::string* mutable_recordid();
+  PROTOBUF_NODISCARD std::string* release_recordid();
+  void set_allocated_recordid(std::string* value);
+
+  private:
+  const std::string& _internal_recordid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_recordid(
+      const std::string& value);
+  std::string* _internal_mutable_recordid();
+
+  public:
+  // int64 flags = 3;
+  void clear_flags() ;
+  ::int64_t flags() const;
+  void set_flags(::int64_t value);
+
+  private:
+  ::int64_t _internal_flags() const;
+  void _internal_set_flags(::int64_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:szengine.FindInterestingEntitiesByRecordIdRequest)
+ private:
+  class _Internal;
+
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      2, 3, 0,
+      80, 2>
+      _table_;
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+
+        inline explicit constexpr Impl_(
+            ::google::protobuf::internal::ConstantInitialized) noexcept;
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena);
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena, const Impl_& from);
+    ::google::protobuf::internal::ArenaStringPtr datasourcecode_;
+    ::google::protobuf::internal::ArenaStringPtr recordid_;
+    ::int64_t flags_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_szengine_2eproto;
+};// -------------------------------------------------------------------
+
+class FindInterestingEntitiesByEntityIdResponse final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szengine.FindInterestingEntitiesByEntityIdResponse) */ {
+ public:
+  inline FindInterestingEntitiesByEntityIdResponse() : FindInterestingEntitiesByEntityIdResponse(nullptr) {}
+  ~FindInterestingEntitiesByEntityIdResponse() override;
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR FindInterestingEntitiesByEntityIdResponse(::google::protobuf::internal::ConstantInitialized);
+
+  inline FindInterestingEntitiesByEntityIdResponse(const FindInterestingEntitiesByEntityIdResponse& from)
+      : FindInterestingEntitiesByEntityIdResponse(nullptr, from) {}
+  FindInterestingEntitiesByEntityIdResponse(FindInterestingEntitiesByEntityIdResponse&& from) noexcept
+    : FindInterestingEntitiesByEntityIdResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline FindInterestingEntitiesByEntityIdResponse& operator=(const FindInterestingEntitiesByEntityIdResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline FindInterestingEntitiesByEntityIdResponse& operator=(FindInterestingEntitiesByEntityIdResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const FindInterestingEntitiesByEntityIdResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const FindInterestingEntitiesByEntityIdResponse* internal_default_instance() {
+    return reinterpret_cast<const FindInterestingEntitiesByEntityIdResponse*>(
+               &_FindInterestingEntitiesByEntityIdResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    15;
+
+  friend void swap(FindInterestingEntitiesByEntityIdResponse& a, FindInterestingEntitiesByEntityIdResponse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(FindInterestingEntitiesByEntityIdResponse* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr &&
+        GetArena() == other->GetArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(FindInterestingEntitiesByEntityIdResponse* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  FindInterestingEntitiesByEntityIdResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<FindInterestingEntitiesByEntityIdResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const FindInterestingEntitiesByEntityIdResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom( const FindInterestingEntitiesByEntityIdResponse& from) {
+    FindInterestingEntitiesByEntityIdResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  ::size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target, ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(FindInterestingEntitiesByEntityIdResponse* other);
+
+  private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "szengine.FindInterestingEntitiesByEntityIdResponse";
+  }
+  protected:
+  explicit FindInterestingEntitiesByEntityIdResponse(::google::protobuf::Arena* arena);
+  FindInterestingEntitiesByEntityIdResponse(::google::protobuf::Arena* arena, const FindInterestingEntitiesByEntityIdResponse& from);
+  public:
+
+  static const ClassData _class_data_;
+  const ::google::protobuf::Message::ClassData*GetClassData() const final;
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+  };
+  // string result = 1;
+  void clear_result() ;
+  const std::string& result() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_result(Arg_&& arg, Args_... args);
+  std::string* mutable_result();
+  PROTOBUF_NODISCARD std::string* release_result();
+  void set_allocated_result(std::string* value);
+
+  private:
+  const std::string& _internal_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(
+      const std::string& value);
+  std::string* _internal_mutable_result();
+
+  public:
+  // @@protoc_insertion_point(class_scope:szengine.FindInterestingEntitiesByEntityIdResponse)
+ private:
+  class _Internal;
+
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 0,
+      65, 2>
+      _table_;
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+
+        inline explicit constexpr Impl_(
+            ::google::protobuf::internal::ConstantInitialized) noexcept;
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena);
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena, const Impl_& from);
+    ::google::protobuf::internal::ArenaStringPtr result_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_szengine_2eproto;
+};// -------------------------------------------------------------------
+
+class FindInterestingEntitiesByEntityIdRequest final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szengine.FindInterestingEntitiesByEntityIdRequest) */ {
+ public:
+  inline FindInterestingEntitiesByEntityIdRequest() : FindInterestingEntitiesByEntityIdRequest(nullptr) {}
+  ~FindInterestingEntitiesByEntityIdRequest() override;
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR FindInterestingEntitiesByEntityIdRequest(::google::protobuf::internal::ConstantInitialized);
+
+  inline FindInterestingEntitiesByEntityIdRequest(const FindInterestingEntitiesByEntityIdRequest& from)
+      : FindInterestingEntitiesByEntityIdRequest(nullptr, from) {}
+  FindInterestingEntitiesByEntityIdRequest(FindInterestingEntitiesByEntityIdRequest&& from) noexcept
+    : FindInterestingEntitiesByEntityIdRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline FindInterestingEntitiesByEntityIdRequest& operator=(const FindInterestingEntitiesByEntityIdRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline FindInterestingEntitiesByEntityIdRequest& operator=(FindInterestingEntitiesByEntityIdRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const FindInterestingEntitiesByEntityIdRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const FindInterestingEntitiesByEntityIdRequest* internal_default_instance() {
+    return reinterpret_cast<const FindInterestingEntitiesByEntityIdRequest*>(
+               &_FindInterestingEntitiesByEntityIdRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    14;
+
+  friend void swap(FindInterestingEntitiesByEntityIdRequest& a, FindInterestingEntitiesByEntityIdRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(FindInterestingEntitiesByEntityIdRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr &&
+        GetArena() == other->GetArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(FindInterestingEntitiesByEntityIdRequest* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  FindInterestingEntitiesByEntityIdRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<FindInterestingEntitiesByEntityIdRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const FindInterestingEntitiesByEntityIdRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom( const FindInterestingEntitiesByEntityIdRequest& from) {
+    FindInterestingEntitiesByEntityIdRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  ::size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target, ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(FindInterestingEntitiesByEntityIdRequest* other);
+
+  private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "szengine.FindInterestingEntitiesByEntityIdRequest";
+  }
+  protected:
+  explicit FindInterestingEntitiesByEntityIdRequest(::google::protobuf::Arena* arena);
+  FindInterestingEntitiesByEntityIdRequest(::google::protobuf::Arena* arena, const FindInterestingEntitiesByEntityIdRequest& from);
+  public:
+
+  static const ClassData _class_data_;
+  const ::google::protobuf::Message::ClassData*GetClassData() const final;
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kEntityIdFieldNumber = 1,
+    kFlagsFieldNumber = 2,
+  };
+  // int64 entityId = 1;
+  void clear_entityid() ;
+  ::int64_t entityid() const;
+  void set_entityid(::int64_t value);
+
+  private:
+  ::int64_t _internal_entityid() const;
+  void _internal_set_entityid(::int64_t value);
+
+  public:
+  // int64 flags = 2;
+  void clear_flags() ;
+  ::int64_t flags() const;
+  void set_flags(::int64_t value);
+
+  private:
+  ::int64_t _internal_flags() const;
+  void _internal_set_flags(::int64_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:szengine.FindInterestingEntitiesByEntityIdRequest)
+ private:
+  class _Internal;
+
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      1, 2, 0,
+      0, 2>
+      _table_;
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+
+        inline explicit constexpr Impl_(
+            ::google::protobuf::internal::ConstantInitialized) noexcept;
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena);
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena, const Impl_& from);
+    ::int64_t entityid_;
     ::int64_t flags_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -12100,6 +12872,303 @@ inline void FetchNextResponse::set_allocated_result(std::string* value) {
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:szengine.FetchNextResponse.result)
+}
+
+// -------------------------------------------------------------------
+
+// FindInterestingEntitiesByEntityIdRequest
+
+// int64 entityId = 1;
+inline void FindInterestingEntitiesByEntityIdRequest::clear_entityid() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.entityid_ = ::int64_t{0};
+}
+inline ::int64_t FindInterestingEntitiesByEntityIdRequest::entityid() const {
+  // @@protoc_insertion_point(field_get:szengine.FindInterestingEntitiesByEntityIdRequest.entityId)
+  return _internal_entityid();
+}
+inline void FindInterestingEntitiesByEntityIdRequest::set_entityid(::int64_t value) {
+  _internal_set_entityid(value);
+  // @@protoc_insertion_point(field_set:szengine.FindInterestingEntitiesByEntityIdRequest.entityId)
+}
+inline ::int64_t FindInterestingEntitiesByEntityIdRequest::_internal_entityid() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.entityid_;
+}
+inline void FindInterestingEntitiesByEntityIdRequest::_internal_set_entityid(::int64_t value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.entityid_ = value;
+}
+
+// int64 flags = 2;
+inline void FindInterestingEntitiesByEntityIdRequest::clear_flags() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.flags_ = ::int64_t{0};
+}
+inline ::int64_t FindInterestingEntitiesByEntityIdRequest::flags() const {
+  // @@protoc_insertion_point(field_get:szengine.FindInterestingEntitiesByEntityIdRequest.flags)
+  return _internal_flags();
+}
+inline void FindInterestingEntitiesByEntityIdRequest::set_flags(::int64_t value) {
+  _internal_set_flags(value);
+  // @@protoc_insertion_point(field_set:szengine.FindInterestingEntitiesByEntityIdRequest.flags)
+}
+inline ::int64_t FindInterestingEntitiesByEntityIdRequest::_internal_flags() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.flags_;
+}
+inline void FindInterestingEntitiesByEntityIdRequest::_internal_set_flags(::int64_t value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.flags_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// FindInterestingEntitiesByEntityIdResponse
+
+// string result = 1;
+inline void FindInterestingEntitiesByEntityIdResponse::clear_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.result_.ClearToEmpty();
+}
+inline const std::string& FindInterestingEntitiesByEntityIdResponse::result() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:szengine.FindInterestingEntitiesByEntityIdResponse.result)
+  return _internal_result();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void FindInterestingEntitiesByEntityIdResponse::set_result(Arg_&& arg,
+                                                     Args_... args) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.result_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szengine.FindInterestingEntitiesByEntityIdResponse.result)
+}
+inline std::string* FindInterestingEntitiesByEntityIdResponse::mutable_result() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_result();
+  // @@protoc_insertion_point(field_mutable:szengine.FindInterestingEntitiesByEntityIdResponse.result)
+  return _s;
+}
+inline const std::string& FindInterestingEntitiesByEntityIdResponse::_internal_result() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.result_.Get();
+}
+inline void FindInterestingEntitiesByEntityIdResponse::_internal_set_result(const std::string& value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.result_.Set(value, GetArena());
+}
+inline std::string* FindInterestingEntitiesByEntityIdResponse::_internal_mutable_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  return _impl_.result_.Mutable( GetArena());
+}
+inline std::string* FindInterestingEntitiesByEntityIdResponse::release_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  // @@protoc_insertion_point(field_release:szengine.FindInterestingEntitiesByEntityIdResponse.result)
+  return _impl_.result_.Release();
+}
+inline void FindInterestingEntitiesByEntityIdResponse::set_allocated_result(std::string* value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.result_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.result_.IsDefault()) {
+          _impl_.result_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:szengine.FindInterestingEntitiesByEntityIdResponse.result)
+}
+
+// -------------------------------------------------------------------
+
+// FindInterestingEntitiesByRecordIdRequest
+
+// string dataSourceCode = 1;
+inline void FindInterestingEntitiesByRecordIdRequest::clear_datasourcecode() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.datasourcecode_.ClearToEmpty();
+}
+inline const std::string& FindInterestingEntitiesByRecordIdRequest::datasourcecode() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:szengine.FindInterestingEntitiesByRecordIdRequest.dataSourceCode)
+  return _internal_datasourcecode();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void FindInterestingEntitiesByRecordIdRequest::set_datasourcecode(Arg_&& arg,
+                                                     Args_... args) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.datasourcecode_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szengine.FindInterestingEntitiesByRecordIdRequest.dataSourceCode)
+}
+inline std::string* FindInterestingEntitiesByRecordIdRequest::mutable_datasourcecode() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_datasourcecode();
+  // @@protoc_insertion_point(field_mutable:szengine.FindInterestingEntitiesByRecordIdRequest.dataSourceCode)
+  return _s;
+}
+inline const std::string& FindInterestingEntitiesByRecordIdRequest::_internal_datasourcecode() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.datasourcecode_.Get();
+}
+inline void FindInterestingEntitiesByRecordIdRequest::_internal_set_datasourcecode(const std::string& value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.datasourcecode_.Set(value, GetArena());
+}
+inline std::string* FindInterestingEntitiesByRecordIdRequest::_internal_mutable_datasourcecode() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  return _impl_.datasourcecode_.Mutable( GetArena());
+}
+inline std::string* FindInterestingEntitiesByRecordIdRequest::release_datasourcecode() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  // @@protoc_insertion_point(field_release:szengine.FindInterestingEntitiesByRecordIdRequest.dataSourceCode)
+  return _impl_.datasourcecode_.Release();
+}
+inline void FindInterestingEntitiesByRecordIdRequest::set_allocated_datasourcecode(std::string* value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.datasourcecode_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.datasourcecode_.IsDefault()) {
+          _impl_.datasourcecode_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:szengine.FindInterestingEntitiesByRecordIdRequest.dataSourceCode)
+}
+
+// string recordId = 2;
+inline void FindInterestingEntitiesByRecordIdRequest::clear_recordid() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.recordid_.ClearToEmpty();
+}
+inline const std::string& FindInterestingEntitiesByRecordIdRequest::recordid() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:szengine.FindInterestingEntitiesByRecordIdRequest.recordId)
+  return _internal_recordid();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void FindInterestingEntitiesByRecordIdRequest::set_recordid(Arg_&& arg,
+                                                     Args_... args) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.recordid_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szengine.FindInterestingEntitiesByRecordIdRequest.recordId)
+}
+inline std::string* FindInterestingEntitiesByRecordIdRequest::mutable_recordid() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_recordid();
+  // @@protoc_insertion_point(field_mutable:szengine.FindInterestingEntitiesByRecordIdRequest.recordId)
+  return _s;
+}
+inline const std::string& FindInterestingEntitiesByRecordIdRequest::_internal_recordid() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.recordid_.Get();
+}
+inline void FindInterestingEntitiesByRecordIdRequest::_internal_set_recordid(const std::string& value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.recordid_.Set(value, GetArena());
+}
+inline std::string* FindInterestingEntitiesByRecordIdRequest::_internal_mutable_recordid() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  return _impl_.recordid_.Mutable( GetArena());
+}
+inline std::string* FindInterestingEntitiesByRecordIdRequest::release_recordid() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  // @@protoc_insertion_point(field_release:szengine.FindInterestingEntitiesByRecordIdRequest.recordId)
+  return _impl_.recordid_.Release();
+}
+inline void FindInterestingEntitiesByRecordIdRequest::set_allocated_recordid(std::string* value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.recordid_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.recordid_.IsDefault()) {
+          _impl_.recordid_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:szengine.FindInterestingEntitiesByRecordIdRequest.recordId)
+}
+
+// int64 flags = 3;
+inline void FindInterestingEntitiesByRecordIdRequest::clear_flags() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.flags_ = ::int64_t{0};
+}
+inline ::int64_t FindInterestingEntitiesByRecordIdRequest::flags() const {
+  // @@protoc_insertion_point(field_get:szengine.FindInterestingEntitiesByRecordIdRequest.flags)
+  return _internal_flags();
+}
+inline void FindInterestingEntitiesByRecordIdRequest::set_flags(::int64_t value) {
+  _internal_set_flags(value);
+  // @@protoc_insertion_point(field_set:szengine.FindInterestingEntitiesByRecordIdRequest.flags)
+}
+inline ::int64_t FindInterestingEntitiesByRecordIdRequest::_internal_flags() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.flags_;
+}
+inline void FindInterestingEntitiesByRecordIdRequest::_internal_set_flags(::int64_t value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.flags_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// FindInterestingEntitiesByRecordIdResponse
+
+// string result = 1;
+inline void FindInterestingEntitiesByRecordIdResponse::clear_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.result_.ClearToEmpty();
+}
+inline const std::string& FindInterestingEntitiesByRecordIdResponse::result() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:szengine.FindInterestingEntitiesByRecordIdResponse.result)
+  return _internal_result();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void FindInterestingEntitiesByRecordIdResponse::set_result(Arg_&& arg,
+                                                     Args_... args) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.result_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szengine.FindInterestingEntitiesByRecordIdResponse.result)
+}
+inline std::string* FindInterestingEntitiesByRecordIdResponse::mutable_result() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_result();
+  // @@protoc_insertion_point(field_mutable:szengine.FindInterestingEntitiesByRecordIdResponse.result)
+  return _s;
+}
+inline const std::string& FindInterestingEntitiesByRecordIdResponse::_internal_result() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.result_.Get();
+}
+inline void FindInterestingEntitiesByRecordIdResponse::_internal_set_result(const std::string& value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.result_.Set(value, GetArena());
+}
+inline std::string* FindInterestingEntitiesByRecordIdResponse::_internal_mutable_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  return _impl_.result_.Mutable( GetArena());
+}
+inline std::string* FindInterestingEntitiesByRecordIdResponse::release_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  // @@protoc_insertion_point(field_release:szengine.FindInterestingEntitiesByRecordIdResponse.result)
+  return _impl_.result_.Release();
+}
+inline void FindInterestingEntitiesByRecordIdResponse::set_allocated_result(std::string* value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.result_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.result_.IsDefault()) {
+          _impl_.result_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:szengine.FindInterestingEntitiesByRecordIdResponse.result)
 }
 
 // -------------------------------------------------------------------
