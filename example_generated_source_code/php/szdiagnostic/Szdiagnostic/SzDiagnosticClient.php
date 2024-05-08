@@ -45,6 +45,20 @@ class SzDiagnosticClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Szdiagnostic\GetFeatureRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetFeature(\Szdiagnostic\GetFeatureRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szdiagnostic.SzDiagnostic/GetFeature',
+        $argument,
+        ['\Szdiagnostic\GetFeatureResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Szdiagnostic\PurgeRepositoryRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

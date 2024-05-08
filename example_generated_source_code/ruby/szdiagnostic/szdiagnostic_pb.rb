@@ -16,6 +16,12 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "szdiagnostic.GetDatastoreInfoResponse" do
       optional :result, :string, 1
     end
+    add_message "szdiagnostic.GetFeatureRequest" do
+      optional :featureId, :int64, 1
+    end
+    add_message "szdiagnostic.GetFeatureResponse" do
+      optional :result, :string, 1
+    end
     add_message "szdiagnostic.PurgeRepositoryRequest" do
     end
     add_message "szdiagnostic.PurgeRepositoryResponse" do
@@ -33,6 +39,8 @@ module Szdiagnostic
   CheckDatastorePerformanceResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.CheckDatastorePerformanceResponse").msgclass
   GetDatastoreInfoRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.GetDatastoreInfoRequest").msgclass
   GetDatastoreInfoResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.GetDatastoreInfoResponse").msgclass
+  GetFeatureRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.GetFeatureRequest").msgclass
+  GetFeatureResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.GetFeatureResponse").msgclass
   PurgeRepositoryRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.PurgeRepositoryRequest").msgclass
   PurgeRepositoryResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.PurgeRepositoryResponse").msgclass
   ReinitializeRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szdiagnostic.ReinitializeRequest").msgclass

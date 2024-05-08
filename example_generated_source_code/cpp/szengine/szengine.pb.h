@@ -2251,7 +2251,7 @@ class SearchByAttributesResponse final :
                &_SearchByAttributesResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    51;
+    53;
 
   friend void swap(SearchByAttributesResponse& a, SearchByAttributesResponse& b) {
     a.Swap(&b);
@@ -2432,7 +2432,7 @@ class SearchByAttributesRequest final :
                &_SearchByAttributesRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    50;
+    52;
 
   friend void swap(SearchByAttributesRequest& a, SearchByAttributesRequest& b) {
     a.Swap(&b);
@@ -2642,7 +2642,7 @@ class ReinitializeResponse final :
                &_ReinitializeResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    49;
+    51;
 
   friend void swap(ReinitializeResponse& a, ReinitializeResponse& b) {
     a.Swap(&b);
@@ -2779,7 +2779,7 @@ class ReinitializeRequest final :
                &_ReinitializeRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    48;
+    50;
 
   friend void swap(ReinitializeRequest& a, ReinitializeRequest& b) {
     a.Swap(&b);
@@ -2954,7 +2954,7 @@ class ReevaluateRecordResponse final :
                &_ReevaluateRecordResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    47;
+    49;
 
   friend void swap(ReevaluateRecordResponse& a, ReevaluateRecordResponse& b) {
     a.Swap(&b);
@@ -3135,7 +3135,7 @@ class ReevaluateRecordRequest final :
                &_ReevaluateRecordRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    46;
+    48;
 
   friend void swap(ReevaluateRecordRequest& a, ReevaluateRecordRequest& b) {
     a.Swap(&b);
@@ -3346,7 +3346,7 @@ class ReevaluateEntityResponse final :
                &_ReevaluateEntityResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    45;
+    47;
 
   friend void swap(ReevaluateEntityResponse& a, ReevaluateEntityResponse& b) {
     a.Swap(&b);
@@ -3527,7 +3527,7 @@ class ReevaluateEntityRequest final :
                &_ReevaluateEntityRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    44;
+    46;
 
   friend void swap(ReevaluateEntityRequest& a, ReevaluateEntityRequest& b) {
     a.Swap(&b);
@@ -3714,7 +3714,7 @@ class ProcessRedoRecordResponse final :
                &_ProcessRedoRecordResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    43;
+    45;
 
   friend void swap(ProcessRedoRecordResponse& a, ProcessRedoRecordResponse& b) {
     a.Swap(&b);
@@ -3895,7 +3895,7 @@ class ProcessRedoRecordRequest final :
                &_ProcessRedoRecordRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    42;
+    44;
 
   friend void swap(ProcessRedoRecordRequest& a, ProcessRedoRecordRequest& b) {
     a.Swap(&b);
@@ -4087,7 +4087,7 @@ class PrimeEngineResponse final :
                &_PrimeEngineResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    41;
+    43;
 
   friend void swap(PrimeEngineResponse& a, PrimeEngineResponse& b) {
     a.Swap(&b);
@@ -4223,7 +4223,7 @@ class PrimeEngineRequest final :
                &_PrimeEngineRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    40;
+    42;
 
   friend void swap(PrimeEngineRequest& a, PrimeEngineRequest& b) {
     a.Swap(&b);
@@ -4360,7 +4360,7 @@ class HowEntityByEntityIdResponse final :
                &_HowEntityByEntityIdResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    39;
+    41;
 
   friend void swap(HowEntityByEntityIdResponse& a, HowEntityByEntityIdResponse& b) {
     a.Swap(&b);
@@ -4541,7 +4541,7 @@ class HowEntityByEntityIdRequest final :
                &_HowEntityByEntityIdRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    38;
+    40;
 
   friend void swap(HowEntityByEntityIdRequest& a, HowEntityByEntityIdRequest& b) {
     a.Swap(&b);
@@ -4728,7 +4728,7 @@ class GetVirtualEntityByRecordIdResponse final :
                &_GetVirtualEntityByRecordIdResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    37;
+    39;
 
   friend void swap(GetVirtualEntityByRecordIdResponse& a, GetVirtualEntityByRecordIdResponse& b) {
     a.Swap(&b);
@@ -4909,7 +4909,7 @@ class GetVirtualEntityByRecordIdRequest final :
                &_GetVirtualEntityByRecordIdRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    36;
+    38;
 
   friend void swap(GetVirtualEntityByRecordIdRequest& a, GetVirtualEntityByRecordIdRequest& b) {
     a.Swap(&b);
@@ -5102,7 +5102,7 @@ class GetStatsResponse final :
                &_GetStatsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    53;
+    37;
 
   friend void swap(GetStatsResponse& a, GetStatsResponse& b) {
     a.Swap(&b);
@@ -5282,7 +5282,7 @@ class GetStatsRequest final :
                &_GetStatsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    52;
+    36;
 
   friend void swap(GetStatsRequest& a, GetStatsRequest& b) {
     a.Swap(&b);
@@ -9937,16 +9937,16 @@ class FetchNextRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResponseHandleFieldNumber = 1,
+    kExportHandleFieldNumber = 1,
   };
-  // int64 responseHandle = 1;
-  void clear_responsehandle() ;
-  ::int64_t responsehandle() const;
-  void set_responsehandle(::int64_t value);
+  // int64 exportHandle = 1;
+  void clear_exporthandle() ;
+  ::int64_t exporthandle() const;
+  void set_exporthandle(::int64_t value);
 
   private:
-  ::int64_t _internal_responsehandle() const;
-  void _internal_set_responsehandle(::int64_t value);
+  ::int64_t _internal_exporthandle() const;
+  void _internal_set_exporthandle(::int64_t value);
 
   public:
   // @@protoc_insertion_point(class_scope:szengine.FetchNextRequest)
@@ -9972,7 +9972,7 @@ class FetchNextRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::int64_t responsehandle_;
+    ::int64_t exporthandle_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -11669,16 +11669,16 @@ class CloseExportRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kResponseHandleFieldNumber = 1,
+    kExportHandleFieldNumber = 1,
   };
-  // int64 responseHandle = 1;
-  void clear_responsehandle() ;
-  ::int64_t responsehandle() const;
-  void set_responsehandle(::int64_t value);
+  // int64 exportHandle = 1;
+  void clear_exporthandle() ;
+  ::int64_t exporthandle() const;
+  void set_exporthandle(::int64_t value);
 
   private:
-  ::int64_t _internal_responsehandle() const;
-  void _internal_set_responsehandle(::int64_t value);
+  ::int64_t _internal_exporthandle() const;
+  void _internal_set_exporthandle(::int64_t value);
 
   public:
   // @@protoc_insertion_point(class_scope:szengine.CloseExportRequest)
@@ -11704,7 +11704,7 @@ class CloseExportRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::int64_t responsehandle_;
+    ::int64_t exporthandle_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -12381,27 +12381,27 @@ inline void AddRecordResponse::set_allocated_result(std::string* value) {
 
 // CloseExportRequest
 
-// int64 responseHandle = 1;
-inline void CloseExportRequest::clear_responsehandle() {
+// int64 exportHandle = 1;
+inline void CloseExportRequest::clear_exporthandle() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.responsehandle_ = ::int64_t{0};
+  _impl_.exporthandle_ = ::int64_t{0};
 }
-inline ::int64_t CloseExportRequest::responsehandle() const {
-  // @@protoc_insertion_point(field_get:szengine.CloseExportRequest.responseHandle)
-  return _internal_responsehandle();
+inline ::int64_t CloseExportRequest::exporthandle() const {
+  // @@protoc_insertion_point(field_get:szengine.CloseExportRequest.exportHandle)
+  return _internal_exporthandle();
 }
-inline void CloseExportRequest::set_responsehandle(::int64_t value) {
-  _internal_set_responsehandle(value);
-  // @@protoc_insertion_point(field_set:szengine.CloseExportRequest.responseHandle)
+inline void CloseExportRequest::set_exporthandle(::int64_t value) {
+  _internal_set_exporthandle(value);
+  // @@protoc_insertion_point(field_set:szengine.CloseExportRequest.exportHandle)
 }
-inline ::int64_t CloseExportRequest::_internal_responsehandle() const {
+inline ::int64_t CloseExportRequest::_internal_exporthandle() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.responsehandle_;
+  return _impl_.exporthandle_;
 }
-inline void CloseExportRequest::_internal_set_responsehandle(::int64_t value) {
+inline void CloseExportRequest::_internal_set_exporthandle(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.responsehandle_ = value;
+  _impl_.exporthandle_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -12794,27 +12794,27 @@ inline void ExportJsonEntityReportResponse::_internal_set_result(::int64_t value
 
 // FetchNextRequest
 
-// int64 responseHandle = 1;
-inline void FetchNextRequest::clear_responsehandle() {
+// int64 exportHandle = 1;
+inline void FetchNextRequest::clear_exporthandle() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.responsehandle_ = ::int64_t{0};
+  _impl_.exporthandle_ = ::int64_t{0};
 }
-inline ::int64_t FetchNextRequest::responsehandle() const {
-  // @@protoc_insertion_point(field_get:szengine.FetchNextRequest.responseHandle)
-  return _internal_responsehandle();
+inline ::int64_t FetchNextRequest::exporthandle() const {
+  // @@protoc_insertion_point(field_get:szengine.FetchNextRequest.exportHandle)
+  return _internal_exporthandle();
 }
-inline void FetchNextRequest::set_responsehandle(::int64_t value) {
-  _internal_set_responsehandle(value);
-  // @@protoc_insertion_point(field_set:szengine.FetchNextRequest.responseHandle)
+inline void FetchNextRequest::set_exporthandle(::int64_t value) {
+  _internal_set_exporthandle(value);
+  // @@protoc_insertion_point(field_set:szengine.FetchNextRequest.exportHandle)
 }
-inline ::int64_t FetchNextRequest::_internal_responsehandle() const {
+inline ::int64_t FetchNextRequest::_internal_exporthandle() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.responsehandle_;
+  return _impl_.exporthandle_;
 }
-inline void FetchNextRequest::_internal_set_responsehandle(::int64_t value) {
+inline void FetchNextRequest::_internal_set_exporthandle(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.responsehandle_ = value;
+  _impl_.exporthandle_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -14848,6 +14848,67 @@ inline void GetRedoRecordResponse::set_allocated_result(std::string* value) {
 
 // -------------------------------------------------------------------
 
+// GetStatsRequest
+
+// -------------------------------------------------------------------
+
+// GetStatsResponse
+
+// string result = 1;
+inline void GetStatsResponse::clear_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.result_.ClearToEmpty();
+}
+inline const std::string& GetStatsResponse::result() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:szengine.GetStatsResponse.result)
+  return _internal_result();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void GetStatsResponse::set_result(Arg_&& arg,
+                                                     Args_... args) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.result_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szengine.GetStatsResponse.result)
+}
+inline std::string* GetStatsResponse::mutable_result() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_result();
+  // @@protoc_insertion_point(field_mutable:szengine.GetStatsResponse.result)
+  return _s;
+}
+inline const std::string& GetStatsResponse::_internal_result() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.result_.Get();
+}
+inline void GetStatsResponse::_internal_set_result(const std::string& value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.result_.Set(value, GetArena());
+}
+inline std::string* GetStatsResponse::_internal_mutable_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  return _impl_.result_.Mutable( GetArena());
+}
+inline std::string* GetStatsResponse::release_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  // @@protoc_insertion_point(field_release:szengine.GetStatsResponse.result)
+  return _impl_.result_.Release();
+}
+inline void GetStatsResponse::set_allocated_result(std::string* value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.result_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.result_.IsDefault()) {
+          _impl_.result_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:szengine.GetStatsResponse.result)
+}
+
+// -------------------------------------------------------------------
+
 // GetVirtualEntityByRecordIdRequest
 
 // string recordList = 1;
@@ -15751,67 +15812,6 @@ inline void SearchByAttributesResponse::set_allocated_result(std::string* value)
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:szengine.SearchByAttributesResponse.result)
-}
-
-// -------------------------------------------------------------------
-
-// GetStatsRequest
-
-// -------------------------------------------------------------------
-
-// GetStatsResponse
-
-// string result = 1;
-inline void GetStatsResponse::clear_result() {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.result_.ClearToEmpty();
-}
-inline const std::string& GetStatsResponse::result() const
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szengine.GetStatsResponse.result)
-  return _internal_result();
-}
-template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GetStatsResponse::set_result(Arg_&& arg,
-                                                     Args_... args) {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ;
-  _impl_.result_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szengine.GetStatsResponse.result)
-}
-inline std::string* GetStatsResponse::mutable_result() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:szengine.GetStatsResponse.result)
-  return _s;
-}
-inline const std::string& GetStatsResponse::_internal_result() const {
-  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.result_.Get();
-}
-inline void GetStatsResponse::_internal_set_result(const std::string& value) {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ;
-  _impl_.result_.Set(value, GetArena());
-}
-inline std::string* GetStatsResponse::_internal_mutable_result() {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ;
-  return _impl_.result_.Mutable( GetArena());
-}
-inline std::string* GetStatsResponse::release_result() {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  // @@protoc_insertion_point(field_release:szengine.GetStatsResponse.result)
-  return _impl_.result_.Release();
-}
-inline void GetStatsResponse::set_allocated_result(std::string* value) {
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.result_.SetAllocated(value, GetArena());
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.result_.IsDefault()) {
-          _impl_.result_.Set("", GetArena());
-        }
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:szengine.GetStatsResponse.result)
 }
 
 // -------------------------------------------------------------------

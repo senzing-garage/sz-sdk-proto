@@ -8,6 +8,7 @@ option java_outer_classname = "SzDiagnosticProto";
 service SzDiagnostic {
   rpc CheckDatastorePerformance (CheckDatastorePerformanceRequest) returns (CheckDatastorePerformanceResponse) {}
   rpc GetDatastoreInfo (GetDatastoreInfoRequest) returns (GetDatastoreInfoResponse) {}
+  rpc GetFeature (GetFeatureRequest) returns (GetFeatureResponse) {}
   rpc PurgeRepository(PurgeRepositoryRequest) returns (PurgeRepositoryResponse) {}
   rpc Reinitialize (ReinitializeRequest) returns (ReinitializeResponse) {}
 }
@@ -24,6 +25,14 @@ message GetDatastoreInfoRequest {
 }
 
 message GetDatastoreInfoResponse {
+  string result = 1;
+}
+
+message GetFeatureRequest {
+  int64 featureId = 1;
+}
+
+message GetFeatureResponse {
   string result = 1;
 }
 

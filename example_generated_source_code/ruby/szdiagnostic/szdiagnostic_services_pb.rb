@@ -16,6 +16,7 @@ module Szdiagnostic
 
       rpc :CheckDatastorePerformance, ::Szdiagnostic::CheckDatastorePerformanceRequest, ::Szdiagnostic::CheckDatastorePerformanceResponse
       rpc :GetDatastoreInfo, ::Szdiagnostic::GetDatastoreInfoRequest, ::Szdiagnostic::GetDatastoreInfoResponse
+      rpc :GetFeature, ::Szdiagnostic::GetFeatureRequest, ::Szdiagnostic::GetFeatureResponse
       rpc :PurgeRepository, ::Szdiagnostic::PurgeRepositoryRequest, ::Szdiagnostic::PurgeRepositoryResponse
       rpc :Reinitialize, ::Szdiagnostic::ReinitializeRequest, ::Szdiagnostic::ReinitializeResponse
     end
