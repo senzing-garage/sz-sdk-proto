@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - ...
 
+## [0.7.5] - 2024-05-08
+
+### Added in 0.7.5
+
+- `GetFeature`
+
 ## [0.7.4] - 2024-05-07
 
 ### Added in 0.7.4
