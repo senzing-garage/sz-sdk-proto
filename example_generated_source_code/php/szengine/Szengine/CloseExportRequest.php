@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class CloseExportRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int64 responseHandle = 1;</code>
+     * Generated from protobuf field <code>int64 exportHandle = 1;</code>
      */
-    protected $responseHandle = 0;
+    protected $exportHandle = 0;
 
     /**
      * Constructor.
@@ -24,7 +24,7 @@ class CloseExportRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int|string $responseHandle
+     *     @type int|string $exportHandle
      * }
      */
     public function __construct($data = NULL) {
@@ -33,23 +33,23 @@ class CloseExportRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 responseHandle = 1;</code>
+     * Generated from protobuf field <code>int64 exportHandle = 1;</code>
      * @return int|string
      */
-    public function getResponseHandle()
+    public function getExportHandle()
     {
-        return $this->responseHandle;
+        return $this->exportHandle;
     }
 
     /**
-     * Generated from protobuf field <code>int64 responseHandle = 1;</code>
+     * Generated from protobuf field <code>int64 exportHandle = 1;</code>
      * @param int|string $var
      * @return $this
      */
-    public function setResponseHandle($var)
+    public function setExportHandle($var)
     {
         GPBUtil::checkInt64($var);
-        $this->responseHandle = $var;
+        $this->exportHandle = $var;
 
         return $this;
     }

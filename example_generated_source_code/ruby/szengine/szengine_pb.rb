@@ -15,7 +15,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :result, :string, 1
     end
     add_message "szengine.CloseExportRequest" do
-      optional :responseHandle, :int64, 1
+      optional :exportHandle, :int64, 1
     end
     add_message "szengine.CloseExportResponse" do
     end
@@ -46,7 +46,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :result, :int64, 1
     end
     add_message "szengine.FetchNextRequest" do
-      optional :responseHandle, :int64, 1
+      optional :exportHandle, :int64, 1
     end
     add_message "szengine.FetchNextResponse" do
       optional :result, :string, 1
@@ -143,6 +143,11 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "szengine.GetRedoRecordResponse" do
       optional :result, :string, 1
     end
+    add_message "szengine.GetStatsRequest" do
+    end
+    add_message "szengine.GetStatsResponse" do
+      optional :result, :string, 1
+    end
     add_message "szengine.GetVirtualEntityByRecordIdRequest" do
       optional :recordList, :string, 1
       optional :flags, :int64, 2
@@ -194,11 +199,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :flags, :int64, 3
     end
     add_message "szengine.SearchByAttributesResponse" do
-      optional :result, :string, 1
-    end
-    add_message "szengine.GetStatsRequest" do
-    end
-    add_message "szengine.GetStatsResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.StreamExportCsvEntityReportRequest" do
@@ -280,6 +280,8 @@ module Szengine
   GetRecordResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetRecordResponse").msgclass
   GetRedoRecordRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetRedoRecordRequest").msgclass
   GetRedoRecordResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetRedoRecordResponse").msgclass
+  GetStatsRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetStatsRequest").msgclass
+  GetStatsResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetStatsResponse").msgclass
   GetVirtualEntityByRecordIdRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetVirtualEntityByRecordIdRequest").msgclass
   GetVirtualEntityByRecordIdResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetVirtualEntityByRecordIdResponse").msgclass
   HowEntityByEntityIdRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.HowEntityByEntityIdRequest").msgclass
@@ -296,8 +298,6 @@ module Szengine
   ReinitializeResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.ReinitializeResponse").msgclass
   SearchByAttributesRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.SearchByAttributesRequest").msgclass
   SearchByAttributesResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.SearchByAttributesResponse").msgclass
-  GetStatsRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetStatsRequest").msgclass
-  GetStatsResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetStatsResponse").msgclass
   StreamExportCsvEntityReportRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.StreamExportCsvEntityReportRequest").msgclass
   StreamExportCsvEntityReportResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.StreamExportCsvEntityReportResponse").msgclass
   StreamExportJsonEntityReportRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.StreamExportJsonEntityReportRequest").msgclass

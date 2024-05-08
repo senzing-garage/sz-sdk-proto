@@ -24,6 +24,7 @@ const _ = grpc.SupportPackageIsVersion7
 type SzDiagnosticClient interface {
 	CheckDatastorePerformance(ctx context.Context, in *CheckDatastorePerformanceRequest, opts ...grpc.CallOption) (*CheckDatastorePerformanceResponse, error)
 	GetDatastoreInfo(ctx context.Context, in *GetDatastoreInfoRequest, opts ...grpc.CallOption) (*GetDatastoreInfoResponse, error)
+	GetFeature(ctx context.Context, in *GetFeatureRequest, opts ...grpc.CallOption) (*GetFeatureResponse, error)
 	PurgeRepository(ctx context.Context, in *PurgeRepositoryRequest, opts ...grpc.CallOption) (*PurgeRepositoryResponse, error)
 	Reinitialize(ctx context.Context, in *ReinitializeRequest, opts ...grpc.CallOption) (*ReinitializeResponse, error)
 }
@@ -54,6 +55,15 @@ func (c *szDiagnosticClient) GetDatastoreInfo(ctx context.Context, in *GetDatast
 	return out, nil
 }
 
+func (c *szDiagnosticClient) GetFeature(ctx context.Context, in *GetFeatureRequest, opts ...grpc.CallOption) (*GetFeatureResponse, error) {
+	out := new(GetFeatureResponse)
+	err := c.cc.Invoke(ctx, "/szdiagnostic.SzDiagnostic/GetFeature", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *szDiagnosticClient) PurgeRepository(ctx context.Context, in *PurgeRepositoryRequest, opts ...grpc.CallOption) (*PurgeRepositoryResponse, error) {
 	out := new(PurgeRepositoryResponse)
 	err := c.cc.Invoke(ctx, "/szdiagnostic.SzDiagnostic/PurgeRepository", in, out, opts...)
@@ -78,6 +88,7 @@ func (c *szDiagnosticClient) Reinitialize(ctx context.Context, in *ReinitializeR
 type SzDiagnosticServer interface {
 	CheckDatastorePerformance(context.Context, *CheckDatastorePerformanceRequest) (*CheckDatastorePerformanceResponse, error)
 	GetDatastoreInfo(context.Context, *GetDatastoreInfoRequest) (*GetDatastoreInfoResponse, error)
+	GetFeature(context.Context, *GetFeatureRequest) (*GetFeatureResponse, error)
 	PurgeRepository(context.Context, *PurgeRepositoryRequest) (*PurgeRepositoryResponse, error)
 	Reinitialize(context.Context, *ReinitializeRequest) (*ReinitializeResponse, error)
 	mustEmbedUnimplementedSzDiagnosticServer()
@@ -92,6 +103,9 @@ func (UnimplementedSzDiagnosticServer) CheckDatastorePerformance(context.Context
 }
 func (UnimplementedSzDiagnosticServer) GetDatastoreInfo(context.Context, *GetDatastoreInfoRequest) (*GetDatastoreInfoResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetDatastoreInfo not implemented")
+}
+func (UnimplementedSzDiagnosticServer) GetFeature(context.Context, *GetFeatureRequest) (*GetFeatureResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetFeature not implemented")
 }
 func (UnimplementedSzDiagnosticServer) PurgeRepository(context.Context, *PurgeRepositoryRequest) (*PurgeRepositoryResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PurgeRepository not implemented")
@@ -148,6 +162,24 @@ func _SzDiagnostic_GetDatastoreInfo_Handler(srv interface{}, ctx context.Context
 	return interceptor(ctx, in, info, handler)
 }
 
+func _SzDiagnostic_GetFeature_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetFeatureRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(SzDiagnosticServer).GetFeature(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/szdiagnostic.SzDiagnostic/GetFeature",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(SzDiagnosticServer).GetFeature(ctx, req.(*GetFeatureRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _SzDiagnostic_PurgeRepository_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(PurgeRepositoryRequest)
 	if err := dec(in); err != nil {
@@ -198,6 +230,10 @@ var SzDiagnostic_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetDatastoreInfo",
 			Handler:    _SzDiagnostic_GetDatastoreInfo_Handler,
+		},
+		{
+			MethodName: "GetFeature",
+			Handler:    _SzDiagnostic_GetFeature_Handler,
 		},
 		{
 			MethodName: "PurgeRepository",

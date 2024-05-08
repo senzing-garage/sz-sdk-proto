@@ -24,6 +24,11 @@ class SzDiagnosticStub(object):
                 request_serializer=szdiagnostic__pb2.GetDatastoreInfoRequest.SerializeToString,
                 response_deserializer=szdiagnostic__pb2.GetDatastoreInfoResponse.FromString,
                 )
+        self.GetFeature = channel.unary_unary(
+                '/szdiagnostic.SzDiagnostic/GetFeature',
+                request_serializer=szdiagnostic__pb2.GetFeatureRequest.SerializeToString,
+                response_deserializer=szdiagnostic__pb2.GetFeatureResponse.FromString,
+                )
         self.PurgeRepository = channel.unary_unary(
                 '/szdiagnostic.SzDiagnostic/PurgeRepository',
                 request_serializer=szdiagnostic__pb2.PurgeRepositoryRequest.SerializeToString,
@@ -46,6 +51,12 @@ class SzDiagnosticServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def GetDatastoreInfo(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetFeature(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -75,6 +86,11 @@ def add_SzDiagnosticServicer_to_server(servicer, server):
                     servicer.GetDatastoreInfo,
                     request_deserializer=szdiagnostic__pb2.GetDatastoreInfoRequest.FromString,
                     response_serializer=szdiagnostic__pb2.GetDatastoreInfoResponse.SerializeToString,
+            ),
+            'GetFeature': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetFeature,
+                    request_deserializer=szdiagnostic__pb2.GetFeatureRequest.FromString,
+                    response_serializer=szdiagnostic__pb2.GetFeatureResponse.SerializeToString,
             ),
             'PurgeRepository': grpc.unary_unary_rpc_method_handler(
                     servicer.PurgeRepository,
@@ -127,6 +143,23 @@ class SzDiagnostic(object):
         return grpc.experimental.unary_unary(request, target, '/szdiagnostic.SzDiagnostic/GetDatastoreInfo',
             szdiagnostic__pb2.GetDatastoreInfoRequest.SerializeToString,
             szdiagnostic__pb2.GetDatastoreInfoResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetFeature(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/szdiagnostic.SzDiagnostic/GetFeature',
+            szdiagnostic__pb2.GetFeatureRequest.SerializeToString,
+            szdiagnostic__pb2.GetFeatureResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 

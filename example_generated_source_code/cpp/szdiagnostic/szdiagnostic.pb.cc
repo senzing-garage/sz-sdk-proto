@@ -77,6 +77,46 @@ struct PurgeRepositoryRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PurgeRepositoryRequestDefaultTypeInternal _PurgeRepositoryRequest_default_instance_;
 
+inline constexpr GetFeatureResponse::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : result_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR GetFeatureResponse::GetFeatureResponse(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct GetFeatureResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetFeatureResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetFeatureResponseDefaultTypeInternal() {}
+  union {
+    GetFeatureResponse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetFeatureResponseDefaultTypeInternal _GetFeatureResponse_default_instance_;
+
+inline constexpr GetFeatureRequest::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : featureid_{::int64_t{0}},
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR GetFeatureRequest::GetFeatureRequest(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct GetFeatureRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetFeatureRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetFeatureRequestDefaultTypeInternal() {}
+  union {
+    GetFeatureRequest _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetFeatureRequestDefaultTypeInternal _GetFeatureRequest_default_instance_;
+
 inline constexpr GetDatastoreInfoResponse::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : result_(
@@ -150,7 +190,7 @@ struct CheckDatastorePerformanceRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CheckDatastorePerformanceRequestDefaultTypeInternal _CheckDatastorePerformanceRequest_default_instance_;
 }  // namespace szdiagnostic
-static ::_pb::Metadata file_level_metadata_szdiagnostic_2eproto[8];
+static ::_pb::Metadata file_level_metadata_szdiagnostic_2eproto[10];
 static constexpr const ::_pb::EnumDescriptor**
     file_level_enum_descriptors_szdiagnostic_2eproto = nullptr;
 static constexpr const ::_pb::ServiceDescriptor**
@@ -193,6 +233,24 @@ const ::uint32_t TableStruct_szdiagnostic_2eproto::offsets[] PROTOBUF_SECTION_VA
     ~0u,  // no sizeof(Split)
     PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetDatastoreInfoResponse, _impl_.result_),
     ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetFeatureRequest, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetFeatureRequest, _impl_.featureid_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetFeatureResponse, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetFeatureResponse, _impl_.result_),
+    ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szdiagnostic::PurgeRepositoryRequest, _internal_metadata_),
     ~0u,  // no _extensions_
     ~0u,  // no _oneof_case_
@@ -233,10 +291,12 @@ static const ::_pbi::MigrationSchema
         {9, -1, -1, sizeof(::szdiagnostic::CheckDatastorePerformanceResponse)},
         {18, -1, -1, sizeof(::szdiagnostic::GetDatastoreInfoRequest)},
         {26, -1, -1, sizeof(::szdiagnostic::GetDatastoreInfoResponse)},
-        {35, -1, -1, sizeof(::szdiagnostic::PurgeRepositoryRequest)},
-        {43, -1, -1, sizeof(::szdiagnostic::PurgeRepositoryResponse)},
-        {51, -1, -1, sizeof(::szdiagnostic::ReinitializeRequest)},
-        {60, -1, -1, sizeof(::szdiagnostic::ReinitializeResponse)},
+        {35, -1, -1, sizeof(::szdiagnostic::GetFeatureRequest)},
+        {44, -1, -1, sizeof(::szdiagnostic::GetFeatureResponse)},
+        {53, -1, -1, sizeof(::szdiagnostic::PurgeRepositoryRequest)},
+        {61, -1, -1, sizeof(::szdiagnostic::PurgeRepositoryResponse)},
+        {69, -1, -1, sizeof(::szdiagnostic::ReinitializeRequest)},
+        {78, -1, -1, sizeof(::szdiagnostic::ReinitializeResponse)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -244,6 +304,8 @@ static const ::_pb::Message* const file_default_instances[] = {
     &::szdiagnostic::_CheckDatastorePerformanceResponse_default_instance_._instance,
     &::szdiagnostic::_GetDatastoreInfoRequest_default_instance_._instance,
     &::szdiagnostic::_GetDatastoreInfoResponse_default_instance_._instance,
+    &::szdiagnostic::_GetFeatureRequest_default_instance_._instance,
+    &::szdiagnostic::_GetFeatureResponse_default_instance_._instance,
     &::szdiagnostic::_PurgeRepositoryRequest_default_instance_._instance,
     &::szdiagnostic::_PurgeRepositoryResponse_default_instance_._instance,
     &::szdiagnostic::_ReinitializeRequest_default_instance_._instance,
@@ -255,36 +317,40 @@ const char descriptor_table_protodef_szdiagnostic_2eproto[] PROTOBUF_SECTION_VAR
     "sToRun\030\001 \001(\005\"3\n!CheckDatastorePerformanc"
     "eResponse\022\016\n\006result\030\001 \001(\t\"\031\n\027GetDatastor"
     "eInfoRequest\"*\n\030GetDatastoreInfoResponse"
-    "\022\016\n\006result\030\001 \001(\t\"\030\n\026PurgeRepositoryReque"
-    "st\"\031\n\027PurgeRepositoryResponse\"\'\n\023Reiniti"
-    "alizeRequest\022\020\n\010configId\030\001 \001(\003\"\026\n\024Reinit"
-    "ializeResponse2\256\003\n\014SzDiagnostic\022~\n\031Check"
-    "DatastorePerformance\022..szdiagnostic.Chec"
-    "kDatastorePerformanceRequest\032/.szdiagnos"
-    "tic.CheckDatastorePerformanceResponse\"\000\022"
-    "c\n\020GetDatastoreInfo\022%.szdiagnostic.GetDa"
-    "tastoreInfoRequest\032&.szdiagnostic.GetDat"
-    "astoreInfoResponse\"\000\022`\n\017PurgeRepository\022"
-    "$.szdiagnostic.PurgeRepositoryRequest\032%."
-    "szdiagnostic.PurgeRepositoryResponse\"\000\022W"
-    "\n\014Reinitialize\022!.szdiagnostic.Reinitiali"
-    "zeRequest\032\".szdiagnostic.ReinitializeRes"
-    "ponse\"\000Bs\n\'com.senzing.sz.engine.grpc.Sz"
-    "DiagnosticB\021SzDiagnosticProtoZ5github.co"
-    "m/senzing-garage/sz-sdk-go-grpc/szdiagno"
-    "sticb\006proto3"
+    "\022\016\n\006result\030\001 \001(\t\"&\n\021GetFeatureRequest\022\021\n"
+    "\tfeatureId\030\001 \001(\003\"$\n\022GetFeatureResponse\022\016"
+    "\n\006result\030\001 \001(\t\"\030\n\026PurgeRepositoryRequest"
+    "\"\031\n\027PurgeRepositoryResponse\"\'\n\023Reinitial"
+    "izeRequest\022\020\n\010configId\030\001 \001(\003\"\026\n\024Reinitia"
+    "lizeResponse2\201\004\n\014SzDiagnostic\022~\n\031CheckDa"
+    "tastorePerformance\022..szdiagnostic.CheckD"
+    "atastorePerformanceRequest\032/.szdiagnosti"
+    "c.CheckDatastorePerformanceResponse\"\000\022c\n"
+    "\020GetDatastoreInfo\022%.szdiagnostic.GetData"
+    "storeInfoRequest\032&.szdiagnostic.GetDatas"
+    "toreInfoResponse\"\000\022Q\n\nGetFeature\022\037.szdia"
+    "gnostic.GetFeatureRequest\032 .szdiagnostic"
+    ".GetFeatureResponse\"\000\022`\n\017PurgeRepository"
+    "\022$.szdiagnostic.PurgeRepositoryRequest\032%"
+    ".szdiagnostic.PurgeRepositoryResponse\"\000\022"
+    "W\n\014Reinitialize\022!.szdiagnostic.Reinitial"
+    "izeRequest\032\".szdiagnostic.ReinitializeRe"
+    "sponse\"\000Bs\n\'com.senzing.sz.engine.grpc.S"
+    "zDiagnosticB\021SzDiagnosticProtoZ5github.c"
+    "om/senzing-garage/sz-sdk-go-grpc/szdiagn"
+    "osticb\006proto3"
 };
 static ::absl::once_flag descriptor_table_szdiagnostic_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_szdiagnostic_2eproto = {
     false,
     false,
-    892,
+    1053,
     descriptor_table_protodef_szdiagnostic_2eproto,
     "szdiagnostic.proto",
     &descriptor_table_szdiagnostic_2eproto_once,
     nullptr,
     0,
-    8,
+    10,
     schemas,
     file_default_instances,
     TableStruct_szdiagnostic_2eproto::offsets,
@@ -898,6 +964,366 @@ void GetDatastoreInfoResponse::InternalSwap(GetDatastoreInfoResponse* PROTOBUF_R
 }
 // ===================================================================
 
+class GetFeatureRequest::_Internal {
+ public:
+};
+
+GetFeatureRequest::GetFeatureRequest(::google::protobuf::Arena* arena)
+    : ::google::protobuf::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:szdiagnostic.GetFeatureRequest)
+}
+GetFeatureRequest::GetFeatureRequest(
+    ::google::protobuf::Arena* arena, const GetFeatureRequest& from)
+    : GetFeatureRequest(arena) {
+  MergeFrom(from);
+}
+inline PROTOBUF_NDEBUG_INLINE GetFeatureRequest::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0} {}
+
+inline void GetFeatureRequest::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.featureid_ = {};
+}
+GetFeatureRequest::~GetFeatureRequest() {
+  // @@protoc_insertion_point(destructor:szdiagnostic.GetFeatureRequest)
+  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  SharedDtor();
+}
+inline void GetFeatureRequest::SharedDtor() {
+  ABSL_DCHECK(GetArena() == nullptr);
+  _impl_.~Impl_();
+}
+
+PROTOBUF_NOINLINE void GetFeatureRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:szdiagnostic.GetFeatureRequest)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.featureid_ = ::int64_t{0};
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+const char* GetFeatureRequest::_InternalParse(
+    const char* ptr, ::_pbi::ParseContext* ctx) {
+  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+  return ptr;
+}
+
+
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<0, 1, 0, 0, 2> GetFeatureRequest::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    1, 0,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967294,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    1,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    &_GetFeatureRequest_default_instance_._instance,
+    ::_pbi::TcParser::GenericFallback,  // fallback
+  }, {{
+    // int64 featureId = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(GetFeatureRequest, _impl_.featureid_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(GetFeatureRequest, _impl_.featureid_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // int64 featureId = 1;
+    {PROTOBUF_FIELD_OFFSET(GetFeatureRequest, _impl_.featureid_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
+  }},
+  // no aux_entries
+  {{
+  }},
+};
+
+::uint8_t* GetFeatureRequest::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:szdiagnostic.GetFeatureRequest)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  // int64 featureId = 1;
+  if (this->_internal_featureid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::
+        WriteInt64ToArrayWithField<1>(
+            stream, this->_internal_featureid(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:szdiagnostic.GetFeatureRequest)
+  return target;
+}
+
+::size_t GetFeatureRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:szdiagnostic.GetFeatureRequest)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int64 featureId = 1;
+  if (this->_internal_featureid() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+        this->_internal_featureid());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::google::protobuf::Message::ClassData GetFeatureRequest::_class_data_ = {
+    GetFeatureRequest::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
+};
+const ::google::protobuf::Message::ClassData* GetFeatureRequest::GetClassData() const {
+  return &_class_data_;
+}
+
+void GetFeatureRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+  auto* const _this = static_cast<GetFeatureRequest*>(&to_msg);
+  auto& from = static_cast<const GetFeatureRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szdiagnostic.GetFeatureRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_featureid() != 0) {
+    _this->_internal_set_featureid(from._internal_featureid());
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetFeatureRequest::CopyFrom(const GetFeatureRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szdiagnostic.GetFeatureRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+PROTOBUF_NOINLINE bool GetFeatureRequest::IsInitialized() const {
+  return true;
+}
+
+::_pbi::CachedSize* GetFeatureRequest::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void GetFeatureRequest::InternalSwap(GetFeatureRequest* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+        swap(_impl_.featureid_, other->_impl_.featureid_);
+}
+
+::google::protobuf::Metadata GetFeatureRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_szdiagnostic_2eproto_getter, &descriptor_table_szdiagnostic_2eproto_once,
+      file_level_metadata_szdiagnostic_2eproto[4]);
+}
+// ===================================================================
+
+class GetFeatureResponse::_Internal {
+ public:
+};
+
+GetFeatureResponse::GetFeatureResponse(::google::protobuf::Arena* arena)
+    : ::google::protobuf::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:szdiagnostic.GetFeatureResponse)
+}
+inline PROTOBUF_NDEBUG_INLINE GetFeatureResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : result_(arena, from.result_),
+        _cached_size_{0} {}
+
+GetFeatureResponse::GetFeatureResponse(
+    ::google::protobuf::Arena* arena,
+    const GetFeatureResponse& from)
+    : ::google::protobuf::Message(arena) {
+  GetFeatureResponse* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+
+  // @@protoc_insertion_point(copy_constructor:szdiagnostic.GetFeatureResponse)
+}
+inline PROTOBUF_NDEBUG_INLINE GetFeatureResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : result_(arena),
+        _cached_size_{0} {}
+
+inline void GetFeatureResponse::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+GetFeatureResponse::~GetFeatureResponse() {
+  // @@protoc_insertion_point(destructor:szdiagnostic.GetFeatureResponse)
+  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  SharedDtor();
+}
+inline void GetFeatureResponse::SharedDtor() {
+  ABSL_DCHECK(GetArena() == nullptr);
+  _impl_.result_.Destroy();
+  _impl_.~Impl_();
+}
+
+PROTOBUF_NOINLINE void GetFeatureResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:szdiagnostic.GetFeatureResponse)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.result_.ClearToEmpty();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+const char* GetFeatureResponse::_InternalParse(
+    const char* ptr, ::_pbi::ParseContext* ctx) {
+  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+  return ptr;
+}
+
+
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<0, 1, 0, 46, 2> GetFeatureResponse::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    1, 0,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967294,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    1,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    &_GetFeatureResponse_default_instance_._instance,
+    ::_pbi::TcParser::GenericFallback,  // fallback
+  }, {{
+    // string result = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GetFeatureResponse, _impl_.result_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string result = 1;
+    {PROTOBUF_FIELD_OFFSET(GetFeatureResponse, _impl_.result_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+  }},
+  // no aux_entries
+  {{
+    "\37\6\0\0\0\0\0\0"
+    "szdiagnostic.GetFeatureResponse"
+    "result"
+  }},
+};
+
+::uint8_t* GetFeatureResponse::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:szdiagnostic.GetFeatureResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  // string result = 1;
+  if (!this->_internal_result().empty()) {
+    const std::string& _s = this->_internal_result();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szdiagnostic.GetFeatureResponse.result");
+    target = stream->WriteStringMaybeAliased(1, _s, target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:szdiagnostic.GetFeatureResponse)
+  return target;
+}
+
+::size_t GetFeatureResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:szdiagnostic.GetFeatureResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string result = 1;
+  if (!this->_internal_result().empty()) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_result());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::google::protobuf::Message::ClassData GetFeatureResponse::_class_data_ = {
+    GetFeatureResponse::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
+};
+const ::google::protobuf::Message::ClassData* GetFeatureResponse::GetClassData() const {
+  return &_class_data_;
+}
+
+void GetFeatureResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+  auto* const _this = static_cast<GetFeatureResponse*>(&to_msg);
+  auto& from = static_cast<const GetFeatureResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szdiagnostic.GetFeatureResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_result().empty()) {
+    _this->_internal_set_result(from._internal_result());
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetFeatureResponse::CopyFrom(const GetFeatureResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szdiagnostic.GetFeatureResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+PROTOBUF_NOINLINE bool GetFeatureResponse::IsInitialized() const {
+  return true;
+}
+
+::_pbi::CachedSize* GetFeatureResponse::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void GetFeatureResponse::InternalSwap(GetFeatureResponse* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.result_, &other->_impl_.result_, arena);
+}
+
+::google::protobuf::Metadata GetFeatureResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_szdiagnostic_2eproto_getter, &descriptor_table_szdiagnostic_2eproto_once,
+      file_level_metadata_szdiagnostic_2eproto[5]);
+}
+// ===================================================================
+
 class PurgeRepositoryRequest::_Internal {
  public:
 };
@@ -929,7 +1355,7 @@ PurgeRepositoryRequest::PurgeRepositoryRequest(
 ::google::protobuf::Metadata PurgeRepositoryRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szdiagnostic_2eproto_getter, &descriptor_table_szdiagnostic_2eproto_once,
-      file_level_metadata_szdiagnostic_2eproto[4]);
+      file_level_metadata_szdiagnostic_2eproto[6]);
 }
 // ===================================================================
 
@@ -964,7 +1390,7 @@ PurgeRepositoryResponse::PurgeRepositoryResponse(
 ::google::protobuf::Metadata PurgeRepositoryResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szdiagnostic_2eproto_getter, &descriptor_table_szdiagnostic_2eproto_once,
-      file_level_metadata_szdiagnostic_2eproto[5]);
+      file_level_metadata_szdiagnostic_2eproto[7]);
 }
 // ===================================================================
 
@@ -1134,7 +1560,7 @@ void ReinitializeRequest::InternalSwap(ReinitializeRequest* PROTOBUF_RESTRICT ot
 ::google::protobuf::Metadata ReinitializeRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szdiagnostic_2eproto_getter, &descriptor_table_szdiagnostic_2eproto_once,
-      file_level_metadata_szdiagnostic_2eproto[6]);
+      file_level_metadata_szdiagnostic_2eproto[8]);
 }
 // ===================================================================
 
@@ -1169,7 +1595,7 @@ ReinitializeResponse::ReinitializeResponse(
 ::google::protobuf::Metadata ReinitializeResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szdiagnostic_2eproto_getter, &descriptor_table_szdiagnostic_2eproto_once,
-      file_level_metadata_szdiagnostic_2eproto[7]);
+      file_level_metadata_szdiagnostic_2eproto[9]);
 }
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace szdiagnostic
