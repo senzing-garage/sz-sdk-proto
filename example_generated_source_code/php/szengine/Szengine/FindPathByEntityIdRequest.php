@@ -26,9 +26,9 @@ class FindPathByEntityIdRequest extends \Google\Protobuf\Internal\Message
      */
     protected $maxDegrees = 0;
     /**
-     * Generated from protobuf field <code>string exclusions = 4;</code>
+     * Generated from protobuf field <code>string avoidEntityIds = 4;</code>
      */
-    protected $exclusions = '';
+    protected $avoidEntityIds = '';
     /**
      * Generated from protobuf field <code>string requiredDataSources = 5;</code>
      */
@@ -47,7 +47,7 @@ class FindPathByEntityIdRequest extends \Google\Protobuf\Internal\Message
      *     @type int|string $startEntityId
      *     @type int|string $endEntityId
      *     @type int|string $maxDegrees
-     *     @type string $exclusions
+     *     @type string $avoidEntityIds
      *     @type string $requiredDataSources
      *     @type int|string $flags
      * }
@@ -124,23 +124,23 @@ class FindPathByEntityIdRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string exclusions = 4;</code>
+     * Generated from protobuf field <code>string avoidEntityIds = 4;</code>
      * @return string
      */
-    public function getExclusions()
+    public function getAvoidEntityIds()
     {
-        return $this->exclusions;
+        return $this->avoidEntityIds;
     }
 
     /**
-     * Generated from protobuf field <code>string exclusions = 4;</code>
+     * Generated from protobuf field <code>string avoidEntityIds = 4;</code>
      * @param string $var
      * @return $this
      */
-    public function setExclusions($var)
+    public function setAvoidEntityIds($var)
     {
         GPBUtil::checkString($var, True);
-        $this->exclusions = $var;
+        $this->avoidEntityIds = $var;
 
         return $this;
     }

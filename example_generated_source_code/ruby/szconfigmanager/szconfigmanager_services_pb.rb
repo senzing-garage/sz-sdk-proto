@@ -16,7 +16,7 @@ module Szconfigmanager
 
       rpc :AddConfig, ::Szconfigmanager::AddConfigRequest, ::Szconfigmanager::AddConfigResponse
       rpc :GetConfig, ::Szconfigmanager::GetConfigRequest, ::Szconfigmanager::GetConfigResponse
-      rpc :GetConfigList, ::Szconfigmanager::GetConfigListRequest, ::Szconfigmanager::GetConfigListResponse
+      rpc :GetConfigs, ::Szconfigmanager::GetConfigsRequest, ::Szconfigmanager::GetConfigsResponse
       rpc :GetDefaultConfigId, ::Szconfigmanager::GetDefaultConfigIdRequest, ::Szconfigmanager::GetDefaultConfigIdResponse
       rpc :ReplaceDefaultConfigId, ::Szconfigmanager::ReplaceDefaultConfigIdRequest, ::Szconfigmanager::ReplaceDefaultConfigIdResponse
       rpc :SetDefaultConfigId, ::Szconfigmanager::SetDefaultConfigIdRequest, ::Szconfigmanager::SetDefaultConfigIdResponse

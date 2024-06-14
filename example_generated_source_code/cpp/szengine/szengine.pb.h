@@ -4982,23 +4982,23 @@ class GetVirtualEntityByRecordIdRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRecordListFieldNumber = 1,
+    kRecordKeysFieldNumber = 1,
     kFlagsFieldNumber = 2,
   };
-  // string recordList = 1;
-  void clear_recordlist() ;
-  const std::string& recordlist() const;
+  // string recordKeys = 1;
+  void clear_recordkeys() ;
+  const std::string& recordkeys() const;
   template <typename Arg_ = const std::string&, typename... Args_>
-  void set_recordlist(Arg_&& arg, Args_... args);
-  std::string* mutable_recordlist();
-  PROTOBUF_NODISCARD std::string* release_recordlist();
-  void set_allocated_recordlist(std::string* value);
+  void set_recordkeys(Arg_&& arg, Args_... args);
+  std::string* mutable_recordkeys();
+  PROTOBUF_NODISCARD std::string* release_recordkeys();
+  void set_allocated_recordkeys(std::string* value);
 
   private:
-  const std::string& _internal_recordlist() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_recordlist(
+  const std::string& _internal_recordkeys() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_recordkeys(
       const std::string& value);
-  std::string* _internal_mutable_recordlist();
+  std::string* _internal_mutable_recordkeys();
 
   public:
   // int64 flags = 2;
@@ -5034,7 +5034,7 @@ class GetVirtualEntityByRecordIdRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::google::protobuf::internal::ArenaStringPtr recordlist_;
+    ::google::protobuf::internal::ArenaStringPtr recordkeys_;
     ::int64_t flags_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -7457,7 +7457,7 @@ class FindPathByRecordIdRequest final :
     kStartRecordIdFieldNumber = 2,
     kEndDataSourceCodeFieldNumber = 3,
     kEndRecordIdFieldNumber = 4,
-    kExclusionsFieldNumber = 6,
+    kAvoidRecordKeysFieldNumber = 6,
     kRequiredDataSourcesFieldNumber = 7,
     kMaxDegreesFieldNumber = 5,
     kFlagsFieldNumber = 8,
@@ -7526,20 +7526,20 @@ class FindPathByRecordIdRequest final :
   std::string* _internal_mutable_endrecordid();
 
   public:
-  // string exclusions = 6;
-  void clear_exclusions() ;
-  const std::string& exclusions() const;
+  // string avoidRecordKeys = 6;
+  void clear_avoidrecordkeys() ;
+  const std::string& avoidrecordkeys() const;
   template <typename Arg_ = const std::string&, typename... Args_>
-  void set_exclusions(Arg_&& arg, Args_... args);
-  std::string* mutable_exclusions();
-  PROTOBUF_NODISCARD std::string* release_exclusions();
-  void set_allocated_exclusions(std::string* value);
+  void set_avoidrecordkeys(Arg_&& arg, Args_... args);
+  std::string* mutable_avoidrecordkeys();
+  PROTOBUF_NODISCARD std::string* release_avoidrecordkeys();
+  void set_allocated_avoidrecordkeys(std::string* value);
 
   private:
-  const std::string& _internal_exclusions() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_exclusions(
+  const std::string& _internal_avoidrecordkeys() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_avoidrecordkeys(
       const std::string& value);
-  std::string* _internal_mutable_exclusions();
+  std::string* _internal_mutable_avoidrecordkeys();
 
   public:
   // string requiredDataSources = 7;
@@ -7585,7 +7585,7 @@ class FindPathByRecordIdRequest final :
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       3, 8, 0,
-      140, 2>
+      145, 2>
       _table_;
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -7605,7 +7605,7 @@ class FindPathByRecordIdRequest final :
     ::google::protobuf::internal::ArenaStringPtr startrecordid_;
     ::google::protobuf::internal::ArenaStringPtr enddatasourcecode_;
     ::google::protobuf::internal::ArenaStringPtr endrecordid_;
-    ::google::protobuf::internal::ArenaStringPtr exclusions_;
+    ::google::protobuf::internal::ArenaStringPtr avoidrecordkeys_;
     ::google::protobuf::internal::ArenaStringPtr requireddatasources_;
     ::int64_t maxdegrees_;
     ::int64_t flags_;
@@ -7929,27 +7929,27 @@ class FindPathByEntityIdRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kExclusionsFieldNumber = 4,
+    kAvoidEntityIdsFieldNumber = 4,
     kRequiredDataSourcesFieldNumber = 5,
     kStartEntityIdFieldNumber = 1,
     kEndEntityIdFieldNumber = 2,
     kMaxDegreesFieldNumber = 3,
     kFlagsFieldNumber = 6,
   };
-  // string exclusions = 4;
-  void clear_exclusions() ;
-  const std::string& exclusions() const;
+  // string avoidEntityIds = 4;
+  void clear_avoidentityids() ;
+  const std::string& avoidentityids() const;
   template <typename Arg_ = const std::string&, typename... Args_>
-  void set_exclusions(Arg_&& arg, Args_... args);
-  std::string* mutable_exclusions();
-  PROTOBUF_NODISCARD std::string* release_exclusions();
-  void set_allocated_exclusions(std::string* value);
+  void set_avoidentityids(Arg_&& arg, Args_... args);
+  std::string* mutable_avoidentityids();
+  PROTOBUF_NODISCARD std::string* release_avoidentityids();
+  void set_allocated_avoidentityids(std::string* value);
 
   private:
-  const std::string& _internal_exclusions() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_exclusions(
+  const std::string& _internal_avoidentityids() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_avoidentityids(
       const std::string& value);
-  std::string* _internal_mutable_exclusions();
+  std::string* _internal_mutable_avoidentityids();
 
   public:
   // string requiredDataSources = 5;
@@ -8015,7 +8015,7 @@ class FindPathByEntityIdRequest final :
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       3, 6, 0,
-      72, 2>
+      76, 2>
       _table_;
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -8031,7 +8031,7 @@ class FindPathByEntityIdRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::google::protobuf::internal::ArenaStringPtr exclusions_;
+    ::google::protobuf::internal::ArenaStringPtr avoidentityids_;
     ::google::protobuf::internal::ArenaStringPtr requireddatasources_;
     ::int64_t startentityid_;
     ::int64_t endentityid_;
@@ -8357,26 +8357,26 @@ class FindNetworkByRecordIdRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kRecordListFieldNumber = 1,
+    kRecordKeysFieldNumber = 1,
     kMaxDegreesFieldNumber = 2,
     kBuildOutDegreeFieldNumber = 3,
-    kMaxEntitiesFieldNumber = 4,
+    kBuildOutMaxEntitiesFieldNumber = 4,
     kFlagsFieldNumber = 5,
   };
-  // string recordList = 1;
-  void clear_recordlist() ;
-  const std::string& recordlist() const;
+  // string recordKeys = 1;
+  void clear_recordkeys() ;
+  const std::string& recordkeys() const;
   template <typename Arg_ = const std::string&, typename... Args_>
-  void set_recordlist(Arg_&& arg, Args_... args);
-  std::string* mutable_recordlist();
-  PROTOBUF_NODISCARD std::string* release_recordlist();
-  void set_allocated_recordlist(std::string* value);
+  void set_recordkeys(Arg_&& arg, Args_... args);
+  std::string* mutable_recordkeys();
+  PROTOBUF_NODISCARD std::string* release_recordkeys();
+  void set_allocated_recordkeys(std::string* value);
 
   private:
-  const std::string& _internal_recordlist() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_recordlist(
+  const std::string& _internal_recordkeys() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_recordkeys(
       const std::string& value);
-  std::string* _internal_mutable_recordlist();
+  std::string* _internal_mutable_recordkeys();
 
   public:
   // int64 maxDegrees = 2;
@@ -8399,14 +8399,14 @@ class FindNetworkByRecordIdRequest final :
   void _internal_set_buildoutdegree(::int64_t value);
 
   public:
-  // int64 maxEntities = 4;
-  void clear_maxentities() ;
-  ::int64_t maxentities() const;
-  void set_maxentities(::int64_t value);
+  // int64 buildOutMaxEntities = 4;
+  void clear_buildoutmaxentities() ;
+  ::int64_t buildoutmaxentities() const;
+  void set_buildoutmaxentities(::int64_t value);
 
   private:
-  ::int64_t _internal_maxentities() const;
-  void _internal_set_maxentities(::int64_t value);
+  ::int64_t _internal_buildoutmaxentities() const;
+  void _internal_set_buildoutmaxentities(::int64_t value);
 
   public:
   // int64 flags = 5;
@@ -8442,10 +8442,10 @@ class FindNetworkByRecordIdRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::google::protobuf::internal::ArenaStringPtr recordlist_;
+    ::google::protobuf::internal::ArenaStringPtr recordkeys_;
     ::int64_t maxdegrees_;
     ::int64_t buildoutdegree_;
-    ::int64_t maxentities_;
+    ::int64_t buildoutmaxentities_;
     ::int64_t flags_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -8767,26 +8767,26 @@ class FindNetworkByEntityIdRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEntityListFieldNumber = 1,
+    kEntityIdsFieldNumber = 1,
     kMaxDegreesFieldNumber = 2,
     kBuildOutDegreeFieldNumber = 3,
-    kMaxEntitiesFieldNumber = 4,
+    kBuildOutMaxEntitiesFieldNumber = 4,
     kFlagsFieldNumber = 5,
   };
-  // string entityList = 1;
-  void clear_entitylist() ;
-  const std::string& entitylist() const;
+  // string entityIds = 1;
+  void clear_entityids() ;
+  const std::string& entityids() const;
   template <typename Arg_ = const std::string&, typename... Args_>
-  void set_entitylist(Arg_&& arg, Args_... args);
-  std::string* mutable_entitylist();
-  PROTOBUF_NODISCARD std::string* release_entitylist();
-  void set_allocated_entitylist(std::string* value);
+  void set_entityids(Arg_&& arg, Args_... args);
+  std::string* mutable_entityids();
+  PROTOBUF_NODISCARD std::string* release_entityids();
+  void set_allocated_entityids(std::string* value);
 
   private:
-  const std::string& _internal_entitylist() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_entitylist(
+  const std::string& _internal_entityids() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_entityids(
       const std::string& value);
-  std::string* _internal_mutable_entitylist();
+  std::string* _internal_mutable_entityids();
 
   public:
   // int64 maxDegrees = 2;
@@ -8809,14 +8809,14 @@ class FindNetworkByEntityIdRequest final :
   void _internal_set_buildoutdegree(::int64_t value);
 
   public:
-  // int64 maxEntities = 4;
-  void clear_maxentities() ;
-  ::int64_t maxentities() const;
-  void set_maxentities(::int64_t value);
+  // int64 buildOutMaxEntities = 4;
+  void clear_buildoutmaxentities() ;
+  ::int64_t buildoutmaxentities() const;
+  void set_buildoutmaxentities(::int64_t value);
 
   private:
-  ::int64_t _internal_maxentities() const;
-  void _internal_set_maxentities(::int64_t value);
+  ::int64_t _internal_buildoutmaxentities() const;
+  void _internal_set_buildoutmaxentities(::int64_t value);
 
   public:
   // int64 flags = 5;
@@ -8836,7 +8836,7 @@ class FindNetworkByEntityIdRequest final :
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       3, 5, 0,
-      56, 2>
+      55, 2>
       _table_;
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -8852,10 +8852,10 @@ class FindNetworkByEntityIdRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::google::protobuf::internal::ArenaStringPtr entitylist_;
+    ::google::protobuf::internal::ArenaStringPtr entityids_;
     ::int64_t maxdegrees_;
     ::int64_t buildoutdegree_;
-    ::int64_t maxentities_;
+    ::int64_t buildoutmaxentities_;
     ::int64_t flags_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -13175,57 +13175,57 @@ inline void FindInterestingEntitiesByRecordIdResponse::set_allocated_result(std:
 
 // FindNetworkByEntityIdRequest
 
-// string entityList = 1;
-inline void FindNetworkByEntityIdRequest::clear_entitylist() {
+// string entityIds = 1;
+inline void FindNetworkByEntityIdRequest::clear_entityids() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.entitylist_.ClearToEmpty();
+  _impl_.entityids_.ClearToEmpty();
 }
-inline const std::string& FindNetworkByEntityIdRequest::entitylist() const
+inline const std::string& FindNetworkByEntityIdRequest::entityids() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szengine.FindNetworkByEntityIdRequest.entityList)
-  return _internal_entitylist();
+  // @@protoc_insertion_point(field_get:szengine.FindNetworkByEntityIdRequest.entityIds)
+  return _internal_entityids();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void FindNetworkByEntityIdRequest::set_entitylist(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void FindNetworkByEntityIdRequest::set_entityids(Arg_&& arg,
                                                      Args_... args) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.entitylist_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szengine.FindNetworkByEntityIdRequest.entityList)
+  _impl_.entityids_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szengine.FindNetworkByEntityIdRequest.entityIds)
 }
-inline std::string* FindNetworkByEntityIdRequest::mutable_entitylist() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_entitylist();
-  // @@protoc_insertion_point(field_mutable:szengine.FindNetworkByEntityIdRequest.entityList)
+inline std::string* FindNetworkByEntityIdRequest::mutable_entityids() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_entityids();
+  // @@protoc_insertion_point(field_mutable:szengine.FindNetworkByEntityIdRequest.entityIds)
   return _s;
 }
-inline const std::string& FindNetworkByEntityIdRequest::_internal_entitylist() const {
+inline const std::string& FindNetworkByEntityIdRequest::_internal_entityids() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.entitylist_.Get();
+  return _impl_.entityids_.Get();
 }
-inline void FindNetworkByEntityIdRequest::_internal_set_entitylist(const std::string& value) {
+inline void FindNetworkByEntityIdRequest::_internal_set_entityids(const std::string& value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.entitylist_.Set(value, GetArena());
+  _impl_.entityids_.Set(value, GetArena());
 }
-inline std::string* FindNetworkByEntityIdRequest::_internal_mutable_entitylist() {
+inline std::string* FindNetworkByEntityIdRequest::_internal_mutable_entityids() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  return _impl_.entitylist_.Mutable( GetArena());
+  return _impl_.entityids_.Mutable( GetArena());
 }
-inline std::string* FindNetworkByEntityIdRequest::release_entitylist() {
+inline std::string* FindNetworkByEntityIdRequest::release_entityids() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  // @@protoc_insertion_point(field_release:szengine.FindNetworkByEntityIdRequest.entityList)
-  return _impl_.entitylist_.Release();
+  // @@protoc_insertion_point(field_release:szengine.FindNetworkByEntityIdRequest.entityIds)
+  return _impl_.entityids_.Release();
 }
-inline void FindNetworkByEntityIdRequest::set_allocated_entitylist(std::string* value) {
+inline void FindNetworkByEntityIdRequest::set_allocated_entityids(std::string* value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.entitylist_.SetAllocated(value, GetArena());
+  _impl_.entityids_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.entitylist_.IsDefault()) {
-          _impl_.entitylist_.Set("", GetArena());
+        if (_impl_.entityids_.IsDefault()) {
+          _impl_.entityids_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:szengine.FindNetworkByEntityIdRequest.entityList)
+  // @@protoc_insertion_point(field_set_allocated:szengine.FindNetworkByEntityIdRequest.entityIds)
 }
 
 // int64 maxDegrees = 2;
@@ -13274,27 +13274,27 @@ inline void FindNetworkByEntityIdRequest::_internal_set_buildoutdegree(::int64_t
   _impl_.buildoutdegree_ = value;
 }
 
-// int64 maxEntities = 4;
-inline void FindNetworkByEntityIdRequest::clear_maxentities() {
+// int64 buildOutMaxEntities = 4;
+inline void FindNetworkByEntityIdRequest::clear_buildoutmaxentities() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.maxentities_ = ::int64_t{0};
+  _impl_.buildoutmaxentities_ = ::int64_t{0};
 }
-inline ::int64_t FindNetworkByEntityIdRequest::maxentities() const {
-  // @@protoc_insertion_point(field_get:szengine.FindNetworkByEntityIdRequest.maxEntities)
-  return _internal_maxentities();
+inline ::int64_t FindNetworkByEntityIdRequest::buildoutmaxentities() const {
+  // @@protoc_insertion_point(field_get:szengine.FindNetworkByEntityIdRequest.buildOutMaxEntities)
+  return _internal_buildoutmaxentities();
 }
-inline void FindNetworkByEntityIdRequest::set_maxentities(::int64_t value) {
-  _internal_set_maxentities(value);
-  // @@protoc_insertion_point(field_set:szengine.FindNetworkByEntityIdRequest.maxEntities)
+inline void FindNetworkByEntityIdRequest::set_buildoutmaxentities(::int64_t value) {
+  _internal_set_buildoutmaxentities(value);
+  // @@protoc_insertion_point(field_set:szengine.FindNetworkByEntityIdRequest.buildOutMaxEntities)
 }
-inline ::int64_t FindNetworkByEntityIdRequest::_internal_maxentities() const {
+inline ::int64_t FindNetworkByEntityIdRequest::_internal_buildoutmaxentities() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.maxentities_;
+  return _impl_.buildoutmaxentities_;
 }
-inline void FindNetworkByEntityIdRequest::_internal_set_maxentities(::int64_t value) {
+inline void FindNetworkByEntityIdRequest::_internal_set_buildoutmaxentities(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.maxentities_ = value;
+  _impl_.buildoutmaxentities_ = value;
 }
 
 // int64 flags = 5;
@@ -13381,57 +13381,57 @@ inline void FindNetworkByEntityIdResponse::set_allocated_result(std::string* val
 
 // FindNetworkByRecordIdRequest
 
-// string recordList = 1;
-inline void FindNetworkByRecordIdRequest::clear_recordlist() {
+// string recordKeys = 1;
+inline void FindNetworkByRecordIdRequest::clear_recordkeys() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.recordlist_.ClearToEmpty();
+  _impl_.recordkeys_.ClearToEmpty();
 }
-inline const std::string& FindNetworkByRecordIdRequest::recordlist() const
+inline const std::string& FindNetworkByRecordIdRequest::recordkeys() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szengine.FindNetworkByRecordIdRequest.recordList)
-  return _internal_recordlist();
+  // @@protoc_insertion_point(field_get:szengine.FindNetworkByRecordIdRequest.recordKeys)
+  return _internal_recordkeys();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void FindNetworkByRecordIdRequest::set_recordlist(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void FindNetworkByRecordIdRequest::set_recordkeys(Arg_&& arg,
                                                      Args_... args) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.recordlist_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szengine.FindNetworkByRecordIdRequest.recordList)
+  _impl_.recordkeys_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szengine.FindNetworkByRecordIdRequest.recordKeys)
 }
-inline std::string* FindNetworkByRecordIdRequest::mutable_recordlist() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_recordlist();
-  // @@protoc_insertion_point(field_mutable:szengine.FindNetworkByRecordIdRequest.recordList)
+inline std::string* FindNetworkByRecordIdRequest::mutable_recordkeys() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_recordkeys();
+  // @@protoc_insertion_point(field_mutable:szengine.FindNetworkByRecordIdRequest.recordKeys)
   return _s;
 }
-inline const std::string& FindNetworkByRecordIdRequest::_internal_recordlist() const {
+inline const std::string& FindNetworkByRecordIdRequest::_internal_recordkeys() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.recordlist_.Get();
+  return _impl_.recordkeys_.Get();
 }
-inline void FindNetworkByRecordIdRequest::_internal_set_recordlist(const std::string& value) {
+inline void FindNetworkByRecordIdRequest::_internal_set_recordkeys(const std::string& value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.recordlist_.Set(value, GetArena());
+  _impl_.recordkeys_.Set(value, GetArena());
 }
-inline std::string* FindNetworkByRecordIdRequest::_internal_mutable_recordlist() {
+inline std::string* FindNetworkByRecordIdRequest::_internal_mutable_recordkeys() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  return _impl_.recordlist_.Mutable( GetArena());
+  return _impl_.recordkeys_.Mutable( GetArena());
 }
-inline std::string* FindNetworkByRecordIdRequest::release_recordlist() {
+inline std::string* FindNetworkByRecordIdRequest::release_recordkeys() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  // @@protoc_insertion_point(field_release:szengine.FindNetworkByRecordIdRequest.recordList)
-  return _impl_.recordlist_.Release();
+  // @@protoc_insertion_point(field_release:szengine.FindNetworkByRecordIdRequest.recordKeys)
+  return _impl_.recordkeys_.Release();
 }
-inline void FindNetworkByRecordIdRequest::set_allocated_recordlist(std::string* value) {
+inline void FindNetworkByRecordIdRequest::set_allocated_recordkeys(std::string* value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.recordlist_.SetAllocated(value, GetArena());
+  _impl_.recordkeys_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.recordlist_.IsDefault()) {
-          _impl_.recordlist_.Set("", GetArena());
+        if (_impl_.recordkeys_.IsDefault()) {
+          _impl_.recordkeys_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:szengine.FindNetworkByRecordIdRequest.recordList)
+  // @@protoc_insertion_point(field_set_allocated:szengine.FindNetworkByRecordIdRequest.recordKeys)
 }
 
 // int64 maxDegrees = 2;
@@ -13480,27 +13480,27 @@ inline void FindNetworkByRecordIdRequest::_internal_set_buildoutdegree(::int64_t
   _impl_.buildoutdegree_ = value;
 }
 
-// int64 maxEntities = 4;
-inline void FindNetworkByRecordIdRequest::clear_maxentities() {
+// int64 buildOutMaxEntities = 4;
+inline void FindNetworkByRecordIdRequest::clear_buildoutmaxentities() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.maxentities_ = ::int64_t{0};
+  _impl_.buildoutmaxentities_ = ::int64_t{0};
 }
-inline ::int64_t FindNetworkByRecordIdRequest::maxentities() const {
-  // @@protoc_insertion_point(field_get:szengine.FindNetworkByRecordIdRequest.maxEntities)
-  return _internal_maxentities();
+inline ::int64_t FindNetworkByRecordIdRequest::buildoutmaxentities() const {
+  // @@protoc_insertion_point(field_get:szengine.FindNetworkByRecordIdRequest.buildOutMaxEntities)
+  return _internal_buildoutmaxentities();
 }
-inline void FindNetworkByRecordIdRequest::set_maxentities(::int64_t value) {
-  _internal_set_maxentities(value);
-  // @@protoc_insertion_point(field_set:szengine.FindNetworkByRecordIdRequest.maxEntities)
+inline void FindNetworkByRecordIdRequest::set_buildoutmaxentities(::int64_t value) {
+  _internal_set_buildoutmaxentities(value);
+  // @@protoc_insertion_point(field_set:szengine.FindNetworkByRecordIdRequest.buildOutMaxEntities)
 }
-inline ::int64_t FindNetworkByRecordIdRequest::_internal_maxentities() const {
+inline ::int64_t FindNetworkByRecordIdRequest::_internal_buildoutmaxentities() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.maxentities_;
+  return _impl_.buildoutmaxentities_;
 }
-inline void FindNetworkByRecordIdRequest::_internal_set_maxentities(::int64_t value) {
+inline void FindNetworkByRecordIdRequest::_internal_set_buildoutmaxentities(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.maxentities_ = value;
+  _impl_.buildoutmaxentities_ = value;
 }
 
 // int64 flags = 5;
@@ -13656,57 +13656,57 @@ inline void FindPathByEntityIdRequest::_internal_set_maxdegrees(::int64_t value)
   _impl_.maxdegrees_ = value;
 }
 
-// string exclusions = 4;
-inline void FindPathByEntityIdRequest::clear_exclusions() {
+// string avoidEntityIds = 4;
+inline void FindPathByEntityIdRequest::clear_avoidentityids() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.exclusions_.ClearToEmpty();
+  _impl_.avoidentityids_.ClearToEmpty();
 }
-inline const std::string& FindPathByEntityIdRequest::exclusions() const
+inline const std::string& FindPathByEntityIdRequest::avoidentityids() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szengine.FindPathByEntityIdRequest.exclusions)
-  return _internal_exclusions();
+  // @@protoc_insertion_point(field_get:szengine.FindPathByEntityIdRequest.avoidEntityIds)
+  return _internal_avoidentityids();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void FindPathByEntityIdRequest::set_exclusions(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void FindPathByEntityIdRequest::set_avoidentityids(Arg_&& arg,
                                                      Args_... args) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.exclusions_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szengine.FindPathByEntityIdRequest.exclusions)
+  _impl_.avoidentityids_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szengine.FindPathByEntityIdRequest.avoidEntityIds)
 }
-inline std::string* FindPathByEntityIdRequest::mutable_exclusions() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_exclusions();
-  // @@protoc_insertion_point(field_mutable:szengine.FindPathByEntityIdRequest.exclusions)
+inline std::string* FindPathByEntityIdRequest::mutable_avoidentityids() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_avoidentityids();
+  // @@protoc_insertion_point(field_mutable:szengine.FindPathByEntityIdRequest.avoidEntityIds)
   return _s;
 }
-inline const std::string& FindPathByEntityIdRequest::_internal_exclusions() const {
+inline const std::string& FindPathByEntityIdRequest::_internal_avoidentityids() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.exclusions_.Get();
+  return _impl_.avoidentityids_.Get();
 }
-inline void FindPathByEntityIdRequest::_internal_set_exclusions(const std::string& value) {
+inline void FindPathByEntityIdRequest::_internal_set_avoidentityids(const std::string& value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.exclusions_.Set(value, GetArena());
+  _impl_.avoidentityids_.Set(value, GetArena());
 }
-inline std::string* FindPathByEntityIdRequest::_internal_mutable_exclusions() {
+inline std::string* FindPathByEntityIdRequest::_internal_mutable_avoidentityids() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  return _impl_.exclusions_.Mutable( GetArena());
+  return _impl_.avoidentityids_.Mutable( GetArena());
 }
-inline std::string* FindPathByEntityIdRequest::release_exclusions() {
+inline std::string* FindPathByEntityIdRequest::release_avoidentityids() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  // @@protoc_insertion_point(field_release:szengine.FindPathByEntityIdRequest.exclusions)
-  return _impl_.exclusions_.Release();
+  // @@protoc_insertion_point(field_release:szengine.FindPathByEntityIdRequest.avoidEntityIds)
+  return _impl_.avoidentityids_.Release();
 }
-inline void FindPathByEntityIdRequest::set_allocated_exclusions(std::string* value) {
+inline void FindPathByEntityIdRequest::set_allocated_avoidentityids(std::string* value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.exclusions_.SetAllocated(value, GetArena());
+  _impl_.avoidentityids_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.exclusions_.IsDefault()) {
-          _impl_.exclusions_.Set("", GetArena());
+        if (_impl_.avoidentityids_.IsDefault()) {
+          _impl_.avoidentityids_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:szengine.FindPathByEntityIdRequest.exclusions)
+  // @@protoc_insertion_point(field_set_allocated:szengine.FindPathByEntityIdRequest.avoidEntityIds)
 }
 
 // string requiredDataSources = 5;
@@ -14081,57 +14081,57 @@ inline void FindPathByRecordIdRequest::_internal_set_maxdegrees(::int64_t value)
   _impl_.maxdegrees_ = value;
 }
 
-// string exclusions = 6;
-inline void FindPathByRecordIdRequest::clear_exclusions() {
+// string avoidRecordKeys = 6;
+inline void FindPathByRecordIdRequest::clear_avoidrecordkeys() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.exclusions_.ClearToEmpty();
+  _impl_.avoidrecordkeys_.ClearToEmpty();
 }
-inline const std::string& FindPathByRecordIdRequest::exclusions() const
+inline const std::string& FindPathByRecordIdRequest::avoidrecordkeys() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szengine.FindPathByRecordIdRequest.exclusions)
-  return _internal_exclusions();
+  // @@protoc_insertion_point(field_get:szengine.FindPathByRecordIdRequest.avoidRecordKeys)
+  return _internal_avoidrecordkeys();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void FindPathByRecordIdRequest::set_exclusions(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void FindPathByRecordIdRequest::set_avoidrecordkeys(Arg_&& arg,
                                                      Args_... args) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.exclusions_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szengine.FindPathByRecordIdRequest.exclusions)
+  _impl_.avoidrecordkeys_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szengine.FindPathByRecordIdRequest.avoidRecordKeys)
 }
-inline std::string* FindPathByRecordIdRequest::mutable_exclusions() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_exclusions();
-  // @@protoc_insertion_point(field_mutable:szengine.FindPathByRecordIdRequest.exclusions)
+inline std::string* FindPathByRecordIdRequest::mutable_avoidrecordkeys() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_avoidrecordkeys();
+  // @@protoc_insertion_point(field_mutable:szengine.FindPathByRecordIdRequest.avoidRecordKeys)
   return _s;
 }
-inline const std::string& FindPathByRecordIdRequest::_internal_exclusions() const {
+inline const std::string& FindPathByRecordIdRequest::_internal_avoidrecordkeys() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.exclusions_.Get();
+  return _impl_.avoidrecordkeys_.Get();
 }
-inline void FindPathByRecordIdRequest::_internal_set_exclusions(const std::string& value) {
+inline void FindPathByRecordIdRequest::_internal_set_avoidrecordkeys(const std::string& value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.exclusions_.Set(value, GetArena());
+  _impl_.avoidrecordkeys_.Set(value, GetArena());
 }
-inline std::string* FindPathByRecordIdRequest::_internal_mutable_exclusions() {
+inline std::string* FindPathByRecordIdRequest::_internal_mutable_avoidrecordkeys() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  return _impl_.exclusions_.Mutable( GetArena());
+  return _impl_.avoidrecordkeys_.Mutable( GetArena());
 }
-inline std::string* FindPathByRecordIdRequest::release_exclusions() {
+inline std::string* FindPathByRecordIdRequest::release_avoidrecordkeys() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  // @@protoc_insertion_point(field_release:szengine.FindPathByRecordIdRequest.exclusions)
-  return _impl_.exclusions_.Release();
+  // @@protoc_insertion_point(field_release:szengine.FindPathByRecordIdRequest.avoidRecordKeys)
+  return _impl_.avoidrecordkeys_.Release();
 }
-inline void FindPathByRecordIdRequest::set_allocated_exclusions(std::string* value) {
+inline void FindPathByRecordIdRequest::set_allocated_avoidrecordkeys(std::string* value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.exclusions_.SetAllocated(value, GetArena());
+  _impl_.avoidrecordkeys_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.exclusions_.IsDefault()) {
-          _impl_.exclusions_.Set("", GetArena());
+        if (_impl_.avoidrecordkeys_.IsDefault()) {
+          _impl_.avoidrecordkeys_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:szengine.FindPathByRecordIdRequest.exclusions)
+  // @@protoc_insertion_point(field_set_allocated:szengine.FindPathByRecordIdRequest.avoidRecordKeys)
 }
 
 // string requiredDataSources = 7;
@@ -14911,57 +14911,57 @@ inline void GetStatsResponse::set_allocated_result(std::string* value) {
 
 // GetVirtualEntityByRecordIdRequest
 
-// string recordList = 1;
-inline void GetVirtualEntityByRecordIdRequest::clear_recordlist() {
+// string recordKeys = 1;
+inline void GetVirtualEntityByRecordIdRequest::clear_recordkeys() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.recordlist_.ClearToEmpty();
+  _impl_.recordkeys_.ClearToEmpty();
 }
-inline const std::string& GetVirtualEntityByRecordIdRequest::recordlist() const
+inline const std::string& GetVirtualEntityByRecordIdRequest::recordkeys() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szengine.GetVirtualEntityByRecordIdRequest.recordList)
-  return _internal_recordlist();
+  // @@protoc_insertion_point(field_get:szengine.GetVirtualEntityByRecordIdRequest.recordKeys)
+  return _internal_recordkeys();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GetVirtualEntityByRecordIdRequest::set_recordlist(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void GetVirtualEntityByRecordIdRequest::set_recordkeys(Arg_&& arg,
                                                      Args_... args) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.recordlist_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szengine.GetVirtualEntityByRecordIdRequest.recordList)
+  _impl_.recordkeys_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szengine.GetVirtualEntityByRecordIdRequest.recordKeys)
 }
-inline std::string* GetVirtualEntityByRecordIdRequest::mutable_recordlist() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_recordlist();
-  // @@protoc_insertion_point(field_mutable:szengine.GetVirtualEntityByRecordIdRequest.recordList)
+inline std::string* GetVirtualEntityByRecordIdRequest::mutable_recordkeys() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_recordkeys();
+  // @@protoc_insertion_point(field_mutable:szengine.GetVirtualEntityByRecordIdRequest.recordKeys)
   return _s;
 }
-inline const std::string& GetVirtualEntityByRecordIdRequest::_internal_recordlist() const {
+inline const std::string& GetVirtualEntityByRecordIdRequest::_internal_recordkeys() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.recordlist_.Get();
+  return _impl_.recordkeys_.Get();
 }
-inline void GetVirtualEntityByRecordIdRequest::_internal_set_recordlist(const std::string& value) {
+inline void GetVirtualEntityByRecordIdRequest::_internal_set_recordkeys(const std::string& value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.recordlist_.Set(value, GetArena());
+  _impl_.recordkeys_.Set(value, GetArena());
 }
-inline std::string* GetVirtualEntityByRecordIdRequest::_internal_mutable_recordlist() {
+inline std::string* GetVirtualEntityByRecordIdRequest::_internal_mutable_recordkeys() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  return _impl_.recordlist_.Mutable( GetArena());
+  return _impl_.recordkeys_.Mutable( GetArena());
 }
-inline std::string* GetVirtualEntityByRecordIdRequest::release_recordlist() {
+inline std::string* GetVirtualEntityByRecordIdRequest::release_recordkeys() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  // @@protoc_insertion_point(field_release:szengine.GetVirtualEntityByRecordIdRequest.recordList)
-  return _impl_.recordlist_.Release();
+  // @@protoc_insertion_point(field_release:szengine.GetVirtualEntityByRecordIdRequest.recordKeys)
+  return _impl_.recordkeys_.Release();
 }
-inline void GetVirtualEntityByRecordIdRequest::set_allocated_recordlist(std::string* value) {
+inline void GetVirtualEntityByRecordIdRequest::set_allocated_recordkeys(std::string* value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.recordlist_.SetAllocated(value, GetArena());
+  _impl_.recordkeys_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.recordlist_.IsDefault()) {
-          _impl_.recordlist_.Set("", GetArena());
+        if (_impl_.recordkeys_.IsDefault()) {
+          _impl_.recordkeys_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:szengine.GetVirtualEntityByRecordIdRequest.recordList)
+  // @@protoc_insertion_point(field_set_allocated:szengine.GetVirtualEntityByRecordIdRequest.recordKeys)
 }
 
 // int64 flags = 2;

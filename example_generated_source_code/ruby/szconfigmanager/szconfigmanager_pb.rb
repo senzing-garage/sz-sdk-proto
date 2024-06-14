@@ -18,9 +18,9 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "szconfigmanager.GetConfigResponse" do
       optional :result, :string, 1
     end
-    add_message "szconfigmanager.GetConfigListRequest" do
+    add_message "szconfigmanager.GetConfigsRequest" do
     end
-    add_message "szconfigmanager.GetConfigListResponse" do
+    add_message "szconfigmanager.GetConfigsResponse" do
       optional :result, :string, 1
     end
     add_message "szconfigmanager.GetDefaultConfigIdRequest" do
@@ -47,8 +47,8 @@ module Szconfigmanager
   AddConfigResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfigmanager.AddConfigResponse").msgclass
   GetConfigRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfigmanager.GetConfigRequest").msgclass
   GetConfigResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfigmanager.GetConfigResponse").msgclass
-  GetConfigListRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfigmanager.GetConfigListRequest").msgclass
-  GetConfigListResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfigmanager.GetConfigListResponse").msgclass
+  GetConfigsRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfigmanager.GetConfigsRequest").msgclass
+  GetConfigsResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfigmanager.GetConfigsResponse").msgclass
   GetDefaultConfigIdRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfigmanager.GetDefaultConfigIdRequest").msgclass
   GetDefaultConfigIdResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfigmanager.GetDefaultConfigIdResponse").msgclass
   ReplaceDefaultConfigIdRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfigmanager.ReplaceDefaultConfigIdRequest").msgclass

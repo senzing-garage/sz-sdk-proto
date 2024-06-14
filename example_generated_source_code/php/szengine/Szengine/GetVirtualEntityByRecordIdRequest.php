@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetVirtualEntityByRecordIdRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string recordList = 1;</code>
+     * Generated from protobuf field <code>string recordKeys = 1;</code>
      */
-    protected $recordList = '';
+    protected $recordKeys = '';
     /**
      * Generated from protobuf field <code>int64 flags = 2;</code>
      */
@@ -28,7 +28,7 @@ class GetVirtualEntityByRecordIdRequest extends \Google\Protobuf\Internal\Messag
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $recordList
+     *     @type string $recordKeys
      *     @type int|string $flags
      * }
      */
@@ -38,23 +38,23 @@ class GetVirtualEntityByRecordIdRequest extends \Google\Protobuf\Internal\Messag
     }
 
     /**
-     * Generated from protobuf field <code>string recordList = 1;</code>
+     * Generated from protobuf field <code>string recordKeys = 1;</code>
      * @return string
      */
-    public function getRecordList()
+    public function getRecordKeys()
     {
-        return $this->recordList;
+        return $this->recordKeys;
     }
 
     /**
-     * Generated from protobuf field <code>string recordList = 1;</code>
+     * Generated from protobuf field <code>string recordKeys = 1;</code>
      * @param string $var
      * @return $this
      */
-    public function setRecordList($var)
+    public function setRecordKeys($var)
     {
         GPBUtil::checkString($var, True);
-        $this->recordList = $var;
+        $this->recordKeys = $var;
 
         return $this;
     }

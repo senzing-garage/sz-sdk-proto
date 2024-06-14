@@ -67,20 +67,20 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :result, :string, 1
     end
     add_message "szengine.FindNetworkByEntityIdRequest" do
-      optional :entityList, :string, 1
+      optional :entityIds, :string, 1
       optional :maxDegrees, :int64, 2
       optional :buildOutDegree, :int64, 3
-      optional :maxEntities, :int64, 4
+      optional :buildOutMaxEntities, :int64, 4
       optional :flags, :int64, 5
     end
     add_message "szengine.FindNetworkByEntityIdResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.FindNetworkByRecordIdRequest" do
-      optional :recordList, :string, 1
+      optional :recordKeys, :string, 1
       optional :maxDegrees, :int64, 2
       optional :buildOutDegree, :int64, 3
-      optional :maxEntities, :int64, 4
+      optional :buildOutMaxEntities, :int64, 4
       optional :flags, :int64, 5
     end
     add_message "szengine.FindNetworkByRecordIdResponse" do
@@ -90,7 +90,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :startEntityId, :int64, 1
       optional :endEntityId, :int64, 2
       optional :maxDegrees, :int64, 3
-      optional :exclusions, :string, 4
+      optional :avoidEntityIds, :string, 4
       optional :requiredDataSources, :string, 5
       optional :flags, :int64, 6
     end
@@ -103,7 +103,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :endDataSourceCode, :string, 3
       optional :endRecordId, :string, 4
       optional :maxDegrees, :int64, 5
-      optional :exclusions, :string, 6
+      optional :avoidRecordKeys, :string, 6
       optional :requiredDataSources, :string, 7
       optional :flags, :int64, 8
     end
@@ -149,7 +149,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :result, :string, 1
     end
     add_message "szengine.GetVirtualEntityByRecordIdRequest" do
-      optional :recordList, :string, 1
+      optional :recordKeys, :string, 1
       optional :flags, :int64, 2
     end
     add_message "szengine.GetVirtualEntityByRecordIdResponse" do

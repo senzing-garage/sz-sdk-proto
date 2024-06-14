@@ -45,16 +45,16 @@ class SzConfigManagerClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Szconfigmanager\GetConfigListRequest $argument input argument
+     * @param \Szconfigmanager\GetConfigsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function GetConfigList(\Szconfigmanager\GetConfigListRequest $argument,
+    public function GetConfigs(\Szconfigmanager\GetConfigsRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szconfigmanager.SzConfigManager/GetConfigList',
+        return $this->_simpleRequest('/szconfigmanager.SzConfigManager/GetConfigs',
         $argument,
-        ['\Szconfigmanager\GetConfigListResponse', 'decode'],
+        ['\Szconfigmanager\GetConfigsResponse', 'decode'],
         $metadata, $options);
     }
 

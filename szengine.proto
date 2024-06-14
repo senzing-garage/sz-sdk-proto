@@ -118,10 +118,10 @@ message FindInterestingEntitiesByRecordIdResponse {
 }
 
 message FindNetworkByEntityIdRequest {
-  string entityList = 1;
+  string entityIds = 1;
   int64 maxDegrees = 2;
   int64 buildOutDegree = 3;
-  int64 maxEntities = 4;
+  int64 buildOutMaxEntities = 4;
   int64 flags = 5;
 }
 
@@ -130,10 +130,10 @@ message FindNetworkByEntityIdResponse {
 }
 
 message FindNetworkByRecordIdRequest {
-  string recordList = 1;
+  string recordKeys = 1;
   int64 maxDegrees = 2;
   int64 buildOutDegree = 3;
-  int64 maxEntities = 4;
+  int64 buildOutMaxEntities = 4;
   int64 flags = 5;
 }
 
@@ -145,7 +145,7 @@ message FindPathByEntityIdRequest {
   int64 startEntityId = 1;
   int64 endEntityId = 2;
   int64 maxDegrees = 3;
-  string exclusions = 4;
+  string avoidEntityIds = 4;
   string requiredDataSources = 5;
   int64 flags = 6;
 }
@@ -160,7 +160,7 @@ message FindPathByRecordIdRequest {
   string endDataSourceCode = 3;
   string endRecordId = 4;
   int64 maxDegrees = 5;
-  string exclusions = 6;
+  string avoidRecordKeys = 6;
   string requiredDataSources = 7;
   int64 flags = 8;
 }
@@ -217,7 +217,7 @@ message GetStatsResponse {
 }
 
 message GetVirtualEntityByRecordIdRequest {
-  string recordList = 1;
+  string recordKeys = 1;
   int64 flags = 2;
 }
 
