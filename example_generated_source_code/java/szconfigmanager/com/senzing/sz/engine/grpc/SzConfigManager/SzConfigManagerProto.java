@@ -2221,43 +2221,43 @@ public final class SzConfigManagerProto {
 
   }
 
-  public interface GetConfigListRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szconfigmanager.GetConfigListRequest)
+  public interface GetConfigsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:szconfigmanager.GetConfigsRequest)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code szconfigmanager.GetConfigListRequest}
+   * Protobuf type {@code szconfigmanager.GetConfigsRequest}
    */
-  public static final class GetConfigListRequest extends
+  public static final class GetConfigsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:szconfigmanager.GetConfigListRequest)
-      GetConfigListRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:szconfigmanager.GetConfigsRequest)
+      GetConfigsRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use GetConfigListRequest.newBuilder() to construct.
-    private GetConfigListRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use GetConfigsRequest.newBuilder() to construct.
+    private GetConfigsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private GetConfigListRequest() {
+    private GetConfigsRequest() {
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new GetConfigListRequest();
+      return new GetConfigsRequest();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigListRequest_descriptor;
+      return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigsRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigListRequest_fieldAccessorTable
+      return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigsRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest.class, com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest.Builder.class);
+              com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest.class, com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2293,10 +2293,10 @@ public final class SzConfigManagerProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest)) {
+      if (!(obj instanceof com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest other = (com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest) obj;
+      com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest other = (com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -2314,44 +2314,44 @@ public final class SzConfigManagerProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest parseFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest parseFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest parseFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest parseFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest parseFrom(byte[] data)
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest parseFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest parseFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2359,26 +2359,26 @@ public final class SzConfigManagerProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest parseDelimitedFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest parseFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest parseFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2391,7 +2391,7 @@ public final class SzConfigManagerProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest prototype) {
+    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2407,26 +2407,26 @@ public final class SzConfigManagerProto {
       return builder;
     }
     /**
-     * Protobuf type {@code szconfigmanager.GetConfigListRequest}
+     * Protobuf type {@code szconfigmanager.GetConfigsRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szconfigmanager.GetConfigListRequest)
-        com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:szconfigmanager.GetConfigsRequest)
+        com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigListRequest_descriptor;
+        return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigsRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigListRequest_fieldAccessorTable
+        return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigsRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest.class, com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest.Builder.class);
+                com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest.class, com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest.newBuilder()
+      // Construct using com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest.newBuilder()
       private Builder() {
 
       }
@@ -2445,17 +2445,17 @@ public final class SzConfigManagerProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigListRequest_descriptor;
+        return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigsRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest.getDefaultInstance();
+      public com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest getDefaultInstanceForType() {
+        return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest build() {
-        com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest result = buildPartial();
+      public com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest build() {
+        com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2463,8 +2463,8 @@ public final class SzConfigManagerProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest result = new com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest(this);
+      public com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest buildPartial() {
+        com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest result = new com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest(this);
         onBuilt();
         return result;
       }
@@ -2503,16 +2503,16 @@ public final class SzConfigManagerProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest)other);
+        if (other instanceof com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest) {
+          return mergeFrom((com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest other) {
+        if (other == com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2567,23 +2567,23 @@ public final class SzConfigManagerProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:szconfigmanager.GetConfigListRequest)
+      // @@protoc_insertion_point(builder_scope:szconfigmanager.GetConfigsRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:szconfigmanager.GetConfigListRequest)
-    private static final com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:szconfigmanager.GetConfigsRequest)
+    private static final com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest();
+      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest getDefaultInstance() {
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetConfigListRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetConfigListRequest>() {
+    private static final com.google.protobuf.Parser<GetConfigsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetConfigsRequest>() {
       @java.lang.Override
-      public GetConfigListRequest parsePartialFrom(
+      public GetConfigsRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2602,24 +2602,24 @@ public final class SzConfigManagerProto {
       }
     };
 
-    public static com.google.protobuf.Parser<GetConfigListRequest> parser() {
+    public static com.google.protobuf.Parser<GetConfigsRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<GetConfigListRequest> getParserForType() {
+    public com.google.protobuf.Parser<GetConfigsRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListRequest getDefaultInstanceForType() {
+    public com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface GetConfigListResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szconfigmanager.GetConfigListResponse)
+  public interface GetConfigsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:szconfigmanager.GetConfigsResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2635,18 +2635,18 @@ public final class SzConfigManagerProto {
         getResultBytes();
   }
   /**
-   * Protobuf type {@code szconfigmanager.GetConfigListResponse}
+   * Protobuf type {@code szconfigmanager.GetConfigsResponse}
    */
-  public static final class GetConfigListResponse extends
+  public static final class GetConfigsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:szconfigmanager.GetConfigListResponse)
-      GetConfigListResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:szconfigmanager.GetConfigsResponse)
+      GetConfigsResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use GetConfigListResponse.newBuilder() to construct.
-    private GetConfigListResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use GetConfigsResponse.newBuilder() to construct.
+    private GetConfigsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private GetConfigListResponse() {
+    private GetConfigsResponse() {
       result_ = "";
     }
 
@@ -2654,20 +2654,20 @@ public final class SzConfigManagerProto {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new GetConfigListResponse();
+      return new GetConfigsResponse();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigListResponse_descriptor;
+      return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigsResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigListResponse_fieldAccessorTable
+      return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse.class, com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse.Builder.class);
+              com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse.class, com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -2748,10 +2748,10 @@ public final class SzConfigManagerProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse)) {
+      if (!(obj instanceof com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse other = (com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse) obj;
+      com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse other = (com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -2773,44 +2773,44 @@ public final class SzConfigManagerProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse parseFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse parseFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse parseFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse parseFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse parseFrom(byte[] data)
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse parseFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse parseFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2818,26 +2818,26 @@ public final class SzConfigManagerProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse parseDelimitedFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse parseFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse parseFrom(
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2850,7 +2850,7 @@ public final class SzConfigManagerProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse prototype) {
+    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2866,26 +2866,26 @@ public final class SzConfigManagerProto {
       return builder;
     }
     /**
-     * Protobuf type {@code szconfigmanager.GetConfigListResponse}
+     * Protobuf type {@code szconfigmanager.GetConfigsResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szconfigmanager.GetConfigListResponse)
-        com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:szconfigmanager.GetConfigsResponse)
+        com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigListResponse_descriptor;
+        return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigsResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigListResponse_fieldAccessorTable
+        return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigsResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse.class, com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse.Builder.class);
+                com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse.class, com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse.newBuilder()
+      // Construct using com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse.newBuilder()
       private Builder() {
 
       }
@@ -2906,17 +2906,17 @@ public final class SzConfigManagerProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigListResponse_descriptor;
+        return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.internal_static_szconfigmanager_GetConfigsResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse.getDefaultInstance();
+      public com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse getDefaultInstanceForType() {
+        return com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse build() {
-        com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse result = buildPartial();
+      public com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse build() {
+        com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2924,14 +2924,14 @@ public final class SzConfigManagerProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse result = new com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse(this);
+      public com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse buildPartial() {
+        com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse result = new com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse result) {
+      private void buildPartial0(com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -2972,16 +2972,16 @@ public final class SzConfigManagerProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse)other);
+        if (other instanceof com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse) {
+          return mergeFrom((com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse other) {
+        if (other == com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -3119,23 +3119,23 @@ public final class SzConfigManagerProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:szconfigmanager.GetConfigListResponse)
+      // @@protoc_insertion_point(builder_scope:szconfigmanager.GetConfigsResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:szconfigmanager.GetConfigListResponse)
-    private static final com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:szconfigmanager.GetConfigsResponse)
+    private static final com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse();
+      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse getDefaultInstance() {
+    public static com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetConfigListResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetConfigListResponse>() {
+    private static final com.google.protobuf.Parser<GetConfigsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetConfigsResponse>() {
       @java.lang.Override
-      public GetConfigListResponse parsePartialFrom(
+      public GetConfigsResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3154,17 +3154,17 @@ public final class SzConfigManagerProto {
       }
     };
 
-    public static com.google.protobuf.Parser<GetConfigListResponse> parser() {
+    public static com.google.protobuf.Parser<GetConfigsResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<GetConfigListResponse> getParserForType() {
+    public com.google.protobuf.Parser<GetConfigsResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigListResponse getDefaultInstanceForType() {
+    public com.senzing.sz.engine.grpc.SzConfigManager.SzConfigManagerProto.GetConfigsResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5886,15 +5886,15 @@ public final class SzConfigManagerProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_szconfigmanager_GetConfigResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szconfigmanager_GetConfigListRequest_descriptor;
+    internal_static_szconfigmanager_GetConfigsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_szconfigmanager_GetConfigListRequest_fieldAccessorTable;
+      internal_static_szconfigmanager_GetConfigsRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szconfigmanager_GetConfigListResponse_descriptor;
+    internal_static_szconfigmanager_GetConfigsResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_szconfigmanager_GetConfigListResponse_fieldAccessorTable;
+      internal_static_szconfigmanager_GetConfigsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_szconfigmanager_GetDefaultConfigIdRequest_descriptor;
   private static final 
@@ -5939,35 +5939,35 @@ public final class SzConfigManagerProto {
       "\030\001 \001(\t\022\025\n\rconfigComment\030\002 \001(\t\"#\n\021AddConf" +
       "igResponse\022\016\n\006result\030\001 \001(\003\"$\n\020GetConfigR" +
       "equest\022\020\n\010configId\030\001 \001(\003\"#\n\021GetConfigRes" +
-      "ponse\022\016\n\006result\030\001 \001(\t\"\026\n\024GetConfigListRe" +
-      "quest\"\'\n\025GetConfigListResponse\022\016\n\006result" +
-      "\030\001 \001(\t\"\033\n\031GetDefaultConfigIdRequest\",\n\032G" +
-      "etDefaultConfigIdResponse\022\016\n\006result\030\001 \001(" +
-      "\003\"[\n\035ReplaceDefaultConfigIdRequest\022\036\n\026cu" +
-      "rrentDefaultConfigId\030\001 \001(\003\022\032\n\022newDefault" +
-      "ConfigId\030\002 \001(\003\" \n\036ReplaceDefaultConfigId" +
-      "Response\"-\n\031SetDefaultConfigIdRequest\022\020\n" +
-      "\010configId\030\001 \001(\003\"\034\n\032SetDefaultConfigIdRes" +
-      "ponse2\376\004\n\017SzConfigManager\022T\n\tAddConfig\022!" +
-      ".szconfigmanager.AddConfigRequest\032\".szco" +
-      "nfigmanager.AddConfigResponse\"\000\022T\n\tGetCo" +
-      "nfig\022!.szconfigmanager.GetConfigRequest\032" +
-      "\".szconfigmanager.GetConfigResponse\"\000\022`\n" +
-      "\rGetConfigList\022%.szconfigmanager.GetConf" +
-      "igListRequest\032&.szconfigmanager.GetConfi" +
-      "gListResponse\"\000\022o\n\022GetDefaultConfigId\022*." +
-      "szconfigmanager.GetDefaultConfigIdReques" +
-      "t\032+.szconfigmanager.GetDefaultConfigIdRe" +
-      "sponse\"\000\022{\n\026ReplaceDefaultConfigId\022..szc" +
-      "onfigmanager.ReplaceDefaultConfigIdReque" +
-      "st\032/.szconfigmanager.ReplaceDefaultConfi" +
-      "gIdResponse\"\000\022o\n\022SetDefaultConfigId\022*.sz" +
-      "configmanager.SetDefaultConfigIdRequest\032" +
-      "+.szconfigmanager.SetDefaultConfigIdResp" +
-      "onse\"\000B|\n*com.senzing.sz.engine.grpc.SzC" +
-      "onfigManagerB\024SzConfigManagerProtoZ8gith" +
-      "ub.com/senzing-garage/sz-sdk-go-grpc/szc" +
-      "onfigmanagerb\006proto3"
+      "ponse\022\016\n\006result\030\001 \001(\t\"\023\n\021GetConfigsReque" +
+      "st\"$\n\022GetConfigsResponse\022\016\n\006result\030\001 \001(\t" +
+      "\"\033\n\031GetDefaultConfigIdRequest\",\n\032GetDefa" +
+      "ultConfigIdResponse\022\016\n\006result\030\001 \001(\003\"[\n\035R" +
+      "eplaceDefaultConfigIdRequest\022\036\n\026currentD" +
+      "efaultConfigId\030\001 \001(\003\022\032\n\022newDefaultConfig" +
+      "Id\030\002 \001(\003\" \n\036ReplaceDefaultConfigIdRespon" +
+      "se\"-\n\031SetDefaultConfigIdRequest\022\020\n\010confi" +
+      "gId\030\001 \001(\003\"\034\n\032SetDefaultConfigIdResponse2" +
+      "\365\004\n\017SzConfigManager\022T\n\tAddConfig\022!.szcon" +
+      "figmanager.AddConfigRequest\032\".szconfigma" +
+      "nager.AddConfigResponse\"\000\022T\n\tGetConfig\022!" +
+      ".szconfigmanager.GetConfigRequest\032\".szco" +
+      "nfigmanager.GetConfigResponse\"\000\022W\n\nGetCo" +
+      "nfigs\022\".szconfigmanager.GetConfigsReques" +
+      "t\032#.szconfigmanager.GetConfigsResponse\"\000" +
+      "\022o\n\022GetDefaultConfigId\022*.szconfigmanager" +
+      ".GetDefaultConfigIdRequest\032+.szconfigman" +
+      "ager.GetDefaultConfigIdResponse\"\000\022{\n\026Rep" +
+      "laceDefaultConfigId\022..szconfigmanager.Re" +
+      "placeDefaultConfigIdRequest\032/.szconfigma" +
+      "nager.ReplaceDefaultConfigIdResponse\"\000\022o" +
+      "\n\022SetDefaultConfigId\022*.szconfigmanager.S" +
+      "etDefaultConfigIdRequest\032+.szconfigmanag" +
+      "er.SetDefaultConfigIdResponse\"\000B|\n*com.s" +
+      "enzing.sz.engine.grpc.SzConfigManagerB\024S" +
+      "zConfigManagerProtoZ8github.com/senzing-" +
+      "garage/sz-sdk-go-grpc/szconfigmanagerb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5997,17 +5997,17 @@ public final class SzConfigManagerProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szconfigmanager_GetConfigResponse_descriptor,
         new java.lang.String[] { "Result", });
-    internal_static_szconfigmanager_GetConfigListRequest_descriptor =
+    internal_static_szconfigmanager_GetConfigsRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_szconfigmanager_GetConfigListRequest_fieldAccessorTable = new
+    internal_static_szconfigmanager_GetConfigsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_szconfigmanager_GetConfigListRequest_descriptor,
+        internal_static_szconfigmanager_GetConfigsRequest_descriptor,
         new java.lang.String[] { });
-    internal_static_szconfigmanager_GetConfigListResponse_descriptor =
+    internal_static_szconfigmanager_GetConfigsResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_szconfigmanager_GetConfigListResponse_fieldAccessorTable = new
+    internal_static_szconfigmanager_GetConfigsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_szconfigmanager_GetConfigListResponse_descriptor,
+        internal_static_szconfigmanager_GetConfigsResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szconfigmanager_GetDefaultConfigIdRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);

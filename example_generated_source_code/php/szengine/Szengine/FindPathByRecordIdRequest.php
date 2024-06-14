@@ -34,9 +34,9 @@ class FindPathByRecordIdRequest extends \Google\Protobuf\Internal\Message
      */
     protected $maxDegrees = 0;
     /**
-     * Generated from protobuf field <code>string exclusions = 6;</code>
+     * Generated from protobuf field <code>string avoidRecordKeys = 6;</code>
      */
-    protected $exclusions = '';
+    protected $avoidRecordKeys = '';
     /**
      * Generated from protobuf field <code>string requiredDataSources = 7;</code>
      */
@@ -57,7 +57,7 @@ class FindPathByRecordIdRequest extends \Google\Protobuf\Internal\Message
      *     @type string $endDataSourceCode
      *     @type string $endRecordId
      *     @type int|string $maxDegrees
-     *     @type string $exclusions
+     *     @type string $avoidRecordKeys
      *     @type string $requiredDataSources
      *     @type int|string $flags
      * }
@@ -178,23 +178,23 @@ class FindPathByRecordIdRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string exclusions = 6;</code>
+     * Generated from protobuf field <code>string avoidRecordKeys = 6;</code>
      * @return string
      */
-    public function getExclusions()
+    public function getAvoidRecordKeys()
     {
-        return $this->exclusions;
+        return $this->avoidRecordKeys;
     }
 
     /**
-     * Generated from protobuf field <code>string exclusions = 6;</code>
+     * Generated from protobuf field <code>string avoidRecordKeys = 6;</code>
      * @param string $var
      * @return $this
      */
-    public function setExclusions($var)
+    public function setAvoidRecordKeys($var)
     {
         GPBUtil::checkString($var, True);
-        $this->exclusions = $var;
+        $this->avoidRecordKeys = $var;
 
         return $this;
     }

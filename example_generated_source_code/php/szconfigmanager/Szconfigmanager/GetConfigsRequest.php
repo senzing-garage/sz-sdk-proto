@@ -9,9 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>szconfigmanager.GetConfigListRequest</code>
+ * Generated from protobuf message <code>szconfigmanager.GetConfigsRequest</code>
  */
-class GetConfigListRequest extends \Google\Protobuf\Internal\Message
+class GetConfigsRequest extends \Google\Protobuf\Internal\Message
 {
 
     /**

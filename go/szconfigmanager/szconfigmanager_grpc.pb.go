@@ -24,7 +24,7 @@ const _ = grpc.SupportPackageIsVersion7
 type SzConfigManagerClient interface {
 	AddConfig(ctx context.Context, in *AddConfigRequest, opts ...grpc.CallOption) (*AddConfigResponse, error)
 	GetConfig(ctx context.Context, in *GetConfigRequest, opts ...grpc.CallOption) (*GetConfigResponse, error)
-	GetConfigList(ctx context.Context, in *GetConfigListRequest, opts ...grpc.CallOption) (*GetConfigListResponse, error)
+	GetConfigs(ctx context.Context, in *GetConfigsRequest, opts ...grpc.CallOption) (*GetConfigsResponse, error)
 	GetDefaultConfigId(ctx context.Context, in *GetDefaultConfigIdRequest, opts ...grpc.CallOption) (*GetDefaultConfigIdResponse, error)
 	ReplaceDefaultConfigId(ctx context.Context, in *ReplaceDefaultConfigIdRequest, opts ...grpc.CallOption) (*ReplaceDefaultConfigIdResponse, error)
 	SetDefaultConfigId(ctx context.Context, in *SetDefaultConfigIdRequest, opts ...grpc.CallOption) (*SetDefaultConfigIdResponse, error)
@@ -56,9 +56,9 @@ func (c *szConfigManagerClient) GetConfig(ctx context.Context, in *GetConfigRequ
 	return out, nil
 }
 
-func (c *szConfigManagerClient) GetConfigList(ctx context.Context, in *GetConfigListRequest, opts ...grpc.CallOption) (*GetConfigListResponse, error) {
-	out := new(GetConfigListResponse)
-	err := c.cc.Invoke(ctx, "/szconfigmanager.SzConfigManager/GetConfigList", in, out, opts...)
+func (c *szConfigManagerClient) GetConfigs(ctx context.Context, in *GetConfigsRequest, opts ...grpc.CallOption) (*GetConfigsResponse, error) {
+	out := new(GetConfigsResponse)
+	err := c.cc.Invoke(ctx, "/szconfigmanager.SzConfigManager/GetConfigs", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -98,7 +98,7 @@ func (c *szConfigManagerClient) SetDefaultConfigId(ctx context.Context, in *SetD
 type SzConfigManagerServer interface {
 	AddConfig(context.Context, *AddConfigRequest) (*AddConfigResponse, error)
 	GetConfig(context.Context, *GetConfigRequest) (*GetConfigResponse, error)
-	GetConfigList(context.Context, *GetConfigListRequest) (*GetConfigListResponse, error)
+	GetConfigs(context.Context, *GetConfigsRequest) (*GetConfigsResponse, error)
 	GetDefaultConfigId(context.Context, *GetDefaultConfigIdRequest) (*GetDefaultConfigIdResponse, error)
 	ReplaceDefaultConfigId(context.Context, *ReplaceDefaultConfigIdRequest) (*ReplaceDefaultConfigIdResponse, error)
 	SetDefaultConfigId(context.Context, *SetDefaultConfigIdRequest) (*SetDefaultConfigIdResponse, error)
@@ -115,8 +115,8 @@ func (UnimplementedSzConfigManagerServer) AddConfig(context.Context, *AddConfigR
 func (UnimplementedSzConfigManagerServer) GetConfig(context.Context, *GetConfigRequest) (*GetConfigResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetConfig not implemented")
 }
-func (UnimplementedSzConfigManagerServer) GetConfigList(context.Context, *GetConfigListRequest) (*GetConfigListResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetConfigList not implemented")
+func (UnimplementedSzConfigManagerServer) GetConfigs(context.Context, *GetConfigsRequest) (*GetConfigsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetConfigs not implemented")
 }
 func (UnimplementedSzConfigManagerServer) GetDefaultConfigId(context.Context, *GetDefaultConfigIdRequest) (*GetDefaultConfigIdResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetDefaultConfigId not implemented")
@@ -176,20 +176,20 @@ func _SzConfigManager_GetConfig_Handler(srv interface{}, ctx context.Context, de
 	return interceptor(ctx, in, info, handler)
 }
 
-func _SzConfigManager_GetConfigList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetConfigListRequest)
+func _SzConfigManager_GetConfigs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetConfigsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(SzConfigManagerServer).GetConfigList(ctx, in)
+		return srv.(SzConfigManagerServer).GetConfigs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/szconfigmanager.SzConfigManager/GetConfigList",
+		FullMethod: "/szconfigmanager.SzConfigManager/GetConfigs",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzConfigManagerServer).GetConfigList(ctx, req.(*GetConfigListRequest))
+		return srv.(SzConfigManagerServer).GetConfigs(ctx, req.(*GetConfigsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -264,8 +264,8 @@ var SzConfigManager_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _SzConfigManager_GetConfig_Handler,
 		},
 		{
-			MethodName: "GetConfigList",
-			Handler:    _SzConfigManager_GetConfigList_Handler,
+			MethodName: "GetConfigs",
+			Handler:    _SzConfigManager_GetConfigs_Handler,
 		},
 		{
 			MethodName: "GetDefaultConfigId",

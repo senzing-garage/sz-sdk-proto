@@ -540,7 +540,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr GetVirtualEntityByRecordIdRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : recordlist_(
+      : recordkeys_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         flags_{::int64_t{0}},
@@ -825,7 +825,7 @@ inline constexpr FindPathByRecordIdRequest::Impl_::Impl_(
         endrecordid_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        exclusions_(
+        avoidrecordkeys_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         requireddatasources_(
@@ -872,7 +872,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr FindPathByEntityIdRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : exclusions_(
+      : avoidentityids_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         requireddatasources_(
@@ -921,12 +921,12 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr FindNetworkByRecordIdRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : recordlist_(
+      : recordkeys_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         maxdegrees_{::int64_t{0}},
         buildoutdegree_{::int64_t{0}},
-        maxentities_{::int64_t{0}},
+        buildoutmaxentities_{::int64_t{0}},
         flags_{::int64_t{0}},
         _cached_size_{0} {}
 
@@ -967,12 +967,12 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr FindNetworkByEntityIdRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : entitylist_(
+      : entityids_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         maxdegrees_{::int64_t{0}},
         buildoutdegree_{::int64_t{0}},
-        maxentities_{::int64_t{0}},
+        buildoutmaxentities_{::int64_t{0}},
         flags_{::int64_t{0}},
         _cached_size_{0} {}
 
@@ -1537,10 +1537,10 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdRequest, _impl_.entitylist_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdRequest, _impl_.entityids_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdRequest, _impl_.maxdegrees_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdRequest, _impl_.buildoutdegree_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdRequest, _impl_.maxentities_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdRequest, _impl_.buildoutmaxentities_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdResponse, _internal_metadata_),
@@ -1559,10 +1559,10 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdRequest, _impl_.recordlist_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdRequest, _impl_.recordkeys_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdRequest, _impl_.maxdegrees_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdRequest, _impl_.buildoutdegree_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdRequest, _impl_.maxentities_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdRequest, _impl_.buildoutmaxentities_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdResponse, _internal_metadata_),
@@ -1584,7 +1584,7 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.startentityid_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.endentityid_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.maxdegrees_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.exclusions_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.avoidentityids_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.requireddatasources_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
@@ -1609,7 +1609,7 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.enddatasourcecode_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.endrecordid_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.maxdegrees_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.exclusions_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.avoidrecordkeys_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.requireddatasources_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
@@ -1739,7 +1739,7 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::GetVirtualEntityByRecordIdRequest, _impl_.recordlist_),
+    PROTOBUF_FIELD_OFFSET(::szengine::GetVirtualEntityByRecordIdRequest, _impl_.recordkeys_),
     PROTOBUF_FIELD_OFFSET(::szengine::GetVirtualEntityByRecordIdRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::GetVirtualEntityByRecordIdResponse, _internal_metadata_),
@@ -2141,165 +2141,166 @@ const char descriptor_table_protodef_szengine_2eproto[] PROTOBUF_SECTION_VARIABL
     "itiesByRecordIdRequest\022\026\n\016dataSourceCode"
     "\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\""
     ";\n)FindInterestingEntitiesByRecordIdResp"
-    "onse\022\016\n\006result\030\001 \001(\t\"\202\001\n\034FindNetworkByEn"
-    "tityIdRequest\022\022\n\nentityList\030\001 \001(\t\022\022\n\nmax"
-    "Degrees\030\002 \001(\003\022\026\n\016buildOutDegree\030\003 \001(\003\022\023\n"
-    "\013maxEntities\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035Fin"
-    "dNetworkByEntityIdResponse\022\016\n\006result\030\001 \001"
-    "(\t\"\202\001\n\034FindNetworkByRecordIdRequest\022\022\n\nr"
-    "ecordList\030\001 \001(\t\022\022\n\nmaxDegrees\030\002 \001(\003\022\026\n\016b"
-    "uildOutDegree\030\003 \001(\003\022\023\n\013maxEntities\030\004 \001(\003"
-    "\022\r\n\005flags\030\005 \001(\003\"/\n\035FindNetworkByRecordId"
-    "Response\022\016\n\006result\030\001 \001(\t\"\233\001\n\031FindPathByE"
-    "ntityIdRequest\022\025\n\rstartEntityId\030\001 \001(\003\022\023\n"
-    "\013endEntityId\030\002 \001(\003\022\022\n\nmaxDegrees\030\003 \001(\003\022\022"
-    "\n\nexclusions\030\004 \001(\t\022\033\n\023requiredDataSource"
-    "s\030\005 \001(\t\022\r\n\005flags\030\006 \001(\003\",\n\032FindPathByEnti"
-    "tyIdResponse\022\016\n\006result\030\001 \001(\t\"\323\001\n\031FindPat"
-    "hByRecordIdRequest\022\033\n\023startDataSourceCod"
-    "e\030\001 \001(\t\022\025\n\rstartRecordId\030\002 \001(\t\022\031\n\021endDat"
-    "aSourceCode\030\003 \001(\t\022\023\n\013endRecordId\030\004 \001(\t\022\022"
-    "\n\nmaxDegrees\030\005 \001(\003\022\022\n\nexclusions\030\006 \001(\t\022\033"
-    "\n\023requiredDataSources\030\007 \001(\t\022\r\n\005flags\030\010 \001"
-    "(\003\",\n\032FindPathByRecordIdResponse\022\016\n\006resu"
-    "lt\030\001 \001(\t\"\032\n\030GetActiveConfigIdRequest\"+\n\031"
-    "GetActiveConfigIdResponse\022\016\n\006result\030\001 \001("
-    "\003\"=\n\032GetEntityByEntityIdRequest\022\020\n\010entit"
-    "yId\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"-\n\033GetEntityByE"
-    "ntityIdResponse\022\016\n\006result\030\001 \001(\t\"U\n\032GetEn"
-    "tityByRecordIdRequest\022\026\n\016dataSourceCode\030"
-    "\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"-"
-    "\n\033GetEntityByRecordIdResponse\022\016\n\006result\030"
-    "\001 \001(\t\"K\n\020GetRecordRequest\022\026\n\016dataSourceC"
+    "onse\022\016\n\006result\030\001 \001(\t\"\211\001\n\034FindNetworkByEn"
+    "tityIdRequest\022\021\n\tentityIds\030\001 \001(\t\022\022\n\nmaxD"
+    "egrees\030\002 \001(\003\022\026\n\016buildOutDegree\030\003 \001(\003\022\033\n\023"
+    "buildOutMaxEntities\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003"
+    "\"/\n\035FindNetworkByEntityIdResponse\022\016\n\006res"
+    "ult\030\001 \001(\t\"\212\001\n\034FindNetworkByRecordIdReque"
+    "st\022\022\n\nrecordKeys\030\001 \001(\t\022\022\n\nmaxDegrees\030\002 \001"
+    "(\003\022\026\n\016buildOutDegree\030\003 \001(\003\022\033\n\023buildOutMa"
+    "xEntities\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035FindNe"
+    "tworkByRecordIdResponse\022\016\n\006result\030\001 \001(\t\""
+    "\237\001\n\031FindPathByEntityIdRequest\022\025\n\rstartEn"
+    "tityId\030\001 \001(\003\022\023\n\013endEntityId\030\002 \001(\003\022\022\n\nmax"
+    "Degrees\030\003 \001(\003\022\026\n\016avoidEntityIds\030\004 \001(\t\022\033\n"
+    "\023requiredDataSources\030\005 \001(\t\022\r\n\005flags\030\006 \001("
+    "\003\",\n\032FindPathByEntityIdResponse\022\016\n\006resul"
+    "t\030\001 \001(\t\"\330\001\n\031FindPathByRecordIdRequest\022\033\n"
+    "\023startDataSourceCode\030\001 \001(\t\022\025\n\rstartRecor"
+    "dId\030\002 \001(\t\022\031\n\021endDataSourceCode\030\003 \001(\t\022\023\n\013"
+    "endRecordId\030\004 \001(\t\022\022\n\nmaxDegrees\030\005 \001(\003\022\027\n"
+    "\017avoidRecordKeys\030\006 \001(\t\022\033\n\023requiredDataSo"
+    "urces\030\007 \001(\t\022\r\n\005flags\030\010 \001(\003\",\n\032FindPathBy"
+    "RecordIdResponse\022\016\n\006result\030\001 \001(\t\"\032\n\030GetA"
+    "ctiveConfigIdRequest\"+\n\031GetActiveConfigI"
+    "dResponse\022\016\n\006result\030\001 \001(\003\"=\n\032GetEntityBy"
+    "EntityIdRequest\022\020\n\010entityId\030\001 \001(\003\022\r\n\005fla"
+    "gs\030\002 \001(\003\"-\n\033GetEntityByEntityIdResponse\022"
+    "\016\n\006result\030\001 \001(\t\"U\n\032GetEntityByRecordIdRe"
+    "quest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordI"
+    "d\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"-\n\033GetEntityByRec"
+    "ordIdResponse\022\016\n\006result\030\001 \001(\t\"K\n\020GetReco"
+    "rdRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010rec"
+    "ordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"#\n\021GetRecordR"
+    "esponse\022\016\n\006result\030\001 \001(\t\"\026\n\024GetRedoRecord"
+    "Request\"\'\n\025GetRedoRecordResponse\022\016\n\006resu"
+    "lt\030\001 \001(\t\"\021\n\017GetStatsRequest\"\"\n\020GetStatsR"
+    "esponse\022\016\n\006result\030\001 \001(\t\"F\n!GetVirtualEnt"
+    "ityByRecordIdRequest\022\022\n\nrecordKeys\030\001 \001(\t"
+    "\022\r\n\005flags\030\002 \001(\003\"4\n\"GetVirtualEntityByRec"
+    "ordIdResponse\022\016\n\006result\030\001 \001(\t\"=\n\032HowEnti"
+    "tyByEntityIdRequest\022\020\n\010entityId\030\001 \001(\003\022\r\n"
+    "\005flags\030\002 \001(\003\"-\n\033HowEntityByEntityIdRespo"
+    "nse\022\016\n\006result\030\001 \001(\t\"\024\n\022PrimeEngineReques"
+    "t\"\025\n\023PrimeEngineResponse\"=\n\030ProcessRedoR"
+    "ecordRequest\022\022\n\nredoRecord\030\001 \001(\t\022\r\n\005flag"
+    "s\030\002 \001(\003\"+\n\031ProcessRedoRecordResponse\022\016\n\006"
+    "result\030\001 \001(\t\":\n\027ReevaluateEntityRequest\022"
+    "\020\n\010entityId\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"*\n\030Reev"
+    "aluateEntityResponse\022\016\n\006result\030\001 \001(\t\"R\n\027"
+    "ReevaluateRecordRequest\022\026\n\016dataSourceCod"
+    "e\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003"
+    "\"*\n\030ReevaluateRecordResponse\022\016\n\006result\030\001"
+    " \001(\t\"\'\n\023ReinitializeRequest\022\020\n\010configId\030"
+    "\001 \001(\003\"\026\n\024ReinitializeResponse\"U\n\031SearchB"
+    "yAttributesRequest\022\022\n\nattributes\030\001 \001(\t\022\025"
+    "\n\rsearchProfile\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\",\n\032"
+    "SearchByAttributesResponse\022\016\n\006result\030\001 \001"
+    "(\t\"J\n\"StreamExportCsvEntityReportRequest"
+    "\022\025\n\rcsvColumnList\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"5"
+    "\n#StreamExportCsvEntityReportResponse\022\016\n"
+    "\006result\030\001 \001(\t\"4\n#StreamExportJsonEntityR"
+    "eportRequest\022\r\n\005flags\030\001 \001(\003\"6\n$StreamExp"
+    "ortJsonEntityReportResponse\022\016\n\006result\030\001 "
+    "\001(\t\"I\n\022WhyEntitiesRequest\022\021\n\tentityId1\030\001"
+    " \001(\003\022\021\n\tentityId2\030\002 \001(\003\022\r\n\005flags\030\003 \001(\003\"%"
+    "\n\023WhyEntitiesResponse\022\016\n\006result\030\001 \001(\t\"S\n"
+    "\030WhyRecordInEntityRequest\022\026\n\016dataSourceC"
     "ode\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001"
-    "(\003\"#\n\021GetRecordResponse\022\016\n\006result\030\001 \001(\t\""
-    "\026\n\024GetRedoRecordRequest\"\'\n\025GetRedoRecord"
-    "Response\022\016\n\006result\030\001 \001(\t\"\021\n\017GetStatsRequ"
-    "est\"\"\n\020GetStatsResponse\022\016\n\006result\030\001 \001(\t\""
-    "F\n!GetVirtualEntityByRecordIdRequest\022\022\n\n"
-    "recordList\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"4\n\"GetVi"
-    "rtualEntityByRecordIdResponse\022\016\n\006result\030"
-    "\001 \001(\t\"=\n\032HowEntityByEntityIdRequest\022\020\n\010e"
-    "ntityId\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"-\n\033HowEntit"
-    "yByEntityIdResponse\022\016\n\006result\030\001 \001(\t\"\024\n\022P"
-    "rimeEngineRequest\"\025\n\023PrimeEngineResponse"
-    "\"=\n\030ProcessRedoRecordRequest\022\022\n\nredoReco"
-    "rd\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"+\n\031ProcessRedoRe"
-    "cordResponse\022\016\n\006result\030\001 \001(\t\":\n\027Reevalua"
-    "teEntityRequest\022\020\n\010entityId\030\001 \001(\003\022\r\n\005fla"
-    "gs\030\002 \001(\003\"*\n\030ReevaluateEntityResponse\022\016\n\006"
-    "result\030\001 \001(\t\"R\n\027ReevaluateRecordRequest\022"
-    "\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordId\030\002 \001("
-    "\t\022\r\n\005flags\030\003 \001(\003\"*\n\030ReevaluateRecordResp"
-    "onse\022\016\n\006result\030\001 \001(\t\"\'\n\023ReinitializeRequ"
-    "est\022\020\n\010configId\030\001 \001(\003\"\026\n\024ReinitializeRes"
-    "ponse\"U\n\031SearchByAttributesRequest\022\022\n\nat"
-    "tributes\030\001 \001(\t\022\025\n\rsearchProfile\030\002 \001(\t\022\r\n"
-    "\005flags\030\003 \001(\003\",\n\032SearchByAttributesRespon"
-    "se\022\016\n\006result\030\001 \001(\t\"J\n\"StreamExportCsvEnt"
-    "ityReportRequest\022\025\n\rcsvColumnList\030\001 \001(\t\022"
-    "\r\n\005flags\030\002 \001(\003\"5\n#StreamExportCsvEntityR"
-    "eportResponse\022\016\n\006result\030\001 \001(\t\"4\n#StreamE"
-    "xportJsonEntityReportRequest\022\r\n\005flags\030\001 "
-    "\001(\003\"6\n$StreamExportJsonEntityReportRespo"
-    "nse\022\016\n\006result\030\001 \001(\t\"I\n\022WhyEntitiesReques"
-    "t\022\021\n\tentityId1\030\001 \001(\003\022\021\n\tentityId2\030\002 \001(\003\022"
-    "\r\n\005flags\030\003 \001(\003\"%\n\023WhyEntitiesResponse\022\016\n"
-    "\006result\030\001 \001(\t\"S\n\030WhyRecordInEntityReques"
-    "t\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordId\030\002 "
-    "\001(\t\022\r\n\005flags\030\003 \001(\003\"+\n\031WhyRecordInEntityR"
-    "esponse\022\016\n\006result\030\001 \001(\t\"z\n\021WhyRecordsReq"
-    "uest\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trecordI"
-    "d1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\trec"
-    "ordId2\030\004 \001(\t\022\r\n\005flags\030\005 \001(\003\"$\n\022WhyRecord"
-    "sResponse\022\016\n\006result\030\001 \001(\t2\270\030\n\010SzEngine\022F"
-    "\n\tAddRecord\022\032.szengine.AddRecordRequest\032"
-    "\033.szengine.AddRecordResponse\"\000\022L\n\013CloseE"
-    "xport\022\034.szengine.CloseExportRequest\032\035.sz"
-    "engine.CloseExportResponse\"\000\022[\n\020CountRed"
-    "oRecords\022!.szengine.CountRedoRecordsRequ"
-    "est\032\".szengine.CountRedoRecordsResponse\""
-    "\000\022O\n\014DeleteRecord\022\035.szengine.DeleteRecor"
-    "dRequest\032\036.szengine.DeleteRecordResponse"
-    "\"\000\022j\n\025ExportCsvEntityReport\022&.szengine.E"
-    "xportCsvEntityReportRequest\032\'.szengine.E"
-    "xportCsvEntityReportResponse\"\000\022m\n\026Export"
-    "JsonEntityReport\022\'.szengine.ExportJsonEn"
-    "tityReportRequest\032(.szengine.ExportJsonE"
-    "ntityReportResponse\"\000\022F\n\tFetchNext\022\032.sze"
-    "ngine.FetchNextRequest\032\033.szengine.FetchN"
-    "extResponse\"\000\022\216\001\n!FindInterestingEntitie"
-    "sByEntityId\0222.szengine.FindInterestingEn"
-    "titiesByEntityIdRequest\0323.szengine.FindI"
-    "nterestingEntitiesByEntityIdResponse\"\000\022\216"
-    "\001\n!FindInterestingEntitiesByRecordId\0222.s"
-    "zengine.FindInterestingEntitiesByRecordI"
-    "dRequest\0323.szengine.FindInterestingEntit"
-    "iesByRecordIdResponse\"\000\022j\n\025FindNetworkBy"
-    "EntityId\022&.szengine.FindNetworkByEntityI"
-    "dRequest\032\'.szengine.FindNetworkByEntityI"
-    "dResponse\"\000\022j\n\025FindNetworkByRecordId\022&.s"
-    "zengine.FindNetworkByRecordIdRequest\032\'.s"
-    "zengine.FindNetworkByRecordIdResponse\"\000\022"
-    "a\n\022FindPathByEntityId\022#.szengine.FindPat"
-    "hByEntityIdRequest\032$.szengine.FindPathBy"
-    "EntityIdResponse\"\000\022a\n\022FindPathByRecordId"
-    "\022#.szengine.FindPathByRecordIdRequest\032$."
-    "szengine.FindPathByRecordIdResponse\"\000\022^\n"
-    "\021GetActiveConfigId\022\".szengine.GetActiveC"
-    "onfigIdRequest\032#.szengine.GetActiveConfi"
-    "gIdResponse\"\000\022d\n\023GetEntityByEntityId\022$.s"
-    "zengine.GetEntityByEntityIdRequest\032%.sze"
-    "ngine.GetEntityByEntityIdResponse\"\000\022d\n\023G"
-    "etEntityByRecordId\022$.szengine.GetEntityB"
-    "yRecordIdRequest\032%.szengine.GetEntityByR"
-    "ecordIdResponse\"\000\022F\n\tGetRecord\022\032.szengin"
-    "e.GetRecordRequest\032\033.szengine.GetRecordR"
-    "esponse\"\000\022R\n\rGetRedoRecord\022\036.szengine.Ge"
-    "tRedoRecordRequest\032\037.szengine.GetRedoRec"
-    "ordResponse\"\000\022C\n\010GetStats\022\031.szengine.Get"
-    "StatsRequest\032\032.szengine.GetStatsResponse"
-    "\"\000\022y\n\032GetVirtualEntityByRecordId\022+.szeng"
-    "ine.GetVirtualEntityByRecordIdRequest\032,."
-    "szengine.GetVirtualEntityByRecordIdRespo"
-    "nse\"\000\022d\n\023HowEntityByEntityId\022$.szengine."
-    "HowEntityByEntityIdRequest\032%.szengine.Ho"
-    "wEntityByEntityIdResponse\"\000\022L\n\013PrimeEngi"
-    "ne\022\034.szengine.PrimeEngineRequest\032\035.szeng"
-    "ine.PrimeEngineResponse\"\000\022^\n\021ProcessRedo"
-    "Record\022\".szengine.ProcessRedoRecordReque"
-    "st\032#.szengine.ProcessRedoRecordResponse\""
-    "\000\022[\n\020ReevaluateEntity\022!.szengine.Reevalu"
-    "ateEntityRequest\032\".szengine.ReevaluateEn"
-    "tityResponse\"\000\022[\n\020ReevaluateRecord\022!.sze"
-    "ngine.ReevaluateRecordRequest\032\".szengine"
-    ".ReevaluateRecordResponse\"\000\022O\n\014Reinitial"
-    "ize\022\035.szengine.ReinitializeRequest\032\036.sze"
-    "ngine.ReinitializeResponse\"\000\022a\n\022SearchBy"
-    "Attributes\022#.szengine.SearchByAttributes"
-    "Request\032$.szengine.SearchByAttributesRes"
-    "ponse\"\000\022~\n\033StreamExportCsvEntityReport\022,"
-    ".szengine.StreamExportCsvEntityReportReq"
-    "uest\032-.szengine.StreamExportCsvEntityRep"
-    "ortResponse\"\0000\001\022\201\001\n\034StreamExportJsonEnti"
-    "tyReport\022-.szengine.StreamExportJsonEnti"
-    "tyReportRequest\032..szengine.StreamExportJ"
-    "sonEntityReportResponse\"\0000\001\022L\n\013WhyEntiti"
-    "es\022\034.szengine.WhyEntitiesRequest\032\035.szeng"
-    "ine.WhyEntitiesResponse\"\000\022^\n\021WhyRecordIn"
-    "Entity\022\".szengine.WhyRecordInEntityReque"
-    "st\032#.szengine.WhyRecordInEntityResponse\""
-    "\000\022I\n\nWhyRecords\022\033.szengine.WhyRecordsReq"
-    "uest\032\034.szengine.WhyRecordsResponse\"\000Bg\n#"
-    "com.senzing.sz.engine.grpc.SzEngineB\rSzE"
-    "ngineProtoZ1github.com/senzing-garage/sz"
-    "-sdk-go-grpc/szengineb\006proto3"
+    "(\003\"+\n\031WhyRecordInEntityResponse\022\016\n\006resul"
+    "t\030\001 \001(\t\"z\n\021WhyRecordsRequest\022\027\n\017dataSour"
+    "ceCode1\030\001 \001(\t\022\021\n\trecordId1\030\002 \001(\t\022\027\n\017data"
+    "SourceCode2\030\003 \001(\t\022\021\n\trecordId2\030\004 \001(\t\022\r\n\005"
+    "flags\030\005 \001(\003\"$\n\022WhyRecordsResponse\022\016\n\006res"
+    "ult\030\001 \001(\t2\270\030\n\010SzEngine\022F\n\tAddRecord\022\032.sz"
+    "engine.AddRecordRequest\032\033.szengine.AddRe"
+    "cordResponse\"\000\022L\n\013CloseExport\022\034.szengine"
+    ".CloseExportRequest\032\035.szengine.CloseExpo"
+    "rtResponse\"\000\022[\n\020CountRedoRecords\022!.szeng"
+    "ine.CountRedoRecordsRequest\032\".szengine.C"
+    "ountRedoRecordsResponse\"\000\022O\n\014DeleteRecor"
+    "d\022\035.szengine.DeleteRecordRequest\032\036.szeng"
+    "ine.DeleteRecordResponse\"\000\022j\n\025ExportCsvE"
+    "ntityReport\022&.szengine.ExportCsvEntityRe"
+    "portRequest\032\'.szengine.ExportCsvEntityRe"
+    "portResponse\"\000\022m\n\026ExportJsonEntityReport"
+    "\022\'.szengine.ExportJsonEntityReportReques"
+    "t\032(.szengine.ExportJsonEntityReportRespo"
+    "nse\"\000\022F\n\tFetchNext\022\032.szengine.FetchNextR"
+    "equest\032\033.szengine.FetchNextResponse\"\000\022\216\001"
+    "\n!FindInterestingEntitiesByEntityId\0222.sz"
+    "engine.FindInterestingEntitiesByEntityId"
+    "Request\0323.szengine.FindInterestingEntiti"
+    "esByEntityIdResponse\"\000\022\216\001\n!FindInteresti"
+    "ngEntitiesByRecordId\0222.szengine.FindInte"
+    "restingEntitiesByRecordIdRequest\0323.szeng"
+    "ine.FindInterestingEntitiesByRecordIdRes"
+    "ponse\"\000\022j\n\025FindNetworkByEntityId\022&.szeng"
+    "ine.FindNetworkByEntityIdRequest\032\'.szeng"
+    "ine.FindNetworkByEntityIdResponse\"\000\022j\n\025F"
+    "indNetworkByRecordId\022&.szengine.FindNetw"
+    "orkByRecordIdRequest\032\'.szengine.FindNetw"
+    "orkByRecordIdResponse\"\000\022a\n\022FindPathByEnt"
+    "ityId\022#.szengine.FindPathByEntityIdReque"
+    "st\032$.szengine.FindPathByEntityIdResponse"
+    "\"\000\022a\n\022FindPathByRecordId\022#.szengine.Find"
+    "PathByRecordIdRequest\032$.szengine.FindPat"
+    "hByRecordIdResponse\"\000\022^\n\021GetActiveConfig"
+    "Id\022\".szengine.GetActiveConfigIdRequest\032#"
+    ".szengine.GetActiveConfigIdResponse\"\000\022d\n"
+    "\023GetEntityByEntityId\022$.szengine.GetEntit"
+    "yByEntityIdRequest\032%.szengine.GetEntityB"
+    "yEntityIdResponse\"\000\022d\n\023GetEntityByRecord"
+    "Id\022$.szengine.GetEntityByRecordIdRequest"
+    "\032%.szengine.GetEntityByRecordIdResponse\""
+    "\000\022F\n\tGetRecord\022\032.szengine.GetRecordReque"
+    "st\032\033.szengine.GetRecordResponse\"\000\022R\n\rGet"
+    "RedoRecord\022\036.szengine.GetRedoRecordReque"
+    "st\032\037.szengine.GetRedoRecordResponse\"\000\022C\n"
+    "\010GetStats\022\031.szengine.GetStatsRequest\032\032.s"
+    "zengine.GetStatsResponse\"\000\022y\n\032GetVirtual"
+    "EntityByRecordId\022+.szengine.GetVirtualEn"
+    "tityByRecordIdRequest\032,.szengine.GetVirt"
+    "ualEntityByRecordIdResponse\"\000\022d\n\023HowEnti"
+    "tyByEntityId\022$.szengine.HowEntityByEntit"
+    "yIdRequest\032%.szengine.HowEntityByEntityI"
+    "dResponse\"\000\022L\n\013PrimeEngine\022\034.szengine.Pr"
+    "imeEngineRequest\032\035.szengine.PrimeEngineR"
+    "esponse\"\000\022^\n\021ProcessRedoRecord\022\".szengin"
+    "e.ProcessRedoRecordRequest\032#.szengine.Pr"
+    "ocessRedoRecordResponse\"\000\022[\n\020ReevaluateE"
+    "ntity\022!.szengine.ReevaluateEntityRequest"
+    "\032\".szengine.ReevaluateEntityResponse\"\000\022["
+    "\n\020ReevaluateRecord\022!.szengine.Reevaluate"
+    "RecordRequest\032\".szengine.ReevaluateRecor"
+    "dResponse\"\000\022O\n\014Reinitialize\022\035.szengine.R"
+    "einitializeRequest\032\036.szengine.Reinitiali"
+    "zeResponse\"\000\022a\n\022SearchByAttributes\022#.sze"
+    "ngine.SearchByAttributesRequest\032$.szengi"
+    "ne.SearchByAttributesResponse\"\000\022~\n\033Strea"
+    "mExportCsvEntityReport\022,.szengine.Stream"
+    "ExportCsvEntityReportRequest\032-.szengine."
+    "StreamExportCsvEntityReportResponse\"\0000\001\022"
+    "\201\001\n\034StreamExportJsonEntityReport\022-.szeng"
+    "ine.StreamExportJsonEntityReportRequest\032"
+    "..szengine.StreamExportJsonEntityReportR"
+    "esponse\"\0000\001\022L\n\013WhyEntities\022\034.szengine.Wh"
+    "yEntitiesRequest\032\035.szengine.WhyEntitiesR"
+    "esponse\"\000\022^\n\021WhyRecordInEntity\022\".szengin"
+    "e.WhyRecordInEntityRequest\032#.szengine.Wh"
+    "yRecordInEntityResponse\"\000\022I\n\nWhyRecords\022"
+    "\033.szengine.WhyRecordsRequest\032\034.szengine."
+    "WhyRecordsResponse\"\000Bg\n#com.senzing.sz.e"
+    "ngine.grpc.SzEngineB\rSzEngineProtoZ1gith"
+    "ub.com/senzing-garage/sz-sdk-go-grpc/sze"
+    "ngineb\006proto3"
 };
 static ::absl::once_flag descriptor_table_szengine_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_szengine_2eproto = {
     false,
     false,
-    7109,
+    7133,
     descriptor_table_protodef_szengine_2eproto,
     "szengine.proto",
     &descriptor_table_szengine_2eproto_once,
@@ -5572,7 +5573,7 @@ FindNetworkByEntityIdRequest::FindNetworkByEntityIdRequest(::google::protobuf::A
 inline PROTOBUF_NDEBUG_INLINE FindNetworkByEntityIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : entitylist_(arena, from.entitylist_),
+      : entityids_(arena, from.entityids_),
         _cached_size_{0} {}
 
 FindNetworkByEntityIdRequest::FindNetworkByEntityIdRequest(
@@ -5597,7 +5598,7 @@ FindNetworkByEntityIdRequest::FindNetworkByEntityIdRequest(
 inline PROTOBUF_NDEBUG_INLINE FindNetworkByEntityIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : entitylist_(arena),
+      : entityids_(arena),
         _cached_size_{0} {}
 
 inline void FindNetworkByEntityIdRequest::SharedCtor(::_pb::Arena* arena) {
@@ -5616,7 +5617,7 @@ FindNetworkByEntityIdRequest::~FindNetworkByEntityIdRequest() {
 }
 inline void FindNetworkByEntityIdRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.entitylist_.Destroy();
+  _impl_.entityids_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -5627,7 +5628,7 @@ PROTOBUF_NOINLINE void FindNetworkByEntityIdRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.entitylist_.ClearToEmpty();
+  _impl_.entityids_.ClearToEmpty();
   ::memset(&_impl_.maxdegrees_, 0, static_cast<::size_t>(
       reinterpret_cast<char*>(&_impl_.flags_) -
       reinterpret_cast<char*>(&_impl_.maxdegrees_)) + sizeof(_impl_.flags_));
@@ -5642,7 +5643,7 @@ const char* FindNetworkByEntityIdRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByEntityIdRequest::_table_ = {
+const ::_pbi::TcParseTable<3, 5, 0, 55, 2> FindNetworkByEntityIdRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -5657,18 +5658,18 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByEntityIdRequest::_table_
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // string entityList = 1;
+    // string entityIds = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.entitylist_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.entityids_)}},
     // int64 maxDegrees = 2;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByEntityIdRequest, _impl_.maxdegrees_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.maxdegrees_)}},
     // int64 buildOutDegree = 3;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByEntityIdRequest, _impl_.buildoutdegree_), 63>(),
      {24, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.buildoutdegree_)}},
-    // int64 maxEntities = 4;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByEntityIdRequest, _impl_.maxentities_), 63>(),
-     {32, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.maxentities_)}},
+    // int64 buildOutMaxEntities = 4;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByEntityIdRequest, _impl_.buildoutmaxentities_), 63>(),
+     {32, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.buildoutmaxentities_)}},
     // int64 flags = 5;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByEntityIdRequest, _impl_.flags_), 63>(),
      {40, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.flags_)}},
@@ -5677,8 +5678,8 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByEntityIdRequest::_table_
   }}, {{
     65535, 65535
   }}, {{
-    // string entityList = 1;
-    {PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.entitylist_), 0, 0,
+    // string entityIds = 1;
+    {PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.entityids_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 maxDegrees = 2;
     {PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.maxdegrees_), 0, 0,
@@ -5686,8 +5687,8 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByEntityIdRequest::_table_
     // int64 buildOutDegree = 3;
     {PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.buildoutdegree_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // int64 maxEntities = 4;
-    {PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.maxentities_), 0, 0,
+    // int64 buildOutMaxEntities = 4;
+    {PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.buildoutmaxentities_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
     // int64 flags = 5;
     {PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.flags_), 0, 0,
@@ -5695,9 +5696,9 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByEntityIdRequest::_table_
   }},
   // no aux_entries
   {{
-    "\45\12\0\0\0\0\0\0"
+    "\45\11\0\0\0\0\0\0"
     "szengine.FindNetworkByEntityIdRequest"
-    "entityList"
+    "entityIds"
   }},
 };
 
@@ -5708,11 +5709,11 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByEntityIdRequest::_table_
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string entityList = 1;
-  if (!this->_internal_entitylist().empty()) {
-    const std::string& _s = this->_internal_entitylist();
+  // string entityIds = 1;
+  if (!this->_internal_entityids().empty()) {
+    const std::string& _s = this->_internal_entityids();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindNetworkByEntityIdRequest.entityList");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindNetworkByEntityIdRequest.entityIds");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
@@ -5730,11 +5731,11 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByEntityIdRequest::_table_
             stream, this->_internal_buildoutdegree(), target);
   }
 
-  // int64 maxEntities = 4;
-  if (this->_internal_maxentities() != 0) {
+  // int64 buildOutMaxEntities = 4;
+  if (this->_internal_buildoutmaxentities() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<4>(
-            stream, this->_internal_maxentities(), target);
+            stream, this->_internal_buildoutmaxentities(), target);
   }
 
   // int64 flags = 5;
@@ -5761,10 +5762,10 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByEntityIdRequest::_table_
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string entityList = 1;
-  if (!this->_internal_entitylist().empty()) {
+  // string entityIds = 1;
+  if (!this->_internal_entityids().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_entitylist());
+                                    this->_internal_entityids());
   }
 
   // int64 maxDegrees = 2;
@@ -5779,10 +5780,10 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByEntityIdRequest::_table_
         this->_internal_buildoutdegree());
   }
 
-  // int64 maxEntities = 4;
-  if (this->_internal_maxentities() != 0) {
+  // int64 buildOutMaxEntities = 4;
+  if (this->_internal_buildoutmaxentities() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_maxentities());
+        this->_internal_buildoutmaxentities());
   }
 
   // int64 flags = 5;
@@ -5810,8 +5811,8 @@ void FindNetworkByEntityIdRequest::MergeImpl(::google::protobuf::Message& to_msg
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_entitylist().empty()) {
-    _this->_internal_set_entitylist(from._internal_entitylist());
+  if (!from._internal_entityids().empty()) {
+    _this->_internal_set_entityids(from._internal_entityids());
   }
   if (from._internal_maxdegrees() != 0) {
     _this->_internal_set_maxdegrees(from._internal_maxdegrees());
@@ -5819,8 +5820,8 @@ void FindNetworkByEntityIdRequest::MergeImpl(::google::protobuf::Message& to_msg
   if (from._internal_buildoutdegree() != 0) {
     _this->_internal_set_buildoutdegree(from._internal_buildoutdegree());
   }
-  if (from._internal_maxentities() != 0) {
-    _this->_internal_set_maxentities(from._internal_maxentities());
+  if (from._internal_buildoutmaxentities() != 0) {
+    _this->_internal_set_buildoutmaxentities(from._internal_buildoutmaxentities());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -5847,7 +5848,7 @@ void FindNetworkByEntityIdRequest::InternalSwap(FindNetworkByEntityIdRequest* PR
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.entitylist_, &other->_impl_.entitylist_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.entityids_, &other->_impl_.entityids_, arena);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.flags_)
       + sizeof(FindNetworkByEntityIdRequest::_impl_.flags_)
@@ -6065,7 +6066,7 @@ FindNetworkByRecordIdRequest::FindNetworkByRecordIdRequest(::google::protobuf::A
 inline PROTOBUF_NDEBUG_INLINE FindNetworkByRecordIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : recordlist_(arena, from.recordlist_),
+      : recordkeys_(arena, from.recordkeys_),
         _cached_size_{0} {}
 
 FindNetworkByRecordIdRequest::FindNetworkByRecordIdRequest(
@@ -6090,7 +6091,7 @@ FindNetworkByRecordIdRequest::FindNetworkByRecordIdRequest(
 inline PROTOBUF_NDEBUG_INLINE FindNetworkByRecordIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : recordlist_(arena),
+      : recordkeys_(arena),
         _cached_size_{0} {}
 
 inline void FindNetworkByRecordIdRequest::SharedCtor(::_pb::Arena* arena) {
@@ -6109,7 +6110,7 @@ FindNetworkByRecordIdRequest::~FindNetworkByRecordIdRequest() {
 }
 inline void FindNetworkByRecordIdRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.recordlist_.Destroy();
+  _impl_.recordkeys_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -6120,7 +6121,7 @@ PROTOBUF_NOINLINE void FindNetworkByRecordIdRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.recordlist_.ClearToEmpty();
+  _impl_.recordkeys_.ClearToEmpty();
   ::memset(&_impl_.maxdegrees_, 0, static_cast<::size_t>(
       reinterpret_cast<char*>(&_impl_.flags_) -
       reinterpret_cast<char*>(&_impl_.maxdegrees_)) + sizeof(_impl_.flags_));
@@ -6150,18 +6151,18 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByRecordIdRequest::_table_
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // string recordList = 1;
+    // string recordKeys = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.recordlist_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.recordkeys_)}},
     // int64 maxDegrees = 2;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByRecordIdRequest, _impl_.maxdegrees_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.maxdegrees_)}},
     // int64 buildOutDegree = 3;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByRecordIdRequest, _impl_.buildoutdegree_), 63>(),
      {24, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.buildoutdegree_)}},
-    // int64 maxEntities = 4;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByRecordIdRequest, _impl_.maxentities_), 63>(),
-     {32, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.maxentities_)}},
+    // int64 buildOutMaxEntities = 4;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByRecordIdRequest, _impl_.buildoutmaxentities_), 63>(),
+     {32, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.buildoutmaxentities_)}},
     // int64 flags = 5;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByRecordIdRequest, _impl_.flags_), 63>(),
      {40, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.flags_)}},
@@ -6170,8 +6171,8 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByRecordIdRequest::_table_
   }}, {{
     65535, 65535
   }}, {{
-    // string recordList = 1;
-    {PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.recordlist_), 0, 0,
+    // string recordKeys = 1;
+    {PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.recordkeys_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 maxDegrees = 2;
     {PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.maxdegrees_), 0, 0,
@@ -6179,8 +6180,8 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByRecordIdRequest::_table_
     // int64 buildOutDegree = 3;
     {PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.buildoutdegree_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // int64 maxEntities = 4;
-    {PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.maxentities_), 0, 0,
+    // int64 buildOutMaxEntities = 4;
+    {PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.buildoutmaxentities_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
     // int64 flags = 5;
     {PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.flags_), 0, 0,
@@ -6190,7 +6191,7 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByRecordIdRequest::_table_
   {{
     "\45\12\0\0\0\0\0\0"
     "szengine.FindNetworkByRecordIdRequest"
-    "recordList"
+    "recordKeys"
   }},
 };
 
@@ -6201,11 +6202,11 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByRecordIdRequest::_table_
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string recordList = 1;
-  if (!this->_internal_recordlist().empty()) {
-    const std::string& _s = this->_internal_recordlist();
+  // string recordKeys = 1;
+  if (!this->_internal_recordkeys().empty()) {
+    const std::string& _s = this->_internal_recordkeys();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindNetworkByRecordIdRequest.recordList");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindNetworkByRecordIdRequest.recordKeys");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
@@ -6223,11 +6224,11 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByRecordIdRequest::_table_
             stream, this->_internal_buildoutdegree(), target);
   }
 
-  // int64 maxEntities = 4;
-  if (this->_internal_maxentities() != 0) {
+  // int64 buildOutMaxEntities = 4;
+  if (this->_internal_buildoutmaxentities() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<4>(
-            stream, this->_internal_maxentities(), target);
+            stream, this->_internal_buildoutmaxentities(), target);
   }
 
   // int64 flags = 5;
@@ -6254,10 +6255,10 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByRecordIdRequest::_table_
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string recordList = 1;
-  if (!this->_internal_recordlist().empty()) {
+  // string recordKeys = 1;
+  if (!this->_internal_recordkeys().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_recordlist());
+                                    this->_internal_recordkeys());
   }
 
   // int64 maxDegrees = 2;
@@ -6272,10 +6273,10 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByRecordIdRequest::_table_
         this->_internal_buildoutdegree());
   }
 
-  // int64 maxEntities = 4;
-  if (this->_internal_maxentities() != 0) {
+  // int64 buildOutMaxEntities = 4;
+  if (this->_internal_buildoutmaxentities() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_maxentities());
+        this->_internal_buildoutmaxentities());
   }
 
   // int64 flags = 5;
@@ -6303,8 +6304,8 @@ void FindNetworkByRecordIdRequest::MergeImpl(::google::protobuf::Message& to_msg
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_recordlist().empty()) {
-    _this->_internal_set_recordlist(from._internal_recordlist());
+  if (!from._internal_recordkeys().empty()) {
+    _this->_internal_set_recordkeys(from._internal_recordkeys());
   }
   if (from._internal_maxdegrees() != 0) {
     _this->_internal_set_maxdegrees(from._internal_maxdegrees());
@@ -6312,8 +6313,8 @@ void FindNetworkByRecordIdRequest::MergeImpl(::google::protobuf::Message& to_msg
   if (from._internal_buildoutdegree() != 0) {
     _this->_internal_set_buildoutdegree(from._internal_buildoutdegree());
   }
-  if (from._internal_maxentities() != 0) {
-    _this->_internal_set_maxentities(from._internal_maxentities());
+  if (from._internal_buildoutmaxentities() != 0) {
+    _this->_internal_set_buildoutmaxentities(from._internal_buildoutmaxentities());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -6340,7 +6341,7 @@ void FindNetworkByRecordIdRequest::InternalSwap(FindNetworkByRecordIdRequest* PR
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recordlist_, &other->_impl_.recordlist_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recordkeys_, &other->_impl_.recordkeys_, arena);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.flags_)
       + sizeof(FindNetworkByRecordIdRequest::_impl_.flags_)
@@ -6558,7 +6559,7 @@ FindPathByEntityIdRequest::FindPathByEntityIdRequest(::google::protobuf::Arena* 
 inline PROTOBUF_NDEBUG_INLINE FindPathByEntityIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : exclusions_(arena, from.exclusions_),
+      : avoidentityids_(arena, from.avoidentityids_),
         requireddatasources_(arena, from.requireddatasources_),
         _cached_size_{0} {}
 
@@ -6584,7 +6585,7 @@ FindPathByEntityIdRequest::FindPathByEntityIdRequest(
 inline PROTOBUF_NDEBUG_INLINE FindPathByEntityIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : exclusions_(arena),
+      : avoidentityids_(arena),
         requireddatasources_(arena),
         _cached_size_{0} {}
 
@@ -6604,7 +6605,7 @@ FindPathByEntityIdRequest::~FindPathByEntityIdRequest() {
 }
 inline void FindPathByEntityIdRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.exclusions_.Destroy();
+  _impl_.avoidentityids_.Destroy();
   _impl_.requireddatasources_.Destroy();
   _impl_.~Impl_();
 }
@@ -6616,7 +6617,7 @@ PROTOBUF_NOINLINE void FindPathByEntityIdRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.exclusions_.ClearToEmpty();
+  _impl_.avoidentityids_.ClearToEmpty();
   _impl_.requireddatasources_.ClearToEmpty();
   ::memset(&_impl_.startentityid_, 0, static_cast<::size_t>(
       reinterpret_cast<char*>(&_impl_.flags_) -
@@ -6632,7 +6633,7 @@ const char* FindPathByEntityIdRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 6, 0, 72, 2> FindPathByEntityIdRequest::_table_ = {
+const ::_pbi::TcParseTable<3, 6, 0, 76, 2> FindPathByEntityIdRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -6656,9 +6657,9 @@ const ::_pbi::TcParseTable<3, 6, 0, 72, 2> FindPathByEntityIdRequest::_table_ = 
     // int64 maxDegrees = 3;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindPathByEntityIdRequest, _impl_.maxdegrees_), 63>(),
      {24, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.maxdegrees_)}},
-    // string exclusions = 4;
+    // string avoidEntityIds = 4;
     {::_pbi::TcParser::FastUS1,
-     {34, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.exclusions_)}},
+     {34, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.avoidentityids_)}},
     // string requiredDataSources = 5;
     {::_pbi::TcParser::FastUS1,
      {42, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.requireddatasources_)}},
@@ -6678,8 +6679,8 @@ const ::_pbi::TcParseTable<3, 6, 0, 72, 2> FindPathByEntityIdRequest::_table_ = 
     // int64 maxDegrees = 3;
     {PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.maxdegrees_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // string exclusions = 4;
-    {PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.exclusions_), 0, 0,
+    // string avoidEntityIds = 4;
+    {PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.avoidentityids_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string requiredDataSources = 5;
     {PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.requireddatasources_), 0, 0,
@@ -6690,9 +6691,9 @@ const ::_pbi::TcParseTable<3, 6, 0, 72, 2> FindPathByEntityIdRequest::_table_ = 
   }},
   // no aux_entries
   {{
-    "\42\0\0\0\12\23\0\0"
+    "\42\0\0\0\16\23\0\0"
     "szengine.FindPathByEntityIdRequest"
-    "exclusions"
+    "avoidEntityIds"
     "requiredDataSources"
   }},
 };
@@ -6725,11 +6726,11 @@ const ::_pbi::TcParseTable<3, 6, 0, 72, 2> FindPathByEntityIdRequest::_table_ = 
             stream, this->_internal_maxdegrees(), target);
   }
 
-  // string exclusions = 4;
-  if (!this->_internal_exclusions().empty()) {
-    const std::string& _s = this->_internal_exclusions();
+  // string avoidEntityIds = 4;
+  if (!this->_internal_avoidentityids().empty()) {
+    const std::string& _s = this->_internal_avoidentityids();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByEntityIdRequest.exclusions");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByEntityIdRequest.avoidEntityIds");
     target = stream->WriteStringMaybeAliased(4, _s, target);
   }
 
@@ -6765,10 +6766,10 @@ const ::_pbi::TcParseTable<3, 6, 0, 72, 2> FindPathByEntityIdRequest::_table_ = 
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string exclusions = 4;
-  if (!this->_internal_exclusions().empty()) {
+  // string avoidEntityIds = 4;
+  if (!this->_internal_avoidentityids().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_exclusions());
+                                    this->_internal_avoidentityids());
   }
 
   // string requiredDataSources = 5;
@@ -6820,8 +6821,8 @@ void FindPathByEntityIdRequest::MergeImpl(::google::protobuf::Message& to_msg, c
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_exclusions().empty()) {
-    _this->_internal_set_exclusions(from._internal_exclusions());
+  if (!from._internal_avoidentityids().empty()) {
+    _this->_internal_set_avoidentityids(from._internal_avoidentityids());
   }
   if (!from._internal_requireddatasources().empty()) {
     _this->_internal_set_requireddatasources(from._internal_requireddatasources());
@@ -6860,7 +6861,7 @@ void FindPathByEntityIdRequest::InternalSwap(FindPathByEntityIdRequest* PROTOBUF
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.exclusions_, &other->_impl_.exclusions_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.avoidentityids_, &other->_impl_.avoidentityids_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.requireddatasources_, &other->_impl_.requireddatasources_, arena);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.flags_)
@@ -7083,7 +7084,7 @@ inline PROTOBUF_NDEBUG_INLINE FindPathByRecordIdRequest::Impl_::Impl_(
         startrecordid_(arena, from.startrecordid_),
         enddatasourcecode_(arena, from.enddatasourcecode_),
         endrecordid_(arena, from.endrecordid_),
-        exclusions_(arena, from.exclusions_),
+        avoidrecordkeys_(arena, from.avoidrecordkeys_),
         requireddatasources_(arena, from.requireddatasources_),
         _cached_size_{0} {}
 
@@ -7113,7 +7114,7 @@ inline PROTOBUF_NDEBUG_INLINE FindPathByRecordIdRequest::Impl_::Impl_(
         startrecordid_(arena),
         enddatasourcecode_(arena),
         endrecordid_(arena),
-        exclusions_(arena),
+        avoidrecordkeys_(arena),
         requireddatasources_(arena),
         _cached_size_{0} {}
 
@@ -7137,7 +7138,7 @@ inline void FindPathByRecordIdRequest::SharedDtor() {
   _impl_.startrecordid_.Destroy();
   _impl_.enddatasourcecode_.Destroy();
   _impl_.endrecordid_.Destroy();
-  _impl_.exclusions_.Destroy();
+  _impl_.avoidrecordkeys_.Destroy();
   _impl_.requireddatasources_.Destroy();
   _impl_.~Impl_();
 }
@@ -7153,7 +7154,7 @@ PROTOBUF_NOINLINE void FindPathByRecordIdRequest::Clear() {
   _impl_.startrecordid_.ClearToEmpty();
   _impl_.enddatasourcecode_.ClearToEmpty();
   _impl_.endrecordid_.ClearToEmpty();
-  _impl_.exclusions_.ClearToEmpty();
+  _impl_.avoidrecordkeys_.ClearToEmpty();
   _impl_.requireddatasources_.ClearToEmpty();
   ::memset(&_impl_.maxdegrees_, 0, static_cast<::size_t>(
       reinterpret_cast<char*>(&_impl_.flags_) -
@@ -7169,7 +7170,7 @@ const char* FindPathByRecordIdRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 8, 0, 140, 2> FindPathByRecordIdRequest::_table_ = {
+const ::_pbi::TcParseTable<3, 8, 0, 145, 2> FindPathByRecordIdRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -7201,9 +7202,9 @@ const ::_pbi::TcParseTable<3, 8, 0, 140, 2> FindPathByRecordIdRequest::_table_ =
     // int64 maxDegrees = 5;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindPathByRecordIdRequest, _impl_.maxdegrees_), 63>(),
      {40, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.maxdegrees_)}},
-    // string exclusions = 6;
+    // string avoidRecordKeys = 6;
     {::_pbi::TcParser::FastUS1,
-     {50, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.exclusions_)}},
+     {50, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.avoidrecordkeys_)}},
     // string requiredDataSources = 7;
     {::_pbi::TcParser::FastUS1,
      {58, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.requireddatasources_)}},
@@ -7225,8 +7226,8 @@ const ::_pbi::TcParseTable<3, 8, 0, 140, 2> FindPathByRecordIdRequest::_table_ =
     // int64 maxDegrees = 5;
     {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.maxdegrees_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // string exclusions = 6;
-    {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.exclusions_), 0, 0,
+    // string avoidRecordKeys = 6;
+    {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.avoidrecordkeys_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string requiredDataSources = 7;
     {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.requireddatasources_), 0, 0,
@@ -7237,13 +7238,13 @@ const ::_pbi::TcParseTable<3, 8, 0, 140, 2> FindPathByRecordIdRequest::_table_ =
   }},
   // no aux_entries
   {{
-    "\42\23\15\21\13\0\12\23\0\0\0\0\0\0\0\0"
+    "\42\23\15\21\13\0\17\23\0\0\0\0\0\0\0\0"
     "szengine.FindPathByRecordIdRequest"
     "startDataSourceCode"
     "startRecordId"
     "endDataSourceCode"
     "endRecordId"
-    "exclusions"
+    "avoidRecordKeys"
     "requiredDataSources"
   }},
 };
@@ -7294,11 +7295,11 @@ const ::_pbi::TcParseTable<3, 8, 0, 140, 2> FindPathByRecordIdRequest::_table_ =
             stream, this->_internal_maxdegrees(), target);
   }
 
-  // string exclusions = 6;
-  if (!this->_internal_exclusions().empty()) {
-    const std::string& _s = this->_internal_exclusions();
+  // string avoidRecordKeys = 6;
+  if (!this->_internal_avoidrecordkeys().empty()) {
+    const std::string& _s = this->_internal_avoidrecordkeys();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByRecordIdRequest.exclusions");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByRecordIdRequest.avoidRecordKeys");
     target = stream->WriteStringMaybeAliased(6, _s, target);
   }
 
@@ -7358,10 +7359,10 @@ const ::_pbi::TcParseTable<3, 8, 0, 140, 2> FindPathByRecordIdRequest::_table_ =
                                     this->_internal_endrecordid());
   }
 
-  // string exclusions = 6;
-  if (!this->_internal_exclusions().empty()) {
+  // string avoidRecordKeys = 6;
+  if (!this->_internal_avoidrecordkeys().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_exclusions());
+                                    this->_internal_avoidrecordkeys());
   }
 
   // string requiredDataSources = 7;
@@ -7413,8 +7414,8 @@ void FindPathByRecordIdRequest::MergeImpl(::google::protobuf::Message& to_msg, c
   if (!from._internal_endrecordid().empty()) {
     _this->_internal_set_endrecordid(from._internal_endrecordid());
   }
-  if (!from._internal_exclusions().empty()) {
-    _this->_internal_set_exclusions(from._internal_exclusions());
+  if (!from._internal_avoidrecordkeys().empty()) {
+    _this->_internal_set_avoidrecordkeys(from._internal_avoidrecordkeys());
   }
   if (!from._internal_requireddatasources().empty()) {
     _this->_internal_set_requireddatasources(from._internal_requireddatasources());
@@ -7451,7 +7452,7 @@ void FindPathByRecordIdRequest::InternalSwap(FindPathByRecordIdRequest* PROTOBUF
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.startrecordid_, &other->_impl_.startrecordid_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.enddatasourcecode_, &other->_impl_.enddatasourcecode_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.endrecordid_, &other->_impl_.endrecordid_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.exclusions_, &other->_impl_.exclusions_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.avoidrecordkeys_, &other->_impl_.avoidrecordkeys_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.requireddatasources_, &other->_impl_.requireddatasources_, arena);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.flags_)
@@ -9591,7 +9592,7 @@ GetVirtualEntityByRecordIdRequest::GetVirtualEntityByRecordIdRequest(::google::p
 inline PROTOBUF_NDEBUG_INLINE GetVirtualEntityByRecordIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : recordlist_(arena, from.recordlist_),
+      : recordkeys_(arena, from.recordkeys_),
         _cached_size_{0} {}
 
 GetVirtualEntityByRecordIdRequest::GetVirtualEntityByRecordIdRequest(
@@ -9610,7 +9611,7 @@ GetVirtualEntityByRecordIdRequest::GetVirtualEntityByRecordIdRequest(
 inline PROTOBUF_NDEBUG_INLINE GetVirtualEntityByRecordIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : recordlist_(arena),
+      : recordkeys_(arena),
         _cached_size_{0} {}
 
 inline void GetVirtualEntityByRecordIdRequest::SharedCtor(::_pb::Arena* arena) {
@@ -9624,7 +9625,7 @@ GetVirtualEntityByRecordIdRequest::~GetVirtualEntityByRecordIdRequest() {
 }
 inline void GetVirtualEntityByRecordIdRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.recordlist_.Destroy();
+  _impl_.recordkeys_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -9635,7 +9636,7 @@ PROTOBUF_NOINLINE void GetVirtualEntityByRecordIdRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.recordlist_.ClearToEmpty();
+  _impl_.recordkeys_.ClearToEmpty();
   _impl_.flags_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -9665,14 +9666,14 @@ const ::_pbi::TcParseTable<1, 2, 0, 61, 2> GetVirtualEntityByRecordIdRequest::_t
     // int64 flags = 2;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(GetVirtualEntityByRecordIdRequest, _impl_.flags_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(GetVirtualEntityByRecordIdRequest, _impl_.flags_)}},
-    // string recordList = 1;
+    // string recordKeys = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GetVirtualEntityByRecordIdRequest, _impl_.recordlist_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GetVirtualEntityByRecordIdRequest, _impl_.recordkeys_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string recordList = 1;
-    {PROTOBUF_FIELD_OFFSET(GetVirtualEntityByRecordIdRequest, _impl_.recordlist_), 0, 0,
+    // string recordKeys = 1;
+    {PROTOBUF_FIELD_OFFSET(GetVirtualEntityByRecordIdRequest, _impl_.recordkeys_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 flags = 2;
     {PROTOBUF_FIELD_OFFSET(GetVirtualEntityByRecordIdRequest, _impl_.flags_), 0, 0,
@@ -9682,7 +9683,7 @@ const ::_pbi::TcParseTable<1, 2, 0, 61, 2> GetVirtualEntityByRecordIdRequest::_t
   {{
     "\52\12\0\0\0\0\0\0"
     "szengine.GetVirtualEntityByRecordIdRequest"
-    "recordList"
+    "recordKeys"
   }},
 };
 
@@ -9693,11 +9694,11 @@ const ::_pbi::TcParseTable<1, 2, 0, 61, 2> GetVirtualEntityByRecordIdRequest::_t
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string recordList = 1;
-  if (!this->_internal_recordlist().empty()) {
-    const std::string& _s = this->_internal_recordlist();
+  // string recordKeys = 1;
+  if (!this->_internal_recordkeys().empty()) {
+    const std::string& _s = this->_internal_recordkeys();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.GetVirtualEntityByRecordIdRequest.recordList");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.GetVirtualEntityByRecordIdRequest.recordKeys");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
@@ -9725,10 +9726,10 @@ const ::_pbi::TcParseTable<1, 2, 0, 61, 2> GetVirtualEntityByRecordIdRequest::_t
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string recordList = 1;
-  if (!this->_internal_recordlist().empty()) {
+  // string recordKeys = 1;
+  if (!this->_internal_recordkeys().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_recordlist());
+                                    this->_internal_recordkeys());
   }
 
   // int64 flags = 2;
@@ -9756,8 +9757,8 @@ void GetVirtualEntityByRecordIdRequest::MergeImpl(::google::protobuf::Message& t
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_recordlist().empty()) {
-    _this->_internal_set_recordlist(from._internal_recordlist());
+  if (!from._internal_recordkeys().empty()) {
+    _this->_internal_set_recordkeys(from._internal_recordkeys());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -9784,7 +9785,7 @@ void GetVirtualEntityByRecordIdRequest::InternalSwap(GetVirtualEntityByRecordIdR
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recordlist_, &other->_impl_.recordlist_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recordkeys_, &other->_impl_.recordkeys_, arena);
         swap(_impl_.flags_, other->_impl_.flags_);
 }
 

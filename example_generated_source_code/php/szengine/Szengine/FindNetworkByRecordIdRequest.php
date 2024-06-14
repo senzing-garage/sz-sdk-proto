@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class FindNetworkByRecordIdRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string recordList = 1;</code>
+     * Generated from protobuf field <code>string recordKeys = 1;</code>
      */
-    protected $recordList = '';
+    protected $recordKeys = '';
     /**
      * Generated from protobuf field <code>int64 maxDegrees = 2;</code>
      */
@@ -26,9 +26,9 @@ class FindNetworkByRecordIdRequest extends \Google\Protobuf\Internal\Message
      */
     protected $buildOutDegree = 0;
     /**
-     * Generated from protobuf field <code>int64 maxEntities = 4;</code>
+     * Generated from protobuf field <code>int64 buildOutMaxEntities = 4;</code>
      */
-    protected $maxEntities = 0;
+    protected $buildOutMaxEntities = 0;
     /**
      * Generated from protobuf field <code>int64 flags = 5;</code>
      */
@@ -40,10 +40,10 @@ class FindNetworkByRecordIdRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $recordList
+     *     @type string $recordKeys
      *     @type int|string $maxDegrees
      *     @type int|string $buildOutDegree
-     *     @type int|string $maxEntities
+     *     @type int|string $buildOutMaxEntities
      *     @type int|string $flags
      * }
      */
@@ -53,23 +53,23 @@ class FindNetworkByRecordIdRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string recordList = 1;</code>
+     * Generated from protobuf field <code>string recordKeys = 1;</code>
      * @return string
      */
-    public function getRecordList()
+    public function getRecordKeys()
     {
-        return $this->recordList;
+        return $this->recordKeys;
     }
 
     /**
-     * Generated from protobuf field <code>string recordList = 1;</code>
+     * Generated from protobuf field <code>string recordKeys = 1;</code>
      * @param string $var
      * @return $this
      */
-    public function setRecordList($var)
+    public function setRecordKeys($var)
     {
         GPBUtil::checkString($var, True);
-        $this->recordList = $var;
+        $this->recordKeys = $var;
 
         return $this;
     }
@@ -119,23 +119,23 @@ class FindNetworkByRecordIdRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 maxEntities = 4;</code>
+     * Generated from protobuf field <code>int64 buildOutMaxEntities = 4;</code>
      * @return int|string
      */
-    public function getMaxEntities()
+    public function getBuildOutMaxEntities()
     {
-        return $this->maxEntities;
+        return $this->buildOutMaxEntities;
     }
 
     /**
-     * Generated from protobuf field <code>int64 maxEntities = 4;</code>
+     * Generated from protobuf field <code>int64 buildOutMaxEntities = 4;</code>
      * @param int|string $var
      * @return $this
      */
-    public function setMaxEntities($var)
+    public function setBuildOutMaxEntities($var)
     {
         GPBUtil::checkInt64($var);
-        $this->maxEntities = $var;
+        $this->buildOutMaxEntities = $var;
 
         return $this;
     }

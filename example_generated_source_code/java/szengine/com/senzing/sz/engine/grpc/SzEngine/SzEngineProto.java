@@ -10078,16 +10078,16 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string entityList = 1;</code>
-     * @return The entityList.
+     * <code>string entityIds = 1;</code>
+     * @return The entityIds.
      */
-    java.lang.String getEntityList();
+    java.lang.String getEntityIds();
     /**
-     * <code>string entityList = 1;</code>
-     * @return The bytes for entityList.
+     * <code>string entityIds = 1;</code>
+     * @return The bytes for entityIds.
      */
     com.google.protobuf.ByteString
-        getEntityListBytes();
+        getEntityIdsBytes();
 
     /**
      * <code>int64 maxDegrees = 2;</code>
@@ -10102,10 +10102,10 @@ public final class SzEngineProto {
     long getBuildOutDegree();
 
     /**
-     * <code>int64 maxEntities = 4;</code>
-     * @return The maxEntities.
+     * <code>int64 buildOutMaxEntities = 4;</code>
+     * @return The buildOutMaxEntities.
      */
-    long getMaxEntities();
+    long getBuildOutMaxEntities();
 
     /**
      * <code>int64 flags = 5;</code>
@@ -10126,7 +10126,7 @@ public final class SzEngineProto {
       super(builder);
     }
     private FindNetworkByEntityIdRequest() {
-      entityList_ = "";
+      entityIds_ = "";
     }
 
     @java.lang.Override
@@ -10149,39 +10149,39 @@ public final class SzEngineProto {
               com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest.Builder.class);
     }
 
-    public static final int ENTITYLIST_FIELD_NUMBER = 1;
+    public static final int ENTITYIDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object entityList_ = "";
+    private volatile java.lang.Object entityIds_ = "";
     /**
-     * <code>string entityList = 1;</code>
-     * @return The entityList.
+     * <code>string entityIds = 1;</code>
+     * @return The entityIds.
      */
     @java.lang.Override
-    public java.lang.String getEntityList() {
-      java.lang.Object ref = entityList_;
+    public java.lang.String getEntityIds() {
+      java.lang.Object ref = entityIds_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        entityList_ = s;
+        entityIds_ = s;
         return s;
       }
     }
     /**
-     * <code>string entityList = 1;</code>
-     * @return The bytes for entityList.
+     * <code>string entityIds = 1;</code>
+     * @return The bytes for entityIds.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getEntityListBytes() {
-      java.lang.Object ref = entityList_;
+        getEntityIdsBytes() {
+      java.lang.Object ref = entityIds_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        entityList_ = b;
+        entityIds_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -10210,15 +10210,15 @@ public final class SzEngineProto {
       return buildOutDegree_;
     }
 
-    public static final int MAXENTITIES_FIELD_NUMBER = 4;
-    private long maxEntities_ = 0L;
+    public static final int BUILDOUTMAXENTITIES_FIELD_NUMBER = 4;
+    private long buildOutMaxEntities_ = 0L;
     /**
-     * <code>int64 maxEntities = 4;</code>
-     * @return The maxEntities.
+     * <code>int64 buildOutMaxEntities = 4;</code>
+     * @return The buildOutMaxEntities.
      */
     @java.lang.Override
-    public long getMaxEntities() {
-      return maxEntities_;
+    public long getBuildOutMaxEntities() {
+      return buildOutMaxEntities_;
     }
 
     public static final int FLAGS_FIELD_NUMBER = 5;
@@ -10246,8 +10246,8 @@ public final class SzEngineProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityList_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, entityList_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityIds_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, entityIds_);
       }
       if (maxDegrees_ != 0L) {
         output.writeInt64(2, maxDegrees_);
@@ -10255,8 +10255,8 @@ public final class SzEngineProto {
       if (buildOutDegree_ != 0L) {
         output.writeInt64(3, buildOutDegree_);
       }
-      if (maxEntities_ != 0L) {
-        output.writeInt64(4, maxEntities_);
+      if (buildOutMaxEntities_ != 0L) {
+        output.writeInt64(4, buildOutMaxEntities_);
       }
       if (flags_ != 0L) {
         output.writeInt64(5, flags_);
@@ -10270,8 +10270,8 @@ public final class SzEngineProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityList_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, entityList_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entityIds_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, entityIds_);
       }
       if (maxDegrees_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -10281,9 +10281,9 @@ public final class SzEngineProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, buildOutDegree_);
       }
-      if (maxEntities_ != 0L) {
+      if (buildOutMaxEntities_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, maxEntities_);
+          .computeInt64Size(4, buildOutMaxEntities_);
       }
       if (flags_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -10304,14 +10304,14 @@ public final class SzEngineProto {
       }
       com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest) obj;
 
-      if (!getEntityList()
-          .equals(other.getEntityList())) return false;
+      if (!getEntityIds()
+          .equals(other.getEntityIds())) return false;
       if (getMaxDegrees()
           != other.getMaxDegrees()) return false;
       if (getBuildOutDegree()
           != other.getBuildOutDegree()) return false;
-      if (getMaxEntities()
-          != other.getMaxEntities()) return false;
+      if (getBuildOutMaxEntities()
+          != other.getBuildOutMaxEntities()) return false;
       if (getFlags()
           != other.getFlags()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -10325,17 +10325,17 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ENTITYLIST_FIELD_NUMBER;
-      hash = (53 * hash) + getEntityList().hashCode();
+      hash = (37 * hash) + ENTITYIDS_FIELD_NUMBER;
+      hash = (53 * hash) + getEntityIds().hashCode();
       hash = (37 * hash) + MAXDEGREES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getMaxDegrees());
       hash = (37 * hash) + BUILDOUTDEGREE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getBuildOutDegree());
-      hash = (37 * hash) + MAXENTITIES_FIELD_NUMBER;
+      hash = (37 * hash) + BUILDOUTMAXENTITIES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getMaxEntities());
+          getBuildOutMaxEntities());
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getFlags());
@@ -10470,10 +10470,10 @@ public final class SzEngineProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        entityList_ = "";
+        entityIds_ = "";
         maxDegrees_ = 0L;
         buildOutDegree_ = 0L;
-        maxEntities_ = 0L;
+        buildOutMaxEntities_ = 0L;
         flags_ = 0L;
         return this;
       }
@@ -10509,7 +10509,7 @@ public final class SzEngineProto {
       private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.entityList_ = entityList_;
+          result.entityIds_ = entityIds_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.maxDegrees_ = maxDegrees_;
@@ -10518,7 +10518,7 @@ public final class SzEngineProto {
           result.buildOutDegree_ = buildOutDegree_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.maxEntities_ = maxEntities_;
+          result.buildOutMaxEntities_ = buildOutMaxEntities_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.flags_ = flags_;
@@ -10569,8 +10569,8 @@ public final class SzEngineProto {
 
       public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest other) {
         if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest.getDefaultInstance()) return this;
-        if (!other.getEntityList().isEmpty()) {
-          entityList_ = other.entityList_;
+        if (!other.getEntityIds().isEmpty()) {
+          entityIds_ = other.entityIds_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -10580,8 +10580,8 @@ public final class SzEngineProto {
         if (other.getBuildOutDegree() != 0L) {
           setBuildOutDegree(other.getBuildOutDegree());
         }
-        if (other.getMaxEntities() != 0L) {
-          setMaxEntities(other.getMaxEntities());
+        if (other.getBuildOutMaxEntities() != 0L) {
+          setBuildOutMaxEntities(other.getBuildOutMaxEntities());
         }
         if (other.getFlags() != 0L) {
           setFlags(other.getFlags());
@@ -10613,7 +10613,7 @@ public final class SzEngineProto {
                 done = true;
                 break;
               case 10: {
-                entityList_ = input.readStringRequireUtf8();
+                entityIds_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -10628,7 +10628,7 @@ public final class SzEngineProto {
                 break;
               } // case 24
               case 32: {
-                maxEntities_ = input.readInt64();
+                buildOutMaxEntities_ = input.readInt64();
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
@@ -10654,73 +10654,73 @@ public final class SzEngineProto {
       }
       private int bitField0_;
 
-      private java.lang.Object entityList_ = "";
+      private java.lang.Object entityIds_ = "";
       /**
-       * <code>string entityList = 1;</code>
-       * @return The entityList.
+       * <code>string entityIds = 1;</code>
+       * @return The entityIds.
        */
-      public java.lang.String getEntityList() {
-        java.lang.Object ref = entityList_;
+      public java.lang.String getEntityIds() {
+        java.lang.Object ref = entityIds_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          entityList_ = s;
+          entityIds_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string entityList = 1;</code>
-       * @return The bytes for entityList.
+       * <code>string entityIds = 1;</code>
+       * @return The bytes for entityIds.
        */
       public com.google.protobuf.ByteString
-          getEntityListBytes() {
-        java.lang.Object ref = entityList_;
+          getEntityIdsBytes() {
+        java.lang.Object ref = entityIds_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          entityList_ = b;
+          entityIds_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string entityList = 1;</code>
-       * @param value The entityList to set.
+       * <code>string entityIds = 1;</code>
+       * @param value The entityIds to set.
        * @return This builder for chaining.
        */
-      public Builder setEntityList(
+      public Builder setEntityIds(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        entityList_ = value;
+        entityIds_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string entityList = 1;</code>
+       * <code>string entityIds = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearEntityList() {
-        entityList_ = getDefaultInstance().getEntityList();
+      public Builder clearEntityIds() {
+        entityIds_ = getDefaultInstance().getEntityIds();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string entityList = 1;</code>
-       * @param value The bytes for entityList to set.
+       * <code>string entityIds = 1;</code>
+       * @param value The bytes for entityIds to set.
        * @return This builder for chaining.
        */
-      public Builder setEntityListBytes(
+      public Builder setEntityIdsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        entityList_ = value;
+        entityIds_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -10790,34 +10790,34 @@ public final class SzEngineProto {
         return this;
       }
 
-      private long maxEntities_ ;
+      private long buildOutMaxEntities_ ;
       /**
-       * <code>int64 maxEntities = 4;</code>
-       * @return The maxEntities.
+       * <code>int64 buildOutMaxEntities = 4;</code>
+       * @return The buildOutMaxEntities.
        */
       @java.lang.Override
-      public long getMaxEntities() {
-        return maxEntities_;
+      public long getBuildOutMaxEntities() {
+        return buildOutMaxEntities_;
       }
       /**
-       * <code>int64 maxEntities = 4;</code>
-       * @param value The maxEntities to set.
+       * <code>int64 buildOutMaxEntities = 4;</code>
+       * @param value The buildOutMaxEntities to set.
        * @return This builder for chaining.
        */
-      public Builder setMaxEntities(long value) {
+      public Builder setBuildOutMaxEntities(long value) {
 
-        maxEntities_ = value;
+        buildOutMaxEntities_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 maxEntities = 4;</code>
+       * <code>int64 buildOutMaxEntities = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearMaxEntities() {
+      public Builder clearBuildOutMaxEntities() {
         bitField0_ = (bitField0_ & ~0x00000008);
-        maxEntities_ = 0L;
+        buildOutMaxEntities_ = 0L;
         onChanged();
         return this;
       }
@@ -11474,16 +11474,16 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string recordList = 1;</code>
-     * @return The recordList.
+     * <code>string recordKeys = 1;</code>
+     * @return The recordKeys.
      */
-    java.lang.String getRecordList();
+    java.lang.String getRecordKeys();
     /**
-     * <code>string recordList = 1;</code>
-     * @return The bytes for recordList.
+     * <code>string recordKeys = 1;</code>
+     * @return The bytes for recordKeys.
      */
     com.google.protobuf.ByteString
-        getRecordListBytes();
+        getRecordKeysBytes();
 
     /**
      * <code>int64 maxDegrees = 2;</code>
@@ -11498,10 +11498,10 @@ public final class SzEngineProto {
     long getBuildOutDegree();
 
     /**
-     * <code>int64 maxEntities = 4;</code>
-     * @return The maxEntities.
+     * <code>int64 buildOutMaxEntities = 4;</code>
+     * @return The buildOutMaxEntities.
      */
-    long getMaxEntities();
+    long getBuildOutMaxEntities();
 
     /**
      * <code>int64 flags = 5;</code>
@@ -11522,7 +11522,7 @@ public final class SzEngineProto {
       super(builder);
     }
     private FindNetworkByRecordIdRequest() {
-      recordList_ = "";
+      recordKeys_ = "";
     }
 
     @java.lang.Override
@@ -11545,39 +11545,39 @@ public final class SzEngineProto {
               com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest.Builder.class);
     }
 
-    public static final int RECORDLIST_FIELD_NUMBER = 1;
+    public static final int RECORDKEYS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object recordList_ = "";
+    private volatile java.lang.Object recordKeys_ = "";
     /**
-     * <code>string recordList = 1;</code>
-     * @return The recordList.
+     * <code>string recordKeys = 1;</code>
+     * @return The recordKeys.
      */
     @java.lang.Override
-    public java.lang.String getRecordList() {
-      java.lang.Object ref = recordList_;
+    public java.lang.String getRecordKeys() {
+      java.lang.Object ref = recordKeys_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        recordList_ = s;
+        recordKeys_ = s;
         return s;
       }
     }
     /**
-     * <code>string recordList = 1;</code>
-     * @return The bytes for recordList.
+     * <code>string recordKeys = 1;</code>
+     * @return The bytes for recordKeys.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getRecordListBytes() {
-      java.lang.Object ref = recordList_;
+        getRecordKeysBytes() {
+      java.lang.Object ref = recordKeys_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        recordList_ = b;
+        recordKeys_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -11606,15 +11606,15 @@ public final class SzEngineProto {
       return buildOutDegree_;
     }
 
-    public static final int MAXENTITIES_FIELD_NUMBER = 4;
-    private long maxEntities_ = 0L;
+    public static final int BUILDOUTMAXENTITIES_FIELD_NUMBER = 4;
+    private long buildOutMaxEntities_ = 0L;
     /**
-     * <code>int64 maxEntities = 4;</code>
-     * @return The maxEntities.
+     * <code>int64 buildOutMaxEntities = 4;</code>
+     * @return The buildOutMaxEntities.
      */
     @java.lang.Override
-    public long getMaxEntities() {
-      return maxEntities_;
+    public long getBuildOutMaxEntities() {
+      return buildOutMaxEntities_;
     }
 
     public static final int FLAGS_FIELD_NUMBER = 5;
@@ -11642,8 +11642,8 @@ public final class SzEngineProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordList_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, recordList_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordKeys_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, recordKeys_);
       }
       if (maxDegrees_ != 0L) {
         output.writeInt64(2, maxDegrees_);
@@ -11651,8 +11651,8 @@ public final class SzEngineProto {
       if (buildOutDegree_ != 0L) {
         output.writeInt64(3, buildOutDegree_);
       }
-      if (maxEntities_ != 0L) {
-        output.writeInt64(4, maxEntities_);
+      if (buildOutMaxEntities_ != 0L) {
+        output.writeInt64(4, buildOutMaxEntities_);
       }
       if (flags_ != 0L) {
         output.writeInt64(5, flags_);
@@ -11666,8 +11666,8 @@ public final class SzEngineProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordList_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, recordList_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordKeys_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, recordKeys_);
       }
       if (maxDegrees_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -11677,9 +11677,9 @@ public final class SzEngineProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, buildOutDegree_);
       }
-      if (maxEntities_ != 0L) {
+      if (buildOutMaxEntities_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, maxEntities_);
+          .computeInt64Size(4, buildOutMaxEntities_);
       }
       if (flags_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -11700,14 +11700,14 @@ public final class SzEngineProto {
       }
       com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest) obj;
 
-      if (!getRecordList()
-          .equals(other.getRecordList())) return false;
+      if (!getRecordKeys()
+          .equals(other.getRecordKeys())) return false;
       if (getMaxDegrees()
           != other.getMaxDegrees()) return false;
       if (getBuildOutDegree()
           != other.getBuildOutDegree()) return false;
-      if (getMaxEntities()
-          != other.getMaxEntities()) return false;
+      if (getBuildOutMaxEntities()
+          != other.getBuildOutMaxEntities()) return false;
       if (getFlags()
           != other.getFlags()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -11721,17 +11721,17 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RECORDLIST_FIELD_NUMBER;
-      hash = (53 * hash) + getRecordList().hashCode();
+      hash = (37 * hash) + RECORDKEYS_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordKeys().hashCode();
       hash = (37 * hash) + MAXDEGREES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getMaxDegrees());
       hash = (37 * hash) + BUILDOUTDEGREE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getBuildOutDegree());
-      hash = (37 * hash) + MAXENTITIES_FIELD_NUMBER;
+      hash = (37 * hash) + BUILDOUTMAXENTITIES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getMaxEntities());
+          getBuildOutMaxEntities());
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getFlags());
@@ -11866,10 +11866,10 @@ public final class SzEngineProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        recordList_ = "";
+        recordKeys_ = "";
         maxDegrees_ = 0L;
         buildOutDegree_ = 0L;
-        maxEntities_ = 0L;
+        buildOutMaxEntities_ = 0L;
         flags_ = 0L;
         return this;
       }
@@ -11905,7 +11905,7 @@ public final class SzEngineProto {
       private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.recordList_ = recordList_;
+          result.recordKeys_ = recordKeys_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.maxDegrees_ = maxDegrees_;
@@ -11914,7 +11914,7 @@ public final class SzEngineProto {
           result.buildOutDegree_ = buildOutDegree_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.maxEntities_ = maxEntities_;
+          result.buildOutMaxEntities_ = buildOutMaxEntities_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.flags_ = flags_;
@@ -11965,8 +11965,8 @@ public final class SzEngineProto {
 
       public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest other) {
         if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest.getDefaultInstance()) return this;
-        if (!other.getRecordList().isEmpty()) {
-          recordList_ = other.recordList_;
+        if (!other.getRecordKeys().isEmpty()) {
+          recordKeys_ = other.recordKeys_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -11976,8 +11976,8 @@ public final class SzEngineProto {
         if (other.getBuildOutDegree() != 0L) {
           setBuildOutDegree(other.getBuildOutDegree());
         }
-        if (other.getMaxEntities() != 0L) {
-          setMaxEntities(other.getMaxEntities());
+        if (other.getBuildOutMaxEntities() != 0L) {
+          setBuildOutMaxEntities(other.getBuildOutMaxEntities());
         }
         if (other.getFlags() != 0L) {
           setFlags(other.getFlags());
@@ -12009,7 +12009,7 @@ public final class SzEngineProto {
                 done = true;
                 break;
               case 10: {
-                recordList_ = input.readStringRequireUtf8();
+                recordKeys_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -12024,7 +12024,7 @@ public final class SzEngineProto {
                 break;
               } // case 24
               case 32: {
-                maxEntities_ = input.readInt64();
+                buildOutMaxEntities_ = input.readInt64();
                 bitField0_ |= 0x00000008;
                 break;
               } // case 32
@@ -12050,73 +12050,73 @@ public final class SzEngineProto {
       }
       private int bitField0_;
 
-      private java.lang.Object recordList_ = "";
+      private java.lang.Object recordKeys_ = "";
       /**
-       * <code>string recordList = 1;</code>
-       * @return The recordList.
+       * <code>string recordKeys = 1;</code>
+       * @return The recordKeys.
        */
-      public java.lang.String getRecordList() {
-        java.lang.Object ref = recordList_;
+      public java.lang.String getRecordKeys() {
+        java.lang.Object ref = recordKeys_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          recordList_ = s;
+          recordKeys_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string recordList = 1;</code>
-       * @return The bytes for recordList.
+       * <code>string recordKeys = 1;</code>
+       * @return The bytes for recordKeys.
        */
       public com.google.protobuf.ByteString
-          getRecordListBytes() {
-        java.lang.Object ref = recordList_;
+          getRecordKeysBytes() {
+        java.lang.Object ref = recordKeys_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          recordList_ = b;
+          recordKeys_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string recordList = 1;</code>
-       * @param value The recordList to set.
+       * <code>string recordKeys = 1;</code>
+       * @param value The recordKeys to set.
        * @return This builder for chaining.
        */
-      public Builder setRecordList(
+      public Builder setRecordKeys(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        recordList_ = value;
+        recordKeys_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string recordList = 1;</code>
+       * <code>string recordKeys = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearRecordList() {
-        recordList_ = getDefaultInstance().getRecordList();
+      public Builder clearRecordKeys() {
+        recordKeys_ = getDefaultInstance().getRecordKeys();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string recordList = 1;</code>
-       * @param value The bytes for recordList to set.
+       * <code>string recordKeys = 1;</code>
+       * @param value The bytes for recordKeys to set.
        * @return This builder for chaining.
        */
-      public Builder setRecordListBytes(
+      public Builder setRecordKeysBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        recordList_ = value;
+        recordKeys_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -12186,34 +12186,34 @@ public final class SzEngineProto {
         return this;
       }
 
-      private long maxEntities_ ;
+      private long buildOutMaxEntities_ ;
       /**
-       * <code>int64 maxEntities = 4;</code>
-       * @return The maxEntities.
+       * <code>int64 buildOutMaxEntities = 4;</code>
+       * @return The buildOutMaxEntities.
        */
       @java.lang.Override
-      public long getMaxEntities() {
-        return maxEntities_;
+      public long getBuildOutMaxEntities() {
+        return buildOutMaxEntities_;
       }
       /**
-       * <code>int64 maxEntities = 4;</code>
-       * @param value The maxEntities to set.
+       * <code>int64 buildOutMaxEntities = 4;</code>
+       * @param value The buildOutMaxEntities to set.
        * @return This builder for chaining.
        */
-      public Builder setMaxEntities(long value) {
+      public Builder setBuildOutMaxEntities(long value) {
 
-        maxEntities_ = value;
+        buildOutMaxEntities_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 maxEntities = 4;</code>
+       * <code>int64 buildOutMaxEntities = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearMaxEntities() {
+      public Builder clearBuildOutMaxEntities() {
         bitField0_ = (bitField0_ & ~0x00000008);
-        maxEntities_ = 0L;
+        buildOutMaxEntities_ = 0L;
         onChanged();
         return this;
       }
@@ -12888,16 +12888,16 @@ public final class SzEngineProto {
     long getMaxDegrees();
 
     /**
-     * <code>string exclusions = 4;</code>
-     * @return The exclusions.
+     * <code>string avoidEntityIds = 4;</code>
+     * @return The avoidEntityIds.
      */
-    java.lang.String getExclusions();
+    java.lang.String getAvoidEntityIds();
     /**
-     * <code>string exclusions = 4;</code>
-     * @return The bytes for exclusions.
+     * <code>string avoidEntityIds = 4;</code>
+     * @return The bytes for avoidEntityIds.
      */
     com.google.protobuf.ByteString
-        getExclusionsBytes();
+        getAvoidEntityIdsBytes();
 
     /**
      * <code>string requiredDataSources = 5;</code>
@@ -12930,7 +12930,7 @@ public final class SzEngineProto {
       super(builder);
     }
     private FindPathByEntityIdRequest() {
-      exclusions_ = "";
+      avoidEntityIds_ = "";
       requiredDataSources_ = "";
     }
 
@@ -12987,39 +12987,39 @@ public final class SzEngineProto {
       return maxDegrees_;
     }
 
-    public static final int EXCLUSIONS_FIELD_NUMBER = 4;
+    public static final int AVOIDENTITYIDS_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object exclusions_ = "";
+    private volatile java.lang.Object avoidEntityIds_ = "";
     /**
-     * <code>string exclusions = 4;</code>
-     * @return The exclusions.
+     * <code>string avoidEntityIds = 4;</code>
+     * @return The avoidEntityIds.
      */
     @java.lang.Override
-    public java.lang.String getExclusions() {
-      java.lang.Object ref = exclusions_;
+    public java.lang.String getAvoidEntityIds() {
+      java.lang.Object ref = avoidEntityIds_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        exclusions_ = s;
+        avoidEntityIds_ = s;
         return s;
       }
     }
     /**
-     * <code>string exclusions = 4;</code>
-     * @return The bytes for exclusions.
+     * <code>string avoidEntityIds = 4;</code>
+     * @return The bytes for avoidEntityIds.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getExclusionsBytes() {
-      java.lang.Object ref = exclusions_;
+        getAvoidEntityIdsBytes() {
+      java.lang.Object ref = avoidEntityIds_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        exclusions_ = b;
+        avoidEntityIds_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -13099,8 +13099,8 @@ public final class SzEngineProto {
       if (maxDegrees_ != 0L) {
         output.writeInt64(3, maxDegrees_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exclusions_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, exclusions_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(avoidEntityIds_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, avoidEntityIds_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requiredDataSources_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, requiredDataSources_);
@@ -13129,8 +13129,8 @@ public final class SzEngineProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, maxDegrees_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exclusions_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, exclusions_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(avoidEntityIds_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, avoidEntityIds_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requiredDataSources_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, requiredDataSources_);
@@ -13160,8 +13160,8 @@ public final class SzEngineProto {
           != other.getEndEntityId()) return false;
       if (getMaxDegrees()
           != other.getMaxDegrees()) return false;
-      if (!getExclusions()
-          .equals(other.getExclusions())) return false;
+      if (!getAvoidEntityIds()
+          .equals(other.getAvoidEntityIds())) return false;
       if (!getRequiredDataSources()
           .equals(other.getRequiredDataSources())) return false;
       if (getFlags()
@@ -13186,8 +13186,8 @@ public final class SzEngineProto {
       hash = (37 * hash) + MAXDEGREES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getMaxDegrees());
-      hash = (37 * hash) + EXCLUSIONS_FIELD_NUMBER;
-      hash = (53 * hash) + getExclusions().hashCode();
+      hash = (37 * hash) + AVOIDENTITYIDS_FIELD_NUMBER;
+      hash = (53 * hash) + getAvoidEntityIds().hashCode();
       hash = (37 * hash) + REQUIREDDATASOURCES_FIELD_NUMBER;
       hash = (53 * hash) + getRequiredDataSources().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
@@ -13327,7 +13327,7 @@ public final class SzEngineProto {
         startEntityId_ = 0L;
         endEntityId_ = 0L;
         maxDegrees_ = 0L;
-        exclusions_ = "";
+        avoidEntityIds_ = "";
         requiredDataSources_ = "";
         flags_ = 0L;
         return this;
@@ -13373,7 +13373,7 @@ public final class SzEngineProto {
           result.maxDegrees_ = maxDegrees_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.exclusions_ = exclusions_;
+          result.avoidEntityIds_ = avoidEntityIds_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.requiredDataSources_ = requiredDataSources_;
@@ -13436,8 +13436,8 @@ public final class SzEngineProto {
         if (other.getMaxDegrees() != 0L) {
           setMaxDegrees(other.getMaxDegrees());
         }
-        if (!other.getExclusions().isEmpty()) {
-          exclusions_ = other.exclusions_;
+        if (!other.getAvoidEntityIds().isEmpty()) {
+          avoidEntityIds_ = other.avoidEntityIds_;
           bitField0_ |= 0x00000008;
           onChanged();
         }
@@ -13491,7 +13491,7 @@ public final class SzEngineProto {
                 break;
               } // case 24
               case 34: {
-                exclusions_ = input.readStringRequireUtf8();
+                avoidEntityIds_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
@@ -13618,73 +13618,73 @@ public final class SzEngineProto {
         return this;
       }
 
-      private java.lang.Object exclusions_ = "";
+      private java.lang.Object avoidEntityIds_ = "";
       /**
-       * <code>string exclusions = 4;</code>
-       * @return The exclusions.
+       * <code>string avoidEntityIds = 4;</code>
+       * @return The avoidEntityIds.
        */
-      public java.lang.String getExclusions() {
-        java.lang.Object ref = exclusions_;
+      public java.lang.String getAvoidEntityIds() {
+        java.lang.Object ref = avoidEntityIds_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          exclusions_ = s;
+          avoidEntityIds_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string exclusions = 4;</code>
-       * @return The bytes for exclusions.
+       * <code>string avoidEntityIds = 4;</code>
+       * @return The bytes for avoidEntityIds.
        */
       public com.google.protobuf.ByteString
-          getExclusionsBytes() {
-        java.lang.Object ref = exclusions_;
+          getAvoidEntityIdsBytes() {
+        java.lang.Object ref = avoidEntityIds_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          exclusions_ = b;
+          avoidEntityIds_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string exclusions = 4;</code>
-       * @param value The exclusions to set.
+       * <code>string avoidEntityIds = 4;</code>
+       * @param value The avoidEntityIds to set.
        * @return This builder for chaining.
        */
-      public Builder setExclusions(
+      public Builder setAvoidEntityIds(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        exclusions_ = value;
+        avoidEntityIds_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>string exclusions = 4;</code>
+       * <code>string avoidEntityIds = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearExclusions() {
-        exclusions_ = getDefaultInstance().getExclusions();
+      public Builder clearAvoidEntityIds() {
+        avoidEntityIds_ = getDefaultInstance().getAvoidEntityIds();
         bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
-       * <code>string exclusions = 4;</code>
-       * @param value The bytes for exclusions to set.
+       * <code>string avoidEntityIds = 4;</code>
+       * @param value The bytes for avoidEntityIds to set.
        * @return This builder for chaining.
        */
-      public Builder setExclusionsBytes(
+      public Builder setAvoidEntityIdsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        exclusions_ = value;
+        avoidEntityIds_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
         return this;
@@ -14468,16 +14468,16 @@ public final class SzEngineProto {
     long getMaxDegrees();
 
     /**
-     * <code>string exclusions = 6;</code>
-     * @return The exclusions.
+     * <code>string avoidRecordKeys = 6;</code>
+     * @return The avoidRecordKeys.
      */
-    java.lang.String getExclusions();
+    java.lang.String getAvoidRecordKeys();
     /**
-     * <code>string exclusions = 6;</code>
-     * @return The bytes for exclusions.
+     * <code>string avoidRecordKeys = 6;</code>
+     * @return The bytes for avoidRecordKeys.
      */
     com.google.protobuf.ByteString
-        getExclusionsBytes();
+        getAvoidRecordKeysBytes();
 
     /**
      * <code>string requiredDataSources = 7;</code>
@@ -14514,7 +14514,7 @@ public final class SzEngineProto {
       startRecordId_ = "";
       endDataSourceCode_ = "";
       endRecordId_ = "";
-      exclusions_ = "";
+      avoidRecordKeys_ = "";
       requiredDataSources_ = "";
     }
 
@@ -14705,39 +14705,39 @@ public final class SzEngineProto {
       return maxDegrees_;
     }
 
-    public static final int EXCLUSIONS_FIELD_NUMBER = 6;
+    public static final int AVOIDRECORDKEYS_FIELD_NUMBER = 6;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object exclusions_ = "";
+    private volatile java.lang.Object avoidRecordKeys_ = "";
     /**
-     * <code>string exclusions = 6;</code>
-     * @return The exclusions.
+     * <code>string avoidRecordKeys = 6;</code>
+     * @return The avoidRecordKeys.
      */
     @java.lang.Override
-    public java.lang.String getExclusions() {
-      java.lang.Object ref = exclusions_;
+    public java.lang.String getAvoidRecordKeys() {
+      java.lang.Object ref = avoidRecordKeys_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        exclusions_ = s;
+        avoidRecordKeys_ = s;
         return s;
       }
     }
     /**
-     * <code>string exclusions = 6;</code>
-     * @return The bytes for exclusions.
+     * <code>string avoidRecordKeys = 6;</code>
+     * @return The bytes for avoidRecordKeys.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getExclusionsBytes() {
-      java.lang.Object ref = exclusions_;
+        getAvoidRecordKeysBytes() {
+      java.lang.Object ref = avoidRecordKeys_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        exclusions_ = b;
+        avoidRecordKeys_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -14823,8 +14823,8 @@ public final class SzEngineProto {
       if (maxDegrees_ != 0L) {
         output.writeInt64(5, maxDegrees_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exclusions_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, exclusions_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(avoidRecordKeys_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, avoidRecordKeys_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requiredDataSources_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, requiredDataSources_);
@@ -14857,8 +14857,8 @@ public final class SzEngineProto {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, maxDegrees_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exclusions_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, exclusions_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(avoidRecordKeys_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, avoidRecordKeys_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requiredDataSources_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, requiredDataSources_);
@@ -14892,8 +14892,8 @@ public final class SzEngineProto {
           .equals(other.getEndRecordId())) return false;
       if (getMaxDegrees()
           != other.getMaxDegrees()) return false;
-      if (!getExclusions()
-          .equals(other.getExclusions())) return false;
+      if (!getAvoidRecordKeys()
+          .equals(other.getAvoidRecordKeys())) return false;
       if (!getRequiredDataSources()
           .equals(other.getRequiredDataSources())) return false;
       if (getFlags()
@@ -14920,8 +14920,8 @@ public final class SzEngineProto {
       hash = (37 * hash) + MAXDEGREES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getMaxDegrees());
-      hash = (37 * hash) + EXCLUSIONS_FIELD_NUMBER;
-      hash = (53 * hash) + getExclusions().hashCode();
+      hash = (37 * hash) + AVOIDRECORDKEYS_FIELD_NUMBER;
+      hash = (53 * hash) + getAvoidRecordKeys().hashCode();
       hash = (37 * hash) + REQUIREDDATASOURCES_FIELD_NUMBER;
       hash = (53 * hash) + getRequiredDataSources().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
@@ -15063,7 +15063,7 @@ public final class SzEngineProto {
         endDataSourceCode_ = "";
         endRecordId_ = "";
         maxDegrees_ = 0L;
-        exclusions_ = "";
+        avoidRecordKeys_ = "";
         requiredDataSources_ = "";
         flags_ = 0L;
         return this;
@@ -15115,7 +15115,7 @@ public final class SzEngineProto {
           result.maxDegrees_ = maxDegrees_;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.exclusions_ = exclusions_;
+          result.avoidRecordKeys_ = avoidRecordKeys_;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.requiredDataSources_ = requiredDataSources_;
@@ -15192,8 +15192,8 @@ public final class SzEngineProto {
         if (other.getMaxDegrees() != 0L) {
           setMaxDegrees(other.getMaxDegrees());
         }
-        if (!other.getExclusions().isEmpty()) {
-          exclusions_ = other.exclusions_;
+        if (!other.getAvoidRecordKeys().isEmpty()) {
+          avoidRecordKeys_ = other.avoidRecordKeys_;
           bitField0_ |= 0x00000020;
           onChanged();
         }
@@ -15257,7 +15257,7 @@ public final class SzEngineProto {
                 break;
               } // case 40
               case 50: {
-                exclusions_ = input.readStringRequireUtf8();
+                avoidRecordKeys_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000020;
                 break;
               } // case 50
@@ -15608,73 +15608,73 @@ public final class SzEngineProto {
         return this;
       }
 
-      private java.lang.Object exclusions_ = "";
+      private java.lang.Object avoidRecordKeys_ = "";
       /**
-       * <code>string exclusions = 6;</code>
-       * @return The exclusions.
+       * <code>string avoidRecordKeys = 6;</code>
+       * @return The avoidRecordKeys.
        */
-      public java.lang.String getExclusions() {
-        java.lang.Object ref = exclusions_;
+      public java.lang.String getAvoidRecordKeys() {
+        java.lang.Object ref = avoidRecordKeys_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          exclusions_ = s;
+          avoidRecordKeys_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string exclusions = 6;</code>
-       * @return The bytes for exclusions.
+       * <code>string avoidRecordKeys = 6;</code>
+       * @return The bytes for avoidRecordKeys.
        */
       public com.google.protobuf.ByteString
-          getExclusionsBytes() {
-        java.lang.Object ref = exclusions_;
+          getAvoidRecordKeysBytes() {
+        java.lang.Object ref = avoidRecordKeys_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          exclusions_ = b;
+          avoidRecordKeys_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string exclusions = 6;</code>
-       * @param value The exclusions to set.
+       * <code>string avoidRecordKeys = 6;</code>
+       * @param value The avoidRecordKeys to set.
        * @return This builder for chaining.
        */
-      public Builder setExclusions(
+      public Builder setAvoidRecordKeys(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        exclusions_ = value;
+        avoidRecordKeys_ = value;
         bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
-       * <code>string exclusions = 6;</code>
+       * <code>string avoidRecordKeys = 6;</code>
        * @return This builder for chaining.
        */
-      public Builder clearExclusions() {
-        exclusions_ = getDefaultInstance().getExclusions();
+      public Builder clearAvoidRecordKeys() {
+        avoidRecordKeys_ = getDefaultInstance().getAvoidRecordKeys();
         bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
       /**
-       * <code>string exclusions = 6;</code>
-       * @param value The bytes for exclusions to set.
+       * <code>string avoidRecordKeys = 6;</code>
+       * @param value The bytes for avoidRecordKeys to set.
        * @return This builder for chaining.
        */
-      public Builder setExclusionsBytes(
+      public Builder setAvoidRecordKeysBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        exclusions_ = value;
+        avoidRecordKeys_ = value;
         bitField0_ |= 0x00000020;
         onChanged();
         return this;
@@ -22928,16 +22928,16 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string recordList = 1;</code>
-     * @return The recordList.
+     * <code>string recordKeys = 1;</code>
+     * @return The recordKeys.
      */
-    java.lang.String getRecordList();
+    java.lang.String getRecordKeys();
     /**
-     * <code>string recordList = 1;</code>
-     * @return The bytes for recordList.
+     * <code>string recordKeys = 1;</code>
+     * @return The bytes for recordKeys.
      */
     com.google.protobuf.ByteString
-        getRecordListBytes();
+        getRecordKeysBytes();
 
     /**
      * <code>int64 flags = 2;</code>
@@ -22958,7 +22958,7 @@ public final class SzEngineProto {
       super(builder);
     }
     private GetVirtualEntityByRecordIdRequest() {
-      recordList_ = "";
+      recordKeys_ = "";
     }
 
     @java.lang.Override
@@ -22981,39 +22981,39 @@ public final class SzEngineProto {
               com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest.Builder.class);
     }
 
-    public static final int RECORDLIST_FIELD_NUMBER = 1;
+    public static final int RECORDKEYS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object recordList_ = "";
+    private volatile java.lang.Object recordKeys_ = "";
     /**
-     * <code>string recordList = 1;</code>
-     * @return The recordList.
+     * <code>string recordKeys = 1;</code>
+     * @return The recordKeys.
      */
     @java.lang.Override
-    public java.lang.String getRecordList() {
-      java.lang.Object ref = recordList_;
+    public java.lang.String getRecordKeys() {
+      java.lang.Object ref = recordKeys_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        recordList_ = s;
+        recordKeys_ = s;
         return s;
       }
     }
     /**
-     * <code>string recordList = 1;</code>
-     * @return The bytes for recordList.
+     * <code>string recordKeys = 1;</code>
+     * @return The bytes for recordKeys.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getRecordListBytes() {
-      java.lang.Object ref = recordList_;
+        getRecordKeysBytes() {
+      java.lang.Object ref = recordKeys_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        recordList_ = b;
+        recordKeys_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -23045,8 +23045,8 @@ public final class SzEngineProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordList_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, recordList_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordKeys_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, recordKeys_);
       }
       if (flags_ != 0L) {
         output.writeInt64(2, flags_);
@@ -23060,8 +23060,8 @@ public final class SzEngineProto {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordList_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, recordList_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordKeys_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, recordKeys_);
       }
       if (flags_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -23082,8 +23082,8 @@ public final class SzEngineProto {
       }
       com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest) obj;
 
-      if (!getRecordList()
-          .equals(other.getRecordList())) return false;
+      if (!getRecordKeys()
+          .equals(other.getRecordKeys())) return false;
       if (getFlags()
           != other.getFlags()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -23097,8 +23097,8 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RECORDLIST_FIELD_NUMBER;
-      hash = (53 * hash) + getRecordList().hashCode();
+      hash = (37 * hash) + RECORDKEYS_FIELD_NUMBER;
+      hash = (53 * hash) + getRecordKeys().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getFlags());
@@ -23233,7 +23233,7 @@ public final class SzEngineProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        recordList_ = "";
+        recordKeys_ = "";
         flags_ = 0L;
         return this;
       }
@@ -23269,7 +23269,7 @@ public final class SzEngineProto {
       private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.recordList_ = recordList_;
+          result.recordKeys_ = recordKeys_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.flags_ = flags_;
@@ -23320,8 +23320,8 @@ public final class SzEngineProto {
 
       public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest other) {
         if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest.getDefaultInstance()) return this;
-        if (!other.getRecordList().isEmpty()) {
-          recordList_ = other.recordList_;
+        if (!other.getRecordKeys().isEmpty()) {
+          recordKeys_ = other.recordKeys_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -23355,7 +23355,7 @@ public final class SzEngineProto {
                 done = true;
                 break;
               case 10: {
-                recordList_ = input.readStringRequireUtf8();
+                recordKeys_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -23381,73 +23381,73 @@ public final class SzEngineProto {
       }
       private int bitField0_;
 
-      private java.lang.Object recordList_ = "";
+      private java.lang.Object recordKeys_ = "";
       /**
-       * <code>string recordList = 1;</code>
-       * @return The recordList.
+       * <code>string recordKeys = 1;</code>
+       * @return The recordKeys.
        */
-      public java.lang.String getRecordList() {
-        java.lang.Object ref = recordList_;
+      public java.lang.String getRecordKeys() {
+        java.lang.Object ref = recordKeys_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          recordList_ = s;
+          recordKeys_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string recordList = 1;</code>
-       * @return The bytes for recordList.
+       * <code>string recordKeys = 1;</code>
+       * @return The bytes for recordKeys.
        */
       public com.google.protobuf.ByteString
-          getRecordListBytes() {
-        java.lang.Object ref = recordList_;
+          getRecordKeysBytes() {
+        java.lang.Object ref = recordKeys_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          recordList_ = b;
+          recordKeys_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string recordList = 1;</code>
-       * @param value The recordList to set.
+       * <code>string recordKeys = 1;</code>
+       * @param value The recordKeys to set.
        * @return This builder for chaining.
        */
-      public Builder setRecordList(
+      public Builder setRecordKeys(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        recordList_ = value;
+        recordKeys_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string recordList = 1;</code>
+       * <code>string recordKeys = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearRecordList() {
-        recordList_ = getDefaultInstance().getRecordList();
+      public Builder clearRecordKeys() {
+        recordKeys_ = getDefaultInstance().getRecordKeys();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string recordList = 1;</code>
-       * @param value The bytes for recordList to set.
+       * <code>string recordKeys = 1;</code>
+       * @param value The bytes for recordKeys to set.
        * @return This builder for chaining.
        */
-      public Builder setRecordListBytes(
+      public Builder setRecordKeysBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        recordList_ = value;
+        recordKeys_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
@@ -38480,159 +38480,160 @@ public final class SzEngineProto {
       "itiesByRecordIdRequest\022\026\n\016dataSourceCode" +
       "\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"" +
       ";\n)FindInterestingEntitiesByRecordIdResp" +
-      "onse\022\016\n\006result\030\001 \001(\t\"\202\001\n\034FindNetworkByEn" +
-      "tityIdRequest\022\022\n\nentityList\030\001 \001(\t\022\022\n\nmax" +
-      "Degrees\030\002 \001(\003\022\026\n\016buildOutDegree\030\003 \001(\003\022\023\n" +
-      "\013maxEntities\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035Fin" +
-      "dNetworkByEntityIdResponse\022\016\n\006result\030\001 \001" +
-      "(\t\"\202\001\n\034FindNetworkByRecordIdRequest\022\022\n\nr" +
-      "ecordList\030\001 \001(\t\022\022\n\nmaxDegrees\030\002 \001(\003\022\026\n\016b" +
-      "uildOutDegree\030\003 \001(\003\022\023\n\013maxEntities\030\004 \001(\003" +
-      "\022\r\n\005flags\030\005 \001(\003\"/\n\035FindNetworkByRecordId" +
-      "Response\022\016\n\006result\030\001 \001(\t\"\233\001\n\031FindPathByE" +
-      "ntityIdRequest\022\025\n\rstartEntityId\030\001 \001(\003\022\023\n" +
-      "\013endEntityId\030\002 \001(\003\022\022\n\nmaxDegrees\030\003 \001(\003\022\022" +
-      "\n\nexclusions\030\004 \001(\t\022\033\n\023requiredDataSource" +
-      "s\030\005 \001(\t\022\r\n\005flags\030\006 \001(\003\",\n\032FindPathByEnti" +
-      "tyIdResponse\022\016\n\006result\030\001 \001(\t\"\323\001\n\031FindPat" +
-      "hByRecordIdRequest\022\033\n\023startDataSourceCod" +
-      "e\030\001 \001(\t\022\025\n\rstartRecordId\030\002 \001(\t\022\031\n\021endDat" +
-      "aSourceCode\030\003 \001(\t\022\023\n\013endRecordId\030\004 \001(\t\022\022" +
-      "\n\nmaxDegrees\030\005 \001(\003\022\022\n\nexclusions\030\006 \001(\t\022\033" +
-      "\n\023requiredDataSources\030\007 \001(\t\022\r\n\005flags\030\010 \001" +
-      "(\003\",\n\032FindPathByRecordIdResponse\022\016\n\006resu" +
-      "lt\030\001 \001(\t\"\032\n\030GetActiveConfigIdRequest\"+\n\031" +
-      "GetActiveConfigIdResponse\022\016\n\006result\030\001 \001(" +
-      "\003\"=\n\032GetEntityByEntityIdRequest\022\020\n\010entit" +
-      "yId\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"-\n\033GetEntityByE" +
-      "ntityIdResponse\022\016\n\006result\030\001 \001(\t\"U\n\032GetEn" +
-      "tityByRecordIdRequest\022\026\n\016dataSourceCode\030" +
-      "\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"-" +
-      "\n\033GetEntityByRecordIdResponse\022\016\n\006result\030" +
-      "\001 \001(\t\"K\n\020GetRecordRequest\022\026\n\016dataSourceC" +
+      "onse\022\016\n\006result\030\001 \001(\t\"\211\001\n\034FindNetworkByEn" +
+      "tityIdRequest\022\021\n\tentityIds\030\001 \001(\t\022\022\n\nmaxD" +
+      "egrees\030\002 \001(\003\022\026\n\016buildOutDegree\030\003 \001(\003\022\033\n\023" +
+      "buildOutMaxEntities\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003" +
+      "\"/\n\035FindNetworkByEntityIdResponse\022\016\n\006res" +
+      "ult\030\001 \001(\t\"\212\001\n\034FindNetworkByRecordIdReque" +
+      "st\022\022\n\nrecordKeys\030\001 \001(\t\022\022\n\nmaxDegrees\030\002 \001" +
+      "(\003\022\026\n\016buildOutDegree\030\003 \001(\003\022\033\n\023buildOutMa" +
+      "xEntities\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035FindNe" +
+      "tworkByRecordIdResponse\022\016\n\006result\030\001 \001(\t\"" +
+      "\237\001\n\031FindPathByEntityIdRequest\022\025\n\rstartEn" +
+      "tityId\030\001 \001(\003\022\023\n\013endEntityId\030\002 \001(\003\022\022\n\nmax" +
+      "Degrees\030\003 \001(\003\022\026\n\016avoidEntityIds\030\004 \001(\t\022\033\n" +
+      "\023requiredDataSources\030\005 \001(\t\022\r\n\005flags\030\006 \001(" +
+      "\003\",\n\032FindPathByEntityIdResponse\022\016\n\006resul" +
+      "t\030\001 \001(\t\"\330\001\n\031FindPathByRecordIdRequest\022\033\n" +
+      "\023startDataSourceCode\030\001 \001(\t\022\025\n\rstartRecor" +
+      "dId\030\002 \001(\t\022\031\n\021endDataSourceCode\030\003 \001(\t\022\023\n\013" +
+      "endRecordId\030\004 \001(\t\022\022\n\nmaxDegrees\030\005 \001(\003\022\027\n" +
+      "\017avoidRecordKeys\030\006 \001(\t\022\033\n\023requiredDataSo" +
+      "urces\030\007 \001(\t\022\r\n\005flags\030\010 \001(\003\",\n\032FindPathBy" +
+      "RecordIdResponse\022\016\n\006result\030\001 \001(\t\"\032\n\030GetA" +
+      "ctiveConfigIdRequest\"+\n\031GetActiveConfigI" +
+      "dResponse\022\016\n\006result\030\001 \001(\003\"=\n\032GetEntityBy" +
+      "EntityIdRequest\022\020\n\010entityId\030\001 \001(\003\022\r\n\005fla" +
+      "gs\030\002 \001(\003\"-\n\033GetEntityByEntityIdResponse\022" +
+      "\016\n\006result\030\001 \001(\t\"U\n\032GetEntityByRecordIdRe" +
+      "quest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordI" +
+      "d\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"-\n\033GetEntityByRec" +
+      "ordIdResponse\022\016\n\006result\030\001 \001(\t\"K\n\020GetReco" +
+      "rdRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010rec" +
+      "ordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"#\n\021GetRecordR" +
+      "esponse\022\016\n\006result\030\001 \001(\t\"\026\n\024GetRedoRecord" +
+      "Request\"\'\n\025GetRedoRecordResponse\022\016\n\006resu" +
+      "lt\030\001 \001(\t\"\021\n\017GetStatsRequest\"\"\n\020GetStatsR" +
+      "esponse\022\016\n\006result\030\001 \001(\t\"F\n!GetVirtualEnt" +
+      "ityByRecordIdRequest\022\022\n\nrecordKeys\030\001 \001(\t" +
+      "\022\r\n\005flags\030\002 \001(\003\"4\n\"GetVirtualEntityByRec" +
+      "ordIdResponse\022\016\n\006result\030\001 \001(\t\"=\n\032HowEnti" +
+      "tyByEntityIdRequest\022\020\n\010entityId\030\001 \001(\003\022\r\n" +
+      "\005flags\030\002 \001(\003\"-\n\033HowEntityByEntityIdRespo" +
+      "nse\022\016\n\006result\030\001 \001(\t\"\024\n\022PrimeEngineReques" +
+      "t\"\025\n\023PrimeEngineResponse\"=\n\030ProcessRedoR" +
+      "ecordRequest\022\022\n\nredoRecord\030\001 \001(\t\022\r\n\005flag" +
+      "s\030\002 \001(\003\"+\n\031ProcessRedoRecordResponse\022\016\n\006" +
+      "result\030\001 \001(\t\":\n\027ReevaluateEntityRequest\022" +
+      "\020\n\010entityId\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"*\n\030Reev" +
+      "aluateEntityResponse\022\016\n\006result\030\001 \001(\t\"R\n\027" +
+      "ReevaluateRecordRequest\022\026\n\016dataSourceCod" +
+      "e\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003" +
+      "\"*\n\030ReevaluateRecordResponse\022\016\n\006result\030\001" +
+      " \001(\t\"\'\n\023ReinitializeRequest\022\020\n\010configId\030" +
+      "\001 \001(\003\"\026\n\024ReinitializeResponse\"U\n\031SearchB" +
+      "yAttributesRequest\022\022\n\nattributes\030\001 \001(\t\022\025" +
+      "\n\rsearchProfile\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\",\n\032" +
+      "SearchByAttributesResponse\022\016\n\006result\030\001 \001" +
+      "(\t\"J\n\"StreamExportCsvEntityReportRequest" +
+      "\022\025\n\rcsvColumnList\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"5" +
+      "\n#StreamExportCsvEntityReportResponse\022\016\n" +
+      "\006result\030\001 \001(\t\"4\n#StreamExportJsonEntityR" +
+      "eportRequest\022\r\n\005flags\030\001 \001(\003\"6\n$StreamExp" +
+      "ortJsonEntityReportResponse\022\016\n\006result\030\001 " +
+      "\001(\t\"I\n\022WhyEntitiesRequest\022\021\n\tentityId1\030\001" +
+      " \001(\003\022\021\n\tentityId2\030\002 \001(\003\022\r\n\005flags\030\003 \001(\003\"%" +
+      "\n\023WhyEntitiesResponse\022\016\n\006result\030\001 \001(\t\"S\n" +
+      "\030WhyRecordInEntityRequest\022\026\n\016dataSourceC" +
       "ode\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001" +
-      "(\003\"#\n\021GetRecordResponse\022\016\n\006result\030\001 \001(\t\"" +
-      "\026\n\024GetRedoRecordRequest\"\'\n\025GetRedoRecord" +
-      "Response\022\016\n\006result\030\001 \001(\t\"\021\n\017GetStatsRequ" +
-      "est\"\"\n\020GetStatsResponse\022\016\n\006result\030\001 \001(\t\"" +
-      "F\n!GetVirtualEntityByRecordIdRequest\022\022\n\n" +
-      "recordList\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"4\n\"GetVi" +
-      "rtualEntityByRecordIdResponse\022\016\n\006result\030" +
-      "\001 \001(\t\"=\n\032HowEntityByEntityIdRequest\022\020\n\010e" +
-      "ntityId\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"-\n\033HowEntit" +
-      "yByEntityIdResponse\022\016\n\006result\030\001 \001(\t\"\024\n\022P" +
-      "rimeEngineRequest\"\025\n\023PrimeEngineResponse" +
-      "\"=\n\030ProcessRedoRecordRequest\022\022\n\nredoReco" +
-      "rd\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"+\n\031ProcessRedoRe" +
-      "cordResponse\022\016\n\006result\030\001 \001(\t\":\n\027Reevalua" +
-      "teEntityRequest\022\020\n\010entityId\030\001 \001(\003\022\r\n\005fla" +
-      "gs\030\002 \001(\003\"*\n\030ReevaluateEntityResponse\022\016\n\006" +
-      "result\030\001 \001(\t\"R\n\027ReevaluateRecordRequest\022" +
-      "\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordId\030\002 \001(" +
-      "\t\022\r\n\005flags\030\003 \001(\003\"*\n\030ReevaluateRecordResp" +
-      "onse\022\016\n\006result\030\001 \001(\t\"\'\n\023ReinitializeRequ" +
-      "est\022\020\n\010configId\030\001 \001(\003\"\026\n\024ReinitializeRes" +
-      "ponse\"U\n\031SearchByAttributesRequest\022\022\n\nat" +
-      "tributes\030\001 \001(\t\022\025\n\rsearchProfile\030\002 \001(\t\022\r\n" +
-      "\005flags\030\003 \001(\003\",\n\032SearchByAttributesRespon" +
-      "se\022\016\n\006result\030\001 \001(\t\"J\n\"StreamExportCsvEnt" +
-      "ityReportRequest\022\025\n\rcsvColumnList\030\001 \001(\t\022" +
-      "\r\n\005flags\030\002 \001(\003\"5\n#StreamExportCsvEntityR" +
-      "eportResponse\022\016\n\006result\030\001 \001(\t\"4\n#StreamE" +
-      "xportJsonEntityReportRequest\022\r\n\005flags\030\001 " +
-      "\001(\003\"6\n$StreamExportJsonEntityReportRespo" +
-      "nse\022\016\n\006result\030\001 \001(\t\"I\n\022WhyEntitiesReques" +
-      "t\022\021\n\tentityId1\030\001 \001(\003\022\021\n\tentityId2\030\002 \001(\003\022" +
-      "\r\n\005flags\030\003 \001(\003\"%\n\023WhyEntitiesResponse\022\016\n" +
-      "\006result\030\001 \001(\t\"S\n\030WhyRecordInEntityReques" +
-      "t\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recordId\030\002 " +
-      "\001(\t\022\r\n\005flags\030\003 \001(\003\"+\n\031WhyRecordInEntityR" +
-      "esponse\022\016\n\006result\030\001 \001(\t\"z\n\021WhyRecordsReq" +
-      "uest\022\027\n\017dataSourceCode1\030\001 \001(\t\022\021\n\trecordI" +
-      "d1\030\002 \001(\t\022\027\n\017dataSourceCode2\030\003 \001(\t\022\021\n\trec" +
-      "ordId2\030\004 \001(\t\022\r\n\005flags\030\005 \001(\003\"$\n\022WhyRecord" +
-      "sResponse\022\016\n\006result\030\001 \001(\t2\270\030\n\010SzEngine\022F" +
-      "\n\tAddRecord\022\032.szengine.AddRecordRequest\032" +
-      "\033.szengine.AddRecordResponse\"\000\022L\n\013CloseE" +
-      "xport\022\034.szengine.CloseExportRequest\032\035.sz" +
-      "engine.CloseExportResponse\"\000\022[\n\020CountRed" +
-      "oRecords\022!.szengine.CountRedoRecordsRequ" +
-      "est\032\".szengine.CountRedoRecordsResponse\"" +
-      "\000\022O\n\014DeleteRecord\022\035.szengine.DeleteRecor" +
-      "dRequest\032\036.szengine.DeleteRecordResponse" +
-      "\"\000\022j\n\025ExportCsvEntityReport\022&.szengine.E" +
-      "xportCsvEntityReportRequest\032\'.szengine.E" +
-      "xportCsvEntityReportResponse\"\000\022m\n\026Export" +
-      "JsonEntityReport\022\'.szengine.ExportJsonEn" +
-      "tityReportRequest\032(.szengine.ExportJsonE" +
-      "ntityReportResponse\"\000\022F\n\tFetchNext\022\032.sze" +
-      "ngine.FetchNextRequest\032\033.szengine.FetchN" +
-      "extResponse\"\000\022\216\001\n!FindInterestingEntitie" +
-      "sByEntityId\0222.szengine.FindInterestingEn" +
-      "titiesByEntityIdRequest\0323.szengine.FindI" +
-      "nterestingEntitiesByEntityIdResponse\"\000\022\216" +
-      "\001\n!FindInterestingEntitiesByRecordId\0222.s" +
-      "zengine.FindInterestingEntitiesByRecordI" +
-      "dRequest\0323.szengine.FindInterestingEntit" +
-      "iesByRecordIdResponse\"\000\022j\n\025FindNetworkBy" +
-      "EntityId\022&.szengine.FindNetworkByEntityI" +
-      "dRequest\032\'.szengine.FindNetworkByEntityI" +
-      "dResponse\"\000\022j\n\025FindNetworkByRecordId\022&.s" +
-      "zengine.FindNetworkByRecordIdRequest\032\'.s" +
-      "zengine.FindNetworkByRecordIdResponse\"\000\022" +
-      "a\n\022FindPathByEntityId\022#.szengine.FindPat" +
-      "hByEntityIdRequest\032$.szengine.FindPathBy" +
-      "EntityIdResponse\"\000\022a\n\022FindPathByRecordId" +
-      "\022#.szengine.FindPathByRecordIdRequest\032$." +
-      "szengine.FindPathByRecordIdResponse\"\000\022^\n" +
-      "\021GetActiveConfigId\022\".szengine.GetActiveC" +
-      "onfigIdRequest\032#.szengine.GetActiveConfi" +
-      "gIdResponse\"\000\022d\n\023GetEntityByEntityId\022$.s" +
-      "zengine.GetEntityByEntityIdRequest\032%.sze" +
-      "ngine.GetEntityByEntityIdResponse\"\000\022d\n\023G" +
-      "etEntityByRecordId\022$.szengine.GetEntityB" +
-      "yRecordIdRequest\032%.szengine.GetEntityByR" +
-      "ecordIdResponse\"\000\022F\n\tGetRecord\022\032.szengin" +
-      "e.GetRecordRequest\032\033.szengine.GetRecordR" +
-      "esponse\"\000\022R\n\rGetRedoRecord\022\036.szengine.Ge" +
-      "tRedoRecordRequest\032\037.szengine.GetRedoRec" +
-      "ordResponse\"\000\022C\n\010GetStats\022\031.szengine.Get" +
-      "StatsRequest\032\032.szengine.GetStatsResponse" +
-      "\"\000\022y\n\032GetVirtualEntityByRecordId\022+.szeng" +
-      "ine.GetVirtualEntityByRecordIdRequest\032,." +
-      "szengine.GetVirtualEntityByRecordIdRespo" +
-      "nse\"\000\022d\n\023HowEntityByEntityId\022$.szengine." +
-      "HowEntityByEntityIdRequest\032%.szengine.Ho" +
-      "wEntityByEntityIdResponse\"\000\022L\n\013PrimeEngi" +
-      "ne\022\034.szengine.PrimeEngineRequest\032\035.szeng" +
-      "ine.PrimeEngineResponse\"\000\022^\n\021ProcessRedo" +
-      "Record\022\".szengine.ProcessRedoRecordReque" +
-      "st\032#.szengine.ProcessRedoRecordResponse\"" +
-      "\000\022[\n\020ReevaluateEntity\022!.szengine.Reevalu" +
-      "ateEntityRequest\032\".szengine.ReevaluateEn" +
-      "tityResponse\"\000\022[\n\020ReevaluateRecord\022!.sze" +
-      "ngine.ReevaluateRecordRequest\032\".szengine" +
-      ".ReevaluateRecordResponse\"\000\022O\n\014Reinitial" +
-      "ize\022\035.szengine.ReinitializeRequest\032\036.sze" +
-      "ngine.ReinitializeResponse\"\000\022a\n\022SearchBy" +
-      "Attributes\022#.szengine.SearchByAttributes" +
-      "Request\032$.szengine.SearchByAttributesRes" +
-      "ponse\"\000\022~\n\033StreamExportCsvEntityReport\022," +
-      ".szengine.StreamExportCsvEntityReportReq" +
-      "uest\032-.szengine.StreamExportCsvEntityRep" +
-      "ortResponse\"\0000\001\022\201\001\n\034StreamExportJsonEnti" +
-      "tyReport\022-.szengine.StreamExportJsonEnti" +
-      "tyReportRequest\032..szengine.StreamExportJ" +
-      "sonEntityReportResponse\"\0000\001\022L\n\013WhyEntiti" +
-      "es\022\034.szengine.WhyEntitiesRequest\032\035.szeng" +
-      "ine.WhyEntitiesResponse\"\000\022^\n\021WhyRecordIn" +
-      "Entity\022\".szengine.WhyRecordInEntityReque" +
-      "st\032#.szengine.WhyRecordInEntityResponse\"" +
-      "\000\022I\n\nWhyRecords\022\033.szengine.WhyRecordsReq" +
-      "uest\032\034.szengine.WhyRecordsResponse\"\000Bg\n#" +
-      "com.senzing.sz.engine.grpc.SzEngineB\rSzE" +
-      "ngineProtoZ1github.com/senzing-garage/sz" +
-      "-sdk-go-grpc/szengineb\006proto3"
+      "(\003\"+\n\031WhyRecordInEntityResponse\022\016\n\006resul" +
+      "t\030\001 \001(\t\"z\n\021WhyRecordsRequest\022\027\n\017dataSour" +
+      "ceCode1\030\001 \001(\t\022\021\n\trecordId1\030\002 \001(\t\022\027\n\017data" +
+      "SourceCode2\030\003 \001(\t\022\021\n\trecordId2\030\004 \001(\t\022\r\n\005" +
+      "flags\030\005 \001(\003\"$\n\022WhyRecordsResponse\022\016\n\006res" +
+      "ult\030\001 \001(\t2\270\030\n\010SzEngine\022F\n\tAddRecord\022\032.sz" +
+      "engine.AddRecordRequest\032\033.szengine.AddRe" +
+      "cordResponse\"\000\022L\n\013CloseExport\022\034.szengine" +
+      ".CloseExportRequest\032\035.szengine.CloseExpo" +
+      "rtResponse\"\000\022[\n\020CountRedoRecords\022!.szeng" +
+      "ine.CountRedoRecordsRequest\032\".szengine.C" +
+      "ountRedoRecordsResponse\"\000\022O\n\014DeleteRecor" +
+      "d\022\035.szengine.DeleteRecordRequest\032\036.szeng" +
+      "ine.DeleteRecordResponse\"\000\022j\n\025ExportCsvE" +
+      "ntityReport\022&.szengine.ExportCsvEntityRe" +
+      "portRequest\032\'.szengine.ExportCsvEntityRe" +
+      "portResponse\"\000\022m\n\026ExportJsonEntityReport" +
+      "\022\'.szengine.ExportJsonEntityReportReques" +
+      "t\032(.szengine.ExportJsonEntityReportRespo" +
+      "nse\"\000\022F\n\tFetchNext\022\032.szengine.FetchNextR" +
+      "equest\032\033.szengine.FetchNextResponse\"\000\022\216\001" +
+      "\n!FindInterestingEntitiesByEntityId\0222.sz" +
+      "engine.FindInterestingEntitiesByEntityId" +
+      "Request\0323.szengine.FindInterestingEntiti" +
+      "esByEntityIdResponse\"\000\022\216\001\n!FindInteresti" +
+      "ngEntitiesByRecordId\0222.szengine.FindInte" +
+      "restingEntitiesByRecordIdRequest\0323.szeng" +
+      "ine.FindInterestingEntitiesByRecordIdRes" +
+      "ponse\"\000\022j\n\025FindNetworkByEntityId\022&.szeng" +
+      "ine.FindNetworkByEntityIdRequest\032\'.szeng" +
+      "ine.FindNetworkByEntityIdResponse\"\000\022j\n\025F" +
+      "indNetworkByRecordId\022&.szengine.FindNetw" +
+      "orkByRecordIdRequest\032\'.szengine.FindNetw" +
+      "orkByRecordIdResponse\"\000\022a\n\022FindPathByEnt" +
+      "ityId\022#.szengine.FindPathByEntityIdReque" +
+      "st\032$.szengine.FindPathByEntityIdResponse" +
+      "\"\000\022a\n\022FindPathByRecordId\022#.szengine.Find" +
+      "PathByRecordIdRequest\032$.szengine.FindPat" +
+      "hByRecordIdResponse\"\000\022^\n\021GetActiveConfig" +
+      "Id\022\".szengine.GetActiveConfigIdRequest\032#" +
+      ".szengine.GetActiveConfigIdResponse\"\000\022d\n" +
+      "\023GetEntityByEntityId\022$.szengine.GetEntit" +
+      "yByEntityIdRequest\032%.szengine.GetEntityB" +
+      "yEntityIdResponse\"\000\022d\n\023GetEntityByRecord" +
+      "Id\022$.szengine.GetEntityByRecordIdRequest" +
+      "\032%.szengine.GetEntityByRecordIdResponse\"" +
+      "\000\022F\n\tGetRecord\022\032.szengine.GetRecordReque" +
+      "st\032\033.szengine.GetRecordResponse\"\000\022R\n\rGet" +
+      "RedoRecord\022\036.szengine.GetRedoRecordReque" +
+      "st\032\037.szengine.GetRedoRecordResponse\"\000\022C\n" +
+      "\010GetStats\022\031.szengine.GetStatsRequest\032\032.s" +
+      "zengine.GetStatsResponse\"\000\022y\n\032GetVirtual" +
+      "EntityByRecordId\022+.szengine.GetVirtualEn" +
+      "tityByRecordIdRequest\032,.szengine.GetVirt" +
+      "ualEntityByRecordIdResponse\"\000\022d\n\023HowEnti" +
+      "tyByEntityId\022$.szengine.HowEntityByEntit" +
+      "yIdRequest\032%.szengine.HowEntityByEntityI" +
+      "dResponse\"\000\022L\n\013PrimeEngine\022\034.szengine.Pr" +
+      "imeEngineRequest\032\035.szengine.PrimeEngineR" +
+      "esponse\"\000\022^\n\021ProcessRedoRecord\022\".szengin" +
+      "e.ProcessRedoRecordRequest\032#.szengine.Pr" +
+      "ocessRedoRecordResponse\"\000\022[\n\020ReevaluateE" +
+      "ntity\022!.szengine.ReevaluateEntityRequest" +
+      "\032\".szengine.ReevaluateEntityResponse\"\000\022[" +
+      "\n\020ReevaluateRecord\022!.szengine.Reevaluate" +
+      "RecordRequest\032\".szengine.ReevaluateRecor" +
+      "dResponse\"\000\022O\n\014Reinitialize\022\035.szengine.R" +
+      "einitializeRequest\032\036.szengine.Reinitiali" +
+      "zeResponse\"\000\022a\n\022SearchByAttributes\022#.sze" +
+      "ngine.SearchByAttributesRequest\032$.szengi" +
+      "ne.SearchByAttributesResponse\"\000\022~\n\033Strea" +
+      "mExportCsvEntityReport\022,.szengine.Stream" +
+      "ExportCsvEntityReportRequest\032-.szengine." +
+      "StreamExportCsvEntityReportResponse\"\0000\001\022" +
+      "\201\001\n\034StreamExportJsonEntityReport\022-.szeng" +
+      "ine.StreamExportJsonEntityReportRequest\032" +
+      "..szengine.StreamExportJsonEntityReportR" +
+      "esponse\"\0000\001\022L\n\013WhyEntities\022\034.szengine.Wh" +
+      "yEntitiesRequest\032\035.szengine.WhyEntitiesR" +
+      "esponse\"\000\022^\n\021WhyRecordInEntity\022\".szengin" +
+      "e.WhyRecordInEntityRequest\032#.szengine.Wh" +
+      "yRecordInEntityResponse\"\000\022I\n\nWhyRecords\022" +
+      "\033.szengine.WhyRecordsRequest\032\034.szengine." +
+      "WhyRecordsResponse\"\000Bg\n#com.senzing.sz.e" +
+      "ngine.grpc.SzEngineB\rSzEngineProtoZ1gith" +
+      "ub.com/senzing-garage/sz-sdk-go-grpc/sze" +
+      "ngineb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -38751,7 +38752,7 @@ public final class SzEngineProto {
     internal_static_szengine_FindNetworkByEntityIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_FindNetworkByEntityIdRequest_descriptor,
-        new java.lang.String[] { "EntityList", "MaxDegrees", "BuildOutDegree", "MaxEntities", "Flags", });
+        new java.lang.String[] { "EntityIds", "MaxDegrees", "BuildOutDegree", "BuildOutMaxEntities", "Flags", });
     internal_static_szengine_FindNetworkByEntityIdResponse_descriptor =
       getDescriptor().getMessageTypes().get(19);
     internal_static_szengine_FindNetworkByEntityIdResponse_fieldAccessorTable = new
@@ -38763,7 +38764,7 @@ public final class SzEngineProto {
     internal_static_szengine_FindNetworkByRecordIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_FindNetworkByRecordIdRequest_descriptor,
-        new java.lang.String[] { "RecordList", "MaxDegrees", "BuildOutDegree", "MaxEntities", "Flags", });
+        new java.lang.String[] { "RecordKeys", "MaxDegrees", "BuildOutDegree", "BuildOutMaxEntities", "Flags", });
     internal_static_szengine_FindNetworkByRecordIdResponse_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_szengine_FindNetworkByRecordIdResponse_fieldAccessorTable = new
@@ -38775,7 +38776,7 @@ public final class SzEngineProto {
     internal_static_szengine_FindPathByEntityIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_FindPathByEntityIdRequest_descriptor,
-        new java.lang.String[] { "StartEntityId", "EndEntityId", "MaxDegrees", "Exclusions", "RequiredDataSources", "Flags", });
+        new java.lang.String[] { "StartEntityId", "EndEntityId", "MaxDegrees", "AvoidEntityIds", "RequiredDataSources", "Flags", });
     internal_static_szengine_FindPathByEntityIdResponse_descriptor =
       getDescriptor().getMessageTypes().get(23);
     internal_static_szengine_FindPathByEntityIdResponse_fieldAccessorTable = new
@@ -38787,7 +38788,7 @@ public final class SzEngineProto {
     internal_static_szengine_FindPathByRecordIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_FindPathByRecordIdRequest_descriptor,
-        new java.lang.String[] { "StartDataSourceCode", "StartRecordId", "EndDataSourceCode", "EndRecordId", "MaxDegrees", "Exclusions", "RequiredDataSources", "Flags", });
+        new java.lang.String[] { "StartDataSourceCode", "StartRecordId", "EndDataSourceCode", "EndRecordId", "MaxDegrees", "AvoidRecordKeys", "RequiredDataSources", "Flags", });
     internal_static_szengine_FindPathByRecordIdResponse_descriptor =
       getDescriptor().getMessageTypes().get(25);
     internal_static_szengine_FindPathByRecordIdResponse_fieldAccessorTable = new
@@ -38871,7 +38872,7 @@ public final class SzEngineProto {
     internal_static_szengine_GetVirtualEntityByRecordIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szengine_GetVirtualEntityByRecordIdRequest_descriptor,
-        new java.lang.String[] { "RecordList", "Flags", });
+        new java.lang.String[] { "RecordKeys", "Flags", });
     internal_static_szengine_GetVirtualEntityByRecordIdResponse_descriptor =
       getDescriptor().getMessageTypes().get(39);
     internal_static_szengine_GetVirtualEntityByRecordIdResponse_fieldAccessorTable = new
