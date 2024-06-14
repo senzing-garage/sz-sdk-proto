@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed in 0.7.6
 
 - From `GetConfigList` to `GetConfigs`
+- From `RecordList` to `RecordKeys`
 - From exclusions to avoidance
 
 ## [0.7.5] - 2024-05-08
