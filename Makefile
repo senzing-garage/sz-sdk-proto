@@ -150,40 +150,40 @@ clean: clean-csharp clean-go clean-java clean-php clean-python clean-ruby clean-
 
 .PHONY: clean-csharp
 clean-csharp:
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/cpp/* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/cpp/* || true
 
 
 .PHONY: clean-go
 clean-go:
-	rm -rf $(MAKEFILE_DIRECTORY)go/szconfig || true
-	@rm -rf $(MAKEFILE_DIRECTORY)go/szconfigmgr || true
-	@rm -rf $(MAKEFILE_DIRECTORY)go/szdiagnostic || true
-	@rm -rf $(MAKEFILE_DIRECTORY)go/szengine || true
-	@rm -rf $(MAKEFILE_DIRECTORY)go/szproduct || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/go/szconfig/sz* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/go/szconfigmgr/sz* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/go/szdiagnostic/sz* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/go/szengine/sz* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/go/szproduct/sz* || true
 
 
 .PHONY: clean-java
 clean-java:
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/java/* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/java/* || true
 
 
 .PHONY: clean-php
 clean-php:
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/php/* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/php/* || true
 
 
 .PHONY: clean-python
 clean-python:
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/python/szconfig/*        || true
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/python/szconfigmanager/* || true
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/python/szdiagnostic/*    || true
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/python/szengine/*        || true
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/python/szproduct/*       || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/python/szconfig/*        || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/python/szconfigmanager/* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/python/szdiagnostic/*    || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/python/szengine/*        || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/python/szproduct/*       || true
 
 
 .PHONY: clean-ruby
 clean-ruby:
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/ruby/* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/ruby/* || true
 
 # -----------------------------------------------------------------------------
 # Utility targets
