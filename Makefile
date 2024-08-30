@@ -145,7 +145,7 @@ documentation: documentation-osarch-specific
 # -----------------------------------------------------------------------------
 
 .PHONY: clean
-clean: clean-csharp clean-go clean-java clean-php clean-python clean-ruby
+clean: clean-csharp clean-go clean-java clean-php clean-python clean-ruby clean-osarch-specific
 
 
 .PHONY: clean-csharp
@@ -155,7 +155,7 @@ clean-csharp:
 
 .PHONY: clean-go
 clean-go:
-	@rm -rf $(MAKEFILE_DIRECTORY)go/szconfig || true
+	rm -rf $(MAKEFILE_DIRECTORY)go/szconfig || true
 	@rm -rf $(MAKEFILE_DIRECTORY)go/szconfigmgr || true
 	@rm -rf $(MAKEFILE_DIRECTORY)go/szdiagnostic || true
 	@rm -rf $(MAKEFILE_DIRECTORY)go/szengine || true
