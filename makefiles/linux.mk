@@ -4,11 +4,6 @@
 # OS specific targets
 # -----------------------------------------------------------------------------
 
-.PHONY: clean-osarch-specific
-clean-osarch-specific:
-	@pkill godoc || true
-
-
 .PHONY: dependencies-for-development-osarch-specific
 dependencies-for-development-osarch-specific:
 	@protoc --version
@@ -18,6 +13,7 @@ dependencies-for-development-osarch-specific:
 
 .PHONY: documentation-osarch-specific
 documentation-osarch-specific:
+	@pkill godoc || true
 	@godoc &
 	@xdg-open http://localhost:6060
 
