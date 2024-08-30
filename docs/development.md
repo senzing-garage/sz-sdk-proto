@@ -1,12 +1,23 @@
 # sz-sdk-proto development
 
-## Prerequisites
 
-1. [protoc]
+The following instructions are useful during development.
 
-## Clone repository
+**Note:** This has been tested on Linux and Darwin/macOS.
+It has not been tested on Windows.
 
-1. Set these environment variable values:
+
+## Prerequisites for development
+
+:thinking: The following tasks need to be complete before proceeding.
+These are "one-time tasks" which may already have been completed.
+
+1. The following software programs need to be installed:
+    1. [protoc]
+
+## Install Git repository
+
+1. Identify git repository.
 
     ```console
     export GIT_ACCOUNT=senzing-garage
@@ -16,7 +27,28 @@
 
     ```
 
-1. Using the environment variables values just set, follow steps in [clone-repository] to install the Git repository.
+1. Using the environment variables values just set, follow
+   steps in [clone-repository] to install the Git repository.
+
+## Dependencies
+
+1. A one-time command to install dependencies needed for `make` targets.
+   Example:
+
+    ```console
+    cd ${GIT_REPOSITORY_DIR}
+    make dependencies-for-development
+
+    ```
+
+1. Install dependencies needed for [Go] code.
+   Example:
+
+    ```console
+    cd ${GIT_REPOSITORY_DIR}
+    make dependencies
+
+    ```
 
 ## Language
 
