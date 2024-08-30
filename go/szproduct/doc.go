@@ -1,4 +1,4 @@
 /*
-Package szproduct a senzingapi is gRPC client/server SDK generated from szproduct.proto.
+Package szproduct is a senzingapi gRPC client/server SDK generated from szproduct.proto.
 */
 package szproduct

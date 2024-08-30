@@ -1,4 +1,4 @@
 /*
-Package szconfigmanager a senzingapi is gRPC client/server SDK generated from szconfigmanager.proto.
+Package szconfigmanager is a senzingapi gRPC client/server SDK generated from szconfigmanager.proto.
 */
 package szconfigmanager
