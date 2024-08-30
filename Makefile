@@ -1,5 +1,13 @@
 # Makefile for sz-sdk-proto
 
+# Detect the operating system and architecture.
+
+include makefiles/osdetect.mk
+
+# -----------------------------------------------------------------------------
+# Variables
+# -----------------------------------------------------------------------------
+
 # "Simple expanded" variables (':=')
 
 # PROGRAM_NAME is the name of the GIT repository.

@@ -6,9 +6,9 @@
 
 .PHONY: dependencies-for-development-osarch-specific
 dependencies-for-development-osarch-specific:
-	protoc --version
-	apt install -y protobuf-compiler
-	protoc --version
+	@protoc --version
+	@sudo apt install --upgrade -y protobuf-compiler
+	@protoc --version
 
 # -----------------------------------------------------------------------------
 # Makefile targets supported only by this platform.

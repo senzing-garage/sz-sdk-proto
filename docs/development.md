@@ -1,16 +1,20 @@
 # sz-sdk-proto development
 
-
 The following instructions are useful during development.
 
 **Note:** This has been tested on Linux and Darwin/macOS.
 It has not been tested on Windows.
 
-
 ## Prerequisites for development
 
 :thinking: The following tasks need to be complete before proceeding.
 These are "one-time tasks" which may already have been completed.
+
+1. The following software programs need to be installed:
+    1. [git]
+    1. [make]
+    1. [docker]
+    1. [go]
 
 1. The following software programs need to be installed:
     1. [protoc]
@@ -50,7 +54,20 @@ These are "one-time tasks" which may already have been completed.
 
     ```
 
+## Generate code
+
+1. Generate code across multiple languages.
+   Example:
+
+    ```console
+    cd ${GIT_REPOSITORY_DIR}
+    make generate
+
+    ```
+
 ## Language
+
+These are manual steps for the `make generate` described above.
 
 The following instructions were used to create a [go module] and other [example generated source code].
 
@@ -234,8 +251,9 @@ The following instructions were used to create a [go module] and other [example 
 
 ### .NET
 
-1. **References:**
-    1. [Overview for gRPC on .NET]
+  1. [Overview for gRPC on .NET]
+
+## References
 
 [C++ Quick start]: https://grpc.io/docs/languages/cpp/quickstart/
 [Clone repository]: #clone-repository
@@ -253,3 +271,7 @@ The following instructions were used to create a [go module] and other [example 
 [Python Quick start]: https://grpc.io/docs/languages/python/quickstart/
 [Ruby Quick start]: https://grpc.io/docs/languages/ruby/quickstart/
 [Thread safety]: https://grpc.io/docs/languages/go/generated-code/
+[docker]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker.md
+[git]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/git.md
+[go]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/go.md
+[make]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/make.md

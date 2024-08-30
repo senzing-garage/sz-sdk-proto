@@ -8359,7 +8359,7 @@ class FindNetworkByRecordIdRequest final :
   enum : int {
     kRecordKeysFieldNumber = 1,
     kMaxDegreesFieldNumber = 2,
-    kBuildOutDegreeFieldNumber = 3,
+    kBuildOutDegreesFieldNumber = 3,
     kBuildOutMaxEntitiesFieldNumber = 4,
     kFlagsFieldNumber = 5,
   };
@@ -8389,14 +8389,14 @@ class FindNetworkByRecordIdRequest final :
   void _internal_set_maxdegrees(::int64_t value);
 
   public:
-  // int64 buildOutDegree = 3;
-  void clear_buildoutdegree() ;
-  ::int64_t buildoutdegree() const;
-  void set_buildoutdegree(::int64_t value);
+  // int64 buildOutDegrees = 3;
+  void clear_buildoutdegrees() ;
+  ::int64_t buildoutdegrees() const;
+  void set_buildoutdegrees(::int64_t value);
 
   private:
-  ::int64_t _internal_buildoutdegree() const;
-  void _internal_set_buildoutdegree(::int64_t value);
+  ::int64_t _internal_buildoutdegrees() const;
+  void _internal_set_buildoutdegrees(::int64_t value);
 
   public:
   // int64 buildOutMaxEntities = 4;
@@ -8444,7 +8444,7 @@ class FindNetworkByRecordIdRequest final :
                               ::google::protobuf::Arena* arena, const Impl_& from);
     ::google::protobuf::internal::ArenaStringPtr recordkeys_;
     ::int64_t maxdegrees_;
-    ::int64_t buildoutdegree_;
+    ::int64_t buildoutdegrees_;
     ::int64_t buildoutmaxentities_;
     ::int64_t flags_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
@@ -8769,7 +8769,7 @@ class FindNetworkByEntityIdRequest final :
   enum : int {
     kEntityIdsFieldNumber = 1,
     kMaxDegreesFieldNumber = 2,
-    kBuildOutDegreeFieldNumber = 3,
+    kBuildOutDegreesFieldNumber = 3,
     kBuildOutMaxEntitiesFieldNumber = 4,
     kFlagsFieldNumber = 5,
   };
@@ -8799,14 +8799,14 @@ class FindNetworkByEntityIdRequest final :
   void _internal_set_maxdegrees(::int64_t value);
 
   public:
-  // int64 buildOutDegree = 3;
-  void clear_buildoutdegree() ;
-  ::int64_t buildoutdegree() const;
-  void set_buildoutdegree(::int64_t value);
+  // int64 buildOutDegrees = 3;
+  void clear_buildoutdegrees() ;
+  ::int64_t buildoutdegrees() const;
+  void set_buildoutdegrees(::int64_t value);
 
   private:
-  ::int64_t _internal_buildoutdegree() const;
-  void _internal_set_buildoutdegree(::int64_t value);
+  ::int64_t _internal_buildoutdegrees() const;
+  void _internal_set_buildoutdegrees(::int64_t value);
 
   public:
   // int64 buildOutMaxEntities = 4;
@@ -8854,7 +8854,7 @@ class FindNetworkByEntityIdRequest final :
                               ::google::protobuf::Arena* arena, const Impl_& from);
     ::google::protobuf::internal::ArenaStringPtr entityids_;
     ::int64_t maxdegrees_;
-    ::int64_t buildoutdegree_;
+    ::int64_t buildoutdegrees_;
     ::int64_t buildoutmaxentities_;
     ::int64_t flags_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
@@ -13251,27 +13251,27 @@ inline void FindNetworkByEntityIdRequest::_internal_set_maxdegrees(::int64_t val
   _impl_.maxdegrees_ = value;
 }
 
-// int64 buildOutDegree = 3;
-inline void FindNetworkByEntityIdRequest::clear_buildoutdegree() {
+// int64 buildOutDegrees = 3;
+inline void FindNetworkByEntityIdRequest::clear_buildoutdegrees() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.buildoutdegree_ = ::int64_t{0};
+  _impl_.buildoutdegrees_ = ::int64_t{0};
 }
-inline ::int64_t FindNetworkByEntityIdRequest::buildoutdegree() const {
-  // @@protoc_insertion_point(field_get:szengine.FindNetworkByEntityIdRequest.buildOutDegree)
-  return _internal_buildoutdegree();
+inline ::int64_t FindNetworkByEntityIdRequest::buildoutdegrees() const {
+  // @@protoc_insertion_point(field_get:szengine.FindNetworkByEntityIdRequest.buildOutDegrees)
+  return _internal_buildoutdegrees();
 }
-inline void FindNetworkByEntityIdRequest::set_buildoutdegree(::int64_t value) {
-  _internal_set_buildoutdegree(value);
-  // @@protoc_insertion_point(field_set:szengine.FindNetworkByEntityIdRequest.buildOutDegree)
+inline void FindNetworkByEntityIdRequest::set_buildoutdegrees(::int64_t value) {
+  _internal_set_buildoutdegrees(value);
+  // @@protoc_insertion_point(field_set:szengine.FindNetworkByEntityIdRequest.buildOutDegrees)
 }
-inline ::int64_t FindNetworkByEntityIdRequest::_internal_buildoutdegree() const {
+inline ::int64_t FindNetworkByEntityIdRequest::_internal_buildoutdegrees() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.buildoutdegree_;
+  return _impl_.buildoutdegrees_;
 }
-inline void FindNetworkByEntityIdRequest::_internal_set_buildoutdegree(::int64_t value) {
+inline void FindNetworkByEntityIdRequest::_internal_set_buildoutdegrees(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.buildoutdegree_ = value;
+  _impl_.buildoutdegrees_ = value;
 }
 
 // int64 buildOutMaxEntities = 4;
@@ -13457,27 +13457,27 @@ inline void FindNetworkByRecordIdRequest::_internal_set_maxdegrees(::int64_t val
   _impl_.maxdegrees_ = value;
 }
 
-// int64 buildOutDegree = 3;
-inline void FindNetworkByRecordIdRequest::clear_buildoutdegree() {
+// int64 buildOutDegrees = 3;
+inline void FindNetworkByRecordIdRequest::clear_buildoutdegrees() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.buildoutdegree_ = ::int64_t{0};
+  _impl_.buildoutdegrees_ = ::int64_t{0};
 }
-inline ::int64_t FindNetworkByRecordIdRequest::buildoutdegree() const {
-  // @@protoc_insertion_point(field_get:szengine.FindNetworkByRecordIdRequest.buildOutDegree)
-  return _internal_buildoutdegree();
+inline ::int64_t FindNetworkByRecordIdRequest::buildoutdegrees() const {
+  // @@protoc_insertion_point(field_get:szengine.FindNetworkByRecordIdRequest.buildOutDegrees)
+  return _internal_buildoutdegrees();
 }
-inline void FindNetworkByRecordIdRequest::set_buildoutdegree(::int64_t value) {
-  _internal_set_buildoutdegree(value);
-  // @@protoc_insertion_point(field_set:szengine.FindNetworkByRecordIdRequest.buildOutDegree)
+inline void FindNetworkByRecordIdRequest::set_buildoutdegrees(::int64_t value) {
+  _internal_set_buildoutdegrees(value);
+  // @@protoc_insertion_point(field_set:szengine.FindNetworkByRecordIdRequest.buildOutDegrees)
 }
-inline ::int64_t FindNetworkByRecordIdRequest::_internal_buildoutdegree() const {
+inline ::int64_t FindNetworkByRecordIdRequest::_internal_buildoutdegrees() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.buildoutdegree_;
+  return _impl_.buildoutdegrees_;
 }
-inline void FindNetworkByRecordIdRequest::_internal_set_buildoutdegree(::int64_t value) {
+inline void FindNetworkByRecordIdRequest::_internal_set_buildoutdegrees(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.buildoutdegree_ = value;
+  _impl_.buildoutdegrees_ = value;
 }
 
 // int64 buildOutMaxEntities = 4;
