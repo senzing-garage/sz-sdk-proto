@@ -22,9 +22,9 @@ class FindNetworkByEntityIdRequest extends \Google\Protobuf\Internal\Message
      */
     protected $maxDegrees = 0;
     /**
-     * Generated from protobuf field <code>int64 buildOutDegree = 3;</code>
+     * Generated from protobuf field <code>int64 buildOutDegrees = 3;</code>
      */
-    protected $buildOutDegree = 0;
+    protected $buildOutDegrees = 0;
     /**
      * Generated from protobuf field <code>int64 buildOutMaxEntities = 4;</code>
      */
@@ -42,7 +42,7 @@ class FindNetworkByEntityIdRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $entityIds
      *     @type int|string $maxDegrees
-     *     @type int|string $buildOutDegree
+     *     @type int|string $buildOutDegrees
      *     @type int|string $buildOutMaxEntities
      *     @type int|string $flags
      * }
@@ -97,23 +97,23 @@ class FindNetworkByEntityIdRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 buildOutDegree = 3;</code>
+     * Generated from protobuf field <code>int64 buildOutDegrees = 3;</code>
      * @return int|string
      */
-    public function getBuildOutDegree()
+    public function getBuildOutDegrees()
     {
-        return $this->buildOutDegree;
+        return $this->buildOutDegrees;
     }
 
     /**
-     * Generated from protobuf field <code>int64 buildOutDegree = 3;</code>
+     * Generated from protobuf field <code>int64 buildOutDegrees = 3;</code>
      * @param int|string $var
      * @return $this
      */
-    public function setBuildOutDegree($var)
+    public function setBuildOutDegrees($var)
     {
         GPBUtil::checkInt64($var);
-        $this->buildOutDegree = $var;
+        $this->buildOutDegrees = $var;
 
         return $this;
     }

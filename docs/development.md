@@ -1,12 +1,27 @@
 # sz-sdk-proto development
 
-## Prerequisites
+The following instructions are useful during development.
 
-1. [protoc](https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/protoc.md)
+**Note:** This has been tested on Linux and Darwin/macOS.
+It has not been tested on Windows.
 
-## Clone repository
+## Prerequisites for development
 
-1. Set these environment variable values:
+:thinking: The following tasks need to be complete before proceeding.
+These are "one-time tasks" which may already have been completed.
+
+1. The following software programs need to be installed:
+    1. [git]
+    1. [make]
+    1. [docker]
+    1. [go]
+
+1. The following software programs need to be installed:
+    1. [protoc]
+
+## Install Git repository
+
+1. Identify git repository.
 
     ```console
     export GIT_ACCOUNT=senzing-garage
@@ -16,13 +31,74 @@
 
     ```
 
-1. Using the environment variables values just set, follow steps in [clone-repository](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/clone-repository.md) to install the Git repository.
+1. Using the environment variables values just set, follow
+   steps in [clone-repository] to install the Git repository.
+
+## Dependencies
+
+1. A one-time command to install dependencies needed for `make` targets.
+   Example:
+
+    ```console
+    cd ${GIT_REPOSITORY_DIR}
+    make dependencies-for-development
+
+    ```
+
+1. Install dependencies needed for [Go] code.
+   Example:
+
+    ```console
+    cd ${GIT_REPOSITORY_DIR}
+    make dependencies
+
+    ```
+
+## Generate code
+
+1. Generate code across multiple languages.
+   Example:
+
+    ```console
+    cd ${GIT_REPOSITORY_DIR}
+    make generate
+
+    ```
+
+## Documentation
+
+1. View documentation.
+   Example:
+
+    ```console
+    cd ${GIT_REPOSITORY_DIR}
+    make clean documentation
+
+    ```
+
+1. If a web page doesn't appear, visit [localhost:6060].
+1. Senzing documentation will be in the "Third party" section.
+   `github.com` > `senzing-garage` > `sz-sdk-proto`
+
+1. When a versioned release is published with a `v0.0.0` format tag,
+the reference can be found by clicking on the following badge at the top of the README.md page.
+Example:
+
+    [![Go Reference Badge]][Go Reference]
+
+1. To stop the `godoc` server, run
+
+    ```console
+    cd ${GIT_REPOSITORY_DIR}
+    make clean
+
+    ```
 
 ## Language
 
-The following instructions were used to create a
-[go module](go) and other
-[example generated source code](example_generated_source_code).
+These are manual steps for the `make generate` described above.
+
+The following instructions were used to create a [go module] and other [example generated source code].
 
 ### Identify Senzing subcomponents
 
@@ -42,11 +118,9 @@ The following instructions were used to create a
 
 ### C++
 
-1. [Clone repository](#clone-repository).
-1. Follow the
-   [C++ Quick start](https://grpc.io/docs/languages/cpp/quickstart/)
-   tutorial to prepare an environment.
-1. [Identify Senzing subcomponents](#identify-senzing-subcomponents)
+1. [Clone repository].
+1. Follow the [C++ Quick start] tutorial to prepare an environment.
+1. [Identify Senzing subcomponents].
 1. Generate message handling code.
    Example:
 
@@ -82,12 +156,10 @@ The following instructions were used to create a
 
 ### Go
 
-1. [Clone repository](#clone-repository).
-1. Follow the
-   [Go Quick start](https://grpc.io/docs/languages/go/quickstart/)
-   tutorial to prepare an environment.
-1. [Identify Senzing subcomponents](#identify-senzing-subcomponents)
-1. [Generating client and server code](https://grpc.io/docs/languages/go/basics/#generating-client-and-server-code).
+1. [Clone repository].
+1. Follow the [Go Quick start] tutorial to prepare an environment.
+1. [Identify Senzing subcomponents].
+1. [Generating client and server code].
    Example:
 
     ```console
@@ -114,17 +186,15 @@ The following instructions were used to create a
         - protocol buffer code to populate, serialize, and retrieve request and response message types.
         - In other workds, it manages message content, not the network traffic.
 1. **References:**
-    1. [gRPC Documents for Go](https://grpc.io/docs/languages/go/)
-        1. [Go Quick start](https://grpc.io/docs/languages/go/quickstart/)
-    1. [Thread safety](https://grpc.io/docs/languages/go/generated-code/)
+    1. [gRPC Documents for Go]
+        1. [Go Quick start]
+    1. [Thread safety]
 
 ### Java
 
-1. [Clone repository](#clone-repository).
-1. Follow the
-   [Java Quick start](https://grpc.io/docs/languages/java/quickstart/)
-   tutorial to prepare an environment.
-1. [Identify Senzing subcomponents](#identify-senzing-subcomponents)
+1. [Clone repository].
+1. Follow the [Java Quick start] tutorial to prepare an environment.
+1. [Identify Senzing subcomponents].
 1. Generate client and server code.
    Example:
 
@@ -143,11 +213,9 @@ The following instructions were used to create a
 
 ### PHP
 
-1. [Clone repository](#clone-repository).
-1. Follow the
-   [PHP Quick start](https://grpc.io/docs/languages/php/quickstart/)
-   tutorial to prepare an environment.
-1. [Identify Senzing subcomponents](#identify-senzing-subcomponents)
+1. [Clone repository].
+1. Follow the [PHP Quick start] tutorial to prepare an environment.
+1. [Identify Senzing subcomponents].
 1. Generate client and server code.
    Example:
 
@@ -168,11 +236,9 @@ The following instructions were used to create a
 
 ### Python
 
-1. [Clone repository](#clone-repository).
-1. Follow the
-   [Python Quick start](https://grpc.io/docs/languages/python/quickstart/)
-   tutorial to prepare an environment.
-1. [Identify Senzing subcomponents](#identify-senzing-subcomponents)
+1. [Clone repository].
+1. Follow the [Python Quick start] tutorial to prepare an environment.
+1. [Identify Senzing subcomponents].
 1. Generate client and server code.
    Example:
 
@@ -192,11 +258,9 @@ The following instructions were used to create a
 
 ### Ruby
 
-1. [Clone repository](#clone-repository).
-1. Follow the
-   [Ruby Quick start](https://grpc.io/docs/languages/ruby/quickstart/)
-   tutorial to prepare an environment.
-1. [Identify Senzing subcomponents](#identify-senzing-subcomponents)
+1. [Clone repository].
+1. Follow the [Ruby Quick start] tutorial to prepare an environment.
+1. [Identify Senzing subcomponents].
 1. Generate client and server code.
    Example:
 
@@ -216,5 +280,29 @@ The following instructions were used to create a
 
 ### .NET
 
-1. **References:**
-    1. [Overview for gRPC on .NET](https://learn.microsoft.com/en-us/aspnet/core/grpc)
+  1. [Overview for gRPC on .NET]
+
+## References
+
+[C++ Quick start]: https://grpc.io/docs/languages/cpp/quickstart/
+[Clone repository]: #clone-repository
+[clone-repository]: https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/clone-repository.md
+[docker]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker.md
+[example generated source code]: example_generated_source_code
+[Generating client and server code]: https://grpc.io/docs/languages/go/basics/#generating-client-and-server-code
+[git]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/git.md
+[go module]: go
+[Go Quick start]: https://grpc.io/docs/languages/go/quickstart/
+[Go Reference Badge]: https://pkg.go.dev/badge/github.com/senzing-garage/sz-sdk-proto.svg
+[Go Reference]: https://pkg.go.dev/github.com/senzing-garage/sz-sdk-proto
+[go]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/go.md
+[gRPC Documents for Go]: https://grpc.io/docs/languages/go/
+[Identify Senzing subcomponents]: #identify-senzing-subcomponents
+[Java Quick start]: https://grpc.io/docs/languages/java/quickstart/
+[make]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/make.md
+[Overview for gRPC on .NET]: https://learn.microsoft.com/en-us/aspnet/core/grpc
+[PHP Quick start]: https://grpc.io/docs/languages/php/quickstart/
+[protoc]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/protoc.md
+[Python Quick start]: https://grpc.io/docs/languages/python/quickstart/
+[Ruby Quick start]: https://grpc.io/docs/languages/ruby/quickstart/
+[Thread safety]: https://grpc.io/docs/languages/go/generated-code/

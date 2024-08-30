@@ -1,0 +1,26 @@
+# Makefile extensions for linux.
+
+# -----------------------------------------------------------------------------
+# OS specific targets
+# -----------------------------------------------------------------------------
+
+.PHONY: dependencies-for-development-osarch-specific
+dependencies-for-development-osarch-specific:
+	@protoc --version
+	@sudo apt install --upgrade -y protobuf-compiler
+	@protoc --version
+
+
+.PHONY: documentation-osarch-specific
+documentation-osarch-specific:
+	@pkill godoc || true
+	@godoc &
+	@xdg-open http://localhost:6060
+
+# -----------------------------------------------------------------------------
+# Makefile targets supported only by this platform.
+# -----------------------------------------------------------------------------
+
+.PHONY: only-linux
+only-linux:
+	$(info Only linux has this Makefile target.)

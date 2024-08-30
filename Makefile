@@ -1,11 +1,19 @@
 # Makefile for sz-sdk-proto
 
+# Detect the operating system and architecture.
+
+include makefiles/osdetect.mk
+
+# -----------------------------------------------------------------------------
+# Variables
+# -----------------------------------------------------------------------------
+
 # "Simple expanded" variables (':=')
 
 # PROGRAM_NAME is the name of the GIT repository.
 PROGRAM_NAME := $(shell basename `git rev-parse --show-toplevel`)
-MAKEFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
-MAKEFILE_DIRECTORY := $(dir $(MAKEFILE_PATH))
+MAKEFILE_PATH := $(abspath $(firstword $(MAKEFILE_LIST)))
+MAKEFILE_DIRECTORY := $(shell dirname $(MAKEFILE_PATH))
 TARGET_DIRECTORY := $(MAKEFILE_DIRECTORY)/target
 BUILD_VERSION := $(shell git describe --always --tags --abbrev=0 --dirty  | sed 's/v//')
 BUILD_TAG := $(shell git describe --always --tags --abbrev=0  | sed 's/v//')
@@ -23,10 +31,45 @@ SENZING_COMPONENTS := szconfig szconfigmanager szdiagnostic szengine szproduct
 
 .EXPORT_ALL_VARIABLES:
 
+# -----------------------------------------------------------------------------
 # The first "make" target runs as default.
+# -----------------------------------------------------------------------------
 
 .PHONY: default
 default: help
+
+# -----------------------------------------------------------------------------
+# Operating System / Architecture targets
+# -----------------------------------------------------------------------------
+
+-include makefiles/$(OSTYPE).mk
+-include makefiles/$(OSTYPE)_$(OSARCH).mk
+
+
+.PHONY: hello-world
+hello-world: hello-world-osarch-specific
+
+# -----------------------------------------------------------------------------
+# Dependency management
+# -----------------------------------------------------------------------------
+
+.PHONY: dependencies-for-development
+dependencies-for-development: dependencies-for-development-osarch-specific
+	@go install golang.org/x/tools/cmd/godoc@latest
+
+
+.PHONY: dependencies
+dependencies:
+	@go get -u ./...
+	@go get -t -u ./...
+	@go mod tidy
+
+# -----------------------------------------------------------------------------
+# Setup
+# -----------------------------------------------------------------------------
+
+.PHONY: setup
+setup: generate
 
 # -----------------------------------------------------------------------------
 # Generate code
@@ -91,6 +134,13 @@ generate-ruby:
 	done
 
 # -----------------------------------------------------------------------------
+# Documentation
+# -----------------------------------------------------------------------------
+
+.PHONY: documentation
+documentation: documentation-osarch-specific
+
+# -----------------------------------------------------------------------------
 # Clean
 # -----------------------------------------------------------------------------
 
@@ -100,74 +150,60 @@ clean: clean-csharp clean-go clean-java clean-php clean-python clean-ruby
 
 .PHONY: clean-csharp
 clean-csharp:
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/cpp/* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/cpp/* || true
 
 
 .PHONY: clean-go
 clean-go:
-	@rm -rf $(MAKEFILE_DIRECTORY)go/szconfig || true
-	@rm -rf $(MAKEFILE_DIRECTORY)go/szconfigmgr || true
-	@rm -rf $(MAKEFILE_DIRECTORY)go/szdiagnostic || true
-	@rm -rf $(MAKEFILE_DIRECTORY)go/szengine || true
-	@rm -rf $(MAKEFILE_DIRECTORY)go/szproduct || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/go/szconfig/sz* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/go/szconfigmanager/sz* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/go/szdiagnostic/sz* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/go/szengine/sz* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/go/szproduct/sz* || true
 
 
 .PHONY: clean-java
 clean-java:
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/java/* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/java/* || true
 
 
 .PHONY: clean-php
 clean-php:
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/php/* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/php/* || true
 
 
 .PHONY: clean-python
 clean-python:
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/python/szconfig/*        || true
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/python/szconfigmanager/* || true
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/python/szdiagnostic/*    || true
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/python/szengine/*        || true
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/python/szproduct/*       || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/python/szconfig/*        || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/python/szconfigmanager/* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/python/szdiagnostic/*    || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/python/szengine/*        || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/python/szproduct/*       || true
 
 
 .PHONY: clean-ruby
 clean-ruby:
-	@rm -rf $(MAKEFILE_DIRECTORY)example_generated_source_code/ruby/* || true
-
-# -----------------------------------------------------------------------------
-# Misc
-# -----------------------------------------------------------------------------
-
-.PHONY: dependencies
-dependencies:
-	@go get -u ./...
-	@go get -t -u ./...
-	@go mod tidy
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/ruby/* || true
 
 # -----------------------------------------------------------------------------
 # Utility targets
 # -----------------------------------------------------------------------------
 
-.PHONY: update-pkg-cache
-update-pkg-cache:
-	@GOPROXY=https://proxy.golang.org GO111MODULE=on \
-		go get $(GO_PACKAGE_NAME)@$(BUILD_TAG)
+.PHONY: help
+help:
+	$(info Build $(PROGRAM_NAME) version $(BUILD_VERSION)-$(BUILD_ITERATION))
+	$(info Makefile targets:)
+	@$(MAKE) -pRrq -f $(firstword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$' | xargs
 
 
 .PHONY: print-make-variables
 print-make-variables:
 	@$(foreach V,$(sort $(.VARIABLES)), \
 		$(if $(filter-out environment% default automatic, \
-		$(origin $V)),$(warning $V=$($V) ($(value $V)))))
+		$(origin $V)),$(info $V=$($V) ($(value $V)))))
 
 
-.PHONY: setup
-setup: generate
-
-
-.PHONY: help
-help:
-	@echo "Build $(PROGRAM_NAME) version $(BUILD_VERSION)-$(BUILD_ITERATION)".
-	@echo "All targets:"
-	@$(MAKE) -pRrq -f $(lastword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$' | xargs
+.PHONY: update-pkg-cache
+update-pkg-cache:
+	@GOPROXY=https://proxy.golang.org GO111MODULE=on \
+		go get $(GO_PACKAGE_NAME)@$(BUILD_TAG)

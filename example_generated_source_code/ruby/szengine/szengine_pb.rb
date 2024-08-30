@@ -69,7 +69,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "szengine.FindNetworkByEntityIdRequest" do
       optional :entityIds, :string, 1
       optional :maxDegrees, :int64, 2
-      optional :buildOutDegree, :int64, 3
+      optional :buildOutDegrees, :int64, 3
       optional :buildOutMaxEntities, :int64, 4
       optional :flags, :int64, 5
     end
@@ -79,7 +79,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "szengine.FindNetworkByRecordIdRequest" do
       optional :recordKeys, :string, 1
       optional :maxDegrees, :int64, 2
-      optional :buildOutDegree, :int64, 3
+      optional :buildOutDegrees, :int64, 3
       optional :buildOutMaxEntities, :int64, 4
       optional :flags, :int64, 5
     end
