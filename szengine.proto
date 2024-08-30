@@ -120,7 +120,7 @@ message FindInterestingEntitiesByRecordIdResponse {
 message FindNetworkByEntityIdRequest {
   string entityIds = 1;
   int64 maxDegrees = 2;
-  int64 buildOutDegree = 3;
+  int64 buildOutDegrees = 3;
   int64 buildOutMaxEntities = 4;
   int64 flags = 5;
 }
@@ -132,7 +132,7 @@ message FindNetworkByEntityIdResponse {
 message FindNetworkByRecordIdRequest {
   string recordKeys = 1;
   int64 maxDegrees = 2;
-  int64 buildOutDegree = 3;
+  int64 buildOutDegrees = 3;
   int64 buildOutMaxEntities = 4;
   int64 flags = 5;
 }
