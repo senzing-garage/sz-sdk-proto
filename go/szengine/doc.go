@@ -1,4 +1,4 @@
 /*
-Package szengine is gRPC client/server SDK generated from szengine.proto.
+Package szengine a senzingapi is gRPC client/server SDK generated from szengine.proto.
 */
 package szengine
