@@ -10,6 +10,12 @@ dependencies-for-development-osarch-specific:
 	@sudo apt install --upgrade -y protobuf-compiler
 	@protoc --version
 
+
+.PHONY: documentation-osarch-specific
+documentation-osarch-specific:
+	@godoc &
+	@xdg-open http://localhost:6060
+
 # -----------------------------------------------------------------------------
 # Makefile targets supported only by this platform.
 # -----------------------------------------------------------------------------

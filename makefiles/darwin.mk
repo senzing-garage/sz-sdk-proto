@@ -4,6 +4,11 @@
 # OS specific targets
 # -----------------------------------------------------------------------------
 
+.PHONY: documentation-osarch-specific
+documentation-osarch-specific:
+	@godoc &
+	@open http://localhost:6060
+
 # -----------------------------------------------------------------------------
 # Makefile targets supported only by this platform.
 # -----------------------------------------------------------------------------
