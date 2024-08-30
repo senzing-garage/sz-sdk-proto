@@ -1,4 +1,4 @@
 /*
-Package szproduct is generated from szproduct.proto.
+Package szproduct is gRPC client/server SDK generated from szproduct.proto.
 */
 package szproduct

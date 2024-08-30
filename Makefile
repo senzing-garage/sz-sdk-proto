@@ -156,7 +156,7 @@ clean-csharp:
 .PHONY: clean-go
 clean-go:
 	@rm -rf $(MAKEFILE_DIRECTORY)/go/szconfig/sz* || true
-	@rm -rf $(MAKEFILE_DIRECTORY)/go/szconfigmgr/sz* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/go/szconfigmanager/sz* || true
 	@rm -rf $(MAKEFILE_DIRECTORY)/go/szdiagnostic/sz* || true
 	@rm -rf $(MAKEFILE_DIRECTORY)/go/szengine/sz* || true
 	@rm -rf $(MAKEFILE_DIRECTORY)/go/szproduct/sz* || true
