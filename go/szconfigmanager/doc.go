@@ -1,0 +1,4 @@
+/*
+Package szconfigmanager...
+*/
+package szconfigmanager

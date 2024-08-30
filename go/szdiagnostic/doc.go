@@ -1,0 +1,4 @@
+/*
+Package szdiagnostic...
+*/
+package szdiagnostic

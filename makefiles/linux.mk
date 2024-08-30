@@ -4,6 +4,11 @@
 # OS specific targets
 # -----------------------------------------------------------------------------
 
+.PHONY: clean-osarch-specific
+clean-osarch-specific:
+	@pkill godoc || true
+
+
 .PHONY: dependencies-for-development-osarch-specific
 dependencies-for-development-osarch-specific:
 	@protoc --version

@@ -1,0 +1,4 @@
+/*
+Package szconfig...
+*/
+package szconfig

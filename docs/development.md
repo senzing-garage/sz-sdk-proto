@@ -78,7 +78,7 @@ These are "one-time tasks" which may already have been completed.
 
 1. If a web page doesn't appear, visit [localhost:6060].
 1. Senzing documentation will be in the "Third party" section.
-   `github.com` > `senzing-garage` > `sz-sdk-????`
+   `github.com` > `senzing-garage` > `sz-sdk-proto`
 
 1. When a versioned release is published with a `v0.0.0` format tag,
 the reference can be found by clicking on the following badge at the top of the README.md page.
@@ -287,20 +287,22 @@ The following instructions were used to create a [go module] and other [example 
 [C++ Quick start]: https://grpc.io/docs/languages/cpp/quickstart/
 [Clone repository]: #clone-repository
 [clone-repository]: https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/clone-repository.md
+[docker]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker.md
 [example generated source code]: example_generated_source_code
 [Generating client and server code]: https://grpc.io/docs/languages/go/basics/#generating-client-and-server-code
+[git]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/git.md
 [go module]: go
 [Go Quick start]: https://grpc.io/docs/languages/go/quickstart/
+[Go Reference Badge]: https://pkg.go.dev/badge/github.com/senzing-garage/sz-sdk-proto.svg
+[Go Reference]: https://pkg.go.dev/github.com/senzing-garage/sz-sdk-proto
+[go]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/go.md
 [gRPC Documents for Go]: https://grpc.io/docs/languages/go/
 [Identify Senzing subcomponents]: #identify-senzing-subcomponents
 [Java Quick start]: https://grpc.io/docs/languages/java/quickstart/
+[make]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/make.md
 [Overview for gRPC on .NET]: https://learn.microsoft.com/en-us/aspnet/core/grpc
 [PHP Quick start]: https://grpc.io/docs/languages/php/quickstart/
 [protoc]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/protoc.md
 [Python Quick start]: https://grpc.io/docs/languages/python/quickstart/
 [Ruby Quick start]: https://grpc.io/docs/languages/ruby/quickstart/
 [Thread safety]: https://grpc.io/docs/languages/go/generated-code/
-[docker]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker.md
-[git]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/git.md
-[go]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/go.md
-[make]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/make.md

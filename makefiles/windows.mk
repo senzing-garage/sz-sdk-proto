@@ -4,6 +4,11 @@
 # OS specific targets
 # -----------------------------------------------------------------------------
 
+.PHONY: clean-osarch-specific
+clean-osarch-specific:
+	@taskkill /f /t/im godoc
+
+
 .PHONY: documentation-osarch-specific
 documentation-osarch-specific:
 	@start /b godoc

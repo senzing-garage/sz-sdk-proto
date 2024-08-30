@@ -1,0 +1,4 @@
+/*
+Package szproduct...
+*/
+package szproduct

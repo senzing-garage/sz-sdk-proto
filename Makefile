@@ -54,7 +54,8 @@ hello-world: hello-world-osarch-specific
 # -----------------------------------------------------------------------------
 
 .PHONY: dependencies-for-development
-dependencies-for-development:  dependencies-for-development-osarch-specific
+dependencies-for-development: dependencies-for-development-osarch-specific
+	@go install golang.org/x/tools/cmd/godoc@latest
 
 
 .PHONY: dependencies
