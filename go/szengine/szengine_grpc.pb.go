@@ -43,6 +43,7 @@ type SzEngineClient interface {
 	GetStats(ctx context.Context, in *GetStatsRequest, opts ...grpc.CallOption) (*GetStatsResponse, error)
 	GetVirtualEntityByRecordId(ctx context.Context, in *GetVirtualEntityByRecordIdRequest, opts ...grpc.CallOption) (*GetVirtualEntityByRecordIdResponse, error)
 	HowEntityByEntityId(ctx context.Context, in *HowEntityByEntityIdRequest, opts ...grpc.CallOption) (*HowEntityByEntityIdResponse, error)
+	PreprocessRecord(ctx context.Context, in *PreprocessRecordRequest, opts ...grpc.CallOption) (*PreprocessRecordResponse, error)
 	PrimeEngine(ctx context.Context, in *PrimeEngineRequest, opts ...grpc.CallOption) (*PrimeEngineResponse, error)
 	ProcessRedoRecord(ctx context.Context, in *ProcessRedoRecordRequest, opts ...grpc.CallOption) (*ProcessRedoRecordResponse, error)
 	ReevaluateEntity(ctx context.Context, in *ReevaluateEntityRequest, opts ...grpc.CallOption) (*ReevaluateEntityResponse, error)
@@ -253,6 +254,15 @@ func (c *szEngineClient) HowEntityByEntityId(ctx context.Context, in *HowEntityB
 	return out, nil
 }
 
+func (c *szEngineClient) PreprocessRecord(ctx context.Context, in *PreprocessRecordRequest, opts ...grpc.CallOption) (*PreprocessRecordResponse, error) {
+	out := new(PreprocessRecordResponse)
+	err := c.cc.Invoke(ctx, "/szengine.SzEngine/PreprocessRecord", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *szEngineClient) PrimeEngine(ctx context.Context, in *PrimeEngineRequest, opts ...grpc.CallOption) (*PrimeEngineResponse, error) {
 	out := new(PrimeEngineResponse)
 	err := c.cc.Invoke(ctx, "/szengine.SzEngine/PrimeEngine", in, out, opts...)
@@ -423,6 +433,7 @@ type SzEngineServer interface {
 	GetStats(context.Context, *GetStatsRequest) (*GetStatsResponse, error)
 	GetVirtualEntityByRecordId(context.Context, *GetVirtualEntityByRecordIdRequest) (*GetVirtualEntityByRecordIdResponse, error)
 	HowEntityByEntityId(context.Context, *HowEntityByEntityIdRequest) (*HowEntityByEntityIdResponse, error)
+	PreprocessRecord(context.Context, *PreprocessRecordRequest) (*PreprocessRecordResponse, error)
 	PrimeEngine(context.Context, *PrimeEngineRequest) (*PrimeEngineResponse, error)
 	ProcessRedoRecord(context.Context, *ProcessRedoRecordRequest) (*ProcessRedoRecordResponse, error)
 	ReevaluateEntity(context.Context, *ReevaluateEntityRequest) (*ReevaluateEntityResponse, error)
@@ -503,6 +514,9 @@ func (UnimplementedSzEngineServer) GetVirtualEntityByRecordId(context.Context, *
 }
 func (UnimplementedSzEngineServer) HowEntityByEntityId(context.Context, *HowEntityByEntityIdRequest) (*HowEntityByEntityIdResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method HowEntityByEntityId not implemented")
+}
+func (UnimplementedSzEngineServer) PreprocessRecord(context.Context, *PreprocessRecordRequest) (*PreprocessRecordResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PreprocessRecord not implemented")
 }
 func (UnimplementedSzEngineServer) PrimeEngine(context.Context, *PrimeEngineRequest) (*PrimeEngineResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PrimeEngine not implemented")
@@ -928,6 +942,24 @@ func _SzEngine_HowEntityByEntityId_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
+func _SzEngine_PreprocessRecord_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PreprocessRecordRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(SzEngineServer).PreprocessRecord(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/szengine.SzEngine/PreprocessRecord",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(SzEngineServer).PreprocessRecord(ctx, req.(*PreprocessRecordRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _SzEngine_PrimeEngine_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(PrimeEngineRequest)
 	if err := dec(in); err != nil {
@@ -1222,6 +1254,10 @@ var SzEngine_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "HowEntityByEntityId",
 			Handler:    _SzEngine_HowEntityByEntityId_Handler,
+		},
+		{
+			MethodName: "PreprocessRecord",
+			Handler:    _SzEngine_PreprocessRecord_Handler,
 		},
 		{
 			MethodName: "PrimeEngine",

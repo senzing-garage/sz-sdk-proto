@@ -183,6 +183,12 @@ extern HowEntityByEntityIdRequestDefaultTypeInternal _HowEntityByEntityIdRequest
 class HowEntityByEntityIdResponse;
 struct HowEntityByEntityIdResponseDefaultTypeInternal;
 extern HowEntityByEntityIdResponseDefaultTypeInternal _HowEntityByEntityIdResponse_default_instance_;
+class PreprocessRecordRequest;
+struct PreprocessRecordRequestDefaultTypeInternal;
+extern PreprocessRecordRequestDefaultTypeInternal _PreprocessRecordRequest_default_instance_;
+class PreprocessRecordResponse;
+struct PreprocessRecordResponseDefaultTypeInternal;
+extern PreprocessRecordResponseDefaultTypeInternal _PreprocessRecordResponse_default_instance_;
 class PrimeEngineRequest;
 struct PrimeEngineRequestDefaultTypeInternal;
 extern PrimeEngineRequestDefaultTypeInternal _PrimeEngineRequest_default_instance_;
@@ -321,7 +327,7 @@ class WhyRecordsResponse final :
                &_WhyRecordsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    63;
+    65;
 
   friend void swap(WhyRecordsResponse& a, WhyRecordsResponse& b) {
     a.Swap(&b);
@@ -502,7 +508,7 @@ class WhyRecordsRequest final :
                &_WhyRecordsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    62;
+    64;
 
   friend void swap(WhyRecordsRequest& a, WhyRecordsRequest& b) {
     a.Swap(&b);
@@ -749,7 +755,7 @@ class WhyRecordInEntityResponse final :
                &_WhyRecordInEntityResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    61;
+    63;
 
   friend void swap(WhyRecordInEntityResponse& a, WhyRecordInEntityResponse& b) {
     a.Swap(&b);
@@ -930,7 +936,7 @@ class WhyRecordInEntityRequest final :
                &_WhyRecordInEntityRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    60;
+    62;
 
   friend void swap(WhyRecordInEntityRequest& a, WhyRecordInEntityRequest& b) {
     a.Swap(&b);
@@ -1141,7 +1147,7 @@ class WhyEntitiesResponse final :
                &_WhyEntitiesResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    59;
+    61;
 
   friend void swap(WhyEntitiesResponse& a, WhyEntitiesResponse& b) {
     a.Swap(&b);
@@ -1322,7 +1328,7 @@ class WhyEntitiesRequest final :
                &_WhyEntitiesRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    58;
+    60;
 
   friend void swap(WhyEntitiesRequest& a, WhyEntitiesRequest& b) {
     a.Swap(&b);
@@ -1521,7 +1527,7 @@ class StreamExportJsonEntityReportResponse final :
                &_StreamExportJsonEntityReportResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    57;
+    59;
 
   friend void swap(StreamExportJsonEntityReportResponse& a, StreamExportJsonEntityReportResponse& b) {
     a.Swap(&b);
@@ -1702,7 +1708,7 @@ class StreamExportJsonEntityReportRequest final :
                &_StreamExportJsonEntityReportRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    56;
+    58;
 
   friend void swap(StreamExportJsonEntityReportRequest& a, StreamExportJsonEntityReportRequest& b) {
     a.Swap(&b);
@@ -1877,7 +1883,7 @@ class StreamExportCsvEntityReportResponse final :
                &_StreamExportCsvEntityReportResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    55;
+    57;
 
   friend void swap(StreamExportCsvEntityReportResponse& a, StreamExportCsvEntityReportResponse& b) {
     a.Swap(&b);
@@ -2058,7 +2064,7 @@ class StreamExportCsvEntityReportRequest final :
                &_StreamExportCsvEntityReportRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    54;
+    56;
 
   friend void swap(StreamExportCsvEntityReportRequest& a, StreamExportCsvEntityReportRequest& b) {
     a.Swap(&b);
@@ -2251,7 +2257,7 @@ class SearchByAttributesResponse final :
                &_SearchByAttributesResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    53;
+    55;
 
   friend void swap(SearchByAttributesResponse& a, SearchByAttributesResponse& b) {
     a.Swap(&b);
@@ -2432,7 +2438,7 @@ class SearchByAttributesRequest final :
                &_SearchByAttributesRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    52;
+    54;
 
   friend void swap(SearchByAttributesRequest& a, SearchByAttributesRequest& b) {
     a.Swap(&b);
@@ -2642,7 +2648,7 @@ class ReinitializeResponse final :
                &_ReinitializeResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    51;
+    53;
 
   friend void swap(ReinitializeResponse& a, ReinitializeResponse& b) {
     a.Swap(&b);
@@ -2779,7 +2785,7 @@ class ReinitializeRequest final :
                &_ReinitializeRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    50;
+    52;
 
   friend void swap(ReinitializeRequest& a, ReinitializeRequest& b) {
     a.Swap(&b);
@@ -2954,7 +2960,7 @@ class ReevaluateRecordResponse final :
                &_ReevaluateRecordResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    49;
+    51;
 
   friend void swap(ReevaluateRecordResponse& a, ReevaluateRecordResponse& b) {
     a.Swap(&b);
@@ -3135,7 +3141,7 @@ class ReevaluateRecordRequest final :
                &_ReevaluateRecordRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    48;
+    50;
 
   friend void swap(ReevaluateRecordRequest& a, ReevaluateRecordRequest& b) {
     a.Swap(&b);
@@ -3346,7 +3352,7 @@ class ReevaluateEntityResponse final :
                &_ReevaluateEntityResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    47;
+    49;
 
   friend void swap(ReevaluateEntityResponse& a, ReevaluateEntityResponse& b) {
     a.Swap(&b);
@@ -3527,7 +3533,7 @@ class ReevaluateEntityRequest final :
                &_ReevaluateEntityRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    46;
+    48;
 
   friend void swap(ReevaluateEntityRequest& a, ReevaluateEntityRequest& b) {
     a.Swap(&b);
@@ -3714,7 +3720,7 @@ class ProcessRedoRecordResponse final :
                &_ProcessRedoRecordResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    45;
+    47;
 
   friend void swap(ProcessRedoRecordResponse& a, ProcessRedoRecordResponse& b) {
     a.Swap(&b);
@@ -3895,7 +3901,7 @@ class ProcessRedoRecordRequest final :
                &_ProcessRedoRecordRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    44;
+    46;
 
   friend void swap(ProcessRedoRecordRequest& a, ProcessRedoRecordRequest& b) {
     a.Swap(&b);
@@ -4298,6 +4304,380 @@ class PrimeEngineRequest final :
                               ::google::protobuf::Arena* arena, const Impl_& from);
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
+  friend struct ::TableStruct_szengine_2eproto;
+};// -------------------------------------------------------------------
+
+class PreprocessRecordResponse final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szengine.PreprocessRecordResponse) */ {
+ public:
+  inline PreprocessRecordResponse() : PreprocessRecordResponse(nullptr) {}
+  ~PreprocessRecordResponse() override;
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR PreprocessRecordResponse(::google::protobuf::internal::ConstantInitialized);
+
+  inline PreprocessRecordResponse(const PreprocessRecordResponse& from)
+      : PreprocessRecordResponse(nullptr, from) {}
+  PreprocessRecordResponse(PreprocessRecordResponse&& from) noexcept
+    : PreprocessRecordResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline PreprocessRecordResponse& operator=(const PreprocessRecordResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline PreprocessRecordResponse& operator=(PreprocessRecordResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const PreprocessRecordResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const PreprocessRecordResponse* internal_default_instance() {
+    return reinterpret_cast<const PreprocessRecordResponse*>(
+               &_PreprocessRecordResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    45;
+
+  friend void swap(PreprocessRecordResponse& a, PreprocessRecordResponse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(PreprocessRecordResponse* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr &&
+        GetArena() == other->GetArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(PreprocessRecordResponse* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  PreprocessRecordResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PreprocessRecordResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const PreprocessRecordResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom( const PreprocessRecordResponse& from) {
+    PreprocessRecordResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  ::size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target, ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(PreprocessRecordResponse* other);
+
+  private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "szengine.PreprocessRecordResponse";
+  }
+  protected:
+  explicit PreprocessRecordResponse(::google::protobuf::Arena* arena);
+  PreprocessRecordResponse(::google::protobuf::Arena* arena, const PreprocessRecordResponse& from);
+  public:
+
+  static const ClassData _class_data_;
+  const ::google::protobuf::Message::ClassData*GetClassData() const final;
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+  };
+  // string result = 1;
+  void clear_result() ;
+  const std::string& result() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_result(Arg_&& arg, Args_... args);
+  std::string* mutable_result();
+  PROTOBUF_NODISCARD std::string* release_result();
+  void set_allocated_result(std::string* value);
+
+  private:
+  const std::string& _internal_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(
+      const std::string& value);
+  std::string* _internal_mutable_result();
+
+  public:
+  // @@protoc_insertion_point(class_scope:szengine.PreprocessRecordResponse)
+ private:
+  class _Internal;
+
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 0,
+      48, 2>
+      _table_;
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+
+        inline explicit constexpr Impl_(
+            ::google::protobuf::internal::ConstantInitialized) noexcept;
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena);
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena, const Impl_& from);
+    ::google::protobuf::internal::ArenaStringPtr result_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_szengine_2eproto;
+};// -------------------------------------------------------------------
+
+class PreprocessRecordRequest final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szengine.PreprocessRecordRequest) */ {
+ public:
+  inline PreprocessRecordRequest() : PreprocessRecordRequest(nullptr) {}
+  ~PreprocessRecordRequest() override;
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR PreprocessRecordRequest(::google::protobuf::internal::ConstantInitialized);
+
+  inline PreprocessRecordRequest(const PreprocessRecordRequest& from)
+      : PreprocessRecordRequest(nullptr, from) {}
+  PreprocessRecordRequest(PreprocessRecordRequest&& from) noexcept
+    : PreprocessRecordRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline PreprocessRecordRequest& operator=(const PreprocessRecordRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline PreprocessRecordRequest& operator=(PreprocessRecordRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const PreprocessRecordRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const PreprocessRecordRequest* internal_default_instance() {
+    return reinterpret_cast<const PreprocessRecordRequest*>(
+               &_PreprocessRecordRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    44;
+
+  friend void swap(PreprocessRecordRequest& a, PreprocessRecordRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(PreprocessRecordRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr &&
+        GetArena() == other->GetArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(PreprocessRecordRequest* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  PreprocessRecordRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PreprocessRecordRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const PreprocessRecordRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom( const PreprocessRecordRequest& from) {
+    PreprocessRecordRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  ::size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target, ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(PreprocessRecordRequest* other);
+
+  private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "szengine.PreprocessRecordRequest";
+  }
+  protected:
+  explicit PreprocessRecordRequest(::google::protobuf::Arena* arena);
+  PreprocessRecordRequest(::google::protobuf::Arena* arena, const PreprocessRecordRequest& from);
+  public:
+
+  static const ClassData _class_data_;
+  const ::google::protobuf::Message::ClassData*GetClassData() const final;
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kRecordDefinitionFieldNumber = 1,
+    kFlagsFieldNumber = 2,
+  };
+  // string recordDefinition = 1;
+  void clear_recorddefinition() ;
+  const std::string& recorddefinition() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_recorddefinition(Arg_&& arg, Args_... args);
+  std::string* mutable_recorddefinition();
+  PROTOBUF_NODISCARD std::string* release_recorddefinition();
+  void set_allocated_recorddefinition(std::string* value);
+
+  private:
+  const std::string& _internal_recorddefinition() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_recorddefinition(
+      const std::string& value);
+  std::string* _internal_mutable_recorddefinition();
+
+  public:
+  // int64 flags = 2;
+  void clear_flags() ;
+  ::int64_t flags() const;
+  void set_flags(::int64_t value);
+
+  private:
+  ::int64_t _internal_flags() const;
+  void _internal_set_flags(::int64_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:szengine.PreprocessRecordRequest)
+ private:
+  class _Internal;
+
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      1, 2, 0,
+      57, 2>
+      _table_;
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+
+        inline explicit constexpr Impl_(
+            ::google::protobuf::internal::ConstantInitialized) noexcept;
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena);
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena, const Impl_& from);
+    ::google::protobuf::internal::ArenaStringPtr recorddefinition_;
+    ::int64_t flags_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
   friend struct ::TableStruct_szengine_2eproto;
 };// -------------------------------------------------------------------
 
@@ -15158,6 +15538,143 @@ inline void HowEntityByEntityIdResponse::set_allocated_result(std::string* value
 // -------------------------------------------------------------------
 
 // PrimeEngineResponse
+
+// -------------------------------------------------------------------
+
+// PreprocessRecordRequest
+
+// string recordDefinition = 1;
+inline void PreprocessRecordRequest::clear_recorddefinition() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.recorddefinition_.ClearToEmpty();
+}
+inline const std::string& PreprocessRecordRequest::recorddefinition() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:szengine.PreprocessRecordRequest.recordDefinition)
+  return _internal_recorddefinition();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void PreprocessRecordRequest::set_recorddefinition(Arg_&& arg,
+                                                     Args_... args) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.recorddefinition_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szengine.PreprocessRecordRequest.recordDefinition)
+}
+inline std::string* PreprocessRecordRequest::mutable_recorddefinition() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_recorddefinition();
+  // @@protoc_insertion_point(field_mutable:szengine.PreprocessRecordRequest.recordDefinition)
+  return _s;
+}
+inline const std::string& PreprocessRecordRequest::_internal_recorddefinition() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.recorddefinition_.Get();
+}
+inline void PreprocessRecordRequest::_internal_set_recorddefinition(const std::string& value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.recorddefinition_.Set(value, GetArena());
+}
+inline std::string* PreprocessRecordRequest::_internal_mutable_recorddefinition() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  return _impl_.recorddefinition_.Mutable( GetArena());
+}
+inline std::string* PreprocessRecordRequest::release_recorddefinition() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  // @@protoc_insertion_point(field_release:szengine.PreprocessRecordRequest.recordDefinition)
+  return _impl_.recorddefinition_.Release();
+}
+inline void PreprocessRecordRequest::set_allocated_recorddefinition(std::string* value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.recorddefinition_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.recorddefinition_.IsDefault()) {
+          _impl_.recorddefinition_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:szengine.PreprocessRecordRequest.recordDefinition)
+}
+
+// int64 flags = 2;
+inline void PreprocessRecordRequest::clear_flags() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.flags_ = ::int64_t{0};
+}
+inline ::int64_t PreprocessRecordRequest::flags() const {
+  // @@protoc_insertion_point(field_get:szengine.PreprocessRecordRequest.flags)
+  return _internal_flags();
+}
+inline void PreprocessRecordRequest::set_flags(::int64_t value) {
+  _internal_set_flags(value);
+  // @@protoc_insertion_point(field_set:szengine.PreprocessRecordRequest.flags)
+}
+inline ::int64_t PreprocessRecordRequest::_internal_flags() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.flags_;
+}
+inline void PreprocessRecordRequest::_internal_set_flags(::int64_t value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.flags_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// PreprocessRecordResponse
+
+// string result = 1;
+inline void PreprocessRecordResponse::clear_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.result_.ClearToEmpty();
+}
+inline const std::string& PreprocessRecordResponse::result() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:szengine.PreprocessRecordResponse.result)
+  return _internal_result();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void PreprocessRecordResponse::set_result(Arg_&& arg,
+                                                     Args_... args) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.result_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szengine.PreprocessRecordResponse.result)
+}
+inline std::string* PreprocessRecordResponse::mutable_result() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_result();
+  // @@protoc_insertion_point(field_mutable:szengine.PreprocessRecordResponse.result)
+  return _s;
+}
+inline const std::string& PreprocessRecordResponse::_internal_result() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.result_.Get();
+}
+inline void PreprocessRecordResponse::_internal_set_result(const std::string& value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.result_.Set(value, GetArena());
+}
+inline std::string* PreprocessRecordResponse::_internal_mutable_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  return _impl_.result_.Mutable( GetArena());
+}
+inline std::string* PreprocessRecordResponse::release_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  // @@protoc_insertion_point(field_release:szengine.PreprocessRecordResponse.result)
+  return _impl_.result_.Release();
+}
+inline void PreprocessRecordResponse::set_allocated_result(std::string* value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.result_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.result_.IsDefault()) {
+          _impl_.result_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:szengine.PreprocessRecordResponse.result)
+}
 
 // -------------------------------------------------------------------
 
