@@ -311,6 +311,20 @@ class SzEngineClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Szengine\PreprocessRecordRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function PreprocessRecord(\Szengine\PreprocessRecordRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szengine.SzEngine/PreprocessRecord',
+        $argument,
+        ['\Szengine\PreprocessRecordResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Szengine\PrimeEngineRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options

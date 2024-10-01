@@ -162,6 +162,13 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "szengine.HowEntityByEntityIdResponse" do
       optional :result, :string, 1
     end
+    add_message "szengine.PreprocessRecordRequest" do
+      optional :recordDefinition, :string, 1
+      optional :flags, :int64, 2
+    end
+    add_message "szengine.PreprocessRecordResponse" do
+      optional :result, :string, 1
+    end
     add_message "szengine.PrimeEngineRequest" do
     end
     add_message "szengine.PrimeEngineResponse" do
@@ -286,6 +293,8 @@ module Szengine
   GetVirtualEntityByRecordIdResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.GetVirtualEntityByRecordIdResponse").msgclass
   HowEntityByEntityIdRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.HowEntityByEntityIdRequest").msgclass
   HowEntityByEntityIdResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.HowEntityByEntityIdResponse").msgclass
+  PreprocessRecordRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.PreprocessRecordRequest").msgclass
+  PreprocessRecordResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.PreprocessRecordResponse").msgclass
   PrimeEngineRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.PrimeEngineRequest").msgclass
   PrimeEngineResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.PrimeEngineResponse").msgclass
   ProcessRedoRecordRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.ProcessRedoRecordRequest").msgclass

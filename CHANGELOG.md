@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning].
 
 - ...
 
+## [0.7.8] - 2024-10-01
+
+### Added in 0.7.8
+
+- `PreprocessRecord`
+
 ## [0.7.7] - 2024-08-30
 
 ### Changed in 0.7.7
