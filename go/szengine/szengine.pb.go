@@ -2237,82 +2237,6 @@ func (x *HowEntityByEntityIdResponse) GetResult() string {
 	return ""
 }
 
-type PrimeEngineRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-}
-
-func (x *PrimeEngineRequest) Reset() {
-	*x = PrimeEngineRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[42]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *PrimeEngineRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*PrimeEngineRequest) ProtoMessage() {}
-
-func (x *PrimeEngineRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[42]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use PrimeEngineRequest.ProtoReflect.Descriptor instead.
-func (*PrimeEngineRequest) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{42}
-}
-
-type PrimeEngineResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-}
-
-func (x *PrimeEngineResponse) Reset() {
-	*x = PrimeEngineResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[43]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *PrimeEngineResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*PrimeEngineResponse) ProtoMessage() {}
-
-func (x *PrimeEngineResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[43]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use PrimeEngineResponse.ProtoReflect.Descriptor instead.
-func (*PrimeEngineResponse) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{43}
-}
-
 type PreprocessRecordRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -2325,7 +2249,7 @@ type PreprocessRecordRequest struct {
 func (x *PreprocessRecordRequest) Reset() {
 	*x = PreprocessRecordRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[44]
+		mi := &file_szengine_proto_msgTypes[42]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2338,7 +2262,7 @@ func (x *PreprocessRecordRequest) String() string {
 func (*PreprocessRecordRequest) ProtoMessage() {}
 
 func (x *PreprocessRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[44]
+	mi := &file_szengine_proto_msgTypes[42]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2351,7 +2275,7 @@ func (x *PreprocessRecordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PreprocessRecordRequest.ProtoReflect.Descriptor instead.
 func (*PreprocessRecordRequest) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{44}
+	return file_szengine_proto_rawDescGZIP(), []int{42}
 }
 
 func (x *PreprocessRecordRequest) GetRecordDefinition() string {
@@ -2379,7 +2303,7 @@ type PreprocessRecordResponse struct {
 func (x *PreprocessRecordResponse) Reset() {
 	*x = PreprocessRecordResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_szengine_proto_msgTypes[45]
+		mi := &file_szengine_proto_msgTypes[43]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2392,7 +2316,7 @@ func (x *PreprocessRecordResponse) String() string {
 func (*PreprocessRecordResponse) ProtoMessage() {}
 
 func (x *PreprocessRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[45]
+	mi := &file_szengine_proto_msgTypes[43]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2405,7 +2329,7 @@ func (x *PreprocessRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PreprocessRecordResponse.ProtoReflect.Descriptor instead.
 func (*PreprocessRecordResponse) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{45}
+	return file_szengine_proto_rawDescGZIP(), []int{43}
 }
 
 func (x *PreprocessRecordResponse) GetResult() string {
@@ -2413,6 +2337,82 @@ func (x *PreprocessRecordResponse) GetResult() string {
 		return x.Result
 	}
 	return ""
+}
+
+type PrimeEngineRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *PrimeEngineRequest) Reset() {
+	*x = PrimeEngineRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_szengine_proto_msgTypes[44]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *PrimeEngineRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PrimeEngineRequest) ProtoMessage() {}
+
+func (x *PrimeEngineRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_szengine_proto_msgTypes[44]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PrimeEngineRequest.ProtoReflect.Descriptor instead.
+func (*PrimeEngineRequest) Descriptor() ([]byte, []int) {
+	return file_szengine_proto_rawDescGZIP(), []int{44}
+}
+
+type PrimeEngineResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *PrimeEngineResponse) Reset() {
+	*x = PrimeEngineResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_szengine_proto_msgTypes[45]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *PrimeEngineResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PrimeEngineResponse) ProtoMessage() {}
+
+func (x *PrimeEngineResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_szengine_proto_msgTypes[45]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PrimeEngineResponse.ProtoReflect.Descriptor instead.
+func (*PrimeEngineResponse) Descriptor() ([]byte, []int) {
+	return file_szengine_proto_rawDescGZIP(), []int{45}
 }
 
 type ProcessRedoRecordRequest struct {
@@ -3686,19 +3686,19 @@ var file_szengine_proto_rawDesc = []byte{
 	0x22, 0x35, 0x0a, 0x1b, 0x48, 0x6f, 0x77, 0x45, 0x6e, 0x74, 0x69, 0x74, 0x79, 0x42, 0x79, 0x45,
 	0x6e, 0x74, 0x69, 0x74, 0x79, 0x49, 0x64, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12,
 	0x16, 0x0a, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x14, 0x0a, 0x12, 0x50, 0x72, 0x69, 0x6d, 0x65,
-	0x45, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0x15, 0x0a,
-	0x13, 0x50, 0x72, 0x69, 0x6d, 0x65, 0x45, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x52, 0x65, 0x73, 0x70,
-	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x5b, 0x0a, 0x17, 0x50, 0x72, 0x65, 0x70, 0x72, 0x6f, 0x63, 0x65,
-	0x73, 0x73, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12,
-	0x2a, 0x0a, 0x10, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74,
-	0x69, 0x6f, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x10, 0x72, 0x65, 0x63, 0x6f, 0x72,
-	0x64, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x14, 0x0a, 0x05, 0x66,
-	0x6c, 0x61, 0x67, 0x73, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x05, 0x66, 0x6c, 0x61, 0x67,
-	0x73, 0x22, 0x32, 0x0a, 0x18, 0x50, 0x72, 0x65, 0x70, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x52,
-	0x65, 0x63, 0x6f, 0x72, 0x64, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x16, 0x0a,
-	0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x72,
-	0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x50, 0x0a, 0x18, 0x50, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73,
+	0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x5b, 0x0a, 0x17, 0x50, 0x72, 0x65, 0x70, 0x72,
+	0x6f, 0x63, 0x65, 0x73, 0x73, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x12, 0x2a, 0x0a, 0x10, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x44, 0x65, 0x66, 0x69,
+	0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x10, 0x72, 0x65,
+	0x63, 0x6f, 0x72, 0x64, 0x44, 0x65, 0x66, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x14,
+	0x0a, 0x05, 0x66, 0x6c, 0x61, 0x67, 0x73, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x05, 0x66,
+	0x6c, 0x61, 0x67, 0x73, 0x22, 0x32, 0x0a, 0x18, 0x50, 0x72, 0x65, 0x70, 0x72, 0x6f, 0x63, 0x65,
+	0x73, 0x73, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
+	0x12, 0x16, 0x0a, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x22, 0x14, 0x0a, 0x12, 0x50, 0x72, 0x69, 0x6d,
+	0x65, 0x45, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0x15,
+	0x0a, 0x13, 0x50, 0x72, 0x69, 0x6d, 0x65, 0x45, 0x6e, 0x67, 0x69, 0x6e, 0x65, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x50, 0x0a, 0x18, 0x50, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73,
 	0x52, 0x65, 0x64, 0x6f, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
 	0x74, 0x12, 0x1e, 0x0a, 0x0a, 0x72, 0x65, 0x64, 0x6f, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x18,
 	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x72, 0x65, 0x64, 0x6f, 0x52, 0x65, 0x63, 0x6f, 0x72,
@@ -4061,10 +4061,10 @@ var file_szengine_proto_goTypes = []interface{}{
 	(*GetVirtualEntityByRecordIdResponse)(nil),        // 39: szengine.GetVirtualEntityByRecordIdResponse
 	(*HowEntityByEntityIdRequest)(nil),                // 40: szengine.HowEntityByEntityIdRequest
 	(*HowEntityByEntityIdResponse)(nil),               // 41: szengine.HowEntityByEntityIdResponse
-	(*PrimeEngineRequest)(nil),                        // 42: szengine.PrimeEngineRequest
-	(*PrimeEngineResponse)(nil),                       // 43: szengine.PrimeEngineResponse
-	(*PreprocessRecordRequest)(nil),                   // 44: szengine.PreprocessRecordRequest
-	(*PreprocessRecordResponse)(nil),                  // 45: szengine.PreprocessRecordResponse
+	(*PreprocessRecordRequest)(nil),                   // 42: szengine.PreprocessRecordRequest
+	(*PreprocessRecordResponse)(nil),                  // 43: szengine.PreprocessRecordResponse
+	(*PrimeEngineRequest)(nil),                        // 44: szengine.PrimeEngineRequest
+	(*PrimeEngineResponse)(nil),                       // 45: szengine.PrimeEngineResponse
 	(*ProcessRedoRecordRequest)(nil),                  // 46: szengine.ProcessRedoRecordRequest
 	(*ProcessRedoRecordResponse)(nil),                 // 47: szengine.ProcessRedoRecordResponse
 	(*ReevaluateEntityRequest)(nil),                   // 48: szengine.ReevaluateEntityRequest
@@ -4108,8 +4108,8 @@ var file_szengine_proto_depIdxs = []int32{
 	36, // 18: szengine.SzEngine.GetStats:input_type -> szengine.GetStatsRequest
 	38, // 19: szengine.SzEngine.GetVirtualEntityByRecordId:input_type -> szengine.GetVirtualEntityByRecordIdRequest
 	40, // 20: szengine.SzEngine.HowEntityByEntityId:input_type -> szengine.HowEntityByEntityIdRequest
-	44, // 21: szengine.SzEngine.PreprocessRecord:input_type -> szengine.PreprocessRecordRequest
-	42, // 22: szengine.SzEngine.PrimeEngine:input_type -> szengine.PrimeEngineRequest
+	42, // 21: szengine.SzEngine.PreprocessRecord:input_type -> szengine.PreprocessRecordRequest
+	44, // 22: szengine.SzEngine.PrimeEngine:input_type -> szengine.PrimeEngineRequest
 	46, // 23: szengine.SzEngine.ProcessRedoRecord:input_type -> szengine.ProcessRedoRecordRequest
 	48, // 24: szengine.SzEngine.ReevaluateEntity:input_type -> szengine.ReevaluateEntityRequest
 	50, // 25: szengine.SzEngine.ReevaluateRecord:input_type -> szengine.ReevaluateRecordRequest
@@ -4141,8 +4141,8 @@ var file_szengine_proto_depIdxs = []int32{
 	37, // 51: szengine.SzEngine.GetStats:output_type -> szengine.GetStatsResponse
 	39, // 52: szengine.SzEngine.GetVirtualEntityByRecordId:output_type -> szengine.GetVirtualEntityByRecordIdResponse
 	41, // 53: szengine.SzEngine.HowEntityByEntityId:output_type -> szengine.HowEntityByEntityIdResponse
-	45, // 54: szengine.SzEngine.PreprocessRecord:output_type -> szengine.PreprocessRecordResponse
-	43, // 55: szengine.SzEngine.PrimeEngine:output_type -> szengine.PrimeEngineResponse
+	43, // 54: szengine.SzEngine.PreprocessRecord:output_type -> szengine.PreprocessRecordResponse
+	45, // 55: szengine.SzEngine.PrimeEngine:output_type -> szengine.PrimeEngineResponse
 	47, // 56: szengine.SzEngine.ProcessRedoRecord:output_type -> szengine.ProcessRedoRecordResponse
 	49, // 57: szengine.SzEngine.ReevaluateEntity:output_type -> szengine.ReevaluateEntityResponse
 	51, // 58: szengine.SzEngine.ReevaluateRecord:output_type -> szengine.ReevaluateRecordResponse
@@ -4671,30 +4671,6 @@ func file_szengine_proto_init() {
 			}
 		}
 		file_szengine_proto_msgTypes[42].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*PrimeEngineRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_szengine_proto_msgTypes[43].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*PrimeEngineResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_szengine_proto_msgTypes[44].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*PreprocessRecordRequest); i {
 			case 0:
 				return &v.state
@@ -4706,8 +4682,32 @@ func file_szengine_proto_init() {
 				return nil
 			}
 		}
-		file_szengine_proto_msgTypes[45].Exporter = func(v interface{}, i int) interface{} {
+		file_szengine_proto_msgTypes[43].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*PreprocessRecordResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_szengine_proto_msgTypes[44].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*PrimeEngineRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_szengine_proto_msgTypes[45].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*PrimeEngineResponse); i {
 			case 0:
 				return &v.state
 			case 1:

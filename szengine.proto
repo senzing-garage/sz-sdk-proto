@@ -235,9 +235,6 @@ message HowEntityByEntityIdResponse {
   string result = 1;
 }
 
-message PrimeEngineRequest {}
-
-message PrimeEngineResponse {}
 
 message PreprocessRecordRequest {
   string recordDefinition = 1;
@@ -247,6 +244,10 @@ message PreprocessRecordRequest {
 message PreprocessRecordResponse {
    string result = 1;
 }
+
+message PrimeEngineRequest {}
+
+message PrimeEngineResponse {}
 
 message ProcessRedoRecordRequest {
   string redoRecord = 1;

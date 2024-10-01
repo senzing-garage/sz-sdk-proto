@@ -1813,22 +1813,6 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no sizeof(Split)
     PROTOBUF_FIELD_OFFSET(::szengine::HowEntityByEntityIdResponse, _impl_.result_),
     ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::szengine::PrimeEngineRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::szengine::PrimeEngineResponse, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::PreprocessRecordRequest, _internal_metadata_),
     ~0u,  // no _extensions_
     ~0u,  // no _oneof_case_
@@ -1847,6 +1831,22 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
     PROTOBUF_FIELD_OFFSET(::szengine::PreprocessRecordResponse, _impl_.result_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::szengine::PrimeEngineRequest, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::szengine::PrimeEngineResponse, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::ProcessRedoRecordRequest, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -2087,10 +2087,10 @@ static const ::_pbi::MigrationSchema
         {381, -1, -1, sizeof(::szengine::GetVirtualEntityByRecordIdResponse)},
         {390, -1, -1, sizeof(::szengine::HowEntityByEntityIdRequest)},
         {400, -1, -1, sizeof(::szengine::HowEntityByEntityIdResponse)},
-        {409, -1, -1, sizeof(::szengine::PrimeEngineRequest)},
-        {417, -1, -1, sizeof(::szengine::PrimeEngineResponse)},
-        {425, -1, -1, sizeof(::szengine::PreprocessRecordRequest)},
-        {435, -1, -1, sizeof(::szengine::PreprocessRecordResponse)},
+        {409, -1, -1, sizeof(::szengine::PreprocessRecordRequest)},
+        {419, -1, -1, sizeof(::szengine::PreprocessRecordResponse)},
+        {428, -1, -1, sizeof(::szengine::PrimeEngineRequest)},
+        {436, -1, -1, sizeof(::szengine::PrimeEngineResponse)},
         {444, -1, -1, sizeof(::szengine::ProcessRedoRecordRequest)},
         {454, -1, -1, sizeof(::szengine::ProcessRedoRecordResponse)},
         {463, -1, -1, sizeof(::szengine::ReevaluateEntityRequest)},
@@ -2156,10 +2156,10 @@ static const ::_pb::Message* const file_default_instances[] = {
     &::szengine::_GetVirtualEntityByRecordIdResponse_default_instance_._instance,
     &::szengine::_HowEntityByEntityIdRequest_default_instance_._instance,
     &::szengine::_HowEntityByEntityIdResponse_default_instance_._instance,
-    &::szengine::_PrimeEngineRequest_default_instance_._instance,
-    &::szengine::_PrimeEngineResponse_default_instance_._instance,
     &::szengine::_PreprocessRecordRequest_default_instance_._instance,
     &::szengine::_PreprocessRecordResponse_default_instance_._instance,
+    &::szengine::_PrimeEngineRequest_default_instance_._instance,
+    &::szengine::_PrimeEngineResponse_default_instance_._instance,
     &::szengine::_ProcessRedoRecordRequest_default_instance_._instance,
     &::szengine::_ProcessRedoRecordResponse_default_instance_._instance,
     &::szengine::_ReevaluateEntityRequest_default_instance_._instance,
@@ -2248,11 +2248,11 @@ const char descriptor_table_protodef_szengine_2eproto[] PROTOBUF_SECTION_VARIABL
     "ecordIdResponse\022\016\n\006result\030\001 \001(\t\"=\n\032HowEn"
     "tityByEntityIdRequest\022\020\n\010entityId\030\001 \001(\003\022"
     "\r\n\005flags\030\002 \001(\003\"-\n\033HowEntityByEntityIdRes"
-    "ponse\022\016\n\006result\030\001 \001(\t\"\024\n\022PrimeEngineRequ"
-    "est\"\025\n\023PrimeEngineResponse\"B\n\027Preprocess"
-    "RecordRequest\022\030\n\020recordDefinition\030\001 \001(\t\022"
-    "\r\n\005flags\030\002 \001(\003\"*\n\030PreprocessRecordRespon"
-    "se\022\016\n\006result\030\001 \001(\t\"=\n\030ProcessRedoRecordR"
+    "ponse\022\016\n\006result\030\001 \001(\t\"B\n\027PreprocessRecor"
+    "dRequest\022\030\n\020recordDefinition\030\001 \001(\t\022\r\n\005fl"
+    "ags\030\002 \001(\003\"*\n\030PreprocessRecordResponse\022\016\n"
+    "\006result\030\001 \001(\t\"\024\n\022PrimeEngineRequest\"\025\n\023P"
+    "rimeEngineResponse\"=\n\030ProcessRedoRecordR"
     "equest\022\022\n\nredoRecord\030\001 \001(\t\022\r\n\005flags\030\002 \001("
     "\003\"+\n\031ProcessRedoRecordResponse\022\016\n\006result"
     "\030\001 \001(\t\":\n\027ReevaluateEntityRequest\022\020\n\010ent"
@@ -10451,76 +10451,6 @@ void HowEntityByEntityIdResponse::InternalSwap(HowEntityByEntityIdResponse* PROT
 }
 // ===================================================================
 
-class PrimeEngineRequest::_Internal {
- public:
-};
-
-PrimeEngineRequest::PrimeEngineRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-  // @@protoc_insertion_point(arena_constructor:szengine.PrimeEngineRequest)
-}
-PrimeEngineRequest::PrimeEngineRequest(
-    ::google::protobuf::Arena* arena,
-    const PrimeEngineRequest& from)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-  PrimeEngineRequest* const _this = this;
-  (void)_this;
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-
-  // @@protoc_insertion_point(copy_constructor:szengine.PrimeEngineRequest)
-}
-
-
-
-
-
-
-
-
-
-::google::protobuf::Metadata PrimeEngineRequest::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[42]);
-}
-// ===================================================================
-
-class PrimeEngineResponse::_Internal {
- public:
-};
-
-PrimeEngineResponse::PrimeEngineResponse(::google::protobuf::Arena* arena)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-  // @@protoc_insertion_point(arena_constructor:szengine.PrimeEngineResponse)
-}
-PrimeEngineResponse::PrimeEngineResponse(
-    ::google::protobuf::Arena* arena,
-    const PrimeEngineResponse& from)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-  PrimeEngineResponse* const _this = this;
-  (void)_this;
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-
-  // @@protoc_insertion_point(copy_constructor:szengine.PrimeEngineResponse)
-}
-
-
-
-
-
-
-
-
-
-::google::protobuf::Metadata PrimeEngineResponse::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[43]);
-}
-// ===================================================================
-
 class PreprocessRecordRequest::_Internal {
  public:
 };
@@ -10733,7 +10663,7 @@ void PreprocessRecordRequest::InternalSwap(PreprocessRecordRequest* PROTOBUF_RES
 ::google::protobuf::Metadata PreprocessRecordRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
-      file_level_metadata_szengine_2eproto[44]);
+      file_level_metadata_szengine_2eproto[42]);
 }
 // ===================================================================
 
@@ -10921,6 +10851,76 @@ void PreprocessRecordResponse::InternalSwap(PreprocessRecordResponse* PROTOBUF_R
 }
 
 ::google::protobuf::Metadata PreprocessRecordResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
+      file_level_metadata_szengine_2eproto[43]);
+}
+// ===================================================================
+
+class PrimeEngineRequest::_Internal {
+ public:
+};
+
+PrimeEngineRequest::PrimeEngineRequest(::google::protobuf::Arena* arena)
+    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
+  // @@protoc_insertion_point(arena_constructor:szengine.PrimeEngineRequest)
+}
+PrimeEngineRequest::PrimeEngineRequest(
+    ::google::protobuf::Arena* arena,
+    const PrimeEngineRequest& from)
+    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
+  PrimeEngineRequest* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+
+  // @@protoc_insertion_point(copy_constructor:szengine.PrimeEngineRequest)
+}
+
+
+
+
+
+
+
+
+
+::google::protobuf::Metadata PrimeEngineRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
+      file_level_metadata_szengine_2eproto[44]);
+}
+// ===================================================================
+
+class PrimeEngineResponse::_Internal {
+ public:
+};
+
+PrimeEngineResponse::PrimeEngineResponse(::google::protobuf::Arena* arena)
+    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
+  // @@protoc_insertion_point(arena_constructor:szengine.PrimeEngineResponse)
+}
+PrimeEngineResponse::PrimeEngineResponse(
+    ::google::protobuf::Arena* arena,
+    const PrimeEngineResponse& from)
+    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
+  PrimeEngineResponse* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+
+  // @@protoc_insertion_point(copy_constructor:szengine.PrimeEngineResponse)
+}
+
+
+
+
+
+
+
+
+
+::google::protobuf::Metadata PrimeEngineResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szengine_2eproto_getter, &descriptor_table_szengine_2eproto_once,
       file_level_metadata_szengine_2eproto[45]);
