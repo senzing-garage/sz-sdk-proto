@@ -55,7 +55,13 @@ hello-world: hello-world-osarch-specific
 
 .PHONY: dependencies-for-development
 dependencies-for-development: dependencies-for-development-osarch-specific
+	@python3 -m pip install --upgrade pip
+	@python3 -m pip install --requirement development-requirements.txt
 	@go install golang.org/x/tools/cmd/godoc@latest
+	@go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+	@go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+	@sudo pecl channel-update pecl.php.net
+	@sudo pecl install grpc
 
 
 .PHONY: dependencies
@@ -76,8 +82,7 @@ setup: generate
 # -----------------------------------------------------------------------------
 
 .PHONY: generate
-generate: generate-csharp generate-go generate-java generate-php generate-python generate-ruby
-
+generate: generate-csharp generate-go generate-java generate-php generate-python
 
 .PHONY: generate-csharp
 generate-csharp:

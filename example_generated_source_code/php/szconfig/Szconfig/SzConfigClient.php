@@ -20,7 +20,7 @@ class SzConfigClient extends \Grpc\BaseStub {
      * @param \Szconfig\AddDataSourceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Szconfig\AddDataSourceResponse
      */
     public function AddDataSource(\Szconfig\AddDataSourceRequest $argument,
       $metadata = [], $options = []) {
@@ -34,7 +34,7 @@ class SzConfigClient extends \Grpc\BaseStub {
      * @param \Szconfig\CloseConfigRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Szconfig\CloseConfigResponse
      */
     public function CloseConfig(\Szconfig\CloseConfigRequest $argument,
       $metadata = [], $options = []) {
@@ -48,7 +48,7 @@ class SzConfigClient extends \Grpc\BaseStub {
      * @param \Szconfig\CreateConfigRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Szconfig\CreateConfigResponse
      */
     public function CreateConfig(\Szconfig\CreateConfigRequest $argument,
       $metadata = [], $options = []) {
@@ -62,7 +62,7 @@ class SzConfigClient extends \Grpc\BaseStub {
      * @param \Szconfig\DeleteDataSourceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Szconfig\DeleteDataSourceResponse
      */
     public function DeleteDataSource(\Szconfig\DeleteDataSourceRequest $argument,
       $metadata = [], $options = []) {
@@ -76,7 +76,7 @@ class SzConfigClient extends \Grpc\BaseStub {
      * @param \Szconfig\ExportConfigRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Szconfig\ExportConfigResponse
      */
     public function ExportConfig(\Szconfig\ExportConfigRequest $argument,
       $metadata = [], $options = []) {
@@ -90,7 +90,7 @@ class SzConfigClient extends \Grpc\BaseStub {
      * @param \Szconfig\GetDataSourcesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Szconfig\GetDataSourcesResponse
      */
     public function GetDataSources(\Szconfig\GetDataSourcesRequest $argument,
       $metadata = [], $options = []) {
@@ -104,7 +104,7 @@ class SzConfigClient extends \Grpc\BaseStub {
      * @param \Szconfig\ImportConfigRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Szconfig\ImportConfigResponse
      */
     public function ImportConfig(\Szconfig\ImportConfigRequest $argument,
       $metadata = [], $options = []) {

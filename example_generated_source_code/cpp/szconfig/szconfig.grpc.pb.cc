@@ -33,188 +33,223 @@ static const char* SzConfig_method_names[] = {
 
 std::unique_ptr< SzConfig::Stub> SzConfig::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
   (void)options;
-  std::unique_ptr< SzConfig::Stub> stub(new SzConfig::Stub(channel, options));
+  std::unique_ptr< SzConfig::Stub> stub(new SzConfig::Stub(channel));
   return stub;
 }
 
-SzConfig::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
-  : channel_(channel), rpcmethod_AddDataSource_(SzConfig_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_CloseConfig_(SzConfig_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_CreateConfig_(SzConfig_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_DeleteDataSource_(SzConfig_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ExportConfig_(SzConfig_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetDataSources_(SzConfig_method_names[5], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ImportConfig_(SzConfig_method_names[6], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+SzConfig::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
+  : channel_(channel), rpcmethod_AddDataSource_(SzConfig_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_CloseConfig_(SzConfig_method_names[1], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_CreateConfig_(SzConfig_method_names[2], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_DeleteDataSource_(SzConfig_method_names[3], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ExportConfig_(SzConfig_method_names[4], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetDataSources_(SzConfig_method_names[5], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ImportConfig_(SzConfig_method_names[6], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status SzConfig::Stub::AddDataSource(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest& request, ::szconfig::AddDataSourceResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::szconfig::AddDataSourceRequest, ::szconfig::AddDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_AddDataSource_, context, request, response);
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_AddDataSource_, context, request, response);
 }
 
-void SzConfig::Stub::async::AddDataSource(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest* request, ::szconfig::AddDataSourceResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::szconfig::AddDataSourceRequest, ::szconfig::AddDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_AddDataSource_, context, request, response, std::move(f));
+void SzConfig::Stub::experimental_async::AddDataSource(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest* request, ::szconfig::AddDataSourceResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_AddDataSource_, context, request, response, std::move(f));
 }
 
-void SzConfig::Stub::async::AddDataSource(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest* request, ::szconfig::AddDataSourceResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_AddDataSource_, context, request, response, reactor);
+void SzConfig::Stub::experimental_async::AddDataSource(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfig::AddDataSourceResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_AddDataSource_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::szconfig::AddDataSourceResponse>* SzConfig::Stub::PrepareAsyncAddDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szconfig::AddDataSourceResponse, ::szconfig::AddDataSourceRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_AddDataSource_, context, request);
+void SzConfig::Stub::experimental_async::AddDataSource(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest* request, ::szconfig::AddDataSourceResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_AddDataSource_, context, request, response, reactor);
+}
+
+void SzConfig::Stub::experimental_async::AddDataSource(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfig::AddDataSourceResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_AddDataSource_, context, request, response, reactor);
 }
 
 ::grpc::ClientAsyncResponseReader< ::szconfig::AddDataSourceResponse>* SzConfig::Stub::AsyncAddDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncAddDataSourceRaw(context, request, cq);
-  result->StartCall();
-  return result;
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::szconfig::AddDataSourceResponse>::Create(channel_.get(), cq, rpcmethod_AddDataSource_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::szconfig::AddDataSourceResponse>* SzConfig::Stub::PrepareAsyncAddDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::szconfig::AddDataSourceResponse>::Create(channel_.get(), cq, rpcmethod_AddDataSource_, context, request, false);
 }
 
 ::grpc::Status SzConfig::Stub::CloseConfig(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest& request, ::szconfig::CloseConfigResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::szconfig::CloseConfigRequest, ::szconfig::CloseConfigResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_CloseConfig_, context, request, response);
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_CloseConfig_, context, request, response);
 }
 
-void SzConfig::Stub::async::CloseConfig(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest* request, ::szconfig::CloseConfigResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::szconfig::CloseConfigRequest, ::szconfig::CloseConfigResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CloseConfig_, context, request, response, std::move(f));
+void SzConfig::Stub::experimental_async::CloseConfig(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest* request, ::szconfig::CloseConfigResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_CloseConfig_, context, request, response, std::move(f));
 }
 
-void SzConfig::Stub::async::CloseConfig(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest* request, ::szconfig::CloseConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CloseConfig_, context, request, response, reactor);
+void SzConfig::Stub::experimental_async::CloseConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfig::CloseConfigResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_CloseConfig_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::szconfig::CloseConfigResponse>* SzConfig::Stub::PrepareAsyncCloseConfigRaw(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szconfig::CloseConfigResponse, ::szconfig::CloseConfigRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_CloseConfig_, context, request);
+void SzConfig::Stub::experimental_async::CloseConfig(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest* request, ::szconfig::CloseConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_CloseConfig_, context, request, response, reactor);
+}
+
+void SzConfig::Stub::experimental_async::CloseConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfig::CloseConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_CloseConfig_, context, request, response, reactor);
 }
 
 ::grpc::ClientAsyncResponseReader< ::szconfig::CloseConfigResponse>* SzConfig::Stub::AsyncCloseConfigRaw(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncCloseConfigRaw(context, request, cq);
-  result->StartCall();
-  return result;
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::szconfig::CloseConfigResponse>::Create(channel_.get(), cq, rpcmethod_CloseConfig_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::szconfig::CloseConfigResponse>* SzConfig::Stub::PrepareAsyncCloseConfigRaw(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::szconfig::CloseConfigResponse>::Create(channel_.get(), cq, rpcmethod_CloseConfig_, context, request, false);
 }
 
 ::grpc::Status SzConfig::Stub::CreateConfig(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest& request, ::szconfig::CreateConfigResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::szconfig::CreateConfigRequest, ::szconfig::CreateConfigResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_CreateConfig_, context, request, response);
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_CreateConfig_, context, request, response);
 }
 
-void SzConfig::Stub::async::CreateConfig(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest* request, ::szconfig::CreateConfigResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::szconfig::CreateConfigRequest, ::szconfig::CreateConfigResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CreateConfig_, context, request, response, std::move(f));
+void SzConfig::Stub::experimental_async::CreateConfig(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest* request, ::szconfig::CreateConfigResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_CreateConfig_, context, request, response, std::move(f));
 }
 
-void SzConfig::Stub::async::CreateConfig(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest* request, ::szconfig::CreateConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CreateConfig_, context, request, response, reactor);
+void SzConfig::Stub::experimental_async::CreateConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfig::CreateConfigResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_CreateConfig_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::szconfig::CreateConfigResponse>* SzConfig::Stub::PrepareAsyncCreateConfigRaw(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szconfig::CreateConfigResponse, ::szconfig::CreateConfigRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_CreateConfig_, context, request);
+void SzConfig::Stub::experimental_async::CreateConfig(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest* request, ::szconfig::CreateConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_CreateConfig_, context, request, response, reactor);
+}
+
+void SzConfig::Stub::experimental_async::CreateConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfig::CreateConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_CreateConfig_, context, request, response, reactor);
 }
 
 ::grpc::ClientAsyncResponseReader< ::szconfig::CreateConfigResponse>* SzConfig::Stub::AsyncCreateConfigRaw(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncCreateConfigRaw(context, request, cq);
-  result->StartCall();
-  return result;
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::szconfig::CreateConfigResponse>::Create(channel_.get(), cq, rpcmethod_CreateConfig_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::szconfig::CreateConfigResponse>* SzConfig::Stub::PrepareAsyncCreateConfigRaw(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::szconfig::CreateConfigResponse>::Create(channel_.get(), cq, rpcmethod_CreateConfig_, context, request, false);
 }
 
 ::grpc::Status SzConfig::Stub::DeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest& request, ::szconfig::DeleteDataSourceResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::szconfig::DeleteDataSourceRequest, ::szconfig::DeleteDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_DeleteDataSource_, context, request, response);
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_DeleteDataSource_, context, request, response);
 }
 
-void SzConfig::Stub::async::DeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest* request, ::szconfig::DeleteDataSourceResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::szconfig::DeleteDataSourceRequest, ::szconfig::DeleteDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_DeleteDataSource_, context, request, response, std::move(f));
+void SzConfig::Stub::experimental_async::DeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest* request, ::szconfig::DeleteDataSourceResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_DeleteDataSource_, context, request, response, std::move(f));
 }
 
-void SzConfig::Stub::async::DeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest* request, ::szconfig::DeleteDataSourceResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_DeleteDataSource_, context, request, response, reactor);
+void SzConfig::Stub::experimental_async::DeleteDataSource(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfig::DeleteDataSourceResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_DeleteDataSource_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::szconfig::DeleteDataSourceResponse>* SzConfig::Stub::PrepareAsyncDeleteDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szconfig::DeleteDataSourceResponse, ::szconfig::DeleteDataSourceRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_DeleteDataSource_, context, request);
+void SzConfig::Stub::experimental_async::DeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest* request, ::szconfig::DeleteDataSourceResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_DeleteDataSource_, context, request, response, reactor);
+}
+
+void SzConfig::Stub::experimental_async::DeleteDataSource(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfig::DeleteDataSourceResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_DeleteDataSource_, context, request, response, reactor);
 }
 
 ::grpc::ClientAsyncResponseReader< ::szconfig::DeleteDataSourceResponse>* SzConfig::Stub::AsyncDeleteDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncDeleteDataSourceRaw(context, request, cq);
-  result->StartCall();
-  return result;
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::szconfig::DeleteDataSourceResponse>::Create(channel_.get(), cq, rpcmethod_DeleteDataSource_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::szconfig::DeleteDataSourceResponse>* SzConfig::Stub::PrepareAsyncDeleteDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::szconfig::DeleteDataSourceResponse>::Create(channel_.get(), cq, rpcmethod_DeleteDataSource_, context, request, false);
 }
 
 ::grpc::Status SzConfig::Stub::ExportConfig(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest& request, ::szconfig::ExportConfigResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::szconfig::ExportConfigRequest, ::szconfig::ExportConfigResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_ExportConfig_, context, request, response);
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ExportConfig_, context, request, response);
 }
 
-void SzConfig::Stub::async::ExportConfig(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest* request, ::szconfig::ExportConfigResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::szconfig::ExportConfigRequest, ::szconfig::ExportConfigResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_ExportConfig_, context, request, response, std::move(f));
+void SzConfig::Stub::experimental_async::ExportConfig(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest* request, ::szconfig::ExportConfigResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ExportConfig_, context, request, response, std::move(f));
 }
 
-void SzConfig::Stub::async::ExportConfig(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest* request, ::szconfig::ExportConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_ExportConfig_, context, request, response, reactor);
+void SzConfig::Stub::experimental_async::ExportConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfig::ExportConfigResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ExportConfig_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::szconfig::ExportConfigResponse>* SzConfig::Stub::PrepareAsyncExportConfigRaw(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szconfig::ExportConfigResponse, ::szconfig::ExportConfigRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_ExportConfig_, context, request);
+void SzConfig::Stub::experimental_async::ExportConfig(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest* request, ::szconfig::ExportConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ExportConfig_, context, request, response, reactor);
+}
+
+void SzConfig::Stub::experimental_async::ExportConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfig::ExportConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ExportConfig_, context, request, response, reactor);
 }
 
 ::grpc::ClientAsyncResponseReader< ::szconfig::ExportConfigResponse>* SzConfig::Stub::AsyncExportConfigRaw(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncExportConfigRaw(context, request, cq);
-  result->StartCall();
-  return result;
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::szconfig::ExportConfigResponse>::Create(channel_.get(), cq, rpcmethod_ExportConfig_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::szconfig::ExportConfigResponse>* SzConfig::Stub::PrepareAsyncExportConfigRaw(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::szconfig::ExportConfigResponse>::Create(channel_.get(), cq, rpcmethod_ExportConfig_, context, request, false);
 }
 
 ::grpc::Status SzConfig::Stub::GetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest& request, ::szconfig::GetDataSourcesResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::szconfig::GetDataSourcesRequest, ::szconfig::GetDataSourcesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetDataSources_, context, request, response);
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_GetDataSources_, context, request, response);
 }
 
-void SzConfig::Stub::async::GetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest* request, ::szconfig::GetDataSourcesResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::szconfig::GetDataSourcesRequest, ::szconfig::GetDataSourcesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetDataSources_, context, request, response, std::move(f));
+void SzConfig::Stub::experimental_async::GetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest* request, ::szconfig::GetDataSourcesResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetDataSources_, context, request, response, std::move(f));
 }
 
-void SzConfig::Stub::async::GetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest* request, ::szconfig::GetDataSourcesResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetDataSources_, context, request, response, reactor);
+void SzConfig::Stub::experimental_async::GetDataSources(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfig::GetDataSourcesResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_GetDataSources_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::szconfig::GetDataSourcesResponse>* SzConfig::Stub::PrepareAsyncGetDataSourcesRaw(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szconfig::GetDataSourcesResponse, ::szconfig::GetDataSourcesRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetDataSources_, context, request);
+void SzConfig::Stub::experimental_async::GetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest* request, ::szconfig::GetDataSourcesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_GetDataSources_, context, request, response, reactor);
+}
+
+void SzConfig::Stub::experimental_async::GetDataSources(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfig::GetDataSourcesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_GetDataSources_, context, request, response, reactor);
 }
 
 ::grpc::ClientAsyncResponseReader< ::szconfig::GetDataSourcesResponse>* SzConfig::Stub::AsyncGetDataSourcesRaw(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetDataSourcesRaw(context, request, cq);
-  result->StartCall();
-  return result;
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::szconfig::GetDataSourcesResponse>::Create(channel_.get(), cq, rpcmethod_GetDataSources_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::szconfig::GetDataSourcesResponse>* SzConfig::Stub::PrepareAsyncGetDataSourcesRaw(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::szconfig::GetDataSourcesResponse>::Create(channel_.get(), cq, rpcmethod_GetDataSources_, context, request, false);
 }
 
 ::grpc::Status SzConfig::Stub::ImportConfig(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest& request, ::szconfig::ImportConfigResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::szconfig::ImportConfigRequest, ::szconfig::ImportConfigResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_ImportConfig_, context, request, response);
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_ImportConfig_, context, request, response);
 }
 
-void SzConfig::Stub::async::ImportConfig(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest* request, ::szconfig::ImportConfigResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::szconfig::ImportConfigRequest, ::szconfig::ImportConfigResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_ImportConfig_, context, request, response, std::move(f));
+void SzConfig::Stub::experimental_async::ImportConfig(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest* request, ::szconfig::ImportConfigResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ImportConfig_, context, request, response, std::move(f));
 }
 
-void SzConfig::Stub::async::ImportConfig(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest* request, ::szconfig::ImportConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_ImportConfig_, context, request, response, reactor);
+void SzConfig::Stub::experimental_async::ImportConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfig::ImportConfigResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_ImportConfig_, context, request, response, std::move(f));
 }
 
-::grpc::ClientAsyncResponseReader< ::szconfig::ImportConfigResponse>* SzConfig::Stub::PrepareAsyncImportConfigRaw(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szconfig::ImportConfigResponse, ::szconfig::ImportConfigRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_ImportConfig_, context, request);
+void SzConfig::Stub::experimental_async::ImportConfig(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest* request, ::szconfig::ImportConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ImportConfig_, context, request, response, reactor);
+}
+
+void SzConfig::Stub::experimental_async::ImportConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfig::ImportConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_ImportConfig_, context, request, response, reactor);
 }
 
 ::grpc::ClientAsyncResponseReader< ::szconfig::ImportConfigResponse>* SzConfig::Stub::AsyncImportConfigRaw(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncImportConfigRaw(context, request, cq);
-  result->StartCall();
-  return result;
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::szconfig::ImportConfigResponse>::Create(channel_.get(), cq, rpcmethod_ImportConfig_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::szconfig::ImportConfigResponse>* SzConfig::Stub::PrepareAsyncImportConfigRaw(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::szconfig::ImportConfigResponse>::Create(channel_.get(), cq, rpcmethod_ImportConfig_, context, request, false);
 }
 
 SzConfig::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzConfig_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::AddDataSourceRequest, ::szconfig::AddDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::AddDataSourceRequest, ::szconfig::AddDataSourceResponse>(
           [](SzConfig::Service* service,
-             ::grpc::ServerContext* ctx,
+             ::grpc_impl::ServerContext* ctx,
              const ::szconfig::AddDataSourceRequest* req,
              ::szconfig::AddDataSourceResponse* resp) {
                return service->AddDataSource(ctx, req, resp);
@@ -222,9 +257,9 @@ SzConfig::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzConfig_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::CloseConfigRequest, ::szconfig::CloseConfigResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::CloseConfigRequest, ::szconfig::CloseConfigResponse>(
           [](SzConfig::Service* service,
-             ::grpc::ServerContext* ctx,
+             ::grpc_impl::ServerContext* ctx,
              const ::szconfig::CloseConfigRequest* req,
              ::szconfig::CloseConfigResponse* resp) {
                return service->CloseConfig(ctx, req, resp);
@@ -232,9 +267,9 @@ SzConfig::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzConfig_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::CreateConfigRequest, ::szconfig::CreateConfigResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::CreateConfigRequest, ::szconfig::CreateConfigResponse>(
           [](SzConfig::Service* service,
-             ::grpc::ServerContext* ctx,
+             ::grpc_impl::ServerContext* ctx,
              const ::szconfig::CreateConfigRequest* req,
              ::szconfig::CreateConfigResponse* resp) {
                return service->CreateConfig(ctx, req, resp);
@@ -242,9 +277,9 @@ SzConfig::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzConfig_method_names[3],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::DeleteDataSourceRequest, ::szconfig::DeleteDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::DeleteDataSourceRequest, ::szconfig::DeleteDataSourceResponse>(
           [](SzConfig::Service* service,
-             ::grpc::ServerContext* ctx,
+             ::grpc_impl::ServerContext* ctx,
              const ::szconfig::DeleteDataSourceRequest* req,
              ::szconfig::DeleteDataSourceResponse* resp) {
                return service->DeleteDataSource(ctx, req, resp);
@@ -252,9 +287,9 @@ SzConfig::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzConfig_method_names[4],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::ExportConfigRequest, ::szconfig::ExportConfigResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::ExportConfigRequest, ::szconfig::ExportConfigResponse>(
           [](SzConfig::Service* service,
-             ::grpc::ServerContext* ctx,
+             ::grpc_impl::ServerContext* ctx,
              const ::szconfig::ExportConfigRequest* req,
              ::szconfig::ExportConfigResponse* resp) {
                return service->ExportConfig(ctx, req, resp);
@@ -262,9 +297,9 @@ SzConfig::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzConfig_method_names[5],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::GetDataSourcesRequest, ::szconfig::GetDataSourcesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::GetDataSourcesRequest, ::szconfig::GetDataSourcesResponse>(
           [](SzConfig::Service* service,
-             ::grpc::ServerContext* ctx,
+             ::grpc_impl::ServerContext* ctx,
              const ::szconfig::GetDataSourcesRequest* req,
              ::szconfig::GetDataSourcesResponse* resp) {
                return service->GetDataSources(ctx, req, resp);
@@ -272,9 +307,9 @@ SzConfig::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzConfig_method_names[6],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::ImportConfigRequest, ::szconfig::ImportConfigResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::ImportConfigRequest, ::szconfig::ImportConfigResponse>(
           [](SzConfig::Service* service,
-             ::grpc::ServerContext* ctx,
+             ::grpc_impl::ServerContext* ctx,
              const ::szconfig::ImportConfigRequest* req,
              ::szconfig::ImportConfigResponse* resp) {
                return service->ImportConfig(ctx, req, resp);

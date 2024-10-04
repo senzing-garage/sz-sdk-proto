@@ -7,7 +7,7 @@
 .PHONY: dependencies-for-development-osarch-specific
 dependencies-for-development-osarch-specific:
 	@protoc --version
-	@sudo apt install --upgrade -y protobuf-compiler
+	@sudo apt install --upgrade -y cmake protobuf-compiler php-pear php-dev ruby-grpc-tools
 	@protoc --version
 
 
