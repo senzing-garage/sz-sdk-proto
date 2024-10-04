@@ -7,6 +7,7 @@
 #include "szengine.pb.h"
 
 #include <functional>
+#include <grpc/impl/codegen/port_platform.h>
 #include <grpcpp/impl/codegen/async_generic_service.h>
 #include <grpcpp/impl/codegen/async_stream.h>
 #include <grpcpp/impl/codegen/async_unary_call.h>
@@ -270,78 +271,400 @@ class SzEngine final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::WhyRecordsResponse>> PrepareAsyncWhyRecords(::grpc::ClientContext* context, const ::szengine::WhyRecordsRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::WhyRecordsResponse>>(PrepareAsyncWhyRecordsRaw(context, request, cq));
     }
-    class async_interface {
+    class experimental_async_interface {
      public:
-      virtual ~async_interface() {}
+      virtual ~experimental_async_interface() {}
       virtual void AddRecord(::grpc::ClientContext* context, const ::szengine::AddRecordRequest* request, ::szengine::AddRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void AddRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::AddRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void AddRecord(::grpc::ClientContext* context, const ::szengine::AddRecordRequest* request, ::szengine::AddRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void AddRecord(::grpc::ClientContext* context, const ::szengine::AddRecordRequest* request, ::szengine::AddRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void AddRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::AddRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void AddRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::AddRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void CloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest* request, ::szengine::CloseExportResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void CloseExport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::CloseExportResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void CloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest* request, ::szengine::CloseExportResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void CloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest* request, ::szengine::CloseExportResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void CloseExport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::CloseExportResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void CloseExport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::CloseExportResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void CountRedoRecords(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest* request, ::szengine::CountRedoRecordsResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void CountRedoRecords(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::CountRedoRecordsResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void CountRedoRecords(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest* request, ::szengine::CountRedoRecordsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void CountRedoRecords(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest* request, ::szengine::CountRedoRecordsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void CountRedoRecords(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::CountRedoRecordsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void CountRedoRecords(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::CountRedoRecordsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void DeleteRecord(::grpc::ClientContext* context, const ::szengine::DeleteRecordRequest* request, ::szengine::DeleteRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void DeleteRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::DeleteRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void DeleteRecord(::grpc::ClientContext* context, const ::szengine::DeleteRecordRequest* request, ::szengine::DeleteRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void DeleteRecord(::grpc::ClientContext* context, const ::szengine::DeleteRecordRequest* request, ::szengine::DeleteRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void DeleteRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::DeleteRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void DeleteRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::DeleteRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void ExportCsvEntityReport(::grpc::ClientContext* context, const ::szengine::ExportCsvEntityReportRequest* request, ::szengine::ExportCsvEntityReportResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void ExportCsvEntityReport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ExportCsvEntityReportResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void ExportCsvEntityReport(::grpc::ClientContext* context, const ::szengine::ExportCsvEntityReportRequest* request, ::szengine::ExportCsvEntityReportResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void ExportCsvEntityReport(::grpc::ClientContext* context, const ::szengine::ExportCsvEntityReportRequest* request, ::szengine::ExportCsvEntityReportResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void ExportCsvEntityReport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ExportCsvEntityReportResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void ExportCsvEntityReport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ExportCsvEntityReportResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void ExportJsonEntityReport(::grpc::ClientContext* context, const ::szengine::ExportJsonEntityReportRequest* request, ::szengine::ExportJsonEntityReportResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void ExportJsonEntityReport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ExportJsonEntityReportResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void ExportJsonEntityReport(::grpc::ClientContext* context, const ::szengine::ExportJsonEntityReportRequest* request, ::szengine::ExportJsonEntityReportResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void ExportJsonEntityReport(::grpc::ClientContext* context, const ::szengine::ExportJsonEntityReportRequest* request, ::szengine::ExportJsonEntityReportResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void ExportJsonEntityReport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ExportJsonEntityReportResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void ExportJsonEntityReport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ExportJsonEntityReportResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void FetchNext(::grpc::ClientContext* context, const ::szengine::FetchNextRequest* request, ::szengine::FetchNextResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void FetchNext(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FetchNextResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void FetchNext(::grpc::ClientContext* context, const ::szengine::FetchNextRequest* request, ::szengine::FetchNextResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void FetchNext(::grpc::ClientContext* context, const ::szengine::FetchNextRequest* request, ::szengine::FetchNextResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void FetchNext(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FetchNextResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void FetchNext(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FetchNextResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void FindInterestingEntitiesByEntityId(::grpc::ClientContext* context, const ::szengine::FindInterestingEntitiesByEntityIdRequest* request, ::szengine::FindInterestingEntitiesByEntityIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void FindInterestingEntitiesByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindInterestingEntitiesByEntityIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void FindInterestingEntitiesByEntityId(::grpc::ClientContext* context, const ::szengine::FindInterestingEntitiesByEntityIdRequest* request, ::szengine::FindInterestingEntitiesByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void FindInterestingEntitiesByEntityId(::grpc::ClientContext* context, const ::szengine::FindInterestingEntitiesByEntityIdRequest* request, ::szengine::FindInterestingEntitiesByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void FindInterestingEntitiesByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindInterestingEntitiesByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void FindInterestingEntitiesByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindInterestingEntitiesByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void FindInterestingEntitiesByRecordId(::grpc::ClientContext* context, const ::szengine::FindInterestingEntitiesByRecordIdRequest* request, ::szengine::FindInterestingEntitiesByRecordIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void FindInterestingEntitiesByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindInterestingEntitiesByRecordIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void FindInterestingEntitiesByRecordId(::grpc::ClientContext* context, const ::szengine::FindInterestingEntitiesByRecordIdRequest* request, ::szengine::FindInterestingEntitiesByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void FindInterestingEntitiesByRecordId(::grpc::ClientContext* context, const ::szengine::FindInterestingEntitiesByRecordIdRequest* request, ::szengine::FindInterestingEntitiesByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void FindInterestingEntitiesByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindInterestingEntitiesByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void FindInterestingEntitiesByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindInterestingEntitiesByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void FindNetworkByEntityId(::grpc::ClientContext* context, const ::szengine::FindNetworkByEntityIdRequest* request, ::szengine::FindNetworkByEntityIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void FindNetworkByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindNetworkByEntityIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void FindNetworkByEntityId(::grpc::ClientContext* context, const ::szengine::FindNetworkByEntityIdRequest* request, ::szengine::FindNetworkByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void FindNetworkByEntityId(::grpc::ClientContext* context, const ::szengine::FindNetworkByEntityIdRequest* request, ::szengine::FindNetworkByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void FindNetworkByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindNetworkByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void FindNetworkByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindNetworkByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void FindNetworkByRecordId(::grpc::ClientContext* context, const ::szengine::FindNetworkByRecordIdRequest* request, ::szengine::FindNetworkByRecordIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void FindNetworkByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindNetworkByRecordIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void FindNetworkByRecordId(::grpc::ClientContext* context, const ::szengine::FindNetworkByRecordIdRequest* request, ::szengine::FindNetworkByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void FindNetworkByRecordId(::grpc::ClientContext* context, const ::szengine::FindNetworkByRecordIdRequest* request, ::szengine::FindNetworkByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void FindNetworkByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindNetworkByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void FindNetworkByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindNetworkByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void FindPathByEntityId(::grpc::ClientContext* context, const ::szengine::FindPathByEntityIdRequest* request, ::szengine::FindPathByEntityIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void FindPathByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindPathByEntityIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void FindPathByEntityId(::grpc::ClientContext* context, const ::szengine::FindPathByEntityIdRequest* request, ::szengine::FindPathByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void FindPathByEntityId(::grpc::ClientContext* context, const ::szengine::FindPathByEntityIdRequest* request, ::szengine::FindPathByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void FindPathByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindPathByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void FindPathByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindPathByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void FindPathByRecordId(::grpc::ClientContext* context, const ::szengine::FindPathByRecordIdRequest* request, ::szengine::FindPathByRecordIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void FindPathByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindPathByRecordIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void FindPathByRecordId(::grpc::ClientContext* context, const ::szengine::FindPathByRecordIdRequest* request, ::szengine::FindPathByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void FindPathByRecordId(::grpc::ClientContext* context, const ::szengine::FindPathByRecordIdRequest* request, ::szengine::FindPathByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void FindPathByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindPathByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void FindPathByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindPathByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void GetActiveConfigId(::grpc::ClientContext* context, const ::szengine::GetActiveConfigIdRequest* request, ::szengine::GetActiveConfigIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetActiveConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetActiveConfigIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void GetActiveConfigId(::grpc::ClientContext* context, const ::szengine::GetActiveConfigIdRequest* request, ::szengine::GetActiveConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetActiveConfigId(::grpc::ClientContext* context, const ::szengine::GetActiveConfigIdRequest* request, ::szengine::GetActiveConfigIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetActiveConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetActiveConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetActiveConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetActiveConfigIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void GetEntityByEntityId(::grpc::ClientContext* context, const ::szengine::GetEntityByEntityIdRequest* request, ::szengine::GetEntityByEntityIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetEntityByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetEntityByEntityIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void GetEntityByEntityId(::grpc::ClientContext* context, const ::szengine::GetEntityByEntityIdRequest* request, ::szengine::GetEntityByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetEntityByEntityId(::grpc::ClientContext* context, const ::szengine::GetEntityByEntityIdRequest* request, ::szengine::GetEntityByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetEntityByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetEntityByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetEntityByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetEntityByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void GetEntityByRecordId(::grpc::ClientContext* context, const ::szengine::GetEntityByRecordIdRequest* request, ::szengine::GetEntityByRecordIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetEntityByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetEntityByRecordIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void GetEntityByRecordId(::grpc::ClientContext* context, const ::szengine::GetEntityByRecordIdRequest* request, ::szengine::GetEntityByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetEntityByRecordId(::grpc::ClientContext* context, const ::szengine::GetEntityByRecordIdRequest* request, ::szengine::GetEntityByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetEntityByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetEntityByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetEntityByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetEntityByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void GetRecord(::grpc::ClientContext* context, const ::szengine::GetRecordRequest* request, ::szengine::GetRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void GetRecord(::grpc::ClientContext* context, const ::szengine::GetRecordRequest* request, ::szengine::GetRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetRecord(::grpc::ClientContext* context, const ::szengine::GetRecordRequest* request, ::szengine::GetRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void GetRedoRecord(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest* request, ::szengine::GetRedoRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetRedoRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetRedoRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void GetRedoRecord(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest* request, ::szengine::GetRedoRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetRedoRecord(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest* request, ::szengine::GetRedoRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetRedoRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetRedoRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetRedoRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetRedoRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void GetStats(::grpc::ClientContext* context, const ::szengine::GetStatsRequest* request, ::szengine::GetStatsResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetStats(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetStatsResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void GetStats(::grpc::ClientContext* context, const ::szengine::GetStatsRequest* request, ::szengine::GetStatsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetStats(::grpc::ClientContext* context, const ::szengine::GetStatsRequest* request, ::szengine::GetStatsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetStats(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetStatsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetStats(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetStatsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void GetVirtualEntityByRecordId(::grpc::ClientContext* context, const ::szengine::GetVirtualEntityByRecordIdRequest* request, ::szengine::GetVirtualEntityByRecordIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetVirtualEntityByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetVirtualEntityByRecordIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void GetVirtualEntityByRecordId(::grpc::ClientContext* context, const ::szengine::GetVirtualEntityByRecordIdRequest* request, ::szengine::GetVirtualEntityByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetVirtualEntityByRecordId(::grpc::ClientContext* context, const ::szengine::GetVirtualEntityByRecordIdRequest* request, ::szengine::GetVirtualEntityByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetVirtualEntityByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetVirtualEntityByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetVirtualEntityByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetVirtualEntityByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void HowEntityByEntityId(::grpc::ClientContext* context, const ::szengine::HowEntityByEntityIdRequest* request, ::szengine::HowEntityByEntityIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void HowEntityByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::HowEntityByEntityIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void HowEntityByEntityId(::grpc::ClientContext* context, const ::szengine::HowEntityByEntityIdRequest* request, ::szengine::HowEntityByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void HowEntityByEntityId(::grpc::ClientContext* context, const ::szengine::HowEntityByEntityIdRequest* request, ::szengine::HowEntityByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void HowEntityByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::HowEntityByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void HowEntityByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::HowEntityByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void PreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest* request, ::szengine::PreprocessRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void PreprocessRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::PreprocessRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void PreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest* request, ::szengine::PreprocessRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void PreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest* request, ::szengine::PreprocessRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void PreprocessRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::PreprocessRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void PreprocessRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::PreprocessRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void PrimeEngine(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest* request, ::szengine::PrimeEngineResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void PrimeEngine(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::PrimeEngineResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void PrimeEngine(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest* request, ::szengine::PrimeEngineResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void PrimeEngine(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest* request, ::szengine::PrimeEngineResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void PrimeEngine(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::PrimeEngineResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void PrimeEngine(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::PrimeEngineResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void ProcessRedoRecord(::grpc::ClientContext* context, const ::szengine::ProcessRedoRecordRequest* request, ::szengine::ProcessRedoRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void ProcessRedoRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ProcessRedoRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void ProcessRedoRecord(::grpc::ClientContext* context, const ::szengine::ProcessRedoRecordRequest* request, ::szengine::ProcessRedoRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void ProcessRedoRecord(::grpc::ClientContext* context, const ::szengine::ProcessRedoRecordRequest* request, ::szengine::ProcessRedoRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void ProcessRedoRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ProcessRedoRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void ProcessRedoRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ProcessRedoRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void ReevaluateEntity(::grpc::ClientContext* context, const ::szengine::ReevaluateEntityRequest* request, ::szengine::ReevaluateEntityResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void ReevaluateEntity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReevaluateEntityResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void ReevaluateEntity(::grpc::ClientContext* context, const ::szengine::ReevaluateEntityRequest* request, ::szengine::ReevaluateEntityResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void ReevaluateEntity(::grpc::ClientContext* context, const ::szengine::ReevaluateEntityRequest* request, ::szengine::ReevaluateEntityResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void ReevaluateEntity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReevaluateEntityResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void ReevaluateEntity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReevaluateEntityResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void ReevaluateRecord(::grpc::ClientContext* context, const ::szengine::ReevaluateRecordRequest* request, ::szengine::ReevaluateRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void ReevaluateRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReevaluateRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void ReevaluateRecord(::grpc::ClientContext* context, const ::szengine::ReevaluateRecordRequest* request, ::szengine::ReevaluateRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void ReevaluateRecord(::grpc::ClientContext* context, const ::szengine::ReevaluateRecordRequest* request, ::szengine::ReevaluateRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void ReevaluateRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReevaluateRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void ReevaluateRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReevaluateRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void Reinitialize(::grpc::ClientContext* context, const ::szengine::ReinitializeRequest* request, ::szengine::ReinitializeResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void Reinitialize(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReinitializeResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void Reinitialize(::grpc::ClientContext* context, const ::szengine::ReinitializeRequest* request, ::szengine::ReinitializeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void Reinitialize(::grpc::ClientContext* context, const ::szengine::ReinitializeRequest* request, ::szengine::ReinitializeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void Reinitialize(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReinitializeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void Reinitialize(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReinitializeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void SearchByAttributes(::grpc::ClientContext* context, const ::szengine::SearchByAttributesRequest* request, ::szengine::SearchByAttributesResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void SearchByAttributes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::SearchByAttributesResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void SearchByAttributes(::grpc::ClientContext* context, const ::szengine::SearchByAttributesRequest* request, ::szengine::SearchByAttributesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void StreamExportCsvEntityReport(::grpc::ClientContext* context, const ::szengine::StreamExportCsvEntityReportRequest* request, ::grpc::ClientReadReactor< ::szengine::StreamExportCsvEntityReportResponse>* reactor) = 0;
-      virtual void StreamExportJsonEntityReport(::grpc::ClientContext* context, const ::szengine::StreamExportJsonEntityReportRequest* request, ::grpc::ClientReadReactor< ::szengine::StreamExportJsonEntityReportResponse>* reactor) = 0;
+      #else
+      virtual void SearchByAttributes(::grpc::ClientContext* context, const ::szengine::SearchByAttributesRequest* request, ::szengine::SearchByAttributesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SearchByAttributes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::SearchByAttributesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void SearchByAttributes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::SearchByAttributesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void StreamExportCsvEntityReport(::grpc::ClientContext* context, ::szengine::StreamExportCsvEntityReportRequest* request, ::grpc::ClientReadReactor< ::szengine::StreamExportCsvEntityReportResponse>* reactor) = 0;
+      #else
+      virtual void StreamExportCsvEntityReport(::grpc::ClientContext* context, ::szengine::StreamExportCsvEntityReportRequest* request, ::grpc::experimental::ClientReadReactor< ::szengine::StreamExportCsvEntityReportResponse>* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void StreamExportJsonEntityReport(::grpc::ClientContext* context, ::szengine::StreamExportJsonEntityReportRequest* request, ::grpc::ClientReadReactor< ::szengine::StreamExportJsonEntityReportResponse>* reactor) = 0;
+      #else
+      virtual void StreamExportJsonEntityReport(::grpc::ClientContext* context, ::szengine::StreamExportJsonEntityReportRequest* request, ::grpc::experimental::ClientReadReactor< ::szengine::StreamExportJsonEntityReportResponse>* reactor) = 0;
+      #endif
       virtual void WhyEntities(::grpc::ClientContext* context, const ::szengine::WhyEntitiesRequest* request, ::szengine::WhyEntitiesResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void WhyEntities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyEntitiesResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void WhyEntities(::grpc::ClientContext* context, const ::szengine::WhyEntitiesRequest* request, ::szengine::WhyEntitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void WhyEntities(::grpc::ClientContext* context, const ::szengine::WhyEntitiesRequest* request, ::szengine::WhyEntitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void WhyEntities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyEntitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void WhyEntities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyEntitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void WhyRecordInEntity(::grpc::ClientContext* context, const ::szengine::WhyRecordInEntityRequest* request, ::szengine::WhyRecordInEntityResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void WhyRecordInEntity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyRecordInEntityResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void WhyRecordInEntity(::grpc::ClientContext* context, const ::szengine::WhyRecordInEntityRequest* request, ::szengine::WhyRecordInEntityResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void WhyRecordInEntity(::grpc::ClientContext* context, const ::szengine::WhyRecordInEntityRequest* request, ::szengine::WhyRecordInEntityResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void WhyRecordInEntity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyRecordInEntityResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void WhyRecordInEntity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyRecordInEntityResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void WhyRecords(::grpc::ClientContext* context, const ::szengine::WhyRecordsRequest* request, ::szengine::WhyRecordsResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void WhyRecords(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyRecordsResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void WhyRecords(::grpc::ClientContext* context, const ::szengine::WhyRecordsRequest* request, ::szengine::WhyRecordsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void WhyRecords(::grpc::ClientContext* context, const ::szengine::WhyRecordsRequest* request, ::szengine::WhyRecordsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void WhyRecords(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyRecordsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void WhyRecords(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyRecordsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
     };
-    typedef class async_interface experimental_async_interface;
-    virtual class async_interface* async() { return nullptr; }
-    class async_interface* experimental_async() { return async(); }
-   private:
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    typedef class experimental_async_interface async_interface;
+    #endif
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    async_interface* async() { return experimental_async(); }
+    #endif
+    virtual class experimental_async_interface* experimental_async() { return nullptr; }
+  private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::AddRecordResponse>* AsyncAddRecordRaw(::grpc::ClientContext* context, const ::szengine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::AddRecordResponse>* PrepareAsyncAddRecordRaw(::grpc::ClientContext* context, const ::szengine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::CloseExportResponse>* AsyncCloseExportRaw(::grpc::ClientContext* context, const ::szengine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -413,7 +736,7 @@ class SzEngine final {
   };
   class Stub final : public StubInterface {
    public:
-    Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
+    Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
     ::grpc::Status AddRecord(::grpc::ClientContext* context, const ::szengine::AddRecordRequest& request, ::szengine::AddRecordResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::AddRecordResponse>> AsyncAddRecord(::grpc::ClientContext* context, const ::szengine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::AddRecordResponse>>(AsyncAddRecordRaw(context, request, cq));
@@ -649,84 +972,402 @@ class SzEngine final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::WhyRecordsResponse>> PrepareAsyncWhyRecords(::grpc::ClientContext* context, const ::szengine::WhyRecordsRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::WhyRecordsResponse>>(PrepareAsyncWhyRecordsRaw(context, request, cq));
     }
-    class async final :
-      public StubInterface::async_interface {
+    class experimental_async final :
+      public StubInterface::experimental_async_interface {
      public:
       void AddRecord(::grpc::ClientContext* context, const ::szengine::AddRecordRequest* request, ::szengine::AddRecordResponse* response, std::function<void(::grpc::Status)>) override;
+      void AddRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::AddRecordResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void AddRecord(::grpc::ClientContext* context, const ::szengine::AddRecordRequest* request, ::szengine::AddRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void AddRecord(::grpc::ClientContext* context, const ::szengine::AddRecordRequest* request, ::szengine::AddRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void AddRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::AddRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void AddRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::AddRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void CloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest* request, ::szengine::CloseExportResponse* response, std::function<void(::grpc::Status)>) override;
+      void CloseExport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::CloseExportResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void CloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest* request, ::szengine::CloseExportResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void CloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest* request, ::szengine::CloseExportResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void CloseExport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::CloseExportResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void CloseExport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::CloseExportResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void CountRedoRecords(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest* request, ::szengine::CountRedoRecordsResponse* response, std::function<void(::grpc::Status)>) override;
+      void CountRedoRecords(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::CountRedoRecordsResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void CountRedoRecords(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest* request, ::szengine::CountRedoRecordsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void CountRedoRecords(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest* request, ::szengine::CountRedoRecordsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void CountRedoRecords(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::CountRedoRecordsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void CountRedoRecords(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::CountRedoRecordsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void DeleteRecord(::grpc::ClientContext* context, const ::szengine::DeleteRecordRequest* request, ::szengine::DeleteRecordResponse* response, std::function<void(::grpc::Status)>) override;
+      void DeleteRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::DeleteRecordResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void DeleteRecord(::grpc::ClientContext* context, const ::szengine::DeleteRecordRequest* request, ::szengine::DeleteRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void DeleteRecord(::grpc::ClientContext* context, const ::szengine::DeleteRecordRequest* request, ::szengine::DeleteRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void DeleteRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::DeleteRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void DeleteRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::DeleteRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void ExportCsvEntityReport(::grpc::ClientContext* context, const ::szengine::ExportCsvEntityReportRequest* request, ::szengine::ExportCsvEntityReportResponse* response, std::function<void(::grpc::Status)>) override;
+      void ExportCsvEntityReport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ExportCsvEntityReportResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void ExportCsvEntityReport(::grpc::ClientContext* context, const ::szengine::ExportCsvEntityReportRequest* request, ::szengine::ExportCsvEntityReportResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void ExportCsvEntityReport(::grpc::ClientContext* context, const ::szengine::ExportCsvEntityReportRequest* request, ::szengine::ExportCsvEntityReportResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void ExportCsvEntityReport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ExportCsvEntityReportResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void ExportCsvEntityReport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ExportCsvEntityReportResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void ExportJsonEntityReport(::grpc::ClientContext* context, const ::szengine::ExportJsonEntityReportRequest* request, ::szengine::ExportJsonEntityReportResponse* response, std::function<void(::grpc::Status)>) override;
+      void ExportJsonEntityReport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ExportJsonEntityReportResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void ExportJsonEntityReport(::grpc::ClientContext* context, const ::szengine::ExportJsonEntityReportRequest* request, ::szengine::ExportJsonEntityReportResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void ExportJsonEntityReport(::grpc::ClientContext* context, const ::szengine::ExportJsonEntityReportRequest* request, ::szengine::ExportJsonEntityReportResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void ExportJsonEntityReport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ExportJsonEntityReportResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void ExportJsonEntityReport(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ExportJsonEntityReportResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void FetchNext(::grpc::ClientContext* context, const ::szengine::FetchNextRequest* request, ::szengine::FetchNextResponse* response, std::function<void(::grpc::Status)>) override;
+      void FetchNext(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FetchNextResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void FetchNext(::grpc::ClientContext* context, const ::szengine::FetchNextRequest* request, ::szengine::FetchNextResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void FetchNext(::grpc::ClientContext* context, const ::szengine::FetchNextRequest* request, ::szengine::FetchNextResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void FetchNext(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FetchNextResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void FetchNext(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FetchNextResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void FindInterestingEntitiesByEntityId(::grpc::ClientContext* context, const ::szengine::FindInterestingEntitiesByEntityIdRequest* request, ::szengine::FindInterestingEntitiesByEntityIdResponse* response, std::function<void(::grpc::Status)>) override;
+      void FindInterestingEntitiesByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindInterestingEntitiesByEntityIdResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void FindInterestingEntitiesByEntityId(::grpc::ClientContext* context, const ::szengine::FindInterestingEntitiesByEntityIdRequest* request, ::szengine::FindInterestingEntitiesByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void FindInterestingEntitiesByEntityId(::grpc::ClientContext* context, const ::szengine::FindInterestingEntitiesByEntityIdRequest* request, ::szengine::FindInterestingEntitiesByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void FindInterestingEntitiesByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindInterestingEntitiesByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void FindInterestingEntitiesByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindInterestingEntitiesByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void FindInterestingEntitiesByRecordId(::grpc::ClientContext* context, const ::szengine::FindInterestingEntitiesByRecordIdRequest* request, ::szengine::FindInterestingEntitiesByRecordIdResponse* response, std::function<void(::grpc::Status)>) override;
+      void FindInterestingEntitiesByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindInterestingEntitiesByRecordIdResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void FindInterestingEntitiesByRecordId(::grpc::ClientContext* context, const ::szengine::FindInterestingEntitiesByRecordIdRequest* request, ::szengine::FindInterestingEntitiesByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void FindInterestingEntitiesByRecordId(::grpc::ClientContext* context, const ::szengine::FindInterestingEntitiesByRecordIdRequest* request, ::szengine::FindInterestingEntitiesByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void FindInterestingEntitiesByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindInterestingEntitiesByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void FindInterestingEntitiesByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindInterestingEntitiesByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void FindNetworkByEntityId(::grpc::ClientContext* context, const ::szengine::FindNetworkByEntityIdRequest* request, ::szengine::FindNetworkByEntityIdResponse* response, std::function<void(::grpc::Status)>) override;
+      void FindNetworkByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindNetworkByEntityIdResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void FindNetworkByEntityId(::grpc::ClientContext* context, const ::szengine::FindNetworkByEntityIdRequest* request, ::szengine::FindNetworkByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void FindNetworkByEntityId(::grpc::ClientContext* context, const ::szengine::FindNetworkByEntityIdRequest* request, ::szengine::FindNetworkByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void FindNetworkByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindNetworkByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void FindNetworkByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindNetworkByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void FindNetworkByRecordId(::grpc::ClientContext* context, const ::szengine::FindNetworkByRecordIdRequest* request, ::szengine::FindNetworkByRecordIdResponse* response, std::function<void(::grpc::Status)>) override;
+      void FindNetworkByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindNetworkByRecordIdResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void FindNetworkByRecordId(::grpc::ClientContext* context, const ::szengine::FindNetworkByRecordIdRequest* request, ::szengine::FindNetworkByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void FindNetworkByRecordId(::grpc::ClientContext* context, const ::szengine::FindNetworkByRecordIdRequest* request, ::szengine::FindNetworkByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void FindNetworkByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindNetworkByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void FindNetworkByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindNetworkByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void FindPathByEntityId(::grpc::ClientContext* context, const ::szengine::FindPathByEntityIdRequest* request, ::szengine::FindPathByEntityIdResponse* response, std::function<void(::grpc::Status)>) override;
+      void FindPathByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindPathByEntityIdResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void FindPathByEntityId(::grpc::ClientContext* context, const ::szengine::FindPathByEntityIdRequest* request, ::szengine::FindPathByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void FindPathByEntityId(::grpc::ClientContext* context, const ::szengine::FindPathByEntityIdRequest* request, ::szengine::FindPathByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void FindPathByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindPathByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void FindPathByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindPathByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void FindPathByRecordId(::grpc::ClientContext* context, const ::szengine::FindPathByRecordIdRequest* request, ::szengine::FindPathByRecordIdResponse* response, std::function<void(::grpc::Status)>) override;
+      void FindPathByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindPathByRecordIdResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void FindPathByRecordId(::grpc::ClientContext* context, const ::szengine::FindPathByRecordIdRequest* request, ::szengine::FindPathByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void FindPathByRecordId(::grpc::ClientContext* context, const ::szengine::FindPathByRecordIdRequest* request, ::szengine::FindPathByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void FindPathByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindPathByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void FindPathByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::FindPathByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void GetActiveConfigId(::grpc::ClientContext* context, const ::szengine::GetActiveConfigIdRequest* request, ::szengine::GetActiveConfigIdResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetActiveConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetActiveConfigIdResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void GetActiveConfigId(::grpc::ClientContext* context, const ::szengine::GetActiveConfigIdRequest* request, ::szengine::GetActiveConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetActiveConfigId(::grpc::ClientContext* context, const ::szengine::GetActiveConfigIdRequest* request, ::szengine::GetActiveConfigIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetActiveConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetActiveConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetActiveConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetActiveConfigIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void GetEntityByEntityId(::grpc::ClientContext* context, const ::szengine::GetEntityByEntityIdRequest* request, ::szengine::GetEntityByEntityIdResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetEntityByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetEntityByEntityIdResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void GetEntityByEntityId(::grpc::ClientContext* context, const ::szengine::GetEntityByEntityIdRequest* request, ::szengine::GetEntityByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetEntityByEntityId(::grpc::ClientContext* context, const ::szengine::GetEntityByEntityIdRequest* request, ::szengine::GetEntityByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetEntityByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetEntityByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetEntityByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetEntityByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void GetEntityByRecordId(::grpc::ClientContext* context, const ::szengine::GetEntityByRecordIdRequest* request, ::szengine::GetEntityByRecordIdResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetEntityByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetEntityByRecordIdResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void GetEntityByRecordId(::grpc::ClientContext* context, const ::szengine::GetEntityByRecordIdRequest* request, ::szengine::GetEntityByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetEntityByRecordId(::grpc::ClientContext* context, const ::szengine::GetEntityByRecordIdRequest* request, ::szengine::GetEntityByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetEntityByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetEntityByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetEntityByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetEntityByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void GetRecord(::grpc::ClientContext* context, const ::szengine::GetRecordRequest* request, ::szengine::GetRecordResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetRecordResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void GetRecord(::grpc::ClientContext* context, const ::szengine::GetRecordRequest* request, ::szengine::GetRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetRecord(::grpc::ClientContext* context, const ::szengine::GetRecordRequest* request, ::szengine::GetRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void GetRedoRecord(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest* request, ::szengine::GetRedoRecordResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetRedoRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetRedoRecordResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void GetRedoRecord(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest* request, ::szengine::GetRedoRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetRedoRecord(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest* request, ::szengine::GetRedoRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetRedoRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetRedoRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetRedoRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetRedoRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void GetStats(::grpc::ClientContext* context, const ::szengine::GetStatsRequest* request, ::szengine::GetStatsResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetStats(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetStatsResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void GetStats(::grpc::ClientContext* context, const ::szengine::GetStatsRequest* request, ::szengine::GetStatsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetStats(::grpc::ClientContext* context, const ::szengine::GetStatsRequest* request, ::szengine::GetStatsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetStats(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetStatsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetStats(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetStatsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void GetVirtualEntityByRecordId(::grpc::ClientContext* context, const ::szengine::GetVirtualEntityByRecordIdRequest* request, ::szengine::GetVirtualEntityByRecordIdResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetVirtualEntityByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetVirtualEntityByRecordIdResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void GetVirtualEntityByRecordId(::grpc::ClientContext* context, const ::szengine::GetVirtualEntityByRecordIdRequest* request, ::szengine::GetVirtualEntityByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetVirtualEntityByRecordId(::grpc::ClientContext* context, const ::szengine::GetVirtualEntityByRecordIdRequest* request, ::szengine::GetVirtualEntityByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetVirtualEntityByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetVirtualEntityByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetVirtualEntityByRecordId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::GetVirtualEntityByRecordIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void HowEntityByEntityId(::grpc::ClientContext* context, const ::szengine::HowEntityByEntityIdRequest* request, ::szengine::HowEntityByEntityIdResponse* response, std::function<void(::grpc::Status)>) override;
+      void HowEntityByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::HowEntityByEntityIdResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void HowEntityByEntityId(::grpc::ClientContext* context, const ::szengine::HowEntityByEntityIdRequest* request, ::szengine::HowEntityByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void HowEntityByEntityId(::grpc::ClientContext* context, const ::szengine::HowEntityByEntityIdRequest* request, ::szengine::HowEntityByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void HowEntityByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::HowEntityByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void HowEntityByEntityId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::HowEntityByEntityIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void PreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest* request, ::szengine::PreprocessRecordResponse* response, std::function<void(::grpc::Status)>) override;
+      void PreprocessRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::PreprocessRecordResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void PreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest* request, ::szengine::PreprocessRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void PreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest* request, ::szengine::PreprocessRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void PreprocessRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::PreprocessRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void PreprocessRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::PreprocessRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void PrimeEngine(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest* request, ::szengine::PrimeEngineResponse* response, std::function<void(::grpc::Status)>) override;
+      void PrimeEngine(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::PrimeEngineResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void PrimeEngine(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest* request, ::szengine::PrimeEngineResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void PrimeEngine(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest* request, ::szengine::PrimeEngineResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void PrimeEngine(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::PrimeEngineResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void PrimeEngine(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::PrimeEngineResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void ProcessRedoRecord(::grpc::ClientContext* context, const ::szengine::ProcessRedoRecordRequest* request, ::szengine::ProcessRedoRecordResponse* response, std::function<void(::grpc::Status)>) override;
+      void ProcessRedoRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ProcessRedoRecordResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void ProcessRedoRecord(::grpc::ClientContext* context, const ::szengine::ProcessRedoRecordRequest* request, ::szengine::ProcessRedoRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void ProcessRedoRecord(::grpc::ClientContext* context, const ::szengine::ProcessRedoRecordRequest* request, ::szengine::ProcessRedoRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void ProcessRedoRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ProcessRedoRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void ProcessRedoRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ProcessRedoRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void ReevaluateEntity(::grpc::ClientContext* context, const ::szengine::ReevaluateEntityRequest* request, ::szengine::ReevaluateEntityResponse* response, std::function<void(::grpc::Status)>) override;
+      void ReevaluateEntity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReevaluateEntityResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void ReevaluateEntity(::grpc::ClientContext* context, const ::szengine::ReevaluateEntityRequest* request, ::szengine::ReevaluateEntityResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void ReevaluateEntity(::grpc::ClientContext* context, const ::szengine::ReevaluateEntityRequest* request, ::szengine::ReevaluateEntityResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void ReevaluateEntity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReevaluateEntityResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void ReevaluateEntity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReevaluateEntityResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void ReevaluateRecord(::grpc::ClientContext* context, const ::szengine::ReevaluateRecordRequest* request, ::szengine::ReevaluateRecordResponse* response, std::function<void(::grpc::Status)>) override;
+      void ReevaluateRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReevaluateRecordResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void ReevaluateRecord(::grpc::ClientContext* context, const ::szengine::ReevaluateRecordRequest* request, ::szengine::ReevaluateRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void ReevaluateRecord(::grpc::ClientContext* context, const ::szengine::ReevaluateRecordRequest* request, ::szengine::ReevaluateRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void ReevaluateRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReevaluateRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void ReevaluateRecord(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReevaluateRecordResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void Reinitialize(::grpc::ClientContext* context, const ::szengine::ReinitializeRequest* request, ::szengine::ReinitializeResponse* response, std::function<void(::grpc::Status)>) override;
+      void Reinitialize(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReinitializeResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void Reinitialize(::grpc::ClientContext* context, const ::szengine::ReinitializeRequest* request, ::szengine::ReinitializeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void Reinitialize(::grpc::ClientContext* context, const ::szengine::ReinitializeRequest* request, ::szengine::ReinitializeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void Reinitialize(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReinitializeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void Reinitialize(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::ReinitializeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void SearchByAttributes(::grpc::ClientContext* context, const ::szengine::SearchByAttributesRequest* request, ::szengine::SearchByAttributesResponse* response, std::function<void(::grpc::Status)>) override;
+      void SearchByAttributes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::SearchByAttributesResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void SearchByAttributes(::grpc::ClientContext* context, const ::szengine::SearchByAttributesRequest* request, ::szengine::SearchByAttributesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void StreamExportCsvEntityReport(::grpc::ClientContext* context, const ::szengine::StreamExportCsvEntityReportRequest* request, ::grpc::ClientReadReactor< ::szengine::StreamExportCsvEntityReportResponse>* reactor) override;
-      void StreamExportJsonEntityReport(::grpc::ClientContext* context, const ::szengine::StreamExportJsonEntityReportRequest* request, ::grpc::ClientReadReactor< ::szengine::StreamExportJsonEntityReportResponse>* reactor) override;
+      #else
+      void SearchByAttributes(::grpc::ClientContext* context, const ::szengine::SearchByAttributesRequest* request, ::szengine::SearchByAttributesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SearchByAttributes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::SearchByAttributesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void SearchByAttributes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::SearchByAttributesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void StreamExportCsvEntityReport(::grpc::ClientContext* context, ::szengine::StreamExportCsvEntityReportRequest* request, ::grpc::ClientReadReactor< ::szengine::StreamExportCsvEntityReportResponse>* reactor) override;
+      #else
+      void StreamExportCsvEntityReport(::grpc::ClientContext* context, ::szengine::StreamExportCsvEntityReportRequest* request, ::grpc::experimental::ClientReadReactor< ::szengine::StreamExportCsvEntityReportResponse>* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void StreamExportJsonEntityReport(::grpc::ClientContext* context, ::szengine::StreamExportJsonEntityReportRequest* request, ::grpc::ClientReadReactor< ::szengine::StreamExportJsonEntityReportResponse>* reactor) override;
+      #else
+      void StreamExportJsonEntityReport(::grpc::ClientContext* context, ::szengine::StreamExportJsonEntityReportRequest* request, ::grpc::experimental::ClientReadReactor< ::szengine::StreamExportJsonEntityReportResponse>* reactor) override;
+      #endif
       void WhyEntities(::grpc::ClientContext* context, const ::szengine::WhyEntitiesRequest* request, ::szengine::WhyEntitiesResponse* response, std::function<void(::grpc::Status)>) override;
+      void WhyEntities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyEntitiesResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void WhyEntities(::grpc::ClientContext* context, const ::szengine::WhyEntitiesRequest* request, ::szengine::WhyEntitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void WhyEntities(::grpc::ClientContext* context, const ::szengine::WhyEntitiesRequest* request, ::szengine::WhyEntitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void WhyEntities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyEntitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void WhyEntities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyEntitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void WhyRecordInEntity(::grpc::ClientContext* context, const ::szengine::WhyRecordInEntityRequest* request, ::szengine::WhyRecordInEntityResponse* response, std::function<void(::grpc::Status)>) override;
+      void WhyRecordInEntity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyRecordInEntityResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void WhyRecordInEntity(::grpc::ClientContext* context, const ::szengine::WhyRecordInEntityRequest* request, ::szengine::WhyRecordInEntityResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void WhyRecordInEntity(::grpc::ClientContext* context, const ::szengine::WhyRecordInEntityRequest* request, ::szengine::WhyRecordInEntityResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void WhyRecordInEntity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyRecordInEntityResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void WhyRecordInEntity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyRecordInEntityResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void WhyRecords(::grpc::ClientContext* context, const ::szengine::WhyRecordsRequest* request, ::szengine::WhyRecordsResponse* response, std::function<void(::grpc::Status)>) override;
+      void WhyRecords(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyRecordsResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void WhyRecords(::grpc::ClientContext* context, const ::szengine::WhyRecordsRequest* request, ::szengine::WhyRecordsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void WhyRecords(::grpc::ClientContext* context, const ::szengine::WhyRecordsRequest* request, ::szengine::WhyRecordsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void WhyRecords(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyRecordsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void WhyRecords(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szengine::WhyRecordsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
      private:
       friend class Stub;
-      explicit async(Stub* stub): stub_(stub) { }
+      explicit experimental_async(Stub* stub): stub_(stub) { }
       Stub* stub() { return stub_; }
       Stub* stub_;
     };
-    class async* async() override { return &async_stub_; }
+    class experimental_async_interface* experimental_async() override { return &async_stub_; }
 
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
-    class async async_stub_{this};
+    class experimental_async async_stub_{this};
     ::grpc::ClientAsyncResponseReader< ::szengine::AddRecordResponse>* AsyncAddRecordRaw(::grpc::ClientContext* context, const ::szengine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szengine::AddRecordResponse>* PrepareAsyncAddRecordRaw(::grpc::ClientContext* context, const ::szengine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szengine::CloseExportResponse>* AsyncCloseExportRaw(::grpc::ClientContext* context, const ::szengine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) override;
@@ -1531,22 +2172,36 @@ class SzEngine final {
   };
   typedef WithAsyncMethod_AddRecord<WithAsyncMethod_CloseExport<WithAsyncMethod_CountRedoRecords<WithAsyncMethod_DeleteRecord<WithAsyncMethod_ExportCsvEntityReport<WithAsyncMethod_ExportJsonEntityReport<WithAsyncMethod_FetchNext<WithAsyncMethod_FindInterestingEntitiesByEntityId<WithAsyncMethod_FindInterestingEntitiesByRecordId<WithAsyncMethod_FindNetworkByEntityId<WithAsyncMethod_FindNetworkByRecordId<WithAsyncMethod_FindPathByEntityId<WithAsyncMethod_FindPathByRecordId<WithAsyncMethod_GetActiveConfigId<WithAsyncMethod_GetEntityByEntityId<WithAsyncMethod_GetEntityByRecordId<WithAsyncMethod_GetRecord<WithAsyncMethod_GetRedoRecord<WithAsyncMethod_GetStats<WithAsyncMethod_GetVirtualEntityByRecordId<WithAsyncMethod_HowEntityByEntityId<WithAsyncMethod_PreprocessRecord<WithAsyncMethod_PrimeEngine<WithAsyncMethod_ProcessRedoRecord<WithAsyncMethod_ReevaluateEntity<WithAsyncMethod_ReevaluateRecord<WithAsyncMethod_Reinitialize<WithAsyncMethod_SearchByAttributes<WithAsyncMethod_StreamExportCsvEntityReport<WithAsyncMethod_StreamExportJsonEntityReport<WithAsyncMethod_WhyEntities<WithAsyncMethod_WhyRecordInEntity<WithAsyncMethod_WhyRecords<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
   template <class BaseClass>
-  class WithCallbackMethod_AddRecord : public BaseClass {
+  class ExperimentalWithCallbackMethod_AddRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_AddRecord() {
-      ::grpc::Service::MarkMethodCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::AddRecordRequest, ::szengine::AddRecordResponse>(
+    ExperimentalWithCallbackMethod_AddRecord() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::AddRecordRequest, ::szengine::AddRecordResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::AddRecordRequest* request, ::szengine::AddRecordResponse* response) { return this->AddRecord(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::AddRecordRequest* request, ::szengine::AddRecordResponse* response) { return this->AddRecord(context, request, response); }));}
     void SetMessageAllocatorFor_AddRecord(
-        ::grpc::MessageAllocator< ::szengine::AddRecordRequest, ::szengine::AddRecordResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::AddRecordRequest, ::szengine::AddRecordResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::AddRecordRequest, ::szengine::AddRecordResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::AddRecordRequest, ::szengine::AddRecordResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_AddRecord() override {
+    ~ExperimentalWithCallbackMethod_AddRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1554,26 +2209,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* AddRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::AddRecordRequest* /*request*/, ::szengine::AddRecordResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::AddRecordRequest* /*request*/, ::szengine::AddRecordResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* AddRecord(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::AddRecordRequest* /*request*/, ::szengine::AddRecordResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_CloseExport : public BaseClass {
+  class ExperimentalWithCallbackMethod_CloseExport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_CloseExport() {
-      ::grpc::Service::MarkMethodCallback(1,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::CloseExportRequest, ::szengine::CloseExportResponse>(
+    ExperimentalWithCallbackMethod_CloseExport() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::CloseExportRequest, ::szengine::CloseExportResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::CloseExportRequest* request, ::szengine::CloseExportResponse* response) { return this->CloseExport(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::CloseExportRequest* request, ::szengine::CloseExportResponse* response) { return this->CloseExport(context, request, response); }));}
     void SetMessageAllocatorFor_CloseExport(
-        ::grpc::MessageAllocator< ::szengine::CloseExportRequest, ::szengine::CloseExportResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::CloseExportRequest, ::szengine::CloseExportResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::CloseExportRequest, ::szengine::CloseExportResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(1);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::CloseExportRequest, ::szengine::CloseExportResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_CloseExport() override {
+    ~ExperimentalWithCallbackMethod_CloseExport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1581,26 +2256,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* CloseExport(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::CloseExportRequest* /*request*/, ::szengine::CloseExportResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::CloseExportRequest* /*request*/, ::szengine::CloseExportResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* CloseExport(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::CloseExportRequest* /*request*/, ::szengine::CloseExportResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_CountRedoRecords : public BaseClass {
+  class ExperimentalWithCallbackMethod_CountRedoRecords : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_CountRedoRecords() {
-      ::grpc::Service::MarkMethodCallback(2,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::CountRedoRecordsRequest, ::szengine::CountRedoRecordsResponse>(
+    ExperimentalWithCallbackMethod_CountRedoRecords() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(2,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::CountRedoRecordsRequest, ::szengine::CountRedoRecordsResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::CountRedoRecordsRequest* request, ::szengine::CountRedoRecordsResponse* response) { return this->CountRedoRecords(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::CountRedoRecordsRequest* request, ::szengine::CountRedoRecordsResponse* response) { return this->CountRedoRecords(context, request, response); }));}
     void SetMessageAllocatorFor_CountRedoRecords(
-        ::grpc::MessageAllocator< ::szengine::CountRedoRecordsRequest, ::szengine::CountRedoRecordsResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::CountRedoRecordsRequest, ::szengine::CountRedoRecordsResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::CountRedoRecordsRequest, ::szengine::CountRedoRecordsResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(2);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::CountRedoRecordsRequest, ::szengine::CountRedoRecordsResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_CountRedoRecords() override {
+    ~ExperimentalWithCallbackMethod_CountRedoRecords() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1608,26 +2303,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* CountRedoRecords(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::CountRedoRecordsRequest* /*request*/, ::szengine::CountRedoRecordsResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::CountRedoRecordsRequest* /*request*/, ::szengine::CountRedoRecordsResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* CountRedoRecords(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::CountRedoRecordsRequest* /*request*/, ::szengine::CountRedoRecordsResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_DeleteRecord : public BaseClass {
+  class ExperimentalWithCallbackMethod_DeleteRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_DeleteRecord() {
-      ::grpc::Service::MarkMethodCallback(3,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::DeleteRecordRequest, ::szengine::DeleteRecordResponse>(
+    ExperimentalWithCallbackMethod_DeleteRecord() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(3,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::DeleteRecordRequest, ::szengine::DeleteRecordResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::DeleteRecordRequest* request, ::szengine::DeleteRecordResponse* response) { return this->DeleteRecord(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::DeleteRecordRequest* request, ::szengine::DeleteRecordResponse* response) { return this->DeleteRecord(context, request, response); }));}
     void SetMessageAllocatorFor_DeleteRecord(
-        ::grpc::MessageAllocator< ::szengine::DeleteRecordRequest, ::szengine::DeleteRecordResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::DeleteRecordRequest, ::szengine::DeleteRecordResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::DeleteRecordRequest, ::szengine::DeleteRecordResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(3);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::DeleteRecordRequest, ::szengine::DeleteRecordResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_DeleteRecord() override {
+    ~ExperimentalWithCallbackMethod_DeleteRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1635,26 +2350,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* DeleteRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::DeleteRecordRequest* /*request*/, ::szengine::DeleteRecordResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::DeleteRecordRequest* /*request*/, ::szengine::DeleteRecordResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* DeleteRecord(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::DeleteRecordRequest* /*request*/, ::szengine::DeleteRecordResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_ExportCsvEntityReport : public BaseClass {
+  class ExperimentalWithCallbackMethod_ExportCsvEntityReport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_ExportCsvEntityReport() {
-      ::grpc::Service::MarkMethodCallback(4,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::ExportCsvEntityReportRequest, ::szengine::ExportCsvEntityReportResponse>(
+    ExperimentalWithCallbackMethod_ExportCsvEntityReport() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(4,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::ExportCsvEntityReportRequest, ::szengine::ExportCsvEntityReportResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::ExportCsvEntityReportRequest* request, ::szengine::ExportCsvEntityReportResponse* response) { return this->ExportCsvEntityReport(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::ExportCsvEntityReportRequest* request, ::szengine::ExportCsvEntityReportResponse* response) { return this->ExportCsvEntityReport(context, request, response); }));}
     void SetMessageAllocatorFor_ExportCsvEntityReport(
-        ::grpc::MessageAllocator< ::szengine::ExportCsvEntityReportRequest, ::szengine::ExportCsvEntityReportResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::ExportCsvEntityReportRequest, ::szengine::ExportCsvEntityReportResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::ExportCsvEntityReportRequest, ::szengine::ExportCsvEntityReportResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(4);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::ExportCsvEntityReportRequest, ::szengine::ExportCsvEntityReportResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_ExportCsvEntityReport() override {
+    ~ExperimentalWithCallbackMethod_ExportCsvEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1662,26 +2397,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* ExportCsvEntityReport(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::ExportCsvEntityReportRequest* /*request*/, ::szengine::ExportCsvEntityReportResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::ExportCsvEntityReportRequest* /*request*/, ::szengine::ExportCsvEntityReportResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* ExportCsvEntityReport(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::ExportCsvEntityReportRequest* /*request*/, ::szengine::ExportCsvEntityReportResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_ExportJsonEntityReport : public BaseClass {
+  class ExperimentalWithCallbackMethod_ExportJsonEntityReport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_ExportJsonEntityReport() {
-      ::grpc::Service::MarkMethodCallback(5,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::ExportJsonEntityReportRequest, ::szengine::ExportJsonEntityReportResponse>(
+    ExperimentalWithCallbackMethod_ExportJsonEntityReport() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(5,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::ExportJsonEntityReportRequest, ::szengine::ExportJsonEntityReportResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::ExportJsonEntityReportRequest* request, ::szengine::ExportJsonEntityReportResponse* response) { return this->ExportJsonEntityReport(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::ExportJsonEntityReportRequest* request, ::szengine::ExportJsonEntityReportResponse* response) { return this->ExportJsonEntityReport(context, request, response); }));}
     void SetMessageAllocatorFor_ExportJsonEntityReport(
-        ::grpc::MessageAllocator< ::szengine::ExportJsonEntityReportRequest, ::szengine::ExportJsonEntityReportResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::ExportJsonEntityReportRequest, ::szengine::ExportJsonEntityReportResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::ExportJsonEntityReportRequest, ::szengine::ExportJsonEntityReportResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(5);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::ExportJsonEntityReportRequest, ::szengine::ExportJsonEntityReportResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_ExportJsonEntityReport() override {
+    ~ExperimentalWithCallbackMethod_ExportJsonEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1689,26 +2444,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* ExportJsonEntityReport(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::ExportJsonEntityReportRequest* /*request*/, ::szengine::ExportJsonEntityReportResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::ExportJsonEntityReportRequest* /*request*/, ::szengine::ExportJsonEntityReportResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* ExportJsonEntityReport(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::ExportJsonEntityReportRequest* /*request*/, ::szengine::ExportJsonEntityReportResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_FetchNext : public BaseClass {
+  class ExperimentalWithCallbackMethod_FetchNext : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_FetchNext() {
-      ::grpc::Service::MarkMethodCallback(6,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::FetchNextRequest, ::szengine::FetchNextResponse>(
+    ExperimentalWithCallbackMethod_FetchNext() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(6,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::FetchNextRequest, ::szengine::FetchNextResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::FetchNextRequest* request, ::szengine::FetchNextResponse* response) { return this->FetchNext(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::FetchNextRequest* request, ::szengine::FetchNextResponse* response) { return this->FetchNext(context, request, response); }));}
     void SetMessageAllocatorFor_FetchNext(
-        ::grpc::MessageAllocator< ::szengine::FetchNextRequest, ::szengine::FetchNextResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::FetchNextRequest, ::szengine::FetchNextResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(6);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::FetchNextRequest, ::szengine::FetchNextResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(6);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::FetchNextRequest, ::szengine::FetchNextResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_FetchNext() override {
+    ~ExperimentalWithCallbackMethod_FetchNext() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1716,26 +2491,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* FetchNext(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::FetchNextRequest* /*request*/, ::szengine::FetchNextResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::FetchNextRequest* /*request*/, ::szengine::FetchNextResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* FetchNext(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::FetchNextRequest* /*request*/, ::szengine::FetchNextResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_FindInterestingEntitiesByEntityId : public BaseClass {
+  class ExperimentalWithCallbackMethod_FindInterestingEntitiesByEntityId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_FindInterestingEntitiesByEntityId() {
-      ::grpc::Service::MarkMethodCallback(7,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::FindInterestingEntitiesByEntityIdRequest, ::szengine::FindInterestingEntitiesByEntityIdResponse>(
+    ExperimentalWithCallbackMethod_FindInterestingEntitiesByEntityId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(7,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::FindInterestingEntitiesByEntityIdRequest, ::szengine::FindInterestingEntitiesByEntityIdResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::FindInterestingEntitiesByEntityIdRequest* request, ::szengine::FindInterestingEntitiesByEntityIdResponse* response) { return this->FindInterestingEntitiesByEntityId(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::FindInterestingEntitiesByEntityIdRequest* request, ::szengine::FindInterestingEntitiesByEntityIdResponse* response) { return this->FindInterestingEntitiesByEntityId(context, request, response); }));}
     void SetMessageAllocatorFor_FindInterestingEntitiesByEntityId(
-        ::grpc::MessageAllocator< ::szengine::FindInterestingEntitiesByEntityIdRequest, ::szengine::FindInterestingEntitiesByEntityIdResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::FindInterestingEntitiesByEntityIdRequest, ::szengine::FindInterestingEntitiesByEntityIdResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(7);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::FindInterestingEntitiesByEntityIdRequest, ::szengine::FindInterestingEntitiesByEntityIdResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(7);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::FindInterestingEntitiesByEntityIdRequest, ::szengine::FindInterestingEntitiesByEntityIdResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_FindInterestingEntitiesByEntityId() override {
+    ~ExperimentalWithCallbackMethod_FindInterestingEntitiesByEntityId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1743,26 +2538,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* FindInterestingEntitiesByEntityId(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::FindInterestingEntitiesByEntityIdRequest* /*request*/, ::szengine::FindInterestingEntitiesByEntityIdResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::FindInterestingEntitiesByEntityIdRequest* /*request*/, ::szengine::FindInterestingEntitiesByEntityIdResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* FindInterestingEntitiesByEntityId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::FindInterestingEntitiesByEntityIdRequest* /*request*/, ::szengine::FindInterestingEntitiesByEntityIdResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_FindInterestingEntitiesByRecordId : public BaseClass {
+  class ExperimentalWithCallbackMethod_FindInterestingEntitiesByRecordId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_FindInterestingEntitiesByRecordId() {
-      ::grpc::Service::MarkMethodCallback(8,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::FindInterestingEntitiesByRecordIdRequest, ::szengine::FindInterestingEntitiesByRecordIdResponse>(
+    ExperimentalWithCallbackMethod_FindInterestingEntitiesByRecordId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(8,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::FindInterestingEntitiesByRecordIdRequest, ::szengine::FindInterestingEntitiesByRecordIdResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::FindInterestingEntitiesByRecordIdRequest* request, ::szengine::FindInterestingEntitiesByRecordIdResponse* response) { return this->FindInterestingEntitiesByRecordId(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::FindInterestingEntitiesByRecordIdRequest* request, ::szengine::FindInterestingEntitiesByRecordIdResponse* response) { return this->FindInterestingEntitiesByRecordId(context, request, response); }));}
     void SetMessageAllocatorFor_FindInterestingEntitiesByRecordId(
-        ::grpc::MessageAllocator< ::szengine::FindInterestingEntitiesByRecordIdRequest, ::szengine::FindInterestingEntitiesByRecordIdResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::FindInterestingEntitiesByRecordIdRequest, ::szengine::FindInterestingEntitiesByRecordIdResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(8);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::FindInterestingEntitiesByRecordIdRequest, ::szengine::FindInterestingEntitiesByRecordIdResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(8);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::FindInterestingEntitiesByRecordIdRequest, ::szengine::FindInterestingEntitiesByRecordIdResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_FindInterestingEntitiesByRecordId() override {
+    ~ExperimentalWithCallbackMethod_FindInterestingEntitiesByRecordId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1770,26 +2585,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* FindInterestingEntitiesByRecordId(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::FindInterestingEntitiesByRecordIdRequest* /*request*/, ::szengine::FindInterestingEntitiesByRecordIdResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::FindInterestingEntitiesByRecordIdRequest* /*request*/, ::szengine::FindInterestingEntitiesByRecordIdResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* FindInterestingEntitiesByRecordId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::FindInterestingEntitiesByRecordIdRequest* /*request*/, ::szengine::FindInterestingEntitiesByRecordIdResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_FindNetworkByEntityId : public BaseClass {
+  class ExperimentalWithCallbackMethod_FindNetworkByEntityId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_FindNetworkByEntityId() {
-      ::grpc::Service::MarkMethodCallback(9,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::FindNetworkByEntityIdRequest, ::szengine::FindNetworkByEntityIdResponse>(
+    ExperimentalWithCallbackMethod_FindNetworkByEntityId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(9,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::FindNetworkByEntityIdRequest, ::szengine::FindNetworkByEntityIdResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::FindNetworkByEntityIdRequest* request, ::szengine::FindNetworkByEntityIdResponse* response) { return this->FindNetworkByEntityId(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::FindNetworkByEntityIdRequest* request, ::szengine::FindNetworkByEntityIdResponse* response) { return this->FindNetworkByEntityId(context, request, response); }));}
     void SetMessageAllocatorFor_FindNetworkByEntityId(
-        ::grpc::MessageAllocator< ::szengine::FindNetworkByEntityIdRequest, ::szengine::FindNetworkByEntityIdResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::FindNetworkByEntityIdRequest, ::szengine::FindNetworkByEntityIdResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(9);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::FindNetworkByEntityIdRequest, ::szengine::FindNetworkByEntityIdResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(9);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::FindNetworkByEntityIdRequest, ::szengine::FindNetworkByEntityIdResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_FindNetworkByEntityId() override {
+    ~ExperimentalWithCallbackMethod_FindNetworkByEntityId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1797,26 +2632,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* FindNetworkByEntityId(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::FindNetworkByEntityIdRequest* /*request*/, ::szengine::FindNetworkByEntityIdResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::FindNetworkByEntityIdRequest* /*request*/, ::szengine::FindNetworkByEntityIdResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* FindNetworkByEntityId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::FindNetworkByEntityIdRequest* /*request*/, ::szengine::FindNetworkByEntityIdResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_FindNetworkByRecordId : public BaseClass {
+  class ExperimentalWithCallbackMethod_FindNetworkByRecordId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_FindNetworkByRecordId() {
-      ::grpc::Service::MarkMethodCallback(10,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::FindNetworkByRecordIdRequest, ::szengine::FindNetworkByRecordIdResponse>(
+    ExperimentalWithCallbackMethod_FindNetworkByRecordId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(10,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::FindNetworkByRecordIdRequest, ::szengine::FindNetworkByRecordIdResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::FindNetworkByRecordIdRequest* request, ::szengine::FindNetworkByRecordIdResponse* response) { return this->FindNetworkByRecordId(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::FindNetworkByRecordIdRequest* request, ::szengine::FindNetworkByRecordIdResponse* response) { return this->FindNetworkByRecordId(context, request, response); }));}
     void SetMessageAllocatorFor_FindNetworkByRecordId(
-        ::grpc::MessageAllocator< ::szengine::FindNetworkByRecordIdRequest, ::szengine::FindNetworkByRecordIdResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::FindNetworkByRecordIdRequest, ::szengine::FindNetworkByRecordIdResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(10);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::FindNetworkByRecordIdRequest, ::szengine::FindNetworkByRecordIdResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(10);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::FindNetworkByRecordIdRequest, ::szengine::FindNetworkByRecordIdResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_FindNetworkByRecordId() override {
+    ~ExperimentalWithCallbackMethod_FindNetworkByRecordId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1824,26 +2679,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* FindNetworkByRecordId(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::FindNetworkByRecordIdRequest* /*request*/, ::szengine::FindNetworkByRecordIdResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::FindNetworkByRecordIdRequest* /*request*/, ::szengine::FindNetworkByRecordIdResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* FindNetworkByRecordId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::FindNetworkByRecordIdRequest* /*request*/, ::szengine::FindNetworkByRecordIdResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_FindPathByEntityId : public BaseClass {
+  class ExperimentalWithCallbackMethod_FindPathByEntityId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_FindPathByEntityId() {
-      ::grpc::Service::MarkMethodCallback(11,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::FindPathByEntityIdRequest, ::szengine::FindPathByEntityIdResponse>(
+    ExperimentalWithCallbackMethod_FindPathByEntityId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(11,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::FindPathByEntityIdRequest, ::szengine::FindPathByEntityIdResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::FindPathByEntityIdRequest* request, ::szengine::FindPathByEntityIdResponse* response) { return this->FindPathByEntityId(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::FindPathByEntityIdRequest* request, ::szengine::FindPathByEntityIdResponse* response) { return this->FindPathByEntityId(context, request, response); }));}
     void SetMessageAllocatorFor_FindPathByEntityId(
-        ::grpc::MessageAllocator< ::szengine::FindPathByEntityIdRequest, ::szengine::FindPathByEntityIdResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::FindPathByEntityIdRequest, ::szengine::FindPathByEntityIdResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(11);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::FindPathByEntityIdRequest, ::szengine::FindPathByEntityIdResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(11);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::FindPathByEntityIdRequest, ::szengine::FindPathByEntityIdResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_FindPathByEntityId() override {
+    ~ExperimentalWithCallbackMethod_FindPathByEntityId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1851,26 +2726,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* FindPathByEntityId(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::FindPathByEntityIdRequest* /*request*/, ::szengine::FindPathByEntityIdResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::FindPathByEntityIdRequest* /*request*/, ::szengine::FindPathByEntityIdResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* FindPathByEntityId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::FindPathByEntityIdRequest* /*request*/, ::szengine::FindPathByEntityIdResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_FindPathByRecordId : public BaseClass {
+  class ExperimentalWithCallbackMethod_FindPathByRecordId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_FindPathByRecordId() {
-      ::grpc::Service::MarkMethodCallback(12,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::FindPathByRecordIdRequest, ::szengine::FindPathByRecordIdResponse>(
+    ExperimentalWithCallbackMethod_FindPathByRecordId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(12,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::FindPathByRecordIdRequest, ::szengine::FindPathByRecordIdResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::FindPathByRecordIdRequest* request, ::szengine::FindPathByRecordIdResponse* response) { return this->FindPathByRecordId(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::FindPathByRecordIdRequest* request, ::szengine::FindPathByRecordIdResponse* response) { return this->FindPathByRecordId(context, request, response); }));}
     void SetMessageAllocatorFor_FindPathByRecordId(
-        ::grpc::MessageAllocator< ::szengine::FindPathByRecordIdRequest, ::szengine::FindPathByRecordIdResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::FindPathByRecordIdRequest, ::szengine::FindPathByRecordIdResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(12);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::FindPathByRecordIdRequest, ::szengine::FindPathByRecordIdResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(12);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::FindPathByRecordIdRequest, ::szengine::FindPathByRecordIdResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_FindPathByRecordId() override {
+    ~ExperimentalWithCallbackMethod_FindPathByRecordId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1878,26 +2773,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* FindPathByRecordId(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::FindPathByRecordIdRequest* /*request*/, ::szengine::FindPathByRecordIdResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::FindPathByRecordIdRequest* /*request*/, ::szengine::FindPathByRecordIdResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* FindPathByRecordId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::FindPathByRecordIdRequest* /*request*/, ::szengine::FindPathByRecordIdResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_GetActiveConfigId : public BaseClass {
+  class ExperimentalWithCallbackMethod_GetActiveConfigId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_GetActiveConfigId() {
-      ::grpc::Service::MarkMethodCallback(13,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::GetActiveConfigIdRequest, ::szengine::GetActiveConfigIdResponse>(
+    ExperimentalWithCallbackMethod_GetActiveConfigId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(13,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::GetActiveConfigIdRequest, ::szengine::GetActiveConfigIdResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::GetActiveConfigIdRequest* request, ::szengine::GetActiveConfigIdResponse* response) { return this->GetActiveConfigId(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::GetActiveConfigIdRequest* request, ::szengine::GetActiveConfigIdResponse* response) { return this->GetActiveConfigId(context, request, response); }));}
     void SetMessageAllocatorFor_GetActiveConfigId(
-        ::grpc::MessageAllocator< ::szengine::GetActiveConfigIdRequest, ::szengine::GetActiveConfigIdResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::GetActiveConfigIdRequest, ::szengine::GetActiveConfigIdResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(13);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::GetActiveConfigIdRequest, ::szengine::GetActiveConfigIdResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(13);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::GetActiveConfigIdRequest, ::szengine::GetActiveConfigIdResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_GetActiveConfigId() override {
+    ~ExperimentalWithCallbackMethod_GetActiveConfigId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1905,26 +2820,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetActiveConfigId(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::GetActiveConfigIdRequest* /*request*/, ::szengine::GetActiveConfigIdResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::GetActiveConfigIdRequest* /*request*/, ::szengine::GetActiveConfigIdResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetActiveConfigId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::GetActiveConfigIdRequest* /*request*/, ::szengine::GetActiveConfigIdResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_GetEntityByEntityId : public BaseClass {
+  class ExperimentalWithCallbackMethod_GetEntityByEntityId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_GetEntityByEntityId() {
-      ::grpc::Service::MarkMethodCallback(14,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::GetEntityByEntityIdRequest, ::szengine::GetEntityByEntityIdResponse>(
+    ExperimentalWithCallbackMethod_GetEntityByEntityId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(14,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::GetEntityByEntityIdRequest, ::szengine::GetEntityByEntityIdResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::GetEntityByEntityIdRequest* request, ::szengine::GetEntityByEntityIdResponse* response) { return this->GetEntityByEntityId(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::GetEntityByEntityIdRequest* request, ::szengine::GetEntityByEntityIdResponse* response) { return this->GetEntityByEntityId(context, request, response); }));}
     void SetMessageAllocatorFor_GetEntityByEntityId(
-        ::grpc::MessageAllocator< ::szengine::GetEntityByEntityIdRequest, ::szengine::GetEntityByEntityIdResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::GetEntityByEntityIdRequest, ::szengine::GetEntityByEntityIdResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(14);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::GetEntityByEntityIdRequest, ::szengine::GetEntityByEntityIdResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(14);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::GetEntityByEntityIdRequest, ::szengine::GetEntityByEntityIdResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_GetEntityByEntityId() override {
+    ~ExperimentalWithCallbackMethod_GetEntityByEntityId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1932,26 +2867,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetEntityByEntityId(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::GetEntityByEntityIdRequest* /*request*/, ::szengine::GetEntityByEntityIdResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::GetEntityByEntityIdRequest* /*request*/, ::szengine::GetEntityByEntityIdResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetEntityByEntityId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::GetEntityByEntityIdRequest* /*request*/, ::szengine::GetEntityByEntityIdResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_GetEntityByRecordId : public BaseClass {
+  class ExperimentalWithCallbackMethod_GetEntityByRecordId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_GetEntityByRecordId() {
-      ::grpc::Service::MarkMethodCallback(15,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::GetEntityByRecordIdRequest, ::szengine::GetEntityByRecordIdResponse>(
+    ExperimentalWithCallbackMethod_GetEntityByRecordId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(15,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::GetEntityByRecordIdRequest, ::szengine::GetEntityByRecordIdResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::GetEntityByRecordIdRequest* request, ::szengine::GetEntityByRecordIdResponse* response) { return this->GetEntityByRecordId(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::GetEntityByRecordIdRequest* request, ::szengine::GetEntityByRecordIdResponse* response) { return this->GetEntityByRecordId(context, request, response); }));}
     void SetMessageAllocatorFor_GetEntityByRecordId(
-        ::grpc::MessageAllocator< ::szengine::GetEntityByRecordIdRequest, ::szengine::GetEntityByRecordIdResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::GetEntityByRecordIdRequest, ::szengine::GetEntityByRecordIdResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(15);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::GetEntityByRecordIdRequest, ::szengine::GetEntityByRecordIdResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(15);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::GetEntityByRecordIdRequest, ::szengine::GetEntityByRecordIdResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_GetEntityByRecordId() override {
+    ~ExperimentalWithCallbackMethod_GetEntityByRecordId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1959,26 +2914,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetEntityByRecordId(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::GetEntityByRecordIdRequest* /*request*/, ::szengine::GetEntityByRecordIdResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::GetEntityByRecordIdRequest* /*request*/, ::szengine::GetEntityByRecordIdResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetEntityByRecordId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::GetEntityByRecordIdRequest* /*request*/, ::szengine::GetEntityByRecordIdResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_GetRecord : public BaseClass {
+  class ExperimentalWithCallbackMethod_GetRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_GetRecord() {
-      ::grpc::Service::MarkMethodCallback(16,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::GetRecordRequest, ::szengine::GetRecordResponse>(
+    ExperimentalWithCallbackMethod_GetRecord() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(16,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::GetRecordRequest, ::szengine::GetRecordResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::GetRecordRequest* request, ::szengine::GetRecordResponse* response) { return this->GetRecord(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::GetRecordRequest* request, ::szengine::GetRecordResponse* response) { return this->GetRecord(context, request, response); }));}
     void SetMessageAllocatorFor_GetRecord(
-        ::grpc::MessageAllocator< ::szengine::GetRecordRequest, ::szengine::GetRecordResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::GetRecordRequest, ::szengine::GetRecordResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(16);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::GetRecordRequest, ::szengine::GetRecordResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(16);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::GetRecordRequest, ::szengine::GetRecordResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_GetRecord() override {
+    ~ExperimentalWithCallbackMethod_GetRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1986,26 +2961,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::GetRecordRequest* /*request*/, ::szengine::GetRecordResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::GetRecordRequest* /*request*/, ::szengine::GetRecordResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetRecord(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::GetRecordRequest* /*request*/, ::szengine::GetRecordResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_GetRedoRecord : public BaseClass {
+  class ExperimentalWithCallbackMethod_GetRedoRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_GetRedoRecord() {
-      ::grpc::Service::MarkMethodCallback(17,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::GetRedoRecordRequest, ::szengine::GetRedoRecordResponse>(
+    ExperimentalWithCallbackMethod_GetRedoRecord() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(17,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::GetRedoRecordRequest, ::szengine::GetRedoRecordResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::GetRedoRecordRequest* request, ::szengine::GetRedoRecordResponse* response) { return this->GetRedoRecord(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::GetRedoRecordRequest* request, ::szengine::GetRedoRecordResponse* response) { return this->GetRedoRecord(context, request, response); }));}
     void SetMessageAllocatorFor_GetRedoRecord(
-        ::grpc::MessageAllocator< ::szengine::GetRedoRecordRequest, ::szengine::GetRedoRecordResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::GetRedoRecordRequest, ::szengine::GetRedoRecordResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(17);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::GetRedoRecordRequest, ::szengine::GetRedoRecordResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(17);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::GetRedoRecordRequest, ::szengine::GetRedoRecordResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_GetRedoRecord() override {
+    ~ExperimentalWithCallbackMethod_GetRedoRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -2013,26 +3008,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetRedoRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::GetRedoRecordRequest* /*request*/, ::szengine::GetRedoRecordResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::GetRedoRecordRequest* /*request*/, ::szengine::GetRedoRecordResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetRedoRecord(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::GetRedoRecordRequest* /*request*/, ::szengine::GetRedoRecordResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_GetStats : public BaseClass {
+  class ExperimentalWithCallbackMethod_GetStats : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_GetStats() {
-      ::grpc::Service::MarkMethodCallback(18,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::GetStatsRequest, ::szengine::GetStatsResponse>(
+    ExperimentalWithCallbackMethod_GetStats() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(18,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::GetStatsRequest, ::szengine::GetStatsResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::GetStatsRequest* request, ::szengine::GetStatsResponse* response) { return this->GetStats(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::GetStatsRequest* request, ::szengine::GetStatsResponse* response) { return this->GetStats(context, request, response); }));}
     void SetMessageAllocatorFor_GetStats(
-        ::grpc::MessageAllocator< ::szengine::GetStatsRequest, ::szengine::GetStatsResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::GetStatsRequest, ::szengine::GetStatsResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(18);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::GetStatsRequest, ::szengine::GetStatsResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(18);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::GetStatsRequest, ::szengine::GetStatsResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_GetStats() override {
+    ~ExperimentalWithCallbackMethod_GetStats() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -2040,26 +3055,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetStats(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::GetStatsRequest* /*request*/, ::szengine::GetStatsResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::GetStatsRequest* /*request*/, ::szengine::GetStatsResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetStats(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::GetStatsRequest* /*request*/, ::szengine::GetStatsResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_GetVirtualEntityByRecordId : public BaseClass {
+  class ExperimentalWithCallbackMethod_GetVirtualEntityByRecordId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_GetVirtualEntityByRecordId() {
-      ::grpc::Service::MarkMethodCallback(19,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::GetVirtualEntityByRecordIdRequest, ::szengine::GetVirtualEntityByRecordIdResponse>(
+    ExperimentalWithCallbackMethod_GetVirtualEntityByRecordId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(19,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::GetVirtualEntityByRecordIdRequest, ::szengine::GetVirtualEntityByRecordIdResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::GetVirtualEntityByRecordIdRequest* request, ::szengine::GetVirtualEntityByRecordIdResponse* response) { return this->GetVirtualEntityByRecordId(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::GetVirtualEntityByRecordIdRequest* request, ::szengine::GetVirtualEntityByRecordIdResponse* response) { return this->GetVirtualEntityByRecordId(context, request, response); }));}
     void SetMessageAllocatorFor_GetVirtualEntityByRecordId(
-        ::grpc::MessageAllocator< ::szengine::GetVirtualEntityByRecordIdRequest, ::szengine::GetVirtualEntityByRecordIdResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::GetVirtualEntityByRecordIdRequest, ::szengine::GetVirtualEntityByRecordIdResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(19);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::GetVirtualEntityByRecordIdRequest, ::szengine::GetVirtualEntityByRecordIdResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(19);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::GetVirtualEntityByRecordIdRequest, ::szengine::GetVirtualEntityByRecordIdResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_GetVirtualEntityByRecordId() override {
+    ~ExperimentalWithCallbackMethod_GetVirtualEntityByRecordId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -2067,26 +3102,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetVirtualEntityByRecordId(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::GetVirtualEntityByRecordIdRequest* /*request*/, ::szengine::GetVirtualEntityByRecordIdResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::GetVirtualEntityByRecordIdRequest* /*request*/, ::szengine::GetVirtualEntityByRecordIdResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetVirtualEntityByRecordId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::GetVirtualEntityByRecordIdRequest* /*request*/, ::szengine::GetVirtualEntityByRecordIdResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_HowEntityByEntityId : public BaseClass {
+  class ExperimentalWithCallbackMethod_HowEntityByEntityId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_HowEntityByEntityId() {
-      ::grpc::Service::MarkMethodCallback(20,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::HowEntityByEntityIdRequest, ::szengine::HowEntityByEntityIdResponse>(
+    ExperimentalWithCallbackMethod_HowEntityByEntityId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(20,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::HowEntityByEntityIdRequest, ::szengine::HowEntityByEntityIdResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::HowEntityByEntityIdRequest* request, ::szengine::HowEntityByEntityIdResponse* response) { return this->HowEntityByEntityId(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::HowEntityByEntityIdRequest* request, ::szengine::HowEntityByEntityIdResponse* response) { return this->HowEntityByEntityId(context, request, response); }));}
     void SetMessageAllocatorFor_HowEntityByEntityId(
-        ::grpc::MessageAllocator< ::szengine::HowEntityByEntityIdRequest, ::szengine::HowEntityByEntityIdResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::HowEntityByEntityIdRequest, ::szengine::HowEntityByEntityIdResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(20);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::HowEntityByEntityIdRequest, ::szengine::HowEntityByEntityIdResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(20);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::HowEntityByEntityIdRequest, ::szengine::HowEntityByEntityIdResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_HowEntityByEntityId() override {
+    ~ExperimentalWithCallbackMethod_HowEntityByEntityId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -2094,26 +3149,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* HowEntityByEntityId(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::HowEntityByEntityIdRequest* /*request*/, ::szengine::HowEntityByEntityIdResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::HowEntityByEntityIdRequest* /*request*/, ::szengine::HowEntityByEntityIdResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* HowEntityByEntityId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::HowEntityByEntityIdRequest* /*request*/, ::szengine::HowEntityByEntityIdResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_PreprocessRecord : public BaseClass {
+  class ExperimentalWithCallbackMethod_PreprocessRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_PreprocessRecord() {
-      ::grpc::Service::MarkMethodCallback(21,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::PreprocessRecordRequest, ::szengine::PreprocessRecordResponse>(
+    ExperimentalWithCallbackMethod_PreprocessRecord() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(21,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::PreprocessRecordRequest, ::szengine::PreprocessRecordResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::PreprocessRecordRequest* request, ::szengine::PreprocessRecordResponse* response) { return this->PreprocessRecord(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::PreprocessRecordRequest* request, ::szengine::PreprocessRecordResponse* response) { return this->PreprocessRecord(context, request, response); }));}
     void SetMessageAllocatorFor_PreprocessRecord(
-        ::grpc::MessageAllocator< ::szengine::PreprocessRecordRequest, ::szengine::PreprocessRecordResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::PreprocessRecordRequest, ::szengine::PreprocessRecordResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(21);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::PreprocessRecordRequest, ::szengine::PreprocessRecordResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(21);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::PreprocessRecordRequest, ::szengine::PreprocessRecordResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_PreprocessRecord() override {
+    ~ExperimentalWithCallbackMethod_PreprocessRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -2121,26 +3196,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* PreprocessRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::PreprocessRecordRequest* /*request*/, ::szengine::PreprocessRecordResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::PreprocessRecordRequest* /*request*/, ::szengine::PreprocessRecordResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PreprocessRecord(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::PreprocessRecordRequest* /*request*/, ::szengine::PreprocessRecordResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_PrimeEngine : public BaseClass {
+  class ExperimentalWithCallbackMethod_PrimeEngine : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_PrimeEngine() {
-      ::grpc::Service::MarkMethodCallback(22,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::PrimeEngineRequest, ::szengine::PrimeEngineResponse>(
+    ExperimentalWithCallbackMethod_PrimeEngine() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(22,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::PrimeEngineRequest, ::szengine::PrimeEngineResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::PrimeEngineRequest* request, ::szengine::PrimeEngineResponse* response) { return this->PrimeEngine(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::PrimeEngineRequest* request, ::szengine::PrimeEngineResponse* response) { return this->PrimeEngine(context, request, response); }));}
     void SetMessageAllocatorFor_PrimeEngine(
-        ::grpc::MessageAllocator< ::szengine::PrimeEngineRequest, ::szengine::PrimeEngineResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::PrimeEngineRequest, ::szengine::PrimeEngineResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(22);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::PrimeEngineRequest, ::szengine::PrimeEngineResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(22);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::PrimeEngineRequest, ::szengine::PrimeEngineResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_PrimeEngine() override {
+    ~ExperimentalWithCallbackMethod_PrimeEngine() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -2148,26 +3243,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* PrimeEngine(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::PrimeEngineRequest* /*request*/, ::szengine::PrimeEngineResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::PrimeEngineRequest* /*request*/, ::szengine::PrimeEngineResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PrimeEngine(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::PrimeEngineRequest* /*request*/, ::szengine::PrimeEngineResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_ProcessRedoRecord : public BaseClass {
+  class ExperimentalWithCallbackMethod_ProcessRedoRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_ProcessRedoRecord() {
-      ::grpc::Service::MarkMethodCallback(23,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::ProcessRedoRecordRequest, ::szengine::ProcessRedoRecordResponse>(
+    ExperimentalWithCallbackMethod_ProcessRedoRecord() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(23,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::ProcessRedoRecordRequest, ::szengine::ProcessRedoRecordResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::ProcessRedoRecordRequest* request, ::szengine::ProcessRedoRecordResponse* response) { return this->ProcessRedoRecord(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::ProcessRedoRecordRequest* request, ::szengine::ProcessRedoRecordResponse* response) { return this->ProcessRedoRecord(context, request, response); }));}
     void SetMessageAllocatorFor_ProcessRedoRecord(
-        ::grpc::MessageAllocator< ::szengine::ProcessRedoRecordRequest, ::szengine::ProcessRedoRecordResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::ProcessRedoRecordRequest, ::szengine::ProcessRedoRecordResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(23);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::ProcessRedoRecordRequest, ::szengine::ProcessRedoRecordResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(23);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::ProcessRedoRecordRequest, ::szengine::ProcessRedoRecordResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_ProcessRedoRecord() override {
+    ~ExperimentalWithCallbackMethod_ProcessRedoRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -2175,26 +3290,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* ProcessRedoRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::ProcessRedoRecordRequest* /*request*/, ::szengine::ProcessRedoRecordResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::ProcessRedoRecordRequest* /*request*/, ::szengine::ProcessRedoRecordResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* ProcessRedoRecord(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::ProcessRedoRecordRequest* /*request*/, ::szengine::ProcessRedoRecordResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_ReevaluateEntity : public BaseClass {
+  class ExperimentalWithCallbackMethod_ReevaluateEntity : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_ReevaluateEntity() {
-      ::grpc::Service::MarkMethodCallback(24,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::ReevaluateEntityRequest, ::szengine::ReevaluateEntityResponse>(
+    ExperimentalWithCallbackMethod_ReevaluateEntity() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(24,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::ReevaluateEntityRequest, ::szengine::ReevaluateEntityResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::ReevaluateEntityRequest* request, ::szengine::ReevaluateEntityResponse* response) { return this->ReevaluateEntity(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::ReevaluateEntityRequest* request, ::szengine::ReevaluateEntityResponse* response) { return this->ReevaluateEntity(context, request, response); }));}
     void SetMessageAllocatorFor_ReevaluateEntity(
-        ::grpc::MessageAllocator< ::szengine::ReevaluateEntityRequest, ::szengine::ReevaluateEntityResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::ReevaluateEntityRequest, ::szengine::ReevaluateEntityResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(24);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::ReevaluateEntityRequest, ::szengine::ReevaluateEntityResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(24);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::ReevaluateEntityRequest, ::szengine::ReevaluateEntityResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_ReevaluateEntity() override {
+    ~ExperimentalWithCallbackMethod_ReevaluateEntity() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -2202,26 +3337,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* ReevaluateEntity(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::ReevaluateEntityRequest* /*request*/, ::szengine::ReevaluateEntityResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::ReevaluateEntityRequest* /*request*/, ::szengine::ReevaluateEntityResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* ReevaluateEntity(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::ReevaluateEntityRequest* /*request*/, ::szengine::ReevaluateEntityResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_ReevaluateRecord : public BaseClass {
+  class ExperimentalWithCallbackMethod_ReevaluateRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_ReevaluateRecord() {
-      ::grpc::Service::MarkMethodCallback(25,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::ReevaluateRecordRequest, ::szengine::ReevaluateRecordResponse>(
+    ExperimentalWithCallbackMethod_ReevaluateRecord() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(25,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::ReevaluateRecordRequest, ::szengine::ReevaluateRecordResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::ReevaluateRecordRequest* request, ::szengine::ReevaluateRecordResponse* response) { return this->ReevaluateRecord(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::ReevaluateRecordRequest* request, ::szengine::ReevaluateRecordResponse* response) { return this->ReevaluateRecord(context, request, response); }));}
     void SetMessageAllocatorFor_ReevaluateRecord(
-        ::grpc::MessageAllocator< ::szengine::ReevaluateRecordRequest, ::szengine::ReevaluateRecordResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::ReevaluateRecordRequest, ::szengine::ReevaluateRecordResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(25);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::ReevaluateRecordRequest, ::szengine::ReevaluateRecordResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(25);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::ReevaluateRecordRequest, ::szengine::ReevaluateRecordResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_ReevaluateRecord() override {
+    ~ExperimentalWithCallbackMethod_ReevaluateRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -2229,26 +3384,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* ReevaluateRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::ReevaluateRecordRequest* /*request*/, ::szengine::ReevaluateRecordResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::ReevaluateRecordRequest* /*request*/, ::szengine::ReevaluateRecordResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* ReevaluateRecord(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::ReevaluateRecordRequest* /*request*/, ::szengine::ReevaluateRecordResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_Reinitialize : public BaseClass {
+  class ExperimentalWithCallbackMethod_Reinitialize : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_Reinitialize() {
-      ::grpc::Service::MarkMethodCallback(26,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::ReinitializeRequest, ::szengine::ReinitializeResponse>(
+    ExperimentalWithCallbackMethod_Reinitialize() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(26,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::ReinitializeRequest, ::szengine::ReinitializeResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::ReinitializeRequest* request, ::szengine::ReinitializeResponse* response) { return this->Reinitialize(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::ReinitializeRequest* request, ::szengine::ReinitializeResponse* response) { return this->Reinitialize(context, request, response); }));}
     void SetMessageAllocatorFor_Reinitialize(
-        ::grpc::MessageAllocator< ::szengine::ReinitializeRequest, ::szengine::ReinitializeResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::ReinitializeRequest, ::szengine::ReinitializeResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(26);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::ReinitializeRequest, ::szengine::ReinitializeResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(26);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::ReinitializeRequest, ::szengine::ReinitializeResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_Reinitialize() override {
+    ~ExperimentalWithCallbackMethod_Reinitialize() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -2256,26 +3431,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* Reinitialize(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::ReinitializeRequest* /*request*/, ::szengine::ReinitializeResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::ReinitializeRequest* /*request*/, ::szengine::ReinitializeResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* Reinitialize(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::ReinitializeRequest* /*request*/, ::szengine::ReinitializeResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_SearchByAttributes : public BaseClass {
+  class ExperimentalWithCallbackMethod_SearchByAttributes : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_SearchByAttributes() {
-      ::grpc::Service::MarkMethodCallback(27,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::SearchByAttributesRequest, ::szengine::SearchByAttributesResponse>(
+    ExperimentalWithCallbackMethod_SearchByAttributes() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(27,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::SearchByAttributesRequest, ::szengine::SearchByAttributesResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::SearchByAttributesRequest* request, ::szengine::SearchByAttributesResponse* response) { return this->SearchByAttributes(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::SearchByAttributesRequest* request, ::szengine::SearchByAttributesResponse* response) { return this->SearchByAttributes(context, request, response); }));}
     void SetMessageAllocatorFor_SearchByAttributes(
-        ::grpc::MessageAllocator< ::szengine::SearchByAttributesRequest, ::szengine::SearchByAttributesResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::SearchByAttributesRequest, ::szengine::SearchByAttributesResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(27);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::SearchByAttributesRequest, ::szengine::SearchByAttributesResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(27);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::SearchByAttributesRequest, ::szengine::SearchByAttributesResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_SearchByAttributes() override {
+    ~ExperimentalWithCallbackMethod_SearchByAttributes() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -2283,21 +3478,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* SearchByAttributes(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::SearchByAttributesRequest* /*request*/, ::szengine::SearchByAttributesResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::SearchByAttributesRequest* /*request*/, ::szengine::SearchByAttributesResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SearchByAttributes(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::SearchByAttributesRequest* /*request*/, ::szengine::SearchByAttributesResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_StreamExportCsvEntityReport : public BaseClass {
+  class ExperimentalWithCallbackMethod_StreamExportCsvEntityReport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_StreamExportCsvEntityReport() {
-      ::grpc::Service::MarkMethodCallback(28,
-          new ::grpc::internal::CallbackServerStreamingHandler< ::szengine::StreamExportCsvEntityReportRequest, ::szengine::StreamExportCsvEntityReportResponse>(
+    ExperimentalWithCallbackMethod_StreamExportCsvEntityReport() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(28,
+          new ::grpc_impl::internal::CallbackServerStreamingHandler< ::szengine::StreamExportCsvEntityReportRequest, ::szengine::StreamExportCsvEntityReportResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::StreamExportCsvEntityReportRequest* request) { return this->StreamExportCsvEntityReport(context, request); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::StreamExportCsvEntityReportRequest* request) { return this->StreamExportCsvEntityReport(context, request); }));
     }
-    ~WithCallbackMethod_StreamExportCsvEntityReport() override {
+    ~ExperimentalWithCallbackMethod_StreamExportCsvEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -2305,21 +3516,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerWriteReactor< ::szengine::StreamExportCsvEntityReportResponse>* StreamExportCsvEntityReport(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::StreamExportCsvEntityReportRequest* /*request*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::StreamExportCsvEntityReportRequest* /*request*/)
+    #else
+    virtual ::grpc::experimental::ServerWriteReactor< ::szengine::StreamExportCsvEntityReportResponse>* StreamExportCsvEntityReport(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::StreamExportCsvEntityReportRequest* /*request*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_StreamExportJsonEntityReport : public BaseClass {
+  class ExperimentalWithCallbackMethod_StreamExportJsonEntityReport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_StreamExportJsonEntityReport() {
-      ::grpc::Service::MarkMethodCallback(29,
-          new ::grpc::internal::CallbackServerStreamingHandler< ::szengine::StreamExportJsonEntityReportRequest, ::szengine::StreamExportJsonEntityReportResponse>(
+    ExperimentalWithCallbackMethod_StreamExportJsonEntityReport() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(29,
+          new ::grpc_impl::internal::CallbackServerStreamingHandler< ::szengine::StreamExportJsonEntityReportRequest, ::szengine::StreamExportJsonEntityReportResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::StreamExportJsonEntityReportRequest* request) { return this->StreamExportJsonEntityReport(context, request); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::StreamExportJsonEntityReportRequest* request) { return this->StreamExportJsonEntityReport(context, request); }));
     }
-    ~WithCallbackMethod_StreamExportJsonEntityReport() override {
+    ~ExperimentalWithCallbackMethod_StreamExportJsonEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -2327,26 +3554,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerWriteReactor< ::szengine::StreamExportJsonEntityReportResponse>* StreamExportJsonEntityReport(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::StreamExportJsonEntityReportRequest* /*request*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::StreamExportJsonEntityReportRequest* /*request*/)
+    #else
+    virtual ::grpc::experimental::ServerWriteReactor< ::szengine::StreamExportJsonEntityReportResponse>* StreamExportJsonEntityReport(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::StreamExportJsonEntityReportRequest* /*request*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_WhyEntities : public BaseClass {
+  class ExperimentalWithCallbackMethod_WhyEntities : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_WhyEntities() {
-      ::grpc::Service::MarkMethodCallback(30,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::WhyEntitiesRequest, ::szengine::WhyEntitiesResponse>(
+    ExperimentalWithCallbackMethod_WhyEntities() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(30,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::WhyEntitiesRequest, ::szengine::WhyEntitiesResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::WhyEntitiesRequest* request, ::szengine::WhyEntitiesResponse* response) { return this->WhyEntities(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::WhyEntitiesRequest* request, ::szengine::WhyEntitiesResponse* response) { return this->WhyEntities(context, request, response); }));}
     void SetMessageAllocatorFor_WhyEntities(
-        ::grpc::MessageAllocator< ::szengine::WhyEntitiesRequest, ::szengine::WhyEntitiesResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::WhyEntitiesRequest, ::szengine::WhyEntitiesResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(30);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::WhyEntitiesRequest, ::szengine::WhyEntitiesResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(30);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::WhyEntitiesRequest, ::szengine::WhyEntitiesResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_WhyEntities() override {
+    ~ExperimentalWithCallbackMethod_WhyEntities() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -2354,26 +3601,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* WhyEntities(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::WhyEntitiesRequest* /*request*/, ::szengine::WhyEntitiesResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::WhyEntitiesRequest* /*request*/, ::szengine::WhyEntitiesResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* WhyEntities(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::WhyEntitiesRequest* /*request*/, ::szengine::WhyEntitiesResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_WhyRecordInEntity : public BaseClass {
+  class ExperimentalWithCallbackMethod_WhyRecordInEntity : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_WhyRecordInEntity() {
-      ::grpc::Service::MarkMethodCallback(31,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::WhyRecordInEntityRequest, ::szengine::WhyRecordInEntityResponse>(
+    ExperimentalWithCallbackMethod_WhyRecordInEntity() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(31,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::WhyRecordInEntityRequest, ::szengine::WhyRecordInEntityResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::WhyRecordInEntityRequest* request, ::szengine::WhyRecordInEntityResponse* response) { return this->WhyRecordInEntity(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::WhyRecordInEntityRequest* request, ::szengine::WhyRecordInEntityResponse* response) { return this->WhyRecordInEntity(context, request, response); }));}
     void SetMessageAllocatorFor_WhyRecordInEntity(
-        ::grpc::MessageAllocator< ::szengine::WhyRecordInEntityRequest, ::szengine::WhyRecordInEntityResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::WhyRecordInEntityRequest, ::szengine::WhyRecordInEntityResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(31);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::WhyRecordInEntityRequest, ::szengine::WhyRecordInEntityResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(31);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::WhyRecordInEntityRequest, ::szengine::WhyRecordInEntityResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_WhyRecordInEntity() override {
+    ~ExperimentalWithCallbackMethod_WhyRecordInEntity() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -2381,26 +3648,46 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* WhyRecordInEntity(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::WhyRecordInEntityRequest* /*request*/, ::szengine::WhyRecordInEntityResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::WhyRecordInEntityRequest* /*request*/, ::szengine::WhyRecordInEntityResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* WhyRecordInEntity(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::WhyRecordInEntityRequest* /*request*/, ::szengine::WhyRecordInEntityResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_WhyRecords : public BaseClass {
+  class ExperimentalWithCallbackMethod_WhyRecords : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_WhyRecords() {
-      ::grpc::Service::MarkMethodCallback(32,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::WhyRecordsRequest, ::szengine::WhyRecordsResponse>(
+    ExperimentalWithCallbackMethod_WhyRecords() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(32,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szengine::WhyRecordsRequest, ::szengine::WhyRecordsResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::WhyRecordsRequest* request, ::szengine::WhyRecordsResponse* response) { return this->WhyRecords(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szengine::WhyRecordsRequest* request, ::szengine::WhyRecordsResponse* response) { return this->WhyRecords(context, request, response); }));}
     void SetMessageAllocatorFor_WhyRecords(
-        ::grpc::MessageAllocator< ::szengine::WhyRecordsRequest, ::szengine::WhyRecordsResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szengine::WhyRecordsRequest, ::szengine::WhyRecordsResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(32);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::WhyRecordsRequest, ::szengine::WhyRecordsResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(32);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szengine::WhyRecordsRequest, ::szengine::WhyRecordsResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_WhyRecords() override {
+    ~ExperimentalWithCallbackMethod_WhyRecords() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -2408,11 +3695,20 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* WhyRecords(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::WhyRecordsRequest* /*request*/, ::szengine::WhyRecordsResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::WhyRecordsRequest* /*request*/, ::szengine::WhyRecordsResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* WhyRecords(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szengine::WhyRecordsRequest* /*request*/, ::szengine::WhyRecordsResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
-  typedef WithCallbackMethod_AddRecord<WithCallbackMethod_CloseExport<WithCallbackMethod_CountRedoRecords<WithCallbackMethod_DeleteRecord<WithCallbackMethod_ExportCsvEntityReport<WithCallbackMethod_ExportJsonEntityReport<WithCallbackMethod_FetchNext<WithCallbackMethod_FindInterestingEntitiesByEntityId<WithCallbackMethod_FindInterestingEntitiesByRecordId<WithCallbackMethod_FindNetworkByEntityId<WithCallbackMethod_FindNetworkByRecordId<WithCallbackMethod_FindPathByEntityId<WithCallbackMethod_FindPathByRecordId<WithCallbackMethod_GetActiveConfigId<WithCallbackMethod_GetEntityByEntityId<WithCallbackMethod_GetEntityByRecordId<WithCallbackMethod_GetRecord<WithCallbackMethod_GetRedoRecord<WithCallbackMethod_GetStats<WithCallbackMethod_GetVirtualEntityByRecordId<WithCallbackMethod_HowEntityByEntityId<WithCallbackMethod_PreprocessRecord<WithCallbackMethod_PrimeEngine<WithCallbackMethod_ProcessRedoRecord<WithCallbackMethod_ReevaluateEntity<WithCallbackMethod_ReevaluateRecord<WithCallbackMethod_Reinitialize<WithCallbackMethod_SearchByAttributes<WithCallbackMethod_StreamExportCsvEntityReport<WithCallbackMethod_StreamExportJsonEntityReport<WithCallbackMethod_WhyEntities<WithCallbackMethod_WhyRecordInEntity<WithCallbackMethod_WhyRecords<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
-  typedef CallbackService ExperimentalCallbackService;
+  #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+  typedef ExperimentalWithCallbackMethod_AddRecord<ExperimentalWithCallbackMethod_CloseExport<ExperimentalWithCallbackMethod_CountRedoRecords<ExperimentalWithCallbackMethod_DeleteRecord<ExperimentalWithCallbackMethod_ExportCsvEntityReport<ExperimentalWithCallbackMethod_ExportJsonEntityReport<ExperimentalWithCallbackMethod_FetchNext<ExperimentalWithCallbackMethod_FindInterestingEntitiesByEntityId<ExperimentalWithCallbackMethod_FindInterestingEntitiesByRecordId<ExperimentalWithCallbackMethod_FindNetworkByEntityId<ExperimentalWithCallbackMethod_FindNetworkByRecordId<ExperimentalWithCallbackMethod_FindPathByEntityId<ExperimentalWithCallbackMethod_FindPathByRecordId<ExperimentalWithCallbackMethod_GetActiveConfigId<ExperimentalWithCallbackMethod_GetEntityByEntityId<ExperimentalWithCallbackMethod_GetEntityByRecordId<ExperimentalWithCallbackMethod_GetRecord<ExperimentalWithCallbackMethod_GetRedoRecord<ExperimentalWithCallbackMethod_GetStats<ExperimentalWithCallbackMethod_GetVirtualEntityByRecordId<ExperimentalWithCallbackMethod_HowEntityByEntityId<ExperimentalWithCallbackMethod_PreprocessRecord<ExperimentalWithCallbackMethod_PrimeEngine<ExperimentalWithCallbackMethod_ProcessRedoRecord<ExperimentalWithCallbackMethod_ReevaluateEntity<ExperimentalWithCallbackMethod_ReevaluateRecord<ExperimentalWithCallbackMethod_Reinitialize<ExperimentalWithCallbackMethod_SearchByAttributes<ExperimentalWithCallbackMethod_StreamExportCsvEntityReport<ExperimentalWithCallbackMethod_StreamExportJsonEntityReport<ExperimentalWithCallbackMethod_WhyEntities<ExperimentalWithCallbackMethod_WhyRecordInEntity<ExperimentalWithCallbackMethod_WhyRecords<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
+  #endif
+
+  typedef ExperimentalWithCallbackMethod_AddRecord<ExperimentalWithCallbackMethod_CloseExport<ExperimentalWithCallbackMethod_CountRedoRecords<ExperimentalWithCallbackMethod_DeleteRecord<ExperimentalWithCallbackMethod_ExportCsvEntityReport<ExperimentalWithCallbackMethod_ExportJsonEntityReport<ExperimentalWithCallbackMethod_FetchNext<ExperimentalWithCallbackMethod_FindInterestingEntitiesByEntityId<ExperimentalWithCallbackMethod_FindInterestingEntitiesByRecordId<ExperimentalWithCallbackMethod_FindNetworkByEntityId<ExperimentalWithCallbackMethod_FindNetworkByRecordId<ExperimentalWithCallbackMethod_FindPathByEntityId<ExperimentalWithCallbackMethod_FindPathByRecordId<ExperimentalWithCallbackMethod_GetActiveConfigId<ExperimentalWithCallbackMethod_GetEntityByEntityId<ExperimentalWithCallbackMethod_GetEntityByRecordId<ExperimentalWithCallbackMethod_GetRecord<ExperimentalWithCallbackMethod_GetRedoRecord<ExperimentalWithCallbackMethod_GetStats<ExperimentalWithCallbackMethod_GetVirtualEntityByRecordId<ExperimentalWithCallbackMethod_HowEntityByEntityId<ExperimentalWithCallbackMethod_PreprocessRecord<ExperimentalWithCallbackMethod_PrimeEngine<ExperimentalWithCallbackMethod_ProcessRedoRecord<ExperimentalWithCallbackMethod_ReevaluateEntity<ExperimentalWithCallbackMethod_ReevaluateRecord<ExperimentalWithCallbackMethod_Reinitialize<ExperimentalWithCallbackMethod_SearchByAttributes<ExperimentalWithCallbackMethod_StreamExportCsvEntityReport<ExperimentalWithCallbackMethod_StreamExportJsonEntityReport<ExperimentalWithCallbackMethod_WhyEntities<ExperimentalWithCallbackMethod_WhyRecordInEntity<ExperimentalWithCallbackMethod_WhyRecords<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_AddRecord : public BaseClass {
    private:
@@ -3635,17 +4931,27 @@ class SzEngine final {
     }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_AddRecord : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_AddRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_AddRecord() {
-      ::grpc::Service::MarkMethodRawCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_AddRecord() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->AddRecord(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->AddRecord(context, request, response); }));
     }
-    ~WithRawCallbackMethod_AddRecord() override {
+    ~ExperimentalWithRawCallbackMethod_AddRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -3653,21 +4959,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* AddRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* AddRecord(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_CloseExport : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_CloseExport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_CloseExport() {
-      ::grpc::Service::MarkMethodRawCallback(1,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_CloseExport() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CloseExport(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CloseExport(context, request, response); }));
     }
-    ~WithRawCallbackMethod_CloseExport() override {
+    ~ExperimentalWithRawCallbackMethod_CloseExport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -3675,21 +4997,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* CloseExport(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* CloseExport(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_CountRedoRecords : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_CountRedoRecords : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_CountRedoRecords() {
-      ::grpc::Service::MarkMethodRawCallback(2,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_CountRedoRecords() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(2,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CountRedoRecords(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CountRedoRecords(context, request, response); }));
     }
-    ~WithRawCallbackMethod_CountRedoRecords() override {
+    ~ExperimentalWithRawCallbackMethod_CountRedoRecords() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -3697,21 +5035,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* CountRedoRecords(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* CountRedoRecords(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_DeleteRecord : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_DeleteRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_DeleteRecord() {
-      ::grpc::Service::MarkMethodRawCallback(3,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_DeleteRecord() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(3,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->DeleteRecord(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->DeleteRecord(context, request, response); }));
     }
-    ~WithRawCallbackMethod_DeleteRecord() override {
+    ~ExperimentalWithRawCallbackMethod_DeleteRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -3719,21 +5073,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* DeleteRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* DeleteRecord(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_ExportCsvEntityReport : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_ExportCsvEntityReport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_ExportCsvEntityReport() {
-      ::grpc::Service::MarkMethodRawCallback(4,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_ExportCsvEntityReport() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(4,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ExportCsvEntityReport(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ExportCsvEntityReport(context, request, response); }));
     }
-    ~WithRawCallbackMethod_ExportCsvEntityReport() override {
+    ~ExperimentalWithRawCallbackMethod_ExportCsvEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -3741,21 +5111,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* ExportCsvEntityReport(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* ExportCsvEntityReport(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_ExportJsonEntityReport : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_ExportJsonEntityReport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_ExportJsonEntityReport() {
-      ::grpc::Service::MarkMethodRawCallback(5,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_ExportJsonEntityReport() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(5,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ExportJsonEntityReport(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ExportJsonEntityReport(context, request, response); }));
     }
-    ~WithRawCallbackMethod_ExportJsonEntityReport() override {
+    ~ExperimentalWithRawCallbackMethod_ExportJsonEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -3763,21 +5149,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* ExportJsonEntityReport(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* ExportJsonEntityReport(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_FetchNext : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_FetchNext : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_FetchNext() {
-      ::grpc::Service::MarkMethodRawCallback(6,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_FetchNext() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(6,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FetchNext(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FetchNext(context, request, response); }));
     }
-    ~WithRawCallbackMethod_FetchNext() override {
+    ~ExperimentalWithRawCallbackMethod_FetchNext() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -3785,21 +5187,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* FetchNext(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* FetchNext(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_FindInterestingEntitiesByEntityId : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_FindInterestingEntitiesByEntityId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_FindInterestingEntitiesByEntityId() {
-      ::grpc::Service::MarkMethodRawCallback(7,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_FindInterestingEntitiesByEntityId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(7,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindInterestingEntitiesByEntityId(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindInterestingEntitiesByEntityId(context, request, response); }));
     }
-    ~WithRawCallbackMethod_FindInterestingEntitiesByEntityId() override {
+    ~ExperimentalWithRawCallbackMethod_FindInterestingEntitiesByEntityId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -3807,21 +5225,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* FindInterestingEntitiesByEntityId(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* FindInterestingEntitiesByEntityId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_FindInterestingEntitiesByRecordId : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_FindInterestingEntitiesByRecordId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_FindInterestingEntitiesByRecordId() {
-      ::grpc::Service::MarkMethodRawCallback(8,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_FindInterestingEntitiesByRecordId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(8,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindInterestingEntitiesByRecordId(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindInterestingEntitiesByRecordId(context, request, response); }));
     }
-    ~WithRawCallbackMethod_FindInterestingEntitiesByRecordId() override {
+    ~ExperimentalWithRawCallbackMethod_FindInterestingEntitiesByRecordId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -3829,21 +5263,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* FindInterestingEntitiesByRecordId(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* FindInterestingEntitiesByRecordId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_FindNetworkByEntityId : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_FindNetworkByEntityId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_FindNetworkByEntityId() {
-      ::grpc::Service::MarkMethodRawCallback(9,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_FindNetworkByEntityId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(9,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindNetworkByEntityId(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindNetworkByEntityId(context, request, response); }));
     }
-    ~WithRawCallbackMethod_FindNetworkByEntityId() override {
+    ~ExperimentalWithRawCallbackMethod_FindNetworkByEntityId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -3851,21 +5301,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* FindNetworkByEntityId(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* FindNetworkByEntityId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_FindNetworkByRecordId : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_FindNetworkByRecordId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_FindNetworkByRecordId() {
-      ::grpc::Service::MarkMethodRawCallback(10,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_FindNetworkByRecordId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(10,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindNetworkByRecordId(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindNetworkByRecordId(context, request, response); }));
     }
-    ~WithRawCallbackMethod_FindNetworkByRecordId() override {
+    ~ExperimentalWithRawCallbackMethod_FindNetworkByRecordId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -3873,21 +5339,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* FindNetworkByRecordId(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* FindNetworkByRecordId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_FindPathByEntityId : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_FindPathByEntityId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_FindPathByEntityId() {
-      ::grpc::Service::MarkMethodRawCallback(11,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_FindPathByEntityId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(11,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindPathByEntityId(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindPathByEntityId(context, request, response); }));
     }
-    ~WithRawCallbackMethod_FindPathByEntityId() override {
+    ~ExperimentalWithRawCallbackMethod_FindPathByEntityId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -3895,21 +5377,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* FindPathByEntityId(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* FindPathByEntityId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_FindPathByRecordId : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_FindPathByRecordId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_FindPathByRecordId() {
-      ::grpc::Service::MarkMethodRawCallback(12,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_FindPathByRecordId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(12,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindPathByRecordId(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->FindPathByRecordId(context, request, response); }));
     }
-    ~WithRawCallbackMethod_FindPathByRecordId() override {
+    ~ExperimentalWithRawCallbackMethod_FindPathByRecordId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -3917,21 +5415,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* FindPathByRecordId(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* FindPathByRecordId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_GetActiveConfigId : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_GetActiveConfigId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_GetActiveConfigId() {
-      ::grpc::Service::MarkMethodRawCallback(13,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_GetActiveConfigId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(13,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetActiveConfigId(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetActiveConfigId(context, request, response); }));
     }
-    ~WithRawCallbackMethod_GetActiveConfigId() override {
+    ~ExperimentalWithRawCallbackMethod_GetActiveConfigId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -3939,21 +5453,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetActiveConfigId(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetActiveConfigId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_GetEntityByEntityId : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_GetEntityByEntityId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_GetEntityByEntityId() {
-      ::grpc::Service::MarkMethodRawCallback(14,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_GetEntityByEntityId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(14,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetEntityByEntityId(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetEntityByEntityId(context, request, response); }));
     }
-    ~WithRawCallbackMethod_GetEntityByEntityId() override {
+    ~ExperimentalWithRawCallbackMethod_GetEntityByEntityId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -3961,21 +5491,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetEntityByEntityId(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetEntityByEntityId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_GetEntityByRecordId : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_GetEntityByRecordId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_GetEntityByRecordId() {
-      ::grpc::Service::MarkMethodRawCallback(15,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_GetEntityByRecordId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(15,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetEntityByRecordId(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetEntityByRecordId(context, request, response); }));
     }
-    ~WithRawCallbackMethod_GetEntityByRecordId() override {
+    ~ExperimentalWithRawCallbackMethod_GetEntityByRecordId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -3983,21 +5529,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetEntityByRecordId(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetEntityByRecordId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_GetRecord : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_GetRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_GetRecord() {
-      ::grpc::Service::MarkMethodRawCallback(16,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_GetRecord() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(16,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetRecord(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetRecord(context, request, response); }));
     }
-    ~WithRawCallbackMethod_GetRecord() override {
+    ~ExperimentalWithRawCallbackMethod_GetRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -4005,21 +5567,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetRecord(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_GetRedoRecord : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_GetRedoRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_GetRedoRecord() {
-      ::grpc::Service::MarkMethodRawCallback(17,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_GetRedoRecord() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(17,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetRedoRecord(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetRedoRecord(context, request, response); }));
     }
-    ~WithRawCallbackMethod_GetRedoRecord() override {
+    ~ExperimentalWithRawCallbackMethod_GetRedoRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -4027,21 +5605,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetRedoRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetRedoRecord(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_GetStats : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_GetStats : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_GetStats() {
-      ::grpc::Service::MarkMethodRawCallback(18,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_GetStats() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(18,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetStats(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetStats(context, request, response); }));
     }
-    ~WithRawCallbackMethod_GetStats() override {
+    ~ExperimentalWithRawCallbackMethod_GetStats() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -4049,21 +5643,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetStats(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetStats(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_GetVirtualEntityByRecordId : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_GetVirtualEntityByRecordId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_GetVirtualEntityByRecordId() {
-      ::grpc::Service::MarkMethodRawCallback(19,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_GetVirtualEntityByRecordId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(19,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetVirtualEntityByRecordId(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetVirtualEntityByRecordId(context, request, response); }));
     }
-    ~WithRawCallbackMethod_GetVirtualEntityByRecordId() override {
+    ~ExperimentalWithRawCallbackMethod_GetVirtualEntityByRecordId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -4071,21 +5681,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetVirtualEntityByRecordId(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetVirtualEntityByRecordId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_HowEntityByEntityId : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_HowEntityByEntityId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_HowEntityByEntityId() {
-      ::grpc::Service::MarkMethodRawCallback(20,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_HowEntityByEntityId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(20,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->HowEntityByEntityId(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->HowEntityByEntityId(context, request, response); }));
     }
-    ~WithRawCallbackMethod_HowEntityByEntityId() override {
+    ~ExperimentalWithRawCallbackMethod_HowEntityByEntityId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -4093,21 +5719,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* HowEntityByEntityId(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* HowEntityByEntityId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_PreprocessRecord : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_PreprocessRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_PreprocessRecord() {
-      ::grpc::Service::MarkMethodRawCallback(21,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_PreprocessRecord() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(21,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PreprocessRecord(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PreprocessRecord(context, request, response); }));
     }
-    ~WithRawCallbackMethod_PreprocessRecord() override {
+    ~ExperimentalWithRawCallbackMethod_PreprocessRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -4115,21 +5757,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* PreprocessRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PreprocessRecord(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_PrimeEngine : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_PrimeEngine : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_PrimeEngine() {
-      ::grpc::Service::MarkMethodRawCallback(22,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_PrimeEngine() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(22,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PrimeEngine(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PrimeEngine(context, request, response); }));
     }
-    ~WithRawCallbackMethod_PrimeEngine() override {
+    ~ExperimentalWithRawCallbackMethod_PrimeEngine() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -4137,21 +5795,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* PrimeEngine(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* PrimeEngine(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_ProcessRedoRecord : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_ProcessRedoRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_ProcessRedoRecord() {
-      ::grpc::Service::MarkMethodRawCallback(23,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_ProcessRedoRecord() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(23,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ProcessRedoRecord(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ProcessRedoRecord(context, request, response); }));
     }
-    ~WithRawCallbackMethod_ProcessRedoRecord() override {
+    ~ExperimentalWithRawCallbackMethod_ProcessRedoRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -4159,21 +5833,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* ProcessRedoRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* ProcessRedoRecord(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_ReevaluateEntity : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_ReevaluateEntity : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_ReevaluateEntity() {
-      ::grpc::Service::MarkMethodRawCallback(24,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_ReevaluateEntity() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(24,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ReevaluateEntity(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ReevaluateEntity(context, request, response); }));
     }
-    ~WithRawCallbackMethod_ReevaluateEntity() override {
+    ~ExperimentalWithRawCallbackMethod_ReevaluateEntity() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -4181,21 +5871,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* ReevaluateEntity(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* ReevaluateEntity(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_ReevaluateRecord : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_ReevaluateRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_ReevaluateRecord() {
-      ::grpc::Service::MarkMethodRawCallback(25,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_ReevaluateRecord() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(25,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ReevaluateRecord(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ReevaluateRecord(context, request, response); }));
     }
-    ~WithRawCallbackMethod_ReevaluateRecord() override {
+    ~ExperimentalWithRawCallbackMethod_ReevaluateRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -4203,21 +5909,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* ReevaluateRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* ReevaluateRecord(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_Reinitialize : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_Reinitialize : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_Reinitialize() {
-      ::grpc::Service::MarkMethodRawCallback(26,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_Reinitialize() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(26,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Reinitialize(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Reinitialize(context, request, response); }));
     }
-    ~WithRawCallbackMethod_Reinitialize() override {
+    ~ExperimentalWithRawCallbackMethod_Reinitialize() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -4225,21 +5947,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* Reinitialize(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* Reinitialize(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_SearchByAttributes : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_SearchByAttributes : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_SearchByAttributes() {
-      ::grpc::Service::MarkMethodRawCallback(27,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_SearchByAttributes() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(27,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SearchByAttributes(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SearchByAttributes(context, request, response); }));
     }
-    ~WithRawCallbackMethod_SearchByAttributes() override {
+    ~ExperimentalWithRawCallbackMethod_SearchByAttributes() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -4247,21 +5985,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* SearchByAttributes(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SearchByAttributes(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_StreamExportCsvEntityReport : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_StreamExportCsvEntityReport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_StreamExportCsvEntityReport() {
-      ::grpc::Service::MarkMethodRawCallback(28,
-          new ::grpc::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_StreamExportCsvEntityReport() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(28,
+          new ::grpc_impl::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const::grpc::ByteBuffer* request) { return this->StreamExportCsvEntityReport(context, request); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const::grpc::ByteBuffer* request) { return this->StreamExportCsvEntityReport(context, request); }));
     }
-    ~WithRawCallbackMethod_StreamExportCsvEntityReport() override {
+    ~ExperimentalWithRawCallbackMethod_StreamExportCsvEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -4269,21 +6023,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerWriteReactor< ::grpc::ByteBuffer>* StreamExportCsvEntityReport(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/)
+    #else
+    virtual ::grpc::experimental::ServerWriteReactor< ::grpc::ByteBuffer>* StreamExportCsvEntityReport(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_StreamExportJsonEntityReport : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_StreamExportJsonEntityReport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_StreamExportJsonEntityReport() {
-      ::grpc::Service::MarkMethodRawCallback(29,
-          new ::grpc::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_StreamExportJsonEntityReport() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(29,
+          new ::grpc_impl::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const::grpc::ByteBuffer* request) { return this->StreamExportJsonEntityReport(context, request); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const::grpc::ByteBuffer* request) { return this->StreamExportJsonEntityReport(context, request); }));
     }
-    ~WithRawCallbackMethod_StreamExportJsonEntityReport() override {
+    ~ExperimentalWithRawCallbackMethod_StreamExportJsonEntityReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -4291,21 +6061,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerWriteReactor< ::grpc::ByteBuffer>* StreamExportJsonEntityReport(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/)
+    #else
+    virtual ::grpc::experimental::ServerWriteReactor< ::grpc::ByteBuffer>* StreamExportJsonEntityReport(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_WhyEntities : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_WhyEntities : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_WhyEntities() {
-      ::grpc::Service::MarkMethodRawCallback(30,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_WhyEntities() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(30,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->WhyEntities(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->WhyEntities(context, request, response); }));
     }
-    ~WithRawCallbackMethod_WhyEntities() override {
+    ~ExperimentalWithRawCallbackMethod_WhyEntities() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -4313,21 +6099,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* WhyEntities(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* WhyEntities(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_WhyRecordInEntity : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_WhyRecordInEntity : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_WhyRecordInEntity() {
-      ::grpc::Service::MarkMethodRawCallback(31,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_WhyRecordInEntity() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(31,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->WhyRecordInEntity(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->WhyRecordInEntity(context, request, response); }));
     }
-    ~WithRawCallbackMethod_WhyRecordInEntity() override {
+    ~ExperimentalWithRawCallbackMethod_WhyRecordInEntity() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -4335,21 +6137,37 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* WhyRecordInEntity(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* WhyRecordInEntity(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_WhyRecords : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_WhyRecords : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_WhyRecords() {
-      ::grpc::Service::MarkMethodRawCallback(32,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_WhyRecords() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(32,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->WhyRecords(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->WhyRecords(context, request, response); }));
     }
-    ~WithRawCallbackMethod_WhyRecords() override {
+    ~ExperimentalWithRawCallbackMethod_WhyRecords() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -4357,8 +6175,14 @@ class SzEngine final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* WhyRecords(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* WhyRecords(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_AddRecord : public BaseClass {
@@ -4369,8 +6193,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::AddRecordRequest, ::szengine::AddRecordResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::AddRecordRequest, ::szengine::AddRecordResponse>* streamer) {
                        return this->StreamedAddRecord(context,
                          streamer);
@@ -4396,8 +6220,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(1,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::CloseExportRequest, ::szengine::CloseExportResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::CloseExportRequest, ::szengine::CloseExportResponse>* streamer) {
                        return this->StreamedCloseExport(context,
                          streamer);
@@ -4423,8 +6247,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::CountRedoRecordsRequest, ::szengine::CountRedoRecordsResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::CountRedoRecordsRequest, ::szengine::CountRedoRecordsResponse>* streamer) {
                        return this->StreamedCountRedoRecords(context,
                          streamer);
@@ -4450,8 +6274,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(3,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::DeleteRecordRequest, ::szengine::DeleteRecordResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::DeleteRecordRequest, ::szengine::DeleteRecordResponse>* streamer) {
                        return this->StreamedDeleteRecord(context,
                          streamer);
@@ -4477,8 +6301,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(4,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::ExportCsvEntityReportRequest, ::szengine::ExportCsvEntityReportResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::ExportCsvEntityReportRequest, ::szengine::ExportCsvEntityReportResponse>* streamer) {
                        return this->StreamedExportCsvEntityReport(context,
                          streamer);
@@ -4504,8 +6328,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(5,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::ExportJsonEntityReportRequest, ::szengine::ExportJsonEntityReportResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::ExportJsonEntityReportRequest, ::szengine::ExportJsonEntityReportResponse>* streamer) {
                        return this->StreamedExportJsonEntityReport(context,
                          streamer);
@@ -4531,8 +6355,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(6,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::FetchNextRequest, ::szengine::FetchNextResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::FetchNextRequest, ::szengine::FetchNextResponse>* streamer) {
                        return this->StreamedFetchNext(context,
                          streamer);
@@ -4558,8 +6382,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(7,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::FindInterestingEntitiesByEntityIdRequest, ::szengine::FindInterestingEntitiesByEntityIdResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::FindInterestingEntitiesByEntityIdRequest, ::szengine::FindInterestingEntitiesByEntityIdResponse>* streamer) {
                        return this->StreamedFindInterestingEntitiesByEntityId(context,
                          streamer);
@@ -4585,8 +6409,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(8,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::FindInterestingEntitiesByRecordIdRequest, ::szengine::FindInterestingEntitiesByRecordIdResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::FindInterestingEntitiesByRecordIdRequest, ::szengine::FindInterestingEntitiesByRecordIdResponse>* streamer) {
                        return this->StreamedFindInterestingEntitiesByRecordId(context,
                          streamer);
@@ -4612,8 +6436,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(9,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::FindNetworkByEntityIdRequest, ::szengine::FindNetworkByEntityIdResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::FindNetworkByEntityIdRequest, ::szengine::FindNetworkByEntityIdResponse>* streamer) {
                        return this->StreamedFindNetworkByEntityId(context,
                          streamer);
@@ -4639,8 +6463,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(10,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::FindNetworkByRecordIdRequest, ::szengine::FindNetworkByRecordIdResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::FindNetworkByRecordIdRequest, ::szengine::FindNetworkByRecordIdResponse>* streamer) {
                        return this->StreamedFindNetworkByRecordId(context,
                          streamer);
@@ -4666,8 +6490,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(11,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::FindPathByEntityIdRequest, ::szengine::FindPathByEntityIdResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::FindPathByEntityIdRequest, ::szengine::FindPathByEntityIdResponse>* streamer) {
                        return this->StreamedFindPathByEntityId(context,
                          streamer);
@@ -4693,8 +6517,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(12,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::FindPathByRecordIdRequest, ::szengine::FindPathByRecordIdResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::FindPathByRecordIdRequest, ::szengine::FindPathByRecordIdResponse>* streamer) {
                        return this->StreamedFindPathByRecordId(context,
                          streamer);
@@ -4720,8 +6544,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(13,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::GetActiveConfigIdRequest, ::szengine::GetActiveConfigIdResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::GetActiveConfigIdRequest, ::szengine::GetActiveConfigIdResponse>* streamer) {
                        return this->StreamedGetActiveConfigId(context,
                          streamer);
@@ -4747,8 +6571,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(14,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::GetEntityByEntityIdRequest, ::szengine::GetEntityByEntityIdResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::GetEntityByEntityIdRequest, ::szengine::GetEntityByEntityIdResponse>* streamer) {
                        return this->StreamedGetEntityByEntityId(context,
                          streamer);
@@ -4774,8 +6598,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(15,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::GetEntityByRecordIdRequest, ::szengine::GetEntityByRecordIdResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::GetEntityByRecordIdRequest, ::szengine::GetEntityByRecordIdResponse>* streamer) {
                        return this->StreamedGetEntityByRecordId(context,
                          streamer);
@@ -4801,8 +6625,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(16,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::GetRecordRequest, ::szengine::GetRecordResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::GetRecordRequest, ::szengine::GetRecordResponse>* streamer) {
                        return this->StreamedGetRecord(context,
                          streamer);
@@ -4828,8 +6652,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(17,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::GetRedoRecordRequest, ::szengine::GetRedoRecordResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::GetRedoRecordRequest, ::szengine::GetRedoRecordResponse>* streamer) {
                        return this->StreamedGetRedoRecord(context,
                          streamer);
@@ -4855,8 +6679,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(18,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::GetStatsRequest, ::szengine::GetStatsResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::GetStatsRequest, ::szengine::GetStatsResponse>* streamer) {
                        return this->StreamedGetStats(context,
                          streamer);
@@ -4882,8 +6706,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(19,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::GetVirtualEntityByRecordIdRequest, ::szengine::GetVirtualEntityByRecordIdResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::GetVirtualEntityByRecordIdRequest, ::szengine::GetVirtualEntityByRecordIdResponse>* streamer) {
                        return this->StreamedGetVirtualEntityByRecordId(context,
                          streamer);
@@ -4909,8 +6733,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(20,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::HowEntityByEntityIdRequest, ::szengine::HowEntityByEntityIdResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::HowEntityByEntityIdRequest, ::szengine::HowEntityByEntityIdResponse>* streamer) {
                        return this->StreamedHowEntityByEntityId(context,
                          streamer);
@@ -4936,8 +6760,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(21,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::PreprocessRecordRequest, ::szengine::PreprocessRecordResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::PreprocessRecordRequest, ::szengine::PreprocessRecordResponse>* streamer) {
                        return this->StreamedPreprocessRecord(context,
                          streamer);
@@ -4963,8 +6787,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(22,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::PrimeEngineRequest, ::szengine::PrimeEngineResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::PrimeEngineRequest, ::szengine::PrimeEngineResponse>* streamer) {
                        return this->StreamedPrimeEngine(context,
                          streamer);
@@ -4990,8 +6814,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(23,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::ProcessRedoRecordRequest, ::szengine::ProcessRedoRecordResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::ProcessRedoRecordRequest, ::szengine::ProcessRedoRecordResponse>* streamer) {
                        return this->StreamedProcessRedoRecord(context,
                          streamer);
@@ -5017,8 +6841,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(24,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::ReevaluateEntityRequest, ::szengine::ReevaluateEntityResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::ReevaluateEntityRequest, ::szengine::ReevaluateEntityResponse>* streamer) {
                        return this->StreamedReevaluateEntity(context,
                          streamer);
@@ -5044,8 +6868,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(25,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::ReevaluateRecordRequest, ::szengine::ReevaluateRecordResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::ReevaluateRecordRequest, ::szengine::ReevaluateRecordResponse>* streamer) {
                        return this->StreamedReevaluateRecord(context,
                          streamer);
@@ -5071,8 +6895,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(26,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::ReinitializeRequest, ::szengine::ReinitializeResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::ReinitializeRequest, ::szengine::ReinitializeResponse>* streamer) {
                        return this->StreamedReinitialize(context,
                          streamer);
@@ -5098,8 +6922,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(27,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::SearchByAttributesRequest, ::szengine::SearchByAttributesResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::SearchByAttributesRequest, ::szengine::SearchByAttributesResponse>* streamer) {
                        return this->StreamedSearchByAttributes(context,
                          streamer);
@@ -5125,8 +6949,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(30,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::WhyEntitiesRequest, ::szengine::WhyEntitiesResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::WhyEntitiesRequest, ::szengine::WhyEntitiesResponse>* streamer) {
                        return this->StreamedWhyEntities(context,
                          streamer);
@@ -5152,8 +6976,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(31,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::WhyRecordInEntityRequest, ::szengine::WhyRecordInEntityResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::WhyRecordInEntityRequest, ::szengine::WhyRecordInEntityResponse>* streamer) {
                        return this->StreamedWhyRecordInEntity(context,
                          streamer);
@@ -5179,8 +7003,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(32,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::WhyRecordsRequest, ::szengine::WhyRecordsResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szengine::WhyRecordsRequest, ::szengine::WhyRecordsResponse>* streamer) {
                        return this->StreamedWhyRecords(context,
                          streamer);
@@ -5207,8 +7031,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(28,
         new ::grpc::internal::SplitServerStreamingHandler<
           ::szengine::StreamExportCsvEntityReportRequest, ::szengine::StreamExportCsvEntityReportResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerSplitStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerSplitStreamer<
                      ::szengine::StreamExportCsvEntityReportRequest, ::szengine::StreamExportCsvEntityReportResponse>* streamer) {
                        return this->StreamedStreamExportCsvEntityReport(context,
                          streamer);
@@ -5234,8 +7058,8 @@ class SzEngine final {
       ::grpc::Service::MarkMethodStreamed(29,
         new ::grpc::internal::SplitServerStreamingHandler<
           ::szengine::StreamExportJsonEntityReportRequest, ::szengine::StreamExportJsonEntityReportResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerSplitStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerSplitStreamer<
                      ::szengine::StreamExportJsonEntityReportRequest, ::szengine::StreamExportJsonEntityReportResponse>* streamer) {
                        return this->StreamedStreamExportJsonEntityReport(context,
                          streamer);

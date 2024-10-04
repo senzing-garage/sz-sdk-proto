@@ -7,6 +7,7 @@
 #include "szconfigmanager.pb.h"
 
 #include <functional>
+#include <grpc/impl/codegen/port_platform.h>
 #include <grpcpp/impl/codegen/async_generic_service.h>
 #include <grpcpp/impl/codegen/async_stream.h>
 #include <grpcpp/impl/codegen/async_unary_call.h>
@@ -77,26 +78,90 @@ class SzConfigManager final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::SetDefaultConfigIdResponse>> PrepareAsyncSetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::SetDefaultConfigIdRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::SetDefaultConfigIdResponse>>(PrepareAsyncSetDefaultConfigIdRaw(context, request, cq));
     }
-    class async_interface {
+    class experimental_async_interface {
      public:
-      virtual ~async_interface() {}
+      virtual ~experimental_async_interface() {}
       virtual void AddConfig(::grpc::ClientContext* context, const ::szconfigmanager::AddConfigRequest* request, ::szconfigmanager::AddConfigResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void AddConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::AddConfigResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void AddConfig(::grpc::ClientContext* context, const ::szconfigmanager::AddConfigRequest* request, ::szconfigmanager::AddConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void AddConfig(::grpc::ClientContext* context, const ::szconfigmanager::AddConfigRequest* request, ::szconfigmanager::AddConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void AddConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::AddConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void AddConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::AddConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void GetConfig(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest* request, ::szconfigmanager::GetConfigResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetConfigResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void GetConfig(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest* request, ::szconfigmanager::GetConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetConfig(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest* request, ::szconfigmanager::GetConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void GetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest* request, ::szconfigmanager::GetConfigsResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetConfigs(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetConfigsResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void GetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest* request, ::szconfigmanager::GetConfigsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest* request, ::szconfigmanager::GetConfigsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetConfigs(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetConfigsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetConfigs(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetConfigsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void GetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest* request, ::szconfigmanager::GetDefaultConfigIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetDefaultConfigIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void GetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest* request, ::szconfigmanager::GetDefaultConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest* request, ::szconfigmanager::GetDefaultConfigIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetDefaultConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void GetDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetDefaultConfigIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void ReplaceDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::ReplaceDefaultConfigIdRequest* request, ::szconfigmanager::ReplaceDefaultConfigIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void ReplaceDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::ReplaceDefaultConfigIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void ReplaceDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::ReplaceDefaultConfigIdRequest* request, ::szconfigmanager::ReplaceDefaultConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void ReplaceDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::ReplaceDefaultConfigIdRequest* request, ::szconfigmanager::ReplaceDefaultConfigIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void ReplaceDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::ReplaceDefaultConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void ReplaceDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::ReplaceDefaultConfigIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
       virtual void SetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::SetDefaultConfigIdRequest* request, ::szconfigmanager::SetDefaultConfigIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void SetDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::SetDefaultConfigIdResponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void SetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::SetDefaultConfigIdRequest* request, ::szconfigmanager::SetDefaultConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void SetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::SetDefaultConfigIdRequest* request, ::szconfigmanager::SetDefaultConfigIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SetDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::SetDefaultConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void SetDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::SetDefaultConfigIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
     };
-    typedef class async_interface experimental_async_interface;
-    virtual class async_interface* async() { return nullptr; }
-    class async_interface* experimental_async() { return async(); }
-   private:
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    typedef class experimental_async_interface async_interface;
+    #endif
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    async_interface* async() { return experimental_async(); }
+    #endif
+    virtual class experimental_async_interface* experimental_async() { return nullptr; }
+  private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::AddConfigResponse>* AsyncAddConfigRaw(::grpc::ClientContext* context, const ::szconfigmanager::AddConfigRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::AddConfigResponse>* PrepareAsyncAddConfigRaw(::grpc::ClientContext* context, const ::szconfigmanager::AddConfigRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetConfigResponse>* AsyncGetConfigRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -112,7 +177,7 @@ class SzConfigManager final {
   };
   class Stub final : public StubInterface {
    public:
-    Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
+    Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
     ::grpc::Status AddConfig(::grpc::ClientContext* context, const ::szconfigmanager::AddConfigRequest& request, ::szconfigmanager::AddConfigResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfigmanager::AddConfigResponse>> AsyncAddConfig(::grpc::ClientContext* context, const ::szconfigmanager::AddConfigRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfigmanager::AddConfigResponse>>(AsyncAddConfigRaw(context, request, cq));
@@ -155,32 +220,92 @@ class SzConfigManager final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfigmanager::SetDefaultConfigIdResponse>> PrepareAsyncSetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::SetDefaultConfigIdRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfigmanager::SetDefaultConfigIdResponse>>(PrepareAsyncSetDefaultConfigIdRaw(context, request, cq));
     }
-    class async final :
-      public StubInterface::async_interface {
+    class experimental_async final :
+      public StubInterface::experimental_async_interface {
      public:
       void AddConfig(::grpc::ClientContext* context, const ::szconfigmanager::AddConfigRequest* request, ::szconfigmanager::AddConfigResponse* response, std::function<void(::grpc::Status)>) override;
+      void AddConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::AddConfigResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void AddConfig(::grpc::ClientContext* context, const ::szconfigmanager::AddConfigRequest* request, ::szconfigmanager::AddConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void AddConfig(::grpc::ClientContext* context, const ::szconfigmanager::AddConfigRequest* request, ::szconfigmanager::AddConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void AddConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::AddConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void AddConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::AddConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void GetConfig(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest* request, ::szconfigmanager::GetConfigResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetConfigResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void GetConfig(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest* request, ::szconfigmanager::GetConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetConfig(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest* request, ::szconfigmanager::GetConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetConfig(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetConfigResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void GetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest* request, ::szconfigmanager::GetConfigsResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetConfigs(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetConfigsResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void GetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest* request, ::szconfigmanager::GetConfigsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest* request, ::szconfigmanager::GetConfigsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetConfigs(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetConfigsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetConfigs(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetConfigsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void GetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest* request, ::szconfigmanager::GetDefaultConfigIdResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetDefaultConfigIdResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void GetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest* request, ::szconfigmanager::GetDefaultConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest* request, ::szconfigmanager::GetDefaultConfigIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetDefaultConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::GetDefaultConfigIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void ReplaceDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::ReplaceDefaultConfigIdRequest* request, ::szconfigmanager::ReplaceDefaultConfigIdResponse* response, std::function<void(::grpc::Status)>) override;
+      void ReplaceDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::ReplaceDefaultConfigIdResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void ReplaceDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::ReplaceDefaultConfigIdRequest* request, ::szconfigmanager::ReplaceDefaultConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void ReplaceDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::ReplaceDefaultConfigIdRequest* request, ::szconfigmanager::ReplaceDefaultConfigIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void ReplaceDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::ReplaceDefaultConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void ReplaceDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::ReplaceDefaultConfigIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
       void SetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::SetDefaultConfigIdRequest* request, ::szconfigmanager::SetDefaultConfigIdResponse* response, std::function<void(::grpc::Status)>) override;
+      void SetDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::SetDefaultConfigIdResponse* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void SetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::SetDefaultConfigIdRequest* request, ::szconfigmanager::SetDefaultConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void SetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::SetDefaultConfigIdRequest* request, ::szconfigmanager::SetDefaultConfigIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SetDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::SetDefaultConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void SetDefaultConfigId(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szconfigmanager::SetDefaultConfigIdResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
      private:
       friend class Stub;
-      explicit async(Stub* stub): stub_(stub) { }
+      explicit experimental_async(Stub* stub): stub_(stub) { }
       Stub* stub() { return stub_; }
       Stub* stub_;
     };
-    class async* async() override { return &async_stub_; }
+    class experimental_async_interface* experimental_async() override { return &async_stub_; }
 
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
-    class async async_stub_{this};
+    class experimental_async async_stub_{this};
     ::grpc::ClientAsyncResponseReader< ::szconfigmanager::AddConfigResponse>* AsyncAddConfigRaw(::grpc::ClientContext* context, const ::szconfigmanager::AddConfigRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szconfigmanager::AddConfigResponse>* PrepareAsyncAddConfigRaw(::grpc::ClientContext* context, const ::szconfigmanager::AddConfigRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigResponse>* AsyncGetConfigRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest& request, ::grpc::CompletionQueue* cq) override;
@@ -335,22 +460,36 @@ class SzConfigManager final {
   };
   typedef WithAsyncMethod_AddConfig<WithAsyncMethod_GetConfig<WithAsyncMethod_GetConfigs<WithAsyncMethod_GetDefaultConfigId<WithAsyncMethod_ReplaceDefaultConfigId<WithAsyncMethod_SetDefaultConfigId<Service > > > > > > AsyncService;
   template <class BaseClass>
-  class WithCallbackMethod_AddConfig : public BaseClass {
+  class ExperimentalWithCallbackMethod_AddConfig : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_AddConfig() {
-      ::grpc::Service::MarkMethodCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::szconfigmanager::AddConfigRequest, ::szconfigmanager::AddConfigResponse>(
+    ExperimentalWithCallbackMethod_AddConfig() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szconfigmanager::AddConfigRequest, ::szconfigmanager::AddConfigResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szconfigmanager::AddConfigRequest* request, ::szconfigmanager::AddConfigResponse* response) { return this->AddConfig(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szconfigmanager::AddConfigRequest* request, ::szconfigmanager::AddConfigResponse* response) { return this->AddConfig(context, request, response); }));}
     void SetMessageAllocatorFor_AddConfig(
-        ::grpc::MessageAllocator< ::szconfigmanager::AddConfigRequest, ::szconfigmanager::AddConfigResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szconfigmanager::AddConfigRequest, ::szconfigmanager::AddConfigResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szconfigmanager::AddConfigRequest, ::szconfigmanager::AddConfigResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szconfigmanager::AddConfigRequest, ::szconfigmanager::AddConfigResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_AddConfig() override {
+    ~ExperimentalWithCallbackMethod_AddConfig() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -358,26 +497,46 @@ class SzConfigManager final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* AddConfig(
-      ::grpc::CallbackServerContext* /*context*/, const ::szconfigmanager::AddConfigRequest* /*request*/, ::szconfigmanager::AddConfigResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szconfigmanager::AddConfigRequest* /*request*/, ::szconfigmanager::AddConfigResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* AddConfig(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szconfigmanager::AddConfigRequest* /*request*/, ::szconfigmanager::AddConfigResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_GetConfig : public BaseClass {
+  class ExperimentalWithCallbackMethod_GetConfig : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_GetConfig() {
-      ::grpc::Service::MarkMethodCallback(1,
-          new ::grpc::internal::CallbackUnaryHandler< ::szconfigmanager::GetConfigRequest, ::szconfigmanager::GetConfigResponse>(
+    ExperimentalWithCallbackMethod_GetConfig() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szconfigmanager::GetConfigRequest, ::szconfigmanager::GetConfigResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szconfigmanager::GetConfigRequest* request, ::szconfigmanager::GetConfigResponse* response) { return this->GetConfig(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szconfigmanager::GetConfigRequest* request, ::szconfigmanager::GetConfigResponse* response) { return this->GetConfig(context, request, response); }));}
     void SetMessageAllocatorFor_GetConfig(
-        ::grpc::MessageAllocator< ::szconfigmanager::GetConfigRequest, ::szconfigmanager::GetConfigResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szconfigmanager::GetConfigRequest, ::szconfigmanager::GetConfigResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szconfigmanager::GetConfigRequest, ::szconfigmanager::GetConfigResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(1);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szconfigmanager::GetConfigRequest, ::szconfigmanager::GetConfigResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_GetConfig() override {
+    ~ExperimentalWithCallbackMethod_GetConfig() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -385,26 +544,46 @@ class SzConfigManager final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetConfig(
-      ::grpc::CallbackServerContext* /*context*/, const ::szconfigmanager::GetConfigRequest* /*request*/, ::szconfigmanager::GetConfigResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szconfigmanager::GetConfigRequest* /*request*/, ::szconfigmanager::GetConfigResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetConfig(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szconfigmanager::GetConfigRequest* /*request*/, ::szconfigmanager::GetConfigResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_GetConfigs : public BaseClass {
+  class ExperimentalWithCallbackMethod_GetConfigs : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_GetConfigs() {
-      ::grpc::Service::MarkMethodCallback(2,
-          new ::grpc::internal::CallbackUnaryHandler< ::szconfigmanager::GetConfigsRequest, ::szconfigmanager::GetConfigsResponse>(
+    ExperimentalWithCallbackMethod_GetConfigs() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(2,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szconfigmanager::GetConfigsRequest, ::szconfigmanager::GetConfigsResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szconfigmanager::GetConfigsRequest* request, ::szconfigmanager::GetConfigsResponse* response) { return this->GetConfigs(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szconfigmanager::GetConfigsRequest* request, ::szconfigmanager::GetConfigsResponse* response) { return this->GetConfigs(context, request, response); }));}
     void SetMessageAllocatorFor_GetConfigs(
-        ::grpc::MessageAllocator< ::szconfigmanager::GetConfigsRequest, ::szconfigmanager::GetConfigsResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szconfigmanager::GetConfigsRequest, ::szconfigmanager::GetConfigsResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szconfigmanager::GetConfigsRequest, ::szconfigmanager::GetConfigsResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(2);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szconfigmanager::GetConfigsRequest, ::szconfigmanager::GetConfigsResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_GetConfigs() override {
+    ~ExperimentalWithCallbackMethod_GetConfigs() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -412,26 +591,46 @@ class SzConfigManager final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetConfigs(
-      ::grpc::CallbackServerContext* /*context*/, const ::szconfigmanager::GetConfigsRequest* /*request*/, ::szconfigmanager::GetConfigsResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szconfigmanager::GetConfigsRequest* /*request*/, ::szconfigmanager::GetConfigsResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetConfigs(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szconfigmanager::GetConfigsRequest* /*request*/, ::szconfigmanager::GetConfigsResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_GetDefaultConfigId : public BaseClass {
+  class ExperimentalWithCallbackMethod_GetDefaultConfigId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_GetDefaultConfigId() {
-      ::grpc::Service::MarkMethodCallback(3,
-          new ::grpc::internal::CallbackUnaryHandler< ::szconfigmanager::GetDefaultConfigIdRequest, ::szconfigmanager::GetDefaultConfigIdResponse>(
+    ExperimentalWithCallbackMethod_GetDefaultConfigId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(3,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szconfigmanager::GetDefaultConfigIdRequest, ::szconfigmanager::GetDefaultConfigIdResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest* request, ::szconfigmanager::GetDefaultConfigIdResponse* response) { return this->GetDefaultConfigId(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szconfigmanager::GetDefaultConfigIdRequest* request, ::szconfigmanager::GetDefaultConfigIdResponse* response) { return this->GetDefaultConfigId(context, request, response); }));}
     void SetMessageAllocatorFor_GetDefaultConfigId(
-        ::grpc::MessageAllocator< ::szconfigmanager::GetDefaultConfigIdRequest, ::szconfigmanager::GetDefaultConfigIdResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szconfigmanager::GetDefaultConfigIdRequest, ::szconfigmanager::GetDefaultConfigIdResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szconfigmanager::GetDefaultConfigIdRequest, ::szconfigmanager::GetDefaultConfigIdResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(3);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szconfigmanager::GetDefaultConfigIdRequest, ::szconfigmanager::GetDefaultConfigIdResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_GetDefaultConfigId() override {
+    ~ExperimentalWithCallbackMethod_GetDefaultConfigId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -439,26 +638,46 @@ class SzConfigManager final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetDefaultConfigId(
-      ::grpc::CallbackServerContext* /*context*/, const ::szconfigmanager::GetDefaultConfigIdRequest* /*request*/, ::szconfigmanager::GetDefaultConfigIdResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szconfigmanager::GetDefaultConfigIdRequest* /*request*/, ::szconfigmanager::GetDefaultConfigIdResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetDefaultConfigId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szconfigmanager::GetDefaultConfigIdRequest* /*request*/, ::szconfigmanager::GetDefaultConfigIdResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_ReplaceDefaultConfigId : public BaseClass {
+  class ExperimentalWithCallbackMethod_ReplaceDefaultConfigId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_ReplaceDefaultConfigId() {
-      ::grpc::Service::MarkMethodCallback(4,
-          new ::grpc::internal::CallbackUnaryHandler< ::szconfigmanager::ReplaceDefaultConfigIdRequest, ::szconfigmanager::ReplaceDefaultConfigIdResponse>(
+    ExperimentalWithCallbackMethod_ReplaceDefaultConfigId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(4,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szconfigmanager::ReplaceDefaultConfigIdRequest, ::szconfigmanager::ReplaceDefaultConfigIdResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szconfigmanager::ReplaceDefaultConfigIdRequest* request, ::szconfigmanager::ReplaceDefaultConfigIdResponse* response) { return this->ReplaceDefaultConfigId(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szconfigmanager::ReplaceDefaultConfigIdRequest* request, ::szconfigmanager::ReplaceDefaultConfigIdResponse* response) { return this->ReplaceDefaultConfigId(context, request, response); }));}
     void SetMessageAllocatorFor_ReplaceDefaultConfigId(
-        ::grpc::MessageAllocator< ::szconfigmanager::ReplaceDefaultConfigIdRequest, ::szconfigmanager::ReplaceDefaultConfigIdResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szconfigmanager::ReplaceDefaultConfigIdRequest, ::szconfigmanager::ReplaceDefaultConfigIdResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szconfigmanager::ReplaceDefaultConfigIdRequest, ::szconfigmanager::ReplaceDefaultConfigIdResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(4);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szconfigmanager::ReplaceDefaultConfigIdRequest, ::szconfigmanager::ReplaceDefaultConfigIdResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_ReplaceDefaultConfigId() override {
+    ~ExperimentalWithCallbackMethod_ReplaceDefaultConfigId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -466,26 +685,46 @@ class SzConfigManager final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* ReplaceDefaultConfigId(
-      ::grpc::CallbackServerContext* /*context*/, const ::szconfigmanager::ReplaceDefaultConfigIdRequest* /*request*/, ::szconfigmanager::ReplaceDefaultConfigIdResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szconfigmanager::ReplaceDefaultConfigIdRequest* /*request*/, ::szconfigmanager::ReplaceDefaultConfigIdResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* ReplaceDefaultConfigId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szconfigmanager::ReplaceDefaultConfigIdRequest* /*request*/, ::szconfigmanager::ReplaceDefaultConfigIdResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_SetDefaultConfigId : public BaseClass {
+  class ExperimentalWithCallbackMethod_SetDefaultConfigId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_SetDefaultConfigId() {
-      ::grpc::Service::MarkMethodCallback(5,
-          new ::grpc::internal::CallbackUnaryHandler< ::szconfigmanager::SetDefaultConfigIdRequest, ::szconfigmanager::SetDefaultConfigIdResponse>(
+    ExperimentalWithCallbackMethod_SetDefaultConfigId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(5,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::szconfigmanager::SetDefaultConfigIdRequest, ::szconfigmanager::SetDefaultConfigIdResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szconfigmanager::SetDefaultConfigIdRequest* request, ::szconfigmanager::SetDefaultConfigIdResponse* response) { return this->SetDefaultConfigId(context, request, response); }));}
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::szconfigmanager::SetDefaultConfigIdRequest* request, ::szconfigmanager::SetDefaultConfigIdResponse* response) { return this->SetDefaultConfigId(context, request, response); }));}
     void SetMessageAllocatorFor_SetDefaultConfigId(
-        ::grpc::MessageAllocator< ::szconfigmanager::SetDefaultConfigIdRequest, ::szconfigmanager::SetDefaultConfigIdResponse>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::szconfigmanager::SetDefaultConfigIdRequest, ::szconfigmanager::SetDefaultConfigIdResponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szconfigmanager::SetDefaultConfigIdRequest, ::szconfigmanager::SetDefaultConfigIdResponse>*>(handler)
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(5);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szconfigmanager::SetDefaultConfigIdRequest, ::szconfigmanager::SetDefaultConfigIdResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_SetDefaultConfigId() override {
+    ~ExperimentalWithCallbackMethod_SetDefaultConfigId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -493,11 +732,20 @@ class SzConfigManager final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* SetDefaultConfigId(
-      ::grpc::CallbackServerContext* /*context*/, const ::szconfigmanager::SetDefaultConfigIdRequest* /*request*/, ::szconfigmanager::SetDefaultConfigIdResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szconfigmanager::SetDefaultConfigIdRequest* /*request*/, ::szconfigmanager::SetDefaultConfigIdResponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SetDefaultConfigId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szconfigmanager::SetDefaultConfigIdRequest* /*request*/, ::szconfigmanager::SetDefaultConfigIdResponse* /*response*/)
+    #endif
+      { return nullptr; }
   };
-  typedef WithCallbackMethod_AddConfig<WithCallbackMethod_GetConfig<WithCallbackMethod_GetConfigs<WithCallbackMethod_GetDefaultConfigId<WithCallbackMethod_ReplaceDefaultConfigId<WithCallbackMethod_SetDefaultConfigId<Service > > > > > > CallbackService;
-  typedef CallbackService ExperimentalCallbackService;
+  #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+  typedef ExperimentalWithCallbackMethod_AddConfig<ExperimentalWithCallbackMethod_GetConfig<ExperimentalWithCallbackMethod_GetConfigs<ExperimentalWithCallbackMethod_GetDefaultConfigId<ExperimentalWithCallbackMethod_ReplaceDefaultConfigId<ExperimentalWithCallbackMethod_SetDefaultConfigId<Service > > > > > > CallbackService;
+  #endif
+
+  typedef ExperimentalWithCallbackMethod_AddConfig<ExperimentalWithCallbackMethod_GetConfig<ExperimentalWithCallbackMethod_GetConfigs<ExperimentalWithCallbackMethod_GetDefaultConfigId<ExperimentalWithCallbackMethod_ReplaceDefaultConfigId<ExperimentalWithCallbackMethod_SetDefaultConfigId<Service > > > > > > ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_AddConfig : public BaseClass {
    private:
@@ -721,17 +969,27 @@ class SzConfigManager final {
     }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_AddConfig : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_AddConfig : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_AddConfig() {
-      ::grpc::Service::MarkMethodRawCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_AddConfig() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(0,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->AddConfig(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->AddConfig(context, request, response); }));
     }
-    ~WithRawCallbackMethod_AddConfig() override {
+    ~ExperimentalWithRawCallbackMethod_AddConfig() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -739,21 +997,37 @@ class SzConfigManager final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* AddConfig(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* AddConfig(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_GetConfig : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_GetConfig : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_GetConfig() {
-      ::grpc::Service::MarkMethodRawCallback(1,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_GetConfig() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(1,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetConfig(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetConfig(context, request, response); }));
     }
-    ~WithRawCallbackMethod_GetConfig() override {
+    ~ExperimentalWithRawCallbackMethod_GetConfig() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -761,21 +1035,37 @@ class SzConfigManager final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetConfig(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetConfig(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_GetConfigs : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_GetConfigs : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_GetConfigs() {
-      ::grpc::Service::MarkMethodRawCallback(2,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_GetConfigs() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(2,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetConfigs(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetConfigs(context, request, response); }));
     }
-    ~WithRawCallbackMethod_GetConfigs() override {
+    ~ExperimentalWithRawCallbackMethod_GetConfigs() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -783,21 +1073,37 @@ class SzConfigManager final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetConfigs(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetConfigs(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_GetDefaultConfigId : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_GetDefaultConfigId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_GetDefaultConfigId() {
-      ::grpc::Service::MarkMethodRawCallback(3,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_GetDefaultConfigId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(3,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetDefaultConfigId(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetDefaultConfigId(context, request, response); }));
     }
-    ~WithRawCallbackMethod_GetDefaultConfigId() override {
+    ~ExperimentalWithRawCallbackMethod_GetDefaultConfigId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -805,21 +1111,37 @@ class SzConfigManager final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetDefaultConfigId(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* GetDefaultConfigId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_ReplaceDefaultConfigId : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_ReplaceDefaultConfigId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_ReplaceDefaultConfigId() {
-      ::grpc::Service::MarkMethodRawCallback(4,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_ReplaceDefaultConfigId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(4,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ReplaceDefaultConfigId(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ReplaceDefaultConfigId(context, request, response); }));
     }
-    ~WithRawCallbackMethod_ReplaceDefaultConfigId() override {
+    ~ExperimentalWithRawCallbackMethod_ReplaceDefaultConfigId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -827,21 +1149,37 @@ class SzConfigManager final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* ReplaceDefaultConfigId(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* ReplaceDefaultConfigId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_SetDefaultConfigId : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_SetDefaultConfigId : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_SetDefaultConfigId() {
-      ::grpc::Service::MarkMethodRawCallback(5,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    ExperimentalWithRawCallbackMethod_SetDefaultConfigId() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(5,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SetDefaultConfigId(context, request, response); }));
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SetDefaultConfigId(context, request, response); }));
     }
-    ~WithRawCallbackMethod_SetDefaultConfigId() override {
+    ~ExperimentalWithRawCallbackMethod_SetDefaultConfigId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -849,8 +1187,14 @@ class SzConfigManager final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* SetDefaultConfigId(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SetDefaultConfigId(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_AddConfig : public BaseClass {
@@ -861,8 +1205,8 @@ class SzConfigManager final {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szconfigmanager::AddConfigRequest, ::szconfigmanager::AddConfigResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szconfigmanager::AddConfigRequest, ::szconfigmanager::AddConfigResponse>* streamer) {
                        return this->StreamedAddConfig(context,
                          streamer);
@@ -888,8 +1232,8 @@ class SzConfigManager final {
       ::grpc::Service::MarkMethodStreamed(1,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szconfigmanager::GetConfigRequest, ::szconfigmanager::GetConfigResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szconfigmanager::GetConfigRequest, ::szconfigmanager::GetConfigResponse>* streamer) {
                        return this->StreamedGetConfig(context,
                          streamer);
@@ -915,8 +1259,8 @@ class SzConfigManager final {
       ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szconfigmanager::GetConfigsRequest, ::szconfigmanager::GetConfigsResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szconfigmanager::GetConfigsRequest, ::szconfigmanager::GetConfigsResponse>* streamer) {
                        return this->StreamedGetConfigs(context,
                          streamer);
@@ -942,8 +1286,8 @@ class SzConfigManager final {
       ::grpc::Service::MarkMethodStreamed(3,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szconfigmanager::GetDefaultConfigIdRequest, ::szconfigmanager::GetDefaultConfigIdResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szconfigmanager::GetDefaultConfigIdRequest, ::szconfigmanager::GetDefaultConfigIdResponse>* streamer) {
                        return this->StreamedGetDefaultConfigId(context,
                          streamer);
@@ -969,8 +1313,8 @@ class SzConfigManager final {
       ::grpc::Service::MarkMethodStreamed(4,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szconfigmanager::ReplaceDefaultConfigIdRequest, ::szconfigmanager::ReplaceDefaultConfigIdResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szconfigmanager::ReplaceDefaultConfigIdRequest, ::szconfigmanager::ReplaceDefaultConfigIdResponse>* streamer) {
                        return this->StreamedReplaceDefaultConfigId(context,
                          streamer);
@@ -996,8 +1340,8 @@ class SzConfigManager final {
       ::grpc::Service::MarkMethodStreamed(5,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szconfigmanager::SetDefaultConfigIdRequest, ::szconfigmanager::SetDefaultConfigIdResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
                      ::szconfigmanager::SetDefaultConfigIdRequest, ::szconfigmanager::SetDefaultConfigIdResponse>* streamer) {
                        return this->StreamedSetDefaultConfigId(context,
                          streamer);

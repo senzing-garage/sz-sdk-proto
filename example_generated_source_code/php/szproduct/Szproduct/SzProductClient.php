@@ -20,7 +20,7 @@ class SzProductClient extends \Grpc\BaseStub {
      * @param \Szproduct\GetLicenseRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Szproduct\GetLicenseResponse
      */
     public function GetLicense(\Szproduct\GetLicenseRequest $argument,
       $metadata = [], $options = []) {
@@ -34,7 +34,7 @@ class SzProductClient extends \Grpc\BaseStub {
      * @param \Szproduct\GetVersionRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Szproduct\GetVersionResponse
      */
     public function GetVersion(\Szproduct\GetVersionRequest $argument,
       $metadata = [], $options = []) {
