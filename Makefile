@@ -82,7 +82,7 @@ setup: generate
 # -----------------------------------------------------------------------------
 
 .PHONY: generate
-generate: generate-csharp generate-go generate-java generate-php generate-python
+generate: generate-csharp generate-go generate-java generate-php generate-python generate-ruby
 
 .PHONY: generate-csharp
 generate-csharp:
@@ -126,8 +126,11 @@ generate-python:
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
 		OUTPUT_DIR=example_generated_source_code/python/$${SENZING_COMPONENT}; \
 		mkdir -p $${OUTPUT_DIR}; \
-		python3 -m grpc_tools.protoc --proto_path=. --python_out=$${OUTPUT_DIR}  --grpc_python_out=$${OUTPUT_DIR}  $${SENZING_COMPONENT}.proto; \
+		protoc --proto_path=. --python_out=$${OUTPUT_DIR}  $${SENZING_COMPONENT}.proto; \
 	done
+
+# Replaced with "protoc"
+#		python3 -m grpc_tools.protoc --proto_path=. --python_out=$${OUTPUT_DIR}  --grpc_python_out=$${OUTPUT_DIR}  $${SENZING_COMPONENT}.proto; \
 
 
 .PHONY: generate-ruby
