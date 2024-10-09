@@ -20,7 +20,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\AddRecordRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\AddRecordResponse
+     * @return \Grpc\UnaryCall
      */
     public function AddRecord(\Szengine\AddRecordRequest $argument,
       $metadata = [], $options = []) {
@@ -34,7 +34,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\CloseExportRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\CloseExportResponse
+     * @return \Grpc\UnaryCall
      */
     public function CloseExport(\Szengine\CloseExportRequest $argument,
       $metadata = [], $options = []) {
@@ -48,7 +48,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\CountRedoRecordsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\CountRedoRecordsResponse
+     * @return \Grpc\UnaryCall
      */
     public function CountRedoRecords(\Szengine\CountRedoRecordsRequest $argument,
       $metadata = [], $options = []) {
@@ -62,7 +62,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\DeleteRecordRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\DeleteRecordResponse
+     * @return \Grpc\UnaryCall
      */
     public function DeleteRecord(\Szengine\DeleteRecordRequest $argument,
       $metadata = [], $options = []) {
@@ -76,7 +76,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\ExportCsvEntityReportRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\ExportCsvEntityReportResponse
+     * @return \Grpc\UnaryCall
      */
     public function ExportCsvEntityReport(\Szengine\ExportCsvEntityReportRequest $argument,
       $metadata = [], $options = []) {
@@ -90,7 +90,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\ExportJsonEntityReportRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\ExportJsonEntityReportResponse
+     * @return \Grpc\UnaryCall
      */
     public function ExportJsonEntityReport(\Szengine\ExportJsonEntityReportRequest $argument,
       $metadata = [], $options = []) {
@@ -104,7 +104,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\FetchNextRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\FetchNextResponse
+     * @return \Grpc\UnaryCall
      */
     public function FetchNext(\Szengine\FetchNextRequest $argument,
       $metadata = [], $options = []) {
@@ -118,7 +118,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\FindInterestingEntitiesByEntityIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\FindInterestingEntitiesByEntityIdResponse
+     * @return \Grpc\UnaryCall
      */
     public function FindInterestingEntitiesByEntityId(\Szengine\FindInterestingEntitiesByEntityIdRequest $argument,
       $metadata = [], $options = []) {
@@ -132,7 +132,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\FindInterestingEntitiesByRecordIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\FindInterestingEntitiesByRecordIdResponse
+     * @return \Grpc\UnaryCall
      */
     public function FindInterestingEntitiesByRecordId(\Szengine\FindInterestingEntitiesByRecordIdRequest $argument,
       $metadata = [], $options = []) {
@@ -146,7 +146,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\FindNetworkByEntityIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\FindNetworkByEntityIdResponse
+     * @return \Grpc\UnaryCall
      */
     public function FindNetworkByEntityId(\Szengine\FindNetworkByEntityIdRequest $argument,
       $metadata = [], $options = []) {
@@ -160,7 +160,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\FindNetworkByRecordIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\FindNetworkByRecordIdResponse
+     * @return \Grpc\UnaryCall
      */
     public function FindNetworkByRecordId(\Szengine\FindNetworkByRecordIdRequest $argument,
       $metadata = [], $options = []) {
@@ -174,7 +174,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\FindPathByEntityIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\FindPathByEntityIdResponse
+     * @return \Grpc\UnaryCall
      */
     public function FindPathByEntityId(\Szengine\FindPathByEntityIdRequest $argument,
       $metadata = [], $options = []) {
@@ -188,7 +188,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\FindPathByRecordIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\FindPathByRecordIdResponse
+     * @return \Grpc\UnaryCall
      */
     public function FindPathByRecordId(\Szengine\FindPathByRecordIdRequest $argument,
       $metadata = [], $options = []) {
@@ -202,7 +202,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\GetActiveConfigIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\GetActiveConfigIdResponse
+     * @return \Grpc\UnaryCall
      */
     public function GetActiveConfigId(\Szengine\GetActiveConfigIdRequest $argument,
       $metadata = [], $options = []) {
@@ -216,7 +216,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\GetEntityByEntityIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\GetEntityByEntityIdResponse
+     * @return \Grpc\UnaryCall
      */
     public function GetEntityByEntityId(\Szengine\GetEntityByEntityIdRequest $argument,
       $metadata = [], $options = []) {
@@ -230,7 +230,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\GetEntityByRecordIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\GetEntityByRecordIdResponse
+     * @return \Grpc\UnaryCall
      */
     public function GetEntityByRecordId(\Szengine\GetEntityByRecordIdRequest $argument,
       $metadata = [], $options = []) {
@@ -244,7 +244,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\GetRecordRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\GetRecordResponse
+     * @return \Grpc\UnaryCall
      */
     public function GetRecord(\Szengine\GetRecordRequest $argument,
       $metadata = [], $options = []) {
@@ -258,7 +258,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\GetRedoRecordRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\GetRedoRecordResponse
+     * @return \Grpc\UnaryCall
      */
     public function GetRedoRecord(\Szengine\GetRedoRecordRequest $argument,
       $metadata = [], $options = []) {
@@ -272,7 +272,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\GetStatsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\GetStatsResponse
+     * @return \Grpc\UnaryCall
      */
     public function GetStats(\Szengine\GetStatsRequest $argument,
       $metadata = [], $options = []) {
@@ -286,7 +286,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\GetVirtualEntityByRecordIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\GetVirtualEntityByRecordIdResponse
+     * @return \Grpc\UnaryCall
      */
     public function GetVirtualEntityByRecordId(\Szengine\GetVirtualEntityByRecordIdRequest $argument,
       $metadata = [], $options = []) {
@@ -300,7 +300,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\HowEntityByEntityIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\HowEntityByEntityIdResponse
+     * @return \Grpc\UnaryCall
      */
     public function HowEntityByEntityId(\Szengine\HowEntityByEntityIdRequest $argument,
       $metadata = [], $options = []) {
@@ -314,7 +314,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\PreprocessRecordRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\PreprocessRecordResponse
+     * @return \Grpc\UnaryCall
      */
     public function PreprocessRecord(\Szengine\PreprocessRecordRequest $argument,
       $metadata = [], $options = []) {
@@ -328,7 +328,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\PrimeEngineRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\PrimeEngineResponse
+     * @return \Grpc\UnaryCall
      */
     public function PrimeEngine(\Szengine\PrimeEngineRequest $argument,
       $metadata = [], $options = []) {
@@ -342,7 +342,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\ProcessRedoRecordRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\ProcessRedoRecordResponse
+     * @return \Grpc\UnaryCall
      */
     public function ProcessRedoRecord(\Szengine\ProcessRedoRecordRequest $argument,
       $metadata = [], $options = []) {
@@ -356,7 +356,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\ReevaluateEntityRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\ReevaluateEntityResponse
+     * @return \Grpc\UnaryCall
      */
     public function ReevaluateEntity(\Szengine\ReevaluateEntityRequest $argument,
       $metadata = [], $options = []) {
@@ -370,7 +370,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\ReevaluateRecordRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\ReevaluateRecordResponse
+     * @return \Grpc\UnaryCall
      */
     public function ReevaluateRecord(\Szengine\ReevaluateRecordRequest $argument,
       $metadata = [], $options = []) {
@@ -384,7 +384,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\ReinitializeRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\ReinitializeResponse
+     * @return \Grpc\UnaryCall
      */
     public function Reinitialize(\Szengine\ReinitializeRequest $argument,
       $metadata = [], $options = []) {
@@ -398,7 +398,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\SearchByAttributesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\SearchByAttributesResponse
+     * @return \Grpc\UnaryCall
      */
     public function SearchByAttributes(\Szengine\SearchByAttributesRequest $argument,
       $metadata = [], $options = []) {
@@ -412,7 +412,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\StreamExportCsvEntityReportRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\StreamExportCsvEntityReportResponse
+     * @return \Grpc\ServerStreamingCall
      */
     public function StreamExportCsvEntityReport(\Szengine\StreamExportCsvEntityReportRequest $argument,
       $metadata = [], $options = []) {
@@ -426,7 +426,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\StreamExportJsonEntityReportRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\StreamExportJsonEntityReportResponse
+     * @return \Grpc\ServerStreamingCall
      */
     public function StreamExportJsonEntityReport(\Szengine\StreamExportJsonEntityReportRequest $argument,
       $metadata = [], $options = []) {
@@ -440,7 +440,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\WhyEntitiesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\WhyEntitiesResponse
+     * @return \Grpc\UnaryCall
      */
     public function WhyEntities(\Szengine\WhyEntitiesRequest $argument,
       $metadata = [], $options = []) {
@@ -454,7 +454,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\WhyRecordInEntityRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\WhyRecordInEntityResponse
+     * @return \Grpc\UnaryCall
      */
     public function WhyRecordInEntity(\Szengine\WhyRecordInEntityRequest $argument,
       $metadata = [], $options = []) {
@@ -468,7 +468,7 @@ class SzEngineClient extends \Grpc\BaseStub {
      * @param \Szengine\WhyRecordsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szengine\WhyRecordsResponse
+     * @return \Grpc\UnaryCall
      */
     public function WhyRecords(\Szengine\WhyRecordsRequest $argument,
       $metadata = [], $options = []) {

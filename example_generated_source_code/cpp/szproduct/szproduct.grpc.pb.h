@@ -7,7 +7,6 @@
 #include "szproduct.pb.h"
 
 #include <functional>
-#include <grpc/impl/codegen/port_platform.h>
 #include <grpcpp/impl/codegen/async_generic_service.h>
 #include <grpcpp/impl/codegen/async_stream.h>
 #include <grpcpp/impl/codegen/async_unary_call.h>
@@ -50,42 +49,18 @@ class SzProduct final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szproduct::GetVersionResponse>> PrepareAsyncGetVersion(::grpc::ClientContext* context, const ::szproduct::GetVersionRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szproduct::GetVersionResponse>>(PrepareAsyncGetVersionRaw(context, request, cq));
     }
-    class experimental_async_interface {
+    class async_interface {
      public:
-      virtual ~experimental_async_interface() {}
+      virtual ~async_interface() {}
       virtual void GetLicense(::grpc::ClientContext* context, const ::szproduct::GetLicenseRequest* request, ::szproduct::GetLicenseResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetLicense(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szproduct::GetLicenseResponse* response, std::function<void(::grpc::Status)>) = 0;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void GetLicense(::grpc::ClientContext* context, const ::szproduct::GetLicenseRequest* request, ::szproduct::GetLicenseResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void GetLicense(::grpc::ClientContext* context, const ::szproduct::GetLicenseRequest* request, ::szproduct::GetLicenseResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void GetLicense(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szproduct::GetLicenseResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void GetLicense(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szproduct::GetLicenseResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void GetVersion(::grpc::ClientContext* context, const ::szproduct::GetVersionRequest* request, ::szproduct::GetVersionResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetVersion(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szproduct::GetVersionResponse* response, std::function<void(::grpc::Status)>) = 0;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void GetVersion(::grpc::ClientContext* context, const ::szproduct::GetVersionRequest* request, ::szproduct::GetVersionResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void GetVersion(::grpc::ClientContext* context, const ::szproduct::GetVersionRequest* request, ::szproduct::GetVersionResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void GetVersion(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szproduct::GetVersionResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void GetVersion(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szproduct::GetVersionResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
     };
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-    typedef class experimental_async_interface async_interface;
-    #endif
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-    async_interface* async() { return experimental_async(); }
-    #endif
-    virtual class experimental_async_interface* experimental_async() { return nullptr; }
-  private:
+    typedef class async_interface experimental_async_interface;
+    virtual class async_interface* async() { return nullptr; }
+    class async_interface* experimental_async() { return async(); }
+   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szproduct::GetLicenseResponse>* AsyncGetLicenseRaw(::grpc::ClientContext* context, const ::szproduct::GetLicenseRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szproduct::GetLicenseResponse>* PrepareAsyncGetLicenseRaw(::grpc::ClientContext* context, const ::szproduct::GetLicenseRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szproduct::GetVersionResponse>* AsyncGetVersionRaw(::grpc::ClientContext* context, const ::szproduct::GetVersionRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -93,7 +68,7 @@ class SzProduct final {
   };
   class Stub final : public StubInterface {
    public:
-    Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
+    Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
     ::grpc::Status GetLicense(::grpc::ClientContext* context, const ::szproduct::GetLicenseRequest& request, ::szproduct::GetLicenseResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szproduct::GetLicenseResponse>> AsyncGetLicense(::grpc::ClientContext* context, const ::szproduct::GetLicenseRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szproduct::GetLicenseResponse>>(AsyncGetLicenseRaw(context, request, cq));
@@ -108,44 +83,24 @@ class SzProduct final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szproduct::GetVersionResponse>> PrepareAsyncGetVersion(::grpc::ClientContext* context, const ::szproduct::GetVersionRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szproduct::GetVersionResponse>>(PrepareAsyncGetVersionRaw(context, request, cq));
     }
-    class experimental_async final :
-      public StubInterface::experimental_async_interface {
+    class async final :
+      public StubInterface::async_interface {
      public:
       void GetLicense(::grpc::ClientContext* context, const ::szproduct::GetLicenseRequest* request, ::szproduct::GetLicenseResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetLicense(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szproduct::GetLicenseResponse* response, std::function<void(::grpc::Status)>) override;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void GetLicense(::grpc::ClientContext* context, const ::szproduct::GetLicenseRequest* request, ::szproduct::GetLicenseResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void GetLicense(::grpc::ClientContext* context, const ::szproduct::GetLicenseRequest* request, ::szproduct::GetLicenseResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void GetLicense(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szproduct::GetLicenseResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void GetLicense(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szproduct::GetLicenseResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void GetVersion(::grpc::ClientContext* context, const ::szproduct::GetVersionRequest* request, ::szproduct::GetVersionResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetVersion(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szproduct::GetVersionResponse* response, std::function<void(::grpc::Status)>) override;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void GetVersion(::grpc::ClientContext* context, const ::szproduct::GetVersionRequest* request, ::szproduct::GetVersionResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void GetVersion(::grpc::ClientContext* context, const ::szproduct::GetVersionRequest* request, ::szproduct::GetVersionResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void GetVersion(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szproduct::GetVersionResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void GetVersion(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szproduct::GetVersionResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
      private:
       friend class Stub;
-      explicit experimental_async(Stub* stub): stub_(stub) { }
+      explicit async(Stub* stub): stub_(stub) { }
       Stub* stub() { return stub_; }
       Stub* stub_;
     };
-    class experimental_async_interface* experimental_async() override { return &async_stub_; }
+    class async* async() override { return &async_stub_; }
 
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
-    class experimental_async async_stub_{this};
+    class async async_stub_{this};
     ::grpc::ClientAsyncResponseReader< ::szproduct::GetLicenseResponse>* AsyncGetLicenseRaw(::grpc::ClientContext* context, const ::szproduct::GetLicenseRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szproduct::GetLicenseResponse>* PrepareAsyncGetLicenseRaw(::grpc::ClientContext* context, const ::szproduct::GetLicenseRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szproduct::GetVersionResponse>* AsyncGetVersionRaw(::grpc::ClientContext* context, const ::szproduct::GetVersionRequest& request, ::grpc::CompletionQueue* cq) override;
@@ -204,36 +159,22 @@ class SzProduct final {
   };
   typedef WithAsyncMethod_GetLicense<WithAsyncMethod_GetVersion<Service > > AsyncService;
   template <class BaseClass>
-  class ExperimentalWithCallbackMethod_GetLicense : public BaseClass {
+  class WithCallbackMethod_GetLicense : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithCallbackMethod_GetLicense() {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::Service::
-    #else
-      ::grpc::Service::experimental().
-    #endif
-        MarkMethodCallback(0,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::szproduct::GetLicenseRequest, ::szproduct::GetLicenseResponse>(
+    WithCallbackMethod_GetLicense() {
+      ::grpc::Service::MarkMethodCallback(0,
+          new ::grpc::internal::CallbackUnaryHandler< ::szproduct::GetLicenseRequest, ::szproduct::GetLicenseResponse>(
             [this](
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-                   ::grpc::CallbackServerContext*
-    #else
-                   ::grpc::experimental::CallbackServerContext*
-    #endif
-                     context, const ::szproduct::GetLicenseRequest* request, ::szproduct::GetLicenseResponse* response) { return this->GetLicense(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::szproduct::GetLicenseRequest* request, ::szproduct::GetLicenseResponse* response) { return this->GetLicense(context, request, response); }));}
     void SetMessageAllocatorFor_GetLicense(
-        ::grpc::experimental::MessageAllocator< ::szproduct::GetLicenseRequest, ::szproduct::GetLicenseResponse>* allocator) {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+        ::grpc::MessageAllocator< ::szproduct::GetLicenseRequest, ::szproduct::GetLicenseResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
-    #else
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
-    #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szproduct::GetLicenseRequest, ::szproduct::GetLicenseResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::szproduct::GetLicenseRequest, ::szproduct::GetLicenseResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~ExperimentalWithCallbackMethod_GetLicense() override {
+    ~WithCallbackMethod_GetLicense() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -241,46 +182,26 @@ class SzProduct final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetLicense(
-      ::grpc::CallbackServerContext* /*context*/, const ::szproduct::GetLicenseRequest* /*request*/, ::szproduct::GetLicenseResponse* /*response*/)
-    #else
-    virtual ::grpc::experimental::ServerUnaryReactor* GetLicense(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szproduct::GetLicenseRequest* /*request*/, ::szproduct::GetLicenseResponse* /*response*/)
-    #endif
-      { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szproduct::GetLicenseRequest* /*request*/, ::szproduct::GetLicenseResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class ExperimentalWithCallbackMethod_GetVersion : public BaseClass {
+  class WithCallbackMethod_GetVersion : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithCallbackMethod_GetVersion() {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::Service::
-    #else
-      ::grpc::Service::experimental().
-    #endif
-        MarkMethodCallback(1,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::szproduct::GetVersionRequest, ::szproduct::GetVersionResponse>(
+    WithCallbackMethod_GetVersion() {
+      ::grpc::Service::MarkMethodCallback(1,
+          new ::grpc::internal::CallbackUnaryHandler< ::szproduct::GetVersionRequest, ::szproduct::GetVersionResponse>(
             [this](
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-                   ::grpc::CallbackServerContext*
-    #else
-                   ::grpc::experimental::CallbackServerContext*
-    #endif
-                     context, const ::szproduct::GetVersionRequest* request, ::szproduct::GetVersionResponse* response) { return this->GetVersion(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::szproduct::GetVersionRequest* request, ::szproduct::GetVersionResponse* response) { return this->GetVersion(context, request, response); }));}
     void SetMessageAllocatorFor_GetVersion(
-        ::grpc::experimental::MessageAllocator< ::szproduct::GetVersionRequest, ::szproduct::GetVersionResponse>* allocator) {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+        ::grpc::MessageAllocator< ::szproduct::GetVersionRequest, ::szproduct::GetVersionResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
-    #else
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(1);
-    #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szproduct::GetVersionRequest, ::szproduct::GetVersionResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::szproduct::GetVersionRequest, ::szproduct::GetVersionResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~ExperimentalWithCallbackMethod_GetVersion() override {
+    ~WithCallbackMethod_GetVersion() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -288,20 +209,11 @@ class SzProduct final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetVersion(
-      ::grpc::CallbackServerContext* /*context*/, const ::szproduct::GetVersionRequest* /*request*/, ::szproduct::GetVersionResponse* /*response*/)
-    #else
-    virtual ::grpc::experimental::ServerUnaryReactor* GetVersion(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szproduct::GetVersionRequest* /*request*/, ::szproduct::GetVersionResponse* /*response*/)
-    #endif
-      { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szproduct::GetVersionRequest* /*request*/, ::szproduct::GetVersionResponse* /*response*/)  { return nullptr; }
   };
-  #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-  typedef ExperimentalWithCallbackMethod_GetLicense<ExperimentalWithCallbackMethod_GetVersion<Service > > CallbackService;
-  #endif
-
-  typedef ExperimentalWithCallbackMethod_GetLicense<ExperimentalWithCallbackMethod_GetVersion<Service > > ExperimentalCallbackService;
+  typedef WithCallbackMethod_GetLicense<WithCallbackMethod_GetVersion<Service > > CallbackService;
+  typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_GetLicense : public BaseClass {
    private:
@@ -377,27 +289,17 @@ class SzProduct final {
     }
   };
   template <class BaseClass>
-  class ExperimentalWithRawCallbackMethod_GetLicense : public BaseClass {
+  class WithRawCallbackMethod_GetLicense : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithRawCallbackMethod_GetLicense() {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::Service::
-    #else
-      ::grpc::Service::experimental().
-    #endif
-        MarkMethodRawCallback(0,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    WithRawCallbackMethod_GetLicense() {
+      ::grpc::Service::MarkMethodRawCallback(0,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-                   ::grpc::CallbackServerContext*
-    #else
-                   ::grpc::experimental::CallbackServerContext*
-    #endif
-                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetLicense(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetLicense(context, request, response); }));
     }
-    ~ExperimentalWithRawCallbackMethod_GetLicense() override {
+    ~WithRawCallbackMethod_GetLicense() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -405,37 +307,21 @@ class SzProduct final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetLicense(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
-    #else
-    virtual ::grpc::experimental::ServerUnaryReactor* GetLicense(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
-    #endif
-      { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class ExperimentalWithRawCallbackMethod_GetVersion : public BaseClass {
+  class WithRawCallbackMethod_GetVersion : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithRawCallbackMethod_GetVersion() {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::Service::
-    #else
-      ::grpc::Service::experimental().
-    #endif
-        MarkMethodRawCallback(1,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    WithRawCallbackMethod_GetVersion() {
+      ::grpc::Service::MarkMethodRawCallback(1,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-                   ::grpc::CallbackServerContext*
-    #else
-                   ::grpc::experimental::CallbackServerContext*
-    #endif
-                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetVersion(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetVersion(context, request, response); }));
     }
-    ~ExperimentalWithRawCallbackMethod_GetVersion() override {
+    ~WithRawCallbackMethod_GetVersion() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -443,14 +329,8 @@ class SzProduct final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetVersion(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
-    #else
-    virtual ::grpc::experimental::ServerUnaryReactor* GetVersion(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
-    #endif
-      { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetLicense : public BaseClass {
@@ -461,8 +341,8 @@ class SzProduct final {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szproduct::GetLicenseRequest, ::szproduct::GetLicenseResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::szproduct::GetLicenseRequest, ::szproduct::GetLicenseResponse>* streamer) {
                        return this->StreamedGetLicense(context,
                          streamer);
@@ -488,8 +368,8 @@ class SzProduct final {
       ::grpc::Service::MarkMethodStreamed(1,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szproduct::GetVersionRequest, ::szproduct::GetVersionResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::szproduct::GetVersionRequest, ::szproduct::GetVersionResponse>* streamer) {
                        return this->StreamedGetVersion(context,
                          streamer);

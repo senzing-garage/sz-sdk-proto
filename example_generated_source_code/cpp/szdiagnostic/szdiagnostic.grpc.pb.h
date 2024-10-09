@@ -7,7 +7,6 @@
 #include "szdiagnostic.pb.h"
 
 #include <functional>
-#include <grpc/impl/codegen/port_platform.h>
 #include <grpcpp/impl/codegen/async_generic_service.h>
 #include <grpcpp/impl/codegen/async_stream.h>
 #include <grpcpp/impl/codegen/async_unary_call.h>
@@ -71,78 +70,24 @@ class SzDiagnostic final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::ReinitializeResponse>> PrepareAsyncReinitialize(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::ReinitializeResponse>>(PrepareAsyncReinitializeRaw(context, request, cq));
     }
-    class experimental_async_interface {
+    class async_interface {
      public:
-      virtual ~experimental_async_interface() {}
+      virtual ~async_interface() {}
       virtual void CheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void CheckDatastorePerformance(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, std::function<void(::grpc::Status)>) = 0;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void CheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void CheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void CheckDatastorePerformance(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void CheckDatastorePerformance(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void GetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest* request, ::szdiagnostic::GetDatastoreInfoResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetDatastoreInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::GetDatastoreInfoResponse* response, std::function<void(::grpc::Status)>) = 0;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void GetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest* request, ::szdiagnostic::GetDatastoreInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void GetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest* request, ::szdiagnostic::GetDatastoreInfoResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void GetDatastoreInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::GetDatastoreInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void GetDatastoreInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::GetDatastoreInfoResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void GetFeature(::grpc::ClientContext* context, const ::szdiagnostic::GetFeatureRequest* request, ::szdiagnostic::GetFeatureResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetFeature(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::GetFeatureResponse* response, std::function<void(::grpc::Status)>) = 0;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void GetFeature(::grpc::ClientContext* context, const ::szdiagnostic::GetFeatureRequest* request, ::szdiagnostic::GetFeatureResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void GetFeature(::grpc::ClientContext* context, const ::szdiagnostic::GetFeatureRequest* request, ::szdiagnostic::GetFeatureResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void GetFeature(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::GetFeatureResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void GetFeature(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::GetFeatureResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void PurgeRepository(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest* request, ::szdiagnostic::PurgeRepositoryResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void PurgeRepository(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::PurgeRepositoryResponse* response, std::function<void(::grpc::Status)>) = 0;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void PurgeRepository(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest* request, ::szdiagnostic::PurgeRepositoryResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void PurgeRepository(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest* request, ::szdiagnostic::PurgeRepositoryResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void PurgeRepository(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::PurgeRepositoryResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void PurgeRepository(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::PurgeRepositoryResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void Reinitialize(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest* request, ::szdiagnostic::ReinitializeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void Reinitialize(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::ReinitializeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void Reinitialize(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest* request, ::szdiagnostic::ReinitializeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void Reinitialize(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest* request, ::szdiagnostic::ReinitializeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void Reinitialize(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::ReinitializeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void Reinitialize(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::ReinitializeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
     };
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-    typedef class experimental_async_interface async_interface;
-    #endif
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-    async_interface* async() { return experimental_async(); }
-    #endif
-    virtual class experimental_async_interface* experimental_async() { return nullptr; }
-  private:
+    typedef class async_interface experimental_async_interface;
+    virtual class async_interface* async() { return nullptr; }
+    class async_interface* experimental_async() { return async(); }
+   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::CheckDatastorePerformanceResponse>* AsyncCheckDatastorePerformanceRaw(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::CheckDatastorePerformanceResponse>* PrepareAsyncCheckDatastorePerformanceRaw(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szdiagnostic::GetDatastoreInfoResponse>* AsyncGetDatastoreInfoRaw(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -156,7 +101,7 @@ class SzDiagnostic final {
   };
   class Stub final : public StubInterface {
    public:
-    Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
+    Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
     ::grpc::Status CheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::szdiagnostic::CheckDatastorePerformanceResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatastorePerformanceResponse>> AsyncCheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatastorePerformanceResponse>>(AsyncCheckDatastorePerformanceRaw(context, request, cq));
@@ -192,80 +137,30 @@ class SzDiagnostic final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szdiagnostic::ReinitializeResponse>> PrepareAsyncReinitialize(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szdiagnostic::ReinitializeResponse>>(PrepareAsyncReinitializeRaw(context, request, cq));
     }
-    class experimental_async final :
-      public StubInterface::experimental_async_interface {
+    class async final :
+      public StubInterface::async_interface {
      public:
       void CheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, std::function<void(::grpc::Status)>) override;
-      void CheckDatastorePerformance(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, std::function<void(::grpc::Status)>) override;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void CheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void CheckDatastorePerformance(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void CheckDatastorePerformance(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void CheckDatastorePerformance(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void GetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest* request, ::szdiagnostic::GetDatastoreInfoResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetDatastoreInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::GetDatastoreInfoResponse* response, std::function<void(::grpc::Status)>) override;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void GetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest* request, ::szdiagnostic::GetDatastoreInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void GetDatastoreInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest* request, ::szdiagnostic::GetDatastoreInfoResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void GetDatastoreInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::GetDatastoreInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void GetDatastoreInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::GetDatastoreInfoResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void GetFeature(::grpc::ClientContext* context, const ::szdiagnostic::GetFeatureRequest* request, ::szdiagnostic::GetFeatureResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetFeature(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::GetFeatureResponse* response, std::function<void(::grpc::Status)>) override;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void GetFeature(::grpc::ClientContext* context, const ::szdiagnostic::GetFeatureRequest* request, ::szdiagnostic::GetFeatureResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void GetFeature(::grpc::ClientContext* context, const ::szdiagnostic::GetFeatureRequest* request, ::szdiagnostic::GetFeatureResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void GetFeature(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::GetFeatureResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void GetFeature(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::GetFeatureResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void PurgeRepository(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest* request, ::szdiagnostic::PurgeRepositoryResponse* response, std::function<void(::grpc::Status)>) override;
-      void PurgeRepository(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::PurgeRepositoryResponse* response, std::function<void(::grpc::Status)>) override;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void PurgeRepository(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest* request, ::szdiagnostic::PurgeRepositoryResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void PurgeRepository(::grpc::ClientContext* context, const ::szdiagnostic::PurgeRepositoryRequest* request, ::szdiagnostic::PurgeRepositoryResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void PurgeRepository(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::PurgeRepositoryResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void PurgeRepository(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::PurgeRepositoryResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void Reinitialize(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest* request, ::szdiagnostic::ReinitializeResponse* response, std::function<void(::grpc::Status)>) override;
-      void Reinitialize(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::ReinitializeResponse* response, std::function<void(::grpc::Status)>) override;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void Reinitialize(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest* request, ::szdiagnostic::ReinitializeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void Reinitialize(::grpc::ClientContext* context, const ::szdiagnostic::ReinitializeRequest* request, ::szdiagnostic::ReinitializeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void Reinitialize(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::ReinitializeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void Reinitialize(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::szdiagnostic::ReinitializeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
      private:
       friend class Stub;
-      explicit experimental_async(Stub* stub): stub_(stub) { }
+      explicit async(Stub* stub): stub_(stub) { }
       Stub* stub() { return stub_; }
       Stub* stub_;
     };
-    class experimental_async_interface* experimental_async() override { return &async_stub_; }
+    class async* async() override { return &async_stub_; }
 
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
-    class experimental_async async_stub_{this};
+    class async async_stub_{this};
     ::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatastorePerformanceResponse>* AsyncCheckDatastorePerformanceRaw(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szdiagnostic::CheckDatastorePerformanceResponse>* PrepareAsyncCheckDatastorePerformanceRaw(::grpc::ClientContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szdiagnostic::GetDatastoreInfoResponse>* AsyncGetDatastoreInfoRaw(::grpc::ClientContext* context, const ::szdiagnostic::GetDatastoreInfoRequest& request, ::grpc::CompletionQueue* cq) override;
@@ -396,36 +291,22 @@ class SzDiagnostic final {
   };
   typedef WithAsyncMethod_CheckDatastorePerformance<WithAsyncMethod_GetDatastoreInfo<WithAsyncMethod_GetFeature<WithAsyncMethod_PurgeRepository<WithAsyncMethod_Reinitialize<Service > > > > > AsyncService;
   template <class BaseClass>
-  class ExperimentalWithCallbackMethod_CheckDatastorePerformance : public BaseClass {
+  class WithCallbackMethod_CheckDatastorePerformance : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithCallbackMethod_CheckDatastorePerformance() {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::Service::
-    #else
-      ::grpc::Service::experimental().
-    #endif
-        MarkMethodCallback(0,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::szdiagnostic::CheckDatastorePerformanceRequest, ::szdiagnostic::CheckDatastorePerformanceResponse>(
+    WithCallbackMethod_CheckDatastorePerformance() {
+      ::grpc::Service::MarkMethodCallback(0,
+          new ::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::CheckDatastorePerformanceRequest, ::szdiagnostic::CheckDatastorePerformanceResponse>(
             [this](
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-                   ::grpc::CallbackServerContext*
-    #else
-                   ::grpc::experimental::CallbackServerContext*
-    #endif
-                     context, const ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response) { return this->CheckDatastorePerformance(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::szdiagnostic::CheckDatastorePerformanceRequest* request, ::szdiagnostic::CheckDatastorePerformanceResponse* response) { return this->CheckDatastorePerformance(context, request, response); }));}
     void SetMessageAllocatorFor_CheckDatastorePerformance(
-        ::grpc::experimental::MessageAllocator< ::szdiagnostic::CheckDatastorePerformanceRequest, ::szdiagnostic::CheckDatastorePerformanceResponse>* allocator) {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+        ::grpc::MessageAllocator< ::szdiagnostic::CheckDatastorePerformanceRequest, ::szdiagnostic::CheckDatastorePerformanceResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
-    #else
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
-    #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szdiagnostic::CheckDatastorePerformanceRequest, ::szdiagnostic::CheckDatastorePerformanceResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::CheckDatastorePerformanceRequest, ::szdiagnostic::CheckDatastorePerformanceResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~ExperimentalWithCallbackMethod_CheckDatastorePerformance() override {
+    ~WithCallbackMethod_CheckDatastorePerformance() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -433,46 +314,26 @@ class SzDiagnostic final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* CheckDatastorePerformance(
-      ::grpc::CallbackServerContext* /*context*/, const ::szdiagnostic::CheckDatastorePerformanceRequest* /*request*/, ::szdiagnostic::CheckDatastorePerformanceResponse* /*response*/)
-    #else
-    virtual ::grpc::experimental::ServerUnaryReactor* CheckDatastorePerformance(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szdiagnostic::CheckDatastorePerformanceRequest* /*request*/, ::szdiagnostic::CheckDatastorePerformanceResponse* /*response*/)
-    #endif
-      { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szdiagnostic::CheckDatastorePerformanceRequest* /*request*/, ::szdiagnostic::CheckDatastorePerformanceResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class ExperimentalWithCallbackMethod_GetDatastoreInfo : public BaseClass {
+  class WithCallbackMethod_GetDatastoreInfo : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithCallbackMethod_GetDatastoreInfo() {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::Service::
-    #else
-      ::grpc::Service::experimental().
-    #endif
-        MarkMethodCallback(1,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::szdiagnostic::GetDatastoreInfoRequest, ::szdiagnostic::GetDatastoreInfoResponse>(
+    WithCallbackMethod_GetDatastoreInfo() {
+      ::grpc::Service::MarkMethodCallback(1,
+          new ::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::GetDatastoreInfoRequest, ::szdiagnostic::GetDatastoreInfoResponse>(
             [this](
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-                   ::grpc::CallbackServerContext*
-    #else
-                   ::grpc::experimental::CallbackServerContext*
-    #endif
-                     context, const ::szdiagnostic::GetDatastoreInfoRequest* request, ::szdiagnostic::GetDatastoreInfoResponse* response) { return this->GetDatastoreInfo(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::szdiagnostic::GetDatastoreInfoRequest* request, ::szdiagnostic::GetDatastoreInfoResponse* response) { return this->GetDatastoreInfo(context, request, response); }));}
     void SetMessageAllocatorFor_GetDatastoreInfo(
-        ::grpc::experimental::MessageAllocator< ::szdiagnostic::GetDatastoreInfoRequest, ::szdiagnostic::GetDatastoreInfoResponse>* allocator) {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+        ::grpc::MessageAllocator< ::szdiagnostic::GetDatastoreInfoRequest, ::szdiagnostic::GetDatastoreInfoResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
-    #else
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(1);
-    #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szdiagnostic::GetDatastoreInfoRequest, ::szdiagnostic::GetDatastoreInfoResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::GetDatastoreInfoRequest, ::szdiagnostic::GetDatastoreInfoResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~ExperimentalWithCallbackMethod_GetDatastoreInfo() override {
+    ~WithCallbackMethod_GetDatastoreInfo() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -480,46 +341,26 @@ class SzDiagnostic final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetDatastoreInfo(
-      ::grpc::CallbackServerContext* /*context*/, const ::szdiagnostic::GetDatastoreInfoRequest* /*request*/, ::szdiagnostic::GetDatastoreInfoResponse* /*response*/)
-    #else
-    virtual ::grpc::experimental::ServerUnaryReactor* GetDatastoreInfo(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szdiagnostic::GetDatastoreInfoRequest* /*request*/, ::szdiagnostic::GetDatastoreInfoResponse* /*response*/)
-    #endif
-      { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szdiagnostic::GetDatastoreInfoRequest* /*request*/, ::szdiagnostic::GetDatastoreInfoResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class ExperimentalWithCallbackMethod_GetFeature : public BaseClass {
+  class WithCallbackMethod_GetFeature : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithCallbackMethod_GetFeature() {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::Service::
-    #else
-      ::grpc::Service::experimental().
-    #endif
-        MarkMethodCallback(2,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::szdiagnostic::GetFeatureRequest, ::szdiagnostic::GetFeatureResponse>(
+    WithCallbackMethod_GetFeature() {
+      ::grpc::Service::MarkMethodCallback(2,
+          new ::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::GetFeatureRequest, ::szdiagnostic::GetFeatureResponse>(
             [this](
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-                   ::grpc::CallbackServerContext*
-    #else
-                   ::grpc::experimental::CallbackServerContext*
-    #endif
-                     context, const ::szdiagnostic::GetFeatureRequest* request, ::szdiagnostic::GetFeatureResponse* response) { return this->GetFeature(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::szdiagnostic::GetFeatureRequest* request, ::szdiagnostic::GetFeatureResponse* response) { return this->GetFeature(context, request, response); }));}
     void SetMessageAllocatorFor_GetFeature(
-        ::grpc::experimental::MessageAllocator< ::szdiagnostic::GetFeatureRequest, ::szdiagnostic::GetFeatureResponse>* allocator) {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+        ::grpc::MessageAllocator< ::szdiagnostic::GetFeatureRequest, ::szdiagnostic::GetFeatureResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
-    #else
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(2);
-    #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szdiagnostic::GetFeatureRequest, ::szdiagnostic::GetFeatureResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::GetFeatureRequest, ::szdiagnostic::GetFeatureResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~ExperimentalWithCallbackMethod_GetFeature() override {
+    ~WithCallbackMethod_GetFeature() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -527,46 +368,26 @@ class SzDiagnostic final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetFeature(
-      ::grpc::CallbackServerContext* /*context*/, const ::szdiagnostic::GetFeatureRequest* /*request*/, ::szdiagnostic::GetFeatureResponse* /*response*/)
-    #else
-    virtual ::grpc::experimental::ServerUnaryReactor* GetFeature(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szdiagnostic::GetFeatureRequest* /*request*/, ::szdiagnostic::GetFeatureResponse* /*response*/)
-    #endif
-      { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szdiagnostic::GetFeatureRequest* /*request*/, ::szdiagnostic::GetFeatureResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class ExperimentalWithCallbackMethod_PurgeRepository : public BaseClass {
+  class WithCallbackMethod_PurgeRepository : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithCallbackMethod_PurgeRepository() {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::Service::
-    #else
-      ::grpc::Service::experimental().
-    #endif
-        MarkMethodCallback(3,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::szdiagnostic::PurgeRepositoryRequest, ::szdiagnostic::PurgeRepositoryResponse>(
+    WithCallbackMethod_PurgeRepository() {
+      ::grpc::Service::MarkMethodCallback(3,
+          new ::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::PurgeRepositoryRequest, ::szdiagnostic::PurgeRepositoryResponse>(
             [this](
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-                   ::grpc::CallbackServerContext*
-    #else
-                   ::grpc::experimental::CallbackServerContext*
-    #endif
-                     context, const ::szdiagnostic::PurgeRepositoryRequest* request, ::szdiagnostic::PurgeRepositoryResponse* response) { return this->PurgeRepository(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::szdiagnostic::PurgeRepositoryRequest* request, ::szdiagnostic::PurgeRepositoryResponse* response) { return this->PurgeRepository(context, request, response); }));}
     void SetMessageAllocatorFor_PurgeRepository(
-        ::grpc::experimental::MessageAllocator< ::szdiagnostic::PurgeRepositoryRequest, ::szdiagnostic::PurgeRepositoryResponse>* allocator) {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+        ::grpc::MessageAllocator< ::szdiagnostic::PurgeRepositoryRequest, ::szdiagnostic::PurgeRepositoryResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
-    #else
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(3);
-    #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szdiagnostic::PurgeRepositoryRequest, ::szdiagnostic::PurgeRepositoryResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::PurgeRepositoryRequest, ::szdiagnostic::PurgeRepositoryResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~ExperimentalWithCallbackMethod_PurgeRepository() override {
+    ~WithCallbackMethod_PurgeRepository() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -574,46 +395,26 @@ class SzDiagnostic final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* PurgeRepository(
-      ::grpc::CallbackServerContext* /*context*/, const ::szdiagnostic::PurgeRepositoryRequest* /*request*/, ::szdiagnostic::PurgeRepositoryResponse* /*response*/)
-    #else
-    virtual ::grpc::experimental::ServerUnaryReactor* PurgeRepository(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szdiagnostic::PurgeRepositoryRequest* /*request*/, ::szdiagnostic::PurgeRepositoryResponse* /*response*/)
-    #endif
-      { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szdiagnostic::PurgeRepositoryRequest* /*request*/, ::szdiagnostic::PurgeRepositoryResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class ExperimentalWithCallbackMethod_Reinitialize : public BaseClass {
+  class WithCallbackMethod_Reinitialize : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithCallbackMethod_Reinitialize() {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::Service::
-    #else
-      ::grpc::Service::experimental().
-    #endif
-        MarkMethodCallback(4,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::szdiagnostic::ReinitializeRequest, ::szdiagnostic::ReinitializeResponse>(
+    WithCallbackMethod_Reinitialize() {
+      ::grpc::Service::MarkMethodCallback(4,
+          new ::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::ReinitializeRequest, ::szdiagnostic::ReinitializeResponse>(
             [this](
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-                   ::grpc::CallbackServerContext*
-    #else
-                   ::grpc::experimental::CallbackServerContext*
-    #endif
-                     context, const ::szdiagnostic::ReinitializeRequest* request, ::szdiagnostic::ReinitializeResponse* response) { return this->Reinitialize(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::szdiagnostic::ReinitializeRequest* request, ::szdiagnostic::ReinitializeResponse* response) { return this->Reinitialize(context, request, response); }));}
     void SetMessageAllocatorFor_Reinitialize(
-        ::grpc::experimental::MessageAllocator< ::szdiagnostic::ReinitializeRequest, ::szdiagnostic::ReinitializeResponse>* allocator) {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+        ::grpc::MessageAllocator< ::szdiagnostic::ReinitializeRequest, ::szdiagnostic::ReinitializeResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
-    #else
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(4);
-    #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::szdiagnostic::ReinitializeRequest, ::szdiagnostic::ReinitializeResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::szdiagnostic::ReinitializeRequest, ::szdiagnostic::ReinitializeResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~ExperimentalWithCallbackMethod_Reinitialize() override {
+    ~WithCallbackMethod_Reinitialize() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -621,20 +422,11 @@ class SzDiagnostic final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* Reinitialize(
-      ::grpc::CallbackServerContext* /*context*/, const ::szdiagnostic::ReinitializeRequest* /*request*/, ::szdiagnostic::ReinitializeResponse* /*response*/)
-    #else
-    virtual ::grpc::experimental::ServerUnaryReactor* Reinitialize(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::szdiagnostic::ReinitializeRequest* /*request*/, ::szdiagnostic::ReinitializeResponse* /*response*/)
-    #endif
-      { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::szdiagnostic::ReinitializeRequest* /*request*/, ::szdiagnostic::ReinitializeResponse* /*response*/)  { return nullptr; }
   };
-  #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-  typedef ExperimentalWithCallbackMethod_CheckDatastorePerformance<ExperimentalWithCallbackMethod_GetDatastoreInfo<ExperimentalWithCallbackMethod_GetFeature<ExperimentalWithCallbackMethod_PurgeRepository<ExperimentalWithCallbackMethod_Reinitialize<Service > > > > > CallbackService;
-  #endif
-
-  typedef ExperimentalWithCallbackMethod_CheckDatastorePerformance<ExperimentalWithCallbackMethod_GetDatastoreInfo<ExperimentalWithCallbackMethod_GetFeature<ExperimentalWithCallbackMethod_PurgeRepository<ExperimentalWithCallbackMethod_Reinitialize<Service > > > > > ExperimentalCallbackService;
+  typedef WithCallbackMethod_CheckDatastorePerformance<WithCallbackMethod_GetDatastoreInfo<WithCallbackMethod_GetFeature<WithCallbackMethod_PurgeRepository<WithCallbackMethod_Reinitialize<Service > > > > > CallbackService;
+  typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_CheckDatastorePerformance : public BaseClass {
    private:
@@ -821,27 +613,17 @@ class SzDiagnostic final {
     }
   };
   template <class BaseClass>
-  class ExperimentalWithRawCallbackMethod_CheckDatastorePerformance : public BaseClass {
+  class WithRawCallbackMethod_CheckDatastorePerformance : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithRawCallbackMethod_CheckDatastorePerformance() {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::Service::
-    #else
-      ::grpc::Service::experimental().
-    #endif
-        MarkMethodRawCallback(0,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    WithRawCallbackMethod_CheckDatastorePerformance() {
+      ::grpc::Service::MarkMethodRawCallback(0,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-                   ::grpc::CallbackServerContext*
-    #else
-                   ::grpc::experimental::CallbackServerContext*
-    #endif
-                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CheckDatastorePerformance(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CheckDatastorePerformance(context, request, response); }));
     }
-    ~ExperimentalWithRawCallbackMethod_CheckDatastorePerformance() override {
+    ~WithRawCallbackMethod_CheckDatastorePerformance() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -849,37 +631,21 @@ class SzDiagnostic final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* CheckDatastorePerformance(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
-    #else
-    virtual ::grpc::experimental::ServerUnaryReactor* CheckDatastorePerformance(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
-    #endif
-      { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class ExperimentalWithRawCallbackMethod_GetDatastoreInfo : public BaseClass {
+  class WithRawCallbackMethod_GetDatastoreInfo : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithRawCallbackMethod_GetDatastoreInfo() {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::Service::
-    #else
-      ::grpc::Service::experimental().
-    #endif
-        MarkMethodRawCallback(1,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    WithRawCallbackMethod_GetDatastoreInfo() {
+      ::grpc::Service::MarkMethodRawCallback(1,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-                   ::grpc::CallbackServerContext*
-    #else
-                   ::grpc::experimental::CallbackServerContext*
-    #endif
-                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetDatastoreInfo(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetDatastoreInfo(context, request, response); }));
     }
-    ~ExperimentalWithRawCallbackMethod_GetDatastoreInfo() override {
+    ~WithRawCallbackMethod_GetDatastoreInfo() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -887,37 +653,21 @@ class SzDiagnostic final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetDatastoreInfo(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
-    #else
-    virtual ::grpc::experimental::ServerUnaryReactor* GetDatastoreInfo(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
-    #endif
-      { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class ExperimentalWithRawCallbackMethod_GetFeature : public BaseClass {
+  class WithRawCallbackMethod_GetFeature : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithRawCallbackMethod_GetFeature() {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::Service::
-    #else
-      ::grpc::Service::experimental().
-    #endif
-        MarkMethodRawCallback(2,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    WithRawCallbackMethod_GetFeature() {
+      ::grpc::Service::MarkMethodRawCallback(2,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-                   ::grpc::CallbackServerContext*
-    #else
-                   ::grpc::experimental::CallbackServerContext*
-    #endif
-                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetFeature(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetFeature(context, request, response); }));
     }
-    ~ExperimentalWithRawCallbackMethod_GetFeature() override {
+    ~WithRawCallbackMethod_GetFeature() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -925,37 +675,21 @@ class SzDiagnostic final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetFeature(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
-    #else
-    virtual ::grpc::experimental::ServerUnaryReactor* GetFeature(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
-    #endif
-      { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class ExperimentalWithRawCallbackMethod_PurgeRepository : public BaseClass {
+  class WithRawCallbackMethod_PurgeRepository : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithRawCallbackMethod_PurgeRepository() {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::Service::
-    #else
-      ::grpc::Service::experimental().
-    #endif
-        MarkMethodRawCallback(3,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    WithRawCallbackMethod_PurgeRepository() {
+      ::grpc::Service::MarkMethodRawCallback(3,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-                   ::grpc::CallbackServerContext*
-    #else
-                   ::grpc::experimental::CallbackServerContext*
-    #endif
-                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PurgeRepository(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PurgeRepository(context, request, response); }));
     }
-    ~ExperimentalWithRawCallbackMethod_PurgeRepository() override {
+    ~WithRawCallbackMethod_PurgeRepository() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -963,37 +697,21 @@ class SzDiagnostic final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* PurgeRepository(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
-    #else
-    virtual ::grpc::experimental::ServerUnaryReactor* PurgeRepository(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
-    #endif
-      { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class ExperimentalWithRawCallbackMethod_Reinitialize : public BaseClass {
+  class WithRawCallbackMethod_Reinitialize : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithRawCallbackMethod_Reinitialize() {
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::Service::
-    #else
-      ::grpc::Service::experimental().
-    #endif
-        MarkMethodRawCallback(4,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+    WithRawCallbackMethod_Reinitialize() {
+      ::grpc::Service::MarkMethodRawCallback(4,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-                   ::grpc::CallbackServerContext*
-    #else
-                   ::grpc::experimental::CallbackServerContext*
-    #endif
-                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Reinitialize(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Reinitialize(context, request, response); }));
     }
-    ~ExperimentalWithRawCallbackMethod_Reinitialize() override {
+    ~WithRawCallbackMethod_Reinitialize() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
@@ -1001,14 +719,8 @@ class SzDiagnostic final {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* Reinitialize(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
-    #else
-    virtual ::grpc::experimental::ServerUnaryReactor* Reinitialize(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
-    #endif
-      { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_CheckDatastorePerformance : public BaseClass {
@@ -1019,8 +731,8 @@ class SzDiagnostic final {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szdiagnostic::CheckDatastorePerformanceRequest, ::szdiagnostic::CheckDatastorePerformanceResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::szdiagnostic::CheckDatastorePerformanceRequest, ::szdiagnostic::CheckDatastorePerformanceResponse>* streamer) {
                        return this->StreamedCheckDatastorePerformance(context,
                          streamer);
@@ -1046,8 +758,8 @@ class SzDiagnostic final {
       ::grpc::Service::MarkMethodStreamed(1,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szdiagnostic::GetDatastoreInfoRequest, ::szdiagnostic::GetDatastoreInfoResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::szdiagnostic::GetDatastoreInfoRequest, ::szdiagnostic::GetDatastoreInfoResponse>* streamer) {
                        return this->StreamedGetDatastoreInfo(context,
                          streamer);
@@ -1073,8 +785,8 @@ class SzDiagnostic final {
       ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szdiagnostic::GetFeatureRequest, ::szdiagnostic::GetFeatureResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::szdiagnostic::GetFeatureRequest, ::szdiagnostic::GetFeatureResponse>* streamer) {
                        return this->StreamedGetFeature(context,
                          streamer);
@@ -1100,8 +812,8 @@ class SzDiagnostic final {
       ::grpc::Service::MarkMethodStreamed(3,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szdiagnostic::PurgeRepositoryRequest, ::szdiagnostic::PurgeRepositoryResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::szdiagnostic::PurgeRepositoryRequest, ::szdiagnostic::PurgeRepositoryResponse>* streamer) {
                        return this->StreamedPurgeRepository(context,
                          streamer);
@@ -1127,8 +839,8 @@ class SzDiagnostic final {
       ::grpc::Service::MarkMethodStreamed(4,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szdiagnostic::ReinitializeRequest, ::szdiagnostic::ReinitializeResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::szdiagnostic::ReinitializeRequest, ::szdiagnostic::ReinitializeResponse>* streamer) {
                        return this->StreamedReinitialize(context,
                          streamer);
