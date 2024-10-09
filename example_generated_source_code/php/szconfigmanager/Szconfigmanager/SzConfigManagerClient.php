@@ -20,7 +20,7 @@ class SzConfigManagerClient extends \Grpc\BaseStub {
      * @param \Szconfigmanager\AddConfigRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szconfigmanager\AddConfigResponse
+     * @return \Grpc\UnaryCall
      */
     public function AddConfig(\Szconfigmanager\AddConfigRequest $argument,
       $metadata = [], $options = []) {
@@ -34,7 +34,7 @@ class SzConfigManagerClient extends \Grpc\BaseStub {
      * @param \Szconfigmanager\GetConfigRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szconfigmanager\GetConfigResponse
+     * @return \Grpc\UnaryCall
      */
     public function GetConfig(\Szconfigmanager\GetConfigRequest $argument,
       $metadata = [], $options = []) {
@@ -48,7 +48,7 @@ class SzConfigManagerClient extends \Grpc\BaseStub {
      * @param \Szconfigmanager\GetConfigsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szconfigmanager\GetConfigsResponse
+     * @return \Grpc\UnaryCall
      */
     public function GetConfigs(\Szconfigmanager\GetConfigsRequest $argument,
       $metadata = [], $options = []) {
@@ -62,7 +62,7 @@ class SzConfigManagerClient extends \Grpc\BaseStub {
      * @param \Szconfigmanager\GetDefaultConfigIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szconfigmanager\GetDefaultConfigIdResponse
+     * @return \Grpc\UnaryCall
      */
     public function GetDefaultConfigId(\Szconfigmanager\GetDefaultConfigIdRequest $argument,
       $metadata = [], $options = []) {
@@ -76,7 +76,7 @@ class SzConfigManagerClient extends \Grpc\BaseStub {
      * @param \Szconfigmanager\ReplaceDefaultConfigIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szconfigmanager\ReplaceDefaultConfigIdResponse
+     * @return \Grpc\UnaryCall
      */
     public function ReplaceDefaultConfigId(\Szconfigmanager\ReplaceDefaultConfigIdRequest $argument,
       $metadata = [], $options = []) {
@@ -90,7 +90,7 @@ class SzConfigManagerClient extends \Grpc\BaseStub {
      * @param \Szconfigmanager\SetDefaultConfigIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szconfigmanager\SetDefaultConfigIdResponse
+     * @return \Grpc\UnaryCall
      */
     public function SetDefaultConfigId(\Szconfigmanager\SetDefaultConfigIdRequest $argument,
       $metadata = [], $options = []) {

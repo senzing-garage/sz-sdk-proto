@@ -20,7 +20,7 @@ class SzDiagnosticClient extends \Grpc\BaseStub {
      * @param \Szdiagnostic\CheckDatastorePerformanceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szdiagnostic\CheckDatastorePerformanceResponse
+     * @return \Grpc\UnaryCall
      */
     public function CheckDatastorePerformance(\Szdiagnostic\CheckDatastorePerformanceRequest $argument,
       $metadata = [], $options = []) {
@@ -34,7 +34,7 @@ class SzDiagnosticClient extends \Grpc\BaseStub {
      * @param \Szdiagnostic\GetDatastoreInfoRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szdiagnostic\GetDatastoreInfoResponse
+     * @return \Grpc\UnaryCall
      */
     public function GetDatastoreInfo(\Szdiagnostic\GetDatastoreInfoRequest $argument,
       $metadata = [], $options = []) {
@@ -48,7 +48,7 @@ class SzDiagnosticClient extends \Grpc\BaseStub {
      * @param \Szdiagnostic\GetFeatureRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szdiagnostic\GetFeatureResponse
+     * @return \Grpc\UnaryCall
      */
     public function GetFeature(\Szdiagnostic\GetFeatureRequest $argument,
       $metadata = [], $options = []) {
@@ -62,7 +62,7 @@ class SzDiagnosticClient extends \Grpc\BaseStub {
      * @param \Szdiagnostic\PurgeRepositoryRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szdiagnostic\PurgeRepositoryResponse
+     * @return \Grpc\UnaryCall
      */
     public function PurgeRepository(\Szdiagnostic\PurgeRepositoryRequest $argument,
       $metadata = [], $options = []) {
@@ -76,7 +76,7 @@ class SzDiagnosticClient extends \Grpc\BaseStub {
      * @param \Szdiagnostic\ReinitializeRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Szdiagnostic\ReinitializeResponse
+     * @return \Grpc\UnaryCall
      */
     public function Reinitialize(\Szdiagnostic\ReinitializeRequest $argument,
       $metadata = [], $options = []) {
