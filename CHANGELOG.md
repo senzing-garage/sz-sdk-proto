@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning].
 
 - ...
 
+## [0.7.10] - 2024-10-08
+
+### Changed in 0.7.10
+
+- Generated using `protoc --version` > `libprotoc 25.1`
+
 ## [0.7.9] - 2024-10-08
 
 ### Changed in 0.7.9
