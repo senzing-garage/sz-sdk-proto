@@ -4,8 +4,8 @@ go 1.21
 toolchain go1.22.9
 
 require (
-	google.golang.org/grpc v1.69.0
-	google.golang.org/protobuf v1.35.2
+	google.golang.org/grpc v1.69.2
+	google.golang.org/protobuf v1.36.0
 )
 
 require (
