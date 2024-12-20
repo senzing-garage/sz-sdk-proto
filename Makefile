@@ -105,9 +105,9 @@ generate-go:
 
 .PHONY: generate-java
 generate-java:
+	OUTPUT_DIR=example_generated_source_code/java/; \
+	mkdir -p $${OUTPUT_DIR}; \
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
-		OUTPUT_DIR=example_generated_source_code/java/$${SENZING_COMPONENT}; \
-		mkdir -p $${OUTPUT_DIR}; \
 		protoc --java_out=$${OUTPUT_DIR}  $${SENZING_COMPONENT}.proto; \
 	done
 
