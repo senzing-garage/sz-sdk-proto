@@ -63,6 +63,8 @@ dependencies-for-development: dependencies-for-development-osarch-specific
 	@sudo pecl channel-update pecl.php.net
 	@sudo pecl install grpc
 
+dependencies-for-nodejs: 
+	@npm install -D grpc-tools @grpc/grpc-js @grpc/proto-loader typescript tsx
 
 .PHONY: dependencies
 dependencies:
@@ -93,7 +95,6 @@ generate-csharp:
 		protoc --grpc_out=$${OUTPUT_DIR}  --plugin=protoc-gen-grpc=`which grpc_cpp_plugin`  $${SENZING_COMPONENT}.proto; \
 	done
 
-
 .PHONY: generate-go
 generate-go:
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
@@ -101,7 +102,6 @@ generate-go:
 		mkdir -p $${OUTPUT_DIR}; \
 		protoc --go_out=$${OUTPUT_DIR} --go_opt=paths=source_relative --go-grpc_out=$${OUTPUT_DIR} --go-grpc_opt=paths=source_relative $${SENZING_COMPONENT}.proto; \
 	done
-
 
 .PHONY: generate-java
 generate-java:
@@ -111,6 +111,13 @@ generate-java:
 		protoc --java_out=$${OUTPUT_DIR}  $${SENZING_COMPONENT}.proto; \
 	done
 
+.PHONY: generate-nodejs
+generate-nodejs:
+	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
+		OUTPUT_DIR=example_generated_source_code/nodejs/$${SENZING_COMPONENT}; \
+		mkdir -p $${OUTPUT_DIR}; \
+		grpc_tools_node_protoc --js_out=import_style=commonjs,binary:$${OUTPUT_DIR} --grpc_out=grpc_js:$${OUTPUT_DIR} $${SENZING_COMPONENT}.proto; \
+	done
 
 .PHONY: generate-php
 generate-php:
@@ -119,7 +126,6 @@ generate-php:
 		mkdir -p $${OUTPUT_DIR}; \
 		protoc --php_out=$${OUTPUT_DIR}  --grpc_out=$${OUTPUT_DIR}  --plugin=protoc-gen-grpc=`which grpc_php_plugin`  $${SENZING_COMPONENT}.proto; \
 	done
-
 
 .PHONY: generate-python
 generate-python:
@@ -141,6 +147,21 @@ generate-ruby:
 		grpc_tools_ruby_protoc --proto_path=. --ruby_out=$${OUTPUT_DIR}  --grpc_out=$${OUTPUT_DIR}  $${SENZING_COMPONENT}.proto; \
 	done
 
+# all typescript compilers follow short name abbr name convention
+generate-ts:
+	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
+		OUTPUT_DIR=example_generated_source_code/ts/$${SENZING_COMPONENT}; \
+		mkdir -p $${OUTPUT_DIR}; \
+		npx proto-loader-gen-types --grpcLib=@grpc/grpc-js --outDir=$${OUTPUT_DIR} $${SENZING_COMPONENT}.proto; \
+	done
+# exactly the same as "generate-ts" but w/ the longname
+generate-typescript:
+	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
+		OUTPUT_DIR=example_generated_source_code/ts/$${SENZING_COMPONENT}; \
+		mkdir -p $${OUTPUT_DIR}; \
+		npx proto-loader-gen-types --grpcLib=@grpc/grpc-js --outDir=$${OUTPUT_DIR} $${SENZING_COMPONENT}.proto; \
+	done
+
 # -----------------------------------------------------------------------------
 # Documentation
 # -----------------------------------------------------------------------------
@@ -153,7 +174,7 @@ documentation: documentation-osarch-specific
 # -----------------------------------------------------------------------------
 
 .PHONY: clean
-clean: clean-csharp clean-go clean-java clean-php clean-python clean-ruby
+clean: clean-csharp clean-go clean-java clean-nodejs clean-php clean-python clean-ruby
 
 
 .PHONY: clean-csharp
@@ -174,6 +195,9 @@ clean-go:
 clean-java:
 	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/java/* || true
 
+.PHONY: clean-nodejs
+clean-node:
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/nodejs/* || true
 
 .PHONY: clean-php
 clean-php:
@@ -192,6 +216,11 @@ clean-python:
 .PHONY: clean-ruby
 clean-ruby:
 	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/ruby/* || true
+
+.PHONY: clean-ts
+clean-node:
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/ts/* || true
+
 
 # -----------------------------------------------------------------------------
 # Utility targets

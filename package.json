@@ -1,0 +1,15 @@
+{
+  "name": "sz-sdk-grpc",
+  "version": "0.0.1",
+  "type": "module",
+  "author": "sdk@senzing.com",
+  "license": "MIT",
+  "description": "Senzing gRPC",
+  "devDependencies": {
+    "@grpc/grpc-js": "^1.12.5",
+    "@grpc/proto-loader": "^0.7.13",
+    "grpc-tools": "^1.12.4",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
