@@ -148,13 +148,8 @@ generate-ruby:
 	done
 
 # all typescript compilers follow short name abbr name convention
-generate-ts:
-	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
-		OUTPUT_DIR=example_generated_source_code/ts/$${SENZING_COMPONENT}; \
-		mkdir -p $${OUTPUT_DIR}; \
-		npx proto-loader-gen-types --grpcLib=@grpc/grpc-js --outDir=$${OUTPUT_DIR} $${SENZING_COMPONENT}.proto; \
-	done
-# exactly the same as "generate-ts" but w/ the longname
+.PHONY: generate-ts
+generate-ts: generate-typescript
 generate-typescript:
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
 		OUTPUT_DIR=example_generated_source_code/ts/$${SENZING_COMPONENT}; \
@@ -218,7 +213,8 @@ clean-ruby:
 	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/ruby/* || true
 
 .PHONY: clean-ts
-clean-node:
+clean-ts: clean-typescript
+clean-typescript:
 	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/ts/* || true
 
 
