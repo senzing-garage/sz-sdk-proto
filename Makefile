@@ -63,8 +63,9 @@ dependencies-for-development: dependencies-for-development-osarch-specific
 	@sudo pecl channel-update pecl.php.net
 	@sudo pecl install grpc
 
-dependencies-for-nodejs: 
-	@npm install -D grpc-tools @grpc/grpc-js @grpc/proto-loader typescript tsx
+dependencies-for-nodejs:
+	@npm install -g grpc-tools
+	@npm install -D @grpc/grpc-js @grpc/proto-loader grpc_tools_node_protoc_ts typescript tsx
 
 .PHONY: dependencies
 dependencies:
@@ -117,7 +118,19 @@ generate-nodejs:
 		OUTPUT_DIR=example_generated_source_code/nodejs/$${SENZING_COMPONENT}; \
 		mkdir -p $${OUTPUT_DIR}; \
 		grpc_tools_node_protoc --js_out=import_style=commonjs,binary:$${OUTPUT_DIR} --grpc_out=grpc_js:$${OUTPUT_DIR} $${SENZING_COMPONENT}.proto; \
+		protoc \
+		--plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts \
+		--ts_out=grpc_js:$${OUTPUT_DIR} \
+		-I ./ \
+		$${SENZING_COMPONENT}.proto; \
 	done
+#.PHONY: generate-nodejs
+#generate-nodejs:
+#	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
+#		OUTPUT_DIR=example_generated_source_code/nodejs/$${SENZING_COMPONENT}; \
+#		mkdir -p $${OUTPUT_DIR}; \
+#		grpc_tools_node_protoc --js_out=import_style=commonjs,binary:$${OUTPUT_DIR} --grpc_out=grpc_js:$${OUTPUT_DIR} $${SENZING_COMPONENT}.proto; \
+#	done
 
 .PHONY: generate-php
 generate-php:
@@ -169,7 +182,7 @@ documentation: documentation-osarch-specific
 # -----------------------------------------------------------------------------
 
 .PHONY: clean
-clean: clean-csharp clean-go clean-java clean-nodejs clean-php clean-python clean-ruby
+clean: clean-csharp clean-go clean-java clean-nodejs clean-php clean-python clean-ruby clean-ts
 
 
 .PHONY: clean-csharp
