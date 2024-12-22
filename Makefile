@@ -116,21 +116,19 @@ generate-java:
 generate-nodejs:
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
 		OUTPUT_DIR=example_generated_source_code/nodejs/$${SENZING_COMPONENT}; \
+		PROTO_DIR=example_generated_source_code/nodejs/proto; \
 		mkdir -p $${OUTPUT_DIR}; \
-		grpc_tools_node_protoc --js_out=import_style=commonjs,binary:$${OUTPUT_DIR} --grpc_out=grpc_js:$${OUTPUT_DIR} $${SENZING_COMPONENT}.proto; \
-		protoc \
-		--plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts \
-		--ts_out=grpc_js:$${OUTPUT_DIR} \
-		-I ./ \
-		$${SENZING_COMPONENT}.proto; \
+		mkdir -p $${PROTO_DIR}; \
+		cp -r $${SENZING_COMPONENT}.proto $${PROTO_DIR}/; \
+		grpc_tools_node_protoc \
+			--js_out=import_style=commonjs,binary:$${OUTPUT_DIR} \
+			--grpc_out=grpc_js:$${OUTPUT_DIR} \
+			--ts_out=grpc_js:$${OUTPUT_DIR} \
+			--plugin=protoc-gen-grpc=`which grpc_tools_node_protoc_plugin` \
+			--plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts \
+			-I ./ \
+			$${SENZING_COMPONENT}.proto; \
 	done
-#.PHONY: generate-nodejs
-#generate-nodejs:
-#	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
-#		OUTPUT_DIR=example_generated_source_code/nodejs/$${SENZING_COMPONENT}; \
-#		mkdir -p $${OUTPUT_DIR}; \
-#		grpc_tools_node_protoc --js_out=import_style=commonjs,binary:$${OUTPUT_DIR} --grpc_out=grpc_js:$${OUTPUT_DIR} $${SENZING_COMPONENT}.proto; \
-#	done
 
 .PHONY: generate-php
 generate-php:
@@ -166,7 +164,10 @@ generate-ts: generate-typescript
 generate-typescript:
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
 		OUTPUT_DIR=example_generated_source_code/ts/$${SENZING_COMPONENT}; \
+		PROTO_DIR=example_generated_source_code/ts/proto; \
 		mkdir -p $${OUTPUT_DIR}; \
+		mkdir -p $${PROTO_DIR}; \
+		cp -r $${SENZING_COMPONENT}.proto $${PROTO_DIR}/; \
 		npx proto-loader-gen-types --grpcLib=@grpc/grpc-js --outDir=$${OUTPUT_DIR} $${SENZING_COMPONENT}.proto; \
 	done
 
@@ -203,8 +204,9 @@ clean-go:
 clean-java:
 	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/java/* || true
 
-.PHONY: clean-nodejs
-clean-node:
+.PHONY: clean-node
+clean-node: clean-nodejs
+clean-nodejs:
 	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/nodejs/* || true
 
 .PHONY: clean-php
