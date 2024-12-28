@@ -112,6 +112,7 @@ generate-java:
 		protoc --java_out=$${OUTPUT_DIR}  $${SENZING_COMPONENT}.proto; \
 	done
 
+
 .PHONY: generate-nodejs
 generate-nodejs:
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
@@ -122,11 +123,8 @@ generate-nodejs:
 		cp -r $${SENZING_COMPONENT}.proto $${PROTO_DIR}/; \
 		grpc_tools_node_protoc \
 			--js_out=import_style=commonjs,binary:$${OUTPUT_DIR} \
+			--ts_out=import_style=commonjs,binary:$${OUTPUT_DIR} \
 			--grpc_out=grpc_js:$${OUTPUT_DIR} \
-			--ts_out=grpc_js:$${OUTPUT_DIR} \
-			--plugin=protoc-gen-grpc=`which grpc_tools_node_protoc_plugin` \
-			--plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts \
-			-I ./ \
 			$${SENZING_COMPONENT}.proto; \
 	done
 
