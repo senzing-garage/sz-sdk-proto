@@ -63,6 +63,12 @@ extern AddConfigRequestDefaultTypeInternal _AddConfigRequest_default_instance_;
 class AddConfigResponse;
 struct AddConfigResponseDefaultTypeInternal;
 extern AddConfigResponseDefaultTypeInternal _AddConfigResponse_default_instance_;
+class CreateNewConfigRequest;
+struct CreateNewConfigRequestDefaultTypeInternal;
+extern CreateNewConfigRequestDefaultTypeInternal _CreateNewConfigRequest_default_instance_;
+class CreateNewConfigResponse;
+struct CreateNewConfigResponseDefaultTypeInternal;
+extern CreateNewConfigResponseDefaultTypeInternal _CreateNewConfigResponse_default_instance_;
 class GetConfigRequest;
 struct GetConfigRequestDefaultTypeInternal;
 extern GetConfigRequestDefaultTypeInternal _GetConfigRequest_default_instance_;
@@ -75,12 +81,24 @@ extern GetConfigsRequestDefaultTypeInternal _GetConfigsRequest_default_instance_
 class GetConfigsResponse;
 struct GetConfigsResponseDefaultTypeInternal;
 extern GetConfigsResponseDefaultTypeInternal _GetConfigsResponse_default_instance_;
+class GetDataSourcesRequest;
+struct GetDataSourcesRequestDefaultTypeInternal;
+extern GetDataSourcesRequestDefaultTypeInternal _GetDataSourcesRequest_default_instance_;
+class GetDataSourcesResponse;
+struct GetDataSourcesResponseDefaultTypeInternal;
+extern GetDataSourcesResponseDefaultTypeInternal _GetDataSourcesResponse_default_instance_;
 class GetDefaultConfigIdRequest;
 struct GetDefaultConfigIdRequestDefaultTypeInternal;
 extern GetDefaultConfigIdRequestDefaultTypeInternal _GetDefaultConfigIdRequest_default_instance_;
 class GetDefaultConfigIdResponse;
 struct GetDefaultConfigIdResponseDefaultTypeInternal;
 extern GetDefaultConfigIdResponseDefaultTypeInternal _GetDefaultConfigIdResponse_default_instance_;
+class GetTemplateConfigIdRequest;
+struct GetTemplateConfigIdRequestDefaultTypeInternal;
+extern GetTemplateConfigIdRequestDefaultTypeInternal _GetTemplateConfigIdRequest_default_instance_;
+class GetTemplateConfigIdResponse;
+struct GetTemplateConfigIdResponseDefaultTypeInternal;
+extern GetTemplateConfigIdResponseDefaultTypeInternal _GetTemplateConfigIdResponse_default_instance_;
 class ReplaceDefaultConfigIdRequest;
 struct ReplaceDefaultConfigIdRequestDefaultTypeInternal;
 extern ReplaceDefaultConfigIdRequestDefaultTypeInternal _ReplaceDefaultConfigIdRequest_default_instance_;
@@ -164,7 +182,7 @@ class SetDefaultConfigIdResponse final :
                &_SetDefaultConfigIdResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    17;
 
   friend void swap(SetDefaultConfigIdResponse& a, SetDefaultConfigIdResponse& b) {
     a.Swap(&b);
@@ -301,7 +319,7 @@ class SetDefaultConfigIdRequest final :
                &_SetDefaultConfigIdRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    16;
 
   friend void swap(SetDefaultConfigIdRequest& a, SetDefaultConfigIdRequest& b) {
     a.Swap(&b);
@@ -475,7 +493,7 @@ class ReplaceDefaultConfigIdResponse final :
                &_ReplaceDefaultConfigIdResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    15;
 
   friend void swap(ReplaceDefaultConfigIdResponse& a, ReplaceDefaultConfigIdResponse& b) {
     a.Swap(&b);
@@ -612,7 +630,7 @@ class ReplaceDefaultConfigIdRequest final :
                &_ReplaceDefaultConfigIdRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    14;
 
   friend void swap(ReplaceDefaultConfigIdRequest& a, ReplaceDefaultConfigIdRequest& b) {
     a.Swap(&b);
@@ -740,6 +758,317 @@ class ReplaceDefaultConfigIdRequest final :
   friend struct ::TableStruct_szconfigmanager_2eproto;
 };// -------------------------------------------------------------------
 
+class GetTemplateConfigIdResponse final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szconfigmanager.GetTemplateConfigIdResponse) */ {
+ public:
+  inline GetTemplateConfigIdResponse() : GetTemplateConfigIdResponse(nullptr) {}
+  ~GetTemplateConfigIdResponse() override;
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR GetTemplateConfigIdResponse(::google::protobuf::internal::ConstantInitialized);
+
+  inline GetTemplateConfigIdResponse(const GetTemplateConfigIdResponse& from)
+      : GetTemplateConfigIdResponse(nullptr, from) {}
+  GetTemplateConfigIdResponse(GetTemplateConfigIdResponse&& from) noexcept
+    : GetTemplateConfigIdResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline GetTemplateConfigIdResponse& operator=(const GetTemplateConfigIdResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetTemplateConfigIdResponse& operator=(GetTemplateConfigIdResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetTemplateConfigIdResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GetTemplateConfigIdResponse* internal_default_instance() {
+    return reinterpret_cast<const GetTemplateConfigIdResponse*>(
+               &_GetTemplateConfigIdResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    13;
+
+  friend void swap(GetTemplateConfigIdResponse& a, GetTemplateConfigIdResponse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GetTemplateConfigIdResponse* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr &&
+        GetArena() == other->GetArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetTemplateConfigIdResponse* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetTemplateConfigIdResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetTemplateConfigIdResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const GetTemplateConfigIdResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom( const GetTemplateConfigIdResponse& from) {
+    GetTemplateConfigIdResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  ::size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target, ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(GetTemplateConfigIdResponse* other);
+
+  private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "szconfigmanager.GetTemplateConfigIdResponse";
+  }
+  protected:
+  explicit GetTemplateConfigIdResponse(::google::protobuf::Arena* arena);
+  GetTemplateConfigIdResponse(::google::protobuf::Arena* arena, const GetTemplateConfigIdResponse& from);
+  public:
+
+  static const ClassData _class_data_;
+  const ::google::protobuf::Message::ClassData*GetClassData() const final;
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+  };
+  // int64 result = 1;
+  void clear_result() ;
+  ::int64_t result() const;
+  void set_result(::int64_t value);
+
+  private:
+  ::int64_t _internal_result() const;
+  void _internal_set_result(::int64_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:szconfigmanager.GetTemplateConfigIdResponse)
+ private:
+  class _Internal;
+
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 0,
+      0, 2>
+      _table_;
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+
+        inline explicit constexpr Impl_(
+            ::google::protobuf::internal::ConstantInitialized) noexcept;
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena);
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena, const Impl_& from);
+    ::int64_t result_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_szconfigmanager_2eproto;
+};// -------------------------------------------------------------------
+
+class GetTemplateConfigIdRequest final :
+    public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:szconfigmanager.GetTemplateConfigIdRequest) */ {
+ public:
+  inline GetTemplateConfigIdRequest() : GetTemplateConfigIdRequest(nullptr) {}
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR GetTemplateConfigIdRequest(::google::protobuf::internal::ConstantInitialized);
+
+  inline GetTemplateConfigIdRequest(const GetTemplateConfigIdRequest& from)
+      : GetTemplateConfigIdRequest(nullptr, from) {}
+  GetTemplateConfigIdRequest(GetTemplateConfigIdRequest&& from) noexcept
+    : GetTemplateConfigIdRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline GetTemplateConfigIdRequest& operator=(const GetTemplateConfigIdRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetTemplateConfigIdRequest& operator=(GetTemplateConfigIdRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetTemplateConfigIdRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GetTemplateConfigIdRequest* internal_default_instance() {
+    return reinterpret_cast<const GetTemplateConfigIdRequest*>(
+               &_GetTemplateConfigIdRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    12;
+
+  friend void swap(GetTemplateConfigIdRequest& a, GetTemplateConfigIdRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GetTemplateConfigIdRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr &&
+        GetArena() == other->GetArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetTemplateConfigIdRequest* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetTemplateConfigIdRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetTemplateConfigIdRequest>(arena);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const GetTemplateConfigIdRequest& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const GetTemplateConfigIdRequest& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
+
+  private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "szconfigmanager.GetTemplateConfigIdRequest";
+  }
+  protected:
+  explicit GetTemplateConfigIdRequest(::google::protobuf::Arena* arena);
+  GetTemplateConfigIdRequest(::google::protobuf::Arena* arena, const GetTemplateConfigIdRequest& from);
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:szconfigmanager.GetTemplateConfigIdRequest)
+ private:
+  class _Internal;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+
+        inline explicit constexpr Impl_(
+            ::google::protobuf::internal::ConstantInitialized) noexcept;
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena);
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena, const Impl_& from);
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  friend struct ::TableStruct_szconfigmanager_2eproto;
+};// -------------------------------------------------------------------
+
 class GetDefaultConfigIdResponse final :
     public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szconfigmanager.GetDefaultConfigIdResponse) */ {
  public:
@@ -799,7 +1128,7 @@ class GetDefaultConfigIdResponse final :
                &_GetDefaultConfigIdResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    11;
 
   friend void swap(GetDefaultConfigIdResponse& a, GetDefaultConfigIdResponse& b) {
     a.Swap(&b);
@@ -973,7 +1302,7 @@ class GetDefaultConfigIdRequest final :
                &_GetDefaultConfigIdRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    10;
 
   friend void swap(GetDefaultConfigIdRequest& a, GetDefaultConfigIdRequest& b) {
     a.Swap(&b);
@@ -1051,6 +1380,362 @@ class GetDefaultConfigIdRequest final :
   friend struct ::TableStruct_szconfigmanager_2eproto;
 };// -------------------------------------------------------------------
 
+class GetDataSourcesResponse final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szconfigmanager.GetDataSourcesResponse) */ {
+ public:
+  inline GetDataSourcesResponse() : GetDataSourcesResponse(nullptr) {}
+  ~GetDataSourcesResponse() override;
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR GetDataSourcesResponse(::google::protobuf::internal::ConstantInitialized);
+
+  inline GetDataSourcesResponse(const GetDataSourcesResponse& from)
+      : GetDataSourcesResponse(nullptr, from) {}
+  GetDataSourcesResponse(GetDataSourcesResponse&& from) noexcept
+    : GetDataSourcesResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline GetDataSourcesResponse& operator=(const GetDataSourcesResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetDataSourcesResponse& operator=(GetDataSourcesResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetDataSourcesResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GetDataSourcesResponse* internal_default_instance() {
+    return reinterpret_cast<const GetDataSourcesResponse*>(
+               &_GetDataSourcesResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    9;
+
+  friend void swap(GetDataSourcesResponse& a, GetDataSourcesResponse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GetDataSourcesResponse* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr &&
+        GetArena() == other->GetArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetDataSourcesResponse* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetDataSourcesResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetDataSourcesResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const GetDataSourcesResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom( const GetDataSourcesResponse& from) {
+    GetDataSourcesResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  ::size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target, ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(GetDataSourcesResponse* other);
+
+  private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "szconfigmanager.GetDataSourcesResponse";
+  }
+  protected:
+  explicit GetDataSourcesResponse(::google::protobuf::Arena* arena);
+  GetDataSourcesResponse(::google::protobuf::Arena* arena, const GetDataSourcesResponse& from);
+  public:
+
+  static const ClassData _class_data_;
+  const ::google::protobuf::Message::ClassData*GetClassData() const final;
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+  };
+  // string result = 1;
+  void clear_result() ;
+  const std::string& result() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_result(Arg_&& arg, Args_... args);
+  std::string* mutable_result();
+  PROTOBUF_NODISCARD std::string* release_result();
+  void set_allocated_result(std::string* value);
+
+  private:
+  const std::string& _internal_result() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_result(
+      const std::string& value);
+  std::string* _internal_mutable_result();
+
+  public:
+  // @@protoc_insertion_point(class_scope:szconfigmanager.GetDataSourcesResponse)
+ private:
+  class _Internal;
+
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 0,
+      53, 2>
+      _table_;
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+
+        inline explicit constexpr Impl_(
+            ::google::protobuf::internal::ConstantInitialized) noexcept;
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena);
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena, const Impl_& from);
+    ::google::protobuf::internal::ArenaStringPtr result_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_szconfigmanager_2eproto;
+};// -------------------------------------------------------------------
+
+class GetDataSourcesRequest final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szconfigmanager.GetDataSourcesRequest) */ {
+ public:
+  inline GetDataSourcesRequest() : GetDataSourcesRequest(nullptr) {}
+  ~GetDataSourcesRequest() override;
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR GetDataSourcesRequest(::google::protobuf::internal::ConstantInitialized);
+
+  inline GetDataSourcesRequest(const GetDataSourcesRequest& from)
+      : GetDataSourcesRequest(nullptr, from) {}
+  GetDataSourcesRequest(GetDataSourcesRequest&& from) noexcept
+    : GetDataSourcesRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline GetDataSourcesRequest& operator=(const GetDataSourcesRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetDataSourcesRequest& operator=(GetDataSourcesRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetDataSourcesRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const GetDataSourcesRequest* internal_default_instance() {
+    return reinterpret_cast<const GetDataSourcesRequest*>(
+               &_GetDataSourcesRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    8;
+
+  friend void swap(GetDataSourcesRequest& a, GetDataSourcesRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GetDataSourcesRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr &&
+        GetArena() == other->GetArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetDataSourcesRequest* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetDataSourcesRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetDataSourcesRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const GetDataSourcesRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom( const GetDataSourcesRequest& from) {
+    GetDataSourcesRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  ::size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target, ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(GetDataSourcesRequest* other);
+
+  private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "szconfigmanager.GetDataSourcesRequest";
+  }
+  protected:
+  explicit GetDataSourcesRequest(::google::protobuf::Arena* arena);
+  GetDataSourcesRequest(::google::protobuf::Arena* arena, const GetDataSourcesRequest& from);
+  public:
+
+  static const ClassData _class_data_;
+  const ::google::protobuf::Message::ClassData*GetClassData() const final;
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kConfigIdFieldNumber = 1,
+  };
+  // int64 configId = 1;
+  void clear_configid() ;
+  ::int64_t configid() const;
+  void set_configid(::int64_t value);
+
+  private:
+  ::int64_t _internal_configid() const;
+  void _internal_set_configid(::int64_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:szconfigmanager.GetDataSourcesRequest)
+ private:
+  class _Internal;
+
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 0,
+      0, 2>
+      _table_;
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+
+        inline explicit constexpr Impl_(
+            ::google::protobuf::internal::ConstantInitialized) noexcept;
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena);
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena, const Impl_& from);
+    ::int64_t configid_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_szconfigmanager_2eproto;
+};// -------------------------------------------------------------------
+
 class GetConfigsResponse final :
     public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szconfigmanager.GetConfigsResponse) */ {
  public:
@@ -1110,7 +1795,7 @@ class GetConfigsResponse final :
                &_GetConfigsResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    7;
 
   friend void swap(GetConfigsResponse& a, GetConfigsResponse& b) {
     a.Swap(&b);
@@ -1290,7 +1975,7 @@ class GetConfigsRequest final :
                &_GetConfigsRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    6;
 
   friend void swap(GetConfigsRequest& a, GetConfigsRequest& b) {
     a.Swap(&b);
@@ -1427,7 +2112,7 @@ class GetConfigResponse final :
                &_GetConfigResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    5;
 
   friend void swap(GetConfigResponse& a, GetConfigResponse& b) {
     a.Swap(&b);
@@ -1608,7 +2293,7 @@ class GetConfigRequest final :
                &_GetConfigRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    4;
 
   friend void swap(GetConfigRequest& a, GetConfigRequest& b) {
     a.Swap(&b);
@@ -1716,6 +2401,392 @@ class GetConfigRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
+    ::int64_t configid_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_szconfigmanager_2eproto;
+};// -------------------------------------------------------------------
+
+class CreateNewConfigResponse final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szconfigmanager.CreateNewConfigResponse) */ {
+ public:
+  inline CreateNewConfigResponse() : CreateNewConfigResponse(nullptr) {}
+  ~CreateNewConfigResponse() override;
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR CreateNewConfigResponse(::google::protobuf::internal::ConstantInitialized);
+
+  inline CreateNewConfigResponse(const CreateNewConfigResponse& from)
+      : CreateNewConfigResponse(nullptr, from) {}
+  CreateNewConfigResponse(CreateNewConfigResponse&& from) noexcept
+    : CreateNewConfigResponse() {
+    *this = ::std::move(from);
+  }
+
+  inline CreateNewConfigResponse& operator=(const CreateNewConfigResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CreateNewConfigResponse& operator=(CreateNewConfigResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const CreateNewConfigResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const CreateNewConfigResponse* internal_default_instance() {
+    return reinterpret_cast<const CreateNewConfigResponse*>(
+               &_CreateNewConfigResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  friend void swap(CreateNewConfigResponse& a, CreateNewConfigResponse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CreateNewConfigResponse* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr &&
+        GetArena() == other->GetArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CreateNewConfigResponse* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  CreateNewConfigResponse* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CreateNewConfigResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const CreateNewConfigResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom( const CreateNewConfigResponse& from) {
+    CreateNewConfigResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  ::size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target, ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(CreateNewConfigResponse* other);
+
+  private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "szconfigmanager.CreateNewConfigResponse";
+  }
+  protected:
+  explicit CreateNewConfigResponse(::google::protobuf::Arena* arena);
+  CreateNewConfigResponse(::google::protobuf::Arena* arena, const CreateNewConfigResponse& from);
+  public:
+
+  static const ClassData _class_data_;
+  const ::google::protobuf::Message::ClassData*GetClassData() const final;
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResultFieldNumber = 1,
+  };
+  // int64 result = 1;
+  void clear_result() ;
+  ::int64_t result() const;
+  void set_result(::int64_t value);
+
+  private:
+  ::int64_t _internal_result() const;
+  void _internal_set_result(::int64_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:szconfigmanager.CreateNewConfigResponse)
+ private:
+  class _Internal;
+
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 0,
+      0, 2>
+      _table_;
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+
+        inline explicit constexpr Impl_(
+            ::google::protobuf::internal::ConstantInitialized) noexcept;
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena);
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena, const Impl_& from);
+    ::int64_t result_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_szconfigmanager_2eproto;
+};// -------------------------------------------------------------------
+
+class CreateNewConfigRequest final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:szconfigmanager.CreateNewConfigRequest) */ {
+ public:
+  inline CreateNewConfigRequest() : CreateNewConfigRequest(nullptr) {}
+  ~CreateNewConfigRequest() override;
+  template<typename = void>
+  explicit PROTOBUF_CONSTEXPR CreateNewConfigRequest(::google::protobuf::internal::ConstantInitialized);
+
+  inline CreateNewConfigRequest(const CreateNewConfigRequest& from)
+      : CreateNewConfigRequest(nullptr, from) {}
+  CreateNewConfigRequest(CreateNewConfigRequest&& from) noexcept
+    : CreateNewConfigRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline CreateNewConfigRequest& operator=(const CreateNewConfigRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline CreateNewConfigRequest& operator=(CreateNewConfigRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const CreateNewConfigRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const CreateNewConfigRequest* internal_default_instance() {
+    return reinterpret_cast<const CreateNewConfigRequest*>(
+               &_CreateNewConfigRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  friend void swap(CreateNewConfigRequest& a, CreateNewConfigRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(CreateNewConfigRequest* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr &&
+        GetArena() == other->GetArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(CreateNewConfigRequest* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  CreateNewConfigRequest* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CreateNewConfigRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const CreateNewConfigRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom( const CreateNewConfigRequest& from) {
+    CreateNewConfigRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  ::size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target, ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  ::google::protobuf::internal::CachedSize* AccessCachedSize() const final;
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(CreateNewConfigRequest* other);
+
+  private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() {
+    return "szconfigmanager.CreateNewConfigRequest";
+  }
+  protected:
+  explicit CreateNewConfigRequest(::google::protobuf::Arena* arena);
+  CreateNewConfigRequest(::google::protobuf::Arena* arena, const CreateNewConfigRequest& from);
+  public:
+
+  static const ClassData _class_data_;
+  const ::google::protobuf::Message::ClassData*GetClassData() const final;
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kConfigCommentFieldNumber = 2,
+    kDataSourceCodesFieldNumber = 3,
+    kConfigIdFieldNumber = 1,
+  };
+  // string configComment = 2;
+  void clear_configcomment() ;
+  const std::string& configcomment() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_configcomment(Arg_&& arg, Args_... args);
+  std::string* mutable_configcomment();
+  PROTOBUF_NODISCARD std::string* release_configcomment();
+  void set_allocated_configcomment(std::string* value);
+
+  private:
+  const std::string& _internal_configcomment() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_configcomment(
+      const std::string& value);
+  std::string* _internal_mutable_configcomment();
+
+  public:
+  // string dataSourceCodes = 3;
+  void clear_datasourcecodes() ;
+  const std::string& datasourcecodes() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_datasourcecodes(Arg_&& arg, Args_... args);
+  std::string* mutable_datasourcecodes();
+  PROTOBUF_NODISCARD std::string* release_datasourcecodes();
+  void set_allocated_datasourcecodes(std::string* value);
+
+  private:
+  const std::string& _internal_datasourcecodes() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_datasourcecodes(
+      const std::string& value);
+  std::string* _internal_mutable_datasourcecodes();
+
+  public:
+  // int64 configId = 1;
+  void clear_configid() ;
+  ::int64_t configid() const;
+  void set_configid(::int64_t value);
+
+  private:
+  ::int64_t _internal_configid() const;
+  void _internal_set_configid(::int64_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:szconfigmanager.CreateNewConfigRequest)
+ private:
+  class _Internal;
+
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      2, 3, 0,
+      75, 2>
+      _table_;
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+
+        inline explicit constexpr Impl_(
+            ::google::protobuf::internal::ConstantInitialized) noexcept;
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena);
+        inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                              ::google::protobuf::Arena* arena, const Impl_& from);
+    ::google::protobuf::internal::ArenaStringPtr configcomment_;
+    ::google::protobuf::internal::ArenaStringPtr datasourcecodes_;
     ::int64_t configid_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
@@ -2249,6 +3320,166 @@ inline void AddConfigResponse::_internal_set_result(::int64_t value) {
 
 // -------------------------------------------------------------------
 
+// CreateNewConfigRequest
+
+// int64 configId = 1;
+inline void CreateNewConfigRequest::clear_configid() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.configid_ = ::int64_t{0};
+}
+inline ::int64_t CreateNewConfigRequest::configid() const {
+  // @@protoc_insertion_point(field_get:szconfigmanager.CreateNewConfigRequest.configId)
+  return _internal_configid();
+}
+inline void CreateNewConfigRequest::set_configid(::int64_t value) {
+  _internal_set_configid(value);
+  // @@protoc_insertion_point(field_set:szconfigmanager.CreateNewConfigRequest.configId)
+}
+inline ::int64_t CreateNewConfigRequest::_internal_configid() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.configid_;
+}
+inline void CreateNewConfigRequest::_internal_set_configid(::int64_t value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.configid_ = value;
+}
+
+// string configComment = 2;
+inline void CreateNewConfigRequest::clear_configcomment() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.configcomment_.ClearToEmpty();
+}
+inline const std::string& CreateNewConfigRequest::configcomment() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:szconfigmanager.CreateNewConfigRequest.configComment)
+  return _internal_configcomment();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void CreateNewConfigRequest::set_configcomment(Arg_&& arg,
+                                                     Args_... args) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.configcomment_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szconfigmanager.CreateNewConfigRequest.configComment)
+}
+inline std::string* CreateNewConfigRequest::mutable_configcomment() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_configcomment();
+  // @@protoc_insertion_point(field_mutable:szconfigmanager.CreateNewConfigRequest.configComment)
+  return _s;
+}
+inline const std::string& CreateNewConfigRequest::_internal_configcomment() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.configcomment_.Get();
+}
+inline void CreateNewConfigRequest::_internal_set_configcomment(const std::string& value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.configcomment_.Set(value, GetArena());
+}
+inline std::string* CreateNewConfigRequest::_internal_mutable_configcomment() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  return _impl_.configcomment_.Mutable( GetArena());
+}
+inline std::string* CreateNewConfigRequest::release_configcomment() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  // @@protoc_insertion_point(field_release:szconfigmanager.CreateNewConfigRequest.configComment)
+  return _impl_.configcomment_.Release();
+}
+inline void CreateNewConfigRequest::set_allocated_configcomment(std::string* value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.configcomment_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.configcomment_.IsDefault()) {
+          _impl_.configcomment_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:szconfigmanager.CreateNewConfigRequest.configComment)
+}
+
+// string dataSourceCodes = 3;
+inline void CreateNewConfigRequest::clear_datasourcecodes() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.datasourcecodes_.ClearToEmpty();
+}
+inline const std::string& CreateNewConfigRequest::datasourcecodes() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:szconfigmanager.CreateNewConfigRequest.dataSourceCodes)
+  return _internal_datasourcecodes();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void CreateNewConfigRequest::set_datasourcecodes(Arg_&& arg,
+                                                     Args_... args) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.datasourcecodes_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szconfigmanager.CreateNewConfigRequest.dataSourceCodes)
+}
+inline std::string* CreateNewConfigRequest::mutable_datasourcecodes() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_datasourcecodes();
+  // @@protoc_insertion_point(field_mutable:szconfigmanager.CreateNewConfigRequest.dataSourceCodes)
+  return _s;
+}
+inline const std::string& CreateNewConfigRequest::_internal_datasourcecodes() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.datasourcecodes_.Get();
+}
+inline void CreateNewConfigRequest::_internal_set_datasourcecodes(const std::string& value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.datasourcecodes_.Set(value, GetArena());
+}
+inline std::string* CreateNewConfigRequest::_internal_mutable_datasourcecodes() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  return _impl_.datasourcecodes_.Mutable( GetArena());
+}
+inline std::string* CreateNewConfigRequest::release_datasourcecodes() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  // @@protoc_insertion_point(field_release:szconfigmanager.CreateNewConfigRequest.dataSourceCodes)
+  return _impl_.datasourcecodes_.Release();
+}
+inline void CreateNewConfigRequest::set_allocated_datasourcecodes(std::string* value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.datasourcecodes_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.datasourcecodes_.IsDefault()) {
+          _impl_.datasourcecodes_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:szconfigmanager.CreateNewConfigRequest.dataSourceCodes)
+}
+
+// -------------------------------------------------------------------
+
+// CreateNewConfigResponse
+
+// int64 result = 1;
+inline void CreateNewConfigResponse::clear_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.result_ = ::int64_t{0};
+}
+inline ::int64_t CreateNewConfigResponse::result() const {
+  // @@protoc_insertion_point(field_get:szconfigmanager.CreateNewConfigResponse.result)
+  return _internal_result();
+}
+inline void CreateNewConfigResponse::set_result(::int64_t value) {
+  _internal_set_result(value);
+  // @@protoc_insertion_point(field_set:szconfigmanager.CreateNewConfigResponse.result)
+}
+inline ::int64_t CreateNewConfigResponse::_internal_result() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.result_;
+}
+inline void CreateNewConfigResponse::_internal_set_result(::int64_t value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.result_ = value;
+}
+
+// -------------------------------------------------------------------
+
 // GetConfigRequest
 
 // int64 configId = 1;
@@ -2394,6 +3625,90 @@ inline void GetConfigsResponse::set_allocated_result(std::string* value) {
 
 // -------------------------------------------------------------------
 
+// GetDataSourcesRequest
+
+// int64 configId = 1;
+inline void GetDataSourcesRequest::clear_configid() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.configid_ = ::int64_t{0};
+}
+inline ::int64_t GetDataSourcesRequest::configid() const {
+  // @@protoc_insertion_point(field_get:szconfigmanager.GetDataSourcesRequest.configId)
+  return _internal_configid();
+}
+inline void GetDataSourcesRequest::set_configid(::int64_t value) {
+  _internal_set_configid(value);
+  // @@protoc_insertion_point(field_set:szconfigmanager.GetDataSourcesRequest.configId)
+}
+inline ::int64_t GetDataSourcesRequest::_internal_configid() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.configid_;
+}
+inline void GetDataSourcesRequest::_internal_set_configid(::int64_t value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.configid_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// GetDataSourcesResponse
+
+// string result = 1;
+inline void GetDataSourcesResponse::clear_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.result_.ClearToEmpty();
+}
+inline const std::string& GetDataSourcesResponse::result() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:szconfigmanager.GetDataSourcesResponse.result)
+  return _internal_result();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void GetDataSourcesResponse::set_result(Arg_&& arg,
+                                                     Args_... args) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.result_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szconfigmanager.GetDataSourcesResponse.result)
+}
+inline std::string* GetDataSourcesResponse::mutable_result() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_result();
+  // @@protoc_insertion_point(field_mutable:szconfigmanager.GetDataSourcesResponse.result)
+  return _s;
+}
+inline const std::string& GetDataSourcesResponse::_internal_result() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.result_.Get();
+}
+inline void GetDataSourcesResponse::_internal_set_result(const std::string& value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.result_.Set(value, GetArena());
+}
+inline std::string* GetDataSourcesResponse::_internal_mutable_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  return _impl_.result_.Mutable( GetArena());
+}
+inline std::string* GetDataSourcesResponse::release_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  // @@protoc_insertion_point(field_release:szconfigmanager.GetDataSourcesResponse.result)
+  return _impl_.result_.Release();
+}
+inline void GetDataSourcesResponse::set_allocated_result(std::string* value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.result_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.result_.IsDefault()) {
+          _impl_.result_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:szconfigmanager.GetDataSourcesResponse.result)
+}
+
+// -------------------------------------------------------------------
+
 // GetDefaultConfigIdRequest
 
 // -------------------------------------------------------------------
@@ -2418,6 +3733,37 @@ inline ::int64_t GetDefaultConfigIdResponse::_internal_result() const {
   return _impl_.result_;
 }
 inline void GetDefaultConfigIdResponse::_internal_set_result(::int64_t value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.result_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// GetTemplateConfigIdRequest
+
+// -------------------------------------------------------------------
+
+// GetTemplateConfigIdResponse
+
+// int64 result = 1;
+inline void GetTemplateConfigIdResponse::clear_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.result_ = ::int64_t{0};
+}
+inline ::int64_t GetTemplateConfigIdResponse::result() const {
+  // @@protoc_insertion_point(field_get:szconfigmanager.GetTemplateConfigIdResponse.result)
+  return _internal_result();
+}
+inline void GetTemplateConfigIdResponse::set_result(::int64_t value) {
+  _internal_set_result(value);
+  // @@protoc_insertion_point(field_set:szconfigmanager.GetTemplateConfigIdResponse.result)
+}
+inline ::int64_t GetTemplateConfigIdResponse::_internal_result() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.result_;
+}
+inline void GetTemplateConfigIdResponse::_internal_set_result(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
   _impl_.result_ = value;

@@ -31,6 +31,20 @@ class SzConfigManagerClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Szconfigmanager\CreateNewConfigRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function CreateNewConfig(\Szconfigmanager\CreateNewConfigRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szconfigmanager.SzConfigManager/CreateNewConfig',
+        $argument,
+        ['\Szconfigmanager\CreateNewConfigResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Szconfigmanager\GetConfigRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -59,6 +73,20 @@ class SzConfigManagerClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Szconfigmanager\GetDataSourcesRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetDataSources(\Szconfigmanager\GetDataSourcesRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szconfigmanager.SzConfigManager/GetDataSources',
+        $argument,
+        ['\Szconfigmanager\GetDataSourcesResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Szconfigmanager\GetDefaultConfigIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -69,6 +97,20 @@ class SzConfigManagerClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/szconfigmanager.SzConfigManager/GetDefaultConfigId',
         $argument,
         ['\Szconfigmanager\GetDefaultConfigIdResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Szconfigmanager\GetTemplateConfigIdRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetTemplateConfigId(\Szconfigmanager\GetTemplateConfigIdRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szconfigmanager.SzConfigManager/GetTemplateConfigId',
+        $argument,
+        ['\Szconfigmanager\GetTemplateConfigIdResponse', 'decode'],
         $metadata, $options);
     }
 

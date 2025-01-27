@@ -480,16 +480,16 @@ const char descriptor_table_protodef_szconfig_2eproto[] PROTOBUF_SECTION_VARIABL
     "\037.szconfig.GetDataSourcesRequest\032 .szcon"
     "fig.GetDataSourcesResponse\"\000\022O\n\014ImportCo"
     "nfig\022\035.szconfig.ImportConfigRequest\032\036.sz"
-    "config.ImportConfigResponse\"\000Bg\n#com.sen"
-    "zing.sz.engine.grpc.SzConfigB\rSzConfigPr"
-    "otoZ1github.com/senzing-garage/sz-sdk-go"
-    "-grpc/szconfigb\006proto3"
+    "config.ImportConfigResponse\"\000BX\n\024com.sen"
+    "zing.sdk.grpcB\rSzConfigProtoZ1github.com"
+    "/senzing-garage/sz-sdk-go-grpc/szconfigb"
+    "\006proto3"
 };
 static ::absl::once_flag descriptor_table_szconfig_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_szconfig_2eproto = {
     false,
     false,
-    1342,
+    1327,
     descriptor_table_protodef_szconfig_2eproto,
     "szconfig.proto",
     &descriptor_table_szconfig_2eproto_once,

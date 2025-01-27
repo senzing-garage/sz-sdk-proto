@@ -2362,16 +2362,16 @@ const char descriptor_table_protodef_szengine_2eproto[] PROTOBUF_SECTION_VARIABL
     "szengine.WhyRecordInEntityRequest\032#.szen"
     "gine.WhyRecordInEntityResponse\"\000\022I\n\nWhyR"
     "ecords\022\033.szengine.WhyRecordsRequest\032\034.sz"
-    "engine.WhyRecordsResponse\"\000Bg\n#com.senzi"
-    "ng.sz.engine.grpc.SzEngineB\rSzEngineProt"
-    "oZ1github.com/senzing-garage/sz-sdk-go-g"
-    "rpc/szengineb\006proto3"
+    "engine.WhyRecordsResponse\"\000BX\n\024com.senzi"
+    "ng.sdk.grpcB\rSzEngineProtoZ1github.com/s"
+    "enzing-garage/sz-sdk-go-grpc/szengineb\006p"
+    "roto3"
 };
 static ::absl::once_flag descriptor_table_szengine_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_szengine_2eproto = {
     false,
     false,
-    7340,
+    7325,
     descriptor_table_protodef_szengine_2eproto,
     "szengine.proto",
     &descriptor_table_szengine_2eproto_once,

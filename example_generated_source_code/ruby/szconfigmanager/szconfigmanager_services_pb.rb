@@ -15,9 +15,12 @@ module Szconfigmanager
       self.service_name = 'szconfigmanager.SzConfigManager'
 
       rpc :AddConfig, ::Szconfigmanager::AddConfigRequest, ::Szconfigmanager::AddConfigResponse
+      rpc :CreateNewConfig, ::Szconfigmanager::CreateNewConfigRequest, ::Szconfigmanager::CreateNewConfigResponse
       rpc :GetConfig, ::Szconfigmanager::GetConfigRequest, ::Szconfigmanager::GetConfigResponse
       rpc :GetConfigs, ::Szconfigmanager::GetConfigsRequest, ::Szconfigmanager::GetConfigsResponse
+      rpc :GetDataSources, ::Szconfigmanager::GetDataSourcesRequest, ::Szconfigmanager::GetDataSourcesResponse
       rpc :GetDefaultConfigId, ::Szconfigmanager::GetDefaultConfigIdRequest, ::Szconfigmanager::GetDefaultConfigIdResponse
+      rpc :GetTemplateConfigId, ::Szconfigmanager::GetTemplateConfigIdRequest, ::Szconfigmanager::GetTemplateConfigIdResponse
       rpc :ReplaceDefaultConfigId, ::Szconfigmanager::ReplaceDefaultConfigIdRequest, ::Szconfigmanager::ReplaceDefaultConfigIdResponse
       rpc :SetDefaultConfigId, ::Szconfigmanager::SetDefaultConfigIdRequest, ::Szconfigmanager::SetDefaultConfigIdResponse
     end

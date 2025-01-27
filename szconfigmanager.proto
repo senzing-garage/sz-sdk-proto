@@ -7,9 +7,12 @@ option java_outer_classname = "SzConfigManagerProto";
 
 service SzConfigManager {
   rpc AddConfig (AddConfigRequest) returns (AddConfigResponse) {}
+  rpc CreateNewConfig (CreateNewConfigRequest) returns (CreateNewConfigResponse) {}
   rpc GetConfig (GetConfigRequest) returns (GetConfigResponse) {}
   rpc GetConfigs (GetConfigsRequest) returns (GetConfigsResponse) {}
+  rpc GetDataSources (GetDataSourcesRequest) returns (GetDataSourcesResponse) {}
   rpc GetDefaultConfigId (GetDefaultConfigIdRequest) returns (GetDefaultConfigIdResponse) {}
+  rpc GetTemplateConfigId (GetTemplateConfigIdRequest) returns (GetTemplateConfigIdResponse) {}
   rpc ReplaceDefaultConfigId (ReplaceDefaultConfigIdRequest) returns (ReplaceDefaultConfigIdResponse) {}
   rpc SetDefaultConfigId (SetDefaultConfigIdRequest) returns (SetDefaultConfigIdResponse) {}
 }
@@ -20,6 +23,16 @@ message AddConfigRequest {
 }
 
 message AddConfigResponse {
+  int64 result = 1;
+}
+
+message CreateNewConfigRequest {
+  int64 configId = 1;
+  string configComment = 2;
+  string dataSourceCodes = 3;
+}
+
+message CreateNewConfigResponse {
   int64 result = 1;
 }
 
@@ -37,9 +50,23 @@ message GetConfigsResponse {
   string result = 1;
 }
 
+message GetDataSourcesRequest {
+  int64 configId = 1;
+}
+
+message GetDataSourcesResponse {
+  string result = 1;
+}
+
 message GetDefaultConfigIdRequest {}
 
 message GetDefaultConfigIdResponse {
+  int64 result = 1;
+}
+
+message GetTemplateConfigIdRequest {}
+
+message GetTemplateConfigIdResponse {
   int64 result = 1;
 }
 
