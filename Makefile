@@ -60,22 +60,22 @@ venv: venv-osarch-specific
 dependencies-for-development: venv dependencies-for-development-osarch-specific
 	$(activate-venv); \
 		python3 -m pip install --upgrade pip; \
-		python3 -m pip install --requirement development-requirements.txt; \
-		go install golang.org/x/tools/cmd/godoc@latest; \
-		go install google.golang.org/protobuf/cmd/protoc-gen-go@latest; \
-		go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest; \
-		sudo pecl channel-update pecl.php.net; \
-		sudo pecl install grpc;
+		python3 -m pip install --requirement development-requirements.txt
+	@go install golang.org/x/tools/cmd/godoc@latest
+	@go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+	@go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+	@sudo pecl channel-update pecl.php.net
+	@sudo pecl install grpc
 
 
 .PHONY: dependencies
 dependencies: venv
 	$(activate-venv); \
 		python3 -m pip install --upgrade pip; \
-		python3 -m pip install --requirement requirements.txt;
-		go get -u ./...; \
-		go get -t -u ./...; \
-		go mod tidy;
+		python3 -m pip install --requirement requirements.txt
+	@go get -u ./...
+	@go get -t -u ./...
+	@go mod tidy
 
 # -----------------------------------------------------------------------------
 # Setup
