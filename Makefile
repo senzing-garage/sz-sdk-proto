@@ -53,22 +53,29 @@ hello-world: hello-world-osarch-specific
 # Dependency management
 # -----------------------------------------------------------------------------
 
+.PHONY: venv
+venv: venv-osarch-specific
+
 .PHONY: dependencies-for-development
-dependencies-for-development: dependencies-for-development-osarch-specific
-	@python3 -m pip install --upgrade pip
-	@python3 -m pip install --requirement development-requirements.txt
-	@go install golang.org/x/tools/cmd/godoc@latest
-	@go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
-	@go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
-	@sudo pecl channel-update pecl.php.net
-	@sudo pecl install grpc
+dependencies-for-development: venv dependencies-for-development-osarch-specific
+	$(activate-venv); \
+		python3 -m pip install --upgrade pip; \
+		python3 -m pip install --requirement development-requirements.txt; \
+		go install golang.org/x/tools/cmd/godoc@latest; \
+		go install google.golang.org/protobuf/cmd/protoc-gen-go@latest; \
+		go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest; \
+		sudo pecl channel-update pecl.php.net; \
+		sudo pecl install grpc;
 
 
 .PHONY: dependencies
-dependencies:
-	@go get -u ./...
-	@go get -t -u ./...
-	@go mod tidy
+dependencies: venv
+	$(activate-venv); \
+		python3 -m pip install --upgrade pip; \
+		python3 -m pip install --requirement requirements.txt;
+		go get -u ./...; \
+		go get -t -u ./...; \
+		go mod tidy;
 
 # -----------------------------------------------------------------------------
 # Setup
@@ -123,6 +130,7 @@ generate-php:
 
 .PHONY: generate-python
 generate-python:
+	$(activate-venv); \
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
 		OUTPUT_DIR=example_generated_source_code/python/$${SENZING_COMPONENT}; \
 		mkdir -p $${OUTPUT_DIR}; \
