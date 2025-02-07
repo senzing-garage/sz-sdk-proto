@@ -335,16 +335,15 @@ const char descriptor_table_protodef_szdiagnostic_2eproto[] PROTOBUF_SECTION_VAR
     ".szdiagnostic.PurgeRepositoryResponse\"\000\022"
     "W\n\014Reinitialize\022!.szdiagnostic.Reinitial"
     "izeRequest\032\".szdiagnostic.ReinitializeRe"
-    "sponse\"\000Bs\n\'com.senzing.sz.engine.grpc.S"
-    "zDiagnosticB\021SzDiagnosticProtoZ5github.c"
-    "om/senzing-garage/sz-sdk-go-grpc/szdiagn"
-    "osticb\006proto3"
+    "sponse\"\000B`\n\024com.senzing.sdk.grpcB\021SzDiag"
+    "nosticProtoZ5github.com/senzing-garage/s"
+    "z-sdk-go-grpc/szdiagnosticb\006proto3"
 };
 static ::absl::once_flag descriptor_table_szdiagnostic_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_szdiagnostic_2eproto = {
     false,
     false,
-    1053,
+    1034,
     descriptor_table_protodef_szdiagnostic_2eproto,
     "szdiagnostic.proto",
     &descriptor_table_szdiagnostic_2eproto_once,

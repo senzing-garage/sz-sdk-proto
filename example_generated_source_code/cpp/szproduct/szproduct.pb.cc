@@ -153,16 +153,16 @@ const char descriptor_table_protodef_szproduct_2eproto[] PROTOBUF_SECTION_VARIAB
     "\022K\n\nGetLicense\022\034.szproduct.GetLicenseReq"
     "uest\032\035.szproduct.GetLicenseResponse\"\000\022K\n"
     "\nGetVersion\022\034.szproduct.GetVersionReques"
-    "t\032\035.szproduct.GetVersionResponse\"\000Bj\n$co"
-    "m.senzing.sz.engine.grpc.SzProductB\016SzPr"
-    "oductProtoZ2github.com/senzing-garage/sz"
-    "-sdk-go-grpc/szproductb\006proto3"
+    "t\032\035.szproduct.GetVersionResponse\"\000BZ\n\024co"
+    "m.senzing.sdk.grpcB\016SzProductProtoZ2gith"
+    "ub.com/senzing-garage/sz-sdk-go-grpc/szp"
+    "roductb\006proto3"
 };
 static ::absl::once_flag descriptor_table_szproduct_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_szproduct_2eproto = {
     false,
     false,
-    430,
+    414,
     descriptor_table_protodef_szproduct_2eproto,
     "szproduct.proto",
     &descriptor_table_szproduct_2eproto_once,
