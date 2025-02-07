@@ -124,7 +124,7 @@ generate-php:
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
 		OUTPUT_DIR=example_generated_source_code/php/$${SENZING_COMPONENT}; \
 		mkdir -p $${OUTPUT_DIR}; \
-		protoc --php_out=$${OUTPUT_DIR}  --grpc_out=$${OUTPUT_DIR}  --plugin=protoc-gen-grpc=`which grpc_php_plugin`  $${SENZING_COMPONENT}.proto; \
+		protoc --proto_path=. --php_out=$${OUTPUT_DIR}  --grpc_out=$${OUTPUT_DIR}  --plugin=protoc-gen-grpc=`which grpc_php_plugin`  $${SENZING_COMPONENT}.proto; \
 	done
 
 
