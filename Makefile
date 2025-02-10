@@ -53,10 +53,14 @@ hello-world: hello-world-osarch-specific
 # Dependency management
 # -----------------------------------------------------------------------------
 
+.PHONY: venv
+venv: venv-osarch-specific
+
 .PHONY: dependencies-for-development
-dependencies-for-development: dependencies-for-development-osarch-specific
-	@python3 -m pip install --upgrade pip
-	@python3 -m pip install --requirement development-requirements.txt
+dependencies-for-development: venv dependencies-for-development-osarch-specific
+	$(activate-venv); \
+		python3 -m pip install --upgrade pip; \
+		python3 -m pip install --requirement development-requirements.txt
 	@go install golang.org/x/tools/cmd/godoc@latest
 	@go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 	@go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
@@ -65,7 +69,10 @@ dependencies-for-development: dependencies-for-development-osarch-specific
 
 
 .PHONY: dependencies
-dependencies:
+dependencies: venv
+	$(activate-venv); \
+		python3 -m pip install --upgrade pip; \
+		python3 -m pip install --requirement requirements.txt
 	@go get -u ./...
 	@go get -t -u ./...
 	@go mod tidy
@@ -117,20 +124,22 @@ generate-php:
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
 		OUTPUT_DIR=example_generated_source_code/php/$${SENZING_COMPONENT}; \
 		mkdir -p $${OUTPUT_DIR}; \
-		protoc --php_out=$${OUTPUT_DIR}  --grpc_out=$${OUTPUT_DIR}  --plugin=protoc-gen-grpc=`which grpc_php_plugin`  $${SENZING_COMPONENT}.proto; \
+		protoc --proto_path=. --php_out=$${OUTPUT_DIR}  --grpc_out=$${OUTPUT_DIR}  --plugin=protoc-gen-grpc=`which grpc_php_plugin`  $${SENZING_COMPONENT}.proto; \
 	done
 
 
 .PHONY: generate-python
 generate-python:
+	$(activate-venv); \
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
 		OUTPUT_DIR=example_generated_source_code/python/$${SENZING_COMPONENT}; \
 		mkdir -p $${OUTPUT_DIR}; \
-		protoc --proto_path=. --python_out=$${OUTPUT_DIR}  $${SENZING_COMPONENT}.proto; \
+		python -m grpc_tools.protoc --proto_path=. --python_out=$${OUTPUT_DIR} --pyi_out=$${OUTPUT_DIR} --grpc_python_out=$${OUTPUT_DIR} $${SENZING_COMPONENT}.proto; \
 	done
 
 # Replaced with "protoc"
 #		python3 -m grpc_tools.protoc --proto_path=. --python_out=$${OUTPUT_DIR}  --grpc_python_out=$${OUTPUT_DIR}  $${SENZING_COMPONENT}.proto; \
+#		protoc --proto_path=. --python_out=$${OUTPUT_DIR}  $${SENZING_COMPONENT}.proto; \
 
 
 .PHONY: generate-ruby

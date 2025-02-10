@@ -407,17 +407,16 @@ const char descriptor_table_protodef_szconfigmanager_2eproto[] PROTOBUF_SECTION_
     "nager.ReplaceDefaultConfigIdResponse\"\000\022o"
     "\n\022SetDefaultConfigId\022*.szconfigmanager.S"
     "etDefaultConfigIdRequest\032+.szconfigmanag"
-    "er.SetDefaultConfigIdResponse\"\000B|\n*com.s"
-    "enzing.sz.engine.grpc.SzConfigManagerB\024S"
-    "zConfigManagerProtoZ8github.com/senzing-"
-    "garage/sz-sdk-go-grpc/szconfigmanagerb\006p"
-    "roto3"
+    "er.SetDefaultConfigIdResponse\"\000Bf\n\024com.s"
+    "enzing.sdk.grpcB\024SzConfigManagerProtoZ8g"
+    "ithub.com/senzing-garage/sz-sdk-go-grpc/"
+    "szconfigmanagerb\006proto3"
 };
 static ::absl::once_flag descriptor_table_szconfigmanager_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_szconfigmanager_2eproto = {
     false,
     false,
-    1325,
+    1303,
     descriptor_table_protodef_szconfigmanager_2eproto,
     "szconfigmanager.proto",
     &descriptor_table_szconfigmanager_2eproto_once,

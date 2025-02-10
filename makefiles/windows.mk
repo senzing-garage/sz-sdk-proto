@@ -10,6 +10,11 @@ documentation-osarch-specific:
 	@start /b godoc
 	@explorer http://localhost:6060
 
+
+.PHONY: venv-osarch-specific
+venv-osarch-specific:
+	@python -m venv .venv
+
 # -----------------------------------------------------------------------------
 # Makefile targets supported only by this platform.
 # -----------------------------------------------------------------------------

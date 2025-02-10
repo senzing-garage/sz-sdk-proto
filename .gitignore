@@ -2,3 +2,5 @@
 .history
 bindings/
 .coverage
+
+.venv
