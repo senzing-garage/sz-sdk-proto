@@ -3,3 +3,4 @@
 bindings/
 .coverage
 node_modules
+.venv

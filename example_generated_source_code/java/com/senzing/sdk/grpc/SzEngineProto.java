@@ -2,7 +2,7 @@
 // source: szengine.proto
 
 // Protobuf Java Version: 3.25.1
-package com.senzing.sz.engine.grpc.SzEngine;
+package com.senzing.sdk.grpc;
 
 public final class SzEngineProto {
   private SzEngineProto() {}
@@ -88,15 +88,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_AddRecordRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_AddRecordRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_AddRecordRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_AddRecordRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest.Builder.class);
     }
 
     public static final int DATASOURCECODE_FIELD_NUMBER = 1;
@@ -285,10 +285,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest other = (com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest) obj;
 
       if (!getDataSourceCode()
           .equals(other.getDataSourceCode())) return false;
@@ -323,44 +323,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -368,26 +368,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -400,7 +400,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -421,21 +421,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.AddRecordRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.AddRecordRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_AddRecordRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_AddRecordRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_AddRecordRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_AddRecordRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest.newBuilder()
       private Builder() {
 
       }
@@ -459,17 +459,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_AddRecordRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_AddRecordRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -477,14 +477,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest result = new com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dataSourceCode_ = dataSourceCode_;
@@ -534,16 +534,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest.getDefaultInstance()) return this;
         if (!other.getDataSourceCode().isEmpty()) {
           dataSourceCode_ = other.dataSourceCode_;
           bitField0_ |= 0x00000001;
@@ -889,12 +889,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.AddRecordRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -930,7 +930,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -977,15 +977,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_AddRecordResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_AddRecordResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_AddRecordResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_AddRecordResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse.class, com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -1066,10 +1066,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse other = (com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -1091,44 +1091,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1136,26 +1136,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1168,7 +1168,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1189,21 +1189,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.AddRecordResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.AddRecordResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_AddRecordResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_AddRecordResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_AddRecordResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_AddRecordResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse.class, com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse.newBuilder()
       private Builder() {
 
       }
@@ -1224,17 +1224,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_AddRecordResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_AddRecordResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1242,14 +1242,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse result = new com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -1290,16 +1290,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -1441,12 +1441,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.AddRecordResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1482,7 +1482,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.AddRecordResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.AddRecordResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1522,15 +1522,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CloseExportRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CloseExportRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest.class, com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest.Builder.class);
     }
 
     public static final int EXPORTHANDLE_FIELD_NUMBER = 1;
@@ -1584,10 +1584,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest other = (com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest) obj;
 
       if (getExportHandle()
           != other.getExportHandle()) return false;
@@ -1610,44 +1610,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1655,26 +1655,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1687,7 +1687,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1708,21 +1708,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.CloseExportRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.CloseExportRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CloseExportRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CloseExportRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest.class, com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest.newBuilder()
       private Builder() {
 
       }
@@ -1743,17 +1743,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CloseExportRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1761,14 +1761,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest result = new com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.exportHandle_ = exportHandle_;
@@ -1809,16 +1809,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest.getDefaultInstance()) return this;
         if (other.getExportHandle() != 0L) {
           setExportHandle(other.getExportHandle());
         }
@@ -1918,12 +1918,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.CloseExportRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1959,7 +1959,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1993,15 +1993,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CloseExportResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CloseExportResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse.class, com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2037,10 +2037,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse other = (com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -2058,44 +2058,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2103,26 +2103,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2135,7 +2135,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2156,21 +2156,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.CloseExportResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.CloseExportResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CloseExportResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CloseExportResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse.class, com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse.newBuilder()
       private Builder() {
 
       }
@@ -2189,17 +2189,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CloseExportResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2207,8 +2207,8 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse result = new com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse(this);
         onBuilt();
         return result;
       }
@@ -2247,16 +2247,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2315,12 +2315,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.CloseExportResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2356,7 +2356,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CloseExportResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2390,15 +2390,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CountRedoRecordsRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CountRedoRecordsRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CountRedoRecordsRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CountRedoRecordsRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest.class, com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2434,10 +2434,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest other = (com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -2455,44 +2455,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2500,26 +2500,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2532,7 +2532,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2553,21 +2553,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.CountRedoRecordsRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CountRedoRecordsRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CountRedoRecordsRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CountRedoRecordsRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CountRedoRecordsRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest.class, com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest.newBuilder()
       private Builder() {
 
       }
@@ -2586,17 +2586,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CountRedoRecordsRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CountRedoRecordsRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2604,8 +2604,8 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest result = new com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest(this);
         onBuilt();
         return result;
       }
@@ -2644,16 +2644,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2712,12 +2712,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.CountRedoRecordsRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2753,7 +2753,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2793,15 +2793,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CountRedoRecordsResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CountRedoRecordsResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CountRedoRecordsResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CountRedoRecordsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse.class, com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -2855,10 +2855,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse other = (com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse) obj;
 
       if (getResult()
           != other.getResult()) return false;
@@ -2881,44 +2881,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2926,26 +2926,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2958,7 +2958,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2979,21 +2979,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.CountRedoRecordsResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CountRedoRecordsResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CountRedoRecordsResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CountRedoRecordsResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CountRedoRecordsResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse.class, com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse.newBuilder()
       private Builder() {
 
       }
@@ -3014,17 +3014,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_CountRedoRecordsResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CountRedoRecordsResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3032,14 +3032,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse result = new com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -3080,16 +3080,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse.getDefaultInstance()) return this;
         if (other.getResult() != 0L) {
           setResult(other.getResult());
         }
@@ -3189,12 +3189,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.CountRedoRecordsResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3230,7 +3230,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.CountRedoRecordsResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.CountRedoRecordsResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3296,15 +3296,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_DeleteRecordRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_DeleteRecordRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_DeleteRecordRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_DeleteRecordRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest.Builder.class);
     }
 
     public static final int DATASOURCECODE_FIELD_NUMBER = 1;
@@ -3448,10 +3448,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest other = (com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest) obj;
 
       if (!getDataSourceCode()
           .equals(other.getDataSourceCode())) return false;
@@ -3482,44 +3482,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3527,26 +3527,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3559,7 +3559,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3580,21 +3580,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.DeleteRecordRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_DeleteRecordRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_DeleteRecordRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_DeleteRecordRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_DeleteRecordRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest.newBuilder()
       private Builder() {
 
       }
@@ -3617,17 +3617,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_DeleteRecordRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_DeleteRecordRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3635,14 +3635,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest result = new com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dataSourceCode_ = dataSourceCode_;
@@ -3689,16 +3689,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest.getDefaultInstance()) return this;
         if (!other.getDataSourceCode().isEmpty()) {
           dataSourceCode_ = other.dataSourceCode_;
           bitField0_ |= 0x00000001;
@@ -3962,12 +3962,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.DeleteRecordRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4003,7 +4003,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4050,15 +4050,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_DeleteRecordResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_DeleteRecordResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_DeleteRecordResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_DeleteRecordResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse.class, com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -4139,10 +4139,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse other = (com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -4164,44 +4164,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4209,26 +4209,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4241,7 +4241,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -4262,21 +4262,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.DeleteRecordResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_DeleteRecordResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_DeleteRecordResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_DeleteRecordResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_DeleteRecordResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse.class, com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse.newBuilder()
       private Builder() {
 
       }
@@ -4297,17 +4297,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_DeleteRecordResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_DeleteRecordResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4315,14 +4315,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse result = new com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -4363,16 +4363,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -4514,12 +4514,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.DeleteRecordResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4555,7 +4555,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.DeleteRecordResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.DeleteRecordResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4608,15 +4608,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportCsvEntityReportRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportCsvEntityReportRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportCsvEntityReportRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportCsvEntityReportRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest.class, com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest.Builder.class);
     }
 
     public static final int CSVCOLUMNLIST_FIELD_NUMBER = 1;
@@ -4715,10 +4715,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest other = (com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest) obj;
 
       if (!getCsvColumnList()
           .equals(other.getCsvColumnList())) return false;
@@ -4745,44 +4745,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4790,26 +4790,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4822,7 +4822,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -4843,21 +4843,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.ExportCsvEntityReportRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportCsvEntityReportRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportCsvEntityReportRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportCsvEntityReportRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportCsvEntityReportRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest.class, com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest.newBuilder()
       private Builder() {
 
       }
@@ -4879,17 +4879,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportCsvEntityReportRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportCsvEntityReportRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4897,14 +4897,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest result = new com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.csvColumnList_ = csvColumnList_;
@@ -4948,16 +4948,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest.getDefaultInstance()) return this;
         if (!other.getCsvColumnList().isEmpty()) {
           csvColumnList_ = other.csvColumnList_;
           bitField0_ |= 0x00000001;
@@ -5139,12 +5139,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.ExportCsvEntityReportRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5180,7 +5180,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5220,15 +5220,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportCsvEntityReportResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportCsvEntityReportResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportCsvEntityReportResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportCsvEntityReportResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse.class, com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -5282,10 +5282,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse other = (com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse) obj;
 
       if (getResult()
           != other.getResult()) return false;
@@ -5308,44 +5308,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5353,26 +5353,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5385,7 +5385,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5406,21 +5406,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.ExportCsvEntityReportResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportCsvEntityReportResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportCsvEntityReportResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportCsvEntityReportResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportCsvEntityReportResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse.class, com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse.newBuilder()
       private Builder() {
 
       }
@@ -5441,17 +5441,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportCsvEntityReportResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportCsvEntityReportResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5459,14 +5459,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse result = new com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -5507,16 +5507,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse.getDefaultInstance()) return this;
         if (other.getResult() != 0L) {
           setResult(other.getResult());
         }
@@ -5616,12 +5616,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.ExportCsvEntityReportResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5657,7 +5657,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportCsvEntityReportResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5697,15 +5697,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportJsonEntityReportRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportJsonEntityReportRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportJsonEntityReportRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportJsonEntityReportRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest.class, com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest.Builder.class);
     }
 
     public static final int FLAGS_FIELD_NUMBER = 1;
@@ -5759,10 +5759,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest other = (com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest) obj;
 
       if (getFlags()
           != other.getFlags()) return false;
@@ -5785,44 +5785,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5830,26 +5830,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5862,7 +5862,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5883,21 +5883,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.ExportJsonEntityReportRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportJsonEntityReportRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportJsonEntityReportRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportJsonEntityReportRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportJsonEntityReportRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest.class, com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest.newBuilder()
       private Builder() {
 
       }
@@ -5918,17 +5918,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportJsonEntityReportRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportJsonEntityReportRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5936,14 +5936,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest result = new com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.flags_ = flags_;
@@ -5984,16 +5984,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest.getDefaultInstance()) return this;
         if (other.getFlags() != 0L) {
           setFlags(other.getFlags());
         }
@@ -6093,12 +6093,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.ExportJsonEntityReportRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6134,7 +6134,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6174,15 +6174,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportJsonEntityReportResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportJsonEntityReportResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportJsonEntityReportResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportJsonEntityReportResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse.class, com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -6236,10 +6236,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse other = (com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse) obj;
 
       if (getResult()
           != other.getResult()) return false;
@@ -6262,44 +6262,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6307,26 +6307,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6339,7 +6339,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -6360,21 +6360,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.ExportJsonEntityReportResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportJsonEntityReportResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportJsonEntityReportResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportJsonEntityReportResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportJsonEntityReportResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse.class, com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse.newBuilder()
       private Builder() {
 
       }
@@ -6395,17 +6395,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ExportJsonEntityReportResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ExportJsonEntityReportResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -6413,14 +6413,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse result = new com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -6461,16 +6461,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse.getDefaultInstance()) return this;
         if (other.getResult() != 0L) {
           setResult(other.getResult());
         }
@@ -6570,12 +6570,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.ExportJsonEntityReportResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6611,7 +6611,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ExportJsonEntityReportResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.ExportJsonEntityReportResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6651,15 +6651,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FetchNextRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FetchNextRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FetchNextRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FetchNextRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest.class, com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest.Builder.class);
     }
 
     public static final int EXPORTHANDLE_FIELD_NUMBER = 1;
@@ -6713,10 +6713,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest other = (com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest) obj;
 
       if (getExportHandle()
           != other.getExportHandle()) return false;
@@ -6739,44 +6739,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6784,26 +6784,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6816,7 +6816,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -6837,21 +6837,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.FetchNextRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.FetchNextRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FetchNextRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FetchNextRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FetchNextRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FetchNextRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest.class, com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest.newBuilder()
       private Builder() {
 
       }
@@ -6872,17 +6872,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FetchNextRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FetchNextRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -6890,14 +6890,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest result = new com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.exportHandle_ = exportHandle_;
@@ -6938,16 +6938,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest.getDefaultInstance()) return this;
         if (other.getExportHandle() != 0L) {
           setExportHandle(other.getExportHandle());
         }
@@ -7047,12 +7047,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.FetchNextRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7088,7 +7088,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7135,15 +7135,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FetchNextResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FetchNextResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FetchNextResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FetchNextResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse.class, com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -7224,10 +7224,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse other = (com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -7249,44 +7249,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7294,26 +7294,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7326,7 +7326,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -7347,21 +7347,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.FetchNextResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.FetchNextResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FetchNextResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FetchNextResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FetchNextResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FetchNextResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse.class, com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse.newBuilder()
       private Builder() {
 
       }
@@ -7382,17 +7382,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FetchNextResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FetchNextResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -7400,14 +7400,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse result = new com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -7448,16 +7448,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -7599,12 +7599,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.FetchNextResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7640,7 +7640,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FetchNextResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.FetchNextResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7686,15 +7686,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.Builder.class);
     }
 
     public static final int ENTITYID_FIELD_NUMBER = 1;
@@ -7766,10 +7766,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest other = (com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest) obj;
 
       if (getEntityId()
           != other.getEntityId()) return false;
@@ -7797,44 +7797,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7842,26 +7842,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7874,7 +7874,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -7895,21 +7895,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.FindInterestingEntitiesByEntityIdRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.newBuilder()
       private Builder() {
 
       }
@@ -7931,17 +7931,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -7949,14 +7949,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest result = new com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.entityId_ = entityId_;
@@ -8000,16 +8000,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.getDefaultInstance()) return this;
         if (other.getEntityId() != 0L) {
           setEntityId(other.getEntityId());
         }
@@ -8149,12 +8149,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.FindInterestingEntitiesByEntityIdRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8190,7 +8190,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8237,15 +8237,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -8326,10 +8326,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse other = (com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -8351,44 +8351,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8396,26 +8396,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8428,7 +8428,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -8449,21 +8449,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.FindInterestingEntitiesByEntityIdResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.newBuilder()
       private Builder() {
 
       }
@@ -8484,17 +8484,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByEntityIdResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -8502,14 +8502,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse result = new com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -8550,16 +8550,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -8701,12 +8701,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.FindInterestingEntitiesByEntityIdResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8742,7 +8742,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByEntityIdResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8808,15 +8808,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.Builder.class);
     }
 
     public static final int DATASOURCECODE_FIELD_NUMBER = 1;
@@ -8960,10 +8960,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest other = (com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest) obj;
 
       if (!getDataSourceCode()
           .equals(other.getDataSourceCode())) return false;
@@ -8994,44 +8994,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -9039,26 +9039,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -9071,7 +9071,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -9092,21 +9092,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.FindInterestingEntitiesByRecordIdRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.newBuilder()
       private Builder() {
 
       }
@@ -9129,17 +9129,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -9147,14 +9147,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest result = new com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dataSourceCode_ = dataSourceCode_;
@@ -9201,16 +9201,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.getDefaultInstance()) return this;
         if (!other.getDataSourceCode().isEmpty()) {
           dataSourceCode_ = other.dataSourceCode_;
           bitField0_ |= 0x00000001;
@@ -9474,12 +9474,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.FindInterestingEntitiesByRecordIdRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9515,7 +9515,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9562,15 +9562,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -9651,10 +9651,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse other = (com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -9676,44 +9676,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -9721,26 +9721,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -9753,7 +9753,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -9774,21 +9774,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.FindInterestingEntitiesByRecordIdResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.newBuilder()
       private Builder() {
 
       }
@@ -9809,17 +9809,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindInterestingEntitiesByRecordIdResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -9827,14 +9827,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse result = new com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -9875,16 +9875,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -10026,12 +10026,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.FindInterestingEntitiesByRecordIdResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10067,7 +10067,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindInterestingEntitiesByRecordIdResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10138,15 +10138,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest.Builder.class);
     }
 
     public static final int ENTITYIDS_FIELD_NUMBER = 1;
@@ -10299,10 +10299,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest other = (com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest) obj;
 
       if (!getEntityIds()
           .equals(other.getEntityIds())) return false;
@@ -10344,44 +10344,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -10389,26 +10389,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -10421,7 +10421,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -10442,21 +10442,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.FindNetworkByEntityIdRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest.newBuilder()
       private Builder() {
 
       }
@@ -10481,17 +10481,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -10499,14 +10499,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest result = new com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.entityIds_ = entityIds_;
@@ -10559,16 +10559,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest.getDefaultInstance()) return this;
         if (!other.getEntityIds().isEmpty()) {
           entityIds_ = other.entityIds_;
           bitField0_ |= 0x00000001;
@@ -10870,12 +10870,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.FindNetworkByEntityIdRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10911,7 +10911,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10958,15 +10958,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -11047,10 +11047,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse other = (com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -11072,44 +11072,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -11117,26 +11117,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -11149,7 +11149,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -11170,21 +11170,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.FindNetworkByEntityIdResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse.newBuilder()
       private Builder() {
 
       }
@@ -11205,17 +11205,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByEntityIdResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -11223,14 +11223,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse result = new com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -11271,16 +11271,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -11422,12 +11422,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.FindNetworkByEntityIdResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -11463,7 +11463,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByEntityIdResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -11534,15 +11534,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest.Builder.class);
     }
 
     public static final int RECORDKEYS_FIELD_NUMBER = 1;
@@ -11695,10 +11695,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest other = (com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest) obj;
 
       if (!getRecordKeys()
           .equals(other.getRecordKeys())) return false;
@@ -11740,44 +11740,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -11785,26 +11785,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -11817,7 +11817,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -11838,21 +11838,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.FindNetworkByRecordIdRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest.newBuilder()
       private Builder() {
 
       }
@@ -11877,17 +11877,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -11895,14 +11895,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest result = new com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.recordKeys_ = recordKeys_;
@@ -11955,16 +11955,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest.getDefaultInstance()) return this;
         if (!other.getRecordKeys().isEmpty()) {
           recordKeys_ = other.recordKeys_;
           bitField0_ |= 0x00000001;
@@ -12266,12 +12266,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.FindNetworkByRecordIdRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12307,7 +12307,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12354,15 +12354,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -12443,10 +12443,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse other = (com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -12468,44 +12468,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -12513,26 +12513,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -12545,7 +12545,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -12566,21 +12566,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.FindNetworkByRecordIdResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse.newBuilder()
       private Builder() {
 
       }
@@ -12601,17 +12601,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindNetworkByRecordIdResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -12619,14 +12619,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse result = new com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -12667,16 +12667,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -12818,12 +12818,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.FindNetworkByRecordIdResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12859,7 +12859,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindNetworkByRecordIdResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12943,15 +12943,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByEntityIdRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByEntityIdRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByEntityIdRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByEntityIdRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest.Builder.class);
     }
 
     public static final int STARTENTITYID_FIELD_NUMBER = 1;
@@ -13149,10 +13149,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest other = (com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest) obj;
 
       if (getStartEntityId()
           != other.getStartEntityId()) return false;
@@ -13198,44 +13198,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -13243,26 +13243,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -13275,7 +13275,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -13296,21 +13296,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.FindPathByEntityIdRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByEntityIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByEntityIdRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByEntityIdRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByEntityIdRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest.newBuilder()
       private Builder() {
 
       }
@@ -13336,17 +13336,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByEntityIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByEntityIdRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -13354,14 +13354,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest result = new com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.startEntityId_ = startEntityId_;
@@ -13417,16 +13417,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest.getDefaultInstance()) return this;
         if (other.getStartEntityId() != 0L) {
           setStartEntityId(other.getStartEntityId());
         }
@@ -13810,12 +13810,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.FindPathByEntityIdRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -13851,7 +13851,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -13898,15 +13898,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByEntityIdResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByEntityIdResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByEntityIdResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByEntityIdResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -13987,10 +13987,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse other = (com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -14012,44 +14012,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -14057,26 +14057,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -14089,7 +14089,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -14110,21 +14110,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.FindPathByEntityIdResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByEntityIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByEntityIdResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByEntityIdResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByEntityIdResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse.newBuilder()
       private Builder() {
 
       }
@@ -14145,17 +14145,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByEntityIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByEntityIdResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -14163,14 +14163,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse result = new com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -14211,16 +14211,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -14362,12 +14362,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.FindPathByEntityIdResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -14403,7 +14403,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByEntityIdResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -14527,15 +14527,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByRecordIdRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByRecordIdRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByRecordIdRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByRecordIdRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest.Builder.class);
     }
 
     public static final int STARTDATASOURCECODE_FIELD_NUMBER = 1;
@@ -14877,10 +14877,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest other = (com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest) obj;
 
       if (!getStartDataSourceCode()
           .equals(other.getStartDataSourceCode())) return false;
@@ -14932,44 +14932,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -14977,26 +14977,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -15009,7 +15009,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -15030,21 +15030,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.FindPathByRecordIdRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByRecordIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByRecordIdRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByRecordIdRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByRecordIdRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest.newBuilder()
       private Builder() {
 
       }
@@ -15072,17 +15072,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByRecordIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByRecordIdRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -15090,14 +15090,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest result = new com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.startDataSourceCode_ = startDataSourceCode_;
@@ -15159,16 +15159,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest.getDefaultInstance()) return this;
         if (!other.getStartDataSourceCode().isEmpty()) {
           startDataSourceCode_ = other.startDataSourceCode_;
           bitField0_ |= 0x00000001;
@@ -15800,12 +15800,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.FindPathByRecordIdRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -15841,7 +15841,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -15888,15 +15888,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByRecordIdResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByRecordIdResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByRecordIdResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByRecordIdResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -15977,10 +15977,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse other = (com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -16002,44 +16002,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -16047,26 +16047,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -16079,7 +16079,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -16100,21 +16100,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.FindPathByRecordIdResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByRecordIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByRecordIdResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByRecordIdResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByRecordIdResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse.newBuilder()
       private Builder() {
 
       }
@@ -16135,17 +16135,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_FindPathByRecordIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_FindPathByRecordIdResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -16153,14 +16153,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse result = new com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -16201,16 +16201,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -16352,12 +16352,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.FindPathByRecordIdResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -16393,7 +16393,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.FindPathByRecordIdResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -16427,15 +16427,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetActiveConfigIdRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetActiveConfigIdRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetActiveConfigIdRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetActiveConfigIdRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -16471,10 +16471,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest other = (com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -16492,44 +16492,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -16537,26 +16537,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -16569,7 +16569,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -16590,21 +16590,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.GetActiveConfigIdRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetActiveConfigIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetActiveConfigIdRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetActiveConfigIdRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetActiveConfigIdRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest.newBuilder()
       private Builder() {
 
       }
@@ -16623,17 +16623,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetActiveConfigIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetActiveConfigIdRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -16641,8 +16641,8 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest result = new com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest(this);
         onBuilt();
         return result;
       }
@@ -16681,16 +16681,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -16749,12 +16749,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.GetActiveConfigIdRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -16790,7 +16790,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -16830,15 +16830,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetActiveConfigIdResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetActiveConfigIdResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetActiveConfigIdResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetActiveConfigIdResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -16892,10 +16892,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse other = (com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse) obj;
 
       if (getResult()
           != other.getResult()) return false;
@@ -16918,44 +16918,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -16963,26 +16963,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -16995,7 +16995,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -17016,21 +17016,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.GetActiveConfigIdResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetActiveConfigIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetActiveConfigIdResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetActiveConfigIdResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetActiveConfigIdResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse.newBuilder()
       private Builder() {
 
       }
@@ -17051,17 +17051,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetActiveConfigIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetActiveConfigIdResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -17069,14 +17069,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse result = new com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -17117,16 +17117,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse.getDefaultInstance()) return this;
         if (other.getResult() != 0L) {
           setResult(other.getResult());
         }
@@ -17226,12 +17226,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.GetActiveConfigIdResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -17267,7 +17267,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetActiveConfigIdResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.GetActiveConfigIdResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -17313,15 +17313,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByEntityIdRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByEntityIdRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByEntityIdRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByEntityIdRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest.Builder.class);
     }
 
     public static final int ENTITYID_FIELD_NUMBER = 1;
@@ -17393,10 +17393,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest other = (com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest) obj;
 
       if (getEntityId()
           != other.getEntityId()) return false;
@@ -17424,44 +17424,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -17469,26 +17469,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -17501,7 +17501,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -17522,21 +17522,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.GetEntityByEntityIdRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByEntityIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByEntityIdRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByEntityIdRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByEntityIdRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest.newBuilder()
       private Builder() {
 
       }
@@ -17558,17 +17558,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByEntityIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByEntityIdRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -17576,14 +17576,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest result = new com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.entityId_ = entityId_;
@@ -17627,16 +17627,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest.getDefaultInstance()) return this;
         if (other.getEntityId() != 0L) {
           setEntityId(other.getEntityId());
         }
@@ -17776,12 +17776,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.GetEntityByEntityIdRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -17817,7 +17817,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -17864,15 +17864,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByEntityIdResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByEntityIdResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByEntityIdResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByEntityIdResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -17953,10 +17953,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse other = (com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -17978,44 +17978,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -18023,26 +18023,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -18055,7 +18055,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -18076,21 +18076,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.GetEntityByEntityIdResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByEntityIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByEntityIdResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByEntityIdResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByEntityIdResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse.newBuilder()
       private Builder() {
 
       }
@@ -18111,17 +18111,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByEntityIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByEntityIdResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -18129,14 +18129,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse result = new com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -18177,16 +18177,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -18328,12 +18328,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.GetEntityByEntityIdResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -18369,7 +18369,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByEntityIdResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -18435,15 +18435,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByRecordIdRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByRecordIdRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByRecordIdRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByRecordIdRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest.Builder.class);
     }
 
     public static final int DATASOURCECODE_FIELD_NUMBER = 1;
@@ -18587,10 +18587,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest other = (com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest) obj;
 
       if (!getDataSourceCode()
           .equals(other.getDataSourceCode())) return false;
@@ -18621,44 +18621,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -18666,26 +18666,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -18698,7 +18698,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -18719,21 +18719,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.GetEntityByRecordIdRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByRecordIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByRecordIdRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByRecordIdRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByRecordIdRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest.newBuilder()
       private Builder() {
 
       }
@@ -18756,17 +18756,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByRecordIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByRecordIdRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -18774,14 +18774,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest result = new com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dataSourceCode_ = dataSourceCode_;
@@ -18828,16 +18828,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest.getDefaultInstance()) return this;
         if (!other.getDataSourceCode().isEmpty()) {
           dataSourceCode_ = other.dataSourceCode_;
           bitField0_ |= 0x00000001;
@@ -19101,12 +19101,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.GetEntityByRecordIdRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -19142,7 +19142,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -19189,15 +19189,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByRecordIdResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByRecordIdResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByRecordIdResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByRecordIdResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -19278,10 +19278,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse other = (com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -19303,44 +19303,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -19348,26 +19348,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -19380,7 +19380,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -19401,21 +19401,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.GetEntityByRecordIdResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByRecordIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByRecordIdResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByRecordIdResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByRecordIdResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse.newBuilder()
       private Builder() {
 
       }
@@ -19436,17 +19436,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetEntityByRecordIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetEntityByRecordIdResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -19454,14 +19454,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse result = new com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -19502,16 +19502,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -19653,12 +19653,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.GetEntityByRecordIdResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -19694,7 +19694,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetEntityByRecordIdResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -19760,15 +19760,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRecordRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRecordRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRecordRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRecordRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest.Builder.class);
     }
 
     public static final int DATASOURCECODE_FIELD_NUMBER = 1;
@@ -19912,10 +19912,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest other = (com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest) obj;
 
       if (!getDataSourceCode()
           .equals(other.getDataSourceCode())) return false;
@@ -19946,44 +19946,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -19991,26 +19991,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -20023,7 +20023,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -20044,21 +20044,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.GetRecordRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.GetRecordRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRecordRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRecordRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRecordRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRecordRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest.newBuilder()
       private Builder() {
 
       }
@@ -20081,17 +20081,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRecordRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRecordRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -20099,14 +20099,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest result = new com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dataSourceCode_ = dataSourceCode_;
@@ -20153,16 +20153,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest.getDefaultInstance()) return this;
         if (!other.getDataSourceCode().isEmpty()) {
           dataSourceCode_ = other.dataSourceCode_;
           bitField0_ |= 0x00000001;
@@ -20426,12 +20426,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.GetRecordRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -20467,7 +20467,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -20514,15 +20514,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRecordResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRecordResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRecordResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRecordResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse.class, com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -20603,10 +20603,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse other = (com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -20628,44 +20628,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -20673,26 +20673,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -20705,7 +20705,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -20726,21 +20726,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.GetRecordResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.GetRecordResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRecordResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRecordResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRecordResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRecordResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse.class, com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse.newBuilder()
       private Builder() {
 
       }
@@ -20761,17 +20761,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRecordResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRecordResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -20779,14 +20779,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse result = new com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -20827,16 +20827,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -20978,12 +20978,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.GetRecordResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -21019,7 +21019,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRecordResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.GetRecordResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -21053,15 +21053,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRedoRecordRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRedoRecordRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRedoRecordRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRedoRecordRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -21097,10 +21097,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest other = (com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -21118,44 +21118,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -21163,26 +21163,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -21195,7 +21195,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -21216,21 +21216,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.GetRedoRecordRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRedoRecordRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRedoRecordRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRedoRecordRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRedoRecordRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest.newBuilder()
       private Builder() {
 
       }
@@ -21249,17 +21249,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRedoRecordRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRedoRecordRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -21267,8 +21267,8 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest result = new com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest(this);
         onBuilt();
         return result;
       }
@@ -21307,16 +21307,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -21375,12 +21375,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.GetRedoRecordRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -21416,7 +21416,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -21463,15 +21463,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRedoRecordResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRedoRecordResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRedoRecordResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRedoRecordResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse.class, com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -21552,10 +21552,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse other = (com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -21577,44 +21577,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -21622,26 +21622,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -21654,7 +21654,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -21675,21 +21675,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.GetRedoRecordResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRedoRecordResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRedoRecordResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRedoRecordResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRedoRecordResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse.class, com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse.newBuilder()
       private Builder() {
 
       }
@@ -21710,17 +21710,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetRedoRecordResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetRedoRecordResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -21728,14 +21728,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse result = new com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -21776,16 +21776,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -21927,12 +21927,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.GetRedoRecordResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -21968,7 +21968,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetRedoRecordResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.GetRedoRecordResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -22002,15 +22002,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetStatsRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetStatsRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetStatsRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetStatsRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -22046,10 +22046,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest other = (com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -22067,44 +22067,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -22112,26 +22112,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -22144,7 +22144,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -22165,21 +22165,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.GetStatsRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.GetStatsRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetStatsRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetStatsRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetStatsRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetStatsRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest.newBuilder()
       private Builder() {
 
       }
@@ -22198,17 +22198,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetStatsRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetStatsRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -22216,8 +22216,8 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest result = new com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest(this);
         onBuilt();
         return result;
       }
@@ -22256,16 +22256,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -22324,12 +22324,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.GetStatsRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -22365,7 +22365,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.GetStatsRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -22412,15 +22412,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetStatsResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetStatsResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetStatsResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetStatsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse.class, com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -22501,10 +22501,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse other = (com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -22526,44 +22526,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -22571,26 +22571,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -22603,7 +22603,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -22624,21 +22624,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.GetStatsResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.GetStatsResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetStatsResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetStatsResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetStatsResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetStatsResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse.class, com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse.newBuilder()
       private Builder() {
 
       }
@@ -22659,17 +22659,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetStatsResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetStatsResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -22677,14 +22677,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse result = new com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -22725,16 +22725,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -22876,12 +22876,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.GetStatsResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -22917,7 +22917,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetStatsResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.GetStatsResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -22970,15 +22970,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest.Builder.class);
     }
 
     public static final int RECORDKEYS_FIELD_NUMBER = 1;
@@ -23077,10 +23077,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest other = (com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest) obj;
 
       if (!getRecordKeys()
           .equals(other.getRecordKeys())) return false;
@@ -23107,44 +23107,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -23152,26 +23152,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -23184,7 +23184,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -23205,21 +23205,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.GetVirtualEntityByRecordIdRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest.newBuilder()
       private Builder() {
 
       }
@@ -23241,17 +23241,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -23259,14 +23259,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest result = new com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.recordKeys_ = recordKeys_;
@@ -23310,16 +23310,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest.getDefaultInstance()) return this;
         if (!other.getRecordKeys().isEmpty()) {
           recordKeys_ = other.recordKeys_;
           bitField0_ |= 0x00000001;
@@ -23501,12 +23501,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.GetVirtualEntityByRecordIdRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -23542,7 +23542,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -23589,15 +23589,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -23678,10 +23678,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse other = (com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -23703,44 +23703,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -23748,26 +23748,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -23780,7 +23780,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -23801,21 +23801,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.GetVirtualEntityByRecordIdResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse.newBuilder()
       private Builder() {
 
       }
@@ -23836,17 +23836,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_GetVirtualEntityByRecordIdResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -23854,14 +23854,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse result = new com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -23902,16 +23902,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -24053,12 +24053,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.GetVirtualEntityByRecordIdResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -24094,7 +24094,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.GetVirtualEntityByRecordIdResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -24140,15 +24140,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_HowEntityByEntityIdRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_HowEntityByEntityIdRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_HowEntityByEntityIdRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_HowEntityByEntityIdRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest.Builder.class);
     }
 
     public static final int ENTITYID_FIELD_NUMBER = 1;
@@ -24220,10 +24220,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest other = (com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest) obj;
 
       if (getEntityId()
           != other.getEntityId()) return false;
@@ -24251,44 +24251,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -24296,26 +24296,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -24328,7 +24328,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -24349,21 +24349,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.HowEntityByEntityIdRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_HowEntityByEntityIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_HowEntityByEntityIdRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_HowEntityByEntityIdRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_HowEntityByEntityIdRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest.newBuilder()
       private Builder() {
 
       }
@@ -24385,17 +24385,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_HowEntityByEntityIdRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_HowEntityByEntityIdRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -24403,14 +24403,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest result = new com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.entityId_ = entityId_;
@@ -24454,16 +24454,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest.getDefaultInstance()) return this;
         if (other.getEntityId() != 0L) {
           setEntityId(other.getEntityId());
         }
@@ -24603,12 +24603,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.HowEntityByEntityIdRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -24644,7 +24644,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -24691,15 +24691,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_HowEntityByEntityIdResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_HowEntityByEntityIdResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_HowEntityByEntityIdResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_HowEntityByEntityIdResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -24780,10 +24780,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse other = (com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -24805,44 +24805,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -24850,26 +24850,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -24882,7 +24882,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -24903,21 +24903,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.HowEntityByEntityIdResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_HowEntityByEntityIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_HowEntityByEntityIdResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_HowEntityByEntityIdResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_HowEntityByEntityIdResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse.class, com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse.newBuilder()
       private Builder() {
 
       }
@@ -24938,17 +24938,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_HowEntityByEntityIdResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_HowEntityByEntityIdResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -24956,14 +24956,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse result = new com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -25004,16 +25004,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -25155,12 +25155,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.HowEntityByEntityIdResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -25196,7 +25196,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.HowEntityByEntityIdResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -25249,15 +25249,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PreprocessRecordRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PreprocessRecordRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PreprocessRecordRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PreprocessRecordRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest.Builder.class);
     }
 
     public static final int RECORDDEFINITION_FIELD_NUMBER = 1;
@@ -25356,10 +25356,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest other = (com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest) obj;
 
       if (!getRecordDefinition()
           .equals(other.getRecordDefinition())) return false;
@@ -25386,44 +25386,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -25431,26 +25431,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -25463,7 +25463,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -25484,21 +25484,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.PreprocessRecordRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PreprocessRecordRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PreprocessRecordRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PreprocessRecordRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PreprocessRecordRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest.newBuilder()
       private Builder() {
 
       }
@@ -25520,17 +25520,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PreprocessRecordRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PreprocessRecordRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -25538,14 +25538,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest result = new com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.recordDefinition_ = recordDefinition_;
@@ -25589,16 +25589,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest.getDefaultInstance()) return this;
         if (!other.getRecordDefinition().isEmpty()) {
           recordDefinition_ = other.recordDefinition_;
           bitField0_ |= 0x00000001;
@@ -25780,12 +25780,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.PreprocessRecordRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -25821,7 +25821,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -25868,15 +25868,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PreprocessRecordResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PreprocessRecordResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PreprocessRecordResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PreprocessRecordResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse.class, com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -25957,10 +25957,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse other = (com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -25982,44 +25982,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -26027,26 +26027,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -26059,7 +26059,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -26080,21 +26080,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.PreprocessRecordResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PreprocessRecordResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PreprocessRecordResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PreprocessRecordResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PreprocessRecordResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse.class, com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse.newBuilder()
       private Builder() {
 
       }
@@ -26115,17 +26115,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PreprocessRecordResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PreprocessRecordResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -26133,14 +26133,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse result = new com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -26181,16 +26181,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -26332,12 +26332,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.PreprocessRecordResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -26373,7 +26373,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PreprocessRecordResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -26407,15 +26407,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PrimeEngineRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PrimeEngineRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PrimeEngineRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PrimeEngineRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest.class, com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -26451,10 +26451,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest other = (com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -26472,44 +26472,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -26517,26 +26517,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -26549,7 +26549,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -26570,21 +26570,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.PrimeEngineRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PrimeEngineRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PrimeEngineRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PrimeEngineRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PrimeEngineRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest.class, com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest.newBuilder()
       private Builder() {
 
       }
@@ -26603,17 +26603,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PrimeEngineRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PrimeEngineRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -26621,8 +26621,8 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest result = new com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest(this);
         onBuilt();
         return result;
       }
@@ -26661,16 +26661,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -26729,12 +26729,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.PrimeEngineRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -26770,7 +26770,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.PrimeEngineRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -26804,15 +26804,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PrimeEngineResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PrimeEngineResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PrimeEngineResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PrimeEngineResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse.class, com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -26848,10 +26848,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse other = (com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -26869,44 +26869,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -26914,26 +26914,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -26946,7 +26946,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -26967,21 +26967,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.PrimeEngineResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PrimeEngineResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PrimeEngineResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PrimeEngineResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PrimeEngineResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse.class, com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse.newBuilder()
       private Builder() {
 
       }
@@ -27000,17 +27000,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_PrimeEngineResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_PrimeEngineResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -27018,8 +27018,8 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse result = new com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse(this);
         onBuilt();
         return result;
       }
@@ -27058,16 +27058,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -27126,12 +27126,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.PrimeEngineResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -27167,7 +27167,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.PrimeEngineResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.PrimeEngineResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -27220,15 +27220,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ProcessRedoRecordRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ProcessRedoRecordRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ProcessRedoRecordRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ProcessRedoRecordRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest.Builder.class);
     }
 
     public static final int REDORECORD_FIELD_NUMBER = 1;
@@ -27327,10 +27327,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest other = (com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest) obj;
 
       if (!getRedoRecord()
           .equals(other.getRedoRecord())) return false;
@@ -27357,44 +27357,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -27402,26 +27402,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -27434,7 +27434,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -27455,21 +27455,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.ProcessRedoRecordRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ProcessRedoRecordRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ProcessRedoRecordRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ProcessRedoRecordRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ProcessRedoRecordRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest.newBuilder()
       private Builder() {
 
       }
@@ -27491,17 +27491,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ProcessRedoRecordRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ProcessRedoRecordRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -27509,14 +27509,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest result = new com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.redoRecord_ = redoRecord_;
@@ -27560,16 +27560,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest.getDefaultInstance()) return this;
         if (!other.getRedoRecord().isEmpty()) {
           redoRecord_ = other.redoRecord_;
           bitField0_ |= 0x00000001;
@@ -27751,12 +27751,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.ProcessRedoRecordRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -27792,7 +27792,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -27839,15 +27839,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ProcessRedoRecordResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ProcessRedoRecordResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ProcessRedoRecordResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ProcessRedoRecordResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse.class, com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -27928,10 +27928,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse other = (com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -27953,44 +27953,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -27998,26 +27998,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -28030,7 +28030,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -28051,21 +28051,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.ProcessRedoRecordResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ProcessRedoRecordResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ProcessRedoRecordResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ProcessRedoRecordResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ProcessRedoRecordResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse.class, com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse.newBuilder()
       private Builder() {
 
       }
@@ -28086,17 +28086,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ProcessRedoRecordResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ProcessRedoRecordResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -28104,14 +28104,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse result = new com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -28152,16 +28152,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -28303,12 +28303,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.ProcessRedoRecordResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -28344,7 +28344,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ProcessRedoRecordResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -28390,15 +28390,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateEntityRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateEntityRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateEntityRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateEntityRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest.class, com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest.Builder.class);
     }
 
     public static final int ENTITYID_FIELD_NUMBER = 1;
@@ -28470,10 +28470,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest other = (com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest) obj;
 
       if (getEntityId()
           != other.getEntityId()) return false;
@@ -28501,44 +28501,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -28546,26 +28546,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -28578,7 +28578,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -28599,21 +28599,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.ReevaluateEntityRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateEntityRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateEntityRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateEntityRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateEntityRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest.class, com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest.newBuilder()
       private Builder() {
 
       }
@@ -28635,17 +28635,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateEntityRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateEntityRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -28653,14 +28653,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest result = new com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.entityId_ = entityId_;
@@ -28704,16 +28704,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest.getDefaultInstance()) return this;
         if (other.getEntityId() != 0L) {
           setEntityId(other.getEntityId());
         }
@@ -28853,12 +28853,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.ReevaluateEntityRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -28894,7 +28894,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -28941,15 +28941,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateEntityResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateEntityResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateEntityResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateEntityResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse.class, com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -29030,10 +29030,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse other = (com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -29055,44 +29055,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -29100,26 +29100,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -29132,7 +29132,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -29153,21 +29153,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.ReevaluateEntityResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateEntityResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateEntityResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateEntityResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateEntityResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse.class, com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse.newBuilder()
       private Builder() {
 
       }
@@ -29188,17 +29188,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateEntityResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateEntityResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -29206,14 +29206,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse result = new com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -29254,16 +29254,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -29405,12 +29405,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.ReevaluateEntityResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -29446,7 +29446,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateEntityResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -29512,15 +29512,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateRecordRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateRecordRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateRecordRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateRecordRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest.Builder.class);
     }
 
     public static final int DATASOURCECODE_FIELD_NUMBER = 1;
@@ -29664,10 +29664,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest other = (com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest) obj;
 
       if (!getDataSourceCode()
           .equals(other.getDataSourceCode())) return false;
@@ -29698,44 +29698,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -29743,26 +29743,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -29775,7 +29775,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -29796,21 +29796,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.ReevaluateRecordRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateRecordRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateRecordRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateRecordRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateRecordRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest.newBuilder()
       private Builder() {
 
       }
@@ -29833,17 +29833,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateRecordRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateRecordRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -29851,14 +29851,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest result = new com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dataSourceCode_ = dataSourceCode_;
@@ -29905,16 +29905,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest.getDefaultInstance()) return this;
         if (!other.getDataSourceCode().isEmpty()) {
           dataSourceCode_ = other.dataSourceCode_;
           bitField0_ |= 0x00000001;
@@ -30178,12 +30178,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.ReevaluateRecordRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -30219,7 +30219,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -30266,15 +30266,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateRecordResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateRecordResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateRecordResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateRecordResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse.class, com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -30355,10 +30355,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse other = (com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -30380,44 +30380,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -30425,26 +30425,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -30457,7 +30457,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -30478,21 +30478,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.ReevaluateRecordResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateRecordResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateRecordResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateRecordResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateRecordResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse.class, com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse.newBuilder()
       private Builder() {
 
       }
@@ -30513,17 +30513,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReevaluateRecordResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReevaluateRecordResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -30531,14 +30531,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse result = new com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -30579,16 +30579,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -30730,12 +30730,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.ReevaluateRecordResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -30771,7 +30771,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReevaluateRecordResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -30811,15 +30811,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReinitializeRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReinitializeRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReinitializeRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReinitializeRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest.class, com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest.Builder.class);
     }
 
     public static final int CONFIGID_FIELD_NUMBER = 1;
@@ -30873,10 +30873,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest other = (com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest) obj;
 
       if (getConfigId()
           != other.getConfigId()) return false;
@@ -30899,44 +30899,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -30944,26 +30944,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -30976,7 +30976,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -30997,21 +30997,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.ReinitializeRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReinitializeRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReinitializeRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReinitializeRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReinitializeRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest.class, com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest.newBuilder()
       private Builder() {
 
       }
@@ -31032,17 +31032,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReinitializeRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReinitializeRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -31050,14 +31050,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest result = new com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.configId_ = configId_;
@@ -31098,16 +31098,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest.getDefaultInstance()) return this;
         if (other.getConfigId() != 0L) {
           setConfigId(other.getConfigId());
         }
@@ -31207,12 +31207,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.ReinitializeRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -31248,7 +31248,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -31282,15 +31282,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReinitializeResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReinitializeResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReinitializeResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReinitializeResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse.class, com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -31326,10 +31326,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse other = (com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -31347,44 +31347,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -31392,26 +31392,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -31424,7 +31424,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -31445,21 +31445,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.ReinitializeResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReinitializeResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReinitializeResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReinitializeResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReinitializeResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse.class, com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse.newBuilder()
       private Builder() {
 
       }
@@ -31478,17 +31478,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_ReinitializeResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_ReinitializeResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -31496,8 +31496,8 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse result = new com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse(this);
         onBuilt();
         return result;
       }
@@ -31536,16 +31536,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -31604,12 +31604,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.ReinitializeResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -31645,7 +31645,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.ReinitializeResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.ReinitializeResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -31711,15 +31711,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_SearchByAttributesRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_SearchByAttributesRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_SearchByAttributesRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_SearchByAttributesRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest.class, com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest.Builder.class);
     }
 
     public static final int ATTRIBUTES_FIELD_NUMBER = 1;
@@ -31863,10 +31863,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest other = (com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest) obj;
 
       if (!getAttributes()
           .equals(other.getAttributes())) return false;
@@ -31897,44 +31897,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -31942,26 +31942,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -31974,7 +31974,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -31995,21 +31995,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.SearchByAttributesRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_SearchByAttributesRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_SearchByAttributesRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_SearchByAttributesRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_SearchByAttributesRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest.class, com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest.newBuilder()
       private Builder() {
 
       }
@@ -32032,17 +32032,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_SearchByAttributesRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_SearchByAttributesRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -32050,14 +32050,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest result = new com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.attributes_ = attributes_;
@@ -32104,16 +32104,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest.getDefaultInstance()) return this;
         if (!other.getAttributes().isEmpty()) {
           attributes_ = other.attributes_;
           bitField0_ |= 0x00000001;
@@ -32377,12 +32377,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.SearchByAttributesRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -32418,7 +32418,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -32465,15 +32465,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_SearchByAttributesResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_SearchByAttributesResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_SearchByAttributesResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_SearchByAttributesResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse.class, com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -32554,10 +32554,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse other = (com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -32579,44 +32579,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -32624,26 +32624,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -32656,7 +32656,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -32677,21 +32677,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.SearchByAttributesResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_SearchByAttributesResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_SearchByAttributesResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_SearchByAttributesResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_SearchByAttributesResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse.class, com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse.newBuilder()
       private Builder() {
 
       }
@@ -32712,17 +32712,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_SearchByAttributesResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_SearchByAttributesResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -32730,14 +32730,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse result = new com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -32778,16 +32778,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -32929,12 +32929,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.SearchByAttributesResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -32970,7 +32970,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.SearchByAttributesResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.SearchByAttributesResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -33023,15 +33023,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest.class, com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest.Builder.class);
     }
 
     public static final int CSVCOLUMNLIST_FIELD_NUMBER = 1;
@@ -33130,10 +33130,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest other = (com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest) obj;
 
       if (!getCsvColumnList()
           .equals(other.getCsvColumnList())) return false;
@@ -33160,44 +33160,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -33205,26 +33205,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -33237,7 +33237,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -33258,21 +33258,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.StreamExportCsvEntityReportRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest.class, com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest.newBuilder()
       private Builder() {
 
       }
@@ -33294,17 +33294,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -33312,14 +33312,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest result = new com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.csvColumnList_ = csvColumnList_;
@@ -33363,16 +33363,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest.getDefaultInstance()) return this;
         if (!other.getCsvColumnList().isEmpty()) {
           csvColumnList_ = other.csvColumnList_;
           bitField0_ |= 0x00000001;
@@ -33554,12 +33554,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.StreamExportCsvEntityReportRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -33595,7 +33595,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -33642,15 +33642,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse.class, com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -33731,10 +33731,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse other = (com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -33756,44 +33756,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -33801,26 +33801,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -33833,7 +33833,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -33854,21 +33854,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.StreamExportCsvEntityReportResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse.class, com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse.newBuilder()
       private Builder() {
 
       }
@@ -33889,17 +33889,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportCsvEntityReportResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -33907,14 +33907,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse result = new com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -33955,16 +33955,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -34106,12 +34106,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.StreamExportCsvEntityReportResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -34147,7 +34147,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportCsvEntityReportResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -34187,15 +34187,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest.class, com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest.Builder.class);
     }
 
     public static final int FLAGS_FIELD_NUMBER = 1;
@@ -34249,10 +34249,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest other = (com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest) obj;
 
       if (getFlags()
           != other.getFlags()) return false;
@@ -34275,44 +34275,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -34320,26 +34320,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -34352,7 +34352,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -34373,21 +34373,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.StreamExportJsonEntityReportRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest.class, com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest.newBuilder()
       private Builder() {
 
       }
@@ -34408,17 +34408,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -34426,14 +34426,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest result = new com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.flags_ = flags_;
@@ -34474,16 +34474,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest.getDefaultInstance()) return this;
         if (other.getFlags() != 0L) {
           setFlags(other.getFlags());
         }
@@ -34583,12 +34583,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.StreamExportJsonEntityReportRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -34624,7 +34624,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -34671,15 +34671,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse.class, com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -34760,10 +34760,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse other = (com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -34785,44 +34785,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -34830,26 +34830,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -34862,7 +34862,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -34883,21 +34883,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.StreamExportJsonEntityReportResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse.class, com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse.newBuilder()
       private Builder() {
 
       }
@@ -34918,17 +34918,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_StreamExportJsonEntityReportResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -34936,14 +34936,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse result = new com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -34984,16 +34984,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -35135,12 +35135,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.StreamExportJsonEntityReportResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -35176,7 +35176,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.StreamExportJsonEntityReportResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.StreamExportJsonEntityReportResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -35228,15 +35228,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyEntitiesRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyEntitiesRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyEntitiesRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyEntitiesRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest.class, com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest.Builder.class);
     }
 
     public static final int ENTITYID1_FIELD_NUMBER = 1;
@@ -35326,10 +35326,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest other = (com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest) obj;
 
       if (getEntityId1()
           != other.getEntityId1()) return false;
@@ -35362,44 +35362,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -35407,26 +35407,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -35439,7 +35439,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -35460,21 +35460,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.WhyEntitiesRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyEntitiesRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyEntitiesRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyEntitiesRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyEntitiesRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest.class, com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest.newBuilder()
       private Builder() {
 
       }
@@ -35497,17 +35497,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyEntitiesRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyEntitiesRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -35515,14 +35515,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest result = new com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.entityId1_ = entityId1_;
@@ -35569,16 +35569,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest.getDefaultInstance()) return this;
         if (other.getEntityId1() != 0L) {
           setEntityId1(other.getEntityId1());
         }
@@ -35758,12 +35758,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.WhyEntitiesRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -35799,7 +35799,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -35846,15 +35846,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyEntitiesResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyEntitiesResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyEntitiesResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyEntitiesResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse.class, com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -35935,10 +35935,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse other = (com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -35960,44 +35960,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -36005,26 +36005,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -36037,7 +36037,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -36058,21 +36058,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.WhyEntitiesResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyEntitiesResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyEntitiesResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyEntitiesResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyEntitiesResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse.class, com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse.newBuilder()
       private Builder() {
 
       }
@@ -36093,17 +36093,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyEntitiesResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyEntitiesResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -36111,14 +36111,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse result = new com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -36159,16 +36159,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -36310,12 +36310,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.WhyEntitiesResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -36351,7 +36351,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyEntitiesResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -36417,15 +36417,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordInEntityRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordInEntityRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordInEntityRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordInEntityRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest.class, com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest.Builder.class);
     }
 
     public static final int DATASOURCECODE_FIELD_NUMBER = 1;
@@ -36569,10 +36569,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest other = (com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest) obj;
 
       if (!getDataSourceCode()
           .equals(other.getDataSourceCode())) return false;
@@ -36603,44 +36603,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -36648,26 +36648,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -36680,7 +36680,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -36701,21 +36701,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.WhyRecordInEntityRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordInEntityRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordInEntityRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordInEntityRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordInEntityRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest.class, com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest.newBuilder()
       private Builder() {
 
       }
@@ -36738,17 +36738,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordInEntityRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordInEntityRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -36756,14 +36756,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest result = new com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dataSourceCode_ = dataSourceCode_;
@@ -36810,16 +36810,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest.getDefaultInstance()) return this;
         if (!other.getDataSourceCode().isEmpty()) {
           dataSourceCode_ = other.dataSourceCode_;
           bitField0_ |= 0x00000001;
@@ -37083,12 +37083,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.WhyRecordInEntityRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -37124,7 +37124,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -37171,15 +37171,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordInEntityResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordInEntityResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordInEntityResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordInEntityResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse.class, com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -37260,10 +37260,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse other = (com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -37285,44 +37285,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -37330,26 +37330,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -37362,7 +37362,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -37383,21 +37383,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.WhyRecordInEntityResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordInEntityResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordInEntityResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordInEntityResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordInEntityResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse.class, com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse.newBuilder()
       private Builder() {
 
       }
@@ -37418,17 +37418,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordInEntityResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordInEntityResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -37436,14 +37436,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse result = new com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -37484,16 +37484,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -37635,12 +37635,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.WhyRecordInEntityResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -37676,7 +37676,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordInEntityResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -37768,15 +37768,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordsRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordsRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordsRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordsRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest.class, com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest.Builder.class);
     }
 
     public static final int DATASOURCECODE1_FIELD_NUMBER = 1;
@@ -38010,10 +38010,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest other = (com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest) obj;
 
       if (!getDataSourceCode1()
           .equals(other.getDataSourceCode1())) return false;
@@ -38052,44 +38052,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -38097,26 +38097,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -38129,7 +38129,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -38150,21 +38150,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.WhyRecordsRequest)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequestOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordsRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordsRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordsRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordsRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest.class, com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest.newBuilder()
       private Builder() {
 
       }
@@ -38189,17 +38189,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordsRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordsRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -38207,14 +38207,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest result = new com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.dataSourceCode1_ = dataSourceCode1_;
@@ -38267,16 +38267,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest.getDefaultInstance()) return this;
         if (!other.getDataSourceCode1().isEmpty()) {
           dataSourceCode1_ = other.dataSourceCode1_;
           bitField0_ |= 0x00000001;
@@ -38704,12 +38704,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.WhyRecordsRequest)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -38745,7 +38745,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -38792,15 +38792,15 @@ public final class SzEngineProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordsResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordsResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordsResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse.class, com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -38881,10 +38881,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse other = (com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse other = (com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -38906,44 +38906,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -38951,26 +38951,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -38983,7 +38983,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -39004,21 +39004,21 @@ public final class SzEngineProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szengine.WhyRecordsResponse)
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponseOrBuilder {
+        com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordsResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordsResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordsResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordsResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse.class, com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse.class, com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse.newBuilder()
       private Builder() {
 
       }
@@ -39039,17 +39039,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.internal_static_szengine_WhyRecordsResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_WhyRecordsResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse build() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -39057,14 +39057,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse result = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse result = new com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -39105,16 +39105,16 @@ public final class SzEngineProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -39256,12 +39256,12 @@ public final class SzEngineProto {
     }
 
     // @@protoc_insertion_point(class_scope:szengine.WhyRecordsResponse)
-    private static final com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -39297,7 +39297,7 @@ public final class SzEngineProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzEngine.SzEngineProto.WhyRecordsResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.WhyRecordsResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -39822,10 +39822,10 @@ public final class SzEngineProto {
       "szengine.WhyRecordInEntityRequest\032#.szen" +
       "gine.WhyRecordInEntityResponse\"\000\022I\n\nWhyR" +
       "ecords\022\033.szengine.WhyRecordsRequest\032\034.sz" +
-      "engine.WhyRecordsResponse\"\000Bg\n#com.senzi" +
-      "ng.sz.engine.grpc.SzEngineB\rSzEngineProt" +
-      "oZ1github.com/senzing-garage/sz-sdk-go-g" +
-      "rpc/szengineb\006proto3"
+      "engine.WhyRecordsResponse\"\000BX\n\024com.senzi" +
+      "ng.sdk.grpcB\rSzEngineProtoZ1github.com/s" +
+      "enzing-garage/sz-sdk-go-grpc/szengineb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

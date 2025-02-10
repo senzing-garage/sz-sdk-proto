@@ -17,6 +17,11 @@ documentation-osarch-specific:
 	@godoc &
 	@xdg-open http://localhost:6060
 
+
+.PHONY: venv-osarch-specific
+venv-osarch-specific:
+	@python3 -m venv .venv
+
 # -----------------------------------------------------------------------------
 # Makefile targets supported only by this platform.
 # -----------------------------------------------------------------------------

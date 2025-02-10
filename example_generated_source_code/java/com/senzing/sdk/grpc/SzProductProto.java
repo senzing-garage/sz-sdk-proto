@@ -2,7 +2,7 @@
 // source: szproduct.proto
 
 // Protobuf Java Version: 3.25.1
-package com.senzing.sz.engine.grpc.SzProduct;
+package com.senzing.sdk.grpc;
 
 public final class SzProductProto {
   private SzProductProto() {}
@@ -43,15 +43,15 @@ public final class SzProductProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetLicenseRequest_descriptor;
+      return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetLicenseRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetLicenseRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetLicenseRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest.class, com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest.Builder.class);
+              com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest.class, com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -87,10 +87,10 @@ public final class SzProductProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest other = (com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest) obj;
+      com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest other = (com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -108,44 +108,44 @@ public final class SzProductProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -153,26 +153,26 @@ public final class SzProductProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -185,7 +185,7 @@ public final class SzProductProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -206,21 +206,21 @@ public final class SzProductProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szproduct.GetLicenseRequest)
-        com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequestOrBuilder {
+        com.senzing.sdk.grpc.SzProductProto.GetLicenseRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetLicenseRequest_descriptor;
+        return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetLicenseRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetLicenseRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetLicenseRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest.class, com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest.Builder.class);
+                com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest.class, com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest.newBuilder()
       private Builder() {
 
       }
@@ -239,17 +239,17 @@ public final class SzProductProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetLicenseRequest_descriptor;
+        return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetLicenseRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest build() {
-        com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest build() {
+        com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -257,8 +257,8 @@ public final class SzProductProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest result = new com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest(this);
+      public com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest buildPartial() {
+        com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest result = new com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest(this);
         onBuilt();
         return result;
       }
@@ -297,16 +297,16 @@ public final class SzProductProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest other) {
+        if (other == com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -365,12 +365,12 @@ public final class SzProductProto {
     }
 
     // @@protoc_insertion_point(class_scope:szproduct.GetLicenseRequest)
-    private static final com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -406,7 +406,7 @@ public final class SzProductProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzProductProto.GetLicenseRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -453,15 +453,15 @@ public final class SzProductProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetLicenseResponse_descriptor;
+      return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetLicenseResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetLicenseResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetLicenseResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse.class, com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse.Builder.class);
+              com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse.class, com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -542,10 +542,10 @@ public final class SzProductProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse other = (com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse) obj;
+      com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse other = (com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -567,44 +567,44 @@ public final class SzProductProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -612,26 +612,26 @@ public final class SzProductProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -644,7 +644,7 @@ public final class SzProductProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -665,21 +665,21 @@ public final class SzProductProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szproduct.GetLicenseResponse)
-        com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponseOrBuilder {
+        com.senzing.sdk.grpc.SzProductProto.GetLicenseResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetLicenseResponse_descriptor;
+        return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetLicenseResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetLicenseResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetLicenseResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse.class, com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse.Builder.class);
+                com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse.class, com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse.newBuilder()
       private Builder() {
 
       }
@@ -700,17 +700,17 @@ public final class SzProductProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetLicenseResponse_descriptor;
+        return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetLicenseResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse build() {
-        com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse build() {
+        com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -718,14 +718,14 @@ public final class SzProductProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse result = new com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse(this);
+      public com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse buildPartial() {
+        com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse result = new com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -766,16 +766,16 @@ public final class SzProductProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse other) {
+        if (other == com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -917,12 +917,12 @@ public final class SzProductProto {
     }
 
     // @@protoc_insertion_point(class_scope:szproduct.GetLicenseResponse)
-    private static final com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -958,7 +958,7 @@ public final class SzProductProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetLicenseResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzProductProto.GetLicenseResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -992,15 +992,15 @@ public final class SzProductProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetVersionRequest_descriptor;
+      return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetVersionRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetVersionRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetVersionRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest.class, com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest.Builder.class);
+              com.senzing.sdk.grpc.SzProductProto.GetVersionRequest.class, com.senzing.sdk.grpc.SzProductProto.GetVersionRequest.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1036,10 +1036,10 @@ public final class SzProductProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzProductProto.GetVersionRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest other = (com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest) obj;
+      com.senzing.sdk.grpc.SzProductProto.GetVersionRequest other = (com.senzing.sdk.grpc.SzProductProto.GetVersionRequest) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -1057,44 +1057,44 @@ public final class SzProductProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1102,26 +1102,26 @@ public final class SzProductProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1134,7 +1134,7 @@ public final class SzProductProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzProductProto.GetVersionRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1155,21 +1155,21 @@ public final class SzProductProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szproduct.GetVersionRequest)
-        com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequestOrBuilder {
+        com.senzing.sdk.grpc.SzProductProto.GetVersionRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetVersionRequest_descriptor;
+        return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetVersionRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetVersionRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetVersionRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest.class, com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest.Builder.class);
+                com.senzing.sdk.grpc.SzProductProto.GetVersionRequest.class, com.senzing.sdk.grpc.SzProductProto.GetVersionRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzProductProto.GetVersionRequest.newBuilder()
       private Builder() {
 
       }
@@ -1188,17 +1188,17 @@ public final class SzProductProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetVersionRequest_descriptor;
+        return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetVersionRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzProductProto.GetVersionRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzProductProto.GetVersionRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest build() {
-        com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzProductProto.GetVersionRequest build() {
+        com.senzing.sdk.grpc.SzProductProto.GetVersionRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1206,8 +1206,8 @@ public final class SzProductProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest buildPartial() {
-        com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest result = new com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest(this);
+      public com.senzing.sdk.grpc.SzProductProto.GetVersionRequest buildPartial() {
+        com.senzing.sdk.grpc.SzProductProto.GetVersionRequest result = new com.senzing.sdk.grpc.SzProductProto.GetVersionRequest(this);
         onBuilt();
         return result;
       }
@@ -1246,16 +1246,16 @@ public final class SzProductProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzProductProto.GetVersionRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzProductProto.GetVersionRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest other) {
-        if (other == com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzProductProto.GetVersionRequest other) {
+        if (other == com.senzing.sdk.grpc.SzProductProto.GetVersionRequest.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1314,12 +1314,12 @@ public final class SzProductProto {
     }
 
     // @@protoc_insertion_point(class_scope:szproduct.GetVersionRequest)
-    private static final com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzProductProto.GetVersionRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzProductProto.GetVersionRequest();
     }
 
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1355,7 +1355,7 @@ public final class SzProductProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzProductProto.GetVersionRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1402,15 +1402,15 @@ public final class SzProductProto {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetVersionResponse_descriptor;
+      return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetVersionResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetVersionResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetVersionResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse.class, com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse.Builder.class);
+              com.senzing.sdk.grpc.SzProductProto.GetVersionResponse.class, com.senzing.sdk.grpc.SzProductProto.GetVersionResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -1491,10 +1491,10 @@ public final class SzProductProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzProductProto.GetVersionResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse other = (com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse) obj;
+      com.senzing.sdk.grpc.SzProductProto.GetVersionResponse other = (com.senzing.sdk.grpc.SzProductProto.GetVersionResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -1516,44 +1516,44 @@ public final class SzProductProto {
       return hash;
     }
 
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1561,26 +1561,26 @@ public final class SzProductProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1593,7 +1593,7 @@ public final class SzProductProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzProductProto.GetVersionResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1614,21 +1614,21 @@ public final class SzProductProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:szproduct.GetVersionResponse)
-        com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponseOrBuilder {
+        com.senzing.sdk.grpc.SzProductProto.GetVersionResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetVersionResponse_descriptor;
+        return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetVersionResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetVersionResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetVersionResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse.class, com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse.Builder.class);
+                com.senzing.sdk.grpc.SzProductProto.GetVersionResponse.class, com.senzing.sdk.grpc.SzProductProto.GetVersionResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzProductProto.GetVersionResponse.newBuilder()
       private Builder() {
 
       }
@@ -1649,17 +1649,17 @@ public final class SzProductProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.internal_static_szproduct_GetVersionResponse_descriptor;
+        return com.senzing.sdk.grpc.SzProductProto.internal_static_szproduct_GetVersionResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse getDefaultInstanceForType() {
-        return com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzProductProto.GetVersionResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzProductProto.GetVersionResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse build() {
-        com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzProductProto.GetVersionResponse build() {
+        com.senzing.sdk.grpc.SzProductProto.GetVersionResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1667,14 +1667,14 @@ public final class SzProductProto {
       }
 
       @java.lang.Override
-      public com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse buildPartial() {
-        com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse result = new com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse(this);
+      public com.senzing.sdk.grpc.SzProductProto.GetVersionResponse buildPartial() {
+        com.senzing.sdk.grpc.SzProductProto.GetVersionResponse result = new com.senzing.sdk.grpc.SzProductProto.GetVersionResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzProductProto.GetVersionResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -1715,16 +1715,16 @@ public final class SzProductProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse) {
-          return mergeFrom((com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzProductProto.GetVersionResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzProductProto.GetVersionResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse other) {
-        if (other == com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzProductProto.GetVersionResponse other) {
+        if (other == com.senzing.sdk.grpc.SzProductProto.GetVersionResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -1866,12 +1866,12 @@ public final class SzProductProto {
     }
 
     // @@protoc_insertion_point(class_scope:szproduct.GetVersionResponse)
-    private static final com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse DEFAULT_INSTANCE;
+    private static final com.senzing.sdk.grpc.SzProductProto.GetVersionResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzProductProto.GetVersionResponse();
     }
 
-    public static com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzProductProto.GetVersionResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1907,7 +1907,7 @@ public final class SzProductProto {
     }
 
     @java.lang.Override
-    public com.senzing.sz.engine.grpc.SzProduct.SzProductProto.GetVersionResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzProductProto.GetVersionResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1949,10 +1949,10 @@ public final class SzProductProto {
       "\022K\n\nGetLicense\022\034.szproduct.GetLicenseReq" +
       "uest\032\035.szproduct.GetLicenseResponse\"\000\022K\n" +
       "\nGetVersion\022\034.szproduct.GetVersionReques" +
-      "t\032\035.szproduct.GetVersionResponse\"\000Bj\n$co" +
-      "m.senzing.sz.engine.grpc.SzProductB\016SzPr" +
-      "oductProtoZ2github.com/senzing-garage/sz" +
-      "-sdk-go-grpc/szproductb\006proto3"
+      "t\032\035.szproduct.GetVersionResponse\"\000BZ\n\024co" +
+      "m.senzing.sdk.grpcB\016SzProductProtoZ2gith" +
+      "ub.com/senzing-garage/sz-sdk-go-grpc/szp" +
+      "roductb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
