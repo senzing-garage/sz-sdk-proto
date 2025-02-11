@@ -36,7 +36,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr ReinitializeRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : configid_{::int64_t{0}},
+      : config_id_{::int64_t{0}},
         _cached_size_{0} {}
 
 template <typename>
@@ -100,7 +100,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr GetFeatureRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : featureid_{::int64_t{0}},
+      : feature_id_{::int64_t{0}},
         _cached_size_{0} {}
 
 template <typename>
@@ -173,7 +173,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr CheckDatastorePerformanceRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : secondstorun_{0},
+      : seconds_to_run_{0},
         _cached_size_{0} {}
 
 template <typename>
@@ -205,7 +205,7 @@ const ::uint32_t TableStruct_szdiagnostic_2eproto::offsets[] PROTOBUF_SECTION_VA
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szdiagnostic::CheckDatastorePerformanceRequest, _impl_.secondstorun_),
+    PROTOBUF_FIELD_OFFSET(::szdiagnostic::CheckDatastorePerformanceRequest, _impl_.seconds_to_run_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szdiagnostic::CheckDatastorePerformanceResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -240,7 +240,7 @@ const ::uint32_t TableStruct_szdiagnostic_2eproto::offsets[] PROTOBUF_SECTION_VA
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetFeatureRequest, _impl_.featureid_),
+    PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetFeatureRequest, _impl_.feature_id_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetFeatureResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -274,7 +274,7 @@ const ::uint32_t TableStruct_szdiagnostic_2eproto::offsets[] PROTOBUF_SECTION_VA
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szdiagnostic::ReinitializeRequest, _impl_.configid_),
+    PROTOBUF_FIELD_OFFSET(::szdiagnostic::ReinitializeRequest, _impl_.config_id_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szdiagnostic::ReinitializeResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -312,38 +312,38 @@ static const ::_pb::Message* const file_default_instances[] = {
     &::szdiagnostic::_ReinitializeResponse_default_instance_._instance,
 };
 const char descriptor_table_protodef_szdiagnostic_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-    "\n\022szdiagnostic.proto\022\014szdiagnostic\"8\n Ch"
-    "eckDatastorePerformanceRequest\022\024\n\014second"
-    "sToRun\030\001 \001(\005\"3\n!CheckDatastorePerformanc"
-    "eResponse\022\016\n\006result\030\001 \001(\t\"\031\n\027GetDatastor"
-    "eInfoRequest\"*\n\030GetDatastoreInfoResponse"
-    "\022\016\n\006result\030\001 \001(\t\"&\n\021GetFeatureRequest\022\021\n"
-    "\tfeatureId\030\001 \001(\003\"$\n\022GetFeatureResponse\022\016"
-    "\n\006result\030\001 \001(\t\"\030\n\026PurgeRepositoryRequest"
-    "\"\031\n\027PurgeRepositoryResponse\"\'\n\023Reinitial"
-    "izeRequest\022\020\n\010configId\030\001 \001(\003\"\026\n\024Reinitia"
-    "lizeResponse2\201\004\n\014SzDiagnostic\022~\n\031CheckDa"
-    "tastorePerformance\022..szdiagnostic.CheckD"
-    "atastorePerformanceRequest\032/.szdiagnosti"
-    "c.CheckDatastorePerformanceResponse\"\000\022c\n"
-    "\020GetDatastoreInfo\022%.szdiagnostic.GetData"
-    "storeInfoRequest\032&.szdiagnostic.GetDatas"
-    "toreInfoResponse\"\000\022Q\n\nGetFeature\022\037.szdia"
-    "gnostic.GetFeatureRequest\032 .szdiagnostic"
-    ".GetFeatureResponse\"\000\022`\n\017PurgeRepository"
-    "\022$.szdiagnostic.PurgeRepositoryRequest\032%"
-    ".szdiagnostic.PurgeRepositoryResponse\"\000\022"
-    "W\n\014Reinitialize\022!.szdiagnostic.Reinitial"
-    "izeRequest\032\".szdiagnostic.ReinitializeRe"
-    "sponse\"\000B`\n\024com.senzing.sdk.grpcB\021SzDiag"
-    "nosticProtoZ5github.com/senzing-garage/s"
-    "z-sdk-go-grpc/szdiagnosticb\006proto3"
+    "\n\022szdiagnostic.proto\022\014szdiagnostic\":\n Ch"
+    "eckDatastorePerformanceRequest\022\026\n\016second"
+    "s_to_run\030\001 \001(\005\"3\n!CheckDatastorePerforma"
+    "nceResponse\022\016\n\006result\030\001 \001(\t\"\031\n\027GetDatast"
+    "oreInfoRequest\"*\n\030GetDatastoreInfoRespon"
+    "se\022\016\n\006result\030\001 \001(\t\"\'\n\021GetFeatureRequest\022"
+    "\022\n\nfeature_id\030\001 \001(\003\"$\n\022GetFeatureRespons"
+    "e\022\016\n\006result\030\001 \001(\t\"\030\n\026PurgeRepositoryRequ"
+    "est\"\031\n\027PurgeRepositoryResponse\"(\n\023Reinit"
+    "ializeRequest\022\021\n\tconfig_id\030\001 \001(\003\"\026\n\024Rein"
+    "itializeResponse2\201\004\n\014SzDiagnostic\022~\n\031Che"
+    "ckDatastorePerformance\022..szdiagnostic.Ch"
+    "eckDatastorePerformanceRequest\032/.szdiagn"
+    "ostic.CheckDatastorePerformanceResponse\""
+    "\000\022c\n\020GetDatastoreInfo\022%.szdiagnostic.Get"
+    "DatastoreInfoRequest\032&.szdiagnostic.GetD"
+    "atastoreInfoResponse\"\000\022Q\n\nGetFeature\022\037.s"
+    "zdiagnostic.GetFeatureRequest\032 .szdiagno"
+    "stic.GetFeatureResponse\"\000\022`\n\017PurgeReposi"
+    "tory\022$.szdiagnostic.PurgeRepositoryReque"
+    "st\032%.szdiagnostic.PurgeRepositoryRespons"
+    "e\"\000\022W\n\014Reinitialize\022!.szdiagnostic.Reini"
+    "tializeRequest\032\".szdiagnostic.Reinitiali"
+    "zeResponse\"\000B`\n\024com.senzing.sdk.grpcB\021Sz"
+    "DiagnosticProtoZ5github.com/senzing-gara"
+    "ge/sz-sdk-go-grpc/szdiagnosticb\006proto3"
 };
 static ::absl::once_flag descriptor_table_szdiagnostic_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_szdiagnostic_2eproto = {
     false,
     false,
-    1034,
+    1038,
     descriptor_table_protodef_szdiagnostic_2eproto,
     "szdiagnostic.proto",
     &descriptor_table_szdiagnostic_2eproto_once,
@@ -399,7 +399,7 @@ inline PROTOBUF_NDEBUG_INLINE CheckDatastorePerformanceRequest::Impl_::Impl_(
 
 inline void CheckDatastorePerformanceRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.secondstorun_ = {};
+  _impl_.seconds_to_run_ = {};
 }
 CheckDatastorePerformanceRequest::~CheckDatastorePerformanceRequest() {
   // @@protoc_insertion_point(destructor:szdiagnostic.CheckDatastorePerformanceRequest)
@@ -418,7 +418,7 @@ PROTOBUF_NOINLINE void CheckDatastorePerformanceRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.secondstorun_ = 0;
+  _impl_.seconds_to_run_ = 0;
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -444,14 +444,14 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> CheckDatastorePerformanceRequest::_tab
     &_CheckDatastorePerformanceRequest_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // int32 secondsToRun = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(CheckDatastorePerformanceRequest, _impl_.secondstorun_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(CheckDatastorePerformanceRequest, _impl_.secondstorun_)}},
+    // int32 seconds_to_run = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(CheckDatastorePerformanceRequest, _impl_.seconds_to_run_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(CheckDatastorePerformanceRequest, _impl_.seconds_to_run_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int32 secondsToRun = 1;
-    {PROTOBUF_FIELD_OFFSET(CheckDatastorePerformanceRequest, _impl_.secondstorun_), 0, 0,
+    // int32 seconds_to_run = 1;
+    {PROTOBUF_FIELD_OFFSET(CheckDatastorePerformanceRequest, _impl_.seconds_to_run_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
   }},
   // no aux_entries
@@ -466,11 +466,11 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> CheckDatastorePerformanceRequest::_tab
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int32 secondsToRun = 1;
-  if (this->_internal_secondstorun() != 0) {
+  // int32 seconds_to_run = 1;
+  if (this->_internal_seconds_to_run() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt32ToArrayWithField<1>(
-            stream, this->_internal_secondstorun(), target);
+            stream, this->_internal_seconds_to_run(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -490,10 +490,10 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> CheckDatastorePerformanceRequest::_tab
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int32 secondsToRun = 1;
-  if (this->_internal_secondstorun() != 0) {
+  // int32 seconds_to_run = 1;
+  if (this->_internal_seconds_to_run() != 0) {
     total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_secondstorun());
+        this->_internal_seconds_to_run());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -515,8 +515,8 @@ void CheckDatastorePerformanceRequest::MergeImpl(::google::protobuf::Message& to
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_secondstorun() != 0) {
-    _this->_internal_set_secondstorun(from._internal_secondstorun());
+  if (from._internal_seconds_to_run() != 0) {
+    _this->_internal_set_seconds_to_run(from._internal_seconds_to_run());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -538,7 +538,7 @@ PROTOBUF_NOINLINE bool CheckDatastorePerformanceRequest::IsInitialized() const {
 void CheckDatastorePerformanceRequest::InternalSwap(CheckDatastorePerformanceRequest* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.secondstorun_, other->_impl_.secondstorun_);
+        swap(_impl_.seconds_to_run_, other->_impl_.seconds_to_run_);
 }
 
 ::google::protobuf::Metadata CheckDatastorePerformanceRequest::GetMetadata() const {
@@ -984,7 +984,7 @@ inline PROTOBUF_NDEBUG_INLINE GetFeatureRequest::Impl_::Impl_(
 
 inline void GetFeatureRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.featureid_ = {};
+  _impl_.feature_id_ = {};
 }
 GetFeatureRequest::~GetFeatureRequest() {
   // @@protoc_insertion_point(destructor:szdiagnostic.GetFeatureRequest)
@@ -1003,7 +1003,7 @@ PROTOBUF_NOINLINE void GetFeatureRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.featureid_ = ::int64_t{0};
+  _impl_.feature_id_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -1029,14 +1029,14 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> GetFeatureRequest::_table_ = {
     &_GetFeatureRequest_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // int64 featureId = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(GetFeatureRequest, _impl_.featureid_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(GetFeatureRequest, _impl_.featureid_)}},
+    // int64 feature_id = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(GetFeatureRequest, _impl_.feature_id_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(GetFeatureRequest, _impl_.feature_id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 featureId = 1;
-    {PROTOBUF_FIELD_OFFSET(GetFeatureRequest, _impl_.featureid_), 0, 0,
+    // int64 feature_id = 1;
+    {PROTOBUF_FIELD_OFFSET(GetFeatureRequest, _impl_.feature_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
   }},
   // no aux_entries
@@ -1051,11 +1051,11 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> GetFeatureRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 featureId = 1;
-  if (this->_internal_featureid() != 0) {
+  // int64 feature_id = 1;
+  if (this->_internal_feature_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_featureid(), target);
+            stream, this->_internal_feature_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1075,10 +1075,10 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> GetFeatureRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 featureId = 1;
-  if (this->_internal_featureid() != 0) {
+  // int64 feature_id = 1;
+  if (this->_internal_feature_id() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_featureid());
+        this->_internal_feature_id());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -1100,8 +1100,8 @@ void GetFeatureRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::g
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_featureid() != 0) {
-    _this->_internal_set_featureid(from._internal_featureid());
+  if (from._internal_feature_id() != 0) {
+    _this->_internal_set_feature_id(from._internal_feature_id());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -1123,7 +1123,7 @@ PROTOBUF_NOINLINE bool GetFeatureRequest::IsInitialized() const {
 void GetFeatureRequest::InternalSwap(GetFeatureRequest* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.featureid_, other->_impl_.featureid_);
+        swap(_impl_.feature_id_, other->_impl_.feature_id_);
 }
 
 ::google::protobuf::Metadata GetFeatureRequest::GetMetadata() const {
@@ -1414,7 +1414,7 @@ inline PROTOBUF_NDEBUG_INLINE ReinitializeRequest::Impl_::Impl_(
 
 inline void ReinitializeRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.configid_ = {};
+  _impl_.config_id_ = {};
 }
 ReinitializeRequest::~ReinitializeRequest() {
   // @@protoc_insertion_point(destructor:szdiagnostic.ReinitializeRequest)
@@ -1433,7 +1433,7 @@ PROTOBUF_NOINLINE void ReinitializeRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.configid_ = ::int64_t{0};
+  _impl_.config_id_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -1459,14 +1459,14 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> ReinitializeRequest::_table_ = {
     &_ReinitializeRequest_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // int64 configId = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ReinitializeRequest, _impl_.configid_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(ReinitializeRequest, _impl_.configid_)}},
+    // int64 config_id = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ReinitializeRequest, _impl_.config_id_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(ReinitializeRequest, _impl_.config_id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 configId = 1;
-    {PROTOBUF_FIELD_OFFSET(ReinitializeRequest, _impl_.configid_), 0, 0,
+    // int64 config_id = 1;
+    {PROTOBUF_FIELD_OFFSET(ReinitializeRequest, _impl_.config_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
   }},
   // no aux_entries
@@ -1481,11 +1481,11 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> ReinitializeRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 configId = 1;
-  if (this->_internal_configid() != 0) {
+  // int64 config_id = 1;
+  if (this->_internal_config_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_configid(), target);
+            stream, this->_internal_config_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1505,10 +1505,10 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> ReinitializeRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 configId = 1;
-  if (this->_internal_configid() != 0) {
+  // int64 config_id = 1;
+  if (this->_internal_config_id() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_configid());
+        this->_internal_config_id());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -1530,8 +1530,8 @@ void ReinitializeRequest::MergeImpl(::google::protobuf::Message& to_msg, const :
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_configid() != 0) {
-    _this->_internal_set_configid(from._internal_configid());
+  if (from._internal_config_id() != 0) {
+    _this->_internal_set_config_id(from._internal_config_id());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -1553,7 +1553,7 @@ PROTOBUF_NOINLINE bool ReinitializeRequest::IsInitialized() const {
 void ReinitializeRequest::InternalSwap(ReinitializeRequest* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.configid_, other->_impl_.configid_);
+        swap(_impl_.config_id_, other->_impl_.config_id_);
 }
 
 ::google::protobuf::Metadata ReinitializeRequest::GetMetadata() const {

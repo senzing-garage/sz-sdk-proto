@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class CheckDatastorePerformanceRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int32 secondsToRun = 1;</code>
+     * Generated from protobuf field <code>int32 seconds_to_run = 1;</code>
      */
-    protected $secondsToRun = 0;
+    protected $seconds_to_run = 0;
 
     /**
      * Constructor.
@@ -24,7 +24,7 @@ class CheckDatastorePerformanceRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $secondsToRun
+     *     @type int $seconds_to_run
      * }
      */
     public function __construct($data = NULL) {
@@ -33,23 +33,23 @@ class CheckDatastorePerformanceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 secondsToRun = 1;</code>
+     * Generated from protobuf field <code>int32 seconds_to_run = 1;</code>
      * @return int
      */
     public function getSecondsToRun()
     {
-        return $this->secondsToRun;
+        return $this->seconds_to_run;
     }
 
     /**
-     * Generated from protobuf field <code>int32 secondsToRun = 1;</code>
+     * Generated from protobuf field <code>int32 seconds_to_run = 1;</code>
      * @param int $var
      * @return $this
      */
     public function setSecondsToRun($var)
     {
         GPBUtil::checkInt32($var);
-        $this->secondsToRun = $var;
+        $this->seconds_to_run = $var;
 
         return $this;
     }

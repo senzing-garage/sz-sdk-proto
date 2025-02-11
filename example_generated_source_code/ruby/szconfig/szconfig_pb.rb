@@ -6,14 +6,14 @@ require 'google/protobuf'
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("szconfig.proto", :syntax => :proto3) do
     add_message "szconfig.AddDataSourceRequest" do
-      optional :configHandle, :int64, 1
-      optional :dataSourceCode, :string, 2
+      optional :config_handle, :int64, 1
+      optional :data_source_code, :string, 2
     end
     add_message "szconfig.AddDataSourceResponse" do
       optional :result, :string, 1
     end
     add_message "szconfig.CloseConfigRequest" do
-      optional :configHandle, :int64, 1
+      optional :config_handle, :int64, 1
     end
     add_message "szconfig.CloseConfigResponse" do
     end
@@ -23,25 +23,25 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :result, :int64, 1
     end
     add_message "szconfig.DeleteDataSourceRequest" do
-      optional :configHandle, :int64, 1
-      optional :dataSourceCode, :string, 2
+      optional :config_handle, :int64, 1
+      optional :data_source_code, :string, 2
     end
     add_message "szconfig.DeleteDataSourceResponse" do
     end
     add_message "szconfig.ExportConfigRequest" do
-      optional :configHandle, :int64, 1
+      optional :config_handle, :int64, 1
     end
     add_message "szconfig.ExportConfigResponse" do
       optional :result, :string, 1
     end
     add_message "szconfig.GetDataSourcesRequest" do
-      optional :configHandle, :int64, 1
+      optional :config_handle, :int64, 1
     end
     add_message "szconfig.GetDataSourcesResponse" do
       optional :result, :string, 1
     end
     add_message "szconfig.ImportConfigRequest" do
-      optional :configDefinition, :string, 1
+      optional :config_definition, :string, 1
     end
     add_message "szconfig.ImportConfigResponse" do
       optional :result, :int64, 1

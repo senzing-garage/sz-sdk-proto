@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class PreprocessRecordRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string recordDefinition = 1;</code>
+     * Generated from protobuf field <code>string record_definition = 1;</code>
      */
-    protected $recordDefinition = '';
+    protected $record_definition = '';
     /**
      * Generated from protobuf field <code>int64 flags = 2;</code>
      */
@@ -28,7 +28,7 @@ class PreprocessRecordRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $recordDefinition
+     *     @type string $record_definition
      *     @type int|string $flags
      * }
      */
@@ -38,23 +38,23 @@ class PreprocessRecordRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string recordDefinition = 1;</code>
+     * Generated from protobuf field <code>string record_definition = 1;</code>
      * @return string
      */
     public function getRecordDefinition()
     {
-        return $this->recordDefinition;
+        return $this->record_definition;
     }
 
     /**
-     * Generated from protobuf field <code>string recordDefinition = 1;</code>
+     * Generated from protobuf field <code>string record_definition = 1;</code>
      * @param string $var
      * @return $this
      */
     public function setRecordDefinition($var)
     {
         GPBUtil::checkString($var, True);
-        $this->recordDefinition = $var;
+        $this->record_definition = $var;
 
         return $this;
     }

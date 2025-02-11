@@ -376,14 +376,14 @@ class SetDefaultConfigIdRequest final :
   enum : int {
     kConfigIdFieldNumber = 1,
   };
-  // int64 configId = 1;
-  void clear_configid() ;
-  ::int64_t configid() const;
-  void set_configid(::int64_t value);
+  // int64 config_id = 1;
+  void clear_config_id() ;
+  ::int64_t config_id() const;
+  void set_config_id(::int64_t value);
 
   private:
-  ::int64_t _internal_configid() const;
-  void _internal_set_configid(::int64_t value);
+  ::int64_t _internal_config_id() const;
+  void _internal_set_config_id(::int64_t value);
 
   public:
   // @@protoc_insertion_point(class_scope:szconfigmanager.SetDefaultConfigIdRequest)
@@ -409,7 +409,7 @@ class SetDefaultConfigIdRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::int64_t configid_;
+    ::int64_t config_id_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -688,24 +688,24 @@ class ReplaceDefaultConfigIdRequest final :
     kCurrentDefaultConfigIdFieldNumber = 1,
     kNewDefaultConfigIdFieldNumber = 2,
   };
-  // int64 currentDefaultConfigId = 1;
-  void clear_currentdefaultconfigid() ;
-  ::int64_t currentdefaultconfigid() const;
-  void set_currentdefaultconfigid(::int64_t value);
+  // int64 current_default_config_id = 1;
+  void clear_current_default_config_id() ;
+  ::int64_t current_default_config_id() const;
+  void set_current_default_config_id(::int64_t value);
 
   private:
-  ::int64_t _internal_currentdefaultconfigid() const;
-  void _internal_set_currentdefaultconfigid(::int64_t value);
+  ::int64_t _internal_current_default_config_id() const;
+  void _internal_set_current_default_config_id(::int64_t value);
 
   public:
-  // int64 newDefaultConfigId = 2;
-  void clear_newdefaultconfigid() ;
-  ::int64_t newdefaultconfigid() const;
-  void set_newdefaultconfigid(::int64_t value);
+  // int64 new_default_config_id = 2;
+  void clear_new_default_config_id() ;
+  ::int64_t new_default_config_id() const;
+  void set_new_default_config_id(::int64_t value);
 
   private:
-  ::int64_t _internal_newdefaultconfigid() const;
-  void _internal_set_newdefaultconfigid(::int64_t value);
+  ::int64_t _internal_new_default_config_id() const;
+  void _internal_set_new_default_config_id(::int64_t value);
 
   public:
   // @@protoc_insertion_point(class_scope:szconfigmanager.ReplaceDefaultConfigIdRequest)
@@ -731,8 +731,8 @@ class ReplaceDefaultConfigIdRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::int64_t currentdefaultconfigid_;
-    ::int64_t newdefaultconfigid_;
+    ::int64_t current_default_config_id_;
+    ::int64_t new_default_config_id_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -1683,14 +1683,14 @@ class GetConfigRequest final :
   enum : int {
     kConfigIdFieldNumber = 1,
   };
-  // int64 configId = 1;
-  void clear_configid() ;
-  ::int64_t configid() const;
-  void set_configid(::int64_t value);
+  // int64 config_id = 1;
+  void clear_config_id() ;
+  ::int64_t config_id() const;
+  void set_config_id(::int64_t value);
 
   private:
-  ::int64_t _internal_configid() const;
-  void _internal_set_configid(::int64_t value);
+  ::int64_t _internal_config_id() const;
+  void _internal_set_config_id(::int64_t value);
 
   public:
   // @@protoc_insertion_point(class_scope:szconfigmanager.GetConfigRequest)
@@ -1716,7 +1716,7 @@ class GetConfigRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::int64_t configid_;
+    ::int64_t config_id_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -2034,36 +2034,36 @@ class AddConfigRequest final :
     kConfigDefinitionFieldNumber = 1,
     kConfigCommentFieldNumber = 2,
   };
-  // string configDefinition = 1;
-  void clear_configdefinition() ;
-  const std::string& configdefinition() const;
+  // string config_definition = 1;
+  void clear_config_definition() ;
+  const std::string& config_definition() const;
   template <typename Arg_ = const std::string&, typename... Args_>
-  void set_configdefinition(Arg_&& arg, Args_... args);
-  std::string* mutable_configdefinition();
-  PROTOBUF_NODISCARD std::string* release_configdefinition();
-  void set_allocated_configdefinition(std::string* value);
+  void set_config_definition(Arg_&& arg, Args_... args);
+  std::string* mutable_config_definition();
+  PROTOBUF_NODISCARD std::string* release_config_definition();
+  void set_allocated_config_definition(std::string* value);
 
   private:
-  const std::string& _internal_configdefinition() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_configdefinition(
+  const std::string& _internal_config_definition() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_config_definition(
       const std::string& value);
-  std::string* _internal_mutable_configdefinition();
+  std::string* _internal_mutable_config_definition();
 
   public:
-  // string configComment = 2;
-  void clear_configcomment() ;
-  const std::string& configcomment() const;
+  // string config_comment = 2;
+  void clear_config_comment() ;
+  const std::string& config_comment() const;
   template <typename Arg_ = const std::string&, typename... Args_>
-  void set_configcomment(Arg_&& arg, Args_... args);
-  std::string* mutable_configcomment();
-  PROTOBUF_NODISCARD std::string* release_configcomment();
-  void set_allocated_configcomment(std::string* value);
+  void set_config_comment(Arg_&& arg, Args_... args);
+  std::string* mutable_config_comment();
+  PROTOBUF_NODISCARD std::string* release_config_comment();
+  void set_allocated_config_comment(std::string* value);
 
   private:
-  const std::string& _internal_configcomment() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_configcomment(
+  const std::string& _internal_config_comment() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_config_comment(
       const std::string& value);
-  std::string* _internal_mutable_configcomment();
+  std::string* _internal_mutable_config_comment();
 
   public:
   // @@protoc_insertion_point(class_scope:szconfigmanager.AddConfigRequest)
@@ -2073,7 +2073,7 @@ class AddConfigRequest final :
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       1, 2, 0,
-      70, 2>
+      72, 2>
       _table_;
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -2089,8 +2089,8 @@ class AddConfigRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::google::protobuf::internal::ArenaStringPtr configdefinition_;
-    ::google::protobuf::internal::ArenaStringPtr configcomment_;
+    ::google::protobuf::internal::ArenaStringPtr config_definition_;
+    ::google::protobuf::internal::ArenaStringPtr config_comment_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -2114,110 +2114,110 @@ class AddConfigRequest final :
 
 // AddConfigRequest
 
-// string configDefinition = 1;
-inline void AddConfigRequest::clear_configdefinition() {
+// string config_definition = 1;
+inline void AddConfigRequest::clear_config_definition() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.configdefinition_.ClearToEmpty();
+  _impl_.config_definition_.ClearToEmpty();
 }
-inline const std::string& AddConfigRequest::configdefinition() const
+inline const std::string& AddConfigRequest::config_definition() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szconfigmanager.AddConfigRequest.configDefinition)
-  return _internal_configdefinition();
+  // @@protoc_insertion_point(field_get:szconfigmanager.AddConfigRequest.config_definition)
+  return _internal_config_definition();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void AddConfigRequest::set_configdefinition(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void AddConfigRequest::set_config_definition(Arg_&& arg,
                                                      Args_... args) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.configdefinition_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szconfigmanager.AddConfigRequest.configDefinition)
+  _impl_.config_definition_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szconfigmanager.AddConfigRequest.config_definition)
 }
-inline std::string* AddConfigRequest::mutable_configdefinition() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_configdefinition();
-  // @@protoc_insertion_point(field_mutable:szconfigmanager.AddConfigRequest.configDefinition)
+inline std::string* AddConfigRequest::mutable_config_definition() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_config_definition();
+  // @@protoc_insertion_point(field_mutable:szconfigmanager.AddConfigRequest.config_definition)
   return _s;
 }
-inline const std::string& AddConfigRequest::_internal_configdefinition() const {
+inline const std::string& AddConfigRequest::_internal_config_definition() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.configdefinition_.Get();
+  return _impl_.config_definition_.Get();
 }
-inline void AddConfigRequest::_internal_set_configdefinition(const std::string& value) {
+inline void AddConfigRequest::_internal_set_config_definition(const std::string& value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.configdefinition_.Set(value, GetArena());
+  _impl_.config_definition_.Set(value, GetArena());
 }
-inline std::string* AddConfigRequest::_internal_mutable_configdefinition() {
+inline std::string* AddConfigRequest::_internal_mutable_config_definition() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  return _impl_.configdefinition_.Mutable( GetArena());
+  return _impl_.config_definition_.Mutable( GetArena());
 }
-inline std::string* AddConfigRequest::release_configdefinition() {
+inline std::string* AddConfigRequest::release_config_definition() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  // @@protoc_insertion_point(field_release:szconfigmanager.AddConfigRequest.configDefinition)
-  return _impl_.configdefinition_.Release();
+  // @@protoc_insertion_point(field_release:szconfigmanager.AddConfigRequest.config_definition)
+  return _impl_.config_definition_.Release();
 }
-inline void AddConfigRequest::set_allocated_configdefinition(std::string* value) {
+inline void AddConfigRequest::set_allocated_config_definition(std::string* value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.configdefinition_.SetAllocated(value, GetArena());
+  _impl_.config_definition_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.configdefinition_.IsDefault()) {
-          _impl_.configdefinition_.Set("", GetArena());
+        if (_impl_.config_definition_.IsDefault()) {
+          _impl_.config_definition_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:szconfigmanager.AddConfigRequest.configDefinition)
+  // @@protoc_insertion_point(field_set_allocated:szconfigmanager.AddConfigRequest.config_definition)
 }
 
-// string configComment = 2;
-inline void AddConfigRequest::clear_configcomment() {
+// string config_comment = 2;
+inline void AddConfigRequest::clear_config_comment() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.configcomment_.ClearToEmpty();
+  _impl_.config_comment_.ClearToEmpty();
 }
-inline const std::string& AddConfigRequest::configcomment() const
+inline const std::string& AddConfigRequest::config_comment() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szconfigmanager.AddConfigRequest.configComment)
-  return _internal_configcomment();
+  // @@protoc_insertion_point(field_get:szconfigmanager.AddConfigRequest.config_comment)
+  return _internal_config_comment();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void AddConfigRequest::set_configcomment(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void AddConfigRequest::set_config_comment(Arg_&& arg,
                                                      Args_... args) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.configcomment_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szconfigmanager.AddConfigRequest.configComment)
+  _impl_.config_comment_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szconfigmanager.AddConfigRequest.config_comment)
 }
-inline std::string* AddConfigRequest::mutable_configcomment() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_configcomment();
-  // @@protoc_insertion_point(field_mutable:szconfigmanager.AddConfigRequest.configComment)
+inline std::string* AddConfigRequest::mutable_config_comment() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_config_comment();
+  // @@protoc_insertion_point(field_mutable:szconfigmanager.AddConfigRequest.config_comment)
   return _s;
 }
-inline const std::string& AddConfigRequest::_internal_configcomment() const {
+inline const std::string& AddConfigRequest::_internal_config_comment() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.configcomment_.Get();
+  return _impl_.config_comment_.Get();
 }
-inline void AddConfigRequest::_internal_set_configcomment(const std::string& value) {
+inline void AddConfigRequest::_internal_set_config_comment(const std::string& value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.configcomment_.Set(value, GetArena());
+  _impl_.config_comment_.Set(value, GetArena());
 }
-inline std::string* AddConfigRequest::_internal_mutable_configcomment() {
+inline std::string* AddConfigRequest::_internal_mutable_config_comment() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  return _impl_.configcomment_.Mutable( GetArena());
+  return _impl_.config_comment_.Mutable( GetArena());
 }
-inline std::string* AddConfigRequest::release_configcomment() {
+inline std::string* AddConfigRequest::release_config_comment() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  // @@protoc_insertion_point(field_release:szconfigmanager.AddConfigRequest.configComment)
-  return _impl_.configcomment_.Release();
+  // @@protoc_insertion_point(field_release:szconfigmanager.AddConfigRequest.config_comment)
+  return _impl_.config_comment_.Release();
 }
-inline void AddConfigRequest::set_allocated_configcomment(std::string* value) {
+inline void AddConfigRequest::set_allocated_config_comment(std::string* value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.configcomment_.SetAllocated(value, GetArena());
+  _impl_.config_comment_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.configcomment_.IsDefault()) {
-          _impl_.configcomment_.Set("", GetArena());
+        if (_impl_.config_comment_.IsDefault()) {
+          _impl_.config_comment_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:szconfigmanager.AddConfigRequest.configComment)
+  // @@protoc_insertion_point(field_set_allocated:szconfigmanager.AddConfigRequest.config_comment)
 }
 
 // -------------------------------------------------------------------
@@ -2251,27 +2251,27 @@ inline void AddConfigResponse::_internal_set_result(::int64_t value) {
 
 // GetConfigRequest
 
-// int64 configId = 1;
-inline void GetConfigRequest::clear_configid() {
+// int64 config_id = 1;
+inline void GetConfigRequest::clear_config_id() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.configid_ = ::int64_t{0};
+  _impl_.config_id_ = ::int64_t{0};
 }
-inline ::int64_t GetConfigRequest::configid() const {
-  // @@protoc_insertion_point(field_get:szconfigmanager.GetConfigRequest.configId)
-  return _internal_configid();
+inline ::int64_t GetConfigRequest::config_id() const {
+  // @@protoc_insertion_point(field_get:szconfigmanager.GetConfigRequest.config_id)
+  return _internal_config_id();
 }
-inline void GetConfigRequest::set_configid(::int64_t value) {
-  _internal_set_configid(value);
-  // @@protoc_insertion_point(field_set:szconfigmanager.GetConfigRequest.configId)
+inline void GetConfigRequest::set_config_id(::int64_t value) {
+  _internal_set_config_id(value);
+  // @@protoc_insertion_point(field_set:szconfigmanager.GetConfigRequest.config_id)
 }
-inline ::int64_t GetConfigRequest::_internal_configid() const {
+inline ::int64_t GetConfigRequest::_internal_config_id() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.configid_;
+  return _impl_.config_id_;
 }
-inline void GetConfigRequest::_internal_set_configid(::int64_t value) {
+inline void GetConfigRequest::_internal_set_config_id(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.configid_ = value;
+  _impl_.config_id_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -2427,50 +2427,50 @@ inline void GetDefaultConfigIdResponse::_internal_set_result(::int64_t value) {
 
 // ReplaceDefaultConfigIdRequest
 
-// int64 currentDefaultConfigId = 1;
-inline void ReplaceDefaultConfigIdRequest::clear_currentdefaultconfigid() {
+// int64 current_default_config_id = 1;
+inline void ReplaceDefaultConfigIdRequest::clear_current_default_config_id() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.currentdefaultconfigid_ = ::int64_t{0};
+  _impl_.current_default_config_id_ = ::int64_t{0};
 }
-inline ::int64_t ReplaceDefaultConfigIdRequest::currentdefaultconfigid() const {
-  // @@protoc_insertion_point(field_get:szconfigmanager.ReplaceDefaultConfigIdRequest.currentDefaultConfigId)
-  return _internal_currentdefaultconfigid();
+inline ::int64_t ReplaceDefaultConfigIdRequest::current_default_config_id() const {
+  // @@protoc_insertion_point(field_get:szconfigmanager.ReplaceDefaultConfigIdRequest.current_default_config_id)
+  return _internal_current_default_config_id();
 }
-inline void ReplaceDefaultConfigIdRequest::set_currentdefaultconfigid(::int64_t value) {
-  _internal_set_currentdefaultconfigid(value);
-  // @@protoc_insertion_point(field_set:szconfigmanager.ReplaceDefaultConfigIdRequest.currentDefaultConfigId)
+inline void ReplaceDefaultConfigIdRequest::set_current_default_config_id(::int64_t value) {
+  _internal_set_current_default_config_id(value);
+  // @@protoc_insertion_point(field_set:szconfigmanager.ReplaceDefaultConfigIdRequest.current_default_config_id)
 }
-inline ::int64_t ReplaceDefaultConfigIdRequest::_internal_currentdefaultconfigid() const {
+inline ::int64_t ReplaceDefaultConfigIdRequest::_internal_current_default_config_id() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.currentdefaultconfigid_;
+  return _impl_.current_default_config_id_;
 }
-inline void ReplaceDefaultConfigIdRequest::_internal_set_currentdefaultconfigid(::int64_t value) {
+inline void ReplaceDefaultConfigIdRequest::_internal_set_current_default_config_id(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.currentdefaultconfigid_ = value;
+  _impl_.current_default_config_id_ = value;
 }
 
-// int64 newDefaultConfigId = 2;
-inline void ReplaceDefaultConfigIdRequest::clear_newdefaultconfigid() {
+// int64 new_default_config_id = 2;
+inline void ReplaceDefaultConfigIdRequest::clear_new_default_config_id() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.newdefaultconfigid_ = ::int64_t{0};
+  _impl_.new_default_config_id_ = ::int64_t{0};
 }
-inline ::int64_t ReplaceDefaultConfigIdRequest::newdefaultconfigid() const {
-  // @@protoc_insertion_point(field_get:szconfigmanager.ReplaceDefaultConfigIdRequest.newDefaultConfigId)
-  return _internal_newdefaultconfigid();
+inline ::int64_t ReplaceDefaultConfigIdRequest::new_default_config_id() const {
+  // @@protoc_insertion_point(field_get:szconfigmanager.ReplaceDefaultConfigIdRequest.new_default_config_id)
+  return _internal_new_default_config_id();
 }
-inline void ReplaceDefaultConfigIdRequest::set_newdefaultconfigid(::int64_t value) {
-  _internal_set_newdefaultconfigid(value);
-  // @@protoc_insertion_point(field_set:szconfigmanager.ReplaceDefaultConfigIdRequest.newDefaultConfigId)
+inline void ReplaceDefaultConfigIdRequest::set_new_default_config_id(::int64_t value) {
+  _internal_set_new_default_config_id(value);
+  // @@protoc_insertion_point(field_set:szconfigmanager.ReplaceDefaultConfigIdRequest.new_default_config_id)
 }
-inline ::int64_t ReplaceDefaultConfigIdRequest::_internal_newdefaultconfigid() const {
+inline ::int64_t ReplaceDefaultConfigIdRequest::_internal_new_default_config_id() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.newdefaultconfigid_;
+  return _impl_.new_default_config_id_;
 }
-inline void ReplaceDefaultConfigIdRequest::_internal_set_newdefaultconfigid(::int64_t value) {
+inline void ReplaceDefaultConfigIdRequest::_internal_set_new_default_config_id(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.newdefaultconfigid_ = value;
+  _impl_.new_default_config_id_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -2481,27 +2481,27 @@ inline void ReplaceDefaultConfigIdRequest::_internal_set_newdefaultconfigid(::in
 
 // SetDefaultConfigIdRequest
 
-// int64 configId = 1;
-inline void SetDefaultConfigIdRequest::clear_configid() {
+// int64 config_id = 1;
+inline void SetDefaultConfigIdRequest::clear_config_id() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.configid_ = ::int64_t{0};
+  _impl_.config_id_ = ::int64_t{0};
 }
-inline ::int64_t SetDefaultConfigIdRequest::configid() const {
-  // @@protoc_insertion_point(field_get:szconfigmanager.SetDefaultConfigIdRequest.configId)
-  return _internal_configid();
+inline ::int64_t SetDefaultConfigIdRequest::config_id() const {
+  // @@protoc_insertion_point(field_get:szconfigmanager.SetDefaultConfigIdRequest.config_id)
+  return _internal_config_id();
 }
-inline void SetDefaultConfigIdRequest::set_configid(::int64_t value) {
-  _internal_set_configid(value);
-  // @@protoc_insertion_point(field_set:szconfigmanager.SetDefaultConfigIdRequest.configId)
+inline void SetDefaultConfigIdRequest::set_config_id(::int64_t value) {
+  _internal_set_config_id(value);
+  // @@protoc_insertion_point(field_set:szconfigmanager.SetDefaultConfigIdRequest.config_id)
 }
-inline ::int64_t SetDefaultConfigIdRequest::_internal_configid() const {
+inline ::int64_t SetDefaultConfigIdRequest::_internal_config_id() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.configid_;
+  return _impl_.config_id_;
 }
-inline void SetDefaultConfigIdRequest::_internal_set_configid(::int64_t value) {
+inline void SetDefaultConfigIdRequest::_internal_set_config_id(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.configid_ = value;
+  _impl_.config_id_ = value;
 }
 
 // -------------------------------------------------------------------

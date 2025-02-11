@@ -20,18 +20,18 @@ public final class SzConfigProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 configHandle = 1;</code>
+     * <code>int64 config_handle = 1;</code>
      * @return The configHandle.
      */
     long getConfigHandle();
 
     /**
-     * <code>string dataSourceCode = 2;</code>
+     * <code>string data_source_code = 2;</code>
      * @return The dataSourceCode.
      */
     java.lang.String getDataSourceCode();
     /**
-     * <code>string dataSourceCode = 2;</code>
+     * <code>string data_source_code = 2;</code>
      * @return The bytes for dataSourceCode.
      */
     com.google.protobuf.ByteString
@@ -73,10 +73,10 @@ public final class SzConfigProto {
               com.senzing.sdk.grpc.SzConfigProto.AddDataSourceRequest.class, com.senzing.sdk.grpc.SzConfigProto.AddDataSourceRequest.Builder.class);
     }
 
-    public static final int CONFIGHANDLE_FIELD_NUMBER = 1;
+    public static final int CONFIG_HANDLE_FIELD_NUMBER = 1;
     private long configHandle_ = 0L;
     /**
-     * <code>int64 configHandle = 1;</code>
+     * <code>int64 config_handle = 1;</code>
      * @return The configHandle.
      */
     @java.lang.Override
@@ -84,11 +84,11 @@ public final class SzConfigProto {
       return configHandle_;
     }
 
-    public static final int DATASOURCECODE_FIELD_NUMBER = 2;
+    public static final int DATA_SOURCE_CODE_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object dataSourceCode_ = "";
     /**
-     * <code>string dataSourceCode = 2;</code>
+     * <code>string data_source_code = 2;</code>
      * @return The dataSourceCode.
      */
     @java.lang.Override
@@ -105,7 +105,7 @@ public final class SzConfigProto {
       }
     }
     /**
-     * <code>string dataSourceCode = 2;</code>
+     * <code>string data_source_code = 2;</code>
      * @return The bytes for dataSourceCode.
      */
     @java.lang.Override
@@ -189,10 +189,10 @@ public final class SzConfigProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIGHANDLE_FIELD_NUMBER;
+      hash = (37 * hash) + CONFIG_HANDLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getConfigHandle());
-      hash = (37 * hash) + DATASOURCECODE_FIELD_NUMBER;
+      hash = (37 * hash) + DATA_SOURCE_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getDataSourceCode().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -475,7 +475,7 @@ public final class SzConfigProto {
 
       private long configHandle_ ;
       /**
-       * <code>int64 configHandle = 1;</code>
+       * <code>int64 config_handle = 1;</code>
        * @return The configHandle.
        */
       @java.lang.Override
@@ -483,7 +483,7 @@ public final class SzConfigProto {
         return configHandle_;
       }
       /**
-       * <code>int64 configHandle = 1;</code>
+       * <code>int64 config_handle = 1;</code>
        * @param value The configHandle to set.
        * @return This builder for chaining.
        */
@@ -495,7 +495,7 @@ public final class SzConfigProto {
         return this;
       }
       /**
-       * <code>int64 configHandle = 1;</code>
+       * <code>int64 config_handle = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearConfigHandle() {
@@ -507,7 +507,7 @@ public final class SzConfigProto {
 
       private java.lang.Object dataSourceCode_ = "";
       /**
-       * <code>string dataSourceCode = 2;</code>
+       * <code>string data_source_code = 2;</code>
        * @return The dataSourceCode.
        */
       public java.lang.String getDataSourceCode() {
@@ -523,7 +523,7 @@ public final class SzConfigProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 2;</code>
+       * <code>string data_source_code = 2;</code>
        * @return The bytes for dataSourceCode.
        */
       public com.google.protobuf.ByteString
@@ -540,7 +540,7 @@ public final class SzConfigProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 2;</code>
+       * <code>string data_source_code = 2;</code>
        * @param value The dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -553,7 +553,7 @@ public final class SzConfigProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 2;</code>
+       * <code>string data_source_code = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearDataSourceCode() {
@@ -563,7 +563,7 @@ public final class SzConfigProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 2;</code>
+       * <code>string data_source_code = 2;</code>
        * @param value The bytes for dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -1197,7 +1197,7 @@ public final class SzConfigProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 configHandle = 1;</code>
+     * <code>int64 config_handle = 1;</code>
      * @return The configHandle.
      */
     long getConfigHandle();
@@ -1237,10 +1237,10 @@ public final class SzConfigProto {
               com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest.class, com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest.Builder.class);
     }
 
-    public static final int CONFIGHANDLE_FIELD_NUMBER = 1;
+    public static final int CONFIG_HANDLE_FIELD_NUMBER = 1;
     private long configHandle_ = 0L;
     /**
-     * <code>int64 configHandle = 1;</code>
+     * <code>int64 config_handle = 1;</code>
      * @return The configHandle.
      */
     @java.lang.Override
@@ -1306,7 +1306,7 @@ public final class SzConfigProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIGHANDLE_FIELD_NUMBER;
+      hash = (37 * hash) + CONFIG_HANDLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getConfigHandle());
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -1576,7 +1576,7 @@ public final class SzConfigProto {
 
       private long configHandle_ ;
       /**
-       * <code>int64 configHandle = 1;</code>
+       * <code>int64 config_handle = 1;</code>
        * @return The configHandle.
        */
       @java.lang.Override
@@ -1584,7 +1584,7 @@ public final class SzConfigProto {
         return configHandle_;
       }
       /**
-       * <code>int64 configHandle = 1;</code>
+       * <code>int64 config_handle = 1;</code>
        * @param value The configHandle to set.
        * @return This builder for chaining.
        */
@@ -1596,7 +1596,7 @@ public final class SzConfigProto {
         return this;
       }
       /**
-       * <code>int64 configHandle = 1;</code>
+       * <code>int64 config_handle = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearConfigHandle() {
@@ -2945,18 +2945,18 @@ public final class SzConfigProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 configHandle = 1;</code>
+     * <code>int64 config_handle = 1;</code>
      * @return The configHandle.
      */
     long getConfigHandle();
 
     /**
-     * <code>string dataSourceCode = 2;</code>
+     * <code>string data_source_code = 2;</code>
      * @return The dataSourceCode.
      */
     java.lang.String getDataSourceCode();
     /**
-     * <code>string dataSourceCode = 2;</code>
+     * <code>string data_source_code = 2;</code>
      * @return The bytes for dataSourceCode.
      */
     com.google.protobuf.ByteString
@@ -2998,10 +2998,10 @@ public final class SzConfigProto {
               com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceRequest.class, com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceRequest.Builder.class);
     }
 
-    public static final int CONFIGHANDLE_FIELD_NUMBER = 1;
+    public static final int CONFIG_HANDLE_FIELD_NUMBER = 1;
     private long configHandle_ = 0L;
     /**
-     * <code>int64 configHandle = 1;</code>
+     * <code>int64 config_handle = 1;</code>
      * @return The configHandle.
      */
     @java.lang.Override
@@ -3009,11 +3009,11 @@ public final class SzConfigProto {
       return configHandle_;
     }
 
-    public static final int DATASOURCECODE_FIELD_NUMBER = 2;
+    public static final int DATA_SOURCE_CODE_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object dataSourceCode_ = "";
     /**
-     * <code>string dataSourceCode = 2;</code>
+     * <code>string data_source_code = 2;</code>
      * @return The dataSourceCode.
      */
     @java.lang.Override
@@ -3030,7 +3030,7 @@ public final class SzConfigProto {
       }
     }
     /**
-     * <code>string dataSourceCode = 2;</code>
+     * <code>string data_source_code = 2;</code>
      * @return The bytes for dataSourceCode.
      */
     @java.lang.Override
@@ -3114,10 +3114,10 @@ public final class SzConfigProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIGHANDLE_FIELD_NUMBER;
+      hash = (37 * hash) + CONFIG_HANDLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getConfigHandle());
-      hash = (37 * hash) + DATASOURCECODE_FIELD_NUMBER;
+      hash = (37 * hash) + DATA_SOURCE_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getDataSourceCode().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3400,7 +3400,7 @@ public final class SzConfigProto {
 
       private long configHandle_ ;
       /**
-       * <code>int64 configHandle = 1;</code>
+       * <code>int64 config_handle = 1;</code>
        * @return The configHandle.
        */
       @java.lang.Override
@@ -3408,7 +3408,7 @@ public final class SzConfigProto {
         return configHandle_;
       }
       /**
-       * <code>int64 configHandle = 1;</code>
+       * <code>int64 config_handle = 1;</code>
        * @param value The configHandle to set.
        * @return This builder for chaining.
        */
@@ -3420,7 +3420,7 @@ public final class SzConfigProto {
         return this;
       }
       /**
-       * <code>int64 configHandle = 1;</code>
+       * <code>int64 config_handle = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearConfigHandle() {
@@ -3432,7 +3432,7 @@ public final class SzConfigProto {
 
       private java.lang.Object dataSourceCode_ = "";
       /**
-       * <code>string dataSourceCode = 2;</code>
+       * <code>string data_source_code = 2;</code>
        * @return The dataSourceCode.
        */
       public java.lang.String getDataSourceCode() {
@@ -3448,7 +3448,7 @@ public final class SzConfigProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 2;</code>
+       * <code>string data_source_code = 2;</code>
        * @return The bytes for dataSourceCode.
        */
       public com.google.protobuf.ByteString
@@ -3465,7 +3465,7 @@ public final class SzConfigProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 2;</code>
+       * <code>string data_source_code = 2;</code>
        * @param value The dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -3478,7 +3478,7 @@ public final class SzConfigProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 2;</code>
+       * <code>string data_source_code = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearDataSourceCode() {
@@ -3488,7 +3488,7 @@ public final class SzConfigProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 2;</code>
+       * <code>string data_source_code = 2;</code>
        * @param value The bytes for dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -3967,7 +3967,7 @@ public final class SzConfigProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 configHandle = 1;</code>
+     * <code>int64 config_handle = 1;</code>
      * @return The configHandle.
      */
     long getConfigHandle();
@@ -4007,10 +4007,10 @@ public final class SzConfigProto {
               com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest.class, com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest.Builder.class);
     }
 
-    public static final int CONFIGHANDLE_FIELD_NUMBER = 1;
+    public static final int CONFIG_HANDLE_FIELD_NUMBER = 1;
     private long configHandle_ = 0L;
     /**
-     * <code>int64 configHandle = 1;</code>
+     * <code>int64 config_handle = 1;</code>
      * @return The configHandle.
      */
     @java.lang.Override
@@ -4076,7 +4076,7 @@ public final class SzConfigProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIGHANDLE_FIELD_NUMBER;
+      hash = (37 * hash) + CONFIG_HANDLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getConfigHandle());
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -4346,7 +4346,7 @@ public final class SzConfigProto {
 
       private long configHandle_ ;
       /**
-       * <code>int64 configHandle = 1;</code>
+       * <code>int64 config_handle = 1;</code>
        * @return The configHandle.
        */
       @java.lang.Override
@@ -4354,7 +4354,7 @@ public final class SzConfigProto {
         return configHandle_;
       }
       /**
-       * <code>int64 configHandle = 1;</code>
+       * <code>int64 config_handle = 1;</code>
        * @param value The configHandle to set.
        * @return This builder for chaining.
        */
@@ -4366,7 +4366,7 @@ public final class SzConfigProto {
         return this;
       }
       /**
-       * <code>int64 configHandle = 1;</code>
+       * <code>int64 config_handle = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearConfigHandle() {
@@ -4996,7 +4996,7 @@ public final class SzConfigProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 configHandle = 1;</code>
+     * <code>int64 config_handle = 1;</code>
      * @return The configHandle.
      */
     long getConfigHandle();
@@ -5036,10 +5036,10 @@ public final class SzConfigProto {
               com.senzing.sdk.grpc.SzConfigProto.GetDataSourcesRequest.class, com.senzing.sdk.grpc.SzConfigProto.GetDataSourcesRequest.Builder.class);
     }
 
-    public static final int CONFIGHANDLE_FIELD_NUMBER = 1;
+    public static final int CONFIG_HANDLE_FIELD_NUMBER = 1;
     private long configHandle_ = 0L;
     /**
-     * <code>int64 configHandle = 1;</code>
+     * <code>int64 config_handle = 1;</code>
      * @return The configHandle.
      */
     @java.lang.Override
@@ -5105,7 +5105,7 @@ public final class SzConfigProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIGHANDLE_FIELD_NUMBER;
+      hash = (37 * hash) + CONFIG_HANDLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getConfigHandle());
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -5375,7 +5375,7 @@ public final class SzConfigProto {
 
       private long configHandle_ ;
       /**
-       * <code>int64 configHandle = 1;</code>
+       * <code>int64 config_handle = 1;</code>
        * @return The configHandle.
        */
       @java.lang.Override
@@ -5383,7 +5383,7 @@ public final class SzConfigProto {
         return configHandle_;
       }
       /**
-       * <code>int64 configHandle = 1;</code>
+       * <code>int64 config_handle = 1;</code>
        * @param value The configHandle to set.
        * @return This builder for chaining.
        */
@@ -5395,7 +5395,7 @@ public final class SzConfigProto {
         return this;
       }
       /**
-       * <code>int64 configHandle = 1;</code>
+       * <code>int64 config_handle = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearConfigHandle() {
@@ -6025,12 +6025,12 @@ public final class SzConfigProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string configDefinition = 1;</code>
+     * <code>string config_definition = 1;</code>
      * @return The configDefinition.
      */
     java.lang.String getConfigDefinition();
     /**
-     * <code>string configDefinition = 1;</code>
+     * <code>string config_definition = 1;</code>
      * @return The bytes for configDefinition.
      */
     com.google.protobuf.ByteString
@@ -6072,11 +6072,11 @@ public final class SzConfigProto {
               com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest.class, com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest.Builder.class);
     }
 
-    public static final int CONFIGDEFINITION_FIELD_NUMBER = 1;
+    public static final int CONFIG_DEFINITION_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object configDefinition_ = "";
     /**
-     * <code>string configDefinition = 1;</code>
+     * <code>string config_definition = 1;</code>
      * @return The configDefinition.
      */
     @java.lang.Override
@@ -6093,7 +6093,7 @@ public final class SzConfigProto {
       }
     }
     /**
-     * <code>string configDefinition = 1;</code>
+     * <code>string config_definition = 1;</code>
      * @return The bytes for configDefinition.
      */
     @java.lang.Override
@@ -6168,7 +6168,7 @@ public final class SzConfigProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIGDEFINITION_FIELD_NUMBER;
+      hash = (37 * hash) + CONFIG_DEFINITION_FIELD_NUMBER;
       hash = (53 * hash) + getConfigDefinition().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -6439,7 +6439,7 @@ public final class SzConfigProto {
 
       private java.lang.Object configDefinition_ = "";
       /**
-       * <code>string configDefinition = 1;</code>
+       * <code>string config_definition = 1;</code>
        * @return The configDefinition.
        */
       public java.lang.String getConfigDefinition() {
@@ -6455,7 +6455,7 @@ public final class SzConfigProto {
         }
       }
       /**
-       * <code>string configDefinition = 1;</code>
+       * <code>string config_definition = 1;</code>
        * @return The bytes for configDefinition.
        */
       public com.google.protobuf.ByteString
@@ -6472,7 +6472,7 @@ public final class SzConfigProto {
         }
       }
       /**
-       * <code>string configDefinition = 1;</code>
+       * <code>string config_definition = 1;</code>
        * @param value The configDefinition to set.
        * @return This builder for chaining.
        */
@@ -6485,7 +6485,7 @@ public final class SzConfigProto {
         return this;
       }
       /**
-       * <code>string configDefinition = 1;</code>
+       * <code>string config_definition = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearConfigDefinition() {
@@ -6495,7 +6495,7 @@ public final class SzConfigProto {
         return this;
       }
       /**
-       * <code>string configDefinition = 1;</code>
+       * <code>string config_definition = 1;</code>
        * @param value The bytes for configDefinition to set.
        * @return This builder for chaining.
        */
@@ -7128,40 +7128,40 @@ public final class SzConfigProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016szconfig.proto\022\010szconfig\"D\n\024AddDataSou" +
-      "rceRequest\022\024\n\014configHandle\030\001 \001(\003\022\026\n\016data" +
-      "SourceCode\030\002 \001(\t\"\'\n\025AddDataSourceRespons" +
-      "e\022\016\n\006result\030\001 \001(\t\"*\n\022CloseConfigRequest\022" +
-      "\024\n\014configHandle\030\001 \001(\003\"\025\n\023CloseConfigResp" +
-      "onse\"\025\n\023CreateConfigRequest\"&\n\024CreateCon" +
-      "figResponse\022\016\n\006result\030\001 \001(\003\"G\n\027DeleteDat" +
-      "aSourceRequest\022\024\n\014configHandle\030\001 \001(\003\022\026\n\016" +
-      "dataSourceCode\030\002 \001(\t\"\032\n\030DeleteDataSource" +
-      "Response\"+\n\023ExportConfigRequest\022\024\n\014confi" +
-      "gHandle\030\001 \001(\003\"&\n\024ExportConfigResponse\022\016\n" +
-      "\006result\030\001 \001(\t\"-\n\025GetDataSourcesRequest\022\024" +
-      "\n\014configHandle\030\001 \001(\003\"(\n\026GetDataSourcesRe" +
-      "sponse\022\016\n\006result\030\001 \001(\t\"/\n\023ImportConfigRe" +
-      "quest\022\030\n\020configDefinition\030\001 \001(\t\"&\n\024Impor" +
-      "tConfigResponse\022\016\n\006result\030\001 \001(\0032\323\004\n\010SzCo" +
-      "nfig\022R\n\rAddDataSource\022\036.szconfig.AddData" +
-      "SourceRequest\032\037.szconfig.AddDataSourceRe" +
-      "sponse\"\000\022L\n\013CloseConfig\022\034.szconfig.Close" +
-      "ConfigRequest\032\035.szconfig.CloseConfigResp" +
-      "onse\"\000\022O\n\014CreateConfig\022\035.szconfig.Create" +
-      "ConfigRequest\032\036.szconfig.CreateConfigRes" +
-      "ponse\"\000\022[\n\020DeleteDataSource\022!.szconfig.D" +
-      "eleteDataSourceRequest\032\".szconfig.Delete" +
-      "DataSourceResponse\"\000\022O\n\014ExportConfig\022\035.s" +
-      "zconfig.ExportConfigRequest\032\036.szconfig.E" +
-      "xportConfigResponse\"\000\022U\n\016GetDataSources\022" +
-      "\037.szconfig.GetDataSourcesRequest\032 .szcon" +
-      "fig.GetDataSourcesResponse\"\000\022O\n\014ImportCo" +
-      "nfig\022\035.szconfig.ImportConfigRequest\032\036.sz" +
-      "config.ImportConfigResponse\"\000BX\n\024com.sen" +
-      "zing.sdk.grpcB\rSzConfigProtoZ1github.com" +
-      "/senzing-garage/sz-sdk-go-grpc/szconfigb" +
-      "\006proto3"
+      "\n\016szconfig.proto\022\010szconfig\"G\n\024AddDataSou" +
+      "rceRequest\022\025\n\rconfig_handle\030\001 \001(\003\022\030\n\020dat" +
+      "a_source_code\030\002 \001(\t\"\'\n\025AddDataSourceResp" +
+      "onse\022\016\n\006result\030\001 \001(\t\"+\n\022CloseConfigReque" +
+      "st\022\025\n\rconfig_handle\030\001 \001(\003\"\025\n\023CloseConfig" +
+      "Response\"\025\n\023CreateConfigRequest\"&\n\024Creat" +
+      "eConfigResponse\022\016\n\006result\030\001 \001(\003\"J\n\027Delet" +
+      "eDataSourceRequest\022\025\n\rconfig_handle\030\001 \001(" +
+      "\003\022\030\n\020data_source_code\030\002 \001(\t\"\032\n\030DeleteDat" +
+      "aSourceResponse\",\n\023ExportConfigRequest\022\025" +
+      "\n\rconfig_handle\030\001 \001(\003\"&\n\024ExportConfigRes" +
+      "ponse\022\016\n\006result\030\001 \001(\t\".\n\025GetDataSourcesR" +
+      "equest\022\025\n\rconfig_handle\030\001 \001(\003\"(\n\026GetData" +
+      "SourcesResponse\022\016\n\006result\030\001 \001(\t\"0\n\023Impor" +
+      "tConfigRequest\022\031\n\021config_definition\030\001 \001(" +
+      "\t\"&\n\024ImportConfigResponse\022\016\n\006result\030\001 \001(" +
+      "\0032\323\004\n\010SzConfig\022R\n\rAddDataSource\022\036.szconf" +
+      "ig.AddDataSourceRequest\032\037.szconfig.AddDa" +
+      "taSourceResponse\"\000\022L\n\013CloseConfig\022\034.szco" +
+      "nfig.CloseConfigRequest\032\035.szconfig.Close" +
+      "ConfigResponse\"\000\022O\n\014CreateConfig\022\035.szcon" +
+      "fig.CreateConfigRequest\032\036.szconfig.Creat" +
+      "eConfigResponse\"\000\022[\n\020DeleteDataSource\022!." +
+      "szconfig.DeleteDataSourceRequest\032\".szcon" +
+      "fig.DeleteDataSourceResponse\"\000\022O\n\014Export" +
+      "Config\022\035.szconfig.ExportConfigRequest\032\036." +
+      "szconfig.ExportConfigResponse\"\000\022U\n\016GetDa" +
+      "taSources\022\037.szconfig.GetDataSourcesReque" +
+      "st\032 .szconfig.GetDataSourcesResponse\"\000\022O" +
+      "\n\014ImportConfig\022\035.szconfig.ImportConfigRe" +
+      "quest\032\036.szconfig.ImportConfigResponse\"\000B" +
+      "X\n\024com.senzing.sdk.grpcB\rSzConfigProtoZ1" +
+      "github.com/senzing-garage/sz-sdk-go-grpc" +
+      "/szconfigb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

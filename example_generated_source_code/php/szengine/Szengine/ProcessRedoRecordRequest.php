@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class ProcessRedoRecordRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string redoRecord = 1;</code>
+     * Generated from protobuf field <code>string redo_record = 1;</code>
      */
-    protected $redoRecord = '';
+    protected $redo_record = '';
     /**
      * Generated from protobuf field <code>int64 flags = 2;</code>
      */
@@ -28,7 +28,7 @@ class ProcessRedoRecordRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $redoRecord
+     *     @type string $redo_record
      *     @type int|string $flags
      * }
      */
@@ -38,23 +38,23 @@ class ProcessRedoRecordRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string redoRecord = 1;</code>
+     * Generated from protobuf field <code>string redo_record = 1;</code>
      * @return string
      */
     public function getRedoRecord()
     {
-        return $this->redoRecord;
+        return $this->redo_record;
     }
 
     /**
-     * Generated from protobuf field <code>string redoRecord = 1;</code>
+     * Generated from protobuf field <code>string redo_record = 1;</code>
      * @param string $var
      * @return $this
      */
     public function setRedoRecord($var)
     {
         GPBUtil::checkString($var, True);
-        $this->redoRecord = $var;
+        $this->redo_record = $var;
 
         return $this;
     }
