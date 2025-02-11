@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning].
 
 - ...
 
+## [0.8.0] - 2025-02-12
+
+### Changed in 0.8.0
+
+- Modify `.proto` to conform to <https://protobuf.dev/programming-guides/style>
+
 ## [0.7.11] - 2025-02-07
 
 ### Changed in 0.7.11
