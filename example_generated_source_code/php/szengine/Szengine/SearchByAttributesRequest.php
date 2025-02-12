@@ -18,9 +18,9 @@ class SearchByAttributesRequest extends \Google\Protobuf\Internal\Message
      */
     protected $attributes = '';
     /**
-     * Generated from protobuf field <code>string searchProfile = 2;</code>
+     * Generated from protobuf field <code>string search_profile = 2;</code>
      */
-    protected $searchProfile = '';
+    protected $search_profile = '';
     /**
      * Generated from protobuf field <code>int64 flags = 3;</code>
      */
@@ -33,7 +33,7 @@ class SearchByAttributesRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $attributes
-     *     @type string $searchProfile
+     *     @type string $search_profile
      *     @type int|string $flags
      * }
      */
@@ -65,23 +65,23 @@ class SearchByAttributesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string searchProfile = 2;</code>
+     * Generated from protobuf field <code>string search_profile = 2;</code>
      * @return string
      */
     public function getSearchProfile()
     {
-        return $this->searchProfile;
+        return $this->search_profile;
     }
 
     /**
-     * Generated from protobuf field <code>string searchProfile = 2;</code>
+     * Generated from protobuf field <code>string search_profile = 2;</code>
      * @param string $var
      * @return $this
      */
     public function setSearchProfile($var)
     {
         GPBUtil::checkString($var, True);
-        $this->searchProfile = $var;
+        $this->search_profile = $var;
 
         return $this;
     }

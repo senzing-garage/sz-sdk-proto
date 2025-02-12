@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class HowEntityByEntityIdRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int64 entityId = 1;</code>
+     * Generated from protobuf field <code>int64 entity_id = 1;</code>
      */
-    protected $entityId = 0;
+    protected $entity_id = 0;
     /**
      * Generated from protobuf field <code>int64 flags = 2;</code>
      */
@@ -28,7 +28,7 @@ class HowEntityByEntityIdRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int|string $entityId
+     *     @type int|string $entity_id
      *     @type int|string $flags
      * }
      */
@@ -38,23 +38,23 @@ class HowEntityByEntityIdRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 entityId = 1;</code>
+     * Generated from protobuf field <code>int64 entity_id = 1;</code>
      * @return int|string
      */
     public function getEntityId()
     {
-        return $this->entityId;
+        return $this->entity_id;
     }
 
     /**
-     * Generated from protobuf field <code>int64 entityId = 1;</code>
+     * Generated from protobuf field <code>int64 entity_id = 1;</code>
      * @param int|string $var
      * @return $this
      */
     public function setEntityId($var)
     {
         GPBUtil::checkInt64($var);
-        $this->entityId = $var;
+        $this->entity_id = $var;
 
         return $this;
     }

@@ -14,21 +14,21 @@ use Google\Protobuf\Internal\GPBUtil;
 class WhyRecordsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string dataSourceCode1 = 1;</code>
+     * Generated from protobuf field <code>string data_source_code_1 = 1;</code>
      */
-    protected $dataSourceCode1 = '';
+    protected $data_source_code_1 = '';
     /**
-     * Generated from protobuf field <code>string recordId1 = 2;</code>
+     * Generated from protobuf field <code>string record_id_1 = 2;</code>
      */
-    protected $recordId1 = '';
+    protected $record_id_1 = '';
     /**
-     * Generated from protobuf field <code>string dataSourceCode2 = 3;</code>
+     * Generated from protobuf field <code>string data_source_code_2 = 3;</code>
      */
-    protected $dataSourceCode2 = '';
+    protected $data_source_code_2 = '';
     /**
-     * Generated from protobuf field <code>string recordId2 = 4;</code>
+     * Generated from protobuf field <code>string record_id_2 = 4;</code>
      */
-    protected $recordId2 = '';
+    protected $record_id_2 = '';
     /**
      * Generated from protobuf field <code>int64 flags = 5;</code>
      */
@@ -40,10 +40,10 @@ class WhyRecordsRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $dataSourceCode1
-     *     @type string $recordId1
-     *     @type string $dataSourceCode2
-     *     @type string $recordId2
+     *     @type string $data_source_code_1
+     *     @type string $record_id_1
+     *     @type string $data_source_code_2
+     *     @type string $record_id_2
      *     @type int|string $flags
      * }
      */
@@ -53,89 +53,89 @@ class WhyRecordsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string dataSourceCode1 = 1;</code>
+     * Generated from protobuf field <code>string data_source_code_1 = 1;</code>
      * @return string
      */
     public function getDataSourceCode1()
     {
-        return $this->dataSourceCode1;
+        return $this->data_source_code_1;
     }
 
     /**
-     * Generated from protobuf field <code>string dataSourceCode1 = 1;</code>
+     * Generated from protobuf field <code>string data_source_code_1 = 1;</code>
      * @param string $var
      * @return $this
      */
     public function setDataSourceCode1($var)
     {
         GPBUtil::checkString($var, True);
-        $this->dataSourceCode1 = $var;
+        $this->data_source_code_1 = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>string recordId1 = 2;</code>
+     * Generated from protobuf field <code>string record_id_1 = 2;</code>
      * @return string
      */
     public function getRecordId1()
     {
-        return $this->recordId1;
+        return $this->record_id_1;
     }
 
     /**
-     * Generated from protobuf field <code>string recordId1 = 2;</code>
+     * Generated from protobuf field <code>string record_id_1 = 2;</code>
      * @param string $var
      * @return $this
      */
     public function setRecordId1($var)
     {
         GPBUtil::checkString($var, True);
-        $this->recordId1 = $var;
+        $this->record_id_1 = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>string dataSourceCode2 = 3;</code>
+     * Generated from protobuf field <code>string data_source_code_2 = 3;</code>
      * @return string
      */
     public function getDataSourceCode2()
     {
-        return $this->dataSourceCode2;
+        return $this->data_source_code_2;
     }
 
     /**
-     * Generated from protobuf field <code>string dataSourceCode2 = 3;</code>
+     * Generated from protobuf field <code>string data_source_code_2 = 3;</code>
      * @param string $var
      * @return $this
      */
     public function setDataSourceCode2($var)
     {
         GPBUtil::checkString($var, True);
-        $this->dataSourceCode2 = $var;
+        $this->data_source_code_2 = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>string recordId2 = 4;</code>
+     * Generated from protobuf field <code>string record_id_2 = 4;</code>
      * @return string
      */
     public function getRecordId2()
     {
-        return $this->recordId2;
+        return $this->record_id_2;
     }
 
     /**
-     * Generated from protobuf field <code>string recordId2 = 4;</code>
+     * Generated from protobuf field <code>string record_id_2 = 4;</code>
      * @param string $var
      * @return $this
      */
     public function setRecordId2($var)
     {
         GPBUtil::checkString($var, True);
-        $this->recordId2 = $var;
+        $this->record_id_2 = $var;
 
         return $this;
     }

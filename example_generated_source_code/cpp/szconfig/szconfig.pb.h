@@ -421,20 +421,20 @@ class ImportConfigRequest final :
   enum : int {
     kConfigDefinitionFieldNumber = 1,
   };
-  // string configDefinition = 1;
-  void clear_configdefinition() ;
-  const std::string& configdefinition() const;
+  // string config_definition = 1;
+  void clear_config_definition() ;
+  const std::string& config_definition() const;
   template <typename Arg_ = const std::string&, typename... Args_>
-  void set_configdefinition(Arg_&& arg, Args_... args);
-  std::string* mutable_configdefinition();
-  PROTOBUF_NODISCARD std::string* release_configdefinition();
-  void set_allocated_configdefinition(std::string* value);
+  void set_config_definition(Arg_&& arg, Args_... args);
+  std::string* mutable_config_definition();
+  PROTOBUF_NODISCARD std::string* release_config_definition();
+  void set_allocated_config_definition(std::string* value);
 
   private:
-  const std::string& _internal_configdefinition() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_configdefinition(
+  const std::string& _internal_config_definition() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_config_definition(
       const std::string& value);
-  std::string* _internal_mutable_configdefinition();
+  std::string* _internal_mutable_config_definition();
 
   public:
   // @@protoc_insertion_point(class_scope:szconfig.ImportConfigRequest)
@@ -444,7 +444,7 @@ class ImportConfigRequest final :
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       0, 1, 0,
-      53, 2>
+      54, 2>
       _table_;
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -460,7 +460,7 @@ class ImportConfigRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::google::protobuf::internal::ArenaStringPtr configdefinition_;
+    ::google::protobuf::internal::ArenaStringPtr config_definition_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -783,14 +783,14 @@ class GetDataSourcesRequest final :
   enum : int {
     kConfigHandleFieldNumber = 1,
   };
-  // int64 configHandle = 1;
-  void clear_confighandle() ;
-  ::int64_t confighandle() const;
-  void set_confighandle(::int64_t value);
+  // int64 config_handle = 1;
+  void clear_config_handle() ;
+  ::int64_t config_handle() const;
+  void set_config_handle(::int64_t value);
 
   private:
-  ::int64_t _internal_confighandle() const;
-  void _internal_set_confighandle(::int64_t value);
+  ::int64_t _internal_config_handle() const;
+  void _internal_set_config_handle(::int64_t value);
 
   public:
   // @@protoc_insertion_point(class_scope:szconfig.GetDataSourcesRequest)
@@ -816,7 +816,7 @@ class GetDataSourcesRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::int64_t confighandle_;
+    ::int64_t config_handle_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -1139,14 +1139,14 @@ class ExportConfigRequest final :
   enum : int {
     kConfigHandleFieldNumber = 1,
   };
-  // int64 configHandle = 1;
-  void clear_confighandle() ;
-  ::int64_t confighandle() const;
-  void set_confighandle(::int64_t value);
+  // int64 config_handle = 1;
+  void clear_config_handle() ;
+  ::int64_t config_handle() const;
+  void set_config_handle(::int64_t value);
 
   private:
-  ::int64_t _internal_confighandle() const;
-  void _internal_set_confighandle(::int64_t value);
+  ::int64_t _internal_config_handle() const;
+  void _internal_set_config_handle(::int64_t value);
 
   public:
   // @@protoc_insertion_point(class_scope:szconfig.ExportConfigRequest)
@@ -1172,7 +1172,7 @@ class ExportConfigRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::int64_t confighandle_;
+    ::int64_t config_handle_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -1451,30 +1451,30 @@ class DeleteDataSourceRequest final :
     kDataSourceCodeFieldNumber = 2,
     kConfigHandleFieldNumber = 1,
   };
-  // string dataSourceCode = 2;
-  void clear_datasourcecode() ;
-  const std::string& datasourcecode() const;
+  // string data_source_code = 2;
+  void clear_data_source_code() ;
+  const std::string& data_source_code() const;
   template <typename Arg_ = const std::string&, typename... Args_>
-  void set_datasourcecode(Arg_&& arg, Args_... args);
-  std::string* mutable_datasourcecode();
-  PROTOBUF_NODISCARD std::string* release_datasourcecode();
-  void set_allocated_datasourcecode(std::string* value);
+  void set_data_source_code(Arg_&& arg, Args_... args);
+  std::string* mutable_data_source_code();
+  PROTOBUF_NODISCARD std::string* release_data_source_code();
+  void set_allocated_data_source_code(std::string* value);
 
   private:
-  const std::string& _internal_datasourcecode() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_datasourcecode(
+  const std::string& _internal_data_source_code() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_data_source_code(
       const std::string& value);
-  std::string* _internal_mutable_datasourcecode();
+  std::string* _internal_mutable_data_source_code();
 
   public:
-  // int64 configHandle = 1;
-  void clear_confighandle() ;
-  ::int64_t confighandle() const;
-  void set_confighandle(::int64_t value);
+  // int64 config_handle = 1;
+  void clear_config_handle() ;
+  ::int64_t config_handle() const;
+  void set_config_handle(::int64_t value);
 
   private:
-  ::int64_t _internal_confighandle() const;
-  void _internal_set_confighandle(::int64_t value);
+  ::int64_t _internal_config_handle() const;
+  void _internal_set_config_handle(::int64_t value);
 
   public:
   // @@protoc_insertion_point(class_scope:szconfig.DeleteDataSourceRequest)
@@ -1484,7 +1484,7 @@ class DeleteDataSourceRequest final :
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       1, 2, 0,
-      55, 2>
+      57, 2>
       _table_;
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -1500,8 +1500,8 @@ class DeleteDataSourceRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::google::protobuf::internal::ArenaStringPtr datasourcecode_;
-    ::int64_t confighandle_;
+    ::google::protobuf::internal::ArenaStringPtr data_source_code_;
+    ::int64_t config_handle_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -2090,14 +2090,14 @@ class CloseConfigRequest final :
   enum : int {
     kConfigHandleFieldNumber = 1,
   };
-  // int64 configHandle = 1;
-  void clear_confighandle() ;
-  ::int64_t confighandle() const;
-  void set_confighandle(::int64_t value);
+  // int64 config_handle = 1;
+  void clear_config_handle() ;
+  ::int64_t config_handle() const;
+  void set_config_handle(::int64_t value);
 
   private:
-  ::int64_t _internal_confighandle() const;
-  void _internal_set_confighandle(::int64_t value);
+  ::int64_t _internal_config_handle() const;
+  void _internal_set_config_handle(::int64_t value);
 
   public:
   // @@protoc_insertion_point(class_scope:szconfig.CloseConfigRequest)
@@ -2123,7 +2123,7 @@ class CloseConfigRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::int64_t confighandle_;
+    ::int64_t config_handle_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -2447,30 +2447,30 @@ class AddDataSourceRequest final :
     kDataSourceCodeFieldNumber = 2,
     kConfigHandleFieldNumber = 1,
   };
-  // string dataSourceCode = 2;
-  void clear_datasourcecode() ;
-  const std::string& datasourcecode() const;
+  // string data_source_code = 2;
+  void clear_data_source_code() ;
+  const std::string& data_source_code() const;
   template <typename Arg_ = const std::string&, typename... Args_>
-  void set_datasourcecode(Arg_&& arg, Args_... args);
-  std::string* mutable_datasourcecode();
-  PROTOBUF_NODISCARD std::string* release_datasourcecode();
-  void set_allocated_datasourcecode(std::string* value);
+  void set_data_source_code(Arg_&& arg, Args_... args);
+  std::string* mutable_data_source_code();
+  PROTOBUF_NODISCARD std::string* release_data_source_code();
+  void set_allocated_data_source_code(std::string* value);
 
   private:
-  const std::string& _internal_datasourcecode() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_datasourcecode(
+  const std::string& _internal_data_source_code() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_data_source_code(
       const std::string& value);
-  std::string* _internal_mutable_datasourcecode();
+  std::string* _internal_mutable_data_source_code();
 
   public:
-  // int64 configHandle = 1;
-  void clear_confighandle() ;
-  ::int64_t confighandle() const;
-  void set_confighandle(::int64_t value);
+  // int64 config_handle = 1;
+  void clear_config_handle() ;
+  ::int64_t config_handle() const;
+  void set_config_handle(::int64_t value);
 
   private:
-  ::int64_t _internal_confighandle() const;
-  void _internal_set_confighandle(::int64_t value);
+  ::int64_t _internal_config_handle() const;
+  void _internal_set_config_handle(::int64_t value);
 
   public:
   // @@protoc_insertion_point(class_scope:szconfig.AddDataSourceRequest)
@@ -2480,7 +2480,7 @@ class AddDataSourceRequest final :
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       1, 2, 0,
-      52, 2>
+      54, 2>
       _table_;
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -2496,8 +2496,8 @@ class AddDataSourceRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::google::protobuf::internal::ArenaStringPtr datasourcecode_;
-    ::int64_t confighandle_;
+    ::google::protobuf::internal::ArenaStringPtr data_source_code_;
+    ::int64_t config_handle_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -2521,80 +2521,80 @@ class AddDataSourceRequest final :
 
 // AddDataSourceRequest
 
-// int64 configHandle = 1;
-inline void AddDataSourceRequest::clear_confighandle() {
+// int64 config_handle = 1;
+inline void AddDataSourceRequest::clear_config_handle() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.confighandle_ = ::int64_t{0};
+  _impl_.config_handle_ = ::int64_t{0};
 }
-inline ::int64_t AddDataSourceRequest::confighandle() const {
-  // @@protoc_insertion_point(field_get:szconfig.AddDataSourceRequest.configHandle)
-  return _internal_confighandle();
+inline ::int64_t AddDataSourceRequest::config_handle() const {
+  // @@protoc_insertion_point(field_get:szconfig.AddDataSourceRequest.config_handle)
+  return _internal_config_handle();
 }
-inline void AddDataSourceRequest::set_confighandle(::int64_t value) {
-  _internal_set_confighandle(value);
-  // @@protoc_insertion_point(field_set:szconfig.AddDataSourceRequest.configHandle)
+inline void AddDataSourceRequest::set_config_handle(::int64_t value) {
+  _internal_set_config_handle(value);
+  // @@protoc_insertion_point(field_set:szconfig.AddDataSourceRequest.config_handle)
 }
-inline ::int64_t AddDataSourceRequest::_internal_confighandle() const {
+inline ::int64_t AddDataSourceRequest::_internal_config_handle() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.confighandle_;
+  return _impl_.config_handle_;
 }
-inline void AddDataSourceRequest::_internal_set_confighandle(::int64_t value) {
+inline void AddDataSourceRequest::_internal_set_config_handle(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.confighandle_ = value;
+  _impl_.config_handle_ = value;
 }
 
-// string dataSourceCode = 2;
-inline void AddDataSourceRequest::clear_datasourcecode() {
+// string data_source_code = 2;
+inline void AddDataSourceRequest::clear_data_source_code() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.datasourcecode_.ClearToEmpty();
+  _impl_.data_source_code_.ClearToEmpty();
 }
-inline const std::string& AddDataSourceRequest::datasourcecode() const
+inline const std::string& AddDataSourceRequest::data_source_code() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szconfig.AddDataSourceRequest.dataSourceCode)
-  return _internal_datasourcecode();
+  // @@protoc_insertion_point(field_get:szconfig.AddDataSourceRequest.data_source_code)
+  return _internal_data_source_code();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void AddDataSourceRequest::set_datasourcecode(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void AddDataSourceRequest::set_data_source_code(Arg_&& arg,
                                                      Args_... args) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.datasourcecode_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szconfig.AddDataSourceRequest.dataSourceCode)
+  _impl_.data_source_code_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szconfig.AddDataSourceRequest.data_source_code)
 }
-inline std::string* AddDataSourceRequest::mutable_datasourcecode() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_datasourcecode();
-  // @@protoc_insertion_point(field_mutable:szconfig.AddDataSourceRequest.dataSourceCode)
+inline std::string* AddDataSourceRequest::mutable_data_source_code() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_data_source_code();
+  // @@protoc_insertion_point(field_mutable:szconfig.AddDataSourceRequest.data_source_code)
   return _s;
 }
-inline const std::string& AddDataSourceRequest::_internal_datasourcecode() const {
+inline const std::string& AddDataSourceRequest::_internal_data_source_code() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.datasourcecode_.Get();
+  return _impl_.data_source_code_.Get();
 }
-inline void AddDataSourceRequest::_internal_set_datasourcecode(const std::string& value) {
+inline void AddDataSourceRequest::_internal_set_data_source_code(const std::string& value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.datasourcecode_.Set(value, GetArena());
+  _impl_.data_source_code_.Set(value, GetArena());
 }
-inline std::string* AddDataSourceRequest::_internal_mutable_datasourcecode() {
+inline std::string* AddDataSourceRequest::_internal_mutable_data_source_code() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  return _impl_.datasourcecode_.Mutable( GetArena());
+  return _impl_.data_source_code_.Mutable( GetArena());
 }
-inline std::string* AddDataSourceRequest::release_datasourcecode() {
+inline std::string* AddDataSourceRequest::release_data_source_code() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  // @@protoc_insertion_point(field_release:szconfig.AddDataSourceRequest.dataSourceCode)
-  return _impl_.datasourcecode_.Release();
+  // @@protoc_insertion_point(field_release:szconfig.AddDataSourceRequest.data_source_code)
+  return _impl_.data_source_code_.Release();
 }
-inline void AddDataSourceRequest::set_allocated_datasourcecode(std::string* value) {
+inline void AddDataSourceRequest::set_allocated_data_source_code(std::string* value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.datasourcecode_.SetAllocated(value, GetArena());
+  _impl_.data_source_code_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.datasourcecode_.IsDefault()) {
-          _impl_.datasourcecode_.Set("", GetArena());
+        if (_impl_.data_source_code_.IsDefault()) {
+          _impl_.data_source_code_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:szconfig.AddDataSourceRequest.dataSourceCode)
+  // @@protoc_insertion_point(field_set_allocated:szconfig.AddDataSourceRequest.data_source_code)
 }
 
 // -------------------------------------------------------------------
@@ -2658,27 +2658,27 @@ inline void AddDataSourceResponse::set_allocated_result(std::string* value) {
 
 // CloseConfigRequest
 
-// int64 configHandle = 1;
-inline void CloseConfigRequest::clear_confighandle() {
+// int64 config_handle = 1;
+inline void CloseConfigRequest::clear_config_handle() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.confighandle_ = ::int64_t{0};
+  _impl_.config_handle_ = ::int64_t{0};
 }
-inline ::int64_t CloseConfigRequest::confighandle() const {
-  // @@protoc_insertion_point(field_get:szconfig.CloseConfigRequest.configHandle)
-  return _internal_confighandle();
+inline ::int64_t CloseConfigRequest::config_handle() const {
+  // @@protoc_insertion_point(field_get:szconfig.CloseConfigRequest.config_handle)
+  return _internal_config_handle();
 }
-inline void CloseConfigRequest::set_confighandle(::int64_t value) {
-  _internal_set_confighandle(value);
-  // @@protoc_insertion_point(field_set:szconfig.CloseConfigRequest.configHandle)
+inline void CloseConfigRequest::set_config_handle(::int64_t value) {
+  _internal_set_config_handle(value);
+  // @@protoc_insertion_point(field_set:szconfig.CloseConfigRequest.config_handle)
 }
-inline ::int64_t CloseConfigRequest::_internal_confighandle() const {
+inline ::int64_t CloseConfigRequest::_internal_config_handle() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.confighandle_;
+  return _impl_.config_handle_;
 }
-inline void CloseConfigRequest::_internal_set_confighandle(::int64_t value) {
+inline void CloseConfigRequest::_internal_set_config_handle(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.confighandle_ = value;
+  _impl_.config_handle_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -2720,80 +2720,80 @@ inline void CreateConfigResponse::_internal_set_result(::int64_t value) {
 
 // DeleteDataSourceRequest
 
-// int64 configHandle = 1;
-inline void DeleteDataSourceRequest::clear_confighandle() {
+// int64 config_handle = 1;
+inline void DeleteDataSourceRequest::clear_config_handle() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.confighandle_ = ::int64_t{0};
+  _impl_.config_handle_ = ::int64_t{0};
 }
-inline ::int64_t DeleteDataSourceRequest::confighandle() const {
-  // @@protoc_insertion_point(field_get:szconfig.DeleteDataSourceRequest.configHandle)
-  return _internal_confighandle();
+inline ::int64_t DeleteDataSourceRequest::config_handle() const {
+  // @@protoc_insertion_point(field_get:szconfig.DeleteDataSourceRequest.config_handle)
+  return _internal_config_handle();
 }
-inline void DeleteDataSourceRequest::set_confighandle(::int64_t value) {
-  _internal_set_confighandle(value);
-  // @@protoc_insertion_point(field_set:szconfig.DeleteDataSourceRequest.configHandle)
+inline void DeleteDataSourceRequest::set_config_handle(::int64_t value) {
+  _internal_set_config_handle(value);
+  // @@protoc_insertion_point(field_set:szconfig.DeleteDataSourceRequest.config_handle)
 }
-inline ::int64_t DeleteDataSourceRequest::_internal_confighandle() const {
+inline ::int64_t DeleteDataSourceRequest::_internal_config_handle() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.confighandle_;
+  return _impl_.config_handle_;
 }
-inline void DeleteDataSourceRequest::_internal_set_confighandle(::int64_t value) {
+inline void DeleteDataSourceRequest::_internal_set_config_handle(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.confighandle_ = value;
+  _impl_.config_handle_ = value;
 }
 
-// string dataSourceCode = 2;
-inline void DeleteDataSourceRequest::clear_datasourcecode() {
+// string data_source_code = 2;
+inline void DeleteDataSourceRequest::clear_data_source_code() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.datasourcecode_.ClearToEmpty();
+  _impl_.data_source_code_.ClearToEmpty();
 }
-inline const std::string& DeleteDataSourceRequest::datasourcecode() const
+inline const std::string& DeleteDataSourceRequest::data_source_code() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szconfig.DeleteDataSourceRequest.dataSourceCode)
-  return _internal_datasourcecode();
+  // @@protoc_insertion_point(field_get:szconfig.DeleteDataSourceRequest.data_source_code)
+  return _internal_data_source_code();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void DeleteDataSourceRequest::set_datasourcecode(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void DeleteDataSourceRequest::set_data_source_code(Arg_&& arg,
                                                      Args_... args) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.datasourcecode_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szconfig.DeleteDataSourceRequest.dataSourceCode)
+  _impl_.data_source_code_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szconfig.DeleteDataSourceRequest.data_source_code)
 }
-inline std::string* DeleteDataSourceRequest::mutable_datasourcecode() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_datasourcecode();
-  // @@protoc_insertion_point(field_mutable:szconfig.DeleteDataSourceRequest.dataSourceCode)
+inline std::string* DeleteDataSourceRequest::mutable_data_source_code() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_data_source_code();
+  // @@protoc_insertion_point(field_mutable:szconfig.DeleteDataSourceRequest.data_source_code)
   return _s;
 }
-inline const std::string& DeleteDataSourceRequest::_internal_datasourcecode() const {
+inline const std::string& DeleteDataSourceRequest::_internal_data_source_code() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.datasourcecode_.Get();
+  return _impl_.data_source_code_.Get();
 }
-inline void DeleteDataSourceRequest::_internal_set_datasourcecode(const std::string& value) {
+inline void DeleteDataSourceRequest::_internal_set_data_source_code(const std::string& value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.datasourcecode_.Set(value, GetArena());
+  _impl_.data_source_code_.Set(value, GetArena());
 }
-inline std::string* DeleteDataSourceRequest::_internal_mutable_datasourcecode() {
+inline std::string* DeleteDataSourceRequest::_internal_mutable_data_source_code() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  return _impl_.datasourcecode_.Mutable( GetArena());
+  return _impl_.data_source_code_.Mutable( GetArena());
 }
-inline std::string* DeleteDataSourceRequest::release_datasourcecode() {
+inline std::string* DeleteDataSourceRequest::release_data_source_code() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  // @@protoc_insertion_point(field_release:szconfig.DeleteDataSourceRequest.dataSourceCode)
-  return _impl_.datasourcecode_.Release();
+  // @@protoc_insertion_point(field_release:szconfig.DeleteDataSourceRequest.data_source_code)
+  return _impl_.data_source_code_.Release();
 }
-inline void DeleteDataSourceRequest::set_allocated_datasourcecode(std::string* value) {
+inline void DeleteDataSourceRequest::set_allocated_data_source_code(std::string* value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.datasourcecode_.SetAllocated(value, GetArena());
+  _impl_.data_source_code_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.datasourcecode_.IsDefault()) {
-          _impl_.datasourcecode_.Set("", GetArena());
+        if (_impl_.data_source_code_.IsDefault()) {
+          _impl_.data_source_code_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:szconfig.DeleteDataSourceRequest.dataSourceCode)
+  // @@protoc_insertion_point(field_set_allocated:szconfig.DeleteDataSourceRequest.data_source_code)
 }
 
 // -------------------------------------------------------------------
@@ -2804,27 +2804,27 @@ inline void DeleteDataSourceRequest::set_allocated_datasourcecode(std::string* v
 
 // ExportConfigRequest
 
-// int64 configHandle = 1;
-inline void ExportConfigRequest::clear_confighandle() {
+// int64 config_handle = 1;
+inline void ExportConfigRequest::clear_config_handle() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.confighandle_ = ::int64_t{0};
+  _impl_.config_handle_ = ::int64_t{0};
 }
-inline ::int64_t ExportConfigRequest::confighandle() const {
-  // @@protoc_insertion_point(field_get:szconfig.ExportConfigRequest.configHandle)
-  return _internal_confighandle();
+inline ::int64_t ExportConfigRequest::config_handle() const {
+  // @@protoc_insertion_point(field_get:szconfig.ExportConfigRequest.config_handle)
+  return _internal_config_handle();
 }
-inline void ExportConfigRequest::set_confighandle(::int64_t value) {
-  _internal_set_confighandle(value);
-  // @@protoc_insertion_point(field_set:szconfig.ExportConfigRequest.configHandle)
+inline void ExportConfigRequest::set_config_handle(::int64_t value) {
+  _internal_set_config_handle(value);
+  // @@protoc_insertion_point(field_set:szconfig.ExportConfigRequest.config_handle)
 }
-inline ::int64_t ExportConfigRequest::_internal_confighandle() const {
+inline ::int64_t ExportConfigRequest::_internal_config_handle() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.confighandle_;
+  return _impl_.config_handle_;
 }
-inline void ExportConfigRequest::_internal_set_confighandle(::int64_t value) {
+inline void ExportConfigRequest::_internal_set_config_handle(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.confighandle_ = value;
+  _impl_.config_handle_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -2888,27 +2888,27 @@ inline void ExportConfigResponse::set_allocated_result(std::string* value) {
 
 // GetDataSourcesRequest
 
-// int64 configHandle = 1;
-inline void GetDataSourcesRequest::clear_confighandle() {
+// int64 config_handle = 1;
+inline void GetDataSourcesRequest::clear_config_handle() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.confighandle_ = ::int64_t{0};
+  _impl_.config_handle_ = ::int64_t{0};
 }
-inline ::int64_t GetDataSourcesRequest::confighandle() const {
-  // @@protoc_insertion_point(field_get:szconfig.GetDataSourcesRequest.configHandle)
-  return _internal_confighandle();
+inline ::int64_t GetDataSourcesRequest::config_handle() const {
+  // @@protoc_insertion_point(field_get:szconfig.GetDataSourcesRequest.config_handle)
+  return _internal_config_handle();
 }
-inline void GetDataSourcesRequest::set_confighandle(::int64_t value) {
-  _internal_set_confighandle(value);
-  // @@protoc_insertion_point(field_set:szconfig.GetDataSourcesRequest.configHandle)
+inline void GetDataSourcesRequest::set_config_handle(::int64_t value) {
+  _internal_set_config_handle(value);
+  // @@protoc_insertion_point(field_set:szconfig.GetDataSourcesRequest.config_handle)
 }
-inline ::int64_t GetDataSourcesRequest::_internal_confighandle() const {
+inline ::int64_t GetDataSourcesRequest::_internal_config_handle() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.confighandle_;
+  return _impl_.config_handle_;
 }
-inline void GetDataSourcesRequest::_internal_set_confighandle(::int64_t value) {
+inline void GetDataSourcesRequest::_internal_set_config_handle(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.confighandle_ = value;
+  _impl_.config_handle_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -2972,57 +2972,57 @@ inline void GetDataSourcesResponse::set_allocated_result(std::string* value) {
 
 // ImportConfigRequest
 
-// string configDefinition = 1;
-inline void ImportConfigRequest::clear_configdefinition() {
+// string config_definition = 1;
+inline void ImportConfigRequest::clear_config_definition() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.configdefinition_.ClearToEmpty();
+  _impl_.config_definition_.ClearToEmpty();
 }
-inline const std::string& ImportConfigRequest::configdefinition() const
+inline const std::string& ImportConfigRequest::config_definition() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szconfig.ImportConfigRequest.configDefinition)
-  return _internal_configdefinition();
+  // @@protoc_insertion_point(field_get:szconfig.ImportConfigRequest.config_definition)
+  return _internal_config_definition();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void ImportConfigRequest::set_configdefinition(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void ImportConfigRequest::set_config_definition(Arg_&& arg,
                                                      Args_... args) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.configdefinition_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szconfig.ImportConfigRequest.configDefinition)
+  _impl_.config_definition_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szconfig.ImportConfigRequest.config_definition)
 }
-inline std::string* ImportConfigRequest::mutable_configdefinition() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_configdefinition();
-  // @@protoc_insertion_point(field_mutable:szconfig.ImportConfigRequest.configDefinition)
+inline std::string* ImportConfigRequest::mutable_config_definition() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_config_definition();
+  // @@protoc_insertion_point(field_mutable:szconfig.ImportConfigRequest.config_definition)
   return _s;
 }
-inline const std::string& ImportConfigRequest::_internal_configdefinition() const {
+inline const std::string& ImportConfigRequest::_internal_config_definition() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.configdefinition_.Get();
+  return _impl_.config_definition_.Get();
 }
-inline void ImportConfigRequest::_internal_set_configdefinition(const std::string& value) {
+inline void ImportConfigRequest::_internal_set_config_definition(const std::string& value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.configdefinition_.Set(value, GetArena());
+  _impl_.config_definition_.Set(value, GetArena());
 }
-inline std::string* ImportConfigRequest::_internal_mutable_configdefinition() {
+inline std::string* ImportConfigRequest::_internal_mutable_config_definition() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  return _impl_.configdefinition_.Mutable( GetArena());
+  return _impl_.config_definition_.Mutable( GetArena());
 }
-inline std::string* ImportConfigRequest::release_configdefinition() {
+inline std::string* ImportConfigRequest::release_config_definition() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  // @@protoc_insertion_point(field_release:szconfig.ImportConfigRequest.configDefinition)
-  return _impl_.configdefinition_.Release();
+  // @@protoc_insertion_point(field_release:szconfig.ImportConfigRequest.config_definition)
+  return _impl_.config_definition_.Release();
 }
-inline void ImportConfigRequest::set_allocated_configdefinition(std::string* value) {
+inline void ImportConfigRequest::set_allocated_config_definition(std::string* value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.configdefinition_.SetAllocated(value, GetArena());
+  _impl_.config_definition_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        if (_impl_.configdefinition_.IsDefault()) {
-          _impl_.configdefinition_.Set("", GetArena());
+        if (_impl_.config_definition_.IsDefault()) {
+          _impl_.config_definition_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:szconfig.ImportConfigRequest.configDefinition)
+  // @@protoc_insertion_point(field_set_allocated:szconfig.ImportConfigRequest.config_definition)
 }
 
 // -------------------------------------------------------------------

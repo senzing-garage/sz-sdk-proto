@@ -20,24 +20,24 @@ public final class SzConfigManagerProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string configDefinition = 1;</code>
+     * <code>string config_definition = 1;</code>
      * @return The configDefinition.
      */
     java.lang.String getConfigDefinition();
     /**
-     * <code>string configDefinition = 1;</code>
+     * <code>string config_definition = 1;</code>
      * @return The bytes for configDefinition.
      */
     com.google.protobuf.ByteString
         getConfigDefinitionBytes();
 
     /**
-     * <code>string configComment = 2;</code>
+     * <code>string config_comment = 2;</code>
      * @return The configComment.
      */
     java.lang.String getConfigComment();
     /**
-     * <code>string configComment = 2;</code>
+     * <code>string config_comment = 2;</code>
      * @return The bytes for configComment.
      */
     com.google.protobuf.ByteString
@@ -80,11 +80,11 @@ public final class SzConfigManagerProto {
               com.senzing.sdk.grpc.SzConfigManagerProto.AddConfigRequest.class, com.senzing.sdk.grpc.SzConfigManagerProto.AddConfigRequest.Builder.class);
     }
 
-    public static final int CONFIGDEFINITION_FIELD_NUMBER = 1;
+    public static final int CONFIG_DEFINITION_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object configDefinition_ = "";
     /**
-     * <code>string configDefinition = 1;</code>
+     * <code>string config_definition = 1;</code>
      * @return The configDefinition.
      */
     @java.lang.Override
@@ -101,7 +101,7 @@ public final class SzConfigManagerProto {
       }
     }
     /**
-     * <code>string configDefinition = 1;</code>
+     * <code>string config_definition = 1;</code>
      * @return The bytes for configDefinition.
      */
     @java.lang.Override
@@ -119,11 +119,11 @@ public final class SzConfigManagerProto {
       }
     }
 
-    public static final int CONFIGCOMMENT_FIELD_NUMBER = 2;
+    public static final int CONFIG_COMMENT_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object configComment_ = "";
     /**
-     * <code>string configComment = 2;</code>
+     * <code>string config_comment = 2;</code>
      * @return The configComment.
      */
     @java.lang.Override
@@ -140,7 +140,7 @@ public final class SzConfigManagerProto {
       }
     }
     /**
-     * <code>string configComment = 2;</code>
+     * <code>string config_comment = 2;</code>
      * @return The bytes for configComment.
      */
     @java.lang.Override
@@ -223,9 +223,9 @@ public final class SzConfigManagerProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIGDEFINITION_FIELD_NUMBER;
+      hash = (37 * hash) + CONFIG_DEFINITION_FIELD_NUMBER;
       hash = (53 * hash) + getConfigDefinition().hashCode();
-      hash = (37 * hash) + CONFIGCOMMENT_FIELD_NUMBER;
+      hash = (37 * hash) + CONFIG_COMMENT_FIELD_NUMBER;
       hash = (53 * hash) + getConfigComment().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -510,7 +510,7 @@ public final class SzConfigManagerProto {
 
       private java.lang.Object configDefinition_ = "";
       /**
-       * <code>string configDefinition = 1;</code>
+       * <code>string config_definition = 1;</code>
        * @return The configDefinition.
        */
       public java.lang.String getConfigDefinition() {
@@ -526,7 +526,7 @@ public final class SzConfigManagerProto {
         }
       }
       /**
-       * <code>string configDefinition = 1;</code>
+       * <code>string config_definition = 1;</code>
        * @return The bytes for configDefinition.
        */
       public com.google.protobuf.ByteString
@@ -543,7 +543,7 @@ public final class SzConfigManagerProto {
         }
       }
       /**
-       * <code>string configDefinition = 1;</code>
+       * <code>string config_definition = 1;</code>
        * @param value The configDefinition to set.
        * @return This builder for chaining.
        */
@@ -556,7 +556,7 @@ public final class SzConfigManagerProto {
         return this;
       }
       /**
-       * <code>string configDefinition = 1;</code>
+       * <code>string config_definition = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearConfigDefinition() {
@@ -566,7 +566,7 @@ public final class SzConfigManagerProto {
         return this;
       }
       /**
-       * <code>string configDefinition = 1;</code>
+       * <code>string config_definition = 1;</code>
        * @param value The bytes for configDefinition to set.
        * @return This builder for chaining.
        */
@@ -582,7 +582,7 @@ public final class SzConfigManagerProto {
 
       private java.lang.Object configComment_ = "";
       /**
-       * <code>string configComment = 2;</code>
+       * <code>string config_comment = 2;</code>
        * @return The configComment.
        */
       public java.lang.String getConfigComment() {
@@ -598,7 +598,7 @@ public final class SzConfigManagerProto {
         }
       }
       /**
-       * <code>string configComment = 2;</code>
+       * <code>string config_comment = 2;</code>
        * @return The bytes for configComment.
        */
       public com.google.protobuf.ByteString
@@ -615,7 +615,7 @@ public final class SzConfigManagerProto {
         }
       }
       /**
-       * <code>string configComment = 2;</code>
+       * <code>string config_comment = 2;</code>
        * @param value The configComment to set.
        * @return This builder for chaining.
        */
@@ -628,7 +628,7 @@ public final class SzConfigManagerProto {
         return this;
       }
       /**
-       * <code>string configComment = 2;</code>
+       * <code>string config_comment = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearConfigComment() {
@@ -638,7 +638,7 @@ public final class SzConfigManagerProto {
         return this;
       }
       /**
-       * <code>string configComment = 2;</code>
+       * <code>string config_comment = 2;</code>
        * @param value The bytes for configComment to set.
        * @return This builder for chaining.
        */
@@ -1197,7 +1197,7 @@ public final class SzConfigManagerProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 configId = 1;</code>
+     * <code>int64 config_id = 1;</code>
      * @return The configId.
      */
     long getConfigId();
@@ -1237,10 +1237,10 @@ public final class SzConfigManagerProto {
               com.senzing.sdk.grpc.SzConfigManagerProto.GetConfigRequest.class, com.senzing.sdk.grpc.SzConfigManagerProto.GetConfigRequest.Builder.class);
     }
 
-    public static final int CONFIGID_FIELD_NUMBER = 1;
+    public static final int CONFIG_ID_FIELD_NUMBER = 1;
     private long configId_ = 0L;
     /**
-     * <code>int64 configId = 1;</code>
+     * <code>int64 config_id = 1;</code>
      * @return The configId.
      */
     @java.lang.Override
@@ -1306,7 +1306,7 @@ public final class SzConfigManagerProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIGID_FIELD_NUMBER;
+      hash = (37 * hash) + CONFIG_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getConfigId());
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -1576,7 +1576,7 @@ public final class SzConfigManagerProto {
 
       private long configId_ ;
       /**
-       * <code>int64 configId = 1;</code>
+       * <code>int64 config_id = 1;</code>
        * @return The configId.
        */
       @java.lang.Override
@@ -1584,7 +1584,7 @@ public final class SzConfigManagerProto {
         return configId_;
       }
       /**
-       * <code>int64 configId = 1;</code>
+       * <code>int64 config_id = 1;</code>
        * @param value The configId to set.
        * @return This builder for chaining.
        */
@@ -1596,7 +1596,7 @@ public final class SzConfigManagerProto {
         return this;
       }
       /**
-       * <code>int64 configId = 1;</code>
+       * <code>int64 config_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearConfigId() {
@@ -4049,13 +4049,13 @@ public final class SzConfigManagerProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 currentDefaultConfigId = 1;</code>
+     * <code>int64 current_default_config_id = 1;</code>
      * @return The currentDefaultConfigId.
      */
     long getCurrentDefaultConfigId();
 
     /**
-     * <code>int64 newDefaultConfigId = 2;</code>
+     * <code>int64 new_default_config_id = 2;</code>
      * @return The newDefaultConfigId.
      */
     long getNewDefaultConfigId();
@@ -4095,10 +4095,10 @@ public final class SzConfigManagerProto {
               com.senzing.sdk.grpc.SzConfigManagerProto.ReplaceDefaultConfigIdRequest.class, com.senzing.sdk.grpc.SzConfigManagerProto.ReplaceDefaultConfigIdRequest.Builder.class);
     }
 
-    public static final int CURRENTDEFAULTCONFIGID_FIELD_NUMBER = 1;
+    public static final int CURRENT_DEFAULT_CONFIG_ID_FIELD_NUMBER = 1;
     private long currentDefaultConfigId_ = 0L;
     /**
-     * <code>int64 currentDefaultConfigId = 1;</code>
+     * <code>int64 current_default_config_id = 1;</code>
      * @return The currentDefaultConfigId.
      */
     @java.lang.Override
@@ -4106,10 +4106,10 @@ public final class SzConfigManagerProto {
       return currentDefaultConfigId_;
     }
 
-    public static final int NEWDEFAULTCONFIGID_FIELD_NUMBER = 2;
+    public static final int NEW_DEFAULT_CONFIG_ID_FIELD_NUMBER = 2;
     private long newDefaultConfigId_ = 0L;
     /**
-     * <code>int64 newDefaultConfigId = 2;</code>
+     * <code>int64 new_default_config_id = 2;</code>
      * @return The newDefaultConfigId.
      */
     @java.lang.Override
@@ -4184,10 +4184,10 @@ public final class SzConfigManagerProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CURRENTDEFAULTCONFIGID_FIELD_NUMBER;
+      hash = (37 * hash) + CURRENT_DEFAULT_CONFIG_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getCurrentDefaultConfigId());
-      hash = (37 * hash) + NEWDEFAULTCONFIGID_FIELD_NUMBER;
+      hash = (37 * hash) + NEW_DEFAULT_CONFIG_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getNewDefaultConfigId());
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -4469,7 +4469,7 @@ public final class SzConfigManagerProto {
 
       private long currentDefaultConfigId_ ;
       /**
-       * <code>int64 currentDefaultConfigId = 1;</code>
+       * <code>int64 current_default_config_id = 1;</code>
        * @return The currentDefaultConfigId.
        */
       @java.lang.Override
@@ -4477,7 +4477,7 @@ public final class SzConfigManagerProto {
         return currentDefaultConfigId_;
       }
       /**
-       * <code>int64 currentDefaultConfigId = 1;</code>
+       * <code>int64 current_default_config_id = 1;</code>
        * @param value The currentDefaultConfigId to set.
        * @return This builder for chaining.
        */
@@ -4489,7 +4489,7 @@ public final class SzConfigManagerProto {
         return this;
       }
       /**
-       * <code>int64 currentDefaultConfigId = 1;</code>
+       * <code>int64 current_default_config_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearCurrentDefaultConfigId() {
@@ -4501,7 +4501,7 @@ public final class SzConfigManagerProto {
 
       private long newDefaultConfigId_ ;
       /**
-       * <code>int64 newDefaultConfigId = 2;</code>
+       * <code>int64 new_default_config_id = 2;</code>
        * @return The newDefaultConfigId.
        */
       @java.lang.Override
@@ -4509,7 +4509,7 @@ public final class SzConfigManagerProto {
         return newDefaultConfigId_;
       }
       /**
-       * <code>int64 newDefaultConfigId = 2;</code>
+       * <code>int64 new_default_config_id = 2;</code>
        * @param value The newDefaultConfigId to set.
        * @return This builder for chaining.
        */
@@ -4521,7 +4521,7 @@ public final class SzConfigManagerProto {
         return this;
       }
       /**
-       * <code>int64 newDefaultConfigId = 2;</code>
+       * <code>int64 new_default_config_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearNewDefaultConfigId() {
@@ -4996,7 +4996,7 @@ public final class SzConfigManagerProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 configId = 1;</code>
+     * <code>int64 config_id = 1;</code>
      * @return The configId.
      */
     long getConfigId();
@@ -5036,10 +5036,10 @@ public final class SzConfigManagerProto {
               com.senzing.sdk.grpc.SzConfigManagerProto.SetDefaultConfigIdRequest.class, com.senzing.sdk.grpc.SzConfigManagerProto.SetDefaultConfigIdRequest.Builder.class);
     }
 
-    public static final int CONFIGID_FIELD_NUMBER = 1;
+    public static final int CONFIG_ID_FIELD_NUMBER = 1;
     private long configId_ = 0L;
     /**
-     * <code>int64 configId = 1;</code>
+     * <code>int64 config_id = 1;</code>
      * @return The configId.
      */
     @java.lang.Override
@@ -5105,7 +5105,7 @@ public final class SzConfigManagerProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIGID_FIELD_NUMBER;
+      hash = (37 * hash) + CONFIG_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getConfigId());
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -5375,7 +5375,7 @@ public final class SzConfigManagerProto {
 
       private long configId_ ;
       /**
-       * <code>int64 configId = 1;</code>
+       * <code>int64 config_id = 1;</code>
        * @return The configId.
        */
       @java.lang.Override
@@ -5383,7 +5383,7 @@ public final class SzConfigManagerProto {
         return configId_;
       }
       /**
-       * <code>int64 configId = 1;</code>
+       * <code>int64 config_id = 1;</code>
        * @param value The configId to set.
        * @return This builder for chaining.
        */
@@ -5395,7 +5395,7 @@ public final class SzConfigManagerProto {
         return this;
       }
       /**
-       * <code>int64 configId = 1;</code>
+       * <code>int64 config_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearConfigId() {
@@ -5935,38 +5935,38 @@ public final class SzConfigManagerProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\025szconfigmanager.proto\022\017szconfigmanager" +
-      "\"C\n\020AddConfigRequest\022\030\n\020configDefinition" +
-      "\030\001 \001(\t\022\025\n\rconfigComment\030\002 \001(\t\"#\n\021AddConf" +
-      "igResponse\022\016\n\006result\030\001 \001(\003\"$\n\020GetConfigR" +
-      "equest\022\020\n\010configId\030\001 \001(\003\"#\n\021GetConfigRes" +
-      "ponse\022\016\n\006result\030\001 \001(\t\"\023\n\021GetConfigsReque" +
-      "st\"$\n\022GetConfigsResponse\022\016\n\006result\030\001 \001(\t" +
-      "\"\033\n\031GetDefaultConfigIdRequest\",\n\032GetDefa" +
-      "ultConfigIdResponse\022\016\n\006result\030\001 \001(\003\"[\n\035R" +
-      "eplaceDefaultConfigIdRequest\022\036\n\026currentD" +
-      "efaultConfigId\030\001 \001(\003\022\032\n\022newDefaultConfig" +
-      "Id\030\002 \001(\003\" \n\036ReplaceDefaultConfigIdRespon" +
-      "se\"-\n\031SetDefaultConfigIdRequest\022\020\n\010confi" +
-      "gId\030\001 \001(\003\"\034\n\032SetDefaultConfigIdResponse2" +
-      "\365\004\n\017SzConfigManager\022T\n\tAddConfig\022!.szcon" +
-      "figmanager.AddConfigRequest\032\".szconfigma" +
-      "nager.AddConfigResponse\"\000\022T\n\tGetConfig\022!" +
-      ".szconfigmanager.GetConfigRequest\032\".szco" +
-      "nfigmanager.GetConfigResponse\"\000\022W\n\nGetCo" +
-      "nfigs\022\".szconfigmanager.GetConfigsReques" +
-      "t\032#.szconfigmanager.GetConfigsResponse\"\000" +
-      "\022o\n\022GetDefaultConfigId\022*.szconfigmanager" +
-      ".GetDefaultConfigIdRequest\032+.szconfigman" +
-      "ager.GetDefaultConfigIdResponse\"\000\022{\n\026Rep" +
-      "laceDefaultConfigId\022..szconfigmanager.Re" +
-      "placeDefaultConfigIdRequest\032/.szconfigma" +
-      "nager.ReplaceDefaultConfigIdResponse\"\000\022o" +
-      "\n\022SetDefaultConfigId\022*.szconfigmanager.S" +
-      "etDefaultConfigIdRequest\032+.szconfigmanag" +
-      "er.SetDefaultConfigIdResponse\"\000Bf\n\024com.s" +
-      "enzing.sdk.grpcB\024SzConfigManagerProtoZ8g" +
-      "ithub.com/senzing-garage/sz-sdk-go-grpc/" +
-      "szconfigmanagerb\006proto3"
+      "\"E\n\020AddConfigRequest\022\031\n\021config_definitio" +
+      "n\030\001 \001(\t\022\026\n\016config_comment\030\002 \001(\t\"#\n\021AddCo" +
+      "nfigResponse\022\016\n\006result\030\001 \001(\003\"%\n\020GetConfi" +
+      "gRequest\022\021\n\tconfig_id\030\001 \001(\003\"#\n\021GetConfig" +
+      "Response\022\016\n\006result\030\001 \001(\t\"\023\n\021GetConfigsRe" +
+      "quest\"$\n\022GetConfigsResponse\022\016\n\006result\030\001 " +
+      "\001(\t\"\033\n\031GetDefaultConfigIdRequest\",\n\032GetD" +
+      "efaultConfigIdResponse\022\016\n\006result\030\001 \001(\003\"a" +
+      "\n\035ReplaceDefaultConfigIdRequest\022!\n\031curre" +
+      "nt_default_config_id\030\001 \001(\003\022\035\n\025new_defaul" +
+      "t_config_id\030\002 \001(\003\" \n\036ReplaceDefaultConfi" +
+      "gIdResponse\".\n\031SetDefaultConfigIdRequest" +
+      "\022\021\n\tconfig_id\030\001 \001(\003\"\034\n\032SetDefaultConfigI" +
+      "dResponse2\365\004\n\017SzConfigManager\022T\n\tAddConf" +
+      "ig\022!.szconfigmanager.AddConfigRequest\032\"." +
+      "szconfigmanager.AddConfigResponse\"\000\022T\n\tG" +
+      "etConfig\022!.szconfigmanager.GetConfigRequ" +
+      "est\032\".szconfigmanager.GetConfigResponse\"" +
+      "\000\022W\n\nGetConfigs\022\".szconfigmanager.GetCon" +
+      "figsRequest\032#.szconfigmanager.GetConfigs" +
+      "Response\"\000\022o\n\022GetDefaultConfigId\022*.szcon" +
+      "figmanager.GetDefaultConfigIdRequest\032+.s" +
+      "zconfigmanager.GetDefaultConfigIdRespons" +
+      "e\"\000\022{\n\026ReplaceDefaultConfigId\022..szconfig" +
+      "manager.ReplaceDefaultConfigIdRequest\032/." +
+      "szconfigmanager.ReplaceDefaultConfigIdRe" +
+      "sponse\"\000\022o\n\022SetDefaultConfigId\022*.szconfi" +
+      "gmanager.SetDefaultConfigIdRequest\032+.szc" +
+      "onfigmanager.SetDefaultConfigIdResponse\"" +
+      "\000Bf\n\024com.senzing.sdk.grpcB\024SzConfigManag" +
+      "erProtoZ8github.com/senzing-garage/sz-sd" +
+      "k-go-grpc/szconfigmanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

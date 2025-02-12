@@ -36,7 +36,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr SetDefaultConfigIdRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : configid_{::int64_t{0}},
+      : config_id_{::int64_t{0}},
         _cached_size_{0} {}
 
 template <typename>
@@ -67,8 +67,8 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr ReplaceDefaultConfigIdRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : currentdefaultconfigid_{::int64_t{0}},
-        newdefaultconfigid_{::int64_t{0}},
+      : current_default_config_id_{::int64_t{0}},
+        new_default_config_id_{::int64_t{0}},
         _cached_size_{0} {}
 
 template <typename>
@@ -172,7 +172,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr GetConfigRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : configid_{::int64_t{0}},
+      : config_id_{::int64_t{0}},
         _cached_size_{0} {}
 
 template <typename>
@@ -210,10 +210,10 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr AddConfigRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : configdefinition_(
+      : config_definition_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        configcomment_(
+        config_comment_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         _cached_size_{0} {}
@@ -247,8 +247,8 @@ const ::uint32_t TableStruct_szconfigmanager_2eproto::offsets[] PROTOBUF_SECTION
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szconfigmanager::AddConfigRequest, _impl_.configdefinition_),
-    PROTOBUF_FIELD_OFFSET(::szconfigmanager::AddConfigRequest, _impl_.configcomment_),
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::AddConfigRequest, _impl_.config_definition_),
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::AddConfigRequest, _impl_.config_comment_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szconfigmanager::AddConfigResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -266,7 +266,7 @@ const ::uint32_t TableStruct_szconfigmanager_2eproto::offsets[] PROTOBUF_SECTION
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szconfigmanager::GetConfigRequest, _impl_.configid_),
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::GetConfigRequest, _impl_.config_id_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szconfigmanager::GetConfigResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -318,8 +318,8 @@ const ::uint32_t TableStruct_szconfigmanager_2eproto::offsets[] PROTOBUF_SECTION
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szconfigmanager::ReplaceDefaultConfigIdRequest, _impl_.currentdefaultconfigid_),
-    PROTOBUF_FIELD_OFFSET(::szconfigmanager::ReplaceDefaultConfigIdRequest, _impl_.newdefaultconfigid_),
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::ReplaceDefaultConfigIdRequest, _impl_.current_default_config_id_),
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::ReplaceDefaultConfigIdRequest, _impl_.new_default_config_id_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szconfigmanager::ReplaceDefaultConfigIdResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -336,7 +336,7 @@ const ::uint32_t TableStruct_szconfigmanager_2eproto::offsets[] PROTOBUF_SECTION
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szconfigmanager::SetDefaultConfigIdRequest, _impl_.configid_),
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::SetDefaultConfigIdRequest, _impl_.config_id_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szconfigmanager::SetDefaultConfigIdResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -379,44 +379,44 @@ static const ::_pb::Message* const file_default_instances[] = {
 };
 const char descriptor_table_protodef_szconfigmanager_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
     "\n\025szconfigmanager.proto\022\017szconfigmanager"
-    "\"C\n\020AddConfigRequest\022\030\n\020configDefinition"
-    "\030\001 \001(\t\022\025\n\rconfigComment\030\002 \001(\t\"#\n\021AddConf"
-    "igResponse\022\016\n\006result\030\001 \001(\003\"$\n\020GetConfigR"
-    "equest\022\020\n\010configId\030\001 \001(\003\"#\n\021GetConfigRes"
-    "ponse\022\016\n\006result\030\001 \001(\t\"\023\n\021GetConfigsReque"
-    "st\"$\n\022GetConfigsResponse\022\016\n\006result\030\001 \001(\t"
-    "\"\033\n\031GetDefaultConfigIdRequest\",\n\032GetDefa"
-    "ultConfigIdResponse\022\016\n\006result\030\001 \001(\003\"[\n\035R"
-    "eplaceDefaultConfigIdRequest\022\036\n\026currentD"
-    "efaultConfigId\030\001 \001(\003\022\032\n\022newDefaultConfig"
-    "Id\030\002 \001(\003\" \n\036ReplaceDefaultConfigIdRespon"
-    "se\"-\n\031SetDefaultConfigIdRequest\022\020\n\010confi"
-    "gId\030\001 \001(\003\"\034\n\032SetDefaultConfigIdResponse2"
-    "\365\004\n\017SzConfigManager\022T\n\tAddConfig\022!.szcon"
-    "figmanager.AddConfigRequest\032\".szconfigma"
-    "nager.AddConfigResponse\"\000\022T\n\tGetConfig\022!"
-    ".szconfigmanager.GetConfigRequest\032\".szco"
-    "nfigmanager.GetConfigResponse\"\000\022W\n\nGetCo"
-    "nfigs\022\".szconfigmanager.GetConfigsReques"
-    "t\032#.szconfigmanager.GetConfigsResponse\"\000"
-    "\022o\n\022GetDefaultConfigId\022*.szconfigmanager"
-    ".GetDefaultConfigIdRequest\032+.szconfigman"
-    "ager.GetDefaultConfigIdResponse\"\000\022{\n\026Rep"
-    "laceDefaultConfigId\022..szconfigmanager.Re"
-    "placeDefaultConfigIdRequest\032/.szconfigma"
-    "nager.ReplaceDefaultConfigIdResponse\"\000\022o"
-    "\n\022SetDefaultConfigId\022*.szconfigmanager.S"
-    "etDefaultConfigIdRequest\032+.szconfigmanag"
-    "er.SetDefaultConfigIdResponse\"\000Bf\n\024com.s"
-    "enzing.sdk.grpcB\024SzConfigManagerProtoZ8g"
-    "ithub.com/senzing-garage/sz-sdk-go-grpc/"
-    "szconfigmanagerb\006proto3"
+    "\"E\n\020AddConfigRequest\022\031\n\021config_definitio"
+    "n\030\001 \001(\t\022\026\n\016config_comment\030\002 \001(\t\"#\n\021AddCo"
+    "nfigResponse\022\016\n\006result\030\001 \001(\003\"%\n\020GetConfi"
+    "gRequest\022\021\n\tconfig_id\030\001 \001(\003\"#\n\021GetConfig"
+    "Response\022\016\n\006result\030\001 \001(\t\"\023\n\021GetConfigsRe"
+    "quest\"$\n\022GetConfigsResponse\022\016\n\006result\030\001 "
+    "\001(\t\"\033\n\031GetDefaultConfigIdRequest\",\n\032GetD"
+    "efaultConfigIdResponse\022\016\n\006result\030\001 \001(\003\"a"
+    "\n\035ReplaceDefaultConfigIdRequest\022!\n\031curre"
+    "nt_default_config_id\030\001 \001(\003\022\035\n\025new_defaul"
+    "t_config_id\030\002 \001(\003\" \n\036ReplaceDefaultConfi"
+    "gIdResponse\".\n\031SetDefaultConfigIdRequest"
+    "\022\021\n\tconfig_id\030\001 \001(\003\"\034\n\032SetDefaultConfigI"
+    "dResponse2\365\004\n\017SzConfigManager\022T\n\tAddConf"
+    "ig\022!.szconfigmanager.AddConfigRequest\032\"."
+    "szconfigmanager.AddConfigResponse\"\000\022T\n\tG"
+    "etConfig\022!.szconfigmanager.GetConfigRequ"
+    "est\032\".szconfigmanager.GetConfigResponse\""
+    "\000\022W\n\nGetConfigs\022\".szconfigmanager.GetCon"
+    "figsRequest\032#.szconfigmanager.GetConfigs"
+    "Response\"\000\022o\n\022GetDefaultConfigId\022*.szcon"
+    "figmanager.GetDefaultConfigIdRequest\032+.s"
+    "zconfigmanager.GetDefaultConfigIdRespons"
+    "e\"\000\022{\n\026ReplaceDefaultConfigId\022..szconfig"
+    "manager.ReplaceDefaultConfigIdRequest\032/."
+    "szconfigmanager.ReplaceDefaultConfigIdRe"
+    "sponse\"\000\022o\n\022SetDefaultConfigId\022*.szconfi"
+    "gmanager.SetDefaultConfigIdRequest\032+.szc"
+    "onfigmanager.SetDefaultConfigIdResponse\""
+    "\000Bf\n\024com.senzing.sdk.grpcB\024SzConfigManag"
+    "erProtoZ8github.com/senzing-garage/sz-sd"
+    "k-go-grpc/szconfigmanagerb\006proto3"
 };
 static ::absl::once_flag descriptor_table_szconfigmanager_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_szconfigmanager_2eproto = {
     false,
     false,
-    1303,
+    1313,
     descriptor_table_protodef_szconfigmanager_2eproto,
     "szconfigmanager.proto",
     &descriptor_table_szconfigmanager_2eproto_once,
@@ -463,8 +463,8 @@ AddConfigRequest::AddConfigRequest(::google::protobuf::Arena* arena)
 inline PROTOBUF_NDEBUG_INLINE AddConfigRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : configdefinition_(arena, from.configdefinition_),
-        configcomment_(arena, from.configcomment_),
+      : config_definition_(arena, from.config_definition_),
+        config_comment_(arena, from.config_comment_),
         _cached_size_{0} {}
 
 AddConfigRequest::AddConfigRequest(
@@ -482,8 +482,8 @@ AddConfigRequest::AddConfigRequest(
 inline PROTOBUF_NDEBUG_INLINE AddConfigRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : configdefinition_(arena),
-        configcomment_(arena),
+      : config_definition_(arena),
+        config_comment_(arena),
         _cached_size_{0} {}
 
 inline void AddConfigRequest::SharedCtor(::_pb::Arena* arena) {
@@ -496,8 +496,8 @@ AddConfigRequest::~AddConfigRequest() {
 }
 inline void AddConfigRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.configdefinition_.Destroy();
-  _impl_.configcomment_.Destroy();
+  _impl_.config_definition_.Destroy();
+  _impl_.config_comment_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -508,8 +508,8 @@ PROTOBUF_NOINLINE void AddConfigRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.configdefinition_.ClearToEmpty();
-  _impl_.configcomment_.ClearToEmpty();
+  _impl_.config_definition_.ClearToEmpty();
+  _impl_.config_comment_.ClearToEmpty();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -521,7 +521,7 @@ const char* AddConfigRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 70, 2> AddConfigRequest::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 72, 2> AddConfigRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -535,28 +535,28 @@ const ::_pbi::TcParseTable<1, 2, 0, 70, 2> AddConfigRequest::_table_ = {
     &_AddConfigRequest_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // string configComment = 2;
+    // string config_comment = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(AddConfigRequest, _impl_.configcomment_)}},
-    // string configDefinition = 1;
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(AddConfigRequest, _impl_.config_comment_)}},
+    // string config_definition = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(AddConfigRequest, _impl_.configdefinition_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(AddConfigRequest, _impl_.config_definition_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string configDefinition = 1;
-    {PROTOBUF_FIELD_OFFSET(AddConfigRequest, _impl_.configdefinition_), 0, 0,
+    // string config_definition = 1;
+    {PROTOBUF_FIELD_OFFSET(AddConfigRequest, _impl_.config_definition_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string configComment = 2;
-    {PROTOBUF_FIELD_OFFSET(AddConfigRequest, _impl_.configcomment_), 0, 0,
+    // string config_comment = 2;
+    {PROTOBUF_FIELD_OFFSET(AddConfigRequest, _impl_.config_comment_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\40\20\15\0\0\0\0\0"
+    "\40\21\16\0\0\0\0\0"
     "szconfigmanager.AddConfigRequest"
-    "configDefinition"
-    "configComment"
+    "config_definition"
+    "config_comment"
   }},
 };
 
@@ -567,19 +567,19 @@ const ::_pbi::TcParseTable<1, 2, 0, 70, 2> AddConfigRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string configDefinition = 1;
-  if (!this->_internal_configdefinition().empty()) {
-    const std::string& _s = this->_internal_configdefinition();
+  // string config_definition = 1;
+  if (!this->_internal_config_definition().empty()) {
+    const std::string& _s = this->_internal_config_definition();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfigmanager.AddConfigRequest.configDefinition");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfigmanager.AddConfigRequest.config_definition");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
-  // string configComment = 2;
-  if (!this->_internal_configcomment().empty()) {
-    const std::string& _s = this->_internal_configcomment();
+  // string config_comment = 2;
+  if (!this->_internal_config_comment().empty()) {
+    const std::string& _s = this->_internal_config_comment();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfigmanager.AddConfigRequest.configComment");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfigmanager.AddConfigRequest.config_comment");
     target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
@@ -600,16 +600,16 @@ const ::_pbi::TcParseTable<1, 2, 0, 70, 2> AddConfigRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string configDefinition = 1;
-  if (!this->_internal_configdefinition().empty()) {
+  // string config_definition = 1;
+  if (!this->_internal_config_definition().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_configdefinition());
+                                    this->_internal_config_definition());
   }
 
-  // string configComment = 2;
-  if (!this->_internal_configcomment().empty()) {
+  // string config_comment = 2;
+  if (!this->_internal_config_comment().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_configcomment());
+                                    this->_internal_config_comment());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -631,11 +631,11 @@ void AddConfigRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::go
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_configdefinition().empty()) {
-    _this->_internal_set_configdefinition(from._internal_configdefinition());
+  if (!from._internal_config_definition().empty()) {
+    _this->_internal_set_config_definition(from._internal_config_definition());
   }
-  if (!from._internal_configcomment().empty()) {
-    _this->_internal_set_configcomment(from._internal_configcomment());
+  if (!from._internal_config_comment().empty()) {
+    _this->_internal_set_config_comment(from._internal_config_comment());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -659,8 +659,8 @@ void AddConfigRequest::InternalSwap(AddConfigRequest* PROTOBUF_RESTRICT other) {
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.configdefinition_, &other->_impl_.configdefinition_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.configcomment_, &other->_impl_.configcomment_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.config_definition_, &other->_impl_.config_definition_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.config_comment_, &other->_impl_.config_comment_, arena);
 }
 
 ::google::protobuf::Metadata AddConfigRequest::GetMetadata() const {
@@ -861,7 +861,7 @@ inline PROTOBUF_NDEBUG_INLINE GetConfigRequest::Impl_::Impl_(
 
 inline void GetConfigRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.configid_ = {};
+  _impl_.config_id_ = {};
 }
 GetConfigRequest::~GetConfigRequest() {
   // @@protoc_insertion_point(destructor:szconfigmanager.GetConfigRequest)
@@ -880,7 +880,7 @@ PROTOBUF_NOINLINE void GetConfigRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.configid_ = ::int64_t{0};
+  _impl_.config_id_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -906,14 +906,14 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> GetConfigRequest::_table_ = {
     &_GetConfigRequest_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // int64 configId = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(GetConfigRequest, _impl_.configid_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(GetConfigRequest, _impl_.configid_)}},
+    // int64 config_id = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(GetConfigRequest, _impl_.config_id_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(GetConfigRequest, _impl_.config_id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 configId = 1;
-    {PROTOBUF_FIELD_OFFSET(GetConfigRequest, _impl_.configid_), 0, 0,
+    // int64 config_id = 1;
+    {PROTOBUF_FIELD_OFFSET(GetConfigRequest, _impl_.config_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
   }},
   // no aux_entries
@@ -928,11 +928,11 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> GetConfigRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 configId = 1;
-  if (this->_internal_configid() != 0) {
+  // int64 config_id = 1;
+  if (this->_internal_config_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_configid(), target);
+            stream, this->_internal_config_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -952,10 +952,10 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> GetConfigRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 configId = 1;
-  if (this->_internal_configid() != 0) {
+  // int64 config_id = 1;
+  if (this->_internal_config_id() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_configid());
+        this->_internal_config_id());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -977,8 +977,8 @@ void GetConfigRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::go
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_configid() != 0) {
-    _this->_internal_set_configid(from._internal_configid());
+  if (from._internal_config_id() != 0) {
+    _this->_internal_set_config_id(from._internal_config_id());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -1000,7 +1000,7 @@ PROTOBUF_NOINLINE bool GetConfigRequest::IsInitialized() const {
 void GetConfigRequest::InternalSwap(GetConfigRequest* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.configid_, other->_impl_.configid_);
+        swap(_impl_.config_id_, other->_impl_.config_id_);
 }
 
 ::google::protobuf::Metadata GetConfigRequest::GetMetadata() const {
@@ -1652,11 +1652,11 @@ inline PROTOBUF_NDEBUG_INLINE ReplaceDefaultConfigIdRequest::Impl_::Impl_(
 inline void ReplaceDefaultConfigIdRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, currentdefaultconfigid_),
+               offsetof(Impl_, current_default_config_id_),
            0,
-           offsetof(Impl_, newdefaultconfigid_) -
-               offsetof(Impl_, currentdefaultconfigid_) +
-               sizeof(Impl_::newdefaultconfigid_));
+           offsetof(Impl_, new_default_config_id_) -
+               offsetof(Impl_, current_default_config_id_) +
+               sizeof(Impl_::new_default_config_id_));
 }
 ReplaceDefaultConfigIdRequest::~ReplaceDefaultConfigIdRequest() {
   // @@protoc_insertion_point(destructor:szconfigmanager.ReplaceDefaultConfigIdRequest)
@@ -1675,9 +1675,9 @@ PROTOBUF_NOINLINE void ReplaceDefaultConfigIdRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.currentdefaultconfigid_, 0, static_cast<::size_t>(
-      reinterpret_cast<char*>(&_impl_.newdefaultconfigid_) -
-      reinterpret_cast<char*>(&_impl_.currentdefaultconfigid_)) + sizeof(_impl_.newdefaultconfigid_));
+  ::memset(&_impl_.current_default_config_id_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.new_default_config_id_) -
+      reinterpret_cast<char*>(&_impl_.current_default_config_id_)) + sizeof(_impl_.new_default_config_id_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -1703,20 +1703,20 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> ReplaceDefaultConfigIdRequest::_table_
     &_ReplaceDefaultConfigIdRequest_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // int64 newDefaultConfigId = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ReplaceDefaultConfigIdRequest, _impl_.newdefaultconfigid_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(ReplaceDefaultConfigIdRequest, _impl_.newdefaultconfigid_)}},
-    // int64 currentDefaultConfigId = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ReplaceDefaultConfigIdRequest, _impl_.currentdefaultconfigid_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(ReplaceDefaultConfigIdRequest, _impl_.currentdefaultconfigid_)}},
+    // int64 new_default_config_id = 2;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ReplaceDefaultConfigIdRequest, _impl_.new_default_config_id_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(ReplaceDefaultConfigIdRequest, _impl_.new_default_config_id_)}},
+    // int64 current_default_config_id = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ReplaceDefaultConfigIdRequest, _impl_.current_default_config_id_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(ReplaceDefaultConfigIdRequest, _impl_.current_default_config_id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 currentDefaultConfigId = 1;
-    {PROTOBUF_FIELD_OFFSET(ReplaceDefaultConfigIdRequest, _impl_.currentdefaultconfigid_), 0, 0,
+    // int64 current_default_config_id = 1;
+    {PROTOBUF_FIELD_OFFSET(ReplaceDefaultConfigIdRequest, _impl_.current_default_config_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // int64 newDefaultConfigId = 2;
-    {PROTOBUF_FIELD_OFFSET(ReplaceDefaultConfigIdRequest, _impl_.newdefaultconfigid_), 0, 0,
+    // int64 new_default_config_id = 2;
+    {PROTOBUF_FIELD_OFFSET(ReplaceDefaultConfigIdRequest, _impl_.new_default_config_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
   }},
   // no aux_entries
@@ -1731,18 +1731,18 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> ReplaceDefaultConfigIdRequest::_table_
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 currentDefaultConfigId = 1;
-  if (this->_internal_currentdefaultconfigid() != 0) {
+  // int64 current_default_config_id = 1;
+  if (this->_internal_current_default_config_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_currentdefaultconfigid(), target);
+            stream, this->_internal_current_default_config_id(), target);
   }
 
-  // int64 newDefaultConfigId = 2;
-  if (this->_internal_newdefaultconfigid() != 0) {
+  // int64 new_default_config_id = 2;
+  if (this->_internal_new_default_config_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<2>(
-            stream, this->_internal_newdefaultconfigid(), target);
+            stream, this->_internal_new_default_config_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1762,16 +1762,16 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> ReplaceDefaultConfigIdRequest::_table_
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 currentDefaultConfigId = 1;
-  if (this->_internal_currentdefaultconfigid() != 0) {
+  // int64 current_default_config_id = 1;
+  if (this->_internal_current_default_config_id() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_currentdefaultconfigid());
+        this->_internal_current_default_config_id());
   }
 
-  // int64 newDefaultConfigId = 2;
-  if (this->_internal_newdefaultconfigid() != 0) {
+  // int64 new_default_config_id = 2;
+  if (this->_internal_new_default_config_id() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_newdefaultconfigid());
+        this->_internal_new_default_config_id());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -1793,11 +1793,11 @@ void ReplaceDefaultConfigIdRequest::MergeImpl(::google::protobuf::Message& to_ms
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_currentdefaultconfigid() != 0) {
-    _this->_internal_set_currentdefaultconfigid(from._internal_currentdefaultconfigid());
+  if (from._internal_current_default_config_id() != 0) {
+    _this->_internal_set_current_default_config_id(from._internal_current_default_config_id());
   }
-  if (from._internal_newdefaultconfigid() != 0) {
-    _this->_internal_set_newdefaultconfigid(from._internal_newdefaultconfigid());
+  if (from._internal_new_default_config_id() != 0) {
+    _this->_internal_set_new_default_config_id(from._internal_new_default_config_id());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -1820,11 +1820,11 @@ void ReplaceDefaultConfigIdRequest::InternalSwap(ReplaceDefaultConfigIdRequest* 
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ReplaceDefaultConfigIdRequest, _impl_.newdefaultconfigid_)
-      + sizeof(ReplaceDefaultConfigIdRequest::_impl_.newdefaultconfigid_)
-      - PROTOBUF_FIELD_OFFSET(ReplaceDefaultConfigIdRequest, _impl_.currentdefaultconfigid_)>(
-          reinterpret_cast<char*>(&_impl_.currentdefaultconfigid_),
-          reinterpret_cast<char*>(&other->_impl_.currentdefaultconfigid_));
+      PROTOBUF_FIELD_OFFSET(ReplaceDefaultConfigIdRequest, _impl_.new_default_config_id_)
+      + sizeof(ReplaceDefaultConfigIdRequest::_impl_.new_default_config_id_)
+      - PROTOBUF_FIELD_OFFSET(ReplaceDefaultConfigIdRequest, _impl_.current_default_config_id_)>(
+          reinterpret_cast<char*>(&_impl_.current_default_config_id_),
+          reinterpret_cast<char*>(&other->_impl_.current_default_config_id_));
 }
 
 ::google::protobuf::Metadata ReplaceDefaultConfigIdRequest::GetMetadata() const {
@@ -1890,7 +1890,7 @@ inline PROTOBUF_NDEBUG_INLINE SetDefaultConfigIdRequest::Impl_::Impl_(
 
 inline void SetDefaultConfigIdRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.configid_ = {};
+  _impl_.config_id_ = {};
 }
 SetDefaultConfigIdRequest::~SetDefaultConfigIdRequest() {
   // @@protoc_insertion_point(destructor:szconfigmanager.SetDefaultConfigIdRequest)
@@ -1909,7 +1909,7 @@ PROTOBUF_NOINLINE void SetDefaultConfigIdRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.configid_ = ::int64_t{0};
+  _impl_.config_id_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -1935,14 +1935,14 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> SetDefaultConfigIdRequest::_table_ = {
     &_SetDefaultConfigIdRequest_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // int64 configId = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(SetDefaultConfigIdRequest, _impl_.configid_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(SetDefaultConfigIdRequest, _impl_.configid_)}},
+    // int64 config_id = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(SetDefaultConfigIdRequest, _impl_.config_id_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(SetDefaultConfigIdRequest, _impl_.config_id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 configId = 1;
-    {PROTOBUF_FIELD_OFFSET(SetDefaultConfigIdRequest, _impl_.configid_), 0, 0,
+    // int64 config_id = 1;
+    {PROTOBUF_FIELD_OFFSET(SetDefaultConfigIdRequest, _impl_.config_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
   }},
   // no aux_entries
@@ -1957,11 +1957,11 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> SetDefaultConfigIdRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 configId = 1;
-  if (this->_internal_configid() != 0) {
+  // int64 config_id = 1;
+  if (this->_internal_config_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_configid(), target);
+            stream, this->_internal_config_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1981,10 +1981,10 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> SetDefaultConfigIdRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 configId = 1;
-  if (this->_internal_configid() != 0) {
+  // int64 config_id = 1;
+  if (this->_internal_config_id() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_configid());
+        this->_internal_config_id());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -2006,8 +2006,8 @@ void SetDefaultConfigIdRequest::MergeImpl(::google::protobuf::Message& to_msg, c
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_configid() != 0) {
-    _this->_internal_set_configid(from._internal_configid());
+  if (from._internal_config_id() != 0) {
+    _this->_internal_set_config_id(from._internal_config_id());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -2029,7 +2029,7 @@ PROTOBUF_NOINLINE bool SetDefaultConfigIdRequest::IsInitialized() const {
 void SetDefaultConfigIdRequest::InternalSwap(SetDefaultConfigIdRequest* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.configid_, other->_impl_.configid_);
+        swap(_impl_.config_id_, other->_impl_.config_id_);
 }
 
 ::google::protobuf::Metadata SetDefaultConfigIdRequest::GetMetadata() const {

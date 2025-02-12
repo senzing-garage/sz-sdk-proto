@@ -6,7 +6,7 @@ require 'google/protobuf'
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("szdiagnostic.proto", :syntax => :proto3) do
     add_message "szdiagnostic.CheckDatastorePerformanceRequest" do
-      optional :secondsToRun, :int32, 1
+      optional :seconds_to_run, :int32, 1
     end
     add_message "szdiagnostic.CheckDatastorePerformanceResponse" do
       optional :result, :string, 1
@@ -17,7 +17,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :result, :string, 1
     end
     add_message "szdiagnostic.GetFeatureRequest" do
-      optional :featureId, :int64, 1
+      optional :feature_id, :int64, 1
     end
     add_message "szdiagnostic.GetFeatureResponse" do
       optional :result, :string, 1
@@ -27,7 +27,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "szdiagnostic.PurgeRepositoryResponse" do
     end
     add_message "szdiagnostic.ReinitializeRequest" do
-      optional :configId, :int64, 1
+      optional :config_id, :int64, 1
     end
     add_message "szdiagnostic.ReinitializeResponse" do
     end

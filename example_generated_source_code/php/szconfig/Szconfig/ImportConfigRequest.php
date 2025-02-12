@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class ImportConfigRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string configDefinition = 1;</code>
+     * Generated from protobuf field <code>string config_definition = 1;</code>
      */
-    protected $configDefinition = '';
+    protected $config_definition = '';
 
     /**
      * Constructor.
@@ -24,7 +24,7 @@ class ImportConfigRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $configDefinition
+     *     @type string $config_definition
      * }
      */
     public function __construct($data = NULL) {
@@ -33,23 +33,23 @@ class ImportConfigRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string configDefinition = 1;</code>
+     * Generated from protobuf field <code>string config_definition = 1;</code>
      * @return string
      */
     public function getConfigDefinition()
     {
-        return $this->configDefinition;
+        return $this->config_definition;
     }
 
     /**
-     * Generated from protobuf field <code>string configDefinition = 1;</code>
+     * Generated from protobuf field <code>string config_definition = 1;</code>
      * @param string $var
      * @return $this
      */
     public function setConfigDefinition($var)
     {
         GPBUtil::checkString($var, True);
-        $this->configDefinition = $var;
+        $this->config_definition = $var;
 
         return $this;
     }

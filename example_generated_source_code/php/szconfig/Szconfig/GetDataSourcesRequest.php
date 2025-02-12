@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetDataSourcesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int64 configHandle = 1;</code>
+     * Generated from protobuf field <code>int64 config_handle = 1;</code>
      */
-    protected $configHandle = 0;
+    protected $config_handle = 0;
 
     /**
      * Constructor.
@@ -24,7 +24,7 @@ class GetDataSourcesRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int|string $configHandle
+     *     @type int|string $config_handle
      * }
      */
     public function __construct($data = NULL) {
@@ -33,23 +33,23 @@ class GetDataSourcesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 configHandle = 1;</code>
+     * Generated from protobuf field <code>int64 config_handle = 1;</code>
      * @return int|string
      */
     public function getConfigHandle()
     {
-        return $this->configHandle;
+        return $this->config_handle;
     }
 
     /**
-     * Generated from protobuf field <code>int64 configHandle = 1;</code>
+     * Generated from protobuf field <code>int64 config_handle = 1;</code>
      * @param int|string $var
      * @return $this
      */
     public function setConfigHandle($var)
     {
         GPBUtil::checkInt64($var);
-        $this->configHandle = $var;
+        $this->config_handle = $var;
 
         return $this;
     }

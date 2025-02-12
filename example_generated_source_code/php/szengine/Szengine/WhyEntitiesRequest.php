@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class WhyEntitiesRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int64 entityId1 = 1;</code>
+     * Generated from protobuf field <code>int64 entity_id_1 = 1;</code>
      */
-    protected $entityId1 = 0;
+    protected $entity_id_1 = 0;
     /**
-     * Generated from protobuf field <code>int64 entityId2 = 2;</code>
+     * Generated from protobuf field <code>int64 entity_id_2 = 2;</code>
      */
-    protected $entityId2 = 0;
+    protected $entity_id_2 = 0;
     /**
      * Generated from protobuf field <code>int64 flags = 3;</code>
      */
@@ -32,8 +32,8 @@ class WhyEntitiesRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int|string $entityId1
-     *     @type int|string $entityId2
+     *     @type int|string $entity_id_1
+     *     @type int|string $entity_id_2
      *     @type int|string $flags
      * }
      */
@@ -43,45 +43,45 @@ class WhyEntitiesRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 entityId1 = 1;</code>
+     * Generated from protobuf field <code>int64 entity_id_1 = 1;</code>
      * @return int|string
      */
     public function getEntityId1()
     {
-        return $this->entityId1;
+        return $this->entity_id_1;
     }
 
     /**
-     * Generated from protobuf field <code>int64 entityId1 = 1;</code>
+     * Generated from protobuf field <code>int64 entity_id_1 = 1;</code>
      * @param int|string $var
      * @return $this
      */
     public function setEntityId1($var)
     {
         GPBUtil::checkInt64($var);
-        $this->entityId1 = $var;
+        $this->entity_id_1 = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>int64 entityId2 = 2;</code>
+     * Generated from protobuf field <code>int64 entity_id_2 = 2;</code>
      * @return int|string
      */
     public function getEntityId2()
     {
-        return $this->entityId2;
+        return $this->entity_id_2;
     }
 
     /**
-     * Generated from protobuf field <code>int64 entityId2 = 2;</code>
+     * Generated from protobuf field <code>int64 entity_id_2 = 2;</code>
      * @param int|string $var
      * @return $this
      */
     public function setEntityId2($var)
     {
         GPBUtil::checkInt64($var);
-        $this->entityId2 = $var;
+        $this->entity_id_2 = $var;
 
         return $this;
     }

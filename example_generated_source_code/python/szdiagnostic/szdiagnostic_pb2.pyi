@@ -5,10 +5,10 @@ from typing import ClassVar as _ClassVar, Optional as _Optional
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class CheckDatastorePerformanceRequest(_message.Message):
-    __slots__ = ("secondsToRun",)
-    SECONDSTORUN_FIELD_NUMBER: _ClassVar[int]
-    secondsToRun: int
-    def __init__(self, secondsToRun: _Optional[int] = ...) -> None: ...
+    __slots__ = ("seconds_to_run",)
+    SECONDS_TO_RUN_FIELD_NUMBER: _ClassVar[int]
+    seconds_to_run: int
+    def __init__(self, seconds_to_run: _Optional[int] = ...) -> None: ...
 
 class CheckDatastorePerformanceResponse(_message.Message):
     __slots__ = ("result",)
@@ -27,10 +27,10 @@ class GetDatastoreInfoResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class GetFeatureRequest(_message.Message):
-    __slots__ = ("featureId",)
-    FEATUREID_FIELD_NUMBER: _ClassVar[int]
-    featureId: int
-    def __init__(self, featureId: _Optional[int] = ...) -> None: ...
+    __slots__ = ("feature_id",)
+    FEATURE_ID_FIELD_NUMBER: _ClassVar[int]
+    feature_id: int
+    def __init__(self, feature_id: _Optional[int] = ...) -> None: ...
 
 class GetFeatureResponse(_message.Message):
     __slots__ = ("result",)
@@ -47,10 +47,10 @@ class PurgeRepositoryResponse(_message.Message):
     def __init__(self) -> None: ...
 
 class ReinitializeRequest(_message.Message):
-    __slots__ = ("configId",)
-    CONFIGID_FIELD_NUMBER: _ClassVar[int]
-    configId: int
-    def __init__(self, configId: _Optional[int] = ...) -> None: ...
+    __slots__ = ("config_id",)
+    CONFIG_ID_FIELD_NUMBER: _ClassVar[int]
+    config_id: int
+    def __init__(self, config_id: _Optional[int] = ...) -> None: ...
 
 class ReinitializeResponse(_message.Message):
     __slots__ = ()

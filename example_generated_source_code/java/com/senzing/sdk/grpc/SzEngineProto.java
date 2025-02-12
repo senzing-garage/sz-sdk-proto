@@ -20,36 +20,36 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The dataSourceCode.
      */
     java.lang.String getDataSourceCode();
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The bytes for dataSourceCode.
      */
     com.google.protobuf.ByteString
         getDataSourceCodeBytes();
 
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The recordId.
      */
     java.lang.String getRecordId();
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The bytes for recordId.
      */
     com.google.protobuf.ByteString
         getRecordIdBytes();
 
     /**
-     * <code>string recordDefinition = 3;</code>
+     * <code>string record_definition = 3;</code>
      * @return The recordDefinition.
      */
     java.lang.String getRecordDefinition();
     /**
-     * <code>string recordDefinition = 3;</code>
+     * <code>string record_definition = 3;</code>
      * @return The bytes for recordDefinition.
      */
     com.google.protobuf.ByteString
@@ -99,11 +99,11 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.AddRecordRequest.Builder.class);
     }
 
-    public static final int DATASOURCECODE_FIELD_NUMBER = 1;
+    public static final int DATA_SOURCE_CODE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object dataSourceCode_ = "";
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The dataSourceCode.
      */
     @java.lang.Override
@@ -120,7 +120,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The bytes for dataSourceCode.
      */
     @java.lang.Override
@@ -138,11 +138,11 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int RECORDID_FIELD_NUMBER = 2;
+    public static final int RECORD_ID_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object recordId_ = "";
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The recordId.
      */
     @java.lang.Override
@@ -159,7 +159,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The bytes for recordId.
      */
     @java.lang.Override
@@ -177,11 +177,11 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int RECORDDEFINITION_FIELD_NUMBER = 3;
+    public static final int RECORD_DEFINITION_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object recordDefinition_ = "";
     /**
-     * <code>string recordDefinition = 3;</code>
+     * <code>string record_definition = 3;</code>
      * @return The recordDefinition.
      */
     @java.lang.Override
@@ -198,7 +198,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string recordDefinition = 3;</code>
+     * <code>string record_definition = 3;</code>
      * @return The bytes for recordDefinition.
      */
     @java.lang.Override
@@ -309,11 +309,11 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASOURCECODE_FIELD_NUMBER;
+      hash = (37 * hash) + DATA_SOURCE_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getDataSourceCode().hashCode();
-      hash = (37 * hash) + RECORDID_FIELD_NUMBER;
+      hash = (37 * hash) + RECORD_ID_FIELD_NUMBER;
       hash = (53 * hash) + getRecordId().hashCode();
-      hash = (37 * hash) + RECORDDEFINITION_FIELD_NUMBER;
+      hash = (37 * hash) + RECORD_DEFINITION_FIELD_NUMBER;
       hash = (53 * hash) + getRecordDefinition().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -627,7 +627,7 @@ public final class SzEngineProto {
 
       private java.lang.Object dataSourceCode_ = "";
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return The dataSourceCode.
        */
       public java.lang.String getDataSourceCode() {
@@ -643,7 +643,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return The bytes for dataSourceCode.
        */
       public com.google.protobuf.ByteString
@@ -660,7 +660,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @param value The dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -673,7 +673,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearDataSourceCode() {
@@ -683,7 +683,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @param value The bytes for dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -699,7 +699,7 @@ public final class SzEngineProto {
 
       private java.lang.Object recordId_ = "";
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return The recordId.
        */
       public java.lang.String getRecordId() {
@@ -715,7 +715,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return The bytes for recordId.
        */
       public com.google.protobuf.ByteString
@@ -732,7 +732,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @param value The recordId to set.
        * @return This builder for chaining.
        */
@@ -745,7 +745,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearRecordId() {
@@ -755,7 +755,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @param value The bytes for recordId to set.
        * @return This builder for chaining.
        */
@@ -771,7 +771,7 @@ public final class SzEngineProto {
 
       private java.lang.Object recordDefinition_ = "";
       /**
-       * <code>string recordDefinition = 3;</code>
+       * <code>string record_definition = 3;</code>
        * @return The recordDefinition.
        */
       public java.lang.String getRecordDefinition() {
@@ -787,7 +787,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordDefinition = 3;</code>
+       * <code>string record_definition = 3;</code>
        * @return The bytes for recordDefinition.
        */
       public com.google.protobuf.ByteString
@@ -804,7 +804,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordDefinition = 3;</code>
+       * <code>string record_definition = 3;</code>
        * @param value The recordDefinition to set.
        * @return This builder for chaining.
        */
@@ -817,7 +817,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordDefinition = 3;</code>
+       * <code>string record_definition = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearRecordDefinition() {
@@ -827,7 +827,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordDefinition = 3;</code>
+       * <code>string record_definition = 3;</code>
        * @param value The bytes for recordDefinition to set.
        * @return This builder for chaining.
        */
@@ -1493,7 +1493,7 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 exportHandle = 1;</code>
+     * <code>int64 export_handle = 1;</code>
      * @return The exportHandle.
      */
     long getExportHandle();
@@ -1533,10 +1533,10 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest.class, com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest.Builder.class);
     }
 
-    public static final int EXPORTHANDLE_FIELD_NUMBER = 1;
+    public static final int EXPORT_HANDLE_FIELD_NUMBER = 1;
     private long exportHandle_ = 0L;
     /**
-     * <code>int64 exportHandle = 1;</code>
+     * <code>int64 export_handle = 1;</code>
      * @return The exportHandle.
      */
     @java.lang.Override
@@ -1602,7 +1602,7 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + EXPORTHANDLE_FIELD_NUMBER;
+      hash = (37 * hash) + EXPORT_HANDLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getExportHandle());
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -1872,7 +1872,7 @@ public final class SzEngineProto {
 
       private long exportHandle_ ;
       /**
-       * <code>int64 exportHandle = 1;</code>
+       * <code>int64 export_handle = 1;</code>
        * @return The exportHandle.
        */
       @java.lang.Override
@@ -1880,7 +1880,7 @@ public final class SzEngineProto {
         return exportHandle_;
       }
       /**
-       * <code>int64 exportHandle = 1;</code>
+       * <code>int64 export_handle = 1;</code>
        * @param value The exportHandle to set.
        * @return This builder for chaining.
        */
@@ -1892,7 +1892,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 exportHandle = 1;</code>
+       * <code>int64 export_handle = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearExportHandle() {
@@ -3241,24 +3241,24 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The dataSourceCode.
      */
     java.lang.String getDataSourceCode();
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The bytes for dataSourceCode.
      */
     com.google.protobuf.ByteString
         getDataSourceCodeBytes();
 
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The recordId.
      */
     java.lang.String getRecordId();
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The bytes for recordId.
      */
     com.google.protobuf.ByteString
@@ -3307,11 +3307,11 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.DeleteRecordRequest.Builder.class);
     }
 
-    public static final int DATASOURCECODE_FIELD_NUMBER = 1;
+    public static final int DATA_SOURCE_CODE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object dataSourceCode_ = "";
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The dataSourceCode.
      */
     @java.lang.Override
@@ -3328,7 +3328,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The bytes for dataSourceCode.
      */
     @java.lang.Override
@@ -3346,11 +3346,11 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int RECORDID_FIELD_NUMBER = 2;
+    public static final int RECORD_ID_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object recordId_ = "";
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The recordId.
      */
     @java.lang.Override
@@ -3367,7 +3367,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The bytes for recordId.
      */
     @java.lang.Override
@@ -3470,9 +3470,9 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASOURCECODE_FIELD_NUMBER;
+      hash = (37 * hash) + DATA_SOURCE_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getDataSourceCode().hashCode();
-      hash = (37 * hash) + RECORDID_FIELD_NUMBER;
+      hash = (37 * hash) + RECORD_ID_FIELD_NUMBER;
       hash = (53 * hash) + getRecordId().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -3772,7 +3772,7 @@ public final class SzEngineProto {
 
       private java.lang.Object dataSourceCode_ = "";
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return The dataSourceCode.
        */
       public java.lang.String getDataSourceCode() {
@@ -3788,7 +3788,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return The bytes for dataSourceCode.
        */
       public com.google.protobuf.ByteString
@@ -3805,7 +3805,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @param value The dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -3818,7 +3818,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearDataSourceCode() {
@@ -3828,7 +3828,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @param value The bytes for dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -3844,7 +3844,7 @@ public final class SzEngineProto {
 
       private java.lang.Object recordId_ = "";
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return The recordId.
        */
       public java.lang.String getRecordId() {
@@ -3860,7 +3860,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return The bytes for recordId.
        */
       public com.google.protobuf.ByteString
@@ -3877,7 +3877,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @param value The recordId to set.
        * @return This builder for chaining.
        */
@@ -3890,7 +3890,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearRecordId() {
@@ -3900,7 +3900,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @param value The bytes for recordId to set.
        * @return This builder for chaining.
        */
@@ -4566,12 +4566,12 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string csvColumnList = 1;</code>
+     * <code>string csv_column_list = 1;</code>
      * @return The csvColumnList.
      */
     java.lang.String getCsvColumnList();
     /**
-     * <code>string csvColumnList = 1;</code>
+     * <code>string csv_column_list = 1;</code>
      * @return The bytes for csvColumnList.
      */
     com.google.protobuf.ByteString
@@ -4619,11 +4619,11 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest.class, com.senzing.sdk.grpc.SzEngineProto.ExportCsvEntityReportRequest.Builder.class);
     }
 
-    public static final int CSVCOLUMNLIST_FIELD_NUMBER = 1;
+    public static final int CSV_COLUMN_LIST_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object csvColumnList_ = "";
     /**
-     * <code>string csvColumnList = 1;</code>
+     * <code>string csv_column_list = 1;</code>
      * @return The csvColumnList.
      */
     @java.lang.Override
@@ -4640,7 +4640,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string csvColumnList = 1;</code>
+     * <code>string csv_column_list = 1;</code>
      * @return The bytes for csvColumnList.
      */
     @java.lang.Override
@@ -4735,7 +4735,7 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CSVCOLUMNLIST_FIELD_NUMBER;
+      hash = (37 * hash) + CSV_COLUMN_LIST_FIELD_NUMBER;
       hash = (53 * hash) + getCsvColumnList().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -5021,7 +5021,7 @@ public final class SzEngineProto {
 
       private java.lang.Object csvColumnList_ = "";
       /**
-       * <code>string csvColumnList = 1;</code>
+       * <code>string csv_column_list = 1;</code>
        * @return The csvColumnList.
        */
       public java.lang.String getCsvColumnList() {
@@ -5037,7 +5037,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string csvColumnList = 1;</code>
+       * <code>string csv_column_list = 1;</code>
        * @return The bytes for csvColumnList.
        */
       public com.google.protobuf.ByteString
@@ -5054,7 +5054,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string csvColumnList = 1;</code>
+       * <code>string csv_column_list = 1;</code>
        * @param value The csvColumnList to set.
        * @return This builder for chaining.
        */
@@ -5067,7 +5067,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string csvColumnList = 1;</code>
+       * <code>string csv_column_list = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearCsvColumnList() {
@@ -5077,7 +5077,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string csvColumnList = 1;</code>
+       * <code>string csv_column_list = 1;</code>
        * @param value The bytes for csvColumnList to set.
        * @return This builder for chaining.
        */
@@ -6622,7 +6622,7 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 exportHandle = 1;</code>
+     * <code>int64 export_handle = 1;</code>
      * @return The exportHandle.
      */
     long getExportHandle();
@@ -6662,10 +6662,10 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest.class, com.senzing.sdk.grpc.SzEngineProto.FetchNextRequest.Builder.class);
     }
 
-    public static final int EXPORTHANDLE_FIELD_NUMBER = 1;
+    public static final int EXPORT_HANDLE_FIELD_NUMBER = 1;
     private long exportHandle_ = 0L;
     /**
-     * <code>int64 exportHandle = 1;</code>
+     * <code>int64 export_handle = 1;</code>
      * @return The exportHandle.
      */
     @java.lang.Override
@@ -6731,7 +6731,7 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + EXPORTHANDLE_FIELD_NUMBER;
+      hash = (37 * hash) + EXPORT_HANDLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getExportHandle());
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -7001,7 +7001,7 @@ public final class SzEngineProto {
 
       private long exportHandle_ ;
       /**
-       * <code>int64 exportHandle = 1;</code>
+       * <code>int64 export_handle = 1;</code>
        * @return The exportHandle.
        */
       @java.lang.Override
@@ -7009,7 +7009,7 @@ public final class SzEngineProto {
         return exportHandle_;
       }
       /**
-       * <code>int64 exportHandle = 1;</code>
+       * <code>int64 export_handle = 1;</code>
        * @param value The exportHandle to set.
        * @return This builder for chaining.
        */
@@ -7021,7 +7021,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 exportHandle = 1;</code>
+       * <code>int64 export_handle = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearExportHandle() {
@@ -7651,7 +7651,7 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 entityId = 1;</code>
+     * <code>int64 entity_id = 1;</code>
      * @return The entityId.
      */
     long getEntityId();
@@ -7697,10 +7697,10 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByEntityIdRequest.Builder.class);
     }
 
-    public static final int ENTITYID_FIELD_NUMBER = 1;
+    public static final int ENTITY_ID_FIELD_NUMBER = 1;
     private long entityId_ = 0L;
     /**
-     * <code>int64 entityId = 1;</code>
+     * <code>int64 entity_id = 1;</code>
      * @return The entityId.
      */
     @java.lang.Override
@@ -7786,7 +7786,7 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ENTITYID_FIELD_NUMBER;
+      hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getEntityId());
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
@@ -8071,7 +8071,7 @@ public final class SzEngineProto {
 
       private long entityId_ ;
       /**
-       * <code>int64 entityId = 1;</code>
+       * <code>int64 entity_id = 1;</code>
        * @return The entityId.
        */
       @java.lang.Override
@@ -8079,7 +8079,7 @@ public final class SzEngineProto {
         return entityId_;
       }
       /**
-       * <code>int64 entityId = 1;</code>
+       * <code>int64 entity_id = 1;</code>
        * @param value The entityId to set.
        * @return This builder for chaining.
        */
@@ -8091,7 +8091,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 entityId = 1;</code>
+       * <code>int64 entity_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityId() {
@@ -8753,24 +8753,24 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The dataSourceCode.
      */
     java.lang.String getDataSourceCode();
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The bytes for dataSourceCode.
      */
     com.google.protobuf.ByteString
         getDataSourceCodeBytes();
 
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The recordId.
      */
     java.lang.String getRecordId();
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The bytes for recordId.
      */
     com.google.protobuf.ByteString
@@ -8819,11 +8819,11 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindInterestingEntitiesByRecordIdRequest.Builder.class);
     }
 
-    public static final int DATASOURCECODE_FIELD_NUMBER = 1;
+    public static final int DATA_SOURCE_CODE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object dataSourceCode_ = "";
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The dataSourceCode.
      */
     @java.lang.Override
@@ -8840,7 +8840,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The bytes for dataSourceCode.
      */
     @java.lang.Override
@@ -8858,11 +8858,11 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int RECORDID_FIELD_NUMBER = 2;
+    public static final int RECORD_ID_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object recordId_ = "";
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The recordId.
      */
     @java.lang.Override
@@ -8879,7 +8879,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The bytes for recordId.
      */
     @java.lang.Override
@@ -8982,9 +8982,9 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASOURCECODE_FIELD_NUMBER;
+      hash = (37 * hash) + DATA_SOURCE_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getDataSourceCode().hashCode();
-      hash = (37 * hash) + RECORDID_FIELD_NUMBER;
+      hash = (37 * hash) + RECORD_ID_FIELD_NUMBER;
       hash = (53 * hash) + getRecordId().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -9284,7 +9284,7 @@ public final class SzEngineProto {
 
       private java.lang.Object dataSourceCode_ = "";
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return The dataSourceCode.
        */
       public java.lang.String getDataSourceCode() {
@@ -9300,7 +9300,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return The bytes for dataSourceCode.
        */
       public com.google.protobuf.ByteString
@@ -9317,7 +9317,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @param value The dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -9330,7 +9330,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearDataSourceCode() {
@@ -9340,7 +9340,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @param value The bytes for dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -9356,7 +9356,7 @@ public final class SzEngineProto {
 
       private java.lang.Object recordId_ = "";
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return The recordId.
        */
       public java.lang.String getRecordId() {
@@ -9372,7 +9372,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return The bytes for recordId.
        */
       public com.google.protobuf.ByteString
@@ -9389,7 +9389,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @param value The recordId to set.
        * @return This builder for chaining.
        */
@@ -9402,7 +9402,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearRecordId() {
@@ -9412,7 +9412,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @param value The bytes for recordId to set.
        * @return This builder for chaining.
        */
@@ -10078,31 +10078,31 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string entityIds = 1;</code>
+     * <code>string entity_ids = 1;</code>
      * @return The entityIds.
      */
     java.lang.String getEntityIds();
     /**
-     * <code>string entityIds = 1;</code>
+     * <code>string entity_ids = 1;</code>
      * @return The bytes for entityIds.
      */
     com.google.protobuf.ByteString
         getEntityIdsBytes();
 
     /**
-     * <code>int64 maxDegrees = 2;</code>
+     * <code>int64 max_degrees = 2;</code>
      * @return The maxDegrees.
      */
     long getMaxDegrees();
 
     /**
-     * <code>int64 buildOutDegrees = 3;</code>
+     * <code>int64 build_out_degrees = 3;</code>
      * @return The buildOutDegrees.
      */
     long getBuildOutDegrees();
 
     /**
-     * <code>int64 buildOutMaxEntities = 4;</code>
+     * <code>int64 build_out_max_entities = 4;</code>
      * @return The buildOutMaxEntities.
      */
     long getBuildOutMaxEntities();
@@ -10149,11 +10149,11 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindNetworkByEntityIdRequest.Builder.class);
     }
 
-    public static final int ENTITYIDS_FIELD_NUMBER = 1;
+    public static final int ENTITY_IDS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object entityIds_ = "";
     /**
-     * <code>string entityIds = 1;</code>
+     * <code>string entity_ids = 1;</code>
      * @return The entityIds.
      */
     @java.lang.Override
@@ -10170,7 +10170,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string entityIds = 1;</code>
+     * <code>string entity_ids = 1;</code>
      * @return The bytes for entityIds.
      */
     @java.lang.Override
@@ -10188,10 +10188,10 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int MAXDEGREES_FIELD_NUMBER = 2;
+    public static final int MAX_DEGREES_FIELD_NUMBER = 2;
     private long maxDegrees_ = 0L;
     /**
-     * <code>int64 maxDegrees = 2;</code>
+     * <code>int64 max_degrees = 2;</code>
      * @return The maxDegrees.
      */
     @java.lang.Override
@@ -10199,10 +10199,10 @@ public final class SzEngineProto {
       return maxDegrees_;
     }
 
-    public static final int BUILDOUTDEGREES_FIELD_NUMBER = 3;
+    public static final int BUILD_OUT_DEGREES_FIELD_NUMBER = 3;
     private long buildOutDegrees_ = 0L;
     /**
-     * <code>int64 buildOutDegrees = 3;</code>
+     * <code>int64 build_out_degrees = 3;</code>
      * @return The buildOutDegrees.
      */
     @java.lang.Override
@@ -10210,10 +10210,10 @@ public final class SzEngineProto {
       return buildOutDegrees_;
     }
 
-    public static final int BUILDOUTMAXENTITIES_FIELD_NUMBER = 4;
+    public static final int BUILD_OUT_MAX_ENTITIES_FIELD_NUMBER = 4;
     private long buildOutMaxEntities_ = 0L;
     /**
-     * <code>int64 buildOutMaxEntities = 4;</code>
+     * <code>int64 build_out_max_entities = 4;</code>
      * @return The buildOutMaxEntities.
      */
     @java.lang.Override
@@ -10325,15 +10325,15 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ENTITYIDS_FIELD_NUMBER;
+      hash = (37 * hash) + ENTITY_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getEntityIds().hashCode();
-      hash = (37 * hash) + MAXDEGREES_FIELD_NUMBER;
+      hash = (37 * hash) + MAX_DEGREES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getMaxDegrees());
-      hash = (37 * hash) + BUILDOUTDEGREES_FIELD_NUMBER;
+      hash = (37 * hash) + BUILD_OUT_DEGREES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getBuildOutDegrees());
-      hash = (37 * hash) + BUILDOUTMAXENTITIES_FIELD_NUMBER;
+      hash = (37 * hash) + BUILD_OUT_MAX_ENTITIES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getBuildOutMaxEntities());
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
@@ -10656,7 +10656,7 @@ public final class SzEngineProto {
 
       private java.lang.Object entityIds_ = "";
       /**
-       * <code>string entityIds = 1;</code>
+       * <code>string entity_ids = 1;</code>
        * @return The entityIds.
        */
       public java.lang.String getEntityIds() {
@@ -10672,7 +10672,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string entityIds = 1;</code>
+       * <code>string entity_ids = 1;</code>
        * @return The bytes for entityIds.
        */
       public com.google.protobuf.ByteString
@@ -10689,7 +10689,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string entityIds = 1;</code>
+       * <code>string entity_ids = 1;</code>
        * @param value The entityIds to set.
        * @return This builder for chaining.
        */
@@ -10702,7 +10702,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string entityIds = 1;</code>
+       * <code>string entity_ids = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityIds() {
@@ -10712,7 +10712,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string entityIds = 1;</code>
+       * <code>string entity_ids = 1;</code>
        * @param value The bytes for entityIds to set.
        * @return This builder for chaining.
        */
@@ -10728,7 +10728,7 @@ public final class SzEngineProto {
 
       private long maxDegrees_ ;
       /**
-       * <code>int64 maxDegrees = 2;</code>
+       * <code>int64 max_degrees = 2;</code>
        * @return The maxDegrees.
        */
       @java.lang.Override
@@ -10736,7 +10736,7 @@ public final class SzEngineProto {
         return maxDegrees_;
       }
       /**
-       * <code>int64 maxDegrees = 2;</code>
+       * <code>int64 max_degrees = 2;</code>
        * @param value The maxDegrees to set.
        * @return This builder for chaining.
        */
@@ -10748,7 +10748,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 maxDegrees = 2;</code>
+       * <code>int64 max_degrees = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearMaxDegrees() {
@@ -10760,7 +10760,7 @@ public final class SzEngineProto {
 
       private long buildOutDegrees_ ;
       /**
-       * <code>int64 buildOutDegrees = 3;</code>
+       * <code>int64 build_out_degrees = 3;</code>
        * @return The buildOutDegrees.
        */
       @java.lang.Override
@@ -10768,7 +10768,7 @@ public final class SzEngineProto {
         return buildOutDegrees_;
       }
       /**
-       * <code>int64 buildOutDegrees = 3;</code>
+       * <code>int64 build_out_degrees = 3;</code>
        * @param value The buildOutDegrees to set.
        * @return This builder for chaining.
        */
@@ -10780,7 +10780,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 buildOutDegrees = 3;</code>
+       * <code>int64 build_out_degrees = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearBuildOutDegrees() {
@@ -10792,7 +10792,7 @@ public final class SzEngineProto {
 
       private long buildOutMaxEntities_ ;
       /**
-       * <code>int64 buildOutMaxEntities = 4;</code>
+       * <code>int64 build_out_max_entities = 4;</code>
        * @return The buildOutMaxEntities.
        */
       @java.lang.Override
@@ -10800,7 +10800,7 @@ public final class SzEngineProto {
         return buildOutMaxEntities_;
       }
       /**
-       * <code>int64 buildOutMaxEntities = 4;</code>
+       * <code>int64 build_out_max_entities = 4;</code>
        * @param value The buildOutMaxEntities to set.
        * @return This builder for chaining.
        */
@@ -10812,7 +10812,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 buildOutMaxEntities = 4;</code>
+       * <code>int64 build_out_max_entities = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearBuildOutMaxEntities() {
@@ -11474,31 +11474,31 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string recordKeys = 1;</code>
+     * <code>string record_keys = 1;</code>
      * @return The recordKeys.
      */
     java.lang.String getRecordKeys();
     /**
-     * <code>string recordKeys = 1;</code>
+     * <code>string record_keys = 1;</code>
      * @return The bytes for recordKeys.
      */
     com.google.protobuf.ByteString
         getRecordKeysBytes();
 
     /**
-     * <code>int64 maxDegrees = 2;</code>
+     * <code>int64 max_degrees = 2;</code>
      * @return The maxDegrees.
      */
     long getMaxDegrees();
 
     /**
-     * <code>int64 buildOutDegrees = 3;</code>
+     * <code>int64 build_out_degrees = 3;</code>
      * @return The buildOutDegrees.
      */
     long getBuildOutDegrees();
 
     /**
-     * <code>int64 buildOutMaxEntities = 4;</code>
+     * <code>int64 build_out_max_entities = 4;</code>
      * @return The buildOutMaxEntities.
      */
     long getBuildOutMaxEntities();
@@ -11545,11 +11545,11 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindNetworkByRecordIdRequest.Builder.class);
     }
 
-    public static final int RECORDKEYS_FIELD_NUMBER = 1;
+    public static final int RECORD_KEYS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object recordKeys_ = "";
     /**
-     * <code>string recordKeys = 1;</code>
+     * <code>string record_keys = 1;</code>
      * @return The recordKeys.
      */
     @java.lang.Override
@@ -11566,7 +11566,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string recordKeys = 1;</code>
+     * <code>string record_keys = 1;</code>
      * @return The bytes for recordKeys.
      */
     @java.lang.Override
@@ -11584,10 +11584,10 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int MAXDEGREES_FIELD_NUMBER = 2;
+    public static final int MAX_DEGREES_FIELD_NUMBER = 2;
     private long maxDegrees_ = 0L;
     /**
-     * <code>int64 maxDegrees = 2;</code>
+     * <code>int64 max_degrees = 2;</code>
      * @return The maxDegrees.
      */
     @java.lang.Override
@@ -11595,10 +11595,10 @@ public final class SzEngineProto {
       return maxDegrees_;
     }
 
-    public static final int BUILDOUTDEGREES_FIELD_NUMBER = 3;
+    public static final int BUILD_OUT_DEGREES_FIELD_NUMBER = 3;
     private long buildOutDegrees_ = 0L;
     /**
-     * <code>int64 buildOutDegrees = 3;</code>
+     * <code>int64 build_out_degrees = 3;</code>
      * @return The buildOutDegrees.
      */
     @java.lang.Override
@@ -11606,10 +11606,10 @@ public final class SzEngineProto {
       return buildOutDegrees_;
     }
 
-    public static final int BUILDOUTMAXENTITIES_FIELD_NUMBER = 4;
+    public static final int BUILD_OUT_MAX_ENTITIES_FIELD_NUMBER = 4;
     private long buildOutMaxEntities_ = 0L;
     /**
-     * <code>int64 buildOutMaxEntities = 4;</code>
+     * <code>int64 build_out_max_entities = 4;</code>
      * @return The buildOutMaxEntities.
      */
     @java.lang.Override
@@ -11721,15 +11721,15 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RECORDKEYS_FIELD_NUMBER;
+      hash = (37 * hash) + RECORD_KEYS_FIELD_NUMBER;
       hash = (53 * hash) + getRecordKeys().hashCode();
-      hash = (37 * hash) + MAXDEGREES_FIELD_NUMBER;
+      hash = (37 * hash) + MAX_DEGREES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getMaxDegrees());
-      hash = (37 * hash) + BUILDOUTDEGREES_FIELD_NUMBER;
+      hash = (37 * hash) + BUILD_OUT_DEGREES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getBuildOutDegrees());
-      hash = (37 * hash) + BUILDOUTMAXENTITIES_FIELD_NUMBER;
+      hash = (37 * hash) + BUILD_OUT_MAX_ENTITIES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getBuildOutMaxEntities());
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
@@ -12052,7 +12052,7 @@ public final class SzEngineProto {
 
       private java.lang.Object recordKeys_ = "";
       /**
-       * <code>string recordKeys = 1;</code>
+       * <code>string record_keys = 1;</code>
        * @return The recordKeys.
        */
       public java.lang.String getRecordKeys() {
@@ -12068,7 +12068,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordKeys = 1;</code>
+       * <code>string record_keys = 1;</code>
        * @return The bytes for recordKeys.
        */
       public com.google.protobuf.ByteString
@@ -12085,7 +12085,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordKeys = 1;</code>
+       * <code>string record_keys = 1;</code>
        * @param value The recordKeys to set.
        * @return This builder for chaining.
        */
@@ -12098,7 +12098,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordKeys = 1;</code>
+       * <code>string record_keys = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearRecordKeys() {
@@ -12108,7 +12108,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordKeys = 1;</code>
+       * <code>string record_keys = 1;</code>
        * @param value The bytes for recordKeys to set.
        * @return This builder for chaining.
        */
@@ -12124,7 +12124,7 @@ public final class SzEngineProto {
 
       private long maxDegrees_ ;
       /**
-       * <code>int64 maxDegrees = 2;</code>
+       * <code>int64 max_degrees = 2;</code>
        * @return The maxDegrees.
        */
       @java.lang.Override
@@ -12132,7 +12132,7 @@ public final class SzEngineProto {
         return maxDegrees_;
       }
       /**
-       * <code>int64 maxDegrees = 2;</code>
+       * <code>int64 max_degrees = 2;</code>
        * @param value The maxDegrees to set.
        * @return This builder for chaining.
        */
@@ -12144,7 +12144,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 maxDegrees = 2;</code>
+       * <code>int64 max_degrees = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearMaxDegrees() {
@@ -12156,7 +12156,7 @@ public final class SzEngineProto {
 
       private long buildOutDegrees_ ;
       /**
-       * <code>int64 buildOutDegrees = 3;</code>
+       * <code>int64 build_out_degrees = 3;</code>
        * @return The buildOutDegrees.
        */
       @java.lang.Override
@@ -12164,7 +12164,7 @@ public final class SzEngineProto {
         return buildOutDegrees_;
       }
       /**
-       * <code>int64 buildOutDegrees = 3;</code>
+       * <code>int64 build_out_degrees = 3;</code>
        * @param value The buildOutDegrees to set.
        * @return This builder for chaining.
        */
@@ -12176,7 +12176,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 buildOutDegrees = 3;</code>
+       * <code>int64 build_out_degrees = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearBuildOutDegrees() {
@@ -12188,7 +12188,7 @@ public final class SzEngineProto {
 
       private long buildOutMaxEntities_ ;
       /**
-       * <code>int64 buildOutMaxEntities = 4;</code>
+       * <code>int64 build_out_max_entities = 4;</code>
        * @return The buildOutMaxEntities.
        */
       @java.lang.Override
@@ -12196,7 +12196,7 @@ public final class SzEngineProto {
         return buildOutMaxEntities_;
       }
       /**
-       * <code>int64 buildOutMaxEntities = 4;</code>
+       * <code>int64 build_out_max_entities = 4;</code>
        * @param value The buildOutMaxEntities to set.
        * @return This builder for chaining.
        */
@@ -12208,7 +12208,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 buildOutMaxEntities = 4;</code>
+       * <code>int64 build_out_max_entities = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearBuildOutMaxEntities() {
@@ -12870,42 +12870,42 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 startEntityId = 1;</code>
+     * <code>int64 start_entity_id = 1;</code>
      * @return The startEntityId.
      */
     long getStartEntityId();
 
     /**
-     * <code>int64 endEntityId = 2;</code>
+     * <code>int64 end_entity_id = 2;</code>
      * @return The endEntityId.
      */
     long getEndEntityId();
 
     /**
-     * <code>int64 maxDegrees = 3;</code>
+     * <code>int64 max_degrees = 3;</code>
      * @return The maxDegrees.
      */
     long getMaxDegrees();
 
     /**
-     * <code>string avoidEntityIds = 4;</code>
+     * <code>string avoid_entity_ids = 4;</code>
      * @return The avoidEntityIds.
      */
     java.lang.String getAvoidEntityIds();
     /**
-     * <code>string avoidEntityIds = 4;</code>
+     * <code>string avoid_entity_ids = 4;</code>
      * @return The bytes for avoidEntityIds.
      */
     com.google.protobuf.ByteString
         getAvoidEntityIdsBytes();
 
     /**
-     * <code>string requiredDataSources = 5;</code>
+     * <code>string required_data_sources = 5;</code>
      * @return The requiredDataSources.
      */
     java.lang.String getRequiredDataSources();
     /**
-     * <code>string requiredDataSources = 5;</code>
+     * <code>string required_data_sources = 5;</code>
      * @return The bytes for requiredDataSources.
      */
     com.google.protobuf.ByteString
@@ -12954,10 +12954,10 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindPathByEntityIdRequest.Builder.class);
     }
 
-    public static final int STARTENTITYID_FIELD_NUMBER = 1;
+    public static final int START_ENTITY_ID_FIELD_NUMBER = 1;
     private long startEntityId_ = 0L;
     /**
-     * <code>int64 startEntityId = 1;</code>
+     * <code>int64 start_entity_id = 1;</code>
      * @return The startEntityId.
      */
     @java.lang.Override
@@ -12965,10 +12965,10 @@ public final class SzEngineProto {
       return startEntityId_;
     }
 
-    public static final int ENDENTITYID_FIELD_NUMBER = 2;
+    public static final int END_ENTITY_ID_FIELD_NUMBER = 2;
     private long endEntityId_ = 0L;
     /**
-     * <code>int64 endEntityId = 2;</code>
+     * <code>int64 end_entity_id = 2;</code>
      * @return The endEntityId.
      */
     @java.lang.Override
@@ -12976,10 +12976,10 @@ public final class SzEngineProto {
       return endEntityId_;
     }
 
-    public static final int MAXDEGREES_FIELD_NUMBER = 3;
+    public static final int MAX_DEGREES_FIELD_NUMBER = 3;
     private long maxDegrees_ = 0L;
     /**
-     * <code>int64 maxDegrees = 3;</code>
+     * <code>int64 max_degrees = 3;</code>
      * @return The maxDegrees.
      */
     @java.lang.Override
@@ -12987,11 +12987,11 @@ public final class SzEngineProto {
       return maxDegrees_;
     }
 
-    public static final int AVOIDENTITYIDS_FIELD_NUMBER = 4;
+    public static final int AVOID_ENTITY_IDS_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private volatile java.lang.Object avoidEntityIds_ = "";
     /**
-     * <code>string avoidEntityIds = 4;</code>
+     * <code>string avoid_entity_ids = 4;</code>
      * @return The avoidEntityIds.
      */
     @java.lang.Override
@@ -13008,7 +13008,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string avoidEntityIds = 4;</code>
+     * <code>string avoid_entity_ids = 4;</code>
      * @return The bytes for avoidEntityIds.
      */
     @java.lang.Override
@@ -13026,11 +13026,11 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int REQUIREDDATASOURCES_FIELD_NUMBER = 5;
+    public static final int REQUIRED_DATA_SOURCES_FIELD_NUMBER = 5;
     @SuppressWarnings("serial")
     private volatile java.lang.Object requiredDataSources_ = "";
     /**
-     * <code>string requiredDataSources = 5;</code>
+     * <code>string required_data_sources = 5;</code>
      * @return The requiredDataSources.
      */
     @java.lang.Override
@@ -13047,7 +13047,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string requiredDataSources = 5;</code>
+     * <code>string required_data_sources = 5;</code>
      * @return The bytes for requiredDataSources.
      */
     @java.lang.Override
@@ -13177,18 +13177,18 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + STARTENTITYID_FIELD_NUMBER;
+      hash = (37 * hash) + START_ENTITY_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getStartEntityId());
-      hash = (37 * hash) + ENDENTITYID_FIELD_NUMBER;
+      hash = (37 * hash) + END_ENTITY_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getEndEntityId());
-      hash = (37 * hash) + MAXDEGREES_FIELD_NUMBER;
+      hash = (37 * hash) + MAX_DEGREES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getMaxDegrees());
-      hash = (37 * hash) + AVOIDENTITYIDS_FIELD_NUMBER;
+      hash = (37 * hash) + AVOID_ENTITY_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getAvoidEntityIds().hashCode();
-      hash = (37 * hash) + REQUIREDDATASOURCES_FIELD_NUMBER;
+      hash = (37 * hash) + REQUIRED_DATA_SOURCES_FIELD_NUMBER;
       hash = (53 * hash) + getRequiredDataSources().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -13524,7 +13524,7 @@ public final class SzEngineProto {
 
       private long startEntityId_ ;
       /**
-       * <code>int64 startEntityId = 1;</code>
+       * <code>int64 start_entity_id = 1;</code>
        * @return The startEntityId.
        */
       @java.lang.Override
@@ -13532,7 +13532,7 @@ public final class SzEngineProto {
         return startEntityId_;
       }
       /**
-       * <code>int64 startEntityId = 1;</code>
+       * <code>int64 start_entity_id = 1;</code>
        * @param value The startEntityId to set.
        * @return This builder for chaining.
        */
@@ -13544,7 +13544,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 startEntityId = 1;</code>
+       * <code>int64 start_entity_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearStartEntityId() {
@@ -13556,7 +13556,7 @@ public final class SzEngineProto {
 
       private long endEntityId_ ;
       /**
-       * <code>int64 endEntityId = 2;</code>
+       * <code>int64 end_entity_id = 2;</code>
        * @return The endEntityId.
        */
       @java.lang.Override
@@ -13564,7 +13564,7 @@ public final class SzEngineProto {
         return endEntityId_;
       }
       /**
-       * <code>int64 endEntityId = 2;</code>
+       * <code>int64 end_entity_id = 2;</code>
        * @param value The endEntityId to set.
        * @return This builder for chaining.
        */
@@ -13576,7 +13576,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 endEntityId = 2;</code>
+       * <code>int64 end_entity_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearEndEntityId() {
@@ -13588,7 +13588,7 @@ public final class SzEngineProto {
 
       private long maxDegrees_ ;
       /**
-       * <code>int64 maxDegrees = 3;</code>
+       * <code>int64 max_degrees = 3;</code>
        * @return The maxDegrees.
        */
       @java.lang.Override
@@ -13596,7 +13596,7 @@ public final class SzEngineProto {
         return maxDegrees_;
       }
       /**
-       * <code>int64 maxDegrees = 3;</code>
+       * <code>int64 max_degrees = 3;</code>
        * @param value The maxDegrees to set.
        * @return This builder for chaining.
        */
@@ -13608,7 +13608,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 maxDegrees = 3;</code>
+       * <code>int64 max_degrees = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearMaxDegrees() {
@@ -13620,7 +13620,7 @@ public final class SzEngineProto {
 
       private java.lang.Object avoidEntityIds_ = "";
       /**
-       * <code>string avoidEntityIds = 4;</code>
+       * <code>string avoid_entity_ids = 4;</code>
        * @return The avoidEntityIds.
        */
       public java.lang.String getAvoidEntityIds() {
@@ -13636,7 +13636,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string avoidEntityIds = 4;</code>
+       * <code>string avoid_entity_ids = 4;</code>
        * @return The bytes for avoidEntityIds.
        */
       public com.google.protobuf.ByteString
@@ -13653,7 +13653,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string avoidEntityIds = 4;</code>
+       * <code>string avoid_entity_ids = 4;</code>
        * @param value The avoidEntityIds to set.
        * @return This builder for chaining.
        */
@@ -13666,7 +13666,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string avoidEntityIds = 4;</code>
+       * <code>string avoid_entity_ids = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearAvoidEntityIds() {
@@ -13676,7 +13676,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string avoidEntityIds = 4;</code>
+       * <code>string avoid_entity_ids = 4;</code>
        * @param value The bytes for avoidEntityIds to set.
        * @return This builder for chaining.
        */
@@ -13692,7 +13692,7 @@ public final class SzEngineProto {
 
       private java.lang.Object requiredDataSources_ = "";
       /**
-       * <code>string requiredDataSources = 5;</code>
+       * <code>string required_data_sources = 5;</code>
        * @return The requiredDataSources.
        */
       public java.lang.String getRequiredDataSources() {
@@ -13708,7 +13708,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string requiredDataSources = 5;</code>
+       * <code>string required_data_sources = 5;</code>
        * @return The bytes for requiredDataSources.
        */
       public com.google.protobuf.ByteString
@@ -13725,7 +13725,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string requiredDataSources = 5;</code>
+       * <code>string required_data_sources = 5;</code>
        * @param value The requiredDataSources to set.
        * @return This builder for chaining.
        */
@@ -13738,7 +13738,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string requiredDataSources = 5;</code>
+       * <code>string required_data_sources = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearRequiredDataSources() {
@@ -13748,7 +13748,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string requiredDataSources = 5;</code>
+       * <code>string required_data_sources = 5;</code>
        * @param value The bytes for requiredDataSources to set.
        * @return This builder for chaining.
        */
@@ -14414,78 +14414,78 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string startDataSourceCode = 1;</code>
+     * <code>string start_data_source_code = 1;</code>
      * @return The startDataSourceCode.
      */
     java.lang.String getStartDataSourceCode();
     /**
-     * <code>string startDataSourceCode = 1;</code>
+     * <code>string start_data_source_code = 1;</code>
      * @return The bytes for startDataSourceCode.
      */
     com.google.protobuf.ByteString
         getStartDataSourceCodeBytes();
 
     /**
-     * <code>string startRecordId = 2;</code>
+     * <code>string start_record_id = 2;</code>
      * @return The startRecordId.
      */
     java.lang.String getStartRecordId();
     /**
-     * <code>string startRecordId = 2;</code>
+     * <code>string start_record_id = 2;</code>
      * @return The bytes for startRecordId.
      */
     com.google.protobuf.ByteString
         getStartRecordIdBytes();
 
     /**
-     * <code>string endDataSourceCode = 3;</code>
+     * <code>string end_data_source_code = 3;</code>
      * @return The endDataSourceCode.
      */
     java.lang.String getEndDataSourceCode();
     /**
-     * <code>string endDataSourceCode = 3;</code>
+     * <code>string end_data_source_code = 3;</code>
      * @return The bytes for endDataSourceCode.
      */
     com.google.protobuf.ByteString
         getEndDataSourceCodeBytes();
 
     /**
-     * <code>string endRecordId = 4;</code>
+     * <code>string end_record_id = 4;</code>
      * @return The endRecordId.
      */
     java.lang.String getEndRecordId();
     /**
-     * <code>string endRecordId = 4;</code>
+     * <code>string end_record_id = 4;</code>
      * @return The bytes for endRecordId.
      */
     com.google.protobuf.ByteString
         getEndRecordIdBytes();
 
     /**
-     * <code>int64 maxDegrees = 5;</code>
+     * <code>int64 max_degrees = 5;</code>
      * @return The maxDegrees.
      */
     long getMaxDegrees();
 
     /**
-     * <code>string avoidRecordKeys = 6;</code>
+     * <code>string avoid_record_keys = 6;</code>
      * @return The avoidRecordKeys.
      */
     java.lang.String getAvoidRecordKeys();
     /**
-     * <code>string avoidRecordKeys = 6;</code>
+     * <code>string avoid_record_keys = 6;</code>
      * @return The bytes for avoidRecordKeys.
      */
     com.google.protobuf.ByteString
         getAvoidRecordKeysBytes();
 
     /**
-     * <code>string requiredDataSources = 7;</code>
+     * <code>string required_data_sources = 7;</code>
      * @return The requiredDataSources.
      */
     java.lang.String getRequiredDataSources();
     /**
-     * <code>string requiredDataSources = 7;</code>
+     * <code>string required_data_sources = 7;</code>
      * @return The bytes for requiredDataSources.
      */
     com.google.protobuf.ByteString
@@ -14538,11 +14538,11 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.FindPathByRecordIdRequest.Builder.class);
     }
 
-    public static final int STARTDATASOURCECODE_FIELD_NUMBER = 1;
+    public static final int START_DATA_SOURCE_CODE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object startDataSourceCode_ = "";
     /**
-     * <code>string startDataSourceCode = 1;</code>
+     * <code>string start_data_source_code = 1;</code>
      * @return The startDataSourceCode.
      */
     @java.lang.Override
@@ -14559,7 +14559,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string startDataSourceCode = 1;</code>
+     * <code>string start_data_source_code = 1;</code>
      * @return The bytes for startDataSourceCode.
      */
     @java.lang.Override
@@ -14577,11 +14577,11 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int STARTRECORDID_FIELD_NUMBER = 2;
+    public static final int START_RECORD_ID_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object startRecordId_ = "";
     /**
-     * <code>string startRecordId = 2;</code>
+     * <code>string start_record_id = 2;</code>
      * @return The startRecordId.
      */
     @java.lang.Override
@@ -14598,7 +14598,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string startRecordId = 2;</code>
+     * <code>string start_record_id = 2;</code>
      * @return The bytes for startRecordId.
      */
     @java.lang.Override
@@ -14616,11 +14616,11 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int ENDDATASOURCECODE_FIELD_NUMBER = 3;
+    public static final int END_DATA_SOURCE_CODE_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object endDataSourceCode_ = "";
     /**
-     * <code>string endDataSourceCode = 3;</code>
+     * <code>string end_data_source_code = 3;</code>
      * @return The endDataSourceCode.
      */
     @java.lang.Override
@@ -14637,7 +14637,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string endDataSourceCode = 3;</code>
+     * <code>string end_data_source_code = 3;</code>
      * @return The bytes for endDataSourceCode.
      */
     @java.lang.Override
@@ -14655,11 +14655,11 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int ENDRECORDID_FIELD_NUMBER = 4;
+    public static final int END_RECORD_ID_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private volatile java.lang.Object endRecordId_ = "";
     /**
-     * <code>string endRecordId = 4;</code>
+     * <code>string end_record_id = 4;</code>
      * @return The endRecordId.
      */
     @java.lang.Override
@@ -14676,7 +14676,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string endRecordId = 4;</code>
+     * <code>string end_record_id = 4;</code>
      * @return The bytes for endRecordId.
      */
     @java.lang.Override
@@ -14694,10 +14694,10 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int MAXDEGREES_FIELD_NUMBER = 5;
+    public static final int MAX_DEGREES_FIELD_NUMBER = 5;
     private long maxDegrees_ = 0L;
     /**
-     * <code>int64 maxDegrees = 5;</code>
+     * <code>int64 max_degrees = 5;</code>
      * @return The maxDegrees.
      */
     @java.lang.Override
@@ -14705,11 +14705,11 @@ public final class SzEngineProto {
       return maxDegrees_;
     }
 
-    public static final int AVOIDRECORDKEYS_FIELD_NUMBER = 6;
+    public static final int AVOID_RECORD_KEYS_FIELD_NUMBER = 6;
     @SuppressWarnings("serial")
     private volatile java.lang.Object avoidRecordKeys_ = "";
     /**
-     * <code>string avoidRecordKeys = 6;</code>
+     * <code>string avoid_record_keys = 6;</code>
      * @return The avoidRecordKeys.
      */
     @java.lang.Override
@@ -14726,7 +14726,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string avoidRecordKeys = 6;</code>
+     * <code>string avoid_record_keys = 6;</code>
      * @return The bytes for avoidRecordKeys.
      */
     @java.lang.Override
@@ -14744,11 +14744,11 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int REQUIREDDATASOURCES_FIELD_NUMBER = 7;
+    public static final int REQUIRED_DATA_SOURCES_FIELD_NUMBER = 7;
     @SuppressWarnings("serial")
     private volatile java.lang.Object requiredDataSources_ = "";
     /**
-     * <code>string requiredDataSources = 7;</code>
+     * <code>string required_data_sources = 7;</code>
      * @return The requiredDataSources.
      */
     @java.lang.Override
@@ -14765,7 +14765,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string requiredDataSources = 7;</code>
+     * <code>string required_data_sources = 7;</code>
      * @return The bytes for requiredDataSources.
      */
     @java.lang.Override
@@ -14909,20 +14909,20 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + STARTDATASOURCECODE_FIELD_NUMBER;
+      hash = (37 * hash) + START_DATA_SOURCE_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getStartDataSourceCode().hashCode();
-      hash = (37 * hash) + STARTRECORDID_FIELD_NUMBER;
+      hash = (37 * hash) + START_RECORD_ID_FIELD_NUMBER;
       hash = (53 * hash) + getStartRecordId().hashCode();
-      hash = (37 * hash) + ENDDATASOURCECODE_FIELD_NUMBER;
+      hash = (37 * hash) + END_DATA_SOURCE_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getEndDataSourceCode().hashCode();
-      hash = (37 * hash) + ENDRECORDID_FIELD_NUMBER;
+      hash = (37 * hash) + END_RECORD_ID_FIELD_NUMBER;
       hash = (53 * hash) + getEndRecordId().hashCode();
-      hash = (37 * hash) + MAXDEGREES_FIELD_NUMBER;
+      hash = (37 * hash) + MAX_DEGREES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getMaxDegrees());
-      hash = (37 * hash) + AVOIDRECORDKEYS_FIELD_NUMBER;
+      hash = (37 * hash) + AVOID_RECORD_KEYS_FIELD_NUMBER;
       hash = (53 * hash) + getAvoidRecordKeys().hashCode();
-      hash = (37 * hash) + REQUIREDDATASOURCES_FIELD_NUMBER;
+      hash = (37 * hash) + REQUIRED_DATA_SOURCES_FIELD_NUMBER;
       hash = (53 * hash) + getRequiredDataSources().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -15290,7 +15290,7 @@ public final class SzEngineProto {
 
       private java.lang.Object startDataSourceCode_ = "";
       /**
-       * <code>string startDataSourceCode = 1;</code>
+       * <code>string start_data_source_code = 1;</code>
        * @return The startDataSourceCode.
        */
       public java.lang.String getStartDataSourceCode() {
@@ -15306,7 +15306,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string startDataSourceCode = 1;</code>
+       * <code>string start_data_source_code = 1;</code>
        * @return The bytes for startDataSourceCode.
        */
       public com.google.protobuf.ByteString
@@ -15323,7 +15323,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string startDataSourceCode = 1;</code>
+       * <code>string start_data_source_code = 1;</code>
        * @param value The startDataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -15336,7 +15336,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string startDataSourceCode = 1;</code>
+       * <code>string start_data_source_code = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearStartDataSourceCode() {
@@ -15346,7 +15346,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string startDataSourceCode = 1;</code>
+       * <code>string start_data_source_code = 1;</code>
        * @param value The bytes for startDataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -15362,7 +15362,7 @@ public final class SzEngineProto {
 
       private java.lang.Object startRecordId_ = "";
       /**
-       * <code>string startRecordId = 2;</code>
+       * <code>string start_record_id = 2;</code>
        * @return The startRecordId.
        */
       public java.lang.String getStartRecordId() {
@@ -15378,7 +15378,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string startRecordId = 2;</code>
+       * <code>string start_record_id = 2;</code>
        * @return The bytes for startRecordId.
        */
       public com.google.protobuf.ByteString
@@ -15395,7 +15395,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string startRecordId = 2;</code>
+       * <code>string start_record_id = 2;</code>
        * @param value The startRecordId to set.
        * @return This builder for chaining.
        */
@@ -15408,7 +15408,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string startRecordId = 2;</code>
+       * <code>string start_record_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearStartRecordId() {
@@ -15418,7 +15418,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string startRecordId = 2;</code>
+       * <code>string start_record_id = 2;</code>
        * @param value The bytes for startRecordId to set.
        * @return This builder for chaining.
        */
@@ -15434,7 +15434,7 @@ public final class SzEngineProto {
 
       private java.lang.Object endDataSourceCode_ = "";
       /**
-       * <code>string endDataSourceCode = 3;</code>
+       * <code>string end_data_source_code = 3;</code>
        * @return The endDataSourceCode.
        */
       public java.lang.String getEndDataSourceCode() {
@@ -15450,7 +15450,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string endDataSourceCode = 3;</code>
+       * <code>string end_data_source_code = 3;</code>
        * @return The bytes for endDataSourceCode.
        */
       public com.google.protobuf.ByteString
@@ -15467,7 +15467,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string endDataSourceCode = 3;</code>
+       * <code>string end_data_source_code = 3;</code>
        * @param value The endDataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -15480,7 +15480,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string endDataSourceCode = 3;</code>
+       * <code>string end_data_source_code = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearEndDataSourceCode() {
@@ -15490,7 +15490,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string endDataSourceCode = 3;</code>
+       * <code>string end_data_source_code = 3;</code>
        * @param value The bytes for endDataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -15506,7 +15506,7 @@ public final class SzEngineProto {
 
       private java.lang.Object endRecordId_ = "";
       /**
-       * <code>string endRecordId = 4;</code>
+       * <code>string end_record_id = 4;</code>
        * @return The endRecordId.
        */
       public java.lang.String getEndRecordId() {
@@ -15522,7 +15522,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string endRecordId = 4;</code>
+       * <code>string end_record_id = 4;</code>
        * @return The bytes for endRecordId.
        */
       public com.google.protobuf.ByteString
@@ -15539,7 +15539,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string endRecordId = 4;</code>
+       * <code>string end_record_id = 4;</code>
        * @param value The endRecordId to set.
        * @return This builder for chaining.
        */
@@ -15552,7 +15552,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string endRecordId = 4;</code>
+       * <code>string end_record_id = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearEndRecordId() {
@@ -15562,7 +15562,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string endRecordId = 4;</code>
+       * <code>string end_record_id = 4;</code>
        * @param value The bytes for endRecordId to set.
        * @return This builder for chaining.
        */
@@ -15578,7 +15578,7 @@ public final class SzEngineProto {
 
       private long maxDegrees_ ;
       /**
-       * <code>int64 maxDegrees = 5;</code>
+       * <code>int64 max_degrees = 5;</code>
        * @return The maxDegrees.
        */
       @java.lang.Override
@@ -15586,7 +15586,7 @@ public final class SzEngineProto {
         return maxDegrees_;
       }
       /**
-       * <code>int64 maxDegrees = 5;</code>
+       * <code>int64 max_degrees = 5;</code>
        * @param value The maxDegrees to set.
        * @return This builder for chaining.
        */
@@ -15598,7 +15598,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 maxDegrees = 5;</code>
+       * <code>int64 max_degrees = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearMaxDegrees() {
@@ -15610,7 +15610,7 @@ public final class SzEngineProto {
 
       private java.lang.Object avoidRecordKeys_ = "";
       /**
-       * <code>string avoidRecordKeys = 6;</code>
+       * <code>string avoid_record_keys = 6;</code>
        * @return The avoidRecordKeys.
        */
       public java.lang.String getAvoidRecordKeys() {
@@ -15626,7 +15626,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string avoidRecordKeys = 6;</code>
+       * <code>string avoid_record_keys = 6;</code>
        * @return The bytes for avoidRecordKeys.
        */
       public com.google.protobuf.ByteString
@@ -15643,7 +15643,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string avoidRecordKeys = 6;</code>
+       * <code>string avoid_record_keys = 6;</code>
        * @param value The avoidRecordKeys to set.
        * @return This builder for chaining.
        */
@@ -15656,7 +15656,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string avoidRecordKeys = 6;</code>
+       * <code>string avoid_record_keys = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearAvoidRecordKeys() {
@@ -15666,7 +15666,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string avoidRecordKeys = 6;</code>
+       * <code>string avoid_record_keys = 6;</code>
        * @param value The bytes for avoidRecordKeys to set.
        * @return This builder for chaining.
        */
@@ -15682,7 +15682,7 @@ public final class SzEngineProto {
 
       private java.lang.Object requiredDataSources_ = "";
       /**
-       * <code>string requiredDataSources = 7;</code>
+       * <code>string required_data_sources = 7;</code>
        * @return The requiredDataSources.
        */
       public java.lang.String getRequiredDataSources() {
@@ -15698,7 +15698,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string requiredDataSources = 7;</code>
+       * <code>string required_data_sources = 7;</code>
        * @return The bytes for requiredDataSources.
        */
       public com.google.protobuf.ByteString
@@ -15715,7 +15715,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string requiredDataSources = 7;</code>
+       * <code>string required_data_sources = 7;</code>
        * @param value The requiredDataSources to set.
        * @return This builder for chaining.
        */
@@ -15728,7 +15728,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string requiredDataSources = 7;</code>
+       * <code>string required_data_sources = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearRequiredDataSources() {
@@ -15738,7 +15738,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string requiredDataSources = 7;</code>
+       * <code>string required_data_sources = 7;</code>
        * @param value The bytes for requiredDataSources to set.
        * @return This builder for chaining.
        */
@@ -17278,7 +17278,7 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 entityId = 1;</code>
+     * <code>int64 entity_id = 1;</code>
      * @return The entityId.
      */
     long getEntityId();
@@ -17324,10 +17324,10 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetEntityByEntityIdRequest.Builder.class);
     }
 
-    public static final int ENTITYID_FIELD_NUMBER = 1;
+    public static final int ENTITY_ID_FIELD_NUMBER = 1;
     private long entityId_ = 0L;
     /**
-     * <code>int64 entityId = 1;</code>
+     * <code>int64 entity_id = 1;</code>
      * @return The entityId.
      */
     @java.lang.Override
@@ -17413,7 +17413,7 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ENTITYID_FIELD_NUMBER;
+      hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getEntityId());
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
@@ -17698,7 +17698,7 @@ public final class SzEngineProto {
 
       private long entityId_ ;
       /**
-       * <code>int64 entityId = 1;</code>
+       * <code>int64 entity_id = 1;</code>
        * @return The entityId.
        */
       @java.lang.Override
@@ -17706,7 +17706,7 @@ public final class SzEngineProto {
         return entityId_;
       }
       /**
-       * <code>int64 entityId = 1;</code>
+       * <code>int64 entity_id = 1;</code>
        * @param value The entityId to set.
        * @return This builder for chaining.
        */
@@ -17718,7 +17718,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 entityId = 1;</code>
+       * <code>int64 entity_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityId() {
@@ -18380,24 +18380,24 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The dataSourceCode.
      */
     java.lang.String getDataSourceCode();
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The bytes for dataSourceCode.
      */
     com.google.protobuf.ByteString
         getDataSourceCodeBytes();
 
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The recordId.
      */
     java.lang.String getRecordId();
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The bytes for recordId.
      */
     com.google.protobuf.ByteString
@@ -18446,11 +18446,11 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetEntityByRecordIdRequest.Builder.class);
     }
 
-    public static final int DATASOURCECODE_FIELD_NUMBER = 1;
+    public static final int DATA_SOURCE_CODE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object dataSourceCode_ = "";
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The dataSourceCode.
      */
     @java.lang.Override
@@ -18467,7 +18467,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The bytes for dataSourceCode.
      */
     @java.lang.Override
@@ -18485,11 +18485,11 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int RECORDID_FIELD_NUMBER = 2;
+    public static final int RECORD_ID_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object recordId_ = "";
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The recordId.
      */
     @java.lang.Override
@@ -18506,7 +18506,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The bytes for recordId.
      */
     @java.lang.Override
@@ -18609,9 +18609,9 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASOURCECODE_FIELD_NUMBER;
+      hash = (37 * hash) + DATA_SOURCE_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getDataSourceCode().hashCode();
-      hash = (37 * hash) + RECORDID_FIELD_NUMBER;
+      hash = (37 * hash) + RECORD_ID_FIELD_NUMBER;
       hash = (53 * hash) + getRecordId().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -18911,7 +18911,7 @@ public final class SzEngineProto {
 
       private java.lang.Object dataSourceCode_ = "";
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return The dataSourceCode.
        */
       public java.lang.String getDataSourceCode() {
@@ -18927,7 +18927,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return The bytes for dataSourceCode.
        */
       public com.google.protobuf.ByteString
@@ -18944,7 +18944,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @param value The dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -18957,7 +18957,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearDataSourceCode() {
@@ -18967,7 +18967,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @param value The bytes for dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -18983,7 +18983,7 @@ public final class SzEngineProto {
 
       private java.lang.Object recordId_ = "";
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return The recordId.
        */
       public java.lang.String getRecordId() {
@@ -18999,7 +18999,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return The bytes for recordId.
        */
       public com.google.protobuf.ByteString
@@ -19016,7 +19016,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @param value The recordId to set.
        * @return This builder for chaining.
        */
@@ -19029,7 +19029,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearRecordId() {
@@ -19039,7 +19039,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @param value The bytes for recordId to set.
        * @return This builder for chaining.
        */
@@ -19705,24 +19705,24 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The dataSourceCode.
      */
     java.lang.String getDataSourceCode();
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The bytes for dataSourceCode.
      */
     com.google.protobuf.ByteString
         getDataSourceCodeBytes();
 
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The recordId.
      */
     java.lang.String getRecordId();
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The bytes for recordId.
      */
     com.google.protobuf.ByteString
@@ -19771,11 +19771,11 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetRecordRequest.Builder.class);
     }
 
-    public static final int DATASOURCECODE_FIELD_NUMBER = 1;
+    public static final int DATA_SOURCE_CODE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object dataSourceCode_ = "";
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The dataSourceCode.
      */
     @java.lang.Override
@@ -19792,7 +19792,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The bytes for dataSourceCode.
      */
     @java.lang.Override
@@ -19810,11 +19810,11 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int RECORDID_FIELD_NUMBER = 2;
+    public static final int RECORD_ID_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object recordId_ = "";
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The recordId.
      */
     @java.lang.Override
@@ -19831,7 +19831,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The bytes for recordId.
      */
     @java.lang.Override
@@ -19934,9 +19934,9 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASOURCECODE_FIELD_NUMBER;
+      hash = (37 * hash) + DATA_SOURCE_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getDataSourceCode().hashCode();
-      hash = (37 * hash) + RECORDID_FIELD_NUMBER;
+      hash = (37 * hash) + RECORD_ID_FIELD_NUMBER;
       hash = (53 * hash) + getRecordId().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -20236,7 +20236,7 @@ public final class SzEngineProto {
 
       private java.lang.Object dataSourceCode_ = "";
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return The dataSourceCode.
        */
       public java.lang.String getDataSourceCode() {
@@ -20252,7 +20252,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return The bytes for dataSourceCode.
        */
       public com.google.protobuf.ByteString
@@ -20269,7 +20269,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @param value The dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -20282,7 +20282,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearDataSourceCode() {
@@ -20292,7 +20292,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @param value The bytes for dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -20308,7 +20308,7 @@ public final class SzEngineProto {
 
       private java.lang.Object recordId_ = "";
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return The recordId.
        */
       public java.lang.String getRecordId() {
@@ -20324,7 +20324,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return The bytes for recordId.
        */
       public com.google.protobuf.ByteString
@@ -20341,7 +20341,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @param value The recordId to set.
        * @return This builder for chaining.
        */
@@ -20354,7 +20354,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearRecordId() {
@@ -20364,7 +20364,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @param value The bytes for recordId to set.
        * @return This builder for chaining.
        */
@@ -22928,12 +22928,12 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string recordKeys = 1;</code>
+     * <code>string record_keys = 1;</code>
      * @return The recordKeys.
      */
     java.lang.String getRecordKeys();
     /**
-     * <code>string recordKeys = 1;</code>
+     * <code>string record_keys = 1;</code>
      * @return The bytes for recordKeys.
      */
     com.google.protobuf.ByteString
@@ -22981,11 +22981,11 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.GetVirtualEntityByRecordIdRequest.Builder.class);
     }
 
-    public static final int RECORDKEYS_FIELD_NUMBER = 1;
+    public static final int RECORD_KEYS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object recordKeys_ = "";
     /**
-     * <code>string recordKeys = 1;</code>
+     * <code>string record_keys = 1;</code>
      * @return The recordKeys.
      */
     @java.lang.Override
@@ -23002,7 +23002,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string recordKeys = 1;</code>
+     * <code>string record_keys = 1;</code>
      * @return The bytes for recordKeys.
      */
     @java.lang.Override
@@ -23097,7 +23097,7 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RECORDKEYS_FIELD_NUMBER;
+      hash = (37 * hash) + RECORD_KEYS_FIELD_NUMBER;
       hash = (53 * hash) + getRecordKeys().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -23383,7 +23383,7 @@ public final class SzEngineProto {
 
       private java.lang.Object recordKeys_ = "";
       /**
-       * <code>string recordKeys = 1;</code>
+       * <code>string record_keys = 1;</code>
        * @return The recordKeys.
        */
       public java.lang.String getRecordKeys() {
@@ -23399,7 +23399,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordKeys = 1;</code>
+       * <code>string record_keys = 1;</code>
        * @return The bytes for recordKeys.
        */
       public com.google.protobuf.ByteString
@@ -23416,7 +23416,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordKeys = 1;</code>
+       * <code>string record_keys = 1;</code>
        * @param value The recordKeys to set.
        * @return This builder for chaining.
        */
@@ -23429,7 +23429,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordKeys = 1;</code>
+       * <code>string record_keys = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearRecordKeys() {
@@ -23439,7 +23439,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordKeys = 1;</code>
+       * <code>string record_keys = 1;</code>
        * @param value The bytes for recordKeys to set.
        * @return This builder for chaining.
        */
@@ -24105,7 +24105,7 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 entityId = 1;</code>
+     * <code>int64 entity_id = 1;</code>
      * @return The entityId.
      */
     long getEntityId();
@@ -24151,10 +24151,10 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest.class, com.senzing.sdk.grpc.SzEngineProto.HowEntityByEntityIdRequest.Builder.class);
     }
 
-    public static final int ENTITYID_FIELD_NUMBER = 1;
+    public static final int ENTITY_ID_FIELD_NUMBER = 1;
     private long entityId_ = 0L;
     /**
-     * <code>int64 entityId = 1;</code>
+     * <code>int64 entity_id = 1;</code>
      * @return The entityId.
      */
     @java.lang.Override
@@ -24240,7 +24240,7 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ENTITYID_FIELD_NUMBER;
+      hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getEntityId());
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
@@ -24525,7 +24525,7 @@ public final class SzEngineProto {
 
       private long entityId_ ;
       /**
-       * <code>int64 entityId = 1;</code>
+       * <code>int64 entity_id = 1;</code>
        * @return The entityId.
        */
       @java.lang.Override
@@ -24533,7 +24533,7 @@ public final class SzEngineProto {
         return entityId_;
       }
       /**
-       * <code>int64 entityId = 1;</code>
+       * <code>int64 entity_id = 1;</code>
        * @param value The entityId to set.
        * @return This builder for chaining.
        */
@@ -24545,7 +24545,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 entityId = 1;</code>
+       * <code>int64 entity_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityId() {
@@ -25207,12 +25207,12 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string recordDefinition = 1;</code>
+     * <code>string record_definition = 1;</code>
      * @return The recordDefinition.
      */
     java.lang.String getRecordDefinition();
     /**
-     * <code>string recordDefinition = 1;</code>
+     * <code>string record_definition = 1;</code>
      * @return The bytes for recordDefinition.
      */
     com.google.protobuf.ByteString
@@ -25260,11 +25260,11 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.PreprocessRecordRequest.Builder.class);
     }
 
-    public static final int RECORDDEFINITION_FIELD_NUMBER = 1;
+    public static final int RECORD_DEFINITION_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object recordDefinition_ = "";
     /**
-     * <code>string recordDefinition = 1;</code>
+     * <code>string record_definition = 1;</code>
      * @return The recordDefinition.
      */
     @java.lang.Override
@@ -25281,7 +25281,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string recordDefinition = 1;</code>
+     * <code>string record_definition = 1;</code>
      * @return The bytes for recordDefinition.
      */
     @java.lang.Override
@@ -25376,7 +25376,7 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RECORDDEFINITION_FIELD_NUMBER;
+      hash = (37 * hash) + RECORD_DEFINITION_FIELD_NUMBER;
       hash = (53 * hash) + getRecordDefinition().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -25662,7 +25662,7 @@ public final class SzEngineProto {
 
       private java.lang.Object recordDefinition_ = "";
       /**
-       * <code>string recordDefinition = 1;</code>
+       * <code>string record_definition = 1;</code>
        * @return The recordDefinition.
        */
       public java.lang.String getRecordDefinition() {
@@ -25678,7 +25678,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordDefinition = 1;</code>
+       * <code>string record_definition = 1;</code>
        * @return The bytes for recordDefinition.
        */
       public com.google.protobuf.ByteString
@@ -25695,7 +25695,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordDefinition = 1;</code>
+       * <code>string record_definition = 1;</code>
        * @param value The recordDefinition to set.
        * @return This builder for chaining.
        */
@@ -25708,7 +25708,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordDefinition = 1;</code>
+       * <code>string record_definition = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearRecordDefinition() {
@@ -25718,7 +25718,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordDefinition = 1;</code>
+       * <code>string record_definition = 1;</code>
        * @param value The bytes for recordDefinition to set.
        * @return This builder for chaining.
        */
@@ -27178,12 +27178,12 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string redoRecord = 1;</code>
+     * <code>string redo_record = 1;</code>
      * @return The redoRecord.
      */
     java.lang.String getRedoRecord();
     /**
-     * <code>string redoRecord = 1;</code>
+     * <code>string redo_record = 1;</code>
      * @return The bytes for redoRecord.
      */
     com.google.protobuf.ByteString
@@ -27231,11 +27231,11 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.ProcessRedoRecordRequest.Builder.class);
     }
 
-    public static final int REDORECORD_FIELD_NUMBER = 1;
+    public static final int REDO_RECORD_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object redoRecord_ = "";
     /**
-     * <code>string redoRecord = 1;</code>
+     * <code>string redo_record = 1;</code>
      * @return The redoRecord.
      */
     @java.lang.Override
@@ -27252,7 +27252,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string redoRecord = 1;</code>
+     * <code>string redo_record = 1;</code>
      * @return The bytes for redoRecord.
      */
     @java.lang.Override
@@ -27347,7 +27347,7 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + REDORECORD_FIELD_NUMBER;
+      hash = (37 * hash) + REDO_RECORD_FIELD_NUMBER;
       hash = (53 * hash) + getRedoRecord().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -27633,7 +27633,7 @@ public final class SzEngineProto {
 
       private java.lang.Object redoRecord_ = "";
       /**
-       * <code>string redoRecord = 1;</code>
+       * <code>string redo_record = 1;</code>
        * @return The redoRecord.
        */
       public java.lang.String getRedoRecord() {
@@ -27649,7 +27649,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string redoRecord = 1;</code>
+       * <code>string redo_record = 1;</code>
        * @return The bytes for redoRecord.
        */
       public com.google.protobuf.ByteString
@@ -27666,7 +27666,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string redoRecord = 1;</code>
+       * <code>string redo_record = 1;</code>
        * @param value The redoRecord to set.
        * @return This builder for chaining.
        */
@@ -27679,7 +27679,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string redoRecord = 1;</code>
+       * <code>string redo_record = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearRedoRecord() {
@@ -27689,7 +27689,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string redoRecord = 1;</code>
+       * <code>string redo_record = 1;</code>
        * @param value The bytes for redoRecord to set.
        * @return This builder for chaining.
        */
@@ -28355,7 +28355,7 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 entityId = 1;</code>
+     * <code>int64 entity_id = 1;</code>
      * @return The entityId.
      */
     long getEntityId();
@@ -28401,10 +28401,10 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest.class, com.senzing.sdk.grpc.SzEngineProto.ReevaluateEntityRequest.Builder.class);
     }
 
-    public static final int ENTITYID_FIELD_NUMBER = 1;
+    public static final int ENTITY_ID_FIELD_NUMBER = 1;
     private long entityId_ = 0L;
     /**
-     * <code>int64 entityId = 1;</code>
+     * <code>int64 entity_id = 1;</code>
      * @return The entityId.
      */
     @java.lang.Override
@@ -28490,7 +28490,7 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ENTITYID_FIELD_NUMBER;
+      hash = (37 * hash) + ENTITY_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getEntityId());
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
@@ -28775,7 +28775,7 @@ public final class SzEngineProto {
 
       private long entityId_ ;
       /**
-       * <code>int64 entityId = 1;</code>
+       * <code>int64 entity_id = 1;</code>
        * @return The entityId.
        */
       @java.lang.Override
@@ -28783,7 +28783,7 @@ public final class SzEngineProto {
         return entityId_;
       }
       /**
-       * <code>int64 entityId = 1;</code>
+       * <code>int64 entity_id = 1;</code>
        * @param value The entityId to set.
        * @return This builder for chaining.
        */
@@ -28795,7 +28795,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 entityId = 1;</code>
+       * <code>int64 entity_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityId() {
@@ -29457,24 +29457,24 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The dataSourceCode.
      */
     java.lang.String getDataSourceCode();
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The bytes for dataSourceCode.
      */
     com.google.protobuf.ByteString
         getDataSourceCodeBytes();
 
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The recordId.
      */
     java.lang.String getRecordId();
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The bytes for recordId.
      */
     com.google.protobuf.ByteString
@@ -29523,11 +29523,11 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest.class, com.senzing.sdk.grpc.SzEngineProto.ReevaluateRecordRequest.Builder.class);
     }
 
-    public static final int DATASOURCECODE_FIELD_NUMBER = 1;
+    public static final int DATA_SOURCE_CODE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object dataSourceCode_ = "";
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The dataSourceCode.
      */
     @java.lang.Override
@@ -29544,7 +29544,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The bytes for dataSourceCode.
      */
     @java.lang.Override
@@ -29562,11 +29562,11 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int RECORDID_FIELD_NUMBER = 2;
+    public static final int RECORD_ID_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object recordId_ = "";
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The recordId.
      */
     @java.lang.Override
@@ -29583,7 +29583,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The bytes for recordId.
      */
     @java.lang.Override
@@ -29686,9 +29686,9 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASOURCECODE_FIELD_NUMBER;
+      hash = (37 * hash) + DATA_SOURCE_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getDataSourceCode().hashCode();
-      hash = (37 * hash) + RECORDID_FIELD_NUMBER;
+      hash = (37 * hash) + RECORD_ID_FIELD_NUMBER;
       hash = (53 * hash) + getRecordId().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -29988,7 +29988,7 @@ public final class SzEngineProto {
 
       private java.lang.Object dataSourceCode_ = "";
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return The dataSourceCode.
        */
       public java.lang.String getDataSourceCode() {
@@ -30004,7 +30004,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return The bytes for dataSourceCode.
        */
       public com.google.protobuf.ByteString
@@ -30021,7 +30021,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @param value The dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -30034,7 +30034,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearDataSourceCode() {
@@ -30044,7 +30044,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @param value The bytes for dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -30060,7 +30060,7 @@ public final class SzEngineProto {
 
       private java.lang.Object recordId_ = "";
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return The recordId.
        */
       public java.lang.String getRecordId() {
@@ -30076,7 +30076,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return The bytes for recordId.
        */
       public com.google.protobuf.ByteString
@@ -30093,7 +30093,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @param value The recordId to set.
        * @return This builder for chaining.
        */
@@ -30106,7 +30106,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearRecordId() {
@@ -30116,7 +30116,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @param value The bytes for recordId to set.
        * @return This builder for chaining.
        */
@@ -30782,7 +30782,7 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 configId = 1;</code>
+     * <code>int64 config_id = 1;</code>
      * @return The configId.
      */
     long getConfigId();
@@ -30822,10 +30822,10 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest.class, com.senzing.sdk.grpc.SzEngineProto.ReinitializeRequest.Builder.class);
     }
 
-    public static final int CONFIGID_FIELD_NUMBER = 1;
+    public static final int CONFIG_ID_FIELD_NUMBER = 1;
     private long configId_ = 0L;
     /**
-     * <code>int64 configId = 1;</code>
+     * <code>int64 config_id = 1;</code>
      * @return The configId.
      */
     @java.lang.Override
@@ -30891,7 +30891,7 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIGID_FIELD_NUMBER;
+      hash = (37 * hash) + CONFIG_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getConfigId());
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -31161,7 +31161,7 @@ public final class SzEngineProto {
 
       private long configId_ ;
       /**
-       * <code>int64 configId = 1;</code>
+       * <code>int64 config_id = 1;</code>
        * @return The configId.
        */
       @java.lang.Override
@@ -31169,7 +31169,7 @@ public final class SzEngineProto {
         return configId_;
       }
       /**
-       * <code>int64 configId = 1;</code>
+       * <code>int64 config_id = 1;</code>
        * @param value The configId to set.
        * @return This builder for chaining.
        */
@@ -31181,7 +31181,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 configId = 1;</code>
+       * <code>int64 config_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearConfigId() {
@@ -31668,12 +31668,12 @@ public final class SzEngineProto {
         getAttributesBytes();
 
     /**
-     * <code>string searchProfile = 2;</code>
+     * <code>string search_profile = 2;</code>
      * @return The searchProfile.
      */
     java.lang.String getSearchProfile();
     /**
-     * <code>string searchProfile = 2;</code>
+     * <code>string search_profile = 2;</code>
      * @return The bytes for searchProfile.
      */
     com.google.protobuf.ByteString
@@ -31761,11 +31761,11 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int SEARCHPROFILE_FIELD_NUMBER = 2;
+    public static final int SEARCH_PROFILE_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object searchProfile_ = "";
     /**
-     * <code>string searchProfile = 2;</code>
+     * <code>string search_profile = 2;</code>
      * @return The searchProfile.
      */
     @java.lang.Override
@@ -31782,7 +31782,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string searchProfile = 2;</code>
+     * <code>string search_profile = 2;</code>
      * @return The bytes for searchProfile.
      */
     @java.lang.Override
@@ -31887,7 +31887,7 @@ public final class SzEngineProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ATTRIBUTES_FIELD_NUMBER;
       hash = (53 * hash) + getAttributes().hashCode();
-      hash = (37 * hash) + SEARCHPROFILE_FIELD_NUMBER;
+      hash = (37 * hash) + SEARCH_PROFILE_FIELD_NUMBER;
       hash = (53 * hash) + getSearchProfile().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -32259,7 +32259,7 @@ public final class SzEngineProto {
 
       private java.lang.Object searchProfile_ = "";
       /**
-       * <code>string searchProfile = 2;</code>
+       * <code>string search_profile = 2;</code>
        * @return The searchProfile.
        */
       public java.lang.String getSearchProfile() {
@@ -32275,7 +32275,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string searchProfile = 2;</code>
+       * <code>string search_profile = 2;</code>
        * @return The bytes for searchProfile.
        */
       public com.google.protobuf.ByteString
@@ -32292,7 +32292,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string searchProfile = 2;</code>
+       * <code>string search_profile = 2;</code>
        * @param value The searchProfile to set.
        * @return This builder for chaining.
        */
@@ -32305,7 +32305,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string searchProfile = 2;</code>
+       * <code>string search_profile = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearSearchProfile() {
@@ -32315,7 +32315,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string searchProfile = 2;</code>
+       * <code>string search_profile = 2;</code>
        * @param value The bytes for searchProfile to set.
        * @return This builder for chaining.
        */
@@ -32981,12 +32981,12 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string csvColumnList = 1;</code>
+     * <code>string csv_column_list = 1;</code>
      * @return The csvColumnList.
      */
     java.lang.String getCsvColumnList();
     /**
-     * <code>string csvColumnList = 1;</code>
+     * <code>string csv_column_list = 1;</code>
      * @return The bytes for csvColumnList.
      */
     com.google.protobuf.ByteString
@@ -33034,11 +33034,11 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest.class, com.senzing.sdk.grpc.SzEngineProto.StreamExportCsvEntityReportRequest.Builder.class);
     }
 
-    public static final int CSVCOLUMNLIST_FIELD_NUMBER = 1;
+    public static final int CSV_COLUMN_LIST_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object csvColumnList_ = "";
     /**
-     * <code>string csvColumnList = 1;</code>
+     * <code>string csv_column_list = 1;</code>
      * @return The csvColumnList.
      */
     @java.lang.Override
@@ -33055,7 +33055,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string csvColumnList = 1;</code>
+     * <code>string csv_column_list = 1;</code>
      * @return The bytes for csvColumnList.
      */
     @java.lang.Override
@@ -33150,7 +33150,7 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CSVCOLUMNLIST_FIELD_NUMBER;
+      hash = (37 * hash) + CSV_COLUMN_LIST_FIELD_NUMBER;
       hash = (53 * hash) + getCsvColumnList().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -33436,7 +33436,7 @@ public final class SzEngineProto {
 
       private java.lang.Object csvColumnList_ = "";
       /**
-       * <code>string csvColumnList = 1;</code>
+       * <code>string csv_column_list = 1;</code>
        * @return The csvColumnList.
        */
       public java.lang.String getCsvColumnList() {
@@ -33452,7 +33452,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string csvColumnList = 1;</code>
+       * <code>string csv_column_list = 1;</code>
        * @return The bytes for csvColumnList.
        */
       public com.google.protobuf.ByteString
@@ -33469,7 +33469,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string csvColumnList = 1;</code>
+       * <code>string csv_column_list = 1;</code>
        * @param value The csvColumnList to set.
        * @return This builder for chaining.
        */
@@ -33482,7 +33482,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string csvColumnList = 1;</code>
+       * <code>string csv_column_list = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearCsvColumnList() {
@@ -33492,7 +33492,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string csvColumnList = 1;</code>
+       * <code>string csv_column_list = 1;</code>
        * @param value The bytes for csvColumnList to set.
        * @return This builder for chaining.
        */
@@ -35187,13 +35187,13 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 entityId1 = 1;</code>
+     * <code>int64 entity_id_1 = 1;</code>
      * @return The entityId1.
      */
     long getEntityId1();
 
     /**
-     * <code>int64 entityId2 = 2;</code>
+     * <code>int64 entity_id_2 = 2;</code>
      * @return The entityId2.
      */
     long getEntityId2();
@@ -35239,10 +35239,10 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest.class, com.senzing.sdk.grpc.SzEngineProto.WhyEntitiesRequest.Builder.class);
     }
 
-    public static final int ENTITYID1_FIELD_NUMBER = 1;
+    public static final int ENTITY_ID_1_FIELD_NUMBER = 1;
     private long entityId1_ = 0L;
     /**
-     * <code>int64 entityId1 = 1;</code>
+     * <code>int64 entity_id_1 = 1;</code>
      * @return The entityId1.
      */
     @java.lang.Override
@@ -35250,10 +35250,10 @@ public final class SzEngineProto {
       return entityId1_;
     }
 
-    public static final int ENTITYID2_FIELD_NUMBER = 2;
+    public static final int ENTITY_ID_2_FIELD_NUMBER = 2;
     private long entityId2_ = 0L;
     /**
-     * <code>int64 entityId2 = 2;</code>
+     * <code>int64 entity_id_2 = 2;</code>
      * @return The entityId2.
      */
     @java.lang.Override
@@ -35348,10 +35348,10 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ENTITYID1_FIELD_NUMBER;
+      hash = (37 * hash) + ENTITY_ID_1_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getEntityId1());
-      hash = (37 * hash) + ENTITYID2_FIELD_NUMBER;
+      hash = (37 * hash) + ENTITY_ID_2_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getEntityId2());
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
@@ -35648,7 +35648,7 @@ public final class SzEngineProto {
 
       private long entityId1_ ;
       /**
-       * <code>int64 entityId1 = 1;</code>
+       * <code>int64 entity_id_1 = 1;</code>
        * @return The entityId1.
        */
       @java.lang.Override
@@ -35656,7 +35656,7 @@ public final class SzEngineProto {
         return entityId1_;
       }
       /**
-       * <code>int64 entityId1 = 1;</code>
+       * <code>int64 entity_id_1 = 1;</code>
        * @param value The entityId1 to set.
        * @return This builder for chaining.
        */
@@ -35668,7 +35668,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 entityId1 = 1;</code>
+       * <code>int64 entity_id_1 = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityId1() {
@@ -35680,7 +35680,7 @@ public final class SzEngineProto {
 
       private long entityId2_ ;
       /**
-       * <code>int64 entityId2 = 2;</code>
+       * <code>int64 entity_id_2 = 2;</code>
        * @return The entityId2.
        */
       @java.lang.Override
@@ -35688,7 +35688,7 @@ public final class SzEngineProto {
         return entityId2_;
       }
       /**
-       * <code>int64 entityId2 = 2;</code>
+       * <code>int64 entity_id_2 = 2;</code>
        * @param value The entityId2 to set.
        * @return This builder for chaining.
        */
@@ -35700,7 +35700,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>int64 entityId2 = 2;</code>
+       * <code>int64 entity_id_2 = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearEntityId2() {
@@ -36362,24 +36362,24 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The dataSourceCode.
      */
     java.lang.String getDataSourceCode();
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The bytes for dataSourceCode.
      */
     com.google.protobuf.ByteString
         getDataSourceCodeBytes();
 
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The recordId.
      */
     java.lang.String getRecordId();
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The bytes for recordId.
      */
     com.google.protobuf.ByteString
@@ -36428,11 +36428,11 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest.class, com.senzing.sdk.grpc.SzEngineProto.WhyRecordInEntityRequest.Builder.class);
     }
 
-    public static final int DATASOURCECODE_FIELD_NUMBER = 1;
+    public static final int DATA_SOURCE_CODE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object dataSourceCode_ = "";
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The dataSourceCode.
      */
     @java.lang.Override
@@ -36449,7 +36449,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string dataSourceCode = 1;</code>
+     * <code>string data_source_code = 1;</code>
      * @return The bytes for dataSourceCode.
      */
     @java.lang.Override
@@ -36467,11 +36467,11 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int RECORDID_FIELD_NUMBER = 2;
+    public static final int RECORD_ID_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object recordId_ = "";
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The recordId.
      */
     @java.lang.Override
@@ -36488,7 +36488,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string recordId = 2;</code>
+     * <code>string record_id = 2;</code>
      * @return The bytes for recordId.
      */
     @java.lang.Override
@@ -36591,9 +36591,9 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASOURCECODE_FIELD_NUMBER;
+      hash = (37 * hash) + DATA_SOURCE_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getDataSourceCode().hashCode();
-      hash = (37 * hash) + RECORDID_FIELD_NUMBER;
+      hash = (37 * hash) + RECORD_ID_FIELD_NUMBER;
       hash = (53 * hash) + getRecordId().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -36893,7 +36893,7 @@ public final class SzEngineProto {
 
       private java.lang.Object dataSourceCode_ = "";
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return The dataSourceCode.
        */
       public java.lang.String getDataSourceCode() {
@@ -36909,7 +36909,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return The bytes for dataSourceCode.
        */
       public com.google.protobuf.ByteString
@@ -36926,7 +36926,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @param value The dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -36939,7 +36939,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearDataSourceCode() {
@@ -36949,7 +36949,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode = 1;</code>
+       * <code>string data_source_code = 1;</code>
        * @param value The bytes for dataSourceCode to set.
        * @return This builder for chaining.
        */
@@ -36965,7 +36965,7 @@ public final class SzEngineProto {
 
       private java.lang.Object recordId_ = "";
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return The recordId.
        */
       public java.lang.String getRecordId() {
@@ -36981,7 +36981,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return The bytes for recordId.
        */
       public com.google.protobuf.ByteString
@@ -36998,7 +36998,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @param value The recordId to set.
        * @return This builder for chaining.
        */
@@ -37011,7 +37011,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearRecordId() {
@@ -37021,7 +37021,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId = 2;</code>
+       * <code>string record_id = 2;</code>
        * @param value The bytes for recordId to set.
        * @return This builder for chaining.
        */
@@ -37687,48 +37687,48 @@ public final class SzEngineProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataSourceCode1 = 1;</code>
+     * <code>string data_source_code_1 = 1;</code>
      * @return The dataSourceCode1.
      */
     java.lang.String getDataSourceCode1();
     /**
-     * <code>string dataSourceCode1 = 1;</code>
+     * <code>string data_source_code_1 = 1;</code>
      * @return The bytes for dataSourceCode1.
      */
     com.google.protobuf.ByteString
         getDataSourceCode1Bytes();
 
     /**
-     * <code>string recordId1 = 2;</code>
+     * <code>string record_id_1 = 2;</code>
      * @return The recordId1.
      */
     java.lang.String getRecordId1();
     /**
-     * <code>string recordId1 = 2;</code>
+     * <code>string record_id_1 = 2;</code>
      * @return The bytes for recordId1.
      */
     com.google.protobuf.ByteString
         getRecordId1Bytes();
 
     /**
-     * <code>string dataSourceCode2 = 3;</code>
+     * <code>string data_source_code_2 = 3;</code>
      * @return The dataSourceCode2.
      */
     java.lang.String getDataSourceCode2();
     /**
-     * <code>string dataSourceCode2 = 3;</code>
+     * <code>string data_source_code_2 = 3;</code>
      * @return The bytes for dataSourceCode2.
      */
     com.google.protobuf.ByteString
         getDataSourceCode2Bytes();
 
     /**
-     * <code>string recordId2 = 4;</code>
+     * <code>string record_id_2 = 4;</code>
      * @return The recordId2.
      */
     java.lang.String getRecordId2();
     /**
-     * <code>string recordId2 = 4;</code>
+     * <code>string record_id_2 = 4;</code>
      * @return The bytes for recordId2.
      */
     com.google.protobuf.ByteString
@@ -37779,11 +37779,11 @@ public final class SzEngineProto {
               com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest.class, com.senzing.sdk.grpc.SzEngineProto.WhyRecordsRequest.Builder.class);
     }
 
-    public static final int DATASOURCECODE1_FIELD_NUMBER = 1;
+    public static final int DATA_SOURCE_CODE_1_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object dataSourceCode1_ = "";
     /**
-     * <code>string dataSourceCode1 = 1;</code>
+     * <code>string data_source_code_1 = 1;</code>
      * @return The dataSourceCode1.
      */
     @java.lang.Override
@@ -37800,7 +37800,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string dataSourceCode1 = 1;</code>
+     * <code>string data_source_code_1 = 1;</code>
      * @return The bytes for dataSourceCode1.
      */
     @java.lang.Override
@@ -37818,11 +37818,11 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int RECORDID1_FIELD_NUMBER = 2;
+    public static final int RECORD_ID_1_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
     private volatile java.lang.Object recordId1_ = "";
     /**
-     * <code>string recordId1 = 2;</code>
+     * <code>string record_id_1 = 2;</code>
      * @return The recordId1.
      */
     @java.lang.Override
@@ -37839,7 +37839,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string recordId1 = 2;</code>
+     * <code>string record_id_1 = 2;</code>
      * @return The bytes for recordId1.
      */
     @java.lang.Override
@@ -37857,11 +37857,11 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int DATASOURCECODE2_FIELD_NUMBER = 3;
+    public static final int DATA_SOURCE_CODE_2_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
     private volatile java.lang.Object dataSourceCode2_ = "";
     /**
-     * <code>string dataSourceCode2 = 3;</code>
+     * <code>string data_source_code_2 = 3;</code>
      * @return The dataSourceCode2.
      */
     @java.lang.Override
@@ -37878,7 +37878,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string dataSourceCode2 = 3;</code>
+     * <code>string data_source_code_2 = 3;</code>
      * @return The bytes for dataSourceCode2.
      */
     @java.lang.Override
@@ -37896,11 +37896,11 @@ public final class SzEngineProto {
       }
     }
 
-    public static final int RECORDID2_FIELD_NUMBER = 4;
+    public static final int RECORD_ID_2_FIELD_NUMBER = 4;
     @SuppressWarnings("serial")
     private volatile java.lang.Object recordId2_ = "";
     /**
-     * <code>string recordId2 = 4;</code>
+     * <code>string record_id_2 = 4;</code>
      * @return The recordId2.
      */
     @java.lang.Override
@@ -37917,7 +37917,7 @@ public final class SzEngineProto {
       }
     }
     /**
-     * <code>string recordId2 = 4;</code>
+     * <code>string record_id_2 = 4;</code>
      * @return The bytes for recordId2.
      */
     @java.lang.Override
@@ -38036,13 +38036,13 @@ public final class SzEngineProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASOURCECODE1_FIELD_NUMBER;
+      hash = (37 * hash) + DATA_SOURCE_CODE_1_FIELD_NUMBER;
       hash = (53 * hash) + getDataSourceCode1().hashCode();
-      hash = (37 * hash) + RECORDID1_FIELD_NUMBER;
+      hash = (37 * hash) + RECORD_ID_1_FIELD_NUMBER;
       hash = (53 * hash) + getRecordId1().hashCode();
-      hash = (37 * hash) + DATASOURCECODE2_FIELD_NUMBER;
+      hash = (37 * hash) + DATA_SOURCE_CODE_2_FIELD_NUMBER;
       hash = (53 * hash) + getDataSourceCode2().hashCode();
-      hash = (37 * hash) + RECORDID2_FIELD_NUMBER;
+      hash = (37 * hash) + RECORD_ID_2_FIELD_NUMBER;
       hash = (53 * hash) + getRecordId2().hashCode();
       hash = (37 * hash) + FLAGS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -38370,7 +38370,7 @@ public final class SzEngineProto {
 
       private java.lang.Object dataSourceCode1_ = "";
       /**
-       * <code>string dataSourceCode1 = 1;</code>
+       * <code>string data_source_code_1 = 1;</code>
        * @return The dataSourceCode1.
        */
       public java.lang.String getDataSourceCode1() {
@@ -38386,7 +38386,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode1 = 1;</code>
+       * <code>string data_source_code_1 = 1;</code>
        * @return The bytes for dataSourceCode1.
        */
       public com.google.protobuf.ByteString
@@ -38403,7 +38403,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode1 = 1;</code>
+       * <code>string data_source_code_1 = 1;</code>
        * @param value The dataSourceCode1 to set.
        * @return This builder for chaining.
        */
@@ -38416,7 +38416,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode1 = 1;</code>
+       * <code>string data_source_code_1 = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearDataSourceCode1() {
@@ -38426,7 +38426,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode1 = 1;</code>
+       * <code>string data_source_code_1 = 1;</code>
        * @param value The bytes for dataSourceCode1 to set.
        * @return This builder for chaining.
        */
@@ -38442,7 +38442,7 @@ public final class SzEngineProto {
 
       private java.lang.Object recordId1_ = "";
       /**
-       * <code>string recordId1 = 2;</code>
+       * <code>string record_id_1 = 2;</code>
        * @return The recordId1.
        */
       public java.lang.String getRecordId1() {
@@ -38458,7 +38458,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId1 = 2;</code>
+       * <code>string record_id_1 = 2;</code>
        * @return The bytes for recordId1.
        */
       public com.google.protobuf.ByteString
@@ -38475,7 +38475,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId1 = 2;</code>
+       * <code>string record_id_1 = 2;</code>
        * @param value The recordId1 to set.
        * @return This builder for chaining.
        */
@@ -38488,7 +38488,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId1 = 2;</code>
+       * <code>string record_id_1 = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearRecordId1() {
@@ -38498,7 +38498,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId1 = 2;</code>
+       * <code>string record_id_1 = 2;</code>
        * @param value The bytes for recordId1 to set.
        * @return This builder for chaining.
        */
@@ -38514,7 +38514,7 @@ public final class SzEngineProto {
 
       private java.lang.Object dataSourceCode2_ = "";
       /**
-       * <code>string dataSourceCode2 = 3;</code>
+       * <code>string data_source_code_2 = 3;</code>
        * @return The dataSourceCode2.
        */
       public java.lang.String getDataSourceCode2() {
@@ -38530,7 +38530,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode2 = 3;</code>
+       * <code>string data_source_code_2 = 3;</code>
        * @return The bytes for dataSourceCode2.
        */
       public com.google.protobuf.ByteString
@@ -38547,7 +38547,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string dataSourceCode2 = 3;</code>
+       * <code>string data_source_code_2 = 3;</code>
        * @param value The dataSourceCode2 to set.
        * @return This builder for chaining.
        */
@@ -38560,7 +38560,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode2 = 3;</code>
+       * <code>string data_source_code_2 = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearDataSourceCode2() {
@@ -38570,7 +38570,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string dataSourceCode2 = 3;</code>
+       * <code>string data_source_code_2 = 3;</code>
        * @param value The bytes for dataSourceCode2 to set.
        * @return This builder for chaining.
        */
@@ -38586,7 +38586,7 @@ public final class SzEngineProto {
 
       private java.lang.Object recordId2_ = "";
       /**
-       * <code>string recordId2 = 4;</code>
+       * <code>string record_id_2 = 4;</code>
        * @return The recordId2.
        */
       public java.lang.String getRecordId2() {
@@ -38602,7 +38602,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId2 = 4;</code>
+       * <code>string record_id_2 = 4;</code>
        * @return The bytes for recordId2.
        */
       public com.google.protobuf.ByteString
@@ -38619,7 +38619,7 @@ public final class SzEngineProto {
         }
       }
       /**
-       * <code>string recordId2 = 4;</code>
+       * <code>string record_id_2 = 4;</code>
        * @param value The recordId2 to set.
        * @return This builder for chaining.
        */
@@ -38632,7 +38632,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId2 = 4;</code>
+       * <code>string record_id_2 = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearRecordId2() {
@@ -38642,7 +38642,7 @@ public final class SzEngineProto {
         return this;
       }
       /**
-       * <code>string recordId2 = 4;</code>
+       * <code>string record_id_2 = 4;</code>
        * @param value The bytes for recordId2 to set.
        * @return This builder for chaining.
        */
@@ -39642,190 +39642,192 @@ public final class SzEngineProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016szengine.proto\022\010szengine\"e\n\020AddRecordR" +
-      "equest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010record" +
-      "Id\030\002 \001(\t\022\030\n\020recordDefinition\030\003 \001(\t\022\r\n\005fl" +
-      "ags\030\004 \001(\003\"#\n\021AddRecordResponse\022\016\n\006result" +
-      "\030\001 \001(\t\"*\n\022CloseExportRequest\022\024\n\014exportHa" +
-      "ndle\030\001 \001(\003\"\025\n\023CloseExportResponse\"\031\n\027Cou" +
-      "ntRedoRecordsRequest\"*\n\030CountRedoRecords" +
-      "Response\022\016\n\006result\030\001 \001(\003\"N\n\023DeleteRecord" +
-      "Request\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recor" +
-      "dId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"&\n\024DeleteRecord" +
-      "Response\022\016\n\006result\030\001 \001(\t\"D\n\034ExportCsvEnt" +
-      "ityReportRequest\022\025\n\rcsvColumnList\030\001 \001(\t\022" +
-      "\r\n\005flags\030\002 \001(\003\"/\n\035ExportCsvEntityReportR" +
-      "esponse\022\016\n\006result\030\001 \001(\003\".\n\035ExportJsonEnt" +
-      "ityReportRequest\022\r\n\005flags\030\001 \001(\003\"0\n\036Expor" +
-      "tJsonEntityReportResponse\022\016\n\006result\030\001 \001(" +
-      "\003\"(\n\020FetchNextRequest\022\024\n\014exportHandle\030\001 " +
-      "\001(\003\"#\n\021FetchNextResponse\022\016\n\006result\030\001 \001(\t" +
-      "\"K\n(FindInterestingEntitiesByEntityIdReq" +
-      "uest\022\020\n\010entityId\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\";\n" +
-      ")FindInterestingEntitiesByEntityIdRespon" +
-      "se\022\016\n\006result\030\001 \001(\t\"c\n(FindInterestingEnt" +
-      "itiesByRecordIdRequest\022\026\n\016dataSourceCode" +
-      "\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"" +
-      ";\n)FindInterestingEntitiesByRecordIdResp" +
-      "onse\022\016\n\006result\030\001 \001(\t\"\212\001\n\034FindNetworkByEn" +
-      "tityIdRequest\022\021\n\tentityIds\030\001 \001(\t\022\022\n\nmaxD" +
-      "egrees\030\002 \001(\003\022\027\n\017buildOutDegrees\030\003 \001(\003\022\033\n" +
-      "\023buildOutMaxEntities\030\004 \001(\003\022\r\n\005flags\030\005 \001(" +
-      "\003\"/\n\035FindNetworkByEntityIdResponse\022\016\n\006re" +
-      "sult\030\001 \001(\t\"\213\001\n\034FindNetworkByRecordIdRequ" +
-      "est\022\022\n\nrecordKeys\030\001 \001(\t\022\022\n\nmaxDegrees\030\002 " +
-      "\001(\003\022\027\n\017buildOutDegrees\030\003 \001(\003\022\033\n\023buildOut" +
-      "MaxEntities\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035Find" +
-      "NetworkByRecordIdResponse\022\016\n\006result\030\001 \001(" +
-      "\t\"\237\001\n\031FindPathByEntityIdRequest\022\025\n\rstart" +
-      "EntityId\030\001 \001(\003\022\023\n\013endEntityId\030\002 \001(\003\022\022\n\nm" +
-      "axDegrees\030\003 \001(\003\022\026\n\016avoidEntityIds\030\004 \001(\t\022" +
-      "\033\n\023requiredDataSources\030\005 \001(\t\022\r\n\005flags\030\006 " +
-      "\001(\003\",\n\032FindPathByEntityIdResponse\022\016\n\006res" +
-      "ult\030\001 \001(\t\"\330\001\n\031FindPathByRecordIdRequest\022" +
-      "\033\n\023startDataSourceCode\030\001 \001(\t\022\025\n\rstartRec" +
-      "ordId\030\002 \001(\t\022\031\n\021endDataSourceCode\030\003 \001(\t\022\023" +
-      "\n\013endRecordId\030\004 \001(\t\022\022\n\nmaxDegrees\030\005 \001(\003\022" +
-      "\027\n\017avoidRecordKeys\030\006 \001(\t\022\033\n\023requiredData" +
-      "Sources\030\007 \001(\t\022\r\n\005flags\030\010 \001(\003\",\n\032FindPath" +
-      "ByRecordIdResponse\022\016\n\006result\030\001 \001(\t\"\032\n\030Ge" +
-      "tActiveConfigIdRequest\"+\n\031GetActiveConfi" +
-      "gIdResponse\022\016\n\006result\030\001 \001(\003\"=\n\032GetEntity" +
-      "ByEntityIdRequest\022\020\n\010entityId\030\001 \001(\003\022\r\n\005f" +
-      "lags\030\002 \001(\003\"-\n\033GetEntityByEntityIdRespons" +
-      "e\022\016\n\006result\030\001 \001(\t\"U\n\032GetEntityByRecordId" +
-      "Request\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recor" +
-      "dId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"-\n\033GetEntityByR" +
-      "ecordIdResponse\022\016\n\006result\030\001 \001(\t\"K\n\020GetRe" +
-      "cordRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010r" +
-      "ecordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"#\n\021GetRecor" +
-      "dResponse\022\016\n\006result\030\001 \001(\t\"\026\n\024GetRedoReco" +
-      "rdRequest\"\'\n\025GetRedoRecordResponse\022\016\n\006re" +
-      "sult\030\001 \001(\t\"\021\n\017GetStatsRequest\"\"\n\020GetStat" +
-      "sResponse\022\016\n\006result\030\001 \001(\t\"F\n!GetVirtualE" +
-      "ntityByRecordIdRequest\022\022\n\nrecordKeys\030\001 \001" +
-      "(\t\022\r\n\005flags\030\002 \001(\003\"4\n\"GetVirtualEntityByR" +
-      "ecordIdResponse\022\016\n\006result\030\001 \001(\t\"=\n\032HowEn" +
-      "tityByEntityIdRequest\022\020\n\010entityId\030\001 \001(\003\022" +
-      "\r\n\005flags\030\002 \001(\003\"-\n\033HowEntityByEntityIdRes" +
-      "ponse\022\016\n\006result\030\001 \001(\t\"B\n\027PreprocessRecor" +
-      "dRequest\022\030\n\020recordDefinition\030\001 \001(\t\022\r\n\005fl" +
-      "ags\030\002 \001(\003\"*\n\030PreprocessRecordResponse\022\016\n" +
-      "\006result\030\001 \001(\t\"\024\n\022PrimeEngineRequest\"\025\n\023P" +
-      "rimeEngineResponse\"=\n\030ProcessRedoRecordR" +
-      "equest\022\022\n\nredoRecord\030\001 \001(\t\022\r\n\005flags\030\002 \001(" +
-      "\003\"+\n\031ProcessRedoRecordResponse\022\016\n\006result" +
-      "\030\001 \001(\t\":\n\027ReevaluateEntityRequest\022\020\n\010ent" +
-      "ityId\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"*\n\030Reevaluate" +
-      "EntityResponse\022\016\n\006result\030\001 \001(\t\"R\n\027Reeval" +
-      "uateRecordRequest\022\026\n\016dataSourceCode\030\001 \001(" +
-      "\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"*\n\030Re" +
-      "evaluateRecordResponse\022\016\n\006result\030\001 \001(\t\"\'" +
-      "\n\023ReinitializeRequest\022\020\n\010configId\030\001 \001(\003\"" +
-      "\026\n\024ReinitializeResponse\"U\n\031SearchByAttri" +
-      "butesRequest\022\022\n\nattributes\030\001 \001(\t\022\025\n\rsear" +
-      "chProfile\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\",\n\032Search" +
-      "ByAttributesResponse\022\016\n\006result\030\001 \001(\t\"J\n\"" +
-      "StreamExportCsvEntityReportRequest\022\025\n\rcs" +
-      "vColumnList\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"5\n#Stre" +
-      "amExportCsvEntityReportResponse\022\016\n\006resul" +
-      "t\030\001 \001(\t\"4\n#StreamExportJsonEntityReportR" +
-      "equest\022\r\n\005flags\030\001 \001(\003\"6\n$StreamExportJso" +
-      "nEntityReportResponse\022\016\n\006result\030\001 \001(\t\"I\n" +
-      "\022WhyEntitiesRequest\022\021\n\tentityId1\030\001 \001(\003\022\021" +
-      "\n\tentityId2\030\002 \001(\003\022\r\n\005flags\030\003 \001(\003\"%\n\023WhyE" +
-      "ntitiesResponse\022\016\n\006result\030\001 \001(\t\"S\n\030WhyRe" +
-      "cordInEntityRequest\022\026\n\016dataSourceCode\030\001 " +
-      "\001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"+\n\031" +
-      "WhyRecordInEntityResponse\022\016\n\006result\030\001 \001(" +
-      "\t\"z\n\021WhyRecordsRequest\022\027\n\017dataSourceCode" +
-      "1\030\001 \001(\t\022\021\n\trecordId1\030\002 \001(\t\022\027\n\017dataSource" +
-      "Code2\030\003 \001(\t\022\021\n\trecordId2\030\004 \001(\t\022\r\n\005flags\030" +
-      "\005 \001(\003\"$\n\022WhyRecordsResponse\022\016\n\006result\030\001 " +
-      "\001(\t2\225\031\n\010SzEngine\022F\n\tAddRecord\022\032.szengine" +
-      ".AddRecordRequest\032\033.szengine.AddRecordRe" +
-      "sponse\"\000\022L\n\013CloseExport\022\034.szengine.Close" +
-      "ExportRequest\032\035.szengine.CloseExportResp" +
-      "onse\"\000\022[\n\020CountRedoRecords\022!.szengine.Co" +
-      "untRedoRecordsRequest\032\".szengine.CountRe" +
-      "doRecordsResponse\"\000\022O\n\014DeleteRecord\022\035.sz" +
-      "engine.DeleteRecordRequest\032\036.szengine.De" +
-      "leteRecordResponse\"\000\022j\n\025ExportCsvEntityR" +
-      "eport\022&.szengine.ExportCsvEntityReportRe" +
-      "quest\032\'.szengine.ExportCsvEntityReportRe" +
-      "sponse\"\000\022m\n\026ExportJsonEntityReport\022\'.sze" +
-      "ngine.ExportJsonEntityReportRequest\032(.sz" +
-      "engine.ExportJsonEntityReportResponse\"\000\022" +
-      "F\n\tFetchNext\022\032.szengine.FetchNextRequest" +
-      "\032\033.szengine.FetchNextResponse\"\000\022\216\001\n!Find" +
-      "InterestingEntitiesByEntityId\0222.szengine" +
-      ".FindInterestingEntitiesByEntityIdReques" +
-      "t\0323.szengine.FindInterestingEntitiesByEn" +
-      "tityIdResponse\"\000\022\216\001\n!FindInterestingEnti" +
-      "tiesByRecordId\0222.szengine.FindInterestin" +
-      "gEntitiesByRecordIdRequest\0323.szengine.Fi" +
-      "ndInterestingEntitiesByRecordIdResponse\"" +
-      "\000\022j\n\025FindNetworkByEntityId\022&.szengine.Fi" +
-      "ndNetworkByEntityIdRequest\032\'.szengine.Fi" +
-      "ndNetworkByEntityIdResponse\"\000\022j\n\025FindNet" +
-      "workByRecordId\022&.szengine.FindNetworkByR" +
-      "ecordIdRequest\032\'.szengine.FindNetworkByR" +
-      "ecordIdResponse\"\000\022a\n\022FindPathByEntityId\022" +
-      "#.szengine.FindPathByEntityIdRequest\032$.s" +
-      "zengine.FindPathByEntityIdResponse\"\000\022a\n\022" +
-      "FindPathByRecordId\022#.szengine.FindPathBy" +
-      "RecordIdRequest\032$.szengine.FindPathByRec" +
-      "ordIdResponse\"\000\022^\n\021GetActiveConfigId\022\".s" +
-      "zengine.GetActiveConfigIdRequest\032#.szeng" +
-      "ine.GetActiveConfigIdResponse\"\000\022d\n\023GetEn" +
-      "tityByEntityId\022$.szengine.GetEntityByEnt" +
-      "ityIdRequest\032%.szengine.GetEntityByEntit" +
-      "yIdResponse\"\000\022d\n\023GetEntityByRecordId\022$.s" +
-      "zengine.GetEntityByRecordIdRequest\032%.sze" +
-      "ngine.GetEntityByRecordIdResponse\"\000\022F\n\tG" +
-      "etRecord\022\032.szengine.GetRecordRequest\032\033.s" +
-      "zengine.GetRecordResponse\"\000\022R\n\rGetRedoRe" +
-      "cord\022\036.szengine.GetRedoRecordRequest\032\037.s" +
-      "zengine.GetRedoRecordResponse\"\000\022C\n\010GetSt" +
-      "ats\022\031.szengine.GetStatsRequest\032\032.szengin" +
-      "e.GetStatsResponse\"\000\022y\n\032GetVirtualEntity" +
-      "ByRecordId\022+.szengine.GetVirtualEntityBy" +
-      "RecordIdRequest\032,.szengine.GetVirtualEnt" +
-      "ityByRecordIdResponse\"\000\022d\n\023HowEntityByEn" +
-      "tityId\022$.szengine.HowEntityByEntityIdReq" +
-      "uest\032%.szengine.HowEntityByEntityIdRespo" +
-      "nse\"\000\022[\n\020PreprocessRecord\022!.szengine.Pre" +
-      "processRecordRequest\032\".szengine.Preproce" +
-      "ssRecordResponse\"\000\022L\n\013PrimeEngine\022\034.szen" +
-      "gine.PrimeEngineRequest\032\035.szengine.Prime" +
-      "EngineResponse\"\000\022^\n\021ProcessRedoRecord\022\"." +
-      "szengine.ProcessRedoRecordRequest\032#.szen" +
-      "gine.ProcessRedoRecordResponse\"\000\022[\n\020Reev" +
-      "aluateEntity\022!.szengine.ReevaluateEntity" +
-      "Request\032\".szengine.ReevaluateEntityRespo" +
-      "nse\"\000\022[\n\020ReevaluateRecord\022!.szengine.Ree" +
-      "valuateRecordRequest\032\".szengine.Reevalua" +
-      "teRecordResponse\"\000\022O\n\014Reinitialize\022\035.sze" +
-      "ngine.ReinitializeRequest\032\036.szengine.Rei" +
-      "nitializeResponse\"\000\022a\n\022SearchByAttribute" +
-      "s\022#.szengine.SearchByAttributesRequest\032$" +
-      ".szengine.SearchByAttributesResponse\"\000\022~" +
-      "\n\033StreamExportCsvEntityReport\022,.szengine" +
-      ".StreamExportCsvEntityReportRequest\032-.sz" +
-      "engine.StreamExportCsvEntityReportRespon" +
-      "se\"\0000\001\022\201\001\n\034StreamExportJsonEntityReport\022" +
-      "-.szengine.StreamExportJsonEntityReportR" +
-      "equest\032..szengine.StreamExportJsonEntity" +
-      "ReportResponse\"\0000\001\022L\n\013WhyEntities\022\034.szen" +
-      "gine.WhyEntitiesRequest\032\035.szengine.WhyEn" +
-      "titiesResponse\"\000\022^\n\021WhyRecordInEntity\022\"." +
-      "szengine.WhyRecordInEntityRequest\032#.szen" +
-      "gine.WhyRecordInEntityResponse\"\000\022I\n\nWhyR" +
-      "ecords\022\033.szengine.WhyRecordsRequest\032\034.sz" +
-      "engine.WhyRecordsResponse\"\000BX\n\024com.senzi" +
-      "ng.sdk.grpcB\rSzEngineProtoZ1github.com/s" +
-      "enzing-garage/sz-sdk-go-grpc/szengineb\006p" +
-      "roto3"
+      "\n\016szengine.proto\022\010szengine\"i\n\020AddRecordR" +
+      "equest\022\030\n\020data_source_code\030\001 \001(\t\022\021\n\treco" +
+      "rd_id\030\002 \001(\t\022\031\n\021record_definition\030\003 \001(\t\022\r" +
+      "\n\005flags\030\004 \001(\003\"#\n\021AddRecordResponse\022\016\n\006re" +
+      "sult\030\001 \001(\t\"+\n\022CloseExportRequest\022\025\n\rexpo" +
+      "rt_handle\030\001 \001(\003\"\025\n\023CloseExportResponse\"\031" +
+      "\n\027CountRedoRecordsRequest\"*\n\030CountRedoRe" +
+      "cordsResponse\022\016\n\006result\030\001 \001(\003\"Q\n\023DeleteR" +
+      "ecordRequest\022\030\n\020data_source_code\030\001 \001(\t\022\021" +
+      "\n\trecord_id\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"&\n\024Dele" +
+      "teRecordResponse\022\016\n\006result\030\001 \001(\t\"F\n\034Expo" +
+      "rtCsvEntityReportRequest\022\027\n\017csv_column_l" +
+      "ist\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"/\n\035ExportCsvEnt" +
+      "ityReportResponse\022\016\n\006result\030\001 \001(\003\".\n\035Exp" +
+      "ortJsonEntityReportRequest\022\r\n\005flags\030\001 \001(" +
+      "\003\"0\n\036ExportJsonEntityReportResponse\022\016\n\006r" +
+      "esult\030\001 \001(\003\")\n\020FetchNextRequest\022\025\n\rexpor" +
+      "t_handle\030\001 \001(\003\"#\n\021FetchNextResponse\022\016\n\006r" +
+      "esult\030\001 \001(\t\"L\n(FindInterestingEntitiesBy" +
+      "EntityIdRequest\022\021\n\tentity_id\030\001 \001(\003\022\r\n\005fl" +
+      "ags\030\002 \001(\003\";\n)FindInterestingEntitiesByEn" +
+      "tityIdResponse\022\016\n\006result\030\001 \001(\t\"f\n(FindIn" +
+      "terestingEntitiesByRecordIdRequest\022\030\n\020da" +
+      "ta_source_code\030\001 \001(\t\022\021\n\trecord_id\030\002 \001(\t\022" +
+      "\r\n\005flags\030\003 \001(\003\";\n)FindInterestingEntitie" +
+      "sByRecordIdResponse\022\016\n\006result\030\001 \001(\t\"\221\001\n\034" +
+      "FindNetworkByEntityIdRequest\022\022\n\nentity_i" +
+      "ds\030\001 \001(\t\022\023\n\013max_degrees\030\002 \001(\003\022\031\n\021build_o" +
+      "ut_degrees\030\003 \001(\003\022\036\n\026build_out_max_entiti" +
+      "es\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035FindNetworkBy" +
+      "EntityIdResponse\022\016\n\006result\030\001 \001(\t\"\222\001\n\034Fin" +
+      "dNetworkByRecordIdRequest\022\023\n\013record_keys" +
+      "\030\001 \001(\t\022\023\n\013max_degrees\030\002 \001(\003\022\031\n\021build_out" +
+      "_degrees\030\003 \001(\003\022\036\n\026build_out_max_entities" +
+      "\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035FindNetworkByRe" +
+      "cordIdResponse\022\016\n\006result\030\001 \001(\t\"\250\001\n\031FindP" +
+      "athByEntityIdRequest\022\027\n\017start_entity_id\030" +
+      "\001 \001(\003\022\025\n\rend_entity_id\030\002 \001(\003\022\023\n\013max_degr" +
+      "ees\030\003 \001(\003\022\030\n\020avoid_entity_ids\030\004 \001(\t\022\035\n\025r" +
+      "equired_data_sources\030\005 \001(\t\022\r\n\005flags\030\006 \001(" +
+      "\003\",\n\032FindPathByEntityIdResponse\022\016\n\006resul" +
+      "t\030\001 \001(\t\"\347\001\n\031FindPathByRecordIdRequest\022\036\n" +
+      "\026start_data_source_code\030\001 \001(\t\022\027\n\017start_r" +
+      "ecord_id\030\002 \001(\t\022\034\n\024end_data_source_code\030\003" +
+      " \001(\t\022\025\n\rend_record_id\030\004 \001(\t\022\023\n\013max_degre" +
+      "es\030\005 \001(\003\022\031\n\021avoid_record_keys\030\006 \001(\t\022\035\n\025r" +
+      "equired_data_sources\030\007 \001(\t\022\r\n\005flags\030\010 \001(" +
+      "\003\",\n\032FindPathByRecordIdResponse\022\016\n\006resul" +
+      "t\030\001 \001(\t\"\032\n\030GetActiveConfigIdRequest\"+\n\031G" +
+      "etActiveConfigIdResponse\022\016\n\006result\030\001 \001(\003" +
+      "\">\n\032GetEntityByEntityIdRequest\022\021\n\tentity" +
+      "_id\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"-\n\033GetEntityByE" +
+      "ntityIdResponse\022\016\n\006result\030\001 \001(\t\"X\n\032GetEn" +
+      "tityByRecordIdRequest\022\030\n\020data_source_cod" +
+      "e\030\001 \001(\t\022\021\n\trecord_id\030\002 \001(\t\022\r\n\005flags\030\003 \001(" +
+      "\003\"-\n\033GetEntityByRecordIdResponse\022\016\n\006resu" +
+      "lt\030\001 \001(\t\"N\n\020GetRecordRequest\022\030\n\020data_sou" +
+      "rce_code\030\001 \001(\t\022\021\n\trecord_id\030\002 \001(\t\022\r\n\005fla" +
+      "gs\030\003 \001(\003\"#\n\021GetRecordResponse\022\016\n\006result\030" +
+      "\001 \001(\t\"\026\n\024GetRedoRecordRequest\"\'\n\025GetRedo" +
+      "RecordResponse\022\016\n\006result\030\001 \001(\t\"\021\n\017GetSta" +
+      "tsRequest\"\"\n\020GetStatsResponse\022\016\n\006result\030" +
+      "\001 \001(\t\"G\n!GetVirtualEntityByRecordIdReque" +
+      "st\022\023\n\013record_keys\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"4" +
+      "\n\"GetVirtualEntityByRecordIdResponse\022\016\n\006" +
+      "result\030\001 \001(\t\">\n\032HowEntityByEntityIdReque" +
+      "st\022\021\n\tentity_id\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"-\n\033" +
+      "HowEntityByEntityIdResponse\022\016\n\006result\030\001 " +
+      "\001(\t\"C\n\027PreprocessRecordRequest\022\031\n\021record" +
+      "_definition\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"*\n\030Prep" +
+      "rocessRecordResponse\022\016\n\006result\030\001 \001(\t\"\024\n\022" +
+      "PrimeEngineRequest\"\025\n\023PrimeEngineRespons" +
+      "e\">\n\030ProcessRedoRecordRequest\022\023\n\013redo_re" +
+      "cord\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"+\n\031ProcessRedo" +
+      "RecordResponse\022\016\n\006result\030\001 \001(\t\";\n\027Reeval" +
+      "uateEntityRequest\022\021\n\tentity_id\030\001 \001(\003\022\r\n\005" +
+      "flags\030\002 \001(\003\"*\n\030ReevaluateEntityResponse\022" +
+      "\016\n\006result\030\001 \001(\t\"U\n\027ReevaluateRecordReque" +
+      "st\022\030\n\020data_source_code\030\001 \001(\t\022\021\n\trecord_i" +
+      "d\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"*\n\030ReevaluateReco" +
+      "rdResponse\022\016\n\006result\030\001 \001(\t\"(\n\023Reinitiali" +
+      "zeRequest\022\021\n\tconfig_id\030\001 \001(\003\"\026\n\024Reinitia" +
+      "lizeResponse\"V\n\031SearchByAttributesReques" +
+      "t\022\022\n\nattributes\030\001 \001(\t\022\026\n\016search_profile\030" +
+      "\002 \001(\t\022\r\n\005flags\030\003 \001(\003\",\n\032SearchByAttribut" +
+      "esResponse\022\016\n\006result\030\001 \001(\t\"L\n\"StreamExpo" +
+      "rtCsvEntityReportRequest\022\027\n\017csv_column_l" +
+      "ist\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"5\n#StreamExport" +
+      "CsvEntityReportResponse\022\016\n\006result\030\001 \001(\t\"" +
+      "4\n#StreamExportJsonEntityReportRequest\022\r" +
+      "\n\005flags\030\001 \001(\003\"6\n$StreamExportJsonEntityR" +
+      "eportResponse\022\016\n\006result\030\001 \001(\t\"M\n\022WhyEnti" +
+      "tiesRequest\022\023\n\013entity_id_1\030\001 \001(\003\022\023\n\013enti" +
+      "ty_id_2\030\002 \001(\003\022\r\n\005flags\030\003 \001(\003\"%\n\023WhyEntit" +
+      "iesResponse\022\016\n\006result\030\001 \001(\t\"V\n\030WhyRecord" +
+      "InEntityRequest\022\030\n\020data_source_code\030\001 \001(" +
+      "\t\022\021\n\trecord_id\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"+\n\031W" +
+      "hyRecordInEntityResponse\022\016\n\006result\030\001 \001(\t" +
+      "\"\204\001\n\021WhyRecordsRequest\022\032\n\022data_source_co" +
+      "de_1\030\001 \001(\t\022\023\n\013record_id_1\030\002 \001(\t\022\032\n\022data_" +
+      "source_code_2\030\003 \001(\t\022\023\n\013record_id_2\030\004 \001(\t" +
+      "\022\r\n\005flags\030\005 \001(\003\"$\n\022WhyRecordsResponse\022\016\n" +
+      "\006result\030\001 \001(\t2\225\031\n\010SzEngine\022F\n\tAddRecord\022" +
+      "\032.szengine.AddRecordRequest\032\033.szengine.A" +
+      "ddRecordResponse\"\000\022L\n\013CloseExport\022\034.szen" +
+      "gine.CloseExportRequest\032\035.szengine.Close" +
+      "ExportResponse\"\000\022[\n\020CountRedoRecords\022!.s" +
+      "zengine.CountRedoRecordsRequest\032\".szengi" +
+      "ne.CountRedoRecordsResponse\"\000\022O\n\014DeleteR" +
+      "ecord\022\035.szengine.DeleteRecordRequest\032\036.s" +
+      "zengine.DeleteRecordResponse\"\000\022j\n\025Export" +
+      "CsvEntityReport\022&.szengine.ExportCsvEnti" +
+      "tyReportRequest\032\'.szengine.ExportCsvEnti" +
+      "tyReportResponse\"\000\022m\n\026ExportJsonEntityRe" +
+      "port\022\'.szengine.ExportJsonEntityReportRe" +
+      "quest\032(.szengine.ExportJsonEntityReportR" +
+      "esponse\"\000\022F\n\tFetchNext\022\032.szengine.FetchN" +
+      "extRequest\032\033.szengine.FetchNextResponse\"" +
+      "\000\022\216\001\n!FindInterestingEntitiesByEntityId\022" +
+      "2.szengine.FindInterestingEntitiesByEnti" +
+      "tyIdRequest\0323.szengine.FindInterestingEn" +
+      "titiesByEntityIdResponse\"\000\022\216\001\n!FindInter" +
+      "estingEntitiesByRecordId\0222.szengine.Find" +
+      "InterestingEntitiesByRecordIdRequest\0323.s" +
+      "zengine.FindInterestingEntitiesByRecordI" +
+      "dResponse\"\000\022j\n\025FindNetworkByEntityId\022&.s" +
+      "zengine.FindNetworkByEntityIdRequest\032\'.s" +
+      "zengine.FindNetworkByEntityIdResponse\"\000\022" +
+      "j\n\025FindNetworkByRecordId\022&.szengine.Find" +
+      "NetworkByRecordIdRequest\032\'.szengine.Find" +
+      "NetworkByRecordIdResponse\"\000\022a\n\022FindPathB" +
+      "yEntityId\022#.szengine.FindPathByEntityIdR" +
+      "equest\032$.szengine.FindPathByEntityIdResp" +
+      "onse\"\000\022a\n\022FindPathByRecordId\022#.szengine." +
+      "FindPathByRecordIdRequest\032$.szengine.Fin" +
+      "dPathByRecordIdResponse\"\000\022^\n\021GetActiveCo" +
+      "nfigId\022\".szengine.GetActiveConfigIdReque" +
+      "st\032#.szengine.GetActiveConfigIdResponse\"" +
+      "\000\022d\n\023GetEntityByEntityId\022$.szengine.GetE" +
+      "ntityByEntityIdRequest\032%.szengine.GetEnt" +
+      "ityByEntityIdResponse\"\000\022d\n\023GetEntityByRe" +
+      "cordId\022$.szengine.GetEntityByRecordIdReq" +
+      "uest\032%.szengine.GetEntityByRecordIdRespo" +
+      "nse\"\000\022F\n\tGetRecord\022\032.szengine.GetRecordR" +
+      "equest\032\033.szengine.GetRecordResponse\"\000\022R\n" +
+      "\rGetRedoRecord\022\036.szengine.GetRedoRecordR" +
+      "equest\032\037.szengine.GetRedoRecordResponse\"" +
+      "\000\022C\n\010GetStats\022\031.szengine.GetStatsRequest" +
+      "\032\032.szengine.GetStatsResponse\"\000\022y\n\032GetVir" +
+      "tualEntityByRecordId\022+.szengine.GetVirtu" +
+      "alEntityByRecordIdRequest\032,.szengine.Get" +
+      "VirtualEntityByRecordIdResponse\"\000\022d\n\023How" +
+      "EntityByEntityId\022$.szengine.HowEntityByE" +
+      "ntityIdRequest\032%.szengine.HowEntityByEnt" +
+      "ityIdResponse\"\000\022[\n\020PreprocessRecord\022!.sz" +
+      "engine.PreprocessRecordRequest\032\".szengin" +
+      "e.PreprocessRecordResponse\"\000\022L\n\013PrimeEng" +
+      "ine\022\034.szengine.PrimeEngineRequest\032\035.szen" +
+      "gine.PrimeEngineResponse\"\000\022^\n\021ProcessRed" +
+      "oRecord\022\".szengine.ProcessRedoRecordRequ" +
+      "est\032#.szengine.ProcessRedoRecordResponse" +
+      "\"\000\022[\n\020ReevaluateEntity\022!.szengine.Reeval" +
+      "uateEntityRequest\032\".szengine.ReevaluateE" +
+      "ntityResponse\"\000\022[\n\020ReevaluateRecord\022!.sz" +
+      "engine.ReevaluateRecordRequest\032\".szengin" +
+      "e.ReevaluateRecordResponse\"\000\022O\n\014Reinitia" +
+      "lize\022\035.szengine.ReinitializeRequest\032\036.sz" +
+      "engine.ReinitializeResponse\"\000\022a\n\022SearchB" +
+      "yAttributes\022#.szengine.SearchByAttribute" +
+      "sRequest\032$.szengine.SearchByAttributesRe" +
+      "sponse\"\000\022~\n\033StreamExportCsvEntityReport\022" +
+      ",.szengine.StreamExportCsvEntityReportRe" +
+      "quest\032-.szengine.StreamExportCsvEntityRe" +
+      "portResponse\"\0000\001\022\201\001\n\034StreamExportJsonEnt" +
+      "ityReport\022-.szengine.StreamExportJsonEnt" +
+      "ityReportRequest\032..szengine.StreamExport" +
+      "JsonEntityReportResponse\"\0000\001\022L\n\013WhyEntit" +
+      "ies\022\034.szengine.WhyEntitiesRequest\032\035.szen" +
+      "gine.WhyEntitiesResponse\"\000\022^\n\021WhyRecordI" +
+      "nEntity\022\".szengine.WhyRecordInEntityRequ" +
+      "est\032#.szengine.WhyRecordInEntityResponse" +
+      "\"\000\022I\n\nWhyRecords\022\033.szengine.WhyRecordsRe" +
+      "quest\032\034.szengine.WhyRecordsResponse\"\000BX\n" +
+      "\024com.senzing.sdk.grpcB\rSzEngineProtoZ1gi" +
+      "thub.com/senzing-garage/sz-sdk-go-grpc/s" +
+      "zengineb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

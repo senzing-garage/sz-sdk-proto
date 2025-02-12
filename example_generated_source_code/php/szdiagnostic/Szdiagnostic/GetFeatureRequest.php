@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class GetFeatureRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int64 featureId = 1;</code>
+     * Generated from protobuf field <code>int64 feature_id = 1;</code>
      */
-    protected $featureId = 0;
+    protected $feature_id = 0;
 
     /**
      * Constructor.
@@ -24,7 +24,7 @@ class GetFeatureRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int|string $featureId
+     *     @type int|string $feature_id
      * }
      */
     public function __construct($data = NULL) {
@@ -33,23 +33,23 @@ class GetFeatureRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 featureId = 1;</code>
+     * Generated from protobuf field <code>int64 feature_id = 1;</code>
      * @return int|string
      */
     public function getFeatureId()
     {
-        return $this->featureId;
+        return $this->feature_id;
     }
 
     /**
-     * Generated from protobuf field <code>int64 featureId = 1;</code>
+     * Generated from protobuf field <code>int64 feature_id = 1;</code>
      * @param int|string $var
      * @return $this
      */
     public function setFeatureId($var)
     {
         GPBUtil::checkInt64($var);
-        $this->featureId = $var;
+        $this->feature_id = $var;
 
         return $this;
     }

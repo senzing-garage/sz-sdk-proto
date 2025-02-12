@@ -6,16 +6,16 @@ require 'google/protobuf'
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("szengine.proto", :syntax => :proto3) do
     add_message "szengine.AddRecordRequest" do
-      optional :dataSourceCode, :string, 1
-      optional :recordId, :string, 2
-      optional :recordDefinition, :string, 3
+      optional :data_source_code, :string, 1
+      optional :record_id, :string, 2
+      optional :record_definition, :string, 3
       optional :flags, :int64, 4
     end
     add_message "szengine.AddRecordResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.CloseExportRequest" do
-      optional :exportHandle, :int64, 1
+      optional :export_handle, :int64, 1
     end
     add_message "szengine.CloseExportResponse" do
     end
@@ -25,15 +25,15 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :result, :int64, 1
     end
     add_message "szengine.DeleteRecordRequest" do
-      optional :dataSourceCode, :string, 1
-      optional :recordId, :string, 2
+      optional :data_source_code, :string, 1
+      optional :record_id, :string, 2
       optional :flags, :int64, 3
     end
     add_message "szengine.DeleteRecordResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.ExportCsvEntityReportRequest" do
-      optional :csvColumnList, :string, 1
+      optional :csv_column_list, :string, 1
       optional :flags, :int64, 2
     end
     add_message "szengine.ExportCsvEntityReportResponse" do
@@ -46,65 +46,65 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :result, :int64, 1
     end
     add_message "szengine.FetchNextRequest" do
-      optional :exportHandle, :int64, 1
+      optional :export_handle, :int64, 1
     end
     add_message "szengine.FetchNextResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.FindInterestingEntitiesByEntityIdRequest" do
-      optional :entityId, :int64, 1
+      optional :entity_id, :int64, 1
       optional :flags, :int64, 2
     end
     add_message "szengine.FindInterestingEntitiesByEntityIdResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.FindInterestingEntitiesByRecordIdRequest" do
-      optional :dataSourceCode, :string, 1
-      optional :recordId, :string, 2
+      optional :data_source_code, :string, 1
+      optional :record_id, :string, 2
       optional :flags, :int64, 3
     end
     add_message "szengine.FindInterestingEntitiesByRecordIdResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.FindNetworkByEntityIdRequest" do
-      optional :entityIds, :string, 1
-      optional :maxDegrees, :int64, 2
-      optional :buildOutDegrees, :int64, 3
-      optional :buildOutMaxEntities, :int64, 4
+      optional :entity_ids, :string, 1
+      optional :max_degrees, :int64, 2
+      optional :build_out_degrees, :int64, 3
+      optional :build_out_max_entities, :int64, 4
       optional :flags, :int64, 5
     end
     add_message "szengine.FindNetworkByEntityIdResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.FindNetworkByRecordIdRequest" do
-      optional :recordKeys, :string, 1
-      optional :maxDegrees, :int64, 2
-      optional :buildOutDegrees, :int64, 3
-      optional :buildOutMaxEntities, :int64, 4
+      optional :record_keys, :string, 1
+      optional :max_degrees, :int64, 2
+      optional :build_out_degrees, :int64, 3
+      optional :build_out_max_entities, :int64, 4
       optional :flags, :int64, 5
     end
     add_message "szengine.FindNetworkByRecordIdResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.FindPathByEntityIdRequest" do
-      optional :startEntityId, :int64, 1
-      optional :endEntityId, :int64, 2
-      optional :maxDegrees, :int64, 3
-      optional :avoidEntityIds, :string, 4
-      optional :requiredDataSources, :string, 5
+      optional :start_entity_id, :int64, 1
+      optional :end_entity_id, :int64, 2
+      optional :max_degrees, :int64, 3
+      optional :avoid_entity_ids, :string, 4
+      optional :required_data_sources, :string, 5
       optional :flags, :int64, 6
     end
     add_message "szengine.FindPathByEntityIdResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.FindPathByRecordIdRequest" do
-      optional :startDataSourceCode, :string, 1
-      optional :startRecordId, :string, 2
-      optional :endDataSourceCode, :string, 3
-      optional :endRecordId, :string, 4
-      optional :maxDegrees, :int64, 5
-      optional :avoidRecordKeys, :string, 6
-      optional :requiredDataSources, :string, 7
+      optional :start_data_source_code, :string, 1
+      optional :start_record_id, :string, 2
+      optional :end_data_source_code, :string, 3
+      optional :end_record_id, :string, 4
+      optional :max_degrees, :int64, 5
+      optional :avoid_record_keys, :string, 6
+      optional :required_data_sources, :string, 7
       optional :flags, :int64, 8
     end
     add_message "szengine.FindPathByRecordIdResponse" do
@@ -116,23 +116,23 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :result, :int64, 1
     end
     add_message "szengine.GetEntityByEntityIdRequest" do
-      optional :entityId, :int64, 1
+      optional :entity_id, :int64, 1
       optional :flags, :int64, 2
     end
     add_message "szengine.GetEntityByEntityIdResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.GetEntityByRecordIdRequest" do
-      optional :dataSourceCode, :string, 1
-      optional :recordId, :string, 2
+      optional :data_source_code, :string, 1
+      optional :record_id, :string, 2
       optional :flags, :int64, 3
     end
     add_message "szengine.GetEntityByRecordIdResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.GetRecordRequest" do
-      optional :dataSourceCode, :string, 1
-      optional :recordId, :string, 2
+      optional :data_source_code, :string, 1
+      optional :record_id, :string, 2
       optional :flags, :int64, 3
     end
     add_message "szengine.GetRecordResponse" do
@@ -149,21 +149,21 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :result, :string, 1
     end
     add_message "szengine.GetVirtualEntityByRecordIdRequest" do
-      optional :recordKeys, :string, 1
+      optional :record_keys, :string, 1
       optional :flags, :int64, 2
     end
     add_message "szengine.GetVirtualEntityByRecordIdResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.HowEntityByEntityIdRequest" do
-      optional :entityId, :int64, 1
+      optional :entity_id, :int64, 1
       optional :flags, :int64, 2
     end
     add_message "szengine.HowEntityByEntityIdResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.PreprocessRecordRequest" do
-      optional :recordDefinition, :string, 1
+      optional :record_definition, :string, 1
       optional :flags, :int64, 2
     end
     add_message "szengine.PreprocessRecordResponse" do
@@ -174,42 +174,42 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "szengine.PrimeEngineResponse" do
     end
     add_message "szengine.ProcessRedoRecordRequest" do
-      optional :redoRecord, :string, 1
+      optional :redo_record, :string, 1
       optional :flags, :int64, 2
     end
     add_message "szengine.ProcessRedoRecordResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.ReevaluateEntityRequest" do
-      optional :entityId, :int64, 1
+      optional :entity_id, :int64, 1
       optional :flags, :int64, 2
     end
     add_message "szengine.ReevaluateEntityResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.ReevaluateRecordRequest" do
-      optional :dataSourceCode, :string, 1
-      optional :recordId, :string, 2
+      optional :data_source_code, :string, 1
+      optional :record_id, :string, 2
       optional :flags, :int64, 3
     end
     add_message "szengine.ReevaluateRecordResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.ReinitializeRequest" do
-      optional :configId, :int64, 1
+      optional :config_id, :int64, 1
     end
     add_message "szengine.ReinitializeResponse" do
     end
     add_message "szengine.SearchByAttributesRequest" do
       optional :attributes, :string, 1
-      optional :searchProfile, :string, 2
+      optional :search_profile, :string, 2
       optional :flags, :int64, 3
     end
     add_message "szengine.SearchByAttributesResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.StreamExportCsvEntityReportRequest" do
-      optional :csvColumnList, :string, 1
+      optional :csv_column_list, :string, 1
       optional :flags, :int64, 2
     end
     add_message "szengine.StreamExportCsvEntityReportResponse" do
@@ -222,26 +222,26 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :result, :string, 1
     end
     add_message "szengine.WhyEntitiesRequest" do
-      optional :entityId1, :int64, 1
-      optional :entityId2, :int64, 2
+      optional :entity_id_1, :int64, 1
+      optional :entity_id_2, :int64, 2
       optional :flags, :int64, 3
     end
     add_message "szengine.WhyEntitiesResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.WhyRecordInEntityRequest" do
-      optional :dataSourceCode, :string, 1
-      optional :recordId, :string, 2
+      optional :data_source_code, :string, 1
+      optional :record_id, :string, 2
       optional :flags, :int64, 3
     end
     add_message "szengine.WhyRecordInEntityResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.WhyRecordsRequest" do
-      optional :dataSourceCode1, :string, 1
-      optional :recordId1, :string, 2
-      optional :dataSourceCode2, :string, 3
-      optional :recordId2, :string, 4
+      optional :data_source_code_1, :string, 1
+      optional :record_id_1, :string, 2
+      optional :data_source_code_2, :string, 3
+      optional :record_id_2, :string, 4
       optional :flags, :int64, 5
     end
     add_message "szengine.WhyRecordsResponse" do
