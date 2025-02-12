@@ -3,14 +3,14 @@ import * as jspb from 'google-protobuf'
 
 
 export class AddRecordRequest extends jspb.Message {
-  getDatasourcecode(): string;
-  setDatasourcecode(value: string): AddRecordRequest;
+  getDataSourceCode(): string;
+  setDataSourceCode(value: string): AddRecordRequest;
 
-  getRecordid(): string;
-  setRecordid(value: string): AddRecordRequest;
+  getRecordId(): string;
+  setRecordId(value: string): AddRecordRequest;
 
-  getRecorddefinition(): string;
-  setRecorddefinition(value: string): AddRecordRequest;
+  getRecordDefinition(): string;
+  setRecordDefinition(value: string): AddRecordRequest;
 
   getFlags(): number;
   setFlags(value: number): AddRecordRequest;
@@ -25,9 +25,9 @@ export class AddRecordRequest extends jspb.Message {
 
 export namespace AddRecordRequest {
   export type AsObject = {
-    datasourcecode: string,
-    recordid: string,
-    recorddefinition: string,
+    dataSourceCode: string,
+    recordId: string,
+    recordDefinition: string,
     flags: number,
   }
 }
@@ -51,8 +51,8 @@ export namespace AddRecordResponse {
 }
 
 export class CloseExportRequest extends jspb.Message {
-  getExporthandle(): number;
-  setExporthandle(value: number): CloseExportRequest;
+  getExportHandle(): number;
+  setExportHandle(value: number): CloseExportRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CloseExportRequest.AsObject;
@@ -64,7 +64,7 @@ export class CloseExportRequest extends jspb.Message {
 
 export namespace CloseExportRequest {
   export type AsObject = {
-    exporthandle: number,
+    exportHandle: number,
   }
 }
 
@@ -115,11 +115,11 @@ export namespace CountRedoRecordsResponse {
 }
 
 export class DeleteRecordRequest extends jspb.Message {
-  getDatasourcecode(): string;
-  setDatasourcecode(value: string): DeleteRecordRequest;
+  getDataSourceCode(): string;
+  setDataSourceCode(value: string): DeleteRecordRequest;
 
-  getRecordid(): string;
-  setRecordid(value: string): DeleteRecordRequest;
+  getRecordId(): string;
+  setRecordId(value: string): DeleteRecordRequest;
 
   getFlags(): number;
   setFlags(value: number): DeleteRecordRequest;
@@ -134,8 +134,8 @@ export class DeleteRecordRequest extends jspb.Message {
 
 export namespace DeleteRecordRequest {
   export type AsObject = {
-    datasourcecode: string,
-    recordid: string,
+    dataSourceCode: string,
+    recordId: string,
     flags: number,
   }
 }
@@ -159,8 +159,8 @@ export namespace DeleteRecordResponse {
 }
 
 export class ExportCsvEntityReportRequest extends jspb.Message {
-  getCsvcolumnlist(): string;
-  setCsvcolumnlist(value: string): ExportCsvEntityReportRequest;
+  getCsvColumnList(): string;
+  setCsvColumnList(value: string): ExportCsvEntityReportRequest;
 
   getFlags(): number;
   setFlags(value: number): ExportCsvEntityReportRequest;
@@ -175,7 +175,7 @@ export class ExportCsvEntityReportRequest extends jspb.Message {
 
 export namespace ExportCsvEntityReportRequest {
   export type AsObject = {
-    csvcolumnlist: string,
+    csvColumnList: string,
     flags: number,
   }
 }
@@ -235,8 +235,8 @@ export namespace ExportJsonEntityReportResponse {
 }
 
 export class FetchNextRequest extends jspb.Message {
-  getExporthandle(): number;
-  setExporthandle(value: number): FetchNextRequest;
+  getExportHandle(): number;
+  setExportHandle(value: number): FetchNextRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FetchNextRequest.AsObject;
@@ -248,7 +248,7 @@ export class FetchNextRequest extends jspb.Message {
 
 export namespace FetchNextRequest {
   export type AsObject = {
-    exporthandle: number,
+    exportHandle: number,
   }
 }
 
@@ -271,8 +271,8 @@ export namespace FetchNextResponse {
 }
 
 export class FindInterestingEntitiesByEntityIdRequest extends jspb.Message {
-  getEntityid(): number;
-  setEntityid(value: number): FindInterestingEntitiesByEntityIdRequest;
+  getEntityId(): number;
+  setEntityId(value: number): FindInterestingEntitiesByEntityIdRequest;
 
   getFlags(): number;
   setFlags(value: number): FindInterestingEntitiesByEntityIdRequest;
@@ -287,7 +287,7 @@ export class FindInterestingEntitiesByEntityIdRequest extends jspb.Message {
 
 export namespace FindInterestingEntitiesByEntityIdRequest {
   export type AsObject = {
-    entityid: number,
+    entityId: number,
     flags: number,
   }
 }
@@ -311,11 +311,11 @@ export namespace FindInterestingEntitiesByEntityIdResponse {
 }
 
 export class FindInterestingEntitiesByRecordIdRequest extends jspb.Message {
-  getDatasourcecode(): string;
-  setDatasourcecode(value: string): FindInterestingEntitiesByRecordIdRequest;
+  getDataSourceCode(): string;
+  setDataSourceCode(value: string): FindInterestingEntitiesByRecordIdRequest;
 
-  getRecordid(): string;
-  setRecordid(value: string): FindInterestingEntitiesByRecordIdRequest;
+  getRecordId(): string;
+  setRecordId(value: string): FindInterestingEntitiesByRecordIdRequest;
 
   getFlags(): number;
   setFlags(value: number): FindInterestingEntitiesByRecordIdRequest;
@@ -330,8 +330,8 @@ export class FindInterestingEntitiesByRecordIdRequest extends jspb.Message {
 
 export namespace FindInterestingEntitiesByRecordIdRequest {
   export type AsObject = {
-    datasourcecode: string,
-    recordid: string,
+    dataSourceCode: string,
+    recordId: string,
     flags: number,
   }
 }
@@ -355,17 +355,17 @@ export namespace FindInterestingEntitiesByRecordIdResponse {
 }
 
 export class FindNetworkByEntityIdRequest extends jspb.Message {
-  getEntityids(): string;
-  setEntityids(value: string): FindNetworkByEntityIdRequest;
+  getEntityIds(): string;
+  setEntityIds(value: string): FindNetworkByEntityIdRequest;
 
-  getMaxdegrees(): number;
-  setMaxdegrees(value: number): FindNetworkByEntityIdRequest;
+  getMaxDegrees(): number;
+  setMaxDegrees(value: number): FindNetworkByEntityIdRequest;
 
-  getBuildoutdegrees(): number;
-  setBuildoutdegrees(value: number): FindNetworkByEntityIdRequest;
+  getBuildOutDegrees(): number;
+  setBuildOutDegrees(value: number): FindNetworkByEntityIdRequest;
 
-  getBuildoutmaxentities(): number;
-  setBuildoutmaxentities(value: number): FindNetworkByEntityIdRequest;
+  getBuildOutMaxEntities(): number;
+  setBuildOutMaxEntities(value: number): FindNetworkByEntityIdRequest;
 
   getFlags(): number;
   setFlags(value: number): FindNetworkByEntityIdRequest;
@@ -380,10 +380,10 @@ export class FindNetworkByEntityIdRequest extends jspb.Message {
 
 export namespace FindNetworkByEntityIdRequest {
   export type AsObject = {
-    entityids: string,
-    maxdegrees: number,
-    buildoutdegrees: number,
-    buildoutmaxentities: number,
+    entityIds: string,
+    maxDegrees: number,
+    buildOutDegrees: number,
+    buildOutMaxEntities: number,
     flags: number,
   }
 }
@@ -407,17 +407,17 @@ export namespace FindNetworkByEntityIdResponse {
 }
 
 export class FindNetworkByRecordIdRequest extends jspb.Message {
-  getRecordkeys(): string;
-  setRecordkeys(value: string): FindNetworkByRecordIdRequest;
+  getRecordKeys(): string;
+  setRecordKeys(value: string): FindNetworkByRecordIdRequest;
 
-  getMaxdegrees(): number;
-  setMaxdegrees(value: number): FindNetworkByRecordIdRequest;
+  getMaxDegrees(): number;
+  setMaxDegrees(value: number): FindNetworkByRecordIdRequest;
 
-  getBuildoutdegrees(): number;
-  setBuildoutdegrees(value: number): FindNetworkByRecordIdRequest;
+  getBuildOutDegrees(): number;
+  setBuildOutDegrees(value: number): FindNetworkByRecordIdRequest;
 
-  getBuildoutmaxentities(): number;
-  setBuildoutmaxentities(value: number): FindNetworkByRecordIdRequest;
+  getBuildOutMaxEntities(): number;
+  setBuildOutMaxEntities(value: number): FindNetworkByRecordIdRequest;
 
   getFlags(): number;
   setFlags(value: number): FindNetworkByRecordIdRequest;
@@ -432,10 +432,10 @@ export class FindNetworkByRecordIdRequest extends jspb.Message {
 
 export namespace FindNetworkByRecordIdRequest {
   export type AsObject = {
-    recordkeys: string,
-    maxdegrees: number,
-    buildoutdegrees: number,
-    buildoutmaxentities: number,
+    recordKeys: string,
+    maxDegrees: number,
+    buildOutDegrees: number,
+    buildOutMaxEntities: number,
     flags: number,
   }
 }
@@ -459,20 +459,20 @@ export namespace FindNetworkByRecordIdResponse {
 }
 
 export class FindPathByEntityIdRequest extends jspb.Message {
-  getStartentityid(): number;
-  setStartentityid(value: number): FindPathByEntityIdRequest;
+  getStartEntityId(): number;
+  setStartEntityId(value: number): FindPathByEntityIdRequest;
 
-  getEndentityid(): number;
-  setEndentityid(value: number): FindPathByEntityIdRequest;
+  getEndEntityId(): number;
+  setEndEntityId(value: number): FindPathByEntityIdRequest;
 
-  getMaxdegrees(): number;
-  setMaxdegrees(value: number): FindPathByEntityIdRequest;
+  getMaxDegrees(): number;
+  setMaxDegrees(value: number): FindPathByEntityIdRequest;
 
-  getAvoidentityids(): string;
-  setAvoidentityids(value: string): FindPathByEntityIdRequest;
+  getAvoidEntityIds(): string;
+  setAvoidEntityIds(value: string): FindPathByEntityIdRequest;
 
-  getRequireddatasources(): string;
-  setRequireddatasources(value: string): FindPathByEntityIdRequest;
+  getRequiredDataSources(): string;
+  setRequiredDataSources(value: string): FindPathByEntityIdRequest;
 
   getFlags(): number;
   setFlags(value: number): FindPathByEntityIdRequest;
@@ -487,11 +487,11 @@ export class FindPathByEntityIdRequest extends jspb.Message {
 
 export namespace FindPathByEntityIdRequest {
   export type AsObject = {
-    startentityid: number,
-    endentityid: number,
-    maxdegrees: number,
-    avoidentityids: string,
-    requireddatasources: string,
+    startEntityId: number,
+    endEntityId: number,
+    maxDegrees: number,
+    avoidEntityIds: string,
+    requiredDataSources: string,
     flags: number,
   }
 }
@@ -515,26 +515,26 @@ export namespace FindPathByEntityIdResponse {
 }
 
 export class FindPathByRecordIdRequest extends jspb.Message {
-  getStartdatasourcecode(): string;
-  setStartdatasourcecode(value: string): FindPathByRecordIdRequest;
+  getStartDataSourceCode(): string;
+  setStartDataSourceCode(value: string): FindPathByRecordIdRequest;
 
-  getStartrecordid(): string;
-  setStartrecordid(value: string): FindPathByRecordIdRequest;
+  getStartRecordId(): string;
+  setStartRecordId(value: string): FindPathByRecordIdRequest;
 
-  getEnddatasourcecode(): string;
-  setEnddatasourcecode(value: string): FindPathByRecordIdRequest;
+  getEndDataSourceCode(): string;
+  setEndDataSourceCode(value: string): FindPathByRecordIdRequest;
 
-  getEndrecordid(): string;
-  setEndrecordid(value: string): FindPathByRecordIdRequest;
+  getEndRecordId(): string;
+  setEndRecordId(value: string): FindPathByRecordIdRequest;
 
-  getMaxdegrees(): number;
-  setMaxdegrees(value: number): FindPathByRecordIdRequest;
+  getMaxDegrees(): number;
+  setMaxDegrees(value: number): FindPathByRecordIdRequest;
 
-  getAvoidrecordkeys(): string;
-  setAvoidrecordkeys(value: string): FindPathByRecordIdRequest;
+  getAvoidRecordKeys(): string;
+  setAvoidRecordKeys(value: string): FindPathByRecordIdRequest;
 
-  getRequireddatasources(): string;
-  setRequireddatasources(value: string): FindPathByRecordIdRequest;
+  getRequiredDataSources(): string;
+  setRequiredDataSources(value: string): FindPathByRecordIdRequest;
 
   getFlags(): number;
   setFlags(value: number): FindPathByRecordIdRequest;
@@ -549,13 +549,13 @@ export class FindPathByRecordIdRequest extends jspb.Message {
 
 export namespace FindPathByRecordIdRequest {
   export type AsObject = {
-    startdatasourcecode: string,
-    startrecordid: string,
-    enddatasourcecode: string,
-    endrecordid: string,
-    maxdegrees: number,
-    avoidrecordkeys: string,
-    requireddatasources: string,
+    startDataSourceCode: string,
+    startRecordId: string,
+    endDataSourceCode: string,
+    endRecordId: string,
+    maxDegrees: number,
+    avoidRecordKeys: string,
+    requiredDataSources: string,
     flags: number,
   }
 }
@@ -611,8 +611,8 @@ export namespace GetActiveConfigIdResponse {
 }
 
 export class GetEntityByEntityIdRequest extends jspb.Message {
-  getEntityid(): number;
-  setEntityid(value: number): GetEntityByEntityIdRequest;
+  getEntityId(): number;
+  setEntityId(value: number): GetEntityByEntityIdRequest;
 
   getFlags(): number;
   setFlags(value: number): GetEntityByEntityIdRequest;
@@ -627,7 +627,7 @@ export class GetEntityByEntityIdRequest extends jspb.Message {
 
 export namespace GetEntityByEntityIdRequest {
   export type AsObject = {
-    entityid: number,
+    entityId: number,
     flags: number,
   }
 }
@@ -651,11 +651,11 @@ export namespace GetEntityByEntityIdResponse {
 }
 
 export class GetEntityByRecordIdRequest extends jspb.Message {
-  getDatasourcecode(): string;
-  setDatasourcecode(value: string): GetEntityByRecordIdRequest;
+  getDataSourceCode(): string;
+  setDataSourceCode(value: string): GetEntityByRecordIdRequest;
 
-  getRecordid(): string;
-  setRecordid(value: string): GetEntityByRecordIdRequest;
+  getRecordId(): string;
+  setRecordId(value: string): GetEntityByRecordIdRequest;
 
   getFlags(): number;
   setFlags(value: number): GetEntityByRecordIdRequest;
@@ -670,8 +670,8 @@ export class GetEntityByRecordIdRequest extends jspb.Message {
 
 export namespace GetEntityByRecordIdRequest {
   export type AsObject = {
-    datasourcecode: string,
-    recordid: string,
+    dataSourceCode: string,
+    recordId: string,
     flags: number,
   }
 }
@@ -695,11 +695,11 @@ export namespace GetEntityByRecordIdResponse {
 }
 
 export class GetRecordRequest extends jspb.Message {
-  getDatasourcecode(): string;
-  setDatasourcecode(value: string): GetRecordRequest;
+  getDataSourceCode(): string;
+  setDataSourceCode(value: string): GetRecordRequest;
 
-  getRecordid(): string;
-  setRecordid(value: string): GetRecordRequest;
+  getRecordId(): string;
+  setRecordId(value: string): GetRecordRequest;
 
   getFlags(): number;
   setFlags(value: number): GetRecordRequest;
@@ -714,8 +714,8 @@ export class GetRecordRequest extends jspb.Message {
 
 export namespace GetRecordRequest {
   export type AsObject = {
-    datasourcecode: string,
-    recordid: string,
+    dataSourceCode: string,
+    recordId: string,
     flags: number,
   }
 }
@@ -803,8 +803,8 @@ export namespace GetStatsResponse {
 }
 
 export class GetVirtualEntityByRecordIdRequest extends jspb.Message {
-  getRecordkeys(): string;
-  setRecordkeys(value: string): GetVirtualEntityByRecordIdRequest;
+  getRecordKeys(): string;
+  setRecordKeys(value: string): GetVirtualEntityByRecordIdRequest;
 
   getFlags(): number;
   setFlags(value: number): GetVirtualEntityByRecordIdRequest;
@@ -819,7 +819,7 @@ export class GetVirtualEntityByRecordIdRequest extends jspb.Message {
 
 export namespace GetVirtualEntityByRecordIdRequest {
   export type AsObject = {
-    recordkeys: string,
+    recordKeys: string,
     flags: number,
   }
 }
@@ -843,8 +843,8 @@ export namespace GetVirtualEntityByRecordIdResponse {
 }
 
 export class HowEntityByEntityIdRequest extends jspb.Message {
-  getEntityid(): number;
-  setEntityid(value: number): HowEntityByEntityIdRequest;
+  getEntityId(): number;
+  setEntityId(value: number): HowEntityByEntityIdRequest;
 
   getFlags(): number;
   setFlags(value: number): HowEntityByEntityIdRequest;
@@ -859,7 +859,7 @@ export class HowEntityByEntityIdRequest extends jspb.Message {
 
 export namespace HowEntityByEntityIdRequest {
   export type AsObject = {
-    entityid: number,
+    entityId: number,
     flags: number,
   }
 }
@@ -883,8 +883,8 @@ export namespace HowEntityByEntityIdResponse {
 }
 
 export class PreprocessRecordRequest extends jspb.Message {
-  getRecorddefinition(): string;
-  setRecorddefinition(value: string): PreprocessRecordRequest;
+  getRecordDefinition(): string;
+  setRecordDefinition(value: string): PreprocessRecordRequest;
 
   getFlags(): number;
   setFlags(value: number): PreprocessRecordRequest;
@@ -899,7 +899,7 @@ export class PreprocessRecordRequest extends jspb.Message {
 
 export namespace PreprocessRecordRequest {
   export type AsObject = {
-    recorddefinition: string,
+    recordDefinition: string,
     flags: number,
   }
 }
@@ -951,8 +951,8 @@ export namespace PrimeEngineResponse {
 }
 
 export class ProcessRedoRecordRequest extends jspb.Message {
-  getRedorecord(): string;
-  setRedorecord(value: string): ProcessRedoRecordRequest;
+  getRedoRecord(): string;
+  setRedoRecord(value: string): ProcessRedoRecordRequest;
 
   getFlags(): number;
   setFlags(value: number): ProcessRedoRecordRequest;
@@ -967,7 +967,7 @@ export class ProcessRedoRecordRequest extends jspb.Message {
 
 export namespace ProcessRedoRecordRequest {
   export type AsObject = {
-    redorecord: string,
+    redoRecord: string,
     flags: number,
   }
 }
@@ -991,8 +991,8 @@ export namespace ProcessRedoRecordResponse {
 }
 
 export class ReevaluateEntityRequest extends jspb.Message {
-  getEntityid(): number;
-  setEntityid(value: number): ReevaluateEntityRequest;
+  getEntityId(): number;
+  setEntityId(value: number): ReevaluateEntityRequest;
 
   getFlags(): number;
   setFlags(value: number): ReevaluateEntityRequest;
@@ -1007,7 +1007,7 @@ export class ReevaluateEntityRequest extends jspb.Message {
 
 export namespace ReevaluateEntityRequest {
   export type AsObject = {
-    entityid: number,
+    entityId: number,
     flags: number,
   }
 }
@@ -1031,11 +1031,11 @@ export namespace ReevaluateEntityResponse {
 }
 
 export class ReevaluateRecordRequest extends jspb.Message {
-  getDatasourcecode(): string;
-  setDatasourcecode(value: string): ReevaluateRecordRequest;
+  getDataSourceCode(): string;
+  setDataSourceCode(value: string): ReevaluateRecordRequest;
 
-  getRecordid(): string;
-  setRecordid(value: string): ReevaluateRecordRequest;
+  getRecordId(): string;
+  setRecordId(value: string): ReevaluateRecordRequest;
 
   getFlags(): number;
   setFlags(value: number): ReevaluateRecordRequest;
@@ -1050,8 +1050,8 @@ export class ReevaluateRecordRequest extends jspb.Message {
 
 export namespace ReevaluateRecordRequest {
   export type AsObject = {
-    datasourcecode: string,
-    recordid: string,
+    dataSourceCode: string,
+    recordId: string,
     flags: number,
   }
 }
@@ -1075,8 +1075,8 @@ export namespace ReevaluateRecordResponse {
 }
 
 export class ReinitializeRequest extends jspb.Message {
-  getConfigid(): number;
-  setConfigid(value: number): ReinitializeRequest;
+  getConfigId(): number;
+  setConfigId(value: number): ReinitializeRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ReinitializeRequest.AsObject;
@@ -1088,7 +1088,7 @@ export class ReinitializeRequest extends jspb.Message {
 
 export namespace ReinitializeRequest {
   export type AsObject = {
-    configid: number,
+    configId: number,
   }
 }
 
@@ -1110,8 +1110,8 @@ export class SearchByAttributesRequest extends jspb.Message {
   getAttributes(): string;
   setAttributes(value: string): SearchByAttributesRequest;
 
-  getSearchprofile(): string;
-  setSearchprofile(value: string): SearchByAttributesRequest;
+  getSearchProfile(): string;
+  setSearchProfile(value: string): SearchByAttributesRequest;
 
   getFlags(): number;
   setFlags(value: number): SearchByAttributesRequest;
@@ -1127,7 +1127,7 @@ export class SearchByAttributesRequest extends jspb.Message {
 export namespace SearchByAttributesRequest {
   export type AsObject = {
     attributes: string,
-    searchprofile: string,
+    searchProfile: string,
     flags: number,
   }
 }
@@ -1151,8 +1151,8 @@ export namespace SearchByAttributesResponse {
 }
 
 export class StreamExportCsvEntityReportRequest extends jspb.Message {
-  getCsvcolumnlist(): string;
-  setCsvcolumnlist(value: string): StreamExportCsvEntityReportRequest;
+  getCsvColumnList(): string;
+  setCsvColumnList(value: string): StreamExportCsvEntityReportRequest;
 
   getFlags(): number;
   setFlags(value: number): StreamExportCsvEntityReportRequest;
@@ -1167,7 +1167,7 @@ export class StreamExportCsvEntityReportRequest extends jspb.Message {
 
 export namespace StreamExportCsvEntityReportRequest {
   export type AsObject = {
-    csvcolumnlist: string,
+    csvColumnList: string,
     flags: number,
   }
 }
@@ -1227,11 +1227,11 @@ export namespace StreamExportJsonEntityReportResponse {
 }
 
 export class WhyEntitiesRequest extends jspb.Message {
-  getEntityid1(): number;
-  setEntityid1(value: number): WhyEntitiesRequest;
+  getEntityId1(): number;
+  setEntityId1(value: number): WhyEntitiesRequest;
 
-  getEntityid2(): number;
-  setEntityid2(value: number): WhyEntitiesRequest;
+  getEntityId2(): number;
+  setEntityId2(value: number): WhyEntitiesRequest;
 
   getFlags(): number;
   setFlags(value: number): WhyEntitiesRequest;
@@ -1246,8 +1246,8 @@ export class WhyEntitiesRequest extends jspb.Message {
 
 export namespace WhyEntitiesRequest {
   export type AsObject = {
-    entityid1: number,
-    entityid2: number,
+    entityId1: number,
+    entityId2: number,
     flags: number,
   }
 }
@@ -1271,11 +1271,11 @@ export namespace WhyEntitiesResponse {
 }
 
 export class WhyRecordInEntityRequest extends jspb.Message {
-  getDatasourcecode(): string;
-  setDatasourcecode(value: string): WhyRecordInEntityRequest;
+  getDataSourceCode(): string;
+  setDataSourceCode(value: string): WhyRecordInEntityRequest;
 
-  getRecordid(): string;
-  setRecordid(value: string): WhyRecordInEntityRequest;
+  getRecordId(): string;
+  setRecordId(value: string): WhyRecordInEntityRequest;
 
   getFlags(): number;
   setFlags(value: number): WhyRecordInEntityRequest;
@@ -1290,8 +1290,8 @@ export class WhyRecordInEntityRequest extends jspb.Message {
 
 export namespace WhyRecordInEntityRequest {
   export type AsObject = {
-    datasourcecode: string,
-    recordid: string,
+    dataSourceCode: string,
+    recordId: string,
     flags: number,
   }
 }
@@ -1315,17 +1315,17 @@ export namespace WhyRecordInEntityResponse {
 }
 
 export class WhyRecordsRequest extends jspb.Message {
-  getDatasourcecode1(): string;
-  setDatasourcecode1(value: string): WhyRecordsRequest;
+  getDataSourceCode1(): string;
+  setDataSourceCode1(value: string): WhyRecordsRequest;
 
-  getRecordid1(): string;
-  setRecordid1(value: string): WhyRecordsRequest;
+  getRecordId1(): string;
+  setRecordId1(value: string): WhyRecordsRequest;
 
-  getDatasourcecode2(): string;
-  setDatasourcecode2(value: string): WhyRecordsRequest;
+  getDataSourceCode2(): string;
+  setDataSourceCode2(value: string): WhyRecordsRequest;
 
-  getRecordid2(): string;
-  setRecordid2(value: string): WhyRecordsRequest;
+  getRecordId2(): string;
+  setRecordId2(value: string): WhyRecordsRequest;
 
   getFlags(): number;
   setFlags(value: number): WhyRecordsRequest;
@@ -1340,10 +1340,10 @@ export class WhyRecordsRequest extends jspb.Message {
 
 export namespace WhyRecordsRequest {
   export type AsObject = {
-    datasourcecode1: string,
-    recordid1: string,
-    datasourcecode2: string,
-    recordid2: string,
+    dataSourceCode1: string,
+    recordId1: string,
+    dataSourceCode2: string,
+    recordId2: string,
     flags: number,
   }
 }
