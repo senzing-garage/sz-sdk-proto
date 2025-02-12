@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class AddConfigRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string configDefinition = 1;</code>
+     * Generated from protobuf field <code>string config_definition = 1;</code>
      */
-    protected $configDefinition = '';
+    protected $config_definition = '';
     /**
-     * Generated from protobuf field <code>string configComment = 2;</code>
+     * Generated from protobuf field <code>string config_comment = 2;</code>
      */
-    protected $configComment = '';
+    protected $config_comment = '';
 
     /**
      * Constructor.
@@ -28,8 +28,8 @@ class AddConfigRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $configDefinition
-     *     @type string $configComment
+     *     @type string $config_definition
+     *     @type string $config_comment
      * }
      */
     public function __construct($data = NULL) {
@@ -38,45 +38,45 @@ class AddConfigRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string configDefinition = 1;</code>
+     * Generated from protobuf field <code>string config_definition = 1;</code>
      * @return string
      */
     public function getConfigDefinition()
     {
-        return $this->configDefinition;
+        return $this->config_definition;
     }
 
     /**
-     * Generated from protobuf field <code>string configDefinition = 1;</code>
+     * Generated from protobuf field <code>string config_definition = 1;</code>
      * @param string $var
      * @return $this
      */
     public function setConfigDefinition($var)
     {
         GPBUtil::checkString($var, True);
-        $this->configDefinition = $var;
+        $this->config_definition = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>string configComment = 2;</code>
+     * Generated from protobuf field <code>string config_comment = 2;</code>
      * @return string
      */
     public function getConfigComment()
     {
-        return $this->configComment;
+        return $this->config_comment;
     }
 
     /**
-     * Generated from protobuf field <code>string configComment = 2;</code>
+     * Generated from protobuf field <code>string config_comment = 2;</code>
      * @param string $var
      * @return $this
      */
     public function setConfigComment($var)
     {
         GPBUtil::checkString($var, True);
-        $this->configComment = $var;
+        $this->config_comment = $var;
 
         return $this;
     }

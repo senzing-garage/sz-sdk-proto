@@ -6,14 +6,14 @@ require 'google/protobuf'
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("szconfigmanager.proto", :syntax => :proto3) do
     add_message "szconfigmanager.AddConfigRequest" do
-      optional :configDefinition, :string, 1
-      optional :configComment, :string, 2
+      optional :config_definition, :string, 1
+      optional :config_comment, :string, 2
     end
     add_message "szconfigmanager.AddConfigResponse" do
       optional :result, :int64, 1
     end
     add_message "szconfigmanager.GetConfigRequest" do
-      optional :configId, :int64, 1
+      optional :config_id, :int64, 1
     end
     add_message "szconfigmanager.GetConfigResponse" do
       optional :result, :string, 1
@@ -29,13 +29,13 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :result, :int64, 1
     end
     add_message "szconfigmanager.ReplaceDefaultConfigIdRequest" do
-      optional :currentDefaultConfigId, :int64, 1
-      optional :newDefaultConfigId, :int64, 2
+      optional :current_default_config_id, :int64, 1
+      optional :new_default_config_id, :int64, 2
     end
     add_message "szconfigmanager.ReplaceDefaultConfigIdResponse" do
     end
     add_message "szconfigmanager.SetDefaultConfigIdRequest" do
-      optional :configId, :int64, 1
+      optional :config_id, :int64, 1
     end
     add_message "szconfigmanager.SetDefaultConfigIdResponse" do
     end

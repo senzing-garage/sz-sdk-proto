@@ -43,7 +43,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr ImportConfigRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : configdefinition_(
+      : config_definition_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         _cached_size_{0} {}
@@ -85,7 +85,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr GetDataSourcesRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : confighandle_{::int64_t{0}},
+      : config_handle_{::int64_t{0}},
         _cached_size_{0} {}
 
 template <typename>
@@ -125,7 +125,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr ExportConfigRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : confighandle_{::int64_t{0}},
+      : config_handle_{::int64_t{0}},
         _cached_size_{0} {}
 
 template <typename>
@@ -156,10 +156,10 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr DeleteDataSourceRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : datasourcecode_(
+      : data_source_code_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        confighandle_{::int64_t{0}},
+        config_handle_{::int64_t{0}},
         _cached_size_{0} {}
 
 template <typename>
@@ -221,7 +221,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr CloseConfigRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : confighandle_{::int64_t{0}},
+      : config_handle_{::int64_t{0}},
         _cached_size_{0} {}
 
 template <typename>
@@ -261,10 +261,10 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr AddDataSourceRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : datasourcecode_(
+      : data_source_code_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        confighandle_{::int64_t{0}},
+        config_handle_{::int64_t{0}},
         _cached_size_{0} {}
 
 template <typename>
@@ -296,8 +296,8 @@ const ::uint32_t TableStruct_szconfig_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szconfig::AddDataSourceRequest, _impl_.confighandle_),
-    PROTOBUF_FIELD_OFFSET(::szconfig::AddDataSourceRequest, _impl_.datasourcecode_),
+    PROTOBUF_FIELD_OFFSET(::szconfig::AddDataSourceRequest, _impl_.config_handle_),
+    PROTOBUF_FIELD_OFFSET(::szconfig::AddDataSourceRequest, _impl_.data_source_code_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szconfig::AddDataSourceResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -315,7 +315,7 @@ const ::uint32_t TableStruct_szconfig_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szconfig::CloseConfigRequest, _impl_.confighandle_),
+    PROTOBUF_FIELD_OFFSET(::szconfig::CloseConfigRequest, _impl_.config_handle_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szconfig::CloseConfigResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -349,8 +349,8 @@ const ::uint32_t TableStruct_szconfig_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szconfig::DeleteDataSourceRequest, _impl_.confighandle_),
-    PROTOBUF_FIELD_OFFSET(::szconfig::DeleteDataSourceRequest, _impl_.datasourcecode_),
+    PROTOBUF_FIELD_OFFSET(::szconfig::DeleteDataSourceRequest, _impl_.config_handle_),
+    PROTOBUF_FIELD_OFFSET(::szconfig::DeleteDataSourceRequest, _impl_.data_source_code_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szconfig::DeleteDataSourceResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -367,7 +367,7 @@ const ::uint32_t TableStruct_szconfig_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szconfig::ExportConfigRequest, _impl_.confighandle_),
+    PROTOBUF_FIELD_OFFSET(::szconfig::ExportConfigRequest, _impl_.config_handle_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szconfig::ExportConfigResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -385,7 +385,7 @@ const ::uint32_t TableStruct_szconfig_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szconfig::GetDataSourcesRequest, _impl_.confighandle_),
+    PROTOBUF_FIELD_OFFSET(::szconfig::GetDataSourcesRequest, _impl_.config_handle_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szconfig::GetDataSourcesResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -403,7 +403,7 @@ const ::uint32_t TableStruct_szconfig_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szconfig::ImportConfigRequest, _impl_.configdefinition_),
+    PROTOBUF_FIELD_OFFSET(::szconfig::ImportConfigRequest, _impl_.config_definition_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szconfig::ImportConfigResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -450,46 +450,46 @@ static const ::_pb::Message* const file_default_instances[] = {
     &::szconfig::_ImportConfigResponse_default_instance_._instance,
 };
 const char descriptor_table_protodef_szconfig_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-    "\n\016szconfig.proto\022\010szconfig\"D\n\024AddDataSou"
-    "rceRequest\022\024\n\014configHandle\030\001 \001(\003\022\026\n\016data"
-    "SourceCode\030\002 \001(\t\"\'\n\025AddDataSourceRespons"
-    "e\022\016\n\006result\030\001 \001(\t\"*\n\022CloseConfigRequest\022"
-    "\024\n\014configHandle\030\001 \001(\003\"\025\n\023CloseConfigResp"
-    "onse\"\025\n\023CreateConfigRequest\"&\n\024CreateCon"
-    "figResponse\022\016\n\006result\030\001 \001(\003\"G\n\027DeleteDat"
-    "aSourceRequest\022\024\n\014configHandle\030\001 \001(\003\022\026\n\016"
-    "dataSourceCode\030\002 \001(\t\"\032\n\030DeleteDataSource"
-    "Response\"+\n\023ExportConfigRequest\022\024\n\014confi"
-    "gHandle\030\001 \001(\003\"&\n\024ExportConfigResponse\022\016\n"
-    "\006result\030\001 \001(\t\"-\n\025GetDataSourcesRequest\022\024"
-    "\n\014configHandle\030\001 \001(\003\"(\n\026GetDataSourcesRe"
-    "sponse\022\016\n\006result\030\001 \001(\t\"/\n\023ImportConfigRe"
-    "quest\022\030\n\020configDefinition\030\001 \001(\t\"&\n\024Impor"
-    "tConfigResponse\022\016\n\006result\030\001 \001(\0032\323\004\n\010SzCo"
-    "nfig\022R\n\rAddDataSource\022\036.szconfig.AddData"
-    "SourceRequest\032\037.szconfig.AddDataSourceRe"
-    "sponse\"\000\022L\n\013CloseConfig\022\034.szconfig.Close"
-    "ConfigRequest\032\035.szconfig.CloseConfigResp"
-    "onse\"\000\022O\n\014CreateConfig\022\035.szconfig.Create"
-    "ConfigRequest\032\036.szconfig.CreateConfigRes"
-    "ponse\"\000\022[\n\020DeleteDataSource\022!.szconfig.D"
-    "eleteDataSourceRequest\032\".szconfig.Delete"
-    "DataSourceResponse\"\000\022O\n\014ExportConfig\022\035.s"
-    "zconfig.ExportConfigRequest\032\036.szconfig.E"
-    "xportConfigResponse\"\000\022U\n\016GetDataSources\022"
-    "\037.szconfig.GetDataSourcesRequest\032 .szcon"
-    "fig.GetDataSourcesResponse\"\000\022O\n\014ImportCo"
-    "nfig\022\035.szconfig.ImportConfigRequest\032\036.sz"
-    "config.ImportConfigResponse\"\000BX\n\024com.sen"
-    "zing.sdk.grpcB\rSzConfigProtoZ1github.com"
-    "/senzing-garage/sz-sdk-go-grpc/szconfigb"
-    "\006proto3"
+    "\n\016szconfig.proto\022\010szconfig\"G\n\024AddDataSou"
+    "rceRequest\022\025\n\rconfig_handle\030\001 \001(\003\022\030\n\020dat"
+    "a_source_code\030\002 \001(\t\"\'\n\025AddDataSourceResp"
+    "onse\022\016\n\006result\030\001 \001(\t\"+\n\022CloseConfigReque"
+    "st\022\025\n\rconfig_handle\030\001 \001(\003\"\025\n\023CloseConfig"
+    "Response\"\025\n\023CreateConfigRequest\"&\n\024Creat"
+    "eConfigResponse\022\016\n\006result\030\001 \001(\003\"J\n\027Delet"
+    "eDataSourceRequest\022\025\n\rconfig_handle\030\001 \001("
+    "\003\022\030\n\020data_source_code\030\002 \001(\t\"\032\n\030DeleteDat"
+    "aSourceResponse\",\n\023ExportConfigRequest\022\025"
+    "\n\rconfig_handle\030\001 \001(\003\"&\n\024ExportConfigRes"
+    "ponse\022\016\n\006result\030\001 \001(\t\".\n\025GetDataSourcesR"
+    "equest\022\025\n\rconfig_handle\030\001 \001(\003\"(\n\026GetData"
+    "SourcesResponse\022\016\n\006result\030\001 \001(\t\"0\n\023Impor"
+    "tConfigRequest\022\031\n\021config_definition\030\001 \001("
+    "\t\"&\n\024ImportConfigResponse\022\016\n\006result\030\001 \001("
+    "\0032\323\004\n\010SzConfig\022R\n\rAddDataSource\022\036.szconf"
+    "ig.AddDataSourceRequest\032\037.szconfig.AddDa"
+    "taSourceResponse\"\000\022L\n\013CloseConfig\022\034.szco"
+    "nfig.CloseConfigRequest\032\035.szconfig.Close"
+    "ConfigResponse\"\000\022O\n\014CreateConfig\022\035.szcon"
+    "fig.CreateConfigRequest\032\036.szconfig.Creat"
+    "eConfigResponse\"\000\022[\n\020DeleteDataSource\022!."
+    "szconfig.DeleteDataSourceRequest\032\".szcon"
+    "fig.DeleteDataSourceResponse\"\000\022O\n\014Export"
+    "Config\022\035.szconfig.ExportConfigRequest\032\036."
+    "szconfig.ExportConfigResponse\"\000\022U\n\016GetDa"
+    "taSources\022\037.szconfig.GetDataSourcesReque"
+    "st\032 .szconfig.GetDataSourcesResponse\"\000\022O"
+    "\n\014ImportConfig\022\035.szconfig.ImportConfigRe"
+    "quest\032\036.szconfig.ImportConfigResponse\"\000B"
+    "X\n\024com.senzing.sdk.grpcB\rSzConfigProtoZ1"
+    "github.com/senzing-garage/sz-sdk-go-grpc"
+    "/szconfigb\006proto3"
 };
 static ::absl::once_flag descriptor_table_szconfig_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_szconfig_2eproto = {
     false,
     false,
-    1327,
+    1337,
     descriptor_table_protodef_szconfig_2eproto,
     "szconfig.proto",
     &descriptor_table_szconfig_2eproto_once,
@@ -536,7 +536,7 @@ AddDataSourceRequest::AddDataSourceRequest(::google::protobuf::Arena* arena)
 inline PROTOBUF_NDEBUG_INLINE AddDataSourceRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : datasourcecode_(arena, from.datasourcecode_),
+      : data_source_code_(arena, from.data_source_code_),
         _cached_size_{0} {}
 
 AddDataSourceRequest::AddDataSourceRequest(
@@ -548,19 +548,19 @@ AddDataSourceRequest::AddDataSourceRequest(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
-  _impl_.confighandle_ = from._impl_.confighandle_;
+  _impl_.config_handle_ = from._impl_.config_handle_;
 
   // @@protoc_insertion_point(copy_constructor:szconfig.AddDataSourceRequest)
 }
 inline PROTOBUF_NDEBUG_INLINE AddDataSourceRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : datasourcecode_(arena),
+      : data_source_code_(arena),
         _cached_size_{0} {}
 
 inline void AddDataSourceRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.confighandle_ = {};
+  _impl_.config_handle_ = {};
 }
 AddDataSourceRequest::~AddDataSourceRequest() {
   // @@protoc_insertion_point(destructor:szconfig.AddDataSourceRequest)
@@ -569,7 +569,7 @@ AddDataSourceRequest::~AddDataSourceRequest() {
 }
 inline void AddDataSourceRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.datasourcecode_.Destroy();
+  _impl_.data_source_code_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -580,8 +580,8 @@ PROTOBUF_NOINLINE void AddDataSourceRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.datasourcecode_.ClearToEmpty();
-  _impl_.confighandle_ = ::int64_t{0};
+  _impl_.data_source_code_.ClearToEmpty();
+  _impl_.config_handle_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -593,7 +593,7 @@ const char* AddDataSourceRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 52, 2> AddDataSourceRequest::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 54, 2> AddDataSourceRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -607,27 +607,27 @@ const ::_pbi::TcParseTable<1, 2, 0, 52, 2> AddDataSourceRequest::_table_ = {
     &_AddDataSourceRequest_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // string dataSourceCode = 2;
+    // string data_source_code = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(AddDataSourceRequest, _impl_.datasourcecode_)}},
-    // int64 configHandle = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(AddDataSourceRequest, _impl_.confighandle_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(AddDataSourceRequest, _impl_.confighandle_)}},
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(AddDataSourceRequest, _impl_.data_source_code_)}},
+    // int64 config_handle = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(AddDataSourceRequest, _impl_.config_handle_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(AddDataSourceRequest, _impl_.config_handle_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 configHandle = 1;
-    {PROTOBUF_FIELD_OFFSET(AddDataSourceRequest, _impl_.confighandle_), 0, 0,
+    // int64 config_handle = 1;
+    {PROTOBUF_FIELD_OFFSET(AddDataSourceRequest, _impl_.config_handle_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // string dataSourceCode = 2;
-    {PROTOBUF_FIELD_OFFSET(AddDataSourceRequest, _impl_.datasourcecode_), 0, 0,
+    // string data_source_code = 2;
+    {PROTOBUF_FIELD_OFFSET(AddDataSourceRequest, _impl_.data_source_code_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\35\0\16\0\0\0\0\0"
+    "\35\0\20\0\0\0\0\0"
     "szconfig.AddDataSourceRequest"
-    "dataSourceCode"
+    "data_source_code"
   }},
 };
 
@@ -638,18 +638,18 @@ const ::_pbi::TcParseTable<1, 2, 0, 52, 2> AddDataSourceRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 configHandle = 1;
-  if (this->_internal_confighandle() != 0) {
+  // int64 config_handle = 1;
+  if (this->_internal_config_handle() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_confighandle(), target);
+            stream, this->_internal_config_handle(), target);
   }
 
-  // string dataSourceCode = 2;
-  if (!this->_internal_datasourcecode().empty()) {
-    const std::string& _s = this->_internal_datasourcecode();
+  // string data_source_code = 2;
+  if (!this->_internal_data_source_code().empty()) {
+    const std::string& _s = this->_internal_data_source_code();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.AddDataSourceRequest.dataSourceCode");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.AddDataSourceRequest.data_source_code");
     target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
@@ -670,16 +670,16 @@ const ::_pbi::TcParseTable<1, 2, 0, 52, 2> AddDataSourceRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string dataSourceCode = 2;
-  if (!this->_internal_datasourcecode().empty()) {
+  // string data_source_code = 2;
+  if (!this->_internal_data_source_code().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_datasourcecode());
+                                    this->_internal_data_source_code());
   }
 
-  // int64 configHandle = 1;
-  if (this->_internal_confighandle() != 0) {
+  // int64 config_handle = 1;
+  if (this->_internal_config_handle() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_confighandle());
+        this->_internal_config_handle());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -701,11 +701,11 @@ void AddDataSourceRequest::MergeImpl(::google::protobuf::Message& to_msg, const 
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_datasourcecode().empty()) {
-    _this->_internal_set_datasourcecode(from._internal_datasourcecode());
+  if (!from._internal_data_source_code().empty()) {
+    _this->_internal_set_data_source_code(from._internal_data_source_code());
   }
-  if (from._internal_confighandle() != 0) {
-    _this->_internal_set_confighandle(from._internal_confighandle());
+  if (from._internal_config_handle() != 0) {
+    _this->_internal_set_config_handle(from._internal_config_handle());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -729,8 +729,8 @@ void AddDataSourceRequest::InternalSwap(AddDataSourceRequest* PROTOBUF_RESTRICT 
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.datasourcecode_, &other->_impl_.datasourcecode_, arena);
-        swap(_impl_.confighandle_, other->_impl_.confighandle_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.data_source_code_, &other->_impl_.data_source_code_, arena);
+        swap(_impl_.config_handle_, other->_impl_.config_handle_);
 }
 
 ::google::protobuf::Metadata AddDataSourceRequest::GetMetadata() const {
@@ -951,7 +951,7 @@ inline PROTOBUF_NDEBUG_INLINE CloseConfigRequest::Impl_::Impl_(
 
 inline void CloseConfigRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.confighandle_ = {};
+  _impl_.config_handle_ = {};
 }
 CloseConfigRequest::~CloseConfigRequest() {
   // @@protoc_insertion_point(destructor:szconfig.CloseConfigRequest)
@@ -970,7 +970,7 @@ PROTOBUF_NOINLINE void CloseConfigRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.confighandle_ = ::int64_t{0};
+  _impl_.config_handle_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -996,14 +996,14 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> CloseConfigRequest::_table_ = {
     &_CloseConfigRequest_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // int64 configHandle = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(CloseConfigRequest, _impl_.confighandle_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(CloseConfigRequest, _impl_.confighandle_)}},
+    // int64 config_handle = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(CloseConfigRequest, _impl_.config_handle_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(CloseConfigRequest, _impl_.config_handle_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 configHandle = 1;
-    {PROTOBUF_FIELD_OFFSET(CloseConfigRequest, _impl_.confighandle_), 0, 0,
+    // int64 config_handle = 1;
+    {PROTOBUF_FIELD_OFFSET(CloseConfigRequest, _impl_.config_handle_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
   }},
   // no aux_entries
@@ -1018,11 +1018,11 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> CloseConfigRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 configHandle = 1;
-  if (this->_internal_confighandle() != 0) {
+  // int64 config_handle = 1;
+  if (this->_internal_config_handle() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_confighandle(), target);
+            stream, this->_internal_config_handle(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1042,10 +1042,10 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> CloseConfigRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 configHandle = 1;
-  if (this->_internal_confighandle() != 0) {
+  // int64 config_handle = 1;
+  if (this->_internal_config_handle() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_confighandle());
+        this->_internal_config_handle());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -1067,8 +1067,8 @@ void CloseConfigRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_confighandle() != 0) {
-    _this->_internal_set_confighandle(from._internal_confighandle());
+  if (from._internal_config_handle() != 0) {
+    _this->_internal_set_config_handle(from._internal_config_handle());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -1090,7 +1090,7 @@ PROTOBUF_NOINLINE bool CloseConfigRequest::IsInitialized() const {
 void CloseConfigRequest::InternalSwap(CloseConfigRequest* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.confighandle_, other->_impl_.confighandle_);
+        swap(_impl_.config_handle_, other->_impl_.config_handle_);
 }
 
 ::google::protobuf::Metadata CloseConfigRequest::GetMetadata() const {
@@ -1352,7 +1352,7 @@ DeleteDataSourceRequest::DeleteDataSourceRequest(::google::protobuf::Arena* aren
 inline PROTOBUF_NDEBUG_INLINE DeleteDataSourceRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : datasourcecode_(arena, from.datasourcecode_),
+      : data_source_code_(arena, from.data_source_code_),
         _cached_size_{0} {}
 
 DeleteDataSourceRequest::DeleteDataSourceRequest(
@@ -1364,19 +1364,19 @@ DeleteDataSourceRequest::DeleteDataSourceRequest(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
-  _impl_.confighandle_ = from._impl_.confighandle_;
+  _impl_.config_handle_ = from._impl_.config_handle_;
 
   // @@protoc_insertion_point(copy_constructor:szconfig.DeleteDataSourceRequest)
 }
 inline PROTOBUF_NDEBUG_INLINE DeleteDataSourceRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : datasourcecode_(arena),
+      : data_source_code_(arena),
         _cached_size_{0} {}
 
 inline void DeleteDataSourceRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.confighandle_ = {};
+  _impl_.config_handle_ = {};
 }
 DeleteDataSourceRequest::~DeleteDataSourceRequest() {
   // @@protoc_insertion_point(destructor:szconfig.DeleteDataSourceRequest)
@@ -1385,7 +1385,7 @@ DeleteDataSourceRequest::~DeleteDataSourceRequest() {
 }
 inline void DeleteDataSourceRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.datasourcecode_.Destroy();
+  _impl_.data_source_code_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -1396,8 +1396,8 @@ PROTOBUF_NOINLINE void DeleteDataSourceRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.datasourcecode_.ClearToEmpty();
-  _impl_.confighandle_ = ::int64_t{0};
+  _impl_.data_source_code_.ClearToEmpty();
+  _impl_.config_handle_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -1409,7 +1409,7 @@ const char* DeleteDataSourceRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 55, 2> DeleteDataSourceRequest::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 57, 2> DeleteDataSourceRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -1423,27 +1423,27 @@ const ::_pbi::TcParseTable<1, 2, 0, 55, 2> DeleteDataSourceRequest::_table_ = {
     &_DeleteDataSourceRequest_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // string dataSourceCode = 2;
+    // string data_source_code = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(DeleteDataSourceRequest, _impl_.datasourcecode_)}},
-    // int64 configHandle = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(DeleteDataSourceRequest, _impl_.confighandle_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(DeleteDataSourceRequest, _impl_.confighandle_)}},
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(DeleteDataSourceRequest, _impl_.data_source_code_)}},
+    // int64 config_handle = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(DeleteDataSourceRequest, _impl_.config_handle_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(DeleteDataSourceRequest, _impl_.config_handle_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 configHandle = 1;
-    {PROTOBUF_FIELD_OFFSET(DeleteDataSourceRequest, _impl_.confighandle_), 0, 0,
+    // int64 config_handle = 1;
+    {PROTOBUF_FIELD_OFFSET(DeleteDataSourceRequest, _impl_.config_handle_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // string dataSourceCode = 2;
-    {PROTOBUF_FIELD_OFFSET(DeleteDataSourceRequest, _impl_.datasourcecode_), 0, 0,
+    // string data_source_code = 2;
+    {PROTOBUF_FIELD_OFFSET(DeleteDataSourceRequest, _impl_.data_source_code_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\40\0\16\0\0\0\0\0"
+    "\40\0\20\0\0\0\0\0"
     "szconfig.DeleteDataSourceRequest"
-    "dataSourceCode"
+    "data_source_code"
   }},
 };
 
@@ -1454,18 +1454,18 @@ const ::_pbi::TcParseTable<1, 2, 0, 55, 2> DeleteDataSourceRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 configHandle = 1;
-  if (this->_internal_confighandle() != 0) {
+  // int64 config_handle = 1;
+  if (this->_internal_config_handle() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_confighandle(), target);
+            stream, this->_internal_config_handle(), target);
   }
 
-  // string dataSourceCode = 2;
-  if (!this->_internal_datasourcecode().empty()) {
-    const std::string& _s = this->_internal_datasourcecode();
+  // string data_source_code = 2;
+  if (!this->_internal_data_source_code().empty()) {
+    const std::string& _s = this->_internal_data_source_code();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.DeleteDataSourceRequest.dataSourceCode");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.DeleteDataSourceRequest.data_source_code");
     target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
@@ -1486,16 +1486,16 @@ const ::_pbi::TcParseTable<1, 2, 0, 55, 2> DeleteDataSourceRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string dataSourceCode = 2;
-  if (!this->_internal_datasourcecode().empty()) {
+  // string data_source_code = 2;
+  if (!this->_internal_data_source_code().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_datasourcecode());
+                                    this->_internal_data_source_code());
   }
 
-  // int64 configHandle = 1;
-  if (this->_internal_confighandle() != 0) {
+  // int64 config_handle = 1;
+  if (this->_internal_config_handle() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_confighandle());
+        this->_internal_config_handle());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -1517,11 +1517,11 @@ void DeleteDataSourceRequest::MergeImpl(::google::protobuf::Message& to_msg, con
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_datasourcecode().empty()) {
-    _this->_internal_set_datasourcecode(from._internal_datasourcecode());
+  if (!from._internal_data_source_code().empty()) {
+    _this->_internal_set_data_source_code(from._internal_data_source_code());
   }
-  if (from._internal_confighandle() != 0) {
-    _this->_internal_set_confighandle(from._internal_confighandle());
+  if (from._internal_config_handle() != 0) {
+    _this->_internal_set_config_handle(from._internal_config_handle());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -1545,8 +1545,8 @@ void DeleteDataSourceRequest::InternalSwap(DeleteDataSourceRequest* PROTOBUF_RES
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.datasourcecode_, &other->_impl_.datasourcecode_, arena);
-        swap(_impl_.confighandle_, other->_impl_.confighandle_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.data_source_code_, &other->_impl_.data_source_code_, arena);
+        swap(_impl_.config_handle_, other->_impl_.config_handle_);
 }
 
 ::google::protobuf::Metadata DeleteDataSourceRequest::GetMetadata() const {
@@ -1612,7 +1612,7 @@ inline PROTOBUF_NDEBUG_INLINE ExportConfigRequest::Impl_::Impl_(
 
 inline void ExportConfigRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.confighandle_ = {};
+  _impl_.config_handle_ = {};
 }
 ExportConfigRequest::~ExportConfigRequest() {
   // @@protoc_insertion_point(destructor:szconfig.ExportConfigRequest)
@@ -1631,7 +1631,7 @@ PROTOBUF_NOINLINE void ExportConfigRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.confighandle_ = ::int64_t{0};
+  _impl_.config_handle_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -1657,14 +1657,14 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> ExportConfigRequest::_table_ = {
     &_ExportConfigRequest_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // int64 configHandle = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ExportConfigRequest, _impl_.confighandle_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(ExportConfigRequest, _impl_.confighandle_)}},
+    // int64 config_handle = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ExportConfigRequest, _impl_.config_handle_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(ExportConfigRequest, _impl_.config_handle_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 configHandle = 1;
-    {PROTOBUF_FIELD_OFFSET(ExportConfigRequest, _impl_.confighandle_), 0, 0,
+    // int64 config_handle = 1;
+    {PROTOBUF_FIELD_OFFSET(ExportConfigRequest, _impl_.config_handle_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
   }},
   // no aux_entries
@@ -1679,11 +1679,11 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> ExportConfigRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 configHandle = 1;
-  if (this->_internal_confighandle() != 0) {
+  // int64 config_handle = 1;
+  if (this->_internal_config_handle() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_confighandle(), target);
+            stream, this->_internal_config_handle(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1703,10 +1703,10 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> ExportConfigRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 configHandle = 1;
-  if (this->_internal_confighandle() != 0) {
+  // int64 config_handle = 1;
+  if (this->_internal_config_handle() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_confighandle());
+        this->_internal_config_handle());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -1728,8 +1728,8 @@ void ExportConfigRequest::MergeImpl(::google::protobuf::Message& to_msg, const :
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_confighandle() != 0) {
-    _this->_internal_set_confighandle(from._internal_confighandle());
+  if (from._internal_config_handle() != 0) {
+    _this->_internal_set_config_handle(from._internal_config_handle());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -1751,7 +1751,7 @@ PROTOBUF_NOINLINE bool ExportConfigRequest::IsInitialized() const {
 void ExportConfigRequest::InternalSwap(ExportConfigRequest* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.confighandle_, other->_impl_.confighandle_);
+        swap(_impl_.config_handle_, other->_impl_.config_handle_);
 }
 
 ::google::protobuf::Metadata ExportConfigRequest::GetMetadata() const {
@@ -1972,7 +1972,7 @@ inline PROTOBUF_NDEBUG_INLINE GetDataSourcesRequest::Impl_::Impl_(
 
 inline void GetDataSourcesRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.confighandle_ = {};
+  _impl_.config_handle_ = {};
 }
 GetDataSourcesRequest::~GetDataSourcesRequest() {
   // @@protoc_insertion_point(destructor:szconfig.GetDataSourcesRequest)
@@ -1991,7 +1991,7 @@ PROTOBUF_NOINLINE void GetDataSourcesRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.confighandle_ = ::int64_t{0};
+  _impl_.config_handle_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -2017,14 +2017,14 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> GetDataSourcesRequest::_table_ = {
     &_GetDataSourcesRequest_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // int64 configHandle = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(GetDataSourcesRequest, _impl_.confighandle_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(GetDataSourcesRequest, _impl_.confighandle_)}},
+    // int64 config_handle = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(GetDataSourcesRequest, _impl_.config_handle_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(GetDataSourcesRequest, _impl_.config_handle_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 configHandle = 1;
-    {PROTOBUF_FIELD_OFFSET(GetDataSourcesRequest, _impl_.confighandle_), 0, 0,
+    // int64 config_handle = 1;
+    {PROTOBUF_FIELD_OFFSET(GetDataSourcesRequest, _impl_.config_handle_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
   }},
   // no aux_entries
@@ -2039,11 +2039,11 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> GetDataSourcesRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 configHandle = 1;
-  if (this->_internal_confighandle() != 0) {
+  // int64 config_handle = 1;
+  if (this->_internal_config_handle() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_confighandle(), target);
+            stream, this->_internal_config_handle(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2063,10 +2063,10 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> GetDataSourcesRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 configHandle = 1;
-  if (this->_internal_confighandle() != 0) {
+  // int64 config_handle = 1;
+  if (this->_internal_config_handle() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_confighandle());
+        this->_internal_config_handle());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -2088,8 +2088,8 @@ void GetDataSourcesRequest::MergeImpl(::google::protobuf::Message& to_msg, const
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_confighandle() != 0) {
-    _this->_internal_set_confighandle(from._internal_confighandle());
+  if (from._internal_config_handle() != 0) {
+    _this->_internal_set_config_handle(from._internal_config_handle());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -2111,7 +2111,7 @@ PROTOBUF_NOINLINE bool GetDataSourcesRequest::IsInitialized() const {
 void GetDataSourcesRequest::InternalSwap(GetDataSourcesRequest* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.confighandle_, other->_impl_.confighandle_);
+        swap(_impl_.config_handle_, other->_impl_.config_handle_);
 }
 
 ::google::protobuf::Metadata GetDataSourcesRequest::GetMetadata() const {
@@ -2323,7 +2323,7 @@ ImportConfigRequest::ImportConfigRequest(::google::protobuf::Arena* arena)
 inline PROTOBUF_NDEBUG_INLINE ImportConfigRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : configdefinition_(arena, from.configdefinition_),
+      : config_definition_(arena, from.config_definition_),
         _cached_size_{0} {}
 
 ImportConfigRequest::ImportConfigRequest(
@@ -2341,7 +2341,7 @@ ImportConfigRequest::ImportConfigRequest(
 inline PROTOBUF_NDEBUG_INLINE ImportConfigRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : configdefinition_(arena),
+      : config_definition_(arena),
         _cached_size_{0} {}
 
 inline void ImportConfigRequest::SharedCtor(::_pb::Arena* arena) {
@@ -2354,7 +2354,7 @@ ImportConfigRequest::~ImportConfigRequest() {
 }
 inline void ImportConfigRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.configdefinition_.Destroy();
+  _impl_.config_definition_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -2365,7 +2365,7 @@ PROTOBUF_NOINLINE void ImportConfigRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.configdefinition_.ClearToEmpty();
+  _impl_.config_definition_.ClearToEmpty();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -2377,7 +2377,7 @@ const char* ImportConfigRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 53, 2> ImportConfigRequest::_table_ = {
+const ::_pbi::TcParseTable<0, 1, 0, 54, 2> ImportConfigRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -2391,21 +2391,21 @@ const ::_pbi::TcParseTable<0, 1, 0, 53, 2> ImportConfigRequest::_table_ = {
     &_ImportConfigRequest_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // string configDefinition = 1;
+    // string config_definition = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(ImportConfigRequest, _impl_.configdefinition_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(ImportConfigRequest, _impl_.config_definition_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string configDefinition = 1;
-    {PROTOBUF_FIELD_OFFSET(ImportConfigRequest, _impl_.configdefinition_), 0, 0,
+    // string config_definition = 1;
+    {PROTOBUF_FIELD_OFFSET(ImportConfigRequest, _impl_.config_definition_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\34\20\0\0\0\0\0\0"
+    "\34\21\0\0\0\0\0\0"
     "szconfig.ImportConfigRequest"
-    "configDefinition"
+    "config_definition"
   }},
 };
 
@@ -2416,11 +2416,11 @@ const ::_pbi::TcParseTable<0, 1, 0, 53, 2> ImportConfigRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string configDefinition = 1;
-  if (!this->_internal_configdefinition().empty()) {
-    const std::string& _s = this->_internal_configdefinition();
+  // string config_definition = 1;
+  if (!this->_internal_config_definition().empty()) {
+    const std::string& _s = this->_internal_config_definition();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.ImportConfigRequest.configDefinition");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.ImportConfigRequest.config_definition");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
@@ -2441,10 +2441,10 @@ const ::_pbi::TcParseTable<0, 1, 0, 53, 2> ImportConfigRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string configDefinition = 1;
-  if (!this->_internal_configdefinition().empty()) {
+  // string config_definition = 1;
+  if (!this->_internal_config_definition().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_configdefinition());
+                                    this->_internal_config_definition());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -2466,8 +2466,8 @@ void ImportConfigRequest::MergeImpl(::google::protobuf::Message& to_msg, const :
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_configdefinition().empty()) {
-    _this->_internal_set_configdefinition(from._internal_configdefinition());
+  if (!from._internal_config_definition().empty()) {
+    _this->_internal_set_config_definition(from._internal_config_definition());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -2491,7 +2491,7 @@ void ImportConfigRequest::InternalSwap(ImportConfigRequest* PROTOBUF_RESTRICT ot
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.configdefinition_, &other->_impl_.configdefinition_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.config_definition_, &other->_impl_.config_definition_, arena);
 }
 
 ::google::protobuf::Metadata ImportConfigRequest::GetMetadata() const {

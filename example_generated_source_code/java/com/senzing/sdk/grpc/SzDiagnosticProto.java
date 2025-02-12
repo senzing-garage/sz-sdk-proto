@@ -20,7 +20,7 @@ public final class SzDiagnosticProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 secondsToRun = 1;</code>
+     * <code>int32 seconds_to_run = 1;</code>
      * @return The secondsToRun.
      */
     int getSecondsToRun();
@@ -60,10 +60,10 @@ public final class SzDiagnosticProto {
               com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest.class, com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest.Builder.class);
     }
 
-    public static final int SECONDSTORUN_FIELD_NUMBER = 1;
+    public static final int SECONDS_TO_RUN_FIELD_NUMBER = 1;
     private int secondsToRun_ = 0;
     /**
-     * <code>int32 secondsToRun = 1;</code>
+     * <code>int32 seconds_to_run = 1;</code>
      * @return The secondsToRun.
      */
     @java.lang.Override
@@ -129,7 +129,7 @@ public final class SzDiagnosticProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SECONDSTORUN_FIELD_NUMBER;
+      hash = (37 * hash) + SECONDS_TO_RUN_FIELD_NUMBER;
       hash = (53 * hash) + getSecondsToRun();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -398,7 +398,7 @@ public final class SzDiagnosticProto {
 
       private int secondsToRun_ ;
       /**
-       * <code>int32 secondsToRun = 1;</code>
+       * <code>int32 seconds_to_run = 1;</code>
        * @return The secondsToRun.
        */
       @java.lang.Override
@@ -406,7 +406,7 @@ public final class SzDiagnosticProto {
         return secondsToRun_;
       }
       /**
-       * <code>int32 secondsToRun = 1;</code>
+       * <code>int32 seconds_to_run = 1;</code>
        * @param value The secondsToRun to set.
        * @return This builder for chaining.
        */
@@ -418,7 +418,7 @@ public final class SzDiagnosticProto {
         return this;
       }
       /**
-       * <code>int32 secondsToRun = 1;</code>
+       * <code>int32 seconds_to_run = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearSecondsToRun() {
@@ -1997,7 +1997,7 @@ public final class SzDiagnosticProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 featureId = 1;</code>
+     * <code>int64 feature_id = 1;</code>
      * @return The featureId.
      */
     long getFeatureId();
@@ -2037,10 +2037,10 @@ public final class SzDiagnosticProto {
               com.senzing.sdk.grpc.SzDiagnosticProto.GetFeatureRequest.class, com.senzing.sdk.grpc.SzDiagnosticProto.GetFeatureRequest.Builder.class);
     }
 
-    public static final int FEATUREID_FIELD_NUMBER = 1;
+    public static final int FEATURE_ID_FIELD_NUMBER = 1;
     private long featureId_ = 0L;
     /**
-     * <code>int64 featureId = 1;</code>
+     * <code>int64 feature_id = 1;</code>
      * @return The featureId.
      */
     @java.lang.Override
@@ -2106,7 +2106,7 @@ public final class SzDiagnosticProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + FEATUREID_FIELD_NUMBER;
+      hash = (37 * hash) + FEATURE_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getFeatureId());
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -2376,7 +2376,7 @@ public final class SzDiagnosticProto {
 
       private long featureId_ ;
       /**
-       * <code>int64 featureId = 1;</code>
+       * <code>int64 feature_id = 1;</code>
        * @return The featureId.
        */
       @java.lang.Override
@@ -2384,7 +2384,7 @@ public final class SzDiagnosticProto {
         return featureId_;
       }
       /**
-       * <code>int64 featureId = 1;</code>
+       * <code>int64 feature_id = 1;</code>
        * @param value The featureId to set.
        * @return This builder for chaining.
        */
@@ -2396,7 +2396,7 @@ public final class SzDiagnosticProto {
         return this;
       }
       /**
-       * <code>int64 featureId = 1;</code>
+       * <code>int64 feature_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearFeatureId() {
@@ -3820,7 +3820,7 @@ public final class SzDiagnosticProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 configId = 1;</code>
+     * <code>int64 config_id = 1;</code>
      * @return The configId.
      */
     long getConfigId();
@@ -3860,10 +3860,10 @@ public final class SzDiagnosticProto {
               com.senzing.sdk.grpc.SzDiagnosticProto.ReinitializeRequest.class, com.senzing.sdk.grpc.SzDiagnosticProto.ReinitializeRequest.Builder.class);
     }
 
-    public static final int CONFIGID_FIELD_NUMBER = 1;
+    public static final int CONFIG_ID_FIELD_NUMBER = 1;
     private long configId_ = 0L;
     /**
-     * <code>int64 configId = 1;</code>
+     * <code>int64 config_id = 1;</code>
      * @return The configId.
      */
     @java.lang.Override
@@ -3929,7 +3929,7 @@ public final class SzDiagnosticProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIGID_FIELD_NUMBER;
+      hash = (37 * hash) + CONFIG_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getConfigId());
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -4199,7 +4199,7 @@ public final class SzDiagnosticProto {
 
       private long configId_ ;
       /**
-       * <code>int64 configId = 1;</code>
+       * <code>int64 config_id = 1;</code>
        * @return The configId.
        */
       @java.lang.Override
@@ -4207,7 +4207,7 @@ public final class SzDiagnosticProto {
         return configId_;
       }
       /**
-       * <code>int64 configId = 1;</code>
+       * <code>int64 config_id = 1;</code>
        * @param value The configId to set.
        * @return This builder for chaining.
        */
@@ -4219,7 +4219,7 @@ public final class SzDiagnosticProto {
         return this;
       }
       /**
-       * <code>int64 configId = 1;</code>
+       * <code>int64 config_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearConfigId() {
@@ -4748,32 +4748,32 @@ public final class SzDiagnosticProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022szdiagnostic.proto\022\014szdiagnostic\"8\n Ch" +
-      "eckDatastorePerformanceRequest\022\024\n\014second" +
-      "sToRun\030\001 \001(\005\"3\n!CheckDatastorePerformanc" +
-      "eResponse\022\016\n\006result\030\001 \001(\t\"\031\n\027GetDatastor" +
-      "eInfoRequest\"*\n\030GetDatastoreInfoResponse" +
-      "\022\016\n\006result\030\001 \001(\t\"&\n\021GetFeatureRequest\022\021\n" +
-      "\tfeatureId\030\001 \001(\003\"$\n\022GetFeatureResponse\022\016" +
-      "\n\006result\030\001 \001(\t\"\030\n\026PurgeRepositoryRequest" +
-      "\"\031\n\027PurgeRepositoryResponse\"\'\n\023Reinitial" +
-      "izeRequest\022\020\n\010configId\030\001 \001(\003\"\026\n\024Reinitia" +
-      "lizeResponse2\201\004\n\014SzDiagnostic\022~\n\031CheckDa" +
-      "tastorePerformance\022..szdiagnostic.CheckD" +
-      "atastorePerformanceRequest\032/.szdiagnosti" +
-      "c.CheckDatastorePerformanceResponse\"\000\022c\n" +
-      "\020GetDatastoreInfo\022%.szdiagnostic.GetData" +
-      "storeInfoRequest\032&.szdiagnostic.GetDatas" +
-      "toreInfoResponse\"\000\022Q\n\nGetFeature\022\037.szdia" +
-      "gnostic.GetFeatureRequest\032 .szdiagnostic" +
-      ".GetFeatureResponse\"\000\022`\n\017PurgeRepository" +
-      "\022$.szdiagnostic.PurgeRepositoryRequest\032%" +
-      ".szdiagnostic.PurgeRepositoryResponse\"\000\022" +
-      "W\n\014Reinitialize\022!.szdiagnostic.Reinitial" +
-      "izeRequest\032\".szdiagnostic.ReinitializeRe" +
-      "sponse\"\000B`\n\024com.senzing.sdk.grpcB\021SzDiag" +
-      "nosticProtoZ5github.com/senzing-garage/s" +
-      "z-sdk-go-grpc/szdiagnosticb\006proto3"
+      "\n\022szdiagnostic.proto\022\014szdiagnostic\":\n Ch" +
+      "eckDatastorePerformanceRequest\022\026\n\016second" +
+      "s_to_run\030\001 \001(\005\"3\n!CheckDatastorePerforma" +
+      "nceResponse\022\016\n\006result\030\001 \001(\t\"\031\n\027GetDatast" +
+      "oreInfoRequest\"*\n\030GetDatastoreInfoRespon" +
+      "se\022\016\n\006result\030\001 \001(\t\"\'\n\021GetFeatureRequest\022" +
+      "\022\n\nfeature_id\030\001 \001(\003\"$\n\022GetFeatureRespons" +
+      "e\022\016\n\006result\030\001 \001(\t\"\030\n\026PurgeRepositoryRequ" +
+      "est\"\031\n\027PurgeRepositoryResponse\"(\n\023Reinit" +
+      "ializeRequest\022\021\n\tconfig_id\030\001 \001(\003\"\026\n\024Rein" +
+      "itializeResponse2\201\004\n\014SzDiagnostic\022~\n\031Che" +
+      "ckDatastorePerformance\022..szdiagnostic.Ch" +
+      "eckDatastorePerformanceRequest\032/.szdiagn" +
+      "ostic.CheckDatastorePerformanceResponse\"" +
+      "\000\022c\n\020GetDatastoreInfo\022%.szdiagnostic.Get" +
+      "DatastoreInfoRequest\032&.szdiagnostic.GetD" +
+      "atastoreInfoResponse\"\000\022Q\n\nGetFeature\022\037.s" +
+      "zdiagnostic.GetFeatureRequest\032 .szdiagno" +
+      "stic.GetFeatureResponse\"\000\022`\n\017PurgeReposi" +
+      "tory\022$.szdiagnostic.PurgeRepositoryReque" +
+      "st\032%.szdiagnostic.PurgeRepositoryRespons" +
+      "e\"\000\022W\n\014Reinitialize\022!.szdiagnostic.Reini" +
+      "tializeRequest\032\".szdiagnostic.Reinitiali" +
+      "zeResponse\"\000B`\n\024com.senzing.sdk.grpcB\021Sz" +
+      "DiagnosticProtoZ5github.com/senzing-gara" +
+      "ge/sz-sdk-go-grpc/szdiagnosticb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

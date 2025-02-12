@@ -370,14 +370,14 @@ class ReinitializeRequest final :
   enum : int {
     kConfigIdFieldNumber = 1,
   };
-  // int64 configId = 1;
-  void clear_configid() ;
-  ::int64_t configid() const;
-  void set_configid(::int64_t value);
+  // int64 config_id = 1;
+  void clear_config_id() ;
+  ::int64_t config_id() const;
+  void set_config_id(::int64_t value);
 
   private:
-  ::int64_t _internal_configid() const;
-  void _internal_set_configid(::int64_t value);
+  ::int64_t _internal_config_id() const;
+  void _internal_set_config_id(::int64_t value);
 
   public:
   // @@protoc_insertion_point(class_scope:szdiagnostic.ReinitializeRequest)
@@ -403,7 +403,7 @@ class ReinitializeRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::int64_t configid_;
+    ::int64_t config_id_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -998,14 +998,14 @@ class GetFeatureRequest final :
   enum : int {
     kFeatureIdFieldNumber = 1,
   };
-  // int64 featureId = 1;
-  void clear_featureid() ;
-  ::int64_t featureid() const;
-  void set_featureid(::int64_t value);
+  // int64 feature_id = 1;
+  void clear_feature_id() ;
+  ::int64_t feature_id() const;
+  void set_feature_id(::int64_t value);
 
   private:
-  ::int64_t _internal_featureid() const;
-  void _internal_set_featureid(::int64_t value);
+  ::int64_t _internal_feature_id() const;
+  void _internal_set_feature_id(::int64_t value);
 
   public:
   // @@protoc_insertion_point(class_scope:szdiagnostic.GetFeatureRequest)
@@ -1031,7 +1031,7 @@ class GetFeatureRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::int64_t featureid_;
+    ::int64_t feature_id_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -1671,14 +1671,14 @@ class CheckDatastorePerformanceRequest final :
   enum : int {
     kSecondsToRunFieldNumber = 1,
   };
-  // int32 secondsToRun = 1;
-  void clear_secondstorun() ;
-  ::int32_t secondstorun() const;
-  void set_secondstorun(::int32_t value);
+  // int32 seconds_to_run = 1;
+  void clear_seconds_to_run() ;
+  ::int32_t seconds_to_run() const;
+  void set_seconds_to_run(::int32_t value);
 
   private:
-  ::int32_t _internal_secondstorun() const;
-  void _internal_set_secondstorun(::int32_t value);
+  ::int32_t _internal_seconds_to_run() const;
+  void _internal_set_seconds_to_run(::int32_t value);
 
   public:
   // @@protoc_insertion_point(class_scope:szdiagnostic.CheckDatastorePerformanceRequest)
@@ -1704,7 +1704,7 @@ class CheckDatastorePerformanceRequest final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::int32_t secondstorun_;
+    ::int32_t seconds_to_run_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -1728,27 +1728,27 @@ class CheckDatastorePerformanceRequest final :
 
 // CheckDatastorePerformanceRequest
 
-// int32 secondsToRun = 1;
-inline void CheckDatastorePerformanceRequest::clear_secondstorun() {
+// int32 seconds_to_run = 1;
+inline void CheckDatastorePerformanceRequest::clear_seconds_to_run() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.secondstorun_ = 0;
+  _impl_.seconds_to_run_ = 0;
 }
-inline ::int32_t CheckDatastorePerformanceRequest::secondstorun() const {
-  // @@protoc_insertion_point(field_get:szdiagnostic.CheckDatastorePerformanceRequest.secondsToRun)
-  return _internal_secondstorun();
+inline ::int32_t CheckDatastorePerformanceRequest::seconds_to_run() const {
+  // @@protoc_insertion_point(field_get:szdiagnostic.CheckDatastorePerformanceRequest.seconds_to_run)
+  return _internal_seconds_to_run();
 }
-inline void CheckDatastorePerformanceRequest::set_secondstorun(::int32_t value) {
-  _internal_set_secondstorun(value);
-  // @@protoc_insertion_point(field_set:szdiagnostic.CheckDatastorePerformanceRequest.secondsToRun)
+inline void CheckDatastorePerformanceRequest::set_seconds_to_run(::int32_t value) {
+  _internal_set_seconds_to_run(value);
+  // @@protoc_insertion_point(field_set:szdiagnostic.CheckDatastorePerformanceRequest.seconds_to_run)
 }
-inline ::int32_t CheckDatastorePerformanceRequest::_internal_secondstorun() const {
+inline ::int32_t CheckDatastorePerformanceRequest::_internal_seconds_to_run() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.secondstorun_;
+  return _impl_.seconds_to_run_;
 }
-inline void CheckDatastorePerformanceRequest::_internal_set_secondstorun(::int32_t value) {
+inline void CheckDatastorePerformanceRequest::_internal_set_seconds_to_run(::int32_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.secondstorun_ = value;
+  _impl_.seconds_to_run_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -1873,27 +1873,27 @@ inline void GetDatastoreInfoResponse::set_allocated_result(std::string* value) {
 
 // GetFeatureRequest
 
-// int64 featureId = 1;
-inline void GetFeatureRequest::clear_featureid() {
+// int64 feature_id = 1;
+inline void GetFeatureRequest::clear_feature_id() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.featureid_ = ::int64_t{0};
+  _impl_.feature_id_ = ::int64_t{0};
 }
-inline ::int64_t GetFeatureRequest::featureid() const {
-  // @@protoc_insertion_point(field_get:szdiagnostic.GetFeatureRequest.featureId)
-  return _internal_featureid();
+inline ::int64_t GetFeatureRequest::feature_id() const {
+  // @@protoc_insertion_point(field_get:szdiagnostic.GetFeatureRequest.feature_id)
+  return _internal_feature_id();
 }
-inline void GetFeatureRequest::set_featureid(::int64_t value) {
-  _internal_set_featureid(value);
-  // @@protoc_insertion_point(field_set:szdiagnostic.GetFeatureRequest.featureId)
+inline void GetFeatureRequest::set_feature_id(::int64_t value) {
+  _internal_set_feature_id(value);
+  // @@protoc_insertion_point(field_set:szdiagnostic.GetFeatureRequest.feature_id)
 }
-inline ::int64_t GetFeatureRequest::_internal_featureid() const {
+inline ::int64_t GetFeatureRequest::_internal_feature_id() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.featureid_;
+  return _impl_.feature_id_;
 }
-inline void GetFeatureRequest::_internal_set_featureid(::int64_t value) {
+inline void GetFeatureRequest::_internal_set_feature_id(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.featureid_ = value;
+  _impl_.feature_id_ = value;
 }
 
 // -------------------------------------------------------------------
@@ -1965,27 +1965,27 @@ inline void GetFeatureResponse::set_allocated_result(std::string* value) {
 
 // ReinitializeRequest
 
-// int64 configId = 1;
-inline void ReinitializeRequest::clear_configid() {
+// int64 config_id = 1;
+inline void ReinitializeRequest::clear_config_id() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.configid_ = ::int64_t{0};
+  _impl_.config_id_ = ::int64_t{0};
 }
-inline ::int64_t ReinitializeRequest::configid() const {
-  // @@protoc_insertion_point(field_get:szdiagnostic.ReinitializeRequest.configId)
-  return _internal_configid();
+inline ::int64_t ReinitializeRequest::config_id() const {
+  // @@protoc_insertion_point(field_get:szdiagnostic.ReinitializeRequest.config_id)
+  return _internal_config_id();
 }
-inline void ReinitializeRequest::set_configid(::int64_t value) {
-  _internal_set_configid(value);
-  // @@protoc_insertion_point(field_set:szdiagnostic.ReinitializeRequest.configId)
+inline void ReinitializeRequest::set_config_id(::int64_t value) {
+  _internal_set_config_id(value);
+  // @@protoc_insertion_point(field_set:szdiagnostic.ReinitializeRequest.config_id)
 }
-inline ::int64_t ReinitializeRequest::_internal_configid() const {
+inline ::int64_t ReinitializeRequest::_internal_config_id() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
-  return _impl_.configid_;
+  return _impl_.config_id_;
 }
-inline void ReinitializeRequest::_internal_set_configid(::int64_t value) {
+inline void ReinitializeRequest::_internal_set_config_id(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
-  _impl_.configid_ = value;
+  _impl_.config_id_ = value;
 }
 
 // -------------------------------------------------------------------

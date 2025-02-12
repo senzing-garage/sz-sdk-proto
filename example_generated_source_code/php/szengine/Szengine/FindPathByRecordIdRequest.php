@@ -14,33 +14,33 @@ use Google\Protobuf\Internal\GPBUtil;
 class FindPathByRecordIdRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string startDataSourceCode = 1;</code>
+     * Generated from protobuf field <code>string start_data_source_code = 1;</code>
      */
-    protected $startDataSourceCode = '';
+    protected $start_data_source_code = '';
     /**
-     * Generated from protobuf field <code>string startRecordId = 2;</code>
+     * Generated from protobuf field <code>string start_record_id = 2;</code>
      */
-    protected $startRecordId = '';
+    protected $start_record_id = '';
     /**
-     * Generated from protobuf field <code>string endDataSourceCode = 3;</code>
+     * Generated from protobuf field <code>string end_data_source_code = 3;</code>
      */
-    protected $endDataSourceCode = '';
+    protected $end_data_source_code = '';
     /**
-     * Generated from protobuf field <code>string endRecordId = 4;</code>
+     * Generated from protobuf field <code>string end_record_id = 4;</code>
      */
-    protected $endRecordId = '';
+    protected $end_record_id = '';
     /**
-     * Generated from protobuf field <code>int64 maxDegrees = 5;</code>
+     * Generated from protobuf field <code>int64 max_degrees = 5;</code>
      */
-    protected $maxDegrees = 0;
+    protected $max_degrees = 0;
     /**
-     * Generated from protobuf field <code>string avoidRecordKeys = 6;</code>
+     * Generated from protobuf field <code>string avoid_record_keys = 6;</code>
      */
-    protected $avoidRecordKeys = '';
+    protected $avoid_record_keys = '';
     /**
-     * Generated from protobuf field <code>string requiredDataSources = 7;</code>
+     * Generated from protobuf field <code>string required_data_sources = 7;</code>
      */
-    protected $requiredDataSources = '';
+    protected $required_data_sources = '';
     /**
      * Generated from protobuf field <code>int64 flags = 8;</code>
      */
@@ -52,13 +52,13 @@ class FindPathByRecordIdRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $startDataSourceCode
-     *     @type string $startRecordId
-     *     @type string $endDataSourceCode
-     *     @type string $endRecordId
-     *     @type int|string $maxDegrees
-     *     @type string $avoidRecordKeys
-     *     @type string $requiredDataSources
+     *     @type string $start_data_source_code
+     *     @type string $start_record_id
+     *     @type string $end_data_source_code
+     *     @type string $end_record_id
+     *     @type int|string $max_degrees
+     *     @type string $avoid_record_keys
+     *     @type string $required_data_sources
      *     @type int|string $flags
      * }
      */
@@ -68,155 +68,155 @@ class FindPathByRecordIdRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string startDataSourceCode = 1;</code>
+     * Generated from protobuf field <code>string start_data_source_code = 1;</code>
      * @return string
      */
     public function getStartDataSourceCode()
     {
-        return $this->startDataSourceCode;
+        return $this->start_data_source_code;
     }
 
     /**
-     * Generated from protobuf field <code>string startDataSourceCode = 1;</code>
+     * Generated from protobuf field <code>string start_data_source_code = 1;</code>
      * @param string $var
      * @return $this
      */
     public function setStartDataSourceCode($var)
     {
         GPBUtil::checkString($var, True);
-        $this->startDataSourceCode = $var;
+        $this->start_data_source_code = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>string startRecordId = 2;</code>
+     * Generated from protobuf field <code>string start_record_id = 2;</code>
      * @return string
      */
     public function getStartRecordId()
     {
-        return $this->startRecordId;
+        return $this->start_record_id;
     }
 
     /**
-     * Generated from protobuf field <code>string startRecordId = 2;</code>
+     * Generated from protobuf field <code>string start_record_id = 2;</code>
      * @param string $var
      * @return $this
      */
     public function setStartRecordId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->startRecordId = $var;
+        $this->start_record_id = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>string endDataSourceCode = 3;</code>
+     * Generated from protobuf field <code>string end_data_source_code = 3;</code>
      * @return string
      */
     public function getEndDataSourceCode()
     {
-        return $this->endDataSourceCode;
+        return $this->end_data_source_code;
     }
 
     /**
-     * Generated from protobuf field <code>string endDataSourceCode = 3;</code>
+     * Generated from protobuf field <code>string end_data_source_code = 3;</code>
      * @param string $var
      * @return $this
      */
     public function setEndDataSourceCode($var)
     {
         GPBUtil::checkString($var, True);
-        $this->endDataSourceCode = $var;
+        $this->end_data_source_code = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>string endRecordId = 4;</code>
+     * Generated from protobuf field <code>string end_record_id = 4;</code>
      * @return string
      */
     public function getEndRecordId()
     {
-        return $this->endRecordId;
+        return $this->end_record_id;
     }
 
     /**
-     * Generated from protobuf field <code>string endRecordId = 4;</code>
+     * Generated from protobuf field <code>string end_record_id = 4;</code>
      * @param string $var
      * @return $this
      */
     public function setEndRecordId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->endRecordId = $var;
+        $this->end_record_id = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>int64 maxDegrees = 5;</code>
+     * Generated from protobuf field <code>int64 max_degrees = 5;</code>
      * @return int|string
      */
     public function getMaxDegrees()
     {
-        return $this->maxDegrees;
+        return $this->max_degrees;
     }
 
     /**
-     * Generated from protobuf field <code>int64 maxDegrees = 5;</code>
+     * Generated from protobuf field <code>int64 max_degrees = 5;</code>
      * @param int|string $var
      * @return $this
      */
     public function setMaxDegrees($var)
     {
         GPBUtil::checkInt64($var);
-        $this->maxDegrees = $var;
+        $this->max_degrees = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>string avoidRecordKeys = 6;</code>
+     * Generated from protobuf field <code>string avoid_record_keys = 6;</code>
      * @return string
      */
     public function getAvoidRecordKeys()
     {
-        return $this->avoidRecordKeys;
+        return $this->avoid_record_keys;
     }
 
     /**
-     * Generated from protobuf field <code>string avoidRecordKeys = 6;</code>
+     * Generated from protobuf field <code>string avoid_record_keys = 6;</code>
      * @param string $var
      * @return $this
      */
     public function setAvoidRecordKeys($var)
     {
         GPBUtil::checkString($var, True);
-        $this->avoidRecordKeys = $var;
+        $this->avoid_record_keys = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>string requiredDataSources = 7;</code>
+     * Generated from protobuf field <code>string required_data_sources = 7;</code>
      * @return string
      */
     public function getRequiredDataSources()
     {
-        return $this->requiredDataSources;
+        return $this->required_data_sources;
     }
 
     /**
-     * Generated from protobuf field <code>string requiredDataSources = 7;</code>
+     * Generated from protobuf field <code>string required_data_sources = 7;</code>
      * @param string $var
      * @return $this
      */
     public function setRequiredDataSources($var)
     {
         GPBUtil::checkString($var, True);
-        $this->requiredDataSources = $var;
+        $this->required_data_sources = $var;
 
         return $this;
     }

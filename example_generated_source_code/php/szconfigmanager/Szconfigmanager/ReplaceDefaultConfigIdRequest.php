@@ -14,13 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class ReplaceDefaultConfigIdRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int64 currentDefaultConfigId = 1;</code>
+     * Generated from protobuf field <code>int64 current_default_config_id = 1;</code>
      */
-    protected $currentDefaultConfigId = 0;
+    protected $current_default_config_id = 0;
     /**
-     * Generated from protobuf field <code>int64 newDefaultConfigId = 2;</code>
+     * Generated from protobuf field <code>int64 new_default_config_id = 2;</code>
      */
-    protected $newDefaultConfigId = 0;
+    protected $new_default_config_id = 0;
 
     /**
      * Constructor.
@@ -28,8 +28,8 @@ class ReplaceDefaultConfigIdRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int|string $currentDefaultConfigId
-     *     @type int|string $newDefaultConfigId
+     *     @type int|string $current_default_config_id
+     *     @type int|string $new_default_config_id
      * }
      */
     public function __construct($data = NULL) {
@@ -38,45 +38,45 @@ class ReplaceDefaultConfigIdRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 currentDefaultConfigId = 1;</code>
+     * Generated from protobuf field <code>int64 current_default_config_id = 1;</code>
      * @return int|string
      */
     public function getCurrentDefaultConfigId()
     {
-        return $this->currentDefaultConfigId;
+        return $this->current_default_config_id;
     }
 
     /**
-     * Generated from protobuf field <code>int64 currentDefaultConfigId = 1;</code>
+     * Generated from protobuf field <code>int64 current_default_config_id = 1;</code>
      * @param int|string $var
      * @return $this
      */
     public function setCurrentDefaultConfigId($var)
     {
         GPBUtil::checkInt64($var);
-        $this->currentDefaultConfigId = $var;
+        $this->current_default_config_id = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>int64 newDefaultConfigId = 2;</code>
+     * Generated from protobuf field <code>int64 new_default_config_id = 2;</code>
      * @return int|string
      */
     public function getNewDefaultConfigId()
     {
-        return $this->newDefaultConfigId;
+        return $this->new_default_config_id;
     }
 
     /**
-     * Generated from protobuf field <code>int64 newDefaultConfigId = 2;</code>
+     * Generated from protobuf field <code>int64 new_default_config_id = 2;</code>
      * @param int|string $var
      * @return $this
      */
     public function setNewDefaultConfigId($var)
     {
         GPBUtil::checkInt64($var);
-        $this->newDefaultConfigId = $var;
+        $this->new_default_config_id = $var;
 
         return $this;
     }

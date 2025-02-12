@@ -5,16 +5,16 @@ from typing import ClassVar as _ClassVar, Optional as _Optional
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class AddRecordRequest(_message.Message):
-    __slots__ = ("dataSourceCode", "recordId", "recordDefinition", "flags")
-    DATASOURCECODE_FIELD_NUMBER: _ClassVar[int]
-    RECORDID_FIELD_NUMBER: _ClassVar[int]
-    RECORDDEFINITION_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("data_source_code", "record_id", "record_definition", "flags")
+    DATA_SOURCE_CODE_FIELD_NUMBER: _ClassVar[int]
+    RECORD_ID_FIELD_NUMBER: _ClassVar[int]
+    RECORD_DEFINITION_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    dataSourceCode: str
-    recordId: str
-    recordDefinition: str
+    data_source_code: str
+    record_id: str
+    record_definition: str
     flags: int
-    def __init__(self, dataSourceCode: _Optional[str] = ..., recordId: _Optional[str] = ..., recordDefinition: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, data_source_code: _Optional[str] = ..., record_id: _Optional[str] = ..., record_definition: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class AddRecordResponse(_message.Message):
     __slots__ = ("result",)
@@ -23,10 +23,10 @@ class AddRecordResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class CloseExportRequest(_message.Message):
-    __slots__ = ("exportHandle",)
-    EXPORTHANDLE_FIELD_NUMBER: _ClassVar[int]
-    exportHandle: int
-    def __init__(self, exportHandle: _Optional[int] = ...) -> None: ...
+    __slots__ = ("export_handle",)
+    EXPORT_HANDLE_FIELD_NUMBER: _ClassVar[int]
+    export_handle: int
+    def __init__(self, export_handle: _Optional[int] = ...) -> None: ...
 
 class CloseExportResponse(_message.Message):
     __slots__ = ()
@@ -43,14 +43,14 @@ class CountRedoRecordsResponse(_message.Message):
     def __init__(self, result: _Optional[int] = ...) -> None: ...
 
 class DeleteRecordRequest(_message.Message):
-    __slots__ = ("dataSourceCode", "recordId", "flags")
-    DATASOURCECODE_FIELD_NUMBER: _ClassVar[int]
-    RECORDID_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("data_source_code", "record_id", "flags")
+    DATA_SOURCE_CODE_FIELD_NUMBER: _ClassVar[int]
+    RECORD_ID_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    dataSourceCode: str
-    recordId: str
+    data_source_code: str
+    record_id: str
     flags: int
-    def __init__(self, dataSourceCode: _Optional[str] = ..., recordId: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, data_source_code: _Optional[str] = ..., record_id: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class DeleteRecordResponse(_message.Message):
     __slots__ = ("result",)
@@ -59,12 +59,12 @@ class DeleteRecordResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class ExportCsvEntityReportRequest(_message.Message):
-    __slots__ = ("csvColumnList", "flags")
-    CSVCOLUMNLIST_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("csv_column_list", "flags")
+    CSV_COLUMN_LIST_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    csvColumnList: str
+    csv_column_list: str
     flags: int
-    def __init__(self, csvColumnList: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, csv_column_list: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class ExportCsvEntityReportResponse(_message.Message):
     __slots__ = ("result",)
@@ -85,10 +85,10 @@ class ExportJsonEntityReportResponse(_message.Message):
     def __init__(self, result: _Optional[int] = ...) -> None: ...
 
 class FetchNextRequest(_message.Message):
-    __slots__ = ("exportHandle",)
-    EXPORTHANDLE_FIELD_NUMBER: _ClassVar[int]
-    exportHandle: int
-    def __init__(self, exportHandle: _Optional[int] = ...) -> None: ...
+    __slots__ = ("export_handle",)
+    EXPORT_HANDLE_FIELD_NUMBER: _ClassVar[int]
+    export_handle: int
+    def __init__(self, export_handle: _Optional[int] = ...) -> None: ...
 
 class FetchNextResponse(_message.Message):
     __slots__ = ("result",)
@@ -97,12 +97,12 @@ class FetchNextResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class FindInterestingEntitiesByEntityIdRequest(_message.Message):
-    __slots__ = ("entityId", "flags")
-    ENTITYID_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("entity_id", "flags")
+    ENTITY_ID_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    entityId: int
+    entity_id: int
     flags: int
-    def __init__(self, entityId: _Optional[int] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, entity_id: _Optional[int] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class FindInterestingEntitiesByEntityIdResponse(_message.Message):
     __slots__ = ("result",)
@@ -111,14 +111,14 @@ class FindInterestingEntitiesByEntityIdResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class FindInterestingEntitiesByRecordIdRequest(_message.Message):
-    __slots__ = ("dataSourceCode", "recordId", "flags")
-    DATASOURCECODE_FIELD_NUMBER: _ClassVar[int]
-    RECORDID_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("data_source_code", "record_id", "flags")
+    DATA_SOURCE_CODE_FIELD_NUMBER: _ClassVar[int]
+    RECORD_ID_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    dataSourceCode: str
-    recordId: str
+    data_source_code: str
+    record_id: str
     flags: int
-    def __init__(self, dataSourceCode: _Optional[str] = ..., recordId: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, data_source_code: _Optional[str] = ..., record_id: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class FindInterestingEntitiesByRecordIdResponse(_message.Message):
     __slots__ = ("result",)
@@ -127,18 +127,18 @@ class FindInterestingEntitiesByRecordIdResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class FindNetworkByEntityIdRequest(_message.Message):
-    __slots__ = ("entityIds", "maxDegrees", "buildOutDegrees", "buildOutMaxEntities", "flags")
-    ENTITYIDS_FIELD_NUMBER: _ClassVar[int]
-    MAXDEGREES_FIELD_NUMBER: _ClassVar[int]
-    BUILDOUTDEGREES_FIELD_NUMBER: _ClassVar[int]
-    BUILDOUTMAXENTITIES_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("entity_ids", "max_degrees", "build_out_degrees", "build_out_max_entities", "flags")
+    ENTITY_IDS_FIELD_NUMBER: _ClassVar[int]
+    MAX_DEGREES_FIELD_NUMBER: _ClassVar[int]
+    BUILD_OUT_DEGREES_FIELD_NUMBER: _ClassVar[int]
+    BUILD_OUT_MAX_ENTITIES_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    entityIds: str
-    maxDegrees: int
-    buildOutDegrees: int
-    buildOutMaxEntities: int
+    entity_ids: str
+    max_degrees: int
+    build_out_degrees: int
+    build_out_max_entities: int
     flags: int
-    def __init__(self, entityIds: _Optional[str] = ..., maxDegrees: _Optional[int] = ..., buildOutDegrees: _Optional[int] = ..., buildOutMaxEntities: _Optional[int] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, entity_ids: _Optional[str] = ..., max_degrees: _Optional[int] = ..., build_out_degrees: _Optional[int] = ..., build_out_max_entities: _Optional[int] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class FindNetworkByEntityIdResponse(_message.Message):
     __slots__ = ("result",)
@@ -147,18 +147,18 @@ class FindNetworkByEntityIdResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class FindNetworkByRecordIdRequest(_message.Message):
-    __slots__ = ("recordKeys", "maxDegrees", "buildOutDegrees", "buildOutMaxEntities", "flags")
-    RECORDKEYS_FIELD_NUMBER: _ClassVar[int]
-    MAXDEGREES_FIELD_NUMBER: _ClassVar[int]
-    BUILDOUTDEGREES_FIELD_NUMBER: _ClassVar[int]
-    BUILDOUTMAXENTITIES_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("record_keys", "max_degrees", "build_out_degrees", "build_out_max_entities", "flags")
+    RECORD_KEYS_FIELD_NUMBER: _ClassVar[int]
+    MAX_DEGREES_FIELD_NUMBER: _ClassVar[int]
+    BUILD_OUT_DEGREES_FIELD_NUMBER: _ClassVar[int]
+    BUILD_OUT_MAX_ENTITIES_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    recordKeys: str
-    maxDegrees: int
-    buildOutDegrees: int
-    buildOutMaxEntities: int
+    record_keys: str
+    max_degrees: int
+    build_out_degrees: int
+    build_out_max_entities: int
     flags: int
-    def __init__(self, recordKeys: _Optional[str] = ..., maxDegrees: _Optional[int] = ..., buildOutDegrees: _Optional[int] = ..., buildOutMaxEntities: _Optional[int] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, record_keys: _Optional[str] = ..., max_degrees: _Optional[int] = ..., build_out_degrees: _Optional[int] = ..., build_out_max_entities: _Optional[int] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class FindNetworkByRecordIdResponse(_message.Message):
     __slots__ = ("result",)
@@ -167,20 +167,20 @@ class FindNetworkByRecordIdResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class FindPathByEntityIdRequest(_message.Message):
-    __slots__ = ("startEntityId", "endEntityId", "maxDegrees", "avoidEntityIds", "requiredDataSources", "flags")
-    STARTENTITYID_FIELD_NUMBER: _ClassVar[int]
-    ENDENTITYID_FIELD_NUMBER: _ClassVar[int]
-    MAXDEGREES_FIELD_NUMBER: _ClassVar[int]
-    AVOIDENTITYIDS_FIELD_NUMBER: _ClassVar[int]
-    REQUIREDDATASOURCES_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("start_entity_id", "end_entity_id", "max_degrees", "avoid_entity_ids", "required_data_sources", "flags")
+    START_ENTITY_ID_FIELD_NUMBER: _ClassVar[int]
+    END_ENTITY_ID_FIELD_NUMBER: _ClassVar[int]
+    MAX_DEGREES_FIELD_NUMBER: _ClassVar[int]
+    AVOID_ENTITY_IDS_FIELD_NUMBER: _ClassVar[int]
+    REQUIRED_DATA_SOURCES_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    startEntityId: int
-    endEntityId: int
-    maxDegrees: int
-    avoidEntityIds: str
-    requiredDataSources: str
+    start_entity_id: int
+    end_entity_id: int
+    max_degrees: int
+    avoid_entity_ids: str
+    required_data_sources: str
     flags: int
-    def __init__(self, startEntityId: _Optional[int] = ..., endEntityId: _Optional[int] = ..., maxDegrees: _Optional[int] = ..., avoidEntityIds: _Optional[str] = ..., requiredDataSources: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, start_entity_id: _Optional[int] = ..., end_entity_id: _Optional[int] = ..., max_degrees: _Optional[int] = ..., avoid_entity_ids: _Optional[str] = ..., required_data_sources: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class FindPathByEntityIdResponse(_message.Message):
     __slots__ = ("result",)
@@ -189,24 +189,24 @@ class FindPathByEntityIdResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class FindPathByRecordIdRequest(_message.Message):
-    __slots__ = ("startDataSourceCode", "startRecordId", "endDataSourceCode", "endRecordId", "maxDegrees", "avoidRecordKeys", "requiredDataSources", "flags")
-    STARTDATASOURCECODE_FIELD_NUMBER: _ClassVar[int]
-    STARTRECORDID_FIELD_NUMBER: _ClassVar[int]
-    ENDDATASOURCECODE_FIELD_NUMBER: _ClassVar[int]
-    ENDRECORDID_FIELD_NUMBER: _ClassVar[int]
-    MAXDEGREES_FIELD_NUMBER: _ClassVar[int]
-    AVOIDRECORDKEYS_FIELD_NUMBER: _ClassVar[int]
-    REQUIREDDATASOURCES_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("start_data_source_code", "start_record_id", "end_data_source_code", "end_record_id", "max_degrees", "avoid_record_keys", "required_data_sources", "flags")
+    START_DATA_SOURCE_CODE_FIELD_NUMBER: _ClassVar[int]
+    START_RECORD_ID_FIELD_NUMBER: _ClassVar[int]
+    END_DATA_SOURCE_CODE_FIELD_NUMBER: _ClassVar[int]
+    END_RECORD_ID_FIELD_NUMBER: _ClassVar[int]
+    MAX_DEGREES_FIELD_NUMBER: _ClassVar[int]
+    AVOID_RECORD_KEYS_FIELD_NUMBER: _ClassVar[int]
+    REQUIRED_DATA_SOURCES_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    startDataSourceCode: str
-    startRecordId: str
-    endDataSourceCode: str
-    endRecordId: str
-    maxDegrees: int
-    avoidRecordKeys: str
-    requiredDataSources: str
+    start_data_source_code: str
+    start_record_id: str
+    end_data_source_code: str
+    end_record_id: str
+    max_degrees: int
+    avoid_record_keys: str
+    required_data_sources: str
     flags: int
-    def __init__(self, startDataSourceCode: _Optional[str] = ..., startRecordId: _Optional[str] = ..., endDataSourceCode: _Optional[str] = ..., endRecordId: _Optional[str] = ..., maxDegrees: _Optional[int] = ..., avoidRecordKeys: _Optional[str] = ..., requiredDataSources: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, start_data_source_code: _Optional[str] = ..., start_record_id: _Optional[str] = ..., end_data_source_code: _Optional[str] = ..., end_record_id: _Optional[str] = ..., max_degrees: _Optional[int] = ..., avoid_record_keys: _Optional[str] = ..., required_data_sources: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class FindPathByRecordIdResponse(_message.Message):
     __slots__ = ("result",)
@@ -225,12 +225,12 @@ class GetActiveConfigIdResponse(_message.Message):
     def __init__(self, result: _Optional[int] = ...) -> None: ...
 
 class GetEntityByEntityIdRequest(_message.Message):
-    __slots__ = ("entityId", "flags")
-    ENTITYID_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("entity_id", "flags")
+    ENTITY_ID_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    entityId: int
+    entity_id: int
     flags: int
-    def __init__(self, entityId: _Optional[int] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, entity_id: _Optional[int] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class GetEntityByEntityIdResponse(_message.Message):
     __slots__ = ("result",)
@@ -239,14 +239,14 @@ class GetEntityByEntityIdResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class GetEntityByRecordIdRequest(_message.Message):
-    __slots__ = ("dataSourceCode", "recordId", "flags")
-    DATASOURCECODE_FIELD_NUMBER: _ClassVar[int]
-    RECORDID_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("data_source_code", "record_id", "flags")
+    DATA_SOURCE_CODE_FIELD_NUMBER: _ClassVar[int]
+    RECORD_ID_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    dataSourceCode: str
-    recordId: str
+    data_source_code: str
+    record_id: str
     flags: int
-    def __init__(self, dataSourceCode: _Optional[str] = ..., recordId: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, data_source_code: _Optional[str] = ..., record_id: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class GetEntityByRecordIdResponse(_message.Message):
     __slots__ = ("result",)
@@ -255,14 +255,14 @@ class GetEntityByRecordIdResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class GetRecordRequest(_message.Message):
-    __slots__ = ("dataSourceCode", "recordId", "flags")
-    DATASOURCECODE_FIELD_NUMBER: _ClassVar[int]
-    RECORDID_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("data_source_code", "record_id", "flags")
+    DATA_SOURCE_CODE_FIELD_NUMBER: _ClassVar[int]
+    RECORD_ID_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    dataSourceCode: str
-    recordId: str
+    data_source_code: str
+    record_id: str
     flags: int
-    def __init__(self, dataSourceCode: _Optional[str] = ..., recordId: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, data_source_code: _Optional[str] = ..., record_id: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class GetRecordResponse(_message.Message):
     __slots__ = ("result",)
@@ -291,12 +291,12 @@ class GetStatsResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class GetVirtualEntityByRecordIdRequest(_message.Message):
-    __slots__ = ("recordKeys", "flags")
-    RECORDKEYS_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("record_keys", "flags")
+    RECORD_KEYS_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    recordKeys: str
+    record_keys: str
     flags: int
-    def __init__(self, recordKeys: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, record_keys: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class GetVirtualEntityByRecordIdResponse(_message.Message):
     __slots__ = ("result",)
@@ -305,12 +305,12 @@ class GetVirtualEntityByRecordIdResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class HowEntityByEntityIdRequest(_message.Message):
-    __slots__ = ("entityId", "flags")
-    ENTITYID_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("entity_id", "flags")
+    ENTITY_ID_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    entityId: int
+    entity_id: int
     flags: int
-    def __init__(self, entityId: _Optional[int] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, entity_id: _Optional[int] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class HowEntityByEntityIdResponse(_message.Message):
     __slots__ = ("result",)
@@ -319,12 +319,12 @@ class HowEntityByEntityIdResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class PreprocessRecordRequest(_message.Message):
-    __slots__ = ("recordDefinition", "flags")
-    RECORDDEFINITION_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("record_definition", "flags")
+    RECORD_DEFINITION_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    recordDefinition: str
+    record_definition: str
     flags: int
-    def __init__(self, recordDefinition: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, record_definition: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class PreprocessRecordResponse(_message.Message):
     __slots__ = ("result",)
@@ -341,12 +341,12 @@ class PrimeEngineResponse(_message.Message):
     def __init__(self) -> None: ...
 
 class ProcessRedoRecordRequest(_message.Message):
-    __slots__ = ("redoRecord", "flags")
-    REDORECORD_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("redo_record", "flags")
+    REDO_RECORD_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    redoRecord: str
+    redo_record: str
     flags: int
-    def __init__(self, redoRecord: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, redo_record: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class ProcessRedoRecordResponse(_message.Message):
     __slots__ = ("result",)
@@ -355,12 +355,12 @@ class ProcessRedoRecordResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class ReevaluateEntityRequest(_message.Message):
-    __slots__ = ("entityId", "flags")
-    ENTITYID_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("entity_id", "flags")
+    ENTITY_ID_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    entityId: int
+    entity_id: int
     flags: int
-    def __init__(self, entityId: _Optional[int] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, entity_id: _Optional[int] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class ReevaluateEntityResponse(_message.Message):
     __slots__ = ("result",)
@@ -369,14 +369,14 @@ class ReevaluateEntityResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class ReevaluateRecordRequest(_message.Message):
-    __slots__ = ("dataSourceCode", "recordId", "flags")
-    DATASOURCECODE_FIELD_NUMBER: _ClassVar[int]
-    RECORDID_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("data_source_code", "record_id", "flags")
+    DATA_SOURCE_CODE_FIELD_NUMBER: _ClassVar[int]
+    RECORD_ID_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    dataSourceCode: str
-    recordId: str
+    data_source_code: str
+    record_id: str
     flags: int
-    def __init__(self, dataSourceCode: _Optional[str] = ..., recordId: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, data_source_code: _Optional[str] = ..., record_id: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class ReevaluateRecordResponse(_message.Message):
     __slots__ = ("result",)
@@ -385,24 +385,24 @@ class ReevaluateRecordResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class ReinitializeRequest(_message.Message):
-    __slots__ = ("configId",)
-    CONFIGID_FIELD_NUMBER: _ClassVar[int]
-    configId: int
-    def __init__(self, configId: _Optional[int] = ...) -> None: ...
+    __slots__ = ("config_id",)
+    CONFIG_ID_FIELD_NUMBER: _ClassVar[int]
+    config_id: int
+    def __init__(self, config_id: _Optional[int] = ...) -> None: ...
 
 class ReinitializeResponse(_message.Message):
     __slots__ = ()
     def __init__(self) -> None: ...
 
 class SearchByAttributesRequest(_message.Message):
-    __slots__ = ("attributes", "searchProfile", "flags")
+    __slots__ = ("attributes", "search_profile", "flags")
     ATTRIBUTES_FIELD_NUMBER: _ClassVar[int]
-    SEARCHPROFILE_FIELD_NUMBER: _ClassVar[int]
+    SEARCH_PROFILE_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
     attributes: str
-    searchProfile: str
+    search_profile: str
     flags: int
-    def __init__(self, attributes: _Optional[str] = ..., searchProfile: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, attributes: _Optional[str] = ..., search_profile: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class SearchByAttributesResponse(_message.Message):
     __slots__ = ("result",)
@@ -411,12 +411,12 @@ class SearchByAttributesResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class StreamExportCsvEntityReportRequest(_message.Message):
-    __slots__ = ("csvColumnList", "flags")
-    CSVCOLUMNLIST_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("csv_column_list", "flags")
+    CSV_COLUMN_LIST_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    csvColumnList: str
+    csv_column_list: str
     flags: int
-    def __init__(self, csvColumnList: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, csv_column_list: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class StreamExportCsvEntityReportResponse(_message.Message):
     __slots__ = ("result",)
@@ -437,14 +437,14 @@ class StreamExportJsonEntityReportResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class WhyEntitiesRequest(_message.Message):
-    __slots__ = ("entityId1", "entityId2", "flags")
-    ENTITYID1_FIELD_NUMBER: _ClassVar[int]
-    ENTITYID2_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("entity_id_1", "entity_id_2", "flags")
+    ENTITY_ID_1_FIELD_NUMBER: _ClassVar[int]
+    ENTITY_ID_2_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    entityId1: int
-    entityId2: int
+    entity_id_1: int
+    entity_id_2: int
     flags: int
-    def __init__(self, entityId1: _Optional[int] = ..., entityId2: _Optional[int] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, entity_id_1: _Optional[int] = ..., entity_id_2: _Optional[int] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class WhyEntitiesResponse(_message.Message):
     __slots__ = ("result",)
@@ -453,14 +453,14 @@ class WhyEntitiesResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class WhyRecordInEntityRequest(_message.Message):
-    __slots__ = ("dataSourceCode", "recordId", "flags")
-    DATASOURCECODE_FIELD_NUMBER: _ClassVar[int]
-    RECORDID_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("data_source_code", "record_id", "flags")
+    DATA_SOURCE_CODE_FIELD_NUMBER: _ClassVar[int]
+    RECORD_ID_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    dataSourceCode: str
-    recordId: str
+    data_source_code: str
+    record_id: str
     flags: int
-    def __init__(self, dataSourceCode: _Optional[str] = ..., recordId: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, data_source_code: _Optional[str] = ..., record_id: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class WhyRecordInEntityResponse(_message.Message):
     __slots__ = ("result",)
@@ -469,18 +469,18 @@ class WhyRecordInEntityResponse(_message.Message):
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
 class WhyRecordsRequest(_message.Message):
-    __slots__ = ("dataSourceCode1", "recordId1", "dataSourceCode2", "recordId2", "flags")
-    DATASOURCECODE1_FIELD_NUMBER: _ClassVar[int]
-    RECORDID1_FIELD_NUMBER: _ClassVar[int]
-    DATASOURCECODE2_FIELD_NUMBER: _ClassVar[int]
-    RECORDID2_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ("data_source_code_1", "record_id_1", "data_source_code_2", "record_id_2", "flags")
+    DATA_SOURCE_CODE_1_FIELD_NUMBER: _ClassVar[int]
+    RECORD_ID_1_FIELD_NUMBER: _ClassVar[int]
+    DATA_SOURCE_CODE_2_FIELD_NUMBER: _ClassVar[int]
+    RECORD_ID_2_FIELD_NUMBER: _ClassVar[int]
     FLAGS_FIELD_NUMBER: _ClassVar[int]
-    dataSourceCode1: str
-    recordId1: str
-    dataSourceCode2: str
-    recordId2: str
+    data_source_code_1: str
+    record_id_1: str
+    data_source_code_2: str
+    record_id_2: str
     flags: int
-    def __init__(self, dataSourceCode1: _Optional[str] = ..., recordId1: _Optional[str] = ..., dataSourceCode2: _Optional[str] = ..., recordId2: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+    def __init__(self, data_source_code_1: _Optional[str] = ..., record_id_1: _Optional[str] = ..., data_source_code_2: _Optional[str] = ..., record_id_2: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class WhyRecordsResponse(_message.Message):
     __slots__ = ("result",)

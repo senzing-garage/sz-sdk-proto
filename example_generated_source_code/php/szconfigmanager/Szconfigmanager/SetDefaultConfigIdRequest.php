@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class SetDefaultConfigIdRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int64 configId = 1;</code>
+     * Generated from protobuf field <code>int64 config_id = 1;</code>
      */
-    protected $configId = 0;
+    protected $config_id = 0;
 
     /**
      * Constructor.
@@ -24,7 +24,7 @@ class SetDefaultConfigIdRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int|string $configId
+     *     @type int|string $config_id
      * }
      */
     public function __construct($data = NULL) {
@@ -33,23 +33,23 @@ class SetDefaultConfigIdRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 configId = 1;</code>
+     * Generated from protobuf field <code>int64 config_id = 1;</code>
      * @return int|string
      */
     public function getConfigId()
     {
-        return $this->configId;
+        return $this->config_id;
     }
 
     /**
-     * Generated from protobuf field <code>int64 configId = 1;</code>
+     * Generated from protobuf field <code>int64 config_id = 1;</code>
      * @param int|string $var
      * @return $this
      */
     public function setConfigId($var)
     {
         GPBUtil::checkInt64($var);
-        $this->configId = $var;
+        $this->config_id = $var;
 
         return $this;
     }

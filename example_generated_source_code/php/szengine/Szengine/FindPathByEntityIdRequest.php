@@ -14,25 +14,25 @@ use Google\Protobuf\Internal\GPBUtil;
 class FindPathByEntityIdRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int64 startEntityId = 1;</code>
+     * Generated from protobuf field <code>int64 start_entity_id = 1;</code>
      */
-    protected $startEntityId = 0;
+    protected $start_entity_id = 0;
     /**
-     * Generated from protobuf field <code>int64 endEntityId = 2;</code>
+     * Generated from protobuf field <code>int64 end_entity_id = 2;</code>
      */
-    protected $endEntityId = 0;
+    protected $end_entity_id = 0;
     /**
-     * Generated from protobuf field <code>int64 maxDegrees = 3;</code>
+     * Generated from protobuf field <code>int64 max_degrees = 3;</code>
      */
-    protected $maxDegrees = 0;
+    protected $max_degrees = 0;
     /**
-     * Generated from protobuf field <code>string avoidEntityIds = 4;</code>
+     * Generated from protobuf field <code>string avoid_entity_ids = 4;</code>
      */
-    protected $avoidEntityIds = '';
+    protected $avoid_entity_ids = '';
     /**
-     * Generated from protobuf field <code>string requiredDataSources = 5;</code>
+     * Generated from protobuf field <code>string required_data_sources = 5;</code>
      */
-    protected $requiredDataSources = '';
+    protected $required_data_sources = '';
     /**
      * Generated from protobuf field <code>int64 flags = 6;</code>
      */
@@ -44,11 +44,11 @@ class FindPathByEntityIdRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int|string $startEntityId
-     *     @type int|string $endEntityId
-     *     @type int|string $maxDegrees
-     *     @type string $avoidEntityIds
-     *     @type string $requiredDataSources
+     *     @type int|string $start_entity_id
+     *     @type int|string $end_entity_id
+     *     @type int|string $max_degrees
+     *     @type string $avoid_entity_ids
+     *     @type string $required_data_sources
      *     @type int|string $flags
      * }
      */
@@ -58,111 +58,111 @@ class FindPathByEntityIdRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 startEntityId = 1;</code>
+     * Generated from protobuf field <code>int64 start_entity_id = 1;</code>
      * @return int|string
      */
     public function getStartEntityId()
     {
-        return $this->startEntityId;
+        return $this->start_entity_id;
     }
 
     /**
-     * Generated from protobuf field <code>int64 startEntityId = 1;</code>
+     * Generated from protobuf field <code>int64 start_entity_id = 1;</code>
      * @param int|string $var
      * @return $this
      */
     public function setStartEntityId($var)
     {
         GPBUtil::checkInt64($var);
-        $this->startEntityId = $var;
+        $this->start_entity_id = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>int64 endEntityId = 2;</code>
+     * Generated from protobuf field <code>int64 end_entity_id = 2;</code>
      * @return int|string
      */
     public function getEndEntityId()
     {
-        return $this->endEntityId;
+        return $this->end_entity_id;
     }
 
     /**
-     * Generated from protobuf field <code>int64 endEntityId = 2;</code>
+     * Generated from protobuf field <code>int64 end_entity_id = 2;</code>
      * @param int|string $var
      * @return $this
      */
     public function setEndEntityId($var)
     {
         GPBUtil::checkInt64($var);
-        $this->endEntityId = $var;
+        $this->end_entity_id = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>int64 maxDegrees = 3;</code>
+     * Generated from protobuf field <code>int64 max_degrees = 3;</code>
      * @return int|string
      */
     public function getMaxDegrees()
     {
-        return $this->maxDegrees;
+        return $this->max_degrees;
     }
 
     /**
-     * Generated from protobuf field <code>int64 maxDegrees = 3;</code>
+     * Generated from protobuf field <code>int64 max_degrees = 3;</code>
      * @param int|string $var
      * @return $this
      */
     public function setMaxDegrees($var)
     {
         GPBUtil::checkInt64($var);
-        $this->maxDegrees = $var;
+        $this->max_degrees = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>string avoidEntityIds = 4;</code>
+     * Generated from protobuf field <code>string avoid_entity_ids = 4;</code>
      * @return string
      */
     public function getAvoidEntityIds()
     {
-        return $this->avoidEntityIds;
+        return $this->avoid_entity_ids;
     }
 
     /**
-     * Generated from protobuf field <code>string avoidEntityIds = 4;</code>
+     * Generated from protobuf field <code>string avoid_entity_ids = 4;</code>
      * @param string $var
      * @return $this
      */
     public function setAvoidEntityIds($var)
     {
         GPBUtil::checkString($var, True);
-        $this->avoidEntityIds = $var;
+        $this->avoid_entity_ids = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>string requiredDataSources = 5;</code>
+     * Generated from protobuf field <code>string required_data_sources = 5;</code>
      * @return string
      */
     public function getRequiredDataSources()
     {
-        return $this->requiredDataSources;
+        return $this->required_data_sources;
     }
 
     /**
-     * Generated from protobuf field <code>string requiredDataSources = 5;</code>
+     * Generated from protobuf field <code>string required_data_sources = 5;</code>
      * @param string $var
      * @return $this
      */
     public function setRequiredDataSources($var)
     {
         GPBUtil::checkString($var, True);
-        $this->requiredDataSources = $var;
+        $this->required_data_sources = $var;
 
         return $this;
     }

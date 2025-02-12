@@ -45,16 +45,16 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr WhyRecordsRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : datasourcecode1_(
+      : data_source_code_1_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        recordid1_(
+        record_id_1_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        datasourcecode2_(
+        data_source_code_2_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        recordid2_(
+        record_id_2_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         flags_{::int64_t{0}},
@@ -97,10 +97,10 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr WhyRecordInEntityRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : datasourcecode_(
+      : data_source_code_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        recordid_(
+        record_id_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         flags_{::int64_t{0}},
@@ -143,8 +143,8 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr WhyEntitiesRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : entityid1_{::int64_t{0}},
-        entityid2_{::int64_t{0}},
+      : entity_id_1_{::int64_t{0}},
+        entity_id_2_{::int64_t{0}},
         flags_{::int64_t{0}},
         _cached_size_{0} {}
 
@@ -225,7 +225,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr StreamExportCsvEntityReportRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : csvcolumnlist_(
+      : csv_column_list_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         flags_{::int64_t{0}},
@@ -271,7 +271,7 @@ inline constexpr SearchByAttributesRequest::Impl_::Impl_(
       : attributes_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        searchprofile_(
+        search_profile_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         flags_{::int64_t{0}},
@@ -305,7 +305,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr ReinitializeRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : configid_{::int64_t{0}},
+      : config_id_{::int64_t{0}},
         _cached_size_{0} {}
 
 template <typename>
@@ -345,10 +345,10 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr ReevaluateRecordRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : datasourcecode_(
+      : data_source_code_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        recordid_(
+        record_id_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         flags_{::int64_t{0}},
@@ -391,7 +391,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr ReevaluateEntityRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : entityid_{::int64_t{0}},
+      : entity_id_{::int64_t{0}},
         flags_{::int64_t{0}},
         _cached_size_{0} {}
 
@@ -432,7 +432,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr ProcessRedoRecordRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : redorecord_(
+      : redo_record_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         flags_{::int64_t{0}},
@@ -499,7 +499,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr PreprocessRecordRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : recorddefinition_(
+      : record_definition_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         flags_{::int64_t{0}},
@@ -542,7 +542,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr HowEntityByEntityIdRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : entityid_{::int64_t{0}},
+      : entity_id_{::int64_t{0}},
         flags_{::int64_t{0}},
         _cached_size_{0} {}
 
@@ -583,7 +583,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr GetVirtualEntityByRecordIdRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : recordkeys_(
+      : record_keys_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         flags_{::int64_t{0}},
@@ -692,10 +692,10 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr GetRecordRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : datasourcecode_(
+      : data_source_code_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        recordid_(
+        record_id_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         flags_{::int64_t{0}},
@@ -738,10 +738,10 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr GetEntityByRecordIdRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : datasourcecode_(
+      : data_source_code_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        recordid_(
+        record_id_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         flags_{::int64_t{0}},
@@ -784,7 +784,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr GetEntityByEntityIdRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : entityid_{::int64_t{0}},
+      : entity_id_{::int64_t{0}},
         flags_{::int64_t{0}},
         _cached_size_{0} {}
 
@@ -856,25 +856,25 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr FindPathByRecordIdRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : startdatasourcecode_(
+      : start_data_source_code_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        startrecordid_(
+        start_record_id_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        enddatasourcecode_(
+        end_data_source_code_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        endrecordid_(
+        end_record_id_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        avoidrecordkeys_(
+        avoid_record_keys_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        requireddatasources_(
+        required_data_sources_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        maxdegrees_{::int64_t{0}},
+        max_degrees_{::int64_t{0}},
         flags_{::int64_t{0}},
         _cached_size_{0} {}
 
@@ -915,15 +915,15 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr FindPathByEntityIdRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : avoidentityids_(
+      : avoid_entity_ids_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        requireddatasources_(
+        required_data_sources_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        startentityid_{::int64_t{0}},
-        endentityid_{::int64_t{0}},
-        maxdegrees_{::int64_t{0}},
+        start_entity_id_{::int64_t{0}},
+        end_entity_id_{::int64_t{0}},
+        max_degrees_{::int64_t{0}},
         flags_{::int64_t{0}},
         _cached_size_{0} {}
 
@@ -964,12 +964,12 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr FindNetworkByRecordIdRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : recordkeys_(
+      : record_keys_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        maxdegrees_{::int64_t{0}},
-        buildoutdegrees_{::int64_t{0}},
-        buildoutmaxentities_{::int64_t{0}},
+        max_degrees_{::int64_t{0}},
+        build_out_degrees_{::int64_t{0}},
+        build_out_max_entities_{::int64_t{0}},
         flags_{::int64_t{0}},
         _cached_size_{0} {}
 
@@ -1010,12 +1010,12 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr FindNetworkByEntityIdRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : entityids_(
+      : entity_ids_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        maxdegrees_{::int64_t{0}},
-        buildoutdegrees_{::int64_t{0}},
-        buildoutmaxentities_{::int64_t{0}},
+        max_degrees_{::int64_t{0}},
+        build_out_degrees_{::int64_t{0}},
+        build_out_max_entities_{::int64_t{0}},
         flags_{::int64_t{0}},
         _cached_size_{0} {}
 
@@ -1056,10 +1056,10 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr FindInterestingEntitiesByRecordIdRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : datasourcecode_(
+      : data_source_code_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        recordid_(
+        record_id_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         flags_{::int64_t{0}},
@@ -1102,7 +1102,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr FindInterestingEntitiesByEntityIdRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : entityid_{::int64_t{0}},
+      : entity_id_{::int64_t{0}},
         flags_{::int64_t{0}},
         _cached_size_{0} {}
 
@@ -1143,7 +1143,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr FetchNextRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : exporthandle_{::int64_t{0}},
+      : export_handle_{::int64_t{0}},
         _cached_size_{0} {}
 
 template <typename>
@@ -1219,7 +1219,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr ExportCsvEntityReportRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : csvcolumnlist_(
+      : csv_column_list_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         flags_{::int64_t{0}},
@@ -1262,10 +1262,10 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr DeleteRecordRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : datasourcecode_(
+      : data_source_code_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        recordid_(
+        record_id_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         flags_{::int64_t{0}},
@@ -1330,7 +1330,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr CloseExportRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : exporthandle_{::int64_t{0}},
+      : export_handle_{::int64_t{0}},
         _cached_size_{0} {}
 
 template <typename>
@@ -1370,13 +1370,13 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr AddRecordRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : datasourcecode_(
+      : data_source_code_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        recordid_(
+        record_id_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        recorddefinition_(
+        record_definition_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         flags_{::int64_t{0}},
@@ -1411,9 +1411,9 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::AddRecordRequest, _impl_.datasourcecode_),
-    PROTOBUF_FIELD_OFFSET(::szengine::AddRecordRequest, _impl_.recordid_),
-    PROTOBUF_FIELD_OFFSET(::szengine::AddRecordRequest, _impl_.recorddefinition_),
+    PROTOBUF_FIELD_OFFSET(::szengine::AddRecordRequest, _impl_.data_source_code_),
+    PROTOBUF_FIELD_OFFSET(::szengine::AddRecordRequest, _impl_.record_id_),
+    PROTOBUF_FIELD_OFFSET(::szengine::AddRecordRequest, _impl_.record_definition_),
     PROTOBUF_FIELD_OFFSET(::szengine::AddRecordRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::AddRecordResponse, _internal_metadata_),
@@ -1432,7 +1432,7 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::CloseExportRequest, _impl_.exporthandle_),
+    PROTOBUF_FIELD_OFFSET(::szengine::CloseExportRequest, _impl_.export_handle_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::CloseExportResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -1466,8 +1466,8 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::DeleteRecordRequest, _impl_.datasourcecode_),
-    PROTOBUF_FIELD_OFFSET(::szengine::DeleteRecordRequest, _impl_.recordid_),
+    PROTOBUF_FIELD_OFFSET(::szengine::DeleteRecordRequest, _impl_.data_source_code_),
+    PROTOBUF_FIELD_OFFSET(::szengine::DeleteRecordRequest, _impl_.record_id_),
     PROTOBUF_FIELD_OFFSET(::szengine::DeleteRecordRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::DeleteRecordResponse, _internal_metadata_),
@@ -1486,7 +1486,7 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::ExportCsvEntityReportRequest, _impl_.csvcolumnlist_),
+    PROTOBUF_FIELD_OFFSET(::szengine::ExportCsvEntityReportRequest, _impl_.csv_column_list_),
     PROTOBUF_FIELD_OFFSET(::szengine::ExportCsvEntityReportRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::ExportCsvEntityReportResponse, _internal_metadata_),
@@ -1523,7 +1523,7 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::FetchNextRequest, _impl_.exporthandle_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FetchNextRequest, _impl_.export_handle_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::FetchNextResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -1541,7 +1541,7 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByEntityIdRequest, _impl_.entityid_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByEntityIdRequest, _impl_.entity_id_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByEntityIdRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByEntityIdResponse, _internal_metadata_),
@@ -1560,8 +1560,8 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByRecordIdRequest, _impl_.datasourcecode_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByRecordIdRequest, _impl_.recordid_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByRecordIdRequest, _impl_.data_source_code_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByRecordIdRequest, _impl_.record_id_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByRecordIdRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::FindInterestingEntitiesByRecordIdResponse, _internal_metadata_),
@@ -1580,10 +1580,10 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdRequest, _impl_.entityids_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdRequest, _impl_.maxdegrees_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdRequest, _impl_.buildoutdegrees_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdRequest, _impl_.buildoutmaxentities_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdRequest, _impl_.entity_ids_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdRequest, _impl_.max_degrees_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdRequest, _impl_.build_out_degrees_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdRequest, _impl_.build_out_max_entities_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByEntityIdResponse, _internal_metadata_),
@@ -1602,10 +1602,10 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdRequest, _impl_.recordkeys_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdRequest, _impl_.maxdegrees_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdRequest, _impl_.buildoutdegrees_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdRequest, _impl_.buildoutmaxentities_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdRequest, _impl_.record_keys_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdRequest, _impl_.max_degrees_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdRequest, _impl_.build_out_degrees_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdRequest, _impl_.build_out_max_entities_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::FindNetworkByRecordIdResponse, _internal_metadata_),
@@ -1624,11 +1624,11 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.startentityid_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.endentityid_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.maxdegrees_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.avoidentityids_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.requireddatasources_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.start_entity_id_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.end_entity_id_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.max_degrees_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.avoid_entity_ids_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.required_data_sources_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::FindPathByEntityIdResponse, _internal_metadata_),
@@ -1647,13 +1647,13 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.startdatasourcecode_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.startrecordid_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.enddatasourcecode_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.endrecordid_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.maxdegrees_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.avoidrecordkeys_),
-    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.requireddatasources_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.start_data_source_code_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.start_record_id_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.end_data_source_code_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.end_record_id_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.max_degrees_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.avoid_record_keys_),
+    PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.required_data_sources_),
     PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::FindPathByRecordIdResponse, _internal_metadata_),
@@ -1689,7 +1689,7 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::GetEntityByEntityIdRequest, _impl_.entityid_),
+    PROTOBUF_FIELD_OFFSET(::szengine::GetEntityByEntityIdRequest, _impl_.entity_id_),
     PROTOBUF_FIELD_OFFSET(::szengine::GetEntityByEntityIdRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::GetEntityByEntityIdResponse, _internal_metadata_),
@@ -1708,8 +1708,8 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::GetEntityByRecordIdRequest, _impl_.datasourcecode_),
-    PROTOBUF_FIELD_OFFSET(::szengine::GetEntityByRecordIdRequest, _impl_.recordid_),
+    PROTOBUF_FIELD_OFFSET(::szengine::GetEntityByRecordIdRequest, _impl_.data_source_code_),
+    PROTOBUF_FIELD_OFFSET(::szengine::GetEntityByRecordIdRequest, _impl_.record_id_),
     PROTOBUF_FIELD_OFFSET(::szengine::GetEntityByRecordIdRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::GetEntityByRecordIdResponse, _internal_metadata_),
@@ -1728,8 +1728,8 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::GetRecordRequest, _impl_.datasourcecode_),
-    PROTOBUF_FIELD_OFFSET(::szengine::GetRecordRequest, _impl_.recordid_),
+    PROTOBUF_FIELD_OFFSET(::szengine::GetRecordRequest, _impl_.data_source_code_),
+    PROTOBUF_FIELD_OFFSET(::szengine::GetRecordRequest, _impl_.record_id_),
     PROTOBUF_FIELD_OFFSET(::szengine::GetRecordRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::GetRecordResponse, _internal_metadata_),
@@ -1782,7 +1782,7 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::GetVirtualEntityByRecordIdRequest, _impl_.recordkeys_),
+    PROTOBUF_FIELD_OFFSET(::szengine::GetVirtualEntityByRecordIdRequest, _impl_.record_keys_),
     PROTOBUF_FIELD_OFFSET(::szengine::GetVirtualEntityByRecordIdRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::GetVirtualEntityByRecordIdResponse, _internal_metadata_),
@@ -1801,7 +1801,7 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::HowEntityByEntityIdRequest, _impl_.entityid_),
+    PROTOBUF_FIELD_OFFSET(::szengine::HowEntityByEntityIdRequest, _impl_.entity_id_),
     PROTOBUF_FIELD_OFFSET(::szengine::HowEntityByEntityIdRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::HowEntityByEntityIdResponse, _internal_metadata_),
@@ -1820,7 +1820,7 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::PreprocessRecordRequest, _impl_.recorddefinition_),
+    PROTOBUF_FIELD_OFFSET(::szengine::PreprocessRecordRequest, _impl_.record_definition_),
     PROTOBUF_FIELD_OFFSET(::szengine::PreprocessRecordRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::PreprocessRecordResponse, _internal_metadata_),
@@ -1855,7 +1855,7 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::ProcessRedoRecordRequest, _impl_.redorecord_),
+    PROTOBUF_FIELD_OFFSET(::szengine::ProcessRedoRecordRequest, _impl_.redo_record_),
     PROTOBUF_FIELD_OFFSET(::szengine::ProcessRedoRecordRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::ProcessRedoRecordResponse, _internal_metadata_),
@@ -1874,7 +1874,7 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::ReevaluateEntityRequest, _impl_.entityid_),
+    PROTOBUF_FIELD_OFFSET(::szengine::ReevaluateEntityRequest, _impl_.entity_id_),
     PROTOBUF_FIELD_OFFSET(::szengine::ReevaluateEntityRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::ReevaluateEntityResponse, _internal_metadata_),
@@ -1893,8 +1893,8 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::ReevaluateRecordRequest, _impl_.datasourcecode_),
-    PROTOBUF_FIELD_OFFSET(::szengine::ReevaluateRecordRequest, _impl_.recordid_),
+    PROTOBUF_FIELD_OFFSET(::szengine::ReevaluateRecordRequest, _impl_.data_source_code_),
+    PROTOBUF_FIELD_OFFSET(::szengine::ReevaluateRecordRequest, _impl_.record_id_),
     PROTOBUF_FIELD_OFFSET(::szengine::ReevaluateRecordRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::ReevaluateRecordResponse, _internal_metadata_),
@@ -1913,7 +1913,7 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::ReinitializeRequest, _impl_.configid_),
+    PROTOBUF_FIELD_OFFSET(::szengine::ReinitializeRequest, _impl_.config_id_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::ReinitializeResponse, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -1931,7 +1931,7 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
     PROTOBUF_FIELD_OFFSET(::szengine::SearchByAttributesRequest, _impl_.attributes_),
-    PROTOBUF_FIELD_OFFSET(::szengine::SearchByAttributesRequest, _impl_.searchprofile_),
+    PROTOBUF_FIELD_OFFSET(::szengine::SearchByAttributesRequest, _impl_.search_profile_),
     PROTOBUF_FIELD_OFFSET(::szengine::SearchByAttributesRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::SearchByAttributesResponse, _internal_metadata_),
@@ -1950,7 +1950,7 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::StreamExportCsvEntityReportRequest, _impl_.csvcolumnlist_),
+    PROTOBUF_FIELD_OFFSET(::szengine::StreamExportCsvEntityReportRequest, _impl_.csv_column_list_),
     PROTOBUF_FIELD_OFFSET(::szengine::StreamExportCsvEntityReportRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::StreamExportCsvEntityReportResponse, _internal_metadata_),
@@ -1987,8 +1987,8 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::WhyEntitiesRequest, _impl_.entityid1_),
-    PROTOBUF_FIELD_OFFSET(::szengine::WhyEntitiesRequest, _impl_.entityid2_),
+    PROTOBUF_FIELD_OFFSET(::szengine::WhyEntitiesRequest, _impl_.entity_id_1_),
+    PROTOBUF_FIELD_OFFSET(::szengine::WhyEntitiesRequest, _impl_.entity_id_2_),
     PROTOBUF_FIELD_OFFSET(::szengine::WhyEntitiesRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::WhyEntitiesResponse, _internal_metadata_),
@@ -2007,8 +2007,8 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::WhyRecordInEntityRequest, _impl_.datasourcecode_),
-    PROTOBUF_FIELD_OFFSET(::szengine::WhyRecordInEntityRequest, _impl_.recordid_),
+    PROTOBUF_FIELD_OFFSET(::szengine::WhyRecordInEntityRequest, _impl_.data_source_code_),
+    PROTOBUF_FIELD_OFFSET(::szengine::WhyRecordInEntityRequest, _impl_.record_id_),
     PROTOBUF_FIELD_OFFSET(::szengine::WhyRecordInEntityRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::WhyRecordInEntityResponse, _internal_metadata_),
@@ -2027,10 +2027,10 @@ const ::uint32_t TableStruct_szengine_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szengine::WhyRecordsRequest, _impl_.datasourcecode1_),
-    PROTOBUF_FIELD_OFFSET(::szengine::WhyRecordsRequest, _impl_.recordid1_),
-    PROTOBUF_FIELD_OFFSET(::szengine::WhyRecordsRequest, _impl_.datasourcecode2_),
-    PROTOBUF_FIELD_OFFSET(::szengine::WhyRecordsRequest, _impl_.recordid2_),
+    PROTOBUF_FIELD_OFFSET(::szengine::WhyRecordsRequest, _impl_.data_source_code_1_),
+    PROTOBUF_FIELD_OFFSET(::szengine::WhyRecordsRequest, _impl_.record_id_1_),
+    PROTOBUF_FIELD_OFFSET(::szengine::WhyRecordsRequest, _impl_.data_source_code_2_),
+    PROTOBUF_FIELD_OFFSET(::szengine::WhyRecordsRequest, _impl_.record_id_2_),
     PROTOBUF_FIELD_OFFSET(::szengine::WhyRecordsRequest, _impl_.flags_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szengine::WhyRecordsResponse, _internal_metadata_),
@@ -2182,196 +2182,198 @@ static const ::_pb::Message* const file_default_instances[] = {
     &::szengine::_WhyRecordsResponse_default_instance_._instance,
 };
 const char descriptor_table_protodef_szengine_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-    "\n\016szengine.proto\022\010szengine\"e\n\020AddRecordR"
-    "equest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010record"
-    "Id\030\002 \001(\t\022\030\n\020recordDefinition\030\003 \001(\t\022\r\n\005fl"
-    "ags\030\004 \001(\003\"#\n\021AddRecordResponse\022\016\n\006result"
-    "\030\001 \001(\t\"*\n\022CloseExportRequest\022\024\n\014exportHa"
-    "ndle\030\001 \001(\003\"\025\n\023CloseExportResponse\"\031\n\027Cou"
-    "ntRedoRecordsRequest\"*\n\030CountRedoRecords"
-    "Response\022\016\n\006result\030\001 \001(\003\"N\n\023DeleteRecord"
-    "Request\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recor"
-    "dId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"&\n\024DeleteRecord"
-    "Response\022\016\n\006result\030\001 \001(\t\"D\n\034ExportCsvEnt"
-    "ityReportRequest\022\025\n\rcsvColumnList\030\001 \001(\t\022"
-    "\r\n\005flags\030\002 \001(\003\"/\n\035ExportCsvEntityReportR"
-    "esponse\022\016\n\006result\030\001 \001(\003\".\n\035ExportJsonEnt"
-    "ityReportRequest\022\r\n\005flags\030\001 \001(\003\"0\n\036Expor"
-    "tJsonEntityReportResponse\022\016\n\006result\030\001 \001("
-    "\003\"(\n\020FetchNextRequest\022\024\n\014exportHandle\030\001 "
-    "\001(\003\"#\n\021FetchNextResponse\022\016\n\006result\030\001 \001(\t"
-    "\"K\n(FindInterestingEntitiesByEntityIdReq"
-    "uest\022\020\n\010entityId\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\";\n"
-    ")FindInterestingEntitiesByEntityIdRespon"
-    "se\022\016\n\006result\030\001 \001(\t\"c\n(FindInterestingEnt"
-    "itiesByRecordIdRequest\022\026\n\016dataSourceCode"
-    "\030\001 \001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\""
-    ";\n)FindInterestingEntitiesByRecordIdResp"
-    "onse\022\016\n\006result\030\001 \001(\t\"\212\001\n\034FindNetworkByEn"
-    "tityIdRequest\022\021\n\tentityIds\030\001 \001(\t\022\022\n\nmaxD"
-    "egrees\030\002 \001(\003\022\027\n\017buildOutDegrees\030\003 \001(\003\022\033\n"
-    "\023buildOutMaxEntities\030\004 \001(\003\022\r\n\005flags\030\005 \001("
-    "\003\"/\n\035FindNetworkByEntityIdResponse\022\016\n\006re"
-    "sult\030\001 \001(\t\"\213\001\n\034FindNetworkByRecordIdRequ"
-    "est\022\022\n\nrecordKeys\030\001 \001(\t\022\022\n\nmaxDegrees\030\002 "
-    "\001(\003\022\027\n\017buildOutDegrees\030\003 \001(\003\022\033\n\023buildOut"
-    "MaxEntities\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035Find"
-    "NetworkByRecordIdResponse\022\016\n\006result\030\001 \001("
-    "\t\"\237\001\n\031FindPathByEntityIdRequest\022\025\n\rstart"
-    "EntityId\030\001 \001(\003\022\023\n\013endEntityId\030\002 \001(\003\022\022\n\nm"
-    "axDegrees\030\003 \001(\003\022\026\n\016avoidEntityIds\030\004 \001(\t\022"
-    "\033\n\023requiredDataSources\030\005 \001(\t\022\r\n\005flags\030\006 "
-    "\001(\003\",\n\032FindPathByEntityIdResponse\022\016\n\006res"
-    "ult\030\001 \001(\t\"\330\001\n\031FindPathByRecordIdRequest\022"
-    "\033\n\023startDataSourceCode\030\001 \001(\t\022\025\n\rstartRec"
-    "ordId\030\002 \001(\t\022\031\n\021endDataSourceCode\030\003 \001(\t\022\023"
-    "\n\013endRecordId\030\004 \001(\t\022\022\n\nmaxDegrees\030\005 \001(\003\022"
-    "\027\n\017avoidRecordKeys\030\006 \001(\t\022\033\n\023requiredData"
-    "Sources\030\007 \001(\t\022\r\n\005flags\030\010 \001(\003\",\n\032FindPath"
-    "ByRecordIdResponse\022\016\n\006result\030\001 \001(\t\"\032\n\030Ge"
-    "tActiveConfigIdRequest\"+\n\031GetActiveConfi"
-    "gIdResponse\022\016\n\006result\030\001 \001(\003\"=\n\032GetEntity"
-    "ByEntityIdRequest\022\020\n\010entityId\030\001 \001(\003\022\r\n\005f"
-    "lags\030\002 \001(\003\"-\n\033GetEntityByEntityIdRespons"
-    "e\022\016\n\006result\030\001 \001(\t\"U\n\032GetEntityByRecordId"
-    "Request\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010recor"
-    "dId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"-\n\033GetEntityByR"
-    "ecordIdResponse\022\016\n\006result\030\001 \001(\t\"K\n\020GetRe"
-    "cordRequest\022\026\n\016dataSourceCode\030\001 \001(\t\022\020\n\010r"
-    "ecordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"#\n\021GetRecor"
-    "dResponse\022\016\n\006result\030\001 \001(\t\"\026\n\024GetRedoReco"
-    "rdRequest\"\'\n\025GetRedoRecordResponse\022\016\n\006re"
-    "sult\030\001 \001(\t\"\021\n\017GetStatsRequest\"\"\n\020GetStat"
-    "sResponse\022\016\n\006result\030\001 \001(\t\"F\n!GetVirtualE"
-    "ntityByRecordIdRequest\022\022\n\nrecordKeys\030\001 \001"
-    "(\t\022\r\n\005flags\030\002 \001(\003\"4\n\"GetVirtualEntityByR"
-    "ecordIdResponse\022\016\n\006result\030\001 \001(\t\"=\n\032HowEn"
-    "tityByEntityIdRequest\022\020\n\010entityId\030\001 \001(\003\022"
-    "\r\n\005flags\030\002 \001(\003\"-\n\033HowEntityByEntityIdRes"
-    "ponse\022\016\n\006result\030\001 \001(\t\"B\n\027PreprocessRecor"
-    "dRequest\022\030\n\020recordDefinition\030\001 \001(\t\022\r\n\005fl"
-    "ags\030\002 \001(\003\"*\n\030PreprocessRecordResponse\022\016\n"
-    "\006result\030\001 \001(\t\"\024\n\022PrimeEngineRequest\"\025\n\023P"
-    "rimeEngineResponse\"=\n\030ProcessRedoRecordR"
-    "equest\022\022\n\nredoRecord\030\001 \001(\t\022\r\n\005flags\030\002 \001("
-    "\003\"+\n\031ProcessRedoRecordResponse\022\016\n\006result"
-    "\030\001 \001(\t\":\n\027ReevaluateEntityRequest\022\020\n\010ent"
-    "ityId\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"*\n\030Reevaluate"
-    "EntityResponse\022\016\n\006result\030\001 \001(\t\"R\n\027Reeval"
-    "uateRecordRequest\022\026\n\016dataSourceCode\030\001 \001("
-    "\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"*\n\030Re"
-    "evaluateRecordResponse\022\016\n\006result\030\001 \001(\t\"\'"
-    "\n\023ReinitializeRequest\022\020\n\010configId\030\001 \001(\003\""
-    "\026\n\024ReinitializeResponse\"U\n\031SearchByAttri"
-    "butesRequest\022\022\n\nattributes\030\001 \001(\t\022\025\n\rsear"
-    "chProfile\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\",\n\032Search"
-    "ByAttributesResponse\022\016\n\006result\030\001 \001(\t\"J\n\""
-    "StreamExportCsvEntityReportRequest\022\025\n\rcs"
-    "vColumnList\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"5\n#Stre"
-    "amExportCsvEntityReportResponse\022\016\n\006resul"
-    "t\030\001 \001(\t\"4\n#StreamExportJsonEntityReportR"
-    "equest\022\r\n\005flags\030\001 \001(\003\"6\n$StreamExportJso"
-    "nEntityReportResponse\022\016\n\006result\030\001 \001(\t\"I\n"
-    "\022WhyEntitiesRequest\022\021\n\tentityId1\030\001 \001(\003\022\021"
-    "\n\tentityId2\030\002 \001(\003\022\r\n\005flags\030\003 \001(\003\"%\n\023WhyE"
-    "ntitiesResponse\022\016\n\006result\030\001 \001(\t\"S\n\030WhyRe"
-    "cordInEntityRequest\022\026\n\016dataSourceCode\030\001 "
-    "\001(\t\022\020\n\010recordId\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"+\n\031"
-    "WhyRecordInEntityResponse\022\016\n\006result\030\001 \001("
-    "\t\"z\n\021WhyRecordsRequest\022\027\n\017dataSourceCode"
-    "1\030\001 \001(\t\022\021\n\trecordId1\030\002 \001(\t\022\027\n\017dataSource"
-    "Code2\030\003 \001(\t\022\021\n\trecordId2\030\004 \001(\t\022\r\n\005flags\030"
-    "\005 \001(\003\"$\n\022WhyRecordsResponse\022\016\n\006result\030\001 "
-    "\001(\t2\225\031\n\010SzEngine\022F\n\tAddRecord\022\032.szengine"
-    ".AddRecordRequest\032\033.szengine.AddRecordRe"
-    "sponse\"\000\022L\n\013CloseExport\022\034.szengine.Close"
-    "ExportRequest\032\035.szengine.CloseExportResp"
-    "onse\"\000\022[\n\020CountRedoRecords\022!.szengine.Co"
-    "untRedoRecordsRequest\032\".szengine.CountRe"
-    "doRecordsResponse\"\000\022O\n\014DeleteRecord\022\035.sz"
-    "engine.DeleteRecordRequest\032\036.szengine.De"
-    "leteRecordResponse\"\000\022j\n\025ExportCsvEntityR"
-    "eport\022&.szengine.ExportCsvEntityReportRe"
-    "quest\032\'.szengine.ExportCsvEntityReportRe"
-    "sponse\"\000\022m\n\026ExportJsonEntityReport\022\'.sze"
-    "ngine.ExportJsonEntityReportRequest\032(.sz"
-    "engine.ExportJsonEntityReportResponse\"\000\022"
-    "F\n\tFetchNext\022\032.szengine.FetchNextRequest"
-    "\032\033.szengine.FetchNextResponse\"\000\022\216\001\n!Find"
-    "InterestingEntitiesByEntityId\0222.szengine"
-    ".FindInterestingEntitiesByEntityIdReques"
-    "t\0323.szengine.FindInterestingEntitiesByEn"
-    "tityIdResponse\"\000\022\216\001\n!FindInterestingEnti"
-    "tiesByRecordId\0222.szengine.FindInterestin"
-    "gEntitiesByRecordIdRequest\0323.szengine.Fi"
-    "ndInterestingEntitiesByRecordIdResponse\""
-    "\000\022j\n\025FindNetworkByEntityId\022&.szengine.Fi"
-    "ndNetworkByEntityIdRequest\032\'.szengine.Fi"
-    "ndNetworkByEntityIdResponse\"\000\022j\n\025FindNet"
-    "workByRecordId\022&.szengine.FindNetworkByR"
-    "ecordIdRequest\032\'.szengine.FindNetworkByR"
-    "ecordIdResponse\"\000\022a\n\022FindPathByEntityId\022"
-    "#.szengine.FindPathByEntityIdRequest\032$.s"
-    "zengine.FindPathByEntityIdResponse\"\000\022a\n\022"
-    "FindPathByRecordId\022#.szengine.FindPathBy"
-    "RecordIdRequest\032$.szengine.FindPathByRec"
-    "ordIdResponse\"\000\022^\n\021GetActiveConfigId\022\".s"
-    "zengine.GetActiveConfigIdRequest\032#.szeng"
-    "ine.GetActiveConfigIdResponse\"\000\022d\n\023GetEn"
-    "tityByEntityId\022$.szengine.GetEntityByEnt"
-    "ityIdRequest\032%.szengine.GetEntityByEntit"
-    "yIdResponse\"\000\022d\n\023GetEntityByRecordId\022$.s"
-    "zengine.GetEntityByRecordIdRequest\032%.sze"
-    "ngine.GetEntityByRecordIdResponse\"\000\022F\n\tG"
-    "etRecord\022\032.szengine.GetRecordRequest\032\033.s"
-    "zengine.GetRecordResponse\"\000\022R\n\rGetRedoRe"
-    "cord\022\036.szengine.GetRedoRecordRequest\032\037.s"
-    "zengine.GetRedoRecordResponse\"\000\022C\n\010GetSt"
-    "ats\022\031.szengine.GetStatsRequest\032\032.szengin"
-    "e.GetStatsResponse\"\000\022y\n\032GetVirtualEntity"
-    "ByRecordId\022+.szengine.GetVirtualEntityBy"
-    "RecordIdRequest\032,.szengine.GetVirtualEnt"
-    "ityByRecordIdResponse\"\000\022d\n\023HowEntityByEn"
-    "tityId\022$.szengine.HowEntityByEntityIdReq"
-    "uest\032%.szengine.HowEntityByEntityIdRespo"
-    "nse\"\000\022[\n\020PreprocessRecord\022!.szengine.Pre"
-    "processRecordRequest\032\".szengine.Preproce"
-    "ssRecordResponse\"\000\022L\n\013PrimeEngine\022\034.szen"
-    "gine.PrimeEngineRequest\032\035.szengine.Prime"
-    "EngineResponse\"\000\022^\n\021ProcessRedoRecord\022\"."
-    "szengine.ProcessRedoRecordRequest\032#.szen"
-    "gine.ProcessRedoRecordResponse\"\000\022[\n\020Reev"
-    "aluateEntity\022!.szengine.ReevaluateEntity"
-    "Request\032\".szengine.ReevaluateEntityRespo"
-    "nse\"\000\022[\n\020ReevaluateRecord\022!.szengine.Ree"
-    "valuateRecordRequest\032\".szengine.Reevalua"
-    "teRecordResponse\"\000\022O\n\014Reinitialize\022\035.sze"
-    "ngine.ReinitializeRequest\032\036.szengine.Rei"
-    "nitializeResponse\"\000\022a\n\022SearchByAttribute"
-    "s\022#.szengine.SearchByAttributesRequest\032$"
-    ".szengine.SearchByAttributesResponse\"\000\022~"
-    "\n\033StreamExportCsvEntityReport\022,.szengine"
-    ".StreamExportCsvEntityReportRequest\032-.sz"
-    "engine.StreamExportCsvEntityReportRespon"
-    "se\"\0000\001\022\201\001\n\034StreamExportJsonEntityReport\022"
-    "-.szengine.StreamExportJsonEntityReportR"
-    "equest\032..szengine.StreamExportJsonEntity"
-    "ReportResponse\"\0000\001\022L\n\013WhyEntities\022\034.szen"
-    "gine.WhyEntitiesRequest\032\035.szengine.WhyEn"
-    "titiesResponse\"\000\022^\n\021WhyRecordInEntity\022\"."
-    "szengine.WhyRecordInEntityRequest\032#.szen"
-    "gine.WhyRecordInEntityResponse\"\000\022I\n\nWhyR"
-    "ecords\022\033.szengine.WhyRecordsRequest\032\034.sz"
-    "engine.WhyRecordsResponse\"\000BX\n\024com.senzi"
-    "ng.sdk.grpcB\rSzEngineProtoZ1github.com/s"
-    "enzing-garage/sz-sdk-go-grpc/szengineb\006p"
-    "roto3"
+    "\n\016szengine.proto\022\010szengine\"i\n\020AddRecordR"
+    "equest\022\030\n\020data_source_code\030\001 \001(\t\022\021\n\treco"
+    "rd_id\030\002 \001(\t\022\031\n\021record_definition\030\003 \001(\t\022\r"
+    "\n\005flags\030\004 \001(\003\"#\n\021AddRecordResponse\022\016\n\006re"
+    "sult\030\001 \001(\t\"+\n\022CloseExportRequest\022\025\n\rexpo"
+    "rt_handle\030\001 \001(\003\"\025\n\023CloseExportResponse\"\031"
+    "\n\027CountRedoRecordsRequest\"*\n\030CountRedoRe"
+    "cordsResponse\022\016\n\006result\030\001 \001(\003\"Q\n\023DeleteR"
+    "ecordRequest\022\030\n\020data_source_code\030\001 \001(\t\022\021"
+    "\n\trecord_id\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"&\n\024Dele"
+    "teRecordResponse\022\016\n\006result\030\001 \001(\t\"F\n\034Expo"
+    "rtCsvEntityReportRequest\022\027\n\017csv_column_l"
+    "ist\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"/\n\035ExportCsvEnt"
+    "ityReportResponse\022\016\n\006result\030\001 \001(\003\".\n\035Exp"
+    "ortJsonEntityReportRequest\022\r\n\005flags\030\001 \001("
+    "\003\"0\n\036ExportJsonEntityReportResponse\022\016\n\006r"
+    "esult\030\001 \001(\003\")\n\020FetchNextRequest\022\025\n\rexpor"
+    "t_handle\030\001 \001(\003\"#\n\021FetchNextResponse\022\016\n\006r"
+    "esult\030\001 \001(\t\"L\n(FindInterestingEntitiesBy"
+    "EntityIdRequest\022\021\n\tentity_id\030\001 \001(\003\022\r\n\005fl"
+    "ags\030\002 \001(\003\";\n)FindInterestingEntitiesByEn"
+    "tityIdResponse\022\016\n\006result\030\001 \001(\t\"f\n(FindIn"
+    "terestingEntitiesByRecordIdRequest\022\030\n\020da"
+    "ta_source_code\030\001 \001(\t\022\021\n\trecord_id\030\002 \001(\t\022"
+    "\r\n\005flags\030\003 \001(\003\";\n)FindInterestingEntitie"
+    "sByRecordIdResponse\022\016\n\006result\030\001 \001(\t\"\221\001\n\034"
+    "FindNetworkByEntityIdRequest\022\022\n\nentity_i"
+    "ds\030\001 \001(\t\022\023\n\013max_degrees\030\002 \001(\003\022\031\n\021build_o"
+    "ut_degrees\030\003 \001(\003\022\036\n\026build_out_max_entiti"
+    "es\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035FindNetworkBy"
+    "EntityIdResponse\022\016\n\006result\030\001 \001(\t\"\222\001\n\034Fin"
+    "dNetworkByRecordIdRequest\022\023\n\013record_keys"
+    "\030\001 \001(\t\022\023\n\013max_degrees\030\002 \001(\003\022\031\n\021build_out"
+    "_degrees\030\003 \001(\003\022\036\n\026build_out_max_entities"
+    "\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035FindNetworkByRe"
+    "cordIdResponse\022\016\n\006result\030\001 \001(\t\"\250\001\n\031FindP"
+    "athByEntityIdRequest\022\027\n\017start_entity_id\030"
+    "\001 \001(\003\022\025\n\rend_entity_id\030\002 \001(\003\022\023\n\013max_degr"
+    "ees\030\003 \001(\003\022\030\n\020avoid_entity_ids\030\004 \001(\t\022\035\n\025r"
+    "equired_data_sources\030\005 \001(\t\022\r\n\005flags\030\006 \001("
+    "\003\",\n\032FindPathByEntityIdResponse\022\016\n\006resul"
+    "t\030\001 \001(\t\"\347\001\n\031FindPathByRecordIdRequest\022\036\n"
+    "\026start_data_source_code\030\001 \001(\t\022\027\n\017start_r"
+    "ecord_id\030\002 \001(\t\022\034\n\024end_data_source_code\030\003"
+    " \001(\t\022\025\n\rend_record_id\030\004 \001(\t\022\023\n\013max_degre"
+    "es\030\005 \001(\003\022\031\n\021avoid_record_keys\030\006 \001(\t\022\035\n\025r"
+    "equired_data_sources\030\007 \001(\t\022\r\n\005flags\030\010 \001("
+    "\003\",\n\032FindPathByRecordIdResponse\022\016\n\006resul"
+    "t\030\001 \001(\t\"\032\n\030GetActiveConfigIdRequest\"+\n\031G"
+    "etActiveConfigIdResponse\022\016\n\006result\030\001 \001(\003"
+    "\">\n\032GetEntityByEntityIdRequest\022\021\n\tentity"
+    "_id\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"-\n\033GetEntityByE"
+    "ntityIdResponse\022\016\n\006result\030\001 \001(\t\"X\n\032GetEn"
+    "tityByRecordIdRequest\022\030\n\020data_source_cod"
+    "e\030\001 \001(\t\022\021\n\trecord_id\030\002 \001(\t\022\r\n\005flags\030\003 \001("
+    "\003\"-\n\033GetEntityByRecordIdResponse\022\016\n\006resu"
+    "lt\030\001 \001(\t\"N\n\020GetRecordRequest\022\030\n\020data_sou"
+    "rce_code\030\001 \001(\t\022\021\n\trecord_id\030\002 \001(\t\022\r\n\005fla"
+    "gs\030\003 \001(\003\"#\n\021GetRecordResponse\022\016\n\006result\030"
+    "\001 \001(\t\"\026\n\024GetRedoRecordRequest\"\'\n\025GetRedo"
+    "RecordResponse\022\016\n\006result\030\001 \001(\t\"\021\n\017GetSta"
+    "tsRequest\"\"\n\020GetStatsResponse\022\016\n\006result\030"
+    "\001 \001(\t\"G\n!GetVirtualEntityByRecordIdReque"
+    "st\022\023\n\013record_keys\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"4"
+    "\n\"GetVirtualEntityByRecordIdResponse\022\016\n\006"
+    "result\030\001 \001(\t\">\n\032HowEntityByEntityIdReque"
+    "st\022\021\n\tentity_id\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"-\n\033"
+    "HowEntityByEntityIdResponse\022\016\n\006result\030\001 "
+    "\001(\t\"C\n\027PreprocessRecordRequest\022\031\n\021record"
+    "_definition\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"*\n\030Prep"
+    "rocessRecordResponse\022\016\n\006result\030\001 \001(\t\"\024\n\022"
+    "PrimeEngineRequest\"\025\n\023PrimeEngineRespons"
+    "e\">\n\030ProcessRedoRecordRequest\022\023\n\013redo_re"
+    "cord\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"+\n\031ProcessRedo"
+    "RecordResponse\022\016\n\006result\030\001 \001(\t\";\n\027Reeval"
+    "uateEntityRequest\022\021\n\tentity_id\030\001 \001(\003\022\r\n\005"
+    "flags\030\002 \001(\003\"*\n\030ReevaluateEntityResponse\022"
+    "\016\n\006result\030\001 \001(\t\"U\n\027ReevaluateRecordReque"
+    "st\022\030\n\020data_source_code\030\001 \001(\t\022\021\n\trecord_i"
+    "d\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"*\n\030ReevaluateReco"
+    "rdResponse\022\016\n\006result\030\001 \001(\t\"(\n\023Reinitiali"
+    "zeRequest\022\021\n\tconfig_id\030\001 \001(\003\"\026\n\024Reinitia"
+    "lizeResponse\"V\n\031SearchByAttributesReques"
+    "t\022\022\n\nattributes\030\001 \001(\t\022\026\n\016search_profile\030"
+    "\002 \001(\t\022\r\n\005flags\030\003 \001(\003\",\n\032SearchByAttribut"
+    "esResponse\022\016\n\006result\030\001 \001(\t\"L\n\"StreamExpo"
+    "rtCsvEntityReportRequest\022\027\n\017csv_column_l"
+    "ist\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"5\n#StreamExport"
+    "CsvEntityReportResponse\022\016\n\006result\030\001 \001(\t\""
+    "4\n#StreamExportJsonEntityReportRequest\022\r"
+    "\n\005flags\030\001 \001(\003\"6\n$StreamExportJsonEntityR"
+    "eportResponse\022\016\n\006result\030\001 \001(\t\"M\n\022WhyEnti"
+    "tiesRequest\022\023\n\013entity_id_1\030\001 \001(\003\022\023\n\013enti"
+    "ty_id_2\030\002 \001(\003\022\r\n\005flags\030\003 \001(\003\"%\n\023WhyEntit"
+    "iesResponse\022\016\n\006result\030\001 \001(\t\"V\n\030WhyRecord"
+    "InEntityRequest\022\030\n\020data_source_code\030\001 \001("
+    "\t\022\021\n\trecord_id\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"+\n\031W"
+    "hyRecordInEntityResponse\022\016\n\006result\030\001 \001(\t"
+    "\"\204\001\n\021WhyRecordsRequest\022\032\n\022data_source_co"
+    "de_1\030\001 \001(\t\022\023\n\013record_id_1\030\002 \001(\t\022\032\n\022data_"
+    "source_code_2\030\003 \001(\t\022\023\n\013record_id_2\030\004 \001(\t"
+    "\022\r\n\005flags\030\005 \001(\003\"$\n\022WhyRecordsResponse\022\016\n"
+    "\006result\030\001 \001(\t2\225\031\n\010SzEngine\022F\n\tAddRecord\022"
+    "\032.szengine.AddRecordRequest\032\033.szengine.A"
+    "ddRecordResponse\"\000\022L\n\013CloseExport\022\034.szen"
+    "gine.CloseExportRequest\032\035.szengine.Close"
+    "ExportResponse\"\000\022[\n\020CountRedoRecords\022!.s"
+    "zengine.CountRedoRecordsRequest\032\".szengi"
+    "ne.CountRedoRecordsResponse\"\000\022O\n\014DeleteR"
+    "ecord\022\035.szengine.DeleteRecordRequest\032\036.s"
+    "zengine.DeleteRecordResponse\"\000\022j\n\025Export"
+    "CsvEntityReport\022&.szengine.ExportCsvEnti"
+    "tyReportRequest\032\'.szengine.ExportCsvEnti"
+    "tyReportResponse\"\000\022m\n\026ExportJsonEntityRe"
+    "port\022\'.szengine.ExportJsonEntityReportRe"
+    "quest\032(.szengine.ExportJsonEntityReportR"
+    "esponse\"\000\022F\n\tFetchNext\022\032.szengine.FetchN"
+    "extRequest\032\033.szengine.FetchNextResponse\""
+    "\000\022\216\001\n!FindInterestingEntitiesByEntityId\022"
+    "2.szengine.FindInterestingEntitiesByEnti"
+    "tyIdRequest\0323.szengine.FindInterestingEn"
+    "titiesByEntityIdResponse\"\000\022\216\001\n!FindInter"
+    "estingEntitiesByRecordId\0222.szengine.Find"
+    "InterestingEntitiesByRecordIdRequest\0323.s"
+    "zengine.FindInterestingEntitiesByRecordI"
+    "dResponse\"\000\022j\n\025FindNetworkByEntityId\022&.s"
+    "zengine.FindNetworkByEntityIdRequest\032\'.s"
+    "zengine.FindNetworkByEntityIdResponse\"\000\022"
+    "j\n\025FindNetworkByRecordId\022&.szengine.Find"
+    "NetworkByRecordIdRequest\032\'.szengine.Find"
+    "NetworkByRecordIdResponse\"\000\022a\n\022FindPathB"
+    "yEntityId\022#.szengine.FindPathByEntityIdR"
+    "equest\032$.szengine.FindPathByEntityIdResp"
+    "onse\"\000\022a\n\022FindPathByRecordId\022#.szengine."
+    "FindPathByRecordIdRequest\032$.szengine.Fin"
+    "dPathByRecordIdResponse\"\000\022^\n\021GetActiveCo"
+    "nfigId\022\".szengine.GetActiveConfigIdReque"
+    "st\032#.szengine.GetActiveConfigIdResponse\""
+    "\000\022d\n\023GetEntityByEntityId\022$.szengine.GetE"
+    "ntityByEntityIdRequest\032%.szengine.GetEnt"
+    "ityByEntityIdResponse\"\000\022d\n\023GetEntityByRe"
+    "cordId\022$.szengine.GetEntityByRecordIdReq"
+    "uest\032%.szengine.GetEntityByRecordIdRespo"
+    "nse\"\000\022F\n\tGetRecord\022\032.szengine.GetRecordR"
+    "equest\032\033.szengine.GetRecordResponse\"\000\022R\n"
+    "\rGetRedoRecord\022\036.szengine.GetRedoRecordR"
+    "equest\032\037.szengine.GetRedoRecordResponse\""
+    "\000\022C\n\010GetStats\022\031.szengine.GetStatsRequest"
+    "\032\032.szengine.GetStatsResponse\"\000\022y\n\032GetVir"
+    "tualEntityByRecordId\022+.szengine.GetVirtu"
+    "alEntityByRecordIdRequest\032,.szengine.Get"
+    "VirtualEntityByRecordIdResponse\"\000\022d\n\023How"
+    "EntityByEntityId\022$.szengine.HowEntityByE"
+    "ntityIdRequest\032%.szengine.HowEntityByEnt"
+    "ityIdResponse\"\000\022[\n\020PreprocessRecord\022!.sz"
+    "engine.PreprocessRecordRequest\032\".szengin"
+    "e.PreprocessRecordResponse\"\000\022L\n\013PrimeEng"
+    "ine\022\034.szengine.PrimeEngineRequest\032\035.szen"
+    "gine.PrimeEngineResponse\"\000\022^\n\021ProcessRed"
+    "oRecord\022\".szengine.ProcessRedoRecordRequ"
+    "est\032#.szengine.ProcessRedoRecordResponse"
+    "\"\000\022[\n\020ReevaluateEntity\022!.szengine.Reeval"
+    "uateEntityRequest\032\".szengine.ReevaluateE"
+    "ntityResponse\"\000\022[\n\020ReevaluateRecord\022!.sz"
+    "engine.ReevaluateRecordRequest\032\".szengin"
+    "e.ReevaluateRecordResponse\"\000\022O\n\014Reinitia"
+    "lize\022\035.szengine.ReinitializeRequest\032\036.sz"
+    "engine.ReinitializeResponse\"\000\022a\n\022SearchB"
+    "yAttributes\022#.szengine.SearchByAttribute"
+    "sRequest\032$.szengine.SearchByAttributesRe"
+    "sponse\"\000\022~\n\033StreamExportCsvEntityReport\022"
+    ",.szengine.StreamExportCsvEntityReportRe"
+    "quest\032-.szengine.StreamExportCsvEntityRe"
+    "portResponse\"\0000\001\022\201\001\n\034StreamExportJsonEnt"
+    "ityReport\022-.szengine.StreamExportJsonEnt"
+    "ityReportRequest\032..szengine.StreamExport"
+    "JsonEntityReportResponse\"\0000\001\022L\n\013WhyEntit"
+    "ies\022\034.szengine.WhyEntitiesRequest\032\035.szen"
+    "gine.WhyEntitiesResponse\"\000\022^\n\021WhyRecordI"
+    "nEntity\022\".szengine.WhyRecordInEntityRequ"
+    "est\032#.szengine.WhyRecordInEntityResponse"
+    "\"\000\022I\n\nWhyRecords\022\033.szengine.WhyRecordsRe"
+    "quest\032\034.szengine.WhyRecordsResponse\"\000BX\n"
+    "\024com.senzing.sdk.grpcB\rSzEngineProtoZ1gi"
+    "thub.com/senzing-garage/sz-sdk-go-grpc/s"
+    "zengineb\006proto3"
 };
 static ::absl::once_flag descriptor_table_szengine_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_szengine_2eproto = {
     false,
     false,
-    7325,
+    7415,
     descriptor_table_protodef_szengine_2eproto,
     "szengine.proto",
     &descriptor_table_szengine_2eproto_once,
@@ -2418,9 +2420,9 @@ AddRecordRequest::AddRecordRequest(::google::protobuf::Arena* arena)
 inline PROTOBUF_NDEBUG_INLINE AddRecordRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : datasourcecode_(arena, from.datasourcecode_),
-        recordid_(arena, from.recordid_),
-        recorddefinition_(arena, from.recorddefinition_),
+      : data_source_code_(arena, from.data_source_code_),
+        record_id_(arena, from.record_id_),
+        record_definition_(arena, from.record_definition_),
         _cached_size_{0} {}
 
 AddRecordRequest::AddRecordRequest(
@@ -2439,9 +2441,9 @@ AddRecordRequest::AddRecordRequest(
 inline PROTOBUF_NDEBUG_INLINE AddRecordRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : datasourcecode_(arena),
-        recordid_(arena),
-        recorddefinition_(arena),
+      : data_source_code_(arena),
+        record_id_(arena),
+        record_definition_(arena),
         _cached_size_{0} {}
 
 inline void AddRecordRequest::SharedCtor(::_pb::Arena* arena) {
@@ -2455,9 +2457,9 @@ AddRecordRequest::~AddRecordRequest() {
 }
 inline void AddRecordRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.datasourcecode_.Destroy();
-  _impl_.recordid_.Destroy();
-  _impl_.recorddefinition_.Destroy();
+  _impl_.data_source_code_.Destroy();
+  _impl_.record_id_.Destroy();
+  _impl_.record_definition_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -2468,9 +2470,9 @@ PROTOBUF_NOINLINE void AddRecordRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.datasourcecode_.ClearToEmpty();
-  _impl_.recordid_.ClearToEmpty();
-  _impl_.recorddefinition_.ClearToEmpty();
+  _impl_.data_source_code_.ClearToEmpty();
+  _impl_.record_id_.ClearToEmpty();
+  _impl_.record_definition_.ClearToEmpty();
   _impl_.flags_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -2483,7 +2485,7 @@ const char* AddRecordRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 4, 0, 72, 2> AddRecordRequest::_table_ = {
+const ::_pbi::TcParseTable<2, 4, 0, 76, 2> AddRecordRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -2500,26 +2502,26 @@ const ::_pbi::TcParseTable<2, 4, 0, 72, 2> AddRecordRequest::_table_ = {
     // int64 flags = 4;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(AddRecordRequest, _impl_.flags_), 63>(),
      {32, 63, 0, PROTOBUF_FIELD_OFFSET(AddRecordRequest, _impl_.flags_)}},
-    // string dataSourceCode = 1;
+    // string data_source_code = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(AddRecordRequest, _impl_.datasourcecode_)}},
-    // string recordId = 2;
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(AddRecordRequest, _impl_.data_source_code_)}},
+    // string record_id = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(AddRecordRequest, _impl_.recordid_)}},
-    // string recordDefinition = 3;
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(AddRecordRequest, _impl_.record_id_)}},
+    // string record_definition = 3;
     {::_pbi::TcParser::FastUS1,
-     {26, 63, 0, PROTOBUF_FIELD_OFFSET(AddRecordRequest, _impl_.recorddefinition_)}},
+     {26, 63, 0, PROTOBUF_FIELD_OFFSET(AddRecordRequest, _impl_.record_definition_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string dataSourceCode = 1;
-    {PROTOBUF_FIELD_OFFSET(AddRecordRequest, _impl_.datasourcecode_), 0, 0,
+    // string data_source_code = 1;
+    {PROTOBUF_FIELD_OFFSET(AddRecordRequest, _impl_.data_source_code_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string recordId = 2;
-    {PROTOBUF_FIELD_OFFSET(AddRecordRequest, _impl_.recordid_), 0, 0,
+    // string record_id = 2;
+    {PROTOBUF_FIELD_OFFSET(AddRecordRequest, _impl_.record_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string recordDefinition = 3;
-    {PROTOBUF_FIELD_OFFSET(AddRecordRequest, _impl_.recorddefinition_), 0, 0,
+    // string record_definition = 3;
+    {PROTOBUF_FIELD_OFFSET(AddRecordRequest, _impl_.record_definition_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 flags = 4;
     {PROTOBUF_FIELD_OFFSET(AddRecordRequest, _impl_.flags_), 0, 0,
@@ -2527,11 +2529,11 @@ const ::_pbi::TcParseTable<2, 4, 0, 72, 2> AddRecordRequest::_table_ = {
   }},
   // no aux_entries
   {{
-    "\31\16\10\20\0\0\0\0"
+    "\31\20\11\21\0\0\0\0"
     "szengine.AddRecordRequest"
-    "dataSourceCode"
-    "recordId"
-    "recordDefinition"
+    "data_source_code"
+    "record_id"
+    "record_definition"
   }},
 };
 
@@ -2542,27 +2544,27 @@ const ::_pbi::TcParseTable<2, 4, 0, 72, 2> AddRecordRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string dataSourceCode = 1;
-  if (!this->_internal_datasourcecode().empty()) {
-    const std::string& _s = this->_internal_datasourcecode();
+  // string data_source_code = 1;
+  if (!this->_internal_data_source_code().empty()) {
+    const std::string& _s = this->_internal_data_source_code();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.AddRecordRequest.dataSourceCode");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.AddRecordRequest.data_source_code");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
-  // string recordId = 2;
-  if (!this->_internal_recordid().empty()) {
-    const std::string& _s = this->_internal_recordid();
+  // string record_id = 2;
+  if (!this->_internal_record_id().empty()) {
+    const std::string& _s = this->_internal_record_id();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.AddRecordRequest.recordId");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.AddRecordRequest.record_id");
     target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
-  // string recordDefinition = 3;
-  if (!this->_internal_recorddefinition().empty()) {
-    const std::string& _s = this->_internal_recorddefinition();
+  // string record_definition = 3;
+  if (!this->_internal_record_definition().empty()) {
+    const std::string& _s = this->_internal_record_definition();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.AddRecordRequest.recordDefinition");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.AddRecordRequest.record_definition");
     target = stream->WriteStringMaybeAliased(3, _s, target);
   }
 
@@ -2590,22 +2592,22 @@ const ::_pbi::TcParseTable<2, 4, 0, 72, 2> AddRecordRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string dataSourceCode = 1;
-  if (!this->_internal_datasourcecode().empty()) {
+  // string data_source_code = 1;
+  if (!this->_internal_data_source_code().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_datasourcecode());
+                                    this->_internal_data_source_code());
   }
 
-  // string recordId = 2;
-  if (!this->_internal_recordid().empty()) {
+  // string record_id = 2;
+  if (!this->_internal_record_id().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_recordid());
+                                    this->_internal_record_id());
   }
 
-  // string recordDefinition = 3;
-  if (!this->_internal_recorddefinition().empty()) {
+  // string record_definition = 3;
+  if (!this->_internal_record_definition().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_recorddefinition());
+                                    this->_internal_record_definition());
   }
 
   // int64 flags = 4;
@@ -2633,14 +2635,14 @@ void AddRecordRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::go
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_datasourcecode().empty()) {
-    _this->_internal_set_datasourcecode(from._internal_datasourcecode());
+  if (!from._internal_data_source_code().empty()) {
+    _this->_internal_set_data_source_code(from._internal_data_source_code());
   }
-  if (!from._internal_recordid().empty()) {
-    _this->_internal_set_recordid(from._internal_recordid());
+  if (!from._internal_record_id().empty()) {
+    _this->_internal_set_record_id(from._internal_record_id());
   }
-  if (!from._internal_recorddefinition().empty()) {
-    _this->_internal_set_recorddefinition(from._internal_recorddefinition());
+  if (!from._internal_record_definition().empty()) {
+    _this->_internal_set_record_definition(from._internal_record_definition());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -2667,9 +2669,9 @@ void AddRecordRequest::InternalSwap(AddRecordRequest* PROTOBUF_RESTRICT other) {
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.datasourcecode_, &other->_impl_.datasourcecode_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recordid_, &other->_impl_.recordid_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recorddefinition_, &other->_impl_.recorddefinition_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.data_source_code_, &other->_impl_.data_source_code_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.record_id_, &other->_impl_.record_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.record_definition_, &other->_impl_.record_definition_, arena);
         swap(_impl_.flags_, other->_impl_.flags_);
 }
 
@@ -2891,7 +2893,7 @@ inline PROTOBUF_NDEBUG_INLINE CloseExportRequest::Impl_::Impl_(
 
 inline void CloseExportRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.exporthandle_ = {};
+  _impl_.export_handle_ = {};
 }
 CloseExportRequest::~CloseExportRequest() {
   // @@protoc_insertion_point(destructor:szengine.CloseExportRequest)
@@ -2910,7 +2912,7 @@ PROTOBUF_NOINLINE void CloseExportRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.exporthandle_ = ::int64_t{0};
+  _impl_.export_handle_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -2936,14 +2938,14 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> CloseExportRequest::_table_ = {
     &_CloseExportRequest_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // int64 exportHandle = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(CloseExportRequest, _impl_.exporthandle_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(CloseExportRequest, _impl_.exporthandle_)}},
+    // int64 export_handle = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(CloseExportRequest, _impl_.export_handle_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(CloseExportRequest, _impl_.export_handle_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 exportHandle = 1;
-    {PROTOBUF_FIELD_OFFSET(CloseExportRequest, _impl_.exporthandle_), 0, 0,
+    // int64 export_handle = 1;
+    {PROTOBUF_FIELD_OFFSET(CloseExportRequest, _impl_.export_handle_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
   }},
   // no aux_entries
@@ -2958,11 +2960,11 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> CloseExportRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 exportHandle = 1;
-  if (this->_internal_exporthandle() != 0) {
+  // int64 export_handle = 1;
+  if (this->_internal_export_handle() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_exporthandle(), target);
+            stream, this->_internal_export_handle(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2982,10 +2984,10 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> CloseExportRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 exportHandle = 1;
-  if (this->_internal_exporthandle() != 0) {
+  // int64 export_handle = 1;
+  if (this->_internal_export_handle() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_exporthandle());
+        this->_internal_export_handle());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -3007,8 +3009,8 @@ void CloseExportRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_exporthandle() != 0) {
-    _this->_internal_set_exporthandle(from._internal_exporthandle());
+  if (from._internal_export_handle() != 0) {
+    _this->_internal_set_export_handle(from._internal_export_handle());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -3030,7 +3032,7 @@ PROTOBUF_NOINLINE bool CloseExportRequest::IsInitialized() const {
 void CloseExportRequest::InternalSwap(CloseExportRequest* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.exporthandle_, other->_impl_.exporthandle_);
+        swap(_impl_.export_handle_, other->_impl_.export_handle_);
 }
 
 ::google::protobuf::Metadata CloseExportRequest::GetMetadata() const {
@@ -3292,8 +3294,8 @@ DeleteRecordRequest::DeleteRecordRequest(::google::protobuf::Arena* arena)
 inline PROTOBUF_NDEBUG_INLINE DeleteRecordRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : datasourcecode_(arena, from.datasourcecode_),
-        recordid_(arena, from.recordid_),
+      : data_source_code_(arena, from.data_source_code_),
+        record_id_(arena, from.record_id_),
         _cached_size_{0} {}
 
 DeleteRecordRequest::DeleteRecordRequest(
@@ -3312,8 +3314,8 @@ DeleteRecordRequest::DeleteRecordRequest(
 inline PROTOBUF_NDEBUG_INLINE DeleteRecordRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : datasourcecode_(arena),
-        recordid_(arena),
+      : data_source_code_(arena),
+        record_id_(arena),
         _cached_size_{0} {}
 
 inline void DeleteRecordRequest::SharedCtor(::_pb::Arena* arena) {
@@ -3327,8 +3329,8 @@ DeleteRecordRequest::~DeleteRecordRequest() {
 }
 inline void DeleteRecordRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.datasourcecode_.Destroy();
-  _impl_.recordid_.Destroy();
+  _impl_.data_source_code_.Destroy();
+  _impl_.record_id_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -3339,8 +3341,8 @@ PROTOBUF_NOINLINE void DeleteRecordRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.datasourcecode_.ClearToEmpty();
-  _impl_.recordid_.ClearToEmpty();
+  _impl_.data_source_code_.ClearToEmpty();
+  _impl_.record_id_.ClearToEmpty();
   _impl_.flags_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -3353,7 +3355,7 @@ const char* DeleteRecordRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 59, 2> DeleteRecordRequest::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 0, 62, 2> DeleteRecordRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -3368,23 +3370,23 @@ const ::_pbi::TcParseTable<2, 3, 0, 59, 2> DeleteRecordRequest::_table_ = {
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // string dataSourceCode = 1;
+    // string data_source_code = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(DeleteRecordRequest, _impl_.datasourcecode_)}},
-    // string recordId = 2;
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(DeleteRecordRequest, _impl_.data_source_code_)}},
+    // string record_id = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(DeleteRecordRequest, _impl_.recordid_)}},
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(DeleteRecordRequest, _impl_.record_id_)}},
     // int64 flags = 3;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(DeleteRecordRequest, _impl_.flags_), 63>(),
      {24, 63, 0, PROTOBUF_FIELD_OFFSET(DeleteRecordRequest, _impl_.flags_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string dataSourceCode = 1;
-    {PROTOBUF_FIELD_OFFSET(DeleteRecordRequest, _impl_.datasourcecode_), 0, 0,
+    // string data_source_code = 1;
+    {PROTOBUF_FIELD_OFFSET(DeleteRecordRequest, _impl_.data_source_code_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string recordId = 2;
-    {PROTOBUF_FIELD_OFFSET(DeleteRecordRequest, _impl_.recordid_), 0, 0,
+    // string record_id = 2;
+    {PROTOBUF_FIELD_OFFSET(DeleteRecordRequest, _impl_.record_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 flags = 3;
     {PROTOBUF_FIELD_OFFSET(DeleteRecordRequest, _impl_.flags_), 0, 0,
@@ -3392,10 +3394,10 @@ const ::_pbi::TcParseTable<2, 3, 0, 59, 2> DeleteRecordRequest::_table_ = {
   }},
   // no aux_entries
   {{
-    "\34\16\10\0\0\0\0\0"
+    "\34\20\11\0\0\0\0\0"
     "szengine.DeleteRecordRequest"
-    "dataSourceCode"
-    "recordId"
+    "data_source_code"
+    "record_id"
   }},
 };
 
@@ -3406,19 +3408,19 @@ const ::_pbi::TcParseTable<2, 3, 0, 59, 2> DeleteRecordRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string dataSourceCode = 1;
-  if (!this->_internal_datasourcecode().empty()) {
-    const std::string& _s = this->_internal_datasourcecode();
+  // string data_source_code = 1;
+  if (!this->_internal_data_source_code().empty()) {
+    const std::string& _s = this->_internal_data_source_code();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.DeleteRecordRequest.dataSourceCode");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.DeleteRecordRequest.data_source_code");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
-  // string recordId = 2;
-  if (!this->_internal_recordid().empty()) {
-    const std::string& _s = this->_internal_recordid();
+  // string record_id = 2;
+  if (!this->_internal_record_id().empty()) {
+    const std::string& _s = this->_internal_record_id();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.DeleteRecordRequest.recordId");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.DeleteRecordRequest.record_id");
     target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
@@ -3446,16 +3448,16 @@ const ::_pbi::TcParseTable<2, 3, 0, 59, 2> DeleteRecordRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string dataSourceCode = 1;
-  if (!this->_internal_datasourcecode().empty()) {
+  // string data_source_code = 1;
+  if (!this->_internal_data_source_code().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_datasourcecode());
+                                    this->_internal_data_source_code());
   }
 
-  // string recordId = 2;
-  if (!this->_internal_recordid().empty()) {
+  // string record_id = 2;
+  if (!this->_internal_record_id().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_recordid());
+                                    this->_internal_record_id());
   }
 
   // int64 flags = 3;
@@ -3483,11 +3485,11 @@ void DeleteRecordRequest::MergeImpl(::google::protobuf::Message& to_msg, const :
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_datasourcecode().empty()) {
-    _this->_internal_set_datasourcecode(from._internal_datasourcecode());
+  if (!from._internal_data_source_code().empty()) {
+    _this->_internal_set_data_source_code(from._internal_data_source_code());
   }
-  if (!from._internal_recordid().empty()) {
-    _this->_internal_set_recordid(from._internal_recordid());
+  if (!from._internal_record_id().empty()) {
+    _this->_internal_set_record_id(from._internal_record_id());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -3514,8 +3516,8 @@ void DeleteRecordRequest::InternalSwap(DeleteRecordRequest* PROTOBUF_RESTRICT ot
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.datasourcecode_, &other->_impl_.datasourcecode_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recordid_, &other->_impl_.recordid_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.data_source_code_, &other->_impl_.data_source_code_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.record_id_, &other->_impl_.record_id_, arena);
         swap(_impl_.flags_, other->_impl_.flags_);
 }
 
@@ -3728,7 +3730,7 @@ ExportCsvEntityReportRequest::ExportCsvEntityReportRequest(::google::protobuf::A
 inline PROTOBUF_NDEBUG_INLINE ExportCsvEntityReportRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : csvcolumnlist_(arena, from.csvcolumnlist_),
+      : csv_column_list_(arena, from.csv_column_list_),
         _cached_size_{0} {}
 
 ExportCsvEntityReportRequest::ExportCsvEntityReportRequest(
@@ -3747,7 +3749,7 @@ ExportCsvEntityReportRequest::ExportCsvEntityReportRequest(
 inline PROTOBUF_NDEBUG_INLINE ExportCsvEntityReportRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : csvcolumnlist_(arena),
+      : csv_column_list_(arena),
         _cached_size_{0} {}
 
 inline void ExportCsvEntityReportRequest::SharedCtor(::_pb::Arena* arena) {
@@ -3761,7 +3763,7 @@ ExportCsvEntityReportRequest::~ExportCsvEntityReportRequest() {
 }
 inline void ExportCsvEntityReportRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.csvcolumnlist_.Destroy();
+  _impl_.csv_column_list_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -3772,7 +3774,7 @@ PROTOBUF_NOINLINE void ExportCsvEntityReportRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.csvcolumnlist_.ClearToEmpty();
+  _impl_.csv_column_list_.ClearToEmpty();
   _impl_.flags_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -3785,7 +3787,7 @@ const char* ExportCsvEntityReportRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 59, 2> ExportCsvEntityReportRequest::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 61, 2> ExportCsvEntityReportRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -3802,14 +3804,14 @@ const ::_pbi::TcParseTable<1, 2, 0, 59, 2> ExportCsvEntityReportRequest::_table_
     // int64 flags = 2;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ExportCsvEntityReportRequest, _impl_.flags_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(ExportCsvEntityReportRequest, _impl_.flags_)}},
-    // string csvColumnList = 1;
+    // string csv_column_list = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(ExportCsvEntityReportRequest, _impl_.csvcolumnlist_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(ExportCsvEntityReportRequest, _impl_.csv_column_list_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string csvColumnList = 1;
-    {PROTOBUF_FIELD_OFFSET(ExportCsvEntityReportRequest, _impl_.csvcolumnlist_), 0, 0,
+    // string csv_column_list = 1;
+    {PROTOBUF_FIELD_OFFSET(ExportCsvEntityReportRequest, _impl_.csv_column_list_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 flags = 2;
     {PROTOBUF_FIELD_OFFSET(ExportCsvEntityReportRequest, _impl_.flags_), 0, 0,
@@ -3817,9 +3819,9 @@ const ::_pbi::TcParseTable<1, 2, 0, 59, 2> ExportCsvEntityReportRequest::_table_
   }},
   // no aux_entries
   {{
-    "\45\15\0\0\0\0\0\0"
+    "\45\17\0\0\0\0\0\0"
     "szengine.ExportCsvEntityReportRequest"
-    "csvColumnList"
+    "csv_column_list"
   }},
 };
 
@@ -3830,11 +3832,11 @@ const ::_pbi::TcParseTable<1, 2, 0, 59, 2> ExportCsvEntityReportRequest::_table_
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string csvColumnList = 1;
-  if (!this->_internal_csvcolumnlist().empty()) {
-    const std::string& _s = this->_internal_csvcolumnlist();
+  // string csv_column_list = 1;
+  if (!this->_internal_csv_column_list().empty()) {
+    const std::string& _s = this->_internal_csv_column_list();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.ExportCsvEntityReportRequest.csvColumnList");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.ExportCsvEntityReportRequest.csv_column_list");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
@@ -3862,10 +3864,10 @@ const ::_pbi::TcParseTable<1, 2, 0, 59, 2> ExportCsvEntityReportRequest::_table_
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string csvColumnList = 1;
-  if (!this->_internal_csvcolumnlist().empty()) {
+  // string csv_column_list = 1;
+  if (!this->_internal_csv_column_list().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_csvcolumnlist());
+                                    this->_internal_csv_column_list());
   }
 
   // int64 flags = 2;
@@ -3893,8 +3895,8 @@ void ExportCsvEntityReportRequest::MergeImpl(::google::protobuf::Message& to_msg
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_csvcolumnlist().empty()) {
-    _this->_internal_set_csvcolumnlist(from._internal_csvcolumnlist());
+  if (!from._internal_csv_column_list().empty()) {
+    _this->_internal_set_csv_column_list(from._internal_csv_column_list());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -3921,7 +3923,7 @@ void ExportCsvEntityReportRequest::InternalSwap(ExportCsvEntityReportRequest* PR
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.csvcolumnlist_, &other->_impl_.csvcolumnlist_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.csv_column_list_, &other->_impl_.csv_column_list_, arena);
         swap(_impl_.flags_, other->_impl_.flags_);
 }
 
@@ -4463,7 +4465,7 @@ inline PROTOBUF_NDEBUG_INLINE FetchNextRequest::Impl_::Impl_(
 
 inline void FetchNextRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.exporthandle_ = {};
+  _impl_.export_handle_ = {};
 }
 FetchNextRequest::~FetchNextRequest() {
   // @@protoc_insertion_point(destructor:szengine.FetchNextRequest)
@@ -4482,7 +4484,7 @@ PROTOBUF_NOINLINE void FetchNextRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.exporthandle_ = ::int64_t{0};
+  _impl_.export_handle_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -4508,14 +4510,14 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> FetchNextRequest::_table_ = {
     &_FetchNextRequest_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // int64 exportHandle = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FetchNextRequest, _impl_.exporthandle_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(FetchNextRequest, _impl_.exporthandle_)}},
+    // int64 export_handle = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FetchNextRequest, _impl_.export_handle_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(FetchNextRequest, _impl_.export_handle_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 exportHandle = 1;
-    {PROTOBUF_FIELD_OFFSET(FetchNextRequest, _impl_.exporthandle_), 0, 0,
+    // int64 export_handle = 1;
+    {PROTOBUF_FIELD_OFFSET(FetchNextRequest, _impl_.export_handle_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
   }},
   // no aux_entries
@@ -4530,11 +4532,11 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> FetchNextRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 exportHandle = 1;
-  if (this->_internal_exporthandle() != 0) {
+  // int64 export_handle = 1;
+  if (this->_internal_export_handle() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_exporthandle(), target);
+            stream, this->_internal_export_handle(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -4554,10 +4556,10 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> FetchNextRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 exportHandle = 1;
-  if (this->_internal_exporthandle() != 0) {
+  // int64 export_handle = 1;
+  if (this->_internal_export_handle() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_exporthandle());
+        this->_internal_export_handle());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -4579,8 +4581,8 @@ void FetchNextRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::go
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_exporthandle() != 0) {
-    _this->_internal_set_exporthandle(from._internal_exporthandle());
+  if (from._internal_export_handle() != 0) {
+    _this->_internal_set_export_handle(from._internal_export_handle());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -4602,7 +4604,7 @@ PROTOBUF_NOINLINE bool FetchNextRequest::IsInitialized() const {
 void FetchNextRequest::InternalSwap(FetchNextRequest* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.exporthandle_, other->_impl_.exporthandle_);
+        swap(_impl_.export_handle_, other->_impl_.export_handle_);
 }
 
 ::google::protobuf::Metadata FetchNextRequest::GetMetadata() const {
@@ -4824,10 +4826,10 @@ inline PROTOBUF_NDEBUG_INLINE FindInterestingEntitiesByEntityIdRequest::Impl_::I
 inline void FindInterestingEntitiesByEntityIdRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, entityid_),
+               offsetof(Impl_, entity_id_),
            0,
            offsetof(Impl_, flags_) -
-               offsetof(Impl_, entityid_) +
+               offsetof(Impl_, entity_id_) +
                sizeof(Impl_::flags_));
 }
 FindInterestingEntitiesByEntityIdRequest::~FindInterestingEntitiesByEntityIdRequest() {
@@ -4847,9 +4849,9 @@ PROTOBUF_NOINLINE void FindInterestingEntitiesByEntityIdRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.entityid_, 0, static_cast<::size_t>(
+  ::memset(&_impl_.entity_id_, 0, static_cast<::size_t>(
       reinterpret_cast<char*>(&_impl_.flags_) -
-      reinterpret_cast<char*>(&_impl_.entityid_)) + sizeof(_impl_.flags_));
+      reinterpret_cast<char*>(&_impl_.entity_id_)) + sizeof(_impl_.flags_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -4878,14 +4880,14 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> FindInterestingEntitiesByEntityIdReque
     // int64 flags = 2;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindInterestingEntitiesByEntityIdRequest, _impl_.flags_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByEntityIdRequest, _impl_.flags_)}},
-    // int64 entityId = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindInterestingEntitiesByEntityIdRequest, _impl_.entityid_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByEntityIdRequest, _impl_.entityid_)}},
+    // int64 entity_id = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindInterestingEntitiesByEntityIdRequest, _impl_.entity_id_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByEntityIdRequest, _impl_.entity_id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 entityId = 1;
-    {PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByEntityIdRequest, _impl_.entityid_), 0, 0,
+    // int64 entity_id = 1;
+    {PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByEntityIdRequest, _impl_.entity_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
     // int64 flags = 2;
     {PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByEntityIdRequest, _impl_.flags_), 0, 0,
@@ -4903,11 +4905,11 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> FindInterestingEntitiesByEntityIdReque
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 entityId = 1;
-  if (this->_internal_entityid() != 0) {
+  // int64 entity_id = 1;
+  if (this->_internal_entity_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_entityid(), target);
+            stream, this->_internal_entity_id(), target);
   }
 
   // int64 flags = 2;
@@ -4934,10 +4936,10 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> FindInterestingEntitiesByEntityIdReque
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 entityId = 1;
-  if (this->_internal_entityid() != 0) {
+  // int64 entity_id = 1;
+  if (this->_internal_entity_id() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_entityid());
+        this->_internal_entity_id());
   }
 
   // int64 flags = 2;
@@ -4965,8 +4967,8 @@ void FindInterestingEntitiesByEntityIdRequest::MergeImpl(::google::protobuf::Mes
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_entityid() != 0) {
-    _this->_internal_set_entityid(from._internal_entityid());
+  if (from._internal_entity_id() != 0) {
+    _this->_internal_set_entity_id(from._internal_entity_id());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -4994,9 +4996,9 @@ void FindInterestingEntitiesByEntityIdRequest::InternalSwap(FindInterestingEntit
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByEntityIdRequest, _impl_.flags_)
       + sizeof(FindInterestingEntitiesByEntityIdRequest::_impl_.flags_)
-      - PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByEntityIdRequest, _impl_.entityid_)>(
-          reinterpret_cast<char*>(&_impl_.entityid_),
-          reinterpret_cast<char*>(&other->_impl_.entityid_));
+      - PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByEntityIdRequest, _impl_.entity_id_)>(
+          reinterpret_cast<char*>(&_impl_.entity_id_),
+          reinterpret_cast<char*>(&other->_impl_.entity_id_));
 }
 
 ::google::protobuf::Metadata FindInterestingEntitiesByEntityIdRequest::GetMetadata() const {
@@ -5208,8 +5210,8 @@ FindInterestingEntitiesByRecordIdRequest::FindInterestingEntitiesByRecordIdReque
 inline PROTOBUF_NDEBUG_INLINE FindInterestingEntitiesByRecordIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : datasourcecode_(arena, from.datasourcecode_),
-        recordid_(arena, from.recordid_),
+      : data_source_code_(arena, from.data_source_code_),
+        record_id_(arena, from.record_id_),
         _cached_size_{0} {}
 
 FindInterestingEntitiesByRecordIdRequest::FindInterestingEntitiesByRecordIdRequest(
@@ -5228,8 +5230,8 @@ FindInterestingEntitiesByRecordIdRequest::FindInterestingEntitiesByRecordIdReque
 inline PROTOBUF_NDEBUG_INLINE FindInterestingEntitiesByRecordIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : datasourcecode_(arena),
-        recordid_(arena),
+      : data_source_code_(arena),
+        record_id_(arena),
         _cached_size_{0} {}
 
 inline void FindInterestingEntitiesByRecordIdRequest::SharedCtor(::_pb::Arena* arena) {
@@ -5243,8 +5245,8 @@ FindInterestingEntitiesByRecordIdRequest::~FindInterestingEntitiesByRecordIdRequ
 }
 inline void FindInterestingEntitiesByRecordIdRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.datasourcecode_.Destroy();
-  _impl_.recordid_.Destroy();
+  _impl_.data_source_code_.Destroy();
+  _impl_.record_id_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -5255,8 +5257,8 @@ PROTOBUF_NOINLINE void FindInterestingEntitiesByRecordIdRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.datasourcecode_.ClearToEmpty();
-  _impl_.recordid_.ClearToEmpty();
+  _impl_.data_source_code_.ClearToEmpty();
+  _impl_.record_id_.ClearToEmpty();
   _impl_.flags_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -5269,7 +5271,7 @@ const char* FindInterestingEntitiesByRecordIdRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 80, 2> FindInterestingEntitiesByRecordIdRequest::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 0, 83, 2> FindInterestingEntitiesByRecordIdRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -5284,23 +5286,23 @@ const ::_pbi::TcParseTable<2, 3, 0, 80, 2> FindInterestingEntitiesByRecordIdRequ
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // string dataSourceCode = 1;
+    // string data_source_code = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdRequest, _impl_.datasourcecode_)}},
-    // string recordId = 2;
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdRequest, _impl_.data_source_code_)}},
+    // string record_id = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdRequest, _impl_.recordid_)}},
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdRequest, _impl_.record_id_)}},
     // int64 flags = 3;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindInterestingEntitiesByRecordIdRequest, _impl_.flags_), 63>(),
      {24, 63, 0, PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdRequest, _impl_.flags_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string dataSourceCode = 1;
-    {PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdRequest, _impl_.datasourcecode_), 0, 0,
+    // string data_source_code = 1;
+    {PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdRequest, _impl_.data_source_code_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string recordId = 2;
-    {PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdRequest, _impl_.recordid_), 0, 0,
+    // string record_id = 2;
+    {PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdRequest, _impl_.record_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 flags = 3;
     {PROTOBUF_FIELD_OFFSET(FindInterestingEntitiesByRecordIdRequest, _impl_.flags_), 0, 0,
@@ -5308,10 +5310,10 @@ const ::_pbi::TcParseTable<2, 3, 0, 80, 2> FindInterestingEntitiesByRecordIdRequ
   }},
   // no aux_entries
   {{
-    "\61\16\10\0\0\0\0\0"
+    "\61\20\11\0\0\0\0\0"
     "szengine.FindInterestingEntitiesByRecordIdRequest"
-    "dataSourceCode"
-    "recordId"
+    "data_source_code"
+    "record_id"
   }},
 };
 
@@ -5322,19 +5324,19 @@ const ::_pbi::TcParseTable<2, 3, 0, 80, 2> FindInterestingEntitiesByRecordIdRequ
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string dataSourceCode = 1;
-  if (!this->_internal_datasourcecode().empty()) {
-    const std::string& _s = this->_internal_datasourcecode();
+  // string data_source_code = 1;
+  if (!this->_internal_data_source_code().empty()) {
+    const std::string& _s = this->_internal_data_source_code();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindInterestingEntitiesByRecordIdRequest.dataSourceCode");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindInterestingEntitiesByRecordIdRequest.data_source_code");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
-  // string recordId = 2;
-  if (!this->_internal_recordid().empty()) {
-    const std::string& _s = this->_internal_recordid();
+  // string record_id = 2;
+  if (!this->_internal_record_id().empty()) {
+    const std::string& _s = this->_internal_record_id();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindInterestingEntitiesByRecordIdRequest.recordId");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindInterestingEntitiesByRecordIdRequest.record_id");
     target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
@@ -5362,16 +5364,16 @@ const ::_pbi::TcParseTable<2, 3, 0, 80, 2> FindInterestingEntitiesByRecordIdRequ
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string dataSourceCode = 1;
-  if (!this->_internal_datasourcecode().empty()) {
+  // string data_source_code = 1;
+  if (!this->_internal_data_source_code().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_datasourcecode());
+                                    this->_internal_data_source_code());
   }
 
-  // string recordId = 2;
-  if (!this->_internal_recordid().empty()) {
+  // string record_id = 2;
+  if (!this->_internal_record_id().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_recordid());
+                                    this->_internal_record_id());
   }
 
   // int64 flags = 3;
@@ -5399,11 +5401,11 @@ void FindInterestingEntitiesByRecordIdRequest::MergeImpl(::google::protobuf::Mes
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_datasourcecode().empty()) {
-    _this->_internal_set_datasourcecode(from._internal_datasourcecode());
+  if (!from._internal_data_source_code().empty()) {
+    _this->_internal_set_data_source_code(from._internal_data_source_code());
   }
-  if (!from._internal_recordid().empty()) {
-    _this->_internal_set_recordid(from._internal_recordid());
+  if (!from._internal_record_id().empty()) {
+    _this->_internal_set_record_id(from._internal_record_id());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -5430,8 +5432,8 @@ void FindInterestingEntitiesByRecordIdRequest::InternalSwap(FindInterestingEntit
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.datasourcecode_, &other->_impl_.datasourcecode_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recordid_, &other->_impl_.recordid_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.data_source_code_, &other->_impl_.data_source_code_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.record_id_, &other->_impl_.record_id_, arena);
         swap(_impl_.flags_, other->_impl_.flags_);
 }
 
@@ -5644,7 +5646,7 @@ FindNetworkByEntityIdRequest::FindNetworkByEntityIdRequest(::google::protobuf::A
 inline PROTOBUF_NDEBUG_INLINE FindNetworkByEntityIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : entityids_(arena, from.entityids_),
+      : entity_ids_(arena, from.entity_ids_),
         _cached_size_{0} {}
 
 FindNetworkByEntityIdRequest::FindNetworkByEntityIdRequest(
@@ -5657,11 +5659,11 @@ FindNetworkByEntityIdRequest::FindNetworkByEntityIdRequest(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
   ::memcpy(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, maxdegrees_),
+               offsetof(Impl_, max_degrees_),
            reinterpret_cast<const char *>(&from._impl_) +
-               offsetof(Impl_, maxdegrees_),
+               offsetof(Impl_, max_degrees_),
            offsetof(Impl_, flags_) -
-               offsetof(Impl_, maxdegrees_) +
+               offsetof(Impl_, max_degrees_) +
                sizeof(Impl_::flags_));
 
   // @@protoc_insertion_point(copy_constructor:szengine.FindNetworkByEntityIdRequest)
@@ -5669,16 +5671,16 @@ FindNetworkByEntityIdRequest::FindNetworkByEntityIdRequest(
 inline PROTOBUF_NDEBUG_INLINE FindNetworkByEntityIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : entityids_(arena),
+      : entity_ids_(arena),
         _cached_size_{0} {}
 
 inline void FindNetworkByEntityIdRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, maxdegrees_),
+               offsetof(Impl_, max_degrees_),
            0,
            offsetof(Impl_, flags_) -
-               offsetof(Impl_, maxdegrees_) +
+               offsetof(Impl_, max_degrees_) +
                sizeof(Impl_::flags_));
 }
 FindNetworkByEntityIdRequest::~FindNetworkByEntityIdRequest() {
@@ -5688,7 +5690,7 @@ FindNetworkByEntityIdRequest::~FindNetworkByEntityIdRequest() {
 }
 inline void FindNetworkByEntityIdRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.entityids_.Destroy();
+  _impl_.entity_ids_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -5699,10 +5701,10 @@ PROTOBUF_NOINLINE void FindNetworkByEntityIdRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.entityids_.ClearToEmpty();
-  ::memset(&_impl_.maxdegrees_, 0, static_cast<::size_t>(
+  _impl_.entity_ids_.ClearToEmpty();
+  ::memset(&_impl_.max_degrees_, 0, static_cast<::size_t>(
       reinterpret_cast<char*>(&_impl_.flags_) -
-      reinterpret_cast<char*>(&_impl_.maxdegrees_)) + sizeof(_impl_.flags_));
+      reinterpret_cast<char*>(&_impl_.max_degrees_)) + sizeof(_impl_.flags_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -5714,7 +5716,7 @@ const char* FindNetworkByEntityIdRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 5, 0, 55, 2> FindNetworkByEntityIdRequest::_table_ = {
+const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByEntityIdRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -5729,18 +5731,18 @@ const ::_pbi::TcParseTable<3, 5, 0, 55, 2> FindNetworkByEntityIdRequest::_table_
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // string entityIds = 1;
+    // string entity_ids = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.entityids_)}},
-    // int64 maxDegrees = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByEntityIdRequest, _impl_.maxdegrees_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.maxdegrees_)}},
-    // int64 buildOutDegrees = 3;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByEntityIdRequest, _impl_.buildoutdegrees_), 63>(),
-     {24, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.buildoutdegrees_)}},
-    // int64 buildOutMaxEntities = 4;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByEntityIdRequest, _impl_.buildoutmaxentities_), 63>(),
-     {32, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.buildoutmaxentities_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.entity_ids_)}},
+    // int64 max_degrees = 2;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByEntityIdRequest, _impl_.max_degrees_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.max_degrees_)}},
+    // int64 build_out_degrees = 3;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByEntityIdRequest, _impl_.build_out_degrees_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.build_out_degrees_)}},
+    // int64 build_out_max_entities = 4;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByEntityIdRequest, _impl_.build_out_max_entities_), 63>(),
+     {32, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.build_out_max_entities_)}},
     // int64 flags = 5;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByEntityIdRequest, _impl_.flags_), 63>(),
      {40, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.flags_)}},
@@ -5749,17 +5751,17 @@ const ::_pbi::TcParseTable<3, 5, 0, 55, 2> FindNetworkByEntityIdRequest::_table_
   }}, {{
     65535, 65535
   }}, {{
-    // string entityIds = 1;
-    {PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.entityids_), 0, 0,
+    // string entity_ids = 1;
+    {PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.entity_ids_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // int64 maxDegrees = 2;
-    {PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.maxdegrees_), 0, 0,
+    // int64 max_degrees = 2;
+    {PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.max_degrees_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // int64 buildOutDegrees = 3;
-    {PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.buildoutdegrees_), 0, 0,
+    // int64 build_out_degrees = 3;
+    {PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.build_out_degrees_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // int64 buildOutMaxEntities = 4;
-    {PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.buildoutmaxentities_), 0, 0,
+    // int64 build_out_max_entities = 4;
+    {PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.build_out_max_entities_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
     // int64 flags = 5;
     {PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.flags_), 0, 0,
@@ -5767,9 +5769,9 @@ const ::_pbi::TcParseTable<3, 5, 0, 55, 2> FindNetworkByEntityIdRequest::_table_
   }},
   // no aux_entries
   {{
-    "\45\11\0\0\0\0\0\0"
+    "\45\12\0\0\0\0\0\0"
     "szengine.FindNetworkByEntityIdRequest"
-    "entityIds"
+    "entity_ids"
   }},
 };
 
@@ -5780,33 +5782,33 @@ const ::_pbi::TcParseTable<3, 5, 0, 55, 2> FindNetworkByEntityIdRequest::_table_
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string entityIds = 1;
-  if (!this->_internal_entityids().empty()) {
-    const std::string& _s = this->_internal_entityids();
+  // string entity_ids = 1;
+  if (!this->_internal_entity_ids().empty()) {
+    const std::string& _s = this->_internal_entity_ids();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindNetworkByEntityIdRequest.entityIds");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindNetworkByEntityIdRequest.entity_ids");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
-  // int64 maxDegrees = 2;
-  if (this->_internal_maxdegrees() != 0) {
+  // int64 max_degrees = 2;
+  if (this->_internal_max_degrees() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<2>(
-            stream, this->_internal_maxdegrees(), target);
+            stream, this->_internal_max_degrees(), target);
   }
 
-  // int64 buildOutDegrees = 3;
-  if (this->_internal_buildoutdegrees() != 0) {
+  // int64 build_out_degrees = 3;
+  if (this->_internal_build_out_degrees() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<3>(
-            stream, this->_internal_buildoutdegrees(), target);
+            stream, this->_internal_build_out_degrees(), target);
   }
 
-  // int64 buildOutMaxEntities = 4;
-  if (this->_internal_buildoutmaxentities() != 0) {
+  // int64 build_out_max_entities = 4;
+  if (this->_internal_build_out_max_entities() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<4>(
-            stream, this->_internal_buildoutmaxentities(), target);
+            stream, this->_internal_build_out_max_entities(), target);
   }
 
   // int64 flags = 5;
@@ -5833,28 +5835,28 @@ const ::_pbi::TcParseTable<3, 5, 0, 55, 2> FindNetworkByEntityIdRequest::_table_
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string entityIds = 1;
-  if (!this->_internal_entityids().empty()) {
+  // string entity_ids = 1;
+  if (!this->_internal_entity_ids().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_entityids());
+                                    this->_internal_entity_ids());
   }
 
-  // int64 maxDegrees = 2;
-  if (this->_internal_maxdegrees() != 0) {
+  // int64 max_degrees = 2;
+  if (this->_internal_max_degrees() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_maxdegrees());
+        this->_internal_max_degrees());
   }
 
-  // int64 buildOutDegrees = 3;
-  if (this->_internal_buildoutdegrees() != 0) {
+  // int64 build_out_degrees = 3;
+  if (this->_internal_build_out_degrees() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_buildoutdegrees());
+        this->_internal_build_out_degrees());
   }
 
-  // int64 buildOutMaxEntities = 4;
-  if (this->_internal_buildoutmaxentities() != 0) {
+  // int64 build_out_max_entities = 4;
+  if (this->_internal_build_out_max_entities() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_buildoutmaxentities());
+        this->_internal_build_out_max_entities());
   }
 
   // int64 flags = 5;
@@ -5882,17 +5884,17 @@ void FindNetworkByEntityIdRequest::MergeImpl(::google::protobuf::Message& to_msg
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_entityids().empty()) {
-    _this->_internal_set_entityids(from._internal_entityids());
+  if (!from._internal_entity_ids().empty()) {
+    _this->_internal_set_entity_ids(from._internal_entity_ids());
   }
-  if (from._internal_maxdegrees() != 0) {
-    _this->_internal_set_maxdegrees(from._internal_maxdegrees());
+  if (from._internal_max_degrees() != 0) {
+    _this->_internal_set_max_degrees(from._internal_max_degrees());
   }
-  if (from._internal_buildoutdegrees() != 0) {
-    _this->_internal_set_buildoutdegrees(from._internal_buildoutdegrees());
+  if (from._internal_build_out_degrees() != 0) {
+    _this->_internal_set_build_out_degrees(from._internal_build_out_degrees());
   }
-  if (from._internal_buildoutmaxentities() != 0) {
-    _this->_internal_set_buildoutmaxentities(from._internal_buildoutmaxentities());
+  if (from._internal_build_out_max_entities() != 0) {
+    _this->_internal_set_build_out_max_entities(from._internal_build_out_max_entities());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -5919,13 +5921,13 @@ void FindNetworkByEntityIdRequest::InternalSwap(FindNetworkByEntityIdRequest* PR
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.entityids_, &other->_impl_.entityids_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.entity_ids_, &other->_impl_.entity_ids_, arena);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.flags_)
       + sizeof(FindNetworkByEntityIdRequest::_impl_.flags_)
-      - PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.maxdegrees_)>(
-          reinterpret_cast<char*>(&_impl_.maxdegrees_),
-          reinterpret_cast<char*>(&other->_impl_.maxdegrees_));
+      - PROTOBUF_FIELD_OFFSET(FindNetworkByEntityIdRequest, _impl_.max_degrees_)>(
+          reinterpret_cast<char*>(&_impl_.max_degrees_),
+          reinterpret_cast<char*>(&other->_impl_.max_degrees_));
 }
 
 ::google::protobuf::Metadata FindNetworkByEntityIdRequest::GetMetadata() const {
@@ -6137,7 +6139,7 @@ FindNetworkByRecordIdRequest::FindNetworkByRecordIdRequest(::google::protobuf::A
 inline PROTOBUF_NDEBUG_INLINE FindNetworkByRecordIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : recordkeys_(arena, from.recordkeys_),
+      : record_keys_(arena, from.record_keys_),
         _cached_size_{0} {}
 
 FindNetworkByRecordIdRequest::FindNetworkByRecordIdRequest(
@@ -6150,11 +6152,11 @@ FindNetworkByRecordIdRequest::FindNetworkByRecordIdRequest(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
   ::memcpy(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, maxdegrees_),
+               offsetof(Impl_, max_degrees_),
            reinterpret_cast<const char *>(&from._impl_) +
-               offsetof(Impl_, maxdegrees_),
+               offsetof(Impl_, max_degrees_),
            offsetof(Impl_, flags_) -
-               offsetof(Impl_, maxdegrees_) +
+               offsetof(Impl_, max_degrees_) +
                sizeof(Impl_::flags_));
 
   // @@protoc_insertion_point(copy_constructor:szengine.FindNetworkByRecordIdRequest)
@@ -6162,16 +6164,16 @@ FindNetworkByRecordIdRequest::FindNetworkByRecordIdRequest(
 inline PROTOBUF_NDEBUG_INLINE FindNetworkByRecordIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : recordkeys_(arena),
+      : record_keys_(arena),
         _cached_size_{0} {}
 
 inline void FindNetworkByRecordIdRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, maxdegrees_),
+               offsetof(Impl_, max_degrees_),
            0,
            offsetof(Impl_, flags_) -
-               offsetof(Impl_, maxdegrees_) +
+               offsetof(Impl_, max_degrees_) +
                sizeof(Impl_::flags_));
 }
 FindNetworkByRecordIdRequest::~FindNetworkByRecordIdRequest() {
@@ -6181,7 +6183,7 @@ FindNetworkByRecordIdRequest::~FindNetworkByRecordIdRequest() {
 }
 inline void FindNetworkByRecordIdRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.recordkeys_.Destroy();
+  _impl_.record_keys_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -6192,10 +6194,10 @@ PROTOBUF_NOINLINE void FindNetworkByRecordIdRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.recordkeys_.ClearToEmpty();
-  ::memset(&_impl_.maxdegrees_, 0, static_cast<::size_t>(
+  _impl_.record_keys_.ClearToEmpty();
+  ::memset(&_impl_.max_degrees_, 0, static_cast<::size_t>(
       reinterpret_cast<char*>(&_impl_.flags_) -
-      reinterpret_cast<char*>(&_impl_.maxdegrees_)) + sizeof(_impl_.flags_));
+      reinterpret_cast<char*>(&_impl_.max_degrees_)) + sizeof(_impl_.flags_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -6207,7 +6209,7 @@ const char* FindNetworkByRecordIdRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByRecordIdRequest::_table_ = {
+const ::_pbi::TcParseTable<3, 5, 0, 57, 2> FindNetworkByRecordIdRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -6222,18 +6224,18 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByRecordIdRequest::_table_
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // string recordKeys = 1;
+    // string record_keys = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.recordkeys_)}},
-    // int64 maxDegrees = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByRecordIdRequest, _impl_.maxdegrees_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.maxdegrees_)}},
-    // int64 buildOutDegrees = 3;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByRecordIdRequest, _impl_.buildoutdegrees_), 63>(),
-     {24, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.buildoutdegrees_)}},
-    // int64 buildOutMaxEntities = 4;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByRecordIdRequest, _impl_.buildoutmaxentities_), 63>(),
-     {32, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.buildoutmaxentities_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.record_keys_)}},
+    // int64 max_degrees = 2;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByRecordIdRequest, _impl_.max_degrees_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.max_degrees_)}},
+    // int64 build_out_degrees = 3;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByRecordIdRequest, _impl_.build_out_degrees_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.build_out_degrees_)}},
+    // int64 build_out_max_entities = 4;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByRecordIdRequest, _impl_.build_out_max_entities_), 63>(),
+     {32, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.build_out_max_entities_)}},
     // int64 flags = 5;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindNetworkByRecordIdRequest, _impl_.flags_), 63>(),
      {40, 63, 0, PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.flags_)}},
@@ -6242,17 +6244,17 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByRecordIdRequest::_table_
   }}, {{
     65535, 65535
   }}, {{
-    // string recordKeys = 1;
-    {PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.recordkeys_), 0, 0,
+    // string record_keys = 1;
+    {PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.record_keys_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // int64 maxDegrees = 2;
-    {PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.maxdegrees_), 0, 0,
+    // int64 max_degrees = 2;
+    {PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.max_degrees_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // int64 buildOutDegrees = 3;
-    {PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.buildoutdegrees_), 0, 0,
+    // int64 build_out_degrees = 3;
+    {PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.build_out_degrees_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // int64 buildOutMaxEntities = 4;
-    {PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.buildoutmaxentities_), 0, 0,
+    // int64 build_out_max_entities = 4;
+    {PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.build_out_max_entities_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
     // int64 flags = 5;
     {PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.flags_), 0, 0,
@@ -6260,9 +6262,9 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByRecordIdRequest::_table_
   }},
   // no aux_entries
   {{
-    "\45\12\0\0\0\0\0\0"
+    "\45\13\0\0\0\0\0\0"
     "szengine.FindNetworkByRecordIdRequest"
-    "recordKeys"
+    "record_keys"
   }},
 };
 
@@ -6273,33 +6275,33 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByRecordIdRequest::_table_
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string recordKeys = 1;
-  if (!this->_internal_recordkeys().empty()) {
-    const std::string& _s = this->_internal_recordkeys();
+  // string record_keys = 1;
+  if (!this->_internal_record_keys().empty()) {
+    const std::string& _s = this->_internal_record_keys();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindNetworkByRecordIdRequest.recordKeys");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindNetworkByRecordIdRequest.record_keys");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
-  // int64 maxDegrees = 2;
-  if (this->_internal_maxdegrees() != 0) {
+  // int64 max_degrees = 2;
+  if (this->_internal_max_degrees() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<2>(
-            stream, this->_internal_maxdegrees(), target);
+            stream, this->_internal_max_degrees(), target);
   }
 
-  // int64 buildOutDegrees = 3;
-  if (this->_internal_buildoutdegrees() != 0) {
+  // int64 build_out_degrees = 3;
+  if (this->_internal_build_out_degrees() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<3>(
-            stream, this->_internal_buildoutdegrees(), target);
+            stream, this->_internal_build_out_degrees(), target);
   }
 
-  // int64 buildOutMaxEntities = 4;
-  if (this->_internal_buildoutmaxentities() != 0) {
+  // int64 build_out_max_entities = 4;
+  if (this->_internal_build_out_max_entities() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<4>(
-            stream, this->_internal_buildoutmaxentities(), target);
+            stream, this->_internal_build_out_max_entities(), target);
   }
 
   // int64 flags = 5;
@@ -6326,28 +6328,28 @@ const ::_pbi::TcParseTable<3, 5, 0, 56, 2> FindNetworkByRecordIdRequest::_table_
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string recordKeys = 1;
-  if (!this->_internal_recordkeys().empty()) {
+  // string record_keys = 1;
+  if (!this->_internal_record_keys().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_recordkeys());
+                                    this->_internal_record_keys());
   }
 
-  // int64 maxDegrees = 2;
-  if (this->_internal_maxdegrees() != 0) {
+  // int64 max_degrees = 2;
+  if (this->_internal_max_degrees() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_maxdegrees());
+        this->_internal_max_degrees());
   }
 
-  // int64 buildOutDegrees = 3;
-  if (this->_internal_buildoutdegrees() != 0) {
+  // int64 build_out_degrees = 3;
+  if (this->_internal_build_out_degrees() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_buildoutdegrees());
+        this->_internal_build_out_degrees());
   }
 
-  // int64 buildOutMaxEntities = 4;
-  if (this->_internal_buildoutmaxentities() != 0) {
+  // int64 build_out_max_entities = 4;
+  if (this->_internal_build_out_max_entities() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_buildoutmaxentities());
+        this->_internal_build_out_max_entities());
   }
 
   // int64 flags = 5;
@@ -6375,17 +6377,17 @@ void FindNetworkByRecordIdRequest::MergeImpl(::google::protobuf::Message& to_msg
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_recordkeys().empty()) {
-    _this->_internal_set_recordkeys(from._internal_recordkeys());
+  if (!from._internal_record_keys().empty()) {
+    _this->_internal_set_record_keys(from._internal_record_keys());
   }
-  if (from._internal_maxdegrees() != 0) {
-    _this->_internal_set_maxdegrees(from._internal_maxdegrees());
+  if (from._internal_max_degrees() != 0) {
+    _this->_internal_set_max_degrees(from._internal_max_degrees());
   }
-  if (from._internal_buildoutdegrees() != 0) {
-    _this->_internal_set_buildoutdegrees(from._internal_buildoutdegrees());
+  if (from._internal_build_out_degrees() != 0) {
+    _this->_internal_set_build_out_degrees(from._internal_build_out_degrees());
   }
-  if (from._internal_buildoutmaxentities() != 0) {
-    _this->_internal_set_buildoutmaxentities(from._internal_buildoutmaxentities());
+  if (from._internal_build_out_max_entities() != 0) {
+    _this->_internal_set_build_out_max_entities(from._internal_build_out_max_entities());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -6412,13 +6414,13 @@ void FindNetworkByRecordIdRequest::InternalSwap(FindNetworkByRecordIdRequest* PR
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recordkeys_, &other->_impl_.recordkeys_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.record_keys_, &other->_impl_.record_keys_, arena);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.flags_)
       + sizeof(FindNetworkByRecordIdRequest::_impl_.flags_)
-      - PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.maxdegrees_)>(
-          reinterpret_cast<char*>(&_impl_.maxdegrees_),
-          reinterpret_cast<char*>(&other->_impl_.maxdegrees_));
+      - PROTOBUF_FIELD_OFFSET(FindNetworkByRecordIdRequest, _impl_.max_degrees_)>(
+          reinterpret_cast<char*>(&_impl_.max_degrees_),
+          reinterpret_cast<char*>(&other->_impl_.max_degrees_));
 }
 
 ::google::protobuf::Metadata FindNetworkByRecordIdRequest::GetMetadata() const {
@@ -6630,8 +6632,8 @@ FindPathByEntityIdRequest::FindPathByEntityIdRequest(::google::protobuf::Arena* 
 inline PROTOBUF_NDEBUG_INLINE FindPathByEntityIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : avoidentityids_(arena, from.avoidentityids_),
-        requireddatasources_(arena, from.requireddatasources_),
+      : avoid_entity_ids_(arena, from.avoid_entity_ids_),
+        required_data_sources_(arena, from.required_data_sources_),
         _cached_size_{0} {}
 
 FindPathByEntityIdRequest::FindPathByEntityIdRequest(
@@ -6644,11 +6646,11 @@ FindPathByEntityIdRequest::FindPathByEntityIdRequest(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
   ::memcpy(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, startentityid_),
+               offsetof(Impl_, start_entity_id_),
            reinterpret_cast<const char *>(&from._impl_) +
-               offsetof(Impl_, startentityid_),
+               offsetof(Impl_, start_entity_id_),
            offsetof(Impl_, flags_) -
-               offsetof(Impl_, startentityid_) +
+               offsetof(Impl_, start_entity_id_) +
                sizeof(Impl_::flags_));
 
   // @@protoc_insertion_point(copy_constructor:szengine.FindPathByEntityIdRequest)
@@ -6656,17 +6658,17 @@ FindPathByEntityIdRequest::FindPathByEntityIdRequest(
 inline PROTOBUF_NDEBUG_INLINE FindPathByEntityIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : avoidentityids_(arena),
-        requireddatasources_(arena),
+      : avoid_entity_ids_(arena),
+        required_data_sources_(arena),
         _cached_size_{0} {}
 
 inline void FindPathByEntityIdRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, startentityid_),
+               offsetof(Impl_, start_entity_id_),
            0,
            offsetof(Impl_, flags_) -
-               offsetof(Impl_, startentityid_) +
+               offsetof(Impl_, start_entity_id_) +
                sizeof(Impl_::flags_));
 }
 FindPathByEntityIdRequest::~FindPathByEntityIdRequest() {
@@ -6676,8 +6678,8 @@ FindPathByEntityIdRequest::~FindPathByEntityIdRequest() {
 }
 inline void FindPathByEntityIdRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.avoidentityids_.Destroy();
-  _impl_.requireddatasources_.Destroy();
+  _impl_.avoid_entity_ids_.Destroy();
+  _impl_.required_data_sources_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -6688,11 +6690,11 @@ PROTOBUF_NOINLINE void FindPathByEntityIdRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.avoidentityids_.ClearToEmpty();
-  _impl_.requireddatasources_.ClearToEmpty();
-  ::memset(&_impl_.startentityid_, 0, static_cast<::size_t>(
+  _impl_.avoid_entity_ids_.ClearToEmpty();
+  _impl_.required_data_sources_.ClearToEmpty();
+  ::memset(&_impl_.start_entity_id_, 0, static_cast<::size_t>(
       reinterpret_cast<char*>(&_impl_.flags_) -
-      reinterpret_cast<char*>(&_impl_.startentityid_)) + sizeof(_impl_.flags_));
+      reinterpret_cast<char*>(&_impl_.start_entity_id_)) + sizeof(_impl_.flags_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -6704,7 +6706,7 @@ const char* FindPathByEntityIdRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 6, 0, 76, 2> FindPathByEntityIdRequest::_table_ = {
+const ::_pbi::TcParseTable<3, 6, 0, 80, 2> FindPathByEntityIdRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -6719,21 +6721,21 @@ const ::_pbi::TcParseTable<3, 6, 0, 76, 2> FindPathByEntityIdRequest::_table_ = 
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // int64 startEntityId = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindPathByEntityIdRequest, _impl_.startentityid_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.startentityid_)}},
-    // int64 endEntityId = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindPathByEntityIdRequest, _impl_.endentityid_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.endentityid_)}},
-    // int64 maxDegrees = 3;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindPathByEntityIdRequest, _impl_.maxdegrees_), 63>(),
-     {24, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.maxdegrees_)}},
-    // string avoidEntityIds = 4;
+    // int64 start_entity_id = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindPathByEntityIdRequest, _impl_.start_entity_id_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.start_entity_id_)}},
+    // int64 end_entity_id = 2;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindPathByEntityIdRequest, _impl_.end_entity_id_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.end_entity_id_)}},
+    // int64 max_degrees = 3;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindPathByEntityIdRequest, _impl_.max_degrees_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.max_degrees_)}},
+    // string avoid_entity_ids = 4;
     {::_pbi::TcParser::FastUS1,
-     {34, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.avoidentityids_)}},
-    // string requiredDataSources = 5;
+     {34, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.avoid_entity_ids_)}},
+    // string required_data_sources = 5;
     {::_pbi::TcParser::FastUS1,
-     {42, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.requireddatasources_)}},
+     {42, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.required_data_sources_)}},
     // int64 flags = 6;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindPathByEntityIdRequest, _impl_.flags_), 63>(),
      {48, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.flags_)}},
@@ -6741,20 +6743,20 @@ const ::_pbi::TcParseTable<3, 6, 0, 76, 2> FindPathByEntityIdRequest::_table_ = 
   }}, {{
     65535, 65535
   }}, {{
-    // int64 startEntityId = 1;
-    {PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.startentityid_), 0, 0,
+    // int64 start_entity_id = 1;
+    {PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.start_entity_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // int64 endEntityId = 2;
-    {PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.endentityid_), 0, 0,
+    // int64 end_entity_id = 2;
+    {PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.end_entity_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // int64 maxDegrees = 3;
-    {PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.maxdegrees_), 0, 0,
+    // int64 max_degrees = 3;
+    {PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.max_degrees_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // string avoidEntityIds = 4;
-    {PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.avoidentityids_), 0, 0,
+    // string avoid_entity_ids = 4;
+    {PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.avoid_entity_ids_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string requiredDataSources = 5;
-    {PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.requireddatasources_), 0, 0,
+    // string required_data_sources = 5;
+    {PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.required_data_sources_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 flags = 6;
     {PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.flags_), 0, 0,
@@ -6762,10 +6764,10 @@ const ::_pbi::TcParseTable<3, 6, 0, 76, 2> FindPathByEntityIdRequest::_table_ = 
   }},
   // no aux_entries
   {{
-    "\42\0\0\0\16\23\0\0"
+    "\42\0\0\0\20\25\0\0"
     "szengine.FindPathByEntityIdRequest"
-    "avoidEntityIds"
-    "requiredDataSources"
+    "avoid_entity_ids"
+    "required_data_sources"
   }},
 };
 
@@ -6776,40 +6778,40 @@ const ::_pbi::TcParseTable<3, 6, 0, 76, 2> FindPathByEntityIdRequest::_table_ = 
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 startEntityId = 1;
-  if (this->_internal_startentityid() != 0) {
+  // int64 start_entity_id = 1;
+  if (this->_internal_start_entity_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_startentityid(), target);
+            stream, this->_internal_start_entity_id(), target);
   }
 
-  // int64 endEntityId = 2;
-  if (this->_internal_endentityid() != 0) {
+  // int64 end_entity_id = 2;
+  if (this->_internal_end_entity_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<2>(
-            stream, this->_internal_endentityid(), target);
+            stream, this->_internal_end_entity_id(), target);
   }
 
-  // int64 maxDegrees = 3;
-  if (this->_internal_maxdegrees() != 0) {
+  // int64 max_degrees = 3;
+  if (this->_internal_max_degrees() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<3>(
-            stream, this->_internal_maxdegrees(), target);
+            stream, this->_internal_max_degrees(), target);
   }
 
-  // string avoidEntityIds = 4;
-  if (!this->_internal_avoidentityids().empty()) {
-    const std::string& _s = this->_internal_avoidentityids();
+  // string avoid_entity_ids = 4;
+  if (!this->_internal_avoid_entity_ids().empty()) {
+    const std::string& _s = this->_internal_avoid_entity_ids();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByEntityIdRequest.avoidEntityIds");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByEntityIdRequest.avoid_entity_ids");
     target = stream->WriteStringMaybeAliased(4, _s, target);
   }
 
-  // string requiredDataSources = 5;
-  if (!this->_internal_requireddatasources().empty()) {
-    const std::string& _s = this->_internal_requireddatasources();
+  // string required_data_sources = 5;
+  if (!this->_internal_required_data_sources().empty()) {
+    const std::string& _s = this->_internal_required_data_sources();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByEntityIdRequest.requiredDataSources");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByEntityIdRequest.required_data_sources");
     target = stream->WriteStringMaybeAliased(5, _s, target);
   }
 
@@ -6837,34 +6839,34 @@ const ::_pbi::TcParseTable<3, 6, 0, 76, 2> FindPathByEntityIdRequest::_table_ = 
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string avoidEntityIds = 4;
-  if (!this->_internal_avoidentityids().empty()) {
+  // string avoid_entity_ids = 4;
+  if (!this->_internal_avoid_entity_ids().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_avoidentityids());
+                                    this->_internal_avoid_entity_ids());
   }
 
-  // string requiredDataSources = 5;
-  if (!this->_internal_requireddatasources().empty()) {
+  // string required_data_sources = 5;
+  if (!this->_internal_required_data_sources().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_requireddatasources());
+                                    this->_internal_required_data_sources());
   }
 
-  // int64 startEntityId = 1;
-  if (this->_internal_startentityid() != 0) {
+  // int64 start_entity_id = 1;
+  if (this->_internal_start_entity_id() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_startentityid());
+        this->_internal_start_entity_id());
   }
 
-  // int64 endEntityId = 2;
-  if (this->_internal_endentityid() != 0) {
+  // int64 end_entity_id = 2;
+  if (this->_internal_end_entity_id() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_endentityid());
+        this->_internal_end_entity_id());
   }
 
-  // int64 maxDegrees = 3;
-  if (this->_internal_maxdegrees() != 0) {
+  // int64 max_degrees = 3;
+  if (this->_internal_max_degrees() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_maxdegrees());
+        this->_internal_max_degrees());
   }
 
   // int64 flags = 6;
@@ -6892,20 +6894,20 @@ void FindPathByEntityIdRequest::MergeImpl(::google::protobuf::Message& to_msg, c
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_avoidentityids().empty()) {
-    _this->_internal_set_avoidentityids(from._internal_avoidentityids());
+  if (!from._internal_avoid_entity_ids().empty()) {
+    _this->_internal_set_avoid_entity_ids(from._internal_avoid_entity_ids());
   }
-  if (!from._internal_requireddatasources().empty()) {
-    _this->_internal_set_requireddatasources(from._internal_requireddatasources());
+  if (!from._internal_required_data_sources().empty()) {
+    _this->_internal_set_required_data_sources(from._internal_required_data_sources());
   }
-  if (from._internal_startentityid() != 0) {
-    _this->_internal_set_startentityid(from._internal_startentityid());
+  if (from._internal_start_entity_id() != 0) {
+    _this->_internal_set_start_entity_id(from._internal_start_entity_id());
   }
-  if (from._internal_endentityid() != 0) {
-    _this->_internal_set_endentityid(from._internal_endentityid());
+  if (from._internal_end_entity_id() != 0) {
+    _this->_internal_set_end_entity_id(from._internal_end_entity_id());
   }
-  if (from._internal_maxdegrees() != 0) {
-    _this->_internal_set_maxdegrees(from._internal_maxdegrees());
+  if (from._internal_max_degrees() != 0) {
+    _this->_internal_set_max_degrees(from._internal_max_degrees());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -6932,14 +6934,14 @@ void FindPathByEntityIdRequest::InternalSwap(FindPathByEntityIdRequest* PROTOBUF
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.avoidentityids_, &other->_impl_.avoidentityids_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.requireddatasources_, &other->_impl_.requireddatasources_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.avoid_entity_ids_, &other->_impl_.avoid_entity_ids_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.required_data_sources_, &other->_impl_.required_data_sources_, arena);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.flags_)
       + sizeof(FindPathByEntityIdRequest::_impl_.flags_)
-      - PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.startentityid_)>(
-          reinterpret_cast<char*>(&_impl_.startentityid_),
-          reinterpret_cast<char*>(&other->_impl_.startentityid_));
+      - PROTOBUF_FIELD_OFFSET(FindPathByEntityIdRequest, _impl_.start_entity_id_)>(
+          reinterpret_cast<char*>(&_impl_.start_entity_id_),
+          reinterpret_cast<char*>(&other->_impl_.start_entity_id_));
 }
 
 ::google::protobuf::Metadata FindPathByEntityIdRequest::GetMetadata() const {
@@ -7151,12 +7153,12 @@ FindPathByRecordIdRequest::FindPathByRecordIdRequest(::google::protobuf::Arena* 
 inline PROTOBUF_NDEBUG_INLINE FindPathByRecordIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : startdatasourcecode_(arena, from.startdatasourcecode_),
-        startrecordid_(arena, from.startrecordid_),
-        enddatasourcecode_(arena, from.enddatasourcecode_),
-        endrecordid_(arena, from.endrecordid_),
-        avoidrecordkeys_(arena, from.avoidrecordkeys_),
-        requireddatasources_(arena, from.requireddatasources_),
+      : start_data_source_code_(arena, from.start_data_source_code_),
+        start_record_id_(arena, from.start_record_id_),
+        end_data_source_code_(arena, from.end_data_source_code_),
+        end_record_id_(arena, from.end_record_id_),
+        avoid_record_keys_(arena, from.avoid_record_keys_),
+        required_data_sources_(arena, from.required_data_sources_),
         _cached_size_{0} {}
 
 FindPathByRecordIdRequest::FindPathByRecordIdRequest(
@@ -7169,11 +7171,11 @@ FindPathByRecordIdRequest::FindPathByRecordIdRequest(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
   ::memcpy(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, maxdegrees_),
+               offsetof(Impl_, max_degrees_),
            reinterpret_cast<const char *>(&from._impl_) +
-               offsetof(Impl_, maxdegrees_),
+               offsetof(Impl_, max_degrees_),
            offsetof(Impl_, flags_) -
-               offsetof(Impl_, maxdegrees_) +
+               offsetof(Impl_, max_degrees_) +
                sizeof(Impl_::flags_));
 
   // @@protoc_insertion_point(copy_constructor:szengine.FindPathByRecordIdRequest)
@@ -7181,21 +7183,21 @@ FindPathByRecordIdRequest::FindPathByRecordIdRequest(
 inline PROTOBUF_NDEBUG_INLINE FindPathByRecordIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : startdatasourcecode_(arena),
-        startrecordid_(arena),
-        enddatasourcecode_(arena),
-        endrecordid_(arena),
-        avoidrecordkeys_(arena),
-        requireddatasources_(arena),
+      : start_data_source_code_(arena),
+        start_record_id_(arena),
+        end_data_source_code_(arena),
+        end_record_id_(arena),
+        avoid_record_keys_(arena),
+        required_data_sources_(arena),
         _cached_size_{0} {}
 
 inline void FindPathByRecordIdRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, maxdegrees_),
+               offsetof(Impl_, max_degrees_),
            0,
            offsetof(Impl_, flags_) -
-               offsetof(Impl_, maxdegrees_) +
+               offsetof(Impl_, max_degrees_) +
                sizeof(Impl_::flags_));
 }
 FindPathByRecordIdRequest::~FindPathByRecordIdRequest() {
@@ -7205,12 +7207,12 @@ FindPathByRecordIdRequest::~FindPathByRecordIdRequest() {
 }
 inline void FindPathByRecordIdRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.startdatasourcecode_.Destroy();
-  _impl_.startrecordid_.Destroy();
-  _impl_.enddatasourcecode_.Destroy();
-  _impl_.endrecordid_.Destroy();
-  _impl_.avoidrecordkeys_.Destroy();
-  _impl_.requireddatasources_.Destroy();
+  _impl_.start_data_source_code_.Destroy();
+  _impl_.start_record_id_.Destroy();
+  _impl_.end_data_source_code_.Destroy();
+  _impl_.end_record_id_.Destroy();
+  _impl_.avoid_record_keys_.Destroy();
+  _impl_.required_data_sources_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -7221,15 +7223,15 @@ PROTOBUF_NOINLINE void FindPathByRecordIdRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.startdatasourcecode_.ClearToEmpty();
-  _impl_.startrecordid_.ClearToEmpty();
-  _impl_.enddatasourcecode_.ClearToEmpty();
-  _impl_.endrecordid_.ClearToEmpty();
-  _impl_.avoidrecordkeys_.ClearToEmpty();
-  _impl_.requireddatasources_.ClearToEmpty();
-  ::memset(&_impl_.maxdegrees_, 0, static_cast<::size_t>(
+  _impl_.start_data_source_code_.ClearToEmpty();
+  _impl_.start_record_id_.ClearToEmpty();
+  _impl_.end_data_source_code_.ClearToEmpty();
+  _impl_.end_record_id_.ClearToEmpty();
+  _impl_.avoid_record_keys_.ClearToEmpty();
+  _impl_.required_data_sources_.ClearToEmpty();
+  ::memset(&_impl_.max_degrees_, 0, static_cast<::size_t>(
       reinterpret_cast<char*>(&_impl_.flags_) -
-      reinterpret_cast<char*>(&_impl_.maxdegrees_)) + sizeof(_impl_.flags_));
+      reinterpret_cast<char*>(&_impl_.max_degrees_)) + sizeof(_impl_.flags_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -7241,7 +7243,7 @@ const char* FindPathByRecordIdRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 8, 0, 145, 2> FindPathByRecordIdRequest::_table_ = {
+const ::_pbi::TcParseTable<3, 8, 0, 159, 2> FindPathByRecordIdRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -7258,50 +7260,50 @@ const ::_pbi::TcParseTable<3, 8, 0, 145, 2> FindPathByRecordIdRequest::_table_ =
     // int64 flags = 8;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindPathByRecordIdRequest, _impl_.flags_), 63>(),
      {64, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.flags_)}},
-    // string startDataSourceCode = 1;
+    // string start_data_source_code = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.startdatasourcecode_)}},
-    // string startRecordId = 2;
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.start_data_source_code_)}},
+    // string start_record_id = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.startrecordid_)}},
-    // string endDataSourceCode = 3;
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.start_record_id_)}},
+    // string end_data_source_code = 3;
     {::_pbi::TcParser::FastUS1,
-     {26, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.enddatasourcecode_)}},
-    // string endRecordId = 4;
+     {26, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.end_data_source_code_)}},
+    // string end_record_id = 4;
     {::_pbi::TcParser::FastUS1,
-     {34, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.endrecordid_)}},
-    // int64 maxDegrees = 5;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindPathByRecordIdRequest, _impl_.maxdegrees_), 63>(),
-     {40, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.maxdegrees_)}},
-    // string avoidRecordKeys = 6;
+     {34, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.end_record_id_)}},
+    // int64 max_degrees = 5;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(FindPathByRecordIdRequest, _impl_.max_degrees_), 63>(),
+     {40, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.max_degrees_)}},
+    // string avoid_record_keys = 6;
     {::_pbi::TcParser::FastUS1,
-     {50, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.avoidrecordkeys_)}},
-    // string requiredDataSources = 7;
+     {50, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.avoid_record_keys_)}},
+    // string required_data_sources = 7;
     {::_pbi::TcParser::FastUS1,
-     {58, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.requireddatasources_)}},
+     {58, 63, 0, PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.required_data_sources_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string startDataSourceCode = 1;
-    {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.startdatasourcecode_), 0, 0,
+    // string start_data_source_code = 1;
+    {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.start_data_source_code_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string startRecordId = 2;
-    {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.startrecordid_), 0, 0,
+    // string start_record_id = 2;
+    {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.start_record_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string endDataSourceCode = 3;
-    {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.enddatasourcecode_), 0, 0,
+    // string end_data_source_code = 3;
+    {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.end_data_source_code_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string endRecordId = 4;
-    {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.endrecordid_), 0, 0,
+    // string end_record_id = 4;
+    {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.end_record_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // int64 maxDegrees = 5;
-    {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.maxdegrees_), 0, 0,
+    // int64 max_degrees = 5;
+    {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.max_degrees_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // string avoidRecordKeys = 6;
-    {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.avoidrecordkeys_), 0, 0,
+    // string avoid_record_keys = 6;
+    {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.avoid_record_keys_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string requiredDataSources = 7;
-    {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.requireddatasources_), 0, 0,
+    // string required_data_sources = 7;
+    {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.required_data_sources_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 flags = 8;
     {PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.flags_), 0, 0,
@@ -7309,14 +7311,14 @@ const ::_pbi::TcParseTable<3, 8, 0, 145, 2> FindPathByRecordIdRequest::_table_ =
   }},
   // no aux_entries
   {{
-    "\42\23\15\21\13\0\17\23\0\0\0\0\0\0\0\0"
+    "\42\26\17\24\15\0\21\25\0\0\0\0\0\0\0\0"
     "szengine.FindPathByRecordIdRequest"
-    "startDataSourceCode"
-    "startRecordId"
-    "endDataSourceCode"
-    "endRecordId"
-    "avoidRecordKeys"
-    "requiredDataSources"
+    "start_data_source_code"
+    "start_record_id"
+    "end_data_source_code"
+    "end_record_id"
+    "avoid_record_keys"
+    "required_data_sources"
   }},
 };
 
@@ -7327,58 +7329,58 @@ const ::_pbi::TcParseTable<3, 8, 0, 145, 2> FindPathByRecordIdRequest::_table_ =
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string startDataSourceCode = 1;
-  if (!this->_internal_startdatasourcecode().empty()) {
-    const std::string& _s = this->_internal_startdatasourcecode();
+  // string start_data_source_code = 1;
+  if (!this->_internal_start_data_source_code().empty()) {
+    const std::string& _s = this->_internal_start_data_source_code();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByRecordIdRequest.startDataSourceCode");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByRecordIdRequest.start_data_source_code");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
-  // string startRecordId = 2;
-  if (!this->_internal_startrecordid().empty()) {
-    const std::string& _s = this->_internal_startrecordid();
+  // string start_record_id = 2;
+  if (!this->_internal_start_record_id().empty()) {
+    const std::string& _s = this->_internal_start_record_id();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByRecordIdRequest.startRecordId");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByRecordIdRequest.start_record_id");
     target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
-  // string endDataSourceCode = 3;
-  if (!this->_internal_enddatasourcecode().empty()) {
-    const std::string& _s = this->_internal_enddatasourcecode();
+  // string end_data_source_code = 3;
+  if (!this->_internal_end_data_source_code().empty()) {
+    const std::string& _s = this->_internal_end_data_source_code();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByRecordIdRequest.endDataSourceCode");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByRecordIdRequest.end_data_source_code");
     target = stream->WriteStringMaybeAliased(3, _s, target);
   }
 
-  // string endRecordId = 4;
-  if (!this->_internal_endrecordid().empty()) {
-    const std::string& _s = this->_internal_endrecordid();
+  // string end_record_id = 4;
+  if (!this->_internal_end_record_id().empty()) {
+    const std::string& _s = this->_internal_end_record_id();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByRecordIdRequest.endRecordId");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByRecordIdRequest.end_record_id");
     target = stream->WriteStringMaybeAliased(4, _s, target);
   }
 
-  // int64 maxDegrees = 5;
-  if (this->_internal_maxdegrees() != 0) {
+  // int64 max_degrees = 5;
+  if (this->_internal_max_degrees() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<5>(
-            stream, this->_internal_maxdegrees(), target);
+            stream, this->_internal_max_degrees(), target);
   }
 
-  // string avoidRecordKeys = 6;
-  if (!this->_internal_avoidrecordkeys().empty()) {
-    const std::string& _s = this->_internal_avoidrecordkeys();
+  // string avoid_record_keys = 6;
+  if (!this->_internal_avoid_record_keys().empty()) {
+    const std::string& _s = this->_internal_avoid_record_keys();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByRecordIdRequest.avoidRecordKeys");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByRecordIdRequest.avoid_record_keys");
     target = stream->WriteStringMaybeAliased(6, _s, target);
   }
 
-  // string requiredDataSources = 7;
-  if (!this->_internal_requireddatasources().empty()) {
-    const std::string& _s = this->_internal_requireddatasources();
+  // string required_data_sources = 7;
+  if (!this->_internal_required_data_sources().empty()) {
+    const std::string& _s = this->_internal_required_data_sources();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByRecordIdRequest.requiredDataSources");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.FindPathByRecordIdRequest.required_data_sources");
     target = stream->WriteStringMaybeAliased(7, _s, target);
   }
 
@@ -7406,46 +7408,46 @@ const ::_pbi::TcParseTable<3, 8, 0, 145, 2> FindPathByRecordIdRequest::_table_ =
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string startDataSourceCode = 1;
-  if (!this->_internal_startdatasourcecode().empty()) {
+  // string start_data_source_code = 1;
+  if (!this->_internal_start_data_source_code().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_startdatasourcecode());
+                                    this->_internal_start_data_source_code());
   }
 
-  // string startRecordId = 2;
-  if (!this->_internal_startrecordid().empty()) {
+  // string start_record_id = 2;
+  if (!this->_internal_start_record_id().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_startrecordid());
+                                    this->_internal_start_record_id());
   }
 
-  // string endDataSourceCode = 3;
-  if (!this->_internal_enddatasourcecode().empty()) {
+  // string end_data_source_code = 3;
+  if (!this->_internal_end_data_source_code().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_enddatasourcecode());
+                                    this->_internal_end_data_source_code());
   }
 
-  // string endRecordId = 4;
-  if (!this->_internal_endrecordid().empty()) {
+  // string end_record_id = 4;
+  if (!this->_internal_end_record_id().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_endrecordid());
+                                    this->_internal_end_record_id());
   }
 
-  // string avoidRecordKeys = 6;
-  if (!this->_internal_avoidrecordkeys().empty()) {
+  // string avoid_record_keys = 6;
+  if (!this->_internal_avoid_record_keys().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_avoidrecordkeys());
+                                    this->_internal_avoid_record_keys());
   }
 
-  // string requiredDataSources = 7;
-  if (!this->_internal_requireddatasources().empty()) {
+  // string required_data_sources = 7;
+  if (!this->_internal_required_data_sources().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_requireddatasources());
+                                    this->_internal_required_data_sources());
   }
 
-  // int64 maxDegrees = 5;
-  if (this->_internal_maxdegrees() != 0) {
+  // int64 max_degrees = 5;
+  if (this->_internal_max_degrees() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_maxdegrees());
+        this->_internal_max_degrees());
   }
 
   // int64 flags = 8;
@@ -7473,26 +7475,26 @@ void FindPathByRecordIdRequest::MergeImpl(::google::protobuf::Message& to_msg, c
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_startdatasourcecode().empty()) {
-    _this->_internal_set_startdatasourcecode(from._internal_startdatasourcecode());
+  if (!from._internal_start_data_source_code().empty()) {
+    _this->_internal_set_start_data_source_code(from._internal_start_data_source_code());
   }
-  if (!from._internal_startrecordid().empty()) {
-    _this->_internal_set_startrecordid(from._internal_startrecordid());
+  if (!from._internal_start_record_id().empty()) {
+    _this->_internal_set_start_record_id(from._internal_start_record_id());
   }
-  if (!from._internal_enddatasourcecode().empty()) {
-    _this->_internal_set_enddatasourcecode(from._internal_enddatasourcecode());
+  if (!from._internal_end_data_source_code().empty()) {
+    _this->_internal_set_end_data_source_code(from._internal_end_data_source_code());
   }
-  if (!from._internal_endrecordid().empty()) {
-    _this->_internal_set_endrecordid(from._internal_endrecordid());
+  if (!from._internal_end_record_id().empty()) {
+    _this->_internal_set_end_record_id(from._internal_end_record_id());
   }
-  if (!from._internal_avoidrecordkeys().empty()) {
-    _this->_internal_set_avoidrecordkeys(from._internal_avoidrecordkeys());
+  if (!from._internal_avoid_record_keys().empty()) {
+    _this->_internal_set_avoid_record_keys(from._internal_avoid_record_keys());
   }
-  if (!from._internal_requireddatasources().empty()) {
-    _this->_internal_set_requireddatasources(from._internal_requireddatasources());
+  if (!from._internal_required_data_sources().empty()) {
+    _this->_internal_set_required_data_sources(from._internal_required_data_sources());
   }
-  if (from._internal_maxdegrees() != 0) {
-    _this->_internal_set_maxdegrees(from._internal_maxdegrees());
+  if (from._internal_max_degrees() != 0) {
+    _this->_internal_set_max_degrees(from._internal_max_degrees());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -7519,18 +7521,18 @@ void FindPathByRecordIdRequest::InternalSwap(FindPathByRecordIdRequest* PROTOBUF
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.startdatasourcecode_, &other->_impl_.startdatasourcecode_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.startrecordid_, &other->_impl_.startrecordid_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.enddatasourcecode_, &other->_impl_.enddatasourcecode_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.endrecordid_, &other->_impl_.endrecordid_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.avoidrecordkeys_, &other->_impl_.avoidrecordkeys_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.requireddatasources_, &other->_impl_.requireddatasources_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.start_data_source_code_, &other->_impl_.start_data_source_code_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.start_record_id_, &other->_impl_.start_record_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.end_data_source_code_, &other->_impl_.end_data_source_code_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.end_record_id_, &other->_impl_.end_record_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.avoid_record_keys_, &other->_impl_.avoid_record_keys_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.required_data_sources_, &other->_impl_.required_data_sources_, arena);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.flags_)
       + sizeof(FindPathByRecordIdRequest::_impl_.flags_)
-      - PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.maxdegrees_)>(
-          reinterpret_cast<char*>(&_impl_.maxdegrees_),
-          reinterpret_cast<char*>(&other->_impl_.maxdegrees_));
+      - PROTOBUF_FIELD_OFFSET(FindPathByRecordIdRequest, _impl_.max_degrees_)>(
+          reinterpret_cast<char*>(&_impl_.max_degrees_),
+          reinterpret_cast<char*>(&other->_impl_.max_degrees_));
 }
 
 ::google::protobuf::Metadata FindPathByRecordIdRequest::GetMetadata() const {
@@ -7957,10 +7959,10 @@ inline PROTOBUF_NDEBUG_INLINE GetEntityByEntityIdRequest::Impl_::Impl_(
 inline void GetEntityByEntityIdRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, entityid_),
+               offsetof(Impl_, entity_id_),
            0,
            offsetof(Impl_, flags_) -
-               offsetof(Impl_, entityid_) +
+               offsetof(Impl_, entity_id_) +
                sizeof(Impl_::flags_));
 }
 GetEntityByEntityIdRequest::~GetEntityByEntityIdRequest() {
@@ -7980,9 +7982,9 @@ PROTOBUF_NOINLINE void GetEntityByEntityIdRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.entityid_, 0, static_cast<::size_t>(
+  ::memset(&_impl_.entity_id_, 0, static_cast<::size_t>(
       reinterpret_cast<char*>(&_impl_.flags_) -
-      reinterpret_cast<char*>(&_impl_.entityid_)) + sizeof(_impl_.flags_));
+      reinterpret_cast<char*>(&_impl_.entity_id_)) + sizeof(_impl_.flags_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -8011,14 +8013,14 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> GetEntityByEntityIdRequest::_table_ = 
     // int64 flags = 2;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(GetEntityByEntityIdRequest, _impl_.flags_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(GetEntityByEntityIdRequest, _impl_.flags_)}},
-    // int64 entityId = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(GetEntityByEntityIdRequest, _impl_.entityid_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(GetEntityByEntityIdRequest, _impl_.entityid_)}},
+    // int64 entity_id = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(GetEntityByEntityIdRequest, _impl_.entity_id_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(GetEntityByEntityIdRequest, _impl_.entity_id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 entityId = 1;
-    {PROTOBUF_FIELD_OFFSET(GetEntityByEntityIdRequest, _impl_.entityid_), 0, 0,
+    // int64 entity_id = 1;
+    {PROTOBUF_FIELD_OFFSET(GetEntityByEntityIdRequest, _impl_.entity_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
     // int64 flags = 2;
     {PROTOBUF_FIELD_OFFSET(GetEntityByEntityIdRequest, _impl_.flags_), 0, 0,
@@ -8036,11 +8038,11 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> GetEntityByEntityIdRequest::_table_ = 
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 entityId = 1;
-  if (this->_internal_entityid() != 0) {
+  // int64 entity_id = 1;
+  if (this->_internal_entity_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_entityid(), target);
+            stream, this->_internal_entity_id(), target);
   }
 
   // int64 flags = 2;
@@ -8067,10 +8069,10 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> GetEntityByEntityIdRequest::_table_ = 
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 entityId = 1;
-  if (this->_internal_entityid() != 0) {
+  // int64 entity_id = 1;
+  if (this->_internal_entity_id() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_entityid());
+        this->_internal_entity_id());
   }
 
   // int64 flags = 2;
@@ -8098,8 +8100,8 @@ void GetEntityByEntityIdRequest::MergeImpl(::google::protobuf::Message& to_msg, 
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_entityid() != 0) {
-    _this->_internal_set_entityid(from._internal_entityid());
+  if (from._internal_entity_id() != 0) {
+    _this->_internal_set_entity_id(from._internal_entity_id());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -8127,9 +8129,9 @@ void GetEntityByEntityIdRequest::InternalSwap(GetEntityByEntityIdRequest* PROTOB
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(GetEntityByEntityIdRequest, _impl_.flags_)
       + sizeof(GetEntityByEntityIdRequest::_impl_.flags_)
-      - PROTOBUF_FIELD_OFFSET(GetEntityByEntityIdRequest, _impl_.entityid_)>(
-          reinterpret_cast<char*>(&_impl_.entityid_),
-          reinterpret_cast<char*>(&other->_impl_.entityid_));
+      - PROTOBUF_FIELD_OFFSET(GetEntityByEntityIdRequest, _impl_.entity_id_)>(
+          reinterpret_cast<char*>(&_impl_.entity_id_),
+          reinterpret_cast<char*>(&other->_impl_.entity_id_));
 }
 
 ::google::protobuf::Metadata GetEntityByEntityIdRequest::GetMetadata() const {
@@ -8341,8 +8343,8 @@ GetEntityByRecordIdRequest::GetEntityByRecordIdRequest(::google::protobuf::Arena
 inline PROTOBUF_NDEBUG_INLINE GetEntityByRecordIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : datasourcecode_(arena, from.datasourcecode_),
-        recordid_(arena, from.recordid_),
+      : data_source_code_(arena, from.data_source_code_),
+        record_id_(arena, from.record_id_),
         _cached_size_{0} {}
 
 GetEntityByRecordIdRequest::GetEntityByRecordIdRequest(
@@ -8361,8 +8363,8 @@ GetEntityByRecordIdRequest::GetEntityByRecordIdRequest(
 inline PROTOBUF_NDEBUG_INLINE GetEntityByRecordIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : datasourcecode_(arena),
-        recordid_(arena),
+      : data_source_code_(arena),
+        record_id_(arena),
         _cached_size_{0} {}
 
 inline void GetEntityByRecordIdRequest::SharedCtor(::_pb::Arena* arena) {
@@ -8376,8 +8378,8 @@ GetEntityByRecordIdRequest::~GetEntityByRecordIdRequest() {
 }
 inline void GetEntityByRecordIdRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.datasourcecode_.Destroy();
-  _impl_.recordid_.Destroy();
+  _impl_.data_source_code_.Destroy();
+  _impl_.record_id_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -8388,8 +8390,8 @@ PROTOBUF_NOINLINE void GetEntityByRecordIdRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.datasourcecode_.ClearToEmpty();
-  _impl_.recordid_.ClearToEmpty();
+  _impl_.data_source_code_.ClearToEmpty();
+  _impl_.record_id_.ClearToEmpty();
   _impl_.flags_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -8402,7 +8404,7 @@ const char* GetEntityByRecordIdRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 66, 2> GetEntityByRecordIdRequest::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 0, 69, 2> GetEntityByRecordIdRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -8417,23 +8419,23 @@ const ::_pbi::TcParseTable<2, 3, 0, 66, 2> GetEntityByRecordIdRequest::_table_ =
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // string dataSourceCode = 1;
+    // string data_source_code = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GetEntityByRecordIdRequest, _impl_.datasourcecode_)}},
-    // string recordId = 2;
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GetEntityByRecordIdRequest, _impl_.data_source_code_)}},
+    // string record_id = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(GetEntityByRecordIdRequest, _impl_.recordid_)}},
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(GetEntityByRecordIdRequest, _impl_.record_id_)}},
     // int64 flags = 3;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(GetEntityByRecordIdRequest, _impl_.flags_), 63>(),
      {24, 63, 0, PROTOBUF_FIELD_OFFSET(GetEntityByRecordIdRequest, _impl_.flags_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string dataSourceCode = 1;
-    {PROTOBUF_FIELD_OFFSET(GetEntityByRecordIdRequest, _impl_.datasourcecode_), 0, 0,
+    // string data_source_code = 1;
+    {PROTOBUF_FIELD_OFFSET(GetEntityByRecordIdRequest, _impl_.data_source_code_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string recordId = 2;
-    {PROTOBUF_FIELD_OFFSET(GetEntityByRecordIdRequest, _impl_.recordid_), 0, 0,
+    // string record_id = 2;
+    {PROTOBUF_FIELD_OFFSET(GetEntityByRecordIdRequest, _impl_.record_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 flags = 3;
     {PROTOBUF_FIELD_OFFSET(GetEntityByRecordIdRequest, _impl_.flags_), 0, 0,
@@ -8441,10 +8443,10 @@ const ::_pbi::TcParseTable<2, 3, 0, 66, 2> GetEntityByRecordIdRequest::_table_ =
   }},
   // no aux_entries
   {{
-    "\43\16\10\0\0\0\0\0"
+    "\43\20\11\0\0\0\0\0"
     "szengine.GetEntityByRecordIdRequest"
-    "dataSourceCode"
-    "recordId"
+    "data_source_code"
+    "record_id"
   }},
 };
 
@@ -8455,19 +8457,19 @@ const ::_pbi::TcParseTable<2, 3, 0, 66, 2> GetEntityByRecordIdRequest::_table_ =
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string dataSourceCode = 1;
-  if (!this->_internal_datasourcecode().empty()) {
-    const std::string& _s = this->_internal_datasourcecode();
+  // string data_source_code = 1;
+  if (!this->_internal_data_source_code().empty()) {
+    const std::string& _s = this->_internal_data_source_code();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.GetEntityByRecordIdRequest.dataSourceCode");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.GetEntityByRecordIdRequest.data_source_code");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
-  // string recordId = 2;
-  if (!this->_internal_recordid().empty()) {
-    const std::string& _s = this->_internal_recordid();
+  // string record_id = 2;
+  if (!this->_internal_record_id().empty()) {
+    const std::string& _s = this->_internal_record_id();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.GetEntityByRecordIdRequest.recordId");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.GetEntityByRecordIdRequest.record_id");
     target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
@@ -8495,16 +8497,16 @@ const ::_pbi::TcParseTable<2, 3, 0, 66, 2> GetEntityByRecordIdRequest::_table_ =
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string dataSourceCode = 1;
-  if (!this->_internal_datasourcecode().empty()) {
+  // string data_source_code = 1;
+  if (!this->_internal_data_source_code().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_datasourcecode());
+                                    this->_internal_data_source_code());
   }
 
-  // string recordId = 2;
-  if (!this->_internal_recordid().empty()) {
+  // string record_id = 2;
+  if (!this->_internal_record_id().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_recordid());
+                                    this->_internal_record_id());
   }
 
   // int64 flags = 3;
@@ -8532,11 +8534,11 @@ void GetEntityByRecordIdRequest::MergeImpl(::google::protobuf::Message& to_msg, 
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_datasourcecode().empty()) {
-    _this->_internal_set_datasourcecode(from._internal_datasourcecode());
+  if (!from._internal_data_source_code().empty()) {
+    _this->_internal_set_data_source_code(from._internal_data_source_code());
   }
-  if (!from._internal_recordid().empty()) {
-    _this->_internal_set_recordid(from._internal_recordid());
+  if (!from._internal_record_id().empty()) {
+    _this->_internal_set_record_id(from._internal_record_id());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -8563,8 +8565,8 @@ void GetEntityByRecordIdRequest::InternalSwap(GetEntityByRecordIdRequest* PROTOB
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.datasourcecode_, &other->_impl_.datasourcecode_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recordid_, &other->_impl_.recordid_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.data_source_code_, &other->_impl_.data_source_code_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.record_id_, &other->_impl_.record_id_, arena);
         swap(_impl_.flags_, other->_impl_.flags_);
 }
 
@@ -8777,8 +8779,8 @@ GetRecordRequest::GetRecordRequest(::google::protobuf::Arena* arena)
 inline PROTOBUF_NDEBUG_INLINE GetRecordRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : datasourcecode_(arena, from.datasourcecode_),
-        recordid_(arena, from.recordid_),
+      : data_source_code_(arena, from.data_source_code_),
+        record_id_(arena, from.record_id_),
         _cached_size_{0} {}
 
 GetRecordRequest::GetRecordRequest(
@@ -8797,8 +8799,8 @@ GetRecordRequest::GetRecordRequest(
 inline PROTOBUF_NDEBUG_INLINE GetRecordRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : datasourcecode_(arena),
-        recordid_(arena),
+      : data_source_code_(arena),
+        record_id_(arena),
         _cached_size_{0} {}
 
 inline void GetRecordRequest::SharedCtor(::_pb::Arena* arena) {
@@ -8812,8 +8814,8 @@ GetRecordRequest::~GetRecordRequest() {
 }
 inline void GetRecordRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.datasourcecode_.Destroy();
-  _impl_.recordid_.Destroy();
+  _impl_.data_source_code_.Destroy();
+  _impl_.record_id_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -8824,8 +8826,8 @@ PROTOBUF_NOINLINE void GetRecordRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.datasourcecode_.ClearToEmpty();
-  _impl_.recordid_.ClearToEmpty();
+  _impl_.data_source_code_.ClearToEmpty();
+  _impl_.record_id_.ClearToEmpty();
   _impl_.flags_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -8838,7 +8840,7 @@ const char* GetRecordRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 56, 2> GetRecordRequest::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 0, 59, 2> GetRecordRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -8853,23 +8855,23 @@ const ::_pbi::TcParseTable<2, 3, 0, 56, 2> GetRecordRequest::_table_ = {
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // string dataSourceCode = 1;
+    // string data_source_code = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GetRecordRequest, _impl_.datasourcecode_)}},
-    // string recordId = 2;
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GetRecordRequest, _impl_.data_source_code_)}},
+    // string record_id = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(GetRecordRequest, _impl_.recordid_)}},
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(GetRecordRequest, _impl_.record_id_)}},
     // int64 flags = 3;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(GetRecordRequest, _impl_.flags_), 63>(),
      {24, 63, 0, PROTOBUF_FIELD_OFFSET(GetRecordRequest, _impl_.flags_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string dataSourceCode = 1;
-    {PROTOBUF_FIELD_OFFSET(GetRecordRequest, _impl_.datasourcecode_), 0, 0,
+    // string data_source_code = 1;
+    {PROTOBUF_FIELD_OFFSET(GetRecordRequest, _impl_.data_source_code_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string recordId = 2;
-    {PROTOBUF_FIELD_OFFSET(GetRecordRequest, _impl_.recordid_), 0, 0,
+    // string record_id = 2;
+    {PROTOBUF_FIELD_OFFSET(GetRecordRequest, _impl_.record_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 flags = 3;
     {PROTOBUF_FIELD_OFFSET(GetRecordRequest, _impl_.flags_), 0, 0,
@@ -8877,10 +8879,10 @@ const ::_pbi::TcParseTable<2, 3, 0, 56, 2> GetRecordRequest::_table_ = {
   }},
   // no aux_entries
   {{
-    "\31\16\10\0\0\0\0\0"
+    "\31\20\11\0\0\0\0\0"
     "szengine.GetRecordRequest"
-    "dataSourceCode"
-    "recordId"
+    "data_source_code"
+    "record_id"
   }},
 };
 
@@ -8891,19 +8893,19 @@ const ::_pbi::TcParseTable<2, 3, 0, 56, 2> GetRecordRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string dataSourceCode = 1;
-  if (!this->_internal_datasourcecode().empty()) {
-    const std::string& _s = this->_internal_datasourcecode();
+  // string data_source_code = 1;
+  if (!this->_internal_data_source_code().empty()) {
+    const std::string& _s = this->_internal_data_source_code();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.GetRecordRequest.dataSourceCode");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.GetRecordRequest.data_source_code");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
-  // string recordId = 2;
-  if (!this->_internal_recordid().empty()) {
-    const std::string& _s = this->_internal_recordid();
+  // string record_id = 2;
+  if (!this->_internal_record_id().empty()) {
+    const std::string& _s = this->_internal_record_id();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.GetRecordRequest.recordId");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.GetRecordRequest.record_id");
     target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
@@ -8931,16 +8933,16 @@ const ::_pbi::TcParseTable<2, 3, 0, 56, 2> GetRecordRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string dataSourceCode = 1;
-  if (!this->_internal_datasourcecode().empty()) {
+  // string data_source_code = 1;
+  if (!this->_internal_data_source_code().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_datasourcecode());
+                                    this->_internal_data_source_code());
   }
 
-  // string recordId = 2;
-  if (!this->_internal_recordid().empty()) {
+  // string record_id = 2;
+  if (!this->_internal_record_id().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_recordid());
+                                    this->_internal_record_id());
   }
 
   // int64 flags = 3;
@@ -8968,11 +8970,11 @@ void GetRecordRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::go
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_datasourcecode().empty()) {
-    _this->_internal_set_datasourcecode(from._internal_datasourcecode());
+  if (!from._internal_data_source_code().empty()) {
+    _this->_internal_set_data_source_code(from._internal_data_source_code());
   }
-  if (!from._internal_recordid().empty()) {
-    _this->_internal_set_recordid(from._internal_recordid());
+  if (!from._internal_record_id().empty()) {
+    _this->_internal_set_record_id(from._internal_record_id());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -8999,8 +9001,8 @@ void GetRecordRequest::InternalSwap(GetRecordRequest* PROTOBUF_RESTRICT other) {
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.datasourcecode_, &other->_impl_.datasourcecode_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recordid_, &other->_impl_.recordid_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.data_source_code_, &other->_impl_.data_source_code_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.record_id_, &other->_impl_.record_id_, arena);
         swap(_impl_.flags_, other->_impl_.flags_);
 }
 
@@ -9663,7 +9665,7 @@ GetVirtualEntityByRecordIdRequest::GetVirtualEntityByRecordIdRequest(::google::p
 inline PROTOBUF_NDEBUG_INLINE GetVirtualEntityByRecordIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : recordkeys_(arena, from.recordkeys_),
+      : record_keys_(arena, from.record_keys_),
         _cached_size_{0} {}
 
 GetVirtualEntityByRecordIdRequest::GetVirtualEntityByRecordIdRequest(
@@ -9682,7 +9684,7 @@ GetVirtualEntityByRecordIdRequest::GetVirtualEntityByRecordIdRequest(
 inline PROTOBUF_NDEBUG_INLINE GetVirtualEntityByRecordIdRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : recordkeys_(arena),
+      : record_keys_(arena),
         _cached_size_{0} {}
 
 inline void GetVirtualEntityByRecordIdRequest::SharedCtor(::_pb::Arena* arena) {
@@ -9696,7 +9698,7 @@ GetVirtualEntityByRecordIdRequest::~GetVirtualEntityByRecordIdRequest() {
 }
 inline void GetVirtualEntityByRecordIdRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.recordkeys_.Destroy();
+  _impl_.record_keys_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -9707,7 +9709,7 @@ PROTOBUF_NOINLINE void GetVirtualEntityByRecordIdRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.recordkeys_.ClearToEmpty();
+  _impl_.record_keys_.ClearToEmpty();
   _impl_.flags_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -9720,7 +9722,7 @@ const char* GetVirtualEntityByRecordIdRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 61, 2> GetVirtualEntityByRecordIdRequest::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 62, 2> GetVirtualEntityByRecordIdRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -9737,14 +9739,14 @@ const ::_pbi::TcParseTable<1, 2, 0, 61, 2> GetVirtualEntityByRecordIdRequest::_t
     // int64 flags = 2;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(GetVirtualEntityByRecordIdRequest, _impl_.flags_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(GetVirtualEntityByRecordIdRequest, _impl_.flags_)}},
-    // string recordKeys = 1;
+    // string record_keys = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GetVirtualEntityByRecordIdRequest, _impl_.recordkeys_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GetVirtualEntityByRecordIdRequest, _impl_.record_keys_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string recordKeys = 1;
-    {PROTOBUF_FIELD_OFFSET(GetVirtualEntityByRecordIdRequest, _impl_.recordkeys_), 0, 0,
+    // string record_keys = 1;
+    {PROTOBUF_FIELD_OFFSET(GetVirtualEntityByRecordIdRequest, _impl_.record_keys_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 flags = 2;
     {PROTOBUF_FIELD_OFFSET(GetVirtualEntityByRecordIdRequest, _impl_.flags_), 0, 0,
@@ -9752,9 +9754,9 @@ const ::_pbi::TcParseTable<1, 2, 0, 61, 2> GetVirtualEntityByRecordIdRequest::_t
   }},
   // no aux_entries
   {{
-    "\52\12\0\0\0\0\0\0"
+    "\52\13\0\0\0\0\0\0"
     "szengine.GetVirtualEntityByRecordIdRequest"
-    "recordKeys"
+    "record_keys"
   }},
 };
 
@@ -9765,11 +9767,11 @@ const ::_pbi::TcParseTable<1, 2, 0, 61, 2> GetVirtualEntityByRecordIdRequest::_t
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string recordKeys = 1;
-  if (!this->_internal_recordkeys().empty()) {
-    const std::string& _s = this->_internal_recordkeys();
+  // string record_keys = 1;
+  if (!this->_internal_record_keys().empty()) {
+    const std::string& _s = this->_internal_record_keys();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.GetVirtualEntityByRecordIdRequest.recordKeys");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.GetVirtualEntityByRecordIdRequest.record_keys");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
@@ -9797,10 +9799,10 @@ const ::_pbi::TcParseTable<1, 2, 0, 61, 2> GetVirtualEntityByRecordIdRequest::_t
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string recordKeys = 1;
-  if (!this->_internal_recordkeys().empty()) {
+  // string record_keys = 1;
+  if (!this->_internal_record_keys().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_recordkeys());
+                                    this->_internal_record_keys());
   }
 
   // int64 flags = 2;
@@ -9828,8 +9830,8 @@ void GetVirtualEntityByRecordIdRequest::MergeImpl(::google::protobuf::Message& t
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_recordkeys().empty()) {
-    _this->_internal_set_recordkeys(from._internal_recordkeys());
+  if (!from._internal_record_keys().empty()) {
+    _this->_internal_set_record_keys(from._internal_record_keys());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -9856,7 +9858,7 @@ void GetVirtualEntityByRecordIdRequest::InternalSwap(GetVirtualEntityByRecordIdR
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recordkeys_, &other->_impl_.recordkeys_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.record_keys_, &other->_impl_.record_keys_, arena);
         swap(_impl_.flags_, other->_impl_.flags_);
 }
 
@@ -10079,10 +10081,10 @@ inline PROTOBUF_NDEBUG_INLINE HowEntityByEntityIdRequest::Impl_::Impl_(
 inline void HowEntityByEntityIdRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, entityid_),
+               offsetof(Impl_, entity_id_),
            0,
            offsetof(Impl_, flags_) -
-               offsetof(Impl_, entityid_) +
+               offsetof(Impl_, entity_id_) +
                sizeof(Impl_::flags_));
 }
 HowEntityByEntityIdRequest::~HowEntityByEntityIdRequest() {
@@ -10102,9 +10104,9 @@ PROTOBUF_NOINLINE void HowEntityByEntityIdRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.entityid_, 0, static_cast<::size_t>(
+  ::memset(&_impl_.entity_id_, 0, static_cast<::size_t>(
       reinterpret_cast<char*>(&_impl_.flags_) -
-      reinterpret_cast<char*>(&_impl_.entityid_)) + sizeof(_impl_.flags_));
+      reinterpret_cast<char*>(&_impl_.entity_id_)) + sizeof(_impl_.flags_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -10133,14 +10135,14 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> HowEntityByEntityIdRequest::_table_ = 
     // int64 flags = 2;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(HowEntityByEntityIdRequest, _impl_.flags_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(HowEntityByEntityIdRequest, _impl_.flags_)}},
-    // int64 entityId = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(HowEntityByEntityIdRequest, _impl_.entityid_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(HowEntityByEntityIdRequest, _impl_.entityid_)}},
+    // int64 entity_id = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(HowEntityByEntityIdRequest, _impl_.entity_id_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(HowEntityByEntityIdRequest, _impl_.entity_id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 entityId = 1;
-    {PROTOBUF_FIELD_OFFSET(HowEntityByEntityIdRequest, _impl_.entityid_), 0, 0,
+    // int64 entity_id = 1;
+    {PROTOBUF_FIELD_OFFSET(HowEntityByEntityIdRequest, _impl_.entity_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
     // int64 flags = 2;
     {PROTOBUF_FIELD_OFFSET(HowEntityByEntityIdRequest, _impl_.flags_), 0, 0,
@@ -10158,11 +10160,11 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> HowEntityByEntityIdRequest::_table_ = 
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 entityId = 1;
-  if (this->_internal_entityid() != 0) {
+  // int64 entity_id = 1;
+  if (this->_internal_entity_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_entityid(), target);
+            stream, this->_internal_entity_id(), target);
   }
 
   // int64 flags = 2;
@@ -10189,10 +10191,10 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> HowEntityByEntityIdRequest::_table_ = 
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 entityId = 1;
-  if (this->_internal_entityid() != 0) {
+  // int64 entity_id = 1;
+  if (this->_internal_entity_id() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_entityid());
+        this->_internal_entity_id());
   }
 
   // int64 flags = 2;
@@ -10220,8 +10222,8 @@ void HowEntityByEntityIdRequest::MergeImpl(::google::protobuf::Message& to_msg, 
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_entityid() != 0) {
-    _this->_internal_set_entityid(from._internal_entityid());
+  if (from._internal_entity_id() != 0) {
+    _this->_internal_set_entity_id(from._internal_entity_id());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -10249,9 +10251,9 @@ void HowEntityByEntityIdRequest::InternalSwap(HowEntityByEntityIdRequest* PROTOB
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(HowEntityByEntityIdRequest, _impl_.flags_)
       + sizeof(HowEntityByEntityIdRequest::_impl_.flags_)
-      - PROTOBUF_FIELD_OFFSET(HowEntityByEntityIdRequest, _impl_.entityid_)>(
-          reinterpret_cast<char*>(&_impl_.entityid_),
-          reinterpret_cast<char*>(&other->_impl_.entityid_));
+      - PROTOBUF_FIELD_OFFSET(HowEntityByEntityIdRequest, _impl_.entity_id_)>(
+          reinterpret_cast<char*>(&_impl_.entity_id_),
+          reinterpret_cast<char*>(&other->_impl_.entity_id_));
 }
 
 ::google::protobuf::Metadata HowEntityByEntityIdRequest::GetMetadata() const {
@@ -10463,7 +10465,7 @@ PreprocessRecordRequest::PreprocessRecordRequest(::google::protobuf::Arena* aren
 inline PROTOBUF_NDEBUG_INLINE PreprocessRecordRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : recorddefinition_(arena, from.recorddefinition_),
+      : record_definition_(arena, from.record_definition_),
         _cached_size_{0} {}
 
 PreprocessRecordRequest::PreprocessRecordRequest(
@@ -10482,7 +10484,7 @@ PreprocessRecordRequest::PreprocessRecordRequest(
 inline PROTOBUF_NDEBUG_INLINE PreprocessRecordRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : recorddefinition_(arena),
+      : record_definition_(arena),
         _cached_size_{0} {}
 
 inline void PreprocessRecordRequest::SharedCtor(::_pb::Arena* arena) {
@@ -10496,7 +10498,7 @@ PreprocessRecordRequest::~PreprocessRecordRequest() {
 }
 inline void PreprocessRecordRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.recorddefinition_.Destroy();
+  _impl_.record_definition_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -10507,7 +10509,7 @@ PROTOBUF_NOINLINE void PreprocessRecordRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.recorddefinition_.ClearToEmpty();
+  _impl_.record_definition_.ClearToEmpty();
   _impl_.flags_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -10520,7 +10522,7 @@ const char* PreprocessRecordRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 57, 2> PreprocessRecordRequest::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 58, 2> PreprocessRecordRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -10537,14 +10539,14 @@ const ::_pbi::TcParseTable<1, 2, 0, 57, 2> PreprocessRecordRequest::_table_ = {
     // int64 flags = 2;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(PreprocessRecordRequest, _impl_.flags_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(PreprocessRecordRequest, _impl_.flags_)}},
-    // string recordDefinition = 1;
+    // string record_definition = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(PreprocessRecordRequest, _impl_.recorddefinition_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(PreprocessRecordRequest, _impl_.record_definition_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string recordDefinition = 1;
-    {PROTOBUF_FIELD_OFFSET(PreprocessRecordRequest, _impl_.recorddefinition_), 0, 0,
+    // string record_definition = 1;
+    {PROTOBUF_FIELD_OFFSET(PreprocessRecordRequest, _impl_.record_definition_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 flags = 2;
     {PROTOBUF_FIELD_OFFSET(PreprocessRecordRequest, _impl_.flags_), 0, 0,
@@ -10552,9 +10554,9 @@ const ::_pbi::TcParseTable<1, 2, 0, 57, 2> PreprocessRecordRequest::_table_ = {
   }},
   // no aux_entries
   {{
-    "\40\20\0\0\0\0\0\0"
+    "\40\21\0\0\0\0\0\0"
     "szengine.PreprocessRecordRequest"
-    "recordDefinition"
+    "record_definition"
   }},
 };
 
@@ -10565,11 +10567,11 @@ const ::_pbi::TcParseTable<1, 2, 0, 57, 2> PreprocessRecordRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string recordDefinition = 1;
-  if (!this->_internal_recorddefinition().empty()) {
-    const std::string& _s = this->_internal_recorddefinition();
+  // string record_definition = 1;
+  if (!this->_internal_record_definition().empty()) {
+    const std::string& _s = this->_internal_record_definition();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.PreprocessRecordRequest.recordDefinition");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.PreprocessRecordRequest.record_definition");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
@@ -10597,10 +10599,10 @@ const ::_pbi::TcParseTable<1, 2, 0, 57, 2> PreprocessRecordRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string recordDefinition = 1;
-  if (!this->_internal_recorddefinition().empty()) {
+  // string record_definition = 1;
+  if (!this->_internal_record_definition().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_recorddefinition());
+                                    this->_internal_record_definition());
   }
 
   // int64 flags = 2;
@@ -10628,8 +10630,8 @@ void PreprocessRecordRequest::MergeImpl(::google::protobuf::Message& to_msg, con
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_recorddefinition().empty()) {
-    _this->_internal_set_recorddefinition(from._internal_recorddefinition());
+  if (!from._internal_record_definition().empty()) {
+    _this->_internal_set_record_definition(from._internal_record_definition());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -10656,7 +10658,7 @@ void PreprocessRecordRequest::InternalSwap(PreprocessRecordRequest* PROTOBUF_RES
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recorddefinition_, &other->_impl_.recorddefinition_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.record_definition_, &other->_impl_.record_definition_, arena);
         swap(_impl_.flags_, other->_impl_.flags_);
 }
 
@@ -10939,7 +10941,7 @@ ProcessRedoRecordRequest::ProcessRedoRecordRequest(::google::protobuf::Arena* ar
 inline PROTOBUF_NDEBUG_INLINE ProcessRedoRecordRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : redorecord_(arena, from.redorecord_),
+      : redo_record_(arena, from.redo_record_),
         _cached_size_{0} {}
 
 ProcessRedoRecordRequest::ProcessRedoRecordRequest(
@@ -10958,7 +10960,7 @@ ProcessRedoRecordRequest::ProcessRedoRecordRequest(
 inline PROTOBUF_NDEBUG_INLINE ProcessRedoRecordRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : redorecord_(arena),
+      : redo_record_(arena),
         _cached_size_{0} {}
 
 inline void ProcessRedoRecordRequest::SharedCtor(::_pb::Arena* arena) {
@@ -10972,7 +10974,7 @@ ProcessRedoRecordRequest::~ProcessRedoRecordRequest() {
 }
 inline void ProcessRedoRecordRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.redorecord_.Destroy();
+  _impl_.redo_record_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -10983,7 +10985,7 @@ PROTOBUF_NOINLINE void ProcessRedoRecordRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.redorecord_.ClearToEmpty();
+  _impl_.redo_record_.ClearToEmpty();
   _impl_.flags_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -10996,7 +10998,7 @@ const char* ProcessRedoRecordRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 52, 2> ProcessRedoRecordRequest::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 53, 2> ProcessRedoRecordRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -11013,14 +11015,14 @@ const ::_pbi::TcParseTable<1, 2, 0, 52, 2> ProcessRedoRecordRequest::_table_ = {
     // int64 flags = 2;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ProcessRedoRecordRequest, _impl_.flags_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(ProcessRedoRecordRequest, _impl_.flags_)}},
-    // string redoRecord = 1;
+    // string redo_record = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(ProcessRedoRecordRequest, _impl_.redorecord_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(ProcessRedoRecordRequest, _impl_.redo_record_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string redoRecord = 1;
-    {PROTOBUF_FIELD_OFFSET(ProcessRedoRecordRequest, _impl_.redorecord_), 0, 0,
+    // string redo_record = 1;
+    {PROTOBUF_FIELD_OFFSET(ProcessRedoRecordRequest, _impl_.redo_record_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 flags = 2;
     {PROTOBUF_FIELD_OFFSET(ProcessRedoRecordRequest, _impl_.flags_), 0, 0,
@@ -11028,9 +11030,9 @@ const ::_pbi::TcParseTable<1, 2, 0, 52, 2> ProcessRedoRecordRequest::_table_ = {
   }},
   // no aux_entries
   {{
-    "\41\12\0\0\0\0\0\0"
+    "\41\13\0\0\0\0\0\0"
     "szengine.ProcessRedoRecordRequest"
-    "redoRecord"
+    "redo_record"
   }},
 };
 
@@ -11041,11 +11043,11 @@ const ::_pbi::TcParseTable<1, 2, 0, 52, 2> ProcessRedoRecordRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string redoRecord = 1;
-  if (!this->_internal_redorecord().empty()) {
-    const std::string& _s = this->_internal_redorecord();
+  // string redo_record = 1;
+  if (!this->_internal_redo_record().empty()) {
+    const std::string& _s = this->_internal_redo_record();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.ProcessRedoRecordRequest.redoRecord");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.ProcessRedoRecordRequest.redo_record");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
@@ -11073,10 +11075,10 @@ const ::_pbi::TcParseTable<1, 2, 0, 52, 2> ProcessRedoRecordRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string redoRecord = 1;
-  if (!this->_internal_redorecord().empty()) {
+  // string redo_record = 1;
+  if (!this->_internal_redo_record().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_redorecord());
+                                    this->_internal_redo_record());
   }
 
   // int64 flags = 2;
@@ -11104,8 +11106,8 @@ void ProcessRedoRecordRequest::MergeImpl(::google::protobuf::Message& to_msg, co
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_redorecord().empty()) {
-    _this->_internal_set_redorecord(from._internal_redorecord());
+  if (!from._internal_redo_record().empty()) {
+    _this->_internal_set_redo_record(from._internal_redo_record());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -11132,7 +11134,7 @@ void ProcessRedoRecordRequest::InternalSwap(ProcessRedoRecordRequest* PROTOBUF_R
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.redorecord_, &other->_impl_.redorecord_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.redo_record_, &other->_impl_.redo_record_, arena);
         swap(_impl_.flags_, other->_impl_.flags_);
 }
 
@@ -11355,10 +11357,10 @@ inline PROTOBUF_NDEBUG_INLINE ReevaluateEntityRequest::Impl_::Impl_(
 inline void ReevaluateEntityRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, entityid_),
+               offsetof(Impl_, entity_id_),
            0,
            offsetof(Impl_, flags_) -
-               offsetof(Impl_, entityid_) +
+               offsetof(Impl_, entity_id_) +
                sizeof(Impl_::flags_));
 }
 ReevaluateEntityRequest::~ReevaluateEntityRequest() {
@@ -11378,9 +11380,9 @@ PROTOBUF_NOINLINE void ReevaluateEntityRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.entityid_, 0, static_cast<::size_t>(
+  ::memset(&_impl_.entity_id_, 0, static_cast<::size_t>(
       reinterpret_cast<char*>(&_impl_.flags_) -
-      reinterpret_cast<char*>(&_impl_.entityid_)) + sizeof(_impl_.flags_));
+      reinterpret_cast<char*>(&_impl_.entity_id_)) + sizeof(_impl_.flags_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -11409,14 +11411,14 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> ReevaluateEntityRequest::_table_ = {
     // int64 flags = 2;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ReevaluateEntityRequest, _impl_.flags_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(ReevaluateEntityRequest, _impl_.flags_)}},
-    // int64 entityId = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ReevaluateEntityRequest, _impl_.entityid_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(ReevaluateEntityRequest, _impl_.entityid_)}},
+    // int64 entity_id = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ReevaluateEntityRequest, _impl_.entity_id_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(ReevaluateEntityRequest, _impl_.entity_id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 entityId = 1;
-    {PROTOBUF_FIELD_OFFSET(ReevaluateEntityRequest, _impl_.entityid_), 0, 0,
+    // int64 entity_id = 1;
+    {PROTOBUF_FIELD_OFFSET(ReevaluateEntityRequest, _impl_.entity_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
     // int64 flags = 2;
     {PROTOBUF_FIELD_OFFSET(ReevaluateEntityRequest, _impl_.flags_), 0, 0,
@@ -11434,11 +11436,11 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> ReevaluateEntityRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 entityId = 1;
-  if (this->_internal_entityid() != 0) {
+  // int64 entity_id = 1;
+  if (this->_internal_entity_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_entityid(), target);
+            stream, this->_internal_entity_id(), target);
   }
 
   // int64 flags = 2;
@@ -11465,10 +11467,10 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> ReevaluateEntityRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 entityId = 1;
-  if (this->_internal_entityid() != 0) {
+  // int64 entity_id = 1;
+  if (this->_internal_entity_id() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_entityid());
+        this->_internal_entity_id());
   }
 
   // int64 flags = 2;
@@ -11496,8 +11498,8 @@ void ReevaluateEntityRequest::MergeImpl(::google::protobuf::Message& to_msg, con
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_entityid() != 0) {
-    _this->_internal_set_entityid(from._internal_entityid());
+  if (from._internal_entity_id() != 0) {
+    _this->_internal_set_entity_id(from._internal_entity_id());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -11525,9 +11527,9 @@ void ReevaluateEntityRequest::InternalSwap(ReevaluateEntityRequest* PROTOBUF_RES
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(ReevaluateEntityRequest, _impl_.flags_)
       + sizeof(ReevaluateEntityRequest::_impl_.flags_)
-      - PROTOBUF_FIELD_OFFSET(ReevaluateEntityRequest, _impl_.entityid_)>(
-          reinterpret_cast<char*>(&_impl_.entityid_),
-          reinterpret_cast<char*>(&other->_impl_.entityid_));
+      - PROTOBUF_FIELD_OFFSET(ReevaluateEntityRequest, _impl_.entity_id_)>(
+          reinterpret_cast<char*>(&_impl_.entity_id_),
+          reinterpret_cast<char*>(&other->_impl_.entity_id_));
 }
 
 ::google::protobuf::Metadata ReevaluateEntityRequest::GetMetadata() const {
@@ -11739,8 +11741,8 @@ ReevaluateRecordRequest::ReevaluateRecordRequest(::google::protobuf::Arena* aren
 inline PROTOBUF_NDEBUG_INLINE ReevaluateRecordRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : datasourcecode_(arena, from.datasourcecode_),
-        recordid_(arena, from.recordid_),
+      : data_source_code_(arena, from.data_source_code_),
+        record_id_(arena, from.record_id_),
         _cached_size_{0} {}
 
 ReevaluateRecordRequest::ReevaluateRecordRequest(
@@ -11759,8 +11761,8 @@ ReevaluateRecordRequest::ReevaluateRecordRequest(
 inline PROTOBUF_NDEBUG_INLINE ReevaluateRecordRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : datasourcecode_(arena),
-        recordid_(arena),
+      : data_source_code_(arena),
+        record_id_(arena),
         _cached_size_{0} {}
 
 inline void ReevaluateRecordRequest::SharedCtor(::_pb::Arena* arena) {
@@ -11774,8 +11776,8 @@ ReevaluateRecordRequest::~ReevaluateRecordRequest() {
 }
 inline void ReevaluateRecordRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.datasourcecode_.Destroy();
-  _impl_.recordid_.Destroy();
+  _impl_.data_source_code_.Destroy();
+  _impl_.record_id_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -11786,8 +11788,8 @@ PROTOBUF_NOINLINE void ReevaluateRecordRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.datasourcecode_.ClearToEmpty();
-  _impl_.recordid_.ClearToEmpty();
+  _impl_.data_source_code_.ClearToEmpty();
+  _impl_.record_id_.ClearToEmpty();
   _impl_.flags_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -11800,7 +11802,7 @@ const char* ReevaluateRecordRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 63, 2> ReevaluateRecordRequest::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 0, 66, 2> ReevaluateRecordRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -11815,23 +11817,23 @@ const ::_pbi::TcParseTable<2, 3, 0, 63, 2> ReevaluateRecordRequest::_table_ = {
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // string dataSourceCode = 1;
+    // string data_source_code = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(ReevaluateRecordRequest, _impl_.datasourcecode_)}},
-    // string recordId = 2;
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(ReevaluateRecordRequest, _impl_.data_source_code_)}},
+    // string record_id = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(ReevaluateRecordRequest, _impl_.recordid_)}},
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(ReevaluateRecordRequest, _impl_.record_id_)}},
     // int64 flags = 3;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ReevaluateRecordRequest, _impl_.flags_), 63>(),
      {24, 63, 0, PROTOBUF_FIELD_OFFSET(ReevaluateRecordRequest, _impl_.flags_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string dataSourceCode = 1;
-    {PROTOBUF_FIELD_OFFSET(ReevaluateRecordRequest, _impl_.datasourcecode_), 0, 0,
+    // string data_source_code = 1;
+    {PROTOBUF_FIELD_OFFSET(ReevaluateRecordRequest, _impl_.data_source_code_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string recordId = 2;
-    {PROTOBUF_FIELD_OFFSET(ReevaluateRecordRequest, _impl_.recordid_), 0, 0,
+    // string record_id = 2;
+    {PROTOBUF_FIELD_OFFSET(ReevaluateRecordRequest, _impl_.record_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 flags = 3;
     {PROTOBUF_FIELD_OFFSET(ReevaluateRecordRequest, _impl_.flags_), 0, 0,
@@ -11839,10 +11841,10 @@ const ::_pbi::TcParseTable<2, 3, 0, 63, 2> ReevaluateRecordRequest::_table_ = {
   }},
   // no aux_entries
   {{
-    "\40\16\10\0\0\0\0\0"
+    "\40\20\11\0\0\0\0\0"
     "szengine.ReevaluateRecordRequest"
-    "dataSourceCode"
-    "recordId"
+    "data_source_code"
+    "record_id"
   }},
 };
 
@@ -11853,19 +11855,19 @@ const ::_pbi::TcParseTable<2, 3, 0, 63, 2> ReevaluateRecordRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string dataSourceCode = 1;
-  if (!this->_internal_datasourcecode().empty()) {
-    const std::string& _s = this->_internal_datasourcecode();
+  // string data_source_code = 1;
+  if (!this->_internal_data_source_code().empty()) {
+    const std::string& _s = this->_internal_data_source_code();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.ReevaluateRecordRequest.dataSourceCode");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.ReevaluateRecordRequest.data_source_code");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
-  // string recordId = 2;
-  if (!this->_internal_recordid().empty()) {
-    const std::string& _s = this->_internal_recordid();
+  // string record_id = 2;
+  if (!this->_internal_record_id().empty()) {
+    const std::string& _s = this->_internal_record_id();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.ReevaluateRecordRequest.recordId");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.ReevaluateRecordRequest.record_id");
     target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
@@ -11893,16 +11895,16 @@ const ::_pbi::TcParseTable<2, 3, 0, 63, 2> ReevaluateRecordRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string dataSourceCode = 1;
-  if (!this->_internal_datasourcecode().empty()) {
+  // string data_source_code = 1;
+  if (!this->_internal_data_source_code().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_datasourcecode());
+                                    this->_internal_data_source_code());
   }
 
-  // string recordId = 2;
-  if (!this->_internal_recordid().empty()) {
+  // string record_id = 2;
+  if (!this->_internal_record_id().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_recordid());
+                                    this->_internal_record_id());
   }
 
   // int64 flags = 3;
@@ -11930,11 +11932,11 @@ void ReevaluateRecordRequest::MergeImpl(::google::protobuf::Message& to_msg, con
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_datasourcecode().empty()) {
-    _this->_internal_set_datasourcecode(from._internal_datasourcecode());
+  if (!from._internal_data_source_code().empty()) {
+    _this->_internal_set_data_source_code(from._internal_data_source_code());
   }
-  if (!from._internal_recordid().empty()) {
-    _this->_internal_set_recordid(from._internal_recordid());
+  if (!from._internal_record_id().empty()) {
+    _this->_internal_set_record_id(from._internal_record_id());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -11961,8 +11963,8 @@ void ReevaluateRecordRequest::InternalSwap(ReevaluateRecordRequest* PROTOBUF_RES
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.datasourcecode_, &other->_impl_.datasourcecode_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recordid_, &other->_impl_.recordid_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.data_source_code_, &other->_impl_.data_source_code_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.record_id_, &other->_impl_.record_id_, arena);
         swap(_impl_.flags_, other->_impl_.flags_);
 }
 
@@ -12184,7 +12186,7 @@ inline PROTOBUF_NDEBUG_INLINE ReinitializeRequest::Impl_::Impl_(
 
 inline void ReinitializeRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.configid_ = {};
+  _impl_.config_id_ = {};
 }
 ReinitializeRequest::~ReinitializeRequest() {
   // @@protoc_insertion_point(destructor:szengine.ReinitializeRequest)
@@ -12203,7 +12205,7 @@ PROTOBUF_NOINLINE void ReinitializeRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.configid_ = ::int64_t{0};
+  _impl_.config_id_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -12229,14 +12231,14 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> ReinitializeRequest::_table_ = {
     &_ReinitializeRequest_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // int64 configId = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ReinitializeRequest, _impl_.configid_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(ReinitializeRequest, _impl_.configid_)}},
+    // int64 config_id = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ReinitializeRequest, _impl_.config_id_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(ReinitializeRequest, _impl_.config_id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 configId = 1;
-    {PROTOBUF_FIELD_OFFSET(ReinitializeRequest, _impl_.configid_), 0, 0,
+    // int64 config_id = 1;
+    {PROTOBUF_FIELD_OFFSET(ReinitializeRequest, _impl_.config_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
   }},
   // no aux_entries
@@ -12251,11 +12253,11 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> ReinitializeRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 configId = 1;
-  if (this->_internal_configid() != 0) {
+  // int64 config_id = 1;
+  if (this->_internal_config_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_configid(), target);
+            stream, this->_internal_config_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -12275,10 +12277,10 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> ReinitializeRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 configId = 1;
-  if (this->_internal_configid() != 0) {
+  // int64 config_id = 1;
+  if (this->_internal_config_id() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_configid());
+        this->_internal_config_id());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -12300,8 +12302,8 @@ void ReinitializeRequest::MergeImpl(::google::protobuf::Message& to_msg, const :
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_configid() != 0) {
-    _this->_internal_set_configid(from._internal_configid());
+  if (from._internal_config_id() != 0) {
+    _this->_internal_set_config_id(from._internal_config_id());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -12323,7 +12325,7 @@ PROTOBUF_NOINLINE bool ReinitializeRequest::IsInitialized() const {
 void ReinitializeRequest::InternalSwap(ReinitializeRequest* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.configid_, other->_impl_.configid_);
+        swap(_impl_.config_id_, other->_impl_.config_id_);
 }
 
 ::google::protobuf::Metadata ReinitializeRequest::GetMetadata() const {
@@ -12381,7 +12383,7 @@ inline PROTOBUF_NDEBUG_INLINE SearchByAttributesRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
       : attributes_(arena, from.attributes_),
-        searchprofile_(arena, from.searchprofile_),
+        search_profile_(arena, from.search_profile_),
         _cached_size_{0} {}
 
 SearchByAttributesRequest::SearchByAttributesRequest(
@@ -12401,7 +12403,7 @@ inline PROTOBUF_NDEBUG_INLINE SearchByAttributesRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : attributes_(arena),
-        searchprofile_(arena),
+        search_profile_(arena),
         _cached_size_{0} {}
 
 inline void SearchByAttributesRequest::SharedCtor(::_pb::Arena* arena) {
@@ -12416,7 +12418,7 @@ SearchByAttributesRequest::~SearchByAttributesRequest() {
 inline void SearchByAttributesRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
   _impl_.attributes_.Destroy();
-  _impl_.searchprofile_.Destroy();
+  _impl_.search_profile_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -12428,7 +12430,7 @@ PROTOBUF_NOINLINE void SearchByAttributesRequest::Clear() {
   (void) cached_has_bits;
 
   _impl_.attributes_.ClearToEmpty();
-  _impl_.searchprofile_.ClearToEmpty();
+  _impl_.search_profile_.ClearToEmpty();
   _impl_.flags_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -12441,7 +12443,7 @@ const char* SearchByAttributesRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 66, 2> SearchByAttributesRequest::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 0, 67, 2> SearchByAttributesRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -12459,9 +12461,9 @@ const ::_pbi::TcParseTable<2, 3, 0, 66, 2> SearchByAttributesRequest::_table_ = 
     // string attributes = 1;
     {::_pbi::TcParser::FastUS1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(SearchByAttributesRequest, _impl_.attributes_)}},
-    // string searchProfile = 2;
+    // string search_profile = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(SearchByAttributesRequest, _impl_.searchprofile_)}},
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(SearchByAttributesRequest, _impl_.search_profile_)}},
     // int64 flags = 3;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(SearchByAttributesRequest, _impl_.flags_), 63>(),
      {24, 63, 0, PROTOBUF_FIELD_OFFSET(SearchByAttributesRequest, _impl_.flags_)}},
@@ -12471,8 +12473,8 @@ const ::_pbi::TcParseTable<2, 3, 0, 66, 2> SearchByAttributesRequest::_table_ = 
     // string attributes = 1;
     {PROTOBUF_FIELD_OFFSET(SearchByAttributesRequest, _impl_.attributes_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string searchProfile = 2;
-    {PROTOBUF_FIELD_OFFSET(SearchByAttributesRequest, _impl_.searchprofile_), 0, 0,
+    // string search_profile = 2;
+    {PROTOBUF_FIELD_OFFSET(SearchByAttributesRequest, _impl_.search_profile_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 flags = 3;
     {PROTOBUF_FIELD_OFFSET(SearchByAttributesRequest, _impl_.flags_), 0, 0,
@@ -12480,10 +12482,10 @@ const ::_pbi::TcParseTable<2, 3, 0, 66, 2> SearchByAttributesRequest::_table_ = 
   }},
   // no aux_entries
   {{
-    "\42\12\15\0\0\0\0\0"
+    "\42\12\16\0\0\0\0\0"
     "szengine.SearchByAttributesRequest"
     "attributes"
-    "searchProfile"
+    "search_profile"
   }},
 };
 
@@ -12502,11 +12504,11 @@ const ::_pbi::TcParseTable<2, 3, 0, 66, 2> SearchByAttributesRequest::_table_ = 
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
-  // string searchProfile = 2;
-  if (!this->_internal_searchprofile().empty()) {
-    const std::string& _s = this->_internal_searchprofile();
+  // string search_profile = 2;
+  if (!this->_internal_search_profile().empty()) {
+    const std::string& _s = this->_internal_search_profile();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.SearchByAttributesRequest.searchProfile");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.SearchByAttributesRequest.search_profile");
     target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
@@ -12540,10 +12542,10 @@ const ::_pbi::TcParseTable<2, 3, 0, 66, 2> SearchByAttributesRequest::_table_ = 
                                     this->_internal_attributes());
   }
 
-  // string searchProfile = 2;
-  if (!this->_internal_searchprofile().empty()) {
+  // string search_profile = 2;
+  if (!this->_internal_search_profile().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_searchprofile());
+                                    this->_internal_search_profile());
   }
 
   // int64 flags = 3;
@@ -12574,8 +12576,8 @@ void SearchByAttributesRequest::MergeImpl(::google::protobuf::Message& to_msg, c
   if (!from._internal_attributes().empty()) {
     _this->_internal_set_attributes(from._internal_attributes());
   }
-  if (!from._internal_searchprofile().empty()) {
-    _this->_internal_set_searchprofile(from._internal_searchprofile());
+  if (!from._internal_search_profile().empty()) {
+    _this->_internal_set_search_profile(from._internal_search_profile());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -12603,7 +12605,7 @@ void SearchByAttributesRequest::InternalSwap(SearchByAttributesRequest* PROTOBUF
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.attributes_, &other->_impl_.attributes_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.searchprofile_, &other->_impl_.searchprofile_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.search_profile_, &other->_impl_.search_profile_, arena);
         swap(_impl_.flags_, other->_impl_.flags_);
 }
 
@@ -12816,7 +12818,7 @@ StreamExportCsvEntityReportRequest::StreamExportCsvEntityReportRequest(::google:
 inline PROTOBUF_NDEBUG_INLINE StreamExportCsvEntityReportRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : csvcolumnlist_(arena, from.csvcolumnlist_),
+      : csv_column_list_(arena, from.csv_column_list_),
         _cached_size_{0} {}
 
 StreamExportCsvEntityReportRequest::StreamExportCsvEntityReportRequest(
@@ -12835,7 +12837,7 @@ StreamExportCsvEntityReportRequest::StreamExportCsvEntityReportRequest(
 inline PROTOBUF_NDEBUG_INLINE StreamExportCsvEntityReportRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : csvcolumnlist_(arena),
+      : csv_column_list_(arena),
         _cached_size_{0} {}
 
 inline void StreamExportCsvEntityReportRequest::SharedCtor(::_pb::Arena* arena) {
@@ -12849,7 +12851,7 @@ StreamExportCsvEntityReportRequest::~StreamExportCsvEntityReportRequest() {
 }
 inline void StreamExportCsvEntityReportRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.csvcolumnlist_.Destroy();
+  _impl_.csv_column_list_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -12860,7 +12862,7 @@ PROTOBUF_NOINLINE void StreamExportCsvEntityReportRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.csvcolumnlist_.ClearToEmpty();
+  _impl_.csv_column_list_.ClearToEmpty();
   _impl_.flags_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -12873,7 +12875,7 @@ const char* StreamExportCsvEntityReportRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 65, 2> StreamExportCsvEntityReportRequest::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 67, 2> StreamExportCsvEntityReportRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -12890,14 +12892,14 @@ const ::_pbi::TcParseTable<1, 2, 0, 65, 2> StreamExportCsvEntityReportRequest::_
     // int64 flags = 2;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(StreamExportCsvEntityReportRequest, _impl_.flags_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(StreamExportCsvEntityReportRequest, _impl_.flags_)}},
-    // string csvColumnList = 1;
+    // string csv_column_list = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(StreamExportCsvEntityReportRequest, _impl_.csvcolumnlist_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(StreamExportCsvEntityReportRequest, _impl_.csv_column_list_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string csvColumnList = 1;
-    {PROTOBUF_FIELD_OFFSET(StreamExportCsvEntityReportRequest, _impl_.csvcolumnlist_), 0, 0,
+    // string csv_column_list = 1;
+    {PROTOBUF_FIELD_OFFSET(StreamExportCsvEntityReportRequest, _impl_.csv_column_list_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 flags = 2;
     {PROTOBUF_FIELD_OFFSET(StreamExportCsvEntityReportRequest, _impl_.flags_), 0, 0,
@@ -12905,9 +12907,9 @@ const ::_pbi::TcParseTable<1, 2, 0, 65, 2> StreamExportCsvEntityReportRequest::_
   }},
   // no aux_entries
   {{
-    "\53\15\0\0\0\0\0\0"
+    "\53\17\0\0\0\0\0\0"
     "szengine.StreamExportCsvEntityReportRequest"
-    "csvColumnList"
+    "csv_column_list"
   }},
 };
 
@@ -12918,11 +12920,11 @@ const ::_pbi::TcParseTable<1, 2, 0, 65, 2> StreamExportCsvEntityReportRequest::_
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string csvColumnList = 1;
-  if (!this->_internal_csvcolumnlist().empty()) {
-    const std::string& _s = this->_internal_csvcolumnlist();
+  // string csv_column_list = 1;
+  if (!this->_internal_csv_column_list().empty()) {
+    const std::string& _s = this->_internal_csv_column_list();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.StreamExportCsvEntityReportRequest.csvColumnList");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.StreamExportCsvEntityReportRequest.csv_column_list");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
@@ -12950,10 +12952,10 @@ const ::_pbi::TcParseTable<1, 2, 0, 65, 2> StreamExportCsvEntityReportRequest::_
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string csvColumnList = 1;
-  if (!this->_internal_csvcolumnlist().empty()) {
+  // string csv_column_list = 1;
+  if (!this->_internal_csv_column_list().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_csvcolumnlist());
+                                    this->_internal_csv_column_list());
   }
 
   // int64 flags = 2;
@@ -12981,8 +12983,8 @@ void StreamExportCsvEntityReportRequest::MergeImpl(::google::protobuf::Message& 
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_csvcolumnlist().empty()) {
-    _this->_internal_set_csvcolumnlist(from._internal_csvcolumnlist());
+  if (!from._internal_csv_column_list().empty()) {
+    _this->_internal_set_csv_column_list(from._internal_csv_column_list());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -13009,7 +13011,7 @@ void StreamExportCsvEntityReportRequest::InternalSwap(StreamExportCsvEntityRepor
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.csvcolumnlist_, &other->_impl_.csvcolumnlist_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.csv_column_list_, &other->_impl_.csv_column_list_, arena);
         swap(_impl_.flags_, other->_impl_.flags_);
 }
 
@@ -13592,10 +13594,10 @@ inline PROTOBUF_NDEBUG_INLINE WhyEntitiesRequest::Impl_::Impl_(
 inline void WhyEntitiesRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, entityid1_),
+               offsetof(Impl_, entity_id_1_),
            0,
            offsetof(Impl_, flags_) -
-               offsetof(Impl_, entityid1_) +
+               offsetof(Impl_, entity_id_1_) +
                sizeof(Impl_::flags_));
 }
 WhyEntitiesRequest::~WhyEntitiesRequest() {
@@ -13615,9 +13617,9 @@ PROTOBUF_NOINLINE void WhyEntitiesRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.entityid1_, 0, static_cast<::size_t>(
+  ::memset(&_impl_.entity_id_1_, 0, static_cast<::size_t>(
       reinterpret_cast<char*>(&_impl_.flags_) -
-      reinterpret_cast<char*>(&_impl_.entityid1_)) + sizeof(_impl_.flags_));
+      reinterpret_cast<char*>(&_impl_.entity_id_1_)) + sizeof(_impl_.flags_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -13644,23 +13646,23 @@ const ::_pbi::TcParseTable<2, 3, 0, 0, 2> WhyEntitiesRequest::_table_ = {
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // int64 entityId1 = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(WhyEntitiesRequest, _impl_.entityid1_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(WhyEntitiesRequest, _impl_.entityid1_)}},
-    // int64 entityId2 = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(WhyEntitiesRequest, _impl_.entityid2_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(WhyEntitiesRequest, _impl_.entityid2_)}},
+    // int64 entity_id_1 = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(WhyEntitiesRequest, _impl_.entity_id_1_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(WhyEntitiesRequest, _impl_.entity_id_1_)}},
+    // int64 entity_id_2 = 2;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(WhyEntitiesRequest, _impl_.entity_id_2_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(WhyEntitiesRequest, _impl_.entity_id_2_)}},
     // int64 flags = 3;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(WhyEntitiesRequest, _impl_.flags_), 63>(),
      {24, 63, 0, PROTOBUF_FIELD_OFFSET(WhyEntitiesRequest, _impl_.flags_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int64 entityId1 = 1;
-    {PROTOBUF_FIELD_OFFSET(WhyEntitiesRequest, _impl_.entityid1_), 0, 0,
+    // int64 entity_id_1 = 1;
+    {PROTOBUF_FIELD_OFFSET(WhyEntitiesRequest, _impl_.entity_id_1_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // int64 entityId2 = 2;
-    {PROTOBUF_FIELD_OFFSET(WhyEntitiesRequest, _impl_.entityid2_), 0, 0,
+    // int64 entity_id_2 = 2;
+    {PROTOBUF_FIELD_OFFSET(WhyEntitiesRequest, _impl_.entity_id_2_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
     // int64 flags = 3;
     {PROTOBUF_FIELD_OFFSET(WhyEntitiesRequest, _impl_.flags_), 0, 0,
@@ -13678,18 +13680,18 @@ const ::_pbi::TcParseTable<2, 3, 0, 0, 2> WhyEntitiesRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int64 entityId1 = 1;
-  if (this->_internal_entityid1() != 0) {
+  // int64 entity_id_1 = 1;
+  if (this->_internal_entity_id_1() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_entityid1(), target);
+            stream, this->_internal_entity_id_1(), target);
   }
 
-  // int64 entityId2 = 2;
-  if (this->_internal_entityid2() != 0) {
+  // int64 entity_id_2 = 2;
+  if (this->_internal_entity_id_2() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
         WriteInt64ToArrayWithField<2>(
-            stream, this->_internal_entityid2(), target);
+            stream, this->_internal_entity_id_2(), target);
   }
 
   // int64 flags = 3;
@@ -13716,16 +13718,16 @@ const ::_pbi::TcParseTable<2, 3, 0, 0, 2> WhyEntitiesRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int64 entityId1 = 1;
-  if (this->_internal_entityid1() != 0) {
+  // int64 entity_id_1 = 1;
+  if (this->_internal_entity_id_1() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_entityid1());
+        this->_internal_entity_id_1());
   }
 
-  // int64 entityId2 = 2;
-  if (this->_internal_entityid2() != 0) {
+  // int64 entity_id_2 = 2;
+  if (this->_internal_entity_id_2() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_entityid2());
+        this->_internal_entity_id_2());
   }
 
   // int64 flags = 3;
@@ -13753,11 +13755,11 @@ void WhyEntitiesRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_entityid1() != 0) {
-    _this->_internal_set_entityid1(from._internal_entityid1());
+  if (from._internal_entity_id_1() != 0) {
+    _this->_internal_set_entity_id_1(from._internal_entity_id_1());
   }
-  if (from._internal_entityid2() != 0) {
-    _this->_internal_set_entityid2(from._internal_entityid2());
+  if (from._internal_entity_id_2() != 0) {
+    _this->_internal_set_entity_id_2(from._internal_entity_id_2());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -13785,9 +13787,9 @@ void WhyEntitiesRequest::InternalSwap(WhyEntitiesRequest* PROTOBUF_RESTRICT othe
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(WhyEntitiesRequest, _impl_.flags_)
       + sizeof(WhyEntitiesRequest::_impl_.flags_)
-      - PROTOBUF_FIELD_OFFSET(WhyEntitiesRequest, _impl_.entityid1_)>(
-          reinterpret_cast<char*>(&_impl_.entityid1_),
-          reinterpret_cast<char*>(&other->_impl_.entityid1_));
+      - PROTOBUF_FIELD_OFFSET(WhyEntitiesRequest, _impl_.entity_id_1_)>(
+          reinterpret_cast<char*>(&_impl_.entity_id_1_),
+          reinterpret_cast<char*>(&other->_impl_.entity_id_1_));
 }
 
 ::google::protobuf::Metadata WhyEntitiesRequest::GetMetadata() const {
@@ -13999,8 +14001,8 @@ WhyRecordInEntityRequest::WhyRecordInEntityRequest(::google::protobuf::Arena* ar
 inline PROTOBUF_NDEBUG_INLINE WhyRecordInEntityRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : datasourcecode_(arena, from.datasourcecode_),
-        recordid_(arena, from.recordid_),
+      : data_source_code_(arena, from.data_source_code_),
+        record_id_(arena, from.record_id_),
         _cached_size_{0} {}
 
 WhyRecordInEntityRequest::WhyRecordInEntityRequest(
@@ -14019,8 +14021,8 @@ WhyRecordInEntityRequest::WhyRecordInEntityRequest(
 inline PROTOBUF_NDEBUG_INLINE WhyRecordInEntityRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : datasourcecode_(arena),
-        recordid_(arena),
+      : data_source_code_(arena),
+        record_id_(arena),
         _cached_size_{0} {}
 
 inline void WhyRecordInEntityRequest::SharedCtor(::_pb::Arena* arena) {
@@ -14034,8 +14036,8 @@ WhyRecordInEntityRequest::~WhyRecordInEntityRequest() {
 }
 inline void WhyRecordInEntityRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.datasourcecode_.Destroy();
-  _impl_.recordid_.Destroy();
+  _impl_.data_source_code_.Destroy();
+  _impl_.record_id_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -14046,8 +14048,8 @@ PROTOBUF_NOINLINE void WhyRecordInEntityRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.datasourcecode_.ClearToEmpty();
-  _impl_.recordid_.ClearToEmpty();
+  _impl_.data_source_code_.ClearToEmpty();
+  _impl_.record_id_.ClearToEmpty();
   _impl_.flags_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -14060,7 +14062,7 @@ const char* WhyRecordInEntityRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 64, 2> WhyRecordInEntityRequest::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 0, 67, 2> WhyRecordInEntityRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -14075,23 +14077,23 @@ const ::_pbi::TcParseTable<2, 3, 0, 64, 2> WhyRecordInEntityRequest::_table_ = {
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // string dataSourceCode = 1;
+    // string data_source_code = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(WhyRecordInEntityRequest, _impl_.datasourcecode_)}},
-    // string recordId = 2;
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(WhyRecordInEntityRequest, _impl_.data_source_code_)}},
+    // string record_id = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(WhyRecordInEntityRequest, _impl_.recordid_)}},
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(WhyRecordInEntityRequest, _impl_.record_id_)}},
     // int64 flags = 3;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(WhyRecordInEntityRequest, _impl_.flags_), 63>(),
      {24, 63, 0, PROTOBUF_FIELD_OFFSET(WhyRecordInEntityRequest, _impl_.flags_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string dataSourceCode = 1;
-    {PROTOBUF_FIELD_OFFSET(WhyRecordInEntityRequest, _impl_.datasourcecode_), 0, 0,
+    // string data_source_code = 1;
+    {PROTOBUF_FIELD_OFFSET(WhyRecordInEntityRequest, _impl_.data_source_code_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string recordId = 2;
-    {PROTOBUF_FIELD_OFFSET(WhyRecordInEntityRequest, _impl_.recordid_), 0, 0,
+    // string record_id = 2;
+    {PROTOBUF_FIELD_OFFSET(WhyRecordInEntityRequest, _impl_.record_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 flags = 3;
     {PROTOBUF_FIELD_OFFSET(WhyRecordInEntityRequest, _impl_.flags_), 0, 0,
@@ -14099,10 +14101,10 @@ const ::_pbi::TcParseTable<2, 3, 0, 64, 2> WhyRecordInEntityRequest::_table_ = {
   }},
   // no aux_entries
   {{
-    "\41\16\10\0\0\0\0\0"
+    "\41\20\11\0\0\0\0\0"
     "szengine.WhyRecordInEntityRequest"
-    "dataSourceCode"
-    "recordId"
+    "data_source_code"
+    "record_id"
   }},
 };
 
@@ -14113,19 +14115,19 @@ const ::_pbi::TcParseTable<2, 3, 0, 64, 2> WhyRecordInEntityRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string dataSourceCode = 1;
-  if (!this->_internal_datasourcecode().empty()) {
-    const std::string& _s = this->_internal_datasourcecode();
+  // string data_source_code = 1;
+  if (!this->_internal_data_source_code().empty()) {
+    const std::string& _s = this->_internal_data_source_code();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.WhyRecordInEntityRequest.dataSourceCode");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.WhyRecordInEntityRequest.data_source_code");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
-  // string recordId = 2;
-  if (!this->_internal_recordid().empty()) {
-    const std::string& _s = this->_internal_recordid();
+  // string record_id = 2;
+  if (!this->_internal_record_id().empty()) {
+    const std::string& _s = this->_internal_record_id();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.WhyRecordInEntityRequest.recordId");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.WhyRecordInEntityRequest.record_id");
     target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
@@ -14153,16 +14155,16 @@ const ::_pbi::TcParseTable<2, 3, 0, 64, 2> WhyRecordInEntityRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string dataSourceCode = 1;
-  if (!this->_internal_datasourcecode().empty()) {
+  // string data_source_code = 1;
+  if (!this->_internal_data_source_code().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_datasourcecode());
+                                    this->_internal_data_source_code());
   }
 
-  // string recordId = 2;
-  if (!this->_internal_recordid().empty()) {
+  // string record_id = 2;
+  if (!this->_internal_record_id().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_recordid());
+                                    this->_internal_record_id());
   }
 
   // int64 flags = 3;
@@ -14190,11 +14192,11 @@ void WhyRecordInEntityRequest::MergeImpl(::google::protobuf::Message& to_msg, co
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_datasourcecode().empty()) {
-    _this->_internal_set_datasourcecode(from._internal_datasourcecode());
+  if (!from._internal_data_source_code().empty()) {
+    _this->_internal_set_data_source_code(from._internal_data_source_code());
   }
-  if (!from._internal_recordid().empty()) {
-    _this->_internal_set_recordid(from._internal_recordid());
+  if (!from._internal_record_id().empty()) {
+    _this->_internal_set_record_id(from._internal_record_id());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -14221,8 +14223,8 @@ void WhyRecordInEntityRequest::InternalSwap(WhyRecordInEntityRequest* PROTOBUF_R
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.datasourcecode_, &other->_impl_.datasourcecode_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recordid_, &other->_impl_.recordid_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.data_source_code_, &other->_impl_.data_source_code_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.record_id_, &other->_impl_.record_id_, arena);
         swap(_impl_.flags_, other->_impl_.flags_);
 }
 
@@ -14435,10 +14437,10 @@ WhyRecordsRequest::WhyRecordsRequest(::google::protobuf::Arena* arena)
 inline PROTOBUF_NDEBUG_INLINE WhyRecordsRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
-      : datasourcecode1_(arena, from.datasourcecode1_),
-        recordid1_(arena, from.recordid1_),
-        datasourcecode2_(arena, from.datasourcecode2_),
-        recordid2_(arena, from.recordid2_),
+      : data_source_code_1_(arena, from.data_source_code_1_),
+        record_id_1_(arena, from.record_id_1_),
+        data_source_code_2_(arena, from.data_source_code_2_),
+        record_id_2_(arena, from.record_id_2_),
         _cached_size_{0} {}
 
 WhyRecordsRequest::WhyRecordsRequest(
@@ -14457,10 +14459,10 @@ WhyRecordsRequest::WhyRecordsRequest(
 inline PROTOBUF_NDEBUG_INLINE WhyRecordsRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : datasourcecode1_(arena),
-        recordid1_(arena),
-        datasourcecode2_(arena),
-        recordid2_(arena),
+      : data_source_code_1_(arena),
+        record_id_1_(arena),
+        data_source_code_2_(arena),
+        record_id_2_(arena),
         _cached_size_{0} {}
 
 inline void WhyRecordsRequest::SharedCtor(::_pb::Arena* arena) {
@@ -14474,10 +14476,10 @@ WhyRecordsRequest::~WhyRecordsRequest() {
 }
 inline void WhyRecordsRequest::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.datasourcecode1_.Destroy();
-  _impl_.recordid1_.Destroy();
-  _impl_.datasourcecode2_.Destroy();
-  _impl_.recordid2_.Destroy();
+  _impl_.data_source_code_1_.Destroy();
+  _impl_.record_id_1_.Destroy();
+  _impl_.data_source_code_2_.Destroy();
+  _impl_.record_id_2_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -14488,10 +14490,10 @@ PROTOBUF_NOINLINE void WhyRecordsRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.datasourcecode1_.ClearToEmpty();
-  _impl_.recordid1_.ClearToEmpty();
-  _impl_.datasourcecode2_.ClearToEmpty();
-  _impl_.recordid2_.ClearToEmpty();
+  _impl_.data_source_code_1_.ClearToEmpty();
+  _impl_.record_id_1_.ClearToEmpty();
+  _impl_.data_source_code_2_.ClearToEmpty();
+  _impl_.record_id_2_.ClearToEmpty();
   _impl_.flags_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -14504,7 +14506,7 @@ const char* WhyRecordsRequest::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 5, 0, 83, 2> WhyRecordsRequest::_table_ = {
+const ::_pbi::TcParseTable<3, 5, 0, 93, 2> WhyRecordsRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -14519,18 +14521,18 @@ const ::_pbi::TcParseTable<3, 5, 0, 83, 2> WhyRecordsRequest::_table_ = {
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // string dataSourceCode1 = 1;
+    // string data_source_code_1 = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.datasourcecode1_)}},
-    // string recordId1 = 2;
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.data_source_code_1_)}},
+    // string record_id_1 = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.recordid1_)}},
-    // string dataSourceCode2 = 3;
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.record_id_1_)}},
+    // string data_source_code_2 = 3;
     {::_pbi::TcParser::FastUS1,
-     {26, 63, 0, PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.datasourcecode2_)}},
-    // string recordId2 = 4;
+     {26, 63, 0, PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.data_source_code_2_)}},
+    // string record_id_2 = 4;
     {::_pbi::TcParser::FastUS1,
-     {34, 63, 0, PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.recordid2_)}},
+     {34, 63, 0, PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.record_id_2_)}},
     // int64 flags = 5;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(WhyRecordsRequest, _impl_.flags_), 63>(),
      {40, 63, 0, PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.flags_)}},
@@ -14539,17 +14541,17 @@ const ::_pbi::TcParseTable<3, 5, 0, 83, 2> WhyRecordsRequest::_table_ = {
   }}, {{
     65535, 65535
   }}, {{
-    // string dataSourceCode1 = 1;
-    {PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.datasourcecode1_), 0, 0,
+    // string data_source_code_1 = 1;
+    {PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.data_source_code_1_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string recordId1 = 2;
-    {PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.recordid1_), 0, 0,
+    // string record_id_1 = 2;
+    {PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.record_id_1_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string dataSourceCode2 = 3;
-    {PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.datasourcecode2_), 0, 0,
+    // string data_source_code_2 = 3;
+    {PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.data_source_code_2_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string recordId2 = 4;
-    {PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.recordid2_), 0, 0,
+    // string record_id_2 = 4;
+    {PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.record_id_2_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int64 flags = 5;
     {PROTOBUF_FIELD_OFFSET(WhyRecordsRequest, _impl_.flags_), 0, 0,
@@ -14557,12 +14559,12 @@ const ::_pbi::TcParseTable<3, 5, 0, 83, 2> WhyRecordsRequest::_table_ = {
   }},
   // no aux_entries
   {{
-    "\32\17\11\17\11\0\0\0"
+    "\32\22\13\22\13\0\0\0"
     "szengine.WhyRecordsRequest"
-    "dataSourceCode1"
-    "recordId1"
-    "dataSourceCode2"
-    "recordId2"
+    "data_source_code_1"
+    "record_id_1"
+    "data_source_code_2"
+    "record_id_2"
   }},
 };
 
@@ -14573,35 +14575,35 @@ const ::_pbi::TcParseTable<3, 5, 0, 83, 2> WhyRecordsRequest::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string dataSourceCode1 = 1;
-  if (!this->_internal_datasourcecode1().empty()) {
-    const std::string& _s = this->_internal_datasourcecode1();
+  // string data_source_code_1 = 1;
+  if (!this->_internal_data_source_code_1().empty()) {
+    const std::string& _s = this->_internal_data_source_code_1();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.WhyRecordsRequest.dataSourceCode1");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.WhyRecordsRequest.data_source_code_1");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
-  // string recordId1 = 2;
-  if (!this->_internal_recordid1().empty()) {
-    const std::string& _s = this->_internal_recordid1();
+  // string record_id_1 = 2;
+  if (!this->_internal_record_id_1().empty()) {
+    const std::string& _s = this->_internal_record_id_1();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.WhyRecordsRequest.recordId1");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.WhyRecordsRequest.record_id_1");
     target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
-  // string dataSourceCode2 = 3;
-  if (!this->_internal_datasourcecode2().empty()) {
-    const std::string& _s = this->_internal_datasourcecode2();
+  // string data_source_code_2 = 3;
+  if (!this->_internal_data_source_code_2().empty()) {
+    const std::string& _s = this->_internal_data_source_code_2();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.WhyRecordsRequest.dataSourceCode2");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.WhyRecordsRequest.data_source_code_2");
     target = stream->WriteStringMaybeAliased(3, _s, target);
   }
 
-  // string recordId2 = 4;
-  if (!this->_internal_recordid2().empty()) {
-    const std::string& _s = this->_internal_recordid2();
+  // string record_id_2 = 4;
+  if (!this->_internal_record_id_2().empty()) {
+    const std::string& _s = this->_internal_record_id_2();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.WhyRecordsRequest.recordId2");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szengine.WhyRecordsRequest.record_id_2");
     target = stream->WriteStringMaybeAliased(4, _s, target);
   }
 
@@ -14629,28 +14631,28 @@ const ::_pbi::TcParseTable<3, 5, 0, 83, 2> WhyRecordsRequest::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string dataSourceCode1 = 1;
-  if (!this->_internal_datasourcecode1().empty()) {
+  // string data_source_code_1 = 1;
+  if (!this->_internal_data_source_code_1().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_datasourcecode1());
+                                    this->_internal_data_source_code_1());
   }
 
-  // string recordId1 = 2;
-  if (!this->_internal_recordid1().empty()) {
+  // string record_id_1 = 2;
+  if (!this->_internal_record_id_1().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_recordid1());
+                                    this->_internal_record_id_1());
   }
 
-  // string dataSourceCode2 = 3;
-  if (!this->_internal_datasourcecode2().empty()) {
+  // string data_source_code_2 = 3;
+  if (!this->_internal_data_source_code_2().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_datasourcecode2());
+                                    this->_internal_data_source_code_2());
   }
 
-  // string recordId2 = 4;
-  if (!this->_internal_recordid2().empty()) {
+  // string record_id_2 = 4;
+  if (!this->_internal_record_id_2().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_recordid2());
+                                    this->_internal_record_id_2());
   }
 
   // int64 flags = 5;
@@ -14678,17 +14680,17 @@ void WhyRecordsRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::g
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_datasourcecode1().empty()) {
-    _this->_internal_set_datasourcecode1(from._internal_datasourcecode1());
+  if (!from._internal_data_source_code_1().empty()) {
+    _this->_internal_set_data_source_code_1(from._internal_data_source_code_1());
   }
-  if (!from._internal_recordid1().empty()) {
-    _this->_internal_set_recordid1(from._internal_recordid1());
+  if (!from._internal_record_id_1().empty()) {
+    _this->_internal_set_record_id_1(from._internal_record_id_1());
   }
-  if (!from._internal_datasourcecode2().empty()) {
-    _this->_internal_set_datasourcecode2(from._internal_datasourcecode2());
+  if (!from._internal_data_source_code_2().empty()) {
+    _this->_internal_set_data_source_code_2(from._internal_data_source_code_2());
   }
-  if (!from._internal_recordid2().empty()) {
-    _this->_internal_set_recordid2(from._internal_recordid2());
+  if (!from._internal_record_id_2().empty()) {
+    _this->_internal_set_record_id_2(from._internal_record_id_2());
   }
   if (from._internal_flags() != 0) {
     _this->_internal_set_flags(from._internal_flags());
@@ -14715,10 +14717,10 @@ void WhyRecordsRequest::InternalSwap(WhyRecordsRequest* PROTOBUF_RESTRICT other)
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.datasourcecode1_, &other->_impl_.datasourcecode1_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recordid1_, &other->_impl_.recordid1_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.datasourcecode2_, &other->_impl_.datasourcecode2_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.recordid2_, &other->_impl_.recordid2_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.data_source_code_1_, &other->_impl_.data_source_code_1_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.record_id_1_, &other->_impl_.record_id_1_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.data_source_code_2_, &other->_impl_.data_source_code_2_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.record_id_2_, &other->_impl_.record_id_2_, arena);
         swap(_impl_.flags_, other->_impl_.flags_);
 }
 

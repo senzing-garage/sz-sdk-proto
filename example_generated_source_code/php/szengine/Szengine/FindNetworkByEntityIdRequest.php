@@ -14,21 +14,21 @@ use Google\Protobuf\Internal\GPBUtil;
 class FindNetworkByEntityIdRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string entityIds = 1;</code>
+     * Generated from protobuf field <code>string entity_ids = 1;</code>
      */
-    protected $entityIds = '';
+    protected $entity_ids = '';
     /**
-     * Generated from protobuf field <code>int64 maxDegrees = 2;</code>
+     * Generated from protobuf field <code>int64 max_degrees = 2;</code>
      */
-    protected $maxDegrees = 0;
+    protected $max_degrees = 0;
     /**
-     * Generated from protobuf field <code>int64 buildOutDegrees = 3;</code>
+     * Generated from protobuf field <code>int64 build_out_degrees = 3;</code>
      */
-    protected $buildOutDegrees = 0;
+    protected $build_out_degrees = 0;
     /**
-     * Generated from protobuf field <code>int64 buildOutMaxEntities = 4;</code>
+     * Generated from protobuf field <code>int64 build_out_max_entities = 4;</code>
      */
-    protected $buildOutMaxEntities = 0;
+    protected $build_out_max_entities = 0;
     /**
      * Generated from protobuf field <code>int64 flags = 5;</code>
      */
@@ -40,10 +40,10 @@ class FindNetworkByEntityIdRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $entityIds
-     *     @type int|string $maxDegrees
-     *     @type int|string $buildOutDegrees
-     *     @type int|string $buildOutMaxEntities
+     *     @type string $entity_ids
+     *     @type int|string $max_degrees
+     *     @type int|string $build_out_degrees
+     *     @type int|string $build_out_max_entities
      *     @type int|string $flags
      * }
      */
@@ -53,89 +53,89 @@ class FindNetworkByEntityIdRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string entityIds = 1;</code>
+     * Generated from protobuf field <code>string entity_ids = 1;</code>
      * @return string
      */
     public function getEntityIds()
     {
-        return $this->entityIds;
+        return $this->entity_ids;
     }
 
     /**
-     * Generated from protobuf field <code>string entityIds = 1;</code>
+     * Generated from protobuf field <code>string entity_ids = 1;</code>
      * @param string $var
      * @return $this
      */
     public function setEntityIds($var)
     {
         GPBUtil::checkString($var, True);
-        $this->entityIds = $var;
+        $this->entity_ids = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>int64 maxDegrees = 2;</code>
+     * Generated from protobuf field <code>int64 max_degrees = 2;</code>
      * @return int|string
      */
     public function getMaxDegrees()
     {
-        return $this->maxDegrees;
+        return $this->max_degrees;
     }
 
     /**
-     * Generated from protobuf field <code>int64 maxDegrees = 2;</code>
+     * Generated from protobuf field <code>int64 max_degrees = 2;</code>
      * @param int|string $var
      * @return $this
      */
     public function setMaxDegrees($var)
     {
         GPBUtil::checkInt64($var);
-        $this->maxDegrees = $var;
+        $this->max_degrees = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>int64 buildOutDegrees = 3;</code>
+     * Generated from protobuf field <code>int64 build_out_degrees = 3;</code>
      * @return int|string
      */
     public function getBuildOutDegrees()
     {
-        return $this->buildOutDegrees;
+        return $this->build_out_degrees;
     }
 
     /**
-     * Generated from protobuf field <code>int64 buildOutDegrees = 3;</code>
+     * Generated from protobuf field <code>int64 build_out_degrees = 3;</code>
      * @param int|string $var
      * @return $this
      */
     public function setBuildOutDegrees($var)
     {
         GPBUtil::checkInt64($var);
-        $this->buildOutDegrees = $var;
+        $this->build_out_degrees = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>int64 buildOutMaxEntities = 4;</code>
+     * Generated from protobuf field <code>int64 build_out_max_entities = 4;</code>
      * @return int|string
      */
     public function getBuildOutMaxEntities()
     {
-        return $this->buildOutMaxEntities;
+        return $this->build_out_max_entities;
     }
 
     /**
-     * Generated from protobuf field <code>int64 buildOutMaxEntities = 4;</code>
+     * Generated from protobuf field <code>int64 build_out_max_entities = 4;</code>
      * @param int|string $var
      * @return $this
      */
     public function setBuildOutMaxEntities($var)
     {
         GPBUtil::checkInt64($var);
-        $this->buildOutMaxEntities = $var;
+        $this->build_out_max_entities = $var;
 
         return $this;
     }
