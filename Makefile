@@ -67,6 +67,9 @@ dependencies-for-development: venv dependencies-for-development-osarch-specific
 	@sudo pecl channel-update pecl.php.net
 	@sudo pecl install grpc
 
+dependencies-for-nodejs:
+	@npm install -g grpc-tools
+	@npm install -D @grpc/grpc-js @grpc/proto-loader grpc_tools_node_protoc_ts typescript tsx
 
 .PHONY: dependencies
 dependencies: venv
@@ -100,7 +103,6 @@ generate-csharp:
 		protoc --grpc_out=$${OUTPUT_DIR}  --plugin=protoc-gen-grpc=`which grpc_cpp_plugin`  $${SENZING_COMPONENT}.proto; \
 	done
 
-
 .PHONY: generate-go
 generate-go:
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
@@ -108,7 +110,6 @@ generate-go:
 		mkdir -p $${OUTPUT_DIR}; \
 		protoc --go_out=$${OUTPUT_DIR} --go_opt=paths=source_relative --go-grpc_out=$${OUTPUT_DIR} --go-grpc_opt=paths=source_relative $${SENZING_COMPONENT}.proto; \
 	done
-
 
 .PHONY: generate-java
 generate-java:
@@ -119,6 +120,21 @@ generate-java:
 	done
 
 
+.PHONY: generate-nodejs
+generate-nodejs:
+	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
+		OUTPUT_DIR=example_generated_source_code/nodejs/$${SENZING_COMPONENT}; \
+		PROTO_DIR=example_generated_source_code/nodejs/proto; \
+		mkdir -p $${OUTPUT_DIR}; \
+		mkdir -p $${PROTO_DIR}; \
+		cp -r $${SENZING_COMPONENT}.proto $${PROTO_DIR}/; \
+		grpc_tools_node_protoc \
+			--js_out=import_style=commonjs,binary:$${OUTPUT_DIR} \
+			--ts_out=import_style=commonjs,binary:$${OUTPUT_DIR} \
+			--grpc_out=grpc_js:$${OUTPUT_DIR} \
+			$${SENZING_COMPONENT}.proto; \
+	done
+
 .PHONY: generate-php
 generate-php:
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
@@ -126,7 +142,6 @@ generate-php:
 		mkdir -p $${OUTPUT_DIR}; \
 		protoc --proto_path=. --php_out=$${OUTPUT_DIR}  --grpc_out=$${OUTPUT_DIR}  --plugin=protoc-gen-grpc=`which grpc_php_plugin`  $${SENZING_COMPONENT}.proto; \
 	done
-
 
 .PHONY: generate-python
 generate-python:
@@ -150,6 +165,37 @@ generate-ruby:
 		grpc_tools_ruby_protoc --proto_path=. --ruby_out=$${OUTPUT_DIR}  --grpc_out=$${OUTPUT_DIR}  $${SENZING_COMPONENT}.proto; \
 	done
 
+# all typescript compilers follow short name abbr name convention
+.PHONY: generate-ts
+generate-ts: generate-typescript
+generate-typescript:
+	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
+		OUTPUT_DIR=example_generated_source_code/ts/$${SENZING_COMPONENT}; \
+		PROTO_DIR=example_generated_source_code/ts/proto; \
+		mkdir -p $${OUTPUT_DIR}; \
+		mkdir -p $${PROTO_DIR}; \
+		cp -r $${SENZING_COMPONENT}.proto $${PROTO_DIR}/; \
+		grpc_tools_node_protoc \
+			--js_out=import_style=commonjs,binary:$${OUTPUT_DIR} \
+			--ts_out=import_style=commonjs,binary:$${OUTPUT_DIR} \
+			--grpc_out=grpc_js:$${OUTPUT_DIR} \
+			$${SENZING_COMPONENT}.proto; \
+	done
+
+.PHONY: generate-web
+generate-web:
+	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
+		OUTPUT_DIR=example_generated_source_code/web/$${SENZING_COMPONENT}; \
+		PROTO_DIR=example_generated_source_code/web/proto; \
+		mkdir -p $${OUTPUT_DIR}; \
+		mkdir -p $${PROTO_DIR}; \
+		cp -r $${SENZING_COMPONENT}.proto $${PROTO_DIR}/; \
+		grpc_tools_node_protoc \
+			--js_out=import_style=commonjs,binary:$${OUTPUT_DIR} \
+			--grpc-web_out=import_style=typescript,mode=grpcwebtext:$${OUTPUT_DIR} \
+			$${SENZING_COMPONENT}.proto; \
+	done
+
 # -----------------------------------------------------------------------------
 # Documentation
 # -----------------------------------------------------------------------------
@@ -162,7 +208,7 @@ documentation: documentation-osarch-specific
 # -----------------------------------------------------------------------------
 
 .PHONY: clean
-clean: clean-csharp clean-go clean-java clean-php clean-python clean-ruby
+clean: clean-csharp clean-go clean-java clean-nodejs clean-php clean-python clean-ruby clean-ts clean-web
 
 
 .PHONY: clean-csharp
@@ -183,6 +229,10 @@ clean-go:
 clean-java:
 	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/java/* || true
 
+.PHONY: clean-node
+clean-node: clean-nodejs
+clean-nodejs:
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/nodejs/* || true
 
 .PHONY: clean-php
 clean-php:
@@ -201,6 +251,16 @@ clean-python:
 .PHONY: clean-ruby
 clean-ruby:
 	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/ruby/* || true
+
+.PHONY: clean-ts
+clean-ts: clean-typescript
+clean-typescript:
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/ts/* || true
+
+.PHONY: clean-web
+clean-web:
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/web/* || true
+
 
 # -----------------------------------------------------------------------------
 # Utility targets

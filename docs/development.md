@@ -54,6 +54,15 @@ These are "one-time tasks" which may already have been completed.
 
     ```
 
+1. Install dependencies needed for [NodeJS] code.
+   Example:
+
+    ```console
+    cd ${GIT_REPOSITORY_DIR}
+    make dependencies-for-nodejs
+
+    ```
+
 ## Generate code
 
 1. Generate code across multiple languages.
@@ -301,6 +310,7 @@ The following instructions were used to create a [go module] and other [example 
 [Java Quick start]: https://grpc.io/docs/languages/java/quickstart/
 [make]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/make.md
 [Overview for gRPC on .NET]: https://learn.microsoft.com/en-us/aspnet/core/grpc
+[NodeJS]: https://nodejs.org/
 [PHP Quick start]: https://grpc.io/docs/languages/php/quickstart/
 [protoc]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/protoc.md
 [Python Quick start]: https://grpc.io/docs/languages/python/quickstart/
