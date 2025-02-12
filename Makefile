@@ -175,7 +175,25 @@ generate-typescript:
 		mkdir -p $${OUTPUT_DIR}; \
 		mkdir -p $${PROTO_DIR}; \
 		cp -r $${SENZING_COMPONENT}.proto $${PROTO_DIR}/; \
-		npx proto-loader-gen-types --grpcLib=@grpc/grpc-js --outDir=$${OUTPUT_DIR} $${SENZING_COMPONENT}.proto; \
+		grpc_tools_node_protoc \
+			--js_out=import_style=commonjs,binary:$${OUTPUT_DIR} \
+			--ts_out=import_style=commonjs,binary:$${OUTPUT_DIR} \
+			--grpc_out=grpc_js:$${OUTPUT_DIR} \
+			$${SENZING_COMPONENT}.proto; \
+	done
+
+.PHONY: generate-web
+generate-web:
+	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
+		OUTPUT_DIR=example_generated_source_code/web/$${SENZING_COMPONENT}; \
+		PROTO_DIR=example_generated_source_code/web/proto; \
+		mkdir -p $${OUTPUT_DIR}; \
+		mkdir -p $${PROTO_DIR}; \
+		cp -r $${SENZING_COMPONENT}.proto $${PROTO_DIR}/; \
+		grpc_tools_node_protoc \
+			--js_out=import_style=commonjs,binary:$${OUTPUT_DIR} \
+			--grpc-web_out=import_style=typescript,mode=grpcwebtext:$${OUTPUT_DIR} \
+			$${SENZING_COMPONENT}.proto; \
 	done
 
 # -----------------------------------------------------------------------------
@@ -190,7 +208,7 @@ documentation: documentation-osarch-specific
 # -----------------------------------------------------------------------------
 
 .PHONY: clean
-clean: clean-csharp clean-go clean-java clean-nodejs clean-php clean-python clean-ruby clean-ts
+clean: clean-csharp clean-go clean-java clean-nodejs clean-php clean-python clean-ruby clean-ts clean-web
 
 
 .PHONY: clean-csharp
@@ -238,6 +256,10 @@ clean-ruby:
 clean-ts: clean-typescript
 clean-typescript:
 	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/ts/* || true
+
+.PHONY: clean-web
+clean-web:
+	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/web/* || true
 
 
 # -----------------------------------------------------------------------------
