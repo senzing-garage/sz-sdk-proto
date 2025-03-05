@@ -1,11 +1,10 @@
 module github.com/senzing-garage/sz-sdk-proto
 
 go 1.22
-
 toolchain go1.23.2
 
 require (
-	google.golang.org/grpc v1.70.0
+	google.golang.org/grpc v1.71.0
 	google.golang.org/protobuf v1.36.5
 )
 
