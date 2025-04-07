@@ -56,14 +56,14 @@ message ReplaceDefaultConfigIdRequest {
   int64 new_default_config_id = 2;
 }
 
-message ReplaceDefaultConfigResponse {}
+message ReplaceDefaultConfigIdResponse {}
 
 message SetDefaultConfigRequest {
   string config_definition = 1;
   string config_comment = 2;
 }
 
-message SetDefaultConfigIdResponse {
+message SetDefaultConfigResponse {
   int64 result = 1;
 }
 
