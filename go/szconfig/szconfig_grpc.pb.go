@@ -20,12 +20,8 @@ const _ = grpc.SupportPackageIsVersion9
 
 const (
 	SzConfig_AddDataSource_FullMethodName    = "/szconfig.SzConfig/AddDataSource"
-	SzConfig_CloseConfig_FullMethodName      = "/szconfig.SzConfig/CloseConfig"
-	SzConfig_CreateConfig_FullMethodName     = "/szconfig.SzConfig/CreateConfig"
 	SzConfig_DeleteDataSource_FullMethodName = "/szconfig.SzConfig/DeleteDataSource"
-	SzConfig_ExportConfig_FullMethodName     = "/szconfig.SzConfig/ExportConfig"
 	SzConfig_GetDataSources_FullMethodName   = "/szconfig.SzConfig/GetDataSources"
-	SzConfig_ImportConfig_FullMethodName     = "/szconfig.SzConfig/ImportConfig"
 )
 
 // SzConfigClient is the client API for SzConfig service.
@@ -33,12 +29,8 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type SzConfigClient interface {
 	AddDataSource(ctx context.Context, in *AddDataSourceRequest, opts ...grpc.CallOption) (*AddDataSourceResponse, error)
-	CloseConfig(ctx context.Context, in *CloseConfigRequest, opts ...grpc.CallOption) (*CloseConfigResponse, error)
-	CreateConfig(ctx context.Context, in *CreateConfigRequest, opts ...grpc.CallOption) (*CreateConfigResponse, error)
 	DeleteDataSource(ctx context.Context, in *DeleteDataSourceRequest, opts ...grpc.CallOption) (*DeleteDataSourceResponse, error)
-	ExportConfig(ctx context.Context, in *ExportConfigRequest, opts ...grpc.CallOption) (*ExportConfigResponse, error)
 	GetDataSources(ctx context.Context, in *GetDataSourcesRequest, opts ...grpc.CallOption) (*GetDataSourcesResponse, error)
-	ImportConfig(ctx context.Context, in *ImportConfigRequest, opts ...grpc.CallOption) (*ImportConfigResponse, error)
 }
 
 type szConfigClient struct {
@@ -59,40 +51,10 @@ func (c *szConfigClient) AddDataSource(ctx context.Context, in *AddDataSourceReq
 	return out, nil
 }
 
-func (c *szConfigClient) CloseConfig(ctx context.Context, in *CloseConfigRequest, opts ...grpc.CallOption) (*CloseConfigResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(CloseConfigResponse)
-	err := c.cc.Invoke(ctx, SzConfig_CloseConfig_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *szConfigClient) CreateConfig(ctx context.Context, in *CreateConfigRequest, opts ...grpc.CallOption) (*CreateConfigResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(CreateConfigResponse)
-	err := c.cc.Invoke(ctx, SzConfig_CreateConfig_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *szConfigClient) DeleteDataSource(ctx context.Context, in *DeleteDataSourceRequest, opts ...grpc.CallOption) (*DeleteDataSourceResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(DeleteDataSourceResponse)
 	err := c.cc.Invoke(ctx, SzConfig_DeleteDataSource_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *szConfigClient) ExportConfig(ctx context.Context, in *ExportConfigRequest, opts ...grpc.CallOption) (*ExportConfigResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(ExportConfigResponse)
-	err := c.cc.Invoke(ctx, SzConfig_ExportConfig_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -109,27 +71,13 @@ func (c *szConfigClient) GetDataSources(ctx context.Context, in *GetDataSourcesR
 	return out, nil
 }
 
-func (c *szConfigClient) ImportConfig(ctx context.Context, in *ImportConfigRequest, opts ...grpc.CallOption) (*ImportConfigResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(ImportConfigResponse)
-	err := c.cc.Invoke(ctx, SzConfig_ImportConfig_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 // SzConfigServer is the server API for SzConfig service.
 // All implementations must embed UnimplementedSzConfigServer
 // for forward compatibility.
 type SzConfigServer interface {
 	AddDataSource(context.Context, *AddDataSourceRequest) (*AddDataSourceResponse, error)
-	CloseConfig(context.Context, *CloseConfigRequest) (*CloseConfigResponse, error)
-	CreateConfig(context.Context, *CreateConfigRequest) (*CreateConfigResponse, error)
 	DeleteDataSource(context.Context, *DeleteDataSourceRequest) (*DeleteDataSourceResponse, error)
-	ExportConfig(context.Context, *ExportConfigRequest) (*ExportConfigResponse, error)
 	GetDataSources(context.Context, *GetDataSourcesRequest) (*GetDataSourcesResponse, error)
-	ImportConfig(context.Context, *ImportConfigRequest) (*ImportConfigResponse, error)
 	mustEmbedUnimplementedSzConfigServer()
 }
 
@@ -143,23 +91,11 @@ type UnimplementedSzConfigServer struct{}
 func (UnimplementedSzConfigServer) AddDataSource(context.Context, *AddDataSourceRequest) (*AddDataSourceResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AddDataSource not implemented")
 }
-func (UnimplementedSzConfigServer) CloseConfig(context.Context, *CloseConfigRequest) (*CloseConfigResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CloseConfig not implemented")
-}
-func (UnimplementedSzConfigServer) CreateConfig(context.Context, *CreateConfigRequest) (*CreateConfigResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CreateConfig not implemented")
-}
 func (UnimplementedSzConfigServer) DeleteDataSource(context.Context, *DeleteDataSourceRequest) (*DeleteDataSourceResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteDataSource not implemented")
 }
-func (UnimplementedSzConfigServer) ExportConfig(context.Context, *ExportConfigRequest) (*ExportConfigResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ExportConfig not implemented")
-}
 func (UnimplementedSzConfigServer) GetDataSources(context.Context, *GetDataSourcesRequest) (*GetDataSourcesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetDataSources not implemented")
-}
-func (UnimplementedSzConfigServer) ImportConfig(context.Context, *ImportConfigRequest) (*ImportConfigResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ImportConfig not implemented")
 }
 func (UnimplementedSzConfigServer) mustEmbedUnimplementedSzConfigServer() {}
 func (UnimplementedSzConfigServer) testEmbeddedByValue()                  {}
@@ -200,42 +136,6 @@ func _SzConfig_AddDataSource_Handler(srv interface{}, ctx context.Context, dec f
 	return interceptor(ctx, in, info, handler)
 }
 
-func _SzConfig_CloseConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CloseConfigRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(SzConfigServer).CloseConfig(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: SzConfig_CloseConfig_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzConfigServer).CloseConfig(ctx, req.(*CloseConfigRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _SzConfig_CreateConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CreateConfigRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(SzConfigServer).CreateConfig(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: SzConfig_CreateConfig_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzConfigServer).CreateConfig(ctx, req.(*CreateConfigRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _SzConfig_DeleteDataSource_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DeleteDataSourceRequest)
 	if err := dec(in); err != nil {
@@ -250,24 +150,6 @@ func _SzConfig_DeleteDataSource_Handler(srv interface{}, ctx context.Context, de
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(SzConfigServer).DeleteDataSource(ctx, req.(*DeleteDataSourceRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _SzConfig_ExportConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ExportConfigRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(SzConfigServer).ExportConfig(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: SzConfig_ExportConfig_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzConfigServer).ExportConfig(ctx, req.(*ExportConfigRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -290,24 +172,6 @@ func _SzConfig_GetDataSources_Handler(srv interface{}, ctx context.Context, dec 
 	return interceptor(ctx, in, info, handler)
 }
 
-func _SzConfig_ImportConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ImportConfigRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(SzConfigServer).ImportConfig(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: SzConfig_ImportConfig_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzConfigServer).ImportConfig(ctx, req.(*ImportConfigRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 // SzConfig_ServiceDesc is the grpc.ServiceDesc for SzConfig service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -320,28 +184,12 @@ var SzConfig_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _SzConfig_AddDataSource_Handler,
 		},
 		{
-			MethodName: "CloseConfig",
-			Handler:    _SzConfig_CloseConfig_Handler,
-		},
-		{
-			MethodName: "CreateConfig",
-			Handler:    _SzConfig_CreateConfig_Handler,
-		},
-		{
 			MethodName: "DeleteDataSource",
 			Handler:    _SzConfig_DeleteDataSource_Handler,
 		},
 		{
-			MethodName: "ExportConfig",
-			Handler:    _SzConfig_ExportConfig_Handler,
-		},
-		{
 			MethodName: "GetDataSources",
 			Handler:    _SzConfig_GetDataSources_Handler,
-		},
-		{
-			MethodName: "ImportConfig",
-			Handler:    _SzConfig_ImportConfig_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

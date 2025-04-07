@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class DeleteDataSourceRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int64 config_handle = 1;</code>
+     * Generated from protobuf field <code>string config_definition = 1;</code>
      */
-    protected $config_handle = 0;
+    protected $config_definition = '';
     /**
      * Generated from protobuf field <code>string data_source_code = 2;</code>
      */
@@ -28,7 +28,7 @@ class DeleteDataSourceRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int|string $config_handle
+     *     @type string $config_definition
      *     @type string $data_source_code
      * }
      */
@@ -38,23 +38,23 @@ class DeleteDataSourceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 config_handle = 1;</code>
-     * @return int|string
+     * Generated from protobuf field <code>string config_definition = 1;</code>
+     * @return string
      */
-    public function getConfigHandle()
+    public function getConfigDefinition()
     {
-        return $this->config_handle;
+        return $this->config_definition;
     }
 
     /**
-     * Generated from protobuf field <code>int64 config_handle = 1;</code>
-     * @param int|string $var
+     * Generated from protobuf field <code>string config_definition = 1;</code>
+     * @param string $var
      * @return $this
      */
-    public function setConfigHandle($var)
+    public function setConfigDefinition($var)
     {
-        GPBUtil::checkInt64($var);
-        $this->config_handle = $var;
+        GPBUtil::checkString($var, True);
+        $this->config_definition = $var;
 
         return $this;
     }

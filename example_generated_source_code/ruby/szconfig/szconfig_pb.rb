@@ -6,45 +6,24 @@ require 'google/protobuf'
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("szconfig.proto", :syntax => :proto3) do
     add_message "szconfig.AddDataSourceRequest" do
-      optional :config_handle, :int64, 1
+      optional :config_definition, :string, 1
       optional :data_source_code, :string, 2
     end
     add_message "szconfig.AddDataSourceResponse" do
       optional :result, :string, 1
     end
-    add_message "szconfig.CloseConfigRequest" do
-      optional :config_handle, :int64, 1
-    end
-    add_message "szconfig.CloseConfigResponse" do
-    end
-    add_message "szconfig.CreateConfigRequest" do
-    end
-    add_message "szconfig.CreateConfigResponse" do
-      optional :result, :int64, 1
-    end
     add_message "szconfig.DeleteDataSourceRequest" do
-      optional :config_handle, :int64, 1
+      optional :config_definition, :string, 1
       optional :data_source_code, :string, 2
     end
     add_message "szconfig.DeleteDataSourceResponse" do
-    end
-    add_message "szconfig.ExportConfigRequest" do
-      optional :config_handle, :int64, 1
-    end
-    add_message "szconfig.ExportConfigResponse" do
       optional :result, :string, 1
     end
     add_message "szconfig.GetDataSourcesRequest" do
-      optional :config_handle, :int64, 1
+      optional :config_definition, :string, 1
     end
     add_message "szconfig.GetDataSourcesResponse" do
       optional :result, :string, 1
-    end
-    add_message "szconfig.ImportConfigRequest" do
-      optional :config_definition, :string, 1
-    end
-    add_message "szconfig.ImportConfigResponse" do
-      optional :result, :int64, 1
     end
   end
 end
@@ -52,16 +31,8 @@ end
 module Szconfig
   AddDataSourceRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.AddDataSourceRequest").msgclass
   AddDataSourceResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.AddDataSourceResponse").msgclass
-  CloseConfigRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.CloseConfigRequest").msgclass
-  CloseConfigResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.CloseConfigResponse").msgclass
-  CreateConfigRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.CreateConfigRequest").msgclass
-  CreateConfigResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.CreateConfigResponse").msgclass
   DeleteDataSourceRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.DeleteDataSourceRequest").msgclass
   DeleteDataSourceResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.DeleteDataSourceResponse").msgclass
-  ExportConfigRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.ExportConfigRequest").msgclass
-  ExportConfigResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.ExportConfigResponse").msgclass
   GetDataSourcesRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.GetDataSourcesRequest").msgclass
   GetDataSourcesResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.GetDataSourcesResponse").msgclass
-  ImportConfigRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.ImportConfigRequest").msgclass
-  ImportConfigResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.ImportConfigResponse").msgclass
 end

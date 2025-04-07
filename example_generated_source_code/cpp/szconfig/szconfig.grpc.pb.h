@@ -42,33 +42,12 @@ class SzConfig final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::AddDataSourceResponse>> PrepareAsyncAddDataSource(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::AddDataSourceResponse>>(PrepareAsyncAddDataSourceRaw(context, request, cq));
     }
-    virtual ::grpc::Status CloseConfig(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest& request, ::szconfig::CloseConfigResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::CloseConfigResponse>> AsyncCloseConfig(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::CloseConfigResponse>>(AsyncCloseConfigRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::CloseConfigResponse>> PrepareAsyncCloseConfig(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::CloseConfigResponse>>(PrepareAsyncCloseConfigRaw(context, request, cq));
-    }
-    virtual ::grpc::Status CreateConfig(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest& request, ::szconfig::CreateConfigResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::CreateConfigResponse>> AsyncCreateConfig(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::CreateConfigResponse>>(AsyncCreateConfigRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::CreateConfigResponse>> PrepareAsyncCreateConfig(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::CreateConfigResponse>>(PrepareAsyncCreateConfigRaw(context, request, cq));
-    }
     virtual ::grpc::Status DeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest& request, ::szconfig::DeleteDataSourceResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::DeleteDataSourceResponse>> AsyncDeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::DeleteDataSourceResponse>>(AsyncDeleteDataSourceRaw(context, request, cq));
     }
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::DeleteDataSourceResponse>> PrepareAsyncDeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::DeleteDataSourceResponse>>(PrepareAsyncDeleteDataSourceRaw(context, request, cq));
-    }
-    virtual ::grpc::Status ExportConfig(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest& request, ::szconfig::ExportConfigResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::ExportConfigResponse>> AsyncExportConfig(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::ExportConfigResponse>>(AsyncExportConfigRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::ExportConfigResponse>> PrepareAsyncExportConfig(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::ExportConfigResponse>>(PrepareAsyncExportConfigRaw(context, request, cq));
     }
     virtual ::grpc::Status GetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest& request, ::szconfig::GetDataSourcesResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::GetDataSourcesResponse>> AsyncGetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest& request, ::grpc::CompletionQueue* cq) {
@@ -77,30 +56,15 @@ class SzConfig final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::GetDataSourcesResponse>> PrepareAsyncGetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::GetDataSourcesResponse>>(PrepareAsyncGetDataSourcesRaw(context, request, cq));
     }
-    virtual ::grpc::Status ImportConfig(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest& request, ::szconfig::ImportConfigResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::ImportConfigResponse>> AsyncImportConfig(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::ImportConfigResponse>>(AsyncImportConfigRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::ImportConfigResponse>> PrepareAsyncImportConfig(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::ImportConfigResponse>>(PrepareAsyncImportConfigRaw(context, request, cq));
-    }
     class async_interface {
      public:
       virtual ~async_interface() {}
       virtual void AddDataSource(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest* request, ::szconfig::AddDataSourceResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void AddDataSource(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest* request, ::szconfig::AddDataSourceResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void CloseConfig(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest* request, ::szconfig::CloseConfigResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void CloseConfig(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest* request, ::szconfig::CloseConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void CreateConfig(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest* request, ::szconfig::CreateConfigResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void CreateConfig(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest* request, ::szconfig::CreateConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void DeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest* request, ::szconfig::DeleteDataSourceResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void DeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest* request, ::szconfig::DeleteDataSourceResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void ExportConfig(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest* request, ::szconfig::ExportConfigResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ExportConfig(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest* request, ::szconfig::ExportConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void GetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest* request, ::szconfig::GetDataSourcesResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest* request, ::szconfig::GetDataSourcesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void ImportConfig(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest* request, ::szconfig::ImportConfigResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ImportConfig(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest* request, ::szconfig::ImportConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
@@ -108,18 +72,10 @@ class SzConfig final {
    private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::AddDataSourceResponse>* AsyncAddDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::AddDataSourceResponse>* PrepareAsyncAddDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::CloseConfigResponse>* AsyncCloseConfigRaw(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::CloseConfigResponse>* PrepareAsyncCloseConfigRaw(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::CreateConfigResponse>* AsyncCreateConfigRaw(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::CreateConfigResponse>* PrepareAsyncCreateConfigRaw(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::DeleteDataSourceResponse>* AsyncDeleteDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::DeleteDataSourceResponse>* PrepareAsyncDeleteDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::ExportConfigResponse>* AsyncExportConfigRaw(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::ExportConfigResponse>* PrepareAsyncExportConfigRaw(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::GetDataSourcesResponse>* AsyncGetDataSourcesRaw(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::GetDataSourcesResponse>* PrepareAsyncGetDataSourcesRaw(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::ImportConfigResponse>* AsyncImportConfigRaw(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfig::ImportConfigResponse>* PrepareAsyncImportConfigRaw(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -131,33 +87,12 @@ class SzConfig final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::AddDataSourceResponse>> PrepareAsyncAddDataSource(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::AddDataSourceResponse>>(PrepareAsyncAddDataSourceRaw(context, request, cq));
     }
-    ::grpc::Status CloseConfig(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest& request, ::szconfig::CloseConfigResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::CloseConfigResponse>> AsyncCloseConfig(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::CloseConfigResponse>>(AsyncCloseConfigRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::CloseConfigResponse>> PrepareAsyncCloseConfig(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::CloseConfigResponse>>(PrepareAsyncCloseConfigRaw(context, request, cq));
-    }
-    ::grpc::Status CreateConfig(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest& request, ::szconfig::CreateConfigResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::CreateConfigResponse>> AsyncCreateConfig(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::CreateConfigResponse>>(AsyncCreateConfigRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::CreateConfigResponse>> PrepareAsyncCreateConfig(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::CreateConfigResponse>>(PrepareAsyncCreateConfigRaw(context, request, cq));
-    }
     ::grpc::Status DeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest& request, ::szconfig::DeleteDataSourceResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::DeleteDataSourceResponse>> AsyncDeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::DeleteDataSourceResponse>>(AsyncDeleteDataSourceRaw(context, request, cq));
     }
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::DeleteDataSourceResponse>> PrepareAsyncDeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::DeleteDataSourceResponse>>(PrepareAsyncDeleteDataSourceRaw(context, request, cq));
-    }
-    ::grpc::Status ExportConfig(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest& request, ::szconfig::ExportConfigResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::ExportConfigResponse>> AsyncExportConfig(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::ExportConfigResponse>>(AsyncExportConfigRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::ExportConfigResponse>> PrepareAsyncExportConfig(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::ExportConfigResponse>>(PrepareAsyncExportConfigRaw(context, request, cq));
     }
     ::grpc::Status GetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest& request, ::szconfig::GetDataSourcesResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::GetDataSourcesResponse>> AsyncGetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest& request, ::grpc::CompletionQueue* cq) {
@@ -166,30 +101,15 @@ class SzConfig final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::GetDataSourcesResponse>> PrepareAsyncGetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::GetDataSourcesResponse>>(PrepareAsyncGetDataSourcesRaw(context, request, cq));
     }
-    ::grpc::Status ImportConfig(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest& request, ::szconfig::ImportConfigResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::ImportConfigResponse>> AsyncImportConfig(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::ImportConfigResponse>>(AsyncImportConfigRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::ImportConfigResponse>> PrepareAsyncImportConfig(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfig::ImportConfigResponse>>(PrepareAsyncImportConfigRaw(context, request, cq));
-    }
     class async final :
       public StubInterface::async_interface {
      public:
       void AddDataSource(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest* request, ::szconfig::AddDataSourceResponse* response, std::function<void(::grpc::Status)>) override;
       void AddDataSource(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest* request, ::szconfig::AddDataSourceResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void CloseConfig(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest* request, ::szconfig::CloseConfigResponse* response, std::function<void(::grpc::Status)>) override;
-      void CloseConfig(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest* request, ::szconfig::CloseConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void CreateConfig(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest* request, ::szconfig::CreateConfigResponse* response, std::function<void(::grpc::Status)>) override;
-      void CreateConfig(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest* request, ::szconfig::CreateConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void DeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest* request, ::szconfig::DeleteDataSourceResponse* response, std::function<void(::grpc::Status)>) override;
       void DeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest* request, ::szconfig::DeleteDataSourceResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void ExportConfig(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest* request, ::szconfig::ExportConfigResponse* response, std::function<void(::grpc::Status)>) override;
-      void ExportConfig(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest* request, ::szconfig::ExportConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void GetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest* request, ::szconfig::GetDataSourcesResponse* response, std::function<void(::grpc::Status)>) override;
       void GetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest* request, ::szconfig::GetDataSourcesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void ImportConfig(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest* request, ::szconfig::ImportConfigResponse* response, std::function<void(::grpc::Status)>) override;
-      void ImportConfig(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest* request, ::szconfig::ImportConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -203,25 +123,13 @@ class SzConfig final {
     class async async_stub_{this};
     ::grpc::ClientAsyncResponseReader< ::szconfig::AddDataSourceResponse>* AsyncAddDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szconfig::AddDataSourceResponse>* PrepareAsyncAddDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::szconfig::CloseConfigResponse>* AsyncCloseConfigRaw(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::szconfig::CloseConfigResponse>* PrepareAsyncCloseConfigRaw(::grpc::ClientContext* context, const ::szconfig::CloseConfigRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::szconfig::CreateConfigResponse>* AsyncCreateConfigRaw(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::szconfig::CreateConfigResponse>* PrepareAsyncCreateConfigRaw(::grpc::ClientContext* context, const ::szconfig::CreateConfigRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szconfig::DeleteDataSourceResponse>* AsyncDeleteDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szconfig::DeleteDataSourceResponse>* PrepareAsyncDeleteDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::szconfig::ExportConfigResponse>* AsyncExportConfigRaw(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::szconfig::ExportConfigResponse>* PrepareAsyncExportConfigRaw(::grpc::ClientContext* context, const ::szconfig::ExportConfigRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szconfig::GetDataSourcesResponse>* AsyncGetDataSourcesRaw(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szconfig::GetDataSourcesResponse>* PrepareAsyncGetDataSourcesRaw(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::szconfig::ImportConfigResponse>* AsyncImportConfigRaw(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::szconfig::ImportConfigResponse>* PrepareAsyncImportConfigRaw(::grpc::ClientContext* context, const ::szconfig::ImportConfigRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_AddDataSource_;
-    const ::grpc::internal::RpcMethod rpcmethod_CloseConfig_;
-    const ::grpc::internal::RpcMethod rpcmethod_CreateConfig_;
     const ::grpc::internal::RpcMethod rpcmethod_DeleteDataSource_;
-    const ::grpc::internal::RpcMethod rpcmethod_ExportConfig_;
     const ::grpc::internal::RpcMethod rpcmethod_GetDataSources_;
-    const ::grpc::internal::RpcMethod rpcmethod_ImportConfig_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -230,12 +138,8 @@ class SzConfig final {
     Service();
     virtual ~Service();
     virtual ::grpc::Status AddDataSource(::grpc::ServerContext* context, const ::szconfig::AddDataSourceRequest* request, ::szconfig::AddDataSourceResponse* response);
-    virtual ::grpc::Status CloseConfig(::grpc::ServerContext* context, const ::szconfig::CloseConfigRequest* request, ::szconfig::CloseConfigResponse* response);
-    virtual ::grpc::Status CreateConfig(::grpc::ServerContext* context, const ::szconfig::CreateConfigRequest* request, ::szconfig::CreateConfigResponse* response);
     virtual ::grpc::Status DeleteDataSource(::grpc::ServerContext* context, const ::szconfig::DeleteDataSourceRequest* request, ::szconfig::DeleteDataSourceResponse* response);
-    virtual ::grpc::Status ExportConfig(::grpc::ServerContext* context, const ::szconfig::ExportConfigRequest* request, ::szconfig::ExportConfigResponse* response);
     virtual ::grpc::Status GetDataSources(::grpc::ServerContext* context, const ::szconfig::GetDataSourcesRequest* request, ::szconfig::GetDataSourcesResponse* response);
-    virtual ::grpc::Status ImportConfig(::grpc::ServerContext* context, const ::szconfig::ImportConfigRequest* request, ::szconfig::ImportConfigResponse* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_AddDataSource : public BaseClass {
@@ -258,52 +162,12 @@ class SzConfig final {
     }
   };
   template <class BaseClass>
-  class WithAsyncMethod_CloseConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_CloseConfig() {
-      ::grpc::Service::MarkMethodAsync(1);
-    }
-    ~WithAsyncMethod_CloseConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status CloseConfig(::grpc::ServerContext* /*context*/, const ::szconfig::CloseConfigRequest* /*request*/, ::szconfig::CloseConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestCloseConfig(::grpc::ServerContext* context, ::szconfig::CloseConfigRequest* request, ::grpc::ServerAsyncResponseWriter< ::szconfig::CloseConfigResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_CreateConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_CreateConfig() {
-      ::grpc::Service::MarkMethodAsync(2);
-    }
-    ~WithAsyncMethod_CreateConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status CreateConfig(::grpc::ServerContext* /*context*/, const ::szconfig::CreateConfigRequest* /*request*/, ::szconfig::CreateConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestCreateConfig(::grpc::ServerContext* context, ::szconfig::CreateConfigRequest* request, ::grpc::ServerAsyncResponseWriter< ::szconfig::CreateConfigResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
   class WithAsyncMethod_DeleteDataSource : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_DeleteDataSource() {
-      ::grpc::Service::MarkMethodAsync(3);
+      ::grpc::Service::MarkMethodAsync(1);
     }
     ~WithAsyncMethod_DeleteDataSource() override {
       BaseClassMustBeDerivedFromService(this);
@@ -314,27 +178,7 @@ class SzConfig final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestDeleteDataSource(::grpc::ServerContext* context, ::szconfig::DeleteDataSourceRequest* request, ::grpc::ServerAsyncResponseWriter< ::szconfig::DeleteDataSourceResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_ExportConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_ExportConfig() {
-      ::grpc::Service::MarkMethodAsync(4);
-    }
-    ~WithAsyncMethod_ExportConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ExportConfig(::grpc::ServerContext* /*context*/, const ::szconfig::ExportConfigRequest* /*request*/, ::szconfig::ExportConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestExportConfig(::grpc::ServerContext* context, ::szconfig::ExportConfigRequest* request, ::grpc::ServerAsyncResponseWriter< ::szconfig::ExportConfigResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -343,7 +187,7 @@ class SzConfig final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetDataSources() {
-      ::grpc::Service::MarkMethodAsync(5);
+      ::grpc::Service::MarkMethodAsync(2);
     }
     ~WithAsyncMethod_GetDataSources() override {
       BaseClassMustBeDerivedFromService(this);
@@ -354,30 +198,10 @@ class SzConfig final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetDataSources(::grpc::ServerContext* context, ::szconfig::GetDataSourcesRequest* request, ::grpc::ServerAsyncResponseWriter< ::szconfig::GetDataSourcesResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  template <class BaseClass>
-  class WithAsyncMethod_ImportConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_ImportConfig() {
-      ::grpc::Service::MarkMethodAsync(6);
-    }
-    ~WithAsyncMethod_ImportConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ImportConfig(::grpc::ServerContext* /*context*/, const ::szconfig::ImportConfigRequest* /*request*/, ::szconfig::ImportConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestImportConfig(::grpc::ServerContext* context, ::szconfig::ImportConfigRequest* request, ::grpc::ServerAsyncResponseWriter< ::szconfig::ImportConfigResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  typedef WithAsyncMethod_AddDataSource<WithAsyncMethod_CloseConfig<WithAsyncMethod_CreateConfig<WithAsyncMethod_DeleteDataSource<WithAsyncMethod_ExportConfig<WithAsyncMethod_GetDataSources<WithAsyncMethod_ImportConfig<Service > > > > > > > AsyncService;
+  typedef WithAsyncMethod_AddDataSource<WithAsyncMethod_DeleteDataSource<WithAsyncMethod_GetDataSources<Service > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_AddDataSource : public BaseClass {
    private:
@@ -406,72 +230,18 @@ class SzConfig final {
       ::grpc::CallbackServerContext* /*context*/, const ::szconfig::AddDataSourceRequest* /*request*/, ::szconfig::AddDataSourceResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_CloseConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_CloseConfig() {
-      ::grpc::Service::MarkMethodCallback(1,
-          new ::grpc::internal::CallbackUnaryHandler< ::szconfig::CloseConfigRequest, ::szconfig::CloseConfigResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::szconfig::CloseConfigRequest* request, ::szconfig::CloseConfigResponse* response) { return this->CloseConfig(context, request, response); }));}
-    void SetMessageAllocatorFor_CloseConfig(
-        ::grpc::MessageAllocator< ::szconfig::CloseConfigRequest, ::szconfig::CloseConfigResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szconfig::CloseConfigRequest, ::szconfig::CloseConfigResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_CloseConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status CloseConfig(::grpc::ServerContext* /*context*/, const ::szconfig::CloseConfigRequest* /*request*/, ::szconfig::CloseConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* CloseConfig(
-      ::grpc::CallbackServerContext* /*context*/, const ::szconfig::CloseConfigRequest* /*request*/, ::szconfig::CloseConfigResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_CreateConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_CreateConfig() {
-      ::grpc::Service::MarkMethodCallback(2,
-          new ::grpc::internal::CallbackUnaryHandler< ::szconfig::CreateConfigRequest, ::szconfig::CreateConfigResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::szconfig::CreateConfigRequest* request, ::szconfig::CreateConfigResponse* response) { return this->CreateConfig(context, request, response); }));}
-    void SetMessageAllocatorFor_CreateConfig(
-        ::grpc::MessageAllocator< ::szconfig::CreateConfigRequest, ::szconfig::CreateConfigResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szconfig::CreateConfigRequest, ::szconfig::CreateConfigResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_CreateConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status CreateConfig(::grpc::ServerContext* /*context*/, const ::szconfig::CreateConfigRequest* /*request*/, ::szconfig::CreateConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* CreateConfig(
-      ::grpc::CallbackServerContext* /*context*/, const ::szconfig::CreateConfigRequest* /*request*/, ::szconfig::CreateConfigResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
   class WithCallbackMethod_DeleteDataSource : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_DeleteDataSource() {
-      ::grpc::Service::MarkMethodCallback(3,
+      ::grpc::Service::MarkMethodCallback(1,
           new ::grpc::internal::CallbackUnaryHandler< ::szconfig::DeleteDataSourceRequest, ::szconfig::DeleteDataSourceResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::szconfig::DeleteDataSourceRequest* request, ::szconfig::DeleteDataSourceResponse* response) { return this->DeleteDataSource(context, request, response); }));}
     void SetMessageAllocatorFor_DeleteDataSource(
         ::grpc::MessageAllocator< ::szconfig::DeleteDataSourceRequest, ::szconfig::DeleteDataSourceResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::szconfig::DeleteDataSourceRequest, ::szconfig::DeleteDataSourceResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -487,45 +257,18 @@ class SzConfig final {
       ::grpc::CallbackServerContext* /*context*/, const ::szconfig::DeleteDataSourceRequest* /*request*/, ::szconfig::DeleteDataSourceResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_ExportConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_ExportConfig() {
-      ::grpc::Service::MarkMethodCallback(4,
-          new ::grpc::internal::CallbackUnaryHandler< ::szconfig::ExportConfigRequest, ::szconfig::ExportConfigResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::szconfig::ExportConfigRequest* request, ::szconfig::ExportConfigResponse* response) { return this->ExportConfig(context, request, response); }));}
-    void SetMessageAllocatorFor_ExportConfig(
-        ::grpc::MessageAllocator< ::szconfig::ExportConfigRequest, ::szconfig::ExportConfigResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szconfig::ExportConfigRequest, ::szconfig::ExportConfigResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_ExportConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ExportConfig(::grpc::ServerContext* /*context*/, const ::szconfig::ExportConfigRequest* /*request*/, ::szconfig::ExportConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* ExportConfig(
-      ::grpc::CallbackServerContext* /*context*/, const ::szconfig::ExportConfigRequest* /*request*/, ::szconfig::ExportConfigResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
   class WithCallbackMethod_GetDataSources : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_GetDataSources() {
-      ::grpc::Service::MarkMethodCallback(5,
+      ::grpc::Service::MarkMethodCallback(2,
           new ::grpc::internal::CallbackUnaryHandler< ::szconfig::GetDataSourcesRequest, ::szconfig::GetDataSourcesResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::szconfig::GetDataSourcesRequest* request, ::szconfig::GetDataSourcesResponse* response) { return this->GetDataSources(context, request, response); }));}
     void SetMessageAllocatorFor_GetDataSources(
         ::grpc::MessageAllocator< ::szconfig::GetDataSourcesRequest, ::szconfig::GetDataSourcesResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::szconfig::GetDataSourcesRequest, ::szconfig::GetDataSourcesResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -540,34 +283,7 @@ class SzConfig final {
     virtual ::grpc::ServerUnaryReactor* GetDataSources(
       ::grpc::CallbackServerContext* /*context*/, const ::szconfig::GetDataSourcesRequest* /*request*/, ::szconfig::GetDataSourcesResponse* /*response*/)  { return nullptr; }
   };
-  template <class BaseClass>
-  class WithCallbackMethod_ImportConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_ImportConfig() {
-      ::grpc::Service::MarkMethodCallback(6,
-          new ::grpc::internal::CallbackUnaryHandler< ::szconfig::ImportConfigRequest, ::szconfig::ImportConfigResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::szconfig::ImportConfigRequest* request, ::szconfig::ImportConfigResponse* response) { return this->ImportConfig(context, request, response); }));}
-    void SetMessageAllocatorFor_ImportConfig(
-        ::grpc::MessageAllocator< ::szconfig::ImportConfigRequest, ::szconfig::ImportConfigResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(6);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szconfig::ImportConfigRequest, ::szconfig::ImportConfigResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_ImportConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ImportConfig(::grpc::ServerContext* /*context*/, const ::szconfig::ImportConfigRequest* /*request*/, ::szconfig::ImportConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* ImportConfig(
-      ::grpc::CallbackServerContext* /*context*/, const ::szconfig::ImportConfigRequest* /*request*/, ::szconfig::ImportConfigResponse* /*response*/)  { return nullptr; }
-  };
-  typedef WithCallbackMethod_AddDataSource<WithCallbackMethod_CloseConfig<WithCallbackMethod_CreateConfig<WithCallbackMethod_DeleteDataSource<WithCallbackMethod_ExportConfig<WithCallbackMethod_GetDataSources<WithCallbackMethod_ImportConfig<Service > > > > > > > CallbackService;
+  typedef WithCallbackMethod_AddDataSource<WithCallbackMethod_DeleteDataSource<WithCallbackMethod_GetDataSources<Service > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_AddDataSource : public BaseClass {
@@ -587,46 +303,12 @@ class SzConfig final {
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_CloseConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_CloseConfig() {
-      ::grpc::Service::MarkMethodGeneric(1);
-    }
-    ~WithGenericMethod_CloseConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status CloseConfig(::grpc::ServerContext* /*context*/, const ::szconfig::CloseConfigRequest* /*request*/, ::szconfig::CloseConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_CreateConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_CreateConfig() {
-      ::grpc::Service::MarkMethodGeneric(2);
-    }
-    ~WithGenericMethod_CreateConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status CreateConfig(::grpc::ServerContext* /*context*/, const ::szconfig::CreateConfigRequest* /*request*/, ::szconfig::CreateConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
   class WithGenericMethod_DeleteDataSource : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_DeleteDataSource() {
-      ::grpc::Service::MarkMethodGeneric(3);
+      ::grpc::Service::MarkMethodGeneric(1);
     }
     ~WithGenericMethod_DeleteDataSource() override {
       BaseClassMustBeDerivedFromService(this);
@@ -638,52 +320,18 @@ class SzConfig final {
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_ExportConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_ExportConfig() {
-      ::grpc::Service::MarkMethodGeneric(4);
-    }
-    ~WithGenericMethod_ExportConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ExportConfig(::grpc::ServerContext* /*context*/, const ::szconfig::ExportConfigRequest* /*request*/, ::szconfig::ExportConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
   class WithGenericMethod_GetDataSources : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetDataSources() {
-      ::grpc::Service::MarkMethodGeneric(5);
+      ::grpc::Service::MarkMethodGeneric(2);
     }
     ~WithGenericMethod_GetDataSources() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
     ::grpc::Status GetDataSources(::grpc::ServerContext* /*context*/, const ::szconfig::GetDataSourcesRequest* /*request*/, ::szconfig::GetDataSourcesResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_ImportConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_ImportConfig() {
-      ::grpc::Service::MarkMethodGeneric(6);
-    }
-    ~WithGenericMethod_ImportConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ImportConfig(::grpc::ServerContext* /*context*/, const ::szconfig::ImportConfigRequest* /*request*/, ::szconfig::ImportConfigResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -709,52 +357,12 @@ class SzConfig final {
     }
   };
   template <class BaseClass>
-  class WithRawMethod_CloseConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_CloseConfig() {
-      ::grpc::Service::MarkMethodRaw(1);
-    }
-    ~WithRawMethod_CloseConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status CloseConfig(::grpc::ServerContext* /*context*/, const ::szconfig::CloseConfigRequest* /*request*/, ::szconfig::CloseConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestCloseConfig(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_CreateConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_CreateConfig() {
-      ::grpc::Service::MarkMethodRaw(2);
-    }
-    ~WithRawMethod_CreateConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status CreateConfig(::grpc::ServerContext* /*context*/, const ::szconfig::CreateConfigRequest* /*request*/, ::szconfig::CreateConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestCreateConfig(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
   class WithRawMethod_DeleteDataSource : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_DeleteDataSource() {
-      ::grpc::Service::MarkMethodRaw(3);
+      ::grpc::Service::MarkMethodRaw(1);
     }
     ~WithRawMethod_DeleteDataSource() override {
       BaseClassMustBeDerivedFromService(this);
@@ -765,27 +373,7 @@ class SzConfig final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestDeleteDataSource(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_ExportConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_ExportConfig() {
-      ::grpc::Service::MarkMethodRaw(4);
-    }
-    ~WithRawMethod_ExportConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ExportConfig(::grpc::ServerContext* /*context*/, const ::szconfig::ExportConfigRequest* /*request*/, ::szconfig::ExportConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestExportConfig(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -794,7 +382,7 @@ class SzConfig final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetDataSources() {
-      ::grpc::Service::MarkMethodRaw(5);
+      ::grpc::Service::MarkMethodRaw(2);
     }
     ~WithRawMethod_GetDataSources() override {
       BaseClassMustBeDerivedFromService(this);
@@ -805,27 +393,7 @@ class SzConfig final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetDataSources(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_ImportConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_ImportConfig() {
-      ::grpc::Service::MarkMethodRaw(6);
-    }
-    ~WithRawMethod_ImportConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ImportConfig(::grpc::ServerContext* /*context*/, const ::szconfig::ImportConfigRequest* /*request*/, ::szconfig::ImportConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestImportConfig(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -851,56 +419,12 @@ class SzConfig final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_CloseConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_CloseConfig() {
-      ::grpc::Service::MarkMethodRawCallback(1,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CloseConfig(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_CloseConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status CloseConfig(::grpc::ServerContext* /*context*/, const ::szconfig::CloseConfigRequest* /*request*/, ::szconfig::CloseConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* CloseConfig(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_CreateConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_CreateConfig() {
-      ::grpc::Service::MarkMethodRawCallback(2,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CreateConfig(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_CreateConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status CreateConfig(::grpc::ServerContext* /*context*/, const ::szconfig::CreateConfigRequest* /*request*/, ::szconfig::CreateConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* CreateConfig(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
   class WithRawCallbackMethod_DeleteDataSource : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_DeleteDataSource() {
-      ::grpc::Service::MarkMethodRawCallback(3,
+      ::grpc::Service::MarkMethodRawCallback(1,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->DeleteDataSource(context, request, response); }));
@@ -917,34 +441,12 @@ class SzConfig final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_ExportConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_ExportConfig() {
-      ::grpc::Service::MarkMethodRawCallback(4,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ExportConfig(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_ExportConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ExportConfig(::grpc::ServerContext* /*context*/, const ::szconfig::ExportConfigRequest* /*request*/, ::szconfig::ExportConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* ExportConfig(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
   class WithRawCallbackMethod_GetDataSources : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_GetDataSources() {
-      ::grpc::Service::MarkMethodRawCallback(5,
+      ::grpc::Service::MarkMethodRawCallback(2,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetDataSources(context, request, response); }));
@@ -958,28 +460,6 @@ class SzConfig final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* GetDataSources(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_ImportConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_ImportConfig() {
-      ::grpc::Service::MarkMethodRawCallback(6,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->ImportConfig(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_ImportConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status ImportConfig(::grpc::ServerContext* /*context*/, const ::szconfig::ImportConfigRequest* /*request*/, ::szconfig::ImportConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* ImportConfig(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
@@ -1010,66 +490,12 @@ class SzConfig final {
     virtual ::grpc::Status StreamedAddDataSource(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szconfig::AddDataSourceRequest,::szconfig::AddDataSourceResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_CloseConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_CloseConfig() {
-      ::grpc::Service::MarkMethodStreamed(1,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::szconfig::CloseConfigRequest, ::szconfig::CloseConfigResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::szconfig::CloseConfigRequest, ::szconfig::CloseConfigResponse>* streamer) {
-                       return this->StreamedCloseConfig(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_CloseConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status CloseConfig(::grpc::ServerContext* /*context*/, const ::szconfig::CloseConfigRequest* /*request*/, ::szconfig::CloseConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedCloseConfig(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szconfig::CloseConfigRequest,::szconfig::CloseConfigResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_CreateConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_CreateConfig() {
-      ::grpc::Service::MarkMethodStreamed(2,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::szconfig::CreateConfigRequest, ::szconfig::CreateConfigResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::szconfig::CreateConfigRequest, ::szconfig::CreateConfigResponse>* streamer) {
-                       return this->StreamedCreateConfig(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_CreateConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status CreateConfig(::grpc::ServerContext* /*context*/, const ::szconfig::CreateConfigRequest* /*request*/, ::szconfig::CreateConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedCreateConfig(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szconfig::CreateConfigRequest,::szconfig::CreateConfigResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
   class WithStreamedUnaryMethod_DeleteDataSource : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_DeleteDataSource() {
-      ::grpc::Service::MarkMethodStreamed(3,
+      ::grpc::Service::MarkMethodStreamed(1,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szconfig::DeleteDataSourceRequest, ::szconfig::DeleteDataSourceResponse>(
             [this](::grpc::ServerContext* context,
@@ -1091,39 +517,12 @@ class SzConfig final {
     virtual ::grpc::Status StreamedDeleteDataSource(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szconfig::DeleteDataSourceRequest,::szconfig::DeleteDataSourceResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_ExportConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_ExportConfig() {
-      ::grpc::Service::MarkMethodStreamed(4,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::szconfig::ExportConfigRequest, ::szconfig::ExportConfigResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::szconfig::ExportConfigRequest, ::szconfig::ExportConfigResponse>* streamer) {
-                       return this->StreamedExportConfig(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_ExportConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status ExportConfig(::grpc::ServerContext* /*context*/, const ::szconfig::ExportConfigRequest* /*request*/, ::szconfig::ExportConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedExportConfig(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szconfig::ExportConfigRequest,::szconfig::ExportConfigResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
   class WithStreamedUnaryMethod_GetDataSources : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetDataSources() {
-      ::grpc::Service::MarkMethodStreamed(5,
+      ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szconfig::GetDataSourcesRequest, ::szconfig::GetDataSourcesResponse>(
             [this](::grpc::ServerContext* context,
@@ -1144,36 +543,9 @@ class SzConfig final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedGetDataSources(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szconfig::GetDataSourcesRequest,::szconfig::GetDataSourcesResponse>* server_unary_streamer) = 0;
   };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_ImportConfig : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_ImportConfig() {
-      ::grpc::Service::MarkMethodStreamed(6,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::szconfig::ImportConfigRequest, ::szconfig::ImportConfigResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::szconfig::ImportConfigRequest, ::szconfig::ImportConfigResponse>* streamer) {
-                       return this->StreamedImportConfig(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_ImportConfig() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status ImportConfig(::grpc::ServerContext* /*context*/, const ::szconfig::ImportConfigRequest* /*request*/, ::szconfig::ImportConfigResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedImportConfig(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szconfig::ImportConfigRequest,::szconfig::ImportConfigResponse>* server_unary_streamer) = 0;
-  };
-  typedef WithStreamedUnaryMethod_AddDataSource<WithStreamedUnaryMethod_CloseConfig<WithStreamedUnaryMethod_CreateConfig<WithStreamedUnaryMethod_DeleteDataSource<WithStreamedUnaryMethod_ExportConfig<WithStreamedUnaryMethod_GetDataSources<WithStreamedUnaryMethod_ImportConfig<Service > > > > > > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_AddDataSource<WithStreamedUnaryMethod_DeleteDataSource<WithStreamedUnaryMethod_GetDataSources<Service > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_AddDataSource<WithStreamedUnaryMethod_CloseConfig<WithStreamedUnaryMethod_CreateConfig<WithStreamedUnaryMethod_DeleteDataSource<WithStreamedUnaryMethod_ExportConfig<WithStreamedUnaryMethod_GetDataSources<WithStreamedUnaryMethod_ImportConfig<Service > > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_AddDataSource<WithStreamedUnaryMethod_DeleteDataSource<WithStreamedUnaryMethod_GetDataSources<Service > > > StreamedService;
 };
 
 }  // namespace szconfig
