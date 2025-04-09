@@ -3,8 +3,8 @@ import * as jspb from 'google-protobuf'
 
 
 export class AddDataSourceRequest extends jspb.Message {
-  getConfigHandle(): number;
-  setConfigHandle(value: number): AddDataSourceRequest;
+  getConfigDefinition(): string;
+  setConfigDefinition(value: string): AddDataSourceRequest;
 
   getDataSourceCode(): string;
   setDataSourceCode(value: string): AddDataSourceRequest;
@@ -19,7 +19,7 @@ export class AddDataSourceRequest extends jspb.Message {
 
 export namespace AddDataSourceRequest {
   export type AsObject = {
-    configHandle: number,
+    configDefinition: string,
     dataSourceCode: string,
   }
 }
@@ -27,6 +27,9 @@ export namespace AddDataSourceRequest {
 export class AddDataSourceResponse extends jspb.Message {
   getResult(): string;
   setResult(value: string): AddDataSourceResponse;
+
+  getConfigDefinition(): string;
+  setConfigDefinition(value: string): AddDataSourceResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AddDataSourceResponse.AsObject;
@@ -39,76 +42,13 @@ export class AddDataSourceResponse extends jspb.Message {
 export namespace AddDataSourceResponse {
   export type AsObject = {
     result: string,
-  }
-}
-
-export class CloseConfigRequest extends jspb.Message {
-  getConfigHandle(): number;
-  setConfigHandle(value: number): CloseConfigRequest;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): CloseConfigRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: CloseConfigRequest): CloseConfigRequest.AsObject;
-  static serializeBinaryToWriter(message: CloseConfigRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): CloseConfigRequest;
-  static deserializeBinaryFromReader(message: CloseConfigRequest, reader: jspb.BinaryReader): CloseConfigRequest;
-}
-
-export namespace CloseConfigRequest {
-  export type AsObject = {
-    configHandle: number,
-  }
-}
-
-export class CloseConfigResponse extends jspb.Message {
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): CloseConfigResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: CloseConfigResponse): CloseConfigResponse.AsObject;
-  static serializeBinaryToWriter(message: CloseConfigResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): CloseConfigResponse;
-  static deserializeBinaryFromReader(message: CloseConfigResponse, reader: jspb.BinaryReader): CloseConfigResponse;
-}
-
-export namespace CloseConfigResponse {
-  export type AsObject = {
-  }
-}
-
-export class CreateConfigRequest extends jspb.Message {
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): CreateConfigRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: CreateConfigRequest): CreateConfigRequest.AsObject;
-  static serializeBinaryToWriter(message: CreateConfigRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): CreateConfigRequest;
-  static deserializeBinaryFromReader(message: CreateConfigRequest, reader: jspb.BinaryReader): CreateConfigRequest;
-}
-
-export namespace CreateConfigRequest {
-  export type AsObject = {
-  }
-}
-
-export class CreateConfigResponse extends jspb.Message {
-  getResult(): number;
-  setResult(value: number): CreateConfigResponse;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): CreateConfigResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: CreateConfigResponse): CreateConfigResponse.AsObject;
-  static serializeBinaryToWriter(message: CreateConfigResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): CreateConfigResponse;
-  static deserializeBinaryFromReader(message: CreateConfigResponse, reader: jspb.BinaryReader): CreateConfigResponse;
-}
-
-export namespace CreateConfigResponse {
-  export type AsObject = {
-    result: number,
+    configDefinition: string,
   }
 }
 
 export class DeleteDataSourceRequest extends jspb.Message {
-  getConfigHandle(): number;
-  setConfigHandle(value: number): DeleteDataSourceRequest;
+  getConfigDefinition(): string;
+  setConfigDefinition(value: string): DeleteDataSourceRequest;
 
   getDataSourceCode(): string;
   setDataSourceCode(value: string): DeleteDataSourceRequest;
@@ -123,12 +63,18 @@ export class DeleteDataSourceRequest extends jspb.Message {
 
 export namespace DeleteDataSourceRequest {
   export type AsObject = {
-    configHandle: number,
+    configDefinition: string,
     dataSourceCode: string,
   }
 }
 
 export class DeleteDataSourceResponse extends jspb.Message {
+  getResult(): string;
+  setResult(value: string): DeleteDataSourceResponse;
+
+  getConfigDefinition(): string;
+  setConfigDefinition(value: string): DeleteDataSourceResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteDataSourceResponse.AsObject;
   static toObject(includeInstance: boolean, msg: DeleteDataSourceResponse): DeleteDataSourceResponse.AsObject;
@@ -139,48 +85,14 @@ export class DeleteDataSourceResponse extends jspb.Message {
 
 export namespace DeleteDataSourceResponse {
   export type AsObject = {
-  }
-}
-
-export class ExportConfigRequest extends jspb.Message {
-  getConfigHandle(): number;
-  setConfigHandle(value: number): ExportConfigRequest;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): ExportConfigRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: ExportConfigRequest): ExportConfigRequest.AsObject;
-  static serializeBinaryToWriter(message: ExportConfigRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): ExportConfigRequest;
-  static deserializeBinaryFromReader(message: ExportConfigRequest, reader: jspb.BinaryReader): ExportConfigRequest;
-}
-
-export namespace ExportConfigRequest {
-  export type AsObject = {
-    configHandle: number,
-  }
-}
-
-export class ExportConfigResponse extends jspb.Message {
-  getResult(): string;
-  setResult(value: string): ExportConfigResponse;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): ExportConfigResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: ExportConfigResponse): ExportConfigResponse.AsObject;
-  static serializeBinaryToWriter(message: ExportConfigResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): ExportConfigResponse;
-  static deserializeBinaryFromReader(message: ExportConfigResponse, reader: jspb.BinaryReader): ExportConfigResponse;
-}
-
-export namespace ExportConfigResponse {
-  export type AsObject = {
     result: string,
+    configDefinition: string,
   }
 }
 
 export class GetDataSourcesRequest extends jspb.Message {
-  getConfigHandle(): number;
-  setConfigHandle(value: number): GetDataSourcesRequest;
+  getConfigDefinition(): string;
+  setConfigDefinition(value: string): GetDataSourcesRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetDataSourcesRequest.AsObject;
@@ -192,7 +104,7 @@ export class GetDataSourcesRequest extends jspb.Message {
 
 export namespace GetDataSourcesRequest {
   export type AsObject = {
-    configHandle: number,
+    configDefinition: string,
   }
 }
 
@@ -211,42 +123,6 @@ export class GetDataSourcesResponse extends jspb.Message {
 export namespace GetDataSourcesResponse {
   export type AsObject = {
     result: string,
-  }
-}
-
-export class ImportConfigRequest extends jspb.Message {
-  getConfigDefinition(): string;
-  setConfigDefinition(value: string): ImportConfigRequest;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): ImportConfigRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: ImportConfigRequest): ImportConfigRequest.AsObject;
-  static serializeBinaryToWriter(message: ImportConfigRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): ImportConfigRequest;
-  static deserializeBinaryFromReader(message: ImportConfigRequest, reader: jspb.BinaryReader): ImportConfigRequest;
-}
-
-export namespace ImportConfigRequest {
-  export type AsObject = {
-    configDefinition: string,
-  }
-}
-
-export class ImportConfigResponse extends jspb.Message {
-  getResult(): number;
-  setResult(value: number): ImportConfigResponse;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): ImportConfigResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: ImportConfigResponse): ImportConfigResponse.AsObject;
-  static serializeBinaryToWriter(message: ImportConfigResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): ImportConfigResponse;
-  static deserializeBinaryFromReader(message: ImportConfigResponse, reader: jspb.BinaryReader): ImportConfigResponse;
-}
-
-export namespace ImportConfigResponse {
-  export type AsObject = {
-    result: number,
   }
 }
 
