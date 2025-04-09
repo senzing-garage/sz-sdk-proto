@@ -21,6 +21,49 @@ namespace _pb = ::google::protobuf;
 namespace _pbi = ::google::protobuf::internal;
 namespace _fl = ::google::protobuf::internal::field_layout;
 namespace szconfigmanager {
+
+inline constexpr SetDefaultConfigResponse::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : result_{::int64_t{0}},
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR SetDefaultConfigResponse::SetDefaultConfigResponse(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct SetDefaultConfigResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SetDefaultConfigResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SetDefaultConfigResponseDefaultTypeInternal() {}
+  union {
+    SetDefaultConfigResponse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetDefaultConfigResponseDefaultTypeInternal _SetDefaultConfigResponse_default_instance_;
+
+inline constexpr SetDefaultConfigRequest::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : config_definition_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        config_comment_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR SetDefaultConfigRequest::SetDefaultConfigRequest(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct SetDefaultConfigRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SetDefaultConfigRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SetDefaultConfigRequestDefaultTypeInternal() {}
+  union {
+    SetDefaultConfigRequest _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetDefaultConfigRequestDefaultTypeInternal _SetDefaultConfigRequest_default_instance_;
       template <typename>
 PROTOBUF_CONSTEXPR SetDefaultConfigIdResponse::SetDefaultConfigIdResponse(::_pbi::ConstantInitialized) {}
 struct SetDefaultConfigIdResponseDefaultTypeInternal {
@@ -84,6 +127,82 @@ struct ReplaceDefaultConfigIdRequestDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ReplaceDefaultConfigIdRequestDefaultTypeInternal _ReplaceDefaultConfigIdRequest_default_instance_;
+
+inline constexpr RegisterConfigResponse::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : result_{::int64_t{0}},
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR RegisterConfigResponse::RegisterConfigResponse(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct RegisterConfigResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR RegisterConfigResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~RegisterConfigResponseDefaultTypeInternal() {}
+  union {
+    RegisterConfigResponse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegisterConfigResponseDefaultTypeInternal _RegisterConfigResponse_default_instance_;
+
+inline constexpr RegisterConfigRequest::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : config_definition_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        config_comment_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR RegisterConfigRequest::RegisterConfigRequest(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct RegisterConfigRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR RegisterConfigRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~RegisterConfigRequestDefaultTypeInternal() {}
+  union {
+    RegisterConfigRequest _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegisterConfigRequestDefaultTypeInternal _RegisterConfigRequest_default_instance_;
+
+inline constexpr GetTemplateConfigResponse::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : result_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR GetTemplateConfigResponse::GetTemplateConfigResponse(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct GetTemplateConfigResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetTemplateConfigResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetTemplateConfigResponseDefaultTypeInternal() {}
+  union {
+    GetTemplateConfigResponse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetTemplateConfigResponseDefaultTypeInternal _GetTemplateConfigResponse_default_instance_;
+      template <typename>
+PROTOBUF_CONSTEXPR GetTemplateConfigRequest::GetTemplateConfigRequest(::_pbi::ConstantInitialized) {}
+struct GetTemplateConfigRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetTemplateConfigRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetTemplateConfigRequestDefaultTypeInternal() {}
+  union {
+    GetTemplateConfigRequest _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetTemplateConfigRequestDefaultTypeInternal _GetTemplateConfigRequest_default_instance_;
 
 inline constexpr GetDefaultConfigIdResponse::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -188,76 +307,14 @@ struct GetConfigRequestDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetConfigRequestDefaultTypeInternal _GetConfigRequest_default_instance_;
-
-inline constexpr AddConfigResponse::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : result_{::int64_t{0}},
-        _cached_size_{0} {}
-
-template <typename>
-PROTOBUF_CONSTEXPR AddConfigResponse::AddConfigResponse(::_pbi::ConstantInitialized)
-    : _impl_(::_pbi::ConstantInitialized()) {}
-struct AddConfigResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR AddConfigResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~AddConfigResponseDefaultTypeInternal() {}
-  union {
-    AddConfigResponse _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AddConfigResponseDefaultTypeInternal _AddConfigResponse_default_instance_;
-
-inline constexpr AddConfigRequest::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : config_definition_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        config_comment_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        _cached_size_{0} {}
-
-template <typename>
-PROTOBUF_CONSTEXPR AddConfigRequest::AddConfigRequest(::_pbi::ConstantInitialized)
-    : _impl_(::_pbi::ConstantInitialized()) {}
-struct AddConfigRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR AddConfigRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~AddConfigRequestDefaultTypeInternal() {}
-  union {
-    AddConfigRequest _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AddConfigRequestDefaultTypeInternal _AddConfigRequest_default_instance_;
 }  // namespace szconfigmanager
-static ::_pb::Metadata file_level_metadata_szconfigmanager_2eproto[12];
+static ::_pb::Metadata file_level_metadata_szconfigmanager_2eproto[16];
 static constexpr const ::_pb::EnumDescriptor**
     file_level_enum_descriptors_szconfigmanager_2eproto = nullptr;
 static constexpr const ::_pb::ServiceDescriptor**
     file_level_service_descriptors_szconfigmanager_2eproto = nullptr;
 const ::uint32_t TableStruct_szconfigmanager_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
     protodesc_cold) = {
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::szconfigmanager::AddConfigRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szconfigmanager::AddConfigRequest, _impl_.config_definition_),
-    PROTOBUF_FIELD_OFFSET(::szconfigmanager::AddConfigRequest, _impl_.config_comment_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::szconfigmanager::AddConfigResponse, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szconfigmanager::AddConfigResponse, _impl_.result_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szconfigmanager::GetConfigRequest, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -311,6 +368,42 @@ const ::uint32_t TableStruct_szconfigmanager_2eproto::offsets[] PROTOBUF_SECTION
     ~0u,  // no sizeof(Split)
     PROTOBUF_FIELD_OFFSET(::szconfigmanager::GetDefaultConfigIdResponse, _impl_.result_),
     ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::GetTemplateConfigRequest, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::GetTemplateConfigResponse, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::GetTemplateConfigResponse, _impl_.result_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::RegisterConfigRequest, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::RegisterConfigRequest, _impl_.config_definition_),
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::RegisterConfigRequest, _impl_.config_comment_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::RegisterConfigResponse, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::RegisterConfigResponse, _impl_.result_),
+    ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szconfigmanager::ReplaceDefaultConfigIdRequest, _internal_metadata_),
     ~0u,  // no _extensions_
     ~0u,  // no _oneof_case_
@@ -328,6 +421,25 @@ const ::uint32_t TableStruct_szconfigmanager_2eproto::offsets[] PROTOBUF_SECTION
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::SetDefaultConfigRequest, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::SetDefaultConfigRequest, _impl_.config_definition_),
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::SetDefaultConfigRequest, _impl_.config_comment_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::SetDefaultConfigResponse, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::szconfigmanager::SetDefaultConfigResponse, _impl_.result_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szconfigmanager::SetDefaultConfigIdRequest, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -349,80 +461,99 @@ const ::uint32_t TableStruct_szconfigmanager_2eproto::offsets[] PROTOBUF_SECTION
 
 static const ::_pbi::MigrationSchema
     schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-        {0, -1, -1, sizeof(::szconfigmanager::AddConfigRequest)},
-        {10, -1, -1, sizeof(::szconfigmanager::AddConfigResponse)},
-        {19, -1, -1, sizeof(::szconfigmanager::GetConfigRequest)},
-        {28, -1, -1, sizeof(::szconfigmanager::GetConfigResponse)},
-        {37, -1, -1, sizeof(::szconfigmanager::GetConfigsRequest)},
-        {45, -1, -1, sizeof(::szconfigmanager::GetConfigsResponse)},
-        {54, -1, -1, sizeof(::szconfigmanager::GetDefaultConfigIdRequest)},
-        {62, -1, -1, sizeof(::szconfigmanager::GetDefaultConfigIdResponse)},
-        {71, -1, -1, sizeof(::szconfigmanager::ReplaceDefaultConfigIdRequest)},
-        {81, -1, -1, sizeof(::szconfigmanager::ReplaceDefaultConfigIdResponse)},
-        {89, -1, -1, sizeof(::szconfigmanager::SetDefaultConfigIdRequest)},
-        {98, -1, -1, sizeof(::szconfigmanager::SetDefaultConfigIdResponse)},
+        {0, -1, -1, sizeof(::szconfigmanager::GetConfigRequest)},
+        {9, -1, -1, sizeof(::szconfigmanager::GetConfigResponse)},
+        {18, -1, -1, sizeof(::szconfigmanager::GetConfigsRequest)},
+        {26, -1, -1, sizeof(::szconfigmanager::GetConfigsResponse)},
+        {35, -1, -1, sizeof(::szconfigmanager::GetDefaultConfigIdRequest)},
+        {43, -1, -1, sizeof(::szconfigmanager::GetDefaultConfigIdResponse)},
+        {52, -1, -1, sizeof(::szconfigmanager::GetTemplateConfigRequest)},
+        {60, -1, -1, sizeof(::szconfigmanager::GetTemplateConfigResponse)},
+        {69, -1, -1, sizeof(::szconfigmanager::RegisterConfigRequest)},
+        {79, -1, -1, sizeof(::szconfigmanager::RegisterConfigResponse)},
+        {88, -1, -1, sizeof(::szconfigmanager::ReplaceDefaultConfigIdRequest)},
+        {98, -1, -1, sizeof(::szconfigmanager::ReplaceDefaultConfigIdResponse)},
+        {106, -1, -1, sizeof(::szconfigmanager::SetDefaultConfigRequest)},
+        {116, -1, -1, sizeof(::szconfigmanager::SetDefaultConfigResponse)},
+        {125, -1, -1, sizeof(::szconfigmanager::SetDefaultConfigIdRequest)},
+        {134, -1, -1, sizeof(::szconfigmanager::SetDefaultConfigIdResponse)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-    &::szconfigmanager::_AddConfigRequest_default_instance_._instance,
-    &::szconfigmanager::_AddConfigResponse_default_instance_._instance,
     &::szconfigmanager::_GetConfigRequest_default_instance_._instance,
     &::szconfigmanager::_GetConfigResponse_default_instance_._instance,
     &::szconfigmanager::_GetConfigsRequest_default_instance_._instance,
     &::szconfigmanager::_GetConfigsResponse_default_instance_._instance,
     &::szconfigmanager::_GetDefaultConfigIdRequest_default_instance_._instance,
     &::szconfigmanager::_GetDefaultConfigIdResponse_default_instance_._instance,
+    &::szconfigmanager::_GetTemplateConfigRequest_default_instance_._instance,
+    &::szconfigmanager::_GetTemplateConfigResponse_default_instance_._instance,
+    &::szconfigmanager::_RegisterConfigRequest_default_instance_._instance,
+    &::szconfigmanager::_RegisterConfigResponse_default_instance_._instance,
     &::szconfigmanager::_ReplaceDefaultConfigIdRequest_default_instance_._instance,
     &::szconfigmanager::_ReplaceDefaultConfigIdResponse_default_instance_._instance,
+    &::szconfigmanager::_SetDefaultConfigRequest_default_instance_._instance,
+    &::szconfigmanager::_SetDefaultConfigResponse_default_instance_._instance,
     &::szconfigmanager::_SetDefaultConfigIdRequest_default_instance_._instance,
     &::szconfigmanager::_SetDefaultConfigIdResponse_default_instance_._instance,
 };
 const char descriptor_table_protodef_szconfigmanager_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
     "\n\025szconfigmanager.proto\022\017szconfigmanager"
-    "\"E\n\020AddConfigRequest\022\031\n\021config_definitio"
-    "n\030\001 \001(\t\022\026\n\016config_comment\030\002 \001(\t\"#\n\021AddCo"
-    "nfigResponse\022\016\n\006result\030\001 \001(\003\"%\n\020GetConfi"
-    "gRequest\022\021\n\tconfig_id\030\001 \001(\003\"#\n\021GetConfig"
-    "Response\022\016\n\006result\030\001 \001(\t\"\023\n\021GetConfigsRe"
-    "quest\"$\n\022GetConfigsResponse\022\016\n\006result\030\001 "
-    "\001(\t\"\033\n\031GetDefaultConfigIdRequest\",\n\032GetD"
-    "efaultConfigIdResponse\022\016\n\006result\030\001 \001(\003\"a"
-    "\n\035ReplaceDefaultConfigIdRequest\022!\n\031curre"
-    "nt_default_config_id\030\001 \001(\003\022\035\n\025new_defaul"
-    "t_config_id\030\002 \001(\003\" \n\036ReplaceDefaultConfi"
-    "gIdResponse\".\n\031SetDefaultConfigIdRequest"
-    "\022\021\n\tconfig_id\030\001 \001(\003\"\034\n\032SetDefaultConfigI"
-    "dResponse2\365\004\n\017SzConfigManager\022T\n\tAddConf"
-    "ig\022!.szconfigmanager.AddConfigRequest\032\"."
-    "szconfigmanager.AddConfigResponse\"\000\022T\n\tG"
-    "etConfig\022!.szconfigmanager.GetConfigRequ"
-    "est\032\".szconfigmanager.GetConfigResponse\""
-    "\000\022W\n\nGetConfigs\022\".szconfigmanager.GetCon"
-    "figsRequest\032#.szconfigmanager.GetConfigs"
-    "Response\"\000\022o\n\022GetDefaultConfigId\022*.szcon"
-    "figmanager.GetDefaultConfigIdRequest\032+.s"
-    "zconfigmanager.GetDefaultConfigIdRespons"
-    "e\"\000\022{\n\026ReplaceDefaultConfigId\022..szconfig"
-    "manager.ReplaceDefaultConfigIdRequest\032/."
-    "szconfigmanager.ReplaceDefaultConfigIdRe"
-    "sponse\"\000\022o\n\022SetDefaultConfigId\022*.szconfi"
-    "gmanager.SetDefaultConfigIdRequest\032+.szc"
-    "onfigmanager.SetDefaultConfigIdResponse\""
-    "\000Bf\n\024com.senzing.sdk.grpcB\024SzConfigManag"
-    "erProtoZ8github.com/senzing-garage/sz-sd"
-    "k-go-grpc/szconfigmanagerb\006proto3"
+    "\"%\n\020GetConfigRequest\022\021\n\tconfig_id\030\001 \001(\003\""
+    "#\n\021GetConfigResponse\022\016\n\006result\030\001 \001(\t\"\023\n\021"
+    "GetConfigsRequest\"$\n\022GetConfigsResponse\022"
+    "\016\n\006result\030\001 \001(\t\"\033\n\031GetDefaultConfigIdReq"
+    "uest\",\n\032GetDefaultConfigIdResponse\022\016\n\006re"
+    "sult\030\001 \001(\003\"\032\n\030GetTemplateConfigRequest\"+"
+    "\n\031GetTemplateConfigResponse\022\016\n\006result\030\001 "
+    "\001(\t\"J\n\025RegisterConfigRequest\022\031\n\021config_d"
+    "efinition\030\001 \001(\t\022\026\n\016config_comment\030\002 \001(\t\""
+    "(\n\026RegisterConfigResponse\022\016\n\006result\030\001 \001("
+    "\003\"a\n\035ReplaceDefaultConfigIdRequest\022!\n\031cu"
+    "rrent_default_config_id\030\001 \001(\003\022\035\n\025new_def"
+    "ault_config_id\030\002 \001(\003\" \n\036ReplaceDefaultCo"
+    "nfigIdResponse\"L\n\027SetDefaultConfigReques"
+    "t\022\031\n\021config_definition\030\001 \001(\t\022\026\n\016config_c"
+    "omment\030\002 \001(\t\"*\n\030SetDefaultConfigResponse"
+    "\022\016\n\006result\030\001 \001(\003\".\n\031SetDefaultConfigIdRe"
+    "quest\022\021\n\tconfig_id\030\001 \001(\003\"\034\n\032SetDefaultCo"
+    "nfigIdResponse2\335\006\n\017SzConfigManager\022T\n\tGe"
+    "tConfig\022!.szconfigmanager.GetConfigReque"
+    "st\032\".szconfigmanager.GetConfigResponse\"\000"
+    "\022W\n\nGetConfigs\022\".szconfigmanager.GetConf"
+    "igsRequest\032#.szconfigmanager.GetConfigsR"
+    "esponse\"\000\022o\n\022GetDefaultConfigId\022*.szconf"
+    "igmanager.GetDefaultConfigIdRequest\032+.sz"
+    "configmanager.GetDefaultConfigIdResponse"
+    "\"\000\022l\n\021GetTemplateConfig\022).szconfigmanage"
+    "r.GetTemplateConfigRequest\032*.szconfigman"
+    "ager.GetTemplateConfigResponse\"\000\022c\n\016Regi"
+    "sterConfig\022&.szconfigmanager.RegisterCon"
+    "figRequest\032\'.szconfigmanager.RegisterCon"
+    "figResponse\"\000\022{\n\026ReplaceDefaultConfigId\022"
+    "..szconfigmanager.ReplaceDefaultConfigId"
+    "Request\032/.szconfigmanager.ReplaceDefault"
+    "ConfigIdResponse\"\000\022i\n\020SetDefaultConfig\022("
+    ".szconfigmanager.SetDefaultConfigRequest"
+    "\032).szconfigmanager.SetDefaultConfigRespo"
+    "nse\"\000\022o\n\022SetDefaultConfigId\022*.szconfigma"
+    "nager.SetDefaultConfigIdRequest\032+.szconf"
+    "igmanager.SetDefaultConfigIdResponse\"\000Bf"
+    "\n\024com.senzing.sdk.grpcB\024SzConfigManagerP"
+    "rotoZ8github.com/senzing-garage/sz-sdk-g"
+    "o-grpc/szconfigmanagerb\006proto3"
 };
 static ::absl::once_flag descriptor_table_szconfigmanager_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_szconfigmanager_2eproto = {
     false,
     false,
-    1313,
+    1750,
     descriptor_table_protodef_szconfigmanager_2eproto,
     "szconfigmanager.proto",
     &descriptor_table_szconfigmanager_2eproto_once,
     nullptr,
     0,
-    12,
+    16,
     schemas,
     file_default_instances,
     TableStruct_szconfigmanager_2eproto::offsets,
@@ -449,395 +580,6 @@ PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_szconfig
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_szconfigmanager_2eproto(&descriptor_table_szconfigmanager_2eproto);
 namespace szconfigmanager {
-// ===================================================================
-
-class AddConfigRequest::_Internal {
- public:
-};
-
-AddConfigRequest::AddConfigRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:szconfigmanager.AddConfigRequest)
-}
-inline PROTOBUF_NDEBUG_INLINE AddConfigRequest::Impl_::Impl_(
-    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from)
-      : config_definition_(arena, from.config_definition_),
-        config_comment_(arena, from.config_comment_),
-        _cached_size_{0} {}
-
-AddConfigRequest::AddConfigRequest(
-    ::google::protobuf::Arena* arena,
-    const AddConfigRequest& from)
-    : ::google::protobuf::Message(arena) {
-  AddConfigRequest* const _this = this;
-  (void)_this;
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
-
-  // @@protoc_insertion_point(copy_constructor:szconfigmanager.AddConfigRequest)
-}
-inline PROTOBUF_NDEBUG_INLINE AddConfigRequest::Impl_::Impl_(
-    ::google::protobuf::internal::InternalVisibility visibility,
-    ::google::protobuf::Arena* arena)
-      : config_definition_(arena),
-        config_comment_(arena),
-        _cached_size_{0} {}
-
-inline void AddConfigRequest::SharedCtor(::_pb::Arena* arena) {
-  new (&_impl_) Impl_(internal_visibility(), arena);
-}
-AddConfigRequest::~AddConfigRequest() {
-  // @@protoc_insertion_point(destructor:szconfigmanager.AddConfigRequest)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
-  SharedDtor();
-}
-inline void AddConfigRequest::SharedDtor() {
-  ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.config_definition_.Destroy();
-  _impl_.config_comment_.Destroy();
-  _impl_.~Impl_();
-}
-
-PROTOBUF_NOINLINE void AddConfigRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:szconfigmanager.AddConfigRequest)
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ::uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _impl_.config_definition_.ClearToEmpty();
-  _impl_.config_comment_.ClearToEmpty();
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
-}
-
-const char* AddConfigRequest::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
-  return ptr;
-}
-
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 72, 2> AddConfigRequest::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    2, 8,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967292,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    2,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_AddConfigRequest_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // string config_comment = 2;
-    {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(AddConfigRequest, _impl_.config_comment_)}},
-    // string config_definition = 1;
-    {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(AddConfigRequest, _impl_.config_definition_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // string config_definition = 1;
-    {PROTOBUF_FIELD_OFFSET(AddConfigRequest, _impl_.config_definition_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string config_comment = 2;
-    {PROTOBUF_FIELD_OFFSET(AddConfigRequest, _impl_.config_comment_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-  }},
-  // no aux_entries
-  {{
-    "\40\21\16\0\0\0\0\0"
-    "szconfigmanager.AddConfigRequest"
-    "config_definition"
-    "config_comment"
-  }},
-};
-
-::uint8_t* AddConfigRequest::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:szconfigmanager.AddConfigRequest)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
-
-  // string config_definition = 1;
-  if (!this->_internal_config_definition().empty()) {
-    const std::string& _s = this->_internal_config_definition();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfigmanager.AddConfigRequest.config_definition");
-    target = stream->WriteStringMaybeAliased(1, _s, target);
-  }
-
-  // string config_comment = 2;
-  if (!this->_internal_config_comment().empty()) {
-    const std::string& _s = this->_internal_config_comment();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfigmanager.AddConfigRequest.config_comment");
-    target = stream->WriteStringMaybeAliased(2, _s, target);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:szconfigmanager.AddConfigRequest)
-  return target;
-}
-
-::size_t AddConfigRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:szconfigmanager.AddConfigRequest)
-  ::size_t total_size = 0;
-
-  ::uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string config_definition = 1;
-  if (!this->_internal_config_definition().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_config_definition());
-  }
-
-  // string config_comment = 2;
-  if (!this->_internal_config_comment().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_config_comment());
-  }
-
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
-}
-
-const ::google::protobuf::Message::ClassData AddConfigRequest::_class_data_ = {
-    AddConfigRequest::MergeImpl,
-    nullptr,  // OnDemandRegisterArenaDtor
-};
-const ::google::protobuf::Message::ClassData* AddConfigRequest::GetClassData() const {
-  return &_class_data_;
-}
-
-void AddConfigRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
-  auto* const _this = static_cast<AddConfigRequest*>(&to_msg);
-  auto& from = static_cast<const AddConfigRequest&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:szconfigmanager.AddConfigRequest)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (!from._internal_config_definition().empty()) {
-    _this->_internal_set_config_definition(from._internal_config_definition());
-  }
-  if (!from._internal_config_comment().empty()) {
-    _this->_internal_set_config_comment(from._internal_config_comment());
-  }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
-}
-
-void AddConfigRequest::CopyFrom(const AddConfigRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:szconfigmanager.AddConfigRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-PROTOBUF_NOINLINE bool AddConfigRequest::IsInitialized() const {
-  return true;
-}
-
-::_pbi::CachedSize* AddConfigRequest::AccessCachedSize() const {
-  return &_impl_._cached_size_;
-}
-void AddConfigRequest::InternalSwap(AddConfigRequest* PROTOBUF_RESTRICT other) {
-  using std::swap;
-  auto* arena = GetArena();
-  ABSL_DCHECK_EQ(arena, other->GetArena());
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.config_definition_, &other->_impl_.config_definition_, arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.config_comment_, &other->_impl_.config_comment_, arena);
-}
-
-::google::protobuf::Metadata AddConfigRequest::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
-      file_level_metadata_szconfigmanager_2eproto[0]);
-}
-// ===================================================================
-
-class AddConfigResponse::_Internal {
- public:
-};
-
-AddConfigResponse::AddConfigResponse(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:szconfigmanager.AddConfigResponse)
-}
-AddConfigResponse::AddConfigResponse(
-    ::google::protobuf::Arena* arena, const AddConfigResponse& from)
-    : AddConfigResponse(arena) {
-  MergeFrom(from);
-}
-inline PROTOBUF_NDEBUG_INLINE AddConfigResponse::Impl_::Impl_(
-    ::google::protobuf::internal::InternalVisibility visibility,
-    ::google::protobuf::Arena* arena)
-      : _cached_size_{0} {}
-
-inline void AddConfigResponse::SharedCtor(::_pb::Arena* arena) {
-  new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.result_ = {};
-}
-AddConfigResponse::~AddConfigResponse() {
-  // @@protoc_insertion_point(destructor:szconfigmanager.AddConfigResponse)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
-  SharedDtor();
-}
-inline void AddConfigResponse::SharedDtor() {
-  ABSL_DCHECK(GetArena() == nullptr);
-  _impl_.~Impl_();
-}
-
-PROTOBUF_NOINLINE void AddConfigResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:szconfigmanager.AddConfigResponse)
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ::uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _impl_.result_ = ::int64_t{0};
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
-}
-
-const char* AddConfigResponse::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
-  return ptr;
-}
-
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 0, 2> AddConfigResponse::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_AddConfigResponse_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // int64 result = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(AddConfigResponse, _impl_.result_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(AddConfigResponse, _impl_.result_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int64 result = 1;
-    {PROTOBUF_FIELD_OFFSET(AddConfigResponse, _impl_.result_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* AddConfigResponse::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:szconfigmanager.AddConfigResponse)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
-
-  // int64 result = 1;
-  if (this->_internal_result() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_result(), target);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:szconfigmanager.AddConfigResponse)
-  return target;
-}
-
-::size_t AddConfigResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:szconfigmanager.AddConfigResponse)
-  ::size_t total_size = 0;
-
-  ::uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // int64 result = 1;
-  if (this->_internal_result() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_result());
-  }
-
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
-}
-
-const ::google::protobuf::Message::ClassData AddConfigResponse::_class_data_ = {
-    AddConfigResponse::MergeImpl,
-    nullptr,  // OnDemandRegisterArenaDtor
-};
-const ::google::protobuf::Message::ClassData* AddConfigResponse::GetClassData() const {
-  return &_class_data_;
-}
-
-void AddConfigResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
-  auto* const _this = static_cast<AddConfigResponse*>(&to_msg);
-  auto& from = static_cast<const AddConfigResponse&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:szconfigmanager.AddConfigResponse)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from._internal_result() != 0) {
-    _this->_internal_set_result(from._internal_result());
-  }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
-}
-
-void AddConfigResponse::CopyFrom(const AddConfigResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:szconfigmanager.AddConfigResponse)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-PROTOBUF_NOINLINE bool AddConfigResponse::IsInitialized() const {
-  return true;
-}
-
-::_pbi::CachedSize* AddConfigResponse::AccessCachedSize() const {
-  return &_impl_._cached_size_;
-}
-void AddConfigResponse::InternalSwap(AddConfigResponse* PROTOBUF_RESTRICT other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-        swap(_impl_.result_, other->_impl_.result_);
-}
-
-::google::protobuf::Metadata AddConfigResponse::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
-      file_level_metadata_szconfigmanager_2eproto[1]);
-}
 // ===================================================================
 
 class GetConfigRequest::_Internal {
@@ -1006,7 +748,7 @@ void GetConfigRequest::InternalSwap(GetConfigRequest* PROTOBUF_RESTRICT other) {
 ::google::protobuf::Metadata GetConfigRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
-      file_level_metadata_szconfigmanager_2eproto[2]);
+      file_level_metadata_szconfigmanager_2eproto[0]);
 }
 // ===================================================================
 
@@ -1196,7 +938,7 @@ void GetConfigResponse::InternalSwap(GetConfigResponse* PROTOBUF_RESTRICT other)
 ::google::protobuf::Metadata GetConfigResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
-      file_level_metadata_szconfigmanager_2eproto[3]);
+      file_level_metadata_szconfigmanager_2eproto[1]);
 }
 // ===================================================================
 
@@ -1231,7 +973,7 @@ GetConfigsRequest::GetConfigsRequest(
 ::google::protobuf::Metadata GetConfigsRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
-      file_level_metadata_szconfigmanager_2eproto[4]);
+      file_level_metadata_szconfigmanager_2eproto[2]);
 }
 // ===================================================================
 
@@ -1421,7 +1163,7 @@ void GetConfigsResponse::InternalSwap(GetConfigsResponse* PROTOBUF_RESTRICT othe
 ::google::protobuf::Metadata GetConfigsResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
-      file_level_metadata_szconfigmanager_2eproto[5]);
+      file_level_metadata_szconfigmanager_2eproto[3]);
 }
 // ===================================================================
 
@@ -1456,7 +1198,7 @@ GetDefaultConfigIdRequest::GetDefaultConfigIdRequest(
 ::google::protobuf::Metadata GetDefaultConfigIdRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
-      file_level_metadata_szconfigmanager_2eproto[6]);
+      file_level_metadata_szconfigmanager_2eproto[4]);
 }
 // ===================================================================
 
@@ -1626,7 +1368,621 @@ void GetDefaultConfigIdResponse::InternalSwap(GetDefaultConfigIdResponse* PROTOB
 ::google::protobuf::Metadata GetDefaultConfigIdResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
+      file_level_metadata_szconfigmanager_2eproto[5]);
+}
+// ===================================================================
+
+class GetTemplateConfigRequest::_Internal {
+ public:
+};
+
+GetTemplateConfigRequest::GetTemplateConfigRequest(::google::protobuf::Arena* arena)
+    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
+  // @@protoc_insertion_point(arena_constructor:szconfigmanager.GetTemplateConfigRequest)
+}
+GetTemplateConfigRequest::GetTemplateConfigRequest(
+    ::google::protobuf::Arena* arena,
+    const GetTemplateConfigRequest& from)
+    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
+  GetTemplateConfigRequest* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+
+  // @@protoc_insertion_point(copy_constructor:szconfigmanager.GetTemplateConfigRequest)
+}
+
+
+
+
+
+
+
+
+
+::google::protobuf::Metadata GetTemplateConfigRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
+      file_level_metadata_szconfigmanager_2eproto[6]);
+}
+// ===================================================================
+
+class GetTemplateConfigResponse::_Internal {
+ public:
+};
+
+GetTemplateConfigResponse::GetTemplateConfigResponse(::google::protobuf::Arena* arena)
+    : ::google::protobuf::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:szconfigmanager.GetTemplateConfigResponse)
+}
+inline PROTOBUF_NDEBUG_INLINE GetTemplateConfigResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : result_(arena, from.result_),
+        _cached_size_{0} {}
+
+GetTemplateConfigResponse::GetTemplateConfigResponse(
+    ::google::protobuf::Arena* arena,
+    const GetTemplateConfigResponse& from)
+    : ::google::protobuf::Message(arena) {
+  GetTemplateConfigResponse* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+
+  // @@protoc_insertion_point(copy_constructor:szconfigmanager.GetTemplateConfigResponse)
+}
+inline PROTOBUF_NDEBUG_INLINE GetTemplateConfigResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : result_(arena),
+        _cached_size_{0} {}
+
+inline void GetTemplateConfigResponse::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+GetTemplateConfigResponse::~GetTemplateConfigResponse() {
+  // @@protoc_insertion_point(destructor:szconfigmanager.GetTemplateConfigResponse)
+  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  SharedDtor();
+}
+inline void GetTemplateConfigResponse::SharedDtor() {
+  ABSL_DCHECK(GetArena() == nullptr);
+  _impl_.result_.Destroy();
+  _impl_.~Impl_();
+}
+
+PROTOBUF_NOINLINE void GetTemplateConfigResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:szconfigmanager.GetTemplateConfigResponse)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.result_.ClearToEmpty();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+const char* GetTemplateConfigResponse::_InternalParse(
+    const char* ptr, ::_pbi::ParseContext* ctx) {
+  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+  return ptr;
+}
+
+
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<0, 1, 0, 56, 2> GetTemplateConfigResponse::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    1, 0,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967294,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    1,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    &_GetTemplateConfigResponse_default_instance_._instance,
+    ::_pbi::TcParser::GenericFallback,  // fallback
+  }, {{
+    // string result = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GetTemplateConfigResponse, _impl_.result_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string result = 1;
+    {PROTOBUF_FIELD_OFFSET(GetTemplateConfigResponse, _impl_.result_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+  }},
+  // no aux_entries
+  {{
+    "\51\6\0\0\0\0\0\0"
+    "szconfigmanager.GetTemplateConfigResponse"
+    "result"
+  }},
+};
+
+::uint8_t* GetTemplateConfigResponse::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:szconfigmanager.GetTemplateConfigResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  // string result = 1;
+  if (!this->_internal_result().empty()) {
+    const std::string& _s = this->_internal_result();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfigmanager.GetTemplateConfigResponse.result");
+    target = stream->WriteStringMaybeAliased(1, _s, target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:szconfigmanager.GetTemplateConfigResponse)
+  return target;
+}
+
+::size_t GetTemplateConfigResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:szconfigmanager.GetTemplateConfigResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string result = 1;
+  if (!this->_internal_result().empty()) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_result());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::google::protobuf::Message::ClassData GetTemplateConfigResponse::_class_data_ = {
+    GetTemplateConfigResponse::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
+};
+const ::google::protobuf::Message::ClassData* GetTemplateConfigResponse::GetClassData() const {
+  return &_class_data_;
+}
+
+void GetTemplateConfigResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+  auto* const _this = static_cast<GetTemplateConfigResponse*>(&to_msg);
+  auto& from = static_cast<const GetTemplateConfigResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szconfigmanager.GetTemplateConfigResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_result().empty()) {
+    _this->_internal_set_result(from._internal_result());
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GetTemplateConfigResponse::CopyFrom(const GetTemplateConfigResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szconfigmanager.GetTemplateConfigResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+PROTOBUF_NOINLINE bool GetTemplateConfigResponse::IsInitialized() const {
+  return true;
+}
+
+::_pbi::CachedSize* GetTemplateConfigResponse::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void GetTemplateConfigResponse::InternalSwap(GetTemplateConfigResponse* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.result_, &other->_impl_.result_, arena);
+}
+
+::google::protobuf::Metadata GetTemplateConfigResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
       file_level_metadata_szconfigmanager_2eproto[7]);
+}
+// ===================================================================
+
+class RegisterConfigRequest::_Internal {
+ public:
+};
+
+RegisterConfigRequest::RegisterConfigRequest(::google::protobuf::Arena* arena)
+    : ::google::protobuf::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:szconfigmanager.RegisterConfigRequest)
+}
+inline PROTOBUF_NDEBUG_INLINE RegisterConfigRequest::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : config_definition_(arena, from.config_definition_),
+        config_comment_(arena, from.config_comment_),
+        _cached_size_{0} {}
+
+RegisterConfigRequest::RegisterConfigRequest(
+    ::google::protobuf::Arena* arena,
+    const RegisterConfigRequest& from)
+    : ::google::protobuf::Message(arena) {
+  RegisterConfigRequest* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+
+  // @@protoc_insertion_point(copy_constructor:szconfigmanager.RegisterConfigRequest)
+}
+inline PROTOBUF_NDEBUG_INLINE RegisterConfigRequest::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : config_definition_(arena),
+        config_comment_(arena),
+        _cached_size_{0} {}
+
+inline void RegisterConfigRequest::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+RegisterConfigRequest::~RegisterConfigRequest() {
+  // @@protoc_insertion_point(destructor:szconfigmanager.RegisterConfigRequest)
+  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  SharedDtor();
+}
+inline void RegisterConfigRequest::SharedDtor() {
+  ABSL_DCHECK(GetArena() == nullptr);
+  _impl_.config_definition_.Destroy();
+  _impl_.config_comment_.Destroy();
+  _impl_.~Impl_();
+}
+
+PROTOBUF_NOINLINE void RegisterConfigRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:szconfigmanager.RegisterConfigRequest)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.config_definition_.ClearToEmpty();
+  _impl_.config_comment_.ClearToEmpty();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+const char* RegisterConfigRequest::_InternalParse(
+    const char* ptr, ::_pbi::ParseContext* ctx) {
+  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+  return ptr;
+}
+
+
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<1, 2, 0, 77, 2> RegisterConfigRequest::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    2, 8,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967292,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    2,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    &_RegisterConfigRequest_default_instance_._instance,
+    ::_pbi::TcParser::GenericFallback,  // fallback
+  }, {{
+    // string config_comment = 2;
+    {::_pbi::TcParser::FastUS1,
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(RegisterConfigRequest, _impl_.config_comment_)}},
+    // string config_definition = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(RegisterConfigRequest, _impl_.config_definition_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string config_definition = 1;
+    {PROTOBUF_FIELD_OFFSET(RegisterConfigRequest, _impl_.config_definition_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // string config_comment = 2;
+    {PROTOBUF_FIELD_OFFSET(RegisterConfigRequest, _impl_.config_comment_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+  }},
+  // no aux_entries
+  {{
+    "\45\21\16\0\0\0\0\0"
+    "szconfigmanager.RegisterConfigRequest"
+    "config_definition"
+    "config_comment"
+  }},
+};
+
+::uint8_t* RegisterConfigRequest::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:szconfigmanager.RegisterConfigRequest)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  // string config_definition = 1;
+  if (!this->_internal_config_definition().empty()) {
+    const std::string& _s = this->_internal_config_definition();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfigmanager.RegisterConfigRequest.config_definition");
+    target = stream->WriteStringMaybeAliased(1, _s, target);
+  }
+
+  // string config_comment = 2;
+  if (!this->_internal_config_comment().empty()) {
+    const std::string& _s = this->_internal_config_comment();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfigmanager.RegisterConfigRequest.config_comment");
+    target = stream->WriteStringMaybeAliased(2, _s, target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:szconfigmanager.RegisterConfigRequest)
+  return target;
+}
+
+::size_t RegisterConfigRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:szconfigmanager.RegisterConfigRequest)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string config_definition = 1;
+  if (!this->_internal_config_definition().empty()) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_config_definition());
+  }
+
+  // string config_comment = 2;
+  if (!this->_internal_config_comment().empty()) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_config_comment());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::google::protobuf::Message::ClassData RegisterConfigRequest::_class_data_ = {
+    RegisterConfigRequest::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
+};
+const ::google::protobuf::Message::ClassData* RegisterConfigRequest::GetClassData() const {
+  return &_class_data_;
+}
+
+void RegisterConfigRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+  auto* const _this = static_cast<RegisterConfigRequest*>(&to_msg);
+  auto& from = static_cast<const RegisterConfigRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szconfigmanager.RegisterConfigRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_config_definition().empty()) {
+    _this->_internal_set_config_definition(from._internal_config_definition());
+  }
+  if (!from._internal_config_comment().empty()) {
+    _this->_internal_set_config_comment(from._internal_config_comment());
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void RegisterConfigRequest::CopyFrom(const RegisterConfigRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szconfigmanager.RegisterConfigRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+PROTOBUF_NOINLINE bool RegisterConfigRequest::IsInitialized() const {
+  return true;
+}
+
+::_pbi::CachedSize* RegisterConfigRequest::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void RegisterConfigRequest::InternalSwap(RegisterConfigRequest* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.config_definition_, &other->_impl_.config_definition_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.config_comment_, &other->_impl_.config_comment_, arena);
+}
+
+::google::protobuf::Metadata RegisterConfigRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
+      file_level_metadata_szconfigmanager_2eproto[8]);
+}
+// ===================================================================
+
+class RegisterConfigResponse::_Internal {
+ public:
+};
+
+RegisterConfigResponse::RegisterConfigResponse(::google::protobuf::Arena* arena)
+    : ::google::protobuf::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:szconfigmanager.RegisterConfigResponse)
+}
+RegisterConfigResponse::RegisterConfigResponse(
+    ::google::protobuf::Arena* arena, const RegisterConfigResponse& from)
+    : RegisterConfigResponse(arena) {
+  MergeFrom(from);
+}
+inline PROTOBUF_NDEBUG_INLINE RegisterConfigResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0} {}
+
+inline void RegisterConfigResponse::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.result_ = {};
+}
+RegisterConfigResponse::~RegisterConfigResponse() {
+  // @@protoc_insertion_point(destructor:szconfigmanager.RegisterConfigResponse)
+  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  SharedDtor();
+}
+inline void RegisterConfigResponse::SharedDtor() {
+  ABSL_DCHECK(GetArena() == nullptr);
+  _impl_.~Impl_();
+}
+
+PROTOBUF_NOINLINE void RegisterConfigResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:szconfigmanager.RegisterConfigResponse)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.result_ = ::int64_t{0};
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+const char* RegisterConfigResponse::_InternalParse(
+    const char* ptr, ::_pbi::ParseContext* ctx) {
+  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+  return ptr;
+}
+
+
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<0, 1, 0, 0, 2> RegisterConfigResponse::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    1, 0,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967294,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    1,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    &_RegisterConfigResponse_default_instance_._instance,
+    ::_pbi::TcParser::GenericFallback,  // fallback
+  }, {{
+    // int64 result = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(RegisterConfigResponse, _impl_.result_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(RegisterConfigResponse, _impl_.result_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // int64 result = 1;
+    {PROTOBUF_FIELD_OFFSET(RegisterConfigResponse, _impl_.result_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
+  }},
+  // no aux_entries
+  {{
+  }},
+};
+
+::uint8_t* RegisterConfigResponse::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:szconfigmanager.RegisterConfigResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  // int64 result = 1;
+  if (this->_internal_result() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::
+        WriteInt64ToArrayWithField<1>(
+            stream, this->_internal_result(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:szconfigmanager.RegisterConfigResponse)
+  return target;
+}
+
+::size_t RegisterConfigResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:szconfigmanager.RegisterConfigResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int64 result = 1;
+  if (this->_internal_result() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+        this->_internal_result());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::google::protobuf::Message::ClassData RegisterConfigResponse::_class_data_ = {
+    RegisterConfigResponse::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
+};
+const ::google::protobuf::Message::ClassData* RegisterConfigResponse::GetClassData() const {
+  return &_class_data_;
+}
+
+void RegisterConfigResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+  auto* const _this = static_cast<RegisterConfigResponse*>(&to_msg);
+  auto& from = static_cast<const RegisterConfigResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szconfigmanager.RegisterConfigResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_result() != 0) {
+    _this->_internal_set_result(from._internal_result());
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void RegisterConfigResponse::CopyFrom(const RegisterConfigResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szconfigmanager.RegisterConfigResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+PROTOBUF_NOINLINE bool RegisterConfigResponse::IsInitialized() const {
+  return true;
+}
+
+::_pbi::CachedSize* RegisterConfigResponse::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void RegisterConfigResponse::InternalSwap(RegisterConfigResponse* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+        swap(_impl_.result_, other->_impl_.result_);
+}
+
+::google::protobuf::Metadata RegisterConfigResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
+      file_level_metadata_szconfigmanager_2eproto[9]);
 }
 // ===================================================================
 
@@ -1830,7 +2186,7 @@ void ReplaceDefaultConfigIdRequest::InternalSwap(ReplaceDefaultConfigIdRequest* 
 ::google::protobuf::Metadata ReplaceDefaultConfigIdRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
-      file_level_metadata_szconfigmanager_2eproto[8]);
+      file_level_metadata_szconfigmanager_2eproto[10]);
 }
 // ===================================================================
 
@@ -1865,7 +2221,396 @@ ReplaceDefaultConfigIdResponse::ReplaceDefaultConfigIdResponse(
 ::google::protobuf::Metadata ReplaceDefaultConfigIdResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
-      file_level_metadata_szconfigmanager_2eproto[9]);
+      file_level_metadata_szconfigmanager_2eproto[11]);
+}
+// ===================================================================
+
+class SetDefaultConfigRequest::_Internal {
+ public:
+};
+
+SetDefaultConfigRequest::SetDefaultConfigRequest(::google::protobuf::Arena* arena)
+    : ::google::protobuf::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:szconfigmanager.SetDefaultConfigRequest)
+}
+inline PROTOBUF_NDEBUG_INLINE SetDefaultConfigRequest::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : config_definition_(arena, from.config_definition_),
+        config_comment_(arena, from.config_comment_),
+        _cached_size_{0} {}
+
+SetDefaultConfigRequest::SetDefaultConfigRequest(
+    ::google::protobuf::Arena* arena,
+    const SetDefaultConfigRequest& from)
+    : ::google::protobuf::Message(arena) {
+  SetDefaultConfigRequest* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+
+  // @@protoc_insertion_point(copy_constructor:szconfigmanager.SetDefaultConfigRequest)
+}
+inline PROTOBUF_NDEBUG_INLINE SetDefaultConfigRequest::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : config_definition_(arena),
+        config_comment_(arena),
+        _cached_size_{0} {}
+
+inline void SetDefaultConfigRequest::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+SetDefaultConfigRequest::~SetDefaultConfigRequest() {
+  // @@protoc_insertion_point(destructor:szconfigmanager.SetDefaultConfigRequest)
+  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  SharedDtor();
+}
+inline void SetDefaultConfigRequest::SharedDtor() {
+  ABSL_DCHECK(GetArena() == nullptr);
+  _impl_.config_definition_.Destroy();
+  _impl_.config_comment_.Destroy();
+  _impl_.~Impl_();
+}
+
+PROTOBUF_NOINLINE void SetDefaultConfigRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:szconfigmanager.SetDefaultConfigRequest)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.config_definition_.ClearToEmpty();
+  _impl_.config_comment_.ClearToEmpty();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+const char* SetDefaultConfigRequest::_InternalParse(
+    const char* ptr, ::_pbi::ParseContext* ctx) {
+  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+  return ptr;
+}
+
+
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<1, 2, 0, 79, 2> SetDefaultConfigRequest::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    2, 8,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967292,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    2,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    &_SetDefaultConfigRequest_default_instance_._instance,
+    ::_pbi::TcParser::GenericFallback,  // fallback
+  }, {{
+    // string config_comment = 2;
+    {::_pbi::TcParser::FastUS1,
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(SetDefaultConfigRequest, _impl_.config_comment_)}},
+    // string config_definition = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(SetDefaultConfigRequest, _impl_.config_definition_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string config_definition = 1;
+    {PROTOBUF_FIELD_OFFSET(SetDefaultConfigRequest, _impl_.config_definition_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // string config_comment = 2;
+    {PROTOBUF_FIELD_OFFSET(SetDefaultConfigRequest, _impl_.config_comment_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+  }},
+  // no aux_entries
+  {{
+    "\47\21\16\0\0\0\0\0"
+    "szconfigmanager.SetDefaultConfigRequest"
+    "config_definition"
+    "config_comment"
+  }},
+};
+
+::uint8_t* SetDefaultConfigRequest::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:szconfigmanager.SetDefaultConfigRequest)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  // string config_definition = 1;
+  if (!this->_internal_config_definition().empty()) {
+    const std::string& _s = this->_internal_config_definition();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfigmanager.SetDefaultConfigRequest.config_definition");
+    target = stream->WriteStringMaybeAliased(1, _s, target);
+  }
+
+  // string config_comment = 2;
+  if (!this->_internal_config_comment().empty()) {
+    const std::string& _s = this->_internal_config_comment();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfigmanager.SetDefaultConfigRequest.config_comment");
+    target = stream->WriteStringMaybeAliased(2, _s, target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:szconfigmanager.SetDefaultConfigRequest)
+  return target;
+}
+
+::size_t SetDefaultConfigRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:szconfigmanager.SetDefaultConfigRequest)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string config_definition = 1;
+  if (!this->_internal_config_definition().empty()) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_config_definition());
+  }
+
+  // string config_comment = 2;
+  if (!this->_internal_config_comment().empty()) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_config_comment());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::google::protobuf::Message::ClassData SetDefaultConfigRequest::_class_data_ = {
+    SetDefaultConfigRequest::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
+};
+const ::google::protobuf::Message::ClassData* SetDefaultConfigRequest::GetClassData() const {
+  return &_class_data_;
+}
+
+void SetDefaultConfigRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+  auto* const _this = static_cast<SetDefaultConfigRequest*>(&to_msg);
+  auto& from = static_cast<const SetDefaultConfigRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szconfigmanager.SetDefaultConfigRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_config_definition().empty()) {
+    _this->_internal_set_config_definition(from._internal_config_definition());
+  }
+  if (!from._internal_config_comment().empty()) {
+    _this->_internal_set_config_comment(from._internal_config_comment());
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SetDefaultConfigRequest::CopyFrom(const SetDefaultConfigRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szconfigmanager.SetDefaultConfigRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+PROTOBUF_NOINLINE bool SetDefaultConfigRequest::IsInitialized() const {
+  return true;
+}
+
+::_pbi::CachedSize* SetDefaultConfigRequest::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void SetDefaultConfigRequest::InternalSwap(SetDefaultConfigRequest* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.config_definition_, &other->_impl_.config_definition_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.config_comment_, &other->_impl_.config_comment_, arena);
+}
+
+::google::protobuf::Metadata SetDefaultConfigRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
+      file_level_metadata_szconfigmanager_2eproto[12]);
+}
+// ===================================================================
+
+class SetDefaultConfigResponse::_Internal {
+ public:
+};
+
+SetDefaultConfigResponse::SetDefaultConfigResponse(::google::protobuf::Arena* arena)
+    : ::google::protobuf::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:szconfigmanager.SetDefaultConfigResponse)
+}
+SetDefaultConfigResponse::SetDefaultConfigResponse(
+    ::google::protobuf::Arena* arena, const SetDefaultConfigResponse& from)
+    : SetDefaultConfigResponse(arena) {
+  MergeFrom(from);
+}
+inline PROTOBUF_NDEBUG_INLINE SetDefaultConfigResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0} {}
+
+inline void SetDefaultConfigResponse::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.result_ = {};
+}
+SetDefaultConfigResponse::~SetDefaultConfigResponse() {
+  // @@protoc_insertion_point(destructor:szconfigmanager.SetDefaultConfigResponse)
+  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  SharedDtor();
+}
+inline void SetDefaultConfigResponse::SharedDtor() {
+  ABSL_DCHECK(GetArena() == nullptr);
+  _impl_.~Impl_();
+}
+
+PROTOBUF_NOINLINE void SetDefaultConfigResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:szconfigmanager.SetDefaultConfigResponse)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.result_ = ::int64_t{0};
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+const char* SetDefaultConfigResponse::_InternalParse(
+    const char* ptr, ::_pbi::ParseContext* ctx) {
+  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+  return ptr;
+}
+
+
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<0, 1, 0, 0, 2> SetDefaultConfigResponse::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    1, 0,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967294,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    1,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    &_SetDefaultConfigResponse_default_instance_._instance,
+    ::_pbi::TcParser::GenericFallback,  // fallback
+  }, {{
+    // int64 result = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(SetDefaultConfigResponse, _impl_.result_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(SetDefaultConfigResponse, _impl_.result_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // int64 result = 1;
+    {PROTOBUF_FIELD_OFFSET(SetDefaultConfigResponse, _impl_.result_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
+  }},
+  // no aux_entries
+  {{
+  }},
+};
+
+::uint8_t* SetDefaultConfigResponse::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:szconfigmanager.SetDefaultConfigResponse)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  // int64 result = 1;
+  if (this->_internal_result() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::
+        WriteInt64ToArrayWithField<1>(
+            stream, this->_internal_result(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:szconfigmanager.SetDefaultConfigResponse)
+  return target;
+}
+
+::size_t SetDefaultConfigResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:szconfigmanager.SetDefaultConfigResponse)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int64 result = 1;
+  if (this->_internal_result() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
+        this->_internal_result());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::google::protobuf::Message::ClassData SetDefaultConfigResponse::_class_data_ = {
+    SetDefaultConfigResponse::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
+};
+const ::google::protobuf::Message::ClassData* SetDefaultConfigResponse::GetClassData() const {
+  return &_class_data_;
+}
+
+void SetDefaultConfigResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+  auto* const _this = static_cast<SetDefaultConfigResponse*>(&to_msg);
+  auto& from = static_cast<const SetDefaultConfigResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szconfigmanager.SetDefaultConfigResponse)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_result() != 0) {
+    _this->_internal_set_result(from._internal_result());
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SetDefaultConfigResponse::CopyFrom(const SetDefaultConfigResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szconfigmanager.SetDefaultConfigResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+PROTOBUF_NOINLINE bool SetDefaultConfigResponse::IsInitialized() const {
+  return true;
+}
+
+::_pbi::CachedSize* SetDefaultConfigResponse::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void SetDefaultConfigResponse::InternalSwap(SetDefaultConfigResponse* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+        swap(_impl_.result_, other->_impl_.result_);
+}
+
+::google::protobuf::Metadata SetDefaultConfigResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
+      file_level_metadata_szconfigmanager_2eproto[13]);
 }
 // ===================================================================
 
@@ -2035,7 +2780,7 @@ void SetDefaultConfigIdRequest::InternalSwap(SetDefaultConfigIdRequest* PROTOBUF
 ::google::protobuf::Metadata SetDefaultConfigIdRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
-      file_level_metadata_szconfigmanager_2eproto[10]);
+      file_level_metadata_szconfigmanager_2eproto[14]);
 }
 // ===================================================================
 
@@ -2070,7 +2815,7 @@ SetDefaultConfigIdResponse::SetDefaultConfigIdResponse(
 ::google::protobuf::Metadata SetDefaultConfigIdResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szconfigmanager_2eproto_getter, &descriptor_table_szconfigmanager_2eproto_once,
-      file_level_metadata_szconfigmanager_2eproto[11]);
+      file_level_metadata_szconfigmanager_2eproto[15]);
 }
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace szconfigmanager

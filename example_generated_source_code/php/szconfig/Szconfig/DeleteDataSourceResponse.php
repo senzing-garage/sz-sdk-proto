@@ -13,6 +13,14 @@ use Google\Protobuf\Internal\GPBUtil;
  */
 class DeleteDataSourceResponse extends \Google\Protobuf\Internal\Message
 {
+    /**
+     * Generated from protobuf field <code>string result = 1;</code>
+     */
+    protected $result = '';
+    /**
+     * Generated from protobuf field <code>string config_definition = 2;</code>
+     */
+    protected $config_definition = '';
 
     /**
      * Constructor.
@@ -20,11 +28,57 @@ class DeleteDataSourceResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type string $result
+     *     @type string $config_definition
      * }
      */
     public function __construct($data = NULL) {
         \GPBMetadata\Szconfig::initOnce();
         parent::__construct($data);
+    }
+
+    /**
+     * Generated from protobuf field <code>string result = 1;</code>
+     * @return string
+     */
+    public function getResult()
+    {
+        return $this->result;
+    }
+
+    /**
+     * Generated from protobuf field <code>string result = 1;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setResult($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->result = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string config_definition = 2;</code>
+     * @return string
+     */
+    public function getConfigDefinition()
+    {
+        return $this->config_definition;
+    }
+
+    /**
+     * Generated from protobuf field <code>string config_definition = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setConfigDefinition($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->config_definition = $var;
+
+        return $this;
     }
 
 }

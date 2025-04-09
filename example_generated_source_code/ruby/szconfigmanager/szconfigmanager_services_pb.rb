@@ -14,11 +14,13 @@ module Szconfigmanager
       self.unmarshal_class_method = :decode
       self.service_name = 'szconfigmanager.SzConfigManager'
 
-      rpc :AddConfig, ::Szconfigmanager::AddConfigRequest, ::Szconfigmanager::AddConfigResponse
       rpc :GetConfig, ::Szconfigmanager::GetConfigRequest, ::Szconfigmanager::GetConfigResponse
       rpc :GetConfigs, ::Szconfigmanager::GetConfigsRequest, ::Szconfigmanager::GetConfigsResponse
       rpc :GetDefaultConfigId, ::Szconfigmanager::GetDefaultConfigIdRequest, ::Szconfigmanager::GetDefaultConfigIdResponse
+      rpc :GetTemplateConfig, ::Szconfigmanager::GetTemplateConfigRequest, ::Szconfigmanager::GetTemplateConfigResponse
+      rpc :RegisterConfig, ::Szconfigmanager::RegisterConfigRequest, ::Szconfigmanager::RegisterConfigResponse
       rpc :ReplaceDefaultConfigId, ::Szconfigmanager::ReplaceDefaultConfigIdRequest, ::Szconfigmanager::ReplaceDefaultConfigIdResponse
+      rpc :SetDefaultConfig, ::Szconfigmanager::SetDefaultConfigRequest, ::Szconfigmanager::SetDefaultConfigResponse
       rpc :SetDefaultConfigId, ::Szconfigmanager::SetDefaultConfigIdRequest, ::Szconfigmanager::SetDefaultConfigIdResponse
     end
 

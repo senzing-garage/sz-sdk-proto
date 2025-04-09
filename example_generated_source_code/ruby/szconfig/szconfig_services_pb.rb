@@ -15,12 +15,8 @@ module Szconfig
       self.service_name = 'szconfig.SzConfig'
 
       rpc :AddDataSource, ::Szconfig::AddDataSourceRequest, ::Szconfig::AddDataSourceResponse
-      rpc :CloseConfig, ::Szconfig::CloseConfigRequest, ::Szconfig::CloseConfigResponse
-      rpc :CreateConfig, ::Szconfig::CreateConfigRequest, ::Szconfig::CreateConfigResponse
       rpc :DeleteDataSource, ::Szconfig::DeleteDataSourceRequest, ::Szconfig::DeleteDataSourceResponse
-      rpc :ExportConfig, ::Szconfig::ExportConfigRequest, ::Szconfig::ExportConfigResponse
       rpc :GetDataSources, ::Szconfig::GetDataSourcesRequest, ::Szconfig::GetDataSourcesResponse
-      rpc :ImportConfig, ::Szconfig::ImportConfigRequest, ::Szconfig::ImportConfigResponse
     end
 
     Stub = Service.rpc_stub_class

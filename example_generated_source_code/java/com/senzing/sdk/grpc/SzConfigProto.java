@@ -20,10 +20,16 @@ public final class SzConfigProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 config_handle = 1;</code>
-     * @return The configHandle.
+     * <code>string config_definition = 1;</code>
+     * @return The configDefinition.
      */
-    long getConfigHandle();
+    java.lang.String getConfigDefinition();
+    /**
+     * <code>string config_definition = 1;</code>
+     * @return The bytes for configDefinition.
+     */
+    com.google.protobuf.ByteString
+        getConfigDefinitionBytes();
 
     /**
      * <code>string data_source_code = 2;</code>
@@ -50,6 +56,7 @@ public final class SzConfigProto {
       super(builder);
     }
     private AddDataSourceRequest() {
+      configDefinition_ = "";
       dataSourceCode_ = "";
     }
 
@@ -73,15 +80,43 @@ public final class SzConfigProto {
               com.senzing.sdk.grpc.SzConfigProto.AddDataSourceRequest.class, com.senzing.sdk.grpc.SzConfigProto.AddDataSourceRequest.Builder.class);
     }
 
-    public static final int CONFIG_HANDLE_FIELD_NUMBER = 1;
-    private long configHandle_ = 0L;
+    public static final int CONFIG_DEFINITION_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object configDefinition_ = "";
     /**
-     * <code>int64 config_handle = 1;</code>
-     * @return The configHandle.
+     * <code>string config_definition = 1;</code>
+     * @return The configDefinition.
      */
     @java.lang.Override
-    public long getConfigHandle() {
-      return configHandle_;
+    public java.lang.String getConfigDefinition() {
+      java.lang.Object ref = configDefinition_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        configDefinition_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string config_definition = 1;</code>
+     * @return The bytes for configDefinition.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConfigDefinitionBytes() {
+      java.lang.Object ref = configDefinition_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        configDefinition_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int DATA_SOURCE_CODE_FIELD_NUMBER = 2;
@@ -137,8 +172,8 @@ public final class SzConfigProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (configHandle_ != 0L) {
-        output.writeInt64(1, configHandle_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configDefinition_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, configDefinition_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataSourceCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dataSourceCode_);
@@ -152,9 +187,8 @@ public final class SzConfigProto {
       if (size != -1) return size;
 
       size = 0;
-      if (configHandle_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, configHandle_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configDefinition_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, configDefinition_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataSourceCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dataSourceCode_);
@@ -174,8 +208,8 @@ public final class SzConfigProto {
       }
       com.senzing.sdk.grpc.SzConfigProto.AddDataSourceRequest other = (com.senzing.sdk.grpc.SzConfigProto.AddDataSourceRequest) obj;
 
-      if (getConfigHandle()
-          != other.getConfigHandle()) return false;
+      if (!getConfigDefinition()
+          .equals(other.getConfigDefinition())) return false;
       if (!getDataSourceCode()
           .equals(other.getDataSourceCode())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -189,9 +223,8 @@ public final class SzConfigProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIG_HANDLE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getConfigHandle());
+      hash = (37 * hash) + CONFIG_DEFINITION_FIELD_NUMBER;
+      hash = (53 * hash) + getConfigDefinition().hashCode();
       hash = (37 * hash) + DATA_SOURCE_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getDataSourceCode().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -325,7 +358,7 @@ public final class SzConfigProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        configHandle_ = 0L;
+        configDefinition_ = "";
         dataSourceCode_ = "";
         return this;
       }
@@ -361,7 +394,7 @@ public final class SzConfigProto {
       private void buildPartial0(com.senzing.sdk.grpc.SzConfigProto.AddDataSourceRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.configHandle_ = configHandle_;
+          result.configDefinition_ = configDefinition_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.dataSourceCode_ = dataSourceCode_;
@@ -412,8 +445,10 @@ public final class SzConfigProto {
 
       public Builder mergeFrom(com.senzing.sdk.grpc.SzConfigProto.AddDataSourceRequest other) {
         if (other == com.senzing.sdk.grpc.SzConfigProto.AddDataSourceRequest.getDefaultInstance()) return this;
-        if (other.getConfigHandle() != 0L) {
-          setConfigHandle(other.getConfigHandle());
+        if (!other.getConfigDefinition().isEmpty()) {
+          configDefinition_ = other.configDefinition_;
+          bitField0_ |= 0x00000001;
+          onChanged();
         }
         if (!other.getDataSourceCode().isEmpty()) {
           dataSourceCode_ = other.dataSourceCode_;
@@ -446,11 +481,11 @@ public final class SzConfigProto {
               case 0:
                 done = true;
                 break;
-              case 8: {
-                configHandle_ = input.readInt64();
+              case 10: {
+                configDefinition_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
-              } // case 8
+              } // case 10
               case 18: {
                 dataSourceCode_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
@@ -473,34 +508,74 @@ public final class SzConfigProto {
       }
       private int bitField0_;
 
-      private long configHandle_ ;
+      private java.lang.Object configDefinition_ = "";
       /**
-       * <code>int64 config_handle = 1;</code>
-       * @return The configHandle.
+       * <code>string config_definition = 1;</code>
+       * @return The configDefinition.
        */
-      @java.lang.Override
-      public long getConfigHandle() {
-        return configHandle_;
+      public java.lang.String getConfigDefinition() {
+        java.lang.Object ref = configDefinition_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          configDefinition_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>int64 config_handle = 1;</code>
-       * @param value The configHandle to set.
+       * <code>string config_definition = 1;</code>
+       * @return The bytes for configDefinition.
+       */
+      public com.google.protobuf.ByteString
+          getConfigDefinitionBytes() {
+        java.lang.Object ref = configDefinition_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          configDefinition_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string config_definition = 1;</code>
+       * @param value The configDefinition to set.
        * @return This builder for chaining.
        */
-      public Builder setConfigHandle(long value) {
-
-        configHandle_ = value;
+      public Builder setConfigDefinition(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        configDefinition_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 config_handle = 1;</code>
+       * <code>string config_definition = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearConfigHandle() {
+      public Builder clearConfigDefinition() {
+        configDefinition_ = getDefaultInstance().getConfigDefinition();
         bitField0_ = (bitField0_ & ~0x00000001);
-        configHandle_ = 0L;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string config_definition = 1;</code>
+       * @param value The bytes for configDefinition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigDefinitionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        configDefinition_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -655,6 +730,18 @@ public final class SzConfigProto {
      */
     com.google.protobuf.ByteString
         getResultBytes();
+
+    /**
+     * <code>string config_definition = 2;</code>
+     * @return The configDefinition.
+     */
+    java.lang.String getConfigDefinition();
+    /**
+     * <code>string config_definition = 2;</code>
+     * @return The bytes for configDefinition.
+     */
+    com.google.protobuf.ByteString
+        getConfigDefinitionBytes();
   }
   /**
    * Protobuf type {@code szconfig.AddDataSourceResponse}
@@ -670,6 +757,7 @@ public final class SzConfigProto {
     }
     private AddDataSourceResponse() {
       result_ = "";
+      configDefinition_ = "";
     }
 
     @java.lang.Override
@@ -731,6 +819,45 @@ public final class SzConfigProto {
       }
     }
 
+    public static final int CONFIG_DEFINITION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object configDefinition_ = "";
+    /**
+     * <code>string config_definition = 2;</code>
+     * @return The configDefinition.
+     */
+    @java.lang.Override
+    public java.lang.String getConfigDefinition() {
+      java.lang.Object ref = configDefinition_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        configDefinition_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string config_definition = 2;</code>
+     * @return The bytes for configDefinition.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConfigDefinitionBytes() {
+      java.lang.Object ref = configDefinition_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        configDefinition_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -748,6 +875,9 @@ public final class SzConfigProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, result_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configDefinition_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, configDefinition_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -759,6 +889,9 @@ public final class SzConfigProto {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, result_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configDefinition_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, configDefinition_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -777,6 +910,8 @@ public final class SzConfigProto {
 
       if (!getResult()
           .equals(other.getResult())) return false;
+      if (!getConfigDefinition()
+          .equals(other.getConfigDefinition())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -790,6 +925,8 @@ public final class SzConfigProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + RESULT_FIELD_NUMBER;
       hash = (53 * hash) + getResult().hashCode();
+      hash = (37 * hash) + CONFIG_DEFINITION_FIELD_NUMBER;
+      hash = (53 * hash) + getConfigDefinition().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -922,6 +1059,7 @@ public final class SzConfigProto {
         super.clear();
         bitField0_ = 0;
         result_ = "";
+        configDefinition_ = "";
         return this;
       }
 
@@ -957,6 +1095,9 @@ public final class SzConfigProto {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.configDefinition_ = configDefinition_;
         }
       }
 
@@ -1009,6 +1150,11 @@ public final class SzConfigProto {
           bitField0_ |= 0x00000001;
           onChanged();
         }
+        if (!other.getConfigDefinition().isEmpty()) {
+          configDefinition_ = other.configDefinition_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1040,6 +1186,11 @@ public final class SzConfigProto {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                configDefinition_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1128,6 +1279,78 @@ public final class SzConfigProto {
         onChanged();
         return this;
       }
+
+      private java.lang.Object configDefinition_ = "";
+      /**
+       * <code>string config_definition = 2;</code>
+       * @return The configDefinition.
+       */
+      public java.lang.String getConfigDefinition() {
+        java.lang.Object ref = configDefinition_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          configDefinition_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string config_definition = 2;</code>
+       * @return The bytes for configDefinition.
+       */
+      public com.google.protobuf.ByteString
+          getConfigDefinitionBytes() {
+        java.lang.Object ref = configDefinition_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          configDefinition_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string config_definition = 2;</code>
+       * @param value The configDefinition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigDefinition(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        configDefinition_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string config_definition = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConfigDefinition() {
+        configDefinition_ = getDefaultInstance().getConfigDefinition();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string config_definition = 2;</code>
+       * @param value The bytes for configDefinition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigDefinitionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        configDefinition_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1192,1763 +1415,21 @@ public final class SzConfigProto {
 
   }
 
-  public interface CloseConfigRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szconfig.CloseConfigRequest)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int64 config_handle = 1;</code>
-     * @return The configHandle.
-     */
-    long getConfigHandle();
-  }
-  /**
-   * Protobuf type {@code szconfig.CloseConfigRequest}
-   */
-  public static final class CloseConfigRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:szconfig.CloseConfigRequest)
-      CloseConfigRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CloseConfigRequest.newBuilder() to construct.
-    private CloseConfigRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CloseConfigRequest() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CloseConfigRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CloseConfigRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CloseConfigRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest.class, com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest.Builder.class);
-    }
-
-    public static final int CONFIG_HANDLE_FIELD_NUMBER = 1;
-    private long configHandle_ = 0L;
-    /**
-     * <code>int64 config_handle = 1;</code>
-     * @return The configHandle.
-     */
-    @java.lang.Override
-    public long getConfigHandle() {
-      return configHandle_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (configHandle_ != 0L) {
-        output.writeInt64(1, configHandle_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (configHandle_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, configHandle_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest)) {
-        return super.equals(obj);
-      }
-      com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest other = (com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest) obj;
-
-      if (getConfigHandle()
-          != other.getConfigHandle()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIG_HANDLE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getConfigHandle());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code szconfig.CloseConfigRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szconfig.CloseConfigRequest)
-        com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CloseConfigRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CloseConfigRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest.class, com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest.Builder.class);
-      }
-
-      // Construct using com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        configHandle_ = 0L;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CloseConfigRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest getDefaultInstanceForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest build() {
-        com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest buildPartial() {
-        com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest result = new com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.configHandle_ = configHandle_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest) {
-          return mergeFrom((com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest other) {
-        if (other == com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest.getDefaultInstance()) return this;
-        if (other.getConfigHandle() != 0L) {
-          setConfigHandle(other.getConfigHandle());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                configHandle_ = input.readInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private long configHandle_ ;
-      /**
-       * <code>int64 config_handle = 1;</code>
-       * @return The configHandle.
-       */
-      @java.lang.Override
-      public long getConfigHandle() {
-        return configHandle_;
-      }
-      /**
-       * <code>int64 config_handle = 1;</code>
-       * @param value The configHandle to set.
-       * @return This builder for chaining.
-       */
-      public Builder setConfigHandle(long value) {
-
-        configHandle_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 config_handle = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearConfigHandle() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        configHandle_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:szconfig.CloseConfigRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:szconfig.CloseConfigRequest)
-    private static final com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest();
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<CloseConfigRequest>
-        PARSER = new com.google.protobuf.AbstractParser<CloseConfigRequest>() {
-      @java.lang.Override
-      public CloseConfigRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<CloseConfigRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CloseConfigRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.senzing.sdk.grpc.SzConfigProto.CloseConfigRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CloseConfigResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szconfig.CloseConfigResponse)
-      com.google.protobuf.MessageOrBuilder {
-  }
-  /**
-   * Protobuf type {@code szconfig.CloseConfigResponse}
-   */
-  public static final class CloseConfigResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:szconfig.CloseConfigResponse)
-      CloseConfigResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CloseConfigResponse.newBuilder() to construct.
-    private CloseConfigResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CloseConfigResponse() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CloseConfigResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CloseConfigResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CloseConfigResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse.class, com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse)) {
-        return super.equals(obj);
-      }
-      com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse other = (com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code szconfig.CloseConfigResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szconfig.CloseConfigResponse)
-        com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CloseConfigResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CloseConfigResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse.class, com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse.Builder.class);
-      }
-
-      // Construct using com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CloseConfigResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse getDefaultInstanceForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse build() {
-        com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse buildPartial() {
-        com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse result = new com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse) {
-          return mergeFrom((com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse other) {
-        if (other == com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:szconfig.CloseConfigResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:szconfig.CloseConfigResponse)
-    private static final com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse();
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<CloseConfigResponse>
-        PARSER = new com.google.protobuf.AbstractParser<CloseConfigResponse>() {
-      @java.lang.Override
-      public CloseConfigResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<CloseConfigResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CloseConfigResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.senzing.sdk.grpc.SzConfigProto.CloseConfigResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CreateConfigRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szconfig.CreateConfigRequest)
-      com.google.protobuf.MessageOrBuilder {
-  }
-  /**
-   * Protobuf type {@code szconfig.CreateConfigRequest}
-   */
-  public static final class CreateConfigRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:szconfig.CreateConfigRequest)
-      CreateConfigRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CreateConfigRequest.newBuilder() to construct.
-    private CreateConfigRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CreateConfigRequest() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CreateConfigRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CreateConfigRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CreateConfigRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest.class, com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest)) {
-        return super.equals(obj);
-      }
-      com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest other = (com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code szconfig.CreateConfigRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szconfig.CreateConfigRequest)
-        com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CreateConfigRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CreateConfigRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest.class, com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest.Builder.class);
-      }
-
-      // Construct using com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CreateConfigRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest getDefaultInstanceForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest build() {
-        com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest buildPartial() {
-        com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest result = new com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest) {
-          return mergeFrom((com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest other) {
-        if (other == com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:szconfig.CreateConfigRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:szconfig.CreateConfigRequest)
-    private static final com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest();
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<CreateConfigRequest>
-        PARSER = new com.google.protobuf.AbstractParser<CreateConfigRequest>() {
-      @java.lang.Override
-      public CreateConfigRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<CreateConfigRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CreateConfigRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.senzing.sdk.grpc.SzConfigProto.CreateConfigRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CreateConfigResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szconfig.CreateConfigResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int64 result = 1;</code>
-     * @return The result.
-     */
-    long getResult();
-  }
-  /**
-   * Protobuf type {@code szconfig.CreateConfigResponse}
-   */
-  public static final class CreateConfigResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:szconfig.CreateConfigResponse)
-      CreateConfigResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CreateConfigResponse.newBuilder() to construct.
-    private CreateConfigResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private CreateConfigResponse() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CreateConfigResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CreateConfigResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CreateConfigResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse.class, com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse.Builder.class);
-    }
-
-    public static final int RESULT_FIELD_NUMBER = 1;
-    private long result_ = 0L;
-    /**
-     * <code>int64 result = 1;</code>
-     * @return The result.
-     */
-    @java.lang.Override
-    public long getResult() {
-      return result_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (result_ != 0L) {
-        output.writeInt64(1, result_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (result_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, result_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse)) {
-        return super.equals(obj);
-      }
-      com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse other = (com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse) obj;
-
-      if (getResult()
-          != other.getResult()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RESULT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getResult());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code szconfig.CreateConfigResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szconfig.CreateConfigResponse)
-        com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CreateConfigResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CreateConfigResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse.class, com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse.Builder.class);
-      }
-
-      // Construct using com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        result_ = 0L;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_CreateConfigResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse getDefaultInstanceForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse build() {
-        com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse buildPartial() {
-        com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse result = new com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.result_ = result_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse) {
-          return mergeFrom((com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse other) {
-        if (other == com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse.getDefaultInstance()) return this;
-        if (other.getResult() != 0L) {
-          setResult(other.getResult());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                result_ = input.readInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private long result_ ;
-      /**
-       * <code>int64 result = 1;</code>
-       * @return The result.
-       */
-      @java.lang.Override
-      public long getResult() {
-        return result_;
-      }
-      /**
-       * <code>int64 result = 1;</code>
-       * @param value The result to set.
-       * @return This builder for chaining.
-       */
-      public Builder setResult(long value) {
-
-        result_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 result = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearResult() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        result_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:szconfig.CreateConfigResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:szconfig.CreateConfigResponse)
-    private static final com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse();
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<CreateConfigResponse>
-        PARSER = new com.google.protobuf.AbstractParser<CreateConfigResponse>() {
-      @java.lang.Override
-      public CreateConfigResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<CreateConfigResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CreateConfigResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.senzing.sdk.grpc.SzConfigProto.CreateConfigResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface DeleteDataSourceRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:szconfig.DeleteDataSourceRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 config_handle = 1;</code>
-     * @return The configHandle.
+     * <code>string config_definition = 1;</code>
+     * @return The configDefinition.
      */
-    long getConfigHandle();
+    java.lang.String getConfigDefinition();
+    /**
+     * <code>string config_definition = 1;</code>
+     * @return The bytes for configDefinition.
+     */
+    com.google.protobuf.ByteString
+        getConfigDefinitionBytes();
 
     /**
      * <code>string data_source_code = 2;</code>
@@ -2975,6 +1456,7 @@ public final class SzConfigProto {
       super(builder);
     }
     private DeleteDataSourceRequest() {
+      configDefinition_ = "";
       dataSourceCode_ = "";
     }
 
@@ -2998,15 +1480,43 @@ public final class SzConfigProto {
               com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceRequest.class, com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceRequest.Builder.class);
     }
 
-    public static final int CONFIG_HANDLE_FIELD_NUMBER = 1;
-    private long configHandle_ = 0L;
+    public static final int CONFIG_DEFINITION_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object configDefinition_ = "";
     /**
-     * <code>int64 config_handle = 1;</code>
-     * @return The configHandle.
+     * <code>string config_definition = 1;</code>
+     * @return The configDefinition.
      */
     @java.lang.Override
-    public long getConfigHandle() {
-      return configHandle_;
+    public java.lang.String getConfigDefinition() {
+      java.lang.Object ref = configDefinition_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        configDefinition_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string config_definition = 1;</code>
+     * @return The bytes for configDefinition.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConfigDefinitionBytes() {
+      java.lang.Object ref = configDefinition_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        configDefinition_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int DATA_SOURCE_CODE_FIELD_NUMBER = 2;
@@ -3062,8 +1572,8 @@ public final class SzConfigProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (configHandle_ != 0L) {
-        output.writeInt64(1, configHandle_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configDefinition_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, configDefinition_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataSourceCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dataSourceCode_);
@@ -3077,9 +1587,8 @@ public final class SzConfigProto {
       if (size != -1) return size;
 
       size = 0;
-      if (configHandle_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, configHandle_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configDefinition_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, configDefinition_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataSourceCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dataSourceCode_);
@@ -3099,8 +1608,8 @@ public final class SzConfigProto {
       }
       com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceRequest other = (com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceRequest) obj;
 
-      if (getConfigHandle()
-          != other.getConfigHandle()) return false;
+      if (!getConfigDefinition()
+          .equals(other.getConfigDefinition())) return false;
       if (!getDataSourceCode()
           .equals(other.getDataSourceCode())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -3114,9 +1623,8 @@ public final class SzConfigProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIG_HANDLE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getConfigHandle());
+      hash = (37 * hash) + CONFIG_DEFINITION_FIELD_NUMBER;
+      hash = (53 * hash) + getConfigDefinition().hashCode();
       hash = (37 * hash) + DATA_SOURCE_CODE_FIELD_NUMBER;
       hash = (53 * hash) + getDataSourceCode().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -3250,7 +1758,7 @@ public final class SzConfigProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        configHandle_ = 0L;
+        configDefinition_ = "";
         dataSourceCode_ = "";
         return this;
       }
@@ -3286,7 +1794,7 @@ public final class SzConfigProto {
       private void buildPartial0(com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.configHandle_ = configHandle_;
+          result.configDefinition_ = configDefinition_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.dataSourceCode_ = dataSourceCode_;
@@ -3337,8 +1845,10 @@ public final class SzConfigProto {
 
       public Builder mergeFrom(com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceRequest other) {
         if (other == com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceRequest.getDefaultInstance()) return this;
-        if (other.getConfigHandle() != 0L) {
-          setConfigHandle(other.getConfigHandle());
+        if (!other.getConfigDefinition().isEmpty()) {
+          configDefinition_ = other.configDefinition_;
+          bitField0_ |= 0x00000001;
+          onChanged();
         }
         if (!other.getDataSourceCode().isEmpty()) {
           dataSourceCode_ = other.dataSourceCode_;
@@ -3371,11 +1881,11 @@ public final class SzConfigProto {
               case 0:
                 done = true;
                 break;
-              case 8: {
-                configHandle_ = input.readInt64();
+              case 10: {
+                configDefinition_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
-              } // case 8
+              } // case 10
               case 18: {
                 dataSourceCode_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
@@ -3398,34 +1908,74 @@ public final class SzConfigProto {
       }
       private int bitField0_;
 
-      private long configHandle_ ;
+      private java.lang.Object configDefinition_ = "";
       /**
-       * <code>int64 config_handle = 1;</code>
-       * @return The configHandle.
+       * <code>string config_definition = 1;</code>
+       * @return The configDefinition.
        */
-      @java.lang.Override
-      public long getConfigHandle() {
-        return configHandle_;
+      public java.lang.String getConfigDefinition() {
+        java.lang.Object ref = configDefinition_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          configDefinition_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>int64 config_handle = 1;</code>
-       * @param value The configHandle to set.
+       * <code>string config_definition = 1;</code>
+       * @return The bytes for configDefinition.
+       */
+      public com.google.protobuf.ByteString
+          getConfigDefinitionBytes() {
+        java.lang.Object ref = configDefinition_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          configDefinition_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string config_definition = 1;</code>
+       * @param value The configDefinition to set.
        * @return This builder for chaining.
        */
-      public Builder setConfigHandle(long value) {
-
-        configHandle_ = value;
+      public Builder setConfigDefinition(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        configDefinition_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 config_handle = 1;</code>
+       * <code>string config_definition = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearConfigHandle() {
+      public Builder clearConfigDefinition() {
+        configDefinition_ = getDefaultInstance().getConfigDefinition();
         bitField0_ = (bitField0_ & ~0x00000001);
-        configHandle_ = 0L;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string config_definition = 1;</code>
+       * @param value The bytes for configDefinition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigDefinitionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        configDefinition_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3568,6 +2118,30 @@ public final class SzConfigProto {
   public interface DeleteDataSourceResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:szconfig.DeleteDataSourceResponse)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string result = 1;</code>
+     * @return The result.
+     */
+    java.lang.String getResult();
+    /**
+     * <code>string result = 1;</code>
+     * @return The bytes for result.
+     */
+    com.google.protobuf.ByteString
+        getResultBytes();
+
+    /**
+     * <code>string config_definition = 2;</code>
+     * @return The configDefinition.
+     */
+    java.lang.String getConfigDefinition();
+    /**
+     * <code>string config_definition = 2;</code>
+     * @return The bytes for configDefinition.
+     */
+    com.google.protobuf.ByteString
+        getConfigDefinitionBytes();
   }
   /**
    * Protobuf type {@code szconfig.DeleteDataSourceResponse}
@@ -3582,6 +2156,8 @@ public final class SzConfigProto {
       super(builder);
     }
     private DeleteDataSourceResponse() {
+      result_ = "";
+      configDefinition_ = "";
     }
 
     @java.lang.Override
@@ -3604,6 +2180,84 @@ public final class SzConfigProto {
               com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse.class, com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse.Builder.class);
     }
 
+    public static final int RESULT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object result_ = "";
+    /**
+     * <code>string result = 1;</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public java.lang.String getResult() {
+      java.lang.Object ref = result_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        result_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string result = 1;</code>
+     * @return The bytes for result.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResultBytes() {
+      java.lang.Object ref = result_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        result_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONFIG_DEFINITION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object configDefinition_ = "";
+    /**
+     * <code>string config_definition = 2;</code>
+     * @return The configDefinition.
+     */
+    @java.lang.Override
+    public java.lang.String getConfigDefinition() {
+      java.lang.Object ref = configDefinition_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        configDefinition_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string config_definition = 2;</code>
+     * @return The bytes for configDefinition.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConfigDefinitionBytes() {
+      java.lang.Object ref = configDefinition_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        configDefinition_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3618,6 +2272,12 @@ public final class SzConfigProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, result_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configDefinition_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, configDefinition_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -3627,6 +2287,12 @@ public final class SzConfigProto {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, result_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configDefinition_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, configDefinition_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3642,6 +2308,10 @@ public final class SzConfigProto {
       }
       com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse other = (com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse) obj;
 
+      if (!getResult()
+          .equals(other.getResult())) return false;
+      if (!getConfigDefinition()
+          .equals(other.getConfigDefinition())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3653,6 +2323,10 @@ public final class SzConfigProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESULT_FIELD_NUMBER;
+      hash = (53 * hash) + getResult().hashCode();
+      hash = (37 * hash) + CONFIG_DEFINITION_FIELD_NUMBER;
+      hash = (53 * hash) + getConfigDefinition().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3783,6 +2457,9 @@ public final class SzConfigProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        result_ = "";
+        configDefinition_ = "";
         return this;
       }
 
@@ -3809,8 +2486,19 @@ public final class SzConfigProto {
       @java.lang.Override
       public com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse buildPartial() {
         com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse result = new com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.result_ = result_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.configDefinition_ = configDefinition_;
+        }
       }
 
       @java.lang.Override
@@ -3857,955 +2545,14 @@ public final class SzConfigProto {
 
       public Builder mergeFrom(com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse other) {
         if (other == com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:szconfig.DeleteDataSourceResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:szconfig.DeleteDataSourceResponse)
-    private static final com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse();
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<DeleteDataSourceResponse>
-        PARSER = new com.google.protobuf.AbstractParser<DeleteDataSourceResponse>() {
-      @java.lang.Override
-      public DeleteDataSourceResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<DeleteDataSourceResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DeleteDataSourceResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface ExportConfigRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szconfig.ExportConfigRequest)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int64 config_handle = 1;</code>
-     * @return The configHandle.
-     */
-    long getConfigHandle();
-  }
-  /**
-   * Protobuf type {@code szconfig.ExportConfigRequest}
-   */
-  public static final class ExportConfigRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:szconfig.ExportConfigRequest)
-      ExportConfigRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ExportConfigRequest.newBuilder() to construct.
-    private ExportConfigRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ExportConfigRequest() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ExportConfigRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ExportConfigRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ExportConfigRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest.class, com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest.Builder.class);
-    }
-
-    public static final int CONFIG_HANDLE_FIELD_NUMBER = 1;
-    private long configHandle_ = 0L;
-    /**
-     * <code>int64 config_handle = 1;</code>
-     * @return The configHandle.
-     */
-    @java.lang.Override
-    public long getConfigHandle() {
-      return configHandle_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (configHandle_ != 0L) {
-        output.writeInt64(1, configHandle_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (configHandle_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, configHandle_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest)) {
-        return super.equals(obj);
-      }
-      com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest other = (com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest) obj;
-
-      if (getConfigHandle()
-          != other.getConfigHandle()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIG_HANDLE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getConfigHandle());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code szconfig.ExportConfigRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szconfig.ExportConfigRequest)
-        com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ExportConfigRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ExportConfigRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest.class, com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest.Builder.class);
-      }
-
-      // Construct using com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        configHandle_ = 0L;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ExportConfigRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest getDefaultInstanceForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest build() {
-        com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest buildPartial() {
-        com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest result = new com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.configHandle_ = configHandle_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest) {
-          return mergeFrom((com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest other) {
-        if (other == com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest.getDefaultInstance()) return this;
-        if (other.getConfigHandle() != 0L) {
-          setConfigHandle(other.getConfigHandle());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                configHandle_ = input.readInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private long configHandle_ ;
-      /**
-       * <code>int64 config_handle = 1;</code>
-       * @return The configHandle.
-       */
-      @java.lang.Override
-      public long getConfigHandle() {
-        return configHandle_;
-      }
-      /**
-       * <code>int64 config_handle = 1;</code>
-       * @param value The configHandle to set.
-       * @return This builder for chaining.
-       */
-      public Builder setConfigHandle(long value) {
-
-        configHandle_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 config_handle = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearConfigHandle() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        configHandle_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:szconfig.ExportConfigRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:szconfig.ExportConfigRequest)
-    private static final com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest();
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ExportConfigRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ExportConfigRequest>() {
-      @java.lang.Override
-      public ExportConfigRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<ExportConfigRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ExportConfigRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.senzing.sdk.grpc.SzConfigProto.ExportConfigRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface ExportConfigResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szconfig.ExportConfigResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string result = 1;</code>
-     * @return The result.
-     */
-    java.lang.String getResult();
-    /**
-     * <code>string result = 1;</code>
-     * @return The bytes for result.
-     */
-    com.google.protobuf.ByteString
-        getResultBytes();
-  }
-  /**
-   * Protobuf type {@code szconfig.ExportConfigResponse}
-   */
-  public static final class ExportConfigResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:szconfig.ExportConfigResponse)
-      ExportConfigResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ExportConfigResponse.newBuilder() to construct.
-    private ExportConfigResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ExportConfigResponse() {
-      result_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ExportConfigResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ExportConfigResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ExportConfigResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse.class, com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse.Builder.class);
-    }
-
-    public static final int RESULT_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object result_ = "";
-    /**
-     * <code>string result = 1;</code>
-     * @return The result.
-     */
-    @java.lang.Override
-    public java.lang.String getResult() {
-      java.lang.Object ref = result_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        result_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string result = 1;</code>
-     * @return The bytes for result.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getResultBytes() {
-      java.lang.Object ref = result_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        result_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, result_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, result_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse)) {
-        return super.equals(obj);
-      }
-      com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse other = (com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse) obj;
-
-      if (!getResult()
-          .equals(other.getResult())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RESULT_FIELD_NUMBER;
-      hash = (53 * hash) + getResult().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code szconfig.ExportConfigResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szconfig.ExportConfigResponse)
-        com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ExportConfigResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ExportConfigResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse.class, com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse.Builder.class);
-      }
-
-      // Construct using com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        result_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ExportConfigResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse getDefaultInstanceForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse build() {
-        com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse buildPartial() {
-        com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse result = new com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.result_ = result_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse) {
-          return mergeFrom((com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse other) {
-        if (other == com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getConfigDefinition().isEmpty()) {
+          configDefinition_ = other.configDefinition_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -4839,6 +2586,11 @@ public final class SzConfigProto {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                configDefinition_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4927,6 +2679,78 @@ public final class SzConfigProto {
         onChanged();
         return this;
       }
+
+      private java.lang.Object configDefinition_ = "";
+      /**
+       * <code>string config_definition = 2;</code>
+       * @return The configDefinition.
+       */
+      public java.lang.String getConfigDefinition() {
+        java.lang.Object ref = configDefinition_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          configDefinition_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string config_definition = 2;</code>
+       * @return The bytes for configDefinition.
+       */
+      public com.google.protobuf.ByteString
+          getConfigDefinitionBytes() {
+        java.lang.Object ref = configDefinition_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          configDefinition_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string config_definition = 2;</code>
+       * @param value The configDefinition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigDefinition(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        configDefinition_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string config_definition = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConfigDefinition() {
+        configDefinition_ = getDefaultInstance().getConfigDefinition();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string config_definition = 2;</code>
+       * @param value The bytes for configDefinition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigDefinitionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        configDefinition_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4940,23 +2764,23 @@ public final class SzConfigProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:szconfig.ExportConfigResponse)
+      // @@protoc_insertion_point(builder_scope:szconfig.DeleteDataSourceResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:szconfig.ExportConfigResponse)
-    private static final com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:szconfig.DeleteDataSourceResponse)
+    private static final com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse();
     }
 
-    public static com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ExportConfigResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ExportConfigResponse>() {
+    private static final com.google.protobuf.Parser<DeleteDataSourceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteDataSourceResponse>() {
       @java.lang.Override
-      public ExportConfigResponse parsePartialFrom(
+      public DeleteDataSourceResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4975,17 +2799,17 @@ public final class SzConfigProto {
       }
     };
 
-    public static com.google.protobuf.Parser<ExportConfigResponse> parser() {
+    public static com.google.protobuf.Parser<DeleteDataSourceResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ExportConfigResponse> getParserForType() {
+    public com.google.protobuf.Parser<DeleteDataSourceResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.senzing.sdk.grpc.SzConfigProto.ExportConfigResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzConfigProto.DeleteDataSourceResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4996,10 +2820,16 @@ public final class SzConfigProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 config_handle = 1;</code>
-     * @return The configHandle.
+     * <code>string config_definition = 1;</code>
+     * @return The configDefinition.
      */
-    long getConfigHandle();
+    java.lang.String getConfigDefinition();
+    /**
+     * <code>string config_definition = 1;</code>
+     * @return The bytes for configDefinition.
+     */
+    com.google.protobuf.ByteString
+        getConfigDefinitionBytes();
   }
   /**
    * Protobuf type {@code szconfig.GetDataSourcesRequest}
@@ -5014,6 +2844,7 @@ public final class SzConfigProto {
       super(builder);
     }
     private GetDataSourcesRequest() {
+      configDefinition_ = "";
     }
 
     @java.lang.Override
@@ -5036,15 +2867,43 @@ public final class SzConfigProto {
               com.senzing.sdk.grpc.SzConfigProto.GetDataSourcesRequest.class, com.senzing.sdk.grpc.SzConfigProto.GetDataSourcesRequest.Builder.class);
     }
 
-    public static final int CONFIG_HANDLE_FIELD_NUMBER = 1;
-    private long configHandle_ = 0L;
+    public static final int CONFIG_DEFINITION_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object configDefinition_ = "";
     /**
-     * <code>int64 config_handle = 1;</code>
-     * @return The configHandle.
+     * <code>string config_definition = 1;</code>
+     * @return The configDefinition.
      */
     @java.lang.Override
-    public long getConfigHandle() {
-      return configHandle_;
+    public java.lang.String getConfigDefinition() {
+      java.lang.Object ref = configDefinition_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        configDefinition_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string config_definition = 1;</code>
+     * @return The bytes for configDefinition.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConfigDefinitionBytes() {
+      java.lang.Object ref = configDefinition_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        configDefinition_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5061,8 +2920,8 @@ public final class SzConfigProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (configHandle_ != 0L) {
-        output.writeInt64(1, configHandle_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configDefinition_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, configDefinition_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -5073,9 +2932,8 @@ public final class SzConfigProto {
       if (size != -1) return size;
 
       size = 0;
-      if (configHandle_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, configHandle_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configDefinition_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, configDefinition_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -5092,8 +2950,8 @@ public final class SzConfigProto {
       }
       com.senzing.sdk.grpc.SzConfigProto.GetDataSourcesRequest other = (com.senzing.sdk.grpc.SzConfigProto.GetDataSourcesRequest) obj;
 
-      if (getConfigHandle()
-          != other.getConfigHandle()) return false;
+      if (!getConfigDefinition()
+          .equals(other.getConfigDefinition())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -5105,9 +2963,8 @@ public final class SzConfigProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIG_HANDLE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getConfigHandle());
+      hash = (37 * hash) + CONFIG_DEFINITION_FIELD_NUMBER;
+      hash = (53 * hash) + getConfigDefinition().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5239,7 +3096,7 @@ public final class SzConfigProto {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        configHandle_ = 0L;
+        configDefinition_ = "";
         return this;
       }
 
@@ -5274,7 +3131,7 @@ public final class SzConfigProto {
       private void buildPartial0(com.senzing.sdk.grpc.SzConfigProto.GetDataSourcesRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.configHandle_ = configHandle_;
+          result.configDefinition_ = configDefinition_;
         }
       }
 
@@ -5322,8 +3179,10 @@ public final class SzConfigProto {
 
       public Builder mergeFrom(com.senzing.sdk.grpc.SzConfigProto.GetDataSourcesRequest other) {
         if (other == com.senzing.sdk.grpc.SzConfigProto.GetDataSourcesRequest.getDefaultInstance()) return this;
-        if (other.getConfigHandle() != 0L) {
-          setConfigHandle(other.getConfigHandle());
+        if (!other.getConfigDefinition().isEmpty()) {
+          configDefinition_ = other.configDefinition_;
+          bitField0_ |= 0x00000001;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -5351,11 +3210,11 @@ public final class SzConfigProto {
               case 0:
                 done = true;
                 break;
-              case 8: {
-                configHandle_ = input.readInt64();
+              case 10: {
+                configDefinition_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
-              } // case 8
+              } // case 10
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5373,34 +3232,74 @@ public final class SzConfigProto {
       }
       private int bitField0_;
 
-      private long configHandle_ ;
+      private java.lang.Object configDefinition_ = "";
       /**
-       * <code>int64 config_handle = 1;</code>
-       * @return The configHandle.
+       * <code>string config_definition = 1;</code>
+       * @return The configDefinition.
        */
-      @java.lang.Override
-      public long getConfigHandle() {
-        return configHandle_;
+      public java.lang.String getConfigDefinition() {
+        java.lang.Object ref = configDefinition_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          configDefinition_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>int64 config_handle = 1;</code>
-       * @param value The configHandle to set.
+       * <code>string config_definition = 1;</code>
+       * @return The bytes for configDefinition.
+       */
+      public com.google.protobuf.ByteString
+          getConfigDefinitionBytes() {
+        java.lang.Object ref = configDefinition_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          configDefinition_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string config_definition = 1;</code>
+       * @param value The configDefinition to set.
        * @return This builder for chaining.
        */
-      public Builder setConfigHandle(long value) {
-
-        configHandle_ = value;
+      public Builder setConfigDefinition(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        configDefinition_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 config_handle = 1;</code>
+       * <code>string config_definition = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearConfigHandle() {
+      public Builder clearConfigDefinition() {
+        configDefinition_ = getDefaultInstance().getConfigDefinition();
         bitField0_ = (bitField0_ & ~0x00000001);
-        configHandle_ = 0L;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string config_definition = 1;</code>
+       * @param value The bytes for configDefinition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigDefinitionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        configDefinition_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6020,1035 +3919,6 @@ public final class SzConfigProto {
 
   }
 
-  public interface ImportConfigRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szconfig.ImportConfigRequest)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string config_definition = 1;</code>
-     * @return The configDefinition.
-     */
-    java.lang.String getConfigDefinition();
-    /**
-     * <code>string config_definition = 1;</code>
-     * @return The bytes for configDefinition.
-     */
-    com.google.protobuf.ByteString
-        getConfigDefinitionBytes();
-  }
-  /**
-   * Protobuf type {@code szconfig.ImportConfigRequest}
-   */
-  public static final class ImportConfigRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:szconfig.ImportConfigRequest)
-      ImportConfigRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ImportConfigRequest.newBuilder() to construct.
-    private ImportConfigRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ImportConfigRequest() {
-      configDefinition_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ImportConfigRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ImportConfigRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ImportConfigRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest.class, com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest.Builder.class);
-    }
-
-    public static final int CONFIG_DEFINITION_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object configDefinition_ = "";
-    /**
-     * <code>string config_definition = 1;</code>
-     * @return The configDefinition.
-     */
-    @java.lang.Override
-    public java.lang.String getConfigDefinition() {
-      java.lang.Object ref = configDefinition_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        configDefinition_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string config_definition = 1;</code>
-     * @return The bytes for configDefinition.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getConfigDefinitionBytes() {
-      java.lang.Object ref = configDefinition_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        configDefinition_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configDefinition_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, configDefinition_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configDefinition_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, configDefinition_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest)) {
-        return super.equals(obj);
-      }
-      com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest other = (com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest) obj;
-
-      if (!getConfigDefinition()
-          .equals(other.getConfigDefinition())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIG_DEFINITION_FIELD_NUMBER;
-      hash = (53 * hash) + getConfigDefinition().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code szconfig.ImportConfigRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szconfig.ImportConfigRequest)
-        com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ImportConfigRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ImportConfigRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest.class, com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest.Builder.class);
-      }
-
-      // Construct using com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        configDefinition_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ImportConfigRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest getDefaultInstanceForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest build() {
-        com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest buildPartial() {
-        com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest result = new com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.configDefinition_ = configDefinition_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest) {
-          return mergeFrom((com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest other) {
-        if (other == com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest.getDefaultInstance()) return this;
-        if (!other.getConfigDefinition().isEmpty()) {
-          configDefinition_ = other.configDefinition_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                configDefinition_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object configDefinition_ = "";
-      /**
-       * <code>string config_definition = 1;</code>
-       * @return The configDefinition.
-       */
-      public java.lang.String getConfigDefinition() {
-        java.lang.Object ref = configDefinition_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          configDefinition_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string config_definition = 1;</code>
-       * @return The bytes for configDefinition.
-       */
-      public com.google.protobuf.ByteString
-          getConfigDefinitionBytes() {
-        java.lang.Object ref = configDefinition_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          configDefinition_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string config_definition = 1;</code>
-       * @param value The configDefinition to set.
-       * @return This builder for chaining.
-       */
-      public Builder setConfigDefinition(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        configDefinition_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string config_definition = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearConfigDefinition() {
-        configDefinition_ = getDefaultInstance().getConfigDefinition();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string config_definition = 1;</code>
-       * @param value The bytes for configDefinition to set.
-       * @return This builder for chaining.
-       */
-      public Builder setConfigDefinitionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        configDefinition_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:szconfig.ImportConfigRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:szconfig.ImportConfigRequest)
-    private static final com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest();
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ImportConfigRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ImportConfigRequest>() {
-      @java.lang.Override
-      public ImportConfigRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<ImportConfigRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ImportConfigRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.senzing.sdk.grpc.SzConfigProto.ImportConfigRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface ImportConfigResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szconfig.ImportConfigResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int64 result = 1;</code>
-     * @return The result.
-     */
-    long getResult();
-  }
-  /**
-   * Protobuf type {@code szconfig.ImportConfigResponse}
-   */
-  public static final class ImportConfigResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:szconfig.ImportConfigResponse)
-      ImportConfigResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ImportConfigResponse.newBuilder() to construct.
-    private ImportConfigResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ImportConfigResponse() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ImportConfigResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ImportConfigResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ImportConfigResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse.class, com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse.Builder.class);
-    }
-
-    public static final int RESULT_FIELD_NUMBER = 1;
-    private long result_ = 0L;
-    /**
-     * <code>int64 result = 1;</code>
-     * @return The result.
-     */
-    @java.lang.Override
-    public long getResult() {
-      return result_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (result_ != 0L) {
-        output.writeInt64(1, result_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (result_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, result_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse)) {
-        return super.equals(obj);
-      }
-      com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse other = (com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse) obj;
-
-      if (getResult()
-          != other.getResult()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RESULT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getResult());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code szconfig.ImportConfigResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szconfig.ImportConfigResponse)
-        com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ImportConfigResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ImportConfigResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse.class, com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse.Builder.class);
-      }
-
-      // Construct using com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        result_ = 0L;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_ImportConfigResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse getDefaultInstanceForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse build() {
-        com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse buildPartial() {
-        com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse result = new com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.result_ = result_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse) {
-          return mergeFrom((com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse other) {
-        if (other == com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse.getDefaultInstance()) return this;
-        if (other.getResult() != 0L) {
-          setResult(other.getResult());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                result_ = input.readInt64();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private long result_ ;
-      /**
-       * <code>int64 result = 1;</code>
-       * @return The result.
-       */
-      @java.lang.Override
-      public long getResult() {
-        return result_;
-      }
-      /**
-       * <code>int64 result = 1;</code>
-       * @param value The result to set.
-       * @return This builder for chaining.
-       */
-      public Builder setResult(long value) {
-
-        result_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 result = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearResult() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        result_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:szconfig.ImportConfigResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:szconfig.ImportConfigResponse)
-    private static final com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse();
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ImportConfigResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ImportConfigResponse>() {
-      @java.lang.Override
-      public ImportConfigResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<ImportConfigResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ImportConfigResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.senzing.sdk.grpc.SzConfigProto.ImportConfigResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_szconfig_AddDataSourceRequest_descriptor;
   private static final 
@@ -7060,26 +3930,6 @@ public final class SzConfigProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_szconfig_AddDataSourceResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szconfig_CloseConfigRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_szconfig_CloseConfigRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szconfig_CloseConfigResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_szconfig_CloseConfigResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szconfig_CreateConfigRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_szconfig_CreateConfigRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szconfig_CreateConfigResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_szconfig_CreateConfigResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_szconfig_DeleteDataSourceRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -7090,16 +3940,6 @@ public final class SzConfigProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_szconfig_DeleteDataSourceResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szconfig_ExportConfigRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_szconfig_ExportConfigRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szconfig_ExportConfigResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_szconfig_ExportConfigResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_szconfig_GetDataSourcesRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -7109,16 +3949,6 @@ public final class SzConfigProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_szconfig_GetDataSourcesResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szconfig_ImportConfigRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_szconfig_ImportConfigRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szconfig_ImportConfigResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_szconfig_ImportConfigResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7128,40 +3958,26 @@ public final class SzConfigProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016szconfig.proto\022\010szconfig\"G\n\024AddDataSou" +
-      "rceRequest\022\025\n\rconfig_handle\030\001 \001(\003\022\030\n\020dat" +
-      "a_source_code\030\002 \001(\t\"\'\n\025AddDataSourceResp" +
-      "onse\022\016\n\006result\030\001 \001(\t\"+\n\022CloseConfigReque" +
-      "st\022\025\n\rconfig_handle\030\001 \001(\003\"\025\n\023CloseConfig" +
-      "Response\"\025\n\023CreateConfigRequest\"&\n\024Creat" +
-      "eConfigResponse\022\016\n\006result\030\001 \001(\003\"J\n\027Delet" +
-      "eDataSourceRequest\022\025\n\rconfig_handle\030\001 \001(" +
-      "\003\022\030\n\020data_source_code\030\002 \001(\t\"\032\n\030DeleteDat" +
-      "aSourceResponse\",\n\023ExportConfigRequest\022\025" +
-      "\n\rconfig_handle\030\001 \001(\003\"&\n\024ExportConfigRes" +
-      "ponse\022\016\n\006result\030\001 \001(\t\".\n\025GetDataSourcesR" +
-      "equest\022\025\n\rconfig_handle\030\001 \001(\003\"(\n\026GetData" +
-      "SourcesResponse\022\016\n\006result\030\001 \001(\t\"0\n\023Impor" +
-      "tConfigRequest\022\031\n\021config_definition\030\001 \001(" +
-      "\t\"&\n\024ImportConfigResponse\022\016\n\006result\030\001 \001(" +
-      "\0032\323\004\n\010SzConfig\022R\n\rAddDataSource\022\036.szconf" +
-      "ig.AddDataSourceRequest\032\037.szconfig.AddDa" +
-      "taSourceResponse\"\000\022L\n\013CloseConfig\022\034.szco" +
-      "nfig.CloseConfigRequest\032\035.szconfig.Close" +
-      "ConfigResponse\"\000\022O\n\014CreateConfig\022\035.szcon" +
-      "fig.CreateConfigRequest\032\036.szconfig.Creat" +
-      "eConfigResponse\"\000\022[\n\020DeleteDataSource\022!." +
-      "szconfig.DeleteDataSourceRequest\032\".szcon" +
-      "fig.DeleteDataSourceResponse\"\000\022O\n\014Export" +
-      "Config\022\035.szconfig.ExportConfigRequest\032\036." +
-      "szconfig.ExportConfigResponse\"\000\022U\n\016GetDa" +
-      "taSources\022\037.szconfig.GetDataSourcesReque" +
-      "st\032 .szconfig.GetDataSourcesResponse\"\000\022O" +
-      "\n\014ImportConfig\022\035.szconfig.ImportConfigRe" +
-      "quest\032\036.szconfig.ImportConfigResponse\"\000B" +
-      "X\n\024com.senzing.sdk.grpcB\rSzConfigProtoZ1" +
-      "github.com/senzing-garage/sz-sdk-go-grpc" +
-      "/szconfigb\006proto3"
+      "\n\016szconfig.proto\022\010szconfig\"K\n\024AddDataSou" +
+      "rceRequest\022\031\n\021config_definition\030\001 \001(\t\022\030\n" +
+      "\020data_source_code\030\002 \001(\t\"B\n\025AddDataSource" +
+      "Response\022\016\n\006result\030\001 \001(\t\022\031\n\021config_defin" +
+      "ition\030\002 \001(\t\"N\n\027DeleteDataSourceRequest\022\031" +
+      "\n\021config_definition\030\001 \001(\t\022\030\n\020data_source" +
+      "_code\030\002 \001(\t\"E\n\030DeleteDataSourceResponse\022" +
+      "\016\n\006result\030\001 \001(\t\022\031\n\021config_definition\030\002 \001" +
+      "(\t\"2\n\025GetDataSourcesRequest\022\031\n\021config_de" +
+      "finition\030\001 \001(\t\"(\n\026GetDataSourcesResponse" +
+      "\022\016\n\006result\030\001 \001(\t2\222\002\n\010SzConfig\022R\n\rAddData" +
+      "Source\022\036.szconfig.AddDataSourceRequest\032\037" +
+      ".szconfig.AddDataSourceResponse\"\000\022[\n\020Del" +
+      "eteDataSource\022!.szconfig.DeleteDataSourc" +
+      "eRequest\032\".szconfig.DeleteDataSourceResp" +
+      "onse\"\000\022U\n\016GetDataSources\022\037.szconfig.GetD" +
+      "ataSourcesRequest\032 .szconfig.GetDataSour" +
+      "cesResponse\"\000BX\n\024com.senzing.sdk.grpcB\rS" +
+      "zConfigProtoZ1github.com/senzing-garage/" +
+      "sz-sdk-go-grpc/szconfigb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7172,84 +3988,36 @@ public final class SzConfigProto {
     internal_static_szconfig_AddDataSourceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szconfig_AddDataSourceRequest_descriptor,
-        new java.lang.String[] { "ConfigHandle", "DataSourceCode", });
+        new java.lang.String[] { "ConfigDefinition", "DataSourceCode", });
     internal_static_szconfig_AddDataSourceResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_szconfig_AddDataSourceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szconfig_AddDataSourceResponse_descriptor,
-        new java.lang.String[] { "Result", });
-    internal_static_szconfig_CloseConfigRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_szconfig_CloseConfigRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_szconfig_CloseConfigRequest_descriptor,
-        new java.lang.String[] { "ConfigHandle", });
-    internal_static_szconfig_CloseConfigResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_szconfig_CloseConfigResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_szconfig_CloseConfigResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_szconfig_CreateConfigRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_szconfig_CreateConfigRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_szconfig_CreateConfigRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_szconfig_CreateConfigResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_szconfig_CreateConfigResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_szconfig_CreateConfigResponse_descriptor,
-        new java.lang.String[] { "Result", });
+        new java.lang.String[] { "Result", "ConfigDefinition", });
     internal_static_szconfig_DeleteDataSourceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_szconfig_DeleteDataSourceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szconfig_DeleteDataSourceRequest_descriptor,
-        new java.lang.String[] { "ConfigHandle", "DataSourceCode", });
+        new java.lang.String[] { "ConfigDefinition", "DataSourceCode", });
     internal_static_szconfig_DeleteDataSourceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_szconfig_DeleteDataSourceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szconfig_DeleteDataSourceResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_szconfig_ExportConfigRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_szconfig_ExportConfigRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_szconfig_ExportConfigRequest_descriptor,
-        new java.lang.String[] { "ConfigHandle", });
-    internal_static_szconfig_ExportConfigResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_szconfig_ExportConfigResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_szconfig_ExportConfigResponse_descriptor,
-        new java.lang.String[] { "Result", });
+        new java.lang.String[] { "Result", "ConfigDefinition", });
     internal_static_szconfig_GetDataSourcesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_szconfig_GetDataSourcesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szconfig_GetDataSourcesRequest_descriptor,
-        new java.lang.String[] { "ConfigHandle", });
+        new java.lang.String[] { "ConfigDefinition", });
     internal_static_szconfig_GetDataSourcesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_szconfig_GetDataSourcesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szconfig_GetDataSourcesResponse_descriptor,
-        new java.lang.String[] { "Result", });
-    internal_static_szconfig_ImportConfigRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_szconfig_ImportConfigRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_szconfig_ImportConfigRequest_descriptor,
-        new java.lang.String[] { "ConfigDefinition", });
-    internal_static_szconfig_ImportConfigResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_szconfig_ImportConfigResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_szconfig_ImportConfigResponse_descriptor,
         new java.lang.String[] { "Result", });
   }
 
