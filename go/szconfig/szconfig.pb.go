@@ -74,10 +74,11 @@ func (x *AddDataSourceRequest) GetDataSourceCode() string {
 }
 
 type AddDataSourceResponse struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Result        string                 `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	Result           string                 `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
+	ConfigDefinition string                 `protobuf:"bytes,2,opt,name=config_definition,json=configDefinition,proto3" json:"config_definition,omitempty"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
 }
 
 func (x *AddDataSourceResponse) Reset() {
@@ -113,6 +114,13 @@ func (*AddDataSourceResponse) Descriptor() ([]byte, []int) {
 func (x *AddDataSourceResponse) GetResult() string {
 	if x != nil {
 		return x.Result
+	}
+	return ""
+}
+
+func (x *AddDataSourceResponse) GetConfigDefinition() string {
+	if x != nil {
+		return x.ConfigDefinition
 	}
 	return ""
 }
@@ -170,10 +178,11 @@ func (x *DeleteDataSourceRequest) GetDataSourceCode() string {
 }
 
 type DeleteDataSourceResponse struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Result        string                 `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	Result           string                 `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
+	ConfigDefinition string                 `protobuf:"bytes,2,opt,name=config_definition,json=configDefinition,proto3" json:"config_definition,omitempty"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
 }
 
 func (x *DeleteDataSourceResponse) Reset() {
@@ -209,6 +218,13 @@ func (*DeleteDataSourceResponse) Descriptor() ([]byte, []int) {
 func (x *DeleteDataSourceResponse) GetResult() string {
 	if x != nil {
 		return x.Result
+	}
+	return ""
+}
+
+func (x *DeleteDataSourceResponse) GetConfigDefinition() string {
+	if x != nil {
+		return x.ConfigDefinition
 	}
 	return ""
 }
@@ -308,14 +324,16 @@ const file_szconfig_proto_rawDesc = "" +
 	"\x0eszconfig.proto\x12\bszconfig\"m\n" +
 	"\x14AddDataSourceRequest\x12+\n" +
 	"\x11config_definition\x18\x01 \x01(\tR\x10configDefinition\x12(\n" +
-	"\x10data_source_code\x18\x02 \x01(\tR\x0edataSourceCode\"/\n" +
+	"\x10data_source_code\x18\x02 \x01(\tR\x0edataSourceCode\"\\\n" +
 	"\x15AddDataSourceResponse\x12\x16\n" +
-	"\x06result\x18\x01 \x01(\tR\x06result\"p\n" +
+	"\x06result\x18\x01 \x01(\tR\x06result\x12+\n" +
+	"\x11config_definition\x18\x02 \x01(\tR\x10configDefinition\"p\n" +
 	"\x17DeleteDataSourceRequest\x12+\n" +
 	"\x11config_definition\x18\x01 \x01(\tR\x10configDefinition\x12(\n" +
-	"\x10data_source_code\x18\x02 \x01(\tR\x0edataSourceCode\"2\n" +
+	"\x10data_source_code\x18\x02 \x01(\tR\x0edataSourceCode\"_\n" +
 	"\x18DeleteDataSourceResponse\x12\x16\n" +
-	"\x06result\x18\x01 \x01(\tR\x06result\"D\n" +
+	"\x06result\x18\x01 \x01(\tR\x06result\x12+\n" +
+	"\x11config_definition\x18\x02 \x01(\tR\x10configDefinition\"D\n" +
 	"\x15GetDataSourcesRequest\x12+\n" +
 	"\x11config_definition\x18\x01 \x01(\tR\x10configDefinition\"0\n" +
 	"\x16GetDataSourcesResponse\x12\x16\n" +

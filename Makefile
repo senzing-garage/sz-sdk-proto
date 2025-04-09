@@ -208,7 +208,7 @@ documentation: documentation-osarch-specific
 # -----------------------------------------------------------------------------
 
 .PHONY: clean
-clean: clean-csharp clean-go clean-java clean-nodejs clean-php clean-python clean-ruby clean-ts clean-web
+clean: clean-csharp clean-go clean-java clean-php clean-python clean-ruby
 
 
 .PHONY: clean-csharp

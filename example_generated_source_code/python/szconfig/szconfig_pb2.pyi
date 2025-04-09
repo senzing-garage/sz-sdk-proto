@@ -13,10 +13,12 @@ class AddDataSourceRequest(_message.Message):
     def __init__(self, config_definition: _Optional[str] = ..., data_source_code: _Optional[str] = ...) -> None: ...
 
 class AddDataSourceResponse(_message.Message):
-    __slots__ = ("result",)
+    __slots__ = ("result", "config_definition")
     RESULT_FIELD_NUMBER: _ClassVar[int]
+    CONFIG_DEFINITION_FIELD_NUMBER: _ClassVar[int]
     result: str
-    def __init__(self, result: _Optional[str] = ...) -> None: ...
+    config_definition: str
+    def __init__(self, result: _Optional[str] = ..., config_definition: _Optional[str] = ...) -> None: ...
 
 class DeleteDataSourceRequest(_message.Message):
     __slots__ = ("config_definition", "data_source_code")
@@ -27,10 +29,12 @@ class DeleteDataSourceRequest(_message.Message):
     def __init__(self, config_definition: _Optional[str] = ..., data_source_code: _Optional[str] = ...) -> None: ...
 
 class DeleteDataSourceResponse(_message.Message):
-    __slots__ = ("result",)
+    __slots__ = ("result", "config_definition")
     RESULT_FIELD_NUMBER: _ClassVar[int]
+    CONFIG_DEFINITION_FIELD_NUMBER: _ClassVar[int]
     result: str
-    def __init__(self, result: _Optional[str] = ...) -> None: ...
+    config_definition: str
+    def __init__(self, result: _Optional[str] = ..., config_definition: _Optional[str] = ...) -> None: ...
 
 class GetDataSourcesRequest(_message.Message):
     __slots__ = ("config_definition",)

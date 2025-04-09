@@ -582,6 +582,7 @@ class DeleteDataSourceResponse final :
 
   enum : int {
     kResultFieldNumber = 1,
+    kConfigDefinitionFieldNumber = 2,
   };
   // string result = 1;
   void clear_result() ;
@@ -599,14 +600,30 @@ class DeleteDataSourceResponse final :
   std::string* _internal_mutable_result();
 
   public:
+  // string config_definition = 2;
+  void clear_config_definition() ;
+  const std::string& config_definition() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_config_definition(Arg_&& arg, Args_... args);
+  std::string* mutable_config_definition();
+  PROTOBUF_NODISCARD std::string* release_config_definition();
+  void set_allocated_config_definition(std::string* value);
+
+  private:
+  const std::string& _internal_config_definition() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_config_definition(
+      const std::string& value);
+  std::string* _internal_mutable_config_definition();
+
+  public:
   // @@protoc_insertion_point(class_scope:szconfig.DeleteDataSourceResponse)
  private:
   class _Internal;
 
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      0, 1, 0,
-      48, 2>
+      1, 2, 0,
+      65, 2>
       _table_;
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -623,6 +640,7 @@ class DeleteDataSourceResponse final :
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
     ::google::protobuf::internal::ArenaStringPtr result_;
+    ::google::protobuf::internal::ArenaStringPtr config_definition_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -962,6 +980,7 @@ class AddDataSourceResponse final :
 
   enum : int {
     kResultFieldNumber = 1,
+    kConfigDefinitionFieldNumber = 2,
   };
   // string result = 1;
   void clear_result() ;
@@ -979,14 +998,30 @@ class AddDataSourceResponse final :
   std::string* _internal_mutable_result();
 
   public:
+  // string config_definition = 2;
+  void clear_config_definition() ;
+  const std::string& config_definition() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_config_definition(Arg_&& arg, Args_... args);
+  std::string* mutable_config_definition();
+  PROTOBUF_NODISCARD std::string* release_config_definition();
+  void set_allocated_config_definition(std::string* value);
+
+  private:
+  const std::string& _internal_config_definition() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_config_definition(
+      const std::string& value);
+  std::string* _internal_mutable_config_definition();
+
+  public:
   // @@protoc_insertion_point(class_scope:szconfig.AddDataSourceResponse)
  private:
   class _Internal;
 
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      0, 1, 0,
-      45, 2>
+      1, 2, 0,
+      62, 2>
       _table_;
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -1003,6 +1038,7 @@ class AddDataSourceResponse final :
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
     ::google::protobuf::internal::ArenaStringPtr result_;
+    ::google::protobuf::internal::ArenaStringPtr config_definition_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -1388,6 +1424,59 @@ inline void AddDataSourceResponse::set_allocated_result(std::string* value) {
   // @@protoc_insertion_point(field_set_allocated:szconfig.AddDataSourceResponse.result)
 }
 
+// string config_definition = 2;
+inline void AddDataSourceResponse::clear_config_definition() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.config_definition_.ClearToEmpty();
+}
+inline const std::string& AddDataSourceResponse::config_definition() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:szconfig.AddDataSourceResponse.config_definition)
+  return _internal_config_definition();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void AddDataSourceResponse::set_config_definition(Arg_&& arg,
+                                                     Args_... args) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.config_definition_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szconfig.AddDataSourceResponse.config_definition)
+}
+inline std::string* AddDataSourceResponse::mutable_config_definition() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_config_definition();
+  // @@protoc_insertion_point(field_mutable:szconfig.AddDataSourceResponse.config_definition)
+  return _s;
+}
+inline const std::string& AddDataSourceResponse::_internal_config_definition() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.config_definition_.Get();
+}
+inline void AddDataSourceResponse::_internal_set_config_definition(const std::string& value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.config_definition_.Set(value, GetArena());
+}
+inline std::string* AddDataSourceResponse::_internal_mutable_config_definition() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  return _impl_.config_definition_.Mutable( GetArena());
+}
+inline std::string* AddDataSourceResponse::release_config_definition() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  // @@protoc_insertion_point(field_release:szconfig.AddDataSourceResponse.config_definition)
+  return _impl_.config_definition_.Release();
+}
+inline void AddDataSourceResponse::set_allocated_config_definition(std::string* value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.config_definition_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.config_definition_.IsDefault()) {
+          _impl_.config_definition_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:szconfig.AddDataSourceResponse.config_definition)
+}
+
 // -------------------------------------------------------------------
 
 // DeleteDataSourceRequest
@@ -1553,6 +1642,59 @@ inline void DeleteDataSourceResponse::set_allocated_result(std::string* value) {
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:szconfig.DeleteDataSourceResponse.result)
+}
+
+// string config_definition = 2;
+inline void DeleteDataSourceResponse::clear_config_definition() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.config_definition_.ClearToEmpty();
+}
+inline const std::string& DeleteDataSourceResponse::config_definition() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:szconfig.DeleteDataSourceResponse.config_definition)
+  return _internal_config_definition();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void DeleteDataSourceResponse::set_config_definition(Arg_&& arg,
+                                                     Args_... args) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.config_definition_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szconfig.DeleteDataSourceResponse.config_definition)
+}
+inline std::string* DeleteDataSourceResponse::mutable_config_definition() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_config_definition();
+  // @@protoc_insertion_point(field_mutable:szconfig.DeleteDataSourceResponse.config_definition)
+  return _s;
+}
+inline const std::string& DeleteDataSourceResponse::_internal_config_definition() const {
+  PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
+  return _impl_.config_definition_.Get();
+}
+inline void DeleteDataSourceResponse::_internal_set_config_definition(const std::string& value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  _impl_.config_definition_.Set(value, GetArena());
+}
+inline std::string* DeleteDataSourceResponse::_internal_mutable_config_definition() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  ;
+  return _impl_.config_definition_.Mutable( GetArena());
+}
+inline std::string* DeleteDataSourceResponse::release_config_definition() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  // @@protoc_insertion_point(field_release:szconfig.DeleteDataSourceResponse.config_definition)
+  return _impl_.config_definition_.Release();
+}
+inline void DeleteDataSourceResponse::set_allocated_config_definition(std::string* value) {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.config_definition_.SetAllocated(value, GetArena());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.config_definition_.IsDefault()) {
+          _impl_.config_definition_.Set("", GetArena());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:szconfig.DeleteDataSourceResponse.config_definition)
 }
 
 // -------------------------------------------------------------------

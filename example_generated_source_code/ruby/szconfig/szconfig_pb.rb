@@ -11,6 +11,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "szconfig.AddDataSourceResponse" do
       optional :result, :string, 1
+      optional :config_definition, :string, 2
     end
     add_message "szconfig.DeleteDataSourceRequest" do
       optional :config_definition, :string, 1
@@ -18,6 +19,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "szconfig.DeleteDataSourceResponse" do
       optional :result, :string, 1
+      optional :config_definition, :string, 2
     end
     add_message "szconfig.GetDataSourcesRequest" do
       optional :config_definition, :string, 1

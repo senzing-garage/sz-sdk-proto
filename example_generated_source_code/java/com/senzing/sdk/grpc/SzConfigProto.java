@@ -730,6 +730,18 @@ public final class SzConfigProto {
      */
     com.google.protobuf.ByteString
         getResultBytes();
+
+    /**
+     * <code>string config_definition = 2;</code>
+     * @return The configDefinition.
+     */
+    java.lang.String getConfigDefinition();
+    /**
+     * <code>string config_definition = 2;</code>
+     * @return The bytes for configDefinition.
+     */
+    com.google.protobuf.ByteString
+        getConfigDefinitionBytes();
   }
   /**
    * Protobuf type {@code szconfig.AddDataSourceResponse}
@@ -745,6 +757,7 @@ public final class SzConfigProto {
     }
     private AddDataSourceResponse() {
       result_ = "";
+      configDefinition_ = "";
     }
 
     @java.lang.Override
@@ -806,6 +819,45 @@ public final class SzConfigProto {
       }
     }
 
+    public static final int CONFIG_DEFINITION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object configDefinition_ = "";
+    /**
+     * <code>string config_definition = 2;</code>
+     * @return The configDefinition.
+     */
+    @java.lang.Override
+    public java.lang.String getConfigDefinition() {
+      java.lang.Object ref = configDefinition_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        configDefinition_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string config_definition = 2;</code>
+     * @return The bytes for configDefinition.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConfigDefinitionBytes() {
+      java.lang.Object ref = configDefinition_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        configDefinition_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -823,6 +875,9 @@ public final class SzConfigProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, result_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configDefinition_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, configDefinition_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -834,6 +889,9 @@ public final class SzConfigProto {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, result_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configDefinition_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, configDefinition_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -852,6 +910,8 @@ public final class SzConfigProto {
 
       if (!getResult()
           .equals(other.getResult())) return false;
+      if (!getConfigDefinition()
+          .equals(other.getConfigDefinition())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -865,6 +925,8 @@ public final class SzConfigProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + RESULT_FIELD_NUMBER;
       hash = (53 * hash) + getResult().hashCode();
+      hash = (37 * hash) + CONFIG_DEFINITION_FIELD_NUMBER;
+      hash = (53 * hash) + getConfigDefinition().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -997,6 +1059,7 @@ public final class SzConfigProto {
         super.clear();
         bitField0_ = 0;
         result_ = "";
+        configDefinition_ = "";
         return this;
       }
 
@@ -1032,6 +1095,9 @@ public final class SzConfigProto {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.configDefinition_ = configDefinition_;
         }
       }
 
@@ -1084,6 +1150,11 @@ public final class SzConfigProto {
           bitField0_ |= 0x00000001;
           onChanged();
         }
+        if (!other.getConfigDefinition().isEmpty()) {
+          configDefinition_ = other.configDefinition_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1115,6 +1186,11 @@ public final class SzConfigProto {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                configDefinition_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1200,6 +1276,78 @@ public final class SzConfigProto {
         checkByteStringIsUtf8(value);
         result_ = value;
         bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object configDefinition_ = "";
+      /**
+       * <code>string config_definition = 2;</code>
+       * @return The configDefinition.
+       */
+      public java.lang.String getConfigDefinition() {
+        java.lang.Object ref = configDefinition_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          configDefinition_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string config_definition = 2;</code>
+       * @return The bytes for configDefinition.
+       */
+      public com.google.protobuf.ByteString
+          getConfigDefinitionBytes() {
+        java.lang.Object ref = configDefinition_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          configDefinition_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string config_definition = 2;</code>
+       * @param value The configDefinition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigDefinition(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        configDefinition_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string config_definition = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConfigDefinition() {
+        configDefinition_ = getDefaultInstance().getConfigDefinition();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string config_definition = 2;</code>
+       * @param value The bytes for configDefinition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigDefinitionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        configDefinition_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1982,6 +2130,18 @@ public final class SzConfigProto {
      */
     com.google.protobuf.ByteString
         getResultBytes();
+
+    /**
+     * <code>string config_definition = 2;</code>
+     * @return The configDefinition.
+     */
+    java.lang.String getConfigDefinition();
+    /**
+     * <code>string config_definition = 2;</code>
+     * @return The bytes for configDefinition.
+     */
+    com.google.protobuf.ByteString
+        getConfigDefinitionBytes();
   }
   /**
    * Protobuf type {@code szconfig.DeleteDataSourceResponse}
@@ -1997,6 +2157,7 @@ public final class SzConfigProto {
     }
     private DeleteDataSourceResponse() {
       result_ = "";
+      configDefinition_ = "";
     }
 
     @java.lang.Override
@@ -2058,6 +2219,45 @@ public final class SzConfigProto {
       }
     }
 
+    public static final int CONFIG_DEFINITION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object configDefinition_ = "";
+    /**
+     * <code>string config_definition = 2;</code>
+     * @return The configDefinition.
+     */
+    @java.lang.Override
+    public java.lang.String getConfigDefinition() {
+      java.lang.Object ref = configDefinition_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        configDefinition_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string config_definition = 2;</code>
+     * @return The bytes for configDefinition.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConfigDefinitionBytes() {
+      java.lang.Object ref = configDefinition_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        configDefinition_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2075,6 +2275,9 @@ public final class SzConfigProto {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, result_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configDefinition_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, configDefinition_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -2086,6 +2289,9 @@ public final class SzConfigProto {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, result_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configDefinition_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, configDefinition_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2104,6 +2310,8 @@ public final class SzConfigProto {
 
       if (!getResult()
           .equals(other.getResult())) return false;
+      if (!getConfigDefinition()
+          .equals(other.getConfigDefinition())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2117,6 +2325,8 @@ public final class SzConfigProto {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + RESULT_FIELD_NUMBER;
       hash = (53 * hash) + getResult().hashCode();
+      hash = (37 * hash) + CONFIG_DEFINITION_FIELD_NUMBER;
+      hash = (53 * hash) + getConfigDefinition().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2249,6 +2459,7 @@ public final class SzConfigProto {
         super.clear();
         bitField0_ = 0;
         result_ = "";
+        configDefinition_ = "";
         return this;
       }
 
@@ -2284,6 +2495,9 @@ public final class SzConfigProto {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.configDefinition_ = configDefinition_;
         }
       }
 
@@ -2336,6 +2550,11 @@ public final class SzConfigProto {
           bitField0_ |= 0x00000001;
           onChanged();
         }
+        if (!other.getConfigDefinition().isEmpty()) {
+          configDefinition_ = other.configDefinition_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2367,6 +2586,11 @@ public final class SzConfigProto {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                configDefinition_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2452,6 +2676,78 @@ public final class SzConfigProto {
         checkByteStringIsUtf8(value);
         result_ = value;
         bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object configDefinition_ = "";
+      /**
+       * <code>string config_definition = 2;</code>
+       * @return The configDefinition.
+       */
+      public java.lang.String getConfigDefinition() {
+        java.lang.Object ref = configDefinition_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          configDefinition_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string config_definition = 2;</code>
+       * @return The bytes for configDefinition.
+       */
+      public com.google.protobuf.ByteString
+          getConfigDefinitionBytes() {
+        java.lang.Object ref = configDefinition_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          configDefinition_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string config_definition = 2;</code>
+       * @param value The configDefinition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigDefinition(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        configDefinition_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string config_definition = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConfigDefinition() {
+        configDefinition_ = getDefaultInstance().getConfigDefinition();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string config_definition = 2;</code>
+       * @param value The bytes for configDefinition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigDefinitionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        configDefinition_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3664,23 +3960,24 @@ public final class SzConfigProto {
     java.lang.String[] descriptorData = {
       "\n\016szconfig.proto\022\010szconfig\"K\n\024AddDataSou" +
       "rceRequest\022\031\n\021config_definition\030\001 \001(\t\022\030\n" +
-      "\020data_source_code\030\002 \001(\t\"\'\n\025AddDataSource" +
-      "Response\022\016\n\006result\030\001 \001(\t\"N\n\027DeleteDataSo" +
-      "urceRequest\022\031\n\021config_definition\030\001 \001(\t\022\030" +
-      "\n\020data_source_code\030\002 \001(\t\"*\n\030DeleteDataSo" +
-      "urceResponse\022\016\n\006result\030\001 \001(\t\"2\n\025GetDataS" +
-      "ourcesRequest\022\031\n\021config_definition\030\001 \001(\t" +
-      "\"(\n\026GetDataSourcesResponse\022\016\n\006result\030\001 \001" +
-      "(\t2\222\002\n\010SzConfig\022R\n\rAddDataSource\022\036.szcon" +
-      "fig.AddDataSourceRequest\032\037.szconfig.AddD" +
-      "ataSourceResponse\"\000\022[\n\020DeleteDataSource\022" +
-      "!.szconfig.DeleteDataSourceRequest\032\".szc" +
-      "onfig.DeleteDataSourceResponse\"\000\022U\n\016GetD" +
-      "ataSources\022\037.szconfig.GetDataSourcesRequ" +
-      "est\032 .szconfig.GetDataSourcesResponse\"\000B" +
-      "X\n\024com.senzing.sdk.grpcB\rSzConfigProtoZ1" +
-      "github.com/senzing-garage/sz-sdk-go-grpc" +
-      "/szconfigb\006proto3"
+      "\020data_source_code\030\002 \001(\t\"B\n\025AddDataSource" +
+      "Response\022\016\n\006result\030\001 \001(\t\022\031\n\021config_defin" +
+      "ition\030\002 \001(\t\"N\n\027DeleteDataSourceRequest\022\031" +
+      "\n\021config_definition\030\001 \001(\t\022\030\n\020data_source" +
+      "_code\030\002 \001(\t\"E\n\030DeleteDataSourceResponse\022" +
+      "\016\n\006result\030\001 \001(\t\022\031\n\021config_definition\030\002 \001" +
+      "(\t\"2\n\025GetDataSourcesRequest\022\031\n\021config_de" +
+      "finition\030\001 \001(\t\"(\n\026GetDataSourcesResponse" +
+      "\022\016\n\006result\030\001 \001(\t2\222\002\n\010SzConfig\022R\n\rAddData" +
+      "Source\022\036.szconfig.AddDataSourceRequest\032\037" +
+      ".szconfig.AddDataSourceResponse\"\000\022[\n\020Del" +
+      "eteDataSource\022!.szconfig.DeleteDataSourc" +
+      "eRequest\032\".szconfig.DeleteDataSourceResp" +
+      "onse\"\000\022U\n\016GetDataSources\022\037.szconfig.GetD" +
+      "ataSourcesRequest\032 .szconfig.GetDataSour" +
+      "cesResponse\"\000BX\n\024com.senzing.sdk.grpcB\rS" +
+      "zConfigProtoZ1github.com/senzing-garage/" +
+      "sz-sdk-go-grpc/szconfigb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3697,7 +3994,7 @@ public final class SzConfigProto {
     internal_static_szconfig_AddDataSourceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szconfig_AddDataSourceResponse_descriptor,
-        new java.lang.String[] { "Result", });
+        new java.lang.String[] { "Result", "ConfigDefinition", });
     internal_static_szconfig_DeleteDataSourceRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_szconfig_DeleteDataSourceRequest_fieldAccessorTable = new
@@ -3709,7 +4006,7 @@ public final class SzConfigProto {
     internal_static_szconfig_DeleteDataSourceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_szconfig_DeleteDataSourceResponse_descriptor,
-        new java.lang.String[] { "Result", });
+        new java.lang.String[] { "Result", "ConfigDefinition", });
     internal_static_szconfig_GetDataSourcesRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_szconfig_GetDataSourcesRequest_fieldAccessorTable = new

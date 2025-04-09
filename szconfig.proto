@@ -18,6 +18,7 @@ message AddDataSourceRequest {
 
 message AddDataSourceResponse {
   string result = 1;
+  string config_definition = 2;
 }
 
 message DeleteDataSourceRequest {
@@ -27,6 +28,7 @@ message DeleteDataSourceRequest {
 
 message DeleteDataSourceResponse {
   string result = 1;
+  string config_definition = 2;
 }
 
 message GetDataSourcesRequest {
@@ -36,5 +38,3 @@ message GetDataSourcesRequest {
 message GetDataSourcesResponse {
   string result = 1;
 }
-
-

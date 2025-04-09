@@ -69,6 +69,9 @@ inline constexpr DeleteDataSourceResponse::Impl_::Impl_(
       : result_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
+        config_definition_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
         _cached_size_{0} {}
 
 template <typename>
@@ -112,6 +115,9 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 inline constexpr AddDataSourceResponse::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : result_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        config_definition_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         _cached_size_{0} {}
@@ -180,6 +186,7 @@ const ::uint32_t TableStruct_szconfig_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
     PROTOBUF_FIELD_OFFSET(::szconfig::AddDataSourceResponse, _impl_.result_),
+    PROTOBUF_FIELD_OFFSET(::szconfig::AddDataSourceResponse, _impl_.config_definition_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szconfig::DeleteDataSourceRequest, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -199,6 +206,7 @@ const ::uint32_t TableStruct_szconfig_2eproto::offsets[] PROTOBUF_SECTION_VARIAB
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
     PROTOBUF_FIELD_OFFSET(::szconfig::DeleteDataSourceResponse, _impl_.result_),
+    PROTOBUF_FIELD_OFFSET(::szconfig::DeleteDataSourceResponse, _impl_.config_definition_),
     ~0u,  // no _has_bits_
     PROTOBUF_FIELD_OFFSET(::szconfig::GetDataSourcesRequest, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -223,10 +231,10 @@ static const ::_pbi::MigrationSchema
     schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
         {0, -1, -1, sizeof(::szconfig::AddDataSourceRequest)},
         {10, -1, -1, sizeof(::szconfig::AddDataSourceResponse)},
-        {19, -1, -1, sizeof(::szconfig::DeleteDataSourceRequest)},
-        {29, -1, -1, sizeof(::szconfig::DeleteDataSourceResponse)},
-        {38, -1, -1, sizeof(::szconfig::GetDataSourcesRequest)},
-        {47, -1, -1, sizeof(::szconfig::GetDataSourcesResponse)},
+        {20, -1, -1, sizeof(::szconfig::DeleteDataSourceRequest)},
+        {30, -1, -1, sizeof(::szconfig::DeleteDataSourceResponse)},
+        {40, -1, -1, sizeof(::szconfig::GetDataSourcesRequest)},
+        {49, -1, -1, sizeof(::szconfig::GetDataSourcesResponse)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
@@ -240,29 +248,30 @@ static const ::_pb::Message* const file_default_instances[] = {
 const char descriptor_table_protodef_szconfig_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
     "\n\016szconfig.proto\022\010szconfig\"K\n\024AddDataSou"
     "rceRequest\022\031\n\021config_definition\030\001 \001(\t\022\030\n"
-    "\020data_source_code\030\002 \001(\t\"\'\n\025AddDataSource"
-    "Response\022\016\n\006result\030\001 \001(\t\"N\n\027DeleteDataSo"
-    "urceRequest\022\031\n\021config_definition\030\001 \001(\t\022\030"
-    "\n\020data_source_code\030\002 \001(\t\"*\n\030DeleteDataSo"
-    "urceResponse\022\016\n\006result\030\001 \001(\t\"2\n\025GetDataS"
-    "ourcesRequest\022\031\n\021config_definition\030\001 \001(\t"
-    "\"(\n\026GetDataSourcesResponse\022\016\n\006result\030\001 \001"
-    "(\t2\222\002\n\010SzConfig\022R\n\rAddDataSource\022\036.szcon"
-    "fig.AddDataSourceRequest\032\037.szconfig.AddD"
-    "ataSourceResponse\"\000\022[\n\020DeleteDataSource\022"
-    "!.szconfig.DeleteDataSourceRequest\032\".szc"
-    "onfig.DeleteDataSourceResponse\"\000\022U\n\016GetD"
-    "ataSources\022\037.szconfig.GetDataSourcesRequ"
-    "est\032 .szconfig.GetDataSourcesResponse\"\000B"
-    "X\n\024com.senzing.sdk.grpcB\rSzConfigProtoZ1"
-    "github.com/senzing-garage/sz-sdk-go-grpc"
-    "/szconfigb\006proto3"
+    "\020data_source_code\030\002 \001(\t\"B\n\025AddDataSource"
+    "Response\022\016\n\006result\030\001 \001(\t\022\031\n\021config_defin"
+    "ition\030\002 \001(\t\"N\n\027DeleteDataSourceRequest\022\031"
+    "\n\021config_definition\030\001 \001(\t\022\030\n\020data_source"
+    "_code\030\002 \001(\t\"E\n\030DeleteDataSourceResponse\022"
+    "\016\n\006result\030\001 \001(\t\022\031\n\021config_definition\030\002 \001"
+    "(\t\"2\n\025GetDataSourcesRequest\022\031\n\021config_de"
+    "finition\030\001 \001(\t\"(\n\026GetDataSourcesResponse"
+    "\022\016\n\006result\030\001 \001(\t2\222\002\n\010SzConfig\022R\n\rAddData"
+    "Source\022\036.szconfig.AddDataSourceRequest\032\037"
+    ".szconfig.AddDataSourceResponse\"\000\022[\n\020Del"
+    "eteDataSource\022!.szconfig.DeleteDataSourc"
+    "eRequest\032\".szconfig.DeleteDataSourceResp"
+    "onse\"\000\022U\n\016GetDataSources\022\037.szconfig.GetD"
+    "ataSourcesRequest\032 .szconfig.GetDataSour"
+    "cesResponse\"\000BX\n\024com.senzing.sdk.grpcB\rS"
+    "zConfigProtoZ1github.com/senzing-garage/"
+    "sz-sdk-go-grpc/szconfigb\006proto3"
 };
 static ::absl::once_flag descriptor_table_szconfig_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_szconfig_2eproto = {
     false,
     false,
-    737,
+    791,
     descriptor_table_protodef_szconfig_2eproto,
     "szconfig.proto",
     &descriptor_table_szconfig_2eproto_once,
@@ -529,6 +538,7 @@ inline PROTOBUF_NDEBUG_INLINE AddDataSourceResponse::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
       : result_(arena, from.result_),
+        config_definition_(arena, from.config_definition_),
         _cached_size_{0} {}
 
 AddDataSourceResponse::AddDataSourceResponse(
@@ -547,6 +557,7 @@ inline PROTOBUF_NDEBUG_INLINE AddDataSourceResponse::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : result_(arena),
+        config_definition_(arena),
         _cached_size_{0} {}
 
 inline void AddDataSourceResponse::SharedCtor(::_pb::Arena* arena) {
@@ -560,6 +571,7 @@ AddDataSourceResponse::~AddDataSourceResponse() {
 inline void AddDataSourceResponse::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
   _impl_.result_.Destroy();
+  _impl_.config_definition_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -571,6 +583,7 @@ PROTOBUF_NOINLINE void AddDataSourceResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.result_.ClearToEmpty();
+  _impl_.config_definition_.ClearToEmpty();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -582,20 +595,23 @@ const char* AddDataSourceResponse::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 45, 2> AddDataSourceResponse::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 62, 2> AddDataSourceResponse::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
+    2, 8,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
+    4294967292,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
+    2,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
     &_AddDataSourceResponse_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
+    // string config_definition = 2;
+    {::_pbi::TcParser::FastUS1,
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(AddDataSourceResponse, _impl_.config_definition_)}},
     // string result = 1;
     {::_pbi::TcParser::FastUS1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(AddDataSourceResponse, _impl_.result_)}},
@@ -605,12 +621,16 @@ const ::_pbi::TcParseTable<0, 1, 0, 45, 2> AddDataSourceResponse::_table_ = {
     // string result = 1;
     {PROTOBUF_FIELD_OFFSET(AddDataSourceResponse, _impl_.result_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // string config_definition = 2;
+    {PROTOBUF_FIELD_OFFSET(AddDataSourceResponse, _impl_.config_definition_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\36\6\0\0\0\0\0\0"
+    "\36\6\21\0\0\0\0\0"
     "szconfig.AddDataSourceResponse"
     "result"
+    "config_definition"
   }},
 };
 
@@ -627,6 +647,14 @@ const ::_pbi::TcParseTable<0, 1, 0, 45, 2> AddDataSourceResponse::_table_ = {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
         _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.AddDataSourceResponse.result");
     target = stream->WriteStringMaybeAliased(1, _s, target);
+  }
+
+  // string config_definition = 2;
+  if (!this->_internal_config_definition().empty()) {
+    const std::string& _s = this->_internal_config_definition();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.AddDataSourceResponse.config_definition");
+    target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -652,6 +680,12 @@ const ::_pbi::TcParseTable<0, 1, 0, 45, 2> AddDataSourceResponse::_table_ = {
                                     this->_internal_result());
   }
 
+  // string config_definition = 2;
+  if (!this->_internal_config_definition().empty()) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_config_definition());
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -673,6 +707,9 @@ void AddDataSourceResponse::MergeImpl(::google::protobuf::Message& to_msg, const
 
   if (!from._internal_result().empty()) {
     _this->_internal_set_result(from._internal_result());
+  }
+  if (!from._internal_config_definition().empty()) {
+    _this->_internal_set_config_definition(from._internal_config_definition());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -697,6 +734,7 @@ void AddDataSourceResponse::InternalSwap(AddDataSourceResponse* PROTOBUF_RESTRIC
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.result_, &other->_impl_.result_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.config_definition_, &other->_impl_.config_definition_, arena);
 }
 
 ::google::protobuf::Metadata AddDataSourceResponse::GetMetadata() const {
@@ -938,6 +976,7 @@ inline PROTOBUF_NDEBUG_INLINE DeleteDataSourceResponse::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from)
       : result_(arena, from.result_),
+        config_definition_(arena, from.config_definition_),
         _cached_size_{0} {}
 
 DeleteDataSourceResponse::DeleteDataSourceResponse(
@@ -956,6 +995,7 @@ inline PROTOBUF_NDEBUG_INLINE DeleteDataSourceResponse::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : result_(arena),
+        config_definition_(arena),
         _cached_size_{0} {}
 
 inline void DeleteDataSourceResponse::SharedCtor(::_pb::Arena* arena) {
@@ -969,6 +1009,7 @@ DeleteDataSourceResponse::~DeleteDataSourceResponse() {
 inline void DeleteDataSourceResponse::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
   _impl_.result_.Destroy();
+  _impl_.config_definition_.Destroy();
   _impl_.~Impl_();
 }
 
@@ -980,6 +1021,7 @@ PROTOBUF_NOINLINE void DeleteDataSourceResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.result_.ClearToEmpty();
+  _impl_.config_definition_.ClearToEmpty();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -991,20 +1033,23 @@ const char* DeleteDataSourceResponse::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 48, 2> DeleteDataSourceResponse::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 65, 2> DeleteDataSourceResponse::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
+    2, 8,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
+    4294967292,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
+    2,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
     &_DeleteDataSourceResponse_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
+    // string config_definition = 2;
+    {::_pbi::TcParser::FastUS1,
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(DeleteDataSourceResponse, _impl_.config_definition_)}},
     // string result = 1;
     {::_pbi::TcParser::FastUS1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(DeleteDataSourceResponse, _impl_.result_)}},
@@ -1014,12 +1059,16 @@ const ::_pbi::TcParseTable<0, 1, 0, 48, 2> DeleteDataSourceResponse::_table_ = {
     // string result = 1;
     {PROTOBUF_FIELD_OFFSET(DeleteDataSourceResponse, _impl_.result_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // string config_definition = 2;
+    {PROTOBUF_FIELD_OFFSET(DeleteDataSourceResponse, _impl_.config_definition_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\41\6\0\0\0\0\0\0"
+    "\41\6\21\0\0\0\0\0"
     "szconfig.DeleteDataSourceResponse"
     "result"
+    "config_definition"
   }},
 };
 
@@ -1036,6 +1085,14 @@ const ::_pbi::TcParseTable<0, 1, 0, 48, 2> DeleteDataSourceResponse::_table_ = {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
         _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.DeleteDataSourceResponse.result");
     target = stream->WriteStringMaybeAliased(1, _s, target);
+  }
+
+  // string config_definition = 2;
+  if (!this->_internal_config_definition().empty()) {
+    const std::string& _s = this->_internal_config_definition();
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.DeleteDataSourceResponse.config_definition");
+    target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1061,6 +1118,12 @@ const ::_pbi::TcParseTable<0, 1, 0, 48, 2> DeleteDataSourceResponse::_table_ = {
                                     this->_internal_result());
   }
 
+  // string config_definition = 2;
+  if (!this->_internal_config_definition().empty()) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_config_definition());
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -1082,6 +1145,9 @@ void DeleteDataSourceResponse::MergeImpl(::google::protobuf::Message& to_msg, co
 
   if (!from._internal_result().empty()) {
     _this->_internal_set_result(from._internal_result());
+  }
+  if (!from._internal_config_definition().empty()) {
+    _this->_internal_set_config_definition(from._internal_config_definition());
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -1106,6 +1172,7 @@ void DeleteDataSourceResponse::InternalSwap(DeleteDataSourceResponse* PROTOBUF_R
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.result_, &other->_impl_.result_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.config_definition_, &other->_impl_.config_definition_, arena);
 }
 
 ::google::protobuf::Metadata DeleteDataSourceResponse::GetMetadata() const {

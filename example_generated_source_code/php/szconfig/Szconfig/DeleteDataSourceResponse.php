@@ -17,6 +17,10 @@ class DeleteDataSourceResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string result = 1;</code>
      */
     protected $result = '';
+    /**
+     * Generated from protobuf field <code>string config_definition = 2;</code>
+     */
+    protected $config_definition = '';
 
     /**
      * Constructor.
@@ -25,6 +29,7 @@ class DeleteDataSourceResponse extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $result
+     *     @type string $config_definition
      * }
      */
     public function __construct($data = NULL) {
@@ -50,6 +55,28 @@ class DeleteDataSourceResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->result = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string config_definition = 2;</code>
+     * @return string
+     */
+    public function getConfigDefinition()
+    {
+        return $this->config_definition;
+    }
+
+    /**
+     * Generated from protobuf field <code>string config_definition = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setConfigDefinition($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->config_definition = $var;
 
         return $this;
     }
