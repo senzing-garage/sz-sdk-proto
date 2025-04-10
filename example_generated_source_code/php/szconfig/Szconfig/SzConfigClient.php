@@ -31,34 +31,6 @@ class SzConfigClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Szconfig\CloseConfigRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function CloseConfig(\Szconfig\CloseConfigRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szconfig.SzConfig/CloseConfig',
-        $argument,
-        ['\Szconfig\CloseConfigResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Szconfig\CreateConfigRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function CreateConfig(\Szconfig\CreateConfigRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szconfig.SzConfig/CreateConfig',
-        $argument,
-        ['\Szconfig\CreateConfigResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \Szconfig\DeleteDataSourceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -73,20 +45,6 @@ class SzConfigClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Szconfig\ExportConfigRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function ExportConfig(\Szconfig\ExportConfigRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szconfig.SzConfig/ExportConfig',
-        $argument,
-        ['\Szconfig\ExportConfigResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \Szconfig\GetDataSourcesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -97,20 +55,6 @@ class SzConfigClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/szconfig.SzConfig/GetDataSources',
         $argument,
         ['\Szconfig\GetDataSourcesResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Szconfig\ImportConfigRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function ImportConfig(\Szconfig\ImportConfigRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szconfig.SzConfig/ImportConfig',
-        $argument,
-        ['\Szconfig\ImportConfigResponse', 'decode'],
         $metadata, $options);
     }
 

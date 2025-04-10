@@ -17,20 +17,6 @@ class SzConfigManagerClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Szconfigmanager\AddConfigRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function AddConfig(\Szconfigmanager\AddConfigRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szconfigmanager.SzConfigManager/AddConfig',
-        $argument,
-        ['\Szconfigmanager\AddConfigResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \Szconfigmanager\GetConfigRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -73,6 +59,34 @@ class SzConfigManagerClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Szconfigmanager\GetTemplateConfigRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetTemplateConfig(\Szconfigmanager\GetTemplateConfigRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szconfigmanager.SzConfigManager/GetTemplateConfig',
+        $argument,
+        ['\Szconfigmanager\GetTemplateConfigResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Szconfigmanager\RegisterConfigRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function RegisterConfig(\Szconfigmanager\RegisterConfigRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szconfigmanager.SzConfigManager/RegisterConfig',
+        $argument,
+        ['\Szconfigmanager\RegisterConfigResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Szconfigmanager\ReplaceDefaultConfigIdRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -83,6 +97,20 @@ class SzConfigManagerClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/szconfigmanager.SzConfigManager/ReplaceDefaultConfigId',
         $argument,
         ['\Szconfigmanager\ReplaceDefaultConfigIdResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Szconfigmanager\SetDefaultConfigRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function SetDefaultConfig(\Szconfigmanager\SetDefaultConfigRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szconfigmanager.SzConfigManager/SetDefaultConfig',
+        $argument,
+        ['\Szconfigmanager\SetDefaultConfigResponse', 'decode'],
         $metadata, $options);
     }
 

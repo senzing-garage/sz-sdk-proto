@@ -4,20 +4,6 @@ from typing import ClassVar as _ClassVar, Optional as _Optional
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
-class AddConfigRequest(_message.Message):
-    __slots__ = ("config_definition", "config_comment")
-    CONFIG_DEFINITION_FIELD_NUMBER: _ClassVar[int]
-    CONFIG_COMMENT_FIELD_NUMBER: _ClassVar[int]
-    config_definition: str
-    config_comment: str
-    def __init__(self, config_definition: _Optional[str] = ..., config_comment: _Optional[str] = ...) -> None: ...
-
-class AddConfigResponse(_message.Message):
-    __slots__ = ("result",)
-    RESULT_FIELD_NUMBER: _ClassVar[int]
-    result: int
-    def __init__(self, result: _Optional[int] = ...) -> None: ...
-
 class GetConfigRequest(_message.Message):
     __slots__ = ("config_id",)
     CONFIG_ID_FIELD_NUMBER: _ClassVar[int]
@@ -50,6 +36,30 @@ class GetDefaultConfigIdResponse(_message.Message):
     result: int
     def __init__(self, result: _Optional[int] = ...) -> None: ...
 
+class GetTemplateConfigRequest(_message.Message):
+    __slots__ = ()
+    def __init__(self) -> None: ...
+
+class GetTemplateConfigResponse(_message.Message):
+    __slots__ = ("result",)
+    RESULT_FIELD_NUMBER: _ClassVar[int]
+    result: str
+    def __init__(self, result: _Optional[str] = ...) -> None: ...
+
+class RegisterConfigRequest(_message.Message):
+    __slots__ = ("config_definition", "config_comment")
+    CONFIG_DEFINITION_FIELD_NUMBER: _ClassVar[int]
+    CONFIG_COMMENT_FIELD_NUMBER: _ClassVar[int]
+    config_definition: str
+    config_comment: str
+    def __init__(self, config_definition: _Optional[str] = ..., config_comment: _Optional[str] = ...) -> None: ...
+
+class RegisterConfigResponse(_message.Message):
+    __slots__ = ("result",)
+    RESULT_FIELD_NUMBER: _ClassVar[int]
+    result: int
+    def __init__(self, result: _Optional[int] = ...) -> None: ...
+
 class ReplaceDefaultConfigIdRequest(_message.Message):
     __slots__ = ("current_default_config_id", "new_default_config_id")
     CURRENT_DEFAULT_CONFIG_ID_FIELD_NUMBER: _ClassVar[int]
@@ -61,6 +71,20 @@ class ReplaceDefaultConfigIdRequest(_message.Message):
 class ReplaceDefaultConfigIdResponse(_message.Message):
     __slots__ = ()
     def __init__(self) -> None: ...
+
+class SetDefaultConfigRequest(_message.Message):
+    __slots__ = ("config_definition", "config_comment")
+    CONFIG_DEFINITION_FIELD_NUMBER: _ClassVar[int]
+    CONFIG_COMMENT_FIELD_NUMBER: _ClassVar[int]
+    config_definition: str
+    config_comment: str
+    def __init__(self, config_definition: _Optional[str] = ..., config_comment: _Optional[str] = ...) -> None: ...
+
+class SetDefaultConfigResponse(_message.Message):
+    __slots__ = ("result",)
+    RESULT_FIELD_NUMBER: _ClassVar[int]
+    result: int
+    def __init__(self, result: _Optional[int] = ...) -> None: ...
 
 class SetDefaultConfigIdRequest(_message.Message):
     __slots__ = ("config_id",)

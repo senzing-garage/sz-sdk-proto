@@ -82,92 +82,6 @@ export class SzConfigClient {
     this.methodDescriptorAddDataSource);
   }
 
-  methodDescriptorCloseConfig = new grpcWeb.MethodDescriptor(
-    '/szconfig.SzConfig/CloseConfig',
-    grpcWeb.MethodType.UNARY,
-    szconfig_pb.CloseConfigRequest,
-    szconfig_pb.CloseConfigResponse,
-    (request: szconfig_pb.CloseConfigRequest) => {
-      return request.serializeBinary();
-    },
-    szconfig_pb.CloseConfigResponse.deserializeBinary
-  );
-
-  closeConfig(
-    request: szconfig_pb.CloseConfigRequest,
-    metadata?: grpcWeb.Metadata | null): Promise<szconfig_pb.CloseConfigResponse>;
-
-  closeConfig(
-    request: szconfig_pb.CloseConfigRequest,
-    metadata: grpcWeb.Metadata | null,
-    callback: (err: grpcWeb.RpcError,
-               response: szconfig_pb.CloseConfigResponse) => void): grpcWeb.ClientReadableStream<szconfig_pb.CloseConfigResponse>;
-
-  closeConfig(
-    request: szconfig_pb.CloseConfigRequest,
-    metadata?: grpcWeb.Metadata | null,
-    callback?: (err: grpcWeb.RpcError,
-               response: szconfig_pb.CloseConfigResponse) => void) {
-    if (callback !== undefined) {
-      return this.client_.rpcCall(
-        this.hostname_ +
-          '/szconfig.SzConfig/CloseConfig',
-        request,
-        metadata || {},
-        this.methodDescriptorCloseConfig,
-        callback);
-    }
-    return this.client_.unaryCall(
-    this.hostname_ +
-      '/szconfig.SzConfig/CloseConfig',
-    request,
-    metadata || {},
-    this.methodDescriptorCloseConfig);
-  }
-
-  methodDescriptorCreateConfig = new grpcWeb.MethodDescriptor(
-    '/szconfig.SzConfig/CreateConfig',
-    grpcWeb.MethodType.UNARY,
-    szconfig_pb.CreateConfigRequest,
-    szconfig_pb.CreateConfigResponse,
-    (request: szconfig_pb.CreateConfigRequest) => {
-      return request.serializeBinary();
-    },
-    szconfig_pb.CreateConfigResponse.deserializeBinary
-  );
-
-  createConfig(
-    request: szconfig_pb.CreateConfigRequest,
-    metadata?: grpcWeb.Metadata | null): Promise<szconfig_pb.CreateConfigResponse>;
-
-  createConfig(
-    request: szconfig_pb.CreateConfigRequest,
-    metadata: grpcWeb.Metadata | null,
-    callback: (err: grpcWeb.RpcError,
-               response: szconfig_pb.CreateConfigResponse) => void): grpcWeb.ClientReadableStream<szconfig_pb.CreateConfigResponse>;
-
-  createConfig(
-    request: szconfig_pb.CreateConfigRequest,
-    metadata?: grpcWeb.Metadata | null,
-    callback?: (err: grpcWeb.RpcError,
-               response: szconfig_pb.CreateConfigResponse) => void) {
-    if (callback !== undefined) {
-      return this.client_.rpcCall(
-        this.hostname_ +
-          '/szconfig.SzConfig/CreateConfig',
-        request,
-        metadata || {},
-        this.methodDescriptorCreateConfig,
-        callback);
-    }
-    return this.client_.unaryCall(
-    this.hostname_ +
-      '/szconfig.SzConfig/CreateConfig',
-    request,
-    metadata || {},
-    this.methodDescriptorCreateConfig);
-  }
-
   methodDescriptorDeleteDataSource = new grpcWeb.MethodDescriptor(
     '/szconfig.SzConfig/DeleteDataSource',
     grpcWeb.MethodType.UNARY,
@@ -211,49 +125,6 @@ export class SzConfigClient {
     this.methodDescriptorDeleteDataSource);
   }
 
-  methodDescriptorExportConfig = new grpcWeb.MethodDescriptor(
-    '/szconfig.SzConfig/ExportConfig',
-    grpcWeb.MethodType.UNARY,
-    szconfig_pb.ExportConfigRequest,
-    szconfig_pb.ExportConfigResponse,
-    (request: szconfig_pb.ExportConfigRequest) => {
-      return request.serializeBinary();
-    },
-    szconfig_pb.ExportConfigResponse.deserializeBinary
-  );
-
-  exportConfig(
-    request: szconfig_pb.ExportConfigRequest,
-    metadata?: grpcWeb.Metadata | null): Promise<szconfig_pb.ExportConfigResponse>;
-
-  exportConfig(
-    request: szconfig_pb.ExportConfigRequest,
-    metadata: grpcWeb.Metadata | null,
-    callback: (err: grpcWeb.RpcError,
-               response: szconfig_pb.ExportConfigResponse) => void): grpcWeb.ClientReadableStream<szconfig_pb.ExportConfigResponse>;
-
-  exportConfig(
-    request: szconfig_pb.ExportConfigRequest,
-    metadata?: grpcWeb.Metadata | null,
-    callback?: (err: grpcWeb.RpcError,
-               response: szconfig_pb.ExportConfigResponse) => void) {
-    if (callback !== undefined) {
-      return this.client_.rpcCall(
-        this.hostname_ +
-          '/szconfig.SzConfig/ExportConfig',
-        request,
-        metadata || {},
-        this.methodDescriptorExportConfig,
-        callback);
-    }
-    return this.client_.unaryCall(
-    this.hostname_ +
-      '/szconfig.SzConfig/ExportConfig',
-    request,
-    metadata || {},
-    this.methodDescriptorExportConfig);
-  }
-
   methodDescriptorGetDataSources = new grpcWeb.MethodDescriptor(
     '/szconfig.SzConfig/GetDataSources',
     grpcWeb.MethodType.UNARY,
@@ -295,49 +166,6 @@ export class SzConfigClient {
     request,
     metadata || {},
     this.methodDescriptorGetDataSources);
-  }
-
-  methodDescriptorImportConfig = new grpcWeb.MethodDescriptor(
-    '/szconfig.SzConfig/ImportConfig',
-    grpcWeb.MethodType.UNARY,
-    szconfig_pb.ImportConfigRequest,
-    szconfig_pb.ImportConfigResponse,
-    (request: szconfig_pb.ImportConfigRequest) => {
-      return request.serializeBinary();
-    },
-    szconfig_pb.ImportConfigResponse.deserializeBinary
-  );
-
-  importConfig(
-    request: szconfig_pb.ImportConfigRequest,
-    metadata?: grpcWeb.Metadata | null): Promise<szconfig_pb.ImportConfigResponse>;
-
-  importConfig(
-    request: szconfig_pb.ImportConfigRequest,
-    metadata: grpcWeb.Metadata | null,
-    callback: (err: grpcWeb.RpcError,
-               response: szconfig_pb.ImportConfigResponse) => void): grpcWeb.ClientReadableStream<szconfig_pb.ImportConfigResponse>;
-
-  importConfig(
-    request: szconfig_pb.ImportConfigRequest,
-    metadata?: grpcWeb.Metadata | null,
-    callback?: (err: grpcWeb.RpcError,
-               response: szconfig_pb.ImportConfigResponse) => void) {
-    if (callback !== undefined) {
-      return this.client_.rpcCall(
-        this.hostname_ +
-          '/szconfig.SzConfig/ImportConfig',
-        request,
-        metadata || {},
-        this.methodDescriptorImportConfig,
-        callback);
-    }
-    return this.client_.unaryCall(
-    this.hostname_ +
-      '/szconfig.SzConfig/ImportConfig',
-    request,
-    metadata || {},
-    this.methodDescriptorImportConfig);
   }
 
 }
