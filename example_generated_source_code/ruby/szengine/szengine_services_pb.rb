@@ -47,6 +47,7 @@ module Szengine
       rpc :WhyEntities, ::Szengine::WhyEntitiesRequest, ::Szengine::WhyEntitiesResponse
       rpc :WhyRecordInEntity, ::Szengine::WhyRecordInEntityRequest, ::Szengine::WhyRecordInEntityResponse
       rpc :WhyRecords, ::Szengine::WhyRecordsRequest, ::Szengine::WhyRecordsResponse
+      rpc :WhySearch, ::Szengine::WhySearchRequest, ::Szengine::WhySearchResponse
     end
 
     Stub = Service.rpc_stub_class

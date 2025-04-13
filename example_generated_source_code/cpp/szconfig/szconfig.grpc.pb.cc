@@ -6,25 +6,26 @@
 #include "szconfig.grpc.pb.h"
 
 #include <functional>
-#include <grpcpp/impl/codegen/async_stream.h>
-#include <grpcpp/impl/codegen/async_unary_call.h>
-#include <grpcpp/impl/codegen/channel_interface.h>
-#include <grpcpp/impl/codegen/client_unary_call.h>
-#include <grpcpp/impl/codegen/client_callback.h>
-#include <grpcpp/impl/codegen/message_allocator.h>
-#include <grpcpp/impl/codegen/method_handler.h>
-#include <grpcpp/impl/codegen/rpc_service_method.h>
-#include <grpcpp/impl/codegen/server_callback.h>
+#include <grpcpp/support/async_stream.h>
+#include <grpcpp/support/async_unary_call.h>
+#include <grpcpp/impl/channel_interface.h>
+#include <grpcpp/impl/client_unary_call.h>
+#include <grpcpp/support/client_callback.h>
+#include <grpcpp/support/message_allocator.h>
+#include <grpcpp/support/method_handler.h>
+#include <grpcpp/impl/rpc_service_method.h>
+#include <grpcpp/support/server_callback.h>
 #include <grpcpp/impl/codegen/server_callback_handlers.h>
-#include <grpcpp/impl/codegen/server_context.h>
-#include <grpcpp/impl/codegen/service_type.h>
-#include <grpcpp/impl/codegen/sync_stream.h>
+#include <grpcpp/server_context.h>
+#include <grpcpp/impl/service_type.h>
+#include <grpcpp/support/sync_stream.h>
 namespace szconfig {
 
 static const char* SzConfig_method_names[] = {
   "/szconfig.SzConfig/AddDataSource",
   "/szconfig.SzConfig/DeleteDataSource",
   "/szconfig.SzConfig/GetDataSources",
+  "/szconfig.SzConfig/VerifyConfig",
 };
 
 std::unique_ptr< SzConfig::Stub> SzConfig::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -37,6 +38,7 @@ SzConfig::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, 
   : channel_(channel), rpcmethod_AddDataSource_(SzConfig_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_DeleteDataSource_(SzConfig_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetDataSources_(SzConfig_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_VerifyConfig_(SzConfig_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status SzConfig::Stub::AddDataSource(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest& request, ::szconfig::AddDataSourceResponse* response) {
@@ -108,6 +110,29 @@ void SzConfig::Stub::async::GetDataSources(::grpc::ClientContext* context, const
   return result;
 }
 
+::grpc::Status SzConfig::Stub::VerifyConfig(::grpc::ClientContext* context, const ::szconfig::VerifyConfigRequest& request, ::szconfig::VerifyConfigResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::szconfig::VerifyConfigRequest, ::szconfig::VerifyConfigResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_VerifyConfig_, context, request, response);
+}
+
+void SzConfig::Stub::async::VerifyConfig(::grpc::ClientContext* context, const ::szconfig::VerifyConfigRequest* request, ::szconfig::VerifyConfigResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::szconfig::VerifyConfigRequest, ::szconfig::VerifyConfigResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_VerifyConfig_, context, request, response, std::move(f));
+}
+
+void SzConfig::Stub::async::VerifyConfig(::grpc::ClientContext* context, const ::szconfig::VerifyConfigRequest* request, ::szconfig::VerifyConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_VerifyConfig_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::szconfig::VerifyConfigResponse>* SzConfig::Stub::PrepareAsyncVerifyConfigRaw(::grpc::ClientContext* context, const ::szconfig::VerifyConfigRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szconfig::VerifyConfigResponse, ::szconfig::VerifyConfigRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_VerifyConfig_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::szconfig::VerifyConfigResponse>* SzConfig::Stub::AsyncVerifyConfigRaw(::grpc::ClientContext* context, const ::szconfig::VerifyConfigRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncVerifyConfigRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
 SzConfig::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzConfig_method_names[0],
@@ -139,6 +164,16 @@ SzConfig::Service::Service() {
              ::szconfig::GetDataSourcesResponse* resp) {
                return service->GetDataSources(ctx, req, resp);
              }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      SzConfig_method_names[3],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::VerifyConfigRequest, ::szconfig::VerifyConfigResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](SzConfig::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::szconfig::VerifyConfigRequest* req,
+             ::szconfig::VerifyConfigResponse* resp) {
+               return service->VerifyConfig(ctx, req, resp);
+             }, this)));
 }
 
 SzConfig::Service::~Service() {
@@ -159,6 +194,13 @@ SzConfig::Service::~Service() {
 }
 
 ::grpc::Status SzConfig::Service::GetDataSources(::grpc::ServerContext* context, const ::szconfig::GetDataSourcesRequest* request, ::szconfig::GetDataSourcesResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status SzConfig::Service::VerifyConfig(::grpc::ServerContext* context, const ::szconfig::VerifyConfigRequest* request, ::szconfig::VerifyConfigResponse* response) {
   (void) context;
   (void) request;
   (void) response;

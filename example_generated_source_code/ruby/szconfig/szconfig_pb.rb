@@ -27,6 +27,12 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "szconfig.GetDataSourcesResponse" do
       optional :result, :string, 1
     end
+    add_message "szconfig.VerifyConfigRequest" do
+      optional :config_definition, :string, 1
+    end
+    add_message "szconfig.VerifyConfigResponse" do
+      optional :result, :bool, 1
+    end
   end
 end
 
@@ -37,4 +43,6 @@ module Szconfig
   DeleteDataSourceResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.DeleteDataSourceResponse").msgclass
   GetDataSourcesRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.GetDataSourcesRequest").msgclass
   GetDataSourcesResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.GetDataSourcesResponse").msgclass
+  VerifyConfigRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.VerifyConfigRequest").msgclass
+  VerifyConfigResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szconfig.VerifyConfigResponse").msgclass
 end

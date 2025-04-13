@@ -478,4 +478,18 @@ class SzEngineClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * @param \Szengine\WhySearchRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function WhySearch(\Szengine\WhySearchRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szengine.SzEngine/WhySearch',
+        $argument,
+        ['\Szengine\WhySearchResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }

@@ -487,3 +487,21 @@ class WhyRecordsResponse(_message.Message):
     RESULT_FIELD_NUMBER: _ClassVar[int]
     result: str
     def __init__(self, result: _Optional[str] = ...) -> None: ...
+
+class WhySearchRequest(_message.Message):
+    __slots__ = ("attributes", "entity_id", "search_profile", "flags")
+    ATTRIBUTES_FIELD_NUMBER: _ClassVar[int]
+    ENTITY_ID_FIELD_NUMBER: _ClassVar[int]
+    SEARCH_PROFILE_FIELD_NUMBER: _ClassVar[int]
+    FLAGS_FIELD_NUMBER: _ClassVar[int]
+    attributes: str
+    entity_id: int
+    search_profile: str
+    flags: int
+    def __init__(self, attributes: _Optional[str] = ..., entity_id: _Optional[int] = ..., search_profile: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+
+class WhySearchResponse(_message.Message):
+    __slots__ = ("result",)
+    RESULT_FIELD_NUMBER: _ClassVar[int]
+    result: str
+    def __init__(self, result: _Optional[str] = ...) -> None: ...
