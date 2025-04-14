@@ -70,6 +70,28 @@ function deserialize_szconfig_GetDataSourcesResponse(buffer_arg) {
   return szconfig_pb.GetDataSourcesResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_szconfig_VerifyConfigRequest(arg) {
+  if (!(arg instanceof szconfig_pb.VerifyConfigRequest)) {
+    throw new Error('Expected argument of type szconfig.VerifyConfigRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_szconfig_VerifyConfigRequest(buffer_arg) {
+  return szconfig_pb.VerifyConfigRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_szconfig_VerifyConfigResponse(arg) {
+  if (!(arg instanceof szconfig_pb.VerifyConfigResponse)) {
+    throw new Error('Expected argument of type szconfig.VerifyConfigResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_szconfig_VerifyConfigResponse(buffer_arg) {
+  return szconfig_pb.VerifyConfigResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 
 var SzConfigService = exports.SzConfigService = {
   addDataSource: {
@@ -104,6 +126,17 @@ var SzConfigService = exports.SzConfigService = {
     requestDeserialize: deserialize_szconfig_GetDataSourcesRequest,
     responseSerialize: serialize_szconfig_GetDataSourcesResponse,
     responseDeserialize: deserialize_szconfig_GetDataSourcesResponse,
+  },
+  verifyConfig: {
+    path: '/szconfig.SzConfig/VerifyConfig',
+    requestStream: false,
+    responseStream: false,
+    requestType: szconfig_pb.VerifyConfigRequest,
+    responseType: szconfig_pb.VerifyConfigResponse,
+    requestSerialize: serialize_szconfig_VerifyConfigRequest,
+    requestDeserialize: deserialize_szconfig_VerifyConfigRequest,
+    responseSerialize: serialize_szconfig_VerifyConfigResponse,
+    responseDeserialize: deserialize_szconfig_VerifyConfigResponse,
   },
 };
 
