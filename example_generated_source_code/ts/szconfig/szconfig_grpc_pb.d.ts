@@ -11,6 +11,7 @@ interface ISzConfigService extends grpc.ServiceDefinition<grpc.UntypedServiceImp
     addDataSource: ISzConfigService_IAddDataSource;
     deleteDataSource: ISzConfigService_IDeleteDataSource;
     getDataSources: ISzConfigService_IGetDataSources;
+    verifyConfig: ISzConfigService_IVerifyConfig;
 }
 
 interface ISzConfigService_IAddDataSource extends grpc.MethodDefinition<szconfig_pb.AddDataSourceRequest, szconfig_pb.AddDataSourceResponse> {
@@ -40,6 +41,15 @@ interface ISzConfigService_IGetDataSources extends grpc.MethodDefinition<szconfi
     responseSerialize: grpc.serialize<szconfig_pb.GetDataSourcesResponse>;
     responseDeserialize: grpc.deserialize<szconfig_pb.GetDataSourcesResponse>;
 }
+interface ISzConfigService_IVerifyConfig extends grpc.MethodDefinition<szconfig_pb.VerifyConfigRequest, szconfig_pb.VerifyConfigResponse> {
+    path: "/szconfig.SzConfig/VerifyConfig";
+    requestStream: false;
+    responseStream: false;
+    requestSerialize: grpc.serialize<szconfig_pb.VerifyConfigRequest>;
+    requestDeserialize: grpc.deserialize<szconfig_pb.VerifyConfigRequest>;
+    responseSerialize: grpc.serialize<szconfig_pb.VerifyConfigResponse>;
+    responseDeserialize: grpc.deserialize<szconfig_pb.VerifyConfigResponse>;
+}
 
 export const SzConfigService: ISzConfigService;
 
@@ -47,6 +57,7 @@ export interface ISzConfigServer {
     addDataSource: grpc.handleUnaryCall<szconfig_pb.AddDataSourceRequest, szconfig_pb.AddDataSourceResponse>;
     deleteDataSource: grpc.handleUnaryCall<szconfig_pb.DeleteDataSourceRequest, szconfig_pb.DeleteDataSourceResponse>;
     getDataSources: grpc.handleUnaryCall<szconfig_pb.GetDataSourcesRequest, szconfig_pb.GetDataSourcesResponse>;
+    verifyConfig: grpc.handleUnaryCall<szconfig_pb.VerifyConfigRequest, szconfig_pb.VerifyConfigResponse>;
 }
 
 export interface ISzConfigClient {
@@ -59,6 +70,9 @@ export interface ISzConfigClient {
     getDataSources(request: szconfig_pb.GetDataSourcesRequest, callback: (error: grpc.ServiceError | null, response: szconfig_pb.GetDataSourcesResponse) => void): grpc.ClientUnaryCall;
     getDataSources(request: szconfig_pb.GetDataSourcesRequest, metadata: grpc.Metadata, callback: (error: grpc.ServiceError | null, response: szconfig_pb.GetDataSourcesResponse) => void): grpc.ClientUnaryCall;
     getDataSources(request: szconfig_pb.GetDataSourcesRequest, metadata: grpc.Metadata, options: Partial<grpc.CallOptions>, callback: (error: grpc.ServiceError | null, response: szconfig_pb.GetDataSourcesResponse) => void): grpc.ClientUnaryCall;
+    verifyConfig(request: szconfig_pb.VerifyConfigRequest, callback: (error: grpc.ServiceError | null, response: szconfig_pb.VerifyConfigResponse) => void): grpc.ClientUnaryCall;
+    verifyConfig(request: szconfig_pb.VerifyConfigRequest, metadata: grpc.Metadata, callback: (error: grpc.ServiceError | null, response: szconfig_pb.VerifyConfigResponse) => void): grpc.ClientUnaryCall;
+    verifyConfig(request: szconfig_pb.VerifyConfigRequest, metadata: grpc.Metadata, options: Partial<grpc.CallOptions>, callback: (error: grpc.ServiceError | null, response: szconfig_pb.VerifyConfigResponse) => void): grpc.ClientUnaryCall;
 }
 
 export class SzConfigClient extends grpc.Client implements ISzConfigClient {
@@ -72,4 +86,7 @@ export class SzConfigClient extends grpc.Client implements ISzConfigClient {
     public getDataSources(request: szconfig_pb.GetDataSourcesRequest, callback: (error: grpc.ServiceError | null, response: szconfig_pb.GetDataSourcesResponse) => void): grpc.ClientUnaryCall;
     public getDataSources(request: szconfig_pb.GetDataSourcesRequest, metadata: grpc.Metadata, callback: (error: grpc.ServiceError | null, response: szconfig_pb.GetDataSourcesResponse) => void): grpc.ClientUnaryCall;
     public getDataSources(request: szconfig_pb.GetDataSourcesRequest, metadata: grpc.Metadata, options: Partial<grpc.CallOptions>, callback: (error: grpc.ServiceError | null, response: szconfig_pb.GetDataSourcesResponse) => void): grpc.ClientUnaryCall;
+    public verifyConfig(request: szconfig_pb.VerifyConfigRequest, callback: (error: grpc.ServiceError | null, response: szconfig_pb.VerifyConfigResponse) => void): grpc.ClientUnaryCall;
+    public verifyConfig(request: szconfig_pb.VerifyConfigRequest, metadata: grpc.Metadata, callback: (error: grpc.ServiceError | null, response: szconfig_pb.VerifyConfigResponse) => void): grpc.ClientUnaryCall;
+    public verifyConfig(request: szconfig_pb.VerifyConfigRequest, metadata: grpc.Metadata, options: Partial<grpc.CallOptions>, callback: (error: grpc.ServiceError | null, response: szconfig_pb.VerifyConfigResponse) => void): grpc.ClientUnaryCall;
 }
