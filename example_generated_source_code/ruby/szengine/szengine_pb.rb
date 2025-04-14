@@ -247,6 +247,15 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "szengine.WhyRecordsResponse" do
       optional :result, :string, 1
     end
+    add_message "szengine.WhySearchRequest" do
+      optional :attributes, :string, 1
+      optional :entity_id, :int64, 2
+      optional :search_profile, :string, 3
+      optional :flags, :int64, 4
+    end
+    add_message "szengine.WhySearchResponse" do
+      optional :result, :string, 1
+    end
   end
 end
 
@@ -317,4 +326,6 @@ module Szengine
   WhyRecordInEntityResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.WhyRecordInEntityResponse").msgclass
   WhyRecordsRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.WhyRecordsRequest").msgclass
   WhyRecordsResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.WhyRecordsResponse").msgclass
+  WhySearchRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.WhySearchRequest").msgclass
+  WhySearchResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.WhySearchResponse").msgclass
 end

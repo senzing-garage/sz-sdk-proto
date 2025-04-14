@@ -47,3 +47,15 @@ class GetDataSourcesResponse(_message.Message):
     RESULT_FIELD_NUMBER: _ClassVar[int]
     result: str
     def __init__(self, result: _Optional[str] = ...) -> None: ...
+
+class VerifyConfigRequest(_message.Message):
+    __slots__ = ("config_definition",)
+    CONFIG_DEFINITION_FIELD_NUMBER: _ClassVar[int]
+    config_definition: str
+    def __init__(self, config_definition: _Optional[str] = ...) -> None: ...
+
+class VerifyConfigResponse(_message.Message):
+    __slots__ = ("result",)
+    RESULT_FIELD_NUMBER: _ClassVar[int]
+    result: bool
+    def __init__(self, result: bool = ...) -> None: ...

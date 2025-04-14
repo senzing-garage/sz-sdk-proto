@@ -17,6 +17,7 @@ module Szconfig
       rpc :AddDataSource, ::Szconfig::AddDataSourceRequest, ::Szconfig::AddDataSourceResponse
       rpc :DeleteDataSource, ::Szconfig::DeleteDataSourceRequest, ::Szconfig::DeleteDataSourceResponse
       rpc :GetDataSources, ::Szconfig::GetDataSourcesRequest, ::Szconfig::GetDataSourcesResponse
+      rpc :VerifyConfig, ::Szconfig::VerifyConfigRequest, ::Szconfig::VerifyConfigResponse
     end
 
     Stub = Service.rpc_stub_class

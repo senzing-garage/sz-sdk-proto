@@ -6,19 +6,19 @@
 #include "szengine.grpc.pb.h"
 
 #include <functional>
-#include <grpcpp/impl/codegen/async_stream.h>
-#include <grpcpp/impl/codegen/async_unary_call.h>
-#include <grpcpp/impl/codegen/channel_interface.h>
-#include <grpcpp/impl/codegen/client_unary_call.h>
-#include <grpcpp/impl/codegen/client_callback.h>
-#include <grpcpp/impl/codegen/message_allocator.h>
-#include <grpcpp/impl/codegen/method_handler.h>
-#include <grpcpp/impl/codegen/rpc_service_method.h>
-#include <grpcpp/impl/codegen/server_callback.h>
+#include <grpcpp/support/async_stream.h>
+#include <grpcpp/support/async_unary_call.h>
+#include <grpcpp/impl/channel_interface.h>
+#include <grpcpp/impl/client_unary_call.h>
+#include <grpcpp/support/client_callback.h>
+#include <grpcpp/support/message_allocator.h>
+#include <grpcpp/support/method_handler.h>
+#include <grpcpp/impl/rpc_service_method.h>
+#include <grpcpp/support/server_callback.h>
 #include <grpcpp/impl/codegen/server_callback_handlers.h>
-#include <grpcpp/impl/codegen/server_context.h>
-#include <grpcpp/impl/codegen/service_type.h>
-#include <grpcpp/impl/codegen/sync_stream.h>
+#include <grpcpp/server_context.h>
+#include <grpcpp/impl/service_type.h>
+#include <grpcpp/support/sync_stream.h>
 namespace szengine {
 
 static const char* SzEngine_method_names[] = {
@@ -55,6 +55,7 @@ static const char* SzEngine_method_names[] = {
   "/szengine.SzEngine/WhyEntities",
   "/szengine.SzEngine/WhyRecordInEntity",
   "/szengine.SzEngine/WhyRecords",
+  "/szengine.SzEngine/WhySearch",
 };
 
 std::unique_ptr< SzEngine::Stub> SzEngine::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -97,6 +98,7 @@ SzEngine::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, 
   , rpcmethod_WhyEntities_(SzEngine_method_names[30], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_WhyRecordInEntity_(SzEngine_method_names[31], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_WhyRecords_(SzEngine_method_names[32], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_WhySearch_(SzEngine_method_names[33], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status SzEngine::Stub::AddRecord(::grpc::ClientContext* context, const ::szengine::AddRecordRequest& request, ::szengine::AddRecordResponse* response) {
@@ -844,6 +846,29 @@ void SzEngine::Stub::async::WhyRecords(::grpc::ClientContext* context, const ::s
   return result;
 }
 
+::grpc::Status SzEngine::Stub::WhySearch(::grpc::ClientContext* context, const ::szengine::WhySearchRequest& request, ::szengine::WhySearchResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::szengine::WhySearchRequest, ::szengine::WhySearchResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_WhySearch_, context, request, response);
+}
+
+void SzEngine::Stub::async::WhySearch(::grpc::ClientContext* context, const ::szengine::WhySearchRequest* request, ::szengine::WhySearchResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::szengine::WhySearchRequest, ::szengine::WhySearchResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WhySearch_, context, request, response, std::move(f));
+}
+
+void SzEngine::Stub::async::WhySearch(::grpc::ClientContext* context, const ::szengine::WhySearchRequest* request, ::szengine::WhySearchResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WhySearch_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::szengine::WhySearchResponse>* SzEngine::Stub::PrepareAsyncWhySearchRaw(::grpc::ClientContext* context, const ::szengine::WhySearchRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szengine::WhySearchResponse, ::szengine::WhySearchRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_WhySearch_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::szengine::WhySearchResponse>* SzEngine::Stub::AsyncWhySearchRaw(::grpc::ClientContext* context, const ::szengine::WhySearchRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncWhySearchRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
 SzEngine::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzEngine_method_names[0],
@@ -1175,6 +1200,16 @@ SzEngine::Service::Service() {
              ::szengine::WhyRecordsResponse* resp) {
                return service->WhyRecords(ctx, req, resp);
              }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      SzEngine_method_names[33],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< SzEngine::Service, ::szengine::WhySearchRequest, ::szengine::WhySearchResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](SzEngine::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::szengine::WhySearchRequest* req,
+             ::szengine::WhySearchResponse* resp) {
+               return service->WhySearch(ctx, req, resp);
+             }, this)));
 }
 
 SzEngine::Service::~Service() {
@@ -1405,6 +1440,13 @@ SzEngine::Service::~Service() {
 }
 
 ::grpc::Status SzEngine::Service::WhyRecords(::grpc::ServerContext* context, const ::szengine::WhyRecordsRequest* request, ::szengine::WhyRecordsResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status SzEngine::Service::WhySearch(::grpc::ServerContext* context, const ::szengine::WhySearchRequest* request, ::szengine::WhySearchResponse* response) {
   (void) context;
   (void) request;
   (void) response;
