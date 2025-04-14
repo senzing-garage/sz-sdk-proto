@@ -137,3 +137,43 @@ export namespace GetDataSourcesResponse {
         result: string,
     }
 }
+
+export class VerifyConfigRequest extends jspb.Message { 
+    getConfigDefinition(): string;
+    setConfigDefinition(value: string): VerifyConfigRequest;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): VerifyConfigRequest.AsObject;
+    static toObject(includeInstance: boolean, msg: VerifyConfigRequest): VerifyConfigRequest.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: VerifyConfigRequest, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): VerifyConfigRequest;
+    static deserializeBinaryFromReader(message: VerifyConfigRequest, reader: jspb.BinaryReader): VerifyConfigRequest;
+}
+
+export namespace VerifyConfigRequest {
+    export type AsObject = {
+        configDefinition: string,
+    }
+}
+
+export class VerifyConfigResponse extends jspb.Message { 
+    getResult(): boolean;
+    setResult(value: boolean): VerifyConfigResponse;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): VerifyConfigResponse.AsObject;
+    static toObject(includeInstance: boolean, msg: VerifyConfigResponse): VerifyConfigResponse.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: VerifyConfigResponse, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): VerifyConfigResponse;
+    static deserializeBinaryFromReader(message: VerifyConfigResponse, reader: jspb.BinaryReader): VerifyConfigResponse;
+}
+
+export namespace VerifyConfigResponse {
+    export type AsObject = {
+        result: boolean,
+    }
+}
