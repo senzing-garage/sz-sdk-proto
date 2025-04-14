@@ -9,6 +9,7 @@ service SzConfig {
   rpc AddDataSource (AddDataSourceRequest) returns (AddDataSourceResponse) {}
   rpc DeleteDataSource (DeleteDataSourceRequest) returns (DeleteDataSourceResponse) {}
   rpc GetDataSources (GetDataSourcesRequest) returns (GetDataSourcesResponse) {}
+  rpc VerifyConfig (VerifyConfigRequest) returns (VerifyConfigResponse) {}
 }
 
 message AddDataSourceRequest {
@@ -38,3 +39,12 @@ message GetDataSourcesRequest {
 message GetDataSourcesResponse {
   string result = 1;
 }
+
+message VerifyConfigRequest {
+  string config_definition = 1;
+}
+
+message VerifyConfigResponse {
+  bool result = 1;
+}
+

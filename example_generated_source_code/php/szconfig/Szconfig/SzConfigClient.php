@@ -58,4 +58,18 @@ class SzConfigClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * @param \Szconfig\VerifyConfigRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function VerifyConfig(\Szconfig\VerifyConfigRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szconfig.SzConfig/VerifyConfig',
+        $argument,
+        ['\Szconfig\VerifyConfigResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }
