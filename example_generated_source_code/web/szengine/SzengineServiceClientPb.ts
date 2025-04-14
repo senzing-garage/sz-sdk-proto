@@ -1416,5 +1416,48 @@ export class SzEngineClient {
     this.methodDescriptorWhyRecords);
   }
 
+  methodDescriptorWhySearch = new grpcWeb.MethodDescriptor(
+    '/szengine.SzEngine/WhySearch',
+    grpcWeb.MethodType.UNARY,
+    szengine_pb.WhySearchRequest,
+    szengine_pb.WhySearchResponse,
+    (request: szengine_pb.WhySearchRequest) => {
+      return request.serializeBinary();
+    },
+    szengine_pb.WhySearchResponse.deserializeBinary
+  );
+
+  whySearch(
+    request: szengine_pb.WhySearchRequest,
+    metadata?: grpcWeb.Metadata | null): Promise<szengine_pb.WhySearchResponse>;
+
+  whySearch(
+    request: szengine_pb.WhySearchRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.RpcError,
+               response: szengine_pb.WhySearchResponse) => void): grpcWeb.ClientReadableStream<szengine_pb.WhySearchResponse>;
+
+  whySearch(
+    request: szengine_pb.WhySearchRequest,
+    metadata?: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.RpcError,
+               response: szengine_pb.WhySearchResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/szengine.SzEngine/WhySearch',
+        request,
+        metadata || {},
+        this.methodDescriptorWhySearch,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/szengine.SzEngine/WhySearch',
+    request,
+    metadata || {},
+    this.methodDescriptorWhySearch);
+  }
+
 }
 

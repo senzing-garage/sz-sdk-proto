@@ -168,5 +168,48 @@ export class SzConfigClient {
     this.methodDescriptorGetDataSources);
   }
 
+  methodDescriptorVerifyConfig = new grpcWeb.MethodDescriptor(
+    '/szconfig.SzConfig/VerifyConfig',
+    grpcWeb.MethodType.UNARY,
+    szconfig_pb.VerifyConfigRequest,
+    szconfig_pb.VerifyConfigResponse,
+    (request: szconfig_pb.VerifyConfigRequest) => {
+      return request.serializeBinary();
+    },
+    szconfig_pb.VerifyConfigResponse.deserializeBinary
+  );
+
+  verifyConfig(
+    request: szconfig_pb.VerifyConfigRequest,
+    metadata?: grpcWeb.Metadata | null): Promise<szconfig_pb.VerifyConfigResponse>;
+
+  verifyConfig(
+    request: szconfig_pb.VerifyConfigRequest,
+    metadata: grpcWeb.Metadata | null,
+    callback: (err: grpcWeb.RpcError,
+               response: szconfig_pb.VerifyConfigResponse) => void): grpcWeb.ClientReadableStream<szconfig_pb.VerifyConfigResponse>;
+
+  verifyConfig(
+    request: szconfig_pb.VerifyConfigRequest,
+    metadata?: grpcWeb.Metadata | null,
+    callback?: (err: grpcWeb.RpcError,
+               response: szconfig_pb.VerifyConfigResponse) => void) {
+    if (callback !== undefined) {
+      return this.client_.rpcCall(
+        this.hostname_ +
+          '/szconfig.SzConfig/VerifyConfig',
+        request,
+        metadata || {},
+        this.methodDescriptorVerifyConfig,
+        callback);
+    }
+    return this.client_.unaryCall(
+    this.hostname_ +
+      '/szconfig.SzConfig/VerifyConfig',
+    request,
+    metadata || {},
+    this.methodDescriptorVerifyConfig);
+  }
+
 }
 

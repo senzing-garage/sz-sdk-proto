@@ -1366,3 +1366,51 @@ export namespace WhyRecordsResponse {
   }
 }
 
+export class WhySearchRequest extends jspb.Message {
+  getAttributes(): string;
+  setAttributes(value: string): WhySearchRequest;
+
+  getEntityId(): number;
+  setEntityId(value: number): WhySearchRequest;
+
+  getSearchProfile(): string;
+  setSearchProfile(value: string): WhySearchRequest;
+
+  getFlags(): number;
+  setFlags(value: number): WhySearchRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): WhySearchRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: WhySearchRequest): WhySearchRequest.AsObject;
+  static serializeBinaryToWriter(message: WhySearchRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): WhySearchRequest;
+  static deserializeBinaryFromReader(message: WhySearchRequest, reader: jspb.BinaryReader): WhySearchRequest;
+}
+
+export namespace WhySearchRequest {
+  export type AsObject = {
+    attributes: string,
+    entityId: number,
+    searchProfile: string,
+    flags: number,
+  }
+}
+
+export class WhySearchResponse extends jspb.Message {
+  getResult(): string;
+  setResult(value: string): WhySearchResponse;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): WhySearchResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: WhySearchResponse): WhySearchResponse.AsObject;
+  static serializeBinaryToWriter(message: WhySearchResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): WhySearchResponse;
+  static deserializeBinaryFromReader(message: WhySearchResponse, reader: jspb.BinaryReader): WhySearchResponse;
+}
+
+export namespace WhySearchResponse {
+  export type AsObject = {
+    result: string,
+  }
+}
+
