@@ -261,7 +261,6 @@ clean-typescript:
 clean-web:
 	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/web/* || true
 
-
 # -----------------------------------------------------------------------------
 # Utility targets
 # -----------------------------------------------------------------------------
