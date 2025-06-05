@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning].
 
 - ...
 
+## [0.8.4] - 2025-06-05
+
+### Changed in 0.8.4
+
+- Updated dependencies
+- Protobuf Python version 6.30.0
+
 ## [0.8.3] - 2025-05-02
 
 ### Changed in 0.8.3
