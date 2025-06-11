@@ -26,9 +26,11 @@
     "gotestfmt",
     "gotesttools",
     "govulncheck",
+    "grpcio",
     "ICLA",
     "LDFLAGS",
     "libprotoc",
+    "mypy",
     "OSARCH",
     "OSTYPE",
     "pkill",
@@ -40,6 +42,7 @@
     "SENZINGSDK",
     "stackoverflow",
     "stretchr",
+    "subcomponents",
     "SUPPORTPATH",
     "szapi",
     "Szconfig",
@@ -61,6 +64,7 @@
     "truthset",
     "unmarshalling",
     "USERPROFILE",
+    "venv",
     "wraperror"
   ],
   "ignorePaths": [
@@ -69,9 +73,11 @@
     ".github/linters/.golangci.yaml",
     ".gitignore",
     ".history/*",
+    ".mypy_cache/**",
     "**/*.go",
     "**/*.mod",
     "**/*.sum",
+    "example_generated_source_code/**",
     "Makefile"
   ]
 }
