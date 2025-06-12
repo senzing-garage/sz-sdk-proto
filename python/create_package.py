@@ -32,11 +32,13 @@ if not os.path.exists(readme_path):
 
 # if dist dir already exists, error out
 if os.path.exists(dist_dir):
-    raise Exception(f"dist dir aleady exists.  must be removed before build {dist_dir}")
+    raise Exception(
+        f"dist dir already exists.  must be removed before build {dist_dir}"
+    )
 
 tmp_dist_dir = os.path.join(working_dir.name, "dist")
 
-# create the dirctory structure
+# create the directory structure
 src_dir = os.path.join(working_dir.name, "src")
 os.mkdir(src_dir)
 code_dir = os.path.join(src_dir, package_name)
@@ -52,7 +54,7 @@ pathlib.Path(os.path.join(code_dir, "__init__.py")).touch()
 # generate the protobuf python from proto files
 print("generating python source files...")
 for proto_file in proto_files:
-    # copy the proto file to appropriate destinateion
+    # copy the proto file to appropriate destination
     src_file = os.path.abspath(f"{start_dir}/../{proto_file}")
     dst_file = f"{proto_file_dir}/{proto_file}"
     if not os.path.exists(src_file):
