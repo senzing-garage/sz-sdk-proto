@@ -64,8 +64,8 @@ dependencies-for-development: venv dependencies-for-development-osarch-specific
 	@go install golang.org/x/tools/cmd/godoc@latest
 	@go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 	@go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
-	@sudo pecl channel-update pecl.php.net
-	@sudo pecl install grpc
+	# @sudo pecl channel-update pecl.php.net
+	# @sudo pecl install grpc
 
 dependencies-for-nodejs:
 	@npm install -g grpc-tools
