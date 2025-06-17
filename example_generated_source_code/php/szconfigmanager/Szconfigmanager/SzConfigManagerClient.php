@@ -31,16 +31,16 @@ class SzConfigManagerClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Szconfigmanager\GetConfigsRequest $argument input argument
+     * @param \Szconfigmanager\GetConfigRegistryRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function GetConfigs(\Szconfigmanager\GetConfigsRequest $argument,
+    public function GetConfigRegistry(\Szconfigmanager\GetConfigRegistryRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szconfigmanager.SzConfigManager/GetConfigs',
+        return $this->_simpleRequest('/szconfigmanager.SzConfigManager/GetConfigRegistry',
         $argument,
-        ['\Szconfigmanager\GetConfigsResponse', 'decode'],
+        ['\Szconfigmanager\GetConfigRegistryResponse', 'decode'],
         $metadata, $options);
     }
 

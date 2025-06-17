@@ -6,24 +6,24 @@
 #include "szconfigmanager.grpc.pb.h"
 
 #include <functional>
-#include <grpcpp/impl/codegen/async_stream.h>
-#include <grpcpp/impl/codegen/async_unary_call.h>
-#include <grpcpp/impl/codegen/channel_interface.h>
-#include <grpcpp/impl/codegen/client_unary_call.h>
-#include <grpcpp/impl/codegen/client_callback.h>
-#include <grpcpp/impl/codegen/message_allocator.h>
-#include <grpcpp/impl/codegen/method_handler.h>
-#include <grpcpp/impl/codegen/rpc_service_method.h>
-#include <grpcpp/impl/codegen/server_callback.h>
+#include <grpcpp/support/async_stream.h>
+#include <grpcpp/support/async_unary_call.h>
+#include <grpcpp/impl/channel_interface.h>
+#include <grpcpp/impl/client_unary_call.h>
+#include <grpcpp/support/client_callback.h>
+#include <grpcpp/support/message_allocator.h>
+#include <grpcpp/support/method_handler.h>
+#include <grpcpp/impl/rpc_service_method.h>
+#include <grpcpp/support/server_callback.h>
 #include <grpcpp/impl/codegen/server_callback_handlers.h>
-#include <grpcpp/impl/codegen/server_context.h>
-#include <grpcpp/impl/codegen/service_type.h>
-#include <grpcpp/impl/codegen/sync_stream.h>
+#include <grpcpp/server_context.h>
+#include <grpcpp/impl/service_type.h>
+#include <grpcpp/support/sync_stream.h>
 namespace szconfigmanager {
 
 static const char* SzConfigManager_method_names[] = {
   "/szconfigmanager.SzConfigManager/GetConfig",
-  "/szconfigmanager.SzConfigManager/GetConfigs",
+  "/szconfigmanager.SzConfigManager/GetConfigRegistry",
   "/szconfigmanager.SzConfigManager/GetDefaultConfigId",
   "/szconfigmanager.SzConfigManager/GetTemplateConfig",
   "/szconfigmanager.SzConfigManager/RegisterConfig",
@@ -40,7 +40,7 @@ std::unique_ptr< SzConfigManager::Stub> SzConfigManager::NewStub(const std::shar
 
 SzConfigManager::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
   : channel_(channel), rpcmethod_GetConfig_(SzConfigManager_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetConfigs_(SzConfigManager_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetConfigRegistry_(SzConfigManager_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetDefaultConfigId_(SzConfigManager_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetTemplateConfig_(SzConfigManager_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_RegisterConfig_(SzConfigManager_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
@@ -72,25 +72,25 @@ void SzConfigManager::Stub::async::GetConfig(::grpc::ClientContext* context, con
   return result;
 }
 
-::grpc::Status SzConfigManager::Stub::GetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest& request, ::szconfigmanager::GetConfigsResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::szconfigmanager::GetConfigsRequest, ::szconfigmanager::GetConfigsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetConfigs_, context, request, response);
+::grpc::Status SzConfigManager::Stub::GetConfigRegistry(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest& request, ::szconfigmanager::GetConfigRegistryResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::szconfigmanager::GetConfigRegistryRequest, ::szconfigmanager::GetConfigRegistryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetConfigRegistry_, context, request, response);
 }
 
-void SzConfigManager::Stub::async::GetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest* request, ::szconfigmanager::GetConfigsResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::szconfigmanager::GetConfigsRequest, ::szconfigmanager::GetConfigsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetConfigs_, context, request, response, std::move(f));
+void SzConfigManager::Stub::async::GetConfigRegistry(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest* request, ::szconfigmanager::GetConfigRegistryResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::szconfigmanager::GetConfigRegistryRequest, ::szconfigmanager::GetConfigRegistryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetConfigRegistry_, context, request, response, std::move(f));
 }
 
-void SzConfigManager::Stub::async::GetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest* request, ::szconfigmanager::GetConfigsResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetConfigs_, context, request, response, reactor);
+void SzConfigManager::Stub::async::GetConfigRegistry(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest* request, ::szconfigmanager::GetConfigRegistryResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetConfigRegistry_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigsResponse>* SzConfigManager::Stub::PrepareAsyncGetConfigsRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szconfigmanager::GetConfigsResponse, ::szconfigmanager::GetConfigsRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetConfigs_, context, request);
+::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigRegistryResponse>* SzConfigManager::Stub::PrepareAsyncGetConfigRegistryRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szconfigmanager::GetConfigRegistryResponse, ::szconfigmanager::GetConfigRegistryRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetConfigRegistry_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigsResponse>* SzConfigManager::Stub::AsyncGetConfigsRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigRegistryResponse>* SzConfigManager::Stub::AsyncGetConfigRegistryRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncGetConfigsRaw(context, request, cq);
+    this->PrepareAsyncGetConfigRegistryRaw(context, request, cq);
   result->StartCall();
   return result;
 }
@@ -247,12 +247,12 @@ SzConfigManager::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzConfigManager_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SzConfigManager::Service, ::szconfigmanager::GetConfigsRequest, ::szconfigmanager::GetConfigsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SzConfigManager::Service, ::szconfigmanager::GetConfigRegistryRequest, ::szconfigmanager::GetConfigRegistryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SzConfigManager::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::szconfigmanager::GetConfigsRequest* req,
-             ::szconfigmanager::GetConfigsResponse* resp) {
-               return service->GetConfigs(ctx, req, resp);
+             const ::szconfigmanager::GetConfigRegistryRequest* req,
+             ::szconfigmanager::GetConfigRegistryResponse* resp) {
+               return service->GetConfigRegistry(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzConfigManager_method_names[2],
@@ -326,7 +326,7 @@ SzConfigManager::Service::~Service() {
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status SzConfigManager::Service::GetConfigs(::grpc::ServerContext* context, const ::szconfigmanager::GetConfigsRequest* request, ::szconfigmanager::GetConfigsResponse* response) {
+::grpc::Status SzConfigManager::Service::GetConfigRegistry(::grpc::ServerContext* context, const ::szconfigmanager::GetConfigRegistryRequest* request, ::szconfigmanager::GetConfigRegistryResponse* response) {
   (void) context;
   (void) request;
   (void) response;

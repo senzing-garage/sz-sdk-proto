@@ -5,7 +5,7 @@ import warnings
 
 import szconfigmanager_pb2 as szconfigmanager__pb2
 
-GRPC_GENERATED_VERSION = '1.72.0'
+GRPC_GENERATED_VERSION = '1.73.0'
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
@@ -39,10 +39,10 @@ class SzConfigManagerStub(object):
                 request_serializer=szconfigmanager__pb2.GetConfigRequest.SerializeToString,
                 response_deserializer=szconfigmanager__pb2.GetConfigResponse.FromString,
                 _registered_method=True)
-        self.GetConfigs = channel.unary_unary(
-                '/szconfigmanager.SzConfigManager/GetConfigs',
-                request_serializer=szconfigmanager__pb2.GetConfigsRequest.SerializeToString,
-                response_deserializer=szconfigmanager__pb2.GetConfigsResponse.FromString,
+        self.GetConfigRegistry = channel.unary_unary(
+                '/szconfigmanager.SzConfigManager/GetConfigRegistry',
+                request_serializer=szconfigmanager__pb2.GetConfigRegistryRequest.SerializeToString,
+                response_deserializer=szconfigmanager__pb2.GetConfigRegistryResponse.FromString,
                 _registered_method=True)
         self.GetDefaultConfigId = channel.unary_unary(
                 '/szconfigmanager.SzConfigManager/GetDefaultConfigId',
@@ -85,7 +85,7 @@ class SzConfigManagerServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def GetConfigs(self, request, context):
+    def GetConfigRegistry(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -135,10 +135,10 @@ def add_SzConfigManagerServicer_to_server(servicer, server):
                     request_deserializer=szconfigmanager__pb2.GetConfigRequest.FromString,
                     response_serializer=szconfigmanager__pb2.GetConfigResponse.SerializeToString,
             ),
-            'GetConfigs': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetConfigs,
-                    request_deserializer=szconfigmanager__pb2.GetConfigsRequest.FromString,
-                    response_serializer=szconfigmanager__pb2.GetConfigsResponse.SerializeToString,
+            'GetConfigRegistry': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetConfigRegistry,
+                    request_deserializer=szconfigmanager__pb2.GetConfigRegistryRequest.FromString,
+                    response_serializer=szconfigmanager__pb2.GetConfigRegistryResponse.SerializeToString,
             ),
             'GetDefaultConfigId': grpc.unary_unary_rpc_method_handler(
                     servicer.GetDefaultConfigId,
@@ -209,7 +209,7 @@ class SzConfigManager(object):
             _registered_method=True)
 
     @staticmethod
-    def GetConfigs(request,
+    def GetConfigRegistry(request,
             target,
             options=(),
             channel_credentials=None,
@@ -222,9 +222,9 @@ class SzConfigManager(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/szconfigmanager.SzConfigManager/GetConfigs',
-            szconfigmanager__pb2.GetConfigsRequest.SerializeToString,
-            szconfigmanager__pb2.GetConfigsResponse.FromString,
+            '/szconfigmanager.SzConfigManager/GetConfigRegistry',
+            szconfigmanager__pb2.GetConfigRegistryRequest.SerializeToString,
+            szconfigmanager__pb2.GetConfigRegistryResponse.FromString,
             options,
             channel_credentials,
             insecure,
