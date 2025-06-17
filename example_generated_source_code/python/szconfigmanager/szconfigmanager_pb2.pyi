@@ -16,11 +16,11 @@ class GetConfigResponse(_message.Message):
     result: str
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
-class GetConfigsRequest(_message.Message):
+class GetConfigRegistryRequest(_message.Message):
     __slots__ = ()
     def __init__(self) -> None: ...
 
-class GetConfigsResponse(_message.Message):
+class GetConfigRegistryResponse(_message.Message):
     __slots__ = ("result",)
     RESULT_FIELD_NUMBER: _ClassVar[int]
     result: str

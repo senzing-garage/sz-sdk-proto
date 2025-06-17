@@ -4,216 +4,163 @@
 #include "szproduct.pb.h"
 
 #include <algorithm>
-#include "google/protobuf/io/coded_stream.h"
-#include "google/protobuf/extension_set.h"
-#include "google/protobuf/wire_format_lite.h"
-#include "google/protobuf/descriptor.h"
-#include "google/protobuf/generated_message_reflection.h"
-#include "google/protobuf/reflection_ops.h"
-#include "google/protobuf/wire_format.h"
-#include "google/protobuf/generated_message_tctable_impl.h"
+
+#include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-// Must be included last.
-#include "google/protobuf/port_def.inc"
 PROTOBUF_PRAGMA_INIT_SEG
-namespace _pb = ::google::protobuf;
-namespace _pbi = ::google::protobuf::internal;
-namespace _fl = ::google::protobuf::internal::field_layout;
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace szproduct {
-
-inline constexpr GetVersionResponse::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : result_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        _cached_size_{0} {}
-
-template <typename>
-PROTOBUF_CONSTEXPR GetVersionResponse::GetVersionResponse(::_pbi::ConstantInitialized)
-    : _impl_(::_pbi::ConstantInitialized()) {}
-struct GetVersionResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GetVersionResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GetVersionResponseDefaultTypeInternal() {}
-  union {
-    GetVersionResponse _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetVersionResponseDefaultTypeInternal _GetVersionResponse_default_instance_;
-      template <typename>
-PROTOBUF_CONSTEXPR GetVersionRequest::GetVersionRequest(::_pbi::ConstantInitialized) {}
-struct GetVersionRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GetVersionRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GetVersionRequestDefaultTypeInternal() {}
-  union {
-    GetVersionRequest _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetVersionRequestDefaultTypeInternal _GetVersionRequest_default_instance_;
-
-inline constexpr GetLicenseResponse::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : result_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        _cached_size_{0} {}
-
-template <typename>
-PROTOBUF_CONSTEXPR GetLicenseResponse::GetLicenseResponse(::_pbi::ConstantInitialized)
-    : _impl_(::_pbi::ConstantInitialized()) {}
-struct GetLicenseResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GetLicenseResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GetLicenseResponseDefaultTypeInternal() {}
-  union {
-    GetLicenseResponse _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetLicenseResponseDefaultTypeInternal _GetLicenseResponse_default_instance_;
-      template <typename>
-PROTOBUF_CONSTEXPR GetLicenseRequest::GetLicenseRequest(::_pbi::ConstantInitialized) {}
+PROTOBUF_CONSTEXPR GetLicenseRequest::GetLicenseRequest(
+    ::_pbi::ConstantInitialized) {}
 struct GetLicenseRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GetLicenseRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR GetLicenseRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~GetLicenseRequestDefaultTypeInternal() {}
   union {
     GetLicenseRequest _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetLicenseRequestDefaultTypeInternal _GetLicenseRequest_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetLicenseRequestDefaultTypeInternal _GetLicenseRequest_default_instance_;
+PROTOBUF_CONSTEXPR GetLicenseResponse::GetLicenseResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct GetLicenseResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetLicenseResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetLicenseResponseDefaultTypeInternal() {}
+  union {
+    GetLicenseResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetLicenseResponseDefaultTypeInternal _GetLicenseResponse_default_instance_;
+PROTOBUF_CONSTEXPR GetVersionRequest::GetVersionRequest(
+    ::_pbi::ConstantInitialized) {}
+struct GetVersionRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetVersionRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetVersionRequestDefaultTypeInternal() {}
+  union {
+    GetVersionRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetVersionRequestDefaultTypeInternal _GetVersionRequest_default_instance_;
+PROTOBUF_CONSTEXPR GetVersionResponse::GetVersionResponse(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct GetVersionResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetVersionResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetVersionResponseDefaultTypeInternal() {}
+  union {
+    GetVersionResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetVersionResponseDefaultTypeInternal _GetVersionResponse_default_instance_;
 }  // namespace szproduct
 static ::_pb::Metadata file_level_metadata_szproduct_2eproto[4];
-static constexpr const ::_pb::EnumDescriptor**
-    file_level_enum_descriptors_szproduct_2eproto = nullptr;
-static constexpr const ::_pb::ServiceDescriptor**
-    file_level_service_descriptors_szproduct_2eproto = nullptr;
-const ::uint32_t TableStruct_szproduct_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
-    protodesc_cold) = {
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::szproduct::GetLicenseRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::szproduct::GetLicenseResponse, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szproduct::GetLicenseResponse, _impl_.result_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::szproduct::GetVersionRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::szproduct::GetVersionResponse, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::szproduct::GetVersionResponse, _impl_.result_),
-};
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_szproduct_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_szproduct_2eproto = nullptr;
 
-static const ::_pbi::MigrationSchema
-    schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-        {0, -1, -1, sizeof(::szproduct::GetLicenseRequest)},
-        {8, -1, -1, sizeof(::szproduct::GetLicenseResponse)},
-        {17, -1, -1, sizeof(::szproduct::GetVersionRequest)},
-        {25, -1, -1, sizeof(::szproduct::GetVersionResponse)},
+const uint32_t TableStruct_szproduct_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::szproduct::GetLicenseRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::szproduct::GetLicenseResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::szproduct::GetLicenseResponse, _impl_.result_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::szproduct::GetVersionRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::szproduct::GetVersionResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::szproduct::GetVersionResponse, _impl_.result_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::szproduct::GetLicenseRequest)},
+  { 6, -1, -1, sizeof(::szproduct::GetLicenseResponse)},
+  { 13, -1, -1, sizeof(::szproduct::GetVersionRequest)},
+  { 19, -1, -1, sizeof(::szproduct::GetVersionResponse)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-    &::szproduct::_GetLicenseRequest_default_instance_._instance,
-    &::szproduct::_GetLicenseResponse_default_instance_._instance,
-    &::szproduct::_GetVersionRequest_default_instance_._instance,
-    &::szproduct::_GetVersionResponse_default_instance_._instance,
-};
-const char descriptor_table_protodef_szproduct_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-    "\n\017szproduct.proto\022\tszproduct\"\023\n\021GetLicen"
-    "seRequest\"$\n\022GetLicenseResponse\022\016\n\006resul"
-    "t\030\001 \001(\t\"\023\n\021GetVersionRequest\"$\n\022GetVersi"
-    "onResponse\022\016\n\006result\030\001 \001(\t2\245\001\n\tSzProduct"
-    "\022K\n\nGetLicense\022\034.szproduct.GetLicenseReq"
-    "uest\032\035.szproduct.GetLicenseResponse\"\000\022K\n"
-    "\nGetVersion\022\034.szproduct.GetVersionReques"
-    "t\032\035.szproduct.GetVersionResponse\"\000BZ\n\024co"
-    "m.senzing.sdk.grpcB\016SzProductProtoZ2gith"
-    "ub.com/senzing-garage/sz-sdk-go-grpc/szp"
-    "roductb\006proto3"
-};
-static ::absl::once_flag descriptor_table_szproduct_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_szproduct_2eproto = {
-    false,
-    false,
-    414,
-    descriptor_table_protodef_szproduct_2eproto,
-    "szproduct.proto",
-    &descriptor_table_szproduct_2eproto_once,
-    nullptr,
-    0,
-    4,
-    schemas,
-    file_default_instances,
-    TableStruct_szproduct_2eproto::offsets,
-    file_level_metadata_szproduct_2eproto,
-    file_level_enum_descriptors_szproduct_2eproto,
-    file_level_service_descriptors_szproduct_2eproto,
+  &::szproduct::_GetLicenseRequest_default_instance_._instance,
+  &::szproduct::_GetLicenseResponse_default_instance_._instance,
+  &::szproduct::_GetVersionRequest_default_instance_._instance,
+  &::szproduct::_GetVersionResponse_default_instance_._instance,
 };
 
-// This function exists to be marked as weak.
-// It can significantly speed up compilation by breaking up LLVM's SCC
-// in the .pb.cc translation units. Large translation units see a
-// reduction of more than 35% of walltime for optimized builds. Without
-// the weak attribute all the messages in the file, including all the
-// vtables and everything they use become part of the same SCC through
-// a cycle like:
-// GetMetadata -> descriptor table -> default instances ->
-//   vtables -> GetMetadata
-// By adding a weak function here we break the connection from the
-// individual vtables back into the descriptor table.
+const char descriptor_table_protodef_szproduct_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\017szproduct.proto\022\tszproduct\"\023\n\021GetLicen"
+  "seRequest\"$\n\022GetLicenseResponse\022\016\n\006resul"
+  "t\030\001 \001(\t\"\023\n\021GetVersionRequest\"$\n\022GetVersi"
+  "onResponse\022\016\n\006result\030\001 \001(\t2\245\001\n\tSzProduct"
+  "\022K\n\nGetLicense\022\034.szproduct.GetLicenseReq"
+  "uest\032\035.szproduct.GetLicenseResponse\"\000\022K\n"
+  "\nGetVersion\022\034.szproduct.GetVersionReques"
+  "t\032\035.szproduct.GetVersionResponse\"\000BZ\n\024co"
+  "m.senzing.sdk.grpcB\016SzProductProtoZ2gith"
+  "ub.com/senzing-garage/sz-sdk-go-grpc/szp"
+  "roductb\006proto3"
+  ;
+static ::_pbi::once_flag descriptor_table_szproduct_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_szproduct_2eproto = {
+    false, false, 414, descriptor_table_protodef_szproduct_2eproto,
+    "szproduct.proto",
+    &descriptor_table_szproduct_2eproto_once, nullptr, 0, 4,
+    schemas, file_default_instances, TableStruct_szproduct_2eproto::offsets,
+    file_level_metadata_szproduct_2eproto, file_level_enum_descriptors_szproduct_2eproto,
+    file_level_service_descriptors_szproduct_2eproto,
+};
 PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_szproduct_2eproto_getter() {
   return &descriptor_table_szproduct_2eproto;
 }
+
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
-static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_szproduct_2eproto(&descriptor_table_szproduct_2eproto);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_szproduct_2eproto(&descriptor_table_szproduct_2eproto);
 namespace szproduct {
+
 // ===================================================================
 
 class GetLicenseRequest::_Internal {
  public:
 };
 
-GetLicenseRequest::GetLicenseRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
+GetLicenseRequest::GetLicenseRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:szproduct.GetLicenseRequest)
 }
-GetLicenseRequest::GetLicenseRequest(
-    ::google::protobuf::Arena* arena,
-    const GetLicenseRequest& from)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-  GetLicenseRequest* const _this = this;
-  (void)_this;
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-
+GetLicenseRequest::GetLicenseRequest(const GetLicenseRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  GetLicenseRequest* const _this = this; (void)_this;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:szproduct.GetLicenseRequest)
 }
 
@@ -221,176 +168,197 @@ GetLicenseRequest::GetLicenseRequest(
 
 
 
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetLicenseRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetLicenseRequest::GetClassData() const { return &_class_data_; }
 
 
 
 
-::google::protobuf::Metadata GetLicenseRequest::GetMetadata() const {
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetLicenseRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szproduct_2eproto_getter, &descriptor_table_szproduct_2eproto_once,
       file_level_metadata_szproduct_2eproto[0]);
 }
+
 // ===================================================================
 
 class GetLicenseResponse::_Internal {
  public:
 };
 
-GetLicenseResponse::GetLicenseResponse(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+GetLicenseResponse::GetLicenseResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:szproduct.GetLicenseResponse)
 }
-inline PROTOBUF_NDEBUG_INLINE GetLicenseResponse::Impl_::Impl_(
-    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from)
-      : result_(arena, from.result_),
-        _cached_size_{0} {}
+GetLicenseResponse::GetLicenseResponse(const GetLicenseResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetLicenseResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.result_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-GetLicenseResponse::GetLicenseResponse(
-    ::google::protobuf::Arena* arena,
-    const GetLicenseResponse& from)
-    : ::google::protobuf::Message(arena) {
-  GetLicenseResponse* const _this = this;
-  (void)_this;
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
-
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.result_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.result_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_result().empty()) {
+    _this->_impl_.result_.Set(from._internal_result(), 
+      _this->GetArenaForAllocation());
+  }
   // @@protoc_insertion_point(copy_constructor:szproduct.GetLicenseResponse)
 }
-inline PROTOBUF_NDEBUG_INLINE GetLicenseResponse::Impl_::Impl_(
-    ::google::protobuf::internal::InternalVisibility visibility,
-    ::google::protobuf::Arena* arena)
-      : result_(arena),
-        _cached_size_{0} {}
 
-inline void GetLicenseResponse::SharedCtor(::_pb::Arena* arena) {
-  new (&_impl_) Impl_(internal_visibility(), arena);
+inline void GetLicenseResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.result_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.result_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.result_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
+
 GetLicenseResponse::~GetLicenseResponse() {
   // @@protoc_insertion_point(destructor:szproduct.GetLicenseResponse)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void GetLicenseResponse::SharedDtor() {
-  ABSL_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.result_.Destroy();
-  _impl_.~Impl_();
 }
 
-PROTOBUF_NOINLINE void GetLicenseResponse::Clear() {
+void GetLicenseResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetLicenseResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:szproduct.GetLicenseResponse)
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   _impl_.result_.ClearToEmpty();
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* GetLicenseResponse::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* GetLicenseResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_result();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "szproduct.GetLicenseResponse.result"));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 43, 2> GetLicenseResponse::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_GetLicenseResponse_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // string result = 1;
-    {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GetLicenseResponse, _impl_.result_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // string result = 1;
-    {PROTOBUF_FIELD_OFFSET(GetLicenseResponse, _impl_.result_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-  }},
-  // no aux_entries
-  {{
-    "\34\6\0\0\0\0\0\0"
-    "szproduct.GetLicenseResponse"
-    "result"
-  }},
-};
-
-::uint8_t* GetLicenseResponse::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* GetLicenseResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:szproduct.GetLicenseResponse)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // string result = 1;
   if (!this->_internal_result().empty()) {
-    const std::string& _s = this->_internal_result();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szproduct.GetLicenseResponse.result");
-    target = stream->WriteStringMaybeAliased(1, _s, target);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_result().data(), static_cast<int>(this->_internal_result().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "szproduct.GetLicenseResponse.result");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:szproduct.GetLicenseResponse)
   return target;
 }
 
-::size_t GetLicenseResponse::ByteSizeLong() const {
+size_t GetLicenseResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:szproduct.GetLicenseResponse)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string result = 1;
   if (!this->_internal_result().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_result());
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_result());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData GetLicenseResponse::_class_data_ = {
-    GetLicenseResponse::MergeImpl,
-    nullptr,  // OnDemandRegisterArenaDtor
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetLicenseResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetLicenseResponse::MergeImpl
 };
-const ::google::protobuf::Message::ClassData* GetLicenseResponse::GetClassData() const {
-  return &_class_data_;
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetLicenseResponse::GetClassData() const { return &_class_data_; }
 
-void GetLicenseResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+
+void GetLicenseResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<GetLicenseResponse*>(&to_msg);
   auto& from = static_cast<const GetLicenseResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:szproduct.GetLicenseResponse)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (!from._internal_result().empty()) {
     _this->_internal_set_result(from._internal_result());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void GetLicenseResponse::CopyFrom(const GetLicenseResponse& from) {
@@ -400,45 +368,42 @@ void GetLicenseResponse::CopyFrom(const GetLicenseResponse& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool GetLicenseResponse::IsInitialized() const {
+bool GetLicenseResponse::IsInitialized() const {
   return true;
 }
 
-::_pbi::CachedSize* GetLicenseResponse::AccessCachedSize() const {
-  return &_impl_._cached_size_;
-}
-void GetLicenseResponse::InternalSwap(GetLicenseResponse* PROTOBUF_RESTRICT other) {
+void GetLicenseResponse::InternalSwap(GetLicenseResponse* other) {
   using std::swap;
-  auto* arena = GetArena();
-  ABSL_DCHECK_EQ(arena, other->GetArena());
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.result_, &other->_impl_.result_, arena);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.result_, lhs_arena,
+      &other->_impl_.result_, rhs_arena
+  );
 }
 
-::google::protobuf::Metadata GetLicenseResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata GetLicenseResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szproduct_2eproto_getter, &descriptor_table_szproduct_2eproto_once,
       file_level_metadata_szproduct_2eproto[1]);
 }
+
 // ===================================================================
 
 class GetVersionRequest::_Internal {
  public:
 };
 
-GetVersionRequest::GetVersionRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
+GetVersionRequest::GetVersionRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:szproduct.GetVersionRequest)
 }
-GetVersionRequest::GetVersionRequest(
-    ::google::protobuf::Arena* arena,
-    const GetVersionRequest& from)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-  GetVersionRequest* const _this = this;
-  (void)_this;
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-
+GetVersionRequest::GetVersionRequest(const GetVersionRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  GetVersionRequest* const _this = this; (void)_this;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:szproduct.GetVersionRequest)
 }
 
@@ -446,176 +411,197 @@ GetVersionRequest::GetVersionRequest(
 
 
 
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetVersionRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetVersionRequest::GetClassData() const { return &_class_data_; }
 
 
 
 
-::google::protobuf::Metadata GetVersionRequest::GetMetadata() const {
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetVersionRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szproduct_2eproto_getter, &descriptor_table_szproduct_2eproto_once,
       file_level_metadata_szproduct_2eproto[2]);
 }
+
 // ===================================================================
 
 class GetVersionResponse::_Internal {
  public:
 };
 
-GetVersionResponse::GetVersionResponse(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
+GetVersionResponse::GetVersionResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:szproduct.GetVersionResponse)
 }
-inline PROTOBUF_NDEBUG_INLINE GetVersionResponse::Impl_::Impl_(
-    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from)
-      : result_(arena, from.result_),
-        _cached_size_{0} {}
+GetVersionResponse::GetVersionResponse(const GetVersionResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GetVersionResponse* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.result_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-GetVersionResponse::GetVersionResponse(
-    ::google::protobuf::Arena* arena,
-    const GetVersionResponse& from)
-    : ::google::protobuf::Message(arena) {
-  GetVersionResponse* const _this = this;
-  (void)_this;
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
-
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.result_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.result_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_result().empty()) {
+    _this->_impl_.result_.Set(from._internal_result(), 
+      _this->GetArenaForAllocation());
+  }
   // @@protoc_insertion_point(copy_constructor:szproduct.GetVersionResponse)
 }
-inline PROTOBUF_NDEBUG_INLINE GetVersionResponse::Impl_::Impl_(
-    ::google::protobuf::internal::InternalVisibility visibility,
-    ::google::protobuf::Arena* arena)
-      : result_(arena),
-        _cached_size_{0} {}
 
-inline void GetVersionResponse::SharedCtor(::_pb::Arena* arena) {
-  new (&_impl_) Impl_(internal_visibility(), arena);
+inline void GetVersionResponse::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.result_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.result_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.result_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
+
 GetVersionResponse::~GetVersionResponse() {
   // @@protoc_insertion_point(destructor:szproduct.GetVersionResponse)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void GetVersionResponse::SharedDtor() {
-  ABSL_DCHECK(GetArena() == nullptr);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.result_.Destroy();
-  _impl_.~Impl_();
 }
 
-PROTOBUF_NOINLINE void GetVersionResponse::Clear() {
+void GetVersionResponse::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GetVersionResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:szproduct.GetVersionResponse)
-  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   _impl_.result_.ClearToEmpty();
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* GetVersionResponse::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* GetVersionResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string result = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_result();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "szproduct.GetVersionResponse.result"));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 43, 2> GetVersionResponse::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_GetVersionResponse_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // string result = 1;
-    {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GetVersionResponse, _impl_.result_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // string result = 1;
-    {PROTOBUF_FIELD_OFFSET(GetVersionResponse, _impl_.result_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-  }},
-  // no aux_entries
-  {{
-    "\34\6\0\0\0\0\0\0"
-    "szproduct.GetVersionResponse"
-    "result"
-  }},
-};
-
-::uint8_t* GetVersionResponse::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+uint8_t* GetVersionResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:szproduct.GetVersionResponse)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // string result = 1;
   if (!this->_internal_result().empty()) {
-    const std::string& _s = this->_internal_result();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szproduct.GetVersionResponse.result");
-    target = stream->WriteStringMaybeAliased(1, _s, target);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_result().data(), static_cast<int>(this->_internal_result().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "szproduct.GetVersionResponse.result");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:szproduct.GetVersionResponse)
   return target;
 }
 
-::size_t GetVersionResponse::ByteSizeLong() const {
+size_t GetVersionResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:szproduct.GetVersionResponse)
-  ::size_t total_size = 0;
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string result = 1;
   if (!this->_internal_result().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_result());
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_result());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData GetVersionResponse::_class_data_ = {
-    GetVersionResponse::MergeImpl,
-    nullptr,  // OnDemandRegisterArenaDtor
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetVersionResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GetVersionResponse::MergeImpl
 };
-const ::google::protobuf::Message::ClassData* GetVersionResponse::GetClassData() const {
-  return &_class_data_;
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetVersionResponse::GetClassData() const { return &_class_data_; }
 
-void GetVersionResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
+
+void GetVersionResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<GetVersionResponse*>(&to_msg);
   auto& from = static_cast<const GetVersionResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:szproduct.GetVersionResponse)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (!from._internal_result().empty()) {
     _this->_internal_set_result(from._internal_result());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void GetVersionResponse::CopyFrom(const GetVersionResponse& from) {
@@ -625,31 +611,47 @@ void GetVersionResponse::CopyFrom(const GetVersionResponse& from) {
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool GetVersionResponse::IsInitialized() const {
+bool GetVersionResponse::IsInitialized() const {
   return true;
 }
 
-::_pbi::CachedSize* GetVersionResponse::AccessCachedSize() const {
-  return &_impl_._cached_size_;
-}
-void GetVersionResponse::InternalSwap(GetVersionResponse* PROTOBUF_RESTRICT other) {
+void GetVersionResponse::InternalSwap(GetVersionResponse* other) {
   using std::swap;
-  auto* arena = GetArena();
-  ABSL_DCHECK_EQ(arena, other->GetArena());
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.result_, &other->_impl_.result_, arena);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.result_, lhs_arena,
+      &other->_impl_.result_, rhs_arena
+  );
 }
 
-::google::protobuf::Metadata GetVersionResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata GetVersionResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_szproduct_2eproto_getter, &descriptor_table_szproduct_2eproto_once,
       file_level_metadata_szproduct_2eproto[3]);
 }
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace szproduct
-namespace google {
-namespace protobuf {
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::szproduct::GetLicenseRequest*
+Arena::CreateMaybeMessage< ::szproduct::GetLicenseRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::szproduct::GetLicenseRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::szproduct::GetLicenseResponse*
+Arena::CreateMaybeMessage< ::szproduct::GetLicenseResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::szproduct::GetLicenseResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::szproduct::GetVersionRequest*
+Arena::CreateMaybeMessage< ::szproduct::GetVersionRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::szproduct::GetVersionRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::szproduct::GetVersionResponse*
+Arena::CreateMaybeMessage< ::szproduct::GetVersionResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::szproduct::GetVersionResponse >(arena);
+}
+PROTOBUF_NAMESPACE_CLOSE
+
 // @@protoc_insertion_point(global_scope)
-#include "google/protobuf/port_undef.inc"
+#include <google/protobuf/port_undef.inc>

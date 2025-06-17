@@ -7,23 +7,23 @@
 #include "szconfigmanager.pb.h"
 
 #include <functional>
-#include <grpcpp/impl/codegen/async_generic_service.h>
-#include <grpcpp/impl/codegen/async_stream.h>
-#include <grpcpp/impl/codegen/async_unary_call.h>
-#include <grpcpp/impl/codegen/client_callback.h>
-#include <grpcpp/impl/codegen/client_context.h>
-#include <grpcpp/impl/codegen/completion_queue.h>
-#include <grpcpp/impl/codegen/message_allocator.h>
-#include <grpcpp/impl/codegen/method_handler.h>
+#include <grpcpp/generic/async_generic_service.h>
+#include <grpcpp/support/async_stream.h>
+#include <grpcpp/support/async_unary_call.h>
+#include <grpcpp/support/client_callback.h>
+#include <grpcpp/client_context.h>
+#include <grpcpp/completion_queue.h>
+#include <grpcpp/support/message_allocator.h>
+#include <grpcpp/support/method_handler.h>
 #include <grpcpp/impl/codegen/proto_utils.h>
-#include <grpcpp/impl/codegen/rpc_method.h>
-#include <grpcpp/impl/codegen/server_callback.h>
+#include <grpcpp/impl/rpc_method.h>
+#include <grpcpp/support/server_callback.h>
 #include <grpcpp/impl/codegen/server_callback_handlers.h>
-#include <grpcpp/impl/codegen/server_context.h>
-#include <grpcpp/impl/codegen/service_type.h>
+#include <grpcpp/server_context.h>
+#include <grpcpp/impl/service_type.h>
 #include <grpcpp/impl/codegen/status.h>
-#include <grpcpp/impl/codegen/stub_options.h>
-#include <grpcpp/impl/codegen/sync_stream.h>
+#include <grpcpp/support/stub_options.h>
+#include <grpcpp/support/sync_stream.h>
 
 namespace szconfigmanager {
 
@@ -42,12 +42,12 @@ class SzConfigManager final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetConfigResponse>> PrepareAsyncGetConfig(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetConfigResponse>>(PrepareAsyncGetConfigRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest& request, ::szconfigmanager::GetConfigsResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetConfigsResponse>> AsyncGetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetConfigsResponse>>(AsyncGetConfigsRaw(context, request, cq));
+    virtual ::grpc::Status GetConfigRegistry(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest& request, ::szconfigmanager::GetConfigRegistryResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetConfigRegistryResponse>> AsyncGetConfigRegistry(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetConfigRegistryResponse>>(AsyncGetConfigRegistryRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetConfigsResponse>> PrepareAsyncGetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetConfigsResponse>>(PrepareAsyncGetConfigsRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetConfigRegistryResponse>> PrepareAsyncGetConfigRegistry(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetConfigRegistryResponse>>(PrepareAsyncGetConfigRegistryRaw(context, request, cq));
     }
     virtual ::grpc::Status GetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest& request, ::szconfigmanager::GetDefaultConfigIdResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetDefaultConfigIdResponse>> AsyncGetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest& request, ::grpc::CompletionQueue* cq) {
@@ -96,8 +96,8 @@ class SzConfigManager final {
       virtual ~async_interface() {}
       virtual void GetConfig(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest* request, ::szconfigmanager::GetConfigResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetConfig(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest* request, ::szconfigmanager::GetConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void GetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest* request, ::szconfigmanager::GetConfigsResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest* request, ::szconfigmanager::GetConfigsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetConfigRegistry(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest* request, ::szconfigmanager::GetConfigRegistryResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetConfigRegistry(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest* request, ::szconfigmanager::GetConfigRegistryResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void GetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest* request, ::szconfigmanager::GetDefaultConfigIdResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest* request, ::szconfigmanager::GetDefaultConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void GetTemplateConfig(::grpc::ClientContext* context, const ::szconfigmanager::GetTemplateConfigRequest* request, ::szconfigmanager::GetTemplateConfigResponse* response, std::function<void(::grpc::Status)>) = 0;
@@ -117,8 +117,8 @@ class SzConfigManager final {
    private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetConfigResponse>* AsyncGetConfigRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetConfigResponse>* PrepareAsyncGetConfigRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetConfigsResponse>* AsyncGetConfigsRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetConfigsResponse>* PrepareAsyncGetConfigsRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetConfigRegistryResponse>* AsyncGetConfigRegistryRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetConfigRegistryResponse>* PrepareAsyncGetConfigRegistryRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetDefaultConfigIdResponse>* AsyncGetDefaultConfigIdRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetDefaultConfigIdResponse>* PrepareAsyncGetDefaultConfigIdRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szconfigmanager::GetTemplateConfigResponse>* AsyncGetTemplateConfigRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetTemplateConfigRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -142,12 +142,12 @@ class SzConfigManager final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigResponse>> PrepareAsyncGetConfig(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigResponse>>(PrepareAsyncGetConfigRaw(context, request, cq));
     }
-    ::grpc::Status GetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest& request, ::szconfigmanager::GetConfigsResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigsResponse>> AsyncGetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigsResponse>>(AsyncGetConfigsRaw(context, request, cq));
+    ::grpc::Status GetConfigRegistry(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest& request, ::szconfigmanager::GetConfigRegistryResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigRegistryResponse>> AsyncGetConfigRegistry(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigRegistryResponse>>(AsyncGetConfigRegistryRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigsResponse>> PrepareAsyncGetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigsResponse>>(PrepareAsyncGetConfigsRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigRegistryResponse>> PrepareAsyncGetConfigRegistry(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigRegistryResponse>>(PrepareAsyncGetConfigRegistryRaw(context, request, cq));
     }
     ::grpc::Status GetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest& request, ::szconfigmanager::GetDefaultConfigIdResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetDefaultConfigIdResponse>> AsyncGetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest& request, ::grpc::CompletionQueue* cq) {
@@ -196,8 +196,8 @@ class SzConfigManager final {
      public:
       void GetConfig(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest* request, ::szconfigmanager::GetConfigResponse* response, std::function<void(::grpc::Status)>) override;
       void GetConfig(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest* request, ::szconfigmanager::GetConfigResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void GetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest* request, ::szconfigmanager::GetConfigsResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetConfigs(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest* request, ::szconfigmanager::GetConfigsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetConfigRegistry(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest* request, ::szconfigmanager::GetConfigRegistryResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetConfigRegistry(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest* request, ::szconfigmanager::GetConfigRegistryResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void GetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest* request, ::szconfigmanager::GetDefaultConfigIdResponse* response, std::function<void(::grpc::Status)>) override;
       void GetDefaultConfigId(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest* request, ::szconfigmanager::GetDefaultConfigIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void GetTemplateConfig(::grpc::ClientContext* context, const ::szconfigmanager::GetTemplateConfigRequest* request, ::szconfigmanager::GetTemplateConfigResponse* response, std::function<void(::grpc::Status)>) override;
@@ -223,8 +223,8 @@ class SzConfigManager final {
     class async async_stub_{this};
     ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigResponse>* AsyncGetConfigRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigResponse>* PrepareAsyncGetConfigRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigsResponse>* AsyncGetConfigsRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigsResponse>* PrepareAsyncGetConfigsRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigsRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigRegistryResponse>* AsyncGetConfigRegistryRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetConfigRegistryResponse>* PrepareAsyncGetConfigRegistryRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetConfigRegistryRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetDefaultConfigIdResponse>* AsyncGetDefaultConfigIdRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetDefaultConfigIdResponse>* PrepareAsyncGetDefaultConfigIdRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szconfigmanager::GetTemplateConfigResponse>* AsyncGetTemplateConfigRaw(::grpc::ClientContext* context, const ::szconfigmanager::GetTemplateConfigRequest& request, ::grpc::CompletionQueue* cq) override;
@@ -238,7 +238,7 @@ class SzConfigManager final {
     ::grpc::ClientAsyncResponseReader< ::szconfigmanager::SetDefaultConfigIdResponse>* AsyncSetDefaultConfigIdRaw(::grpc::ClientContext* context, const ::szconfigmanager::SetDefaultConfigIdRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szconfigmanager::SetDefaultConfigIdResponse>* PrepareAsyncSetDefaultConfigIdRaw(::grpc::ClientContext* context, const ::szconfigmanager::SetDefaultConfigIdRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_GetConfig_;
-    const ::grpc::internal::RpcMethod rpcmethod_GetConfigs_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetConfigRegistry_;
     const ::grpc::internal::RpcMethod rpcmethod_GetDefaultConfigId_;
     const ::grpc::internal::RpcMethod rpcmethod_GetTemplateConfig_;
     const ::grpc::internal::RpcMethod rpcmethod_RegisterConfig_;
@@ -253,7 +253,7 @@ class SzConfigManager final {
     Service();
     virtual ~Service();
     virtual ::grpc::Status GetConfig(::grpc::ServerContext* context, const ::szconfigmanager::GetConfigRequest* request, ::szconfigmanager::GetConfigResponse* response);
-    virtual ::grpc::Status GetConfigs(::grpc::ServerContext* context, const ::szconfigmanager::GetConfigsRequest* request, ::szconfigmanager::GetConfigsResponse* response);
+    virtual ::grpc::Status GetConfigRegistry(::grpc::ServerContext* context, const ::szconfigmanager::GetConfigRegistryRequest* request, ::szconfigmanager::GetConfigRegistryResponse* response);
     virtual ::grpc::Status GetDefaultConfigId(::grpc::ServerContext* context, const ::szconfigmanager::GetDefaultConfigIdRequest* request, ::szconfigmanager::GetDefaultConfigIdResponse* response);
     virtual ::grpc::Status GetTemplateConfig(::grpc::ServerContext* context, const ::szconfigmanager::GetTemplateConfigRequest* request, ::szconfigmanager::GetTemplateConfigResponse* response);
     virtual ::grpc::Status RegisterConfig(::grpc::ServerContext* context, const ::szconfigmanager::RegisterConfigRequest* request, ::szconfigmanager::RegisterConfigResponse* response);
@@ -282,22 +282,22 @@ class SzConfigManager final {
     }
   };
   template <class BaseClass>
-  class WithAsyncMethod_GetConfigs : public BaseClass {
+  class WithAsyncMethod_GetConfigRegistry : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithAsyncMethod_GetConfigs() {
+    WithAsyncMethod_GetConfigRegistry() {
       ::grpc::Service::MarkMethodAsync(1);
     }
-    ~WithAsyncMethod_GetConfigs() override {
+    ~WithAsyncMethod_GetConfigRegistry() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetConfigs(::grpc::ServerContext* /*context*/, const ::szconfigmanager::GetConfigsRequest* /*request*/, ::szconfigmanager::GetConfigsResponse* /*response*/) override {
+    ::grpc::Status GetConfigRegistry(::grpc::ServerContext* /*context*/, const ::szconfigmanager::GetConfigRegistryRequest* /*request*/, ::szconfigmanager::GetConfigRegistryResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetConfigs(::grpc::ServerContext* context, ::szconfigmanager::GetConfigsRequest* request, ::grpc::ServerAsyncResponseWriter< ::szconfigmanager::GetConfigsResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetConfigRegistry(::grpc::ServerContext* context, ::szconfigmanager::GetConfigRegistryRequest* request, ::grpc::ServerAsyncResponseWriter< ::szconfigmanager::GetConfigRegistryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -421,7 +421,7 @@ class SzConfigManager final {
       ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_GetConfig<WithAsyncMethod_GetConfigs<WithAsyncMethod_GetDefaultConfigId<WithAsyncMethod_GetTemplateConfig<WithAsyncMethod_RegisterConfig<WithAsyncMethod_ReplaceDefaultConfigId<WithAsyncMethod_SetDefaultConfig<WithAsyncMethod_SetDefaultConfigId<Service > > > > > > > > AsyncService;
+  typedef WithAsyncMethod_GetConfig<WithAsyncMethod_GetConfigRegistry<WithAsyncMethod_GetDefaultConfigId<WithAsyncMethod_GetTemplateConfig<WithAsyncMethod_RegisterConfig<WithAsyncMethod_ReplaceDefaultConfigId<WithAsyncMethod_SetDefaultConfig<WithAsyncMethod_SetDefaultConfigId<Service > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_GetConfig : public BaseClass {
    private:
@@ -450,31 +450,31 @@ class SzConfigManager final {
       ::grpc::CallbackServerContext* /*context*/, const ::szconfigmanager::GetConfigRequest* /*request*/, ::szconfigmanager::GetConfigResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_GetConfigs : public BaseClass {
+  class WithCallbackMethod_GetConfigRegistry : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_GetConfigs() {
+    WithCallbackMethod_GetConfigRegistry() {
       ::grpc::Service::MarkMethodCallback(1,
-          new ::grpc::internal::CallbackUnaryHandler< ::szconfigmanager::GetConfigsRequest, ::szconfigmanager::GetConfigsResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::szconfigmanager::GetConfigRegistryRequest, ::szconfigmanager::GetConfigRegistryResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szconfigmanager::GetConfigsRequest* request, ::szconfigmanager::GetConfigsResponse* response) { return this->GetConfigs(context, request, response); }));}
-    void SetMessageAllocatorFor_GetConfigs(
-        ::grpc::MessageAllocator< ::szconfigmanager::GetConfigsRequest, ::szconfigmanager::GetConfigsResponse>* allocator) {
+                   ::grpc::CallbackServerContext* context, const ::szconfigmanager::GetConfigRegistryRequest* request, ::szconfigmanager::GetConfigRegistryResponse* response) { return this->GetConfigRegistry(context, request, response); }));}
+    void SetMessageAllocatorFor_GetConfigRegistry(
+        ::grpc::MessageAllocator< ::szconfigmanager::GetConfigRegistryRequest, ::szconfigmanager::GetConfigRegistryResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szconfigmanager::GetConfigsRequest, ::szconfigmanager::GetConfigsResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::szconfigmanager::GetConfigRegistryRequest, ::szconfigmanager::GetConfigRegistryResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_GetConfigs() override {
+    ~WithCallbackMethod_GetConfigRegistry() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetConfigs(::grpc::ServerContext* /*context*/, const ::szconfigmanager::GetConfigsRequest* /*request*/, ::szconfigmanager::GetConfigsResponse* /*response*/) override {
+    ::grpc::Status GetConfigRegistry(::grpc::ServerContext* /*context*/, const ::szconfigmanager::GetConfigRegistryRequest* /*request*/, ::szconfigmanager::GetConfigRegistryResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* GetConfigs(
-      ::grpc::CallbackServerContext* /*context*/, const ::szconfigmanager::GetConfigsRequest* /*request*/, ::szconfigmanager::GetConfigsResponse* /*response*/)  { return nullptr; }
+    virtual ::grpc::ServerUnaryReactor* GetConfigRegistry(
+      ::grpc::CallbackServerContext* /*context*/, const ::szconfigmanager::GetConfigRegistryRequest* /*request*/, ::szconfigmanager::GetConfigRegistryResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithCallbackMethod_GetDefaultConfigId : public BaseClass {
@@ -638,7 +638,7 @@ class SzConfigManager final {
     virtual ::grpc::ServerUnaryReactor* SetDefaultConfigId(
       ::grpc::CallbackServerContext* /*context*/, const ::szconfigmanager::SetDefaultConfigIdRequest* /*request*/, ::szconfigmanager::SetDefaultConfigIdResponse* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_GetConfig<WithCallbackMethod_GetConfigs<WithCallbackMethod_GetDefaultConfigId<WithCallbackMethod_GetTemplateConfig<WithCallbackMethod_RegisterConfig<WithCallbackMethod_ReplaceDefaultConfigId<WithCallbackMethod_SetDefaultConfig<WithCallbackMethod_SetDefaultConfigId<Service > > > > > > > > CallbackService;
+  typedef WithCallbackMethod_GetConfig<WithCallbackMethod_GetConfigRegistry<WithCallbackMethod_GetDefaultConfigId<WithCallbackMethod_GetTemplateConfig<WithCallbackMethod_RegisterConfig<WithCallbackMethod_ReplaceDefaultConfigId<WithCallbackMethod_SetDefaultConfig<WithCallbackMethod_SetDefaultConfigId<Service > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_GetConfig : public BaseClass {
@@ -658,18 +658,18 @@ class SzConfigManager final {
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_GetConfigs : public BaseClass {
+  class WithGenericMethod_GetConfigRegistry : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithGenericMethod_GetConfigs() {
+    WithGenericMethod_GetConfigRegistry() {
       ::grpc::Service::MarkMethodGeneric(1);
     }
-    ~WithGenericMethod_GetConfigs() override {
+    ~WithGenericMethod_GetConfigRegistry() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetConfigs(::grpc::ServerContext* /*context*/, const ::szconfigmanager::GetConfigsRequest* /*request*/, ::szconfigmanager::GetConfigsResponse* /*response*/) override {
+    ::grpc::Status GetConfigRegistry(::grpc::ServerContext* /*context*/, const ::szconfigmanager::GetConfigRegistryRequest* /*request*/, ::szconfigmanager::GetConfigRegistryResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -797,22 +797,22 @@ class SzConfigManager final {
     }
   };
   template <class BaseClass>
-  class WithRawMethod_GetConfigs : public BaseClass {
+  class WithRawMethod_GetConfigRegistry : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawMethod_GetConfigs() {
+    WithRawMethod_GetConfigRegistry() {
       ::grpc::Service::MarkMethodRaw(1);
     }
-    ~WithRawMethod_GetConfigs() override {
+    ~WithRawMethod_GetConfigRegistry() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetConfigs(::grpc::ServerContext* /*context*/, const ::szconfigmanager::GetConfigsRequest* /*request*/, ::szconfigmanager::GetConfigsResponse* /*response*/) override {
+    ::grpc::Status GetConfigRegistry(::grpc::ServerContext* /*context*/, const ::szconfigmanager::GetConfigRegistryRequest* /*request*/, ::szconfigmanager::GetConfigRegistryResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetConfigs(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetConfigRegistry(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -959,25 +959,25 @@ class SzConfigManager final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_GetConfigs : public BaseClass {
+  class WithRawCallbackMethod_GetConfigRegistry : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_GetConfigs() {
+    WithRawCallbackMethod_GetConfigRegistry() {
       ::grpc::Service::MarkMethodRawCallback(1,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetConfigs(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetConfigRegistry(context, request, response); }));
     }
-    ~WithRawCallbackMethod_GetConfigs() override {
+    ~WithRawCallbackMethod_GetConfigRegistry() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetConfigs(::grpc::ServerContext* /*context*/, const ::szconfigmanager::GetConfigsRequest* /*request*/, ::szconfigmanager::GetConfigsResponse* /*response*/) override {
+    ::grpc::Status GetConfigRegistry(::grpc::ServerContext* /*context*/, const ::szconfigmanager::GetConfigRegistryRequest* /*request*/, ::szconfigmanager::GetConfigRegistryResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* GetConfigs(
+    virtual ::grpc::ServerUnaryReactor* GetConfigRegistry(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
@@ -1140,31 +1140,31 @@ class SzConfigManager final {
     virtual ::grpc::Status StreamedGetConfig(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szconfigmanager::GetConfigRequest,::szconfigmanager::GetConfigResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_GetConfigs : public BaseClass {
+  class WithStreamedUnaryMethod_GetConfigRegistry : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithStreamedUnaryMethod_GetConfigs() {
+    WithStreamedUnaryMethod_GetConfigRegistry() {
       ::grpc::Service::MarkMethodStreamed(1,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::szconfigmanager::GetConfigsRequest, ::szconfigmanager::GetConfigsResponse>(
+          ::szconfigmanager::GetConfigRegistryRequest, ::szconfigmanager::GetConfigRegistryResponse>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::szconfigmanager::GetConfigsRequest, ::szconfigmanager::GetConfigsResponse>* streamer) {
-                       return this->StreamedGetConfigs(context,
+                     ::szconfigmanager::GetConfigRegistryRequest, ::szconfigmanager::GetConfigRegistryResponse>* streamer) {
+                       return this->StreamedGetConfigRegistry(context,
                          streamer);
                   }));
     }
-    ~WithStreamedUnaryMethod_GetConfigs() override {
+    ~WithStreamedUnaryMethod_GetConfigRegistry() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetConfigs(::grpc::ServerContext* /*context*/, const ::szconfigmanager::GetConfigsRequest* /*request*/, ::szconfigmanager::GetConfigsResponse* /*response*/) override {
+    ::grpc::Status GetConfigRegistry(::grpc::ServerContext* /*context*/, const ::szconfigmanager::GetConfigRegistryRequest* /*request*/, ::szconfigmanager::GetConfigRegistryResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetConfigs(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szconfigmanager::GetConfigsRequest,::szconfigmanager::GetConfigsResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetConfigRegistry(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szconfigmanager::GetConfigRegistryRequest,::szconfigmanager::GetConfigRegistryResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetDefaultConfigId : public BaseClass {
@@ -1328,9 +1328,9 @@ class SzConfigManager final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedSetDefaultConfigId(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szconfigmanager::SetDefaultConfigIdRequest,::szconfigmanager::SetDefaultConfigIdResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_GetConfig<WithStreamedUnaryMethod_GetConfigs<WithStreamedUnaryMethod_GetDefaultConfigId<WithStreamedUnaryMethod_GetTemplateConfig<WithStreamedUnaryMethod_RegisterConfig<WithStreamedUnaryMethod_ReplaceDefaultConfigId<WithStreamedUnaryMethod_SetDefaultConfig<WithStreamedUnaryMethod_SetDefaultConfigId<Service > > > > > > > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_GetConfig<WithStreamedUnaryMethod_GetConfigRegistry<WithStreamedUnaryMethod_GetDefaultConfigId<WithStreamedUnaryMethod_GetTemplateConfig<WithStreamedUnaryMethod_RegisterConfig<WithStreamedUnaryMethod_ReplaceDefaultConfigId<WithStreamedUnaryMethod_SetDefaultConfig<WithStreamedUnaryMethod_SetDefaultConfigId<Service > > > > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_GetConfig<WithStreamedUnaryMethod_GetConfigs<WithStreamedUnaryMethod_GetDefaultConfigId<WithStreamedUnaryMethod_GetTemplateConfig<WithStreamedUnaryMethod_RegisterConfig<WithStreamedUnaryMethod_ReplaceDefaultConfigId<WithStreamedUnaryMethod_SetDefaultConfig<WithStreamedUnaryMethod_SetDefaultConfigId<Service > > > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_GetConfig<WithStreamedUnaryMethod_GetConfigRegistry<WithStreamedUnaryMethod_GetDefaultConfigId<WithStreamedUnaryMethod_GetTemplateConfig<WithStreamedUnaryMethod_RegisterConfig<WithStreamedUnaryMethod_ReplaceDefaultConfigId<WithStreamedUnaryMethod_SetDefaultConfig<WithStreamedUnaryMethod_SetDefaultConfigId<Service > > > > > > > > StreamedService;
 };
 
 }  // namespace szconfigmanager
