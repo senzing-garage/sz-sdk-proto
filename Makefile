@@ -146,9 +146,9 @@ generate-php:
 .PHONY: generate-python
 generate-python:
 	$(activate-venv); \
+	OUTPUT_DIR=python/src; \
+	mkdir -p $${OUTPUT_DIR}; \
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
-		OUTPUT_DIR=example_generated_source_code/python/$${SENZING_COMPONENT}; \
-		mkdir -p $${OUTPUT_DIR}; \
 		python -m grpc_tools.protoc --proto_path=. --python_out=$${OUTPUT_DIR} --pyi_out=$${OUTPUT_DIR} --grpc_python_out=$${OUTPUT_DIR} $${SENZING_COMPONENT}.proto; \
 	done
 
@@ -202,6 +202,13 @@ generate-web:
 
 .PHONY: documentation
 documentation: documentation-osarch-specific
+
+# -----------------------------------------------------------------------------
+# Package
+# -----------------------------------------------------------------------------
+
+.PHONY: package
+package: clean package-osarch-specific
 
 # -----------------------------------------------------------------------------
 # Clean

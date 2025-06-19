@@ -77,7 +77,7 @@ These are "one-time tasks" which may already have been completed.
 
 ## Documentation
 
-1.  View documentation.
+1. View documentation.
     Example:
 
     ```console
@@ -86,17 +86,17 @@ These are "one-time tasks" which may already have been completed.
 
     ```
 
-1.  If a web page doesn't appear, visit [localhost:6060].
-1.  Senzing documentation will be in the "Third party" section.
+1. If a web page doesn't appear, visit [localhost:6060].
+1. Senzing documentation will be in the "Third party" section.
     `github.com` > `senzing-garage` > `sz-sdk-proto`
 
-1.  When a versioned release is published with a `v0.0.0` format tag,
+1. When a versioned release is published with a `v0.0.0` format tag,
     the reference can be found by clicking on the following badge at the top of the README.md page.
     Example:
 
-        [![Go Reference Badge]][Go Reference]
+      ![Go Reference Badge]][Go Reference]
 
-1.  To stop the `godoc` server, run
+1. To stop the `godoc` server, run
 
     ```console
     cd ${GIT_REPOSITORY_DIR}
@@ -293,6 +293,87 @@ The following instructions were used to create a [go module] and other [example 
 
 1. [Overview for gRPC on .NET]
 
+## Package
+
+### Package python
+
+1. Build the `wheel` file for distribution.
+   Example:
+
+   ```console
+   cd ${GIT_REPOSITORY_DIR}
+   make package
+
+   ```
+
+1. Activate virtual environment.
+
+   ```console
+   cd ${GIT_REPOSITORY_DIR}
+   source .venv/bin/activate
+
+   ```
+
+1. Verify that `senzing` is not installed.
+   Example:
+
+   ```console
+   python3 -m pip freeze | grep -e senzing_grpc_protobuf
+
+   ```
+
+   Nothing is returned.
+
+1. Install directly from `wheel` file.
+   Example:
+
+   ```console
+   python3 -m pip install ${GIT_REPOSITORY_DIR}/dist/*.whl
+
+   ```
+
+1. Verify that `senzing` is installed.
+   Example:
+
+   ```console
+   python3 -m pip freeze | grep -e senzing_grpc_protobuf
+
+   ```
+
+   Example return:
+
+   > senzing @ file:///home/senzing/senzing-garage.git/sz-sdk-proto/dist/senzing-0.0.1-py3-none-any.whl#sha256=2a4e5218d66d5be60ee31bfad5943e6611fc921f28a4326d9594ceceae7e0ac1
+
+1. Uninstall the `senzing` python package.
+   Example:
+
+   ```console
+   python3 -m pip uninstall senzing_grpc_protobuf
+
+   ```
+
+1. Deactivate virtual environment.
+
+   ```console
+   deactivate
+
+   ```
+
+### Test publish - python
+
+:warning: This test can only be performed once per versioned release.
+
+1. Test publishing `wheel` file to [Test PyPi].
+   Example:
+
+   ```console
+   cd ${GIT_REPOSITORY_DIR}
+   make publish-test
+
+   ```
+
+1. Visit [Test PyPi] and search for package.
+
 ## References
 
 [C++ Quick start]: https://grpc.io/docs/languages/cpp/quickstart/
@@ -304,17 +385,16 @@ The following instructions were used to create a [go module] and other [example 
 [git]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/git.md
 [go module]: go
 [Go Quick start]: https://grpc.io/docs/languages/go/quickstart/
-[Go Reference Badge]: https://pkg.go.dev/badge/github.com/senzing-garage/sz-sdk-proto.svg
-[Go Reference]: https://pkg.go.dev/github.com/senzing-garage/sz-sdk-proto
 [go]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/go.md
 [gRPC Documents for Go]: https://grpc.io/docs/languages/go/
 [Identify Senzing subcomponents]: #identify-senzing-subcomponents
 [Java Quick start]: https://grpc.io/docs/languages/java/quickstart/
 [make]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/make.md
-[Overview for gRPC on .NET]: https://learn.microsoft.com/en-us/aspnet/core/grpc
 [NodeJS]: https://nodejs.org/
+[Overview for gRPC on .NET]: https://learn.microsoft.com/en-us/aspnet/core/grpc
 [PHP Quick start]: https://grpc.io/docs/languages/php/quickstart/
 [protoc]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/protoc.md
 [Python Quick start]: https://grpc.io/docs/languages/python/quickstart/
 [Ruby Quick start]: https://grpc.io/docs/languages/ruby/quickstart/
+[Test PyPi]: https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/pypi.md#test-pypi
 [Thread safety]: https://grpc.io/docs/languages/go/generated-code/

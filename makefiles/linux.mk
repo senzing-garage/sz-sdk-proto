@@ -18,6 +18,10 @@ documentation-osarch-specific:
 	@xdg-open http://localhost:6060
 
 
+.PHONY: package-osarch-specific
+package-osarch-specific:
+	@$(activate-venv); python3 -m build
+
 .PHONY: venv-osarch-specific
 venv-osarch-specific:
 	@python3 -m venv .venv
