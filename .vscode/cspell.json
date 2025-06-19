@@ -82,6 +82,7 @@
     "**/*.mod",
     "**/*.sum",
     "example_generated_source_code/**",
-    "Makefile"
+    "Makefile",
+    "python/src"
   ]
 }
