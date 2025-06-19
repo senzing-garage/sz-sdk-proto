@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning].
 
 - ...
 
+## [0.8.6] - 2025-06-19
+
+### Changed in 0.8.6
+
+- Push python `senzing-grpc-protobuf` package to pypi
+
 ## [0.8.5] - 2025-06-17
 
 ### Changed in 0.8.5
