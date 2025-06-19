@@ -1,55 +1,22 @@
-[build-system]
-requires = [
-    "setuptools>=42",
-    "wheel"
+[project]
+name = "senzing_grpc_protobuf"
+version = "0.0.3"
+authors = [
+  { name="Senzing", email="support@senzing.com" },
 ]
-build-backend = "setuptools.build_meta"
-
-[dependency-groups]
-test = ["pytest", "coverage"]
-
-[tool.bandit]
-skips = ["B101"]
-
-[tool.black]
-line-length = 120
-
-[tool.flake8]
-extend-ignore = ["E203", "E501", "E704", "W503"]
-max-line-length = 120
-
-[tool.isort]
-profile = "black"
-src_paths = ["examples", "src", "tests"]
-
-[[tool.mypy.overrides]]
-module = "senzing_abstract.szengineflags.*"
-ignore_missing_imports = "true"
-warn_unused_ignores = "false"
-
-[[tool.mypy.overrides]]
-module = "pytest_schema.*"
-ignore_missing_imports = "true"
-
-[tool.pylint]
-load-plugins = [
-    "pylint_per_file_ignores",
+description = "auto-generated python protobuf for grpc"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "protobuf >= 6.31.1",
+    "grpcio >= 1.73.0"
 ]
-disable = [
-    "duplicate-code",
-    "line-too-long",
-    "missing-module-docstring",
-    "too-many-arguments",
-    "too-many-function-args",
-    "too-many-instance-attributes",
-    "too-many-positional-arguments",
-    "too-many-public-methods"
-]
-ignore = [
-    "__init__.py",
-    "docs/source/conf.py"
-]
-notes = [
-    "FIXME"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
 ]
 
+[project.urls]
+"Homepage" = "https://github.com/senzing-garage/sz-sdk-proto"
+"Bug Tracker" = "https://github.com/senzing-garage/sz-sdk-proto/issues"
