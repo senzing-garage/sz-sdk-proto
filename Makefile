@@ -56,6 +56,7 @@ hello-world: hello-world-osarch-specific
 .PHONY: venv
 venv: venv-osarch-specific
 
+
 .PHONY: dependencies-for-development
 dependencies-for-development: venv dependencies-for-development-osarch-specific
 	$(activate-venv); \
@@ -67,9 +68,11 @@ dependencies-for-development: venv dependencies-for-development-osarch-specific
 	@sudo pecl channel-update pecl.php.net
 	@sudo pecl install grpc
 
+
 dependencies-for-nodejs:
 	@npm install -g grpc-tools
 	@npm install -D @grpc/grpc-js @grpc/proto-loader grpc_tools_node_protoc_ts typescript tsx
+
 
 .PHONY: dependencies
 dependencies: venv
@@ -94,6 +97,7 @@ setup: generate
 .PHONY: generate
 generate: generate-csharp generate-go generate-java generate-php generate-python generate-ruby
 
+
 .PHONY: generate-csharp
 generate-csharp:
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
@@ -103,6 +107,7 @@ generate-csharp:
 		protoc --grpc_out=$${OUTPUT_DIR}  --plugin=protoc-gen-grpc=`which grpc_cpp_plugin`  $${SENZING_COMPONENT}.proto; \
 	done
 
+
 .PHONY: generate-go
 generate-go:
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
@@ -110,6 +115,7 @@ generate-go:
 		mkdir -p $${OUTPUT_DIR}; \
 		protoc --go_out=$${OUTPUT_DIR} --go_opt=paths=source_relative --go-grpc_out=$${OUTPUT_DIR} --go-grpc_opt=paths=source_relative $${SENZING_COMPONENT}.proto; \
 	done
+
 
 .PHONY: generate-java
 generate-java:
@@ -135,6 +141,7 @@ generate-nodejs:
 			$${SENZING_COMPONENT}.proto; \
 	done
 
+
 .PHONY: generate-php
 generate-php:
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
@@ -142,6 +149,7 @@ generate-php:
 		mkdir -p $${OUTPUT_DIR}; \
 		protoc --proto_path=. --php_out=$${OUTPUT_DIR}  --grpc_out=$${OUTPUT_DIR}  --plugin=protoc-gen-grpc=`which grpc_php_plugin`  $${SENZING_COMPONENT}.proto; \
 	done
+
 
 .PHONY: generate-python
 generate-python:
@@ -152,10 +160,6 @@ generate-python:
 		python -m grpc_tools.protoc --proto_path=. --python_out=$${OUTPUT_DIR} --pyi_out=$${OUTPUT_DIR} --grpc_python_out=$${OUTPUT_DIR} $${SENZING_COMPONENT}.proto; \
 	done
 
-# Replaced with "protoc"
-#		python3 -m grpc_tools.protoc --proto_path=. --python_out=$${OUTPUT_DIR}  --grpc_python_out=$${OUTPUT_DIR}  $${SENZING_COMPONENT}.proto; \
-#		protoc --proto_path=. --python_out=$${OUTPUT_DIR}  $${SENZING_COMPONENT}.proto; \
-
 
 .PHONY: generate-ruby
 generate-ruby:
@@ -164,6 +168,7 @@ generate-ruby:
 		mkdir -p $${OUTPUT_DIR}; \
 		grpc_tools_ruby_protoc --proto_path=. --ruby_out=$${OUTPUT_DIR}  --grpc_out=$${OUTPUT_DIR}  $${SENZING_COMPONENT}.proto; \
 	done
+
 
 # all typescript compilers follow short name abbr name convention
 .PHONY: generate-ts
@@ -181,6 +186,7 @@ generate-typescript:
 			--grpc_out=grpc_js:$${OUTPUT_DIR} \
 			$${SENZING_COMPONENT}.proto; \
 	done
+
 
 .PHONY: generate-web
 generate-web:
@@ -236,10 +242,12 @@ clean-go:
 clean-java:
 	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/java/* || true
 
+
 .PHONY: clean-node
 clean-node: clean-nodejs
 clean-nodejs:
 	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/nodejs/* || true
+
 
 .PHONY: clean-php
 clean-php:
@@ -248,21 +256,23 @@ clean-php:
 
 .PHONY: clean-python
 clean-python:
-	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/python/szconfig/*        || true
-	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/python/szconfigmanager/* || true
-	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/python/szdiagnostic/*    || true
-	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/python/szengine/*        || true
-	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/python/szproduct/*       || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/python/src/senzing_grpc_protobuf/szconfig*        || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/python/src/senzing_grpc_protobuf/szconfigmanager* || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/python/src/senzing_grpc_protobuf/szdiagnostic*    || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/python/src/senzing_grpc_protobuf/szengine*        || true
+	@rm -rf $(MAKEFILE_DIRECTORY)/python/src/senzing_grpc_protobuf/szproduct*       || true
 
 
 .PHONY: clean-ruby
 clean-ruby:
 	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/ruby/* || true
 
+
 .PHONY: clean-ts
 clean-ts: clean-typescript
 clean-typescript:
 	@rm -rf $(MAKEFILE_DIRECTORY)/example_generated_source_code/ts/* || true
+
 
 .PHONY: clean-web
 clean-web:
