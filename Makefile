@@ -148,7 +148,6 @@ generate-python:
 	$(activate-venv); \
 	OUTPUT_DIR=python/src/senzing_grpc_protobuf; \
 	mkdir -p $${OUTPUT_DIR}; \
-	touch $${OUTPUT_DIR}/__init__.py; \
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
 		python -m grpc_tools.protoc --proto_path=. --python_out=$${OUTPUT_DIR} --pyi_out=$${OUTPUT_DIR} --grpc_python_out=$${OUTPUT_DIR} $${SENZING_COMPONENT}.proto; \
 	done
@@ -209,7 +208,7 @@ documentation: documentation-osarch-specific
 # -----------------------------------------------------------------------------
 
 .PHONY: package
-package: clean package-osarch-specific
+package: package-osarch-specific
 
 # -----------------------------------------------------------------------------
 # Clean
