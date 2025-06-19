@@ -20,3 +20,6 @@ classifiers = [
 [project.urls]
 "Homepage" = "https://github.com/senzing-garage/sz-sdk-proto"
 "Bug Tracker" = "https://github.com/senzing-garage/sz-sdk-proto/issues"
+
+[tool.setuptools.package-dir]
+senzing_grpc_protobuf = "python/src/senzing_grpc_protobuf"

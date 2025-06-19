@@ -146,7 +146,7 @@ generate-php:
 .PHONY: generate-python
 generate-python:
 	$(activate-venv); \
-	OUTPUT_DIR=src/senzing_grpc_protobuf; \
+	OUTPUT_DIR=python/src/senzing_grpc_protobuf; \
 	mkdir -p $${OUTPUT_DIR}; \
 	touch $${OUTPUT_DIR}/__init__.py; \
 	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
