@@ -49,6 +49,7 @@
     "rootfs",
     "Senzing",
     "SENZINGSDK",
+    "setuptools",
     "Sigstore",
     "stackoverflow",
     "stretchr",
