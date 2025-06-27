@@ -4,7 +4,7 @@ build==1.2.2.post1
 coverage==7.9.1
 flake8==7.3.0
 fpvs==0.3.0
-grpcio-tools==1.73.0
+grpcio-tools==1.73.1
 isort==6.0.1
 mypy==1.16.1
 orjson==3.10.18
