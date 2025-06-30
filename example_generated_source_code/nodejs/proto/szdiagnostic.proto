@@ -7,8 +7,8 @@ option java_outer_classname = "SzDiagnosticProto";
 
 service SzDiagnostic {
   rpc CheckRepositoryPerformance (CheckRepositoryPerformanceRequest) returns (CheckRepositoryPerformanceResponse) {}
-  rpc GetRepositoryInfo (GetRepositoryInfoRequest) returns (GetRepositoryInfoResponse) {}
   rpc GetFeature (GetFeatureRequest) returns (GetFeatureResponse) {}
+  rpc GetRepositoryInfo (GetRepositoryInfoRequest) returns (GetRepositoryInfoResponse) {}
   rpc PurgeRepository(PurgeRepositoryRequest) returns (PurgeRepositoryResponse) {}
   rpc Reinitialize (ReinitializeRequest) returns (ReinitializeResponse) {}
 }
