@@ -23,8 +23,8 @@ namespace szdiagnostic {
 
 static const char* SzDiagnostic_method_names[] = {
   "/szdiagnostic.SzDiagnostic/CheckRepositoryPerformance",
-  "/szdiagnostic.SzDiagnostic/GetRepositoryInfo",
   "/szdiagnostic.SzDiagnostic/GetFeature",
+  "/szdiagnostic.SzDiagnostic/GetRepositoryInfo",
   "/szdiagnostic.SzDiagnostic/PurgeRepository",
   "/szdiagnostic.SzDiagnostic/Reinitialize",
 };
@@ -37,8 +37,8 @@ std::unique_ptr< SzDiagnostic::Stub> SzDiagnostic::NewStub(const std::shared_ptr
 
 SzDiagnostic::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
   : channel_(channel), rpcmethod_CheckRepositoryPerformance_(SzDiagnostic_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetRepositoryInfo_(SzDiagnostic_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetFeature_(SzDiagnostic_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetFeature_(SzDiagnostic_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetRepositoryInfo_(SzDiagnostic_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_PurgeRepository_(SzDiagnostic_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_Reinitialize_(SzDiagnostic_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
@@ -66,29 +66,6 @@ void SzDiagnostic::Stub::async::CheckRepositoryPerformance(::grpc::ClientContext
   return result;
 }
 
-::grpc::Status SzDiagnostic::Stub::GetRepositoryInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetRepositoryInfoRequest& request, ::szdiagnostic::GetRepositoryInfoResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::szdiagnostic::GetRepositoryInfoRequest, ::szdiagnostic::GetRepositoryInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetRepositoryInfo_, context, request, response);
-}
-
-void SzDiagnostic::Stub::async::GetRepositoryInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetRepositoryInfoRequest* request, ::szdiagnostic::GetRepositoryInfoResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::szdiagnostic::GetRepositoryInfoRequest, ::szdiagnostic::GetRepositoryInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetRepositoryInfo_, context, request, response, std::move(f));
-}
-
-void SzDiagnostic::Stub::async::GetRepositoryInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetRepositoryInfoRequest* request, ::szdiagnostic::GetRepositoryInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetRepositoryInfo_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::szdiagnostic::GetRepositoryInfoResponse>* SzDiagnostic::Stub::PrepareAsyncGetRepositoryInfoRaw(::grpc::ClientContext* context, const ::szdiagnostic::GetRepositoryInfoRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szdiagnostic::GetRepositoryInfoResponse, ::szdiagnostic::GetRepositoryInfoRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetRepositoryInfo_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::szdiagnostic::GetRepositoryInfoResponse>* SzDiagnostic::Stub::AsyncGetRepositoryInfoRaw(::grpc::ClientContext* context, const ::szdiagnostic::GetRepositoryInfoRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncGetRepositoryInfoRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
 ::grpc::Status SzDiagnostic::Stub::GetFeature(::grpc::ClientContext* context, const ::szdiagnostic::GetFeatureRequest& request, ::szdiagnostic::GetFeatureResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::szdiagnostic::GetFeatureRequest, ::szdiagnostic::GetFeatureResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetFeature_, context, request, response);
 }
@@ -108,6 +85,29 @@ void SzDiagnostic::Stub::async::GetFeature(::grpc::ClientContext* context, const
 ::grpc::ClientAsyncResponseReader< ::szdiagnostic::GetFeatureResponse>* SzDiagnostic::Stub::AsyncGetFeatureRaw(::grpc::ClientContext* context, const ::szdiagnostic::GetFeatureRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncGetFeatureRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
+::grpc::Status SzDiagnostic::Stub::GetRepositoryInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetRepositoryInfoRequest& request, ::szdiagnostic::GetRepositoryInfoResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::szdiagnostic::GetRepositoryInfoRequest, ::szdiagnostic::GetRepositoryInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetRepositoryInfo_, context, request, response);
+}
+
+void SzDiagnostic::Stub::async::GetRepositoryInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetRepositoryInfoRequest* request, ::szdiagnostic::GetRepositoryInfoResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::szdiagnostic::GetRepositoryInfoRequest, ::szdiagnostic::GetRepositoryInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetRepositoryInfo_, context, request, response, std::move(f));
+}
+
+void SzDiagnostic::Stub::async::GetRepositoryInfo(::grpc::ClientContext* context, const ::szdiagnostic::GetRepositoryInfoRequest* request, ::szdiagnostic::GetRepositoryInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetRepositoryInfo_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::szdiagnostic::GetRepositoryInfoResponse>* SzDiagnostic::Stub::PrepareAsyncGetRepositoryInfoRaw(::grpc::ClientContext* context, const ::szdiagnostic::GetRepositoryInfoRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szdiagnostic::GetRepositoryInfoResponse, ::szdiagnostic::GetRepositoryInfoRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetRepositoryInfo_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::szdiagnostic::GetRepositoryInfoResponse>* SzDiagnostic::Stub::AsyncGetRepositoryInfoRaw(::grpc::ClientContext* context, const ::szdiagnostic::GetRepositoryInfoRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncGetRepositoryInfoRaw(context, request, cq);
   result->StartCall();
   return result;
 }
@@ -172,22 +172,22 @@ SzDiagnostic::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzDiagnostic_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SzDiagnostic::Service, ::szdiagnostic::GetRepositoryInfoRequest, ::szdiagnostic::GetRepositoryInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](SzDiagnostic::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::szdiagnostic::GetRepositoryInfoRequest* req,
-             ::szdiagnostic::GetRepositoryInfoResponse* resp) {
-               return service->GetRepositoryInfo(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      SzDiagnostic_method_names[2],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< SzDiagnostic::Service, ::szdiagnostic::GetFeatureRequest, ::szdiagnostic::GetFeatureResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SzDiagnostic::Service* service,
              ::grpc::ServerContext* ctx,
              const ::szdiagnostic::GetFeatureRequest* req,
              ::szdiagnostic::GetFeatureResponse* resp) {
                return service->GetFeature(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      SzDiagnostic_method_names[2],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< SzDiagnostic::Service, ::szdiagnostic::GetRepositoryInfoRequest, ::szdiagnostic::GetRepositoryInfoResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](SzDiagnostic::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::szdiagnostic::GetRepositoryInfoRequest* req,
+             ::szdiagnostic::GetRepositoryInfoResponse* resp) {
+               return service->GetRepositoryInfo(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzDiagnostic_method_names[3],
@@ -221,14 +221,14 @@ SzDiagnostic::Service::~Service() {
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status SzDiagnostic::Service::GetRepositoryInfo(::grpc::ServerContext* context, const ::szdiagnostic::GetRepositoryInfoRequest* request, ::szdiagnostic::GetRepositoryInfoResponse* response) {
+::grpc::Status SzDiagnostic::Service::GetFeature(::grpc::ServerContext* context, const ::szdiagnostic::GetFeatureRequest* request, ::szdiagnostic::GetFeatureResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status SzDiagnostic::Service::GetFeature(::grpc::ServerContext* context, const ::szdiagnostic::GetFeatureRequest* request, ::szdiagnostic::GetFeatureResponse* response) {
+::grpc::Status SzDiagnostic::Service::GetRepositoryInfo(::grpc::ServerContext* context, const ::szdiagnostic::GetRepositoryInfoRequest* request, ::szdiagnostic::GetRepositoryInfoResponse* response) {
   (void) context;
   (void) request;
   (void) response;

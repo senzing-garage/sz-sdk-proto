@@ -31,20 +31,6 @@ class SzDiagnosticClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Szdiagnostic\GetRepositoryInfoRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function GetRepositoryInfo(\Szdiagnostic\GetRepositoryInfoRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szdiagnostic.SzDiagnostic/GetRepositoryInfo',
-        $argument,
-        ['\Szdiagnostic\GetRepositoryInfoResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \Szdiagnostic\GetFeatureRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -55,6 +41,20 @@ class SzDiagnosticClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/szdiagnostic.SzDiagnostic/GetFeature',
         $argument,
         ['\Szdiagnostic\GetFeatureResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Szdiagnostic\GetRepositoryInfoRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetRepositoryInfo(\Szdiagnostic\GetRepositoryInfoRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szdiagnostic.SzDiagnostic/GetRepositoryInfo',
+        $argument,
+        ['\Szdiagnostic\GetRepositoryInfoResponse', 'decode'],
         $metadata, $options);
     }
 

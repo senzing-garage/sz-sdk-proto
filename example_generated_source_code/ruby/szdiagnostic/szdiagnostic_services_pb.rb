@@ -15,8 +15,8 @@ module Szdiagnostic
       self.service_name = 'szdiagnostic.SzDiagnostic'
 
       rpc :CheckRepositoryPerformance, ::Szdiagnostic::CheckRepositoryPerformanceRequest, ::Szdiagnostic::CheckRepositoryPerformanceResponse
-      rpc :GetRepositoryInfo, ::Szdiagnostic::GetRepositoryInfoRequest, ::Szdiagnostic::GetRepositoryInfoResponse
       rpc :GetFeature, ::Szdiagnostic::GetFeatureRequest, ::Szdiagnostic::GetFeatureResponse
+      rpc :GetRepositoryInfo, ::Szdiagnostic::GetRepositoryInfoRequest, ::Szdiagnostic::GetRepositoryInfoResponse
       rpc :PurgeRepository, ::Szdiagnostic::PurgeRepositoryRequest, ::Szdiagnostic::PurgeRepositoryResponse
       rpc :Reinitialize, ::Szdiagnostic::ReinitializeRequest, ::Szdiagnostic::ReinitializeResponse
     end

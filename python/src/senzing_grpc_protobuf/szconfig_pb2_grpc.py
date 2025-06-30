@@ -34,6 +34,11 @@ class SzConfigStub(object):
         Args:
             channel: A grpc.Channel.
         """
+        self.GetDataSourceRegistry = channel.unary_unary(
+                '/szconfig.SzConfig/GetDataSourceRegistry',
+                request_serializer=szconfig__pb2.GetDataSourceRegistryRequest.SerializeToString,
+                response_deserializer=szconfig__pb2.GetDataSourceRegistryResponse.FromString,
+                _registered_method=True)
         self.RegisterDataSource = channel.unary_unary(
                 '/szconfig.SzConfig/RegisterDataSource',
                 request_serializer=szconfig__pb2.RegisterDataSourceRequest.SerializeToString,
@@ -43,11 +48,6 @@ class SzConfigStub(object):
                 '/szconfig.SzConfig/UnregisterDataSource',
                 request_serializer=szconfig__pb2.UnregisterDataSourceRequest.SerializeToString,
                 response_deserializer=szconfig__pb2.UnregisterDataSourceResponse.FromString,
-                _registered_method=True)
-        self.GetDataSourceRegistry = channel.unary_unary(
-                '/szconfig.SzConfig/GetDataSourceRegistry',
-                request_serializer=szconfig__pb2.GetDataSourceRegistryRequest.SerializeToString,
-                response_deserializer=szconfig__pb2.GetDataSourceRegistryResponse.FromString,
                 _registered_method=True)
         self.VerifyConfig = channel.unary_unary(
                 '/szconfig.SzConfig/VerifyConfig',
@@ -59,6 +59,12 @@ class SzConfigStub(object):
 class SzConfigServicer(object):
     """Missing associated documentation comment in .proto file."""
 
+    def GetDataSourceRegistry(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def RegisterDataSource(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -66,12 +72,6 @@ class SzConfigServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def UnregisterDataSource(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def GetDataSourceRegistry(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -86,6 +86,11 @@ class SzConfigServicer(object):
 
 def add_SzConfigServicer_to_server(servicer, server):
     rpc_method_handlers = {
+            'GetDataSourceRegistry': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetDataSourceRegistry,
+                    request_deserializer=szconfig__pb2.GetDataSourceRegistryRequest.FromString,
+                    response_serializer=szconfig__pb2.GetDataSourceRegistryResponse.SerializeToString,
+            ),
             'RegisterDataSource': grpc.unary_unary_rpc_method_handler(
                     servicer.RegisterDataSource,
                     request_deserializer=szconfig__pb2.RegisterDataSourceRequest.FromString,
@@ -95,11 +100,6 @@ def add_SzConfigServicer_to_server(servicer, server):
                     servicer.UnregisterDataSource,
                     request_deserializer=szconfig__pb2.UnregisterDataSourceRequest.FromString,
                     response_serializer=szconfig__pb2.UnregisterDataSourceResponse.SerializeToString,
-            ),
-            'GetDataSourceRegistry': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetDataSourceRegistry,
-                    request_deserializer=szconfig__pb2.GetDataSourceRegistryRequest.FromString,
-                    response_serializer=szconfig__pb2.GetDataSourceRegistryResponse.SerializeToString,
             ),
             'VerifyConfig': grpc.unary_unary_rpc_method_handler(
                     servicer.VerifyConfig,
@@ -116,6 +116,33 @@ def add_SzConfigServicer_to_server(servicer, server):
  # This class is part of an EXPERIMENTAL API.
 class SzConfig(object):
     """Missing associated documentation comment in .proto file."""
+
+    @staticmethod
+    def GetDataSourceRegistry(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/szconfig.SzConfig/GetDataSourceRegistry',
+            szconfig__pb2.GetDataSourceRegistryRequest.SerializeToString,
+            szconfig__pb2.GetDataSourceRegistryResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def RegisterDataSource(request,
@@ -161,33 +188,6 @@ class SzConfig(object):
             '/szconfig.SzConfig/UnregisterDataSource',
             szconfig__pb2.UnregisterDataSourceRequest.SerializeToString,
             szconfig__pb2.UnregisterDataSourceResponse.FromString,
-            options,
-            channel_credentials,
-            insecure,
-            call_credentials,
-            compression,
-            wait_for_ready,
-            timeout,
-            metadata,
-            _registered_method=True)
-
-    @staticmethod
-    def GetDataSourceRegistry(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(
-            request,
-            target,
-            '/szconfig.SzConfig/GetDataSourceRegistry',
-            szconfig__pb2.GetDataSourceRegistryRequest.SerializeToString,
-            szconfig__pb2.GetDataSourceRegistryResponse.FromString,
             options,
             channel_credentials,
             insecure,

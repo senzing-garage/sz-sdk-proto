@@ -25,6 +25,1026 @@ public final class SzConfigProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface GetDataSourceRegistryRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:szconfig.GetDataSourceRegistryRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string config_definition = 1;</code>
+     * @return The configDefinition.
+     */
+    java.lang.String getConfigDefinition();
+    /**
+     * <code>string config_definition = 1;</code>
+     * @return The bytes for configDefinition.
+     */
+    com.google.protobuf.ByteString
+        getConfigDefinitionBytes();
+  }
+  /**
+   * Protobuf type {@code szconfig.GetDataSourceRegistryRequest}
+   */
+  public static final class GetDataSourceRegistryRequest extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:szconfig.GetDataSourceRegistryRequest)
+      GetDataSourceRegistryRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 30,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        GetDataSourceRegistryRequest.class.getName());
+    }
+    // Use GetDataSourceRegistryRequest.newBuilder() to construct.
+    private GetDataSourceRegistryRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private GetDataSourceRegistryRequest() {
+      configDefinition_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest.class, com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest.Builder.class);
+    }
+
+    public static final int CONFIG_DEFINITION_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object configDefinition_ = "";
+    /**
+     * <code>string config_definition = 1;</code>
+     * @return The configDefinition.
+     */
+    @java.lang.Override
+    public java.lang.String getConfigDefinition() {
+      java.lang.Object ref = configDefinition_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        configDefinition_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string config_definition = 1;</code>
+     * @return The bytes for configDefinition.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConfigDefinitionBytes() {
+      java.lang.Object ref = configDefinition_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        configDefinition_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(configDefinition_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, configDefinition_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(configDefinition_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, configDefinition_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest)) {
+        return super.equals(obj);
+      }
+      com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest other = (com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest) obj;
+
+      if (!getConfigDefinition()
+          .equals(other.getConfigDefinition())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONFIG_DEFINITION_FIELD_NUMBER;
+      hash = (53 * hash) + getConfigDefinition().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code szconfig.GetDataSourceRegistryRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:szconfig.GetDataSourceRegistryRequest)
+        com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest.class, com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest.Builder.class);
+      }
+
+      // Construct using com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        configDefinition_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest build() {
+        com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest buildPartial() {
+        com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest result = new com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.configDefinition_ = configDefinition_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest other) {
+        if (other == com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest.getDefaultInstance()) return this;
+        if (!other.getConfigDefinition().isEmpty()) {
+          configDefinition_ = other.configDefinition_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                configDefinition_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object configDefinition_ = "";
+      /**
+       * <code>string config_definition = 1;</code>
+       * @return The configDefinition.
+       */
+      public java.lang.String getConfigDefinition() {
+        java.lang.Object ref = configDefinition_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          configDefinition_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string config_definition = 1;</code>
+       * @return The bytes for configDefinition.
+       */
+      public com.google.protobuf.ByteString
+          getConfigDefinitionBytes() {
+        java.lang.Object ref = configDefinition_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          configDefinition_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string config_definition = 1;</code>
+       * @param value The configDefinition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigDefinition(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        configDefinition_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string config_definition = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConfigDefinition() {
+        configDefinition_ = getDefaultInstance().getConfigDefinition();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string config_definition = 1;</code>
+       * @param value The bytes for configDefinition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigDefinitionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        configDefinition_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:szconfig.GetDataSourceRegistryRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:szconfig.GetDataSourceRegistryRequest)
+    private static final com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest();
+    }
+
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetDataSourceRegistryRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetDataSourceRegistryRequest>() {
+      @java.lang.Override
+      public GetDataSourceRegistryRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetDataSourceRegistryRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetDataSourceRegistryRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetDataSourceRegistryResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:szconfig.GetDataSourceRegistryResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string result = 1;</code>
+     * @return The result.
+     */
+    java.lang.String getResult();
+    /**
+     * <code>string result = 1;</code>
+     * @return The bytes for result.
+     */
+    com.google.protobuf.ByteString
+        getResultBytes();
+  }
+  /**
+   * Protobuf type {@code szconfig.GetDataSourceRegistryResponse}
+   */
+  public static final class GetDataSourceRegistryResponse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:szconfig.GetDataSourceRegistryResponse)
+      GetDataSourceRegistryResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 30,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        GetDataSourceRegistryResponse.class.getName());
+    }
+    // Use GetDataSourceRegistryResponse.newBuilder() to construct.
+    private GetDataSourceRegistryResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private GetDataSourceRegistryResponse() {
+      result_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse.class, com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse.Builder.class);
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object result_ = "";
+    /**
+     * <code>string result = 1;</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public java.lang.String getResult() {
+      java.lang.Object ref = result_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        result_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string result = 1;</code>
+     * @return The bytes for result.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResultBytes() {
+      java.lang.Object ref = result_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        result_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(result_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, result_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(result_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, result_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse)) {
+        return super.equals(obj);
+      }
+      com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse other = (com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse) obj;
+
+      if (!getResult()
+          .equals(other.getResult())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESULT_FIELD_NUMBER;
+      hash = (53 * hash) + getResult().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code szconfig.GetDataSourceRegistryResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:szconfig.GetDataSourceRegistryResponse)
+        com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse.class, com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse.Builder.class);
+      }
+
+      // Construct using com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        result_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse build() {
+        com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse buildPartial() {
+        com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse result = new com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.result_ = result_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse other) {
+        if (other == com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse.getDefaultInstance()) return this;
+        if (!other.getResult().isEmpty()) {
+          result_ = other.result_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                result_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object result_ = "";
+      /**
+       * <code>string result = 1;</code>
+       * @return The result.
+       */
+      public java.lang.String getResult() {
+        java.lang.Object ref = result_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          result_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string result = 1;</code>
+       * @return The bytes for result.
+       */
+      public com.google.protobuf.ByteString
+          getResultBytes() {
+        java.lang.Object ref = result_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          result_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string result = 1;</code>
+       * @param value The result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResult(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        result_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string result = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResult() {
+        result_ = getDefaultInstance().getResult();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string result = 1;</code>
+       * @param value The bytes for result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResultBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        result_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:szconfig.GetDataSourceRegistryResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:szconfig.GetDataSourceRegistryResponse)
+    private static final com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse();
+    }
+
+    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetDataSourceRegistryResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetDataSourceRegistryResponse>() {
+      @java.lang.Override
+      public GetDataSourceRegistryResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetDataSourceRegistryResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetDataSourceRegistryResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface RegisterDataSourceRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:szconfig.RegisterDataSourceRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -2657,1026 +3677,6 @@ public final class SzConfigProto {
 
   }
 
-  public interface GetDataSourceRegistryRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szconfig.GetDataSourceRegistryRequest)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string config_definition = 1;</code>
-     * @return The configDefinition.
-     */
-    java.lang.String getConfigDefinition();
-    /**
-     * <code>string config_definition = 1;</code>
-     * @return The bytes for configDefinition.
-     */
-    com.google.protobuf.ByteString
-        getConfigDefinitionBytes();
-  }
-  /**
-   * Protobuf type {@code szconfig.GetDataSourceRegistryRequest}
-   */
-  public static final class GetDataSourceRegistryRequest extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:szconfig.GetDataSourceRegistryRequest)
-      GetDataSourceRegistryRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    static {
-      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 30,
-        /* patch= */ 2,
-        /* suffix= */ "",
-        GetDataSourceRegistryRequest.class.getName());
-    }
-    // Use GetDataSourceRegistryRequest.newBuilder() to construct.
-    private GetDataSourceRegistryRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private GetDataSourceRegistryRequest() {
-      configDefinition_ = "";
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest.class, com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest.Builder.class);
-    }
-
-    public static final int CONFIG_DEFINITION_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object configDefinition_ = "";
-    /**
-     * <code>string config_definition = 1;</code>
-     * @return The configDefinition.
-     */
-    @java.lang.Override
-    public java.lang.String getConfigDefinition() {
-      java.lang.Object ref = configDefinition_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        configDefinition_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string config_definition = 1;</code>
-     * @return The bytes for configDefinition.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getConfigDefinitionBytes() {
-      java.lang.Object ref = configDefinition_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        configDefinition_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(configDefinition_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, configDefinition_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(configDefinition_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, configDefinition_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest)) {
-        return super.equals(obj);
-      }
-      com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest other = (com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest) obj;
-
-      if (!getConfigDefinition()
-          .equals(other.getConfigDefinition())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONFIG_DEFINITION_FIELD_NUMBER;
-      hash = (53 * hash) + getConfigDefinition().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code szconfig.GetDataSourceRegistryRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szconfig.GetDataSourceRegistryRequest)
-        com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest.class, com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest.Builder.class);
-      }
-
-      // Construct using com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        configDefinition_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest getDefaultInstanceForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest build() {
-        com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest buildPartial() {
-        com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest result = new com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.configDefinition_ = configDefinition_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest) {
-          return mergeFrom((com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest other) {
-        if (other == com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest.getDefaultInstance()) return this;
-        if (!other.getConfigDefinition().isEmpty()) {
-          configDefinition_ = other.configDefinition_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                configDefinition_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object configDefinition_ = "";
-      /**
-       * <code>string config_definition = 1;</code>
-       * @return The configDefinition.
-       */
-      public java.lang.String getConfigDefinition() {
-        java.lang.Object ref = configDefinition_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          configDefinition_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string config_definition = 1;</code>
-       * @return The bytes for configDefinition.
-       */
-      public com.google.protobuf.ByteString
-          getConfigDefinitionBytes() {
-        java.lang.Object ref = configDefinition_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          configDefinition_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string config_definition = 1;</code>
-       * @param value The configDefinition to set.
-       * @return This builder for chaining.
-       */
-      public Builder setConfigDefinition(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        configDefinition_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string config_definition = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearConfigDefinition() {
-        configDefinition_ = getDefaultInstance().getConfigDefinition();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string config_definition = 1;</code>
-       * @param value The bytes for configDefinition to set.
-       * @return This builder for chaining.
-       */
-      public Builder setConfigDefinitionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        configDefinition_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:szconfig.GetDataSourceRegistryRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:szconfig.GetDataSourceRegistryRequest)
-    private static final com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest();
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<GetDataSourceRegistryRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetDataSourceRegistryRequest>() {
-      @java.lang.Override
-      public GetDataSourceRegistryRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<GetDataSourceRegistryRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetDataSourceRegistryRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface GetDataSourceRegistryResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szconfig.GetDataSourceRegistryResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string result = 1;</code>
-     * @return The result.
-     */
-    java.lang.String getResult();
-    /**
-     * <code>string result = 1;</code>
-     * @return The bytes for result.
-     */
-    com.google.protobuf.ByteString
-        getResultBytes();
-  }
-  /**
-   * Protobuf type {@code szconfig.GetDataSourceRegistryResponse}
-   */
-  public static final class GetDataSourceRegistryResponse extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:szconfig.GetDataSourceRegistryResponse)
-      GetDataSourceRegistryResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    static {
-      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 30,
-        /* patch= */ 2,
-        /* suffix= */ "",
-        GetDataSourceRegistryResponse.class.getName());
-    }
-    // Use GetDataSourceRegistryResponse.newBuilder() to construct.
-    private GetDataSourceRegistryResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private GetDataSourceRegistryResponse() {
-      result_ = "";
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse.class, com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse.Builder.class);
-    }
-
-    public static final int RESULT_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object result_ = "";
-    /**
-     * <code>string result = 1;</code>
-     * @return The result.
-     */
-    @java.lang.Override
-    public java.lang.String getResult() {
-      java.lang.Object ref = result_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        result_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string result = 1;</code>
-     * @return The bytes for result.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getResultBytes() {
-      java.lang.Object ref = result_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        result_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(result_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, result_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(result_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, result_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse)) {
-        return super.equals(obj);
-      }
-      com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse other = (com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse) obj;
-
-      if (!getResult()
-          .equals(other.getResult())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + RESULT_FIELD_NUMBER;
-      hash = (53 * hash) + getResult().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code szconfig.GetDataSourceRegistryResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szconfig.GetDataSourceRegistryResponse)
-        com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse.class, com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse.Builder.class);
-      }
-
-      // Construct using com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        result_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.internal_static_szconfig_GetDataSourceRegistryResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse getDefaultInstanceForType() {
-        return com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse build() {
-        com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse buildPartial() {
-        com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse result = new com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.result_ = result_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse) {
-          return mergeFrom((com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse other) {
-        if (other == com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse.getDefaultInstance()) return this;
-        if (!other.getResult().isEmpty()) {
-          result_ = other.result_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                result_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object result_ = "";
-      /**
-       * <code>string result = 1;</code>
-       * @return The result.
-       */
-      public java.lang.String getResult() {
-        java.lang.Object ref = result_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          result_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string result = 1;</code>
-       * @return The bytes for result.
-       */
-      public com.google.protobuf.ByteString
-          getResultBytes() {
-        java.lang.Object ref = result_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          result_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string result = 1;</code>
-       * @param value The result to set.
-       * @return This builder for chaining.
-       */
-      public Builder setResult(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        result_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string result = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearResult() {
-        result_ = getDefaultInstance().getResult();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string result = 1;</code>
-       * @param value The bytes for result to set.
-       * @return This builder for chaining.
-       */
-      public Builder setResultBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        result_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:szconfig.GetDataSourceRegistryResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:szconfig.GetDataSourceRegistryResponse)
-    private static final com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse();
-    }
-
-    public static com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<GetDataSourceRegistryResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetDataSourceRegistryResponse>() {
-      @java.lang.Override
-      public GetDataSourceRegistryResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<GetDataSourceRegistryResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetDataSourceRegistryResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.senzing.sdk.grpc.SzConfigProto.GetDataSourceRegistryResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface VerifyConfigRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:szconfig.VerifyConfigRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -4623,6 +4623,16 @@ public final class SzConfigProto {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_szconfig_GetDataSourceRegistryRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_szconfig_GetDataSourceRegistryRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_szconfig_GetDataSourceRegistryResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_szconfig_GetDataSourceRegistryResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_szconfig_RegisterDataSourceRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -4643,16 +4653,6 @@ public final class SzConfigProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_szconfig_UnregisterDataSourceResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szconfig_GetDataSourceRegistryRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_szconfig_GetDataSourceRegistryRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szconfig_GetDataSourceRegistryResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_szconfig_GetDataSourceRegistryResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_szconfig_VerifyConfigRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -4671,28 +4671,28 @@ public final class SzConfigProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016szconfig.proto\022\010szconfig\"P\n\031RegisterDa" +
-      "taSourceRequest\022\031\n\021config_definition\030\001 \001" +
-      "(\t\022\030\n\020data_source_code\030\002 \001(\t\"G\n\032Register" +
-      "DataSourceResponse\022\016\n\006result\030\001 \001(\t\022\031\n\021co" +
-      "nfig_definition\030\002 \001(\t\"R\n\033UnregisterDataS" +
-      "ourceRequest\022\031\n\021config_definition\030\001 \001(\t\022" +
-      "\030\n\020data_source_code\030\002 \001(\t\"I\n\034UnregisterD" +
-      "ataSourceResponse\022\016\n\006result\030\001 \001(\t\022\031\n\021con" +
-      "fig_definition\030\002 \001(\t\"9\n\034GetDataSourceReg" +
-      "istryRequest\022\031\n\021config_definition\030\001 \001(\t\"" +
-      "/\n\035GetDataSourceRegistryResponse\022\016\n\006resu" +
-      "lt\030\001 \001(\t\"0\n\023VerifyConfigRequest\022\031\n\021confi" +
+      "\n\016szconfig.proto\022\010szconfig\"9\n\034GetDataSou" +
+      "rceRegistryRequest\022\031\n\021config_definition\030" +
+      "\001 \001(\t\"/\n\035GetDataSourceRegistryResponse\022\016" +
+      "\n\006result\030\001 \001(\t\"P\n\031RegisterDataSourceRequ" +
+      "est\022\031\n\021config_definition\030\001 \001(\t\022\030\n\020data_s" +
+      "ource_code\030\002 \001(\t\"G\n\032RegisterDataSourceRe" +
+      "sponse\022\016\n\006result\030\001 \001(\t\022\031\n\021config_definit" +
+      "ion\030\002 \001(\t\"R\n\033UnregisterDataSourceRequest" +
+      "\022\031\n\021config_definition\030\001 \001(\t\022\030\n\020data_sour" +
+      "ce_code\030\002 \001(\t\"I\n\034UnregisterDataSourceRes" +
+      "ponse\022\016\n\006result\030\001 \001(\t\022\031\n\021config_definiti" +
+      "on\030\002 \001(\t\"0\n\023VerifyConfigRequest\022\031\n\021confi" +
       "g_definition\030\001 \001(\t\"&\n\024VerifyConfigRespon" +
-      "se\022\016\n\006result\030\001 \001(\0102\223\003\n\010SzConfig\022a\n\022Regis" +
-      "terDataSource\022#.szconfig.RegisterDataSou" +
-      "rceRequest\032$.szconfig.RegisterDataSource" +
-      "Response\"\000\022g\n\024UnregisterDataSource\022%.szc" +
-      "onfig.UnregisterDataSourceRequest\032&.szco" +
-      "nfig.UnregisterDataSourceResponse\"\000\022j\n\025G" +
-      "etDataSourceRegistry\022&.szconfig.GetDataS" +
-      "ourceRegistryRequest\032\'.szconfig.GetDataS" +
-      "ourceRegistryResponse\"\000\022O\n\014VerifyConfig\022" +
+      "se\022\016\n\006result\030\001 \001(\0102\223\003\n\010SzConfig\022j\n\025GetDa" +
+      "taSourceRegistry\022&.szconfig.GetDataSourc" +
+      "eRegistryRequest\032\'.szconfig.GetDataSourc" +
+      "eRegistryResponse\"\000\022a\n\022RegisterDataSourc" +
+      "e\022#.szconfig.RegisterDataSourceRequest\032$" +
+      ".szconfig.RegisterDataSourceResponse\"\000\022g" +
+      "\n\024UnregisterDataSource\022%.szconfig.Unregi" +
+      "sterDataSourceRequest\032&.szconfig.Unregis" +
+      "terDataSourceResponse\"\000\022O\n\014VerifyConfig\022" +
       "\035.szconfig.VerifyConfigRequest\032\036.szconfi" +
       "g.VerifyConfigResponse\"\000BX\n\024com.senzing." +
       "sdk.grpcB\rSzConfigProtoZ1github.com/senz" +
@@ -4703,42 +4703,42 @@ public final class SzConfigProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_szconfig_RegisterDataSourceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_szconfig_RegisterDataSourceRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_szconfig_RegisterDataSourceRequest_descriptor,
-        new java.lang.String[] { "ConfigDefinition", "DataSourceCode", });
-    internal_static_szconfig_RegisterDataSourceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_szconfig_RegisterDataSourceResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_szconfig_RegisterDataSourceResponse_descriptor,
-        new java.lang.String[] { "Result", "ConfigDefinition", });
-    internal_static_szconfig_UnregisterDataSourceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_szconfig_UnregisterDataSourceRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_szconfig_UnregisterDataSourceRequest_descriptor,
-        new java.lang.String[] { "ConfigDefinition", "DataSourceCode", });
-    internal_static_szconfig_UnregisterDataSourceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_szconfig_UnregisterDataSourceResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_szconfig_UnregisterDataSourceResponse_descriptor,
-        new java.lang.String[] { "Result", "ConfigDefinition", });
     internal_static_szconfig_GetDataSourceRegistryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_szconfig_GetDataSourceRegistryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_szconfig_GetDataSourceRegistryRequest_descriptor,
         new java.lang.String[] { "ConfigDefinition", });
     internal_static_szconfig_GetDataSourceRegistryResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_szconfig_GetDataSourceRegistryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_szconfig_GetDataSourceRegistryResponse_descriptor,
         new java.lang.String[] { "Result", });
+    internal_static_szconfig_RegisterDataSourceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_szconfig_RegisterDataSourceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_szconfig_RegisterDataSourceRequest_descriptor,
+        new java.lang.String[] { "ConfigDefinition", "DataSourceCode", });
+    internal_static_szconfig_RegisterDataSourceResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_szconfig_RegisterDataSourceResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_szconfig_RegisterDataSourceResponse_descriptor,
+        new java.lang.String[] { "Result", "ConfigDefinition", });
+    internal_static_szconfig_UnregisterDataSourceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_szconfig_UnregisterDataSourceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_szconfig_UnregisterDataSourceRequest_descriptor,
+        new java.lang.String[] { "ConfigDefinition", "DataSourceCode", });
+    internal_static_szconfig_UnregisterDataSourceResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_szconfig_UnregisterDataSourceResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_szconfig_UnregisterDataSourceResponse_descriptor,
+        new java.lang.String[] { "Result", "ConfigDefinition", });
     internal_static_szconfig_VerifyConfigRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_szconfig_VerifyConfigRequest_fieldAccessorTable = new

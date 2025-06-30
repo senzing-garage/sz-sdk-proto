@@ -17,6 +17,20 @@ class SzConfigClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Szconfig\GetDataSourceRegistryRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetDataSourceRegistry(\Szconfig\GetDataSourceRegistryRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szconfig.SzConfig/GetDataSourceRegistry',
+        $argument,
+        ['\Szconfig\GetDataSourceRegistryResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Szconfig\RegisterDataSourceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -41,20 +55,6 @@ class SzConfigClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/szconfig.SzConfig/UnregisterDataSource',
         $argument,
         ['\Szconfig\UnregisterDataSourceResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Szconfig\GetDataSourceRegistryRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function GetDataSourceRegistry(\Szconfig\GetDataSourceRegistryRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szconfig.SzConfig/GetDataSourceRegistry',
-        $argument,
-        ['\Szconfig\GetDataSourceRegistryResponse', 'decode'],
         $metadata, $options);
     }
 

@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0eszconfig.proto\x12\x08szconfig\"P\n\x19RegisterDataSourceRequest\x12\x19\n\x11\x63onfig_definition\x18\x01 \x01(\t\x12\x18\n\x10\x64\x61ta_source_code\x18\x02 \x01(\t\"G\n\x1aRegisterDataSourceResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\x12\x19\n\x11\x63onfig_definition\x18\x02 \x01(\t\"R\n\x1bUnregisterDataSourceRequest\x12\x19\n\x11\x63onfig_definition\x18\x01 \x01(\t\x12\x18\n\x10\x64\x61ta_source_code\x18\x02 \x01(\t\"I\n\x1cUnregisterDataSourceResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\x12\x19\n\x11\x63onfig_definition\x18\x02 \x01(\t\"9\n\x1cGetDataSourceRegistryRequest\x12\x19\n\x11\x63onfig_definition\x18\x01 \x01(\t\"/\n\x1dGetDataSourceRegistryResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\"0\n\x13VerifyConfigRequest\x12\x19\n\x11\x63onfig_definition\x18\x01 \x01(\t\"&\n\x14VerifyConfigResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\x32\x93\x03\n\x08SzConfig\x12\x61\n\x12RegisterDataSource\x12#.szconfig.RegisterDataSourceRequest\x1a$.szconfig.RegisterDataSourceResponse\"\x00\x12g\n\x14UnregisterDataSource\x12%.szconfig.UnregisterDataSourceRequest\x1a&.szconfig.UnregisterDataSourceResponse\"\x00\x12j\n\x15GetDataSourceRegistry\x12&.szconfig.GetDataSourceRegistryRequest\x1a\'.szconfig.GetDataSourceRegistryResponse\"\x00\x12O\n\x0cVerifyConfig\x12\x1d.szconfig.VerifyConfigRequest\x1a\x1e.szconfig.VerifyConfigResponse\"\x00\x42X\n\x14\x63om.senzing.sdk.grpcB\rSzConfigProtoZ1github.com/senzing-garage/sz-sdk-go-grpc/szconfigb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0eszconfig.proto\x12\x08szconfig\"9\n\x1cGetDataSourceRegistryRequest\x12\x19\n\x11\x63onfig_definition\x18\x01 \x01(\t\"/\n\x1dGetDataSourceRegistryResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\"P\n\x19RegisterDataSourceRequest\x12\x19\n\x11\x63onfig_definition\x18\x01 \x01(\t\x12\x18\n\x10\x64\x61ta_source_code\x18\x02 \x01(\t\"G\n\x1aRegisterDataSourceResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\x12\x19\n\x11\x63onfig_definition\x18\x02 \x01(\t\"R\n\x1bUnregisterDataSourceRequest\x12\x19\n\x11\x63onfig_definition\x18\x01 \x01(\t\x12\x18\n\x10\x64\x61ta_source_code\x18\x02 \x01(\t\"I\n\x1cUnregisterDataSourceResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\x12\x19\n\x11\x63onfig_definition\x18\x02 \x01(\t\"0\n\x13VerifyConfigRequest\x12\x19\n\x11\x63onfig_definition\x18\x01 \x01(\t\"&\n\x14VerifyConfigResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\x32\x93\x03\n\x08SzConfig\x12j\n\x15GetDataSourceRegistry\x12&.szconfig.GetDataSourceRegistryRequest\x1a\'.szconfig.GetDataSourceRegistryResponse\"\x00\x12\x61\n\x12RegisterDataSource\x12#.szconfig.RegisterDataSourceRequest\x1a$.szconfig.RegisterDataSourceResponse\"\x00\x12g\n\x14UnregisterDataSource\x12%.szconfig.UnregisterDataSourceRequest\x1a&.szconfig.UnregisterDataSourceResponse\"\x00\x12O\n\x0cVerifyConfig\x12\x1d.szconfig.VerifyConfigRequest\x1a\x1e.szconfig.VerifyConfigResponse\"\x00\x42X\n\x14\x63om.senzing.sdk.grpcB\rSzConfigProtoZ1github.com/senzing-garage/sz-sdk-go-grpc/szconfigb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -32,18 +32,18 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'szconfig_pb2', _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
   _globals['DESCRIPTOR']._serialized_options = b'\n\024com.senzing.sdk.grpcB\rSzConfigProtoZ1github.com/senzing-garage/sz-sdk-go-grpc/szconfig'
-  _globals['_REGISTERDATASOURCEREQUEST']._serialized_start=28
-  _globals['_REGISTERDATASOURCEREQUEST']._serialized_end=108
-  _globals['_REGISTERDATASOURCERESPONSE']._serialized_start=110
-  _globals['_REGISTERDATASOURCERESPONSE']._serialized_end=181
-  _globals['_UNREGISTERDATASOURCEREQUEST']._serialized_start=183
-  _globals['_UNREGISTERDATASOURCEREQUEST']._serialized_end=265
-  _globals['_UNREGISTERDATASOURCERESPONSE']._serialized_start=267
-  _globals['_UNREGISTERDATASOURCERESPONSE']._serialized_end=340
-  _globals['_GETDATASOURCEREGISTRYREQUEST']._serialized_start=342
-  _globals['_GETDATASOURCEREGISTRYREQUEST']._serialized_end=399
-  _globals['_GETDATASOURCEREGISTRYRESPONSE']._serialized_start=401
-  _globals['_GETDATASOURCEREGISTRYRESPONSE']._serialized_end=448
+  _globals['_GETDATASOURCEREGISTRYREQUEST']._serialized_start=28
+  _globals['_GETDATASOURCEREGISTRYREQUEST']._serialized_end=85
+  _globals['_GETDATASOURCEREGISTRYRESPONSE']._serialized_start=87
+  _globals['_GETDATASOURCEREGISTRYRESPONSE']._serialized_end=134
+  _globals['_REGISTERDATASOURCEREQUEST']._serialized_start=136
+  _globals['_REGISTERDATASOURCEREQUEST']._serialized_end=216
+  _globals['_REGISTERDATASOURCERESPONSE']._serialized_start=218
+  _globals['_REGISTERDATASOURCERESPONSE']._serialized_end=289
+  _globals['_UNREGISTERDATASOURCEREQUEST']._serialized_start=291
+  _globals['_UNREGISTERDATASOURCEREQUEST']._serialized_end=373
+  _globals['_UNREGISTERDATASOURCERESPONSE']._serialized_start=375
+  _globals['_UNREGISTERDATASOURCERESPONSE']._serialized_end=448
   _globals['_VERIFYCONFIGREQUEST']._serialized_start=450
   _globals['_VERIFYCONFIGREQUEST']._serialized_end=498
   _globals['_VERIFYCONFIGRESPONSE']._serialized_start=500

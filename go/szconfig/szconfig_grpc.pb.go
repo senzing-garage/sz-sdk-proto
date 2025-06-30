@@ -19,9 +19,9 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
+	SzConfig_GetDataSourceRegistry_FullMethodName = "/szconfig.SzConfig/GetDataSourceRegistry"
 	SzConfig_RegisterDataSource_FullMethodName    = "/szconfig.SzConfig/RegisterDataSource"
 	SzConfig_UnregisterDataSource_FullMethodName  = "/szconfig.SzConfig/UnregisterDataSource"
-	SzConfig_GetDataSourceRegistry_FullMethodName = "/szconfig.SzConfig/GetDataSourceRegistry"
 	SzConfig_VerifyConfig_FullMethodName          = "/szconfig.SzConfig/VerifyConfig"
 )
 
@@ -29,9 +29,9 @@ const (
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type SzConfigClient interface {
+	GetDataSourceRegistry(ctx context.Context, in *GetDataSourceRegistryRequest, opts ...grpc.CallOption) (*GetDataSourceRegistryResponse, error)
 	RegisterDataSource(ctx context.Context, in *RegisterDataSourceRequest, opts ...grpc.CallOption) (*RegisterDataSourceResponse, error)
 	UnregisterDataSource(ctx context.Context, in *UnregisterDataSourceRequest, opts ...grpc.CallOption) (*UnregisterDataSourceResponse, error)
-	GetDataSourceRegistry(ctx context.Context, in *GetDataSourceRegistryRequest, opts ...grpc.CallOption) (*GetDataSourceRegistryResponse, error)
 	VerifyConfig(ctx context.Context, in *VerifyConfigRequest, opts ...grpc.CallOption) (*VerifyConfigResponse, error)
 }
 
@@ -41,6 +41,16 @@ type szConfigClient struct {
 
 func NewSzConfigClient(cc grpc.ClientConnInterface) SzConfigClient {
 	return &szConfigClient{cc}
+}
+
+func (c *szConfigClient) GetDataSourceRegistry(ctx context.Context, in *GetDataSourceRegistryRequest, opts ...grpc.CallOption) (*GetDataSourceRegistryResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(GetDataSourceRegistryResponse)
+	err := c.cc.Invoke(ctx, SzConfig_GetDataSourceRegistry_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
 }
 
 func (c *szConfigClient) RegisterDataSource(ctx context.Context, in *RegisterDataSourceRequest, opts ...grpc.CallOption) (*RegisterDataSourceResponse, error) {
@@ -63,16 +73,6 @@ func (c *szConfigClient) UnregisterDataSource(ctx context.Context, in *Unregiste
 	return out, nil
 }
 
-func (c *szConfigClient) GetDataSourceRegistry(ctx context.Context, in *GetDataSourceRegistryRequest, opts ...grpc.CallOption) (*GetDataSourceRegistryResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(GetDataSourceRegistryResponse)
-	err := c.cc.Invoke(ctx, SzConfig_GetDataSourceRegistry_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *szConfigClient) VerifyConfig(ctx context.Context, in *VerifyConfigRequest, opts ...grpc.CallOption) (*VerifyConfigResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(VerifyConfigResponse)
@@ -87,9 +87,9 @@ func (c *szConfigClient) VerifyConfig(ctx context.Context, in *VerifyConfigReque
 // All implementations must embed UnimplementedSzConfigServer
 // for forward compatibility.
 type SzConfigServer interface {
+	GetDataSourceRegistry(context.Context, *GetDataSourceRegistryRequest) (*GetDataSourceRegistryResponse, error)
 	RegisterDataSource(context.Context, *RegisterDataSourceRequest) (*RegisterDataSourceResponse, error)
 	UnregisterDataSource(context.Context, *UnregisterDataSourceRequest) (*UnregisterDataSourceResponse, error)
-	GetDataSourceRegistry(context.Context, *GetDataSourceRegistryRequest) (*GetDataSourceRegistryResponse, error)
 	VerifyConfig(context.Context, *VerifyConfigRequest) (*VerifyConfigResponse, error)
 	mustEmbedUnimplementedSzConfigServer()
 }
@@ -101,14 +101,14 @@ type SzConfigServer interface {
 // pointer dereference when methods are called.
 type UnimplementedSzConfigServer struct{}
 
+func (UnimplementedSzConfigServer) GetDataSourceRegistry(context.Context, *GetDataSourceRegistryRequest) (*GetDataSourceRegistryResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDataSourceRegistry not implemented")
+}
 func (UnimplementedSzConfigServer) RegisterDataSource(context.Context, *RegisterDataSourceRequest) (*RegisterDataSourceResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RegisterDataSource not implemented")
 }
 func (UnimplementedSzConfigServer) UnregisterDataSource(context.Context, *UnregisterDataSourceRequest) (*UnregisterDataSourceResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UnregisterDataSource not implemented")
-}
-func (UnimplementedSzConfigServer) GetDataSourceRegistry(context.Context, *GetDataSourceRegistryRequest) (*GetDataSourceRegistryResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetDataSourceRegistry not implemented")
 }
 func (UnimplementedSzConfigServer) VerifyConfig(context.Context, *VerifyConfigRequest) (*VerifyConfigResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method VerifyConfig not implemented")
@@ -132,6 +132,24 @@ func RegisterSzConfigServer(s grpc.ServiceRegistrar, srv SzConfigServer) {
 		t.testEmbeddedByValue()
 	}
 	s.RegisterService(&SzConfig_ServiceDesc, srv)
+}
+
+func _SzConfig_GetDataSourceRegistry_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetDataSourceRegistryRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(SzConfigServer).GetDataSourceRegistry(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: SzConfig_GetDataSourceRegistry_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(SzConfigServer).GetDataSourceRegistry(ctx, req.(*GetDataSourceRegistryRequest))
+	}
+	return interceptor(ctx, in, info, handler)
 }
 
 func _SzConfig_RegisterDataSource_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -170,24 +188,6 @@ func _SzConfig_UnregisterDataSource_Handler(srv interface{}, ctx context.Context
 	return interceptor(ctx, in, info, handler)
 }
 
-func _SzConfig_GetDataSourceRegistry_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetDataSourceRegistryRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(SzConfigServer).GetDataSourceRegistry(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: SzConfig_GetDataSourceRegistry_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzConfigServer).GetDataSourceRegistry(ctx, req.(*GetDataSourceRegistryRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _SzConfig_VerifyConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(VerifyConfigRequest)
 	if err := dec(in); err != nil {
@@ -214,16 +214,16 @@ var SzConfig_ServiceDesc = grpc.ServiceDesc{
 	HandlerType: (*SzConfigServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
+			MethodName: "GetDataSourceRegistry",
+			Handler:    _SzConfig_GetDataSourceRegistry_Handler,
+		},
+		{
 			MethodName: "RegisterDataSource",
 			Handler:    _SzConfig_RegisterDataSource_Handler,
 		},
 		{
 			MethodName: "UnregisterDataSource",
 			Handler:    _SzConfig_UnregisterDataSource_Handler,
-		},
-		{
-			MethodName: "GetDataSourceRegistry",
-			Handler:    _SzConfig_GetDataSourceRegistry_Handler,
 		},
 		{
 			MethodName: "VerifyConfig",

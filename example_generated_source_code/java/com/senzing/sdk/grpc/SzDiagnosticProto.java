@@ -4352,11 +4352,11 @@ public final class SzDiagnosticProto {
       "\n\032CheckRepositoryPerformance\022/.szdiagnos" +
       "tic.CheckRepositoryPerformanceRequest\0320." +
       "szdiagnostic.CheckRepositoryPerformanceR" +
-      "esponse\"\000\022f\n\021GetRepositoryInfo\022&.szdiagn" +
-      "ostic.GetRepositoryInfoRequest\032\'.szdiagn" +
-      "ostic.GetRepositoryInfoResponse\"\000\022Q\n\nGet" +
-      "Feature\022\037.szdiagnostic.GetFeatureRequest" +
-      "\032 .szdiagnostic.GetFeatureResponse\"\000\022`\n\017" +
+      "esponse\"\000\022Q\n\nGetFeature\022\037.szdiagnostic.G" +
+      "etFeatureRequest\032 .szdiagnostic.GetFeatu" +
+      "reResponse\"\000\022f\n\021GetRepositoryInfo\022&.szdi" +
+      "agnostic.GetRepositoryInfoRequest\032\'.szdi" +
+      "agnostic.GetRepositoryInfoResponse\"\000\022`\n\017" +
       "PurgeRepository\022$.szdiagnostic.PurgeRepo" +
       "sitoryRequest\032%.szdiagnostic.PurgeReposi" +
       "toryResponse\"\000\022W\n\014Reinitialize\022!.szdiagn" +

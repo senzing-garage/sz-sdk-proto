@@ -540,7 +540,7 @@ class UnregisterDataSourceResponse final : public ::google::protobuf::Message
     return *reinterpret_cast<const UnregisterDataSourceResponse*>(
         &_UnregisterDataSourceResponse_default_instance_);
   }
-  static constexpr int kIndexInFileMessages = 3;
+  static constexpr int kIndexInFileMessages = 5;
   friend void swap(UnregisterDataSourceResponse& a, UnregisterDataSourceResponse& b) { a.Swap(&b); }
   inline void Swap(UnregisterDataSourceResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -753,7 +753,7 @@ class UnregisterDataSourceRequest final : public ::google::protobuf::Message
     return *reinterpret_cast<const UnregisterDataSourceRequest*>(
         &_UnregisterDataSourceRequest_default_instance_);
   }
-  static constexpr int kIndexInFileMessages = 2;
+  static constexpr int kIndexInFileMessages = 4;
   friend void swap(UnregisterDataSourceRequest& a, UnregisterDataSourceRequest& b) { a.Swap(&b); }
   inline void Swap(UnregisterDataSourceRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -966,7 +966,7 @@ class RegisterDataSourceResponse final : public ::google::protobuf::Message
     return *reinterpret_cast<const RegisterDataSourceResponse*>(
         &_RegisterDataSourceResponse_default_instance_);
   }
-  static constexpr int kIndexInFileMessages = 1;
+  static constexpr int kIndexInFileMessages = 3;
   friend void swap(RegisterDataSourceResponse& a, RegisterDataSourceResponse& b) { a.Swap(&b); }
   inline void Swap(RegisterDataSourceResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -1179,7 +1179,7 @@ class RegisterDataSourceRequest final : public ::google::protobuf::Message
     return *reinterpret_cast<const RegisterDataSourceRequest*>(
         &_RegisterDataSourceRequest_default_instance_);
   }
-  static constexpr int kIndexInFileMessages = 0;
+  static constexpr int kIndexInFileMessages = 2;
   friend void swap(RegisterDataSourceRequest& a, RegisterDataSourceRequest& b) { a.Swap(&b); }
   inline void Swap(RegisterDataSourceRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -1392,7 +1392,7 @@ class GetDataSourceRegistryResponse final : public ::google::protobuf::Message
     return *reinterpret_cast<const GetDataSourceRegistryResponse*>(
         &_GetDataSourceRegistryResponse_default_instance_);
   }
-  static constexpr int kIndexInFileMessages = 5;
+  static constexpr int kIndexInFileMessages = 1;
   friend void swap(GetDataSourceRegistryResponse& a, GetDataSourceRegistryResponse& b) { a.Swap(&b); }
   inline void Swap(GetDataSourceRegistryResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -1588,7 +1588,7 @@ class GetDataSourceRegistryRequest final : public ::google::protobuf::Message
     return *reinterpret_cast<const GetDataSourceRegistryRequest*>(
         &_GetDataSourceRegistryRequest_default_instance_);
   }
-  static constexpr int kIndexInFileMessages = 4;
+  static constexpr int kIndexInFileMessages = 0;
   friend void swap(GetDataSourceRegistryRequest& a, GetDataSourceRegistryRequest& b) { a.Swap(&b); }
   inline void Swap(GetDataSourceRegistryRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -1740,6 +1740,144 @@ extern const ::google::protobuf::internal::ClassDataFull GetDataSourceRegistryRe
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// GetDataSourceRegistryRequest
+
+// string config_definition = 1;
+inline void GetDataSourceRegistryRequest::clear_config_definition() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.config_definition_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& GetDataSourceRegistryRequest::config_definition() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:szconfig.GetDataSourceRegistryRequest.config_definition)
+  return _internal_config_definition();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void GetDataSourceRegistryRequest::set_config_definition(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.config_definition_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szconfig.GetDataSourceRegistryRequest.config_definition)
+}
+inline std::string* PROTOBUF_NONNULL GetDataSourceRegistryRequest::mutable_config_definition()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_config_definition();
+  // @@protoc_insertion_point(field_mutable:szconfig.GetDataSourceRegistryRequest.config_definition)
+  return _s;
+}
+inline const std::string& GetDataSourceRegistryRequest::_internal_config_definition() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.config_definition_.Get();
+}
+inline void GetDataSourceRegistryRequest::_internal_set_config_definition(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.config_definition_.Set(value, GetArena());
+}
+inline std::string* PROTOBUF_NONNULL GetDataSourceRegistryRequest::_internal_mutable_config_definition() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000001u;
+  return _impl_.config_definition_.Mutable( GetArena());
+}
+inline std::string* PROTOBUF_NULLABLE GetDataSourceRegistryRequest::release_config_definition() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:szconfig.GetDataSourceRegistryRequest.config_definition)
+  if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* released = _impl_.config_definition_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.config_definition_.Set("", GetArena());
+  }
+  return released;
+}
+inline void GetDataSourceRegistryRequest::set_allocated_config_definition(std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  _impl_.config_definition_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.config_definition_.IsDefault()) {
+    _impl_.config_definition_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:szconfig.GetDataSourceRegistryRequest.config_definition)
+}
+
+// -------------------------------------------------------------------
+
+// GetDataSourceRegistryResponse
+
+// string result = 1;
+inline void GetDataSourceRegistryResponse::clear_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.result_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& GetDataSourceRegistryResponse::result() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:szconfig.GetDataSourceRegistryResponse.result)
+  return _internal_result();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void GetDataSourceRegistryResponse::set_result(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.result_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:szconfig.GetDataSourceRegistryResponse.result)
+}
+inline std::string* PROTOBUF_NONNULL GetDataSourceRegistryResponse::mutable_result()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_result();
+  // @@protoc_insertion_point(field_mutable:szconfig.GetDataSourceRegistryResponse.result)
+  return _s;
+}
+inline const std::string& GetDataSourceRegistryResponse::_internal_result() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.result_.Get();
+}
+inline void GetDataSourceRegistryResponse::_internal_set_result(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.result_.Set(value, GetArena());
+}
+inline std::string* PROTOBUF_NONNULL GetDataSourceRegistryResponse::_internal_mutable_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_._has_bits_[0] |= 0x00000001u;
+  return _impl_.result_.Mutable( GetArena());
+}
+inline std::string* PROTOBUF_NULLABLE GetDataSourceRegistryResponse::release_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:szconfig.GetDataSourceRegistryResponse.result)
+  if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* released = _impl_.result_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.result_.Set("", GetArena());
+  }
+  return released;
+}
+inline void GetDataSourceRegistryResponse::set_allocated_result(std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  _impl_.result_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.result_.IsDefault()) {
+    _impl_.result_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:szconfig.GetDataSourceRegistryResponse.result)
+}
+
 // -------------------------------------------------------------------
 
 // RegisterDataSourceRequest
@@ -2274,144 +2412,6 @@ inline void UnregisterDataSourceResponse::set_allocated_config_definition(std::s
     _impl_.config_definition_.Set("", GetArena());
   }
   // @@protoc_insertion_point(field_set_allocated:szconfig.UnregisterDataSourceResponse.config_definition)
-}
-
-// -------------------------------------------------------------------
-
-// GetDataSourceRegistryRequest
-
-// string config_definition = 1;
-inline void GetDataSourceRegistryRequest::clear_config_definition() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.config_definition_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
-}
-inline const std::string& GetDataSourceRegistryRequest::config_definition() const
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szconfig.GetDataSourceRegistryRequest.config_definition)
-  return _internal_config_definition();
-}
-template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void GetDataSourceRegistryRequest::set_config_definition(Arg_&& arg, Args_... args) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.config_definition_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szconfig.GetDataSourceRegistryRequest.config_definition)
-}
-inline std::string* PROTOBUF_NONNULL GetDataSourceRegistryRequest::mutable_config_definition()
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_config_definition();
-  // @@protoc_insertion_point(field_mutable:szconfig.GetDataSourceRegistryRequest.config_definition)
-  return _s;
-}
-inline const std::string& GetDataSourceRegistryRequest::_internal_config_definition() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.config_definition_.Get();
-}
-inline void GetDataSourceRegistryRequest::_internal_set_config_definition(const std::string& value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.config_definition_.Set(value, GetArena());
-}
-inline std::string* PROTOBUF_NONNULL GetDataSourceRegistryRequest::_internal_mutable_config_definition() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.config_definition_.Mutable( GetArena());
-}
-inline std::string* PROTOBUF_NULLABLE GetDataSourceRegistryRequest::release_config_definition() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:szconfig.GetDataSourceRegistryRequest.config_definition)
-  if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* released = _impl_.config_definition_.Release();
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
-    _impl_.config_definition_.Set("", GetArena());
-  }
-  return released;
-}
-inline void GetDataSourceRegistryRequest::set_allocated_config_definition(std::string* PROTOBUF_NULLABLE value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (value != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
-  }
-  _impl_.config_definition_.SetAllocated(value, GetArena());
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.config_definition_.IsDefault()) {
-    _impl_.config_definition_.Set("", GetArena());
-  }
-  // @@protoc_insertion_point(field_set_allocated:szconfig.GetDataSourceRegistryRequest.config_definition)
-}
-
-// -------------------------------------------------------------------
-
-// GetDataSourceRegistryResponse
-
-// string result = 1;
-inline void GetDataSourceRegistryResponse::clear_result() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.result_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
-}
-inline const std::string& GetDataSourceRegistryResponse::result() const
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szconfig.GetDataSourceRegistryResponse.result)
-  return _internal_result();
-}
-template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void GetDataSourceRegistryResponse::set_result(Arg_&& arg, Args_... args) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szconfig.GetDataSourceRegistryResponse.result)
-}
-inline std::string* PROTOBUF_NONNULL GetDataSourceRegistryResponse::mutable_result()
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:szconfig.GetDataSourceRegistryResponse.result)
-  return _s;
-}
-inline const std::string& GetDataSourceRegistryResponse::_internal_result() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.result_.Get();
-}
-inline void GetDataSourceRegistryResponse::_internal_set_result(const std::string& value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_._has_bits_[0] |= 0x00000001u;
-  _impl_.result_.Set(value, GetArena());
-}
-inline std::string* PROTOBUF_NONNULL GetDataSourceRegistryResponse::_internal_mutable_result() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_._has_bits_[0] |= 0x00000001u;
-  return _impl_.result_.Mutable( GetArena());
-}
-inline std::string* PROTOBUF_NULLABLE GetDataSourceRegistryResponse::release_result() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:szconfig.GetDataSourceRegistryResponse.result)
-  if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* released = _impl_.result_.Release();
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
-    _impl_.result_.Set("", GetArena());
-  }
-  return released;
-}
-inline void GetDataSourceRegistryResponse::set_allocated_result(std::string* PROTOBUF_NULLABLE value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (value != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
-  }
-  _impl_.result_.SetAllocated(value, GetArena());
-  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.result_.IsDefault()) {
-    _impl_.result_.Set("", GetArena());
-  }
-  // @@protoc_insertion_point(field_set_allocated:szconfig.GetDataSourceRegistryResponse.result)
 }
 
 // -------------------------------------------------------------------

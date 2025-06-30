@@ -21,6 +21,94 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+type GetDataSourceRegistryRequest struct {
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	ConfigDefinition string                 `protobuf:"bytes,1,opt,name=config_definition,json=configDefinition,proto3" json:"config_definition,omitempty"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
+}
+
+func (x *GetDataSourceRegistryRequest) Reset() {
+	*x = GetDataSourceRegistryRequest{}
+	mi := &file_szconfig_proto_msgTypes[0]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetDataSourceRegistryRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetDataSourceRegistryRequest) ProtoMessage() {}
+
+func (x *GetDataSourceRegistryRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_szconfig_proto_msgTypes[0]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetDataSourceRegistryRequest.ProtoReflect.Descriptor instead.
+func (*GetDataSourceRegistryRequest) Descriptor() ([]byte, []int) {
+	return file_szconfig_proto_rawDescGZIP(), []int{0}
+}
+
+func (x *GetDataSourceRegistryRequest) GetConfigDefinition() string {
+	if x != nil {
+		return x.ConfigDefinition
+	}
+	return ""
+}
+
+type GetDataSourceRegistryResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Result        string                 `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetDataSourceRegistryResponse) Reset() {
+	*x = GetDataSourceRegistryResponse{}
+	mi := &file_szconfig_proto_msgTypes[1]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetDataSourceRegistryResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetDataSourceRegistryResponse) ProtoMessage() {}
+
+func (x *GetDataSourceRegistryResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_szconfig_proto_msgTypes[1]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetDataSourceRegistryResponse.ProtoReflect.Descriptor instead.
+func (*GetDataSourceRegistryResponse) Descriptor() ([]byte, []int) {
+	return file_szconfig_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *GetDataSourceRegistryResponse) GetResult() string {
+	if x != nil {
+		return x.Result
+	}
+	return ""
+}
+
 type RegisterDataSourceRequest struct {
 	state            protoimpl.MessageState `protogen:"open.v1"`
 	ConfigDefinition string                 `protobuf:"bytes,1,opt,name=config_definition,json=configDefinition,proto3" json:"config_definition,omitempty"`
@@ -31,7 +119,7 @@ type RegisterDataSourceRequest struct {
 
 func (x *RegisterDataSourceRequest) Reset() {
 	*x = RegisterDataSourceRequest{}
-	mi := &file_szconfig_proto_msgTypes[0]
+	mi := &file_szconfig_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -43,7 +131,7 @@ func (x *RegisterDataSourceRequest) String() string {
 func (*RegisterDataSourceRequest) ProtoMessage() {}
 
 func (x *RegisterDataSourceRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szconfig_proto_msgTypes[0]
+	mi := &file_szconfig_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -56,7 +144,7 @@ func (x *RegisterDataSourceRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RegisterDataSourceRequest.ProtoReflect.Descriptor instead.
 func (*RegisterDataSourceRequest) Descriptor() ([]byte, []int) {
-	return file_szconfig_proto_rawDescGZIP(), []int{0}
+	return file_szconfig_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *RegisterDataSourceRequest) GetConfigDefinition() string {
@@ -83,7 +171,7 @@ type RegisterDataSourceResponse struct {
 
 func (x *RegisterDataSourceResponse) Reset() {
 	*x = RegisterDataSourceResponse{}
-	mi := &file_szconfig_proto_msgTypes[1]
+	mi := &file_szconfig_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -95,7 +183,7 @@ func (x *RegisterDataSourceResponse) String() string {
 func (*RegisterDataSourceResponse) ProtoMessage() {}
 
 func (x *RegisterDataSourceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szconfig_proto_msgTypes[1]
+	mi := &file_szconfig_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -108,7 +196,7 @@ func (x *RegisterDataSourceResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RegisterDataSourceResponse.ProtoReflect.Descriptor instead.
 func (*RegisterDataSourceResponse) Descriptor() ([]byte, []int) {
-	return file_szconfig_proto_rawDescGZIP(), []int{1}
+	return file_szconfig_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *RegisterDataSourceResponse) GetResult() string {
@@ -135,7 +223,7 @@ type UnregisterDataSourceRequest struct {
 
 func (x *UnregisterDataSourceRequest) Reset() {
 	*x = UnregisterDataSourceRequest{}
-	mi := &file_szconfig_proto_msgTypes[2]
+	mi := &file_szconfig_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -147,7 +235,7 @@ func (x *UnregisterDataSourceRequest) String() string {
 func (*UnregisterDataSourceRequest) ProtoMessage() {}
 
 func (x *UnregisterDataSourceRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szconfig_proto_msgTypes[2]
+	mi := &file_szconfig_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -160,7 +248,7 @@ func (x *UnregisterDataSourceRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UnregisterDataSourceRequest.ProtoReflect.Descriptor instead.
 func (*UnregisterDataSourceRequest) Descriptor() ([]byte, []int) {
-	return file_szconfig_proto_rawDescGZIP(), []int{2}
+	return file_szconfig_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *UnregisterDataSourceRequest) GetConfigDefinition() string {
@@ -187,7 +275,7 @@ type UnregisterDataSourceResponse struct {
 
 func (x *UnregisterDataSourceResponse) Reset() {
 	*x = UnregisterDataSourceResponse{}
-	mi := &file_szconfig_proto_msgTypes[3]
+	mi := &file_szconfig_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -199,7 +287,7 @@ func (x *UnregisterDataSourceResponse) String() string {
 func (*UnregisterDataSourceResponse) ProtoMessage() {}
 
 func (x *UnregisterDataSourceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szconfig_proto_msgTypes[3]
+	mi := &file_szconfig_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -212,7 +300,7 @@ func (x *UnregisterDataSourceResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UnregisterDataSourceResponse.ProtoReflect.Descriptor instead.
 func (*UnregisterDataSourceResponse) Descriptor() ([]byte, []int) {
-	return file_szconfig_proto_rawDescGZIP(), []int{3}
+	return file_szconfig_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *UnregisterDataSourceResponse) GetResult() string {
@@ -225,94 +313,6 @@ func (x *UnregisterDataSourceResponse) GetResult() string {
 func (x *UnregisterDataSourceResponse) GetConfigDefinition() string {
 	if x != nil {
 		return x.ConfigDefinition
-	}
-	return ""
-}
-
-type GetDataSourceRegistryRequest struct {
-	state            protoimpl.MessageState `protogen:"open.v1"`
-	ConfigDefinition string                 `protobuf:"bytes,1,opt,name=config_definition,json=configDefinition,proto3" json:"config_definition,omitempty"`
-	unknownFields    protoimpl.UnknownFields
-	sizeCache        protoimpl.SizeCache
-}
-
-func (x *GetDataSourceRegistryRequest) Reset() {
-	*x = GetDataSourceRegistryRequest{}
-	mi := &file_szconfig_proto_msgTypes[4]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *GetDataSourceRegistryRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*GetDataSourceRegistryRequest) ProtoMessage() {}
-
-func (x *GetDataSourceRegistryRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szconfig_proto_msgTypes[4]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use GetDataSourceRegistryRequest.ProtoReflect.Descriptor instead.
-func (*GetDataSourceRegistryRequest) Descriptor() ([]byte, []int) {
-	return file_szconfig_proto_rawDescGZIP(), []int{4}
-}
-
-func (x *GetDataSourceRegistryRequest) GetConfigDefinition() string {
-	if x != nil {
-		return x.ConfigDefinition
-	}
-	return ""
-}
-
-type GetDataSourceRegistryResponse struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Result        string                 `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
-}
-
-func (x *GetDataSourceRegistryResponse) Reset() {
-	*x = GetDataSourceRegistryResponse{}
-	mi := &file_szconfig_proto_msgTypes[5]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *GetDataSourceRegistryResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*GetDataSourceRegistryResponse) ProtoMessage() {}
-
-func (x *GetDataSourceRegistryResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szconfig_proto_msgTypes[5]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use GetDataSourceRegistryResponse.ProtoReflect.Descriptor instead.
-func (*GetDataSourceRegistryResponse) Descriptor() ([]byte, []int) {
-	return file_szconfig_proto_rawDescGZIP(), []int{5}
-}
-
-func (x *GetDataSourceRegistryResponse) GetResult() string {
-	if x != nil {
-		return x.Result
 	}
 	return ""
 }
@@ -409,7 +409,11 @@ var File_szconfig_proto protoreflect.FileDescriptor
 
 const file_szconfig_proto_rawDesc = "" +
 	"\n" +
-	"\x0eszconfig.proto\x12\bszconfig\"r\n" +
+	"\x0eszconfig.proto\x12\bszconfig\"K\n" +
+	"\x1cGetDataSourceRegistryRequest\x12+\n" +
+	"\x11config_definition\x18\x01 \x01(\tR\x10configDefinition\"7\n" +
+	"\x1dGetDataSourceRegistryResponse\x12\x16\n" +
+	"\x06result\x18\x01 \x01(\tR\x06result\"r\n" +
 	"\x19RegisterDataSourceRequest\x12+\n" +
 	"\x11config_definition\x18\x01 \x01(\tR\x10configDefinition\x12(\n" +
 	"\x10data_source_code\x18\x02 \x01(\tR\x0edataSourceCode\"a\n" +
@@ -421,19 +425,15 @@ const file_szconfig_proto_rawDesc = "" +
 	"\x10data_source_code\x18\x02 \x01(\tR\x0edataSourceCode\"c\n" +
 	"\x1cUnregisterDataSourceResponse\x12\x16\n" +
 	"\x06result\x18\x01 \x01(\tR\x06result\x12+\n" +
-	"\x11config_definition\x18\x02 \x01(\tR\x10configDefinition\"K\n" +
-	"\x1cGetDataSourceRegistryRequest\x12+\n" +
-	"\x11config_definition\x18\x01 \x01(\tR\x10configDefinition\"7\n" +
-	"\x1dGetDataSourceRegistryResponse\x12\x16\n" +
-	"\x06result\x18\x01 \x01(\tR\x06result\"B\n" +
+	"\x11config_definition\x18\x02 \x01(\tR\x10configDefinition\"B\n" +
 	"\x13VerifyConfigRequest\x12+\n" +
 	"\x11config_definition\x18\x01 \x01(\tR\x10configDefinition\".\n" +
 	"\x14VerifyConfigResponse\x12\x16\n" +
 	"\x06result\x18\x01 \x01(\bR\x06result2\x93\x03\n" +
-	"\bSzConfig\x12a\n" +
+	"\bSzConfig\x12j\n" +
+	"\x15GetDataSourceRegistry\x12&.szconfig.GetDataSourceRegistryRequest\x1a'.szconfig.GetDataSourceRegistryResponse\"\x00\x12a\n" +
 	"\x12RegisterDataSource\x12#.szconfig.RegisterDataSourceRequest\x1a$.szconfig.RegisterDataSourceResponse\"\x00\x12g\n" +
-	"\x14UnregisterDataSource\x12%.szconfig.UnregisterDataSourceRequest\x1a&.szconfig.UnregisterDataSourceResponse\"\x00\x12j\n" +
-	"\x15GetDataSourceRegistry\x12&.szconfig.GetDataSourceRegistryRequest\x1a'.szconfig.GetDataSourceRegistryResponse\"\x00\x12O\n" +
+	"\x14UnregisterDataSource\x12%.szconfig.UnregisterDataSourceRequest\x1a&.szconfig.UnregisterDataSourceResponse\"\x00\x12O\n" +
 	"\fVerifyConfig\x12\x1d.szconfig.VerifyConfigRequest\x1a\x1e.szconfig.VerifyConfigResponse\"\x00BX\n" +
 	"\x14com.senzing.sdk.grpcB\rSzConfigProtoZ1github.com/senzing-garage/sz-sdk-go-grpc/szconfigb\x06proto3"
 
@@ -451,23 +451,23 @@ func file_szconfig_proto_rawDescGZIP() []byte {
 
 var file_szconfig_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_szconfig_proto_goTypes = []any{
-	(*RegisterDataSourceRequest)(nil),     // 0: szconfig.RegisterDataSourceRequest
-	(*RegisterDataSourceResponse)(nil),    // 1: szconfig.RegisterDataSourceResponse
-	(*UnregisterDataSourceRequest)(nil),   // 2: szconfig.UnregisterDataSourceRequest
-	(*UnregisterDataSourceResponse)(nil),  // 3: szconfig.UnregisterDataSourceResponse
-	(*GetDataSourceRegistryRequest)(nil),  // 4: szconfig.GetDataSourceRegistryRequest
-	(*GetDataSourceRegistryResponse)(nil), // 5: szconfig.GetDataSourceRegistryResponse
+	(*GetDataSourceRegistryRequest)(nil),  // 0: szconfig.GetDataSourceRegistryRequest
+	(*GetDataSourceRegistryResponse)(nil), // 1: szconfig.GetDataSourceRegistryResponse
+	(*RegisterDataSourceRequest)(nil),     // 2: szconfig.RegisterDataSourceRequest
+	(*RegisterDataSourceResponse)(nil),    // 3: szconfig.RegisterDataSourceResponse
+	(*UnregisterDataSourceRequest)(nil),   // 4: szconfig.UnregisterDataSourceRequest
+	(*UnregisterDataSourceResponse)(nil),  // 5: szconfig.UnregisterDataSourceResponse
 	(*VerifyConfigRequest)(nil),           // 6: szconfig.VerifyConfigRequest
 	(*VerifyConfigResponse)(nil),          // 7: szconfig.VerifyConfigResponse
 }
 var file_szconfig_proto_depIdxs = []int32{
-	0, // 0: szconfig.SzConfig.RegisterDataSource:input_type -> szconfig.RegisterDataSourceRequest
-	2, // 1: szconfig.SzConfig.UnregisterDataSource:input_type -> szconfig.UnregisterDataSourceRequest
-	4, // 2: szconfig.SzConfig.GetDataSourceRegistry:input_type -> szconfig.GetDataSourceRegistryRequest
+	0, // 0: szconfig.SzConfig.GetDataSourceRegistry:input_type -> szconfig.GetDataSourceRegistryRequest
+	2, // 1: szconfig.SzConfig.RegisterDataSource:input_type -> szconfig.RegisterDataSourceRequest
+	4, // 2: szconfig.SzConfig.UnregisterDataSource:input_type -> szconfig.UnregisterDataSourceRequest
 	6, // 3: szconfig.SzConfig.VerifyConfig:input_type -> szconfig.VerifyConfigRequest
-	1, // 4: szconfig.SzConfig.RegisterDataSource:output_type -> szconfig.RegisterDataSourceResponse
-	3, // 5: szconfig.SzConfig.UnregisterDataSource:output_type -> szconfig.UnregisterDataSourceResponse
-	5, // 6: szconfig.SzConfig.GetDataSourceRegistry:output_type -> szconfig.GetDataSourceRegistryResponse
+	1, // 4: szconfig.SzConfig.GetDataSourceRegistry:output_type -> szconfig.GetDataSourceRegistryResponse
+	3, // 5: szconfig.SzConfig.RegisterDataSource:output_type -> szconfig.RegisterDataSourceResponse
+	5, // 6: szconfig.SzConfig.UnregisterDataSource:output_type -> szconfig.UnregisterDataSourceResponse
 	7, // 7: szconfig.SzConfig.VerifyConfig:output_type -> szconfig.VerifyConfigResponse
 	4, // [4:8] is the sub-list for method output_type
 	0, // [0:4] is the sub-list for method input_type
