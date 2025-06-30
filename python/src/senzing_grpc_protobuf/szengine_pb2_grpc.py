@@ -5,7 +5,7 @@ import warnings
 
 import szengine_pb2 as szengine__pb2
 
-GRPC_GENERATED_VERSION = '1.73.0'
+GRPC_GENERATED_VERSION = '1.73.1'
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
@@ -39,10 +39,10 @@ class SzEngineStub(object):
                 request_serializer=szengine__pb2.AddRecordRequest.SerializeToString,
                 response_deserializer=szengine__pb2.AddRecordResponse.FromString,
                 _registered_method=True)
-        self.CloseExport = channel.unary_unary(
-                '/szengine.SzEngine/CloseExport',
-                request_serializer=szengine__pb2.CloseExportRequest.SerializeToString,
-                response_deserializer=szengine__pb2.CloseExportResponse.FromString,
+        self.CloseExportReport = channel.unary_unary(
+                '/szengine.SzEngine/CloseExportReport',
+                request_serializer=szengine__pb2.CloseExportReportRequest.SerializeToString,
+                response_deserializer=szengine__pb2.CloseExportReportResponse.FromString,
                 _registered_method=True)
         self.CountRedoRecords = channel.unary_unary(
                 '/szengine.SzEngine/CountRedoRecords',
@@ -215,7 +215,7 @@ class SzEngineServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def CloseExport(self, request, context):
+    def CloseExportReport(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -421,10 +421,10 @@ def add_SzEngineServicer_to_server(servicer, server):
                     request_deserializer=szengine__pb2.AddRecordRequest.FromString,
                     response_serializer=szengine__pb2.AddRecordResponse.SerializeToString,
             ),
-            'CloseExport': grpc.unary_unary_rpc_method_handler(
-                    servicer.CloseExport,
-                    request_deserializer=szengine__pb2.CloseExportRequest.FromString,
-                    response_serializer=szengine__pb2.CloseExportResponse.SerializeToString,
+            'CloseExportReport': grpc.unary_unary_rpc_method_handler(
+                    servicer.CloseExportReport,
+                    request_deserializer=szengine__pb2.CloseExportReportRequest.FromString,
+                    response_serializer=szengine__pb2.CloseExportReportResponse.SerializeToString,
             ),
             'CountRedoRecords': grpc.unary_unary_rpc_method_handler(
                     servicer.CountRedoRecords,
@@ -625,7 +625,7 @@ class SzEngine(object):
             _registered_method=True)
 
     @staticmethod
-    def CloseExport(request,
+    def CloseExportReport(request,
             target,
             options=(),
             channel_credentials=None,
@@ -638,9 +638,9 @@ class SzEngine(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/szengine.SzEngine/CloseExport',
-            szengine__pb2.CloseExportRequest.SerializeToString,
-            szengine__pb2.CloseExportResponse.FromString,
+            '/szengine.SzEngine/CloseExportReport',
+            szengine__pb2.CloseExportReportRequest.SerializeToString,
+            szengine__pb2.CloseExportReportResponse.FromString,
             options,
             channel_credentials,
             insecure,

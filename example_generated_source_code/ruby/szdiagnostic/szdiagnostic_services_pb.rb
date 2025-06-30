@@ -14,8 +14,8 @@ module Szdiagnostic
       self.unmarshal_class_method = :decode
       self.service_name = 'szdiagnostic.SzDiagnostic'
 
-      rpc :CheckDatastorePerformance, ::Szdiagnostic::CheckDatastorePerformanceRequest, ::Szdiagnostic::CheckDatastorePerformanceResponse
-      rpc :GetDatastoreInfo, ::Szdiagnostic::GetDatastoreInfoRequest, ::Szdiagnostic::GetDatastoreInfoResponse
+      rpc :CheckRepositoryPerformance, ::Szdiagnostic::CheckRepositoryPerformanceRequest, ::Szdiagnostic::CheckRepositoryPerformanceResponse
+      rpc :GetRepositoryInfo, ::Szdiagnostic::GetRepositoryInfoRequest, ::Szdiagnostic::GetRepositoryInfoResponse
       rpc :GetFeature, ::Szdiagnostic::GetFeatureRequest, ::Szdiagnostic::GetFeatureResponse
       rpc :PurgeRepository, ::Szdiagnostic::PurgeRepositoryRequest, ::Szdiagnostic::PurgeRepositoryResponse
       rpc :Reinitialize, ::Szdiagnostic::ReinitializeRequest, ::Szdiagnostic::ReinitializeResponse

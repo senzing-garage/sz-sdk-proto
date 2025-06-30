@@ -105,6 +105,51 @@ struct PurgeRepositoryRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PurgeRepositoryRequestDefaultTypeInternal _PurgeRepositoryRequest_default_instance_;
 
+inline constexpr GetRepositoryInfoResponse::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        result_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+PROTOBUF_CONSTEXPR GetRepositoryInfoResponse::GetRepositoryInfoResponse(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(GetRepositoryInfoResponse_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct GetRepositoryInfoResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetRepositoryInfoResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetRepositoryInfoResponseDefaultTypeInternal() {}
+  union {
+    GetRepositoryInfoResponse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetRepositoryInfoResponseDefaultTypeInternal _GetRepositoryInfoResponse_default_instance_;
+template <typename>
+PROTOBUF_CONSTEXPR GetRepositoryInfoRequest::GetRepositoryInfoRequest(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::internal::ZeroFieldsBase(GetRepositoryInfoRequest_class_data_.base()){}
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::internal::ZeroFieldsBase() {
+}
+#endif  // PROTOBUF_CUSTOM_VTABLE
+struct GetRepositoryInfoRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetRepositoryInfoRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetRepositoryInfoRequestDefaultTypeInternal() {}
+  union {
+    GetRepositoryInfoRequest _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetRepositoryInfoRequestDefaultTypeInternal _GetRepositoryInfoRequest_default_instance_;
+
 inline constexpr GetFeatureResponse::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
@@ -157,7 +202,7 @@ struct GetFeatureRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetFeatureRequestDefaultTypeInternal _GetFeatureRequest_default_instance_;
 
-inline constexpr GetDatastoreInfoResponse::Impl_::Impl_(
+inline constexpr CheckRepositoryPerformanceResponse::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
         result_(
@@ -165,94 +210,49 @@ inline constexpr GetDatastoreInfoResponse::Impl_::Impl_(
             ::_pbi::ConstantInitialized()) {}
 
 template <typename>
-PROTOBUF_CONSTEXPR GetDatastoreInfoResponse::GetDatastoreInfoResponse(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR CheckRepositoryPerformanceResponse::CheckRepositoryPerformanceResponse(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(GetDatastoreInfoResponse_class_data_.base()),
+    : ::google::protobuf::Message(CheckRepositoryPerformanceResponse_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(),
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct GetDatastoreInfoResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GetDatastoreInfoResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GetDatastoreInfoResponseDefaultTypeInternal() {}
+struct CheckRepositoryPerformanceResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CheckRepositoryPerformanceResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CheckRepositoryPerformanceResponseDefaultTypeInternal() {}
   union {
-    GetDatastoreInfoResponse _instance;
+    CheckRepositoryPerformanceResponse _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetDatastoreInfoResponseDefaultTypeInternal _GetDatastoreInfoResponse_default_instance_;
-template <typename>
-PROTOBUF_CONSTEXPR GetDatastoreInfoRequest::GetDatastoreInfoRequest(::_pbi::ConstantInitialized)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::internal::ZeroFieldsBase(GetDatastoreInfoRequest_class_data_.base()){}
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::internal::ZeroFieldsBase() {
-}
-#endif  // PROTOBUF_CUSTOM_VTABLE
-struct GetDatastoreInfoRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GetDatastoreInfoRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GetDatastoreInfoRequestDefaultTypeInternal() {}
-  union {
-    GetDatastoreInfoRequest _instance;
-  };
-};
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CheckRepositoryPerformanceResponseDefaultTypeInternal _CheckRepositoryPerformanceResponse_default_instance_;
 
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetDatastoreInfoRequestDefaultTypeInternal _GetDatastoreInfoRequest_default_instance_;
-
-inline constexpr CheckDatastorePerformanceResponse::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : _cached_size_{0},
-        result_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()) {}
-
-template <typename>
-PROTOBUF_CONSTEXPR CheckDatastorePerformanceResponse::CheckDatastorePerformanceResponse(::_pbi::ConstantInitialized)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(CheckDatastorePerformanceResponse_class_data_.base()),
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(),
-#endif  // PROTOBUF_CUSTOM_VTABLE
-      _impl_(::_pbi::ConstantInitialized()) {
-}
-struct CheckDatastorePerformanceResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CheckDatastorePerformanceResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~CheckDatastorePerformanceResponseDefaultTypeInternal() {}
-  union {
-    CheckDatastorePerformanceResponse _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CheckDatastorePerformanceResponseDefaultTypeInternal _CheckDatastorePerformanceResponse_default_instance_;
-
-inline constexpr CheckDatastorePerformanceRequest::Impl_::Impl_(
+inline constexpr CheckRepositoryPerformanceRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
         seconds_to_run_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR CheckDatastorePerformanceRequest::CheckDatastorePerformanceRequest(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR CheckRepositoryPerformanceRequest::CheckRepositoryPerformanceRequest(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(CheckDatastorePerformanceRequest_class_data_.base()),
+    : ::google::protobuf::Message(CheckRepositoryPerformanceRequest_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(),
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct CheckDatastorePerformanceRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CheckDatastorePerformanceRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~CheckDatastorePerformanceRequestDefaultTypeInternal() {}
+struct CheckRepositoryPerformanceRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CheckRepositoryPerformanceRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CheckRepositoryPerformanceRequestDefaultTypeInternal() {}
   union {
-    CheckDatastorePerformanceRequest _instance;
+    CheckRepositoryPerformanceRequest _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CheckDatastorePerformanceRequestDefaultTypeInternal _CheckDatastorePerformanceRequest_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CheckRepositoryPerformanceRequestDefaultTypeInternal _CheckRepositoryPerformanceRequest_default_instance_;
 }  // namespace szdiagnostic
 static constexpr const ::_pb::EnumDescriptor *PROTOBUF_NONNULL *PROTOBUF_NULLABLE
     file_level_enum_descriptors_szdiagnostic_2eproto = nullptr;
@@ -261,43 +261,43 @@ static constexpr const ::_pb::ServiceDescriptor *PROTOBUF_NONNULL *PROTOBUF_NULL
 const ::uint32_t
     TableStruct_szdiagnostic_2eproto::offsets[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
         protodesc_cold) = {
-        PROTOBUF_FIELD_OFFSET(::szdiagnostic::CheckDatastorePerformanceRequest, _impl_._has_bits_),
-        PROTOBUF_FIELD_OFFSET(::szdiagnostic::CheckDatastorePerformanceRequest, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::szdiagnostic::CheckRepositoryPerformanceRequest, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::szdiagnostic::CheckRepositoryPerformanceRequest, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::szdiagnostic::CheckDatastorePerformanceRequest, _impl_.seconds_to_run_),
+        PROTOBUF_FIELD_OFFSET(::szdiagnostic::CheckRepositoryPerformanceRequest, _impl_.seconds_to_run_),
         0,
-        PROTOBUF_FIELD_OFFSET(::szdiagnostic::CheckDatastorePerformanceResponse, _impl_._has_bits_),
-        PROTOBUF_FIELD_OFFSET(::szdiagnostic::CheckDatastorePerformanceResponse, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::szdiagnostic::CheckRepositoryPerformanceResponse, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::szdiagnostic::CheckRepositoryPerformanceResponse, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::szdiagnostic::CheckDatastorePerformanceResponse, _impl_.result_),
+        PROTOBUF_FIELD_OFFSET(::szdiagnostic::CheckRepositoryPerformanceResponse, _impl_.result_),
         0,
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetDatastoreInfoRequest, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetRepositoryInfoRequest, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetDatastoreInfoResponse, _impl_._has_bits_),
-        PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetDatastoreInfoResponse, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetRepositoryInfoResponse, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetRepositoryInfoResponse, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetDatastoreInfoResponse, _impl_.result_),
+        PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetRepositoryInfoResponse, _impl_.result_),
         0,
         PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetFeatureRequest, _impl_._has_bits_),
         PROTOBUF_FIELD_OFFSET(::szdiagnostic::GetFeatureRequest, _internal_metadata_),
@@ -357,10 +357,10 @@ const ::uint32_t
 
 static const ::_pbi::MigrationSchema
     schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-        {0, 9, -1, sizeof(::szdiagnostic::CheckDatastorePerformanceRequest)},
-        {10, 19, -1, sizeof(::szdiagnostic::CheckDatastorePerformanceResponse)},
-        {20, -1, -1, sizeof(::szdiagnostic::GetDatastoreInfoRequest)},
-        {28, 37, -1, sizeof(::szdiagnostic::GetDatastoreInfoResponse)},
+        {0, 9, -1, sizeof(::szdiagnostic::CheckRepositoryPerformanceRequest)},
+        {10, 19, -1, sizeof(::szdiagnostic::CheckRepositoryPerformanceResponse)},
+        {20, -1, -1, sizeof(::szdiagnostic::GetRepositoryInfoRequest)},
+        {28, 37, -1, sizeof(::szdiagnostic::GetRepositoryInfoResponse)},
         {38, 47, -1, sizeof(::szdiagnostic::GetFeatureRequest)},
         {48, 57, -1, sizeof(::szdiagnostic::GetFeatureResponse)},
         {58, -1, -1, sizeof(::szdiagnostic::PurgeRepositoryRequest)},
@@ -369,10 +369,10 @@ static const ::_pbi::MigrationSchema
         {84, -1, -1, sizeof(::szdiagnostic::ReinitializeResponse)},
 };
 static const ::_pb::Message* PROTOBUF_NONNULL const file_default_instances[] = {
-    &::szdiagnostic::_CheckDatastorePerformanceRequest_default_instance_._instance,
-    &::szdiagnostic::_CheckDatastorePerformanceResponse_default_instance_._instance,
-    &::szdiagnostic::_GetDatastoreInfoRequest_default_instance_._instance,
-    &::szdiagnostic::_GetDatastoreInfoResponse_default_instance_._instance,
+    &::szdiagnostic::_CheckRepositoryPerformanceRequest_default_instance_._instance,
+    &::szdiagnostic::_CheckRepositoryPerformanceResponse_default_instance_._instance,
+    &::szdiagnostic::_GetRepositoryInfoRequest_default_instance_._instance,
+    &::szdiagnostic::_GetRepositoryInfoResponse_default_instance_._instance,
     &::szdiagnostic::_GetFeatureRequest_default_instance_._instance,
     &::szdiagnostic::_GetFeatureResponse_default_instance_._instance,
     &::szdiagnostic::_PurgeRepositoryRequest_default_instance_._instance,
@@ -382,38 +382,39 @@ static const ::_pb::Message* PROTOBUF_NONNULL const file_default_instances[] = {
 };
 const char descriptor_table_protodef_szdiagnostic_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
-    "\n\022szdiagnostic.proto\022\014szdiagnostic\":\n Ch"
-    "eckDatastorePerformanceRequest\022\026\n\016second"
-    "s_to_run\030\001 \001(\005\"3\n!CheckDatastorePerforma"
-    "nceResponse\022\016\n\006result\030\001 \001(\t\"\031\n\027GetDatast"
-    "oreInfoRequest\"*\n\030GetDatastoreInfoRespon"
-    "se\022\016\n\006result\030\001 \001(\t\"\'\n\021GetFeatureRequest\022"
-    "\022\n\nfeature_id\030\001 \001(\003\"$\n\022GetFeatureRespons"
-    "e\022\016\n\006result\030\001 \001(\t\"\030\n\026PurgeRepositoryRequ"
-    "est\"\031\n\027PurgeRepositoryResponse\"(\n\023Reinit"
-    "ializeRequest\022\021\n\tconfig_id\030\001 \001(\003\"\026\n\024Rein"
-    "itializeResponse2\201\004\n\014SzDiagnostic\022~\n\031Che"
-    "ckDatastorePerformance\022..szdiagnostic.Ch"
-    "eckDatastorePerformanceRequest\032/.szdiagn"
-    "ostic.CheckDatastorePerformanceResponse\""
-    "\000\022c\n\020GetDatastoreInfo\022%.szdiagnostic.Get"
-    "DatastoreInfoRequest\032&.szdiagnostic.GetD"
-    "atastoreInfoResponse\"\000\022Q\n\nGetFeature\022\037.s"
-    "zdiagnostic.GetFeatureRequest\032 .szdiagno"
-    "stic.GetFeatureResponse\"\000\022`\n\017PurgeReposi"
-    "tory\022$.szdiagnostic.PurgeRepositoryReque"
-    "st\032%.szdiagnostic.PurgeRepositoryRespons"
-    "e\"\000\022W\n\014Reinitialize\022!.szdiagnostic.Reini"
-    "tializeRequest\032\".szdiagnostic.Reinitiali"
-    "zeResponse\"\000B`\n\024com.senzing.sdk.grpcB\021Sz"
-    "DiagnosticProtoZ5github.com/senzing-gara"
-    "ge/sz-sdk-go-grpc/szdiagnosticb\006proto3"
+    "\n\022szdiagnostic.proto\022\014szdiagnostic\";\n!Ch"
+    "eckRepositoryPerformanceRequest\022\026\n\016secon"
+    "ds_to_run\030\001 \001(\005\"4\n\"CheckRepositoryPerfor"
+    "manceResponse\022\016\n\006result\030\001 \001(\t\"\032\n\030GetRepo"
+    "sitoryInfoRequest\"+\n\031GetRepositoryInfoRe"
+    "sponse\022\016\n\006result\030\001 \001(\t\"\'\n\021GetFeatureRequ"
+    "est\022\022\n\nfeature_id\030\001 \001(\003\"$\n\022GetFeatureRes"
+    "ponse\022\016\n\006result\030\001 \001(\t\"\030\n\026PurgeRepository"
+    "Request\"\031\n\027PurgeRepositoryResponse\"(\n\023Re"
+    "initializeRequest\022\021\n\tconfig_id\030\001 \001(\003\"\026\n\024"
+    "ReinitializeResponse2\210\004\n\014SzDiagnostic\022\201\001"
+    "\n\032CheckRepositoryPerformance\022/.szdiagnos"
+    "tic.CheckRepositoryPerformanceRequest\0320."
+    "szdiagnostic.CheckRepositoryPerformanceR"
+    "esponse\"\000\022f\n\021GetRepositoryInfo\022&.szdiagn"
+    "ostic.GetRepositoryInfoRequest\032\'.szdiagn"
+    "ostic.GetRepositoryInfoResponse\"\000\022Q\n\nGet"
+    "Feature\022\037.szdiagnostic.GetFeatureRequest"
+    "\032 .szdiagnostic.GetFeatureResponse\"\000\022`\n\017"
+    "PurgeRepository\022$.szdiagnostic.PurgeRepo"
+    "sitoryRequest\032%.szdiagnostic.PurgeReposi"
+    "toryResponse\"\000\022W\n\014Reinitialize\022!.szdiagn"
+    "ostic.ReinitializeRequest\032\".szdiagnostic"
+    ".ReinitializeResponse\"\000B`\n\024com.senzing.s"
+    "dk.grpcB\021SzDiagnosticProtoZ5github.com/s"
+    "enzing-garage/sz-sdk-go-grpc/szdiagnosti"
+    "cb\006proto3"
 };
 static ::absl::once_flag descriptor_table_szdiagnostic_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_szdiagnostic_2eproto = {
     false,
     false,
-    1038,
+    1049,
     descriptor_table_protodef_szdiagnostic_2eproto,
     "szdiagnostic.proto",
     &descriptor_table_szdiagnostic_2eproto_once,
@@ -429,27 +430,27 @@ PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_szdiagnostic_2
 namespace szdiagnostic {
 // ===================================================================
 
-class CheckDatastorePerformanceRequest::_Internal {
+class CheckRepositoryPerformanceRequest::_Internal {
  public:
   using HasBits =
-      decltype(std::declval<CheckDatastorePerformanceRequest>()._impl_._has_bits_);
+      decltype(std::declval<CheckRepositoryPerformanceRequest>()._impl_._has_bits_);
   static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(CheckDatastorePerformanceRequest, _impl_._has_bits_);
+      8 * PROTOBUF_FIELD_OFFSET(CheckRepositoryPerformanceRequest, _impl_._has_bits_);
 };
 
-CheckDatastorePerformanceRequest::CheckDatastorePerformanceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+CheckRepositoryPerformanceRequest::CheckRepositoryPerformanceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, CheckDatastorePerformanceRequest_class_data_.base()) {
+    : ::google::protobuf::Message(arena, CheckRepositoryPerformanceRequest_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:szdiagnostic.CheckDatastorePerformanceRequest)
+  // @@protoc_insertion_point(arena_constructor:szdiagnostic.CheckRepositoryPerformanceRequest)
 }
-CheckDatastorePerformanceRequest::CheckDatastorePerformanceRequest(
-    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const CheckDatastorePerformanceRequest& from)
+CheckRepositoryPerformanceRequest::CheckRepositoryPerformanceRequest(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const CheckRepositoryPerformanceRequest& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, CheckDatastorePerformanceRequest_class_data_.base()),
+    : ::google::protobuf::Message(arena, CheckRepositoryPerformanceRequest_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena),
 #endif  // PROTOBUF_CUSTOM_VTABLE
@@ -457,72 +458,72 @@ CheckDatastorePerformanceRequest::CheckDatastorePerformanceRequest(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
 }
-PROTOBUF_NDEBUG_INLINE CheckDatastorePerformanceRequest::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE CheckRepositoryPerformanceRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
       : _cached_size_{0} {}
 
-inline void CheckDatastorePerformanceRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+inline void CheckRepositoryPerformanceRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   _impl_.seconds_to_run_ = {};
 }
-CheckDatastorePerformanceRequest::~CheckDatastorePerformanceRequest() {
-  // @@protoc_insertion_point(destructor:szdiagnostic.CheckDatastorePerformanceRequest)
+CheckRepositoryPerformanceRequest::~CheckRepositoryPerformanceRequest() {
+  // @@protoc_insertion_point(destructor:szdiagnostic.CheckRepositoryPerformanceRequest)
   SharedDtor(*this);
 }
-inline void CheckDatastorePerformanceRequest::SharedDtor(MessageLite& self) {
-  CheckDatastorePerformanceRequest& this_ = static_cast<CheckDatastorePerformanceRequest&>(self);
+inline void CheckRepositoryPerformanceRequest::SharedDtor(MessageLite& self) {
+  CheckRepositoryPerformanceRequest& this_ = static_cast<CheckRepositoryPerformanceRequest&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.~Impl_();
 }
 
-inline void* PROTOBUF_NONNULL CheckDatastorePerformanceRequest::PlacementNew_(
+inline void* PROTOBUF_NONNULL CheckRepositoryPerformanceRequest::PlacementNew_(
     const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
-  return ::new (mem) CheckDatastorePerformanceRequest(arena);
+  return ::new (mem) CheckRepositoryPerformanceRequest(arena);
 }
-constexpr auto CheckDatastorePerformanceRequest::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(CheckDatastorePerformanceRequest),
-                                            alignof(CheckDatastorePerformanceRequest));
+constexpr auto CheckRepositoryPerformanceRequest::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(CheckRepositoryPerformanceRequest),
+                                            alignof(CheckRepositoryPerformanceRequest));
 }
-constexpr auto CheckDatastorePerformanceRequest::InternalGenerateClassData_() {
+constexpr auto CheckRepositoryPerformanceRequest::InternalGenerateClassData_() {
   return ::google::protobuf::internal::ClassDataFull{
       ::google::protobuf::internal::ClassData{
-          &_CheckDatastorePerformanceRequest_default_instance_._instance,
+          &_CheckRepositoryPerformanceRequest_default_instance_._instance,
           &_table_.header,
           nullptr,  // OnDemandRegisterArenaDtor
           nullptr,  // IsInitialized
-          &CheckDatastorePerformanceRequest::MergeImpl,
-          ::google::protobuf::Message::GetNewImpl<CheckDatastorePerformanceRequest>(),
+          &CheckRepositoryPerformanceRequest::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<CheckRepositoryPerformanceRequest>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-          &CheckDatastorePerformanceRequest::SharedDtor,
-          ::google::protobuf::Message::GetClearImpl<CheckDatastorePerformanceRequest>(), &CheckDatastorePerformanceRequest::ByteSizeLong,
-              &CheckDatastorePerformanceRequest::_InternalSerialize,
+          &CheckRepositoryPerformanceRequest::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<CheckRepositoryPerformanceRequest>(), &CheckRepositoryPerformanceRequest::ByteSizeLong,
+              &CheckRepositoryPerformanceRequest::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          PROTOBUF_FIELD_OFFSET(CheckDatastorePerformanceRequest, _impl_._cached_size_),
+          PROTOBUF_FIELD_OFFSET(CheckRepositoryPerformanceRequest, _impl_._cached_size_),
           false,
       },
-      &CheckDatastorePerformanceRequest::kDescriptorMethods,
+      &CheckRepositoryPerformanceRequest::kDescriptorMethods,
       &descriptor_table_szdiagnostic_2eproto,
       nullptr,  // tracker
   };
 }
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
-    ::google::protobuf::internal::ClassDataFull CheckDatastorePerformanceRequest_class_data_ =
-        CheckDatastorePerformanceRequest::InternalGenerateClassData_();
+    ::google::protobuf::internal::ClassDataFull CheckRepositoryPerformanceRequest_class_data_ =
+        CheckRepositoryPerformanceRequest::InternalGenerateClassData_();
 
-const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL CheckDatastorePerformanceRequest::GetClassData() const {
-  ::google::protobuf::internal::PrefetchToLocalCache(&CheckDatastorePerformanceRequest_class_data_);
-  ::google::protobuf::internal::PrefetchToLocalCache(CheckDatastorePerformanceRequest_class_data_.tc_table);
-  return CheckDatastorePerformanceRequest_class_data_.base();
+const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL CheckRepositoryPerformanceRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&CheckRepositoryPerformanceRequest_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(CheckRepositoryPerformanceRequest_class_data_.tc_table);
+  return CheckRepositoryPerformanceRequest_class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
 const ::_pbi::TcParseTable<0, 1, 0, 0, 2>
-CheckDatastorePerformanceRequest::_table_ = {
+CheckRepositoryPerformanceRequest::_table_ = {
   {
-    PROTOBUF_FIELD_OFFSET(CheckDatastorePerformanceRequest, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(CheckRepositoryPerformanceRequest, _impl_._has_bits_),
     0, // no _extensions_
     1, 0,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
@@ -531,29 +532,29 @@ CheckDatastorePerformanceRequest::_table_ = {
     1,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
-    CheckDatastorePerformanceRequest_class_data_.base(),
+    CheckRepositoryPerformanceRequest_class_data_.base(),
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::szdiagnostic::CheckDatastorePerformanceRequest>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::szdiagnostic::CheckRepositoryPerformanceRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // int32 seconds_to_run = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(CheckDatastorePerformanceRequest, _impl_.seconds_to_run_), 0>(),
-     {8, 0, 0, PROTOBUF_FIELD_OFFSET(CheckDatastorePerformanceRequest, _impl_.seconds_to_run_)}},
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(CheckRepositoryPerformanceRequest, _impl_.seconds_to_run_), 0>(),
+     {8, 0, 0, PROTOBUF_FIELD_OFFSET(CheckRepositoryPerformanceRequest, _impl_.seconds_to_run_)}},
   }}, {{
     65535, 65535
   }}, {{
     // int32 seconds_to_run = 1;
-    {PROTOBUF_FIELD_OFFSET(CheckDatastorePerformanceRequest, _impl_.seconds_to_run_), _Internal::kHasBitsOffset + 0, 0,
+    {PROTOBUF_FIELD_OFFSET(CheckRepositoryPerformanceRequest, _impl_.seconds_to_run_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kInt32)},
   }},
   // no aux_entries
   {{
   }},
 };
-PROTOBUF_NOINLINE void CheckDatastorePerformanceRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:szdiagnostic.CheckDatastorePerformanceRequest)
+PROTOBUF_NOINLINE void CheckRepositoryPerformanceRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:szdiagnostic.CheckRepositoryPerformanceRequest)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -565,17 +566,17 @@ PROTOBUF_NOINLINE void CheckDatastorePerformanceRequest::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::uint8_t* PROTOBUF_NONNULL CheckDatastorePerformanceRequest::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL CheckRepositoryPerformanceRequest::_InternalSerialize(
     const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
-  const CheckDatastorePerformanceRequest& this_ = static_cast<const CheckDatastorePerformanceRequest&>(base);
+  const CheckRepositoryPerformanceRequest& this_ = static_cast<const CheckRepositoryPerformanceRequest&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::uint8_t* PROTOBUF_NONNULL CheckDatastorePerformanceRequest::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL CheckRepositoryPerformanceRequest::_InternalSerialize(
     ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
-  const CheckDatastorePerformanceRequest& this_ = *this;
+  const CheckRepositoryPerformanceRequest& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(serialize_to_array_start:szdiagnostic.CheckDatastorePerformanceRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:szdiagnostic.CheckRepositoryPerformanceRequest)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
@@ -593,18 +594,18 @@ PROTOBUF_NOINLINE void CheckDatastorePerformanceRequest::Clear() {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:szdiagnostic.CheckDatastorePerformanceRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:szdiagnostic.CheckRepositoryPerformanceRequest)
   return target;
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::size_t CheckDatastorePerformanceRequest::ByteSizeLong(const MessageLite& base) {
-  const CheckDatastorePerformanceRequest& this_ = static_cast<const CheckDatastorePerformanceRequest&>(base);
+::size_t CheckRepositoryPerformanceRequest::ByteSizeLong(const MessageLite& base) {
+  const CheckRepositoryPerformanceRequest& this_ = static_cast<const CheckRepositoryPerformanceRequest&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::size_t CheckDatastorePerformanceRequest::ByteSizeLong() const {
-  const CheckDatastorePerformanceRequest& this_ = *this;
+::size_t CheckRepositoryPerformanceRequest::ByteSizeLong() const {
+  const CheckRepositoryPerformanceRequest& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(message_byte_size_start:szdiagnostic.CheckDatastorePerformanceRequest)
+  // @@protoc_insertion_point(message_byte_size_start:szdiagnostic.CheckRepositoryPerformanceRequest)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
@@ -625,10 +626,10 @@ PROTOBUF_NOINLINE void CheckDatastorePerformanceRequest::Clear() {
                                              &this_._impl_._cached_size_);
 }
 
-void CheckDatastorePerformanceRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<CheckDatastorePerformanceRequest*>(&to_msg);
-  auto& from = static_cast<const CheckDatastorePerformanceRequest&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:szdiagnostic.CheckDatastorePerformanceRequest)
+void CheckRepositoryPerformanceRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<CheckRepositoryPerformanceRequest*>(&to_msg);
+  auto& from = static_cast<const CheckRepositoryPerformanceRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szdiagnostic.CheckRepositoryPerformanceRequest)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -643,134 +644,134 @@ void CheckDatastorePerformanceRequest::MergeImpl(::google::protobuf::MessageLite
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void CheckDatastorePerformanceRequest::CopyFrom(const CheckDatastorePerformanceRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:szdiagnostic.CheckDatastorePerformanceRequest)
+void CheckRepositoryPerformanceRequest::CopyFrom(const CheckRepositoryPerformanceRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szdiagnostic.CheckRepositoryPerformanceRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void CheckDatastorePerformanceRequest::InternalSwap(CheckDatastorePerformanceRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+void CheckRepositoryPerformanceRequest::InternalSwap(CheckRepositoryPerformanceRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.seconds_to_run_, other->_impl_.seconds_to_run_);
 }
 
-::google::protobuf::Metadata CheckDatastorePerformanceRequest::GetMetadata() const {
+::google::protobuf::Metadata CheckRepositoryPerformanceRequest::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class CheckDatastorePerformanceResponse::_Internal {
+class CheckRepositoryPerformanceResponse::_Internal {
  public:
   using HasBits =
-      decltype(std::declval<CheckDatastorePerformanceResponse>()._impl_._has_bits_);
+      decltype(std::declval<CheckRepositoryPerformanceResponse>()._impl_._has_bits_);
   static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(CheckDatastorePerformanceResponse, _impl_._has_bits_);
+      8 * PROTOBUF_FIELD_OFFSET(CheckRepositoryPerformanceResponse, _impl_._has_bits_);
 };
 
-CheckDatastorePerformanceResponse::CheckDatastorePerformanceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+CheckRepositoryPerformanceResponse::CheckRepositoryPerformanceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, CheckDatastorePerformanceResponse_class_data_.base()) {
+    : ::google::protobuf::Message(arena, CheckRepositoryPerformanceResponse_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:szdiagnostic.CheckDatastorePerformanceResponse)
+  // @@protoc_insertion_point(arena_constructor:szdiagnostic.CheckRepositoryPerformanceResponse)
 }
-PROTOBUF_NDEBUG_INLINE CheckDatastorePerformanceResponse::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE CheckRepositoryPerformanceResponse::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-    const ::szdiagnostic::CheckDatastorePerformanceResponse& from_msg)
+    const ::szdiagnostic::CheckRepositoryPerformanceResponse& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         result_(arena, from.result_) {}
 
-CheckDatastorePerformanceResponse::CheckDatastorePerformanceResponse(
+CheckRepositoryPerformanceResponse::CheckRepositoryPerformanceResponse(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
-    const CheckDatastorePerformanceResponse& from)
+    const CheckRepositoryPerformanceResponse& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, CheckDatastorePerformanceResponse_class_data_.base()) {
+    : ::google::protobuf::Message(arena, CheckRepositoryPerformanceResponse_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  CheckDatastorePerformanceResponse* const _this = this;
+  CheckRepositoryPerformanceResponse* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
 
-  // @@protoc_insertion_point(copy_constructor:szdiagnostic.CheckDatastorePerformanceResponse)
+  // @@protoc_insertion_point(copy_constructor:szdiagnostic.CheckRepositoryPerformanceResponse)
 }
-PROTOBUF_NDEBUG_INLINE CheckDatastorePerformanceResponse::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE CheckRepositoryPerformanceResponse::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
       : _cached_size_{0},
         result_(arena) {}
 
-inline void CheckDatastorePerformanceResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+inline void CheckRepositoryPerformanceResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
-CheckDatastorePerformanceResponse::~CheckDatastorePerformanceResponse() {
-  // @@protoc_insertion_point(destructor:szdiagnostic.CheckDatastorePerformanceResponse)
+CheckRepositoryPerformanceResponse::~CheckRepositoryPerformanceResponse() {
+  // @@protoc_insertion_point(destructor:szdiagnostic.CheckRepositoryPerformanceResponse)
   SharedDtor(*this);
 }
-inline void CheckDatastorePerformanceResponse::SharedDtor(MessageLite& self) {
-  CheckDatastorePerformanceResponse& this_ = static_cast<CheckDatastorePerformanceResponse&>(self);
+inline void CheckRepositoryPerformanceResponse::SharedDtor(MessageLite& self) {
+  CheckRepositoryPerformanceResponse& this_ = static_cast<CheckRepositoryPerformanceResponse&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.result_.Destroy();
   this_._impl_.~Impl_();
 }
 
-inline void* PROTOBUF_NONNULL CheckDatastorePerformanceResponse::PlacementNew_(
+inline void* PROTOBUF_NONNULL CheckRepositoryPerformanceResponse::PlacementNew_(
     const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
-  return ::new (mem) CheckDatastorePerformanceResponse(arena);
+  return ::new (mem) CheckRepositoryPerformanceResponse(arena);
 }
-constexpr auto CheckDatastorePerformanceResponse::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(CheckDatastorePerformanceResponse),
-                                            alignof(CheckDatastorePerformanceResponse));
+constexpr auto CheckRepositoryPerformanceResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(CheckRepositoryPerformanceResponse),
+                                            alignof(CheckRepositoryPerformanceResponse));
 }
-constexpr auto CheckDatastorePerformanceResponse::InternalGenerateClassData_() {
+constexpr auto CheckRepositoryPerformanceResponse::InternalGenerateClassData_() {
   return ::google::protobuf::internal::ClassDataFull{
       ::google::protobuf::internal::ClassData{
-          &_CheckDatastorePerformanceResponse_default_instance_._instance,
+          &_CheckRepositoryPerformanceResponse_default_instance_._instance,
           &_table_.header,
           nullptr,  // OnDemandRegisterArenaDtor
           nullptr,  // IsInitialized
-          &CheckDatastorePerformanceResponse::MergeImpl,
-          ::google::protobuf::Message::GetNewImpl<CheckDatastorePerformanceResponse>(),
+          &CheckRepositoryPerformanceResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<CheckRepositoryPerformanceResponse>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-          &CheckDatastorePerformanceResponse::SharedDtor,
-          ::google::protobuf::Message::GetClearImpl<CheckDatastorePerformanceResponse>(), &CheckDatastorePerformanceResponse::ByteSizeLong,
-              &CheckDatastorePerformanceResponse::_InternalSerialize,
+          &CheckRepositoryPerformanceResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<CheckRepositoryPerformanceResponse>(), &CheckRepositoryPerformanceResponse::ByteSizeLong,
+              &CheckRepositoryPerformanceResponse::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          PROTOBUF_FIELD_OFFSET(CheckDatastorePerformanceResponse, _impl_._cached_size_),
+          PROTOBUF_FIELD_OFFSET(CheckRepositoryPerformanceResponse, _impl_._cached_size_),
           false,
       },
-      &CheckDatastorePerformanceResponse::kDescriptorMethods,
+      &CheckRepositoryPerformanceResponse::kDescriptorMethods,
       &descriptor_table_szdiagnostic_2eproto,
       nullptr,  // tracker
   };
 }
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
-    ::google::protobuf::internal::ClassDataFull CheckDatastorePerformanceResponse_class_data_ =
-        CheckDatastorePerformanceResponse::InternalGenerateClassData_();
+    ::google::protobuf::internal::ClassDataFull CheckRepositoryPerformanceResponse_class_data_ =
+        CheckRepositoryPerformanceResponse::InternalGenerateClassData_();
 
-const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL CheckDatastorePerformanceResponse::GetClassData() const {
-  ::google::protobuf::internal::PrefetchToLocalCache(&CheckDatastorePerformanceResponse_class_data_);
-  ::google::protobuf::internal::PrefetchToLocalCache(CheckDatastorePerformanceResponse_class_data_.tc_table);
-  return CheckDatastorePerformanceResponse_class_data_.base();
+const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL CheckRepositoryPerformanceResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&CheckRepositoryPerformanceResponse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(CheckRepositoryPerformanceResponse_class_data_.tc_table);
+  return CheckRepositoryPerformanceResponse_class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 61, 2>
-CheckDatastorePerformanceResponse::_table_ = {
+const ::_pbi::TcParseTable<0, 1, 0, 62, 2>
+CheckRepositoryPerformanceResponse::_table_ = {
   {
-    PROTOBUF_FIELD_OFFSET(CheckDatastorePerformanceResponse, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(CheckRepositoryPerformanceResponse, _impl_._has_bits_),
     0, // no _extensions_
     1, 0,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
@@ -779,32 +780,32 @@ CheckDatastorePerformanceResponse::_table_ = {
     1,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
-    CheckDatastorePerformanceResponse_class_data_.base(),
+    CheckRepositoryPerformanceResponse_class_data_.base(),
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::szdiagnostic::CheckDatastorePerformanceResponse>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::szdiagnostic::CheckRepositoryPerformanceResponse>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // string result = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 0, 0, PROTOBUF_FIELD_OFFSET(CheckDatastorePerformanceResponse, _impl_.result_)}},
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(CheckRepositoryPerformanceResponse, _impl_.result_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string result = 1;
-    {PROTOBUF_FIELD_OFFSET(CheckDatastorePerformanceResponse, _impl_.result_), _Internal::kHasBitsOffset + 0, 0,
+    {PROTOBUF_FIELD_OFFSET(CheckRepositoryPerformanceResponse, _impl_.result_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\56\6\0\0\0\0\0\0"
-    "szdiagnostic.CheckDatastorePerformanceResponse"
+    "\57\6\0\0\0\0\0\0"
+    "szdiagnostic.CheckRepositoryPerformanceResponse"
     "result"
   }},
 };
-PROTOBUF_NOINLINE void CheckDatastorePerformanceResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:szdiagnostic.CheckDatastorePerformanceResponse)
+PROTOBUF_NOINLINE void CheckRepositoryPerformanceResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:szdiagnostic.CheckRepositoryPerformanceResponse)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -819,17 +820,17 @@ PROTOBUF_NOINLINE void CheckDatastorePerformanceResponse::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::uint8_t* PROTOBUF_NONNULL CheckDatastorePerformanceResponse::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL CheckRepositoryPerformanceResponse::_InternalSerialize(
     const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
-  const CheckDatastorePerformanceResponse& this_ = static_cast<const CheckDatastorePerformanceResponse&>(base);
+  const CheckRepositoryPerformanceResponse& this_ = static_cast<const CheckRepositoryPerformanceResponse&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::uint8_t* PROTOBUF_NONNULL CheckDatastorePerformanceResponse::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL CheckRepositoryPerformanceResponse::_InternalSerialize(
     ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
-  const CheckDatastorePerformanceResponse& this_ = *this;
+  const CheckRepositoryPerformanceResponse& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(serialize_to_array_start:szdiagnostic.CheckDatastorePerformanceResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:szdiagnostic.CheckRepositoryPerformanceResponse)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
@@ -838,7 +839,7 @@ PROTOBUF_NOINLINE void CheckDatastorePerformanceResponse::Clear() {
     if (!this_._internal_result().empty()) {
       const std::string& _s = this_._internal_result();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szdiagnostic.CheckDatastorePerformanceResponse.result");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szdiagnostic.CheckRepositoryPerformanceResponse.result");
       target = stream->WriteStringMaybeAliased(1, _s, target);
     }
   }
@@ -848,18 +849,18 @@ PROTOBUF_NOINLINE void CheckDatastorePerformanceResponse::Clear() {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:szdiagnostic.CheckDatastorePerformanceResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:szdiagnostic.CheckRepositoryPerformanceResponse)
   return target;
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::size_t CheckDatastorePerformanceResponse::ByteSizeLong(const MessageLite& base) {
-  const CheckDatastorePerformanceResponse& this_ = static_cast<const CheckDatastorePerformanceResponse&>(base);
+::size_t CheckRepositoryPerformanceResponse::ByteSizeLong(const MessageLite& base) {
+  const CheckRepositoryPerformanceResponse& this_ = static_cast<const CheckRepositoryPerformanceResponse&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::size_t CheckDatastorePerformanceResponse::ByteSizeLong() const {
-  const CheckDatastorePerformanceResponse& this_ = *this;
+::size_t CheckRepositoryPerformanceResponse::ByteSizeLong() const {
+  const CheckRepositoryPerformanceResponse& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(message_byte_size_start:szdiagnostic.CheckDatastorePerformanceResponse)
+  // @@protoc_insertion_point(message_byte_size_start:szdiagnostic.CheckRepositoryPerformanceResponse)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
@@ -880,10 +881,10 @@ PROTOBUF_NOINLINE void CheckDatastorePerformanceResponse::Clear() {
                                              &this_._impl_._cached_size_);
 }
 
-void CheckDatastorePerformanceResponse::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<CheckDatastorePerformanceResponse*>(&to_msg);
-  auto& from = static_cast<const CheckDatastorePerformanceResponse&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:szdiagnostic.CheckDatastorePerformanceResponse)
+void CheckRepositoryPerformanceResponse::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<CheckRepositoryPerformanceResponse*>(&to_msg);
+  auto& from = static_cast<const CheckRepositoryPerformanceResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szdiagnostic.CheckRepositoryPerformanceResponse)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -902,15 +903,15 @@ void CheckDatastorePerformanceResponse::MergeImpl(::google::protobuf::MessageLit
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void CheckDatastorePerformanceResponse::CopyFrom(const CheckDatastorePerformanceResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:szdiagnostic.CheckDatastorePerformanceResponse)
+void CheckRepositoryPerformanceResponse::CopyFrom(const CheckRepositoryPerformanceResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szdiagnostic.CheckRepositoryPerformanceResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void CheckDatastorePerformanceResponse::InternalSwap(CheckDatastorePerformanceResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+void CheckRepositoryPerformanceResponse::InternalSwap(CheckRepositoryPerformanceResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -919,83 +920,83 @@ void CheckDatastorePerformanceResponse::InternalSwap(CheckDatastorePerformanceRe
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.result_, &other->_impl_.result_, arena);
 }
 
-::google::protobuf::Metadata CheckDatastorePerformanceResponse::GetMetadata() const {
+::google::protobuf::Metadata CheckRepositoryPerformanceResponse::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class GetDatastoreInfoRequest::_Internal {
+class GetRepositoryInfoRequest::_Internal {
  public:
 };
 
-GetDatastoreInfoRequest::GetDatastoreInfoRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+GetRepositoryInfoRequest::GetRepositoryInfoRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena, GetDatastoreInfoRequest_class_data_.base()) {
+    : ::google::protobuf::internal::ZeroFieldsBase(arena, GetRepositoryInfoRequest_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::internal::ZeroFieldsBase(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(arena_constructor:szdiagnostic.GetDatastoreInfoRequest)
+  // @@protoc_insertion_point(arena_constructor:szdiagnostic.GetRepositoryInfoRequest)
 }
-GetDatastoreInfoRequest::GetDatastoreInfoRequest(
+GetRepositoryInfoRequest::GetRepositoryInfoRequest(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
-    const GetDatastoreInfoRequest& from)
+    const GetRepositoryInfoRequest& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::internal::ZeroFieldsBase(arena, GetDatastoreInfoRequest_class_data_.base()) {
+    : ::google::protobuf::internal::ZeroFieldsBase(arena, GetRepositoryInfoRequest_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::internal::ZeroFieldsBase(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  GetDatastoreInfoRequest* const _this = this;
+  GetRepositoryInfoRequest* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
 
-  // @@protoc_insertion_point(copy_constructor:szdiagnostic.GetDatastoreInfoRequest)
+  // @@protoc_insertion_point(copy_constructor:szdiagnostic.GetRepositoryInfoRequest)
 }
 
-inline void* PROTOBUF_NONNULL GetDatastoreInfoRequest::PlacementNew_(
+inline void* PROTOBUF_NONNULL GetRepositoryInfoRequest::PlacementNew_(
     const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
-  return ::new (mem) GetDatastoreInfoRequest(arena);
+  return ::new (mem) GetRepositoryInfoRequest(arena);
 }
-constexpr auto GetDatastoreInfoRequest::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(GetDatastoreInfoRequest),
-                                            alignof(GetDatastoreInfoRequest));
+constexpr auto GetRepositoryInfoRequest::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(GetRepositoryInfoRequest),
+                                            alignof(GetRepositoryInfoRequest));
 }
-constexpr auto GetDatastoreInfoRequest::InternalGenerateClassData_() {
+constexpr auto GetRepositoryInfoRequest::InternalGenerateClassData_() {
   return ::google::protobuf::internal::ClassDataFull{
       ::google::protobuf::internal::ClassData{
-          &_GetDatastoreInfoRequest_default_instance_._instance,
+          &_GetRepositoryInfoRequest_default_instance_._instance,
           &_table_.header,
           nullptr,  // OnDemandRegisterArenaDtor
           nullptr,  // IsInitialized
-          &GetDatastoreInfoRequest::MergeImpl,
-          ::google::protobuf::internal::ZeroFieldsBase::GetNewImpl<GetDatastoreInfoRequest>(),
+          &GetRepositoryInfoRequest::MergeImpl,
+          ::google::protobuf::internal::ZeroFieldsBase::GetNewImpl<GetRepositoryInfoRequest>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-          &GetDatastoreInfoRequest::SharedDtor,
-          ::google::protobuf::internal::ZeroFieldsBase::GetClearImpl<GetDatastoreInfoRequest>(), &GetDatastoreInfoRequest::ByteSizeLong,
-              &GetDatastoreInfoRequest::_InternalSerialize,
+          &GetRepositoryInfoRequest::SharedDtor,
+          ::google::protobuf::internal::ZeroFieldsBase::GetClearImpl<GetRepositoryInfoRequest>(), &GetRepositoryInfoRequest::ByteSizeLong,
+              &GetRepositoryInfoRequest::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          PROTOBUF_FIELD_OFFSET(GetDatastoreInfoRequest, _impl_._cached_size_),
+          PROTOBUF_FIELD_OFFSET(GetRepositoryInfoRequest, _impl_._cached_size_),
           false,
       },
-      &GetDatastoreInfoRequest::kDescriptorMethods,
+      &GetRepositoryInfoRequest::kDescriptorMethods,
       &descriptor_table_szdiagnostic_2eproto,
       nullptr,  // tracker
   };
 }
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
-    ::google::protobuf::internal::ClassDataFull GetDatastoreInfoRequest_class_data_ =
-        GetDatastoreInfoRequest::InternalGenerateClassData_();
+    ::google::protobuf::internal::ClassDataFull GetRepositoryInfoRequest_class_data_ =
+        GetRepositoryInfoRequest::InternalGenerateClassData_();
 
-const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetDatastoreInfoRequest::GetClassData() const {
-  ::google::protobuf::internal::PrefetchToLocalCache(&GetDatastoreInfoRequest_class_data_);
-  ::google::protobuf::internal::PrefetchToLocalCache(GetDatastoreInfoRequest_class_data_.tc_table);
-  return GetDatastoreInfoRequest_class_data_.base();
+const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetRepositoryInfoRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&GetRepositoryInfoRequest_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(GetRepositoryInfoRequest_class_data_.tc_table);
+  return GetRepositoryInfoRequest_class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
 const ::_pbi::TcParseTable<0, 0, 0, 0, 2>
-GetDatastoreInfoRequest::_table_ = {
+GetRepositoryInfoRequest::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -1006,11 +1007,11 @@ GetDatastoreInfoRequest::_table_ = {
     0,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
-    GetDatastoreInfoRequest_class_data_.base(),
+    GetRepositoryInfoRequest_class_data_.base(),
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::szdiagnostic::GetDatastoreInfoRequest>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::szdiagnostic::GetRepositoryInfoRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
@@ -1027,119 +1028,119 @@ GetDatastoreInfoRequest::_table_ = {
 
 
 
-::google::protobuf::Metadata GetDatastoreInfoRequest::GetMetadata() const {
+::google::protobuf::Metadata GetRepositoryInfoRequest::GetMetadata() const {
   return ::google::protobuf::internal::ZeroFieldsBase::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class GetDatastoreInfoResponse::_Internal {
+class GetRepositoryInfoResponse::_Internal {
  public:
   using HasBits =
-      decltype(std::declval<GetDatastoreInfoResponse>()._impl_._has_bits_);
+      decltype(std::declval<GetRepositoryInfoResponse>()._impl_._has_bits_);
   static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(GetDatastoreInfoResponse, _impl_._has_bits_);
+      8 * PROTOBUF_FIELD_OFFSET(GetRepositoryInfoResponse, _impl_._has_bits_);
 };
 
-GetDatastoreInfoResponse::GetDatastoreInfoResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+GetRepositoryInfoResponse::GetRepositoryInfoResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, GetDatastoreInfoResponse_class_data_.base()) {
+    : ::google::protobuf::Message(arena, GetRepositoryInfoResponse_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:szdiagnostic.GetDatastoreInfoResponse)
+  // @@protoc_insertion_point(arena_constructor:szdiagnostic.GetRepositoryInfoResponse)
 }
-PROTOBUF_NDEBUG_INLINE GetDatastoreInfoResponse::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE GetRepositoryInfoResponse::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-    const ::szdiagnostic::GetDatastoreInfoResponse& from_msg)
+    const ::szdiagnostic::GetRepositoryInfoResponse& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         result_(arena, from.result_) {}
 
-GetDatastoreInfoResponse::GetDatastoreInfoResponse(
+GetRepositoryInfoResponse::GetRepositoryInfoResponse(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
-    const GetDatastoreInfoResponse& from)
+    const GetRepositoryInfoResponse& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, GetDatastoreInfoResponse_class_data_.base()) {
+    : ::google::protobuf::Message(arena, GetRepositoryInfoResponse_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  GetDatastoreInfoResponse* const _this = this;
+  GetRepositoryInfoResponse* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
 
-  // @@protoc_insertion_point(copy_constructor:szdiagnostic.GetDatastoreInfoResponse)
+  // @@protoc_insertion_point(copy_constructor:szdiagnostic.GetRepositoryInfoResponse)
 }
-PROTOBUF_NDEBUG_INLINE GetDatastoreInfoResponse::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE GetRepositoryInfoResponse::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
       : _cached_size_{0},
         result_(arena) {}
 
-inline void GetDatastoreInfoResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+inline void GetRepositoryInfoResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
-GetDatastoreInfoResponse::~GetDatastoreInfoResponse() {
-  // @@protoc_insertion_point(destructor:szdiagnostic.GetDatastoreInfoResponse)
+GetRepositoryInfoResponse::~GetRepositoryInfoResponse() {
+  // @@protoc_insertion_point(destructor:szdiagnostic.GetRepositoryInfoResponse)
   SharedDtor(*this);
 }
-inline void GetDatastoreInfoResponse::SharedDtor(MessageLite& self) {
-  GetDatastoreInfoResponse& this_ = static_cast<GetDatastoreInfoResponse&>(self);
+inline void GetRepositoryInfoResponse::SharedDtor(MessageLite& self) {
+  GetRepositoryInfoResponse& this_ = static_cast<GetRepositoryInfoResponse&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.result_.Destroy();
   this_._impl_.~Impl_();
 }
 
-inline void* PROTOBUF_NONNULL GetDatastoreInfoResponse::PlacementNew_(
+inline void* PROTOBUF_NONNULL GetRepositoryInfoResponse::PlacementNew_(
     const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
-  return ::new (mem) GetDatastoreInfoResponse(arena);
+  return ::new (mem) GetRepositoryInfoResponse(arena);
 }
-constexpr auto GetDatastoreInfoResponse::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(GetDatastoreInfoResponse),
-                                            alignof(GetDatastoreInfoResponse));
+constexpr auto GetRepositoryInfoResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(GetRepositoryInfoResponse),
+                                            alignof(GetRepositoryInfoResponse));
 }
-constexpr auto GetDatastoreInfoResponse::InternalGenerateClassData_() {
+constexpr auto GetRepositoryInfoResponse::InternalGenerateClassData_() {
   return ::google::protobuf::internal::ClassDataFull{
       ::google::protobuf::internal::ClassData{
-          &_GetDatastoreInfoResponse_default_instance_._instance,
+          &_GetRepositoryInfoResponse_default_instance_._instance,
           &_table_.header,
           nullptr,  // OnDemandRegisterArenaDtor
           nullptr,  // IsInitialized
-          &GetDatastoreInfoResponse::MergeImpl,
-          ::google::protobuf::Message::GetNewImpl<GetDatastoreInfoResponse>(),
+          &GetRepositoryInfoResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<GetRepositoryInfoResponse>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-          &GetDatastoreInfoResponse::SharedDtor,
-          ::google::protobuf::Message::GetClearImpl<GetDatastoreInfoResponse>(), &GetDatastoreInfoResponse::ByteSizeLong,
-              &GetDatastoreInfoResponse::_InternalSerialize,
+          &GetRepositoryInfoResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<GetRepositoryInfoResponse>(), &GetRepositoryInfoResponse::ByteSizeLong,
+              &GetRepositoryInfoResponse::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          PROTOBUF_FIELD_OFFSET(GetDatastoreInfoResponse, _impl_._cached_size_),
+          PROTOBUF_FIELD_OFFSET(GetRepositoryInfoResponse, _impl_._cached_size_),
           false,
       },
-      &GetDatastoreInfoResponse::kDescriptorMethods,
+      &GetRepositoryInfoResponse::kDescriptorMethods,
       &descriptor_table_szdiagnostic_2eproto,
       nullptr,  // tracker
   };
 }
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
-    ::google::protobuf::internal::ClassDataFull GetDatastoreInfoResponse_class_data_ =
-        GetDatastoreInfoResponse::InternalGenerateClassData_();
+    ::google::protobuf::internal::ClassDataFull GetRepositoryInfoResponse_class_data_ =
+        GetRepositoryInfoResponse::InternalGenerateClassData_();
 
-const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetDatastoreInfoResponse::GetClassData() const {
-  ::google::protobuf::internal::PrefetchToLocalCache(&GetDatastoreInfoResponse_class_data_);
-  ::google::protobuf::internal::PrefetchToLocalCache(GetDatastoreInfoResponse_class_data_.tc_table);
-  return GetDatastoreInfoResponse_class_data_.base();
+const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetRepositoryInfoResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&GetRepositoryInfoResponse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(GetRepositoryInfoResponse_class_data_.tc_table);
+  return GetRepositoryInfoResponse_class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 52, 2>
-GetDatastoreInfoResponse::_table_ = {
+const ::_pbi::TcParseTable<0, 1, 0, 53, 2>
+GetRepositoryInfoResponse::_table_ = {
   {
-    PROTOBUF_FIELD_OFFSET(GetDatastoreInfoResponse, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(GetRepositoryInfoResponse, _impl_._has_bits_),
     0, // no _extensions_
     1, 0,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
@@ -1148,32 +1149,32 @@ GetDatastoreInfoResponse::_table_ = {
     1,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
-    GetDatastoreInfoResponse_class_data_.base(),
+    GetRepositoryInfoResponse_class_data_.base(),
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::szdiagnostic::GetDatastoreInfoResponse>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::szdiagnostic::GetRepositoryInfoResponse>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // string result = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 0, 0, PROTOBUF_FIELD_OFFSET(GetDatastoreInfoResponse, _impl_.result_)}},
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(GetRepositoryInfoResponse, _impl_.result_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string result = 1;
-    {PROTOBUF_FIELD_OFFSET(GetDatastoreInfoResponse, _impl_.result_), _Internal::kHasBitsOffset + 0, 0,
+    {PROTOBUF_FIELD_OFFSET(GetRepositoryInfoResponse, _impl_.result_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\45\6\0\0\0\0\0\0"
-    "szdiagnostic.GetDatastoreInfoResponse"
+    "\46\6\0\0\0\0\0\0"
+    "szdiagnostic.GetRepositoryInfoResponse"
     "result"
   }},
 };
-PROTOBUF_NOINLINE void GetDatastoreInfoResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:szdiagnostic.GetDatastoreInfoResponse)
+PROTOBUF_NOINLINE void GetRepositoryInfoResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:szdiagnostic.GetRepositoryInfoResponse)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1188,17 +1189,17 @@ PROTOBUF_NOINLINE void GetDatastoreInfoResponse::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::uint8_t* PROTOBUF_NONNULL GetDatastoreInfoResponse::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL GetRepositoryInfoResponse::_InternalSerialize(
     const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
-  const GetDatastoreInfoResponse& this_ = static_cast<const GetDatastoreInfoResponse&>(base);
+  const GetRepositoryInfoResponse& this_ = static_cast<const GetRepositoryInfoResponse&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::uint8_t* PROTOBUF_NONNULL GetDatastoreInfoResponse::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL GetRepositoryInfoResponse::_InternalSerialize(
     ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
-  const GetDatastoreInfoResponse& this_ = *this;
+  const GetRepositoryInfoResponse& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(serialize_to_array_start:szdiagnostic.GetDatastoreInfoResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:szdiagnostic.GetRepositoryInfoResponse)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
@@ -1207,7 +1208,7 @@ PROTOBUF_NOINLINE void GetDatastoreInfoResponse::Clear() {
     if (!this_._internal_result().empty()) {
       const std::string& _s = this_._internal_result();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szdiagnostic.GetDatastoreInfoResponse.result");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szdiagnostic.GetRepositoryInfoResponse.result");
       target = stream->WriteStringMaybeAliased(1, _s, target);
     }
   }
@@ -1217,18 +1218,18 @@ PROTOBUF_NOINLINE void GetDatastoreInfoResponse::Clear() {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:szdiagnostic.GetDatastoreInfoResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:szdiagnostic.GetRepositoryInfoResponse)
   return target;
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::size_t GetDatastoreInfoResponse::ByteSizeLong(const MessageLite& base) {
-  const GetDatastoreInfoResponse& this_ = static_cast<const GetDatastoreInfoResponse&>(base);
+::size_t GetRepositoryInfoResponse::ByteSizeLong(const MessageLite& base) {
+  const GetRepositoryInfoResponse& this_ = static_cast<const GetRepositoryInfoResponse&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::size_t GetDatastoreInfoResponse::ByteSizeLong() const {
-  const GetDatastoreInfoResponse& this_ = *this;
+::size_t GetRepositoryInfoResponse::ByteSizeLong() const {
+  const GetRepositoryInfoResponse& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(message_byte_size_start:szdiagnostic.GetDatastoreInfoResponse)
+  // @@protoc_insertion_point(message_byte_size_start:szdiagnostic.GetRepositoryInfoResponse)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
@@ -1249,10 +1250,10 @@ PROTOBUF_NOINLINE void GetDatastoreInfoResponse::Clear() {
                                              &this_._impl_._cached_size_);
 }
 
-void GetDatastoreInfoResponse::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<GetDatastoreInfoResponse*>(&to_msg);
-  auto& from = static_cast<const GetDatastoreInfoResponse&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:szdiagnostic.GetDatastoreInfoResponse)
+void GetRepositoryInfoResponse::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<GetRepositoryInfoResponse*>(&to_msg);
+  auto& from = static_cast<const GetRepositoryInfoResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szdiagnostic.GetRepositoryInfoResponse)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1271,15 +1272,15 @@ void GetDatastoreInfoResponse::MergeImpl(::google::protobuf::MessageLite& to_msg
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void GetDatastoreInfoResponse::CopyFrom(const GetDatastoreInfoResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:szdiagnostic.GetDatastoreInfoResponse)
+void GetRepositoryInfoResponse::CopyFrom(const GetRepositoryInfoResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szdiagnostic.GetRepositoryInfoResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void GetDatastoreInfoResponse::InternalSwap(GetDatastoreInfoResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+void GetRepositoryInfoResponse::InternalSwap(GetRepositoryInfoResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -1288,7 +1289,7 @@ void GetDatastoreInfoResponse::InternalSwap(GetDatastoreInfoResponse* PROTOBUF_R
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.result_, &other->_impl_.result_, arena);
 }
 
-::google::protobuf::Metadata GetDatastoreInfoResponse::GetMetadata() const {
+::google::protobuf::Metadata GetRepositoryInfoResponse::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================

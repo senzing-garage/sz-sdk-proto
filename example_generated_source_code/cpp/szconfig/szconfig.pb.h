@@ -53,30 +53,30 @@ extern "C" {
 extern const ::google::protobuf::internal::DescriptorTable descriptor_table_szconfig_2eproto;
 }  // extern "C"
 namespace szconfig {
-class AddDataSourceRequest;
-struct AddDataSourceRequestDefaultTypeInternal;
-extern AddDataSourceRequestDefaultTypeInternal _AddDataSourceRequest_default_instance_;
-extern const ::google::protobuf::internal::ClassDataFull AddDataSourceRequest_class_data_;
-class AddDataSourceResponse;
-struct AddDataSourceResponseDefaultTypeInternal;
-extern AddDataSourceResponseDefaultTypeInternal _AddDataSourceResponse_default_instance_;
-extern const ::google::protobuf::internal::ClassDataFull AddDataSourceResponse_class_data_;
-class DeleteDataSourceRequest;
-struct DeleteDataSourceRequestDefaultTypeInternal;
-extern DeleteDataSourceRequestDefaultTypeInternal _DeleteDataSourceRequest_default_instance_;
-extern const ::google::protobuf::internal::ClassDataFull DeleteDataSourceRequest_class_data_;
-class DeleteDataSourceResponse;
-struct DeleteDataSourceResponseDefaultTypeInternal;
-extern DeleteDataSourceResponseDefaultTypeInternal _DeleteDataSourceResponse_default_instance_;
-extern const ::google::protobuf::internal::ClassDataFull DeleteDataSourceResponse_class_data_;
-class GetDataSourcesRequest;
-struct GetDataSourcesRequestDefaultTypeInternal;
-extern GetDataSourcesRequestDefaultTypeInternal _GetDataSourcesRequest_default_instance_;
-extern const ::google::protobuf::internal::ClassDataFull GetDataSourcesRequest_class_data_;
-class GetDataSourcesResponse;
-struct GetDataSourcesResponseDefaultTypeInternal;
-extern GetDataSourcesResponseDefaultTypeInternal _GetDataSourcesResponse_default_instance_;
-extern const ::google::protobuf::internal::ClassDataFull GetDataSourcesResponse_class_data_;
+class GetDataSourceRegistryRequest;
+struct GetDataSourceRegistryRequestDefaultTypeInternal;
+extern GetDataSourceRegistryRequestDefaultTypeInternal _GetDataSourceRegistryRequest_default_instance_;
+extern const ::google::protobuf::internal::ClassDataFull GetDataSourceRegistryRequest_class_data_;
+class GetDataSourceRegistryResponse;
+struct GetDataSourceRegistryResponseDefaultTypeInternal;
+extern GetDataSourceRegistryResponseDefaultTypeInternal _GetDataSourceRegistryResponse_default_instance_;
+extern const ::google::protobuf::internal::ClassDataFull GetDataSourceRegistryResponse_class_data_;
+class RegisterDataSourceRequest;
+struct RegisterDataSourceRequestDefaultTypeInternal;
+extern RegisterDataSourceRequestDefaultTypeInternal _RegisterDataSourceRequest_default_instance_;
+extern const ::google::protobuf::internal::ClassDataFull RegisterDataSourceRequest_class_data_;
+class RegisterDataSourceResponse;
+struct RegisterDataSourceResponseDefaultTypeInternal;
+extern RegisterDataSourceResponseDefaultTypeInternal _RegisterDataSourceResponse_default_instance_;
+extern const ::google::protobuf::internal::ClassDataFull RegisterDataSourceResponse_class_data_;
+class UnregisterDataSourceRequest;
+struct UnregisterDataSourceRequestDefaultTypeInternal;
+extern UnregisterDataSourceRequestDefaultTypeInternal _UnregisterDataSourceRequest_default_instance_;
+extern const ::google::protobuf::internal::ClassDataFull UnregisterDataSourceRequest_class_data_;
+class UnregisterDataSourceResponse;
+struct UnregisterDataSourceResponseDefaultTypeInternal;
+extern UnregisterDataSourceResponseDefaultTypeInternal _UnregisterDataSourceResponse_default_instance_;
+extern const ::google::protobuf::internal::ClassDataFull UnregisterDataSourceResponse_class_data_;
 class VerifyConfigRequest;
 struct VerifyConfigRequestDefaultTypeInternal;
 extern VerifyConfigRequestDefaultTypeInternal _VerifyConfigRequest_default_instance_;
@@ -485,30 +485,30 @@ class VerifyConfigRequest final : public ::google::protobuf::Message
 extern const ::google::protobuf::internal::ClassDataFull VerifyConfigRequest_class_data_;
 // -------------------------------------------------------------------
 
-class GetDataSourcesResponse final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:szconfig.GetDataSourcesResponse) */ {
+class UnregisterDataSourceResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:szconfig.UnregisterDataSourceResponse) */ {
  public:
-  inline GetDataSourcesResponse() : GetDataSourcesResponse(nullptr) {}
-  ~GetDataSourcesResponse() PROTOBUF_FINAL;
+  inline UnregisterDataSourceResponse() : UnregisterDataSourceResponse(nullptr) {}
+  ~UnregisterDataSourceResponse() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(GetDataSourcesResponse* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
+  void operator delete(UnregisterDataSourceResponse* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(GetDataSourcesResponse));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(UnregisterDataSourceResponse));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR GetDataSourcesResponse(::google::protobuf::internal::ConstantInitialized);
+  explicit PROTOBUF_CONSTEXPR UnregisterDataSourceResponse(::google::protobuf::internal::ConstantInitialized);
 
-  inline GetDataSourcesResponse(const GetDataSourcesResponse& from) : GetDataSourcesResponse(nullptr, from) {}
-  inline GetDataSourcesResponse(GetDataSourcesResponse&& from) noexcept
-      : GetDataSourcesResponse(nullptr, std::move(from)) {}
-  inline GetDataSourcesResponse& operator=(const GetDataSourcesResponse& from) {
+  inline UnregisterDataSourceResponse(const UnregisterDataSourceResponse& from) : UnregisterDataSourceResponse(nullptr, from) {}
+  inline UnregisterDataSourceResponse(UnregisterDataSourceResponse&& from) noexcept
+      : UnregisterDataSourceResponse(nullptr, std::move(from)) {}
+  inline UnregisterDataSourceResponse& operator=(const UnregisterDataSourceResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline GetDataSourcesResponse& operator=(GetDataSourcesResponse&& from) noexcept {
+  inline UnregisterDataSourceResponse& operator=(UnregisterDataSourceResponse&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -536,405 +536,13 @@ class GetDataSourcesResponse final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const GetDataSourcesResponse& default_instance() {
-    return *reinterpret_cast<const GetDataSourcesResponse*>(
-        &_GetDataSourcesResponse_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages = 5;
-  friend void swap(GetDataSourcesResponse& a, GetDataSourcesResponse& b) { a.Swap(&b); }
-  inline void Swap(GetDataSourcesResponse* PROTOBUF_NONNULL other) {
-    if (other == this) return;
-    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(GetDataSourcesResponse* PROTOBUF_NONNULL other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  GetDataSourcesResponse* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<GetDataSourcesResponse>(arena);
-  }
-  using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const GetDataSourcesResponse& from);
-  using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const GetDataSourcesResponse& from) { GetDataSourcesResponse::MergeImpl(*this, from); }
-
-  private:
-  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
-                        const ::google::protobuf::MessageLite& from_msg);
-
-  public:
-  bool IsInitialized() const {
-    return true;
-  }
-  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
-  #if defined(PROTOBUF_CUSTOM_VTABLE)
-  private:
-  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
-  static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
-
-  public:
-  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
-  ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
-    return _InternalSerialize(*this, target, stream);
-  }
-  #else   // PROTOBUF_CUSTOM_VTABLE
-  ::size_t ByteSizeLong() const final;
-  ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
-  #endif  // PROTOBUF_CUSTOM_VTABLE
-  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  static void SharedDtor(MessageLite& self);
-  void InternalSwap(GetDataSourcesResponse* PROTOBUF_NONNULL other);
- private:
-  template <typename T>
-  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "szconfig.GetDataSourcesResponse"; }
-
- protected:
-  explicit GetDataSourcesResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  GetDataSourcesResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const GetDataSourcesResponse& from);
-  GetDataSourcesResponse(
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, GetDataSourcesResponse&& from) noexcept
-      : GetDataSourcesResponse(arena) {
-    *this = ::std::move(from);
-  }
-  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
-  static void* PROTOBUF_NONNULL PlacementNew_(
-      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  static constexpr auto InternalNewImpl_();
-
- public:
-  static constexpr auto InternalGenerateClassData_();
-
-  ::google::protobuf::Metadata GetMetadata() const;
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-  enum : int {
-    kResultFieldNumber = 1,
-  };
-  // string result = 1;
-  void clear_result() ;
-  const std::string& result() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_result(Arg_&& arg, Args_... args);
-  std::string* PROTOBUF_NONNULL mutable_result();
-  [[nodiscard]] std::string* PROTOBUF_NULLABLE release_result();
-  void set_allocated_result(std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const std::string& _internal_result() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
-  std::string* PROTOBUF_NONNULL _internal_mutable_result();
-
-  public:
-  // @@protoc_insertion_point(class_scope:szconfig.GetDataSourcesResponse)
- private:
-  class _Internal;
-  friend class ::google::protobuf::internal::TcParser;
-  static const ::google::protobuf::internal::TcParseTable<0, 1,
-                                   0, 46,
-                                   2>
-      _table_;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-    inline explicit constexpr Impl_(::google::protobuf::internal::ConstantInitialized) noexcept;
-    inline explicit Impl_(
-        ::google::protobuf::internal::InternalVisibility visibility,
-        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-    inline explicit Impl_(
-        ::google::protobuf::internal::InternalVisibility visibility,
-        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-        const GetDataSourcesResponse& from_msg);
-    ::google::protobuf::internal::HasBits<1> _has_bits_;
-    ::google::protobuf::internal::CachedSize _cached_size_;
-    ::google::protobuf::internal::ArenaStringPtr result_;
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_szconfig_2eproto;
-};
-
-extern const ::google::protobuf::internal::ClassDataFull GetDataSourcesResponse_class_data_;
-// -------------------------------------------------------------------
-
-class GetDataSourcesRequest final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:szconfig.GetDataSourcesRequest) */ {
- public:
-  inline GetDataSourcesRequest() : GetDataSourcesRequest(nullptr) {}
-  ~GetDataSourcesRequest() PROTOBUF_FINAL;
-
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(GetDataSourcesRequest* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
-    SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(GetDataSourcesRequest));
-  }
-#endif
-
-  template <typename = void>
-  explicit PROTOBUF_CONSTEXPR GetDataSourcesRequest(::google::protobuf::internal::ConstantInitialized);
-
-  inline GetDataSourcesRequest(const GetDataSourcesRequest& from) : GetDataSourcesRequest(nullptr, from) {}
-  inline GetDataSourcesRequest(GetDataSourcesRequest&& from) noexcept
-      : GetDataSourcesRequest(nullptr, std::move(from)) {}
-  inline GetDataSourcesRequest& operator=(const GetDataSourcesRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline GetDataSourcesRequest& operator=(GetDataSourcesRequest&& from) noexcept {
-    if (this == &from) return *this;
-    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const GetDataSourcesRequest& default_instance() {
-    return *reinterpret_cast<const GetDataSourcesRequest*>(
-        &_GetDataSourcesRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages = 4;
-  friend void swap(GetDataSourcesRequest& a, GetDataSourcesRequest& b) { a.Swap(&b); }
-  inline void Swap(GetDataSourcesRequest* PROTOBUF_NONNULL other) {
-    if (other == this) return;
-    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(GetDataSourcesRequest* PROTOBUF_NONNULL other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  GetDataSourcesRequest* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<GetDataSourcesRequest>(arena);
-  }
-  using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const GetDataSourcesRequest& from);
-  using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const GetDataSourcesRequest& from) { GetDataSourcesRequest::MergeImpl(*this, from); }
-
-  private:
-  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
-                        const ::google::protobuf::MessageLite& from_msg);
-
-  public:
-  bool IsInitialized() const {
-    return true;
-  }
-  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
-  #if defined(PROTOBUF_CUSTOM_VTABLE)
-  private:
-  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
-  static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
-
-  public:
-  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
-  ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
-    return _InternalSerialize(*this, target, stream);
-  }
-  #else   // PROTOBUF_CUSTOM_VTABLE
-  ::size_t ByteSizeLong() const final;
-  ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
-  #endif  // PROTOBUF_CUSTOM_VTABLE
-  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  static void SharedDtor(MessageLite& self);
-  void InternalSwap(GetDataSourcesRequest* PROTOBUF_NONNULL other);
- private:
-  template <typename T>
-  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "szconfig.GetDataSourcesRequest"; }
-
- protected:
-  explicit GetDataSourcesRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  GetDataSourcesRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const GetDataSourcesRequest& from);
-  GetDataSourcesRequest(
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, GetDataSourcesRequest&& from) noexcept
-      : GetDataSourcesRequest(arena) {
-    *this = ::std::move(from);
-  }
-  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
-  static void* PROTOBUF_NONNULL PlacementNew_(
-      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  static constexpr auto InternalNewImpl_();
-
- public:
-  static constexpr auto InternalGenerateClassData_();
-
-  ::google::protobuf::Metadata GetMetadata() const;
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-  enum : int {
-    kConfigDefinitionFieldNumber = 1,
-  };
-  // string config_definition = 1;
-  void clear_config_definition() ;
-  const std::string& config_definition() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_config_definition(Arg_&& arg, Args_... args);
-  std::string* PROTOBUF_NONNULL mutable_config_definition();
-  [[nodiscard]] std::string* PROTOBUF_NULLABLE release_config_definition();
-  void set_allocated_config_definition(std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const std::string& _internal_config_definition() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_config_definition(const std::string& value);
-  std::string* PROTOBUF_NONNULL _internal_mutable_config_definition();
-
-  public:
-  // @@protoc_insertion_point(class_scope:szconfig.GetDataSourcesRequest)
- private:
-  class _Internal;
-  friend class ::google::protobuf::internal::TcParser;
-  static const ::google::protobuf::internal::TcParseTable<0, 1,
-                                   0, 56,
-                                   2>
-      _table_;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-    inline explicit constexpr Impl_(::google::protobuf::internal::ConstantInitialized) noexcept;
-    inline explicit Impl_(
-        ::google::protobuf::internal::InternalVisibility visibility,
-        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-    inline explicit Impl_(
-        ::google::protobuf::internal::InternalVisibility visibility,
-        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-        const GetDataSourcesRequest& from_msg);
-    ::google::protobuf::internal::HasBits<1> _has_bits_;
-    ::google::protobuf::internal::CachedSize _cached_size_;
-    ::google::protobuf::internal::ArenaStringPtr config_definition_;
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_szconfig_2eproto;
-};
-
-extern const ::google::protobuf::internal::ClassDataFull GetDataSourcesRequest_class_data_;
-// -------------------------------------------------------------------
-
-class DeleteDataSourceResponse final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:szconfig.DeleteDataSourceResponse) */ {
- public:
-  inline DeleteDataSourceResponse() : DeleteDataSourceResponse(nullptr) {}
-  ~DeleteDataSourceResponse() PROTOBUF_FINAL;
-
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(DeleteDataSourceResponse* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
-    SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(DeleteDataSourceResponse));
-  }
-#endif
-
-  template <typename = void>
-  explicit PROTOBUF_CONSTEXPR DeleteDataSourceResponse(::google::protobuf::internal::ConstantInitialized);
-
-  inline DeleteDataSourceResponse(const DeleteDataSourceResponse& from) : DeleteDataSourceResponse(nullptr, from) {}
-  inline DeleteDataSourceResponse(DeleteDataSourceResponse&& from) noexcept
-      : DeleteDataSourceResponse(nullptr, std::move(from)) {}
-  inline DeleteDataSourceResponse& operator=(const DeleteDataSourceResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline DeleteDataSourceResponse& operator=(DeleteDataSourceResponse&& from) noexcept {
-    if (this == &from) return *this;
-    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const DeleteDataSourceResponse& default_instance() {
-    return *reinterpret_cast<const DeleteDataSourceResponse*>(
-        &_DeleteDataSourceResponse_default_instance_);
+  static const UnregisterDataSourceResponse& default_instance() {
+    return *reinterpret_cast<const UnregisterDataSourceResponse*>(
+        &_UnregisterDataSourceResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 3;
-  friend void swap(DeleteDataSourceResponse& a, DeleteDataSourceResponse& b) { a.Swap(&b); }
-  inline void Swap(DeleteDataSourceResponse* PROTOBUF_NONNULL other) {
+  friend void swap(UnregisterDataSourceResponse& a, UnregisterDataSourceResponse& b) { a.Swap(&b); }
+  inline void Swap(UnregisterDataSourceResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -942,7 +550,7 @@ class DeleteDataSourceResponse final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(DeleteDataSourceResponse* PROTOBUF_NONNULL other) {
+  void UnsafeArenaSwap(UnregisterDataSourceResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -950,13 +558,13 @@ class DeleteDataSourceResponse final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  DeleteDataSourceResponse* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<DeleteDataSourceResponse>(arena);
+  UnregisterDataSourceResponse* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<UnregisterDataSourceResponse>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const DeleteDataSourceResponse& from);
+  void CopyFrom(const UnregisterDataSourceResponse& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const DeleteDataSourceResponse& from) { DeleteDataSourceResponse::MergeImpl(*this, from); }
+  void MergeFrom(const UnregisterDataSourceResponse& from) { UnregisterDataSourceResponse::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(::google::protobuf::MessageLite& to_msg,
@@ -992,18 +600,18 @@ class DeleteDataSourceResponse final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(DeleteDataSourceResponse* PROTOBUF_NONNULL other);
+  void InternalSwap(UnregisterDataSourceResponse* PROTOBUF_NONNULL other);
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "szconfig.DeleteDataSourceResponse"; }
+  static ::absl::string_view FullMessageName() { return "szconfig.UnregisterDataSourceResponse"; }
 
  protected:
-  explicit DeleteDataSourceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  DeleteDataSourceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const DeleteDataSourceResponse& from);
-  DeleteDataSourceResponse(
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, DeleteDataSourceResponse&& from) noexcept
-      : DeleteDataSourceResponse(arena) {
+  explicit UnregisterDataSourceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  UnregisterDataSourceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const UnregisterDataSourceResponse& from);
+  UnregisterDataSourceResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, UnregisterDataSourceResponse&& from) noexcept
+      : UnregisterDataSourceResponse(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
@@ -1053,12 +661,12 @@ class DeleteDataSourceResponse final : public ::google::protobuf::Message
   std::string* PROTOBUF_NONNULL _internal_mutable_config_definition();
 
   public:
-  // @@protoc_insertion_point(class_scope:szconfig.DeleteDataSourceResponse)
+  // @@protoc_insertion_point(class_scope:szconfig.UnregisterDataSourceResponse)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<1, 2,
-                                   0, 65,
+                                   0, 69,
                                    2>
       _table_;
 
@@ -1076,7 +684,7 @@ class DeleteDataSourceResponse final : public ::google::protobuf::Message
     inline explicit Impl_(
         ::google::protobuf::internal::InternalVisibility visibility,
         ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-        const DeleteDataSourceResponse& from_msg);
+        const UnregisterDataSourceResponse& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr result_;
@@ -1087,33 +695,33 @@ class DeleteDataSourceResponse final : public ::google::protobuf::Message
   friend struct ::TableStruct_szconfig_2eproto;
 };
 
-extern const ::google::protobuf::internal::ClassDataFull DeleteDataSourceResponse_class_data_;
+extern const ::google::protobuf::internal::ClassDataFull UnregisterDataSourceResponse_class_data_;
 // -------------------------------------------------------------------
 
-class DeleteDataSourceRequest final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:szconfig.DeleteDataSourceRequest) */ {
+class UnregisterDataSourceRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:szconfig.UnregisterDataSourceRequest) */ {
  public:
-  inline DeleteDataSourceRequest() : DeleteDataSourceRequest(nullptr) {}
-  ~DeleteDataSourceRequest() PROTOBUF_FINAL;
+  inline UnregisterDataSourceRequest() : UnregisterDataSourceRequest(nullptr) {}
+  ~UnregisterDataSourceRequest() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(DeleteDataSourceRequest* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
+  void operator delete(UnregisterDataSourceRequest* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(DeleteDataSourceRequest));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(UnregisterDataSourceRequest));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR DeleteDataSourceRequest(::google::protobuf::internal::ConstantInitialized);
+  explicit PROTOBUF_CONSTEXPR UnregisterDataSourceRequest(::google::protobuf::internal::ConstantInitialized);
 
-  inline DeleteDataSourceRequest(const DeleteDataSourceRequest& from) : DeleteDataSourceRequest(nullptr, from) {}
-  inline DeleteDataSourceRequest(DeleteDataSourceRequest&& from) noexcept
-      : DeleteDataSourceRequest(nullptr, std::move(from)) {}
-  inline DeleteDataSourceRequest& operator=(const DeleteDataSourceRequest& from) {
+  inline UnregisterDataSourceRequest(const UnregisterDataSourceRequest& from) : UnregisterDataSourceRequest(nullptr, from) {}
+  inline UnregisterDataSourceRequest(UnregisterDataSourceRequest&& from) noexcept
+      : UnregisterDataSourceRequest(nullptr, std::move(from)) {}
+  inline UnregisterDataSourceRequest& operator=(const UnregisterDataSourceRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline DeleteDataSourceRequest& operator=(DeleteDataSourceRequest&& from) noexcept {
+  inline UnregisterDataSourceRequest& operator=(UnregisterDataSourceRequest&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -1141,13 +749,13 @@ class DeleteDataSourceRequest final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const DeleteDataSourceRequest& default_instance() {
-    return *reinterpret_cast<const DeleteDataSourceRequest*>(
-        &_DeleteDataSourceRequest_default_instance_);
+  static const UnregisterDataSourceRequest& default_instance() {
+    return *reinterpret_cast<const UnregisterDataSourceRequest*>(
+        &_UnregisterDataSourceRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 2;
-  friend void swap(DeleteDataSourceRequest& a, DeleteDataSourceRequest& b) { a.Swap(&b); }
-  inline void Swap(DeleteDataSourceRequest* PROTOBUF_NONNULL other) {
+  friend void swap(UnregisterDataSourceRequest& a, UnregisterDataSourceRequest& b) { a.Swap(&b); }
+  inline void Swap(UnregisterDataSourceRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -1155,7 +763,7 @@ class DeleteDataSourceRequest final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(DeleteDataSourceRequest* PROTOBUF_NONNULL other) {
+  void UnsafeArenaSwap(UnregisterDataSourceRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -1163,13 +771,13 @@ class DeleteDataSourceRequest final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  DeleteDataSourceRequest* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<DeleteDataSourceRequest>(arena);
+  UnregisterDataSourceRequest* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<UnregisterDataSourceRequest>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const DeleteDataSourceRequest& from);
+  void CopyFrom(const UnregisterDataSourceRequest& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const DeleteDataSourceRequest& from) { DeleteDataSourceRequest::MergeImpl(*this, from); }
+  void MergeFrom(const UnregisterDataSourceRequest& from) { UnregisterDataSourceRequest::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(::google::protobuf::MessageLite& to_msg,
@@ -1205,18 +813,18 @@ class DeleteDataSourceRequest final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(DeleteDataSourceRequest* PROTOBUF_NONNULL other);
+  void InternalSwap(UnregisterDataSourceRequest* PROTOBUF_NONNULL other);
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "szconfig.DeleteDataSourceRequest"; }
+  static ::absl::string_view FullMessageName() { return "szconfig.UnregisterDataSourceRequest"; }
 
  protected:
-  explicit DeleteDataSourceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  DeleteDataSourceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const DeleteDataSourceRequest& from);
-  DeleteDataSourceRequest(
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, DeleteDataSourceRequest&& from) noexcept
-      : DeleteDataSourceRequest(arena) {
+  explicit UnregisterDataSourceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  UnregisterDataSourceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const UnregisterDataSourceRequest& from);
+  UnregisterDataSourceRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, UnregisterDataSourceRequest&& from) noexcept
+      : UnregisterDataSourceRequest(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
@@ -1266,12 +874,12 @@ class DeleteDataSourceRequest final : public ::google::protobuf::Message
   std::string* PROTOBUF_NONNULL _internal_mutable_data_source_code();
 
   public:
-  // @@protoc_insertion_point(class_scope:szconfig.DeleteDataSourceRequest)
+  // @@protoc_insertion_point(class_scope:szconfig.UnregisterDataSourceRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<1, 2,
-                                   0, 74,
+                                   0, 78,
                                    2>
       _table_;
 
@@ -1289,7 +897,7 @@ class DeleteDataSourceRequest final : public ::google::protobuf::Message
     inline explicit Impl_(
         ::google::protobuf::internal::InternalVisibility visibility,
         ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-        const DeleteDataSourceRequest& from_msg);
+        const UnregisterDataSourceRequest& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr config_definition_;
@@ -1300,33 +908,33 @@ class DeleteDataSourceRequest final : public ::google::protobuf::Message
   friend struct ::TableStruct_szconfig_2eproto;
 };
 
-extern const ::google::protobuf::internal::ClassDataFull DeleteDataSourceRequest_class_data_;
+extern const ::google::protobuf::internal::ClassDataFull UnregisterDataSourceRequest_class_data_;
 // -------------------------------------------------------------------
 
-class AddDataSourceResponse final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:szconfig.AddDataSourceResponse) */ {
+class RegisterDataSourceResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:szconfig.RegisterDataSourceResponse) */ {
  public:
-  inline AddDataSourceResponse() : AddDataSourceResponse(nullptr) {}
-  ~AddDataSourceResponse() PROTOBUF_FINAL;
+  inline RegisterDataSourceResponse() : RegisterDataSourceResponse(nullptr) {}
+  ~RegisterDataSourceResponse() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(AddDataSourceResponse* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
+  void operator delete(RegisterDataSourceResponse* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(AddDataSourceResponse));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(RegisterDataSourceResponse));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR AddDataSourceResponse(::google::protobuf::internal::ConstantInitialized);
+  explicit PROTOBUF_CONSTEXPR RegisterDataSourceResponse(::google::protobuf::internal::ConstantInitialized);
 
-  inline AddDataSourceResponse(const AddDataSourceResponse& from) : AddDataSourceResponse(nullptr, from) {}
-  inline AddDataSourceResponse(AddDataSourceResponse&& from) noexcept
-      : AddDataSourceResponse(nullptr, std::move(from)) {}
-  inline AddDataSourceResponse& operator=(const AddDataSourceResponse& from) {
+  inline RegisterDataSourceResponse(const RegisterDataSourceResponse& from) : RegisterDataSourceResponse(nullptr, from) {}
+  inline RegisterDataSourceResponse(RegisterDataSourceResponse&& from) noexcept
+      : RegisterDataSourceResponse(nullptr, std::move(from)) {}
+  inline RegisterDataSourceResponse& operator=(const RegisterDataSourceResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AddDataSourceResponse& operator=(AddDataSourceResponse&& from) noexcept {
+  inline RegisterDataSourceResponse& operator=(RegisterDataSourceResponse&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -1354,13 +962,13 @@ class AddDataSourceResponse final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AddDataSourceResponse& default_instance() {
-    return *reinterpret_cast<const AddDataSourceResponse*>(
-        &_AddDataSourceResponse_default_instance_);
+  static const RegisterDataSourceResponse& default_instance() {
+    return *reinterpret_cast<const RegisterDataSourceResponse*>(
+        &_RegisterDataSourceResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 1;
-  friend void swap(AddDataSourceResponse& a, AddDataSourceResponse& b) { a.Swap(&b); }
-  inline void Swap(AddDataSourceResponse* PROTOBUF_NONNULL other) {
+  friend void swap(RegisterDataSourceResponse& a, RegisterDataSourceResponse& b) { a.Swap(&b); }
+  inline void Swap(RegisterDataSourceResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -1368,7 +976,7 @@ class AddDataSourceResponse final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AddDataSourceResponse* PROTOBUF_NONNULL other) {
+  void UnsafeArenaSwap(RegisterDataSourceResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -1376,13 +984,13 @@ class AddDataSourceResponse final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  AddDataSourceResponse* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<AddDataSourceResponse>(arena);
+  RegisterDataSourceResponse* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<RegisterDataSourceResponse>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const AddDataSourceResponse& from);
+  void CopyFrom(const RegisterDataSourceResponse& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const AddDataSourceResponse& from) { AddDataSourceResponse::MergeImpl(*this, from); }
+  void MergeFrom(const RegisterDataSourceResponse& from) { RegisterDataSourceResponse::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(::google::protobuf::MessageLite& to_msg,
@@ -1418,18 +1026,18 @@ class AddDataSourceResponse final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(AddDataSourceResponse* PROTOBUF_NONNULL other);
+  void InternalSwap(RegisterDataSourceResponse* PROTOBUF_NONNULL other);
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "szconfig.AddDataSourceResponse"; }
+  static ::absl::string_view FullMessageName() { return "szconfig.RegisterDataSourceResponse"; }
 
  protected:
-  explicit AddDataSourceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  AddDataSourceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const AddDataSourceResponse& from);
-  AddDataSourceResponse(
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, AddDataSourceResponse&& from) noexcept
-      : AddDataSourceResponse(arena) {
+  explicit RegisterDataSourceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  RegisterDataSourceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const RegisterDataSourceResponse& from);
+  RegisterDataSourceResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, RegisterDataSourceResponse&& from) noexcept
+      : RegisterDataSourceResponse(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
@@ -1479,12 +1087,12 @@ class AddDataSourceResponse final : public ::google::protobuf::Message
   std::string* PROTOBUF_NONNULL _internal_mutable_config_definition();
 
   public:
-  // @@protoc_insertion_point(class_scope:szconfig.AddDataSourceResponse)
+  // @@protoc_insertion_point(class_scope:szconfig.RegisterDataSourceResponse)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<1, 2,
-                                   0, 62,
+                                   0, 67,
                                    2>
       _table_;
 
@@ -1502,7 +1110,7 @@ class AddDataSourceResponse final : public ::google::protobuf::Message
     inline explicit Impl_(
         ::google::protobuf::internal::InternalVisibility visibility,
         ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-        const AddDataSourceResponse& from_msg);
+        const RegisterDataSourceResponse& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr result_;
@@ -1513,33 +1121,33 @@ class AddDataSourceResponse final : public ::google::protobuf::Message
   friend struct ::TableStruct_szconfig_2eproto;
 };
 
-extern const ::google::protobuf::internal::ClassDataFull AddDataSourceResponse_class_data_;
+extern const ::google::protobuf::internal::ClassDataFull RegisterDataSourceResponse_class_data_;
 // -------------------------------------------------------------------
 
-class AddDataSourceRequest final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:szconfig.AddDataSourceRequest) */ {
+class RegisterDataSourceRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:szconfig.RegisterDataSourceRequest) */ {
  public:
-  inline AddDataSourceRequest() : AddDataSourceRequest(nullptr) {}
-  ~AddDataSourceRequest() PROTOBUF_FINAL;
+  inline RegisterDataSourceRequest() : RegisterDataSourceRequest(nullptr) {}
+  ~RegisterDataSourceRequest() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(AddDataSourceRequest* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
+  void operator delete(RegisterDataSourceRequest* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(AddDataSourceRequest));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(RegisterDataSourceRequest));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR AddDataSourceRequest(::google::protobuf::internal::ConstantInitialized);
+  explicit PROTOBUF_CONSTEXPR RegisterDataSourceRequest(::google::protobuf::internal::ConstantInitialized);
 
-  inline AddDataSourceRequest(const AddDataSourceRequest& from) : AddDataSourceRequest(nullptr, from) {}
-  inline AddDataSourceRequest(AddDataSourceRequest&& from) noexcept
-      : AddDataSourceRequest(nullptr, std::move(from)) {}
-  inline AddDataSourceRequest& operator=(const AddDataSourceRequest& from) {
+  inline RegisterDataSourceRequest(const RegisterDataSourceRequest& from) : RegisterDataSourceRequest(nullptr, from) {}
+  inline RegisterDataSourceRequest(RegisterDataSourceRequest&& from) noexcept
+      : RegisterDataSourceRequest(nullptr, std::move(from)) {}
+  inline RegisterDataSourceRequest& operator=(const RegisterDataSourceRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AddDataSourceRequest& operator=(AddDataSourceRequest&& from) noexcept {
+  inline RegisterDataSourceRequest& operator=(RegisterDataSourceRequest&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -1567,13 +1175,13 @@ class AddDataSourceRequest final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const AddDataSourceRequest& default_instance() {
-    return *reinterpret_cast<const AddDataSourceRequest*>(
-        &_AddDataSourceRequest_default_instance_);
+  static const RegisterDataSourceRequest& default_instance() {
+    return *reinterpret_cast<const RegisterDataSourceRequest*>(
+        &_RegisterDataSourceRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 0;
-  friend void swap(AddDataSourceRequest& a, AddDataSourceRequest& b) { a.Swap(&b); }
-  inline void Swap(AddDataSourceRequest* PROTOBUF_NONNULL other) {
+  friend void swap(RegisterDataSourceRequest& a, RegisterDataSourceRequest& b) { a.Swap(&b); }
+  inline void Swap(RegisterDataSourceRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -1581,7 +1189,7 @@ class AddDataSourceRequest final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(AddDataSourceRequest* PROTOBUF_NONNULL other) {
+  void UnsafeArenaSwap(RegisterDataSourceRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -1589,13 +1197,13 @@ class AddDataSourceRequest final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  AddDataSourceRequest* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<AddDataSourceRequest>(arena);
+  RegisterDataSourceRequest* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<RegisterDataSourceRequest>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const AddDataSourceRequest& from);
+  void CopyFrom(const RegisterDataSourceRequest& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const AddDataSourceRequest& from) { AddDataSourceRequest::MergeImpl(*this, from); }
+  void MergeFrom(const RegisterDataSourceRequest& from) { RegisterDataSourceRequest::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(::google::protobuf::MessageLite& to_msg,
@@ -1631,18 +1239,18 @@ class AddDataSourceRequest final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(AddDataSourceRequest* PROTOBUF_NONNULL other);
+  void InternalSwap(RegisterDataSourceRequest* PROTOBUF_NONNULL other);
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "szconfig.AddDataSourceRequest"; }
+  static ::absl::string_view FullMessageName() { return "szconfig.RegisterDataSourceRequest"; }
 
  protected:
-  explicit AddDataSourceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  AddDataSourceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const AddDataSourceRequest& from);
-  AddDataSourceRequest(
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, AddDataSourceRequest&& from) noexcept
-      : AddDataSourceRequest(arena) {
+  explicit RegisterDataSourceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  RegisterDataSourceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const RegisterDataSourceRequest& from);
+  RegisterDataSourceRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, RegisterDataSourceRequest&& from) noexcept
+      : RegisterDataSourceRequest(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
@@ -1692,12 +1300,12 @@ class AddDataSourceRequest final : public ::google::protobuf::Message
   std::string* PROTOBUF_NONNULL _internal_mutable_data_source_code();
 
   public:
-  // @@protoc_insertion_point(class_scope:szconfig.AddDataSourceRequest)
+  // @@protoc_insertion_point(class_scope:szconfig.RegisterDataSourceRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<1, 2,
-                                   0, 71,
+                                   0, 76,
                                    2>
       _table_;
 
@@ -1715,7 +1323,7 @@ class AddDataSourceRequest final : public ::google::protobuf::Message
     inline explicit Impl_(
         ::google::protobuf::internal::InternalVisibility visibility,
         ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-        const AddDataSourceRequest& from_msg);
+        const RegisterDataSourceRequest& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr config_definition_;
@@ -1726,7 +1334,399 @@ class AddDataSourceRequest final : public ::google::protobuf::Message
   friend struct ::TableStruct_szconfig_2eproto;
 };
 
-extern const ::google::protobuf::internal::ClassDataFull AddDataSourceRequest_class_data_;
+extern const ::google::protobuf::internal::ClassDataFull RegisterDataSourceRequest_class_data_;
+// -------------------------------------------------------------------
+
+class GetDataSourceRegistryResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:szconfig.GetDataSourceRegistryResponse) */ {
+ public:
+  inline GetDataSourceRegistryResponse() : GetDataSourceRegistryResponse(nullptr) {}
+  ~GetDataSourceRegistryResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(GetDataSourceRegistryResponse* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(GetDataSourceRegistryResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR GetDataSourceRegistryResponse(::google::protobuf::internal::ConstantInitialized);
+
+  inline GetDataSourceRegistryResponse(const GetDataSourceRegistryResponse& from) : GetDataSourceRegistryResponse(nullptr, from) {}
+  inline GetDataSourceRegistryResponse(GetDataSourceRegistryResponse&& from) noexcept
+      : GetDataSourceRegistryResponse(nullptr, std::move(from)) {}
+  inline GetDataSourceRegistryResponse& operator=(const GetDataSourceRegistryResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetDataSourceRegistryResponse& operator=(GetDataSourceRegistryResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetDataSourceRegistryResponse& default_instance() {
+    return *reinterpret_cast<const GetDataSourceRegistryResponse*>(
+        &_GetDataSourceRegistryResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 5;
+  friend void swap(GetDataSourceRegistryResponse& a, GetDataSourceRegistryResponse& b) { a.Swap(&b); }
+  inline void Swap(GetDataSourceRegistryResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetDataSourceRegistryResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetDataSourceRegistryResponse* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<GetDataSourceRegistryResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const GetDataSourceRegistryResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const GetDataSourceRegistryResponse& from) { GetDataSourceRegistryResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(GetDataSourceRegistryResponse* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "szconfig.GetDataSourceRegistryResponse"; }
+
+ protected:
+  explicit GetDataSourceRegistryResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  GetDataSourceRegistryResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const GetDataSourceRegistryResponse& from);
+  GetDataSourceRegistryResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, GetDataSourceRegistryResponse&& from) noexcept
+      : GetDataSourceRegistryResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_();
+
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kResultFieldNumber = 1,
+  };
+  // string result = 1;
+  void clear_result() ;
+  const std::string& result() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_result(Arg_&& arg, Args_... args);
+  std::string* PROTOBUF_NONNULL mutable_result();
+  [[nodiscard]] std::string* PROTOBUF_NULLABLE release_result();
+  void set_allocated_result(std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const std::string& _internal_result() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
+  std::string* PROTOBUF_NONNULL _internal_mutable_result();
+
+  public:
+  // @@protoc_insertion_point(class_scope:szconfig.GetDataSourceRegistryResponse)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<0, 1,
+                                   0, 53,
+                                   2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const GetDataSourceRegistryResponse& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr result_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_szconfig_2eproto;
+};
+
+extern const ::google::protobuf::internal::ClassDataFull GetDataSourceRegistryResponse_class_data_;
+// -------------------------------------------------------------------
+
+class GetDataSourceRegistryRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:szconfig.GetDataSourceRegistryRequest) */ {
+ public:
+  inline GetDataSourceRegistryRequest() : GetDataSourceRegistryRequest(nullptr) {}
+  ~GetDataSourceRegistryRequest() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(GetDataSourceRegistryRequest* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(GetDataSourceRegistryRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR GetDataSourceRegistryRequest(::google::protobuf::internal::ConstantInitialized);
+
+  inline GetDataSourceRegistryRequest(const GetDataSourceRegistryRequest& from) : GetDataSourceRegistryRequest(nullptr, from) {}
+  inline GetDataSourceRegistryRequest(GetDataSourceRegistryRequest&& from) noexcept
+      : GetDataSourceRegistryRequest(nullptr, std::move(from)) {}
+  inline GetDataSourceRegistryRequest& operator=(const GetDataSourceRegistryRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetDataSourceRegistryRequest& operator=(GetDataSourceRegistryRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetDataSourceRegistryRequest& default_instance() {
+    return *reinterpret_cast<const GetDataSourceRegistryRequest*>(
+        &_GetDataSourceRegistryRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 4;
+  friend void swap(GetDataSourceRegistryRequest& a, GetDataSourceRegistryRequest& b) { a.Swap(&b); }
+  inline void Swap(GetDataSourceRegistryRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetDataSourceRegistryRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetDataSourceRegistryRequest* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<GetDataSourceRegistryRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const GetDataSourceRegistryRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const GetDataSourceRegistryRequest& from) { GetDataSourceRegistryRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(GetDataSourceRegistryRequest* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "szconfig.GetDataSourceRegistryRequest"; }
+
+ protected:
+  explicit GetDataSourceRegistryRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  GetDataSourceRegistryRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const GetDataSourceRegistryRequest& from);
+  GetDataSourceRegistryRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, GetDataSourceRegistryRequest&& from) noexcept
+      : GetDataSourceRegistryRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_();
+
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kConfigDefinitionFieldNumber = 1,
+  };
+  // string config_definition = 1;
+  void clear_config_definition() ;
+  const std::string& config_definition() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_config_definition(Arg_&& arg, Args_... args);
+  std::string* PROTOBUF_NONNULL mutable_config_definition();
+  [[nodiscard]] std::string* PROTOBUF_NULLABLE release_config_definition();
+  void set_allocated_config_definition(std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const std::string& _internal_config_definition() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_config_definition(const std::string& value);
+  std::string* PROTOBUF_NONNULL _internal_mutable_config_definition();
+
+  public:
+  // @@protoc_insertion_point(class_scope:szconfig.GetDataSourceRegistryRequest)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<0, 1,
+                                   0, 63,
+                                   2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const GetDataSourceRegistryRequest& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr config_definition_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_szconfig_2eproto;
+};
+
+extern const ::google::protobuf::internal::ClassDataFull GetDataSourceRegistryRequest_class_data_;
 
 // ===================================================================
 
@@ -1742,49 +1742,49 @@ extern const ::google::protobuf::internal::ClassDataFull AddDataSourceRequest_cl
 #endif  // __GNUC__
 // -------------------------------------------------------------------
 
-// AddDataSourceRequest
+// RegisterDataSourceRequest
 
 // string config_definition = 1;
-inline void AddDataSourceRequest::clear_config_definition() {
+inline void RegisterDataSourceRequest::clear_config_definition() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.config_definition_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& AddDataSourceRequest::config_definition() const
+inline const std::string& RegisterDataSourceRequest::config_definition() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szconfig.AddDataSourceRequest.config_definition)
+  // @@protoc_insertion_point(field_get:szconfig.RegisterDataSourceRequest.config_definition)
   return _internal_config_definition();
 }
 template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void AddDataSourceRequest::set_config_definition(Arg_&& arg, Args_... args) {
+PROTOBUF_ALWAYS_INLINE void RegisterDataSourceRequest::set_config_definition(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.config_definition_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szconfig.AddDataSourceRequest.config_definition)
+  // @@protoc_insertion_point(field_set:szconfig.RegisterDataSourceRequest.config_definition)
 }
-inline std::string* PROTOBUF_NONNULL AddDataSourceRequest::mutable_config_definition()
+inline std::string* PROTOBUF_NONNULL RegisterDataSourceRequest::mutable_config_definition()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_config_definition();
-  // @@protoc_insertion_point(field_mutable:szconfig.AddDataSourceRequest.config_definition)
+  // @@protoc_insertion_point(field_mutable:szconfig.RegisterDataSourceRequest.config_definition)
   return _s;
 }
-inline const std::string& AddDataSourceRequest::_internal_config_definition() const {
+inline const std::string& RegisterDataSourceRequest::_internal_config_definition() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.config_definition_.Get();
 }
-inline void AddDataSourceRequest::_internal_set_config_definition(const std::string& value) {
+inline void RegisterDataSourceRequest::_internal_set_config_definition(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.config_definition_.Set(value, GetArena());
 }
-inline std::string* PROTOBUF_NONNULL AddDataSourceRequest::_internal_mutable_config_definition() {
+inline std::string* PROTOBUF_NONNULL RegisterDataSourceRequest::_internal_mutable_config_definition() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.config_definition_.Mutable( GetArena());
 }
-inline std::string* PROTOBUF_NULLABLE AddDataSourceRequest::release_config_definition() {
+inline std::string* PROTOBUF_NULLABLE RegisterDataSourceRequest::release_config_definition() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:szconfig.AddDataSourceRequest.config_definition)
+  // @@protoc_insertion_point(field_release:szconfig.RegisterDataSourceRequest.config_definition)
   if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
     return nullptr;
   }
@@ -1795,7 +1795,7 @@ inline std::string* PROTOBUF_NULLABLE AddDataSourceRequest::release_config_defin
   }
   return released;
 }
-inline void AddDataSourceRequest::set_allocated_config_definition(std::string* PROTOBUF_NULLABLE value) {
+inline void RegisterDataSourceRequest::set_allocated_config_definition(std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
@@ -1806,50 +1806,50 @@ inline void AddDataSourceRequest::set_allocated_config_definition(std::string* P
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.config_definition_.IsDefault()) {
     _impl_.config_definition_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:szconfig.AddDataSourceRequest.config_definition)
+  // @@protoc_insertion_point(field_set_allocated:szconfig.RegisterDataSourceRequest.config_definition)
 }
 
 // string data_source_code = 2;
-inline void AddDataSourceRequest::clear_data_source_code() {
+inline void RegisterDataSourceRequest::clear_data_source_code() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.data_source_code_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& AddDataSourceRequest::data_source_code() const
+inline const std::string& RegisterDataSourceRequest::data_source_code() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szconfig.AddDataSourceRequest.data_source_code)
+  // @@protoc_insertion_point(field_get:szconfig.RegisterDataSourceRequest.data_source_code)
   return _internal_data_source_code();
 }
 template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void AddDataSourceRequest::set_data_source_code(Arg_&& arg, Args_... args) {
+PROTOBUF_ALWAYS_INLINE void RegisterDataSourceRequest::set_data_source_code(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.data_source_code_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szconfig.AddDataSourceRequest.data_source_code)
+  // @@protoc_insertion_point(field_set:szconfig.RegisterDataSourceRequest.data_source_code)
 }
-inline std::string* PROTOBUF_NONNULL AddDataSourceRequest::mutable_data_source_code()
+inline std::string* PROTOBUF_NONNULL RegisterDataSourceRequest::mutable_data_source_code()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_data_source_code();
-  // @@protoc_insertion_point(field_mutable:szconfig.AddDataSourceRequest.data_source_code)
+  // @@protoc_insertion_point(field_mutable:szconfig.RegisterDataSourceRequest.data_source_code)
   return _s;
 }
-inline const std::string& AddDataSourceRequest::_internal_data_source_code() const {
+inline const std::string& RegisterDataSourceRequest::_internal_data_source_code() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.data_source_code_.Get();
 }
-inline void AddDataSourceRequest::_internal_set_data_source_code(const std::string& value) {
+inline void RegisterDataSourceRequest::_internal_set_data_source_code(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.data_source_code_.Set(value, GetArena());
 }
-inline std::string* PROTOBUF_NONNULL AddDataSourceRequest::_internal_mutable_data_source_code() {
+inline std::string* PROTOBUF_NONNULL RegisterDataSourceRequest::_internal_mutable_data_source_code() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.data_source_code_.Mutable( GetArena());
 }
-inline std::string* PROTOBUF_NULLABLE AddDataSourceRequest::release_data_source_code() {
+inline std::string* PROTOBUF_NULLABLE RegisterDataSourceRequest::release_data_source_code() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:szconfig.AddDataSourceRequest.data_source_code)
+  // @@protoc_insertion_point(field_release:szconfig.RegisterDataSourceRequest.data_source_code)
   if ((_impl_._has_bits_[0] & 0x00000002u) == 0) {
     return nullptr;
   }
@@ -1860,7 +1860,7 @@ inline std::string* PROTOBUF_NULLABLE AddDataSourceRequest::release_data_source_
   }
   return released;
 }
-inline void AddDataSourceRequest::set_allocated_data_source_code(std::string* PROTOBUF_NULLABLE value) {
+inline void RegisterDataSourceRequest::set_allocated_data_source_code(std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
@@ -1871,54 +1871,54 @@ inline void AddDataSourceRequest::set_allocated_data_source_code(std::string* PR
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.data_source_code_.IsDefault()) {
     _impl_.data_source_code_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:szconfig.AddDataSourceRequest.data_source_code)
+  // @@protoc_insertion_point(field_set_allocated:szconfig.RegisterDataSourceRequest.data_source_code)
 }
 
 // -------------------------------------------------------------------
 
-// AddDataSourceResponse
+// RegisterDataSourceResponse
 
 // string result = 1;
-inline void AddDataSourceResponse::clear_result() {
+inline void RegisterDataSourceResponse::clear_result() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.result_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& AddDataSourceResponse::result() const
+inline const std::string& RegisterDataSourceResponse::result() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szconfig.AddDataSourceResponse.result)
+  // @@protoc_insertion_point(field_get:szconfig.RegisterDataSourceResponse.result)
   return _internal_result();
 }
 template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void AddDataSourceResponse::set_result(Arg_&& arg, Args_... args) {
+PROTOBUF_ALWAYS_INLINE void RegisterDataSourceResponse::set_result(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.result_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szconfig.AddDataSourceResponse.result)
+  // @@protoc_insertion_point(field_set:szconfig.RegisterDataSourceResponse.result)
 }
-inline std::string* PROTOBUF_NONNULL AddDataSourceResponse::mutable_result()
+inline std::string* PROTOBUF_NONNULL RegisterDataSourceResponse::mutable_result()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:szconfig.AddDataSourceResponse.result)
+  // @@protoc_insertion_point(field_mutable:szconfig.RegisterDataSourceResponse.result)
   return _s;
 }
-inline const std::string& AddDataSourceResponse::_internal_result() const {
+inline const std::string& RegisterDataSourceResponse::_internal_result() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.result_.Get();
 }
-inline void AddDataSourceResponse::_internal_set_result(const std::string& value) {
+inline void RegisterDataSourceResponse::_internal_set_result(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.result_.Set(value, GetArena());
 }
-inline std::string* PROTOBUF_NONNULL AddDataSourceResponse::_internal_mutable_result() {
+inline std::string* PROTOBUF_NONNULL RegisterDataSourceResponse::_internal_mutable_result() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.result_.Mutable( GetArena());
 }
-inline std::string* PROTOBUF_NULLABLE AddDataSourceResponse::release_result() {
+inline std::string* PROTOBUF_NULLABLE RegisterDataSourceResponse::release_result() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:szconfig.AddDataSourceResponse.result)
+  // @@protoc_insertion_point(field_release:szconfig.RegisterDataSourceResponse.result)
   if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
     return nullptr;
   }
@@ -1929,7 +1929,7 @@ inline std::string* PROTOBUF_NULLABLE AddDataSourceResponse::release_result() {
   }
   return released;
 }
-inline void AddDataSourceResponse::set_allocated_result(std::string* PROTOBUF_NULLABLE value) {
+inline void RegisterDataSourceResponse::set_allocated_result(std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
@@ -1940,50 +1940,50 @@ inline void AddDataSourceResponse::set_allocated_result(std::string* PROTOBUF_NU
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.result_.IsDefault()) {
     _impl_.result_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:szconfig.AddDataSourceResponse.result)
+  // @@protoc_insertion_point(field_set_allocated:szconfig.RegisterDataSourceResponse.result)
 }
 
 // string config_definition = 2;
-inline void AddDataSourceResponse::clear_config_definition() {
+inline void RegisterDataSourceResponse::clear_config_definition() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.config_definition_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& AddDataSourceResponse::config_definition() const
+inline const std::string& RegisterDataSourceResponse::config_definition() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szconfig.AddDataSourceResponse.config_definition)
+  // @@protoc_insertion_point(field_get:szconfig.RegisterDataSourceResponse.config_definition)
   return _internal_config_definition();
 }
 template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void AddDataSourceResponse::set_config_definition(Arg_&& arg, Args_... args) {
+PROTOBUF_ALWAYS_INLINE void RegisterDataSourceResponse::set_config_definition(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.config_definition_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szconfig.AddDataSourceResponse.config_definition)
+  // @@protoc_insertion_point(field_set:szconfig.RegisterDataSourceResponse.config_definition)
 }
-inline std::string* PROTOBUF_NONNULL AddDataSourceResponse::mutable_config_definition()
+inline std::string* PROTOBUF_NONNULL RegisterDataSourceResponse::mutable_config_definition()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_config_definition();
-  // @@protoc_insertion_point(field_mutable:szconfig.AddDataSourceResponse.config_definition)
+  // @@protoc_insertion_point(field_mutable:szconfig.RegisterDataSourceResponse.config_definition)
   return _s;
 }
-inline const std::string& AddDataSourceResponse::_internal_config_definition() const {
+inline const std::string& RegisterDataSourceResponse::_internal_config_definition() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.config_definition_.Get();
 }
-inline void AddDataSourceResponse::_internal_set_config_definition(const std::string& value) {
+inline void RegisterDataSourceResponse::_internal_set_config_definition(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.config_definition_.Set(value, GetArena());
 }
-inline std::string* PROTOBUF_NONNULL AddDataSourceResponse::_internal_mutable_config_definition() {
+inline std::string* PROTOBUF_NONNULL RegisterDataSourceResponse::_internal_mutable_config_definition() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.config_definition_.Mutable( GetArena());
 }
-inline std::string* PROTOBUF_NULLABLE AddDataSourceResponse::release_config_definition() {
+inline std::string* PROTOBUF_NULLABLE RegisterDataSourceResponse::release_config_definition() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:szconfig.AddDataSourceResponse.config_definition)
+  // @@protoc_insertion_point(field_release:szconfig.RegisterDataSourceResponse.config_definition)
   if ((_impl_._has_bits_[0] & 0x00000002u) == 0) {
     return nullptr;
   }
@@ -1994,7 +1994,7 @@ inline std::string* PROTOBUF_NULLABLE AddDataSourceResponse::release_config_defi
   }
   return released;
 }
-inline void AddDataSourceResponse::set_allocated_config_definition(std::string* PROTOBUF_NULLABLE value) {
+inline void RegisterDataSourceResponse::set_allocated_config_definition(std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
@@ -2005,54 +2005,54 @@ inline void AddDataSourceResponse::set_allocated_config_definition(std::string* 
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.config_definition_.IsDefault()) {
     _impl_.config_definition_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:szconfig.AddDataSourceResponse.config_definition)
+  // @@protoc_insertion_point(field_set_allocated:szconfig.RegisterDataSourceResponse.config_definition)
 }
 
 // -------------------------------------------------------------------
 
-// DeleteDataSourceRequest
+// UnregisterDataSourceRequest
 
 // string config_definition = 1;
-inline void DeleteDataSourceRequest::clear_config_definition() {
+inline void UnregisterDataSourceRequest::clear_config_definition() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.config_definition_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& DeleteDataSourceRequest::config_definition() const
+inline const std::string& UnregisterDataSourceRequest::config_definition() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szconfig.DeleteDataSourceRequest.config_definition)
+  // @@protoc_insertion_point(field_get:szconfig.UnregisterDataSourceRequest.config_definition)
   return _internal_config_definition();
 }
 template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void DeleteDataSourceRequest::set_config_definition(Arg_&& arg, Args_... args) {
+PROTOBUF_ALWAYS_INLINE void UnregisterDataSourceRequest::set_config_definition(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.config_definition_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szconfig.DeleteDataSourceRequest.config_definition)
+  // @@protoc_insertion_point(field_set:szconfig.UnregisterDataSourceRequest.config_definition)
 }
-inline std::string* PROTOBUF_NONNULL DeleteDataSourceRequest::mutable_config_definition()
+inline std::string* PROTOBUF_NONNULL UnregisterDataSourceRequest::mutable_config_definition()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_config_definition();
-  // @@protoc_insertion_point(field_mutable:szconfig.DeleteDataSourceRequest.config_definition)
+  // @@protoc_insertion_point(field_mutable:szconfig.UnregisterDataSourceRequest.config_definition)
   return _s;
 }
-inline const std::string& DeleteDataSourceRequest::_internal_config_definition() const {
+inline const std::string& UnregisterDataSourceRequest::_internal_config_definition() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.config_definition_.Get();
 }
-inline void DeleteDataSourceRequest::_internal_set_config_definition(const std::string& value) {
+inline void UnregisterDataSourceRequest::_internal_set_config_definition(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.config_definition_.Set(value, GetArena());
 }
-inline std::string* PROTOBUF_NONNULL DeleteDataSourceRequest::_internal_mutable_config_definition() {
+inline std::string* PROTOBUF_NONNULL UnregisterDataSourceRequest::_internal_mutable_config_definition() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.config_definition_.Mutable( GetArena());
 }
-inline std::string* PROTOBUF_NULLABLE DeleteDataSourceRequest::release_config_definition() {
+inline std::string* PROTOBUF_NULLABLE UnregisterDataSourceRequest::release_config_definition() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:szconfig.DeleteDataSourceRequest.config_definition)
+  // @@protoc_insertion_point(field_release:szconfig.UnregisterDataSourceRequest.config_definition)
   if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
     return nullptr;
   }
@@ -2063,7 +2063,7 @@ inline std::string* PROTOBUF_NULLABLE DeleteDataSourceRequest::release_config_de
   }
   return released;
 }
-inline void DeleteDataSourceRequest::set_allocated_config_definition(std::string* PROTOBUF_NULLABLE value) {
+inline void UnregisterDataSourceRequest::set_allocated_config_definition(std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
@@ -2074,50 +2074,50 @@ inline void DeleteDataSourceRequest::set_allocated_config_definition(std::string
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.config_definition_.IsDefault()) {
     _impl_.config_definition_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:szconfig.DeleteDataSourceRequest.config_definition)
+  // @@protoc_insertion_point(field_set_allocated:szconfig.UnregisterDataSourceRequest.config_definition)
 }
 
 // string data_source_code = 2;
-inline void DeleteDataSourceRequest::clear_data_source_code() {
+inline void UnregisterDataSourceRequest::clear_data_source_code() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.data_source_code_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& DeleteDataSourceRequest::data_source_code() const
+inline const std::string& UnregisterDataSourceRequest::data_source_code() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szconfig.DeleteDataSourceRequest.data_source_code)
+  // @@protoc_insertion_point(field_get:szconfig.UnregisterDataSourceRequest.data_source_code)
   return _internal_data_source_code();
 }
 template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void DeleteDataSourceRequest::set_data_source_code(Arg_&& arg, Args_... args) {
+PROTOBUF_ALWAYS_INLINE void UnregisterDataSourceRequest::set_data_source_code(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.data_source_code_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szconfig.DeleteDataSourceRequest.data_source_code)
+  // @@protoc_insertion_point(field_set:szconfig.UnregisterDataSourceRequest.data_source_code)
 }
-inline std::string* PROTOBUF_NONNULL DeleteDataSourceRequest::mutable_data_source_code()
+inline std::string* PROTOBUF_NONNULL UnregisterDataSourceRequest::mutable_data_source_code()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_data_source_code();
-  // @@protoc_insertion_point(field_mutable:szconfig.DeleteDataSourceRequest.data_source_code)
+  // @@protoc_insertion_point(field_mutable:szconfig.UnregisterDataSourceRequest.data_source_code)
   return _s;
 }
-inline const std::string& DeleteDataSourceRequest::_internal_data_source_code() const {
+inline const std::string& UnregisterDataSourceRequest::_internal_data_source_code() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.data_source_code_.Get();
 }
-inline void DeleteDataSourceRequest::_internal_set_data_source_code(const std::string& value) {
+inline void UnregisterDataSourceRequest::_internal_set_data_source_code(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.data_source_code_.Set(value, GetArena());
 }
-inline std::string* PROTOBUF_NONNULL DeleteDataSourceRequest::_internal_mutable_data_source_code() {
+inline std::string* PROTOBUF_NONNULL UnregisterDataSourceRequest::_internal_mutable_data_source_code() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.data_source_code_.Mutable( GetArena());
 }
-inline std::string* PROTOBUF_NULLABLE DeleteDataSourceRequest::release_data_source_code() {
+inline std::string* PROTOBUF_NULLABLE UnregisterDataSourceRequest::release_data_source_code() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:szconfig.DeleteDataSourceRequest.data_source_code)
+  // @@protoc_insertion_point(field_release:szconfig.UnregisterDataSourceRequest.data_source_code)
   if ((_impl_._has_bits_[0] & 0x00000002u) == 0) {
     return nullptr;
   }
@@ -2128,7 +2128,7 @@ inline std::string* PROTOBUF_NULLABLE DeleteDataSourceRequest::release_data_sour
   }
   return released;
 }
-inline void DeleteDataSourceRequest::set_allocated_data_source_code(std::string* PROTOBUF_NULLABLE value) {
+inline void UnregisterDataSourceRequest::set_allocated_data_source_code(std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
@@ -2139,54 +2139,54 @@ inline void DeleteDataSourceRequest::set_allocated_data_source_code(std::string*
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.data_source_code_.IsDefault()) {
     _impl_.data_source_code_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:szconfig.DeleteDataSourceRequest.data_source_code)
+  // @@protoc_insertion_point(field_set_allocated:szconfig.UnregisterDataSourceRequest.data_source_code)
 }
 
 // -------------------------------------------------------------------
 
-// DeleteDataSourceResponse
+// UnregisterDataSourceResponse
 
 // string result = 1;
-inline void DeleteDataSourceResponse::clear_result() {
+inline void UnregisterDataSourceResponse::clear_result() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.result_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& DeleteDataSourceResponse::result() const
+inline const std::string& UnregisterDataSourceResponse::result() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szconfig.DeleteDataSourceResponse.result)
+  // @@protoc_insertion_point(field_get:szconfig.UnregisterDataSourceResponse.result)
   return _internal_result();
 }
 template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void DeleteDataSourceResponse::set_result(Arg_&& arg, Args_... args) {
+PROTOBUF_ALWAYS_INLINE void UnregisterDataSourceResponse::set_result(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.result_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szconfig.DeleteDataSourceResponse.result)
+  // @@protoc_insertion_point(field_set:szconfig.UnregisterDataSourceResponse.result)
 }
-inline std::string* PROTOBUF_NONNULL DeleteDataSourceResponse::mutable_result()
+inline std::string* PROTOBUF_NONNULL UnregisterDataSourceResponse::mutable_result()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:szconfig.DeleteDataSourceResponse.result)
+  // @@protoc_insertion_point(field_mutable:szconfig.UnregisterDataSourceResponse.result)
   return _s;
 }
-inline const std::string& DeleteDataSourceResponse::_internal_result() const {
+inline const std::string& UnregisterDataSourceResponse::_internal_result() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.result_.Get();
 }
-inline void DeleteDataSourceResponse::_internal_set_result(const std::string& value) {
+inline void UnregisterDataSourceResponse::_internal_set_result(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.result_.Set(value, GetArena());
 }
-inline std::string* PROTOBUF_NONNULL DeleteDataSourceResponse::_internal_mutable_result() {
+inline std::string* PROTOBUF_NONNULL UnregisterDataSourceResponse::_internal_mutable_result() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.result_.Mutable( GetArena());
 }
-inline std::string* PROTOBUF_NULLABLE DeleteDataSourceResponse::release_result() {
+inline std::string* PROTOBUF_NULLABLE UnregisterDataSourceResponse::release_result() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:szconfig.DeleteDataSourceResponse.result)
+  // @@protoc_insertion_point(field_release:szconfig.UnregisterDataSourceResponse.result)
   if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
     return nullptr;
   }
@@ -2197,7 +2197,7 @@ inline std::string* PROTOBUF_NULLABLE DeleteDataSourceResponse::release_result()
   }
   return released;
 }
-inline void DeleteDataSourceResponse::set_allocated_result(std::string* PROTOBUF_NULLABLE value) {
+inline void UnregisterDataSourceResponse::set_allocated_result(std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
@@ -2208,50 +2208,50 @@ inline void DeleteDataSourceResponse::set_allocated_result(std::string* PROTOBUF
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.result_.IsDefault()) {
     _impl_.result_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:szconfig.DeleteDataSourceResponse.result)
+  // @@protoc_insertion_point(field_set_allocated:szconfig.UnregisterDataSourceResponse.result)
 }
 
 // string config_definition = 2;
-inline void DeleteDataSourceResponse::clear_config_definition() {
+inline void UnregisterDataSourceResponse::clear_config_definition() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.config_definition_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& DeleteDataSourceResponse::config_definition() const
+inline const std::string& UnregisterDataSourceResponse::config_definition() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szconfig.DeleteDataSourceResponse.config_definition)
+  // @@protoc_insertion_point(field_get:szconfig.UnregisterDataSourceResponse.config_definition)
   return _internal_config_definition();
 }
 template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void DeleteDataSourceResponse::set_config_definition(Arg_&& arg, Args_... args) {
+PROTOBUF_ALWAYS_INLINE void UnregisterDataSourceResponse::set_config_definition(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.config_definition_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szconfig.DeleteDataSourceResponse.config_definition)
+  // @@protoc_insertion_point(field_set:szconfig.UnregisterDataSourceResponse.config_definition)
 }
-inline std::string* PROTOBUF_NONNULL DeleteDataSourceResponse::mutable_config_definition()
+inline std::string* PROTOBUF_NONNULL UnregisterDataSourceResponse::mutable_config_definition()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_config_definition();
-  // @@protoc_insertion_point(field_mutable:szconfig.DeleteDataSourceResponse.config_definition)
+  // @@protoc_insertion_point(field_mutable:szconfig.UnregisterDataSourceResponse.config_definition)
   return _s;
 }
-inline const std::string& DeleteDataSourceResponse::_internal_config_definition() const {
+inline const std::string& UnregisterDataSourceResponse::_internal_config_definition() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.config_definition_.Get();
 }
-inline void DeleteDataSourceResponse::_internal_set_config_definition(const std::string& value) {
+inline void UnregisterDataSourceResponse::_internal_set_config_definition(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.config_definition_.Set(value, GetArena());
 }
-inline std::string* PROTOBUF_NONNULL DeleteDataSourceResponse::_internal_mutable_config_definition() {
+inline std::string* PROTOBUF_NONNULL UnregisterDataSourceResponse::_internal_mutable_config_definition() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.config_definition_.Mutable( GetArena());
 }
-inline std::string* PROTOBUF_NULLABLE DeleteDataSourceResponse::release_config_definition() {
+inline std::string* PROTOBUF_NULLABLE UnregisterDataSourceResponse::release_config_definition() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:szconfig.DeleteDataSourceResponse.config_definition)
+  // @@protoc_insertion_point(field_release:szconfig.UnregisterDataSourceResponse.config_definition)
   if ((_impl_._has_bits_[0] & 0x00000002u) == 0) {
     return nullptr;
   }
@@ -2262,7 +2262,7 @@ inline std::string* PROTOBUF_NULLABLE DeleteDataSourceResponse::release_config_d
   }
   return released;
 }
-inline void DeleteDataSourceResponse::set_allocated_config_definition(std::string* PROTOBUF_NULLABLE value) {
+inline void UnregisterDataSourceResponse::set_allocated_config_definition(std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000002u;
@@ -2273,54 +2273,54 @@ inline void DeleteDataSourceResponse::set_allocated_config_definition(std::strin
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.config_definition_.IsDefault()) {
     _impl_.config_definition_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:szconfig.DeleteDataSourceResponse.config_definition)
+  // @@protoc_insertion_point(field_set_allocated:szconfig.UnregisterDataSourceResponse.config_definition)
 }
 
 // -------------------------------------------------------------------
 
-// GetDataSourcesRequest
+// GetDataSourceRegistryRequest
 
 // string config_definition = 1;
-inline void GetDataSourcesRequest::clear_config_definition() {
+inline void GetDataSourceRegistryRequest::clear_config_definition() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.config_definition_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& GetDataSourcesRequest::config_definition() const
+inline const std::string& GetDataSourceRegistryRequest::config_definition() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szconfig.GetDataSourcesRequest.config_definition)
+  // @@protoc_insertion_point(field_get:szconfig.GetDataSourceRegistryRequest.config_definition)
   return _internal_config_definition();
 }
 template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void GetDataSourcesRequest::set_config_definition(Arg_&& arg, Args_... args) {
+PROTOBUF_ALWAYS_INLINE void GetDataSourceRegistryRequest::set_config_definition(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.config_definition_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szconfig.GetDataSourcesRequest.config_definition)
+  // @@protoc_insertion_point(field_set:szconfig.GetDataSourceRegistryRequest.config_definition)
 }
-inline std::string* PROTOBUF_NONNULL GetDataSourcesRequest::mutable_config_definition()
+inline std::string* PROTOBUF_NONNULL GetDataSourceRegistryRequest::mutable_config_definition()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_config_definition();
-  // @@protoc_insertion_point(field_mutable:szconfig.GetDataSourcesRequest.config_definition)
+  // @@protoc_insertion_point(field_mutable:szconfig.GetDataSourceRegistryRequest.config_definition)
   return _s;
 }
-inline const std::string& GetDataSourcesRequest::_internal_config_definition() const {
+inline const std::string& GetDataSourceRegistryRequest::_internal_config_definition() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.config_definition_.Get();
 }
-inline void GetDataSourcesRequest::_internal_set_config_definition(const std::string& value) {
+inline void GetDataSourceRegistryRequest::_internal_set_config_definition(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.config_definition_.Set(value, GetArena());
 }
-inline std::string* PROTOBUF_NONNULL GetDataSourcesRequest::_internal_mutable_config_definition() {
+inline std::string* PROTOBUF_NONNULL GetDataSourceRegistryRequest::_internal_mutable_config_definition() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.config_definition_.Mutable( GetArena());
 }
-inline std::string* PROTOBUF_NULLABLE GetDataSourcesRequest::release_config_definition() {
+inline std::string* PROTOBUF_NULLABLE GetDataSourceRegistryRequest::release_config_definition() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:szconfig.GetDataSourcesRequest.config_definition)
+  // @@protoc_insertion_point(field_release:szconfig.GetDataSourceRegistryRequest.config_definition)
   if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
     return nullptr;
   }
@@ -2331,7 +2331,7 @@ inline std::string* PROTOBUF_NULLABLE GetDataSourcesRequest::release_config_defi
   }
   return released;
 }
-inline void GetDataSourcesRequest::set_allocated_config_definition(std::string* PROTOBUF_NULLABLE value) {
+inline void GetDataSourceRegistryRequest::set_allocated_config_definition(std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
@@ -2342,54 +2342,54 @@ inline void GetDataSourcesRequest::set_allocated_config_definition(std::string* 
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.config_definition_.IsDefault()) {
     _impl_.config_definition_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:szconfig.GetDataSourcesRequest.config_definition)
+  // @@protoc_insertion_point(field_set_allocated:szconfig.GetDataSourceRegistryRequest.config_definition)
 }
 
 // -------------------------------------------------------------------
 
-// GetDataSourcesResponse
+// GetDataSourceRegistryResponse
 
 // string result = 1;
-inline void GetDataSourcesResponse::clear_result() {
+inline void GetDataSourceRegistryResponse::clear_result() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.result_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& GetDataSourcesResponse::result() const
+inline const std::string& GetDataSourceRegistryResponse::result() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szconfig.GetDataSourcesResponse.result)
+  // @@protoc_insertion_point(field_get:szconfig.GetDataSourceRegistryResponse.result)
   return _internal_result();
 }
 template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void GetDataSourcesResponse::set_result(Arg_&& arg, Args_... args) {
+PROTOBUF_ALWAYS_INLINE void GetDataSourceRegistryResponse::set_result(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.result_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szconfig.GetDataSourcesResponse.result)
+  // @@protoc_insertion_point(field_set:szconfig.GetDataSourceRegistryResponse.result)
 }
-inline std::string* PROTOBUF_NONNULL GetDataSourcesResponse::mutable_result()
+inline std::string* PROTOBUF_NONNULL GetDataSourceRegistryResponse::mutable_result()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:szconfig.GetDataSourcesResponse.result)
+  // @@protoc_insertion_point(field_mutable:szconfig.GetDataSourceRegistryResponse.result)
   return _s;
 }
-inline const std::string& GetDataSourcesResponse::_internal_result() const {
+inline const std::string& GetDataSourceRegistryResponse::_internal_result() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.result_.Get();
 }
-inline void GetDataSourcesResponse::_internal_set_result(const std::string& value) {
+inline void GetDataSourceRegistryResponse::_internal_set_result(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.result_.Set(value, GetArena());
 }
-inline std::string* PROTOBUF_NONNULL GetDataSourcesResponse::_internal_mutable_result() {
+inline std::string* PROTOBUF_NONNULL GetDataSourceRegistryResponse::_internal_mutable_result() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.result_.Mutable( GetArena());
 }
-inline std::string* PROTOBUF_NULLABLE GetDataSourcesResponse::release_result() {
+inline std::string* PROTOBUF_NULLABLE GetDataSourceRegistryResponse::release_result() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:szconfig.GetDataSourcesResponse.result)
+  // @@protoc_insertion_point(field_release:szconfig.GetDataSourceRegistryResponse.result)
   if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
     return nullptr;
   }
@@ -2400,7 +2400,7 @@ inline std::string* PROTOBUF_NULLABLE GetDataSourcesResponse::release_result() {
   }
   return released;
 }
-inline void GetDataSourcesResponse::set_allocated_result(std::string* PROTOBUF_NULLABLE value) {
+inline void GetDataSourceRegistryResponse::set_allocated_result(std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
@@ -2411,7 +2411,7 @@ inline void GetDataSourcesResponse::set_allocated_result(std::string* PROTOBUF_N
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.result_.IsDefault()) {
     _impl_.result_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:szconfig.GetDataSourcesResponse.result)
+  // @@protoc_insertion_point(field_set_allocated:szconfig.GetDataSourceRegistryResponse.result)
 }
 
 // -------------------------------------------------------------------

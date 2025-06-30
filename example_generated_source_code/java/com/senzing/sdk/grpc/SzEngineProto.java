@@ -1414,8 +1414,8 @@ public final class SzEngineProto {
 
   }
 
-  public interface CloseExportRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szengine.CloseExportRequest)
+  public interface CloseExportReportRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:szengine.CloseExportReportRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1425,12 +1425,12 @@ public final class SzEngineProto {
     long getExportHandle();
   }
   /**
-   * Protobuf type {@code szengine.CloseExportRequest}
+   * Protobuf type {@code szengine.CloseExportReportRequest}
    */
-  public static final class CloseExportRequest extends
+  public static final class CloseExportReportRequest extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:szengine.CloseExportRequest)
-      CloseExportRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:szengine.CloseExportReportRequest)
+      CloseExportReportRequestOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -1439,26 +1439,26 @@ public final class SzEngineProto {
         /* minor= */ 30,
         /* patch= */ 2,
         /* suffix= */ "",
-        CloseExportRequest.class.getName());
+        CloseExportReportRequest.class.getName());
     }
-    // Use CloseExportRequest.newBuilder() to construct.
-    private CloseExportRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use CloseExportReportRequest.newBuilder() to construct.
+    private CloseExportReportRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private CloseExportRequest() {
+    private CloseExportReportRequest() {
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportRequest_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportReportRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportReportRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest.class, com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest.class, com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest.Builder.class);
     }
 
     public static final int EXPORT_HANDLE_FIELD_NUMBER = 1;
@@ -1512,10 +1512,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest other = (com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest) obj;
+      com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest other = (com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest) obj;
 
       if (getExportHandle()
           != other.getExportHandle()) return false;
@@ -1538,44 +1538,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1583,26 +1583,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1615,7 +1615,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1631,26 +1631,26 @@ public final class SzEngineProto {
       return builder;
     }
     /**
-     * Protobuf type {@code szengine.CloseExportRequest}
+     * Protobuf type {@code szengine.CloseExportReportRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szengine.CloseExportRequest)
-        com.senzing.sdk.grpc.SzEngineProto.CloseExportRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:szengine.CloseExportReportRequest)
+        com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportReportRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportReportRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest.class, com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest.class, com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest.newBuilder()
       private Builder() {
 
       }
@@ -1671,17 +1671,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportRequest_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportReportRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest getDefaultInstanceForType() {
-        return com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest build() {
-        com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest build() {
+        com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1689,14 +1689,14 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest buildPartial() {
-        com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest result = new com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest(this);
+      public com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest result = new com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.exportHandle_ = exportHandle_;
@@ -1705,16 +1705,16 @@ public final class SzEngineProto {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest) {
-          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest other) {
-        if (other == com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest.getDefaultInstance()) return this;
         if (other.getExportHandle() != 0L) {
           setExportHandle(other.getExportHandle());
         }
@@ -1798,23 +1798,23 @@ public final class SzEngineProto {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:szengine.CloseExportRequest)
+      // @@protoc_insertion_point(builder_scope:szengine.CloseExportReportRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:szengine.CloseExportRequest)
-    private static final com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:szengine.CloseExportReportRequest)
+    private static final com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest();
     }
 
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CloseExportRequest>
-        PARSER = new com.google.protobuf.AbstractParser<CloseExportRequest>() {
+    private static final com.google.protobuf.Parser<CloseExportReportRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CloseExportReportRequest>() {
       @java.lang.Override
-      public CloseExportRequest parsePartialFrom(
+      public CloseExportReportRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1833,33 +1833,33 @@ public final class SzEngineProto {
       }
     };
 
-    public static com.google.protobuf.Parser<CloseExportRequest> parser() {
+    public static com.google.protobuf.Parser<CloseExportReportRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CloseExportRequest> getParserForType() {
+    public com.google.protobuf.Parser<CloseExportReportRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.senzing.sdk.grpc.SzEngineProto.CloseExportRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.CloseExportReportRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface CloseExportResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szengine.CloseExportResponse)
+  public interface CloseExportReportResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:szengine.CloseExportReportResponse)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code szengine.CloseExportResponse}
+   * Protobuf type {@code szengine.CloseExportReportResponse}
    */
-  public static final class CloseExportResponse extends
+  public static final class CloseExportReportResponse extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:szengine.CloseExportResponse)
-      CloseExportResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:szengine.CloseExportReportResponse)
+      CloseExportReportResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -1868,26 +1868,26 @@ public final class SzEngineProto {
         /* minor= */ 30,
         /* patch= */ 2,
         /* suffix= */ "",
-        CloseExportResponse.class.getName());
+        CloseExportReportResponse.class.getName());
     }
-    // Use CloseExportResponse.newBuilder() to construct.
-    private CloseExportResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use CloseExportReportResponse.newBuilder() to construct.
+    private CloseExportReportResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private CloseExportResponse() {
+    private CloseExportReportResponse() {
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportResponse_descriptor;
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportReportResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportReportResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse.class, com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse.Builder.class);
+              com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse.class, com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1923,10 +1923,10 @@ public final class SzEngineProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse other = (com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse) obj;
+      com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse other = (com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -1944,44 +1944,44 @@ public final class SzEngineProto {
       return hash;
     }
 
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1989,26 +1989,26 @@ public final class SzEngineProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2021,7 +2021,7 @@ public final class SzEngineProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2037,26 +2037,26 @@ public final class SzEngineProto {
       return builder;
     }
     /**
-     * Protobuf type {@code szengine.CloseExportResponse}
+     * Protobuf type {@code szengine.CloseExportReportResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szengine.CloseExportResponse)
-        com.senzing.sdk.grpc.SzEngineProto.CloseExportResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:szengine.CloseExportReportResponse)
+        com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportReportResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportReportResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse.class, com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse.Builder.class);
+                com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse.class, com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse.newBuilder()
       private Builder() {
 
       }
@@ -2075,17 +2075,17 @@ public final class SzEngineProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportResponse_descriptor;
+        return com.senzing.sdk.grpc.SzEngineProto.internal_static_szengine_CloseExportReportResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse getDefaultInstanceForType() {
-        return com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse build() {
-        com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse build() {
+        com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2093,24 +2093,24 @@ public final class SzEngineProto {
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse buildPartial() {
-        com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse result = new com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse(this);
+      public com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse buildPartial() {
+        com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse result = new com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse(this);
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse) {
-          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse other) {
-        if (other == com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse other) {
+        if (other == com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2153,23 +2153,23 @@ public final class SzEngineProto {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:szengine.CloseExportResponse)
+      // @@protoc_insertion_point(builder_scope:szengine.CloseExportReportResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:szengine.CloseExportResponse)
-    private static final com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:szengine.CloseExportReportResponse)
+    private static final com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse();
     }
 
-    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CloseExportResponse>
-        PARSER = new com.google.protobuf.AbstractParser<CloseExportResponse>() {
+    private static final com.google.protobuf.Parser<CloseExportReportResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CloseExportReportResponse>() {
       @java.lang.Override
-      public CloseExportResponse parsePartialFrom(
+      public CloseExportReportResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2188,17 +2188,17 @@ public final class SzEngineProto {
       }
     };
 
-    public static com.google.protobuf.Parser<CloseExportResponse> parser() {
+    public static com.google.protobuf.Parser<CloseExportReportResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CloseExportResponse> getParserForType() {
+    public com.google.protobuf.Parser<CloseExportReportResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.senzing.sdk.grpc.SzEngineProto.CloseExportResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzEngineProto.CloseExportReportResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -37866,15 +37866,15 @@ public final class SzEngineProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_szengine_AddRecordResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szengine_CloseExportRequest_descriptor;
+    internal_static_szengine_CloseExportReportRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_szengine_CloseExportRequest_fieldAccessorTable;
+      internal_static_szengine_CloseExportReportRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szengine_CloseExportResponse_descriptor;
+    internal_static_szengine_CloseExportReportResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_szengine_CloseExportResponse_fieldAccessorTable;
+      internal_static_szengine_CloseExportReportResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_szengine_CountRedoRecordsRequest_descriptor;
   private static final 
@@ -38208,193 +38208,194 @@ public final class SzEngineProto {
       "equest\022\030\n\020data_source_code\030\001 \001(\t\022\021\n\treco" +
       "rd_id\030\002 \001(\t\022\031\n\021record_definition\030\003 \001(\t\022\r" +
       "\n\005flags\030\004 \001(\003\"#\n\021AddRecordResponse\022\016\n\006re" +
-      "sult\030\001 \001(\t\"+\n\022CloseExportRequest\022\025\n\rexpo" +
-      "rt_handle\030\001 \001(\003\"\025\n\023CloseExportResponse\"\031" +
-      "\n\027CountRedoRecordsRequest\"*\n\030CountRedoRe" +
-      "cordsResponse\022\016\n\006result\030\001 \001(\003\"Q\n\023DeleteR" +
-      "ecordRequest\022\030\n\020data_source_code\030\001 \001(\t\022\021" +
-      "\n\trecord_id\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"&\n\024Dele" +
-      "teRecordResponse\022\016\n\006result\030\001 \001(\t\"F\n\034Expo" +
-      "rtCsvEntityReportRequest\022\027\n\017csv_column_l" +
-      "ist\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"/\n\035ExportCsvEnt" +
-      "ityReportResponse\022\016\n\006result\030\001 \001(\003\".\n\035Exp" +
-      "ortJsonEntityReportRequest\022\r\n\005flags\030\001 \001(" +
-      "\003\"0\n\036ExportJsonEntityReportResponse\022\016\n\006r" +
-      "esult\030\001 \001(\003\")\n\020FetchNextRequest\022\025\n\rexpor" +
-      "t_handle\030\001 \001(\003\"#\n\021FetchNextResponse\022\016\n\006r" +
-      "esult\030\001 \001(\t\"L\n(FindInterestingEntitiesBy" +
-      "EntityIdRequest\022\021\n\tentity_id\030\001 \001(\003\022\r\n\005fl" +
-      "ags\030\002 \001(\003\";\n)FindInterestingEntitiesByEn" +
-      "tityIdResponse\022\016\n\006result\030\001 \001(\t\"f\n(FindIn" +
-      "terestingEntitiesByRecordIdRequest\022\030\n\020da" +
-      "ta_source_code\030\001 \001(\t\022\021\n\trecord_id\030\002 \001(\t\022" +
-      "\r\n\005flags\030\003 \001(\003\";\n)FindInterestingEntitie" +
-      "sByRecordIdResponse\022\016\n\006result\030\001 \001(\t\"\221\001\n\034" +
-      "FindNetworkByEntityIdRequest\022\022\n\nentity_i" +
-      "ds\030\001 \001(\t\022\023\n\013max_degrees\030\002 \001(\003\022\031\n\021build_o" +
-      "ut_degrees\030\003 \001(\003\022\036\n\026build_out_max_entiti" +
-      "es\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035FindNetworkBy" +
-      "EntityIdResponse\022\016\n\006result\030\001 \001(\t\"\222\001\n\034Fin" +
-      "dNetworkByRecordIdRequest\022\023\n\013record_keys" +
-      "\030\001 \001(\t\022\023\n\013max_degrees\030\002 \001(\003\022\031\n\021build_out" +
-      "_degrees\030\003 \001(\003\022\036\n\026build_out_max_entities" +
-      "\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035FindNetworkByRe" +
-      "cordIdResponse\022\016\n\006result\030\001 \001(\t\"\250\001\n\031FindP" +
-      "athByEntityIdRequest\022\027\n\017start_entity_id\030" +
-      "\001 \001(\003\022\025\n\rend_entity_id\030\002 \001(\003\022\023\n\013max_degr" +
-      "ees\030\003 \001(\003\022\030\n\020avoid_entity_ids\030\004 \001(\t\022\035\n\025r" +
-      "equired_data_sources\030\005 \001(\t\022\r\n\005flags\030\006 \001(" +
-      "\003\",\n\032FindPathByEntityIdResponse\022\016\n\006resul" +
-      "t\030\001 \001(\t\"\347\001\n\031FindPathByRecordIdRequest\022\036\n" +
-      "\026start_data_source_code\030\001 \001(\t\022\027\n\017start_r" +
-      "ecord_id\030\002 \001(\t\022\034\n\024end_data_source_code\030\003" +
-      " \001(\t\022\025\n\rend_record_id\030\004 \001(\t\022\023\n\013max_degre" +
-      "es\030\005 \001(\003\022\031\n\021avoid_record_keys\030\006 \001(\t\022\035\n\025r" +
-      "equired_data_sources\030\007 \001(\t\022\r\n\005flags\030\010 \001(" +
-      "\003\",\n\032FindPathByRecordIdResponse\022\016\n\006resul" +
-      "t\030\001 \001(\t\"\032\n\030GetActiveConfigIdRequest\"+\n\031G" +
-      "etActiveConfigIdResponse\022\016\n\006result\030\001 \001(\003" +
-      "\">\n\032GetEntityByEntityIdRequest\022\021\n\tentity" +
-      "_id\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"-\n\033GetEntityByE" +
-      "ntityIdResponse\022\016\n\006result\030\001 \001(\t\"X\n\032GetEn" +
-      "tityByRecordIdRequest\022\030\n\020data_source_cod" +
-      "e\030\001 \001(\t\022\021\n\trecord_id\030\002 \001(\t\022\r\n\005flags\030\003 \001(" +
-      "\003\"-\n\033GetEntityByRecordIdResponse\022\016\n\006resu" +
-      "lt\030\001 \001(\t\"N\n\020GetRecordRequest\022\030\n\020data_sou" +
-      "rce_code\030\001 \001(\t\022\021\n\trecord_id\030\002 \001(\t\022\r\n\005fla" +
-      "gs\030\003 \001(\003\"#\n\021GetRecordResponse\022\016\n\006result\030" +
-      "\001 \001(\t\"\026\n\024GetRedoRecordRequest\"\'\n\025GetRedo" +
-      "RecordResponse\022\016\n\006result\030\001 \001(\t\"\021\n\017GetSta" +
-      "tsRequest\"\"\n\020GetStatsResponse\022\016\n\006result\030" +
-      "\001 \001(\t\"G\n!GetVirtualEntityByRecordIdReque" +
-      "st\022\023\n\013record_keys\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"4" +
-      "\n\"GetVirtualEntityByRecordIdResponse\022\016\n\006" +
-      "result\030\001 \001(\t\">\n\032HowEntityByEntityIdReque" +
+      "sult\030\001 \001(\t\"1\n\030CloseExportReportRequest\022\025" +
+      "\n\rexport_handle\030\001 \001(\003\"\033\n\031CloseExportRepo" +
+      "rtResponse\"\031\n\027CountRedoRecordsRequest\"*\n" +
+      "\030CountRedoRecordsResponse\022\016\n\006result\030\001 \001(" +
+      "\003\"Q\n\023DeleteRecordRequest\022\030\n\020data_source_" +
+      "code\030\001 \001(\t\022\021\n\trecord_id\030\002 \001(\t\022\r\n\005flags\030\003" +
+      " \001(\003\"&\n\024DeleteRecordResponse\022\016\n\006result\030\001" +
+      " \001(\t\"F\n\034ExportCsvEntityReportRequest\022\027\n\017" +
+      "csv_column_list\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"/\n\035" +
+      "ExportCsvEntityReportResponse\022\016\n\006result\030" +
+      "\001 \001(\003\".\n\035ExportJsonEntityReportRequest\022\r" +
+      "\n\005flags\030\001 \001(\003\"0\n\036ExportJsonEntityReportR" +
+      "esponse\022\016\n\006result\030\001 \001(\003\")\n\020FetchNextRequ" +
+      "est\022\025\n\rexport_handle\030\001 \001(\003\"#\n\021FetchNextR" +
+      "esponse\022\016\n\006result\030\001 \001(\t\"L\n(FindInteresti" +
+      "ngEntitiesByEntityIdRequest\022\021\n\tentity_id" +
+      "\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\";\n)FindInteresting" +
+      "EntitiesByEntityIdResponse\022\016\n\006result\030\001 \001" +
+      "(\t\"f\n(FindInterestingEntitiesByRecordIdR" +
+      "equest\022\030\n\020data_source_code\030\001 \001(\t\022\021\n\treco" +
+      "rd_id\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\";\n)FindIntere" +
+      "stingEntitiesByRecordIdResponse\022\016\n\006resul" +
+      "t\030\001 \001(\t\"\221\001\n\034FindNetworkByEntityIdRequest" +
+      "\022\022\n\nentity_ids\030\001 \001(\t\022\023\n\013max_degrees\030\002 \001(" +
+      "\003\022\031\n\021build_out_degrees\030\003 \001(\003\022\036\n\026build_ou" +
+      "t_max_entities\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035F" +
+      "indNetworkByEntityIdResponse\022\016\n\006result\030\001" +
+      " \001(\t\"\222\001\n\034FindNetworkByRecordIdRequest\022\023\n" +
+      "\013record_keys\030\001 \001(\t\022\023\n\013max_degrees\030\002 \001(\003\022" +
+      "\031\n\021build_out_degrees\030\003 \001(\003\022\036\n\026build_out_" +
+      "max_entities\030\004 \001(\003\022\r\n\005flags\030\005 \001(\003\"/\n\035Fin" +
+      "dNetworkByRecordIdResponse\022\016\n\006result\030\001 \001" +
+      "(\t\"\250\001\n\031FindPathByEntityIdRequest\022\027\n\017star" +
+      "t_entity_id\030\001 \001(\003\022\025\n\rend_entity_id\030\002 \001(\003" +
+      "\022\023\n\013max_degrees\030\003 \001(\003\022\030\n\020avoid_entity_id" +
+      "s\030\004 \001(\t\022\035\n\025required_data_sources\030\005 \001(\t\022\r" +
+      "\n\005flags\030\006 \001(\003\",\n\032FindPathByEntityIdRespo" +
+      "nse\022\016\n\006result\030\001 \001(\t\"\347\001\n\031FindPathByRecord" +
+      "IdRequest\022\036\n\026start_data_source_code\030\001 \001(" +
+      "\t\022\027\n\017start_record_id\030\002 \001(\t\022\034\n\024end_data_s" +
+      "ource_code\030\003 \001(\t\022\025\n\rend_record_id\030\004 \001(\t\022" +
+      "\023\n\013max_degrees\030\005 \001(\003\022\031\n\021avoid_record_key" +
+      "s\030\006 \001(\t\022\035\n\025required_data_sources\030\007 \001(\t\022\r" +
+      "\n\005flags\030\010 \001(\003\",\n\032FindPathByRecordIdRespo" +
+      "nse\022\016\n\006result\030\001 \001(\t\"\032\n\030GetActiveConfigId" +
+      "Request\"+\n\031GetActiveConfigIdResponse\022\016\n\006" +
+      "result\030\001 \001(\003\">\n\032GetEntityByEntityIdReque" +
       "st\022\021\n\tentity_id\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"-\n\033" +
-      "HowEntityByEntityIdResponse\022\016\n\006result\030\001 " +
-      "\001(\t\"C\n\027PreprocessRecordRequest\022\031\n\021record" +
-      "_definition\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"*\n\030Prep" +
-      "rocessRecordResponse\022\016\n\006result\030\001 \001(\t\"\024\n\022" +
-      "PrimeEngineRequest\"\025\n\023PrimeEngineRespons" +
-      "e\">\n\030ProcessRedoRecordRequest\022\023\n\013redo_re" +
-      "cord\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"+\n\031ProcessRedo" +
-      "RecordResponse\022\016\n\006result\030\001 \001(\t\";\n\027Reeval" +
-      "uateEntityRequest\022\021\n\tentity_id\030\001 \001(\003\022\r\n\005" +
-      "flags\030\002 \001(\003\"*\n\030ReevaluateEntityResponse\022" +
-      "\016\n\006result\030\001 \001(\t\"U\n\027ReevaluateRecordReque" +
-      "st\022\030\n\020data_source_code\030\001 \001(\t\022\021\n\trecord_i" +
-      "d\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"*\n\030ReevaluateReco" +
-      "rdResponse\022\016\n\006result\030\001 \001(\t\"(\n\023Reinitiali" +
-      "zeRequest\022\021\n\tconfig_id\030\001 \001(\003\"\026\n\024Reinitia" +
-      "lizeResponse\"V\n\031SearchByAttributesReques" +
-      "t\022\022\n\nattributes\030\001 \001(\t\022\026\n\016search_profile\030" +
-      "\002 \001(\t\022\r\n\005flags\030\003 \001(\003\",\n\032SearchByAttribut" +
-      "esResponse\022\016\n\006result\030\001 \001(\t\"L\n\"StreamExpo" +
-      "rtCsvEntityReportRequest\022\027\n\017csv_column_l" +
-      "ist\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"5\n#StreamExport" +
-      "CsvEntityReportResponse\022\016\n\006result\030\001 \001(\t\"" +
-      "4\n#StreamExportJsonEntityReportRequest\022\r" +
-      "\n\005flags\030\001 \001(\003\"6\n$StreamExportJsonEntityR" +
-      "eportResponse\022\016\n\006result\030\001 \001(\t\"M\n\022WhyEnti" +
-      "tiesRequest\022\023\n\013entity_id_1\030\001 \001(\003\022\023\n\013enti" +
-      "ty_id_2\030\002 \001(\003\022\r\n\005flags\030\003 \001(\003\"%\n\023WhyEntit" +
-      "iesResponse\022\016\n\006result\030\001 \001(\t\"V\n\030WhyRecord" +
-      "InEntityRequest\022\030\n\020data_source_code\030\001 \001(" +
-      "\t\022\021\n\trecord_id\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"+\n\031W" +
-      "hyRecordInEntityResponse\022\016\n\006result\030\001 \001(\t" +
-      "\"\204\001\n\021WhyRecordsRequest\022\032\n\022data_source_co" +
-      "de_1\030\001 \001(\t\022\023\n\013record_id_1\030\002 \001(\t\022\032\n\022data_" +
-      "source_code_2\030\003 \001(\t\022\023\n\013record_id_2\030\004 \001(\t" +
-      "\022\r\n\005flags\030\005 \001(\003\"$\n\022WhyRecordsResponse\022\016\n" +
-      "\006result\030\001 \001(\t\"`\n\020WhySearchRequest\022\022\n\natt" +
-      "ributes\030\001 \001(\t\022\021\n\tentity_id\030\002 \001(\003\022\026\n\016sear" +
-      "ch_profile\030\003 \001(\t\022\r\n\005flags\030\004 \001(\003\"#\n\021WhySe" +
-      "archResponse\022\016\n\006result\030\001 \001(\t2\335\031\n\010SzEngin" +
-      "e\022F\n\tAddRecord\022\032.szengine.AddRecordReque" +
-      "st\032\033.szengine.AddRecordResponse\"\000\022L\n\013Clo" +
-      "seExport\022\034.szengine.CloseExportRequest\032\035" +
-      ".szengine.CloseExportResponse\"\000\022[\n\020Count" +
-      "RedoRecords\022!.szengine.CountRedoRecordsR" +
-      "equest\032\".szengine.CountRedoRecordsRespon" +
-      "se\"\000\022O\n\014DeleteRecord\022\035.szengine.DeleteRe" +
-      "cordRequest\032\036.szengine.DeleteRecordRespo" +
-      "nse\"\000\022j\n\025ExportCsvEntityReport\022&.szengin" +
-      "e.ExportCsvEntityReportRequest\032\'.szengin" +
-      "e.ExportCsvEntityReportResponse\"\000\022m\n\026Exp" +
-      "ortJsonEntityReport\022\'.szengine.ExportJso" +
-      "nEntityReportRequest\032(.szengine.ExportJs" +
-      "onEntityReportResponse\"\000\022F\n\tFetchNext\022\032." +
-      "szengine.FetchNextRequest\032\033.szengine.Fet" +
-      "chNextResponse\"\000\022\216\001\n!FindInterestingEnti" +
-      "tiesByEntityId\0222.szengine.FindInterestin" +
-      "gEntitiesByEntityIdRequest\0323.szengine.Fi" +
-      "ndInterestingEntitiesByEntityIdResponse\"" +
-      "\000\022\216\001\n!FindInterestingEntitiesByRecordId\022" +
-      "2.szengine.FindInterestingEntitiesByReco" +
-      "rdIdRequest\0323.szengine.FindInterestingEn" +
-      "titiesByRecordIdResponse\"\000\022j\n\025FindNetwor" +
-      "kByEntityId\022&.szengine.FindNetworkByEnti" +
-      "tyIdRequest\032\'.szengine.FindNetworkByEnti" +
-      "tyIdResponse\"\000\022j\n\025FindNetworkByRecordId\022" +
-      "&.szengine.FindNetworkByRecordIdRequest\032" +
-      "\'.szengine.FindNetworkByRecordIdResponse" +
-      "\"\000\022a\n\022FindPathByEntityId\022#.szengine.Find" +
-      "PathByEntityIdRequest\032$.szengine.FindPat" +
-      "hByEntityIdResponse\"\000\022a\n\022FindPathByRecor" +
-      "dId\022#.szengine.FindPathByRecordIdRequest" +
-      "\032$.szengine.FindPathByRecordIdResponse\"\000" +
-      "\022^\n\021GetActiveConfigId\022\".szengine.GetActi" +
-      "veConfigIdRequest\032#.szengine.GetActiveCo" +
-      "nfigIdResponse\"\000\022d\n\023GetEntityByEntityId\022" +
-      "$.szengine.GetEntityByEntityIdRequest\032%." +
-      "szengine.GetEntityByEntityIdResponse\"\000\022d" +
-      "\n\023GetEntityByRecordId\022$.szengine.GetEnti" +
-      "tyByRecordIdRequest\032%.szengine.GetEntity" +
-      "ByRecordIdResponse\"\000\022F\n\tGetRecord\022\032.szen" +
-      "gine.GetRecordRequest\032\033.szengine.GetReco" +
-      "rdResponse\"\000\022R\n\rGetRedoRecord\022\036.szengine" +
-      ".GetRedoRecordRequest\032\037.szengine.GetRedo" +
-      "RecordResponse\"\000\022C\n\010GetStats\022\031.szengine." +
-      "GetStatsRequest\032\032.szengine.GetStatsRespo" +
-      "nse\"\000\022y\n\032GetVirtualEntityByRecordId\022+.sz" +
-      "engine.GetVirtualEntityByRecordIdRequest" +
-      "\032,.szengine.GetVirtualEntityByRecordIdRe" +
-      "sponse\"\000\022d\n\023HowEntityByEntityId\022$.szengi" +
-      "ne.HowEntityByEntityIdRequest\032%.szengine" +
-      ".HowEntityByEntityIdResponse\"\000\022[\n\020Prepro" +
-      "cessRecord\022!.szengine.PreprocessRecordRe" +
-      "quest\032\".szengine.PreprocessRecordRespons" +
-      "e\"\000\022L\n\013PrimeEngine\022\034.szengine.PrimeEngin" +
-      "eRequest\032\035.szengine.PrimeEngineResponse\"" +
-      "\000\022^\n\021ProcessRedoRecord\022\".szengine.Proces" +
-      "sRedoRecordRequest\032#.szengine.ProcessRed" +
-      "oRecordResponse\"\000\022[\n\020ReevaluateEntity\022!." +
-      "szengine.ReevaluateEntityRequest\032\".szeng" +
-      "ine.ReevaluateEntityResponse\"\000\022[\n\020Reeval" +
-      "uateRecord\022!.szengine.ReevaluateRecordRe" +
-      "quest\032\".szengine.ReevaluateRecordRespons" +
-      "e\"\000\022O\n\014Reinitialize\022\035.szengine.Reinitial" +
-      "izeRequest\032\036.szengine.ReinitializeRespon" +
-      "se\"\000\022a\n\022SearchByAttributes\022#.szengine.Se" +
-      "archByAttributesRequest\032$.szengine.Searc" +
-      "hByAttributesResponse\"\000\022~\n\033StreamExportC" +
-      "svEntityReport\022,.szengine.StreamExportCs" +
-      "vEntityReportRequest\032-.szengine.StreamEx" +
-      "portCsvEntityReportResponse\"\0000\001\022\201\001\n\034Stre" +
-      "amExportJsonEntityReport\022-.szengine.Stre" +
-      "amExportJsonEntityReportRequest\032..szengi" +
-      "ne.StreamExportJsonEntityReportResponse\"" +
-      "\0000\001\022L\n\013WhyEntities\022\034.szengine.WhyEntitie" +
-      "sRequest\032\035.szengine.WhyEntitiesResponse\"" +
-      "\000\022^\n\021WhyRecordInEntity\022\".szengine.WhyRec" +
-      "ordInEntityRequest\032#.szengine.WhyRecordI" +
-      "nEntityResponse\"\000\022I\n\nWhyRecords\022\033.szengi" +
-      "ne.WhyRecordsRequest\032\034.szengine.WhyRecor" +
-      "dsResponse\"\000\022F\n\tWhySearch\022\032.szengine.Why" +
-      "SearchRequest\032\033.szengine.WhySearchRespon" +
-      "se\"\000BX\n\024com.senzing.sdk.grpcB\rSzEnginePr" +
-      "otoZ1github.com/senzing-garage/sz-sdk-go" +
-      "-grpc/szengineb\006proto3"
+      "GetEntityByEntityIdResponse\022\016\n\006result\030\001 " +
+      "\001(\t\"X\n\032GetEntityByRecordIdRequest\022\030\n\020dat" +
+      "a_source_code\030\001 \001(\t\022\021\n\trecord_id\030\002 \001(\t\022\r" +
+      "\n\005flags\030\003 \001(\003\"-\n\033GetEntityByRecordIdResp" +
+      "onse\022\016\n\006result\030\001 \001(\t\"N\n\020GetRecordRequest" +
+      "\022\030\n\020data_source_code\030\001 \001(\t\022\021\n\trecord_id\030" +
+      "\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"#\n\021GetRecordRespons" +
+      "e\022\016\n\006result\030\001 \001(\t\"\026\n\024GetRedoRecordReques" +
+      "t\"\'\n\025GetRedoRecordResponse\022\016\n\006result\030\001 \001" +
+      "(\t\"\021\n\017GetStatsRequest\"\"\n\020GetStatsRespons" +
+      "e\022\016\n\006result\030\001 \001(\t\"G\n!GetVirtualEntityByR" +
+      "ecordIdRequest\022\023\n\013record_keys\030\001 \001(\t\022\r\n\005f" +
+      "lags\030\002 \001(\003\"4\n\"GetVirtualEntityByRecordId" +
+      "Response\022\016\n\006result\030\001 \001(\t\">\n\032HowEntityByE" +
+      "ntityIdRequest\022\021\n\tentity_id\030\001 \001(\003\022\r\n\005fla" +
+      "gs\030\002 \001(\003\"-\n\033HowEntityByEntityIdResponse\022" +
+      "\016\n\006result\030\001 \001(\t\"C\n\027PreprocessRecordReque" +
+      "st\022\031\n\021record_definition\030\001 \001(\t\022\r\n\005flags\030\002" +
+      " \001(\003\"*\n\030PreprocessRecordResponse\022\016\n\006resu" +
+      "lt\030\001 \001(\t\"\024\n\022PrimeEngineRequest\"\025\n\023PrimeE" +
+      "ngineResponse\">\n\030ProcessRedoRecordReques" +
+      "t\022\023\n\013redo_record\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"+\n" +
+      "\031ProcessRedoRecordResponse\022\016\n\006result\030\001 \001" +
+      "(\t\";\n\027ReevaluateEntityRequest\022\021\n\tentity_" +
+      "id\030\001 \001(\003\022\r\n\005flags\030\002 \001(\003\"*\n\030ReevaluateEnt" +
+      "ityResponse\022\016\n\006result\030\001 \001(\t\"U\n\027Reevaluat" +
+      "eRecordRequest\022\030\n\020data_source_code\030\001 \001(\t" +
+      "\022\021\n\trecord_id\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\"*\n\030Re" +
+      "evaluateRecordResponse\022\016\n\006result\030\001 \001(\t\"(" +
+      "\n\023ReinitializeRequest\022\021\n\tconfig_id\030\001 \001(\003" +
+      "\"\026\n\024ReinitializeResponse\"V\n\031SearchByAttr" +
+      "ibutesRequest\022\022\n\nattributes\030\001 \001(\t\022\026\n\016sea" +
+      "rch_profile\030\002 \001(\t\022\r\n\005flags\030\003 \001(\003\",\n\032Sear" +
+      "chByAttributesResponse\022\016\n\006result\030\001 \001(\t\"L" +
+      "\n\"StreamExportCsvEntityReportRequest\022\027\n\017" +
+      "csv_column_list\030\001 \001(\t\022\r\n\005flags\030\002 \001(\003\"5\n#" +
+      "StreamExportCsvEntityReportResponse\022\016\n\006r" +
+      "esult\030\001 \001(\t\"4\n#StreamExportJsonEntityRep" +
+      "ortRequest\022\r\n\005flags\030\001 \001(\003\"6\n$StreamExpor" +
+      "tJsonEntityReportResponse\022\016\n\006result\030\001 \001(" +
+      "\t\"M\n\022WhyEntitiesRequest\022\023\n\013entity_id_1\030\001" +
+      " \001(\003\022\023\n\013entity_id_2\030\002 \001(\003\022\r\n\005flags\030\003 \001(\003" +
+      "\"%\n\023WhyEntitiesResponse\022\016\n\006result\030\001 \001(\t\"" +
+      "V\n\030WhyRecordInEntityRequest\022\030\n\020data_sour" +
+      "ce_code\030\001 \001(\t\022\021\n\trecord_id\030\002 \001(\t\022\r\n\005flag" +
+      "s\030\003 \001(\003\"+\n\031WhyRecordInEntityResponse\022\016\n\006" +
+      "result\030\001 \001(\t\"\204\001\n\021WhyRecordsRequest\022\032\n\022da" +
+      "ta_source_code_1\030\001 \001(\t\022\023\n\013record_id_1\030\002 " +
+      "\001(\t\022\032\n\022data_source_code_2\030\003 \001(\t\022\023\n\013recor" +
+      "d_id_2\030\004 \001(\t\022\r\n\005flags\030\005 \001(\003\"$\n\022WhyRecord" +
+      "sResponse\022\016\n\006result\030\001 \001(\t\"`\n\020WhySearchRe" +
+      "quest\022\022\n\nattributes\030\001 \001(\t\022\021\n\tentity_id\030\002" +
+      " \001(\003\022\026\n\016search_profile\030\003 \001(\t\022\r\n\005flags\030\004 " +
+      "\001(\003\"#\n\021WhySearchResponse\022\016\n\006result\030\001 \001(\t" +
+      "2\357\031\n\010SzEngine\022F\n\tAddRecord\022\032.szengine.Ad" +
+      "dRecordRequest\032\033.szengine.AddRecordRespo" +
+      "nse\"\000\022^\n\021CloseExportReport\022\".szengine.Cl" +
+      "oseExportReportRequest\032#.szengine.CloseE" +
+      "xportReportResponse\"\000\022[\n\020CountRedoRecord" +
+      "s\022!.szengine.CountRedoRecordsRequest\032\".s" +
+      "zengine.CountRedoRecordsResponse\"\000\022O\n\014De" +
+      "leteRecord\022\035.szengine.DeleteRecordReques" +
+      "t\032\036.szengine.DeleteRecordResponse\"\000\022j\n\025E" +
+      "xportCsvEntityReport\022&.szengine.ExportCs" +
+      "vEntityReportRequest\032\'.szengine.ExportCs" +
+      "vEntityReportResponse\"\000\022m\n\026ExportJsonEnt" +
+      "ityReport\022\'.szengine.ExportJsonEntityRep" +
+      "ortRequest\032(.szengine.ExportJsonEntityRe" +
+      "portResponse\"\000\022F\n\tFetchNext\022\032.szengine.F" +
+      "etchNextRequest\032\033.szengine.FetchNextResp" +
+      "onse\"\000\022\216\001\n!FindInterestingEntitiesByEnti" +
+      "tyId\0222.szengine.FindInterestingEntitiesB" +
+      "yEntityIdRequest\0323.szengine.FindInterest" +
+      "ingEntitiesByEntityIdResponse\"\000\022\216\001\n!Find" +
+      "InterestingEntitiesByRecordId\0222.szengine" +
+      ".FindInterestingEntitiesByRecordIdReques" +
+      "t\0323.szengine.FindInterestingEntitiesByRe" +
+      "cordIdResponse\"\000\022j\n\025FindNetworkByEntityI" +
+      "d\022&.szengine.FindNetworkByEntityIdReques" +
+      "t\032\'.szengine.FindNetworkByEntityIdRespon" +
+      "se\"\000\022j\n\025FindNetworkByRecordId\022&.szengine" +
+      ".FindNetworkByRecordIdRequest\032\'.szengine" +
+      ".FindNetworkByRecordIdResponse\"\000\022a\n\022Find" +
+      "PathByEntityId\022#.szengine.FindPathByEnti" +
+      "tyIdRequest\032$.szengine.FindPathByEntityI" +
+      "dResponse\"\000\022a\n\022FindPathByRecordId\022#.szen" +
+      "gine.FindPathByRecordIdRequest\032$.szengin" +
+      "e.FindPathByRecordIdResponse\"\000\022^\n\021GetAct" +
+      "iveConfigId\022\".szengine.GetActiveConfigId" +
+      "Request\032#.szengine.GetActiveConfigIdResp" +
+      "onse\"\000\022d\n\023GetEntityByEntityId\022$.szengine" +
+      ".GetEntityByEntityIdRequest\032%.szengine.G" +
+      "etEntityByEntityIdResponse\"\000\022d\n\023GetEntit" +
+      "yByRecordId\022$.szengine.GetEntityByRecord" +
+      "IdRequest\032%.szengine.GetEntityByRecordId" +
+      "Response\"\000\022F\n\tGetRecord\022\032.szengine.GetRe" +
+      "cordRequest\032\033.szengine.GetRecordResponse" +
+      "\"\000\022R\n\rGetRedoRecord\022\036.szengine.GetRedoRe" +
+      "cordRequest\032\037.szengine.GetRedoRecordResp" +
+      "onse\"\000\022C\n\010GetStats\022\031.szengine.GetStatsRe" +
+      "quest\032\032.szengine.GetStatsResponse\"\000\022y\n\032G" +
+      "etVirtualEntityByRecordId\022+.szengine.Get" +
+      "VirtualEntityByRecordIdRequest\032,.szengin" +
+      "e.GetVirtualEntityByRecordIdResponse\"\000\022d" +
+      "\n\023HowEntityByEntityId\022$.szengine.HowEnti" +
+      "tyByEntityIdRequest\032%.szengine.HowEntity" +
+      "ByEntityIdResponse\"\000\022[\n\020PreprocessRecord" +
+      "\022!.szengine.PreprocessRecordRequest\032\".sz" +
+      "engine.PreprocessRecordResponse\"\000\022L\n\013Pri" +
+      "meEngine\022\034.szengine.PrimeEngineRequest\032\035" +
+      ".szengine.PrimeEngineResponse\"\000\022^\n\021Proce" +
+      "ssRedoRecord\022\".szengine.ProcessRedoRecor" +
+      "dRequest\032#.szengine.ProcessRedoRecordRes" +
+      "ponse\"\000\022[\n\020ReevaluateEntity\022!.szengine.R" +
+      "eevaluateEntityRequest\032\".szengine.Reeval" +
+      "uateEntityResponse\"\000\022[\n\020ReevaluateRecord" +
+      "\022!.szengine.ReevaluateRecordRequest\032\".sz" +
+      "engine.ReevaluateRecordResponse\"\000\022O\n\014Rei" +
+      "nitialize\022\035.szengine.ReinitializeRequest" +
+      "\032\036.szengine.ReinitializeResponse\"\000\022a\n\022Se" +
+      "archByAttributes\022#.szengine.SearchByAttr" +
+      "ibutesRequest\032$.szengine.SearchByAttribu" +
+      "tesResponse\"\000\022~\n\033StreamExportCsvEntityRe" +
+      "port\022,.szengine.StreamExportCsvEntityRep" +
+      "ortRequest\032-.szengine.StreamExportCsvEnt" +
+      "ityReportResponse\"\0000\001\022\201\001\n\034StreamExportJs" +
+      "onEntityReport\022-.szengine.StreamExportJs" +
+      "onEntityReportRequest\032..szengine.StreamE" +
+      "xportJsonEntityReportResponse\"\0000\001\022L\n\013Why" +
+      "Entities\022\034.szengine.WhyEntitiesRequest\032\035" +
+      ".szengine.WhyEntitiesResponse\"\000\022^\n\021WhyRe" +
+      "cordInEntity\022\".szengine.WhyRecordInEntit" +
+      "yRequest\032#.szengine.WhyRecordInEntityRes" +
+      "ponse\"\000\022I\n\nWhyRecords\022\033.szengine.WhyReco" +
+      "rdsRequest\032\034.szengine.WhyRecordsResponse" +
+      "\"\000\022F\n\tWhySearch\022\032.szengine.WhySearchRequ" +
+      "est\032\033.szengine.WhySearchResponse\"\000BX\n\024co" +
+      "m.senzing.sdk.grpcB\rSzEngineProtoZ1githu" +
+      "b.com/senzing-garage/sz-sdk-go-grpc/szen" +
+      "gineb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -38412,17 +38413,17 @@ public final class SzEngineProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_szengine_AddRecordResponse_descriptor,
         new java.lang.String[] { "Result", });
-    internal_static_szengine_CloseExportRequest_descriptor =
+    internal_static_szengine_CloseExportReportRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_szengine_CloseExportRequest_fieldAccessorTable = new
+    internal_static_szengine_CloseExportReportRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_szengine_CloseExportRequest_descriptor,
+        internal_static_szengine_CloseExportReportRequest_descriptor,
         new java.lang.String[] { "ExportHandle", });
-    internal_static_szengine_CloseExportResponse_descriptor =
+    internal_static_szengine_CloseExportReportResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_szengine_CloseExportResponse_fieldAccessorTable = new
+    internal_static_szengine_CloseExportReportResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_szengine_CloseExportResponse_descriptor,
+        internal_static_szengine_CloseExportReportResponse_descriptor,
         new java.lang.String[] { });
     internal_static_szengine_CountRedoRecordsRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);

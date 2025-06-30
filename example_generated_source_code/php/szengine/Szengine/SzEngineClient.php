@@ -31,16 +31,16 @@ class SzEngineClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Szengine\CloseExportRequest $argument input argument
+     * @param \Szengine\CloseExportReportRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function CloseExport(\Szengine\CloseExportRequest $argument,
+    public function CloseExportReport(\Szengine\CloseExportReportRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szengine.SzEngine/CloseExport',
+        return $this->_simpleRequest('/szengine.SzEngine/CloseExportReport',
         $argument,
-        ['\Szengine\CloseExportResponse', 'decode'],
+        ['\Szengine\CloseExportReportResponse', 'decode'],
         $metadata, $options);
     }
 

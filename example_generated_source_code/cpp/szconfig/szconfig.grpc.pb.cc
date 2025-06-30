@@ -6,25 +6,25 @@
 #include "szconfig.grpc.pb.h"
 
 #include <functional>
-#include <grpcpp/support/async_stream.h>
-#include <grpcpp/support/async_unary_call.h>
-#include <grpcpp/impl/channel_interface.h>
-#include <grpcpp/impl/client_unary_call.h>
-#include <grpcpp/support/client_callback.h>
-#include <grpcpp/support/message_allocator.h>
-#include <grpcpp/support/method_handler.h>
-#include <grpcpp/impl/rpc_service_method.h>
-#include <grpcpp/support/server_callback.h>
+#include <grpcpp/impl/codegen/async_stream.h>
+#include <grpcpp/impl/codegen/async_unary_call.h>
+#include <grpcpp/impl/codegen/channel_interface.h>
+#include <grpcpp/impl/codegen/client_unary_call.h>
+#include <grpcpp/impl/codegen/client_callback.h>
+#include <grpcpp/impl/codegen/message_allocator.h>
+#include <grpcpp/impl/codegen/method_handler.h>
+#include <grpcpp/impl/codegen/rpc_service_method.h>
+#include <grpcpp/impl/codegen/server_callback.h>
 #include <grpcpp/impl/codegen/server_callback_handlers.h>
-#include <grpcpp/server_context.h>
-#include <grpcpp/impl/service_type.h>
-#include <grpcpp/support/sync_stream.h>
+#include <grpcpp/impl/codegen/server_context.h>
+#include <grpcpp/impl/codegen/service_type.h>
+#include <grpcpp/impl/codegen/sync_stream.h>
 namespace szconfig {
 
 static const char* SzConfig_method_names[] = {
-  "/szconfig.SzConfig/AddDataSource",
-  "/szconfig.SzConfig/DeleteDataSource",
-  "/szconfig.SzConfig/GetDataSources",
+  "/szconfig.SzConfig/RegisterDataSource",
+  "/szconfig.SzConfig/UnregisterDataSource",
+  "/szconfig.SzConfig/GetDataSourceRegistry",
   "/szconfig.SzConfig/VerifyConfig",
 };
 
@@ -35,77 +35,77 @@ std::unique_ptr< SzConfig::Stub> SzConfig::NewStub(const std::shared_ptr< ::grpc
 }
 
 SzConfig::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
-  : channel_(channel), rpcmethod_AddDataSource_(SzConfig_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_DeleteDataSource_(SzConfig_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetDataSources_(SzConfig_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  : channel_(channel), rpcmethod_RegisterDataSource_(SzConfig_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_UnregisterDataSource_(SzConfig_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetDataSourceRegistry_(SzConfig_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_VerifyConfig_(SzConfig_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status SzConfig::Stub::AddDataSource(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest& request, ::szconfig::AddDataSourceResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::szconfig::AddDataSourceRequest, ::szconfig::AddDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_AddDataSource_, context, request, response);
+::grpc::Status SzConfig::Stub::RegisterDataSource(::grpc::ClientContext* context, const ::szconfig::RegisterDataSourceRequest& request, ::szconfig::RegisterDataSourceResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::szconfig::RegisterDataSourceRequest, ::szconfig::RegisterDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_RegisterDataSource_, context, request, response);
 }
 
-void SzConfig::Stub::async::AddDataSource(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest* request, ::szconfig::AddDataSourceResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::szconfig::AddDataSourceRequest, ::szconfig::AddDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_AddDataSource_, context, request, response, std::move(f));
+void SzConfig::Stub::async::RegisterDataSource(::grpc::ClientContext* context, const ::szconfig::RegisterDataSourceRequest* request, ::szconfig::RegisterDataSourceResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::szconfig::RegisterDataSourceRequest, ::szconfig::RegisterDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_RegisterDataSource_, context, request, response, std::move(f));
 }
 
-void SzConfig::Stub::async::AddDataSource(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest* request, ::szconfig::AddDataSourceResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_AddDataSource_, context, request, response, reactor);
+void SzConfig::Stub::async::RegisterDataSource(::grpc::ClientContext* context, const ::szconfig::RegisterDataSourceRequest* request, ::szconfig::RegisterDataSourceResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_RegisterDataSource_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::szconfig::AddDataSourceResponse>* SzConfig::Stub::PrepareAsyncAddDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szconfig::AddDataSourceResponse, ::szconfig::AddDataSourceRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_AddDataSource_, context, request);
+::grpc::ClientAsyncResponseReader< ::szconfig::RegisterDataSourceResponse>* SzConfig::Stub::PrepareAsyncRegisterDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::RegisterDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szconfig::RegisterDataSourceResponse, ::szconfig::RegisterDataSourceRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_RegisterDataSource_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::szconfig::AddDataSourceResponse>* SzConfig::Stub::AsyncAddDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::AddDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::szconfig::RegisterDataSourceResponse>* SzConfig::Stub::AsyncRegisterDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::RegisterDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncAddDataSourceRaw(context, request, cq);
+    this->PrepareAsyncRegisterDataSourceRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status SzConfig::Stub::DeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest& request, ::szconfig::DeleteDataSourceResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::szconfig::DeleteDataSourceRequest, ::szconfig::DeleteDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_DeleteDataSource_, context, request, response);
+::grpc::Status SzConfig::Stub::UnregisterDataSource(::grpc::ClientContext* context, const ::szconfig::UnregisterDataSourceRequest& request, ::szconfig::UnregisterDataSourceResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::szconfig::UnregisterDataSourceRequest, ::szconfig::UnregisterDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_UnregisterDataSource_, context, request, response);
 }
 
-void SzConfig::Stub::async::DeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest* request, ::szconfig::DeleteDataSourceResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::szconfig::DeleteDataSourceRequest, ::szconfig::DeleteDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_DeleteDataSource_, context, request, response, std::move(f));
+void SzConfig::Stub::async::UnregisterDataSource(::grpc::ClientContext* context, const ::szconfig::UnregisterDataSourceRequest* request, ::szconfig::UnregisterDataSourceResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::szconfig::UnregisterDataSourceRequest, ::szconfig::UnregisterDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_UnregisterDataSource_, context, request, response, std::move(f));
 }
 
-void SzConfig::Stub::async::DeleteDataSource(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest* request, ::szconfig::DeleteDataSourceResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_DeleteDataSource_, context, request, response, reactor);
+void SzConfig::Stub::async::UnregisterDataSource(::grpc::ClientContext* context, const ::szconfig::UnregisterDataSourceRequest* request, ::szconfig::UnregisterDataSourceResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_UnregisterDataSource_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::szconfig::DeleteDataSourceResponse>* SzConfig::Stub::PrepareAsyncDeleteDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szconfig::DeleteDataSourceResponse, ::szconfig::DeleteDataSourceRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_DeleteDataSource_, context, request);
+::grpc::ClientAsyncResponseReader< ::szconfig::UnregisterDataSourceResponse>* SzConfig::Stub::PrepareAsyncUnregisterDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::UnregisterDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szconfig::UnregisterDataSourceResponse, ::szconfig::UnregisterDataSourceRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_UnregisterDataSource_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::szconfig::DeleteDataSourceResponse>* SzConfig::Stub::AsyncDeleteDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::DeleteDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::szconfig::UnregisterDataSourceResponse>* SzConfig::Stub::AsyncUnregisterDataSourceRaw(::grpc::ClientContext* context, const ::szconfig::UnregisterDataSourceRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncDeleteDataSourceRaw(context, request, cq);
+    this->PrepareAsyncUnregisterDataSourceRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status SzConfig::Stub::GetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest& request, ::szconfig::GetDataSourcesResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::szconfig::GetDataSourcesRequest, ::szconfig::GetDataSourcesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetDataSources_, context, request, response);
+::grpc::Status SzConfig::Stub::GetDataSourceRegistry(::grpc::ClientContext* context, const ::szconfig::GetDataSourceRegistryRequest& request, ::szconfig::GetDataSourceRegistryResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::szconfig::GetDataSourceRegistryRequest, ::szconfig::GetDataSourceRegistryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetDataSourceRegistry_, context, request, response);
 }
 
-void SzConfig::Stub::async::GetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest* request, ::szconfig::GetDataSourcesResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::szconfig::GetDataSourcesRequest, ::szconfig::GetDataSourcesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetDataSources_, context, request, response, std::move(f));
+void SzConfig::Stub::async::GetDataSourceRegistry(::grpc::ClientContext* context, const ::szconfig::GetDataSourceRegistryRequest* request, ::szconfig::GetDataSourceRegistryResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::szconfig::GetDataSourceRegistryRequest, ::szconfig::GetDataSourceRegistryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetDataSourceRegistry_, context, request, response, std::move(f));
 }
 
-void SzConfig::Stub::async::GetDataSources(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest* request, ::szconfig::GetDataSourcesResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetDataSources_, context, request, response, reactor);
+void SzConfig::Stub::async::GetDataSourceRegistry(::grpc::ClientContext* context, const ::szconfig::GetDataSourceRegistryRequest* request, ::szconfig::GetDataSourceRegistryResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetDataSourceRegistry_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::szconfig::GetDataSourcesResponse>* SzConfig::Stub::PrepareAsyncGetDataSourcesRaw(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szconfig::GetDataSourcesResponse, ::szconfig::GetDataSourcesRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetDataSources_, context, request);
+::grpc::ClientAsyncResponseReader< ::szconfig::GetDataSourceRegistryResponse>* SzConfig::Stub::PrepareAsyncGetDataSourceRegistryRaw(::grpc::ClientContext* context, const ::szconfig::GetDataSourceRegistryRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szconfig::GetDataSourceRegistryResponse, ::szconfig::GetDataSourceRegistryRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetDataSourceRegistry_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::szconfig::GetDataSourcesResponse>* SzConfig::Stub::AsyncGetDataSourcesRaw(::grpc::ClientContext* context, const ::szconfig::GetDataSourcesRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::szconfig::GetDataSourceRegistryResponse>* SzConfig::Stub::AsyncGetDataSourceRegistryRaw(::grpc::ClientContext* context, const ::szconfig::GetDataSourceRegistryRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncGetDataSourcesRaw(context, request, cq);
+    this->PrepareAsyncGetDataSourceRegistryRaw(context, request, cq);
   result->StartCall();
   return result;
 }
@@ -137,32 +137,32 @@ SzConfig::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzConfig_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::AddDataSourceRequest, ::szconfig::AddDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::RegisterDataSourceRequest, ::szconfig::RegisterDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SzConfig::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::szconfig::AddDataSourceRequest* req,
-             ::szconfig::AddDataSourceResponse* resp) {
-               return service->AddDataSource(ctx, req, resp);
+             const ::szconfig::RegisterDataSourceRequest* req,
+             ::szconfig::RegisterDataSourceResponse* resp) {
+               return service->RegisterDataSource(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzConfig_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::DeleteDataSourceRequest, ::szconfig::DeleteDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::UnregisterDataSourceRequest, ::szconfig::UnregisterDataSourceResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SzConfig::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::szconfig::DeleteDataSourceRequest* req,
-             ::szconfig::DeleteDataSourceResponse* resp) {
-               return service->DeleteDataSource(ctx, req, resp);
+             const ::szconfig::UnregisterDataSourceRequest* req,
+             ::szconfig::UnregisterDataSourceResponse* resp) {
+               return service->UnregisterDataSource(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzConfig_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::GetDataSourcesRequest, ::szconfig::GetDataSourcesResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SzConfig::Service, ::szconfig::GetDataSourceRegistryRequest, ::szconfig::GetDataSourceRegistryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SzConfig::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::szconfig::GetDataSourcesRequest* req,
-             ::szconfig::GetDataSourcesResponse* resp) {
-               return service->GetDataSources(ctx, req, resp);
+             const ::szconfig::GetDataSourceRegistryRequest* req,
+             ::szconfig::GetDataSourceRegistryResponse* resp) {
+               return service->GetDataSourceRegistry(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzConfig_method_names[3],
@@ -179,21 +179,21 @@ SzConfig::Service::Service() {
 SzConfig::Service::~Service() {
 }
 
-::grpc::Status SzConfig::Service::AddDataSource(::grpc::ServerContext* context, const ::szconfig::AddDataSourceRequest* request, ::szconfig::AddDataSourceResponse* response) {
+::grpc::Status SzConfig::Service::RegisterDataSource(::grpc::ServerContext* context, const ::szconfig::RegisterDataSourceRequest* request, ::szconfig::RegisterDataSourceResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status SzConfig::Service::DeleteDataSource(::grpc::ServerContext* context, const ::szconfig::DeleteDataSourceRequest* request, ::szconfig::DeleteDataSourceResponse* response) {
+::grpc::Status SzConfig::Service::UnregisterDataSource(::grpc::ServerContext* context, const ::szconfig::UnregisterDataSourceRequest* request, ::szconfig::UnregisterDataSourceResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status SzConfig::Service::GetDataSources(::grpc::ServerContext* context, const ::szconfig::GetDataSourcesRequest* request, ::szconfig::GetDataSourcesResponse* response) {
+::grpc::Status SzConfig::Service::GetDataSourceRegistry(::grpc::ServerContext* context, const ::szconfig::GetDataSourceRegistryRequest* request, ::szconfig::GetDataSourceRegistryResponse* response) {
   (void) context;
   (void) request;
   (void) response;

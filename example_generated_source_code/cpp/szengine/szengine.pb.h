@@ -62,14 +62,14 @@ class AddRecordResponse;
 struct AddRecordResponseDefaultTypeInternal;
 extern AddRecordResponseDefaultTypeInternal _AddRecordResponse_default_instance_;
 extern const ::google::protobuf::internal::ClassDataFull AddRecordResponse_class_data_;
-class CloseExportRequest;
-struct CloseExportRequestDefaultTypeInternal;
-extern CloseExportRequestDefaultTypeInternal _CloseExportRequest_default_instance_;
-extern const ::google::protobuf::internal::ClassDataFull CloseExportRequest_class_data_;
-class CloseExportResponse;
-struct CloseExportResponseDefaultTypeInternal;
-extern CloseExportResponseDefaultTypeInternal _CloseExportResponse_default_instance_;
-extern const ::google::protobuf::internal::ClassDataFull CloseExportResponse_class_data_;
+class CloseExportReportRequest;
+struct CloseExportReportRequestDefaultTypeInternal;
+extern CloseExportReportRequestDefaultTypeInternal _CloseExportReportRequest_default_instance_;
+extern const ::google::protobuf::internal::ClassDataFull CloseExportReportRequest_class_data_;
+class CloseExportReportResponse;
+struct CloseExportReportResponseDefaultTypeInternal;
+extern CloseExportReportResponseDefaultTypeInternal _CloseExportReportResponse_default_instance_;
+extern const ::google::protobuf::internal::ClassDataFull CloseExportReportResponse_class_data_;
 class CountRedoRecordsRequest;
 struct CountRedoRecordsRequestDefaultTypeInternal;
 extern CountRedoRecordsRequestDefaultTypeInternal _CountRedoRecordsRequest_default_instance_;
@@ -13177,29 +13177,29 @@ class CountRedoRecordsRequest final : public ::google::protobuf::internal::ZeroF
 extern const ::google::protobuf::internal::ClassDataFull CountRedoRecordsRequest_class_data_;
 // -------------------------------------------------------------------
 
-class CloseExportResponse final : public ::google::protobuf::internal::ZeroFieldsBase
-/* @@protoc_insertion_point(class_definition:szengine.CloseExportResponse) */ {
+class CloseExportReportResponse final : public ::google::protobuf::internal::ZeroFieldsBase
+/* @@protoc_insertion_point(class_definition:szengine.CloseExportReportResponse) */ {
  public:
-  inline CloseExportResponse() : CloseExportResponse(nullptr) {}
+  inline CloseExportReportResponse() : CloseExportReportResponse(nullptr) {}
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(CloseExportResponse* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
+  void operator delete(CloseExportReportResponse* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(CloseExportResponse));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(CloseExportReportResponse));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR CloseExportResponse(::google::protobuf::internal::ConstantInitialized);
+  explicit PROTOBUF_CONSTEXPR CloseExportReportResponse(::google::protobuf::internal::ConstantInitialized);
 
-  inline CloseExportResponse(const CloseExportResponse& from) : CloseExportResponse(nullptr, from) {}
-  inline CloseExportResponse(CloseExportResponse&& from) noexcept
-      : CloseExportResponse(nullptr, std::move(from)) {}
-  inline CloseExportResponse& operator=(const CloseExportResponse& from) {
+  inline CloseExportReportResponse(const CloseExportReportResponse& from) : CloseExportReportResponse(nullptr, from) {}
+  inline CloseExportReportResponse(CloseExportReportResponse&& from) noexcept
+      : CloseExportReportResponse(nullptr, std::move(from)) {}
+  inline CloseExportReportResponse& operator=(const CloseExportReportResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline CloseExportResponse& operator=(CloseExportResponse&& from) noexcept {
+  inline CloseExportReportResponse& operator=(CloseExportReportResponse&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -13227,13 +13227,13 @@ class CloseExportResponse final : public ::google::protobuf::internal::ZeroField
   static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const CloseExportResponse& default_instance() {
-    return *reinterpret_cast<const CloseExportResponse*>(
-        &_CloseExportResponse_default_instance_);
+  static const CloseExportReportResponse& default_instance() {
+    return *reinterpret_cast<const CloseExportReportResponse*>(
+        &_CloseExportReportResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 3;
-  friend void swap(CloseExportResponse& a, CloseExportResponse& b) { a.Swap(&b); }
-  inline void Swap(CloseExportResponse* PROTOBUF_NONNULL other) {
+  friend void swap(CloseExportReportResponse& a, CloseExportReportResponse& b) { a.Swap(&b); }
+  inline void Swap(CloseExportReportResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -13241,7 +13241,7 @@ class CloseExportResponse final : public ::google::protobuf::internal::ZeroField
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(CloseExportResponse* PROTOBUF_NONNULL other) {
+  void UnsafeArenaSwap(CloseExportReportResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -13249,15 +13249,15 @@ class CloseExportResponse final : public ::google::protobuf::internal::ZeroField
 
   // implements Message ----------------------------------------------
 
-  CloseExportResponse* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
-    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<CloseExportResponse>(arena);
+  CloseExportReportResponse* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<CloseExportReportResponse>(arena);
   }
   using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const CloseExportResponse& from) {
+  inline void CopyFrom(const CloseExportReportResponse& from) {
     ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
   }
   using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const CloseExportResponse& from) {
+  void MergeFrom(const CloseExportReportResponse& from) {
     ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
   }
 
@@ -13268,14 +13268,14 @@ class CloseExportResponse final : public ::google::protobuf::internal::ZeroField
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "szengine.CloseExportResponse"; }
+  static ::absl::string_view FullMessageName() { return "szengine.CloseExportReportResponse"; }
 
  protected:
-  explicit CloseExportResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  CloseExportResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const CloseExportResponse& from);
-  CloseExportResponse(
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, CloseExportResponse&& from) noexcept
-      : CloseExportResponse(arena) {
+  explicit CloseExportReportResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  CloseExportReportResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const CloseExportReportResponse& from);
+  CloseExportReportResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, CloseExportReportResponse&& from) noexcept
+      : CloseExportReportResponse(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
@@ -13291,7 +13291,7 @@ class CloseExportResponse final : public ::google::protobuf::internal::ZeroField
   // nested types ----------------------------------------------------
 
   // accessors -------------------------------------------------------
-  // @@protoc_insertion_point(class_scope:szengine.CloseExportResponse)
+  // @@protoc_insertion_point(class_scope:szengine.CloseExportReportResponse)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -13314,39 +13314,39 @@ class CloseExportResponse final : public ::google::protobuf::internal::ZeroField
     inline explicit Impl_(
         ::google::protobuf::internal::InternalVisibility visibility,
         ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-        const CloseExportResponse& from_msg);
+        const CloseExportReportResponse& from_msg);
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   friend struct ::TableStruct_szengine_2eproto;
 };
 
-extern const ::google::protobuf::internal::ClassDataFull CloseExportResponse_class_data_;
+extern const ::google::protobuf::internal::ClassDataFull CloseExportReportResponse_class_data_;
 // -------------------------------------------------------------------
 
-class CloseExportRequest final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:szengine.CloseExportRequest) */ {
+class CloseExportReportRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:szengine.CloseExportReportRequest) */ {
  public:
-  inline CloseExportRequest() : CloseExportRequest(nullptr) {}
-  ~CloseExportRequest() PROTOBUF_FINAL;
+  inline CloseExportReportRequest() : CloseExportReportRequest(nullptr) {}
+  ~CloseExportReportRequest() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(CloseExportRequest* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
+  void operator delete(CloseExportReportRequest* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(CloseExportRequest));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(CloseExportReportRequest));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR CloseExportRequest(::google::protobuf::internal::ConstantInitialized);
+  explicit PROTOBUF_CONSTEXPR CloseExportReportRequest(::google::protobuf::internal::ConstantInitialized);
 
-  inline CloseExportRequest(const CloseExportRequest& from) : CloseExportRequest(nullptr, from) {}
-  inline CloseExportRequest(CloseExportRequest&& from) noexcept
-      : CloseExportRequest(nullptr, std::move(from)) {}
-  inline CloseExportRequest& operator=(const CloseExportRequest& from) {
+  inline CloseExportReportRequest(const CloseExportReportRequest& from) : CloseExportReportRequest(nullptr, from) {}
+  inline CloseExportReportRequest(CloseExportReportRequest&& from) noexcept
+      : CloseExportReportRequest(nullptr, std::move(from)) {}
+  inline CloseExportReportRequest& operator=(const CloseExportReportRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline CloseExportRequest& operator=(CloseExportRequest&& from) noexcept {
+  inline CloseExportReportRequest& operator=(CloseExportReportRequest&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -13374,13 +13374,13 @@ class CloseExportRequest final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const CloseExportRequest& default_instance() {
-    return *reinterpret_cast<const CloseExportRequest*>(
-        &_CloseExportRequest_default_instance_);
+  static const CloseExportReportRequest& default_instance() {
+    return *reinterpret_cast<const CloseExportReportRequest*>(
+        &_CloseExportReportRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 2;
-  friend void swap(CloseExportRequest& a, CloseExportRequest& b) { a.Swap(&b); }
-  inline void Swap(CloseExportRequest* PROTOBUF_NONNULL other) {
+  friend void swap(CloseExportReportRequest& a, CloseExportReportRequest& b) { a.Swap(&b); }
+  inline void Swap(CloseExportReportRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -13388,7 +13388,7 @@ class CloseExportRequest final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(CloseExportRequest* PROTOBUF_NONNULL other) {
+  void UnsafeArenaSwap(CloseExportReportRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -13396,13 +13396,13 @@ class CloseExportRequest final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  CloseExportRequest* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<CloseExportRequest>(arena);
+  CloseExportReportRequest* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<CloseExportReportRequest>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const CloseExportRequest& from);
+  void CopyFrom(const CloseExportReportRequest& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const CloseExportRequest& from) { CloseExportRequest::MergeImpl(*this, from); }
+  void MergeFrom(const CloseExportReportRequest& from) { CloseExportReportRequest::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(::google::protobuf::MessageLite& to_msg,
@@ -13438,18 +13438,18 @@ class CloseExportRequest final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(CloseExportRequest* PROTOBUF_NONNULL other);
+  void InternalSwap(CloseExportReportRequest* PROTOBUF_NONNULL other);
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "szengine.CloseExportRequest"; }
+  static ::absl::string_view FullMessageName() { return "szengine.CloseExportReportRequest"; }
 
  protected:
-  explicit CloseExportRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  CloseExportRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const CloseExportRequest& from);
-  CloseExportRequest(
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, CloseExportRequest&& from) noexcept
-      : CloseExportRequest(arena) {
+  explicit CloseExportReportRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  CloseExportReportRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const CloseExportReportRequest& from);
+  CloseExportReportRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, CloseExportReportRequest&& from) noexcept
+      : CloseExportReportRequest(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
@@ -13478,7 +13478,7 @@ class CloseExportRequest final : public ::google::protobuf::Message
   void _internal_set_export_handle(::int64_t value);
 
   public:
-  // @@protoc_insertion_point(class_scope:szengine.CloseExportRequest)
+  // @@protoc_insertion_point(class_scope:szengine.CloseExportReportRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -13501,7 +13501,7 @@ class CloseExportRequest final : public ::google::protobuf::Message
     inline explicit Impl_(
         ::google::protobuf::internal::InternalVisibility visibility,
         ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-        const CloseExportRequest& from_msg);
+        const CloseExportReportRequest& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::int64_t export_handle_;
@@ -13511,7 +13511,7 @@ class CloseExportRequest final : public ::google::protobuf::Message
   friend struct ::TableStruct_szengine_2eproto;
 };
 
-extern const ::google::protobuf::internal::ClassDataFull CloseExportRequest_class_data_;
+extern const ::google::protobuf::internal::ClassDataFull CloseExportReportRequest_class_data_;
 // -------------------------------------------------------------------
 
 class AddRecordResponse final : public ::google::protobuf::Message
@@ -14257,35 +14257,35 @@ inline void AddRecordResponse::set_allocated_result(std::string* PROTOBUF_NULLAB
 
 // -------------------------------------------------------------------
 
-// CloseExportRequest
+// CloseExportReportRequest
 
 // int64 export_handle = 1;
-inline void CloseExportRequest::clear_export_handle() {
+inline void CloseExportReportRequest::clear_export_handle() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.export_handle_ = ::int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline ::int64_t CloseExportRequest::export_handle() const {
-  // @@protoc_insertion_point(field_get:szengine.CloseExportRequest.export_handle)
+inline ::int64_t CloseExportReportRequest::export_handle() const {
+  // @@protoc_insertion_point(field_get:szengine.CloseExportReportRequest.export_handle)
   return _internal_export_handle();
 }
-inline void CloseExportRequest::set_export_handle(::int64_t value) {
+inline void CloseExportReportRequest::set_export_handle(::int64_t value) {
   _internal_set_export_handle(value);
   _impl_._has_bits_[0] |= 0x00000001u;
-  // @@protoc_insertion_point(field_set:szengine.CloseExportRequest.export_handle)
+  // @@protoc_insertion_point(field_set:szengine.CloseExportReportRequest.export_handle)
 }
-inline ::int64_t CloseExportRequest::_internal_export_handle() const {
+inline ::int64_t CloseExportReportRequest::_internal_export_handle() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.export_handle_;
 }
-inline void CloseExportRequest::_internal_set_export_handle(::int64_t value) {
+inline void CloseExportReportRequest::_internal_set_export_handle(::int64_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.export_handle_ = value;
 }
 
 // -------------------------------------------------------------------
 
-// CloseExportResponse
+// CloseExportReportResponse
 
 // -------------------------------------------------------------------
 

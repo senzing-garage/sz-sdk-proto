@@ -7,23 +7,23 @@
 #include "szengine.pb.h"
 
 #include <functional>
-#include <grpcpp/generic/async_generic_service.h>
-#include <grpcpp/support/async_stream.h>
-#include <grpcpp/support/async_unary_call.h>
-#include <grpcpp/support/client_callback.h>
-#include <grpcpp/client_context.h>
-#include <grpcpp/completion_queue.h>
-#include <grpcpp/support/message_allocator.h>
-#include <grpcpp/support/method_handler.h>
+#include <grpcpp/impl/codegen/async_generic_service.h>
+#include <grpcpp/impl/codegen/async_stream.h>
+#include <grpcpp/impl/codegen/async_unary_call.h>
+#include <grpcpp/impl/codegen/client_callback.h>
+#include <grpcpp/impl/codegen/client_context.h>
+#include <grpcpp/impl/codegen/completion_queue.h>
+#include <grpcpp/impl/codegen/message_allocator.h>
+#include <grpcpp/impl/codegen/method_handler.h>
 #include <grpcpp/impl/codegen/proto_utils.h>
-#include <grpcpp/impl/rpc_method.h>
-#include <grpcpp/support/server_callback.h>
+#include <grpcpp/impl/codegen/rpc_method.h>
+#include <grpcpp/impl/codegen/server_callback.h>
 #include <grpcpp/impl/codegen/server_callback_handlers.h>
-#include <grpcpp/server_context.h>
-#include <grpcpp/impl/service_type.h>
+#include <grpcpp/impl/codegen/server_context.h>
+#include <grpcpp/impl/codegen/service_type.h>
 #include <grpcpp/impl/codegen/status.h>
-#include <grpcpp/support/stub_options.h>
-#include <grpcpp/support/sync_stream.h>
+#include <grpcpp/impl/codegen/stub_options.h>
+#include <grpcpp/impl/codegen/sync_stream.h>
 
 namespace szengine {
 
@@ -42,12 +42,12 @@ class SzEngine final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::AddRecordResponse>> PrepareAsyncAddRecord(::grpc::ClientContext* context, const ::szengine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::AddRecordResponse>>(PrepareAsyncAddRecordRaw(context, request, cq));
     }
-    virtual ::grpc::Status CloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest& request, ::szengine::CloseExportResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::CloseExportResponse>> AsyncCloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::CloseExportResponse>>(AsyncCloseExportRaw(context, request, cq));
+    virtual ::grpc::Status CloseExportReport(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest& request, ::szengine::CloseExportReportResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::CloseExportReportResponse>> AsyncCloseExportReport(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::CloseExportReportResponse>>(AsyncCloseExportReportRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::CloseExportResponse>> PrepareAsyncCloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::CloseExportResponse>>(PrepareAsyncCloseExportRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::CloseExportReportResponse>> PrepareAsyncCloseExportReport(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::CloseExportReportResponse>>(PrepareAsyncCloseExportReportRaw(context, request, cq));
     }
     virtual ::grpc::Status CountRedoRecords(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest& request, ::szengine::CountRedoRecordsResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::CountRedoRecordsResponse>> AsyncCountRedoRecords(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest& request, ::grpc::CompletionQueue* cq) {
@@ -282,8 +282,8 @@ class SzEngine final {
       virtual ~async_interface() {}
       virtual void AddRecord(::grpc::ClientContext* context, const ::szengine::AddRecordRequest* request, ::szengine::AddRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void AddRecord(::grpc::ClientContext* context, const ::szengine::AddRecordRequest* request, ::szengine::AddRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void CloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest* request, ::szengine::CloseExportResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void CloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest* request, ::szengine::CloseExportResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void CloseExportReport(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest* request, ::szengine::CloseExportReportResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void CloseExportReport(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest* request, ::szengine::CloseExportReportResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void CountRedoRecords(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest* request, ::szengine::CountRedoRecordsResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void CountRedoRecords(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest* request, ::szengine::CountRedoRecordsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void DeleteRecord(::grpc::ClientContext* context, const ::szengine::DeleteRecordRequest* request, ::szengine::DeleteRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
@@ -353,8 +353,8 @@ class SzEngine final {
    private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::AddRecordResponse>* AsyncAddRecordRaw(::grpc::ClientContext* context, const ::szengine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::AddRecordResponse>* PrepareAsyncAddRecordRaw(::grpc::ClientContext* context, const ::szengine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::CloseExportResponse>* AsyncCloseExportRaw(::grpc::ClientContext* context, const ::szengine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::CloseExportResponse>* PrepareAsyncCloseExportRaw(::grpc::ClientContext* context, const ::szengine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::CloseExportReportResponse>* AsyncCloseExportReportRaw(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::CloseExportReportResponse>* PrepareAsyncCloseExportReportRaw(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::CountRedoRecordsResponse>* AsyncCountRedoRecordsRaw(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::CountRedoRecordsResponse>* PrepareAsyncCountRedoRecordsRaw(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::DeleteRecordResponse>* AsyncDeleteRecordRaw(::grpc::ClientContext* context, const ::szengine::DeleteRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -432,12 +432,12 @@ class SzEngine final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::AddRecordResponse>> PrepareAsyncAddRecord(::grpc::ClientContext* context, const ::szengine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::AddRecordResponse>>(PrepareAsyncAddRecordRaw(context, request, cq));
     }
-    ::grpc::Status CloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest& request, ::szengine::CloseExportResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::CloseExportResponse>> AsyncCloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::CloseExportResponse>>(AsyncCloseExportRaw(context, request, cq));
+    ::grpc::Status CloseExportReport(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest& request, ::szengine::CloseExportReportResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::CloseExportReportResponse>> AsyncCloseExportReport(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::CloseExportReportResponse>>(AsyncCloseExportReportRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::CloseExportResponse>> PrepareAsyncCloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::CloseExportResponse>>(PrepareAsyncCloseExportRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::CloseExportReportResponse>> PrepareAsyncCloseExportReport(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::CloseExportReportResponse>>(PrepareAsyncCloseExportReportRaw(context, request, cq));
     }
     ::grpc::Status CountRedoRecords(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest& request, ::szengine::CountRedoRecordsResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::CountRedoRecordsResponse>> AsyncCountRedoRecords(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest& request, ::grpc::CompletionQueue* cq) {
@@ -672,8 +672,8 @@ class SzEngine final {
      public:
       void AddRecord(::grpc::ClientContext* context, const ::szengine::AddRecordRequest* request, ::szengine::AddRecordResponse* response, std::function<void(::grpc::Status)>) override;
       void AddRecord(::grpc::ClientContext* context, const ::szengine::AddRecordRequest* request, ::szengine::AddRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void CloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest* request, ::szengine::CloseExportResponse* response, std::function<void(::grpc::Status)>) override;
-      void CloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest* request, ::szengine::CloseExportResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void CloseExportReport(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest* request, ::szengine::CloseExportReportResponse* response, std::function<void(::grpc::Status)>) override;
+      void CloseExportReport(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest* request, ::szengine::CloseExportReportResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void CountRedoRecords(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest* request, ::szengine::CountRedoRecordsResponse* response, std::function<void(::grpc::Status)>) override;
       void CountRedoRecords(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest* request, ::szengine::CountRedoRecordsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void DeleteRecord(::grpc::ClientContext* context, const ::szengine::DeleteRecordRequest* request, ::szengine::DeleteRecordResponse* response, std::function<void(::grpc::Status)>) override;
@@ -749,8 +749,8 @@ class SzEngine final {
     class async async_stub_{this};
     ::grpc::ClientAsyncResponseReader< ::szengine::AddRecordResponse>* AsyncAddRecordRaw(::grpc::ClientContext* context, const ::szengine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szengine::AddRecordResponse>* PrepareAsyncAddRecordRaw(::grpc::ClientContext* context, const ::szengine::AddRecordRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::szengine::CloseExportResponse>* AsyncCloseExportRaw(::grpc::ClientContext* context, const ::szengine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::szengine::CloseExportResponse>* PrepareAsyncCloseExportRaw(::grpc::ClientContext* context, const ::szengine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::szengine::CloseExportReportResponse>* AsyncCloseExportReportRaw(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::szengine::CloseExportReportResponse>* PrepareAsyncCloseExportReportRaw(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szengine::CountRedoRecordsResponse>* AsyncCountRedoRecordsRaw(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szengine::CountRedoRecordsResponse>* PrepareAsyncCountRedoRecordsRaw(::grpc::ClientContext* context, const ::szengine::CountRedoRecordsRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szengine::DeleteRecordResponse>* AsyncDeleteRecordRaw(::grpc::ClientContext* context, const ::szengine::DeleteRecordRequest& request, ::grpc::CompletionQueue* cq) override;
@@ -818,7 +818,7 @@ class SzEngine final {
     ::grpc::ClientAsyncResponseReader< ::szengine::WhySearchResponse>* AsyncWhySearchRaw(::grpc::ClientContext* context, const ::szengine::WhySearchRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szengine::WhySearchResponse>* PrepareAsyncWhySearchRaw(::grpc::ClientContext* context, const ::szengine::WhySearchRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_AddRecord_;
-    const ::grpc::internal::RpcMethod rpcmethod_CloseExport_;
+    const ::grpc::internal::RpcMethod rpcmethod_CloseExportReport_;
     const ::grpc::internal::RpcMethod rpcmethod_CountRedoRecords_;
     const ::grpc::internal::RpcMethod rpcmethod_DeleteRecord_;
     const ::grpc::internal::RpcMethod rpcmethod_ExportCsvEntityReport_;
@@ -859,7 +859,7 @@ class SzEngine final {
     Service();
     virtual ~Service();
     virtual ::grpc::Status AddRecord(::grpc::ServerContext* context, const ::szengine::AddRecordRequest* request, ::szengine::AddRecordResponse* response);
-    virtual ::grpc::Status CloseExport(::grpc::ServerContext* context, const ::szengine::CloseExportRequest* request, ::szengine::CloseExportResponse* response);
+    virtual ::grpc::Status CloseExportReport(::grpc::ServerContext* context, const ::szengine::CloseExportReportRequest* request, ::szengine::CloseExportReportResponse* response);
     virtual ::grpc::Status CountRedoRecords(::grpc::ServerContext* context, const ::szengine::CountRedoRecordsRequest* request, ::szengine::CountRedoRecordsResponse* response);
     virtual ::grpc::Status DeleteRecord(::grpc::ServerContext* context, const ::szengine::DeleteRecordRequest* request, ::szengine::DeleteRecordResponse* response);
     virtual ::grpc::Status ExportCsvEntityReport(::grpc::ServerContext* context, const ::szengine::ExportCsvEntityReportRequest* request, ::szengine::ExportCsvEntityReportResponse* response);
@@ -914,22 +914,22 @@ class SzEngine final {
     }
   };
   template <class BaseClass>
-  class WithAsyncMethod_CloseExport : public BaseClass {
+  class WithAsyncMethod_CloseExportReport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithAsyncMethod_CloseExport() {
+    WithAsyncMethod_CloseExportReport() {
       ::grpc::Service::MarkMethodAsync(1);
     }
-    ~WithAsyncMethod_CloseExport() override {
+    ~WithAsyncMethod_CloseExportReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CloseExport(::grpc::ServerContext* /*context*/, const ::szengine::CloseExportRequest* /*request*/, ::szengine::CloseExportResponse* /*response*/) override {
+    ::grpc::Status CloseExportReport(::grpc::ServerContext* /*context*/, const ::szengine::CloseExportReportRequest* /*request*/, ::szengine::CloseExportReportResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestCloseExport(::grpc::ServerContext* context, ::szengine::CloseExportRequest* request, ::grpc::ServerAsyncResponseWriter< ::szengine::CloseExportResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestCloseExportReport(::grpc::ServerContext* context, ::szengine::CloseExportReportRequest* request, ::grpc::ServerAsyncResponseWriter< ::szengine::CloseExportReportResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1573,7 +1573,7 @@ class SzEngine final {
       ::grpc::Service::RequestAsyncUnary(33, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_AddRecord<WithAsyncMethod_CloseExport<WithAsyncMethod_CountRedoRecords<WithAsyncMethod_DeleteRecord<WithAsyncMethod_ExportCsvEntityReport<WithAsyncMethod_ExportJsonEntityReport<WithAsyncMethod_FetchNext<WithAsyncMethod_FindInterestingEntitiesByEntityId<WithAsyncMethod_FindInterestingEntitiesByRecordId<WithAsyncMethod_FindNetworkByEntityId<WithAsyncMethod_FindNetworkByRecordId<WithAsyncMethod_FindPathByEntityId<WithAsyncMethod_FindPathByRecordId<WithAsyncMethod_GetActiveConfigId<WithAsyncMethod_GetEntityByEntityId<WithAsyncMethod_GetEntityByRecordId<WithAsyncMethod_GetRecord<WithAsyncMethod_GetRedoRecord<WithAsyncMethod_GetStats<WithAsyncMethod_GetVirtualEntityByRecordId<WithAsyncMethod_HowEntityByEntityId<WithAsyncMethod_PreprocessRecord<WithAsyncMethod_PrimeEngine<WithAsyncMethod_ProcessRedoRecord<WithAsyncMethod_ReevaluateEntity<WithAsyncMethod_ReevaluateRecord<WithAsyncMethod_Reinitialize<WithAsyncMethod_SearchByAttributes<WithAsyncMethod_StreamExportCsvEntityReport<WithAsyncMethod_StreamExportJsonEntityReport<WithAsyncMethod_WhyEntities<WithAsyncMethod_WhyRecordInEntity<WithAsyncMethod_WhyRecords<WithAsyncMethod_WhySearch<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
+  typedef WithAsyncMethod_AddRecord<WithAsyncMethod_CloseExportReport<WithAsyncMethod_CountRedoRecords<WithAsyncMethod_DeleteRecord<WithAsyncMethod_ExportCsvEntityReport<WithAsyncMethod_ExportJsonEntityReport<WithAsyncMethod_FetchNext<WithAsyncMethod_FindInterestingEntitiesByEntityId<WithAsyncMethod_FindInterestingEntitiesByRecordId<WithAsyncMethod_FindNetworkByEntityId<WithAsyncMethod_FindNetworkByRecordId<WithAsyncMethod_FindPathByEntityId<WithAsyncMethod_FindPathByRecordId<WithAsyncMethod_GetActiveConfigId<WithAsyncMethod_GetEntityByEntityId<WithAsyncMethod_GetEntityByRecordId<WithAsyncMethod_GetRecord<WithAsyncMethod_GetRedoRecord<WithAsyncMethod_GetStats<WithAsyncMethod_GetVirtualEntityByRecordId<WithAsyncMethod_HowEntityByEntityId<WithAsyncMethod_PreprocessRecord<WithAsyncMethod_PrimeEngine<WithAsyncMethod_ProcessRedoRecord<WithAsyncMethod_ReevaluateEntity<WithAsyncMethod_ReevaluateRecord<WithAsyncMethod_Reinitialize<WithAsyncMethod_SearchByAttributes<WithAsyncMethod_StreamExportCsvEntityReport<WithAsyncMethod_StreamExportJsonEntityReport<WithAsyncMethod_WhyEntities<WithAsyncMethod_WhyRecordInEntity<WithAsyncMethod_WhyRecords<WithAsyncMethod_WhySearch<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_AddRecord : public BaseClass {
    private:
@@ -1602,31 +1602,31 @@ class SzEngine final {
       ::grpc::CallbackServerContext* /*context*/, const ::szengine::AddRecordRequest* /*request*/, ::szengine::AddRecordResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_CloseExport : public BaseClass {
+  class WithCallbackMethod_CloseExportReport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_CloseExport() {
+    WithCallbackMethod_CloseExportReport() {
       ::grpc::Service::MarkMethodCallback(1,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::CloseExportRequest, ::szengine::CloseExportResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::szengine::CloseExportReportRequest, ::szengine::CloseExportReportResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::CloseExportRequest* request, ::szengine::CloseExportResponse* response) { return this->CloseExport(context, request, response); }));}
-    void SetMessageAllocatorFor_CloseExport(
-        ::grpc::MessageAllocator< ::szengine::CloseExportRequest, ::szengine::CloseExportResponse>* allocator) {
+                   ::grpc::CallbackServerContext* context, const ::szengine::CloseExportReportRequest* request, ::szengine::CloseExportReportResponse* response) { return this->CloseExportReport(context, request, response); }));}
+    void SetMessageAllocatorFor_CloseExportReport(
+        ::grpc::MessageAllocator< ::szengine::CloseExportReportRequest, ::szengine::CloseExportReportResponse>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::CloseExportRequest, ::szengine::CloseExportResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::CloseExportReportRequest, ::szengine::CloseExportReportResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_CloseExport() override {
+    ~WithCallbackMethod_CloseExportReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CloseExport(::grpc::ServerContext* /*context*/, const ::szengine::CloseExportRequest* /*request*/, ::szengine::CloseExportResponse* /*response*/) override {
+    ::grpc::Status CloseExportReport(::grpc::ServerContext* /*context*/, const ::szengine::CloseExportReportRequest* /*request*/, ::szengine::CloseExportReportResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* CloseExport(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::CloseExportRequest* /*request*/, ::szengine::CloseExportResponse* /*response*/)  { return nullptr; }
+    virtual ::grpc::ServerUnaryReactor* CloseExportReport(
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::CloseExportReportRequest* /*request*/, ::szengine::CloseExportReportResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithCallbackMethod_CountRedoRecords : public BaseClass {
@@ -2482,7 +2482,7 @@ class SzEngine final {
     virtual ::grpc::ServerUnaryReactor* WhySearch(
       ::grpc::CallbackServerContext* /*context*/, const ::szengine::WhySearchRequest* /*request*/, ::szengine::WhySearchResponse* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_AddRecord<WithCallbackMethod_CloseExport<WithCallbackMethod_CountRedoRecords<WithCallbackMethod_DeleteRecord<WithCallbackMethod_ExportCsvEntityReport<WithCallbackMethod_ExportJsonEntityReport<WithCallbackMethod_FetchNext<WithCallbackMethod_FindInterestingEntitiesByEntityId<WithCallbackMethod_FindInterestingEntitiesByRecordId<WithCallbackMethod_FindNetworkByEntityId<WithCallbackMethod_FindNetworkByRecordId<WithCallbackMethod_FindPathByEntityId<WithCallbackMethod_FindPathByRecordId<WithCallbackMethod_GetActiveConfigId<WithCallbackMethod_GetEntityByEntityId<WithCallbackMethod_GetEntityByRecordId<WithCallbackMethod_GetRecord<WithCallbackMethod_GetRedoRecord<WithCallbackMethod_GetStats<WithCallbackMethod_GetVirtualEntityByRecordId<WithCallbackMethod_HowEntityByEntityId<WithCallbackMethod_PreprocessRecord<WithCallbackMethod_PrimeEngine<WithCallbackMethod_ProcessRedoRecord<WithCallbackMethod_ReevaluateEntity<WithCallbackMethod_ReevaluateRecord<WithCallbackMethod_Reinitialize<WithCallbackMethod_SearchByAttributes<WithCallbackMethod_StreamExportCsvEntityReport<WithCallbackMethod_StreamExportJsonEntityReport<WithCallbackMethod_WhyEntities<WithCallbackMethod_WhyRecordInEntity<WithCallbackMethod_WhyRecords<WithCallbackMethod_WhySearch<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
+  typedef WithCallbackMethod_AddRecord<WithCallbackMethod_CloseExportReport<WithCallbackMethod_CountRedoRecords<WithCallbackMethod_DeleteRecord<WithCallbackMethod_ExportCsvEntityReport<WithCallbackMethod_ExportJsonEntityReport<WithCallbackMethod_FetchNext<WithCallbackMethod_FindInterestingEntitiesByEntityId<WithCallbackMethod_FindInterestingEntitiesByRecordId<WithCallbackMethod_FindNetworkByEntityId<WithCallbackMethod_FindNetworkByRecordId<WithCallbackMethod_FindPathByEntityId<WithCallbackMethod_FindPathByRecordId<WithCallbackMethod_GetActiveConfigId<WithCallbackMethod_GetEntityByEntityId<WithCallbackMethod_GetEntityByRecordId<WithCallbackMethod_GetRecord<WithCallbackMethod_GetRedoRecord<WithCallbackMethod_GetStats<WithCallbackMethod_GetVirtualEntityByRecordId<WithCallbackMethod_HowEntityByEntityId<WithCallbackMethod_PreprocessRecord<WithCallbackMethod_PrimeEngine<WithCallbackMethod_ProcessRedoRecord<WithCallbackMethod_ReevaluateEntity<WithCallbackMethod_ReevaluateRecord<WithCallbackMethod_Reinitialize<WithCallbackMethod_SearchByAttributes<WithCallbackMethod_StreamExportCsvEntityReport<WithCallbackMethod_StreamExportJsonEntityReport<WithCallbackMethod_WhyEntities<WithCallbackMethod_WhyRecordInEntity<WithCallbackMethod_WhyRecords<WithCallbackMethod_WhySearch<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_AddRecord : public BaseClass {
@@ -2502,18 +2502,18 @@ class SzEngine final {
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_CloseExport : public BaseClass {
+  class WithGenericMethod_CloseExportReport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithGenericMethod_CloseExport() {
+    WithGenericMethod_CloseExportReport() {
       ::grpc::Service::MarkMethodGeneric(1);
     }
-    ~WithGenericMethod_CloseExport() override {
+    ~WithGenericMethod_CloseExportReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CloseExport(::grpc::ServerContext* /*context*/, const ::szengine::CloseExportRequest* /*request*/, ::szengine::CloseExportResponse* /*response*/) override {
+    ::grpc::Status CloseExportReport(::grpc::ServerContext* /*context*/, const ::szengine::CloseExportReportRequest* /*request*/, ::szengine::CloseExportReportResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -3083,22 +3083,22 @@ class SzEngine final {
     }
   };
   template <class BaseClass>
-  class WithRawMethod_CloseExport : public BaseClass {
+  class WithRawMethod_CloseExportReport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawMethod_CloseExport() {
+    WithRawMethod_CloseExportReport() {
       ::grpc::Service::MarkMethodRaw(1);
     }
-    ~WithRawMethod_CloseExport() override {
+    ~WithRawMethod_CloseExportReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CloseExport(::grpc::ServerContext* /*context*/, const ::szengine::CloseExportRequest* /*request*/, ::szengine::CloseExportResponse* /*response*/) override {
+    ::grpc::Status CloseExportReport(::grpc::ServerContext* /*context*/, const ::szengine::CloseExportReportRequest* /*request*/, ::szengine::CloseExportReportResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestCloseExport(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestCloseExportReport(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -3765,25 +3765,25 @@ class SzEngine final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_CloseExport : public BaseClass {
+  class WithRawCallbackMethod_CloseExportReport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_CloseExport() {
+    WithRawCallbackMethod_CloseExportReport() {
       ::grpc::Service::MarkMethodRawCallback(1,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CloseExport(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->CloseExportReport(context, request, response); }));
     }
-    ~WithRawCallbackMethod_CloseExport() override {
+    ~WithRawCallbackMethod_CloseExportReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status CloseExport(::grpc::ServerContext* /*context*/, const ::szengine::CloseExportRequest* /*request*/, ::szengine::CloseExportResponse* /*response*/) override {
+    ::grpc::Status CloseExportReport(::grpc::ServerContext* /*context*/, const ::szengine::CloseExportReportRequest* /*request*/, ::szengine::CloseExportReportResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* CloseExport(
+    virtual ::grpc::ServerUnaryReactor* CloseExportReport(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
@@ -4518,31 +4518,31 @@ class SzEngine final {
     virtual ::grpc::Status StreamedAddRecord(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szengine::AddRecordRequest,::szengine::AddRecordResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_CloseExport : public BaseClass {
+  class WithStreamedUnaryMethod_CloseExportReport : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithStreamedUnaryMethod_CloseExport() {
+    WithStreamedUnaryMethod_CloseExportReport() {
       ::grpc::Service::MarkMethodStreamed(1,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::szengine::CloseExportRequest, ::szengine::CloseExportResponse>(
+          ::szengine::CloseExportReportRequest, ::szengine::CloseExportReportResponse>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::szengine::CloseExportRequest, ::szengine::CloseExportResponse>* streamer) {
-                       return this->StreamedCloseExport(context,
+                     ::szengine::CloseExportReportRequest, ::szengine::CloseExportReportResponse>* streamer) {
+                       return this->StreamedCloseExportReport(context,
                          streamer);
                   }));
     }
-    ~WithStreamedUnaryMethod_CloseExport() override {
+    ~WithStreamedUnaryMethod_CloseExportReport() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status CloseExport(::grpc::ServerContext* /*context*/, const ::szengine::CloseExportRequest* /*request*/, ::szengine::CloseExportResponse* /*response*/) override {
+    ::grpc::Status CloseExportReport(::grpc::ServerContext* /*context*/, const ::szengine::CloseExportReportRequest* /*request*/, ::szengine::CloseExportReportResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedCloseExport(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szengine::CloseExportRequest,::szengine::CloseExportResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedCloseExportReport(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szengine::CloseExportReportRequest,::szengine::CloseExportReportResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_CountRedoRecords : public BaseClass {
@@ -5354,7 +5354,7 @@ class SzEngine final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedWhySearch(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szengine::WhySearchRequest,::szengine::WhySearchResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_AddRecord<WithStreamedUnaryMethod_CloseExport<WithStreamedUnaryMethod_CountRedoRecords<WithStreamedUnaryMethod_DeleteRecord<WithStreamedUnaryMethod_ExportCsvEntityReport<WithStreamedUnaryMethod_ExportJsonEntityReport<WithStreamedUnaryMethod_FetchNext<WithStreamedUnaryMethod_FindInterestingEntitiesByEntityId<WithStreamedUnaryMethod_FindInterestingEntitiesByRecordId<WithStreamedUnaryMethod_FindNetworkByEntityId<WithStreamedUnaryMethod_FindNetworkByRecordId<WithStreamedUnaryMethod_FindPathByEntityId<WithStreamedUnaryMethod_FindPathByRecordId<WithStreamedUnaryMethod_GetActiveConfigId<WithStreamedUnaryMethod_GetEntityByEntityId<WithStreamedUnaryMethod_GetEntityByRecordId<WithStreamedUnaryMethod_GetRecord<WithStreamedUnaryMethod_GetRedoRecord<WithStreamedUnaryMethod_GetStats<WithStreamedUnaryMethod_GetVirtualEntityByRecordId<WithStreamedUnaryMethod_HowEntityByEntityId<WithStreamedUnaryMethod_PreprocessRecord<WithStreamedUnaryMethod_PrimeEngine<WithStreamedUnaryMethod_ProcessRedoRecord<WithStreamedUnaryMethod_ReevaluateEntity<WithStreamedUnaryMethod_ReevaluateRecord<WithStreamedUnaryMethod_Reinitialize<WithStreamedUnaryMethod_SearchByAttributes<WithStreamedUnaryMethod_WhyEntities<WithStreamedUnaryMethod_WhyRecordInEntity<WithStreamedUnaryMethod_WhyRecords<WithStreamedUnaryMethod_WhySearch<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_AddRecord<WithStreamedUnaryMethod_CloseExportReport<WithStreamedUnaryMethod_CountRedoRecords<WithStreamedUnaryMethod_DeleteRecord<WithStreamedUnaryMethod_ExportCsvEntityReport<WithStreamedUnaryMethod_ExportJsonEntityReport<WithStreamedUnaryMethod_FetchNext<WithStreamedUnaryMethod_FindInterestingEntitiesByEntityId<WithStreamedUnaryMethod_FindInterestingEntitiesByRecordId<WithStreamedUnaryMethod_FindNetworkByEntityId<WithStreamedUnaryMethod_FindNetworkByRecordId<WithStreamedUnaryMethod_FindPathByEntityId<WithStreamedUnaryMethod_FindPathByRecordId<WithStreamedUnaryMethod_GetActiveConfigId<WithStreamedUnaryMethod_GetEntityByEntityId<WithStreamedUnaryMethod_GetEntityByRecordId<WithStreamedUnaryMethod_GetRecord<WithStreamedUnaryMethod_GetRedoRecord<WithStreamedUnaryMethod_GetStats<WithStreamedUnaryMethod_GetVirtualEntityByRecordId<WithStreamedUnaryMethod_HowEntityByEntityId<WithStreamedUnaryMethod_PreprocessRecord<WithStreamedUnaryMethod_PrimeEngine<WithStreamedUnaryMethod_ProcessRedoRecord<WithStreamedUnaryMethod_ReevaluateEntity<WithStreamedUnaryMethod_ReevaluateRecord<WithStreamedUnaryMethod_Reinitialize<WithStreamedUnaryMethod_SearchByAttributes<WithStreamedUnaryMethod_WhyEntities<WithStreamedUnaryMethod_WhyRecordInEntity<WithStreamedUnaryMethod_WhyRecords<WithStreamedUnaryMethod_WhySearch<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
   template <class BaseClass>
   class WithSplitStreamingMethod_StreamExportCsvEntityReport : public BaseClass {
    private:
@@ -5410,7 +5410,7 @@ class SzEngine final {
     virtual ::grpc::Status StreamedStreamExportJsonEntityReport(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::szengine::StreamExportJsonEntityReportRequest,::szengine::StreamExportJsonEntityReportResponse>* server_split_streamer) = 0;
   };
   typedef WithSplitStreamingMethod_StreamExportCsvEntityReport<WithSplitStreamingMethod_StreamExportJsonEntityReport<Service > > SplitStreamedService;
-  typedef WithStreamedUnaryMethod_AddRecord<WithStreamedUnaryMethod_CloseExport<WithStreamedUnaryMethod_CountRedoRecords<WithStreamedUnaryMethod_DeleteRecord<WithStreamedUnaryMethod_ExportCsvEntityReport<WithStreamedUnaryMethod_ExportJsonEntityReport<WithStreamedUnaryMethod_FetchNext<WithStreamedUnaryMethod_FindInterestingEntitiesByEntityId<WithStreamedUnaryMethod_FindInterestingEntitiesByRecordId<WithStreamedUnaryMethod_FindNetworkByEntityId<WithStreamedUnaryMethod_FindNetworkByRecordId<WithStreamedUnaryMethod_FindPathByEntityId<WithStreamedUnaryMethod_FindPathByRecordId<WithStreamedUnaryMethod_GetActiveConfigId<WithStreamedUnaryMethod_GetEntityByEntityId<WithStreamedUnaryMethod_GetEntityByRecordId<WithStreamedUnaryMethod_GetRecord<WithStreamedUnaryMethod_GetRedoRecord<WithStreamedUnaryMethod_GetStats<WithStreamedUnaryMethod_GetVirtualEntityByRecordId<WithStreamedUnaryMethod_HowEntityByEntityId<WithStreamedUnaryMethod_PreprocessRecord<WithStreamedUnaryMethod_PrimeEngine<WithStreamedUnaryMethod_ProcessRedoRecord<WithStreamedUnaryMethod_ReevaluateEntity<WithStreamedUnaryMethod_ReevaluateRecord<WithStreamedUnaryMethod_Reinitialize<WithStreamedUnaryMethod_SearchByAttributes<WithSplitStreamingMethod_StreamExportCsvEntityReport<WithSplitStreamingMethod_StreamExportJsonEntityReport<WithStreamedUnaryMethod_WhyEntities<WithStreamedUnaryMethod_WhyRecordInEntity<WithStreamedUnaryMethod_WhyRecords<WithStreamedUnaryMethod_WhySearch<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_AddRecord<WithStreamedUnaryMethod_CloseExportReport<WithStreamedUnaryMethod_CountRedoRecords<WithStreamedUnaryMethod_DeleteRecord<WithStreamedUnaryMethod_ExportCsvEntityReport<WithStreamedUnaryMethod_ExportJsonEntityReport<WithStreamedUnaryMethod_FetchNext<WithStreamedUnaryMethod_FindInterestingEntitiesByEntityId<WithStreamedUnaryMethod_FindInterestingEntitiesByRecordId<WithStreamedUnaryMethod_FindNetworkByEntityId<WithStreamedUnaryMethod_FindNetworkByRecordId<WithStreamedUnaryMethod_FindPathByEntityId<WithStreamedUnaryMethod_FindPathByRecordId<WithStreamedUnaryMethod_GetActiveConfigId<WithStreamedUnaryMethod_GetEntityByEntityId<WithStreamedUnaryMethod_GetEntityByRecordId<WithStreamedUnaryMethod_GetRecord<WithStreamedUnaryMethod_GetRedoRecord<WithStreamedUnaryMethod_GetStats<WithStreamedUnaryMethod_GetVirtualEntityByRecordId<WithStreamedUnaryMethod_HowEntityByEntityId<WithStreamedUnaryMethod_PreprocessRecord<WithStreamedUnaryMethod_PrimeEngine<WithStreamedUnaryMethod_ProcessRedoRecord<WithStreamedUnaryMethod_ReevaluateEntity<WithStreamedUnaryMethod_ReevaluateRecord<WithStreamedUnaryMethod_Reinitialize<WithStreamedUnaryMethod_SearchByAttributes<WithSplitStreamingMethod_StreamExportCsvEntityReport<WithSplitStreamingMethod_StreamExportJsonEntityReport<WithStreamedUnaryMethod_WhyEntities<WithStreamedUnaryMethod_WhyRecordInEntity<WithStreamedUnaryMethod_WhyRecords<WithStreamedUnaryMethod_WhySearch<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
 };
 
 }  // namespace szengine

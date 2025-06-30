@@ -22,13 +22,13 @@ class AddRecordResponse(_message.Message):
     result: str
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
-class CloseExportRequest(_message.Message):
+class CloseExportReportRequest(_message.Message):
     __slots__ = ("export_handle",)
     EXPORT_HANDLE_FIELD_NUMBER: _ClassVar[int]
     export_handle: int
     def __init__(self, export_handle: _Optional[int] = ...) -> None: ...
 
-class CloseExportResponse(_message.Message):
+class CloseExportReportResponse(_message.Message):
     __slots__ = ()
     def __init__(self) -> None: ...
 

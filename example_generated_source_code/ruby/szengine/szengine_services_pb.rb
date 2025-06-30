@@ -15,7 +15,7 @@ module Szengine
       self.service_name = 'szengine.SzEngine'
 
       rpc :AddRecord, ::Szengine::AddRecordRequest, ::Szengine::AddRecordResponse
-      rpc :CloseExport, ::Szengine::CloseExportRequest, ::Szengine::CloseExportResponse
+      rpc :CloseExportReport, ::Szengine::CloseExportReportRequest, ::Szengine::CloseExportReportResponse
       rpc :CountRedoRecords, ::Szengine::CountRedoRecordsRequest, ::Szengine::CountRedoRecordsResponse
       rpc :DeleteRecord, ::Szengine::DeleteRecordRequest, ::Szengine::DeleteRecordResponse
       rpc :ExportCsvEntityReport, ::Szengine::ExportCsvEntityReportRequest, ::Szengine::ExportCsvEntityReportResponse

@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12szdiagnostic.proto\x12\x0cszdiagnostic\":\n CheckDatastorePerformanceRequest\x12\x16\n\x0eseconds_to_run\x18\x01 \x01(\x05\"3\n!CheckDatastorePerformanceResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\"\x19\n\x17GetDatastoreInfoRequest\"*\n\x18GetDatastoreInfoResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\"\'\n\x11GetFeatureRequest\x12\x12\n\nfeature_id\x18\x01 \x01(\x03\"$\n\x12GetFeatureResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\"\x18\n\x16PurgeRepositoryRequest\"\x19\n\x17PurgeRepositoryResponse\"(\n\x13ReinitializeRequest\x12\x11\n\tconfig_id\x18\x01 \x01(\x03\"\x16\n\x14ReinitializeResponse2\x81\x04\n\x0cSzDiagnostic\x12~\n\x19\x43heckDatastorePerformance\x12..szdiagnostic.CheckDatastorePerformanceRequest\x1a/.szdiagnostic.CheckDatastorePerformanceResponse\"\x00\x12\x63\n\x10GetDatastoreInfo\x12%.szdiagnostic.GetDatastoreInfoRequest\x1a&.szdiagnostic.GetDatastoreInfoResponse\"\x00\x12Q\n\nGetFeature\x12\x1f.szdiagnostic.GetFeatureRequest\x1a .szdiagnostic.GetFeatureResponse\"\x00\x12`\n\x0fPurgeRepository\x12$.szdiagnostic.PurgeRepositoryRequest\x1a%.szdiagnostic.PurgeRepositoryResponse\"\x00\x12W\n\x0cReinitialize\x12!.szdiagnostic.ReinitializeRequest\x1a\".szdiagnostic.ReinitializeResponse\"\x00\x42`\n\x14\x63om.senzing.sdk.grpcB\x11SzDiagnosticProtoZ5github.com/senzing-garage/sz-sdk-go-grpc/szdiagnosticb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12szdiagnostic.proto\x12\x0cszdiagnostic\";\n!CheckRepositoryPerformanceRequest\x12\x16\n\x0eseconds_to_run\x18\x01 \x01(\x05\"4\n\"CheckRepositoryPerformanceResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\"\x1a\n\x18GetRepositoryInfoRequest\"+\n\x19GetRepositoryInfoResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\"\'\n\x11GetFeatureRequest\x12\x12\n\nfeature_id\x18\x01 \x01(\x03\"$\n\x12GetFeatureResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\"\x18\n\x16PurgeRepositoryRequest\"\x19\n\x17PurgeRepositoryResponse\"(\n\x13ReinitializeRequest\x12\x11\n\tconfig_id\x18\x01 \x01(\x03\"\x16\n\x14ReinitializeResponse2\x88\x04\n\x0cSzDiagnostic\x12\x81\x01\n\x1a\x43heckRepositoryPerformance\x12/.szdiagnostic.CheckRepositoryPerformanceRequest\x1a\x30.szdiagnostic.CheckRepositoryPerformanceResponse\"\x00\x12\x66\n\x11GetRepositoryInfo\x12&.szdiagnostic.GetRepositoryInfoRequest\x1a\'.szdiagnostic.GetRepositoryInfoResponse\"\x00\x12Q\n\nGetFeature\x12\x1f.szdiagnostic.GetFeatureRequest\x1a .szdiagnostic.GetFeatureResponse\"\x00\x12`\n\x0fPurgeRepository\x12$.szdiagnostic.PurgeRepositoryRequest\x1a%.szdiagnostic.PurgeRepositoryResponse\"\x00\x12W\n\x0cReinitialize\x12!.szdiagnostic.ReinitializeRequest\x1a\".szdiagnostic.ReinitializeResponse\"\x00\x42`\n\x14\x63om.senzing.sdk.grpcB\x11SzDiagnosticProtoZ5github.com/senzing-garage/sz-sdk-go-grpc/szdiagnosticb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -32,26 +32,26 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'szdiagnostic_pb2', _globals
 if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
   _globals['DESCRIPTOR']._serialized_options = b'\n\024com.senzing.sdk.grpcB\021SzDiagnosticProtoZ5github.com/senzing-garage/sz-sdk-go-grpc/szdiagnostic'
-  _globals['_CHECKDATASTOREPERFORMANCEREQUEST']._serialized_start=36
-  _globals['_CHECKDATASTOREPERFORMANCEREQUEST']._serialized_end=94
-  _globals['_CHECKDATASTOREPERFORMANCERESPONSE']._serialized_start=96
-  _globals['_CHECKDATASTOREPERFORMANCERESPONSE']._serialized_end=147
-  _globals['_GETDATASTOREINFOREQUEST']._serialized_start=149
-  _globals['_GETDATASTOREINFOREQUEST']._serialized_end=174
-  _globals['_GETDATASTOREINFORESPONSE']._serialized_start=176
-  _globals['_GETDATASTOREINFORESPONSE']._serialized_end=218
-  _globals['_GETFEATUREREQUEST']._serialized_start=220
-  _globals['_GETFEATUREREQUEST']._serialized_end=259
-  _globals['_GETFEATURERESPONSE']._serialized_start=261
-  _globals['_GETFEATURERESPONSE']._serialized_end=297
-  _globals['_PURGEREPOSITORYREQUEST']._serialized_start=299
-  _globals['_PURGEREPOSITORYREQUEST']._serialized_end=323
-  _globals['_PURGEREPOSITORYRESPONSE']._serialized_start=325
-  _globals['_PURGEREPOSITORYRESPONSE']._serialized_end=350
-  _globals['_REINITIALIZEREQUEST']._serialized_start=352
-  _globals['_REINITIALIZEREQUEST']._serialized_end=392
-  _globals['_REINITIALIZERESPONSE']._serialized_start=394
-  _globals['_REINITIALIZERESPONSE']._serialized_end=416
-  _globals['_SZDIAGNOSTIC']._serialized_start=419
-  _globals['_SZDIAGNOSTIC']._serialized_end=932
+  _globals['_CHECKREPOSITORYPERFORMANCEREQUEST']._serialized_start=36
+  _globals['_CHECKREPOSITORYPERFORMANCEREQUEST']._serialized_end=95
+  _globals['_CHECKREPOSITORYPERFORMANCERESPONSE']._serialized_start=97
+  _globals['_CHECKREPOSITORYPERFORMANCERESPONSE']._serialized_end=149
+  _globals['_GETREPOSITORYINFOREQUEST']._serialized_start=151
+  _globals['_GETREPOSITORYINFOREQUEST']._serialized_end=177
+  _globals['_GETREPOSITORYINFORESPONSE']._serialized_start=179
+  _globals['_GETREPOSITORYINFORESPONSE']._serialized_end=222
+  _globals['_GETFEATUREREQUEST']._serialized_start=224
+  _globals['_GETFEATUREREQUEST']._serialized_end=263
+  _globals['_GETFEATURERESPONSE']._serialized_start=265
+  _globals['_GETFEATURERESPONSE']._serialized_end=301
+  _globals['_PURGEREPOSITORYREQUEST']._serialized_start=303
+  _globals['_PURGEREPOSITORYREQUEST']._serialized_end=327
+  _globals['_PURGEREPOSITORYRESPONSE']._serialized_start=329
+  _globals['_PURGEREPOSITORYRESPONSE']._serialized_end=354
+  _globals['_REINITIALIZEREQUEST']._serialized_start=356
+  _globals['_REINITIALIZEREQUEST']._serialized_end=396
+  _globals['_REINITIALIZERESPONSE']._serialized_start=398
+  _globals['_REINITIALIZERESPONSE']._serialized_end=420
+  _globals['_SZDIAGNOSTIC']._serialized_start=423
+  _globals['_SZDIAGNOSTIC']._serialized_end=943
 # @@protoc_insertion_point(module_scope)

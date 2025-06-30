@@ -4,23 +4,23 @@ from typing import ClassVar as _ClassVar, Optional as _Optional
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
-class CheckDatastorePerformanceRequest(_message.Message):
+class CheckRepositoryPerformanceRequest(_message.Message):
     __slots__ = ("seconds_to_run",)
     SECONDS_TO_RUN_FIELD_NUMBER: _ClassVar[int]
     seconds_to_run: int
     def __init__(self, seconds_to_run: _Optional[int] = ...) -> None: ...
 
-class CheckDatastorePerformanceResponse(_message.Message):
+class CheckRepositoryPerformanceResponse(_message.Message):
     __slots__ = ("result",)
     RESULT_FIELD_NUMBER: _ClassVar[int]
     result: str
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
-class GetDatastoreInfoRequest(_message.Message):
+class GetRepositoryInfoRequest(_message.Message):
     __slots__ = ()
     def __init__(self) -> None: ...
 
-class GetDatastoreInfoResponse(_message.Message):
+class GetRepositoryInfoResponse(_message.Message):
     __slots__ = ("result",)
     RESULT_FIELD_NUMBER: _ClassVar[int]
     result: str

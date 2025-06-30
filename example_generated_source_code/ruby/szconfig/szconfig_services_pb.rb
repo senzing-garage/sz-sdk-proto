@@ -14,9 +14,9 @@ module Szconfig
       self.unmarshal_class_method = :decode
       self.service_name = 'szconfig.SzConfig'
 
-      rpc :AddDataSource, ::Szconfig::AddDataSourceRequest, ::Szconfig::AddDataSourceResponse
-      rpc :DeleteDataSource, ::Szconfig::DeleteDataSourceRequest, ::Szconfig::DeleteDataSourceResponse
-      rpc :GetDataSources, ::Szconfig::GetDataSourcesRequest, ::Szconfig::GetDataSourcesResponse
+      rpc :RegisterDataSource, ::Szconfig::RegisterDataSourceRequest, ::Szconfig::RegisterDataSourceResponse
+      rpc :UnregisterDataSource, ::Szconfig::UnregisterDataSourceRequest, ::Szconfig::UnregisterDataSourceResponse
+      rpc :GetDataSourceRegistry, ::Szconfig::GetDataSourceRegistryRequest, ::Szconfig::GetDataSourceRegistryResponse
       rpc :VerifyConfig, ::Szconfig::VerifyConfigRequest, ::Szconfig::VerifyConfigResponse
     end
 

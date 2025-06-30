@@ -20,7 +20,7 @@ const _ = grpc.SupportPackageIsVersion9
 
 const (
 	SzEngine_AddRecord_FullMethodName                         = "/szengine.SzEngine/AddRecord"
-	SzEngine_CloseExport_FullMethodName                       = "/szengine.SzEngine/CloseExport"
+	SzEngine_CloseExportReport_FullMethodName                 = "/szengine.SzEngine/CloseExportReport"
 	SzEngine_CountRedoRecords_FullMethodName                  = "/szengine.SzEngine/CountRedoRecords"
 	SzEngine_DeleteRecord_FullMethodName                      = "/szengine.SzEngine/DeleteRecord"
 	SzEngine_ExportCsvEntityReport_FullMethodName             = "/szengine.SzEngine/ExportCsvEntityReport"
@@ -60,7 +60,7 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type SzEngineClient interface {
 	AddRecord(ctx context.Context, in *AddRecordRequest, opts ...grpc.CallOption) (*AddRecordResponse, error)
-	CloseExport(ctx context.Context, in *CloseExportRequest, opts ...grpc.CallOption) (*CloseExportResponse, error)
+	CloseExportReport(ctx context.Context, in *CloseExportReportRequest, opts ...grpc.CallOption) (*CloseExportReportResponse, error)
 	CountRedoRecords(ctx context.Context, in *CountRedoRecordsRequest, opts ...grpc.CallOption) (*CountRedoRecordsResponse, error)
 	DeleteRecord(ctx context.Context, in *DeleteRecordRequest, opts ...grpc.CallOption) (*DeleteRecordResponse, error)
 	ExportCsvEntityReport(ctx context.Context, in *ExportCsvEntityReportRequest, opts ...grpc.CallOption) (*ExportCsvEntityReportResponse, error)
@@ -113,10 +113,10 @@ func (c *szEngineClient) AddRecord(ctx context.Context, in *AddRecordRequest, op
 	return out, nil
 }
 
-func (c *szEngineClient) CloseExport(ctx context.Context, in *CloseExportRequest, opts ...grpc.CallOption) (*CloseExportResponse, error) {
+func (c *szEngineClient) CloseExportReport(ctx context.Context, in *CloseExportReportRequest, opts ...grpc.CallOption) (*CloseExportReportResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(CloseExportResponse)
-	err := c.cc.Invoke(ctx, SzEngine_CloseExport_FullMethodName, in, out, cOpts...)
+	out := new(CloseExportReportResponse)
+	err := c.cc.Invoke(ctx, SzEngine_CloseExportReport_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -466,7 +466,7 @@ func (c *szEngineClient) WhySearch(ctx context.Context, in *WhySearchRequest, op
 // for forward compatibility.
 type SzEngineServer interface {
 	AddRecord(context.Context, *AddRecordRequest) (*AddRecordResponse, error)
-	CloseExport(context.Context, *CloseExportRequest) (*CloseExportResponse, error)
+	CloseExportReport(context.Context, *CloseExportReportRequest) (*CloseExportReportResponse, error)
 	CountRedoRecords(context.Context, *CountRedoRecordsRequest) (*CountRedoRecordsResponse, error)
 	DeleteRecord(context.Context, *DeleteRecordRequest) (*DeleteRecordResponse, error)
 	ExportCsvEntityReport(context.Context, *ExportCsvEntityReportRequest) (*ExportCsvEntityReportResponse, error)
@@ -512,8 +512,8 @@ type UnimplementedSzEngineServer struct{}
 func (UnimplementedSzEngineServer) AddRecord(context.Context, *AddRecordRequest) (*AddRecordResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AddRecord not implemented")
 }
-func (UnimplementedSzEngineServer) CloseExport(context.Context, *CloseExportRequest) (*CloseExportResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CloseExport not implemented")
+func (UnimplementedSzEngineServer) CloseExportReport(context.Context, *CloseExportReportRequest) (*CloseExportReportResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CloseExportReport not implemented")
 }
 func (UnimplementedSzEngineServer) CountRedoRecords(context.Context, *CountRedoRecordsRequest) (*CountRedoRecordsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CountRedoRecords not implemented")
@@ -650,20 +650,20 @@ func _SzEngine_AddRecord_Handler(srv interface{}, ctx context.Context, dec func(
 	return interceptor(ctx, in, info, handler)
 }
 
-func _SzEngine_CloseExport_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CloseExportRequest)
+func _SzEngine_CloseExportReport_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CloseExportReportRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(SzEngineServer).CloseExport(ctx, in)
+		return srv.(SzEngineServer).CloseExportReport(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: SzEngine_CloseExport_FullMethodName,
+		FullMethod: SzEngine_CloseExportReport_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzEngineServer).CloseExport(ctx, req.(*CloseExportRequest))
+		return srv.(SzEngineServer).CloseExportReport(ctx, req.(*CloseExportReportRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1242,8 +1242,8 @@ var SzEngine_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _SzEngine_AddRecord_Handler,
 		},
 		{
-			MethodName: "CloseExport",
-			Handler:    _SzEngine_CloseExport_Handler,
+			MethodName: "CloseExportReport",
+			Handler:    _SzEngine_CloseExportReport_Handler,
 		},
 		{
 			MethodName: "CountRedoRecords",

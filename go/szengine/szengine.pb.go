@@ -133,27 +133,27 @@ func (x *AddRecordResponse) GetResult() string {
 	return ""
 }
 
-type CloseExportRequest struct {
+type CloseExportReportRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	ExportHandle  int64                  `protobuf:"varint,1,opt,name=export_handle,json=exportHandle,proto3" json:"export_handle,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
-func (x *CloseExportRequest) Reset() {
-	*x = CloseExportRequest{}
+func (x *CloseExportReportRequest) Reset() {
+	*x = CloseExportReportRequest{}
 	mi := &file_szengine_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
 
-func (x *CloseExportRequest) String() string {
+func (x *CloseExportReportRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*CloseExportRequest) ProtoMessage() {}
+func (*CloseExportReportRequest) ProtoMessage() {}
 
-func (x *CloseExportRequest) ProtoReflect() protoreflect.Message {
+func (x *CloseExportReportRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_szengine_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -165,38 +165,38 @@ func (x *CloseExportRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use CloseExportRequest.ProtoReflect.Descriptor instead.
-func (*CloseExportRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use CloseExportReportRequest.ProtoReflect.Descriptor instead.
+func (*CloseExportReportRequest) Descriptor() ([]byte, []int) {
 	return file_szengine_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *CloseExportRequest) GetExportHandle() int64 {
+func (x *CloseExportReportRequest) GetExportHandle() int64 {
 	if x != nil {
 		return x.ExportHandle
 	}
 	return 0
 }
 
-type CloseExportResponse struct {
+type CloseExportReportResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
-func (x *CloseExportResponse) Reset() {
-	*x = CloseExportResponse{}
+func (x *CloseExportReportResponse) Reset() {
+	*x = CloseExportReportResponse{}
 	mi := &file_szengine_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
 
-func (x *CloseExportResponse) String() string {
+func (x *CloseExportReportResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*CloseExportResponse) ProtoMessage() {}
+func (*CloseExportReportResponse) ProtoMessage() {}
 
-func (x *CloseExportResponse) ProtoReflect() protoreflect.Message {
+func (x *CloseExportReportResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_szengine_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -208,8 +208,8 @@ func (x *CloseExportResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use CloseExportResponse.ProtoReflect.Descriptor instead.
-func (*CloseExportResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use CloseExportReportResponse.ProtoReflect.Descriptor instead.
+func (*CloseExportReportResponse) Descriptor() ([]byte, []int) {
 	return file_szengine_proto_rawDescGZIP(), []int{3}
 }
 
@@ -3400,10 +3400,10 @@ const file_szengine_proto_rawDesc = "" +
 	"\x11record_definition\x18\x03 \x01(\tR\x10recordDefinition\x12\x14\n" +
 	"\x05flags\x18\x04 \x01(\x03R\x05flags\"+\n" +
 	"\x11AddRecordResponse\x12\x16\n" +
-	"\x06result\x18\x01 \x01(\tR\x06result\"9\n" +
-	"\x12CloseExportRequest\x12#\n" +
-	"\rexport_handle\x18\x01 \x01(\x03R\fexportHandle\"\x15\n" +
-	"\x13CloseExportResponse\"\x19\n" +
+	"\x06result\x18\x01 \x01(\tR\x06result\"?\n" +
+	"\x18CloseExportReportRequest\x12#\n" +
+	"\rexport_handle\x18\x01 \x01(\x03R\fexportHandle\"\x1b\n" +
+	"\x19CloseExportReportResponse\"\x19\n" +
 	"\x17CountRedoRecordsRequest\"2\n" +
 	"\x18CountRedoRecordsResponse\x12\x16\n" +
 	"\x06result\x18\x01 \x01(\x03R\x06result\"r\n" +
@@ -3588,10 +3588,10 @@ const file_szengine_proto_rawDesc = "" +
 	"\x0esearch_profile\x18\x03 \x01(\tR\rsearchProfile\x12\x14\n" +
 	"\x05flags\x18\x04 \x01(\x03R\x05flags\"+\n" +
 	"\x11WhySearchResponse\x12\x16\n" +
-	"\x06result\x18\x01 \x01(\tR\x06result2\xdd\x19\n" +
+	"\x06result\x18\x01 \x01(\tR\x06result2\xef\x19\n" +
 	"\bSzEngine\x12F\n" +
-	"\tAddRecord\x12\x1a.szengine.AddRecordRequest\x1a\x1b.szengine.AddRecordResponse\"\x00\x12L\n" +
-	"\vCloseExport\x12\x1c.szengine.CloseExportRequest\x1a\x1d.szengine.CloseExportResponse\"\x00\x12[\n" +
+	"\tAddRecord\x12\x1a.szengine.AddRecordRequest\x1a\x1b.szengine.AddRecordResponse\"\x00\x12^\n" +
+	"\x11CloseExportReport\x12\".szengine.CloseExportReportRequest\x1a#.szengine.CloseExportReportResponse\"\x00\x12[\n" +
 	"\x10CountRedoRecords\x12!.szengine.CountRedoRecordsRequest\x1a\".szengine.CountRedoRecordsResponse\"\x00\x12O\n" +
 	"\fDeleteRecord\x12\x1d.szengine.DeleteRecordRequest\x1a\x1e.szengine.DeleteRecordResponse\"\x00\x12j\n" +
 	"\x15ExportCsvEntityReport\x12&.szengine.ExportCsvEntityReportRequest\x1a'.szengine.ExportCsvEntityReportResponse\"\x00\x12m\n" +
@@ -3643,8 +3643,8 @@ var file_szengine_proto_msgTypes = make([]protoimpl.MessageInfo, 68)
 var file_szengine_proto_goTypes = []any{
 	(*AddRecordRequest)(nil),                          // 0: szengine.AddRecordRequest
 	(*AddRecordResponse)(nil),                         // 1: szengine.AddRecordResponse
-	(*CloseExportRequest)(nil),                        // 2: szengine.CloseExportRequest
-	(*CloseExportResponse)(nil),                       // 3: szengine.CloseExportResponse
+	(*CloseExportReportRequest)(nil),                  // 2: szengine.CloseExportReportRequest
+	(*CloseExportReportResponse)(nil),                 // 3: szengine.CloseExportReportResponse
 	(*CountRedoRecordsRequest)(nil),                   // 4: szengine.CountRedoRecordsRequest
 	(*CountRedoRecordsResponse)(nil),                  // 5: szengine.CountRedoRecordsResponse
 	(*DeleteRecordRequest)(nil),                       // 6: szengine.DeleteRecordRequest
@@ -3712,7 +3712,7 @@ var file_szengine_proto_goTypes = []any{
 }
 var file_szengine_proto_depIdxs = []int32{
 	0,  // 0: szengine.SzEngine.AddRecord:input_type -> szengine.AddRecordRequest
-	2,  // 1: szengine.SzEngine.CloseExport:input_type -> szengine.CloseExportRequest
+	2,  // 1: szengine.SzEngine.CloseExportReport:input_type -> szengine.CloseExportReportRequest
 	4,  // 2: szengine.SzEngine.CountRedoRecords:input_type -> szengine.CountRedoRecordsRequest
 	6,  // 3: szengine.SzEngine.DeleteRecord:input_type -> szengine.DeleteRecordRequest
 	8,  // 4: szengine.SzEngine.ExportCsvEntityReport:input_type -> szengine.ExportCsvEntityReportRequest
@@ -3746,7 +3746,7 @@ var file_szengine_proto_depIdxs = []int32{
 	64, // 32: szengine.SzEngine.WhyRecords:input_type -> szengine.WhyRecordsRequest
 	66, // 33: szengine.SzEngine.WhySearch:input_type -> szengine.WhySearchRequest
 	1,  // 34: szengine.SzEngine.AddRecord:output_type -> szengine.AddRecordResponse
-	3,  // 35: szengine.SzEngine.CloseExport:output_type -> szengine.CloseExportResponse
+	3,  // 35: szengine.SzEngine.CloseExportReport:output_type -> szengine.CloseExportReportResponse
 	5,  // 36: szengine.SzEngine.CountRedoRecords:output_type -> szengine.CountRedoRecordsResponse
 	7,  // 37: szengine.SzEngine.DeleteRecord:output_type -> szengine.DeleteRecordResponse
 	9,  // 38: szengine.SzEngine.ExportCsvEntityReport:output_type -> szengine.ExportCsvEntityReportResponse

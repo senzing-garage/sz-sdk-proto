@@ -78,61 +78,7 @@ struct VerifyConfigRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 VerifyConfigRequestDefaultTypeInternal _VerifyConfigRequest_default_instance_;
 
-inline constexpr GetDataSourcesResponse::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : _cached_size_{0},
-        result_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()) {}
-
-template <typename>
-PROTOBUF_CONSTEXPR GetDataSourcesResponse::GetDataSourcesResponse(::_pbi::ConstantInitialized)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(GetDataSourcesResponse_class_data_.base()),
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(),
-#endif  // PROTOBUF_CUSTOM_VTABLE
-      _impl_(::_pbi::ConstantInitialized()) {
-}
-struct GetDataSourcesResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GetDataSourcesResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GetDataSourcesResponseDefaultTypeInternal() {}
-  union {
-    GetDataSourcesResponse _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetDataSourcesResponseDefaultTypeInternal _GetDataSourcesResponse_default_instance_;
-
-inline constexpr GetDataSourcesRequest::Impl_::Impl_(
-    ::_pbi::ConstantInitialized) noexcept
-      : _cached_size_{0},
-        config_definition_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()) {}
-
-template <typename>
-PROTOBUF_CONSTEXPR GetDataSourcesRequest::GetDataSourcesRequest(::_pbi::ConstantInitialized)
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(GetDataSourcesRequest_class_data_.base()),
-#else   // PROTOBUF_CUSTOM_VTABLE
-    : ::google::protobuf::Message(),
-#endif  // PROTOBUF_CUSTOM_VTABLE
-      _impl_(::_pbi::ConstantInitialized()) {
-}
-struct GetDataSourcesRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GetDataSourcesRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GetDataSourcesRequestDefaultTypeInternal() {}
-  union {
-    GetDataSourcesRequest _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetDataSourcesRequestDefaultTypeInternal _GetDataSourcesRequest_default_instance_;
-
-inline constexpr DeleteDataSourceResponse::Impl_::Impl_(
+inline constexpr UnregisterDataSourceResponse::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
         result_(
@@ -143,26 +89,26 @@ inline constexpr DeleteDataSourceResponse::Impl_::Impl_(
             ::_pbi::ConstantInitialized()) {}
 
 template <typename>
-PROTOBUF_CONSTEXPR DeleteDataSourceResponse::DeleteDataSourceResponse(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR UnregisterDataSourceResponse::UnregisterDataSourceResponse(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(DeleteDataSourceResponse_class_data_.base()),
+    : ::google::protobuf::Message(UnregisterDataSourceResponse_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(),
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct DeleteDataSourceResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR DeleteDataSourceResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~DeleteDataSourceResponseDefaultTypeInternal() {}
+struct UnregisterDataSourceResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR UnregisterDataSourceResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~UnregisterDataSourceResponseDefaultTypeInternal() {}
   union {
-    DeleteDataSourceResponse _instance;
+    UnregisterDataSourceResponse _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteDataSourceResponseDefaultTypeInternal _DeleteDataSourceResponse_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UnregisterDataSourceResponseDefaultTypeInternal _UnregisterDataSourceResponse_default_instance_;
 
-inline constexpr DeleteDataSourceRequest::Impl_::Impl_(
+inline constexpr UnregisterDataSourceRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
         config_definition_(
@@ -173,26 +119,26 @@ inline constexpr DeleteDataSourceRequest::Impl_::Impl_(
             ::_pbi::ConstantInitialized()) {}
 
 template <typename>
-PROTOBUF_CONSTEXPR DeleteDataSourceRequest::DeleteDataSourceRequest(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR UnregisterDataSourceRequest::UnregisterDataSourceRequest(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(DeleteDataSourceRequest_class_data_.base()),
+    : ::google::protobuf::Message(UnregisterDataSourceRequest_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(),
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct DeleteDataSourceRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR DeleteDataSourceRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~DeleteDataSourceRequestDefaultTypeInternal() {}
+struct UnregisterDataSourceRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR UnregisterDataSourceRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~UnregisterDataSourceRequestDefaultTypeInternal() {}
   union {
-    DeleteDataSourceRequest _instance;
+    UnregisterDataSourceRequest _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteDataSourceRequestDefaultTypeInternal _DeleteDataSourceRequest_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UnregisterDataSourceRequestDefaultTypeInternal _UnregisterDataSourceRequest_default_instance_;
 
-inline constexpr AddDataSourceResponse::Impl_::Impl_(
+inline constexpr RegisterDataSourceResponse::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
         result_(
@@ -203,26 +149,26 @@ inline constexpr AddDataSourceResponse::Impl_::Impl_(
             ::_pbi::ConstantInitialized()) {}
 
 template <typename>
-PROTOBUF_CONSTEXPR AddDataSourceResponse::AddDataSourceResponse(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR RegisterDataSourceResponse::RegisterDataSourceResponse(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(AddDataSourceResponse_class_data_.base()),
+    : ::google::protobuf::Message(RegisterDataSourceResponse_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(),
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct AddDataSourceResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR AddDataSourceResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~AddDataSourceResponseDefaultTypeInternal() {}
+struct RegisterDataSourceResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR RegisterDataSourceResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~RegisterDataSourceResponseDefaultTypeInternal() {}
   union {
-    AddDataSourceResponse _instance;
+    RegisterDataSourceResponse _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AddDataSourceResponseDefaultTypeInternal _AddDataSourceResponse_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegisterDataSourceResponseDefaultTypeInternal _RegisterDataSourceResponse_default_instance_;
 
-inline constexpr AddDataSourceRequest::Impl_::Impl_(
+inline constexpr RegisterDataSourceRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
         config_definition_(
@@ -233,24 +179,78 @@ inline constexpr AddDataSourceRequest::Impl_::Impl_(
             ::_pbi::ConstantInitialized()) {}
 
 template <typename>
-PROTOBUF_CONSTEXPR AddDataSourceRequest::AddDataSourceRequest(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR RegisterDataSourceRequest::RegisterDataSourceRequest(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(AddDataSourceRequest_class_data_.base()),
+    : ::google::protobuf::Message(RegisterDataSourceRequest_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(),
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct AddDataSourceRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR AddDataSourceRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~AddDataSourceRequestDefaultTypeInternal() {}
+struct RegisterDataSourceRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR RegisterDataSourceRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~RegisterDataSourceRequestDefaultTypeInternal() {}
   union {
-    AddDataSourceRequest _instance;
+    RegisterDataSourceRequest _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AddDataSourceRequestDefaultTypeInternal _AddDataSourceRequest_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegisterDataSourceRequestDefaultTypeInternal _RegisterDataSourceRequest_default_instance_;
+
+inline constexpr GetDataSourceRegistryResponse::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        result_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+PROTOBUF_CONSTEXPR GetDataSourceRegistryResponse::GetDataSourceRegistryResponse(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(GetDataSourceRegistryResponse_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct GetDataSourceRegistryResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetDataSourceRegistryResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetDataSourceRegistryResponseDefaultTypeInternal() {}
+  union {
+    GetDataSourceRegistryResponse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetDataSourceRegistryResponseDefaultTypeInternal _GetDataSourceRegistryResponse_default_instance_;
+
+inline constexpr GetDataSourceRegistryRequest::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        config_definition_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+PROTOBUF_CONSTEXPR GetDataSourceRegistryRequest::GetDataSourceRegistryRequest(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(GetDataSourceRegistryRequest_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct GetDataSourceRegistryRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetDataSourceRegistryRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetDataSourceRegistryRequestDefaultTypeInternal() {}
+  union {
+    GetDataSourceRegistryRequest _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetDataSourceRegistryRequestDefaultTypeInternal _GetDataSourceRegistryRequest_default_instance_;
 }  // namespace szconfig
 static constexpr const ::_pb::EnumDescriptor *PROTOBUF_NONNULL *PROTOBUF_NULLABLE
     file_level_enum_descriptors_szconfig_2eproto = nullptr;
@@ -259,73 +259,73 @@ static constexpr const ::_pb::ServiceDescriptor *PROTOBUF_NONNULL *PROTOBUF_NULL
 const ::uint32_t
     TableStruct_szconfig_2eproto::offsets[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
         protodesc_cold) = {
-        PROTOBUF_FIELD_OFFSET(::szconfig::AddDataSourceRequest, _impl_._has_bits_),
-        PROTOBUF_FIELD_OFFSET(::szconfig::AddDataSourceRequest, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::RegisterDataSourceRequest, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::RegisterDataSourceRequest, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::szconfig::AddDataSourceRequest, _impl_.config_definition_),
-        PROTOBUF_FIELD_OFFSET(::szconfig::AddDataSourceRequest, _impl_.data_source_code_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::RegisterDataSourceRequest, _impl_.config_definition_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::RegisterDataSourceRequest, _impl_.data_source_code_),
         0,
         1,
-        PROTOBUF_FIELD_OFFSET(::szconfig::AddDataSourceResponse, _impl_._has_bits_),
-        PROTOBUF_FIELD_OFFSET(::szconfig::AddDataSourceResponse, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::RegisterDataSourceResponse, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::RegisterDataSourceResponse, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::szconfig::AddDataSourceResponse, _impl_.result_),
-        PROTOBUF_FIELD_OFFSET(::szconfig::AddDataSourceResponse, _impl_.config_definition_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::RegisterDataSourceResponse, _impl_.result_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::RegisterDataSourceResponse, _impl_.config_definition_),
         0,
         1,
-        PROTOBUF_FIELD_OFFSET(::szconfig::DeleteDataSourceRequest, _impl_._has_bits_),
-        PROTOBUF_FIELD_OFFSET(::szconfig::DeleteDataSourceRequest, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::UnregisterDataSourceRequest, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::UnregisterDataSourceRequest, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::szconfig::DeleteDataSourceRequest, _impl_.config_definition_),
-        PROTOBUF_FIELD_OFFSET(::szconfig::DeleteDataSourceRequest, _impl_.data_source_code_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::UnregisterDataSourceRequest, _impl_.config_definition_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::UnregisterDataSourceRequest, _impl_.data_source_code_),
         0,
         1,
-        PROTOBUF_FIELD_OFFSET(::szconfig::DeleteDataSourceResponse, _impl_._has_bits_),
-        PROTOBUF_FIELD_OFFSET(::szconfig::DeleteDataSourceResponse, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::UnregisterDataSourceResponse, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::UnregisterDataSourceResponse, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::szconfig::DeleteDataSourceResponse, _impl_.result_),
-        PROTOBUF_FIELD_OFFSET(::szconfig::DeleteDataSourceResponse, _impl_.config_definition_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::UnregisterDataSourceResponse, _impl_.result_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::UnregisterDataSourceResponse, _impl_.config_definition_),
         0,
         1,
-        PROTOBUF_FIELD_OFFSET(::szconfig::GetDataSourcesRequest, _impl_._has_bits_),
-        PROTOBUF_FIELD_OFFSET(::szconfig::GetDataSourcesRequest, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::GetDataSourceRegistryRequest, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::GetDataSourceRegistryRequest, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::szconfig::GetDataSourcesRequest, _impl_.config_definition_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::GetDataSourceRegistryRequest, _impl_.config_definition_),
         0,
-        PROTOBUF_FIELD_OFFSET(::szconfig::GetDataSourcesResponse, _impl_._has_bits_),
-        PROTOBUF_FIELD_OFFSET(::szconfig::GetDataSourcesResponse, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::GetDataSourceRegistryResponse, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::GetDataSourceRegistryResponse, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::szconfig::GetDataSourcesResponse, _impl_.result_),
+        PROTOBUF_FIELD_OFFSET(::szconfig::GetDataSourceRegistryResponse, _impl_.result_),
         0,
         PROTOBUF_FIELD_OFFSET(::szconfig::VerifyConfigRequest, _impl_._has_bits_),
         PROTOBUF_FIELD_OFFSET(::szconfig::VerifyConfigRequest, _internal_metadata_),
@@ -351,47 +351,49 @@ const ::uint32_t
 
 static const ::_pbi::MigrationSchema
     schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-        {0, 10, -1, sizeof(::szconfig::AddDataSourceRequest)},
-        {12, 22, -1, sizeof(::szconfig::AddDataSourceResponse)},
-        {24, 34, -1, sizeof(::szconfig::DeleteDataSourceRequest)},
-        {36, 46, -1, sizeof(::szconfig::DeleteDataSourceResponse)},
-        {48, 57, -1, sizeof(::szconfig::GetDataSourcesRequest)},
-        {58, 67, -1, sizeof(::szconfig::GetDataSourcesResponse)},
+        {0, 10, -1, sizeof(::szconfig::RegisterDataSourceRequest)},
+        {12, 22, -1, sizeof(::szconfig::RegisterDataSourceResponse)},
+        {24, 34, -1, sizeof(::szconfig::UnregisterDataSourceRequest)},
+        {36, 46, -1, sizeof(::szconfig::UnregisterDataSourceResponse)},
+        {48, 57, -1, sizeof(::szconfig::GetDataSourceRegistryRequest)},
+        {58, 67, -1, sizeof(::szconfig::GetDataSourceRegistryResponse)},
         {68, 77, -1, sizeof(::szconfig::VerifyConfigRequest)},
         {78, 87, -1, sizeof(::szconfig::VerifyConfigResponse)},
 };
 static const ::_pb::Message* PROTOBUF_NONNULL const file_default_instances[] = {
-    &::szconfig::_AddDataSourceRequest_default_instance_._instance,
-    &::szconfig::_AddDataSourceResponse_default_instance_._instance,
-    &::szconfig::_DeleteDataSourceRequest_default_instance_._instance,
-    &::szconfig::_DeleteDataSourceResponse_default_instance_._instance,
-    &::szconfig::_GetDataSourcesRequest_default_instance_._instance,
-    &::szconfig::_GetDataSourcesResponse_default_instance_._instance,
+    &::szconfig::_RegisterDataSourceRequest_default_instance_._instance,
+    &::szconfig::_RegisterDataSourceResponse_default_instance_._instance,
+    &::szconfig::_UnregisterDataSourceRequest_default_instance_._instance,
+    &::szconfig::_UnregisterDataSourceResponse_default_instance_._instance,
+    &::szconfig::_GetDataSourceRegistryRequest_default_instance_._instance,
+    &::szconfig::_GetDataSourceRegistryResponse_default_instance_._instance,
     &::szconfig::_VerifyConfigRequest_default_instance_._instance,
     &::szconfig::_VerifyConfigResponse_default_instance_._instance,
 };
 const char descriptor_table_protodef_szconfig_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
-    "\n\016szconfig.proto\022\010szconfig\"K\n\024AddDataSou"
-    "rceRequest\022\031\n\021config_definition\030\001 \001(\t\022\030\n"
-    "\020data_source_code\030\002 \001(\t\"B\n\025AddDataSource"
-    "Response\022\016\n\006result\030\001 \001(\t\022\031\n\021config_defin"
-    "ition\030\002 \001(\t\"N\n\027DeleteDataSourceRequest\022\031"
-    "\n\021config_definition\030\001 \001(\t\022\030\n\020data_source"
-    "_code\030\002 \001(\t\"E\n\030DeleteDataSourceResponse\022"
-    "\016\n\006result\030\001 \001(\t\022\031\n\021config_definition\030\002 \001"
-    "(\t\"2\n\025GetDataSourcesRequest\022\031\n\021config_de"
-    "finition\030\001 \001(\t\"(\n\026GetDataSourcesResponse"
-    "\022\016\n\006result\030\001 \001(\t\"0\n\023VerifyConfigRequest\022"
-    "\031\n\021config_definition\030\001 \001(\t\"&\n\024VerifyConf"
-    "igResponse\022\016\n\006result\030\001 \001(\0102\343\002\n\010SzConfig\022"
-    "R\n\rAddDataSource\022\036.szconfig.AddDataSourc"
-    "eRequest\032\037.szconfig.AddDataSourceRespons"
-    "e\"\000\022[\n\020DeleteDataSource\022!.szconfig.Delet"
-    "eDataSourceRequest\032\".szconfig.DeleteData"
-    "SourceResponse\"\000\022U\n\016GetDataSources\022\037.szc"
-    "onfig.GetDataSourcesRequest\032 .szconfig.G"
-    "etDataSourcesResponse\"\000\022O\n\014VerifyConfig\022"
+    "\n\016szconfig.proto\022\010szconfig\"P\n\031RegisterDa"
+    "taSourceRequest\022\031\n\021config_definition\030\001 \001"
+    "(\t\022\030\n\020data_source_code\030\002 \001(\t\"G\n\032Register"
+    "DataSourceResponse\022\016\n\006result\030\001 \001(\t\022\031\n\021co"
+    "nfig_definition\030\002 \001(\t\"R\n\033UnregisterDataS"
+    "ourceRequest\022\031\n\021config_definition\030\001 \001(\t\022"
+    "\030\n\020data_source_code\030\002 \001(\t\"I\n\034UnregisterD"
+    "ataSourceResponse\022\016\n\006result\030\001 \001(\t\022\031\n\021con"
+    "fig_definition\030\002 \001(\t\"9\n\034GetDataSourceReg"
+    "istryRequest\022\031\n\021config_definition\030\001 \001(\t\""
+    "/\n\035GetDataSourceRegistryResponse\022\016\n\006resu"
+    "lt\030\001 \001(\t\"0\n\023VerifyConfigRequest\022\031\n\021confi"
+    "g_definition\030\001 \001(\t\"&\n\024VerifyConfigRespon"
+    "se\022\016\n\006result\030\001 \001(\0102\223\003\n\010SzConfig\022a\n\022Regis"
+    "terDataSource\022#.szconfig.RegisterDataSou"
+    "rceRequest\032$.szconfig.RegisterDataSource"
+    "Response\"\000\022g\n\024UnregisterDataSource\022%.szc"
+    "onfig.UnregisterDataSourceRequest\032&.szco"
+    "nfig.UnregisterDataSourceResponse\"\000\022j\n\025G"
+    "etDataSourceRegistry\022&.szconfig.GetDataS"
+    "ourceRegistryRequest\032\'.szconfig.GetDataS"
+    "ourceRegistryResponse\"\000\022O\n\014VerifyConfig\022"
     "\035.szconfig.VerifyConfigRequest\032\036.szconfi"
     "g.VerifyConfigResponse\"\000BX\n\024com.senzing."
     "sdk.grpcB\rSzConfigProtoZ1github.com/senz"
@@ -402,7 +404,7 @@ static ::absl::once_flag descriptor_table_szconfig_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_szconfig_2eproto = {
     false,
     false,
-    962,
+    1042,
     descriptor_table_protodef_szconfig_2eproto,
     "szconfig.proto",
     &descriptor_table_szconfig_2eproto_once,
@@ -418,64 +420,64 @@ PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_szconfig_2epro
 namespace szconfig {
 // ===================================================================
 
-class AddDataSourceRequest::_Internal {
+class RegisterDataSourceRequest::_Internal {
  public:
   using HasBits =
-      decltype(std::declval<AddDataSourceRequest>()._impl_._has_bits_);
+      decltype(std::declval<RegisterDataSourceRequest>()._impl_._has_bits_);
   static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(AddDataSourceRequest, _impl_._has_bits_);
+      8 * PROTOBUF_FIELD_OFFSET(RegisterDataSourceRequest, _impl_._has_bits_);
 };
 
-AddDataSourceRequest::AddDataSourceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+RegisterDataSourceRequest::RegisterDataSourceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, AddDataSourceRequest_class_data_.base()) {
+    : ::google::protobuf::Message(arena, RegisterDataSourceRequest_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:szconfig.AddDataSourceRequest)
+  // @@protoc_insertion_point(arena_constructor:szconfig.RegisterDataSourceRequest)
 }
-PROTOBUF_NDEBUG_INLINE AddDataSourceRequest::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE RegisterDataSourceRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-    const ::szconfig::AddDataSourceRequest& from_msg)
+    const ::szconfig::RegisterDataSourceRequest& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         config_definition_(arena, from.config_definition_),
         data_source_code_(arena, from.data_source_code_) {}
 
-AddDataSourceRequest::AddDataSourceRequest(
+RegisterDataSourceRequest::RegisterDataSourceRequest(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
-    const AddDataSourceRequest& from)
+    const RegisterDataSourceRequest& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, AddDataSourceRequest_class_data_.base()) {
+    : ::google::protobuf::Message(arena, RegisterDataSourceRequest_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  AddDataSourceRequest* const _this = this;
+  RegisterDataSourceRequest* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
 
-  // @@protoc_insertion_point(copy_constructor:szconfig.AddDataSourceRequest)
+  // @@protoc_insertion_point(copy_constructor:szconfig.RegisterDataSourceRequest)
 }
-PROTOBUF_NDEBUG_INLINE AddDataSourceRequest::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE RegisterDataSourceRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
       : _cached_size_{0},
         config_definition_(arena),
         data_source_code_(arena) {}
 
-inline void AddDataSourceRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+inline void RegisterDataSourceRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
-AddDataSourceRequest::~AddDataSourceRequest() {
-  // @@protoc_insertion_point(destructor:szconfig.AddDataSourceRequest)
+RegisterDataSourceRequest::~RegisterDataSourceRequest() {
+  // @@protoc_insertion_point(destructor:szconfig.RegisterDataSourceRequest)
   SharedDtor(*this);
 }
-inline void AddDataSourceRequest::SharedDtor(MessageLite& self) {
-  AddDataSourceRequest& this_ = static_cast<AddDataSourceRequest&>(self);
+inline void RegisterDataSourceRequest::SharedDtor(MessageLite& self) {
+  RegisterDataSourceRequest& this_ = static_cast<RegisterDataSourceRequest&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.config_definition_.Destroy();
@@ -483,52 +485,52 @@ inline void AddDataSourceRequest::SharedDtor(MessageLite& self) {
   this_._impl_.~Impl_();
 }
 
-inline void* PROTOBUF_NONNULL AddDataSourceRequest::PlacementNew_(
+inline void* PROTOBUF_NONNULL RegisterDataSourceRequest::PlacementNew_(
     const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
-  return ::new (mem) AddDataSourceRequest(arena);
+  return ::new (mem) RegisterDataSourceRequest(arena);
 }
-constexpr auto AddDataSourceRequest::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(AddDataSourceRequest),
-                                            alignof(AddDataSourceRequest));
+constexpr auto RegisterDataSourceRequest::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(RegisterDataSourceRequest),
+                                            alignof(RegisterDataSourceRequest));
 }
-constexpr auto AddDataSourceRequest::InternalGenerateClassData_() {
+constexpr auto RegisterDataSourceRequest::InternalGenerateClassData_() {
   return ::google::protobuf::internal::ClassDataFull{
       ::google::protobuf::internal::ClassData{
-          &_AddDataSourceRequest_default_instance_._instance,
+          &_RegisterDataSourceRequest_default_instance_._instance,
           &_table_.header,
           nullptr,  // OnDemandRegisterArenaDtor
           nullptr,  // IsInitialized
-          &AddDataSourceRequest::MergeImpl,
-          ::google::protobuf::Message::GetNewImpl<AddDataSourceRequest>(),
+          &RegisterDataSourceRequest::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<RegisterDataSourceRequest>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-          &AddDataSourceRequest::SharedDtor,
-          ::google::protobuf::Message::GetClearImpl<AddDataSourceRequest>(), &AddDataSourceRequest::ByteSizeLong,
-              &AddDataSourceRequest::_InternalSerialize,
+          &RegisterDataSourceRequest::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<RegisterDataSourceRequest>(), &RegisterDataSourceRequest::ByteSizeLong,
+              &RegisterDataSourceRequest::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          PROTOBUF_FIELD_OFFSET(AddDataSourceRequest, _impl_._cached_size_),
+          PROTOBUF_FIELD_OFFSET(RegisterDataSourceRequest, _impl_._cached_size_),
           false,
       },
-      &AddDataSourceRequest::kDescriptorMethods,
+      &RegisterDataSourceRequest::kDescriptorMethods,
       &descriptor_table_szconfig_2eproto,
       nullptr,  // tracker
   };
 }
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
-    ::google::protobuf::internal::ClassDataFull AddDataSourceRequest_class_data_ =
-        AddDataSourceRequest::InternalGenerateClassData_();
+    ::google::protobuf::internal::ClassDataFull RegisterDataSourceRequest_class_data_ =
+        RegisterDataSourceRequest::InternalGenerateClassData_();
 
-const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL AddDataSourceRequest::GetClassData() const {
-  ::google::protobuf::internal::PrefetchToLocalCache(&AddDataSourceRequest_class_data_);
-  ::google::protobuf::internal::PrefetchToLocalCache(AddDataSourceRequest_class_data_.tc_table);
-  return AddDataSourceRequest_class_data_.base();
+const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL RegisterDataSourceRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&RegisterDataSourceRequest_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(RegisterDataSourceRequest_class_data_.tc_table);
+  return RegisterDataSourceRequest_class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 71, 2>
-AddDataSourceRequest::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 76, 2>
+RegisterDataSourceRequest::_table_ = {
   {
-    PROTOBUF_FIELD_OFFSET(AddDataSourceRequest, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(RegisterDataSourceRequest, _impl_._has_bits_),
     0, // no _extensions_
     2, 8,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
@@ -537,39 +539,39 @@ AddDataSourceRequest::_table_ = {
     2,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
-    AddDataSourceRequest_class_data_.base(),
+    RegisterDataSourceRequest_class_data_.base(),
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::szconfig::AddDataSourceRequest>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::szconfig::RegisterDataSourceRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // string data_source_code = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 1, 0, PROTOBUF_FIELD_OFFSET(AddDataSourceRequest, _impl_.data_source_code_)}},
+     {18, 1, 0, PROTOBUF_FIELD_OFFSET(RegisterDataSourceRequest, _impl_.data_source_code_)}},
     // string config_definition = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 0, 0, PROTOBUF_FIELD_OFFSET(AddDataSourceRequest, _impl_.config_definition_)}},
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(RegisterDataSourceRequest, _impl_.config_definition_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string config_definition = 1;
-    {PROTOBUF_FIELD_OFFSET(AddDataSourceRequest, _impl_.config_definition_), _Internal::kHasBitsOffset + 0, 0,
+    {PROTOBUF_FIELD_OFFSET(RegisterDataSourceRequest, _impl_.config_definition_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string data_source_code = 2;
-    {PROTOBUF_FIELD_OFFSET(AddDataSourceRequest, _impl_.data_source_code_), _Internal::kHasBitsOffset + 1, 0,
+    {PROTOBUF_FIELD_OFFSET(RegisterDataSourceRequest, _impl_.data_source_code_), _Internal::kHasBitsOffset + 1, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\35\21\20\0\0\0\0\0"
-    "szconfig.AddDataSourceRequest"
+    "\42\21\20\0\0\0\0\0"
+    "szconfig.RegisterDataSourceRequest"
     "config_definition"
     "data_source_code"
   }},
 };
-PROTOBUF_NOINLINE void AddDataSourceRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:szconfig.AddDataSourceRequest)
+PROTOBUF_NOINLINE void RegisterDataSourceRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:szconfig.RegisterDataSourceRequest)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -589,17 +591,17 @@ PROTOBUF_NOINLINE void AddDataSourceRequest::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::uint8_t* PROTOBUF_NONNULL AddDataSourceRequest::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL RegisterDataSourceRequest::_InternalSerialize(
     const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
-  const AddDataSourceRequest& this_ = static_cast<const AddDataSourceRequest&>(base);
+  const RegisterDataSourceRequest& this_ = static_cast<const RegisterDataSourceRequest&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::uint8_t* PROTOBUF_NONNULL AddDataSourceRequest::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL RegisterDataSourceRequest::_InternalSerialize(
     ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
-  const AddDataSourceRequest& this_ = *this;
+  const RegisterDataSourceRequest& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(serialize_to_array_start:szconfig.AddDataSourceRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:szconfig.RegisterDataSourceRequest)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
@@ -608,7 +610,7 @@ PROTOBUF_NOINLINE void AddDataSourceRequest::Clear() {
     if (!this_._internal_config_definition().empty()) {
       const std::string& _s = this_._internal_config_definition();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.AddDataSourceRequest.config_definition");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.RegisterDataSourceRequest.config_definition");
       target = stream->WriteStringMaybeAliased(1, _s, target);
     }
   }
@@ -618,7 +620,7 @@ PROTOBUF_NOINLINE void AddDataSourceRequest::Clear() {
     if (!this_._internal_data_source_code().empty()) {
       const std::string& _s = this_._internal_data_source_code();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.AddDataSourceRequest.data_source_code");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.RegisterDataSourceRequest.data_source_code");
       target = stream->WriteStringMaybeAliased(2, _s, target);
     }
   }
@@ -628,18 +630,18 @@ PROTOBUF_NOINLINE void AddDataSourceRequest::Clear() {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:szconfig.AddDataSourceRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:szconfig.RegisterDataSourceRequest)
   return target;
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::size_t AddDataSourceRequest::ByteSizeLong(const MessageLite& base) {
-  const AddDataSourceRequest& this_ = static_cast<const AddDataSourceRequest&>(base);
+::size_t RegisterDataSourceRequest::ByteSizeLong(const MessageLite& base) {
+  const RegisterDataSourceRequest& this_ = static_cast<const RegisterDataSourceRequest&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::size_t AddDataSourceRequest::ByteSizeLong() const {
-  const AddDataSourceRequest& this_ = *this;
+::size_t RegisterDataSourceRequest::ByteSizeLong() const {
+  const RegisterDataSourceRequest& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(message_byte_size_start:szconfig.AddDataSourceRequest)
+  // @@protoc_insertion_point(message_byte_size_start:szconfig.RegisterDataSourceRequest)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
@@ -668,10 +670,10 @@ PROTOBUF_NOINLINE void AddDataSourceRequest::Clear() {
                                              &this_._impl_._cached_size_);
 }
 
-void AddDataSourceRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<AddDataSourceRequest*>(&to_msg);
-  auto& from = static_cast<const AddDataSourceRequest&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:szconfig.AddDataSourceRequest)
+void RegisterDataSourceRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<RegisterDataSourceRequest*>(&to_msg);
+  auto& from = static_cast<const RegisterDataSourceRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szconfig.RegisterDataSourceRequest)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -701,15 +703,15 @@ void AddDataSourceRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, co
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void AddDataSourceRequest::CopyFrom(const AddDataSourceRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:szconfig.AddDataSourceRequest)
+void RegisterDataSourceRequest::CopyFrom(const RegisterDataSourceRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szconfig.RegisterDataSourceRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void AddDataSourceRequest::InternalSwap(AddDataSourceRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+void RegisterDataSourceRequest::InternalSwap(RegisterDataSourceRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -719,69 +721,69 @@ void AddDataSourceRequest::InternalSwap(AddDataSourceRequest* PROTOBUF_RESTRICT 
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.data_source_code_, &other->_impl_.data_source_code_, arena);
 }
 
-::google::protobuf::Metadata AddDataSourceRequest::GetMetadata() const {
+::google::protobuf::Metadata RegisterDataSourceRequest::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class AddDataSourceResponse::_Internal {
+class RegisterDataSourceResponse::_Internal {
  public:
   using HasBits =
-      decltype(std::declval<AddDataSourceResponse>()._impl_._has_bits_);
+      decltype(std::declval<RegisterDataSourceResponse>()._impl_._has_bits_);
   static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(AddDataSourceResponse, _impl_._has_bits_);
+      8 * PROTOBUF_FIELD_OFFSET(RegisterDataSourceResponse, _impl_._has_bits_);
 };
 
-AddDataSourceResponse::AddDataSourceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+RegisterDataSourceResponse::RegisterDataSourceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, AddDataSourceResponse_class_data_.base()) {
+    : ::google::protobuf::Message(arena, RegisterDataSourceResponse_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:szconfig.AddDataSourceResponse)
+  // @@protoc_insertion_point(arena_constructor:szconfig.RegisterDataSourceResponse)
 }
-PROTOBUF_NDEBUG_INLINE AddDataSourceResponse::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE RegisterDataSourceResponse::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-    const ::szconfig::AddDataSourceResponse& from_msg)
+    const ::szconfig::RegisterDataSourceResponse& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         result_(arena, from.result_),
         config_definition_(arena, from.config_definition_) {}
 
-AddDataSourceResponse::AddDataSourceResponse(
+RegisterDataSourceResponse::RegisterDataSourceResponse(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
-    const AddDataSourceResponse& from)
+    const RegisterDataSourceResponse& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, AddDataSourceResponse_class_data_.base()) {
+    : ::google::protobuf::Message(arena, RegisterDataSourceResponse_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  AddDataSourceResponse* const _this = this;
+  RegisterDataSourceResponse* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
 
-  // @@protoc_insertion_point(copy_constructor:szconfig.AddDataSourceResponse)
+  // @@protoc_insertion_point(copy_constructor:szconfig.RegisterDataSourceResponse)
 }
-PROTOBUF_NDEBUG_INLINE AddDataSourceResponse::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE RegisterDataSourceResponse::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
       : _cached_size_{0},
         result_(arena),
         config_definition_(arena) {}
 
-inline void AddDataSourceResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+inline void RegisterDataSourceResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
-AddDataSourceResponse::~AddDataSourceResponse() {
-  // @@protoc_insertion_point(destructor:szconfig.AddDataSourceResponse)
+RegisterDataSourceResponse::~RegisterDataSourceResponse() {
+  // @@protoc_insertion_point(destructor:szconfig.RegisterDataSourceResponse)
   SharedDtor(*this);
 }
-inline void AddDataSourceResponse::SharedDtor(MessageLite& self) {
-  AddDataSourceResponse& this_ = static_cast<AddDataSourceResponse&>(self);
+inline void RegisterDataSourceResponse::SharedDtor(MessageLite& self) {
+  RegisterDataSourceResponse& this_ = static_cast<RegisterDataSourceResponse&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.result_.Destroy();
@@ -789,52 +791,52 @@ inline void AddDataSourceResponse::SharedDtor(MessageLite& self) {
   this_._impl_.~Impl_();
 }
 
-inline void* PROTOBUF_NONNULL AddDataSourceResponse::PlacementNew_(
+inline void* PROTOBUF_NONNULL RegisterDataSourceResponse::PlacementNew_(
     const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
-  return ::new (mem) AddDataSourceResponse(arena);
+  return ::new (mem) RegisterDataSourceResponse(arena);
 }
-constexpr auto AddDataSourceResponse::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(AddDataSourceResponse),
-                                            alignof(AddDataSourceResponse));
+constexpr auto RegisterDataSourceResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(RegisterDataSourceResponse),
+                                            alignof(RegisterDataSourceResponse));
 }
-constexpr auto AddDataSourceResponse::InternalGenerateClassData_() {
+constexpr auto RegisterDataSourceResponse::InternalGenerateClassData_() {
   return ::google::protobuf::internal::ClassDataFull{
       ::google::protobuf::internal::ClassData{
-          &_AddDataSourceResponse_default_instance_._instance,
+          &_RegisterDataSourceResponse_default_instance_._instance,
           &_table_.header,
           nullptr,  // OnDemandRegisterArenaDtor
           nullptr,  // IsInitialized
-          &AddDataSourceResponse::MergeImpl,
-          ::google::protobuf::Message::GetNewImpl<AddDataSourceResponse>(),
+          &RegisterDataSourceResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<RegisterDataSourceResponse>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-          &AddDataSourceResponse::SharedDtor,
-          ::google::protobuf::Message::GetClearImpl<AddDataSourceResponse>(), &AddDataSourceResponse::ByteSizeLong,
-              &AddDataSourceResponse::_InternalSerialize,
+          &RegisterDataSourceResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<RegisterDataSourceResponse>(), &RegisterDataSourceResponse::ByteSizeLong,
+              &RegisterDataSourceResponse::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          PROTOBUF_FIELD_OFFSET(AddDataSourceResponse, _impl_._cached_size_),
+          PROTOBUF_FIELD_OFFSET(RegisterDataSourceResponse, _impl_._cached_size_),
           false,
       },
-      &AddDataSourceResponse::kDescriptorMethods,
+      &RegisterDataSourceResponse::kDescriptorMethods,
       &descriptor_table_szconfig_2eproto,
       nullptr,  // tracker
   };
 }
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
-    ::google::protobuf::internal::ClassDataFull AddDataSourceResponse_class_data_ =
-        AddDataSourceResponse::InternalGenerateClassData_();
+    ::google::protobuf::internal::ClassDataFull RegisterDataSourceResponse_class_data_ =
+        RegisterDataSourceResponse::InternalGenerateClassData_();
 
-const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL AddDataSourceResponse::GetClassData() const {
-  ::google::protobuf::internal::PrefetchToLocalCache(&AddDataSourceResponse_class_data_);
-  ::google::protobuf::internal::PrefetchToLocalCache(AddDataSourceResponse_class_data_.tc_table);
-  return AddDataSourceResponse_class_data_.base();
+const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL RegisterDataSourceResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&RegisterDataSourceResponse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(RegisterDataSourceResponse_class_data_.tc_table);
+  return RegisterDataSourceResponse_class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 62, 2>
-AddDataSourceResponse::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 67, 2>
+RegisterDataSourceResponse::_table_ = {
   {
-    PROTOBUF_FIELD_OFFSET(AddDataSourceResponse, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(RegisterDataSourceResponse, _impl_._has_bits_),
     0, // no _extensions_
     2, 8,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
@@ -843,39 +845,39 @@ AddDataSourceResponse::_table_ = {
     2,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
-    AddDataSourceResponse_class_data_.base(),
+    RegisterDataSourceResponse_class_data_.base(),
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::szconfig::AddDataSourceResponse>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::szconfig::RegisterDataSourceResponse>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // string config_definition = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 1, 0, PROTOBUF_FIELD_OFFSET(AddDataSourceResponse, _impl_.config_definition_)}},
+     {18, 1, 0, PROTOBUF_FIELD_OFFSET(RegisterDataSourceResponse, _impl_.config_definition_)}},
     // string result = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 0, 0, PROTOBUF_FIELD_OFFSET(AddDataSourceResponse, _impl_.result_)}},
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(RegisterDataSourceResponse, _impl_.result_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string result = 1;
-    {PROTOBUF_FIELD_OFFSET(AddDataSourceResponse, _impl_.result_), _Internal::kHasBitsOffset + 0, 0,
+    {PROTOBUF_FIELD_OFFSET(RegisterDataSourceResponse, _impl_.result_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string config_definition = 2;
-    {PROTOBUF_FIELD_OFFSET(AddDataSourceResponse, _impl_.config_definition_), _Internal::kHasBitsOffset + 1, 0,
+    {PROTOBUF_FIELD_OFFSET(RegisterDataSourceResponse, _impl_.config_definition_), _Internal::kHasBitsOffset + 1, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\36\6\21\0\0\0\0\0"
-    "szconfig.AddDataSourceResponse"
+    "\43\6\21\0\0\0\0\0"
+    "szconfig.RegisterDataSourceResponse"
     "result"
     "config_definition"
   }},
 };
-PROTOBUF_NOINLINE void AddDataSourceResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:szconfig.AddDataSourceResponse)
+PROTOBUF_NOINLINE void RegisterDataSourceResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:szconfig.RegisterDataSourceResponse)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -895,17 +897,17 @@ PROTOBUF_NOINLINE void AddDataSourceResponse::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::uint8_t* PROTOBUF_NONNULL AddDataSourceResponse::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL RegisterDataSourceResponse::_InternalSerialize(
     const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
-  const AddDataSourceResponse& this_ = static_cast<const AddDataSourceResponse&>(base);
+  const RegisterDataSourceResponse& this_ = static_cast<const RegisterDataSourceResponse&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::uint8_t* PROTOBUF_NONNULL AddDataSourceResponse::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL RegisterDataSourceResponse::_InternalSerialize(
     ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
-  const AddDataSourceResponse& this_ = *this;
+  const RegisterDataSourceResponse& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(serialize_to_array_start:szconfig.AddDataSourceResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:szconfig.RegisterDataSourceResponse)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
@@ -914,7 +916,7 @@ PROTOBUF_NOINLINE void AddDataSourceResponse::Clear() {
     if (!this_._internal_result().empty()) {
       const std::string& _s = this_._internal_result();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.AddDataSourceResponse.result");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.RegisterDataSourceResponse.result");
       target = stream->WriteStringMaybeAliased(1, _s, target);
     }
   }
@@ -924,7 +926,7 @@ PROTOBUF_NOINLINE void AddDataSourceResponse::Clear() {
     if (!this_._internal_config_definition().empty()) {
       const std::string& _s = this_._internal_config_definition();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.AddDataSourceResponse.config_definition");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.RegisterDataSourceResponse.config_definition");
       target = stream->WriteStringMaybeAliased(2, _s, target);
     }
   }
@@ -934,18 +936,18 @@ PROTOBUF_NOINLINE void AddDataSourceResponse::Clear() {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:szconfig.AddDataSourceResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:szconfig.RegisterDataSourceResponse)
   return target;
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::size_t AddDataSourceResponse::ByteSizeLong(const MessageLite& base) {
-  const AddDataSourceResponse& this_ = static_cast<const AddDataSourceResponse&>(base);
+::size_t RegisterDataSourceResponse::ByteSizeLong(const MessageLite& base) {
+  const RegisterDataSourceResponse& this_ = static_cast<const RegisterDataSourceResponse&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::size_t AddDataSourceResponse::ByteSizeLong() const {
-  const AddDataSourceResponse& this_ = *this;
+::size_t RegisterDataSourceResponse::ByteSizeLong() const {
+  const RegisterDataSourceResponse& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(message_byte_size_start:szconfig.AddDataSourceResponse)
+  // @@protoc_insertion_point(message_byte_size_start:szconfig.RegisterDataSourceResponse)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
@@ -974,10 +976,10 @@ PROTOBUF_NOINLINE void AddDataSourceResponse::Clear() {
                                              &this_._impl_._cached_size_);
 }
 
-void AddDataSourceResponse::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<AddDataSourceResponse*>(&to_msg);
-  auto& from = static_cast<const AddDataSourceResponse&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:szconfig.AddDataSourceResponse)
+void RegisterDataSourceResponse::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<RegisterDataSourceResponse*>(&to_msg);
+  auto& from = static_cast<const RegisterDataSourceResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szconfig.RegisterDataSourceResponse)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1007,15 +1009,15 @@ void AddDataSourceResponse::MergeImpl(::google::protobuf::MessageLite& to_msg, c
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void AddDataSourceResponse::CopyFrom(const AddDataSourceResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:szconfig.AddDataSourceResponse)
+void RegisterDataSourceResponse::CopyFrom(const RegisterDataSourceResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szconfig.RegisterDataSourceResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void AddDataSourceResponse::InternalSwap(AddDataSourceResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+void RegisterDataSourceResponse::InternalSwap(RegisterDataSourceResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -1025,69 +1027,69 @@ void AddDataSourceResponse::InternalSwap(AddDataSourceResponse* PROTOBUF_RESTRIC
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.config_definition_, &other->_impl_.config_definition_, arena);
 }
 
-::google::protobuf::Metadata AddDataSourceResponse::GetMetadata() const {
+::google::protobuf::Metadata RegisterDataSourceResponse::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class DeleteDataSourceRequest::_Internal {
+class UnregisterDataSourceRequest::_Internal {
  public:
   using HasBits =
-      decltype(std::declval<DeleteDataSourceRequest>()._impl_._has_bits_);
+      decltype(std::declval<UnregisterDataSourceRequest>()._impl_._has_bits_);
   static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(DeleteDataSourceRequest, _impl_._has_bits_);
+      8 * PROTOBUF_FIELD_OFFSET(UnregisterDataSourceRequest, _impl_._has_bits_);
 };
 
-DeleteDataSourceRequest::DeleteDataSourceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+UnregisterDataSourceRequest::UnregisterDataSourceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, DeleteDataSourceRequest_class_data_.base()) {
+    : ::google::protobuf::Message(arena, UnregisterDataSourceRequest_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:szconfig.DeleteDataSourceRequest)
+  // @@protoc_insertion_point(arena_constructor:szconfig.UnregisterDataSourceRequest)
 }
-PROTOBUF_NDEBUG_INLINE DeleteDataSourceRequest::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE UnregisterDataSourceRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-    const ::szconfig::DeleteDataSourceRequest& from_msg)
+    const ::szconfig::UnregisterDataSourceRequest& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         config_definition_(arena, from.config_definition_),
         data_source_code_(arena, from.data_source_code_) {}
 
-DeleteDataSourceRequest::DeleteDataSourceRequest(
+UnregisterDataSourceRequest::UnregisterDataSourceRequest(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
-    const DeleteDataSourceRequest& from)
+    const UnregisterDataSourceRequest& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, DeleteDataSourceRequest_class_data_.base()) {
+    : ::google::protobuf::Message(arena, UnregisterDataSourceRequest_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  DeleteDataSourceRequest* const _this = this;
+  UnregisterDataSourceRequest* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
 
-  // @@protoc_insertion_point(copy_constructor:szconfig.DeleteDataSourceRequest)
+  // @@protoc_insertion_point(copy_constructor:szconfig.UnregisterDataSourceRequest)
 }
-PROTOBUF_NDEBUG_INLINE DeleteDataSourceRequest::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE UnregisterDataSourceRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
       : _cached_size_{0},
         config_definition_(arena),
         data_source_code_(arena) {}
 
-inline void DeleteDataSourceRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+inline void UnregisterDataSourceRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
-DeleteDataSourceRequest::~DeleteDataSourceRequest() {
-  // @@protoc_insertion_point(destructor:szconfig.DeleteDataSourceRequest)
+UnregisterDataSourceRequest::~UnregisterDataSourceRequest() {
+  // @@protoc_insertion_point(destructor:szconfig.UnregisterDataSourceRequest)
   SharedDtor(*this);
 }
-inline void DeleteDataSourceRequest::SharedDtor(MessageLite& self) {
-  DeleteDataSourceRequest& this_ = static_cast<DeleteDataSourceRequest&>(self);
+inline void UnregisterDataSourceRequest::SharedDtor(MessageLite& self) {
+  UnregisterDataSourceRequest& this_ = static_cast<UnregisterDataSourceRequest&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.config_definition_.Destroy();
@@ -1095,52 +1097,52 @@ inline void DeleteDataSourceRequest::SharedDtor(MessageLite& self) {
   this_._impl_.~Impl_();
 }
 
-inline void* PROTOBUF_NONNULL DeleteDataSourceRequest::PlacementNew_(
+inline void* PROTOBUF_NONNULL UnregisterDataSourceRequest::PlacementNew_(
     const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
-  return ::new (mem) DeleteDataSourceRequest(arena);
+  return ::new (mem) UnregisterDataSourceRequest(arena);
 }
-constexpr auto DeleteDataSourceRequest::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(DeleteDataSourceRequest),
-                                            alignof(DeleteDataSourceRequest));
+constexpr auto UnregisterDataSourceRequest::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(UnregisterDataSourceRequest),
+                                            alignof(UnregisterDataSourceRequest));
 }
-constexpr auto DeleteDataSourceRequest::InternalGenerateClassData_() {
+constexpr auto UnregisterDataSourceRequest::InternalGenerateClassData_() {
   return ::google::protobuf::internal::ClassDataFull{
       ::google::protobuf::internal::ClassData{
-          &_DeleteDataSourceRequest_default_instance_._instance,
+          &_UnregisterDataSourceRequest_default_instance_._instance,
           &_table_.header,
           nullptr,  // OnDemandRegisterArenaDtor
           nullptr,  // IsInitialized
-          &DeleteDataSourceRequest::MergeImpl,
-          ::google::protobuf::Message::GetNewImpl<DeleteDataSourceRequest>(),
+          &UnregisterDataSourceRequest::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<UnregisterDataSourceRequest>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-          &DeleteDataSourceRequest::SharedDtor,
-          ::google::protobuf::Message::GetClearImpl<DeleteDataSourceRequest>(), &DeleteDataSourceRequest::ByteSizeLong,
-              &DeleteDataSourceRequest::_InternalSerialize,
+          &UnregisterDataSourceRequest::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<UnregisterDataSourceRequest>(), &UnregisterDataSourceRequest::ByteSizeLong,
+              &UnregisterDataSourceRequest::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          PROTOBUF_FIELD_OFFSET(DeleteDataSourceRequest, _impl_._cached_size_),
+          PROTOBUF_FIELD_OFFSET(UnregisterDataSourceRequest, _impl_._cached_size_),
           false,
       },
-      &DeleteDataSourceRequest::kDescriptorMethods,
+      &UnregisterDataSourceRequest::kDescriptorMethods,
       &descriptor_table_szconfig_2eproto,
       nullptr,  // tracker
   };
 }
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
-    ::google::protobuf::internal::ClassDataFull DeleteDataSourceRequest_class_data_ =
-        DeleteDataSourceRequest::InternalGenerateClassData_();
+    ::google::protobuf::internal::ClassDataFull UnregisterDataSourceRequest_class_data_ =
+        UnregisterDataSourceRequest::InternalGenerateClassData_();
 
-const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL DeleteDataSourceRequest::GetClassData() const {
-  ::google::protobuf::internal::PrefetchToLocalCache(&DeleteDataSourceRequest_class_data_);
-  ::google::protobuf::internal::PrefetchToLocalCache(DeleteDataSourceRequest_class_data_.tc_table);
-  return DeleteDataSourceRequest_class_data_.base();
+const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL UnregisterDataSourceRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&UnregisterDataSourceRequest_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(UnregisterDataSourceRequest_class_data_.tc_table);
+  return UnregisterDataSourceRequest_class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 74, 2>
-DeleteDataSourceRequest::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 78, 2>
+UnregisterDataSourceRequest::_table_ = {
   {
-    PROTOBUF_FIELD_OFFSET(DeleteDataSourceRequest, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(UnregisterDataSourceRequest, _impl_._has_bits_),
     0, // no _extensions_
     2, 8,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
@@ -1149,39 +1151,39 @@ DeleteDataSourceRequest::_table_ = {
     2,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
-    DeleteDataSourceRequest_class_data_.base(),
+    UnregisterDataSourceRequest_class_data_.base(),
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::szconfig::DeleteDataSourceRequest>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::szconfig::UnregisterDataSourceRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // string data_source_code = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 1, 0, PROTOBUF_FIELD_OFFSET(DeleteDataSourceRequest, _impl_.data_source_code_)}},
+     {18, 1, 0, PROTOBUF_FIELD_OFFSET(UnregisterDataSourceRequest, _impl_.data_source_code_)}},
     // string config_definition = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 0, 0, PROTOBUF_FIELD_OFFSET(DeleteDataSourceRequest, _impl_.config_definition_)}},
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(UnregisterDataSourceRequest, _impl_.config_definition_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string config_definition = 1;
-    {PROTOBUF_FIELD_OFFSET(DeleteDataSourceRequest, _impl_.config_definition_), _Internal::kHasBitsOffset + 0, 0,
+    {PROTOBUF_FIELD_OFFSET(UnregisterDataSourceRequest, _impl_.config_definition_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string data_source_code = 2;
-    {PROTOBUF_FIELD_OFFSET(DeleteDataSourceRequest, _impl_.data_source_code_), _Internal::kHasBitsOffset + 1, 0,
+    {PROTOBUF_FIELD_OFFSET(UnregisterDataSourceRequest, _impl_.data_source_code_), _Internal::kHasBitsOffset + 1, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\40\21\20\0\0\0\0\0"
-    "szconfig.DeleteDataSourceRequest"
+    "\44\21\20\0\0\0\0\0"
+    "szconfig.UnregisterDataSourceRequest"
     "config_definition"
     "data_source_code"
   }},
 };
-PROTOBUF_NOINLINE void DeleteDataSourceRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:szconfig.DeleteDataSourceRequest)
+PROTOBUF_NOINLINE void UnregisterDataSourceRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:szconfig.UnregisterDataSourceRequest)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1201,17 +1203,17 @@ PROTOBUF_NOINLINE void DeleteDataSourceRequest::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::uint8_t* PROTOBUF_NONNULL DeleteDataSourceRequest::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL UnregisterDataSourceRequest::_InternalSerialize(
     const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
-  const DeleteDataSourceRequest& this_ = static_cast<const DeleteDataSourceRequest&>(base);
+  const UnregisterDataSourceRequest& this_ = static_cast<const UnregisterDataSourceRequest&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::uint8_t* PROTOBUF_NONNULL DeleteDataSourceRequest::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL UnregisterDataSourceRequest::_InternalSerialize(
     ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
-  const DeleteDataSourceRequest& this_ = *this;
+  const UnregisterDataSourceRequest& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(serialize_to_array_start:szconfig.DeleteDataSourceRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:szconfig.UnregisterDataSourceRequest)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
@@ -1220,7 +1222,7 @@ PROTOBUF_NOINLINE void DeleteDataSourceRequest::Clear() {
     if (!this_._internal_config_definition().empty()) {
       const std::string& _s = this_._internal_config_definition();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.DeleteDataSourceRequest.config_definition");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.UnregisterDataSourceRequest.config_definition");
       target = stream->WriteStringMaybeAliased(1, _s, target);
     }
   }
@@ -1230,7 +1232,7 @@ PROTOBUF_NOINLINE void DeleteDataSourceRequest::Clear() {
     if (!this_._internal_data_source_code().empty()) {
       const std::string& _s = this_._internal_data_source_code();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.DeleteDataSourceRequest.data_source_code");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.UnregisterDataSourceRequest.data_source_code");
       target = stream->WriteStringMaybeAliased(2, _s, target);
     }
   }
@@ -1240,18 +1242,18 @@ PROTOBUF_NOINLINE void DeleteDataSourceRequest::Clear() {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:szconfig.DeleteDataSourceRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:szconfig.UnregisterDataSourceRequest)
   return target;
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::size_t DeleteDataSourceRequest::ByteSizeLong(const MessageLite& base) {
-  const DeleteDataSourceRequest& this_ = static_cast<const DeleteDataSourceRequest&>(base);
+::size_t UnregisterDataSourceRequest::ByteSizeLong(const MessageLite& base) {
+  const UnregisterDataSourceRequest& this_ = static_cast<const UnregisterDataSourceRequest&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::size_t DeleteDataSourceRequest::ByteSizeLong() const {
-  const DeleteDataSourceRequest& this_ = *this;
+::size_t UnregisterDataSourceRequest::ByteSizeLong() const {
+  const UnregisterDataSourceRequest& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(message_byte_size_start:szconfig.DeleteDataSourceRequest)
+  // @@protoc_insertion_point(message_byte_size_start:szconfig.UnregisterDataSourceRequest)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
@@ -1280,10 +1282,10 @@ PROTOBUF_NOINLINE void DeleteDataSourceRequest::Clear() {
                                              &this_._impl_._cached_size_);
 }
 
-void DeleteDataSourceRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<DeleteDataSourceRequest*>(&to_msg);
-  auto& from = static_cast<const DeleteDataSourceRequest&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:szconfig.DeleteDataSourceRequest)
+void UnregisterDataSourceRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<UnregisterDataSourceRequest*>(&to_msg);
+  auto& from = static_cast<const UnregisterDataSourceRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szconfig.UnregisterDataSourceRequest)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1313,15 +1315,15 @@ void DeleteDataSourceRequest::MergeImpl(::google::protobuf::MessageLite& to_msg,
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void DeleteDataSourceRequest::CopyFrom(const DeleteDataSourceRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:szconfig.DeleteDataSourceRequest)
+void UnregisterDataSourceRequest::CopyFrom(const UnregisterDataSourceRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szconfig.UnregisterDataSourceRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void DeleteDataSourceRequest::InternalSwap(DeleteDataSourceRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+void UnregisterDataSourceRequest::InternalSwap(UnregisterDataSourceRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -1331,69 +1333,69 @@ void DeleteDataSourceRequest::InternalSwap(DeleteDataSourceRequest* PROTOBUF_RES
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.data_source_code_, &other->_impl_.data_source_code_, arena);
 }
 
-::google::protobuf::Metadata DeleteDataSourceRequest::GetMetadata() const {
+::google::protobuf::Metadata UnregisterDataSourceRequest::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class DeleteDataSourceResponse::_Internal {
+class UnregisterDataSourceResponse::_Internal {
  public:
   using HasBits =
-      decltype(std::declval<DeleteDataSourceResponse>()._impl_._has_bits_);
+      decltype(std::declval<UnregisterDataSourceResponse>()._impl_._has_bits_);
   static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(DeleteDataSourceResponse, _impl_._has_bits_);
+      8 * PROTOBUF_FIELD_OFFSET(UnregisterDataSourceResponse, _impl_._has_bits_);
 };
 
-DeleteDataSourceResponse::DeleteDataSourceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+UnregisterDataSourceResponse::UnregisterDataSourceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, DeleteDataSourceResponse_class_data_.base()) {
+    : ::google::protobuf::Message(arena, UnregisterDataSourceResponse_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:szconfig.DeleteDataSourceResponse)
+  // @@protoc_insertion_point(arena_constructor:szconfig.UnregisterDataSourceResponse)
 }
-PROTOBUF_NDEBUG_INLINE DeleteDataSourceResponse::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE UnregisterDataSourceResponse::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-    const ::szconfig::DeleteDataSourceResponse& from_msg)
+    const ::szconfig::UnregisterDataSourceResponse& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         result_(arena, from.result_),
         config_definition_(arena, from.config_definition_) {}
 
-DeleteDataSourceResponse::DeleteDataSourceResponse(
+UnregisterDataSourceResponse::UnregisterDataSourceResponse(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
-    const DeleteDataSourceResponse& from)
+    const UnregisterDataSourceResponse& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, DeleteDataSourceResponse_class_data_.base()) {
+    : ::google::protobuf::Message(arena, UnregisterDataSourceResponse_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  DeleteDataSourceResponse* const _this = this;
+  UnregisterDataSourceResponse* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
 
-  // @@protoc_insertion_point(copy_constructor:szconfig.DeleteDataSourceResponse)
+  // @@protoc_insertion_point(copy_constructor:szconfig.UnregisterDataSourceResponse)
 }
-PROTOBUF_NDEBUG_INLINE DeleteDataSourceResponse::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE UnregisterDataSourceResponse::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
       : _cached_size_{0},
         result_(arena),
         config_definition_(arena) {}
 
-inline void DeleteDataSourceResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+inline void UnregisterDataSourceResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
-DeleteDataSourceResponse::~DeleteDataSourceResponse() {
-  // @@protoc_insertion_point(destructor:szconfig.DeleteDataSourceResponse)
+UnregisterDataSourceResponse::~UnregisterDataSourceResponse() {
+  // @@protoc_insertion_point(destructor:szconfig.UnregisterDataSourceResponse)
   SharedDtor(*this);
 }
-inline void DeleteDataSourceResponse::SharedDtor(MessageLite& self) {
-  DeleteDataSourceResponse& this_ = static_cast<DeleteDataSourceResponse&>(self);
+inline void UnregisterDataSourceResponse::SharedDtor(MessageLite& self) {
+  UnregisterDataSourceResponse& this_ = static_cast<UnregisterDataSourceResponse&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.result_.Destroy();
@@ -1401,52 +1403,52 @@ inline void DeleteDataSourceResponse::SharedDtor(MessageLite& self) {
   this_._impl_.~Impl_();
 }
 
-inline void* PROTOBUF_NONNULL DeleteDataSourceResponse::PlacementNew_(
+inline void* PROTOBUF_NONNULL UnregisterDataSourceResponse::PlacementNew_(
     const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
-  return ::new (mem) DeleteDataSourceResponse(arena);
+  return ::new (mem) UnregisterDataSourceResponse(arena);
 }
-constexpr auto DeleteDataSourceResponse::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(DeleteDataSourceResponse),
-                                            alignof(DeleteDataSourceResponse));
+constexpr auto UnregisterDataSourceResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(UnregisterDataSourceResponse),
+                                            alignof(UnregisterDataSourceResponse));
 }
-constexpr auto DeleteDataSourceResponse::InternalGenerateClassData_() {
+constexpr auto UnregisterDataSourceResponse::InternalGenerateClassData_() {
   return ::google::protobuf::internal::ClassDataFull{
       ::google::protobuf::internal::ClassData{
-          &_DeleteDataSourceResponse_default_instance_._instance,
+          &_UnregisterDataSourceResponse_default_instance_._instance,
           &_table_.header,
           nullptr,  // OnDemandRegisterArenaDtor
           nullptr,  // IsInitialized
-          &DeleteDataSourceResponse::MergeImpl,
-          ::google::protobuf::Message::GetNewImpl<DeleteDataSourceResponse>(),
+          &UnregisterDataSourceResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<UnregisterDataSourceResponse>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-          &DeleteDataSourceResponse::SharedDtor,
-          ::google::protobuf::Message::GetClearImpl<DeleteDataSourceResponse>(), &DeleteDataSourceResponse::ByteSizeLong,
-              &DeleteDataSourceResponse::_InternalSerialize,
+          &UnregisterDataSourceResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<UnregisterDataSourceResponse>(), &UnregisterDataSourceResponse::ByteSizeLong,
+              &UnregisterDataSourceResponse::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          PROTOBUF_FIELD_OFFSET(DeleteDataSourceResponse, _impl_._cached_size_),
+          PROTOBUF_FIELD_OFFSET(UnregisterDataSourceResponse, _impl_._cached_size_),
           false,
       },
-      &DeleteDataSourceResponse::kDescriptorMethods,
+      &UnregisterDataSourceResponse::kDescriptorMethods,
       &descriptor_table_szconfig_2eproto,
       nullptr,  // tracker
   };
 }
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
-    ::google::protobuf::internal::ClassDataFull DeleteDataSourceResponse_class_data_ =
-        DeleteDataSourceResponse::InternalGenerateClassData_();
+    ::google::protobuf::internal::ClassDataFull UnregisterDataSourceResponse_class_data_ =
+        UnregisterDataSourceResponse::InternalGenerateClassData_();
 
-const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL DeleteDataSourceResponse::GetClassData() const {
-  ::google::protobuf::internal::PrefetchToLocalCache(&DeleteDataSourceResponse_class_data_);
-  ::google::protobuf::internal::PrefetchToLocalCache(DeleteDataSourceResponse_class_data_.tc_table);
-  return DeleteDataSourceResponse_class_data_.base();
+const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL UnregisterDataSourceResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&UnregisterDataSourceResponse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(UnregisterDataSourceResponse_class_data_.tc_table);
+  return UnregisterDataSourceResponse_class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 65, 2>
-DeleteDataSourceResponse::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 69, 2>
+UnregisterDataSourceResponse::_table_ = {
   {
-    PROTOBUF_FIELD_OFFSET(DeleteDataSourceResponse, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(UnregisterDataSourceResponse, _impl_._has_bits_),
     0, // no _extensions_
     2, 8,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
@@ -1455,39 +1457,39 @@ DeleteDataSourceResponse::_table_ = {
     2,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
-    DeleteDataSourceResponse_class_data_.base(),
+    UnregisterDataSourceResponse_class_data_.base(),
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::szconfig::DeleteDataSourceResponse>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::szconfig::UnregisterDataSourceResponse>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // string config_definition = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 1, 0, PROTOBUF_FIELD_OFFSET(DeleteDataSourceResponse, _impl_.config_definition_)}},
+     {18, 1, 0, PROTOBUF_FIELD_OFFSET(UnregisterDataSourceResponse, _impl_.config_definition_)}},
     // string result = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 0, 0, PROTOBUF_FIELD_OFFSET(DeleteDataSourceResponse, _impl_.result_)}},
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(UnregisterDataSourceResponse, _impl_.result_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string result = 1;
-    {PROTOBUF_FIELD_OFFSET(DeleteDataSourceResponse, _impl_.result_), _Internal::kHasBitsOffset + 0, 0,
+    {PROTOBUF_FIELD_OFFSET(UnregisterDataSourceResponse, _impl_.result_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string config_definition = 2;
-    {PROTOBUF_FIELD_OFFSET(DeleteDataSourceResponse, _impl_.config_definition_), _Internal::kHasBitsOffset + 1, 0,
+    {PROTOBUF_FIELD_OFFSET(UnregisterDataSourceResponse, _impl_.config_definition_), _Internal::kHasBitsOffset + 1, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\41\6\21\0\0\0\0\0"
-    "szconfig.DeleteDataSourceResponse"
+    "\45\6\21\0\0\0\0\0"
+    "szconfig.UnregisterDataSourceResponse"
     "result"
     "config_definition"
   }},
 };
-PROTOBUF_NOINLINE void DeleteDataSourceResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:szconfig.DeleteDataSourceResponse)
+PROTOBUF_NOINLINE void UnregisterDataSourceResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:szconfig.UnregisterDataSourceResponse)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1507,17 +1509,17 @@ PROTOBUF_NOINLINE void DeleteDataSourceResponse::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::uint8_t* PROTOBUF_NONNULL DeleteDataSourceResponse::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL UnregisterDataSourceResponse::_InternalSerialize(
     const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
-  const DeleteDataSourceResponse& this_ = static_cast<const DeleteDataSourceResponse&>(base);
+  const UnregisterDataSourceResponse& this_ = static_cast<const UnregisterDataSourceResponse&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::uint8_t* PROTOBUF_NONNULL DeleteDataSourceResponse::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL UnregisterDataSourceResponse::_InternalSerialize(
     ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
-  const DeleteDataSourceResponse& this_ = *this;
+  const UnregisterDataSourceResponse& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(serialize_to_array_start:szconfig.DeleteDataSourceResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:szconfig.UnregisterDataSourceResponse)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
@@ -1526,7 +1528,7 @@ PROTOBUF_NOINLINE void DeleteDataSourceResponse::Clear() {
     if (!this_._internal_result().empty()) {
       const std::string& _s = this_._internal_result();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.DeleteDataSourceResponse.result");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.UnregisterDataSourceResponse.result");
       target = stream->WriteStringMaybeAliased(1, _s, target);
     }
   }
@@ -1536,7 +1538,7 @@ PROTOBUF_NOINLINE void DeleteDataSourceResponse::Clear() {
     if (!this_._internal_config_definition().empty()) {
       const std::string& _s = this_._internal_config_definition();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.DeleteDataSourceResponse.config_definition");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.UnregisterDataSourceResponse.config_definition");
       target = stream->WriteStringMaybeAliased(2, _s, target);
     }
   }
@@ -1546,18 +1548,18 @@ PROTOBUF_NOINLINE void DeleteDataSourceResponse::Clear() {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:szconfig.DeleteDataSourceResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:szconfig.UnregisterDataSourceResponse)
   return target;
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::size_t DeleteDataSourceResponse::ByteSizeLong(const MessageLite& base) {
-  const DeleteDataSourceResponse& this_ = static_cast<const DeleteDataSourceResponse&>(base);
+::size_t UnregisterDataSourceResponse::ByteSizeLong(const MessageLite& base) {
+  const UnregisterDataSourceResponse& this_ = static_cast<const UnregisterDataSourceResponse&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::size_t DeleteDataSourceResponse::ByteSizeLong() const {
-  const DeleteDataSourceResponse& this_ = *this;
+::size_t UnregisterDataSourceResponse::ByteSizeLong() const {
+  const UnregisterDataSourceResponse& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(message_byte_size_start:szconfig.DeleteDataSourceResponse)
+  // @@protoc_insertion_point(message_byte_size_start:szconfig.UnregisterDataSourceResponse)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
@@ -1586,10 +1588,10 @@ PROTOBUF_NOINLINE void DeleteDataSourceResponse::Clear() {
                                              &this_._impl_._cached_size_);
 }
 
-void DeleteDataSourceResponse::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<DeleteDataSourceResponse*>(&to_msg);
-  auto& from = static_cast<const DeleteDataSourceResponse&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:szconfig.DeleteDataSourceResponse)
+void UnregisterDataSourceResponse::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<UnregisterDataSourceResponse*>(&to_msg);
+  auto& from = static_cast<const UnregisterDataSourceResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szconfig.UnregisterDataSourceResponse)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1619,15 +1621,15 @@ void DeleteDataSourceResponse::MergeImpl(::google::protobuf::MessageLite& to_msg
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void DeleteDataSourceResponse::CopyFrom(const DeleteDataSourceResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:szconfig.DeleteDataSourceResponse)
+void UnregisterDataSourceResponse::CopyFrom(const UnregisterDataSourceResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szconfig.UnregisterDataSourceResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void DeleteDataSourceResponse::InternalSwap(DeleteDataSourceResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+void UnregisterDataSourceResponse::InternalSwap(UnregisterDataSourceResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -1637,119 +1639,119 @@ void DeleteDataSourceResponse::InternalSwap(DeleteDataSourceResponse* PROTOBUF_R
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.config_definition_, &other->_impl_.config_definition_, arena);
 }
 
-::google::protobuf::Metadata DeleteDataSourceResponse::GetMetadata() const {
+::google::protobuf::Metadata UnregisterDataSourceResponse::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class GetDataSourcesRequest::_Internal {
+class GetDataSourceRegistryRequest::_Internal {
  public:
   using HasBits =
-      decltype(std::declval<GetDataSourcesRequest>()._impl_._has_bits_);
+      decltype(std::declval<GetDataSourceRegistryRequest>()._impl_._has_bits_);
   static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(GetDataSourcesRequest, _impl_._has_bits_);
+      8 * PROTOBUF_FIELD_OFFSET(GetDataSourceRegistryRequest, _impl_._has_bits_);
 };
 
-GetDataSourcesRequest::GetDataSourcesRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+GetDataSourceRegistryRequest::GetDataSourceRegistryRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, GetDataSourcesRequest_class_data_.base()) {
+    : ::google::protobuf::Message(arena, GetDataSourceRegistryRequest_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:szconfig.GetDataSourcesRequest)
+  // @@protoc_insertion_point(arena_constructor:szconfig.GetDataSourceRegistryRequest)
 }
-PROTOBUF_NDEBUG_INLINE GetDataSourcesRequest::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE GetDataSourceRegistryRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-    const ::szconfig::GetDataSourcesRequest& from_msg)
+    const ::szconfig::GetDataSourceRegistryRequest& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         config_definition_(arena, from.config_definition_) {}
 
-GetDataSourcesRequest::GetDataSourcesRequest(
+GetDataSourceRegistryRequest::GetDataSourceRegistryRequest(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
-    const GetDataSourcesRequest& from)
+    const GetDataSourceRegistryRequest& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, GetDataSourcesRequest_class_data_.base()) {
+    : ::google::protobuf::Message(arena, GetDataSourceRegistryRequest_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  GetDataSourcesRequest* const _this = this;
+  GetDataSourceRegistryRequest* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
 
-  // @@protoc_insertion_point(copy_constructor:szconfig.GetDataSourcesRequest)
+  // @@protoc_insertion_point(copy_constructor:szconfig.GetDataSourceRegistryRequest)
 }
-PROTOBUF_NDEBUG_INLINE GetDataSourcesRequest::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE GetDataSourceRegistryRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
       : _cached_size_{0},
         config_definition_(arena) {}
 
-inline void GetDataSourcesRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+inline void GetDataSourceRegistryRequest::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
-GetDataSourcesRequest::~GetDataSourcesRequest() {
-  // @@protoc_insertion_point(destructor:szconfig.GetDataSourcesRequest)
+GetDataSourceRegistryRequest::~GetDataSourceRegistryRequest() {
+  // @@protoc_insertion_point(destructor:szconfig.GetDataSourceRegistryRequest)
   SharedDtor(*this);
 }
-inline void GetDataSourcesRequest::SharedDtor(MessageLite& self) {
-  GetDataSourcesRequest& this_ = static_cast<GetDataSourcesRequest&>(self);
+inline void GetDataSourceRegistryRequest::SharedDtor(MessageLite& self) {
+  GetDataSourceRegistryRequest& this_ = static_cast<GetDataSourceRegistryRequest&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.config_definition_.Destroy();
   this_._impl_.~Impl_();
 }
 
-inline void* PROTOBUF_NONNULL GetDataSourcesRequest::PlacementNew_(
+inline void* PROTOBUF_NONNULL GetDataSourceRegistryRequest::PlacementNew_(
     const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
-  return ::new (mem) GetDataSourcesRequest(arena);
+  return ::new (mem) GetDataSourceRegistryRequest(arena);
 }
-constexpr auto GetDataSourcesRequest::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(GetDataSourcesRequest),
-                                            alignof(GetDataSourcesRequest));
+constexpr auto GetDataSourceRegistryRequest::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(GetDataSourceRegistryRequest),
+                                            alignof(GetDataSourceRegistryRequest));
 }
-constexpr auto GetDataSourcesRequest::InternalGenerateClassData_() {
+constexpr auto GetDataSourceRegistryRequest::InternalGenerateClassData_() {
   return ::google::protobuf::internal::ClassDataFull{
       ::google::protobuf::internal::ClassData{
-          &_GetDataSourcesRequest_default_instance_._instance,
+          &_GetDataSourceRegistryRequest_default_instance_._instance,
           &_table_.header,
           nullptr,  // OnDemandRegisterArenaDtor
           nullptr,  // IsInitialized
-          &GetDataSourcesRequest::MergeImpl,
-          ::google::protobuf::Message::GetNewImpl<GetDataSourcesRequest>(),
+          &GetDataSourceRegistryRequest::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<GetDataSourceRegistryRequest>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-          &GetDataSourcesRequest::SharedDtor,
-          ::google::protobuf::Message::GetClearImpl<GetDataSourcesRequest>(), &GetDataSourcesRequest::ByteSizeLong,
-              &GetDataSourcesRequest::_InternalSerialize,
+          &GetDataSourceRegistryRequest::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<GetDataSourceRegistryRequest>(), &GetDataSourceRegistryRequest::ByteSizeLong,
+              &GetDataSourceRegistryRequest::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          PROTOBUF_FIELD_OFFSET(GetDataSourcesRequest, _impl_._cached_size_),
+          PROTOBUF_FIELD_OFFSET(GetDataSourceRegistryRequest, _impl_._cached_size_),
           false,
       },
-      &GetDataSourcesRequest::kDescriptorMethods,
+      &GetDataSourceRegistryRequest::kDescriptorMethods,
       &descriptor_table_szconfig_2eproto,
       nullptr,  // tracker
   };
 }
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
-    ::google::protobuf::internal::ClassDataFull GetDataSourcesRequest_class_data_ =
-        GetDataSourcesRequest::InternalGenerateClassData_();
+    ::google::protobuf::internal::ClassDataFull GetDataSourceRegistryRequest_class_data_ =
+        GetDataSourceRegistryRequest::InternalGenerateClassData_();
 
-const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetDataSourcesRequest::GetClassData() const {
-  ::google::protobuf::internal::PrefetchToLocalCache(&GetDataSourcesRequest_class_data_);
-  ::google::protobuf::internal::PrefetchToLocalCache(GetDataSourcesRequest_class_data_.tc_table);
-  return GetDataSourcesRequest_class_data_.base();
+const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetDataSourceRegistryRequest::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&GetDataSourceRegistryRequest_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(GetDataSourceRegistryRequest_class_data_.tc_table);
+  return GetDataSourceRegistryRequest_class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 56, 2>
-GetDataSourcesRequest::_table_ = {
+const ::_pbi::TcParseTable<0, 1, 0, 63, 2>
+GetDataSourceRegistryRequest::_table_ = {
   {
-    PROTOBUF_FIELD_OFFSET(GetDataSourcesRequest, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(GetDataSourceRegistryRequest, _impl_._has_bits_),
     0, // no _extensions_
     1, 0,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
@@ -1758,32 +1760,32 @@ GetDataSourcesRequest::_table_ = {
     1,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
-    GetDataSourcesRequest_class_data_.base(),
+    GetDataSourceRegistryRequest_class_data_.base(),
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::szconfig::GetDataSourcesRequest>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::szconfig::GetDataSourceRegistryRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // string config_definition = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 0, 0, PROTOBUF_FIELD_OFFSET(GetDataSourcesRequest, _impl_.config_definition_)}},
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(GetDataSourceRegistryRequest, _impl_.config_definition_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string config_definition = 1;
-    {PROTOBUF_FIELD_OFFSET(GetDataSourcesRequest, _impl_.config_definition_), _Internal::kHasBitsOffset + 0, 0,
+    {PROTOBUF_FIELD_OFFSET(GetDataSourceRegistryRequest, _impl_.config_definition_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\36\21\0\0\0\0\0\0"
-    "szconfig.GetDataSourcesRequest"
+    "\45\21\0\0\0\0\0\0"
+    "szconfig.GetDataSourceRegistryRequest"
     "config_definition"
   }},
 };
-PROTOBUF_NOINLINE void GetDataSourcesRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:szconfig.GetDataSourcesRequest)
+PROTOBUF_NOINLINE void GetDataSourceRegistryRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:szconfig.GetDataSourceRegistryRequest)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1798,17 +1800,17 @@ PROTOBUF_NOINLINE void GetDataSourcesRequest::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::uint8_t* PROTOBUF_NONNULL GetDataSourcesRequest::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL GetDataSourceRegistryRequest::_InternalSerialize(
     const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
-  const GetDataSourcesRequest& this_ = static_cast<const GetDataSourcesRequest&>(base);
+  const GetDataSourceRegistryRequest& this_ = static_cast<const GetDataSourceRegistryRequest&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::uint8_t* PROTOBUF_NONNULL GetDataSourcesRequest::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL GetDataSourceRegistryRequest::_InternalSerialize(
     ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
-  const GetDataSourcesRequest& this_ = *this;
+  const GetDataSourceRegistryRequest& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(serialize_to_array_start:szconfig.GetDataSourcesRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:szconfig.GetDataSourceRegistryRequest)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
@@ -1817,7 +1819,7 @@ PROTOBUF_NOINLINE void GetDataSourcesRequest::Clear() {
     if (!this_._internal_config_definition().empty()) {
       const std::string& _s = this_._internal_config_definition();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.GetDataSourcesRequest.config_definition");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.GetDataSourceRegistryRequest.config_definition");
       target = stream->WriteStringMaybeAliased(1, _s, target);
     }
   }
@@ -1827,18 +1829,18 @@ PROTOBUF_NOINLINE void GetDataSourcesRequest::Clear() {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:szconfig.GetDataSourcesRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:szconfig.GetDataSourceRegistryRequest)
   return target;
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::size_t GetDataSourcesRequest::ByteSizeLong(const MessageLite& base) {
-  const GetDataSourcesRequest& this_ = static_cast<const GetDataSourcesRequest&>(base);
+::size_t GetDataSourceRegistryRequest::ByteSizeLong(const MessageLite& base) {
+  const GetDataSourceRegistryRequest& this_ = static_cast<const GetDataSourceRegistryRequest&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::size_t GetDataSourcesRequest::ByteSizeLong() const {
-  const GetDataSourcesRequest& this_ = *this;
+::size_t GetDataSourceRegistryRequest::ByteSizeLong() const {
+  const GetDataSourceRegistryRequest& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(message_byte_size_start:szconfig.GetDataSourcesRequest)
+  // @@protoc_insertion_point(message_byte_size_start:szconfig.GetDataSourceRegistryRequest)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
@@ -1859,10 +1861,10 @@ PROTOBUF_NOINLINE void GetDataSourcesRequest::Clear() {
                                              &this_._impl_._cached_size_);
 }
 
-void GetDataSourcesRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<GetDataSourcesRequest*>(&to_msg);
-  auto& from = static_cast<const GetDataSourcesRequest&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:szconfig.GetDataSourcesRequest)
+void GetDataSourceRegistryRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<GetDataSourceRegistryRequest*>(&to_msg);
+  auto& from = static_cast<const GetDataSourceRegistryRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szconfig.GetDataSourceRegistryRequest)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1881,15 +1883,15 @@ void GetDataSourcesRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, c
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void GetDataSourcesRequest::CopyFrom(const GetDataSourcesRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:szconfig.GetDataSourcesRequest)
+void GetDataSourceRegistryRequest::CopyFrom(const GetDataSourceRegistryRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szconfig.GetDataSourceRegistryRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void GetDataSourcesRequest::InternalSwap(GetDataSourcesRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+void GetDataSourceRegistryRequest::InternalSwap(GetDataSourceRegistryRequest* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -1898,119 +1900,119 @@ void GetDataSourcesRequest::InternalSwap(GetDataSourcesRequest* PROTOBUF_RESTRIC
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.config_definition_, &other->_impl_.config_definition_, arena);
 }
 
-::google::protobuf::Metadata GetDataSourcesRequest::GetMetadata() const {
+::google::protobuf::Metadata GetDataSourceRegistryRequest::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class GetDataSourcesResponse::_Internal {
+class GetDataSourceRegistryResponse::_Internal {
  public:
   using HasBits =
-      decltype(std::declval<GetDataSourcesResponse>()._impl_._has_bits_);
+      decltype(std::declval<GetDataSourceRegistryResponse>()._impl_._has_bits_);
   static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(GetDataSourcesResponse, _impl_._has_bits_);
+      8 * PROTOBUF_FIELD_OFFSET(GetDataSourceRegistryResponse, _impl_._has_bits_);
 };
 
-GetDataSourcesResponse::GetDataSourcesResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+GetDataSourceRegistryResponse::GetDataSourceRegistryResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, GetDataSourcesResponse_class_data_.base()) {
+    : ::google::protobuf::Message(arena, GetDataSourceRegistryResponse_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:szconfig.GetDataSourcesResponse)
+  // @@protoc_insertion_point(arena_constructor:szconfig.GetDataSourceRegistryResponse)
 }
-PROTOBUF_NDEBUG_INLINE GetDataSourcesResponse::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE GetDataSourceRegistryResponse::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-    const ::szconfig::GetDataSourcesResponse& from_msg)
+    const ::szconfig::GetDataSourceRegistryResponse& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         result_(arena, from.result_) {}
 
-GetDataSourcesResponse::GetDataSourcesResponse(
+GetDataSourceRegistryResponse::GetDataSourceRegistryResponse(
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
-    const GetDataSourcesResponse& from)
+    const GetDataSourceRegistryResponse& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-    : ::google::protobuf::Message(arena, GetDataSourcesResponse_class_data_.base()) {
+    : ::google::protobuf::Message(arena, GetDataSourceRegistryResponse_class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  GetDataSourcesResponse* const _this = this;
+  GetDataSourceRegistryResponse* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
 
-  // @@protoc_insertion_point(copy_constructor:szconfig.GetDataSourcesResponse)
+  // @@protoc_insertion_point(copy_constructor:szconfig.GetDataSourceRegistryResponse)
 }
-PROTOBUF_NDEBUG_INLINE GetDataSourcesResponse::Impl_::Impl_(
+PROTOBUF_NDEBUG_INLINE GetDataSourceRegistryResponse::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
       : _cached_size_{0},
         result_(arena) {}
 
-inline void GetDataSourcesResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+inline void GetDataSourceRegistryResponse::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
-GetDataSourcesResponse::~GetDataSourcesResponse() {
-  // @@protoc_insertion_point(destructor:szconfig.GetDataSourcesResponse)
+GetDataSourceRegistryResponse::~GetDataSourceRegistryResponse() {
+  // @@protoc_insertion_point(destructor:szconfig.GetDataSourceRegistryResponse)
   SharedDtor(*this);
 }
-inline void GetDataSourcesResponse::SharedDtor(MessageLite& self) {
-  GetDataSourcesResponse& this_ = static_cast<GetDataSourcesResponse&>(self);
+inline void GetDataSourceRegistryResponse::SharedDtor(MessageLite& self) {
+  GetDataSourceRegistryResponse& this_ = static_cast<GetDataSourceRegistryResponse&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.result_.Destroy();
   this_._impl_.~Impl_();
 }
 
-inline void* PROTOBUF_NONNULL GetDataSourcesResponse::PlacementNew_(
+inline void* PROTOBUF_NONNULL GetDataSourceRegistryResponse::PlacementNew_(
     const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
-  return ::new (mem) GetDataSourcesResponse(arena);
+  return ::new (mem) GetDataSourceRegistryResponse(arena);
 }
-constexpr auto GetDataSourcesResponse::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(GetDataSourcesResponse),
-                                            alignof(GetDataSourcesResponse));
+constexpr auto GetDataSourceRegistryResponse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(GetDataSourceRegistryResponse),
+                                            alignof(GetDataSourceRegistryResponse));
 }
-constexpr auto GetDataSourcesResponse::InternalGenerateClassData_() {
+constexpr auto GetDataSourceRegistryResponse::InternalGenerateClassData_() {
   return ::google::protobuf::internal::ClassDataFull{
       ::google::protobuf::internal::ClassData{
-          &_GetDataSourcesResponse_default_instance_._instance,
+          &_GetDataSourceRegistryResponse_default_instance_._instance,
           &_table_.header,
           nullptr,  // OnDemandRegisterArenaDtor
           nullptr,  // IsInitialized
-          &GetDataSourcesResponse::MergeImpl,
-          ::google::protobuf::Message::GetNewImpl<GetDataSourcesResponse>(),
+          &GetDataSourceRegistryResponse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<GetDataSourceRegistryResponse>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-          &GetDataSourcesResponse::SharedDtor,
-          ::google::protobuf::Message::GetClearImpl<GetDataSourcesResponse>(), &GetDataSourcesResponse::ByteSizeLong,
-              &GetDataSourcesResponse::_InternalSerialize,
+          &GetDataSourceRegistryResponse::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<GetDataSourceRegistryResponse>(), &GetDataSourceRegistryResponse::ByteSizeLong,
+              &GetDataSourceRegistryResponse::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          PROTOBUF_FIELD_OFFSET(GetDataSourcesResponse, _impl_._cached_size_),
+          PROTOBUF_FIELD_OFFSET(GetDataSourceRegistryResponse, _impl_._cached_size_),
           false,
       },
-      &GetDataSourcesResponse::kDescriptorMethods,
+      &GetDataSourceRegistryResponse::kDescriptorMethods,
       &descriptor_table_szconfig_2eproto,
       nullptr,  // tracker
   };
 }
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
-    ::google::protobuf::internal::ClassDataFull GetDataSourcesResponse_class_data_ =
-        GetDataSourcesResponse::InternalGenerateClassData_();
+    ::google::protobuf::internal::ClassDataFull GetDataSourceRegistryResponse_class_data_ =
+        GetDataSourceRegistryResponse::InternalGenerateClassData_();
 
-const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetDataSourcesResponse::GetClassData() const {
-  ::google::protobuf::internal::PrefetchToLocalCache(&GetDataSourcesResponse_class_data_);
-  ::google::protobuf::internal::PrefetchToLocalCache(GetDataSourcesResponse_class_data_.tc_table);
-  return GetDataSourcesResponse_class_data_.base();
+const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetDataSourceRegistryResponse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&GetDataSourceRegistryResponse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(GetDataSourceRegistryResponse_class_data_.tc_table);
+  return GetDataSourceRegistryResponse_class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 46, 2>
-GetDataSourcesResponse::_table_ = {
+const ::_pbi::TcParseTable<0, 1, 0, 53, 2>
+GetDataSourceRegistryResponse::_table_ = {
   {
-    PROTOBUF_FIELD_OFFSET(GetDataSourcesResponse, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(GetDataSourceRegistryResponse, _impl_._has_bits_),
     0, // no _extensions_
     1, 0,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
@@ -2019,32 +2021,32 @@ GetDataSourcesResponse::_table_ = {
     1,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
-    GetDataSourcesResponse_class_data_.base(),
+    GetDataSourceRegistryResponse_class_data_.base(),
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::szconfig::GetDataSourcesResponse>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::szconfig::GetDataSourceRegistryResponse>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // string result = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 0, 0, PROTOBUF_FIELD_OFFSET(GetDataSourcesResponse, _impl_.result_)}},
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(GetDataSourceRegistryResponse, _impl_.result_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string result = 1;
-    {PROTOBUF_FIELD_OFFSET(GetDataSourcesResponse, _impl_.result_), _Internal::kHasBitsOffset + 0, 0,
+    {PROTOBUF_FIELD_OFFSET(GetDataSourceRegistryResponse, _impl_.result_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\37\6\0\0\0\0\0\0"
-    "szconfig.GetDataSourcesResponse"
+    "\46\6\0\0\0\0\0\0"
+    "szconfig.GetDataSourceRegistryResponse"
     "result"
   }},
 };
-PROTOBUF_NOINLINE void GetDataSourcesResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:szconfig.GetDataSourcesResponse)
+PROTOBUF_NOINLINE void GetDataSourceRegistryResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:szconfig.GetDataSourceRegistryResponse)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -2059,17 +2061,17 @@ PROTOBUF_NOINLINE void GetDataSourcesResponse::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::uint8_t* PROTOBUF_NONNULL GetDataSourcesResponse::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL GetDataSourceRegistryResponse::_InternalSerialize(
     const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
-  const GetDataSourcesResponse& this_ = static_cast<const GetDataSourcesResponse&>(base);
+  const GetDataSourceRegistryResponse& this_ = static_cast<const GetDataSourceRegistryResponse&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::uint8_t* PROTOBUF_NONNULL GetDataSourcesResponse::_InternalSerialize(
+::uint8_t* PROTOBUF_NONNULL GetDataSourceRegistryResponse::_InternalSerialize(
     ::uint8_t* PROTOBUF_NONNULL target,
     ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
-  const GetDataSourcesResponse& this_ = *this;
+  const GetDataSourceRegistryResponse& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(serialize_to_array_start:szconfig.GetDataSourcesResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:szconfig.GetDataSourceRegistryResponse)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
@@ -2078,7 +2080,7 @@ PROTOBUF_NOINLINE void GetDataSourcesResponse::Clear() {
     if (!this_._internal_result().empty()) {
       const std::string& _s = this_._internal_result();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.GetDataSourcesResponse.result");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "szconfig.GetDataSourceRegistryResponse.result");
       target = stream->WriteStringMaybeAliased(1, _s, target);
     }
   }
@@ -2088,18 +2090,18 @@ PROTOBUF_NOINLINE void GetDataSourcesResponse::Clear() {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:szconfig.GetDataSourcesResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:szconfig.GetDataSourceRegistryResponse)
   return target;
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-::size_t GetDataSourcesResponse::ByteSizeLong(const MessageLite& base) {
-  const GetDataSourcesResponse& this_ = static_cast<const GetDataSourcesResponse&>(base);
+::size_t GetDataSourceRegistryResponse::ByteSizeLong(const MessageLite& base) {
+  const GetDataSourceRegistryResponse& this_ = static_cast<const GetDataSourceRegistryResponse&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-::size_t GetDataSourcesResponse::ByteSizeLong() const {
-  const GetDataSourcesResponse& this_ = *this;
+::size_t GetDataSourceRegistryResponse::ByteSizeLong() const {
+  const GetDataSourceRegistryResponse& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  // @@protoc_insertion_point(message_byte_size_start:szconfig.GetDataSourcesResponse)
+  // @@protoc_insertion_point(message_byte_size_start:szconfig.GetDataSourceRegistryResponse)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
@@ -2120,10 +2122,10 @@ PROTOBUF_NOINLINE void GetDataSourcesResponse::Clear() {
                                              &this_._impl_._cached_size_);
 }
 
-void GetDataSourcesResponse::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<GetDataSourcesResponse*>(&to_msg);
-  auto& from = static_cast<const GetDataSourcesResponse&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:szconfig.GetDataSourcesResponse)
+void GetDataSourceRegistryResponse::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<GetDataSourceRegistryResponse*>(&to_msg);
+  auto& from = static_cast<const GetDataSourceRegistryResponse&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:szconfig.GetDataSourceRegistryResponse)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2142,15 +2144,15 @@ void GetDataSourcesResponse::MergeImpl(::google::protobuf::MessageLite& to_msg, 
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void GetDataSourcesResponse::CopyFrom(const GetDataSourcesResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:szconfig.GetDataSourcesResponse)
+void GetDataSourceRegistryResponse::CopyFrom(const GetDataSourceRegistryResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:szconfig.GetDataSourceRegistryResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void GetDataSourcesResponse::InternalSwap(GetDataSourcesResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+void GetDataSourceRegistryResponse::InternalSwap(GetDataSourceRegistryResponse* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -2159,7 +2161,7 @@ void GetDataSourcesResponse::InternalSwap(GetDataSourcesResponse* PROTOBUF_RESTR
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.result_, &other->_impl_.result_, arena);
 }
 
-::google::protobuf::Metadata GetDataSourcesResponse::GetMetadata() const {
+::google::protobuf::Metadata GetDataSourceRegistryResponse::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
