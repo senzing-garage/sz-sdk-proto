@@ -154,6 +154,13 @@ class SzEngine final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::GetRecordResponse>> PrepareAsyncGetRecord(::grpc::ClientContext* context, const ::szengine::GetRecordRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::GetRecordResponse>>(PrepareAsyncGetRecordRaw(context, request, cq));
     }
+    virtual ::grpc::Status GetRecordPreview(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest& request, ::szengine::GetRecordPreviewResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::GetRecordPreviewResponse>> AsyncGetRecordPreview(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::GetRecordPreviewResponse>>(AsyncGetRecordPreviewRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::GetRecordPreviewResponse>> PrepareAsyncGetRecordPreview(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::GetRecordPreviewResponse>>(PrepareAsyncGetRecordPreviewRaw(context, request, cq));
+    }
     virtual ::grpc::Status GetRedoRecord(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest& request, ::szengine::GetRedoRecordResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::GetRedoRecordResponse>> AsyncGetRedoRecord(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::GetRedoRecordResponse>>(AsyncGetRedoRecordRaw(context, request, cq));
@@ -181,13 +188,6 @@ class SzEngine final {
     }
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::HowEntityByEntityIdResponse>> PrepareAsyncHowEntityByEntityId(::grpc::ClientContext* context, const ::szengine::HowEntityByEntityIdRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::HowEntityByEntityIdResponse>>(PrepareAsyncHowEntityByEntityIdRaw(context, request, cq));
-    }
-    virtual ::grpc::Status PreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest& request, ::szengine::PreprocessRecordResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::PreprocessRecordResponse>> AsyncPreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::PreprocessRecordResponse>>(AsyncPreprocessRecordRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::PreprocessRecordResponse>> PrepareAsyncPreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::PreprocessRecordResponse>>(PrepareAsyncPreprocessRecordRaw(context, request, cq));
     }
     virtual ::grpc::Status PrimeEngine(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest& request, ::szengine::PrimeEngineResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::szengine::PrimeEngineResponse>> AsyncPrimeEngine(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest& request, ::grpc::CompletionQueue* cq) {
@@ -314,6 +314,8 @@ class SzEngine final {
       virtual void GetEntityByRecordId(::grpc::ClientContext* context, const ::szengine::GetEntityByRecordIdRequest* request, ::szengine::GetEntityByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void GetRecord(::grpc::ClientContext* context, const ::szengine::GetRecordRequest* request, ::szengine::GetRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetRecord(::grpc::ClientContext* context, const ::szengine::GetRecordRequest* request, ::szengine::GetRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetRecordPreview(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest* request, ::szengine::GetRecordPreviewResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetRecordPreview(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest* request, ::szengine::GetRecordPreviewResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void GetRedoRecord(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest* request, ::szengine::GetRedoRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetRedoRecord(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest* request, ::szengine::GetRedoRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void GetStats(::grpc::ClientContext* context, const ::szengine::GetStatsRequest* request, ::szengine::GetStatsResponse* response, std::function<void(::grpc::Status)>) = 0;
@@ -322,8 +324,6 @@ class SzEngine final {
       virtual void GetVirtualEntityByRecordId(::grpc::ClientContext* context, const ::szengine::GetVirtualEntityByRecordIdRequest* request, ::szengine::GetVirtualEntityByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void HowEntityByEntityId(::grpc::ClientContext* context, const ::szengine::HowEntityByEntityIdRequest* request, ::szengine::HowEntityByEntityIdResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void HowEntityByEntityId(::grpc::ClientContext* context, const ::szengine::HowEntityByEntityIdRequest* request, ::szengine::HowEntityByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void PreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest* request, ::szengine::PreprocessRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void PreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest* request, ::szengine::PreprocessRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void PrimeEngine(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest* request, ::szengine::PrimeEngineResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void PrimeEngine(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest* request, ::szengine::PrimeEngineResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void ProcessRedoRecord(::grpc::ClientContext* context, const ::szengine::ProcessRedoRecordRequest* request, ::szengine::ProcessRedoRecordResponse* response, std::function<void(::grpc::Status)>) = 0;
@@ -385,6 +385,8 @@ class SzEngine final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::GetEntityByRecordIdResponse>* PrepareAsyncGetEntityByRecordIdRaw(::grpc::ClientContext* context, const ::szengine::GetEntityByRecordIdRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::GetRecordResponse>* AsyncGetRecordRaw(::grpc::ClientContext* context, const ::szengine::GetRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::GetRecordResponse>* PrepareAsyncGetRecordRaw(::grpc::ClientContext* context, const ::szengine::GetRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::GetRecordPreviewResponse>* AsyncGetRecordPreviewRaw(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::GetRecordPreviewResponse>* PrepareAsyncGetRecordPreviewRaw(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::GetRedoRecordResponse>* AsyncGetRedoRecordRaw(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::GetRedoRecordResponse>* PrepareAsyncGetRedoRecordRaw(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::GetStatsResponse>* AsyncGetStatsRaw(::grpc::ClientContext* context, const ::szengine::GetStatsRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -393,8 +395,6 @@ class SzEngine final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::GetVirtualEntityByRecordIdResponse>* PrepareAsyncGetVirtualEntityByRecordIdRaw(::grpc::ClientContext* context, const ::szengine::GetVirtualEntityByRecordIdRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::HowEntityByEntityIdResponse>* AsyncHowEntityByEntityIdRaw(::grpc::ClientContext* context, const ::szengine::HowEntityByEntityIdRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::HowEntityByEntityIdResponse>* PrepareAsyncHowEntityByEntityIdRaw(::grpc::ClientContext* context, const ::szengine::HowEntityByEntityIdRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::PreprocessRecordResponse>* AsyncPreprocessRecordRaw(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::PreprocessRecordResponse>* PrepareAsyncPreprocessRecordRaw(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::PrimeEngineResponse>* AsyncPrimeEngineRaw(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::PrimeEngineResponse>* PrepareAsyncPrimeEngineRaw(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::szengine::ProcessRedoRecordResponse>* AsyncProcessRedoRecordRaw(::grpc::ClientContext* context, const ::szengine::ProcessRedoRecordRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -544,6 +544,13 @@ class SzEngine final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::GetRecordResponse>> PrepareAsyncGetRecord(::grpc::ClientContext* context, const ::szengine::GetRecordRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::GetRecordResponse>>(PrepareAsyncGetRecordRaw(context, request, cq));
     }
+    ::grpc::Status GetRecordPreview(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest& request, ::szengine::GetRecordPreviewResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::GetRecordPreviewResponse>> AsyncGetRecordPreview(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::GetRecordPreviewResponse>>(AsyncGetRecordPreviewRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::GetRecordPreviewResponse>> PrepareAsyncGetRecordPreview(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::GetRecordPreviewResponse>>(PrepareAsyncGetRecordPreviewRaw(context, request, cq));
+    }
     ::grpc::Status GetRedoRecord(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest& request, ::szengine::GetRedoRecordResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::GetRedoRecordResponse>> AsyncGetRedoRecord(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::GetRedoRecordResponse>>(AsyncGetRedoRecordRaw(context, request, cq));
@@ -571,13 +578,6 @@ class SzEngine final {
     }
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::HowEntityByEntityIdResponse>> PrepareAsyncHowEntityByEntityId(::grpc::ClientContext* context, const ::szengine::HowEntityByEntityIdRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::HowEntityByEntityIdResponse>>(PrepareAsyncHowEntityByEntityIdRaw(context, request, cq));
-    }
-    ::grpc::Status PreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest& request, ::szengine::PreprocessRecordResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::PreprocessRecordResponse>> AsyncPreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::PreprocessRecordResponse>>(AsyncPreprocessRecordRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::PreprocessRecordResponse>> PrepareAsyncPreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::PreprocessRecordResponse>>(PrepareAsyncPreprocessRecordRaw(context, request, cq));
     }
     ::grpc::Status PrimeEngine(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest& request, ::szengine::PrimeEngineResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::szengine::PrimeEngineResponse>> AsyncPrimeEngine(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest& request, ::grpc::CompletionQueue* cq) {
@@ -704,6 +704,8 @@ class SzEngine final {
       void GetEntityByRecordId(::grpc::ClientContext* context, const ::szengine::GetEntityByRecordIdRequest* request, ::szengine::GetEntityByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void GetRecord(::grpc::ClientContext* context, const ::szengine::GetRecordRequest* request, ::szengine::GetRecordResponse* response, std::function<void(::grpc::Status)>) override;
       void GetRecord(::grpc::ClientContext* context, const ::szengine::GetRecordRequest* request, ::szengine::GetRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetRecordPreview(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest* request, ::szengine::GetRecordPreviewResponse* response, std::function<void(::grpc::Status)>) override;
+      void GetRecordPreview(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest* request, ::szengine::GetRecordPreviewResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void GetRedoRecord(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest* request, ::szengine::GetRedoRecordResponse* response, std::function<void(::grpc::Status)>) override;
       void GetRedoRecord(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest* request, ::szengine::GetRedoRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void GetStats(::grpc::ClientContext* context, const ::szengine::GetStatsRequest* request, ::szengine::GetStatsResponse* response, std::function<void(::grpc::Status)>) override;
@@ -712,8 +714,6 @@ class SzEngine final {
       void GetVirtualEntityByRecordId(::grpc::ClientContext* context, const ::szengine::GetVirtualEntityByRecordIdRequest* request, ::szengine::GetVirtualEntityByRecordIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void HowEntityByEntityId(::grpc::ClientContext* context, const ::szengine::HowEntityByEntityIdRequest* request, ::szengine::HowEntityByEntityIdResponse* response, std::function<void(::grpc::Status)>) override;
       void HowEntityByEntityId(::grpc::ClientContext* context, const ::szengine::HowEntityByEntityIdRequest* request, ::szengine::HowEntityByEntityIdResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void PreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest* request, ::szengine::PreprocessRecordResponse* response, std::function<void(::grpc::Status)>) override;
-      void PreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest* request, ::szengine::PreprocessRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void PrimeEngine(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest* request, ::szengine::PrimeEngineResponse* response, std::function<void(::grpc::Status)>) override;
       void PrimeEngine(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest* request, ::szengine::PrimeEngineResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void ProcessRedoRecord(::grpc::ClientContext* context, const ::szengine::ProcessRedoRecordRequest* request, ::szengine::ProcessRedoRecordResponse* response, std::function<void(::grpc::Status)>) override;
@@ -781,6 +781,8 @@ class SzEngine final {
     ::grpc::ClientAsyncResponseReader< ::szengine::GetEntityByRecordIdResponse>* PrepareAsyncGetEntityByRecordIdRaw(::grpc::ClientContext* context, const ::szengine::GetEntityByRecordIdRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szengine::GetRecordResponse>* AsyncGetRecordRaw(::grpc::ClientContext* context, const ::szengine::GetRecordRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szengine::GetRecordResponse>* PrepareAsyncGetRecordRaw(::grpc::ClientContext* context, const ::szengine::GetRecordRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::szengine::GetRecordPreviewResponse>* AsyncGetRecordPreviewRaw(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::szengine::GetRecordPreviewResponse>* PrepareAsyncGetRecordPreviewRaw(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szengine::GetRedoRecordResponse>* AsyncGetRedoRecordRaw(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szengine::GetRedoRecordResponse>* PrepareAsyncGetRedoRecordRaw(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szengine::GetStatsResponse>* AsyncGetStatsRaw(::grpc::ClientContext* context, const ::szengine::GetStatsRequest& request, ::grpc::CompletionQueue* cq) override;
@@ -789,8 +791,6 @@ class SzEngine final {
     ::grpc::ClientAsyncResponseReader< ::szengine::GetVirtualEntityByRecordIdResponse>* PrepareAsyncGetVirtualEntityByRecordIdRaw(::grpc::ClientContext* context, const ::szengine::GetVirtualEntityByRecordIdRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szengine::HowEntityByEntityIdResponse>* AsyncHowEntityByEntityIdRaw(::grpc::ClientContext* context, const ::szengine::HowEntityByEntityIdRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szengine::HowEntityByEntityIdResponse>* PrepareAsyncHowEntityByEntityIdRaw(::grpc::ClientContext* context, const ::szengine::HowEntityByEntityIdRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::szengine::PreprocessRecordResponse>* AsyncPreprocessRecordRaw(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::szengine::PreprocessRecordResponse>* PrepareAsyncPreprocessRecordRaw(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szengine::PrimeEngineResponse>* AsyncPrimeEngineRaw(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szengine::PrimeEngineResponse>* PrepareAsyncPrimeEngineRaw(::grpc::ClientContext* context, const ::szengine::PrimeEngineRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::szengine::ProcessRedoRecordResponse>* AsyncProcessRedoRecordRaw(::grpc::ClientContext* context, const ::szengine::ProcessRedoRecordRequest& request, ::grpc::CompletionQueue* cq) override;
@@ -834,11 +834,11 @@ class SzEngine final {
     const ::grpc::internal::RpcMethod rpcmethod_GetEntityByEntityId_;
     const ::grpc::internal::RpcMethod rpcmethod_GetEntityByRecordId_;
     const ::grpc::internal::RpcMethod rpcmethod_GetRecord_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetRecordPreview_;
     const ::grpc::internal::RpcMethod rpcmethod_GetRedoRecord_;
     const ::grpc::internal::RpcMethod rpcmethod_GetStats_;
     const ::grpc::internal::RpcMethod rpcmethod_GetVirtualEntityByRecordId_;
     const ::grpc::internal::RpcMethod rpcmethod_HowEntityByEntityId_;
-    const ::grpc::internal::RpcMethod rpcmethod_PreprocessRecord_;
     const ::grpc::internal::RpcMethod rpcmethod_PrimeEngine_;
     const ::grpc::internal::RpcMethod rpcmethod_ProcessRedoRecord_;
     const ::grpc::internal::RpcMethod rpcmethod_ReevaluateEntity_;
@@ -875,11 +875,11 @@ class SzEngine final {
     virtual ::grpc::Status GetEntityByEntityId(::grpc::ServerContext* context, const ::szengine::GetEntityByEntityIdRequest* request, ::szengine::GetEntityByEntityIdResponse* response);
     virtual ::grpc::Status GetEntityByRecordId(::grpc::ServerContext* context, const ::szengine::GetEntityByRecordIdRequest* request, ::szengine::GetEntityByRecordIdResponse* response);
     virtual ::grpc::Status GetRecord(::grpc::ServerContext* context, const ::szengine::GetRecordRequest* request, ::szengine::GetRecordResponse* response);
+    virtual ::grpc::Status GetRecordPreview(::grpc::ServerContext* context, const ::szengine::GetRecordPreviewRequest* request, ::szengine::GetRecordPreviewResponse* response);
     virtual ::grpc::Status GetRedoRecord(::grpc::ServerContext* context, const ::szengine::GetRedoRecordRequest* request, ::szengine::GetRedoRecordResponse* response);
     virtual ::grpc::Status GetStats(::grpc::ServerContext* context, const ::szengine::GetStatsRequest* request, ::szengine::GetStatsResponse* response);
     virtual ::grpc::Status GetVirtualEntityByRecordId(::grpc::ServerContext* context, const ::szengine::GetVirtualEntityByRecordIdRequest* request, ::szengine::GetVirtualEntityByRecordIdResponse* response);
     virtual ::grpc::Status HowEntityByEntityId(::grpc::ServerContext* context, const ::szengine::HowEntityByEntityIdRequest* request, ::szengine::HowEntityByEntityIdResponse* response);
-    virtual ::grpc::Status PreprocessRecord(::grpc::ServerContext* context, const ::szengine::PreprocessRecordRequest* request, ::szengine::PreprocessRecordResponse* response);
     virtual ::grpc::Status PrimeEngine(::grpc::ServerContext* context, const ::szengine::PrimeEngineRequest* request, ::szengine::PrimeEngineResponse* response);
     virtual ::grpc::Status ProcessRedoRecord(::grpc::ServerContext* context, const ::szengine::ProcessRedoRecordRequest* request, ::szengine::ProcessRedoRecordResponse* response);
     virtual ::grpc::Status ReevaluateEntity(::grpc::ServerContext* context, const ::szengine::ReevaluateEntityRequest* request, ::szengine::ReevaluateEntityResponse* response);
@@ -1234,12 +1234,32 @@ class SzEngine final {
     }
   };
   template <class BaseClass>
+  class WithAsyncMethod_GetRecordPreview : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetRecordPreview() {
+      ::grpc::Service::MarkMethodAsync(17);
+    }
+    ~WithAsyncMethod_GetRecordPreview() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetRecordPreview(::grpc::ServerContext* /*context*/, const ::szengine::GetRecordPreviewRequest* /*request*/, ::szengine::GetRecordPreviewResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetRecordPreview(::grpc::ServerContext* context, ::szengine::GetRecordPreviewRequest* request, ::grpc::ServerAsyncResponseWriter< ::szengine::GetRecordPreviewResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(17, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
   class WithAsyncMethod_GetRedoRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetRedoRecord() {
-      ::grpc::Service::MarkMethodAsync(17);
+      ::grpc::Service::MarkMethodAsync(18);
     }
     ~WithAsyncMethod_GetRedoRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1250,7 +1270,7 @@ class SzEngine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetRedoRecord(::grpc::ServerContext* context, ::szengine::GetRedoRecordRequest* request, ::grpc::ServerAsyncResponseWriter< ::szengine::GetRedoRecordResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(17, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(18, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1259,7 +1279,7 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetStats() {
-      ::grpc::Service::MarkMethodAsync(18);
+      ::grpc::Service::MarkMethodAsync(19);
     }
     ~WithAsyncMethod_GetStats() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1270,7 +1290,7 @@ class SzEngine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetStats(::grpc::ServerContext* context, ::szengine::GetStatsRequest* request, ::grpc::ServerAsyncResponseWriter< ::szengine::GetStatsResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(18, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(19, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1279,7 +1299,7 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetVirtualEntityByRecordId() {
-      ::grpc::Service::MarkMethodAsync(19);
+      ::grpc::Service::MarkMethodAsync(20);
     }
     ~WithAsyncMethod_GetVirtualEntityByRecordId() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1290,7 +1310,7 @@ class SzEngine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetVirtualEntityByRecordId(::grpc::ServerContext* context, ::szengine::GetVirtualEntityByRecordIdRequest* request, ::grpc::ServerAsyncResponseWriter< ::szengine::GetVirtualEntityByRecordIdResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(19, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(20, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1299,7 +1319,7 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_HowEntityByEntityId() {
-      ::grpc::Service::MarkMethodAsync(20);
+      ::grpc::Service::MarkMethodAsync(21);
     }
     ~WithAsyncMethod_HowEntityByEntityId() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1310,26 +1330,6 @@ class SzEngine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestHowEntityByEntityId(::grpc::ServerContext* context, ::szengine::HowEntityByEntityIdRequest* request, ::grpc::ServerAsyncResponseWriter< ::szengine::HowEntityByEntityIdResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(20, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithAsyncMethod_PreprocessRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithAsyncMethod_PreprocessRecord() {
-      ::grpc::Service::MarkMethodAsync(21);
-    }
-    ~WithAsyncMethod_PreprocessRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status PreprocessRecord(::grpc::ServerContext* /*context*/, const ::szengine::PreprocessRecordRequest* /*request*/, ::szengine::PreprocessRecordResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestPreprocessRecord(::grpc::ServerContext* context, ::szengine::PreprocessRecordRequest* request, ::grpc::ServerAsyncResponseWriter< ::szengine::PreprocessRecordResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(21, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1573,7 +1573,7 @@ class SzEngine final {
       ::grpc::Service::RequestAsyncUnary(33, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_AddRecord<WithAsyncMethod_CloseExportReport<WithAsyncMethod_CountRedoRecords<WithAsyncMethod_DeleteRecord<WithAsyncMethod_ExportCsvEntityReport<WithAsyncMethod_ExportJsonEntityReport<WithAsyncMethod_FetchNext<WithAsyncMethod_FindInterestingEntitiesByEntityId<WithAsyncMethod_FindInterestingEntitiesByRecordId<WithAsyncMethod_FindNetworkByEntityId<WithAsyncMethod_FindNetworkByRecordId<WithAsyncMethod_FindPathByEntityId<WithAsyncMethod_FindPathByRecordId<WithAsyncMethod_GetActiveConfigId<WithAsyncMethod_GetEntityByEntityId<WithAsyncMethod_GetEntityByRecordId<WithAsyncMethod_GetRecord<WithAsyncMethod_GetRedoRecord<WithAsyncMethod_GetStats<WithAsyncMethod_GetVirtualEntityByRecordId<WithAsyncMethod_HowEntityByEntityId<WithAsyncMethod_PreprocessRecord<WithAsyncMethod_PrimeEngine<WithAsyncMethod_ProcessRedoRecord<WithAsyncMethod_ReevaluateEntity<WithAsyncMethod_ReevaluateRecord<WithAsyncMethod_Reinitialize<WithAsyncMethod_SearchByAttributes<WithAsyncMethod_StreamExportCsvEntityReport<WithAsyncMethod_StreamExportJsonEntityReport<WithAsyncMethod_WhyEntities<WithAsyncMethod_WhyRecordInEntity<WithAsyncMethod_WhyRecords<WithAsyncMethod_WhySearch<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
+  typedef WithAsyncMethod_AddRecord<WithAsyncMethod_CloseExportReport<WithAsyncMethod_CountRedoRecords<WithAsyncMethod_DeleteRecord<WithAsyncMethod_ExportCsvEntityReport<WithAsyncMethod_ExportJsonEntityReport<WithAsyncMethod_FetchNext<WithAsyncMethod_FindInterestingEntitiesByEntityId<WithAsyncMethod_FindInterestingEntitiesByRecordId<WithAsyncMethod_FindNetworkByEntityId<WithAsyncMethod_FindNetworkByRecordId<WithAsyncMethod_FindPathByEntityId<WithAsyncMethod_FindPathByRecordId<WithAsyncMethod_GetActiveConfigId<WithAsyncMethod_GetEntityByEntityId<WithAsyncMethod_GetEntityByRecordId<WithAsyncMethod_GetRecord<WithAsyncMethod_GetRecordPreview<WithAsyncMethod_GetRedoRecord<WithAsyncMethod_GetStats<WithAsyncMethod_GetVirtualEntityByRecordId<WithAsyncMethod_HowEntityByEntityId<WithAsyncMethod_PrimeEngine<WithAsyncMethod_ProcessRedoRecord<WithAsyncMethod_ReevaluateEntity<WithAsyncMethod_ReevaluateRecord<WithAsyncMethod_Reinitialize<WithAsyncMethod_SearchByAttributes<WithAsyncMethod_StreamExportCsvEntityReport<WithAsyncMethod_StreamExportJsonEntityReport<WithAsyncMethod_WhyEntities<WithAsyncMethod_WhyRecordInEntity<WithAsyncMethod_WhyRecords<WithAsyncMethod_WhySearch<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_AddRecord : public BaseClass {
    private:
@@ -2034,18 +2034,45 @@ class SzEngine final {
       ::grpc::CallbackServerContext* /*context*/, const ::szengine::GetRecordRequest* /*request*/, ::szengine::GetRecordResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
+  class WithCallbackMethod_GetRecordPreview : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetRecordPreview() {
+      ::grpc::Service::MarkMethodCallback(17,
+          new ::grpc::internal::CallbackUnaryHandler< ::szengine::GetRecordPreviewRequest, ::szengine::GetRecordPreviewResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::szengine::GetRecordPreviewRequest* request, ::szengine::GetRecordPreviewResponse* response) { return this->GetRecordPreview(context, request, response); }));}
+    void SetMessageAllocatorFor_GetRecordPreview(
+        ::grpc::MessageAllocator< ::szengine::GetRecordPreviewRequest, ::szengine::GetRecordPreviewResponse>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(17);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::GetRecordPreviewRequest, ::szengine::GetRecordPreviewResponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_GetRecordPreview() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetRecordPreview(::grpc::ServerContext* /*context*/, const ::szengine::GetRecordPreviewRequest* /*request*/, ::szengine::GetRecordPreviewResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetRecordPreview(
+      ::grpc::CallbackServerContext* /*context*/, const ::szengine::GetRecordPreviewRequest* /*request*/, ::szengine::GetRecordPreviewResponse* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
   class WithCallbackMethod_GetRedoRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_GetRedoRecord() {
-      ::grpc::Service::MarkMethodCallback(17,
+      ::grpc::Service::MarkMethodCallback(18,
           new ::grpc::internal::CallbackUnaryHandler< ::szengine::GetRedoRecordRequest, ::szengine::GetRedoRecordResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::szengine::GetRedoRecordRequest* request, ::szengine::GetRedoRecordResponse* response) { return this->GetRedoRecord(context, request, response); }));}
     void SetMessageAllocatorFor_GetRedoRecord(
         ::grpc::MessageAllocator< ::szengine::GetRedoRecordRequest, ::szengine::GetRedoRecordResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(17);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(18);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::GetRedoRecordRequest, ::szengine::GetRedoRecordResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -2066,13 +2093,13 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_GetStats() {
-      ::grpc::Service::MarkMethodCallback(18,
+      ::grpc::Service::MarkMethodCallback(19,
           new ::grpc::internal::CallbackUnaryHandler< ::szengine::GetStatsRequest, ::szengine::GetStatsResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::szengine::GetStatsRequest* request, ::szengine::GetStatsResponse* response) { return this->GetStats(context, request, response); }));}
     void SetMessageAllocatorFor_GetStats(
         ::grpc::MessageAllocator< ::szengine::GetStatsRequest, ::szengine::GetStatsResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(18);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(19);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::GetStatsRequest, ::szengine::GetStatsResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -2093,13 +2120,13 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_GetVirtualEntityByRecordId() {
-      ::grpc::Service::MarkMethodCallback(19,
+      ::grpc::Service::MarkMethodCallback(20,
           new ::grpc::internal::CallbackUnaryHandler< ::szengine::GetVirtualEntityByRecordIdRequest, ::szengine::GetVirtualEntityByRecordIdResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::szengine::GetVirtualEntityByRecordIdRequest* request, ::szengine::GetVirtualEntityByRecordIdResponse* response) { return this->GetVirtualEntityByRecordId(context, request, response); }));}
     void SetMessageAllocatorFor_GetVirtualEntityByRecordId(
         ::grpc::MessageAllocator< ::szengine::GetVirtualEntityByRecordIdRequest, ::szengine::GetVirtualEntityByRecordIdResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(19);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(20);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::GetVirtualEntityByRecordIdRequest, ::szengine::GetVirtualEntityByRecordIdResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -2120,13 +2147,13 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_HowEntityByEntityId() {
-      ::grpc::Service::MarkMethodCallback(20,
+      ::grpc::Service::MarkMethodCallback(21,
           new ::grpc::internal::CallbackUnaryHandler< ::szengine::HowEntityByEntityIdRequest, ::szengine::HowEntityByEntityIdResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::szengine::HowEntityByEntityIdRequest* request, ::szengine::HowEntityByEntityIdResponse* response) { return this->HowEntityByEntityId(context, request, response); }));}
     void SetMessageAllocatorFor_HowEntityByEntityId(
         ::grpc::MessageAllocator< ::szengine::HowEntityByEntityIdRequest, ::szengine::HowEntityByEntityIdResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(20);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(21);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::HowEntityByEntityIdRequest, ::szengine::HowEntityByEntityIdResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -2140,33 +2167,6 @@ class SzEngine final {
     }
     virtual ::grpc::ServerUnaryReactor* HowEntityByEntityId(
       ::grpc::CallbackServerContext* /*context*/, const ::szengine::HowEntityByEntityIdRequest* /*request*/, ::szengine::HowEntityByEntityIdResponse* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithCallbackMethod_PreprocessRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithCallbackMethod_PreprocessRecord() {
-      ::grpc::Service::MarkMethodCallback(21,
-          new ::grpc::internal::CallbackUnaryHandler< ::szengine::PreprocessRecordRequest, ::szengine::PreprocessRecordResponse>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::szengine::PreprocessRecordRequest* request, ::szengine::PreprocessRecordResponse* response) { return this->PreprocessRecord(context, request, response); }));}
-    void SetMessageAllocatorFor_PreprocessRecord(
-        ::grpc::MessageAllocator< ::szengine::PreprocessRecordRequest, ::szengine::PreprocessRecordResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(21);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::szengine::PreprocessRecordRequest, ::szengine::PreprocessRecordResponse>*>(handler)
-              ->SetMessageAllocator(allocator);
-    }
-    ~WithCallbackMethod_PreprocessRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status PreprocessRecord(::grpc::ServerContext* /*context*/, const ::szengine::PreprocessRecordRequest* /*request*/, ::szengine::PreprocessRecordResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* PreprocessRecord(
-      ::grpc::CallbackServerContext* /*context*/, const ::szengine::PreprocessRecordRequest* /*request*/, ::szengine::PreprocessRecordResponse* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithCallbackMethod_PrimeEngine : public BaseClass {
@@ -2482,7 +2482,7 @@ class SzEngine final {
     virtual ::grpc::ServerUnaryReactor* WhySearch(
       ::grpc::CallbackServerContext* /*context*/, const ::szengine::WhySearchRequest* /*request*/, ::szengine::WhySearchResponse* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_AddRecord<WithCallbackMethod_CloseExportReport<WithCallbackMethod_CountRedoRecords<WithCallbackMethod_DeleteRecord<WithCallbackMethod_ExportCsvEntityReport<WithCallbackMethod_ExportJsonEntityReport<WithCallbackMethod_FetchNext<WithCallbackMethod_FindInterestingEntitiesByEntityId<WithCallbackMethod_FindInterestingEntitiesByRecordId<WithCallbackMethod_FindNetworkByEntityId<WithCallbackMethod_FindNetworkByRecordId<WithCallbackMethod_FindPathByEntityId<WithCallbackMethod_FindPathByRecordId<WithCallbackMethod_GetActiveConfigId<WithCallbackMethod_GetEntityByEntityId<WithCallbackMethod_GetEntityByRecordId<WithCallbackMethod_GetRecord<WithCallbackMethod_GetRedoRecord<WithCallbackMethod_GetStats<WithCallbackMethod_GetVirtualEntityByRecordId<WithCallbackMethod_HowEntityByEntityId<WithCallbackMethod_PreprocessRecord<WithCallbackMethod_PrimeEngine<WithCallbackMethod_ProcessRedoRecord<WithCallbackMethod_ReevaluateEntity<WithCallbackMethod_ReevaluateRecord<WithCallbackMethod_Reinitialize<WithCallbackMethod_SearchByAttributes<WithCallbackMethod_StreamExportCsvEntityReport<WithCallbackMethod_StreamExportJsonEntityReport<WithCallbackMethod_WhyEntities<WithCallbackMethod_WhyRecordInEntity<WithCallbackMethod_WhyRecords<WithCallbackMethod_WhySearch<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
+  typedef WithCallbackMethod_AddRecord<WithCallbackMethod_CloseExportReport<WithCallbackMethod_CountRedoRecords<WithCallbackMethod_DeleteRecord<WithCallbackMethod_ExportCsvEntityReport<WithCallbackMethod_ExportJsonEntityReport<WithCallbackMethod_FetchNext<WithCallbackMethod_FindInterestingEntitiesByEntityId<WithCallbackMethod_FindInterestingEntitiesByRecordId<WithCallbackMethod_FindNetworkByEntityId<WithCallbackMethod_FindNetworkByRecordId<WithCallbackMethod_FindPathByEntityId<WithCallbackMethod_FindPathByRecordId<WithCallbackMethod_GetActiveConfigId<WithCallbackMethod_GetEntityByEntityId<WithCallbackMethod_GetEntityByRecordId<WithCallbackMethod_GetRecord<WithCallbackMethod_GetRecordPreview<WithCallbackMethod_GetRedoRecord<WithCallbackMethod_GetStats<WithCallbackMethod_GetVirtualEntityByRecordId<WithCallbackMethod_HowEntityByEntityId<WithCallbackMethod_PrimeEngine<WithCallbackMethod_ProcessRedoRecord<WithCallbackMethod_ReevaluateEntity<WithCallbackMethod_ReevaluateRecord<WithCallbackMethod_Reinitialize<WithCallbackMethod_SearchByAttributes<WithCallbackMethod_StreamExportCsvEntityReport<WithCallbackMethod_StreamExportJsonEntityReport<WithCallbackMethod_WhyEntities<WithCallbackMethod_WhyRecordInEntity<WithCallbackMethod_WhyRecords<WithCallbackMethod_WhySearch<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_AddRecord : public BaseClass {
@@ -2774,12 +2774,29 @@ class SzEngine final {
     }
   };
   template <class BaseClass>
+  class WithGenericMethod_GetRecordPreview : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetRecordPreview() {
+      ::grpc::Service::MarkMethodGeneric(17);
+    }
+    ~WithGenericMethod_GetRecordPreview() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetRecordPreview(::grpc::ServerContext* /*context*/, const ::szengine::GetRecordPreviewRequest* /*request*/, ::szengine::GetRecordPreviewResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
   class WithGenericMethod_GetRedoRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetRedoRecord() {
-      ::grpc::Service::MarkMethodGeneric(17);
+      ::grpc::Service::MarkMethodGeneric(18);
     }
     ~WithGenericMethod_GetRedoRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2796,7 +2813,7 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetStats() {
-      ::grpc::Service::MarkMethodGeneric(18);
+      ::grpc::Service::MarkMethodGeneric(19);
     }
     ~WithGenericMethod_GetStats() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2813,7 +2830,7 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetVirtualEntityByRecordId() {
-      ::grpc::Service::MarkMethodGeneric(19);
+      ::grpc::Service::MarkMethodGeneric(20);
     }
     ~WithGenericMethod_GetVirtualEntityByRecordId() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2830,30 +2847,13 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_HowEntityByEntityId() {
-      ::grpc::Service::MarkMethodGeneric(20);
+      ::grpc::Service::MarkMethodGeneric(21);
     }
     ~WithGenericMethod_HowEntityByEntityId() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
     ::grpc::Status HowEntityByEntityId(::grpc::ServerContext* /*context*/, const ::szengine::HowEntityByEntityIdRequest* /*request*/, ::szengine::HowEntityByEntityIdResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-  };
-  template <class BaseClass>
-  class WithGenericMethod_PreprocessRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithGenericMethod_PreprocessRecord() {
-      ::grpc::Service::MarkMethodGeneric(21);
-    }
-    ~WithGenericMethod_PreprocessRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status PreprocessRecord(::grpc::ServerContext* /*context*/, const ::szengine::PreprocessRecordRequest* /*request*/, ::szengine::PreprocessRecordResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -3403,12 +3403,32 @@ class SzEngine final {
     }
   };
   template <class BaseClass>
+  class WithRawMethod_GetRecordPreview : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetRecordPreview() {
+      ::grpc::Service::MarkMethodRaw(17);
+    }
+    ~WithRawMethod_GetRecordPreview() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetRecordPreview(::grpc::ServerContext* /*context*/, const ::szengine::GetRecordPreviewRequest* /*request*/, ::szengine::GetRecordPreviewResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetRecordPreview(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(17, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
   class WithRawMethod_GetRedoRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetRedoRecord() {
-      ::grpc::Service::MarkMethodRaw(17);
+      ::grpc::Service::MarkMethodRaw(18);
     }
     ~WithRawMethod_GetRedoRecord() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3419,7 +3439,7 @@ class SzEngine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetRedoRecord(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(17, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(18, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3428,7 +3448,7 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetStats() {
-      ::grpc::Service::MarkMethodRaw(18);
+      ::grpc::Service::MarkMethodRaw(19);
     }
     ~WithRawMethod_GetStats() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3439,7 +3459,7 @@ class SzEngine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetStats(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(18, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(19, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3448,7 +3468,7 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetVirtualEntityByRecordId() {
-      ::grpc::Service::MarkMethodRaw(19);
+      ::grpc::Service::MarkMethodRaw(20);
     }
     ~WithRawMethod_GetVirtualEntityByRecordId() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3459,7 +3479,7 @@ class SzEngine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetVirtualEntityByRecordId(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(19, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(20, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -3468,7 +3488,7 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_HowEntityByEntityId() {
-      ::grpc::Service::MarkMethodRaw(20);
+      ::grpc::Service::MarkMethodRaw(21);
     }
     ~WithRawMethod_HowEntityByEntityId() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3479,26 +3499,6 @@ class SzEngine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestHowEntityByEntityId(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(20, context, request, response, new_call_cq, notification_cq, tag);
-    }
-  };
-  template <class BaseClass>
-  class WithRawMethod_PreprocessRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawMethod_PreprocessRecord() {
-      ::grpc::Service::MarkMethodRaw(21);
-    }
-    ~WithRawMethod_PreprocessRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status PreprocessRecord(::grpc::ServerContext* /*context*/, const ::szengine::PreprocessRecordRequest* /*request*/, ::szengine::PreprocessRecordResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    void RequestPreprocessRecord(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(21, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -4117,12 +4117,34 @@ class SzEngine final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
+  class WithRawCallbackMethod_GetRecordPreview : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetRecordPreview() {
+      ::grpc::Service::MarkMethodRawCallback(17,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetRecordPreview(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_GetRecordPreview() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetRecordPreview(::grpc::ServerContext* /*context*/, const ::szengine::GetRecordPreviewRequest* /*request*/, ::szengine::GetRecordPreviewResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetRecordPreview(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
   class WithRawCallbackMethod_GetRedoRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_GetRedoRecord() {
-      ::grpc::Service::MarkMethodRawCallback(17,
+      ::grpc::Service::MarkMethodRawCallback(18,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetRedoRecord(context, request, response); }));
@@ -4144,7 +4166,7 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_GetStats() {
-      ::grpc::Service::MarkMethodRawCallback(18,
+      ::grpc::Service::MarkMethodRawCallback(19,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetStats(context, request, response); }));
@@ -4166,7 +4188,7 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_GetVirtualEntityByRecordId() {
-      ::grpc::Service::MarkMethodRawCallback(19,
+      ::grpc::Service::MarkMethodRawCallback(20,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetVirtualEntityByRecordId(context, request, response); }));
@@ -4188,7 +4210,7 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_HowEntityByEntityId() {
-      ::grpc::Service::MarkMethodRawCallback(20,
+      ::grpc::Service::MarkMethodRawCallback(21,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->HowEntityByEntityId(context, request, response); }));
@@ -4202,28 +4224,6 @@ class SzEngine final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* HowEntityByEntityId(
-      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
-  };
-  template <class BaseClass>
-  class WithRawCallbackMethod_PreprocessRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithRawCallbackMethod_PreprocessRecord() {
-      ::grpc::Service::MarkMethodRawCallback(21,
-          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
-            [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->PreprocessRecord(context, request, response); }));
-    }
-    ~WithRawCallbackMethod_PreprocessRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable synchronous version of this method
-    ::grpc::Status PreprocessRecord(::grpc::ServerContext* /*context*/, const ::szengine::PreprocessRecordRequest* /*request*/, ::szengine::PreprocessRecordResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    virtual ::grpc::ServerUnaryReactor* PreprocessRecord(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
@@ -4950,12 +4950,39 @@ class SzEngine final {
     virtual ::grpc::Status StreamedGetRecord(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szengine::GetRecordRequest,::szengine::GetRecordResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
+  class WithStreamedUnaryMethod_GetRecordPreview : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_GetRecordPreview() {
+      ::grpc::Service::MarkMethodStreamed(17,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::szengine::GetRecordPreviewRequest, ::szengine::GetRecordPreviewResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::szengine::GetRecordPreviewRequest, ::szengine::GetRecordPreviewResponse>* streamer) {
+                       return this->StreamedGetRecordPreview(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_GetRecordPreview() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status GetRecordPreview(::grpc::ServerContext* /*context*/, const ::szengine::GetRecordPreviewRequest* /*request*/, ::szengine::GetRecordPreviewResponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedGetRecordPreview(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szengine::GetRecordPreviewRequest,::szengine::GetRecordPreviewResponse>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
   class WithStreamedUnaryMethod_GetRedoRecord : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetRedoRecord() {
-      ::grpc::Service::MarkMethodStreamed(17,
+      ::grpc::Service::MarkMethodStreamed(18,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::GetRedoRecordRequest, ::szengine::GetRedoRecordResponse>(
             [this](::grpc::ServerContext* context,
@@ -4982,7 +5009,7 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetStats() {
-      ::grpc::Service::MarkMethodStreamed(18,
+      ::grpc::Service::MarkMethodStreamed(19,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::GetStatsRequest, ::szengine::GetStatsResponse>(
             [this](::grpc::ServerContext* context,
@@ -5009,7 +5036,7 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetVirtualEntityByRecordId() {
-      ::grpc::Service::MarkMethodStreamed(19,
+      ::grpc::Service::MarkMethodStreamed(20,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::GetVirtualEntityByRecordIdRequest, ::szengine::GetVirtualEntityByRecordIdResponse>(
             [this](::grpc::ServerContext* context,
@@ -5036,7 +5063,7 @@ class SzEngine final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_HowEntityByEntityId() {
-      ::grpc::Service::MarkMethodStreamed(20,
+      ::grpc::Service::MarkMethodStreamed(21,
         new ::grpc::internal::StreamedUnaryHandler<
           ::szengine::HowEntityByEntityIdRequest, ::szengine::HowEntityByEntityIdResponse>(
             [this](::grpc::ServerContext* context,
@@ -5056,33 +5083,6 @@ class SzEngine final {
     }
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedHowEntityByEntityId(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szengine::HowEntityByEntityIdRequest,::szengine::HowEntityByEntityIdResponse>* server_unary_streamer) = 0;
-  };
-  template <class BaseClass>
-  class WithStreamedUnaryMethod_PreprocessRecord : public BaseClass {
-   private:
-    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
-   public:
-    WithStreamedUnaryMethod_PreprocessRecord() {
-      ::grpc::Service::MarkMethodStreamed(21,
-        new ::grpc::internal::StreamedUnaryHandler<
-          ::szengine::PreprocessRecordRequest, ::szengine::PreprocessRecordResponse>(
-            [this](::grpc::ServerContext* context,
-                   ::grpc::ServerUnaryStreamer<
-                     ::szengine::PreprocessRecordRequest, ::szengine::PreprocessRecordResponse>* streamer) {
-                       return this->StreamedPreprocessRecord(context,
-                         streamer);
-                  }));
-    }
-    ~WithStreamedUnaryMethod_PreprocessRecord() override {
-      BaseClassMustBeDerivedFromService(this);
-    }
-    // disable regular version of this method
-    ::grpc::Status PreprocessRecord(::grpc::ServerContext* /*context*/, const ::szengine::PreprocessRecordRequest* /*request*/, ::szengine::PreprocessRecordResponse* /*response*/) override {
-      abort();
-      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-    }
-    // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedPreprocessRecord(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szengine::PreprocessRecordRequest,::szengine::PreprocessRecordResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_PrimeEngine : public BaseClass {
@@ -5354,7 +5354,7 @@ class SzEngine final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedWhySearch(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::szengine::WhySearchRequest,::szengine::WhySearchResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_AddRecord<WithStreamedUnaryMethod_CloseExportReport<WithStreamedUnaryMethod_CountRedoRecords<WithStreamedUnaryMethod_DeleteRecord<WithStreamedUnaryMethod_ExportCsvEntityReport<WithStreamedUnaryMethod_ExportJsonEntityReport<WithStreamedUnaryMethod_FetchNext<WithStreamedUnaryMethod_FindInterestingEntitiesByEntityId<WithStreamedUnaryMethod_FindInterestingEntitiesByRecordId<WithStreamedUnaryMethod_FindNetworkByEntityId<WithStreamedUnaryMethod_FindNetworkByRecordId<WithStreamedUnaryMethod_FindPathByEntityId<WithStreamedUnaryMethod_FindPathByRecordId<WithStreamedUnaryMethod_GetActiveConfigId<WithStreamedUnaryMethod_GetEntityByEntityId<WithStreamedUnaryMethod_GetEntityByRecordId<WithStreamedUnaryMethod_GetRecord<WithStreamedUnaryMethod_GetRedoRecord<WithStreamedUnaryMethod_GetStats<WithStreamedUnaryMethod_GetVirtualEntityByRecordId<WithStreamedUnaryMethod_HowEntityByEntityId<WithStreamedUnaryMethod_PreprocessRecord<WithStreamedUnaryMethod_PrimeEngine<WithStreamedUnaryMethod_ProcessRedoRecord<WithStreamedUnaryMethod_ReevaluateEntity<WithStreamedUnaryMethod_ReevaluateRecord<WithStreamedUnaryMethod_Reinitialize<WithStreamedUnaryMethod_SearchByAttributes<WithStreamedUnaryMethod_WhyEntities<WithStreamedUnaryMethod_WhyRecordInEntity<WithStreamedUnaryMethod_WhyRecords<WithStreamedUnaryMethod_WhySearch<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_AddRecord<WithStreamedUnaryMethod_CloseExportReport<WithStreamedUnaryMethod_CountRedoRecords<WithStreamedUnaryMethod_DeleteRecord<WithStreamedUnaryMethod_ExportCsvEntityReport<WithStreamedUnaryMethod_ExportJsonEntityReport<WithStreamedUnaryMethod_FetchNext<WithStreamedUnaryMethod_FindInterestingEntitiesByEntityId<WithStreamedUnaryMethod_FindInterestingEntitiesByRecordId<WithStreamedUnaryMethod_FindNetworkByEntityId<WithStreamedUnaryMethod_FindNetworkByRecordId<WithStreamedUnaryMethod_FindPathByEntityId<WithStreamedUnaryMethod_FindPathByRecordId<WithStreamedUnaryMethod_GetActiveConfigId<WithStreamedUnaryMethod_GetEntityByEntityId<WithStreamedUnaryMethod_GetEntityByRecordId<WithStreamedUnaryMethod_GetRecord<WithStreamedUnaryMethod_GetRecordPreview<WithStreamedUnaryMethod_GetRedoRecord<WithStreamedUnaryMethod_GetStats<WithStreamedUnaryMethod_GetVirtualEntityByRecordId<WithStreamedUnaryMethod_HowEntityByEntityId<WithStreamedUnaryMethod_PrimeEngine<WithStreamedUnaryMethod_ProcessRedoRecord<WithStreamedUnaryMethod_ReevaluateEntity<WithStreamedUnaryMethod_ReevaluateRecord<WithStreamedUnaryMethod_Reinitialize<WithStreamedUnaryMethod_SearchByAttributes<WithStreamedUnaryMethod_WhyEntities<WithStreamedUnaryMethod_WhyRecordInEntity<WithStreamedUnaryMethod_WhyRecords<WithStreamedUnaryMethod_WhySearch<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
   template <class BaseClass>
   class WithSplitStreamingMethod_StreamExportCsvEntityReport : public BaseClass {
    private:
@@ -5410,7 +5410,7 @@ class SzEngine final {
     virtual ::grpc::Status StreamedStreamExportJsonEntityReport(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::szengine::StreamExportJsonEntityReportRequest,::szengine::StreamExportJsonEntityReportResponse>* server_split_streamer) = 0;
   };
   typedef WithSplitStreamingMethod_StreamExportCsvEntityReport<WithSplitStreamingMethod_StreamExportJsonEntityReport<Service > > SplitStreamedService;
-  typedef WithStreamedUnaryMethod_AddRecord<WithStreamedUnaryMethod_CloseExportReport<WithStreamedUnaryMethod_CountRedoRecords<WithStreamedUnaryMethod_DeleteRecord<WithStreamedUnaryMethod_ExportCsvEntityReport<WithStreamedUnaryMethod_ExportJsonEntityReport<WithStreamedUnaryMethod_FetchNext<WithStreamedUnaryMethod_FindInterestingEntitiesByEntityId<WithStreamedUnaryMethod_FindInterestingEntitiesByRecordId<WithStreamedUnaryMethod_FindNetworkByEntityId<WithStreamedUnaryMethod_FindNetworkByRecordId<WithStreamedUnaryMethod_FindPathByEntityId<WithStreamedUnaryMethod_FindPathByRecordId<WithStreamedUnaryMethod_GetActiveConfigId<WithStreamedUnaryMethod_GetEntityByEntityId<WithStreamedUnaryMethod_GetEntityByRecordId<WithStreamedUnaryMethod_GetRecord<WithStreamedUnaryMethod_GetRedoRecord<WithStreamedUnaryMethod_GetStats<WithStreamedUnaryMethod_GetVirtualEntityByRecordId<WithStreamedUnaryMethod_HowEntityByEntityId<WithStreamedUnaryMethod_PreprocessRecord<WithStreamedUnaryMethod_PrimeEngine<WithStreamedUnaryMethod_ProcessRedoRecord<WithStreamedUnaryMethod_ReevaluateEntity<WithStreamedUnaryMethod_ReevaluateRecord<WithStreamedUnaryMethod_Reinitialize<WithStreamedUnaryMethod_SearchByAttributes<WithSplitStreamingMethod_StreamExportCsvEntityReport<WithSplitStreamingMethod_StreamExportJsonEntityReport<WithStreamedUnaryMethod_WhyEntities<WithStreamedUnaryMethod_WhyRecordInEntity<WithStreamedUnaryMethod_WhyRecords<WithStreamedUnaryMethod_WhySearch<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_AddRecord<WithStreamedUnaryMethod_CloseExportReport<WithStreamedUnaryMethod_CountRedoRecords<WithStreamedUnaryMethod_DeleteRecord<WithStreamedUnaryMethod_ExportCsvEntityReport<WithStreamedUnaryMethod_ExportJsonEntityReport<WithStreamedUnaryMethod_FetchNext<WithStreamedUnaryMethod_FindInterestingEntitiesByEntityId<WithStreamedUnaryMethod_FindInterestingEntitiesByRecordId<WithStreamedUnaryMethod_FindNetworkByEntityId<WithStreamedUnaryMethod_FindNetworkByRecordId<WithStreamedUnaryMethod_FindPathByEntityId<WithStreamedUnaryMethod_FindPathByRecordId<WithStreamedUnaryMethod_GetActiveConfigId<WithStreamedUnaryMethod_GetEntityByEntityId<WithStreamedUnaryMethod_GetEntityByRecordId<WithStreamedUnaryMethod_GetRecord<WithStreamedUnaryMethod_GetRecordPreview<WithStreamedUnaryMethod_GetRedoRecord<WithStreamedUnaryMethod_GetStats<WithStreamedUnaryMethod_GetVirtualEntityByRecordId<WithStreamedUnaryMethod_HowEntityByEntityId<WithStreamedUnaryMethod_PrimeEngine<WithStreamedUnaryMethod_ProcessRedoRecord<WithStreamedUnaryMethod_ReevaluateEntity<WithStreamedUnaryMethod_ReevaluateRecord<WithStreamedUnaryMethod_Reinitialize<WithStreamedUnaryMethod_SearchByAttributes<WithSplitStreamingMethod_StreamExportCsvEntityReport<WithSplitStreamingMethod_StreamExportJsonEntityReport<WithStreamedUnaryMethod_WhyEntities<WithStreamedUnaryMethod_WhyRecordInEntity<WithStreamedUnaryMethod_WhyRecords<WithStreamedUnaryMethod_WhySearch<Service > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > StreamedService;
 };
 
 }  // namespace szengine

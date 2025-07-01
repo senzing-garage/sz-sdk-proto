@@ -119,6 +119,11 @@ class SzEngineStub(object):
                 request_serializer=szengine__pb2.GetRecordRequest.SerializeToString,
                 response_deserializer=szengine__pb2.GetRecordResponse.FromString,
                 _registered_method=True)
+        self.GetRecordPreview = channel.unary_unary(
+                '/szengine.SzEngine/GetRecordPreview',
+                request_serializer=szengine__pb2.GetRecordPreviewRequest.SerializeToString,
+                response_deserializer=szengine__pb2.GetRecordPreviewResponse.FromString,
+                _registered_method=True)
         self.GetRedoRecord = channel.unary_unary(
                 '/szengine.SzEngine/GetRedoRecord',
                 request_serializer=szengine__pb2.GetRedoRecordRequest.SerializeToString,
@@ -138,11 +143,6 @@ class SzEngineStub(object):
                 '/szengine.SzEngine/HowEntityByEntityId',
                 request_serializer=szengine__pb2.HowEntityByEntityIdRequest.SerializeToString,
                 response_deserializer=szengine__pb2.HowEntityByEntityIdResponse.FromString,
-                _registered_method=True)
-        self.PreprocessRecord = channel.unary_unary(
-                '/szengine.SzEngine/PreprocessRecord',
-                request_serializer=szengine__pb2.PreprocessRecordRequest.SerializeToString,
-                response_deserializer=szengine__pb2.PreprocessRecordResponse.FromString,
                 _registered_method=True)
         self.PrimeEngine = channel.unary_unary(
                 '/szengine.SzEngine/PrimeEngine',
@@ -311,6 +311,12 @@ class SzEngineServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GetRecordPreview(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def GetRedoRecord(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -330,12 +336,6 @@ class SzEngineServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def HowEntityByEntityId(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def PreprocessRecord(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -501,6 +501,11 @@ def add_SzEngineServicer_to_server(servicer, server):
                     request_deserializer=szengine__pb2.GetRecordRequest.FromString,
                     response_serializer=szengine__pb2.GetRecordResponse.SerializeToString,
             ),
+            'GetRecordPreview': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetRecordPreview,
+                    request_deserializer=szengine__pb2.GetRecordPreviewRequest.FromString,
+                    response_serializer=szengine__pb2.GetRecordPreviewResponse.SerializeToString,
+            ),
             'GetRedoRecord': grpc.unary_unary_rpc_method_handler(
                     servicer.GetRedoRecord,
                     request_deserializer=szengine__pb2.GetRedoRecordRequest.FromString,
@@ -520,11 +525,6 @@ def add_SzEngineServicer_to_server(servicer, server):
                     servicer.HowEntityByEntityId,
                     request_deserializer=szengine__pb2.HowEntityByEntityIdRequest.FromString,
                     response_serializer=szengine__pb2.HowEntityByEntityIdResponse.SerializeToString,
-            ),
-            'PreprocessRecord': grpc.unary_unary_rpc_method_handler(
-                    servicer.PreprocessRecord,
-                    request_deserializer=szengine__pb2.PreprocessRecordRequest.FromString,
-                    response_serializer=szengine__pb2.PreprocessRecordResponse.SerializeToString,
             ),
             'PrimeEngine': grpc.unary_unary_rpc_method_handler(
                     servicer.PrimeEngine,
@@ -1057,6 +1057,33 @@ class SzEngine(object):
             _registered_method=True)
 
     @staticmethod
+    def GetRecordPreview(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/szengine.SzEngine/GetRecordPreview',
+            szengine__pb2.GetRecordPreviewRequest.SerializeToString,
+            szengine__pb2.GetRecordPreviewResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
     def GetRedoRecord(request,
             target,
             options=(),
@@ -1154,33 +1181,6 @@ class SzEngine(object):
             '/szengine.SzEngine/HowEntityByEntityId',
             szengine__pb2.HowEntityByEntityIdRequest.SerializeToString,
             szengine__pb2.HowEntityByEntityIdResponse.FromString,
-            options,
-            channel_credentials,
-            insecure,
-            call_credentials,
-            compression,
-            wait_for_ready,
-            timeout,
-            metadata,
-            _registered_method=True)
-
-    @staticmethod
-    def PreprocessRecord(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(
-            request,
-            target,
-            '/szengine.SzEngine/PreprocessRecord',
-            szengine__pb2.PreprocessRecordRequest.SerializeToString,
-            szengine__pb2.PreprocessRecordResponse.FromString,
             options,
             channel_credentials,
             insecure,

@@ -31,11 +31,11 @@ module Szengine
       rpc :GetEntityByEntityId, ::Szengine::GetEntityByEntityIdRequest, ::Szengine::GetEntityByEntityIdResponse
       rpc :GetEntityByRecordId, ::Szengine::GetEntityByRecordIdRequest, ::Szengine::GetEntityByRecordIdResponse
       rpc :GetRecord, ::Szengine::GetRecordRequest, ::Szengine::GetRecordResponse
+      rpc :GetRecordPreview, ::Szengine::GetRecordPreviewRequest, ::Szengine::GetRecordPreviewResponse
       rpc :GetRedoRecord, ::Szengine::GetRedoRecordRequest, ::Szengine::GetRedoRecordResponse
       rpc :GetStats, ::Szengine::GetStatsRequest, ::Szengine::GetStatsResponse
       rpc :GetVirtualEntityByRecordId, ::Szengine::GetVirtualEntityByRecordIdRequest, ::Szengine::GetVirtualEntityByRecordIdResponse
       rpc :HowEntityByEntityId, ::Szengine::HowEntityByEntityIdRequest, ::Szengine::HowEntityByEntityIdResponse
-      rpc :PreprocessRecord, ::Szengine::PreprocessRecordRequest, ::Szengine::PreprocessRecordResponse
       rpc :PrimeEngine, ::Szengine::PrimeEngineRequest, ::Szengine::PrimeEngineResponse
       rpc :ProcessRedoRecord, ::Szengine::ProcessRedoRecordRequest, ::Szengine::ProcessRedoRecordResponse
       rpc :ReevaluateEntity, ::Szengine::ReevaluateEntityRequest, ::Szengine::ReevaluateEntityResponse

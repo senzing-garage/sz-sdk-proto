@@ -1661,6 +1661,102 @@ func (x *GetEntityByRecordIdResponse) GetResult() string {
 	return ""
 }
 
+type GetRecordPreviewRequest struct {
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	RecordDefinition string                 `protobuf:"bytes,1,opt,name=record_definition,json=recordDefinition,proto3" json:"record_definition,omitempty"`
+	Flags            int64                  `protobuf:"varint,2,opt,name=flags,proto3" json:"flags,omitempty"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
+}
+
+func (x *GetRecordPreviewRequest) Reset() {
+	*x = GetRecordPreviewRequest{}
+	mi := &file_szengine_proto_msgTypes[32]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetRecordPreviewRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetRecordPreviewRequest) ProtoMessage() {}
+
+func (x *GetRecordPreviewRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_szengine_proto_msgTypes[32]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetRecordPreviewRequest.ProtoReflect.Descriptor instead.
+func (*GetRecordPreviewRequest) Descriptor() ([]byte, []int) {
+	return file_szengine_proto_rawDescGZIP(), []int{32}
+}
+
+func (x *GetRecordPreviewRequest) GetRecordDefinition() string {
+	if x != nil {
+		return x.RecordDefinition
+	}
+	return ""
+}
+
+func (x *GetRecordPreviewRequest) GetFlags() int64 {
+	if x != nil {
+		return x.Flags
+	}
+	return 0
+}
+
+type GetRecordPreviewResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Result        string                 `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetRecordPreviewResponse) Reset() {
+	*x = GetRecordPreviewResponse{}
+	mi := &file_szengine_proto_msgTypes[33]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetRecordPreviewResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetRecordPreviewResponse) ProtoMessage() {}
+
+func (x *GetRecordPreviewResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_szengine_proto_msgTypes[33]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetRecordPreviewResponse.ProtoReflect.Descriptor instead.
+func (*GetRecordPreviewResponse) Descriptor() ([]byte, []int) {
+	return file_szengine_proto_rawDescGZIP(), []int{33}
+}
+
+func (x *GetRecordPreviewResponse) GetResult() string {
+	if x != nil {
+		return x.Result
+	}
+	return ""
+}
+
 type GetRecordRequest struct {
 	state          protoimpl.MessageState `protogen:"open.v1"`
 	DataSourceCode string                 `protobuf:"bytes,1,opt,name=data_source_code,json=dataSourceCode,proto3" json:"data_source_code,omitempty"`
@@ -1672,7 +1768,7 @@ type GetRecordRequest struct {
 
 func (x *GetRecordRequest) Reset() {
 	*x = GetRecordRequest{}
-	mi := &file_szengine_proto_msgTypes[32]
+	mi := &file_szengine_proto_msgTypes[34]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1684,7 +1780,7 @@ func (x *GetRecordRequest) String() string {
 func (*GetRecordRequest) ProtoMessage() {}
 
 func (x *GetRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[32]
+	mi := &file_szengine_proto_msgTypes[34]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1697,7 +1793,7 @@ func (x *GetRecordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetRecordRequest.ProtoReflect.Descriptor instead.
 func (*GetRecordRequest) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{32}
+	return file_szengine_proto_rawDescGZIP(), []int{34}
 }
 
 func (x *GetRecordRequest) GetDataSourceCode() string {
@@ -1730,7 +1826,7 @@ type GetRecordResponse struct {
 
 func (x *GetRecordResponse) Reset() {
 	*x = GetRecordResponse{}
-	mi := &file_szengine_proto_msgTypes[33]
+	mi := &file_szengine_proto_msgTypes[35]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1742,7 +1838,7 @@ func (x *GetRecordResponse) String() string {
 func (*GetRecordResponse) ProtoMessage() {}
 
 func (x *GetRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[33]
+	mi := &file_szengine_proto_msgTypes[35]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1755,7 +1851,7 @@ func (x *GetRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetRecordResponse.ProtoReflect.Descriptor instead.
 func (*GetRecordResponse) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{33}
+	return file_szengine_proto_rawDescGZIP(), []int{35}
 }
 
 func (x *GetRecordResponse) GetResult() string {
@@ -1773,7 +1869,7 @@ type GetRedoRecordRequest struct {
 
 func (x *GetRedoRecordRequest) Reset() {
 	*x = GetRedoRecordRequest{}
-	mi := &file_szengine_proto_msgTypes[34]
+	mi := &file_szengine_proto_msgTypes[36]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1785,7 +1881,7 @@ func (x *GetRedoRecordRequest) String() string {
 func (*GetRedoRecordRequest) ProtoMessage() {}
 
 func (x *GetRedoRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[34]
+	mi := &file_szengine_proto_msgTypes[36]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1798,7 +1894,7 @@ func (x *GetRedoRecordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetRedoRecordRequest.ProtoReflect.Descriptor instead.
 func (*GetRedoRecordRequest) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{34}
+	return file_szengine_proto_rawDescGZIP(), []int{36}
 }
 
 type GetRedoRecordResponse struct {
@@ -1810,7 +1906,7 @@ type GetRedoRecordResponse struct {
 
 func (x *GetRedoRecordResponse) Reset() {
 	*x = GetRedoRecordResponse{}
-	mi := &file_szengine_proto_msgTypes[35]
+	mi := &file_szengine_proto_msgTypes[37]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1822,7 +1918,7 @@ func (x *GetRedoRecordResponse) String() string {
 func (*GetRedoRecordResponse) ProtoMessage() {}
 
 func (x *GetRedoRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[35]
+	mi := &file_szengine_proto_msgTypes[37]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1835,7 +1931,7 @@ func (x *GetRedoRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetRedoRecordResponse.ProtoReflect.Descriptor instead.
 func (*GetRedoRecordResponse) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{35}
+	return file_szengine_proto_rawDescGZIP(), []int{37}
 }
 
 func (x *GetRedoRecordResponse) GetResult() string {
@@ -1853,7 +1949,7 @@ type GetStatsRequest struct {
 
 func (x *GetStatsRequest) Reset() {
 	*x = GetStatsRequest{}
-	mi := &file_szengine_proto_msgTypes[36]
+	mi := &file_szengine_proto_msgTypes[38]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1865,7 +1961,7 @@ func (x *GetStatsRequest) String() string {
 func (*GetStatsRequest) ProtoMessage() {}
 
 func (x *GetStatsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[36]
+	mi := &file_szengine_proto_msgTypes[38]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1878,7 +1974,7 @@ func (x *GetStatsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetStatsRequest.ProtoReflect.Descriptor instead.
 func (*GetStatsRequest) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{36}
+	return file_szengine_proto_rawDescGZIP(), []int{38}
 }
 
 type GetStatsResponse struct {
@@ -1890,7 +1986,7 @@ type GetStatsResponse struct {
 
 func (x *GetStatsResponse) Reset() {
 	*x = GetStatsResponse{}
-	mi := &file_szengine_proto_msgTypes[37]
+	mi := &file_szengine_proto_msgTypes[39]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1902,7 +1998,7 @@ func (x *GetStatsResponse) String() string {
 func (*GetStatsResponse) ProtoMessage() {}
 
 func (x *GetStatsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[37]
+	mi := &file_szengine_proto_msgTypes[39]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1915,7 +2011,7 @@ func (x *GetStatsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetStatsResponse.ProtoReflect.Descriptor instead.
 func (*GetStatsResponse) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{37}
+	return file_szengine_proto_rawDescGZIP(), []int{39}
 }
 
 func (x *GetStatsResponse) GetResult() string {
@@ -1935,7 +2031,7 @@ type GetVirtualEntityByRecordIdRequest struct {
 
 func (x *GetVirtualEntityByRecordIdRequest) Reset() {
 	*x = GetVirtualEntityByRecordIdRequest{}
-	mi := &file_szengine_proto_msgTypes[38]
+	mi := &file_szengine_proto_msgTypes[40]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1947,7 +2043,7 @@ func (x *GetVirtualEntityByRecordIdRequest) String() string {
 func (*GetVirtualEntityByRecordIdRequest) ProtoMessage() {}
 
 func (x *GetVirtualEntityByRecordIdRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[38]
+	mi := &file_szengine_proto_msgTypes[40]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1960,7 +2056,7 @@ func (x *GetVirtualEntityByRecordIdRequest) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use GetVirtualEntityByRecordIdRequest.ProtoReflect.Descriptor instead.
 func (*GetVirtualEntityByRecordIdRequest) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{38}
+	return file_szengine_proto_rawDescGZIP(), []int{40}
 }
 
 func (x *GetVirtualEntityByRecordIdRequest) GetRecordKeys() string {
@@ -1986,7 +2082,7 @@ type GetVirtualEntityByRecordIdResponse struct {
 
 func (x *GetVirtualEntityByRecordIdResponse) Reset() {
 	*x = GetVirtualEntityByRecordIdResponse{}
-	mi := &file_szengine_proto_msgTypes[39]
+	mi := &file_szengine_proto_msgTypes[41]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1998,7 +2094,7 @@ func (x *GetVirtualEntityByRecordIdResponse) String() string {
 func (*GetVirtualEntityByRecordIdResponse) ProtoMessage() {}
 
 func (x *GetVirtualEntityByRecordIdResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[39]
+	mi := &file_szengine_proto_msgTypes[41]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2011,7 +2107,7 @@ func (x *GetVirtualEntityByRecordIdResponse) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use GetVirtualEntityByRecordIdResponse.ProtoReflect.Descriptor instead.
 func (*GetVirtualEntityByRecordIdResponse) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{39}
+	return file_szengine_proto_rawDescGZIP(), []int{41}
 }
 
 func (x *GetVirtualEntityByRecordIdResponse) GetResult() string {
@@ -2031,7 +2127,7 @@ type HowEntityByEntityIdRequest struct {
 
 func (x *HowEntityByEntityIdRequest) Reset() {
 	*x = HowEntityByEntityIdRequest{}
-	mi := &file_szengine_proto_msgTypes[40]
+	mi := &file_szengine_proto_msgTypes[42]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2043,7 +2139,7 @@ func (x *HowEntityByEntityIdRequest) String() string {
 func (*HowEntityByEntityIdRequest) ProtoMessage() {}
 
 func (x *HowEntityByEntityIdRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[40]
+	mi := &file_szengine_proto_msgTypes[42]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2056,7 +2152,7 @@ func (x *HowEntityByEntityIdRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HowEntityByEntityIdRequest.ProtoReflect.Descriptor instead.
 func (*HowEntityByEntityIdRequest) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{40}
+	return file_szengine_proto_rawDescGZIP(), []int{42}
 }
 
 func (x *HowEntityByEntityIdRequest) GetEntityId() int64 {
@@ -2082,7 +2178,7 @@ type HowEntityByEntityIdResponse struct {
 
 func (x *HowEntityByEntityIdResponse) Reset() {
 	*x = HowEntityByEntityIdResponse{}
-	mi := &file_szengine_proto_msgTypes[41]
+	mi := &file_szengine_proto_msgTypes[43]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -2094,7 +2190,7 @@ func (x *HowEntityByEntityIdResponse) String() string {
 func (*HowEntityByEntityIdResponse) ProtoMessage() {}
 
 func (x *HowEntityByEntityIdResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[41]
+	mi := &file_szengine_proto_msgTypes[43]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2107,106 +2203,10 @@ func (x *HowEntityByEntityIdResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HowEntityByEntityIdResponse.ProtoReflect.Descriptor instead.
 func (*HowEntityByEntityIdResponse) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{41}
-}
-
-func (x *HowEntityByEntityIdResponse) GetResult() string {
-	if x != nil {
-		return x.Result
-	}
-	return ""
-}
-
-type PreprocessRecordRequest struct {
-	state            protoimpl.MessageState `protogen:"open.v1"`
-	RecordDefinition string                 `protobuf:"bytes,1,opt,name=record_definition,json=recordDefinition,proto3" json:"record_definition,omitempty"`
-	Flags            int64                  `protobuf:"varint,2,opt,name=flags,proto3" json:"flags,omitempty"`
-	unknownFields    protoimpl.UnknownFields
-	sizeCache        protoimpl.SizeCache
-}
-
-func (x *PreprocessRecordRequest) Reset() {
-	*x = PreprocessRecordRequest{}
-	mi := &file_szengine_proto_msgTypes[42]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *PreprocessRecordRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*PreprocessRecordRequest) ProtoMessage() {}
-
-func (x *PreprocessRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[42]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use PreprocessRecordRequest.ProtoReflect.Descriptor instead.
-func (*PreprocessRecordRequest) Descriptor() ([]byte, []int) {
-	return file_szengine_proto_rawDescGZIP(), []int{42}
-}
-
-func (x *PreprocessRecordRequest) GetRecordDefinition() string {
-	if x != nil {
-		return x.RecordDefinition
-	}
-	return ""
-}
-
-func (x *PreprocessRecordRequest) GetFlags() int64 {
-	if x != nil {
-		return x.Flags
-	}
-	return 0
-}
-
-type PreprocessRecordResponse struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	Result        string                 `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
-}
-
-func (x *PreprocessRecordResponse) Reset() {
-	*x = PreprocessRecordResponse{}
-	mi := &file_szengine_proto_msgTypes[43]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *PreprocessRecordResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*PreprocessRecordResponse) ProtoMessage() {}
-
-func (x *PreprocessRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szengine_proto_msgTypes[43]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use PreprocessRecordResponse.ProtoReflect.Descriptor instead.
-func (*PreprocessRecordResponse) Descriptor() ([]byte, []int) {
 	return file_szengine_proto_rawDescGZIP(), []int{43}
 }
 
-func (x *PreprocessRecordResponse) GetResult() string {
+func (x *HowEntityByEntityIdResponse) GetResult() string {
 	if x != nil {
 		return x.Result
 	}
@@ -3492,6 +3492,11 @@ const file_szengine_proto_rawDesc = "" +
 	"\trecord_id\x18\x02 \x01(\tR\brecordId\x12\x14\n" +
 	"\x05flags\x18\x03 \x01(\x03R\x05flags\"5\n" +
 	"\x1bGetEntityByRecordIdResponse\x12\x16\n" +
+	"\x06result\x18\x01 \x01(\tR\x06result\"\\\n" +
+	"\x17GetRecordPreviewRequest\x12+\n" +
+	"\x11record_definition\x18\x01 \x01(\tR\x10recordDefinition\x12\x14\n" +
+	"\x05flags\x18\x02 \x01(\x03R\x05flags\"2\n" +
+	"\x18GetRecordPreviewResponse\x12\x16\n" +
 	"\x06result\x18\x01 \x01(\tR\x06result\"o\n" +
 	"\x10GetRecordRequest\x12(\n" +
 	"\x10data_source_code\x18\x01 \x01(\tR\x0edataSourceCode\x12\x1b\n" +
@@ -3515,11 +3520,6 @@ const file_szengine_proto_rawDesc = "" +
 	"\tentity_id\x18\x01 \x01(\x03R\bentityId\x12\x14\n" +
 	"\x05flags\x18\x02 \x01(\x03R\x05flags\"5\n" +
 	"\x1bHowEntityByEntityIdResponse\x12\x16\n" +
-	"\x06result\x18\x01 \x01(\tR\x06result\"\\\n" +
-	"\x17PreprocessRecordRequest\x12+\n" +
-	"\x11record_definition\x18\x01 \x01(\tR\x10recordDefinition\x12\x14\n" +
-	"\x05flags\x18\x02 \x01(\x03R\x05flags\"2\n" +
-	"\x18PreprocessRecordResponse\x12\x16\n" +
 	"\x06result\x18\x01 \x01(\tR\x06result\"\x14\n" +
 	"\x12PrimeEngineRequest\"\x15\n" +
 	"\x13PrimeEngineResponse\"Q\n" +
@@ -3606,12 +3606,12 @@ const file_szengine_proto_rawDesc = "" +
 	"\x11GetActiveConfigId\x12\".szengine.GetActiveConfigIdRequest\x1a#.szengine.GetActiveConfigIdResponse\"\x00\x12d\n" +
 	"\x13GetEntityByEntityId\x12$.szengine.GetEntityByEntityIdRequest\x1a%.szengine.GetEntityByEntityIdResponse\"\x00\x12d\n" +
 	"\x13GetEntityByRecordId\x12$.szengine.GetEntityByRecordIdRequest\x1a%.szengine.GetEntityByRecordIdResponse\"\x00\x12F\n" +
-	"\tGetRecord\x12\x1a.szengine.GetRecordRequest\x1a\x1b.szengine.GetRecordResponse\"\x00\x12R\n" +
+	"\tGetRecord\x12\x1a.szengine.GetRecordRequest\x1a\x1b.szengine.GetRecordResponse\"\x00\x12[\n" +
+	"\x10GetRecordPreview\x12!.szengine.GetRecordPreviewRequest\x1a\".szengine.GetRecordPreviewResponse\"\x00\x12R\n" +
 	"\rGetRedoRecord\x12\x1e.szengine.GetRedoRecordRequest\x1a\x1f.szengine.GetRedoRecordResponse\"\x00\x12C\n" +
 	"\bGetStats\x12\x19.szengine.GetStatsRequest\x1a\x1a.szengine.GetStatsResponse\"\x00\x12y\n" +
 	"\x1aGetVirtualEntityByRecordId\x12+.szengine.GetVirtualEntityByRecordIdRequest\x1a,.szengine.GetVirtualEntityByRecordIdResponse\"\x00\x12d\n" +
-	"\x13HowEntityByEntityId\x12$.szengine.HowEntityByEntityIdRequest\x1a%.szengine.HowEntityByEntityIdResponse\"\x00\x12[\n" +
-	"\x10PreprocessRecord\x12!.szengine.PreprocessRecordRequest\x1a\".szengine.PreprocessRecordResponse\"\x00\x12L\n" +
+	"\x13HowEntityByEntityId\x12$.szengine.HowEntityByEntityIdRequest\x1a%.szengine.HowEntityByEntityIdResponse\"\x00\x12L\n" +
 	"\vPrimeEngine\x12\x1c.szengine.PrimeEngineRequest\x1a\x1d.szengine.PrimeEngineResponse\"\x00\x12^\n" +
 	"\x11ProcessRedoRecord\x12\".szengine.ProcessRedoRecordRequest\x1a#.szengine.ProcessRedoRecordResponse\"\x00\x12[\n" +
 	"\x10ReevaluateEntity\x12!.szengine.ReevaluateEntityRequest\x1a\".szengine.ReevaluateEntityResponse\"\x00\x12[\n" +
@@ -3673,18 +3673,18 @@ var file_szengine_proto_goTypes = []any{
 	(*GetEntityByEntityIdResponse)(nil),               // 29: szengine.GetEntityByEntityIdResponse
 	(*GetEntityByRecordIdRequest)(nil),                // 30: szengine.GetEntityByRecordIdRequest
 	(*GetEntityByRecordIdResponse)(nil),               // 31: szengine.GetEntityByRecordIdResponse
-	(*GetRecordRequest)(nil),                          // 32: szengine.GetRecordRequest
-	(*GetRecordResponse)(nil),                         // 33: szengine.GetRecordResponse
-	(*GetRedoRecordRequest)(nil),                      // 34: szengine.GetRedoRecordRequest
-	(*GetRedoRecordResponse)(nil),                     // 35: szengine.GetRedoRecordResponse
-	(*GetStatsRequest)(nil),                           // 36: szengine.GetStatsRequest
-	(*GetStatsResponse)(nil),                          // 37: szengine.GetStatsResponse
-	(*GetVirtualEntityByRecordIdRequest)(nil),         // 38: szengine.GetVirtualEntityByRecordIdRequest
-	(*GetVirtualEntityByRecordIdResponse)(nil),        // 39: szengine.GetVirtualEntityByRecordIdResponse
-	(*HowEntityByEntityIdRequest)(nil),                // 40: szengine.HowEntityByEntityIdRequest
-	(*HowEntityByEntityIdResponse)(nil),               // 41: szengine.HowEntityByEntityIdResponse
-	(*PreprocessRecordRequest)(nil),                   // 42: szengine.PreprocessRecordRequest
-	(*PreprocessRecordResponse)(nil),                  // 43: szengine.PreprocessRecordResponse
+	(*GetRecordPreviewRequest)(nil),                   // 32: szengine.GetRecordPreviewRequest
+	(*GetRecordPreviewResponse)(nil),                  // 33: szengine.GetRecordPreviewResponse
+	(*GetRecordRequest)(nil),                          // 34: szengine.GetRecordRequest
+	(*GetRecordResponse)(nil),                         // 35: szengine.GetRecordResponse
+	(*GetRedoRecordRequest)(nil),                      // 36: szengine.GetRedoRecordRequest
+	(*GetRedoRecordResponse)(nil),                     // 37: szengine.GetRedoRecordResponse
+	(*GetStatsRequest)(nil),                           // 38: szengine.GetStatsRequest
+	(*GetStatsResponse)(nil),                          // 39: szengine.GetStatsResponse
+	(*GetVirtualEntityByRecordIdRequest)(nil),         // 40: szengine.GetVirtualEntityByRecordIdRequest
+	(*GetVirtualEntityByRecordIdResponse)(nil),        // 41: szengine.GetVirtualEntityByRecordIdResponse
+	(*HowEntityByEntityIdRequest)(nil),                // 42: szengine.HowEntityByEntityIdRequest
+	(*HowEntityByEntityIdResponse)(nil),               // 43: szengine.HowEntityByEntityIdResponse
 	(*PrimeEngineRequest)(nil),                        // 44: szengine.PrimeEngineRequest
 	(*PrimeEngineResponse)(nil),                       // 45: szengine.PrimeEngineResponse
 	(*ProcessRedoRecordRequest)(nil),                  // 46: szengine.ProcessRedoRecordRequest
@@ -3727,12 +3727,12 @@ var file_szengine_proto_depIdxs = []int32{
 	26, // 13: szengine.SzEngine.GetActiveConfigId:input_type -> szengine.GetActiveConfigIdRequest
 	28, // 14: szengine.SzEngine.GetEntityByEntityId:input_type -> szengine.GetEntityByEntityIdRequest
 	30, // 15: szengine.SzEngine.GetEntityByRecordId:input_type -> szengine.GetEntityByRecordIdRequest
-	32, // 16: szengine.SzEngine.GetRecord:input_type -> szengine.GetRecordRequest
-	34, // 17: szengine.SzEngine.GetRedoRecord:input_type -> szengine.GetRedoRecordRequest
-	36, // 18: szengine.SzEngine.GetStats:input_type -> szengine.GetStatsRequest
-	38, // 19: szengine.SzEngine.GetVirtualEntityByRecordId:input_type -> szengine.GetVirtualEntityByRecordIdRequest
-	40, // 20: szengine.SzEngine.HowEntityByEntityId:input_type -> szengine.HowEntityByEntityIdRequest
-	42, // 21: szengine.SzEngine.PreprocessRecord:input_type -> szengine.PreprocessRecordRequest
+	34, // 16: szengine.SzEngine.GetRecord:input_type -> szengine.GetRecordRequest
+	32, // 17: szengine.SzEngine.GetRecordPreview:input_type -> szengine.GetRecordPreviewRequest
+	36, // 18: szengine.SzEngine.GetRedoRecord:input_type -> szengine.GetRedoRecordRequest
+	38, // 19: szengine.SzEngine.GetStats:input_type -> szengine.GetStatsRequest
+	40, // 20: szengine.SzEngine.GetVirtualEntityByRecordId:input_type -> szengine.GetVirtualEntityByRecordIdRequest
+	42, // 21: szengine.SzEngine.HowEntityByEntityId:input_type -> szengine.HowEntityByEntityIdRequest
 	44, // 22: szengine.SzEngine.PrimeEngine:input_type -> szengine.PrimeEngineRequest
 	46, // 23: szengine.SzEngine.ProcessRedoRecord:input_type -> szengine.ProcessRedoRecordRequest
 	48, // 24: szengine.SzEngine.ReevaluateEntity:input_type -> szengine.ReevaluateEntityRequest
@@ -3761,12 +3761,12 @@ var file_szengine_proto_depIdxs = []int32{
 	27, // 47: szengine.SzEngine.GetActiveConfigId:output_type -> szengine.GetActiveConfigIdResponse
 	29, // 48: szengine.SzEngine.GetEntityByEntityId:output_type -> szengine.GetEntityByEntityIdResponse
 	31, // 49: szengine.SzEngine.GetEntityByRecordId:output_type -> szengine.GetEntityByRecordIdResponse
-	33, // 50: szengine.SzEngine.GetRecord:output_type -> szengine.GetRecordResponse
-	35, // 51: szengine.SzEngine.GetRedoRecord:output_type -> szengine.GetRedoRecordResponse
-	37, // 52: szengine.SzEngine.GetStats:output_type -> szengine.GetStatsResponse
-	39, // 53: szengine.SzEngine.GetVirtualEntityByRecordId:output_type -> szengine.GetVirtualEntityByRecordIdResponse
-	41, // 54: szengine.SzEngine.HowEntityByEntityId:output_type -> szengine.HowEntityByEntityIdResponse
-	43, // 55: szengine.SzEngine.PreprocessRecord:output_type -> szengine.PreprocessRecordResponse
+	35, // 50: szengine.SzEngine.GetRecord:output_type -> szengine.GetRecordResponse
+	33, // 51: szengine.SzEngine.GetRecordPreview:output_type -> szengine.GetRecordPreviewResponse
+	37, // 52: szengine.SzEngine.GetRedoRecord:output_type -> szengine.GetRedoRecordResponse
+	39, // 53: szengine.SzEngine.GetStats:output_type -> szengine.GetStatsResponse
+	41, // 54: szengine.SzEngine.GetVirtualEntityByRecordId:output_type -> szengine.GetVirtualEntityByRecordIdResponse
+	43, // 55: szengine.SzEngine.HowEntityByEntityId:output_type -> szengine.HowEntityByEntityIdResponse
 	45, // 56: szengine.SzEngine.PrimeEngine:output_type -> szengine.PrimeEngineResponse
 	47, // 57: szengine.SzEngine.ProcessRedoRecord:output_type -> szengine.ProcessRedoRecordResponse
 	49, // 58: szengine.SzEngine.ReevaluateEntity:output_type -> szengine.ReevaluateEntityResponse
