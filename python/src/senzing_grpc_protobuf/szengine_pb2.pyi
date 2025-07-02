@@ -22,13 +22,13 @@ class AddRecordResponse(_message.Message):
     result: str
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
-class CloseExportRequest(_message.Message):
+class CloseExportReportRequest(_message.Message):
     __slots__ = ("export_handle",)
     EXPORT_HANDLE_FIELD_NUMBER: _ClassVar[int]
     export_handle: int
     def __init__(self, export_handle: _Optional[int] = ...) -> None: ...
 
-class CloseExportResponse(_message.Message):
+class CloseExportReportResponse(_message.Message):
     __slots__ = ()
     def __init__(self) -> None: ...
 
@@ -254,6 +254,20 @@ class GetEntityByRecordIdResponse(_message.Message):
     result: str
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
+class GetRecordPreviewRequest(_message.Message):
+    __slots__ = ("record_definition", "flags")
+    RECORD_DEFINITION_FIELD_NUMBER: _ClassVar[int]
+    FLAGS_FIELD_NUMBER: _ClassVar[int]
+    record_definition: str
+    flags: int
+    def __init__(self, record_definition: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
+
+class GetRecordPreviewResponse(_message.Message):
+    __slots__ = ("result",)
+    RESULT_FIELD_NUMBER: _ClassVar[int]
+    result: str
+    def __init__(self, result: _Optional[str] = ...) -> None: ...
+
 class GetRecordRequest(_message.Message):
     __slots__ = ("data_source_code", "record_id", "flags")
     DATA_SOURCE_CODE_FIELD_NUMBER: _ClassVar[int]
@@ -313,20 +327,6 @@ class HowEntityByEntityIdRequest(_message.Message):
     def __init__(self, entity_id: _Optional[int] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class HowEntityByEntityIdResponse(_message.Message):
-    __slots__ = ("result",)
-    RESULT_FIELD_NUMBER: _ClassVar[int]
-    result: str
-    def __init__(self, result: _Optional[str] = ...) -> None: ...
-
-class PreprocessRecordRequest(_message.Message):
-    __slots__ = ("record_definition", "flags")
-    RECORD_DEFINITION_FIELD_NUMBER: _ClassVar[int]
-    FLAGS_FIELD_NUMBER: _ClassVar[int]
-    record_definition: str
-    flags: int
-    def __init__(self, record_definition: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
-
-class PreprocessRecordResponse(_message.Message):
     __slots__ = ("result",)
     RESULT_FIELD_NUMBER: _ClassVar[int]
     result: str

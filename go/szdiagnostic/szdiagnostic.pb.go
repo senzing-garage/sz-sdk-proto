@@ -21,27 +21,27 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type CheckDatastorePerformanceRequest struct {
+type CheckRepositoryPerformanceRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	SecondsToRun  int32                  `protobuf:"varint,1,opt,name=seconds_to_run,json=secondsToRun,proto3" json:"seconds_to_run,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
-func (x *CheckDatastorePerformanceRequest) Reset() {
-	*x = CheckDatastorePerformanceRequest{}
+func (x *CheckRepositoryPerformanceRequest) Reset() {
+	*x = CheckRepositoryPerformanceRequest{}
 	mi := &file_szdiagnostic_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
 
-func (x *CheckDatastorePerformanceRequest) String() string {
+func (x *CheckRepositoryPerformanceRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*CheckDatastorePerformanceRequest) ProtoMessage() {}
+func (*CheckRepositoryPerformanceRequest) ProtoMessage() {}
 
-func (x *CheckDatastorePerformanceRequest) ProtoReflect() protoreflect.Message {
+func (x *CheckRepositoryPerformanceRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_szdiagnostic_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -53,39 +53,39 @@ func (x *CheckDatastorePerformanceRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use CheckDatastorePerformanceRequest.ProtoReflect.Descriptor instead.
-func (*CheckDatastorePerformanceRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use CheckRepositoryPerformanceRequest.ProtoReflect.Descriptor instead.
+func (*CheckRepositoryPerformanceRequest) Descriptor() ([]byte, []int) {
 	return file_szdiagnostic_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *CheckDatastorePerformanceRequest) GetSecondsToRun() int32 {
+func (x *CheckRepositoryPerformanceRequest) GetSecondsToRun() int32 {
 	if x != nil {
 		return x.SecondsToRun
 	}
 	return 0
 }
 
-type CheckDatastorePerformanceResponse struct {
+type CheckRepositoryPerformanceResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Result        string                 `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
-func (x *CheckDatastorePerformanceResponse) Reset() {
-	*x = CheckDatastorePerformanceResponse{}
+func (x *CheckRepositoryPerformanceResponse) Reset() {
+	*x = CheckRepositoryPerformanceResponse{}
 	mi := &file_szdiagnostic_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
 
-func (x *CheckDatastorePerformanceResponse) String() string {
+func (x *CheckRepositoryPerformanceResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*CheckDatastorePerformanceResponse) ProtoMessage() {}
+func (*CheckRepositoryPerformanceResponse) ProtoMessage() {}
 
-func (x *CheckDatastorePerformanceResponse) ProtoReflect() protoreflect.Message {
+func (x *CheckRepositoryPerformanceResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_szdiagnostic_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -97,38 +97,38 @@ func (x *CheckDatastorePerformanceResponse) ProtoReflect() protoreflect.Message 
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use CheckDatastorePerformanceResponse.ProtoReflect.Descriptor instead.
-func (*CheckDatastorePerformanceResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use CheckRepositoryPerformanceResponse.ProtoReflect.Descriptor instead.
+func (*CheckRepositoryPerformanceResponse) Descriptor() ([]byte, []int) {
 	return file_szdiagnostic_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *CheckDatastorePerformanceResponse) GetResult() string {
+func (x *CheckRepositoryPerformanceResponse) GetResult() string {
 	if x != nil {
 		return x.Result
 	}
 	return ""
 }
 
-type GetDatastoreInfoRequest struct {
+type GetRepositoryInfoRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
-func (x *GetDatastoreInfoRequest) Reset() {
-	*x = GetDatastoreInfoRequest{}
+func (x *GetRepositoryInfoRequest) Reset() {
+	*x = GetRepositoryInfoRequest{}
 	mi := &file_szdiagnostic_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
 
-func (x *GetDatastoreInfoRequest) String() string {
+func (x *GetRepositoryInfoRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*GetDatastoreInfoRequest) ProtoMessage() {}
+func (*GetRepositoryInfoRequest) ProtoMessage() {}
 
-func (x *GetDatastoreInfoRequest) ProtoReflect() protoreflect.Message {
+func (x *GetRepositoryInfoRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_szdiagnostic_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -140,32 +140,32 @@ func (x *GetDatastoreInfoRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use GetDatastoreInfoRequest.ProtoReflect.Descriptor instead.
-func (*GetDatastoreInfoRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use GetRepositoryInfoRequest.ProtoReflect.Descriptor instead.
+func (*GetRepositoryInfoRequest) Descriptor() ([]byte, []int) {
 	return file_szdiagnostic_proto_rawDescGZIP(), []int{2}
 }
 
-type GetDatastoreInfoResponse struct {
+type GetRepositoryInfoResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Result        string                 `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
-func (x *GetDatastoreInfoResponse) Reset() {
-	*x = GetDatastoreInfoResponse{}
+func (x *GetRepositoryInfoResponse) Reset() {
+	*x = GetRepositoryInfoResponse{}
 	mi := &file_szdiagnostic_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
 
-func (x *GetDatastoreInfoResponse) String() string {
+func (x *GetRepositoryInfoResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*GetDatastoreInfoResponse) ProtoMessage() {}
+func (*GetRepositoryInfoResponse) ProtoMessage() {}
 
-func (x *GetDatastoreInfoResponse) ProtoReflect() protoreflect.Message {
+func (x *GetRepositoryInfoResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_szdiagnostic_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -177,12 +177,12 @@ func (x *GetDatastoreInfoResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use GetDatastoreInfoResponse.ProtoReflect.Descriptor instead.
-func (*GetDatastoreInfoResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use GetRepositoryInfoResponse.ProtoReflect.Descriptor instead.
+func (*GetRepositoryInfoResponse) Descriptor() ([]byte, []int) {
 	return file_szdiagnostic_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *GetDatastoreInfoResponse) GetResult() string {
+func (x *GetRepositoryInfoResponse) GetResult() string {
 	if x != nil {
 		return x.Result
 	}
@@ -433,13 +433,13 @@ var File_szdiagnostic_proto protoreflect.FileDescriptor
 
 const file_szdiagnostic_proto_rawDesc = "" +
 	"\n" +
-	"\x12szdiagnostic.proto\x12\fszdiagnostic\"H\n" +
-	" CheckDatastorePerformanceRequest\x12$\n" +
-	"\x0eseconds_to_run\x18\x01 \x01(\x05R\fsecondsToRun\";\n" +
-	"!CheckDatastorePerformanceResponse\x12\x16\n" +
-	"\x06result\x18\x01 \x01(\tR\x06result\"\x19\n" +
-	"\x17GetDatastoreInfoRequest\"2\n" +
-	"\x18GetDatastoreInfoResponse\x12\x16\n" +
+	"\x12szdiagnostic.proto\x12\fszdiagnostic\"I\n" +
+	"!CheckRepositoryPerformanceRequest\x12$\n" +
+	"\x0eseconds_to_run\x18\x01 \x01(\x05R\fsecondsToRun\"<\n" +
+	"\"CheckRepositoryPerformanceResponse\x12\x16\n" +
+	"\x06result\x18\x01 \x01(\tR\x06result\"\x1a\n" +
+	"\x18GetRepositoryInfoRequest\"3\n" +
+	"\x19GetRepositoryInfoResponse\x12\x16\n" +
 	"\x06result\x18\x01 \x01(\tR\x06result\"2\n" +
 	"\x11GetFeatureRequest\x12\x1d\n" +
 	"\n" +
@@ -450,12 +450,12 @@ const file_szdiagnostic_proto_rawDesc = "" +
 	"\x17PurgeRepositoryResponse\"2\n" +
 	"\x13ReinitializeRequest\x12\x1b\n" +
 	"\tconfig_id\x18\x01 \x01(\x03R\bconfigId\"\x16\n" +
-	"\x14ReinitializeResponse2\x81\x04\n" +
-	"\fSzDiagnostic\x12~\n" +
-	"\x19CheckDatastorePerformance\x12..szdiagnostic.CheckDatastorePerformanceRequest\x1a/.szdiagnostic.CheckDatastorePerformanceResponse\"\x00\x12c\n" +
-	"\x10GetDatastoreInfo\x12%.szdiagnostic.GetDatastoreInfoRequest\x1a&.szdiagnostic.GetDatastoreInfoResponse\"\x00\x12Q\n" +
+	"\x14ReinitializeResponse2\x88\x04\n" +
+	"\fSzDiagnostic\x12\x81\x01\n" +
+	"\x1aCheckRepositoryPerformance\x12/.szdiagnostic.CheckRepositoryPerformanceRequest\x1a0.szdiagnostic.CheckRepositoryPerformanceResponse\"\x00\x12Q\n" +
 	"\n" +
-	"GetFeature\x12\x1f.szdiagnostic.GetFeatureRequest\x1a .szdiagnostic.GetFeatureResponse\"\x00\x12`\n" +
+	"GetFeature\x12\x1f.szdiagnostic.GetFeatureRequest\x1a .szdiagnostic.GetFeatureResponse\"\x00\x12f\n" +
+	"\x11GetRepositoryInfo\x12&.szdiagnostic.GetRepositoryInfoRequest\x1a'.szdiagnostic.GetRepositoryInfoResponse\"\x00\x12`\n" +
 	"\x0fPurgeRepository\x12$.szdiagnostic.PurgeRepositoryRequest\x1a%.szdiagnostic.PurgeRepositoryResponse\"\x00\x12W\n" +
 	"\fReinitialize\x12!.szdiagnostic.ReinitializeRequest\x1a\".szdiagnostic.ReinitializeResponse\"\x00B`\n" +
 	"\x14com.senzing.sdk.grpcB\x11SzDiagnosticProtoZ5github.com/senzing-garage/sz-sdk-go-grpc/szdiagnosticb\x06proto3"
@@ -474,26 +474,26 @@ func file_szdiagnostic_proto_rawDescGZIP() []byte {
 
 var file_szdiagnostic_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
 var file_szdiagnostic_proto_goTypes = []any{
-	(*CheckDatastorePerformanceRequest)(nil),  // 0: szdiagnostic.CheckDatastorePerformanceRequest
-	(*CheckDatastorePerformanceResponse)(nil), // 1: szdiagnostic.CheckDatastorePerformanceResponse
-	(*GetDatastoreInfoRequest)(nil),           // 2: szdiagnostic.GetDatastoreInfoRequest
-	(*GetDatastoreInfoResponse)(nil),          // 3: szdiagnostic.GetDatastoreInfoResponse
-	(*GetFeatureRequest)(nil),                 // 4: szdiagnostic.GetFeatureRequest
-	(*GetFeatureResponse)(nil),                // 5: szdiagnostic.GetFeatureResponse
-	(*PurgeRepositoryRequest)(nil),            // 6: szdiagnostic.PurgeRepositoryRequest
-	(*PurgeRepositoryResponse)(nil),           // 7: szdiagnostic.PurgeRepositoryResponse
-	(*ReinitializeRequest)(nil),               // 8: szdiagnostic.ReinitializeRequest
-	(*ReinitializeResponse)(nil),              // 9: szdiagnostic.ReinitializeResponse
+	(*CheckRepositoryPerformanceRequest)(nil),  // 0: szdiagnostic.CheckRepositoryPerformanceRequest
+	(*CheckRepositoryPerformanceResponse)(nil), // 1: szdiagnostic.CheckRepositoryPerformanceResponse
+	(*GetRepositoryInfoRequest)(nil),           // 2: szdiagnostic.GetRepositoryInfoRequest
+	(*GetRepositoryInfoResponse)(nil),          // 3: szdiagnostic.GetRepositoryInfoResponse
+	(*GetFeatureRequest)(nil),                  // 4: szdiagnostic.GetFeatureRequest
+	(*GetFeatureResponse)(nil),                 // 5: szdiagnostic.GetFeatureResponse
+	(*PurgeRepositoryRequest)(nil),             // 6: szdiagnostic.PurgeRepositoryRequest
+	(*PurgeRepositoryResponse)(nil),            // 7: szdiagnostic.PurgeRepositoryResponse
+	(*ReinitializeRequest)(nil),                // 8: szdiagnostic.ReinitializeRequest
+	(*ReinitializeResponse)(nil),               // 9: szdiagnostic.ReinitializeResponse
 }
 var file_szdiagnostic_proto_depIdxs = []int32{
-	0, // 0: szdiagnostic.SzDiagnostic.CheckDatastorePerformance:input_type -> szdiagnostic.CheckDatastorePerformanceRequest
-	2, // 1: szdiagnostic.SzDiagnostic.GetDatastoreInfo:input_type -> szdiagnostic.GetDatastoreInfoRequest
-	4, // 2: szdiagnostic.SzDiagnostic.GetFeature:input_type -> szdiagnostic.GetFeatureRequest
+	0, // 0: szdiagnostic.SzDiagnostic.CheckRepositoryPerformance:input_type -> szdiagnostic.CheckRepositoryPerformanceRequest
+	4, // 1: szdiagnostic.SzDiagnostic.GetFeature:input_type -> szdiagnostic.GetFeatureRequest
+	2, // 2: szdiagnostic.SzDiagnostic.GetRepositoryInfo:input_type -> szdiagnostic.GetRepositoryInfoRequest
 	6, // 3: szdiagnostic.SzDiagnostic.PurgeRepository:input_type -> szdiagnostic.PurgeRepositoryRequest
 	8, // 4: szdiagnostic.SzDiagnostic.Reinitialize:input_type -> szdiagnostic.ReinitializeRequest
-	1, // 5: szdiagnostic.SzDiagnostic.CheckDatastorePerformance:output_type -> szdiagnostic.CheckDatastorePerformanceResponse
-	3, // 6: szdiagnostic.SzDiagnostic.GetDatastoreInfo:output_type -> szdiagnostic.GetDatastoreInfoResponse
-	5, // 7: szdiagnostic.SzDiagnostic.GetFeature:output_type -> szdiagnostic.GetFeatureResponse
+	1, // 5: szdiagnostic.SzDiagnostic.CheckRepositoryPerformance:output_type -> szdiagnostic.CheckRepositoryPerformanceResponse
+	5, // 6: szdiagnostic.SzDiagnostic.GetFeature:output_type -> szdiagnostic.GetFeatureResponse
+	3, // 7: szdiagnostic.SzDiagnostic.GetRepositoryInfo:output_type -> szdiagnostic.GetRepositoryInfoResponse
 	7, // 8: szdiagnostic.SzDiagnostic.PurgeRepository:output_type -> szdiagnostic.PurgeRepositoryResponse
 	9, // 9: szdiagnostic.SzDiagnostic.Reinitialize:output_type -> szdiagnostic.ReinitializeResponse
 	5, // [5:10] is the sub-list for method output_type

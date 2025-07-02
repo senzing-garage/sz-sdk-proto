@@ -10,14 +10,18 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>szconfig.GetDataSourcesRequest</code>
+ * Generated from protobuf message <code>szconfig.UnregisterDataSourceRequest</code>
  */
-class GetDataSourcesRequest extends \Google\Protobuf\Internal\Message
+class UnregisterDataSourceRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string config_definition = 1;</code>
      */
     protected $config_definition = '';
+    /**
+     * Generated from protobuf field <code>string data_source_code = 2;</code>
+     */
+    protected $data_source_code = '';
 
     /**
      * Constructor.
@@ -26,6 +30,7 @@ class GetDataSourcesRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $config_definition
+     *     @type string $data_source_code
      * }
      */
     public function __construct($data = NULL) {
@@ -51,6 +56,28 @@ class GetDataSourcesRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->config_definition = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string data_source_code = 2;</code>
+     * @return string
+     */
+    public function getDataSourceCode()
+    {
+        return $this->data_source_code;
+    }
+
+    /**
+     * Generated from protobuf field <code>string data_source_code = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setDataSourceCode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->data_source_code = $var;
 
         return $this;
     }

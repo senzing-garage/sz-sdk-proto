@@ -17,44 +17,44 @@ class SzConfigClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Szconfig\AddDataSourceRequest $argument input argument
+     * @param \Szconfig\GetDataSourceRegistryRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function AddDataSource(\Szconfig\AddDataSourceRequest $argument,
+    public function GetDataSourceRegistry(\Szconfig\GetDataSourceRegistryRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szconfig.SzConfig/AddDataSource',
+        return $this->_simpleRequest('/szconfig.SzConfig/GetDataSourceRegistry',
         $argument,
-        ['\Szconfig\AddDataSourceResponse', 'decode'],
+        ['\Szconfig\GetDataSourceRegistryResponse', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Szconfig\DeleteDataSourceRequest $argument input argument
+     * @param \Szconfig\RegisterDataSourceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function DeleteDataSource(\Szconfig\DeleteDataSourceRequest $argument,
+    public function RegisterDataSource(\Szconfig\RegisterDataSourceRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szconfig.SzConfig/DeleteDataSource',
+        return $this->_simpleRequest('/szconfig.SzConfig/RegisterDataSource',
         $argument,
-        ['\Szconfig\DeleteDataSourceResponse', 'decode'],
+        ['\Szconfig\RegisterDataSourceResponse', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Szconfig\GetDataSourcesRequest $argument input argument
+     * @param \Szconfig\UnregisterDataSourceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function GetDataSources(\Szconfig\GetDataSourcesRequest $argument,
+    public function UnregisterDataSource(\Szconfig\UnregisterDataSourceRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szconfig.SzConfig/GetDataSources',
+        return $this->_simpleRequest('/szconfig.SzConfig/UnregisterDataSource',
         $argument,
-        ['\Szconfig\GetDataSourcesResponse', 'decode'],
+        ['\Szconfig\UnregisterDataSourceResponse', 'decode'],
         $metadata, $options);
     }
 

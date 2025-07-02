@@ -17,30 +17,16 @@ class SzDiagnosticClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Szdiagnostic\CheckDatastorePerformanceRequest $argument input argument
+     * @param \Szdiagnostic\CheckRepositoryPerformanceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function CheckDatastorePerformance(\Szdiagnostic\CheckDatastorePerformanceRequest $argument,
+    public function CheckRepositoryPerformance(\Szdiagnostic\CheckRepositoryPerformanceRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szdiagnostic.SzDiagnostic/CheckDatastorePerformance',
+        return $this->_simpleRequest('/szdiagnostic.SzDiagnostic/CheckRepositoryPerformance',
         $argument,
-        ['\Szdiagnostic\CheckDatastorePerformanceResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Szdiagnostic\GetDatastoreInfoRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function GetDatastoreInfo(\Szdiagnostic\GetDatastoreInfoRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szdiagnostic.SzDiagnostic/GetDatastoreInfo',
-        $argument,
-        ['\Szdiagnostic\GetDatastoreInfoResponse', 'decode'],
+        ['\Szdiagnostic\CheckRepositoryPerformanceResponse', 'decode'],
         $metadata, $options);
     }
 
@@ -55,6 +41,20 @@ class SzDiagnosticClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/szdiagnostic.SzDiagnostic/GetFeature',
         $argument,
         ['\Szdiagnostic\GetFeatureResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Szdiagnostic\GetRepositoryInfoRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetRepositoryInfo(\Szdiagnostic\GetRepositoryInfoRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szdiagnostic.SzDiagnostic/GetRepositoryInfo',
+        $argument,
+        ['\Szdiagnostic\GetRepositoryInfoResponse', 'decode'],
         $metadata, $options);
     }
 

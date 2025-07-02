@@ -31,16 +31,16 @@ class SzEngineClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Szengine\CloseExportRequest $argument input argument
+     * @param \Szengine\CloseExportReportRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      * @return \Grpc\UnaryCall
      */
-    public function CloseExport(\Szengine\CloseExportRequest $argument,
+    public function CloseExportReport(\Szengine\CloseExportReportRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szengine.SzEngine/CloseExport',
+        return $this->_simpleRequest('/szengine.SzEngine/CloseExportReport',
         $argument,
-        ['\Szengine\CloseExportResponse', 'decode'],
+        ['\Szengine\CloseExportReportResponse', 'decode'],
         $metadata, $options);
     }
 
@@ -255,6 +255,20 @@ class SzEngineClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Szengine\GetRecordPreviewRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall
+     */
+    public function GetRecordPreview(\Szengine\GetRecordPreviewRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/szengine.SzEngine/GetRecordPreview',
+        $argument,
+        ['\Szengine\GetRecordPreviewResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Szengine\GetRedoRecordRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -307,20 +321,6 @@ class SzEngineClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/szengine.SzEngine/HowEntityByEntityId',
         $argument,
         ['\Szengine\HowEntityByEntityIdResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Szengine\PreprocessRecordRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function PreprocessRecord(\Szengine\PreprocessRecordRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szengine.SzEngine/PreprocessRecord',
-        $argument,
-        ['\Szengine\PreprocessRecordResponse', 'decode'],
         $metadata, $options);
     }
 

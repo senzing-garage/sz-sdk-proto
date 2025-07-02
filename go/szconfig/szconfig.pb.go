@@ -21,28 +21,27 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type AddDataSourceRequest struct {
+type GetDataSourceRegistryRequest struct {
 	state            protoimpl.MessageState `protogen:"open.v1"`
 	ConfigDefinition string                 `protobuf:"bytes,1,opt,name=config_definition,json=configDefinition,proto3" json:"config_definition,omitempty"`
-	DataSourceCode   string                 `protobuf:"bytes,2,opt,name=data_source_code,json=dataSourceCode,proto3" json:"data_source_code,omitempty"`
 	unknownFields    protoimpl.UnknownFields
 	sizeCache        protoimpl.SizeCache
 }
 
-func (x *AddDataSourceRequest) Reset() {
-	*x = AddDataSourceRequest{}
+func (x *GetDataSourceRegistryRequest) Reset() {
+	*x = GetDataSourceRegistryRequest{}
 	mi := &file_szconfig_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
 
-func (x *AddDataSourceRequest) String() string {
+func (x *GetDataSourceRegistryRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*AddDataSourceRequest) ProtoMessage() {}
+func (*GetDataSourceRegistryRequest) ProtoMessage() {}
 
-func (x *AddDataSourceRequest) ProtoReflect() protoreflect.Message {
+func (x *GetDataSourceRegistryRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_szconfig_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -54,246 +53,240 @@ func (x *AddDataSourceRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use AddDataSourceRequest.ProtoReflect.Descriptor instead.
-func (*AddDataSourceRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use GetDataSourceRegistryRequest.ProtoReflect.Descriptor instead.
+func (*GetDataSourceRegistryRequest) Descriptor() ([]byte, []int) {
 	return file_szconfig_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *AddDataSourceRequest) GetConfigDefinition() string {
+func (x *GetDataSourceRegistryRequest) GetConfigDefinition() string {
 	if x != nil {
 		return x.ConfigDefinition
 	}
 	return ""
 }
 
-func (x *AddDataSourceRequest) GetDataSourceCode() string {
-	if x != nil {
-		return x.DataSourceCode
-	}
-	return ""
-}
-
-type AddDataSourceResponse struct {
-	state            protoimpl.MessageState `protogen:"open.v1"`
-	Result           string                 `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
-	ConfigDefinition string                 `protobuf:"bytes,2,opt,name=config_definition,json=configDefinition,proto3" json:"config_definition,omitempty"`
-	unknownFields    protoimpl.UnknownFields
-	sizeCache        protoimpl.SizeCache
-}
-
-func (x *AddDataSourceResponse) Reset() {
-	*x = AddDataSourceResponse{}
-	mi := &file_szconfig_proto_msgTypes[1]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *AddDataSourceResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*AddDataSourceResponse) ProtoMessage() {}
-
-func (x *AddDataSourceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szconfig_proto_msgTypes[1]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use AddDataSourceResponse.ProtoReflect.Descriptor instead.
-func (*AddDataSourceResponse) Descriptor() ([]byte, []int) {
-	return file_szconfig_proto_rawDescGZIP(), []int{1}
-}
-
-func (x *AddDataSourceResponse) GetResult() string {
-	if x != nil {
-		return x.Result
-	}
-	return ""
-}
-
-func (x *AddDataSourceResponse) GetConfigDefinition() string {
-	if x != nil {
-		return x.ConfigDefinition
-	}
-	return ""
-}
-
-type DeleteDataSourceRequest struct {
-	state            protoimpl.MessageState `protogen:"open.v1"`
-	ConfigDefinition string                 `protobuf:"bytes,1,opt,name=config_definition,json=configDefinition,proto3" json:"config_definition,omitempty"`
-	DataSourceCode   string                 `protobuf:"bytes,2,opt,name=data_source_code,json=dataSourceCode,proto3" json:"data_source_code,omitempty"`
-	unknownFields    protoimpl.UnknownFields
-	sizeCache        protoimpl.SizeCache
-}
-
-func (x *DeleteDataSourceRequest) Reset() {
-	*x = DeleteDataSourceRequest{}
-	mi := &file_szconfig_proto_msgTypes[2]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *DeleteDataSourceRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*DeleteDataSourceRequest) ProtoMessage() {}
-
-func (x *DeleteDataSourceRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szconfig_proto_msgTypes[2]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use DeleteDataSourceRequest.ProtoReflect.Descriptor instead.
-func (*DeleteDataSourceRequest) Descriptor() ([]byte, []int) {
-	return file_szconfig_proto_rawDescGZIP(), []int{2}
-}
-
-func (x *DeleteDataSourceRequest) GetConfigDefinition() string {
-	if x != nil {
-		return x.ConfigDefinition
-	}
-	return ""
-}
-
-func (x *DeleteDataSourceRequest) GetDataSourceCode() string {
-	if x != nil {
-		return x.DataSourceCode
-	}
-	return ""
-}
-
-type DeleteDataSourceResponse struct {
-	state            protoimpl.MessageState `protogen:"open.v1"`
-	Result           string                 `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
-	ConfigDefinition string                 `protobuf:"bytes,2,opt,name=config_definition,json=configDefinition,proto3" json:"config_definition,omitempty"`
-	unknownFields    protoimpl.UnknownFields
-	sizeCache        protoimpl.SizeCache
-}
-
-func (x *DeleteDataSourceResponse) Reset() {
-	*x = DeleteDataSourceResponse{}
-	mi := &file_szconfig_proto_msgTypes[3]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *DeleteDataSourceResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*DeleteDataSourceResponse) ProtoMessage() {}
-
-func (x *DeleteDataSourceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_szconfig_proto_msgTypes[3]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use DeleteDataSourceResponse.ProtoReflect.Descriptor instead.
-func (*DeleteDataSourceResponse) Descriptor() ([]byte, []int) {
-	return file_szconfig_proto_rawDescGZIP(), []int{3}
-}
-
-func (x *DeleteDataSourceResponse) GetResult() string {
-	if x != nil {
-		return x.Result
-	}
-	return ""
-}
-
-func (x *DeleteDataSourceResponse) GetConfigDefinition() string {
-	if x != nil {
-		return x.ConfigDefinition
-	}
-	return ""
-}
-
-type GetDataSourcesRequest struct {
-	state            protoimpl.MessageState `protogen:"open.v1"`
-	ConfigDefinition string                 `protobuf:"bytes,1,opt,name=config_definition,json=configDefinition,proto3" json:"config_definition,omitempty"`
-	unknownFields    protoimpl.UnknownFields
-	sizeCache        protoimpl.SizeCache
-}
-
-func (x *GetDataSourcesRequest) Reset() {
-	*x = GetDataSourcesRequest{}
-	mi := &file_szconfig_proto_msgTypes[4]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *GetDataSourcesRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*GetDataSourcesRequest) ProtoMessage() {}
-
-func (x *GetDataSourcesRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_szconfig_proto_msgTypes[4]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use GetDataSourcesRequest.ProtoReflect.Descriptor instead.
-func (*GetDataSourcesRequest) Descriptor() ([]byte, []int) {
-	return file_szconfig_proto_rawDescGZIP(), []int{4}
-}
-
-func (x *GetDataSourcesRequest) GetConfigDefinition() string {
-	if x != nil {
-		return x.ConfigDefinition
-	}
-	return ""
-}
-
-type GetDataSourcesResponse struct {
+type GetDataSourceRegistryResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Result        string                 `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
 
-func (x *GetDataSourcesResponse) Reset() {
-	*x = GetDataSourcesResponse{}
+func (x *GetDataSourceRegistryResponse) Reset() {
+	*x = GetDataSourceRegistryResponse{}
+	mi := &file_szconfig_proto_msgTypes[1]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetDataSourceRegistryResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetDataSourceRegistryResponse) ProtoMessage() {}
+
+func (x *GetDataSourceRegistryResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_szconfig_proto_msgTypes[1]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetDataSourceRegistryResponse.ProtoReflect.Descriptor instead.
+func (*GetDataSourceRegistryResponse) Descriptor() ([]byte, []int) {
+	return file_szconfig_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *GetDataSourceRegistryResponse) GetResult() string {
+	if x != nil {
+		return x.Result
+	}
+	return ""
+}
+
+type RegisterDataSourceRequest struct {
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	ConfigDefinition string                 `protobuf:"bytes,1,opt,name=config_definition,json=configDefinition,proto3" json:"config_definition,omitempty"`
+	DataSourceCode   string                 `protobuf:"bytes,2,opt,name=data_source_code,json=dataSourceCode,proto3" json:"data_source_code,omitempty"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
+}
+
+func (x *RegisterDataSourceRequest) Reset() {
+	*x = RegisterDataSourceRequest{}
+	mi := &file_szconfig_proto_msgTypes[2]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *RegisterDataSourceRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RegisterDataSourceRequest) ProtoMessage() {}
+
+func (x *RegisterDataSourceRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_szconfig_proto_msgTypes[2]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RegisterDataSourceRequest.ProtoReflect.Descriptor instead.
+func (*RegisterDataSourceRequest) Descriptor() ([]byte, []int) {
+	return file_szconfig_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *RegisterDataSourceRequest) GetConfigDefinition() string {
+	if x != nil {
+		return x.ConfigDefinition
+	}
+	return ""
+}
+
+func (x *RegisterDataSourceRequest) GetDataSourceCode() string {
+	if x != nil {
+		return x.DataSourceCode
+	}
+	return ""
+}
+
+type RegisterDataSourceResponse struct {
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	Result           string                 `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
+	ConfigDefinition string                 `protobuf:"bytes,2,opt,name=config_definition,json=configDefinition,proto3" json:"config_definition,omitempty"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
+}
+
+func (x *RegisterDataSourceResponse) Reset() {
+	*x = RegisterDataSourceResponse{}
+	mi := &file_szconfig_proto_msgTypes[3]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *RegisterDataSourceResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RegisterDataSourceResponse) ProtoMessage() {}
+
+func (x *RegisterDataSourceResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_szconfig_proto_msgTypes[3]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use RegisterDataSourceResponse.ProtoReflect.Descriptor instead.
+func (*RegisterDataSourceResponse) Descriptor() ([]byte, []int) {
+	return file_szconfig_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *RegisterDataSourceResponse) GetResult() string {
+	if x != nil {
+		return x.Result
+	}
+	return ""
+}
+
+func (x *RegisterDataSourceResponse) GetConfigDefinition() string {
+	if x != nil {
+		return x.ConfigDefinition
+	}
+	return ""
+}
+
+type UnregisterDataSourceRequest struct {
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	ConfigDefinition string                 `protobuf:"bytes,1,opt,name=config_definition,json=configDefinition,proto3" json:"config_definition,omitempty"`
+	DataSourceCode   string                 `protobuf:"bytes,2,opt,name=data_source_code,json=dataSourceCode,proto3" json:"data_source_code,omitempty"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
+}
+
+func (x *UnregisterDataSourceRequest) Reset() {
+	*x = UnregisterDataSourceRequest{}
+	mi := &file_szconfig_proto_msgTypes[4]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *UnregisterDataSourceRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UnregisterDataSourceRequest) ProtoMessage() {}
+
+func (x *UnregisterDataSourceRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_szconfig_proto_msgTypes[4]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UnregisterDataSourceRequest.ProtoReflect.Descriptor instead.
+func (*UnregisterDataSourceRequest) Descriptor() ([]byte, []int) {
+	return file_szconfig_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *UnregisterDataSourceRequest) GetConfigDefinition() string {
+	if x != nil {
+		return x.ConfigDefinition
+	}
+	return ""
+}
+
+func (x *UnregisterDataSourceRequest) GetDataSourceCode() string {
+	if x != nil {
+		return x.DataSourceCode
+	}
+	return ""
+}
+
+type UnregisterDataSourceResponse struct {
+	state            protoimpl.MessageState `protogen:"open.v1"`
+	Result           string                 `protobuf:"bytes,1,opt,name=result,proto3" json:"result,omitempty"`
+	ConfigDefinition string                 `protobuf:"bytes,2,opt,name=config_definition,json=configDefinition,proto3" json:"config_definition,omitempty"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
+}
+
+func (x *UnregisterDataSourceResponse) Reset() {
+	*x = UnregisterDataSourceResponse{}
 	mi := &file_szconfig_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
 
-func (x *GetDataSourcesResponse) String() string {
+func (x *UnregisterDataSourceResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*GetDataSourcesResponse) ProtoMessage() {}
+func (*UnregisterDataSourceResponse) ProtoMessage() {}
 
-func (x *GetDataSourcesResponse) ProtoReflect() protoreflect.Message {
+func (x *UnregisterDataSourceResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_szconfig_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -305,14 +298,21 @@ func (x *GetDataSourcesResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use GetDataSourcesResponse.ProtoReflect.Descriptor instead.
-func (*GetDataSourcesResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use UnregisterDataSourceResponse.ProtoReflect.Descriptor instead.
+func (*UnregisterDataSourceResponse) Descriptor() ([]byte, []int) {
 	return file_szconfig_proto_rawDescGZIP(), []int{5}
 }
 
-func (x *GetDataSourcesResponse) GetResult() string {
+func (x *UnregisterDataSourceResponse) GetResult() string {
 	if x != nil {
 		return x.Result
+	}
+	return ""
+}
+
+func (x *UnregisterDataSourceResponse) GetConfigDefinition() string {
+	if x != nil {
+		return x.ConfigDefinition
 	}
 	return ""
 }
@@ -409,31 +409,31 @@ var File_szconfig_proto protoreflect.FileDescriptor
 
 const file_szconfig_proto_rawDesc = "" +
 	"\n" +
-	"\x0eszconfig.proto\x12\bszconfig\"m\n" +
-	"\x14AddDataSourceRequest\x12+\n" +
+	"\x0eszconfig.proto\x12\bszconfig\"K\n" +
+	"\x1cGetDataSourceRegistryRequest\x12+\n" +
+	"\x11config_definition\x18\x01 \x01(\tR\x10configDefinition\"7\n" +
+	"\x1dGetDataSourceRegistryResponse\x12\x16\n" +
+	"\x06result\x18\x01 \x01(\tR\x06result\"r\n" +
+	"\x19RegisterDataSourceRequest\x12+\n" +
 	"\x11config_definition\x18\x01 \x01(\tR\x10configDefinition\x12(\n" +
-	"\x10data_source_code\x18\x02 \x01(\tR\x0edataSourceCode\"\\\n" +
-	"\x15AddDataSourceResponse\x12\x16\n" +
+	"\x10data_source_code\x18\x02 \x01(\tR\x0edataSourceCode\"a\n" +
+	"\x1aRegisterDataSourceResponse\x12\x16\n" +
 	"\x06result\x18\x01 \x01(\tR\x06result\x12+\n" +
-	"\x11config_definition\x18\x02 \x01(\tR\x10configDefinition\"p\n" +
-	"\x17DeleteDataSourceRequest\x12+\n" +
+	"\x11config_definition\x18\x02 \x01(\tR\x10configDefinition\"t\n" +
+	"\x1bUnregisterDataSourceRequest\x12+\n" +
 	"\x11config_definition\x18\x01 \x01(\tR\x10configDefinition\x12(\n" +
-	"\x10data_source_code\x18\x02 \x01(\tR\x0edataSourceCode\"_\n" +
-	"\x18DeleteDataSourceResponse\x12\x16\n" +
+	"\x10data_source_code\x18\x02 \x01(\tR\x0edataSourceCode\"c\n" +
+	"\x1cUnregisterDataSourceResponse\x12\x16\n" +
 	"\x06result\x18\x01 \x01(\tR\x06result\x12+\n" +
-	"\x11config_definition\x18\x02 \x01(\tR\x10configDefinition\"D\n" +
-	"\x15GetDataSourcesRequest\x12+\n" +
-	"\x11config_definition\x18\x01 \x01(\tR\x10configDefinition\"0\n" +
-	"\x16GetDataSourcesResponse\x12\x16\n" +
-	"\x06result\x18\x01 \x01(\tR\x06result\"B\n" +
+	"\x11config_definition\x18\x02 \x01(\tR\x10configDefinition\"B\n" +
 	"\x13VerifyConfigRequest\x12+\n" +
 	"\x11config_definition\x18\x01 \x01(\tR\x10configDefinition\".\n" +
 	"\x14VerifyConfigResponse\x12\x16\n" +
-	"\x06result\x18\x01 \x01(\bR\x06result2\xe3\x02\n" +
-	"\bSzConfig\x12R\n" +
-	"\rAddDataSource\x12\x1e.szconfig.AddDataSourceRequest\x1a\x1f.szconfig.AddDataSourceResponse\"\x00\x12[\n" +
-	"\x10DeleteDataSource\x12!.szconfig.DeleteDataSourceRequest\x1a\".szconfig.DeleteDataSourceResponse\"\x00\x12U\n" +
-	"\x0eGetDataSources\x12\x1f.szconfig.GetDataSourcesRequest\x1a .szconfig.GetDataSourcesResponse\"\x00\x12O\n" +
+	"\x06result\x18\x01 \x01(\bR\x06result2\x93\x03\n" +
+	"\bSzConfig\x12j\n" +
+	"\x15GetDataSourceRegistry\x12&.szconfig.GetDataSourceRegistryRequest\x1a'.szconfig.GetDataSourceRegistryResponse\"\x00\x12a\n" +
+	"\x12RegisterDataSource\x12#.szconfig.RegisterDataSourceRequest\x1a$.szconfig.RegisterDataSourceResponse\"\x00\x12g\n" +
+	"\x14UnregisterDataSource\x12%.szconfig.UnregisterDataSourceRequest\x1a&.szconfig.UnregisterDataSourceResponse\"\x00\x12O\n" +
 	"\fVerifyConfig\x12\x1d.szconfig.VerifyConfigRequest\x1a\x1e.szconfig.VerifyConfigResponse\"\x00BX\n" +
 	"\x14com.senzing.sdk.grpcB\rSzConfigProtoZ1github.com/senzing-garage/sz-sdk-go-grpc/szconfigb\x06proto3"
 
@@ -451,23 +451,23 @@ func file_szconfig_proto_rawDescGZIP() []byte {
 
 var file_szconfig_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_szconfig_proto_goTypes = []any{
-	(*AddDataSourceRequest)(nil),     // 0: szconfig.AddDataSourceRequest
-	(*AddDataSourceResponse)(nil),    // 1: szconfig.AddDataSourceResponse
-	(*DeleteDataSourceRequest)(nil),  // 2: szconfig.DeleteDataSourceRequest
-	(*DeleteDataSourceResponse)(nil), // 3: szconfig.DeleteDataSourceResponse
-	(*GetDataSourcesRequest)(nil),    // 4: szconfig.GetDataSourcesRequest
-	(*GetDataSourcesResponse)(nil),   // 5: szconfig.GetDataSourcesResponse
-	(*VerifyConfigRequest)(nil),      // 6: szconfig.VerifyConfigRequest
-	(*VerifyConfigResponse)(nil),     // 7: szconfig.VerifyConfigResponse
+	(*GetDataSourceRegistryRequest)(nil),  // 0: szconfig.GetDataSourceRegistryRequest
+	(*GetDataSourceRegistryResponse)(nil), // 1: szconfig.GetDataSourceRegistryResponse
+	(*RegisterDataSourceRequest)(nil),     // 2: szconfig.RegisterDataSourceRequest
+	(*RegisterDataSourceResponse)(nil),    // 3: szconfig.RegisterDataSourceResponse
+	(*UnregisterDataSourceRequest)(nil),   // 4: szconfig.UnregisterDataSourceRequest
+	(*UnregisterDataSourceResponse)(nil),  // 5: szconfig.UnregisterDataSourceResponse
+	(*VerifyConfigRequest)(nil),           // 6: szconfig.VerifyConfigRequest
+	(*VerifyConfigResponse)(nil),          // 7: szconfig.VerifyConfigResponse
 }
 var file_szconfig_proto_depIdxs = []int32{
-	0, // 0: szconfig.SzConfig.AddDataSource:input_type -> szconfig.AddDataSourceRequest
-	2, // 1: szconfig.SzConfig.DeleteDataSource:input_type -> szconfig.DeleteDataSourceRequest
-	4, // 2: szconfig.SzConfig.GetDataSources:input_type -> szconfig.GetDataSourcesRequest
+	0, // 0: szconfig.SzConfig.GetDataSourceRegistry:input_type -> szconfig.GetDataSourceRegistryRequest
+	2, // 1: szconfig.SzConfig.RegisterDataSource:input_type -> szconfig.RegisterDataSourceRequest
+	4, // 2: szconfig.SzConfig.UnregisterDataSource:input_type -> szconfig.UnregisterDataSourceRequest
 	6, // 3: szconfig.SzConfig.VerifyConfig:input_type -> szconfig.VerifyConfigRequest
-	1, // 4: szconfig.SzConfig.AddDataSource:output_type -> szconfig.AddDataSourceResponse
-	3, // 5: szconfig.SzConfig.DeleteDataSource:output_type -> szconfig.DeleteDataSourceResponse
-	5, // 6: szconfig.SzConfig.GetDataSources:output_type -> szconfig.GetDataSourcesResponse
+	1, // 4: szconfig.SzConfig.GetDataSourceRegistry:output_type -> szconfig.GetDataSourceRegistryResponse
+	3, // 5: szconfig.SzConfig.RegisterDataSource:output_type -> szconfig.RegisterDataSourceResponse
+	5, // 6: szconfig.SzConfig.UnregisterDataSource:output_type -> szconfig.UnregisterDataSourceResponse
 	7, // 7: szconfig.SzConfig.VerifyConfig:output_type -> szconfig.VerifyConfigResponse
 	4, // [4:8] is the sub-list for method output_type
 	0, // [0:4] is the sub-list for method input_type

@@ -10,9 +10,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>szdiagnostic.GetDatastoreInfoResponse</code>
+ * Generated from protobuf message <code>szdiagnostic.CheckRepositoryPerformanceResponse</code>
  */
-class GetDatastoreInfoResponse extends \Google\Protobuf\Internal\Message
+class CheckRepositoryPerformanceResponse extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string result = 1;</code>

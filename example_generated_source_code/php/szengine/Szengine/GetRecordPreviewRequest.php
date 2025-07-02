@@ -10,9 +10,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>szengine.PreprocessRecordRequest</code>
+ * Generated from protobuf message <code>szengine.GetRecordPreviewRequest</code>
  */
-class PreprocessRecordRequest extends \Google\Protobuf\Internal\Message
+class GetRecordPreviewRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string record_definition = 1;</code>

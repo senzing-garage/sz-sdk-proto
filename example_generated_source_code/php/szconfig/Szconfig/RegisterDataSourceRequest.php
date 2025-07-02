@@ -10,9 +10,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>szconfig.DeleteDataSourceRequest</code>
+ * Generated from protobuf message <code>szconfig.RegisterDataSourceRequest</code>
  */
-class DeleteDataSourceRequest extends \Google\Protobuf\Internal\Message
+class RegisterDataSourceRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string config_definition = 1;</code>

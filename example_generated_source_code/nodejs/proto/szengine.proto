@@ -7,7 +7,7 @@ option java_outer_classname = "SzEngineProto";
 
 service SzEngine {
   rpc AddRecord(AddRecordRequest) returns (AddRecordResponse) {}
-  rpc CloseExport(CloseExportRequest) returns (CloseExportResponse) {}
+  rpc CloseExportReport(CloseExportReportRequest) returns (CloseExportReportResponse) {}
   rpc CountRedoRecords(CountRedoRecordsRequest) returns (CountRedoRecordsResponse) {}
   rpc DeleteRecord(DeleteRecordRequest) returns (DeleteRecordResponse) {}
   rpc ExportCsvEntityReport(ExportCsvEntityReportRequest) returns (ExportCsvEntityReportResponse) {}
@@ -53,11 +53,11 @@ message AddRecordResponse {
    string result = 1;
 }
 
-message CloseExportRequest {
+message CloseExportReportRequest {
   int64 export_handle = 1;
 }
 
-message CloseExportResponse {}
+message CloseExportReportResponse {}
 
 message CountRedoRecordsRequest {}
 

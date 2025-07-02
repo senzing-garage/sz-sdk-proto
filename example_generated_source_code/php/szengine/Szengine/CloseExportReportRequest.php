@@ -10,9 +10,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>szengine.CloseExportRequest</code>
+ * Generated from protobuf message <code>szengine.CloseExportReportRequest</code>
  */
-class CloseExportRequest extends \Google\Protobuf\Internal\Message
+class CloseExportReportRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>int64 export_handle = 1;</code>

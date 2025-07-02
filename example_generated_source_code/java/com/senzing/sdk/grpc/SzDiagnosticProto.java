@@ -25,8 +25,8 @@ public final class SzDiagnosticProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface CheckDatastorePerformanceRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szdiagnostic.CheckDatastorePerformanceRequest)
+  public interface CheckRepositoryPerformanceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:szdiagnostic.CheckRepositoryPerformanceRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -36,12 +36,12 @@ public final class SzDiagnosticProto {
     int getSecondsToRun();
   }
   /**
-   * Protobuf type {@code szdiagnostic.CheckDatastorePerformanceRequest}
+   * Protobuf type {@code szdiagnostic.CheckRepositoryPerformanceRequest}
    */
-  public static final class CheckDatastorePerformanceRequest extends
+  public static final class CheckRepositoryPerformanceRequest extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:szdiagnostic.CheckDatastorePerformanceRequest)
-      CheckDatastorePerformanceRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:szdiagnostic.CheckRepositoryPerformanceRequest)
+      CheckRepositoryPerformanceRequestOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -50,26 +50,26 @@ public final class SzDiagnosticProto {
         /* minor= */ 30,
         /* patch= */ 2,
         /* suffix= */ "",
-        CheckDatastorePerformanceRequest.class.getName());
+        CheckRepositoryPerformanceRequest.class.getName());
     }
-    // Use CheckDatastorePerformanceRequest.newBuilder() to construct.
-    private CheckDatastorePerformanceRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use CheckRepositoryPerformanceRequest.newBuilder() to construct.
+    private CheckRepositoryPerformanceRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private CheckDatastorePerformanceRequest() {
+    private CheckRepositoryPerformanceRequest() {
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckDatastorePerformanceRequest_descriptor;
+      return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckRepositoryPerformanceRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckDatastorePerformanceRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckRepositoryPerformanceRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest.class, com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest.Builder.class);
+              com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest.class, com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest.Builder.class);
     }
 
     public static final int SECONDS_TO_RUN_FIELD_NUMBER = 1;
@@ -123,10 +123,10 @@ public final class SzDiagnosticProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest other = (com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest) obj;
+      com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest other = (com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest) obj;
 
       if (getSecondsToRun()
           != other.getSecondsToRun()) return false;
@@ -148,44 +148,44 @@ public final class SzDiagnosticProto {
       return hash;
     }
 
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -193,26 +193,26 @@ public final class SzDiagnosticProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -225,7 +225,7 @@ public final class SzDiagnosticProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -241,26 +241,26 @@ public final class SzDiagnosticProto {
       return builder;
     }
     /**
-     * Protobuf type {@code szdiagnostic.CheckDatastorePerformanceRequest}
+     * Protobuf type {@code szdiagnostic.CheckRepositoryPerformanceRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szdiagnostic.CheckDatastorePerformanceRequest)
-        com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:szdiagnostic.CheckRepositoryPerformanceRequest)
+        com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckDatastorePerformanceRequest_descriptor;
+        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckRepositoryPerformanceRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckDatastorePerformanceRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckRepositoryPerformanceRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest.class, com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest.Builder.class);
+                com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest.class, com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest.newBuilder()
       private Builder() {
 
       }
@@ -281,17 +281,17 @@ public final class SzDiagnosticProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckDatastorePerformanceRequest_descriptor;
+        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckRepositoryPerformanceRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest getDefaultInstanceForType() {
-        return com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest build() {
-        com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest build() {
+        com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -299,14 +299,14 @@ public final class SzDiagnosticProto {
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest buildPartial() {
-        com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest result = new com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest(this);
+      public com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest buildPartial() {
+        com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest result = new com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.secondsToRun_ = secondsToRun_;
@@ -315,16 +315,16 @@ public final class SzDiagnosticProto {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest) {
-          return mergeFrom((com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest other) {
-        if (other == com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest other) {
+        if (other == com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest.getDefaultInstance()) return this;
         if (other.getSecondsToRun() != 0) {
           setSecondsToRun(other.getSecondsToRun());
         }
@@ -408,23 +408,23 @@ public final class SzDiagnosticProto {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:szdiagnostic.CheckDatastorePerformanceRequest)
+      // @@protoc_insertion_point(builder_scope:szdiagnostic.CheckRepositoryPerformanceRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:szdiagnostic.CheckDatastorePerformanceRequest)
-    private static final com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:szdiagnostic.CheckRepositoryPerformanceRequest)
+    private static final com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest();
     }
 
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CheckDatastorePerformanceRequest>
-        PARSER = new com.google.protobuf.AbstractParser<CheckDatastorePerformanceRequest>() {
+    private static final com.google.protobuf.Parser<CheckRepositoryPerformanceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CheckRepositoryPerformanceRequest>() {
       @java.lang.Override
-      public CheckDatastorePerformanceRequest parsePartialFrom(
+      public CheckRepositoryPerformanceRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -443,24 +443,24 @@ public final class SzDiagnosticProto {
       }
     };
 
-    public static com.google.protobuf.Parser<CheckDatastorePerformanceRequest> parser() {
+    public static com.google.protobuf.Parser<CheckRepositoryPerformanceRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CheckDatastorePerformanceRequest> getParserForType() {
+    public com.google.protobuf.Parser<CheckRepositoryPerformanceRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface CheckDatastorePerformanceResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szdiagnostic.CheckDatastorePerformanceResponse)
+  public interface CheckRepositoryPerformanceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:szdiagnostic.CheckRepositoryPerformanceResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -476,12 +476,12 @@ public final class SzDiagnosticProto {
         getResultBytes();
   }
   /**
-   * Protobuf type {@code szdiagnostic.CheckDatastorePerformanceResponse}
+   * Protobuf type {@code szdiagnostic.CheckRepositoryPerformanceResponse}
    */
-  public static final class CheckDatastorePerformanceResponse extends
+  public static final class CheckRepositoryPerformanceResponse extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:szdiagnostic.CheckDatastorePerformanceResponse)
-      CheckDatastorePerformanceResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:szdiagnostic.CheckRepositoryPerformanceResponse)
+      CheckRepositoryPerformanceResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -490,27 +490,27 @@ public final class SzDiagnosticProto {
         /* minor= */ 30,
         /* patch= */ 2,
         /* suffix= */ "",
-        CheckDatastorePerformanceResponse.class.getName());
+        CheckRepositoryPerformanceResponse.class.getName());
     }
-    // Use CheckDatastorePerformanceResponse.newBuilder() to construct.
-    private CheckDatastorePerformanceResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use CheckRepositoryPerformanceResponse.newBuilder() to construct.
+    private CheckRepositoryPerformanceResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private CheckDatastorePerformanceResponse() {
+    private CheckRepositoryPerformanceResponse() {
       result_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckDatastorePerformanceResponse_descriptor;
+      return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckRepositoryPerformanceResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckDatastorePerformanceResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckRepositoryPerformanceResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse.class, com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse.Builder.class);
+              com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse.class, com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -591,10 +591,10 @@ public final class SzDiagnosticProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse other = (com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse) obj;
+      com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse other = (com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -616,44 +616,44 @@ public final class SzDiagnosticProto {
       return hash;
     }
 
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -661,26 +661,26 @@ public final class SzDiagnosticProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -693,7 +693,7 @@ public final class SzDiagnosticProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -709,26 +709,26 @@ public final class SzDiagnosticProto {
       return builder;
     }
     /**
-     * Protobuf type {@code szdiagnostic.CheckDatastorePerformanceResponse}
+     * Protobuf type {@code szdiagnostic.CheckRepositoryPerformanceResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szdiagnostic.CheckDatastorePerformanceResponse)
-        com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:szdiagnostic.CheckRepositoryPerformanceResponse)
+        com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckDatastorePerformanceResponse_descriptor;
+        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckRepositoryPerformanceResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckDatastorePerformanceResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckRepositoryPerformanceResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse.class, com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse.Builder.class);
+                com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse.class, com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse.newBuilder()
       private Builder() {
 
       }
@@ -749,17 +749,17 @@ public final class SzDiagnosticProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckDatastorePerformanceResponse_descriptor;
+        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_CheckRepositoryPerformanceResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse getDefaultInstanceForType() {
-        return com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse build() {
-        com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse build() {
+        com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -767,14 +767,14 @@ public final class SzDiagnosticProto {
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse buildPartial() {
-        com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse result = new com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse(this);
+      public com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse buildPartial() {
+        com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse result = new com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -783,16 +783,16 @@ public final class SzDiagnosticProto {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse) {
-          return mergeFrom((com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse other) {
-        if (other == com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse other) {
+        if (other == com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -918,23 +918,23 @@ public final class SzDiagnosticProto {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:szdiagnostic.CheckDatastorePerformanceResponse)
+      // @@protoc_insertion_point(builder_scope:szdiagnostic.CheckRepositoryPerformanceResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:szdiagnostic.CheckDatastorePerformanceResponse)
-    private static final com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:szdiagnostic.CheckRepositoryPerformanceResponse)
+    private static final com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse();
     }
 
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CheckDatastorePerformanceResponse>
-        PARSER = new com.google.protobuf.AbstractParser<CheckDatastorePerformanceResponse>() {
+    private static final com.google.protobuf.Parser<CheckRepositoryPerformanceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CheckRepositoryPerformanceResponse>() {
       @java.lang.Override
-      public CheckDatastorePerformanceResponse parsePartialFrom(
+      public CheckRepositoryPerformanceResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -953,33 +953,33 @@ public final class SzDiagnosticProto {
       }
     };
 
-    public static com.google.protobuf.Parser<CheckDatastorePerformanceResponse> parser() {
+    public static com.google.protobuf.Parser<CheckRepositoryPerformanceResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CheckDatastorePerformanceResponse> getParserForType() {
+    public com.google.protobuf.Parser<CheckRepositoryPerformanceResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.senzing.sdk.grpc.SzDiagnosticProto.CheckDatastorePerformanceResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzDiagnosticProto.CheckRepositoryPerformanceResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface GetDatastoreInfoRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szdiagnostic.GetDatastoreInfoRequest)
+  public interface GetRepositoryInfoRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:szdiagnostic.GetRepositoryInfoRequest)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code szdiagnostic.GetDatastoreInfoRequest}
+   * Protobuf type {@code szdiagnostic.GetRepositoryInfoRequest}
    */
-  public static final class GetDatastoreInfoRequest extends
+  public static final class GetRepositoryInfoRequest extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:szdiagnostic.GetDatastoreInfoRequest)
-      GetDatastoreInfoRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:szdiagnostic.GetRepositoryInfoRequest)
+      GetRepositoryInfoRequestOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -988,26 +988,26 @@ public final class SzDiagnosticProto {
         /* minor= */ 30,
         /* patch= */ 2,
         /* suffix= */ "",
-        GetDatastoreInfoRequest.class.getName());
+        GetRepositoryInfoRequest.class.getName());
     }
-    // Use GetDatastoreInfoRequest.newBuilder() to construct.
-    private GetDatastoreInfoRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use GetRepositoryInfoRequest.newBuilder() to construct.
+    private GetRepositoryInfoRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private GetDatastoreInfoRequest() {
+    private GetRepositoryInfoRequest() {
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetDatastoreInfoRequest_descriptor;
+      return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetRepositoryInfoRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetDatastoreInfoRequest_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetRepositoryInfoRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest.class, com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest.Builder.class);
+              com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest.class, com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1043,10 +1043,10 @@ public final class SzDiagnosticProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest)) {
         return super.equals(obj);
       }
-      com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest other = (com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest) obj;
+      com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest other = (com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -1064,44 +1064,44 @@ public final class SzDiagnosticProto {
       return hash;
     }
 
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1109,26 +1109,26 @@ public final class SzDiagnosticProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1141,7 +1141,7 @@ public final class SzDiagnosticProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1157,26 +1157,26 @@ public final class SzDiagnosticProto {
       return builder;
     }
     /**
-     * Protobuf type {@code szdiagnostic.GetDatastoreInfoRequest}
+     * Protobuf type {@code szdiagnostic.GetRepositoryInfoRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szdiagnostic.GetDatastoreInfoRequest)
-        com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:szdiagnostic.GetRepositoryInfoRequest)
+        com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetDatastoreInfoRequest_descriptor;
+        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetRepositoryInfoRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetDatastoreInfoRequest_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetRepositoryInfoRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest.class, com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest.Builder.class);
+                com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest.class, com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest.Builder.class);
       }
 
-      // Construct using com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest.newBuilder()
       private Builder() {
 
       }
@@ -1195,17 +1195,17 @@ public final class SzDiagnosticProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetDatastoreInfoRequest_descriptor;
+        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetRepositoryInfoRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest getDefaultInstanceForType() {
-        return com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest build() {
-        com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest result = buildPartial();
+      public com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest build() {
+        com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1213,24 +1213,24 @@ public final class SzDiagnosticProto {
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest buildPartial() {
-        com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest result = new com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest(this);
+      public com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest buildPartial() {
+        com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest result = new com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest(this);
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest) {
-          return mergeFrom((com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest)other);
+        if (other instanceof com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest) {
+          return mergeFrom((com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest other) {
-        if (other == com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest other) {
+        if (other == com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1273,23 +1273,23 @@ public final class SzDiagnosticProto {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:szdiagnostic.GetDatastoreInfoRequest)
+      // @@protoc_insertion_point(builder_scope:szdiagnostic.GetRepositoryInfoRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:szdiagnostic.GetDatastoreInfoRequest)
-    private static final com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:szdiagnostic.GetRepositoryInfoRequest)
+    private static final com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest();
     }
 
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetDatastoreInfoRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetDatastoreInfoRequest>() {
+    private static final com.google.protobuf.Parser<GetRepositoryInfoRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetRepositoryInfoRequest>() {
       @java.lang.Override
-      public GetDatastoreInfoRequest parsePartialFrom(
+      public GetRepositoryInfoRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1308,24 +1308,24 @@ public final class SzDiagnosticProto {
       }
     };
 
-    public static com.google.protobuf.Parser<GetDatastoreInfoRequest> parser() {
+    public static com.google.protobuf.Parser<GetRepositoryInfoRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<GetDatastoreInfoRequest> getParserForType() {
+    public com.google.protobuf.Parser<GetRepositoryInfoRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoRequest getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface GetDatastoreInfoResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:szdiagnostic.GetDatastoreInfoResponse)
+  public interface GetRepositoryInfoResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:szdiagnostic.GetRepositoryInfoResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1341,12 +1341,12 @@ public final class SzDiagnosticProto {
         getResultBytes();
   }
   /**
-   * Protobuf type {@code szdiagnostic.GetDatastoreInfoResponse}
+   * Protobuf type {@code szdiagnostic.GetRepositoryInfoResponse}
    */
-  public static final class GetDatastoreInfoResponse extends
+  public static final class GetRepositoryInfoResponse extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:szdiagnostic.GetDatastoreInfoResponse)
-      GetDatastoreInfoResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:szdiagnostic.GetRepositoryInfoResponse)
+      GetRepositoryInfoResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -1355,27 +1355,27 @@ public final class SzDiagnosticProto {
         /* minor= */ 30,
         /* patch= */ 2,
         /* suffix= */ "",
-        GetDatastoreInfoResponse.class.getName());
+        GetRepositoryInfoResponse.class.getName());
     }
-    // Use GetDatastoreInfoResponse.newBuilder() to construct.
-    private GetDatastoreInfoResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use GetRepositoryInfoResponse.newBuilder() to construct.
+    private GetRepositoryInfoResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private GetDatastoreInfoResponse() {
+    private GetRepositoryInfoResponse() {
       result_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetDatastoreInfoResponse_descriptor;
+      return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetRepositoryInfoResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetDatastoreInfoResponse_fieldAccessorTable
+      return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetRepositoryInfoResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse.class, com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse.Builder.class);
+              com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse.class, com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -1456,10 +1456,10 @@ public final class SzDiagnosticProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse)) {
+      if (!(obj instanceof com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse)) {
         return super.equals(obj);
       }
-      com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse other = (com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse) obj;
+      com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse other = (com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse) obj;
 
       if (!getResult()
           .equals(other.getResult())) return false;
@@ -1481,44 +1481,44 @@ public final class SzDiagnosticProto {
       return hash;
     }
 
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse parseFrom(byte[] data)
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse parseFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1526,26 +1526,26 @@ public final class SzDiagnosticProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse parseDelimitedFrom(java.io.InputStream input)
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse parseDelimitedFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse parseFrom(
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1558,7 +1558,7 @@ public final class SzDiagnosticProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse prototype) {
+    public static Builder newBuilder(com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1574,26 +1574,26 @@ public final class SzDiagnosticProto {
       return builder;
     }
     /**
-     * Protobuf type {@code szdiagnostic.GetDatastoreInfoResponse}
+     * Protobuf type {@code szdiagnostic.GetRepositoryInfoResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:szdiagnostic.GetDatastoreInfoResponse)
-        com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:szdiagnostic.GetRepositoryInfoResponse)
+        com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetDatastoreInfoResponse_descriptor;
+        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetRepositoryInfoResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetDatastoreInfoResponse_fieldAccessorTable
+        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetRepositoryInfoResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse.class, com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse.Builder.class);
+                com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse.class, com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse.Builder.class);
       }
 
-      // Construct using com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse.newBuilder()
+      // Construct using com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse.newBuilder()
       private Builder() {
 
       }
@@ -1614,17 +1614,17 @@ public final class SzDiagnosticProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetDatastoreInfoResponse_descriptor;
+        return com.senzing.sdk.grpc.SzDiagnosticProto.internal_static_szdiagnostic_GetRepositoryInfoResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse getDefaultInstanceForType() {
-        return com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse.getDefaultInstance();
+      public com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse getDefaultInstanceForType() {
+        return com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse build() {
-        com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse result = buildPartial();
+      public com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse build() {
+        com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1632,14 +1632,14 @@ public final class SzDiagnosticProto {
       }
 
       @java.lang.Override
-      public com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse buildPartial() {
-        com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse result = new com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse(this);
+      public com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse buildPartial() {
+        com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse result = new com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse result) {
+      private void buildPartial0(com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.result_ = result_;
@@ -1648,16 +1648,16 @@ public final class SzDiagnosticProto {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse) {
-          return mergeFrom((com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse)other);
+        if (other instanceof com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse) {
+          return mergeFrom((com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse other) {
-        if (other == com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse other) {
+        if (other == com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse.getDefaultInstance()) return this;
         if (!other.getResult().isEmpty()) {
           result_ = other.result_;
           bitField0_ |= 0x00000001;
@@ -1783,23 +1783,23 @@ public final class SzDiagnosticProto {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:szdiagnostic.GetDatastoreInfoResponse)
+      // @@protoc_insertion_point(builder_scope:szdiagnostic.GetRepositoryInfoResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:szdiagnostic.GetDatastoreInfoResponse)
-    private static final com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:szdiagnostic.GetRepositoryInfoResponse)
+    private static final com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse();
+      DEFAULT_INSTANCE = new com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse();
     }
 
-    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse getDefaultInstance() {
+    public static com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetDatastoreInfoResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetDatastoreInfoResponse>() {
+    private static final com.google.protobuf.Parser<GetRepositoryInfoResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetRepositoryInfoResponse>() {
       @java.lang.Override
-      public GetDatastoreInfoResponse parsePartialFrom(
+      public GetRepositoryInfoResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1818,17 +1818,17 @@ public final class SzDiagnosticProto {
       }
     };
 
-    public static com.google.protobuf.Parser<GetDatastoreInfoResponse> parser() {
+    public static com.google.protobuf.Parser<GetRepositoryInfoResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<GetDatastoreInfoResponse> getParserForType() {
+    public com.google.protobuf.Parser<GetRepositoryInfoResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.senzing.sdk.grpc.SzDiagnosticProto.GetDatastoreInfoResponse getDefaultInstanceForType() {
+    public com.senzing.sdk.grpc.SzDiagnosticProto.GetRepositoryInfoResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4280,25 +4280,25 @@ public final class SzDiagnosticProto {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szdiagnostic_CheckDatastorePerformanceRequest_descriptor;
+    internal_static_szdiagnostic_CheckRepositoryPerformanceRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_szdiagnostic_CheckDatastorePerformanceRequest_fieldAccessorTable;
+      internal_static_szdiagnostic_CheckRepositoryPerformanceRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szdiagnostic_CheckDatastorePerformanceResponse_descriptor;
+    internal_static_szdiagnostic_CheckRepositoryPerformanceResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_szdiagnostic_CheckDatastorePerformanceResponse_fieldAccessorTable;
+      internal_static_szdiagnostic_CheckRepositoryPerformanceResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szdiagnostic_GetDatastoreInfoRequest_descriptor;
+    internal_static_szdiagnostic_GetRepositoryInfoRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_szdiagnostic_GetDatastoreInfoRequest_fieldAccessorTable;
+      internal_static_szdiagnostic_GetRepositoryInfoRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_szdiagnostic_GetDatastoreInfoResponse_descriptor;
+    internal_static_szdiagnostic_GetRepositoryInfoResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_szdiagnostic_GetDatastoreInfoResponse_fieldAccessorTable;
+      internal_static_szdiagnostic_GetRepositoryInfoResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_szdiagnostic_GetFeatureRequest_descriptor;
   private static final 
@@ -4338,60 +4338,61 @@ public final class SzDiagnosticProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022szdiagnostic.proto\022\014szdiagnostic\":\n Ch" +
-      "eckDatastorePerformanceRequest\022\026\n\016second" +
-      "s_to_run\030\001 \001(\005\"3\n!CheckDatastorePerforma" +
-      "nceResponse\022\016\n\006result\030\001 \001(\t\"\031\n\027GetDatast" +
-      "oreInfoRequest\"*\n\030GetDatastoreInfoRespon" +
-      "se\022\016\n\006result\030\001 \001(\t\"\'\n\021GetFeatureRequest\022" +
-      "\022\n\nfeature_id\030\001 \001(\003\"$\n\022GetFeatureRespons" +
-      "e\022\016\n\006result\030\001 \001(\t\"\030\n\026PurgeRepositoryRequ" +
-      "est\"\031\n\027PurgeRepositoryResponse\"(\n\023Reinit" +
-      "ializeRequest\022\021\n\tconfig_id\030\001 \001(\003\"\026\n\024Rein" +
-      "itializeResponse2\201\004\n\014SzDiagnostic\022~\n\031Che" +
-      "ckDatastorePerformance\022..szdiagnostic.Ch" +
-      "eckDatastorePerformanceRequest\032/.szdiagn" +
-      "ostic.CheckDatastorePerformanceResponse\"" +
-      "\000\022c\n\020GetDatastoreInfo\022%.szdiagnostic.Get" +
-      "DatastoreInfoRequest\032&.szdiagnostic.GetD" +
-      "atastoreInfoResponse\"\000\022Q\n\nGetFeature\022\037.s" +
-      "zdiagnostic.GetFeatureRequest\032 .szdiagno" +
-      "stic.GetFeatureResponse\"\000\022`\n\017PurgeReposi" +
-      "tory\022$.szdiagnostic.PurgeRepositoryReque" +
-      "st\032%.szdiagnostic.PurgeRepositoryRespons" +
-      "e\"\000\022W\n\014Reinitialize\022!.szdiagnostic.Reini" +
-      "tializeRequest\032\".szdiagnostic.Reinitiali" +
-      "zeResponse\"\000B`\n\024com.senzing.sdk.grpcB\021Sz" +
-      "DiagnosticProtoZ5github.com/senzing-gara" +
-      "ge/sz-sdk-go-grpc/szdiagnosticb\006proto3"
+      "\n\022szdiagnostic.proto\022\014szdiagnostic\";\n!Ch" +
+      "eckRepositoryPerformanceRequest\022\026\n\016secon" +
+      "ds_to_run\030\001 \001(\005\"4\n\"CheckRepositoryPerfor" +
+      "manceResponse\022\016\n\006result\030\001 \001(\t\"\032\n\030GetRepo" +
+      "sitoryInfoRequest\"+\n\031GetRepositoryInfoRe" +
+      "sponse\022\016\n\006result\030\001 \001(\t\"\'\n\021GetFeatureRequ" +
+      "est\022\022\n\nfeature_id\030\001 \001(\003\"$\n\022GetFeatureRes" +
+      "ponse\022\016\n\006result\030\001 \001(\t\"\030\n\026PurgeRepository" +
+      "Request\"\031\n\027PurgeRepositoryResponse\"(\n\023Re" +
+      "initializeRequest\022\021\n\tconfig_id\030\001 \001(\003\"\026\n\024" +
+      "ReinitializeResponse2\210\004\n\014SzDiagnostic\022\201\001" +
+      "\n\032CheckRepositoryPerformance\022/.szdiagnos" +
+      "tic.CheckRepositoryPerformanceRequest\0320." +
+      "szdiagnostic.CheckRepositoryPerformanceR" +
+      "esponse\"\000\022Q\n\nGetFeature\022\037.szdiagnostic.G" +
+      "etFeatureRequest\032 .szdiagnostic.GetFeatu" +
+      "reResponse\"\000\022f\n\021GetRepositoryInfo\022&.szdi" +
+      "agnostic.GetRepositoryInfoRequest\032\'.szdi" +
+      "agnostic.GetRepositoryInfoResponse\"\000\022`\n\017" +
+      "PurgeRepository\022$.szdiagnostic.PurgeRepo" +
+      "sitoryRequest\032%.szdiagnostic.PurgeReposi" +
+      "toryResponse\"\000\022W\n\014Reinitialize\022!.szdiagn" +
+      "ostic.ReinitializeRequest\032\".szdiagnostic" +
+      ".ReinitializeResponse\"\000B`\n\024com.senzing.s" +
+      "dk.grpcB\021SzDiagnosticProtoZ5github.com/s" +
+      "enzing-garage/sz-sdk-go-grpc/szdiagnosti" +
+      "cb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_szdiagnostic_CheckDatastorePerformanceRequest_descriptor =
+    internal_static_szdiagnostic_CheckRepositoryPerformanceRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_szdiagnostic_CheckDatastorePerformanceRequest_fieldAccessorTable = new
+    internal_static_szdiagnostic_CheckRepositoryPerformanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_szdiagnostic_CheckDatastorePerformanceRequest_descriptor,
+        internal_static_szdiagnostic_CheckRepositoryPerformanceRequest_descriptor,
         new java.lang.String[] { "SecondsToRun", });
-    internal_static_szdiagnostic_CheckDatastorePerformanceResponse_descriptor =
+    internal_static_szdiagnostic_CheckRepositoryPerformanceResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_szdiagnostic_CheckDatastorePerformanceResponse_fieldAccessorTable = new
+    internal_static_szdiagnostic_CheckRepositoryPerformanceResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_szdiagnostic_CheckDatastorePerformanceResponse_descriptor,
+        internal_static_szdiagnostic_CheckRepositoryPerformanceResponse_descriptor,
         new java.lang.String[] { "Result", });
-    internal_static_szdiagnostic_GetDatastoreInfoRequest_descriptor =
+    internal_static_szdiagnostic_GetRepositoryInfoRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_szdiagnostic_GetDatastoreInfoRequest_fieldAccessorTable = new
+    internal_static_szdiagnostic_GetRepositoryInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_szdiagnostic_GetDatastoreInfoRequest_descriptor,
+        internal_static_szdiagnostic_GetRepositoryInfoRequest_descriptor,
         new java.lang.String[] { });
-    internal_static_szdiagnostic_GetDatastoreInfoResponse_descriptor =
+    internal_static_szdiagnostic_GetRepositoryInfoResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_szdiagnostic_GetDatastoreInfoResponse_fieldAccessorTable = new
+    internal_static_szdiagnostic_GetRepositoryInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_szdiagnostic_GetDatastoreInfoResponse_descriptor,
+        internal_static_szdiagnostic_GetRepositoryInfoResponse_descriptor,
         new java.lang.String[] { "Result", });
     internal_static_szdiagnostic_GetFeatureRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);

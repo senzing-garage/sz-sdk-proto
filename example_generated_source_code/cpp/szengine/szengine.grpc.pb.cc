@@ -6,24 +6,24 @@
 #include "szengine.grpc.pb.h"
 
 #include <functional>
-#include <grpcpp/support/async_stream.h>
-#include <grpcpp/support/async_unary_call.h>
-#include <grpcpp/impl/channel_interface.h>
-#include <grpcpp/impl/client_unary_call.h>
-#include <grpcpp/support/client_callback.h>
-#include <grpcpp/support/message_allocator.h>
-#include <grpcpp/support/method_handler.h>
-#include <grpcpp/impl/rpc_service_method.h>
-#include <grpcpp/support/server_callback.h>
+#include <grpcpp/impl/codegen/async_stream.h>
+#include <grpcpp/impl/codegen/async_unary_call.h>
+#include <grpcpp/impl/codegen/channel_interface.h>
+#include <grpcpp/impl/codegen/client_unary_call.h>
+#include <grpcpp/impl/codegen/client_callback.h>
+#include <grpcpp/impl/codegen/message_allocator.h>
+#include <grpcpp/impl/codegen/method_handler.h>
+#include <grpcpp/impl/codegen/rpc_service_method.h>
+#include <grpcpp/impl/codegen/server_callback.h>
 #include <grpcpp/impl/codegen/server_callback_handlers.h>
-#include <grpcpp/server_context.h>
-#include <grpcpp/impl/service_type.h>
-#include <grpcpp/support/sync_stream.h>
+#include <grpcpp/impl/codegen/server_context.h>
+#include <grpcpp/impl/codegen/service_type.h>
+#include <grpcpp/impl/codegen/sync_stream.h>
 namespace szengine {
 
 static const char* SzEngine_method_names[] = {
   "/szengine.SzEngine/AddRecord",
-  "/szengine.SzEngine/CloseExport",
+  "/szengine.SzEngine/CloseExportReport",
   "/szengine.SzEngine/CountRedoRecords",
   "/szengine.SzEngine/DeleteRecord",
   "/szengine.SzEngine/ExportCsvEntityReport",
@@ -39,11 +39,11 @@ static const char* SzEngine_method_names[] = {
   "/szengine.SzEngine/GetEntityByEntityId",
   "/szengine.SzEngine/GetEntityByRecordId",
   "/szengine.SzEngine/GetRecord",
+  "/szengine.SzEngine/GetRecordPreview",
   "/szengine.SzEngine/GetRedoRecord",
   "/szengine.SzEngine/GetStats",
   "/szengine.SzEngine/GetVirtualEntityByRecordId",
   "/szengine.SzEngine/HowEntityByEntityId",
-  "/szengine.SzEngine/PreprocessRecord",
   "/szengine.SzEngine/PrimeEngine",
   "/szengine.SzEngine/ProcessRedoRecord",
   "/szengine.SzEngine/ReevaluateEntity",
@@ -66,7 +66,7 @@ std::unique_ptr< SzEngine::Stub> SzEngine::NewStub(const std::shared_ptr< ::grpc
 
 SzEngine::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
   : channel_(channel), rpcmethod_AddRecord_(SzEngine_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_CloseExport_(SzEngine_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_CloseExportReport_(SzEngine_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_CountRedoRecords_(SzEngine_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_DeleteRecord_(SzEngine_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_ExportCsvEntityReport_(SzEngine_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
@@ -82,11 +82,11 @@ SzEngine::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, 
   , rpcmethod_GetEntityByEntityId_(SzEngine_method_names[14], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetEntityByRecordId_(SzEngine_method_names[15], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_GetRecord_(SzEngine_method_names[16], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetRedoRecord_(SzEngine_method_names[17], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetStats_(SzEngine_method_names[18], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetVirtualEntityByRecordId_(SzEngine_method_names[19], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_HowEntityByEntityId_(SzEngine_method_names[20], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_PreprocessRecord_(SzEngine_method_names[21], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetRecordPreview_(SzEngine_method_names[17], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetRedoRecord_(SzEngine_method_names[18], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetStats_(SzEngine_method_names[19], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetVirtualEntityByRecordId_(SzEngine_method_names[20], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_HowEntityByEntityId_(SzEngine_method_names[21], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_PrimeEngine_(SzEngine_method_names[22], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_ProcessRedoRecord_(SzEngine_method_names[23], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_ReevaluateEntity_(SzEngine_method_names[24], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
@@ -124,25 +124,25 @@ void SzEngine::Stub::async::AddRecord(::grpc::ClientContext* context, const ::sz
   return result;
 }
 
-::grpc::Status SzEngine::Stub::CloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest& request, ::szengine::CloseExportResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::szengine::CloseExportRequest, ::szengine::CloseExportResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_CloseExport_, context, request, response);
+::grpc::Status SzEngine::Stub::CloseExportReport(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest& request, ::szengine::CloseExportReportResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::szengine::CloseExportReportRequest, ::szengine::CloseExportReportResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_CloseExportReport_, context, request, response);
 }
 
-void SzEngine::Stub::async::CloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest* request, ::szengine::CloseExportResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::szengine::CloseExportRequest, ::szengine::CloseExportResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CloseExport_, context, request, response, std::move(f));
+void SzEngine::Stub::async::CloseExportReport(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest* request, ::szengine::CloseExportReportResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::szengine::CloseExportReportRequest, ::szengine::CloseExportReportResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CloseExportReport_, context, request, response, std::move(f));
 }
 
-void SzEngine::Stub::async::CloseExport(::grpc::ClientContext* context, const ::szengine::CloseExportRequest* request, ::szengine::CloseExportResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CloseExport_, context, request, response, reactor);
+void SzEngine::Stub::async::CloseExportReport(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest* request, ::szengine::CloseExportReportResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_CloseExportReport_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::szengine::CloseExportResponse>* SzEngine::Stub::PrepareAsyncCloseExportRaw(::grpc::ClientContext* context, const ::szengine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szengine::CloseExportResponse, ::szengine::CloseExportRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_CloseExport_, context, request);
+::grpc::ClientAsyncResponseReader< ::szengine::CloseExportReportResponse>* SzEngine::Stub::PrepareAsyncCloseExportReportRaw(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szengine::CloseExportReportResponse, ::szengine::CloseExportReportRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_CloseExportReport_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::szengine::CloseExportResponse>* SzEngine::Stub::AsyncCloseExportRaw(::grpc::ClientContext* context, const ::szengine::CloseExportRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::szengine::CloseExportReportResponse>* SzEngine::Stub::AsyncCloseExportReportRaw(::grpc::ClientContext* context, const ::szengine::CloseExportReportRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncCloseExportRaw(context, request, cq);
+    this->PrepareAsyncCloseExportReportRaw(context, request, cq);
   result->StartCall();
   return result;
 }
@@ -492,6 +492,29 @@ void SzEngine::Stub::async::GetRecord(::grpc::ClientContext* context, const ::sz
   return result;
 }
 
+::grpc::Status SzEngine::Stub::GetRecordPreview(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest& request, ::szengine::GetRecordPreviewResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::szengine::GetRecordPreviewRequest, ::szengine::GetRecordPreviewResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetRecordPreview_, context, request, response);
+}
+
+void SzEngine::Stub::async::GetRecordPreview(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest* request, ::szengine::GetRecordPreviewResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::szengine::GetRecordPreviewRequest, ::szengine::GetRecordPreviewResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetRecordPreview_, context, request, response, std::move(f));
+}
+
+void SzEngine::Stub::async::GetRecordPreview(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest* request, ::szengine::GetRecordPreviewResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetRecordPreview_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::szengine::GetRecordPreviewResponse>* SzEngine::Stub::PrepareAsyncGetRecordPreviewRaw(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szengine::GetRecordPreviewResponse, ::szengine::GetRecordPreviewRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetRecordPreview_, context, request);
+}
+
+::grpc::ClientAsyncResponseReader< ::szengine::GetRecordPreviewResponse>* SzEngine::Stub::AsyncGetRecordPreviewRaw(::grpc::ClientContext* context, const ::szengine::GetRecordPreviewRequest& request, ::grpc::CompletionQueue* cq) {
+  auto* result =
+    this->PrepareAsyncGetRecordPreviewRaw(context, request, cq);
+  result->StartCall();
+  return result;
+}
+
 ::grpc::Status SzEngine::Stub::GetRedoRecord(::grpc::ClientContext* context, const ::szengine::GetRedoRecordRequest& request, ::szengine::GetRedoRecordResponse* response) {
   return ::grpc::internal::BlockingUnaryCall< ::szengine::GetRedoRecordRequest, ::szengine::GetRedoRecordResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetRedoRecord_, context, request, response);
 }
@@ -580,29 +603,6 @@ void SzEngine::Stub::async::HowEntityByEntityId(::grpc::ClientContext* context, 
 ::grpc::ClientAsyncResponseReader< ::szengine::HowEntityByEntityIdResponse>* SzEngine::Stub::AsyncHowEntityByEntityIdRaw(::grpc::ClientContext* context, const ::szengine::HowEntityByEntityIdRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncHowEntityByEntityIdRaw(context, request, cq);
-  result->StartCall();
-  return result;
-}
-
-::grpc::Status SzEngine::Stub::PreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest& request, ::szengine::PreprocessRecordResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::szengine::PreprocessRecordRequest, ::szengine::PreprocessRecordResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_PreprocessRecord_, context, request, response);
-}
-
-void SzEngine::Stub::async::PreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest* request, ::szengine::PreprocessRecordResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::szengine::PreprocessRecordRequest, ::szengine::PreprocessRecordResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_PreprocessRecord_, context, request, response, std::move(f));
-}
-
-void SzEngine::Stub::async::PreprocessRecord(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest* request, ::szengine::PreprocessRecordResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_PreprocessRecord_, context, request, response, reactor);
-}
-
-::grpc::ClientAsyncResponseReader< ::szengine::PreprocessRecordResponse>* SzEngine::Stub::PrepareAsyncPreprocessRecordRaw(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::szengine::PreprocessRecordResponse, ::szengine::PreprocessRecordRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_PreprocessRecord_, context, request);
-}
-
-::grpc::ClientAsyncResponseReader< ::szengine::PreprocessRecordResponse>* SzEngine::Stub::AsyncPreprocessRecordRaw(::grpc::ClientContext* context, const ::szengine::PreprocessRecordRequest& request, ::grpc::CompletionQueue* cq) {
-  auto* result =
-    this->PrepareAsyncPreprocessRecordRaw(context, request, cq);
   result->StartCall();
   return result;
 }
@@ -883,12 +883,12 @@ SzEngine::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzEngine_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SzEngine::Service, ::szengine::CloseExportRequest, ::szengine::CloseExportResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< SzEngine::Service, ::szengine::CloseExportReportRequest, ::szengine::CloseExportReportResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SzEngine::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::szengine::CloseExportRequest* req,
-             ::szengine::CloseExportResponse* resp) {
-               return service->CloseExport(ctx, req, resp);
+             const ::szengine::CloseExportReportRequest* req,
+             ::szengine::CloseExportReportResponse* resp) {
+               return service->CloseExportReport(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzEngine_method_names[2],
@@ -1043,6 +1043,16 @@ SzEngine::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzEngine_method_names[17],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< SzEngine::Service, ::szengine::GetRecordPreviewRequest, ::szengine::GetRecordPreviewResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](SzEngine::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::szengine::GetRecordPreviewRequest* req,
+             ::szengine::GetRecordPreviewResponse* resp) {
+               return service->GetRecordPreview(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      SzEngine_method_names[18],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< SzEngine::Service, ::szengine::GetRedoRecordRequest, ::szengine::GetRedoRecordResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SzEngine::Service* service,
              ::grpc::ServerContext* ctx,
@@ -1051,7 +1061,7 @@ SzEngine::Service::Service() {
                return service->GetRedoRecord(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      SzEngine_method_names[18],
+      SzEngine_method_names[19],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< SzEngine::Service, ::szengine::GetStatsRequest, ::szengine::GetStatsResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SzEngine::Service* service,
@@ -1061,7 +1071,7 @@ SzEngine::Service::Service() {
                return service->GetStats(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      SzEngine_method_names[19],
+      SzEngine_method_names[20],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< SzEngine::Service, ::szengine::GetVirtualEntityByRecordIdRequest, ::szengine::GetVirtualEntityByRecordIdResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SzEngine::Service* service,
@@ -1071,7 +1081,7 @@ SzEngine::Service::Service() {
                return service->GetVirtualEntityByRecordId(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      SzEngine_method_names[20],
+      SzEngine_method_names[21],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< SzEngine::Service, ::szengine::HowEntityByEntityIdRequest, ::szengine::HowEntityByEntityIdResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](SzEngine::Service* service,
@@ -1079,16 +1089,6 @@ SzEngine::Service::Service() {
              const ::szengine::HowEntityByEntityIdRequest* req,
              ::szengine::HowEntityByEntityIdResponse* resp) {
                return service->HowEntityByEntityId(ctx, req, resp);
-             }, this)));
-  AddMethod(new ::grpc::internal::RpcServiceMethod(
-      SzEngine_method_names[21],
-      ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< SzEngine::Service, ::szengine::PreprocessRecordRequest, ::szengine::PreprocessRecordResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](SzEngine::Service* service,
-             ::grpc::ServerContext* ctx,
-             const ::szengine::PreprocessRecordRequest* req,
-             ::szengine::PreprocessRecordResponse* resp) {
-               return service->PreprocessRecord(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       SzEngine_method_names[22],
@@ -1222,7 +1222,7 @@ SzEngine::Service::~Service() {
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status SzEngine::Service::CloseExport(::grpc::ServerContext* context, const ::szengine::CloseExportRequest* request, ::szengine::CloseExportResponse* response) {
+::grpc::Status SzEngine::Service::CloseExportReport(::grpc::ServerContext* context, const ::szengine::CloseExportReportRequest* request, ::szengine::CloseExportReportResponse* response) {
   (void) context;
   (void) request;
   (void) response;
@@ -1334,6 +1334,13 @@ SzEngine::Service::~Service() {
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
+::grpc::Status SzEngine::Service::GetRecordPreview(::grpc::ServerContext* context, const ::szengine::GetRecordPreviewRequest* request, ::szengine::GetRecordPreviewResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
 ::grpc::Status SzEngine::Service::GetRedoRecord(::grpc::ServerContext* context, const ::szengine::GetRedoRecordRequest* request, ::szengine::GetRedoRecordResponse* response) {
   (void) context;
   (void) request;
@@ -1356,13 +1363,6 @@ SzEngine::Service::~Service() {
 }
 
 ::grpc::Status SzEngine::Service::HowEntityByEntityId(::grpc::ServerContext* context, const ::szengine::HowEntityByEntityIdRequest* request, ::szengine::HowEntityByEntityIdResponse* response) {
-  (void) context;
-  (void) request;
-  (void) response;
-  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
-}
-
-::grpc::Status SzEngine::Service::PreprocessRecord(::grpc::ServerContext* context, const ::szengine::PreprocessRecordRequest* request, ::szengine::PreprocessRecordResponse* response) {
   (void) context;
   (void) request;
   (void) response;

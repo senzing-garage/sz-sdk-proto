@@ -54,22 +54,14 @@ extern "C" {
 extern const ::google::protobuf::internal::DescriptorTable descriptor_table_szdiagnostic_2eproto;
 }  // extern "C"
 namespace szdiagnostic {
-class CheckDatastorePerformanceRequest;
-struct CheckDatastorePerformanceRequestDefaultTypeInternal;
-extern CheckDatastorePerformanceRequestDefaultTypeInternal _CheckDatastorePerformanceRequest_default_instance_;
-extern const ::google::protobuf::internal::ClassDataFull CheckDatastorePerformanceRequest_class_data_;
-class CheckDatastorePerformanceResponse;
-struct CheckDatastorePerformanceResponseDefaultTypeInternal;
-extern CheckDatastorePerformanceResponseDefaultTypeInternal _CheckDatastorePerformanceResponse_default_instance_;
-extern const ::google::protobuf::internal::ClassDataFull CheckDatastorePerformanceResponse_class_data_;
-class GetDatastoreInfoRequest;
-struct GetDatastoreInfoRequestDefaultTypeInternal;
-extern GetDatastoreInfoRequestDefaultTypeInternal _GetDatastoreInfoRequest_default_instance_;
-extern const ::google::protobuf::internal::ClassDataFull GetDatastoreInfoRequest_class_data_;
-class GetDatastoreInfoResponse;
-struct GetDatastoreInfoResponseDefaultTypeInternal;
-extern GetDatastoreInfoResponseDefaultTypeInternal _GetDatastoreInfoResponse_default_instance_;
-extern const ::google::protobuf::internal::ClassDataFull GetDatastoreInfoResponse_class_data_;
+class CheckRepositoryPerformanceRequest;
+struct CheckRepositoryPerformanceRequestDefaultTypeInternal;
+extern CheckRepositoryPerformanceRequestDefaultTypeInternal _CheckRepositoryPerformanceRequest_default_instance_;
+extern const ::google::protobuf::internal::ClassDataFull CheckRepositoryPerformanceRequest_class_data_;
+class CheckRepositoryPerformanceResponse;
+struct CheckRepositoryPerformanceResponseDefaultTypeInternal;
+extern CheckRepositoryPerformanceResponseDefaultTypeInternal _CheckRepositoryPerformanceResponse_default_instance_;
+extern const ::google::protobuf::internal::ClassDataFull CheckRepositoryPerformanceResponse_class_data_;
 class GetFeatureRequest;
 struct GetFeatureRequestDefaultTypeInternal;
 extern GetFeatureRequestDefaultTypeInternal _GetFeatureRequest_default_instance_;
@@ -78,6 +70,14 @@ class GetFeatureResponse;
 struct GetFeatureResponseDefaultTypeInternal;
 extern GetFeatureResponseDefaultTypeInternal _GetFeatureResponse_default_instance_;
 extern const ::google::protobuf::internal::ClassDataFull GetFeatureResponse_class_data_;
+class GetRepositoryInfoRequest;
+struct GetRepositoryInfoRequestDefaultTypeInternal;
+extern GetRepositoryInfoRequestDefaultTypeInternal _GetRepositoryInfoRequest_default_instance_;
+extern const ::google::protobuf::internal::ClassDataFull GetRepositoryInfoRequest_class_data_;
+class GetRepositoryInfoResponse;
+struct GetRepositoryInfoResponseDefaultTypeInternal;
+extern GetRepositoryInfoResponseDefaultTypeInternal _GetRepositoryInfoResponse_default_instance_;
+extern const ::google::protobuf::internal::ClassDataFull GetRepositoryInfoResponse_class_data_;
 class PurgeRepositoryRequest;
 struct PurgeRepositoryRequestDefaultTypeInternal;
 extern PurgeRepositoryRequestDefaultTypeInternal _PurgeRepositoryRequest_default_instance_;
@@ -736,6 +736,348 @@ class PurgeRepositoryRequest final : public ::google::protobuf::internal::ZeroFi
 extern const ::google::protobuf::internal::ClassDataFull PurgeRepositoryRequest_class_data_;
 // -------------------------------------------------------------------
 
+class GetRepositoryInfoResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:szdiagnostic.GetRepositoryInfoResponse) */ {
+ public:
+  inline GetRepositoryInfoResponse() : GetRepositoryInfoResponse(nullptr) {}
+  ~GetRepositoryInfoResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(GetRepositoryInfoResponse* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(GetRepositoryInfoResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR GetRepositoryInfoResponse(::google::protobuf::internal::ConstantInitialized);
+
+  inline GetRepositoryInfoResponse(const GetRepositoryInfoResponse& from) : GetRepositoryInfoResponse(nullptr, from) {}
+  inline GetRepositoryInfoResponse(GetRepositoryInfoResponse&& from) noexcept
+      : GetRepositoryInfoResponse(nullptr, std::move(from)) {}
+  inline GetRepositoryInfoResponse& operator=(const GetRepositoryInfoResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetRepositoryInfoResponse& operator=(GetRepositoryInfoResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetRepositoryInfoResponse& default_instance() {
+    return *reinterpret_cast<const GetRepositoryInfoResponse*>(
+        &_GetRepositoryInfoResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 3;
+  friend void swap(GetRepositoryInfoResponse& a, GetRepositoryInfoResponse& b) { a.Swap(&b); }
+  inline void Swap(GetRepositoryInfoResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetRepositoryInfoResponse* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetRepositoryInfoResponse* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<GetRepositoryInfoResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const GetRepositoryInfoResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const GetRepositoryInfoResponse& from) { GetRepositoryInfoResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(GetRepositoryInfoResponse* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "szdiagnostic.GetRepositoryInfoResponse"; }
+
+ protected:
+  explicit GetRepositoryInfoResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  GetRepositoryInfoResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const GetRepositoryInfoResponse& from);
+  GetRepositoryInfoResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, GetRepositoryInfoResponse&& from) noexcept
+      : GetRepositoryInfoResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_();
+
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kResultFieldNumber = 1,
+  };
+  // string result = 1;
+  void clear_result() ;
+  const std::string& result() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_result(Arg_&& arg, Args_... args);
+  std::string* PROTOBUF_NONNULL mutable_result();
+  [[nodiscard]] std::string* PROTOBUF_NULLABLE release_result();
+  void set_allocated_result(std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const std::string& _internal_result() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
+  std::string* PROTOBUF_NONNULL _internal_mutable_result();
+
+  public:
+  // @@protoc_insertion_point(class_scope:szdiagnostic.GetRepositoryInfoResponse)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<0, 1,
+                                   0, 53,
+                                   2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const GetRepositoryInfoResponse& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr result_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_szdiagnostic_2eproto;
+};
+
+extern const ::google::protobuf::internal::ClassDataFull GetRepositoryInfoResponse_class_data_;
+// -------------------------------------------------------------------
+
+class GetRepositoryInfoRequest final : public ::google::protobuf::internal::ZeroFieldsBase
+/* @@protoc_insertion_point(class_definition:szdiagnostic.GetRepositoryInfoRequest) */ {
+ public:
+  inline GetRepositoryInfoRequest() : GetRepositoryInfoRequest(nullptr) {}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(GetRepositoryInfoRequest* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(GetRepositoryInfoRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR GetRepositoryInfoRequest(::google::protobuf::internal::ConstantInitialized);
+
+  inline GetRepositoryInfoRequest(const GetRepositoryInfoRequest& from) : GetRepositoryInfoRequest(nullptr, from) {}
+  inline GetRepositoryInfoRequest(GetRepositoryInfoRequest&& from) noexcept
+      : GetRepositoryInfoRequest(nullptr, std::move(from)) {}
+  inline GetRepositoryInfoRequest& operator=(const GetRepositoryInfoRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetRepositoryInfoRequest& operator=(GetRepositoryInfoRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const GetRepositoryInfoRequest& default_instance() {
+    return *reinterpret_cast<const GetRepositoryInfoRequest*>(
+        &_GetRepositoryInfoRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 2;
+  friend void swap(GetRepositoryInfoRequest& a, GetRepositoryInfoRequest& b) { a.Swap(&b); }
+  inline void Swap(GetRepositoryInfoRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(GetRepositoryInfoRequest* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  GetRepositoryInfoRequest* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<GetRepositoryInfoRequest>(arena);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const GetRepositoryInfoRequest& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const GetRepositoryInfoRequest& from) {
+    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "szdiagnostic.GetRepositoryInfoRequest"; }
+
+ protected:
+  explicit GetRepositoryInfoRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  GetRepositoryInfoRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const GetRepositoryInfoRequest& from);
+  GetRepositoryInfoRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, GetRepositoryInfoRequest&& from) noexcept
+      : GetRepositoryInfoRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_();
+
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  // @@protoc_insertion_point(class_scope:szdiagnostic.GetRepositoryInfoRequest)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<0, 0,
+                                   0, 0,
+                                   2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const GetRepositoryInfoRequest& from_msg);
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  friend struct ::TableStruct_szdiagnostic_2eproto;
+};
+
+extern const ::google::protobuf::internal::ClassDataFull GetRepositoryInfoRequest_class_data_;
+// -------------------------------------------------------------------
+
 class GetFeatureResponse final : public ::google::protobuf::Message
 /* @@protoc_insertion_point(class_definition:szdiagnostic.GetFeatureResponse) */ {
  public:
@@ -1123,30 +1465,30 @@ class GetFeatureRequest final : public ::google::protobuf::Message
 extern const ::google::protobuf::internal::ClassDataFull GetFeatureRequest_class_data_;
 // -------------------------------------------------------------------
 
-class GetDatastoreInfoResponse final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:szdiagnostic.GetDatastoreInfoResponse) */ {
+class CheckRepositoryPerformanceResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:szdiagnostic.CheckRepositoryPerformanceResponse) */ {
  public:
-  inline GetDatastoreInfoResponse() : GetDatastoreInfoResponse(nullptr) {}
-  ~GetDatastoreInfoResponse() PROTOBUF_FINAL;
+  inline CheckRepositoryPerformanceResponse() : CheckRepositoryPerformanceResponse(nullptr) {}
+  ~CheckRepositoryPerformanceResponse() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(GetDatastoreInfoResponse* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
+  void operator delete(CheckRepositoryPerformanceResponse* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(GetDatastoreInfoResponse));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(CheckRepositoryPerformanceResponse));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR GetDatastoreInfoResponse(::google::protobuf::internal::ConstantInitialized);
+  explicit PROTOBUF_CONSTEXPR CheckRepositoryPerformanceResponse(::google::protobuf::internal::ConstantInitialized);
 
-  inline GetDatastoreInfoResponse(const GetDatastoreInfoResponse& from) : GetDatastoreInfoResponse(nullptr, from) {}
-  inline GetDatastoreInfoResponse(GetDatastoreInfoResponse&& from) noexcept
-      : GetDatastoreInfoResponse(nullptr, std::move(from)) {}
-  inline GetDatastoreInfoResponse& operator=(const GetDatastoreInfoResponse& from) {
+  inline CheckRepositoryPerformanceResponse(const CheckRepositoryPerformanceResponse& from) : CheckRepositoryPerformanceResponse(nullptr, from) {}
+  inline CheckRepositoryPerformanceResponse(CheckRepositoryPerformanceResponse&& from) noexcept
+      : CheckRepositoryPerformanceResponse(nullptr, std::move(from)) {}
+  inline CheckRepositoryPerformanceResponse& operator=(const CheckRepositoryPerformanceResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline GetDatastoreInfoResponse& operator=(GetDatastoreInfoResponse&& from) noexcept {
+  inline CheckRepositoryPerformanceResponse& operator=(CheckRepositoryPerformanceResponse&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -1174,355 +1516,13 @@ class GetDatastoreInfoResponse final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const GetDatastoreInfoResponse& default_instance() {
-    return *reinterpret_cast<const GetDatastoreInfoResponse*>(
-        &_GetDatastoreInfoResponse_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages = 3;
-  friend void swap(GetDatastoreInfoResponse& a, GetDatastoreInfoResponse& b) { a.Swap(&b); }
-  inline void Swap(GetDatastoreInfoResponse* PROTOBUF_NONNULL other) {
-    if (other == this) return;
-    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(GetDatastoreInfoResponse* PROTOBUF_NONNULL other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  GetDatastoreInfoResponse* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<GetDatastoreInfoResponse>(arena);
-  }
-  using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const GetDatastoreInfoResponse& from);
-  using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const GetDatastoreInfoResponse& from) { GetDatastoreInfoResponse::MergeImpl(*this, from); }
-
-  private:
-  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
-                        const ::google::protobuf::MessageLite& from_msg);
-
-  public:
-  bool IsInitialized() const {
-    return true;
-  }
-  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
-  #if defined(PROTOBUF_CUSTOM_VTABLE)
-  private:
-  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
-  static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
-
-  public:
-  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
-  ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
-    return _InternalSerialize(*this, target, stream);
-  }
-  #else   // PROTOBUF_CUSTOM_VTABLE
-  ::size_t ByteSizeLong() const final;
-  ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
-      ::uint8_t* PROTOBUF_NONNULL target,
-      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
-  #endif  // PROTOBUF_CUSTOM_VTABLE
-  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  static void SharedDtor(MessageLite& self);
-  void InternalSwap(GetDatastoreInfoResponse* PROTOBUF_NONNULL other);
- private:
-  template <typename T>
-  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "szdiagnostic.GetDatastoreInfoResponse"; }
-
- protected:
-  explicit GetDatastoreInfoResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  GetDatastoreInfoResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const GetDatastoreInfoResponse& from);
-  GetDatastoreInfoResponse(
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, GetDatastoreInfoResponse&& from) noexcept
-      : GetDatastoreInfoResponse(arena) {
-    *this = ::std::move(from);
-  }
-  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
-  static void* PROTOBUF_NONNULL PlacementNew_(
-      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  static constexpr auto InternalNewImpl_();
-
- public:
-  static constexpr auto InternalGenerateClassData_();
-
-  ::google::protobuf::Metadata GetMetadata() const;
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-  enum : int {
-    kResultFieldNumber = 1,
-  };
-  // string result = 1;
-  void clear_result() ;
-  const std::string& result() const;
-  template <typename Arg_ = const std::string&, typename... Args_>
-  void set_result(Arg_&& arg, Args_... args);
-  std::string* PROTOBUF_NONNULL mutable_result();
-  [[nodiscard]] std::string* PROTOBUF_NULLABLE release_result();
-  void set_allocated_result(std::string* PROTOBUF_NULLABLE value);
-
-  private:
-  const std::string& _internal_result() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_result(const std::string& value);
-  std::string* PROTOBUF_NONNULL _internal_mutable_result();
-
-  public:
-  // @@protoc_insertion_point(class_scope:szdiagnostic.GetDatastoreInfoResponse)
- private:
-  class _Internal;
-  friend class ::google::protobuf::internal::TcParser;
-  static const ::google::protobuf::internal::TcParseTable<0, 1,
-                                   0, 52,
-                                   2>
-      _table_;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-    inline explicit constexpr Impl_(::google::protobuf::internal::ConstantInitialized) noexcept;
-    inline explicit Impl_(
-        ::google::protobuf::internal::InternalVisibility visibility,
-        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-    inline explicit Impl_(
-        ::google::protobuf::internal::InternalVisibility visibility,
-        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-        const GetDatastoreInfoResponse& from_msg);
-    ::google::protobuf::internal::HasBits<1> _has_bits_;
-    ::google::protobuf::internal::CachedSize _cached_size_;
-    ::google::protobuf::internal::ArenaStringPtr result_;
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_szdiagnostic_2eproto;
-};
-
-extern const ::google::protobuf::internal::ClassDataFull GetDatastoreInfoResponse_class_data_;
-// -------------------------------------------------------------------
-
-class GetDatastoreInfoRequest final : public ::google::protobuf::internal::ZeroFieldsBase
-/* @@protoc_insertion_point(class_definition:szdiagnostic.GetDatastoreInfoRequest) */ {
- public:
-  inline GetDatastoreInfoRequest() : GetDatastoreInfoRequest(nullptr) {}
-
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(GetDatastoreInfoRequest* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
-    SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(GetDatastoreInfoRequest));
-  }
-#endif
-
-  template <typename = void>
-  explicit PROTOBUF_CONSTEXPR GetDatastoreInfoRequest(::google::protobuf::internal::ConstantInitialized);
-
-  inline GetDatastoreInfoRequest(const GetDatastoreInfoRequest& from) : GetDatastoreInfoRequest(nullptr, from) {}
-  inline GetDatastoreInfoRequest(GetDatastoreInfoRequest&& from) noexcept
-      : GetDatastoreInfoRequest(nullptr, std::move(from)) {}
-  inline GetDatastoreInfoRequest& operator=(const GetDatastoreInfoRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline GetDatastoreInfoRequest& operator=(GetDatastoreInfoRequest&& from) noexcept {
-    if (this == &from) return *this;
-    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const GetDatastoreInfoRequest& default_instance() {
-    return *reinterpret_cast<const GetDatastoreInfoRequest*>(
-        &_GetDatastoreInfoRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages = 2;
-  friend void swap(GetDatastoreInfoRequest& a, GetDatastoreInfoRequest& b) { a.Swap(&b); }
-  inline void Swap(GetDatastoreInfoRequest* PROTOBUF_NONNULL other) {
-    if (other == this) return;
-    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
-      InternalSwap(other);
-    } else {
-      ::google::protobuf::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(GetDatastoreInfoRequest* PROTOBUF_NONNULL other) {
-    if (other == this) return;
-    ABSL_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  GetDatastoreInfoRequest* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
-    return ::google::protobuf::internal::ZeroFieldsBase::DefaultConstruct<GetDatastoreInfoRequest>(arena);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const GetDatastoreInfoRequest& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl(*this, from);
-  }
-  using ::google::protobuf::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const GetDatastoreInfoRequest& from) {
-    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
-
-  public:
-  bool IsInitialized() const {
-    return true;
-  }
- private:
-  template <typename T>
-  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "szdiagnostic.GetDatastoreInfoRequest"; }
-
- protected:
-  explicit GetDatastoreInfoRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  GetDatastoreInfoRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const GetDatastoreInfoRequest& from);
-  GetDatastoreInfoRequest(
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, GetDatastoreInfoRequest&& from) noexcept
-      : GetDatastoreInfoRequest(arena) {
-    *this = ::std::move(from);
-  }
-  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
-  static void* PROTOBUF_NONNULL PlacementNew_(
-      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  static constexpr auto InternalNewImpl_();
-
- public:
-  static constexpr auto InternalGenerateClassData_();
-
-  ::google::protobuf::Metadata GetMetadata() const;
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-  // @@protoc_insertion_point(class_scope:szdiagnostic.GetDatastoreInfoRequest)
- private:
-  class _Internal;
-  friend class ::google::protobuf::internal::TcParser;
-  static const ::google::protobuf::internal::TcParseTable<0, 0,
-                                   0, 0,
-                                   2>
-      _table_;
-
-  friend class ::google::protobuf::MessageLite;
-  friend class ::google::protobuf::Arena;
-  template <typename T>
-  friend class ::google::protobuf::Arena::InternalHelper;
-  using InternalArenaConstructable_ = void;
-  using DestructorSkippable_ = void;
-  struct Impl_ {
-    inline explicit constexpr Impl_(::google::protobuf::internal::ConstantInitialized) noexcept;
-    inline explicit Impl_(
-        ::google::protobuf::internal::InternalVisibility visibility,
-        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-    inline explicit Impl_(
-        ::google::protobuf::internal::InternalVisibility visibility,
-        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-        const GetDatastoreInfoRequest& from_msg);
-    PROTOBUF_TSAN_DECLARE_MEMBER
-  };
-  friend struct ::TableStruct_szdiagnostic_2eproto;
-};
-
-extern const ::google::protobuf::internal::ClassDataFull GetDatastoreInfoRequest_class_data_;
-// -------------------------------------------------------------------
-
-class CheckDatastorePerformanceResponse final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:szdiagnostic.CheckDatastorePerformanceResponse) */ {
- public:
-  inline CheckDatastorePerformanceResponse() : CheckDatastorePerformanceResponse(nullptr) {}
-  ~CheckDatastorePerformanceResponse() PROTOBUF_FINAL;
-
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(CheckDatastorePerformanceResponse* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
-    SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(CheckDatastorePerformanceResponse));
-  }
-#endif
-
-  template <typename = void>
-  explicit PROTOBUF_CONSTEXPR CheckDatastorePerformanceResponse(::google::protobuf::internal::ConstantInitialized);
-
-  inline CheckDatastorePerformanceResponse(const CheckDatastorePerformanceResponse& from) : CheckDatastorePerformanceResponse(nullptr, from) {}
-  inline CheckDatastorePerformanceResponse(CheckDatastorePerformanceResponse&& from) noexcept
-      : CheckDatastorePerformanceResponse(nullptr, std::move(from)) {}
-  inline CheckDatastorePerformanceResponse& operator=(const CheckDatastorePerformanceResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline CheckDatastorePerformanceResponse& operator=(CheckDatastorePerformanceResponse&& from) noexcept {
-    if (this == &from) return *this;
-    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-  }
-  inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL mutable_unknown_fields()
-      ABSL_ATTRIBUTE_LIFETIME_BOUND {
-    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-  }
-
-  static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
-    return GetDescriptor();
-  }
-  static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const CheckDatastorePerformanceResponse& default_instance() {
-    return *reinterpret_cast<const CheckDatastorePerformanceResponse*>(
-        &_CheckDatastorePerformanceResponse_default_instance_);
+  static const CheckRepositoryPerformanceResponse& default_instance() {
+    return *reinterpret_cast<const CheckRepositoryPerformanceResponse*>(
+        &_CheckRepositoryPerformanceResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 1;
-  friend void swap(CheckDatastorePerformanceResponse& a, CheckDatastorePerformanceResponse& b) { a.Swap(&b); }
-  inline void Swap(CheckDatastorePerformanceResponse* PROTOBUF_NONNULL other) {
+  friend void swap(CheckRepositoryPerformanceResponse& a, CheckRepositoryPerformanceResponse& b) { a.Swap(&b); }
+  inline void Swap(CheckRepositoryPerformanceResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -1530,7 +1530,7 @@ class CheckDatastorePerformanceResponse final : public ::google::protobuf::Messa
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(CheckDatastorePerformanceResponse* PROTOBUF_NONNULL other) {
+  void UnsafeArenaSwap(CheckRepositoryPerformanceResponse* PROTOBUF_NONNULL other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -1538,13 +1538,13 @@ class CheckDatastorePerformanceResponse final : public ::google::protobuf::Messa
 
   // implements Message ----------------------------------------------
 
-  CheckDatastorePerformanceResponse* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<CheckDatastorePerformanceResponse>(arena);
+  CheckRepositoryPerformanceResponse* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<CheckRepositoryPerformanceResponse>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const CheckDatastorePerformanceResponse& from);
+  void CopyFrom(const CheckRepositoryPerformanceResponse& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const CheckDatastorePerformanceResponse& from) { CheckDatastorePerformanceResponse::MergeImpl(*this, from); }
+  void MergeFrom(const CheckRepositoryPerformanceResponse& from) { CheckRepositoryPerformanceResponse::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(::google::protobuf::MessageLite& to_msg,
@@ -1580,18 +1580,18 @@ class CheckDatastorePerformanceResponse final : public ::google::protobuf::Messa
   private:
   void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(CheckDatastorePerformanceResponse* PROTOBUF_NONNULL other);
+  void InternalSwap(CheckRepositoryPerformanceResponse* PROTOBUF_NONNULL other);
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "szdiagnostic.CheckDatastorePerformanceResponse"; }
+  static ::absl::string_view FullMessageName() { return "szdiagnostic.CheckRepositoryPerformanceResponse"; }
 
  protected:
-  explicit CheckDatastorePerformanceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  CheckDatastorePerformanceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const CheckDatastorePerformanceResponse& from);
-  CheckDatastorePerformanceResponse(
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, CheckDatastorePerformanceResponse&& from) noexcept
-      : CheckDatastorePerformanceResponse(arena) {
+  explicit CheckRepositoryPerformanceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  CheckRepositoryPerformanceResponse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const CheckRepositoryPerformanceResponse& from);
+  CheckRepositoryPerformanceResponse(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, CheckRepositoryPerformanceResponse&& from) noexcept
+      : CheckRepositoryPerformanceResponse(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
@@ -1625,12 +1625,12 @@ class CheckDatastorePerformanceResponse final : public ::google::protobuf::Messa
   std::string* PROTOBUF_NONNULL _internal_mutable_result();
 
   public:
-  // @@protoc_insertion_point(class_scope:szdiagnostic.CheckDatastorePerformanceResponse)
+  // @@protoc_insertion_point(class_scope:szdiagnostic.CheckRepositoryPerformanceResponse)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<0, 1,
-                                   0, 61,
+                                   0, 62,
                                    2>
       _table_;
 
@@ -1648,7 +1648,7 @@ class CheckDatastorePerformanceResponse final : public ::google::protobuf::Messa
     inline explicit Impl_(
         ::google::protobuf::internal::InternalVisibility visibility,
         ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-        const CheckDatastorePerformanceResponse& from_msg);
+        const CheckRepositoryPerformanceResponse& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::google::protobuf::internal::ArenaStringPtr result_;
@@ -1658,33 +1658,33 @@ class CheckDatastorePerformanceResponse final : public ::google::protobuf::Messa
   friend struct ::TableStruct_szdiagnostic_2eproto;
 };
 
-extern const ::google::protobuf::internal::ClassDataFull CheckDatastorePerformanceResponse_class_data_;
+extern const ::google::protobuf::internal::ClassDataFull CheckRepositoryPerformanceResponse_class_data_;
 // -------------------------------------------------------------------
 
-class CheckDatastorePerformanceRequest final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:szdiagnostic.CheckDatastorePerformanceRequest) */ {
+class CheckRepositoryPerformanceRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:szdiagnostic.CheckRepositoryPerformanceRequest) */ {
  public:
-  inline CheckDatastorePerformanceRequest() : CheckDatastorePerformanceRequest(nullptr) {}
-  ~CheckDatastorePerformanceRequest() PROTOBUF_FINAL;
+  inline CheckRepositoryPerformanceRequest() : CheckRepositoryPerformanceRequest(nullptr) {}
+  ~CheckRepositoryPerformanceRequest() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-  void operator delete(CheckDatastorePerformanceRequest* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
+  void operator delete(CheckRepositoryPerformanceRequest* PROTOBUF_NONNULL msg, std::destroying_delete_t) {
     SharedDtor(*msg);
-    ::google::protobuf::internal::SizedDelete(msg, sizeof(CheckDatastorePerformanceRequest));
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(CheckRepositoryPerformanceRequest));
   }
 #endif
 
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR CheckDatastorePerformanceRequest(::google::protobuf::internal::ConstantInitialized);
+  explicit PROTOBUF_CONSTEXPR CheckRepositoryPerformanceRequest(::google::protobuf::internal::ConstantInitialized);
 
-  inline CheckDatastorePerformanceRequest(const CheckDatastorePerformanceRequest& from) : CheckDatastorePerformanceRequest(nullptr, from) {}
-  inline CheckDatastorePerformanceRequest(CheckDatastorePerformanceRequest&& from) noexcept
-      : CheckDatastorePerformanceRequest(nullptr, std::move(from)) {}
-  inline CheckDatastorePerformanceRequest& operator=(const CheckDatastorePerformanceRequest& from) {
+  inline CheckRepositoryPerformanceRequest(const CheckRepositoryPerformanceRequest& from) : CheckRepositoryPerformanceRequest(nullptr, from) {}
+  inline CheckRepositoryPerformanceRequest(CheckRepositoryPerformanceRequest&& from) noexcept
+      : CheckRepositoryPerformanceRequest(nullptr, std::move(from)) {}
+  inline CheckRepositoryPerformanceRequest& operator=(const CheckRepositoryPerformanceRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline CheckDatastorePerformanceRequest& operator=(CheckDatastorePerformanceRequest&& from) noexcept {
+  inline CheckRepositoryPerformanceRequest& operator=(CheckRepositoryPerformanceRequest&& from) noexcept {
     if (this == &from) return *this;
     if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
       InternalSwap(&from);
@@ -1712,13 +1712,13 @@ class CheckDatastorePerformanceRequest final : public ::google::protobuf::Messag
   static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const CheckDatastorePerformanceRequest& default_instance() {
-    return *reinterpret_cast<const CheckDatastorePerformanceRequest*>(
-        &_CheckDatastorePerformanceRequest_default_instance_);
+  static const CheckRepositoryPerformanceRequest& default_instance() {
+    return *reinterpret_cast<const CheckRepositoryPerformanceRequest*>(
+        &_CheckRepositoryPerformanceRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 0;
-  friend void swap(CheckDatastorePerformanceRequest& a, CheckDatastorePerformanceRequest& b) { a.Swap(&b); }
-  inline void Swap(CheckDatastorePerformanceRequest* PROTOBUF_NONNULL other) {
+  friend void swap(CheckRepositoryPerformanceRequest& a, CheckRepositoryPerformanceRequest& b) { a.Swap(&b); }
+  inline void Swap(CheckRepositoryPerformanceRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
     if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
       InternalSwap(other);
@@ -1726,7 +1726,7 @@ class CheckDatastorePerformanceRequest final : public ::google::protobuf::Messag
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(CheckDatastorePerformanceRequest* PROTOBUF_NONNULL other) {
+  void UnsafeArenaSwap(CheckRepositoryPerformanceRequest* PROTOBUF_NONNULL other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -1734,13 +1734,13 @@ class CheckDatastorePerformanceRequest final : public ::google::protobuf::Messag
 
   // implements Message ----------------------------------------------
 
-  CheckDatastorePerformanceRequest* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
-    return ::google::protobuf::Message::DefaultConstruct<CheckDatastorePerformanceRequest>(arena);
+  CheckRepositoryPerformanceRequest* PROTOBUF_NONNULL New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<CheckRepositoryPerformanceRequest>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const CheckDatastorePerformanceRequest& from);
+  void CopyFrom(const CheckRepositoryPerformanceRequest& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const CheckDatastorePerformanceRequest& from) { CheckDatastorePerformanceRequest::MergeImpl(*this, from); }
+  void MergeFrom(const CheckRepositoryPerformanceRequest& from) { CheckRepositoryPerformanceRequest::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(::google::protobuf::MessageLite& to_msg,
@@ -1776,18 +1776,18 @@ class CheckDatastorePerformanceRequest final : public ::google::protobuf::Messag
   private:
   void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
   static void SharedDtor(MessageLite& self);
-  void InternalSwap(CheckDatastorePerformanceRequest* PROTOBUF_NONNULL other);
+  void InternalSwap(CheckRepositoryPerformanceRequest* PROTOBUF_NONNULL other);
  private:
   template <typename T>
   friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
-  static ::absl::string_view FullMessageName() { return "szdiagnostic.CheckDatastorePerformanceRequest"; }
+  static ::absl::string_view FullMessageName() { return "szdiagnostic.CheckRepositoryPerformanceRequest"; }
 
  protected:
-  explicit CheckDatastorePerformanceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
-  CheckDatastorePerformanceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const CheckDatastorePerformanceRequest& from);
-  CheckDatastorePerformanceRequest(
-      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, CheckDatastorePerformanceRequest&& from) noexcept
-      : CheckDatastorePerformanceRequest(arena) {
+  explicit CheckRepositoryPerformanceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  CheckRepositoryPerformanceRequest(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const CheckRepositoryPerformanceRequest& from);
+  CheckRepositoryPerformanceRequest(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, CheckRepositoryPerformanceRequest&& from) noexcept
+      : CheckRepositoryPerformanceRequest(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
@@ -1816,7 +1816,7 @@ class CheckDatastorePerformanceRequest final : public ::google::protobuf::Messag
   void _internal_set_seconds_to_run(::int32_t value);
 
   public:
-  // @@protoc_insertion_point(class_scope:szdiagnostic.CheckDatastorePerformanceRequest)
+  // @@protoc_insertion_point(class_scope:szdiagnostic.CheckRepositoryPerformanceRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -1839,7 +1839,7 @@ class CheckDatastorePerformanceRequest final : public ::google::protobuf::Messag
     inline explicit Impl_(
         ::google::protobuf::internal::InternalVisibility visibility,
         ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
-        const CheckDatastorePerformanceRequest& from_msg);
+        const CheckRepositoryPerformanceRequest& from_msg);
     ::google::protobuf::internal::HasBits<1> _has_bits_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::int32_t seconds_to_run_;
@@ -1849,7 +1849,7 @@ class CheckDatastorePerformanceRequest final : public ::google::protobuf::Messag
   friend struct ::TableStruct_szdiagnostic_2eproto;
 };
 
-extern const ::google::protobuf::internal::ClassDataFull CheckDatastorePerformanceRequest_class_data_;
+extern const ::google::protobuf::internal::ClassDataFull CheckRepositoryPerformanceRequest_class_data_;
 
 // ===================================================================
 
@@ -1865,77 +1865,77 @@ extern const ::google::protobuf::internal::ClassDataFull CheckDatastorePerforman
 #endif  // __GNUC__
 // -------------------------------------------------------------------
 
-// CheckDatastorePerformanceRequest
+// CheckRepositoryPerformanceRequest
 
 // int32 seconds_to_run = 1;
-inline void CheckDatastorePerformanceRequest::clear_seconds_to_run() {
+inline void CheckRepositoryPerformanceRequest::clear_seconds_to_run() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.seconds_to_run_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline ::int32_t CheckDatastorePerformanceRequest::seconds_to_run() const {
-  // @@protoc_insertion_point(field_get:szdiagnostic.CheckDatastorePerformanceRequest.seconds_to_run)
+inline ::int32_t CheckRepositoryPerformanceRequest::seconds_to_run() const {
+  // @@protoc_insertion_point(field_get:szdiagnostic.CheckRepositoryPerformanceRequest.seconds_to_run)
   return _internal_seconds_to_run();
 }
-inline void CheckDatastorePerformanceRequest::set_seconds_to_run(::int32_t value) {
+inline void CheckRepositoryPerformanceRequest::set_seconds_to_run(::int32_t value) {
   _internal_set_seconds_to_run(value);
   _impl_._has_bits_[0] |= 0x00000001u;
-  // @@protoc_insertion_point(field_set:szdiagnostic.CheckDatastorePerformanceRequest.seconds_to_run)
+  // @@protoc_insertion_point(field_set:szdiagnostic.CheckRepositoryPerformanceRequest.seconds_to_run)
 }
-inline ::int32_t CheckDatastorePerformanceRequest::_internal_seconds_to_run() const {
+inline ::int32_t CheckRepositoryPerformanceRequest::_internal_seconds_to_run() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.seconds_to_run_;
 }
-inline void CheckDatastorePerformanceRequest::_internal_set_seconds_to_run(::int32_t value) {
+inline void CheckRepositoryPerformanceRequest::_internal_set_seconds_to_run(::int32_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.seconds_to_run_ = value;
 }
 
 // -------------------------------------------------------------------
 
-// CheckDatastorePerformanceResponse
+// CheckRepositoryPerformanceResponse
 
 // string result = 1;
-inline void CheckDatastorePerformanceResponse::clear_result() {
+inline void CheckRepositoryPerformanceResponse::clear_result() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.result_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& CheckDatastorePerformanceResponse::result() const
+inline const std::string& CheckRepositoryPerformanceResponse::result() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szdiagnostic.CheckDatastorePerformanceResponse.result)
+  // @@protoc_insertion_point(field_get:szdiagnostic.CheckRepositoryPerformanceResponse.result)
   return _internal_result();
 }
 template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void CheckDatastorePerformanceResponse::set_result(Arg_&& arg, Args_... args) {
+PROTOBUF_ALWAYS_INLINE void CheckRepositoryPerformanceResponse::set_result(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.result_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szdiagnostic.CheckDatastorePerformanceResponse.result)
+  // @@protoc_insertion_point(field_set:szdiagnostic.CheckRepositoryPerformanceResponse.result)
 }
-inline std::string* PROTOBUF_NONNULL CheckDatastorePerformanceResponse::mutable_result()
+inline std::string* PROTOBUF_NONNULL CheckRepositoryPerformanceResponse::mutable_result()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:szdiagnostic.CheckDatastorePerformanceResponse.result)
+  // @@protoc_insertion_point(field_mutable:szdiagnostic.CheckRepositoryPerformanceResponse.result)
   return _s;
 }
-inline const std::string& CheckDatastorePerformanceResponse::_internal_result() const {
+inline const std::string& CheckRepositoryPerformanceResponse::_internal_result() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.result_.Get();
 }
-inline void CheckDatastorePerformanceResponse::_internal_set_result(const std::string& value) {
+inline void CheckRepositoryPerformanceResponse::_internal_set_result(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.result_.Set(value, GetArena());
 }
-inline std::string* PROTOBUF_NONNULL CheckDatastorePerformanceResponse::_internal_mutable_result() {
+inline std::string* PROTOBUF_NONNULL CheckRepositoryPerformanceResponse::_internal_mutable_result() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.result_.Mutable( GetArena());
 }
-inline std::string* PROTOBUF_NULLABLE CheckDatastorePerformanceResponse::release_result() {
+inline std::string* PROTOBUF_NULLABLE CheckRepositoryPerformanceResponse::release_result() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:szdiagnostic.CheckDatastorePerformanceResponse.result)
+  // @@protoc_insertion_point(field_release:szdiagnostic.CheckRepositoryPerformanceResponse.result)
   if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
     return nullptr;
   }
@@ -1946,7 +1946,7 @@ inline std::string* PROTOBUF_NULLABLE CheckDatastorePerformanceResponse::release
   }
   return released;
 }
-inline void CheckDatastorePerformanceResponse::set_allocated_result(std::string* PROTOBUF_NULLABLE value) {
+inline void CheckRepositoryPerformanceResponse::set_allocated_result(std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
@@ -1957,58 +1957,58 @@ inline void CheckDatastorePerformanceResponse::set_allocated_result(std::string*
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.result_.IsDefault()) {
     _impl_.result_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:szdiagnostic.CheckDatastorePerformanceResponse.result)
+  // @@protoc_insertion_point(field_set_allocated:szdiagnostic.CheckRepositoryPerformanceResponse.result)
 }
 
 // -------------------------------------------------------------------
 
-// GetDatastoreInfoRequest
+// GetRepositoryInfoRequest
 
 // -------------------------------------------------------------------
 
-// GetDatastoreInfoResponse
+// GetRepositoryInfoResponse
 
 // string result = 1;
-inline void GetDatastoreInfoResponse::clear_result() {
+inline void GetRepositoryInfoResponse::clear_result() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.result_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& GetDatastoreInfoResponse::result() const
+inline const std::string& GetRepositoryInfoResponse::result() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:szdiagnostic.GetDatastoreInfoResponse.result)
+  // @@protoc_insertion_point(field_get:szdiagnostic.GetRepositoryInfoResponse.result)
   return _internal_result();
 }
 template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void GetDatastoreInfoResponse::set_result(Arg_&& arg, Args_... args) {
+PROTOBUF_ALWAYS_INLINE void GetRepositoryInfoResponse::set_result(Arg_&& arg, Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.result_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:szdiagnostic.GetDatastoreInfoResponse.result)
+  // @@protoc_insertion_point(field_set:szdiagnostic.GetRepositoryInfoResponse.result)
 }
-inline std::string* PROTOBUF_NONNULL GetDatastoreInfoResponse::mutable_result()
+inline std::string* PROTOBUF_NONNULL GetRepositoryInfoResponse::mutable_result()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_result();
-  // @@protoc_insertion_point(field_mutable:szdiagnostic.GetDatastoreInfoResponse.result)
+  // @@protoc_insertion_point(field_mutable:szdiagnostic.GetRepositoryInfoResponse.result)
   return _s;
 }
-inline const std::string& GetDatastoreInfoResponse::_internal_result() const {
+inline const std::string& GetRepositoryInfoResponse::_internal_result() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.result_.Get();
 }
-inline void GetDatastoreInfoResponse::_internal_set_result(const std::string& value) {
+inline void GetRepositoryInfoResponse::_internal_set_result(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.result_.Set(value, GetArena());
 }
-inline std::string* PROTOBUF_NONNULL GetDatastoreInfoResponse::_internal_mutable_result() {
+inline std::string* PROTOBUF_NONNULL GetRepositoryInfoResponse::_internal_mutable_result() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.result_.Mutable( GetArena());
 }
-inline std::string* PROTOBUF_NULLABLE GetDatastoreInfoResponse::release_result() {
+inline std::string* PROTOBUF_NULLABLE GetRepositoryInfoResponse::release_result() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:szdiagnostic.GetDatastoreInfoResponse.result)
+  // @@protoc_insertion_point(field_release:szdiagnostic.GetRepositoryInfoResponse.result)
   if ((_impl_._has_bits_[0] & 0x00000001u) == 0) {
     return nullptr;
   }
@@ -2019,7 +2019,7 @@ inline std::string* PROTOBUF_NULLABLE GetDatastoreInfoResponse::release_result()
   }
   return released;
 }
-inline void GetDatastoreInfoResponse::set_allocated_result(std::string* PROTOBUF_NULLABLE value) {
+inline void GetRepositoryInfoResponse::set_allocated_result(std::string* PROTOBUF_NULLABLE value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (value != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
@@ -2030,7 +2030,7 @@ inline void GetDatastoreInfoResponse::set_allocated_result(std::string* PROTOBUF
   if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.result_.IsDefault()) {
     _impl_.result_.Set("", GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:szdiagnostic.GetDatastoreInfoResponse.result)
+  // @@protoc_insertion_point(field_set_allocated:szdiagnostic.GetRepositoryInfoResponse.result)
 }
 
 // -------------------------------------------------------------------

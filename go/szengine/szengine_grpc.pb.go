@@ -20,7 +20,7 @@ const _ = grpc.SupportPackageIsVersion9
 
 const (
 	SzEngine_AddRecord_FullMethodName                         = "/szengine.SzEngine/AddRecord"
-	SzEngine_CloseExport_FullMethodName                       = "/szengine.SzEngine/CloseExport"
+	SzEngine_CloseExportReport_FullMethodName                 = "/szengine.SzEngine/CloseExportReport"
 	SzEngine_CountRedoRecords_FullMethodName                  = "/szengine.SzEngine/CountRedoRecords"
 	SzEngine_DeleteRecord_FullMethodName                      = "/szengine.SzEngine/DeleteRecord"
 	SzEngine_ExportCsvEntityReport_FullMethodName             = "/szengine.SzEngine/ExportCsvEntityReport"
@@ -36,11 +36,11 @@ const (
 	SzEngine_GetEntityByEntityId_FullMethodName               = "/szengine.SzEngine/GetEntityByEntityId"
 	SzEngine_GetEntityByRecordId_FullMethodName               = "/szengine.SzEngine/GetEntityByRecordId"
 	SzEngine_GetRecord_FullMethodName                         = "/szengine.SzEngine/GetRecord"
+	SzEngine_GetRecordPreview_FullMethodName                  = "/szengine.SzEngine/GetRecordPreview"
 	SzEngine_GetRedoRecord_FullMethodName                     = "/szengine.SzEngine/GetRedoRecord"
 	SzEngine_GetStats_FullMethodName                          = "/szengine.SzEngine/GetStats"
 	SzEngine_GetVirtualEntityByRecordId_FullMethodName        = "/szengine.SzEngine/GetVirtualEntityByRecordId"
 	SzEngine_HowEntityByEntityId_FullMethodName               = "/szengine.SzEngine/HowEntityByEntityId"
-	SzEngine_PreprocessRecord_FullMethodName                  = "/szengine.SzEngine/PreprocessRecord"
 	SzEngine_PrimeEngine_FullMethodName                       = "/szengine.SzEngine/PrimeEngine"
 	SzEngine_ProcessRedoRecord_FullMethodName                 = "/szengine.SzEngine/ProcessRedoRecord"
 	SzEngine_ReevaluateEntity_FullMethodName                  = "/szengine.SzEngine/ReevaluateEntity"
@@ -60,7 +60,7 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type SzEngineClient interface {
 	AddRecord(ctx context.Context, in *AddRecordRequest, opts ...grpc.CallOption) (*AddRecordResponse, error)
-	CloseExport(ctx context.Context, in *CloseExportRequest, opts ...grpc.CallOption) (*CloseExportResponse, error)
+	CloseExportReport(ctx context.Context, in *CloseExportReportRequest, opts ...grpc.CallOption) (*CloseExportReportResponse, error)
 	CountRedoRecords(ctx context.Context, in *CountRedoRecordsRequest, opts ...grpc.CallOption) (*CountRedoRecordsResponse, error)
 	DeleteRecord(ctx context.Context, in *DeleteRecordRequest, opts ...grpc.CallOption) (*DeleteRecordResponse, error)
 	ExportCsvEntityReport(ctx context.Context, in *ExportCsvEntityReportRequest, opts ...grpc.CallOption) (*ExportCsvEntityReportResponse, error)
@@ -76,11 +76,11 @@ type SzEngineClient interface {
 	GetEntityByEntityId(ctx context.Context, in *GetEntityByEntityIdRequest, opts ...grpc.CallOption) (*GetEntityByEntityIdResponse, error)
 	GetEntityByRecordId(ctx context.Context, in *GetEntityByRecordIdRequest, opts ...grpc.CallOption) (*GetEntityByRecordIdResponse, error)
 	GetRecord(ctx context.Context, in *GetRecordRequest, opts ...grpc.CallOption) (*GetRecordResponse, error)
+	GetRecordPreview(ctx context.Context, in *GetRecordPreviewRequest, opts ...grpc.CallOption) (*GetRecordPreviewResponse, error)
 	GetRedoRecord(ctx context.Context, in *GetRedoRecordRequest, opts ...grpc.CallOption) (*GetRedoRecordResponse, error)
 	GetStats(ctx context.Context, in *GetStatsRequest, opts ...grpc.CallOption) (*GetStatsResponse, error)
 	GetVirtualEntityByRecordId(ctx context.Context, in *GetVirtualEntityByRecordIdRequest, opts ...grpc.CallOption) (*GetVirtualEntityByRecordIdResponse, error)
 	HowEntityByEntityId(ctx context.Context, in *HowEntityByEntityIdRequest, opts ...grpc.CallOption) (*HowEntityByEntityIdResponse, error)
-	PreprocessRecord(ctx context.Context, in *PreprocessRecordRequest, opts ...grpc.CallOption) (*PreprocessRecordResponse, error)
 	PrimeEngine(ctx context.Context, in *PrimeEngineRequest, opts ...grpc.CallOption) (*PrimeEngineResponse, error)
 	ProcessRedoRecord(ctx context.Context, in *ProcessRedoRecordRequest, opts ...grpc.CallOption) (*ProcessRedoRecordResponse, error)
 	ReevaluateEntity(ctx context.Context, in *ReevaluateEntityRequest, opts ...grpc.CallOption) (*ReevaluateEntityResponse, error)
@@ -113,10 +113,10 @@ func (c *szEngineClient) AddRecord(ctx context.Context, in *AddRecordRequest, op
 	return out, nil
 }
 
-func (c *szEngineClient) CloseExport(ctx context.Context, in *CloseExportRequest, opts ...grpc.CallOption) (*CloseExportResponse, error) {
+func (c *szEngineClient) CloseExportReport(ctx context.Context, in *CloseExportReportRequest, opts ...grpc.CallOption) (*CloseExportReportResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(CloseExportResponse)
-	err := c.cc.Invoke(ctx, SzEngine_CloseExport_FullMethodName, in, out, cOpts...)
+	out := new(CloseExportReportResponse)
+	err := c.cc.Invoke(ctx, SzEngine_CloseExportReport_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -273,6 +273,16 @@ func (c *szEngineClient) GetRecord(ctx context.Context, in *GetRecordRequest, op
 	return out, nil
 }
 
+func (c *szEngineClient) GetRecordPreview(ctx context.Context, in *GetRecordPreviewRequest, opts ...grpc.CallOption) (*GetRecordPreviewResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(GetRecordPreviewResponse)
+	err := c.cc.Invoke(ctx, SzEngine_GetRecordPreview_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *szEngineClient) GetRedoRecord(ctx context.Context, in *GetRedoRecordRequest, opts ...grpc.CallOption) (*GetRedoRecordResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetRedoRecordResponse)
@@ -307,16 +317,6 @@ func (c *szEngineClient) HowEntityByEntityId(ctx context.Context, in *HowEntityB
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(HowEntityByEntityIdResponse)
 	err := c.cc.Invoke(ctx, SzEngine_HowEntityByEntityId_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *szEngineClient) PreprocessRecord(ctx context.Context, in *PreprocessRecordRequest, opts ...grpc.CallOption) (*PreprocessRecordResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(PreprocessRecordResponse)
-	err := c.cc.Invoke(ctx, SzEngine_PreprocessRecord_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -466,7 +466,7 @@ func (c *szEngineClient) WhySearch(ctx context.Context, in *WhySearchRequest, op
 // for forward compatibility.
 type SzEngineServer interface {
 	AddRecord(context.Context, *AddRecordRequest) (*AddRecordResponse, error)
-	CloseExport(context.Context, *CloseExportRequest) (*CloseExportResponse, error)
+	CloseExportReport(context.Context, *CloseExportReportRequest) (*CloseExportReportResponse, error)
 	CountRedoRecords(context.Context, *CountRedoRecordsRequest) (*CountRedoRecordsResponse, error)
 	DeleteRecord(context.Context, *DeleteRecordRequest) (*DeleteRecordResponse, error)
 	ExportCsvEntityReport(context.Context, *ExportCsvEntityReportRequest) (*ExportCsvEntityReportResponse, error)
@@ -482,11 +482,11 @@ type SzEngineServer interface {
 	GetEntityByEntityId(context.Context, *GetEntityByEntityIdRequest) (*GetEntityByEntityIdResponse, error)
 	GetEntityByRecordId(context.Context, *GetEntityByRecordIdRequest) (*GetEntityByRecordIdResponse, error)
 	GetRecord(context.Context, *GetRecordRequest) (*GetRecordResponse, error)
+	GetRecordPreview(context.Context, *GetRecordPreviewRequest) (*GetRecordPreviewResponse, error)
 	GetRedoRecord(context.Context, *GetRedoRecordRequest) (*GetRedoRecordResponse, error)
 	GetStats(context.Context, *GetStatsRequest) (*GetStatsResponse, error)
 	GetVirtualEntityByRecordId(context.Context, *GetVirtualEntityByRecordIdRequest) (*GetVirtualEntityByRecordIdResponse, error)
 	HowEntityByEntityId(context.Context, *HowEntityByEntityIdRequest) (*HowEntityByEntityIdResponse, error)
-	PreprocessRecord(context.Context, *PreprocessRecordRequest) (*PreprocessRecordResponse, error)
 	PrimeEngine(context.Context, *PrimeEngineRequest) (*PrimeEngineResponse, error)
 	ProcessRedoRecord(context.Context, *ProcessRedoRecordRequest) (*ProcessRedoRecordResponse, error)
 	ReevaluateEntity(context.Context, *ReevaluateEntityRequest) (*ReevaluateEntityResponse, error)
@@ -512,8 +512,8 @@ type UnimplementedSzEngineServer struct{}
 func (UnimplementedSzEngineServer) AddRecord(context.Context, *AddRecordRequest) (*AddRecordResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AddRecord not implemented")
 }
-func (UnimplementedSzEngineServer) CloseExport(context.Context, *CloseExportRequest) (*CloseExportResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CloseExport not implemented")
+func (UnimplementedSzEngineServer) CloseExportReport(context.Context, *CloseExportReportRequest) (*CloseExportReportResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CloseExportReport not implemented")
 }
 func (UnimplementedSzEngineServer) CountRedoRecords(context.Context, *CountRedoRecordsRequest) (*CountRedoRecordsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CountRedoRecords not implemented")
@@ -560,6 +560,9 @@ func (UnimplementedSzEngineServer) GetEntityByRecordId(context.Context, *GetEnti
 func (UnimplementedSzEngineServer) GetRecord(context.Context, *GetRecordRequest) (*GetRecordResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetRecord not implemented")
 }
+func (UnimplementedSzEngineServer) GetRecordPreview(context.Context, *GetRecordPreviewRequest) (*GetRecordPreviewResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetRecordPreview not implemented")
+}
 func (UnimplementedSzEngineServer) GetRedoRecord(context.Context, *GetRedoRecordRequest) (*GetRedoRecordResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetRedoRecord not implemented")
 }
@@ -571,9 +574,6 @@ func (UnimplementedSzEngineServer) GetVirtualEntityByRecordId(context.Context, *
 }
 func (UnimplementedSzEngineServer) HowEntityByEntityId(context.Context, *HowEntityByEntityIdRequest) (*HowEntityByEntityIdResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method HowEntityByEntityId not implemented")
-}
-func (UnimplementedSzEngineServer) PreprocessRecord(context.Context, *PreprocessRecordRequest) (*PreprocessRecordResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method PreprocessRecord not implemented")
 }
 func (UnimplementedSzEngineServer) PrimeEngine(context.Context, *PrimeEngineRequest) (*PrimeEngineResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PrimeEngine not implemented")
@@ -650,20 +650,20 @@ func _SzEngine_AddRecord_Handler(srv interface{}, ctx context.Context, dec func(
 	return interceptor(ctx, in, info, handler)
 }
 
-func _SzEngine_CloseExport_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CloseExportRequest)
+func _SzEngine_CloseExportReport_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CloseExportReportRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(SzEngineServer).CloseExport(ctx, in)
+		return srv.(SzEngineServer).CloseExportReport(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: SzEngine_CloseExport_FullMethodName,
+		FullMethod: SzEngine_CloseExportReport_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzEngineServer).CloseExport(ctx, req.(*CloseExportRequest))
+		return srv.(SzEngineServer).CloseExportReport(ctx, req.(*CloseExportReportRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -938,6 +938,24 @@ func _SzEngine_GetRecord_Handler(srv interface{}, ctx context.Context, dec func(
 	return interceptor(ctx, in, info, handler)
 }
 
+func _SzEngine_GetRecordPreview_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetRecordPreviewRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(SzEngineServer).GetRecordPreview(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: SzEngine_GetRecordPreview_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(SzEngineServer).GetRecordPreview(ctx, req.(*GetRecordPreviewRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _SzEngine_GetRedoRecord_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetRedoRecordRequest)
 	if err := dec(in); err != nil {
@@ -1006,24 +1024,6 @@ func _SzEngine_HowEntityByEntityId_Handler(srv interface{}, ctx context.Context,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(SzEngineServer).HowEntityByEntityId(ctx, req.(*HowEntityByEntityIdRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _SzEngine_PreprocessRecord_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PreprocessRecordRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(SzEngineServer).PreprocessRecord(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: SzEngine_PreprocessRecord_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzEngineServer).PreprocessRecord(ctx, req.(*PreprocessRecordRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1242,8 +1242,8 @@ var SzEngine_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _SzEngine_AddRecord_Handler,
 		},
 		{
-			MethodName: "CloseExport",
-			Handler:    _SzEngine_CloseExport_Handler,
+			MethodName: "CloseExportReport",
+			Handler:    _SzEngine_CloseExportReport_Handler,
 		},
 		{
 			MethodName: "CountRedoRecords",
@@ -1306,6 +1306,10 @@ var SzEngine_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _SzEngine_GetRecord_Handler,
 		},
 		{
+			MethodName: "GetRecordPreview",
+			Handler:    _SzEngine_GetRecordPreview_Handler,
+		},
+		{
 			MethodName: "GetRedoRecord",
 			Handler:    _SzEngine_GetRedoRecord_Handler,
 		},
@@ -1320,10 +1324,6 @@ var SzEngine_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "HowEntityByEntityId",
 			Handler:    _SzEngine_HowEntityByEntityId_Handler,
-		},
-		{
-			MethodName: "PreprocessRecord",
-			Handler:    _SzEngine_PreprocessRecord_Handler,
 		},
 		{
 			MethodName: "PrimeEngine",

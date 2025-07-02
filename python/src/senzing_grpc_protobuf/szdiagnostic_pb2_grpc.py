@@ -5,7 +5,7 @@ import warnings
 
 import szdiagnostic_pb2 as szdiagnostic__pb2
 
-GRPC_GENERATED_VERSION = '1.73.0'
+GRPC_GENERATED_VERSION = '1.73.1'
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
@@ -34,20 +34,20 @@ class SzDiagnosticStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.CheckDatastorePerformance = channel.unary_unary(
-                '/szdiagnostic.SzDiagnostic/CheckDatastorePerformance',
-                request_serializer=szdiagnostic__pb2.CheckDatastorePerformanceRequest.SerializeToString,
-                response_deserializer=szdiagnostic__pb2.CheckDatastorePerformanceResponse.FromString,
-                _registered_method=True)
-        self.GetDatastoreInfo = channel.unary_unary(
-                '/szdiagnostic.SzDiagnostic/GetDatastoreInfo',
-                request_serializer=szdiagnostic__pb2.GetDatastoreInfoRequest.SerializeToString,
-                response_deserializer=szdiagnostic__pb2.GetDatastoreInfoResponse.FromString,
+        self.CheckRepositoryPerformance = channel.unary_unary(
+                '/szdiagnostic.SzDiagnostic/CheckRepositoryPerformance',
+                request_serializer=szdiagnostic__pb2.CheckRepositoryPerformanceRequest.SerializeToString,
+                response_deserializer=szdiagnostic__pb2.CheckRepositoryPerformanceResponse.FromString,
                 _registered_method=True)
         self.GetFeature = channel.unary_unary(
                 '/szdiagnostic.SzDiagnostic/GetFeature',
                 request_serializer=szdiagnostic__pb2.GetFeatureRequest.SerializeToString,
                 response_deserializer=szdiagnostic__pb2.GetFeatureResponse.FromString,
+                _registered_method=True)
+        self.GetRepositoryInfo = channel.unary_unary(
+                '/szdiagnostic.SzDiagnostic/GetRepositoryInfo',
+                request_serializer=szdiagnostic__pb2.GetRepositoryInfoRequest.SerializeToString,
+                response_deserializer=szdiagnostic__pb2.GetRepositoryInfoResponse.FromString,
                 _registered_method=True)
         self.PurgeRepository = channel.unary_unary(
                 '/szdiagnostic.SzDiagnostic/PurgeRepository',
@@ -64,19 +64,19 @@ class SzDiagnosticStub(object):
 class SzDiagnosticServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def CheckDatastorePerformance(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def GetDatastoreInfo(self, request, context):
+    def CheckRepositoryPerformance(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetFeature(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetRepositoryInfo(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -97,20 +97,20 @@ class SzDiagnosticServicer(object):
 
 def add_SzDiagnosticServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'CheckDatastorePerformance': grpc.unary_unary_rpc_method_handler(
-                    servicer.CheckDatastorePerformance,
-                    request_deserializer=szdiagnostic__pb2.CheckDatastorePerformanceRequest.FromString,
-                    response_serializer=szdiagnostic__pb2.CheckDatastorePerformanceResponse.SerializeToString,
-            ),
-            'GetDatastoreInfo': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetDatastoreInfo,
-                    request_deserializer=szdiagnostic__pb2.GetDatastoreInfoRequest.FromString,
-                    response_serializer=szdiagnostic__pb2.GetDatastoreInfoResponse.SerializeToString,
+            'CheckRepositoryPerformance': grpc.unary_unary_rpc_method_handler(
+                    servicer.CheckRepositoryPerformance,
+                    request_deserializer=szdiagnostic__pb2.CheckRepositoryPerformanceRequest.FromString,
+                    response_serializer=szdiagnostic__pb2.CheckRepositoryPerformanceResponse.SerializeToString,
             ),
             'GetFeature': grpc.unary_unary_rpc_method_handler(
                     servicer.GetFeature,
                     request_deserializer=szdiagnostic__pb2.GetFeatureRequest.FromString,
                     response_serializer=szdiagnostic__pb2.GetFeatureResponse.SerializeToString,
+            ),
+            'GetRepositoryInfo': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetRepositoryInfo,
+                    request_deserializer=szdiagnostic__pb2.GetRepositoryInfoRequest.FromString,
+                    response_serializer=szdiagnostic__pb2.GetRepositoryInfoResponse.SerializeToString,
             ),
             'PurgeRepository': grpc.unary_unary_rpc_method_handler(
                     servicer.PurgeRepository,
@@ -134,7 +134,7 @@ class SzDiagnostic(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def CheckDatastorePerformance(request,
+    def CheckRepositoryPerformance(request,
             target,
             options=(),
             channel_credentials=None,
@@ -147,36 +147,9 @@ class SzDiagnostic(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/szdiagnostic.SzDiagnostic/CheckDatastorePerformance',
-            szdiagnostic__pb2.CheckDatastorePerformanceRequest.SerializeToString,
-            szdiagnostic__pb2.CheckDatastorePerformanceResponse.FromString,
-            options,
-            channel_credentials,
-            insecure,
-            call_credentials,
-            compression,
-            wait_for_ready,
-            timeout,
-            metadata,
-            _registered_method=True)
-
-    @staticmethod
-    def GetDatastoreInfo(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(
-            request,
-            target,
-            '/szdiagnostic.SzDiagnostic/GetDatastoreInfo',
-            szdiagnostic__pb2.GetDatastoreInfoRequest.SerializeToString,
-            szdiagnostic__pb2.GetDatastoreInfoResponse.FromString,
+            '/szdiagnostic.SzDiagnostic/CheckRepositoryPerformance',
+            szdiagnostic__pb2.CheckRepositoryPerformanceRequest.SerializeToString,
+            szdiagnostic__pb2.CheckRepositoryPerformanceResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -204,6 +177,33 @@ class SzDiagnostic(object):
             '/szdiagnostic.SzDiagnostic/GetFeature',
             szdiagnostic__pb2.GetFeatureRequest.SerializeToString,
             szdiagnostic__pb2.GetFeatureResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def GetRepositoryInfo(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/szdiagnostic.SzDiagnostic/GetRepositoryInfo',
+            szdiagnostic__pb2.GetRepositoryInfoRequest.SerializeToString,
+            szdiagnostic__pb2.GetRepositoryInfoResponse.FromString,
             options,
             channel_credentials,
             insecure,

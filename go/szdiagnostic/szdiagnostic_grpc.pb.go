@@ -19,20 +19,20 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	SzDiagnostic_CheckDatastorePerformance_FullMethodName = "/szdiagnostic.SzDiagnostic/CheckDatastorePerformance"
-	SzDiagnostic_GetDatastoreInfo_FullMethodName          = "/szdiagnostic.SzDiagnostic/GetDatastoreInfo"
-	SzDiagnostic_GetFeature_FullMethodName                = "/szdiagnostic.SzDiagnostic/GetFeature"
-	SzDiagnostic_PurgeRepository_FullMethodName           = "/szdiagnostic.SzDiagnostic/PurgeRepository"
-	SzDiagnostic_Reinitialize_FullMethodName              = "/szdiagnostic.SzDiagnostic/Reinitialize"
+	SzDiagnostic_CheckRepositoryPerformance_FullMethodName = "/szdiagnostic.SzDiagnostic/CheckRepositoryPerformance"
+	SzDiagnostic_GetFeature_FullMethodName                 = "/szdiagnostic.SzDiagnostic/GetFeature"
+	SzDiagnostic_GetRepositoryInfo_FullMethodName          = "/szdiagnostic.SzDiagnostic/GetRepositoryInfo"
+	SzDiagnostic_PurgeRepository_FullMethodName            = "/szdiagnostic.SzDiagnostic/PurgeRepository"
+	SzDiagnostic_Reinitialize_FullMethodName               = "/szdiagnostic.SzDiagnostic/Reinitialize"
 )
 
 // SzDiagnosticClient is the client API for SzDiagnostic service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type SzDiagnosticClient interface {
-	CheckDatastorePerformance(ctx context.Context, in *CheckDatastorePerformanceRequest, opts ...grpc.CallOption) (*CheckDatastorePerformanceResponse, error)
-	GetDatastoreInfo(ctx context.Context, in *GetDatastoreInfoRequest, opts ...grpc.CallOption) (*GetDatastoreInfoResponse, error)
+	CheckRepositoryPerformance(ctx context.Context, in *CheckRepositoryPerformanceRequest, opts ...grpc.CallOption) (*CheckRepositoryPerformanceResponse, error)
 	GetFeature(ctx context.Context, in *GetFeatureRequest, opts ...grpc.CallOption) (*GetFeatureResponse, error)
+	GetRepositoryInfo(ctx context.Context, in *GetRepositoryInfoRequest, opts ...grpc.CallOption) (*GetRepositoryInfoResponse, error)
 	PurgeRepository(ctx context.Context, in *PurgeRepositoryRequest, opts ...grpc.CallOption) (*PurgeRepositoryResponse, error)
 	Reinitialize(ctx context.Context, in *ReinitializeRequest, opts ...grpc.CallOption) (*ReinitializeResponse, error)
 }
@@ -45,20 +45,10 @@ func NewSzDiagnosticClient(cc grpc.ClientConnInterface) SzDiagnosticClient {
 	return &szDiagnosticClient{cc}
 }
 
-func (c *szDiagnosticClient) CheckDatastorePerformance(ctx context.Context, in *CheckDatastorePerformanceRequest, opts ...grpc.CallOption) (*CheckDatastorePerformanceResponse, error) {
+func (c *szDiagnosticClient) CheckRepositoryPerformance(ctx context.Context, in *CheckRepositoryPerformanceRequest, opts ...grpc.CallOption) (*CheckRepositoryPerformanceResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(CheckDatastorePerformanceResponse)
-	err := c.cc.Invoke(ctx, SzDiagnostic_CheckDatastorePerformance_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *szDiagnosticClient) GetDatastoreInfo(ctx context.Context, in *GetDatastoreInfoRequest, opts ...grpc.CallOption) (*GetDatastoreInfoResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(GetDatastoreInfoResponse)
-	err := c.cc.Invoke(ctx, SzDiagnostic_GetDatastoreInfo_FullMethodName, in, out, cOpts...)
+	out := new(CheckRepositoryPerformanceResponse)
+	err := c.cc.Invoke(ctx, SzDiagnostic_CheckRepositoryPerformance_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -69,6 +59,16 @@ func (c *szDiagnosticClient) GetFeature(ctx context.Context, in *GetFeatureReque
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetFeatureResponse)
 	err := c.cc.Invoke(ctx, SzDiagnostic_GetFeature_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *szDiagnosticClient) GetRepositoryInfo(ctx context.Context, in *GetRepositoryInfoRequest, opts ...grpc.CallOption) (*GetRepositoryInfoResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(GetRepositoryInfoResponse)
+	err := c.cc.Invoke(ctx, SzDiagnostic_GetRepositoryInfo_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -99,9 +99,9 @@ func (c *szDiagnosticClient) Reinitialize(ctx context.Context, in *ReinitializeR
 // All implementations must embed UnimplementedSzDiagnosticServer
 // for forward compatibility.
 type SzDiagnosticServer interface {
-	CheckDatastorePerformance(context.Context, *CheckDatastorePerformanceRequest) (*CheckDatastorePerformanceResponse, error)
-	GetDatastoreInfo(context.Context, *GetDatastoreInfoRequest) (*GetDatastoreInfoResponse, error)
+	CheckRepositoryPerformance(context.Context, *CheckRepositoryPerformanceRequest) (*CheckRepositoryPerformanceResponse, error)
 	GetFeature(context.Context, *GetFeatureRequest) (*GetFeatureResponse, error)
+	GetRepositoryInfo(context.Context, *GetRepositoryInfoRequest) (*GetRepositoryInfoResponse, error)
 	PurgeRepository(context.Context, *PurgeRepositoryRequest) (*PurgeRepositoryResponse, error)
 	Reinitialize(context.Context, *ReinitializeRequest) (*ReinitializeResponse, error)
 	mustEmbedUnimplementedSzDiagnosticServer()
@@ -114,14 +114,14 @@ type SzDiagnosticServer interface {
 // pointer dereference when methods are called.
 type UnimplementedSzDiagnosticServer struct{}
 
-func (UnimplementedSzDiagnosticServer) CheckDatastorePerformance(context.Context, *CheckDatastorePerformanceRequest) (*CheckDatastorePerformanceResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method CheckDatastorePerformance not implemented")
-}
-func (UnimplementedSzDiagnosticServer) GetDatastoreInfo(context.Context, *GetDatastoreInfoRequest) (*GetDatastoreInfoResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetDatastoreInfo not implemented")
+func (UnimplementedSzDiagnosticServer) CheckRepositoryPerformance(context.Context, *CheckRepositoryPerformanceRequest) (*CheckRepositoryPerformanceResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CheckRepositoryPerformance not implemented")
 }
 func (UnimplementedSzDiagnosticServer) GetFeature(context.Context, *GetFeatureRequest) (*GetFeatureResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetFeature not implemented")
+}
+func (UnimplementedSzDiagnosticServer) GetRepositoryInfo(context.Context, *GetRepositoryInfoRequest) (*GetRepositoryInfoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetRepositoryInfo not implemented")
 }
 func (UnimplementedSzDiagnosticServer) PurgeRepository(context.Context, *PurgeRepositoryRequest) (*PurgeRepositoryResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PurgeRepository not implemented")
@@ -150,38 +150,20 @@ func RegisterSzDiagnosticServer(s grpc.ServiceRegistrar, srv SzDiagnosticServer)
 	s.RegisterService(&SzDiagnostic_ServiceDesc, srv)
 }
 
-func _SzDiagnostic_CheckDatastorePerformance_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CheckDatastorePerformanceRequest)
+func _SzDiagnostic_CheckRepositoryPerformance_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CheckRepositoryPerformanceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(SzDiagnosticServer).CheckDatastorePerformance(ctx, in)
+		return srv.(SzDiagnosticServer).CheckRepositoryPerformance(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: SzDiagnostic_CheckDatastorePerformance_FullMethodName,
+		FullMethod: SzDiagnostic_CheckRepositoryPerformance_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzDiagnosticServer).CheckDatastorePerformance(ctx, req.(*CheckDatastorePerformanceRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _SzDiagnostic_GetDatastoreInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetDatastoreInfoRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(SzDiagnosticServer).GetDatastoreInfo(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: SzDiagnostic_GetDatastoreInfo_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzDiagnosticServer).GetDatastoreInfo(ctx, req.(*GetDatastoreInfoRequest))
+		return srv.(SzDiagnosticServer).CheckRepositoryPerformance(ctx, req.(*CheckRepositoryPerformanceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -200,6 +182,24 @@ func _SzDiagnostic_GetFeature_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(SzDiagnosticServer).GetFeature(ctx, req.(*GetFeatureRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _SzDiagnostic_GetRepositoryInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetRepositoryInfoRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(SzDiagnosticServer).GetRepositoryInfo(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: SzDiagnostic_GetRepositoryInfo_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(SzDiagnosticServer).GetRepositoryInfo(ctx, req.(*GetRepositoryInfoRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -248,16 +248,16 @@ var SzDiagnostic_ServiceDesc = grpc.ServiceDesc{
 	HandlerType: (*SzDiagnosticServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "CheckDatastorePerformance",
-			Handler:    _SzDiagnostic_CheckDatastorePerformance_Handler,
-		},
-		{
-			MethodName: "GetDatastoreInfo",
-			Handler:    _SzDiagnostic_GetDatastoreInfo_Handler,
+			MethodName: "CheckRepositoryPerformance",
+			Handler:    _SzDiagnostic_CheckRepositoryPerformance_Handler,
 		},
 		{
 			MethodName: "GetFeature",
 			Handler:    _SzDiagnostic_GetFeature_Handler,
+		},
+		{
+			MethodName: "GetRepositoryInfo",
+			Handler:    _SzDiagnostic_GetRepositoryInfo_Handler,
 		},
 		{
 			MethodName: "PurgeRepository",

@@ -10,16 +10,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>szconfig.AddDataSourceResponse</code>
+ * Generated from protobuf message <code>szconfig.GetDataSourceRegistryRequest</code>
  */
-class AddDataSourceResponse extends \Google\Protobuf\Internal\Message
+class GetDataSourceRegistryRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string result = 1;</code>
-     */
-    protected $result = '';
-    /**
-     * Generated from protobuf field <code>string config_definition = 2;</code>
+     * Generated from protobuf field <code>string config_definition = 1;</code>
      */
     protected $config_definition = '';
 
@@ -29,7 +25,6 @@ class AddDataSourceResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type string $result
      *     @type string $config_definition
      * }
      */
@@ -39,29 +34,7 @@ class AddDataSourceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string result = 1;</code>
-     * @return string
-     */
-    public function getResult()
-    {
-        return $this->result;
-    }
-
-    /**
-     * Generated from protobuf field <code>string result = 1;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setResult($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->result = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>string config_definition = 2;</code>
+     * Generated from protobuf field <code>string config_definition = 1;</code>
      * @return string
      */
     public function getConfigDefinition()
@@ -70,7 +43,7 @@ class AddDataSourceResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string config_definition = 2;</code>
+     * Generated from protobuf field <code>string config_definition = 1;</code>
      * @param string $var
      * @return $this
      */

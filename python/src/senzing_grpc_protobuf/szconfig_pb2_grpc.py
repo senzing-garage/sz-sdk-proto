@@ -5,7 +5,7 @@ import warnings
 
 import szconfig_pb2 as szconfig__pb2
 
-GRPC_GENERATED_VERSION = '1.73.0'
+GRPC_GENERATED_VERSION = '1.73.1'
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
@@ -34,20 +34,20 @@ class SzConfigStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.AddDataSource = channel.unary_unary(
-                '/szconfig.SzConfig/AddDataSource',
-                request_serializer=szconfig__pb2.AddDataSourceRequest.SerializeToString,
-                response_deserializer=szconfig__pb2.AddDataSourceResponse.FromString,
+        self.GetDataSourceRegistry = channel.unary_unary(
+                '/szconfig.SzConfig/GetDataSourceRegistry',
+                request_serializer=szconfig__pb2.GetDataSourceRegistryRequest.SerializeToString,
+                response_deserializer=szconfig__pb2.GetDataSourceRegistryResponse.FromString,
                 _registered_method=True)
-        self.DeleteDataSource = channel.unary_unary(
-                '/szconfig.SzConfig/DeleteDataSource',
-                request_serializer=szconfig__pb2.DeleteDataSourceRequest.SerializeToString,
-                response_deserializer=szconfig__pb2.DeleteDataSourceResponse.FromString,
+        self.RegisterDataSource = channel.unary_unary(
+                '/szconfig.SzConfig/RegisterDataSource',
+                request_serializer=szconfig__pb2.RegisterDataSourceRequest.SerializeToString,
+                response_deserializer=szconfig__pb2.RegisterDataSourceResponse.FromString,
                 _registered_method=True)
-        self.GetDataSources = channel.unary_unary(
-                '/szconfig.SzConfig/GetDataSources',
-                request_serializer=szconfig__pb2.GetDataSourcesRequest.SerializeToString,
-                response_deserializer=szconfig__pb2.GetDataSourcesResponse.FromString,
+        self.UnregisterDataSource = channel.unary_unary(
+                '/szconfig.SzConfig/UnregisterDataSource',
+                request_serializer=szconfig__pb2.UnregisterDataSourceRequest.SerializeToString,
+                response_deserializer=szconfig__pb2.UnregisterDataSourceResponse.FromString,
                 _registered_method=True)
         self.VerifyConfig = channel.unary_unary(
                 '/szconfig.SzConfig/VerifyConfig',
@@ -59,19 +59,19 @@ class SzConfigStub(object):
 class SzConfigServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def AddDataSource(self, request, context):
+    def GetDataSourceRegistry(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def DeleteDataSource(self, request, context):
+    def RegisterDataSource(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def GetDataSources(self, request, context):
+    def UnregisterDataSource(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -86,20 +86,20 @@ class SzConfigServicer(object):
 
 def add_SzConfigServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'AddDataSource': grpc.unary_unary_rpc_method_handler(
-                    servicer.AddDataSource,
-                    request_deserializer=szconfig__pb2.AddDataSourceRequest.FromString,
-                    response_serializer=szconfig__pb2.AddDataSourceResponse.SerializeToString,
+            'GetDataSourceRegistry': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetDataSourceRegistry,
+                    request_deserializer=szconfig__pb2.GetDataSourceRegistryRequest.FromString,
+                    response_serializer=szconfig__pb2.GetDataSourceRegistryResponse.SerializeToString,
             ),
-            'DeleteDataSource': grpc.unary_unary_rpc_method_handler(
-                    servicer.DeleteDataSource,
-                    request_deserializer=szconfig__pb2.DeleteDataSourceRequest.FromString,
-                    response_serializer=szconfig__pb2.DeleteDataSourceResponse.SerializeToString,
+            'RegisterDataSource': grpc.unary_unary_rpc_method_handler(
+                    servicer.RegisterDataSource,
+                    request_deserializer=szconfig__pb2.RegisterDataSourceRequest.FromString,
+                    response_serializer=szconfig__pb2.RegisterDataSourceResponse.SerializeToString,
             ),
-            'GetDataSources': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetDataSources,
-                    request_deserializer=szconfig__pb2.GetDataSourcesRequest.FromString,
-                    response_serializer=szconfig__pb2.GetDataSourcesResponse.SerializeToString,
+            'UnregisterDataSource': grpc.unary_unary_rpc_method_handler(
+                    servicer.UnregisterDataSource,
+                    request_deserializer=szconfig__pb2.UnregisterDataSourceRequest.FromString,
+                    response_serializer=szconfig__pb2.UnregisterDataSourceResponse.SerializeToString,
             ),
             'VerifyConfig': grpc.unary_unary_rpc_method_handler(
                     servicer.VerifyConfig,
@@ -118,7 +118,7 @@ class SzConfig(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def AddDataSource(request,
+    def GetDataSourceRegistry(request,
             target,
             options=(),
             channel_credentials=None,
@@ -131,9 +131,9 @@ class SzConfig(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/szconfig.SzConfig/AddDataSource',
-            szconfig__pb2.AddDataSourceRequest.SerializeToString,
-            szconfig__pb2.AddDataSourceResponse.FromString,
+            '/szconfig.SzConfig/GetDataSourceRegistry',
+            szconfig__pb2.GetDataSourceRegistryRequest.SerializeToString,
+            szconfig__pb2.GetDataSourceRegistryResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -145,7 +145,7 @@ class SzConfig(object):
             _registered_method=True)
 
     @staticmethod
-    def DeleteDataSource(request,
+    def RegisterDataSource(request,
             target,
             options=(),
             channel_credentials=None,
@@ -158,9 +158,9 @@ class SzConfig(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/szconfig.SzConfig/DeleteDataSource',
-            szconfig__pb2.DeleteDataSourceRequest.SerializeToString,
-            szconfig__pb2.DeleteDataSourceResponse.FromString,
+            '/szconfig.SzConfig/RegisterDataSource',
+            szconfig__pb2.RegisterDataSourceRequest.SerializeToString,
+            szconfig__pb2.RegisterDataSourceResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -172,7 +172,7 @@ class SzConfig(object):
             _registered_method=True)
 
     @staticmethod
-    def GetDataSources(request,
+    def UnregisterDataSource(request,
             target,
             options=(),
             channel_credentials=None,
@@ -185,9 +185,9 @@ class SzConfig(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/szconfig.SzConfig/GetDataSources',
-            szconfig__pb2.GetDataSourcesRequest.SerializeToString,
-            szconfig__pb2.GetDataSourcesResponse.FromString,
+            '/szconfig.SzConfig/UnregisterDataSource',
+            szconfig__pb2.UnregisterDataSourceRequest.SerializeToString,
+            szconfig__pb2.UnregisterDataSourceResponse.FromString,
             options,
             channel_credentials,
             insecure,
