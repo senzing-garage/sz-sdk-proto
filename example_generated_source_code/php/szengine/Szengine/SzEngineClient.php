@@ -31,20 +31,6 @@ class SzEngineClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Szengine\CloseExportReportRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function CloseExportReport(\Szengine\CloseExportReportRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szengine.SzEngine/CloseExportReport',
-        $argument,
-        ['\Szengine\CloseExportReportResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
      * @param \Szengine\CountRedoRecordsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
@@ -69,48 +55,6 @@ class SzEngineClient extends \Grpc\BaseStub {
         return $this->_simpleRequest('/szengine.SzEngine/DeleteRecord',
         $argument,
         ['\Szengine\DeleteRecordResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Szengine\ExportCsvEntityReportRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function ExportCsvEntityReport(\Szengine\ExportCsvEntityReportRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szengine.SzEngine/ExportCsvEntityReport',
-        $argument,
-        ['\Szengine\ExportCsvEntityReportResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Szengine\ExportJsonEntityReportRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function ExportJsonEntityReport(\Szengine\ExportJsonEntityReportRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szengine.SzEngine/ExportJsonEntityReport',
-        $argument,
-        ['\Szengine\ExportJsonEntityReportResponse', 'decode'],
-        $metadata, $options);
-    }
-
-    /**
-     * @param \Szengine\FetchNextRequest $argument input argument
-     * @param array $metadata metadata
-     * @param array $options call options
-     * @return \Grpc\UnaryCall
-     */
-    public function FetchNext(\Szengine\FetchNextRequest $argument,
-      $metadata = [], $options = []) {
-        return $this->_simpleRequest('/szengine.SzEngine/FetchNext',
-        $argument,
-        ['\Szengine\FetchNextResponse', 'decode'],
         $metadata, $options);
     }
 

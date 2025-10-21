@@ -74,4 +74,4 @@ var SzProductService = exports.SzProductService = {
   },
 };
 
-exports.SzProductClient = grpc.makeGenericClientConstructor(SzProductService);
+exports.SzProductClient = grpc.makeGenericClientConstructor(SzProductService, 'SzProduct');

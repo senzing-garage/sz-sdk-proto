@@ -183,16 +183,16 @@ const char descriptor_table_protodef_szproduct_2eproto[] ABSL_ATTRIBUTE_SECTION_
     "\022K\n\nGetLicense\022\034.szproduct.GetLicenseReq"
     "uest\032\035.szproduct.GetLicenseResponse\"\000\022K\n"
     "\nGetVersion\022\034.szproduct.GetVersionReques"
-    "t\032\035.szproduct.GetVersionResponse\"\000BZ\n\024co"
-    "m.senzing.sdk.grpcB\016SzProductProtoZ2gith"
-    "ub.com/senzing-garage/sz-sdk-go-grpc/szp"
-    "roductb\006proto3"
+    "t\032\035.szproduct.GetVersionResponse\"\000B`\n\032co"
+    "m.senzing.sdk.grpc.protoB\016SzProductProto"
+    "Z2github.com/senzing-garage/sz-sdk-go-gr"
+    "pc/szproductb\006proto3"
 };
 static ::absl::once_flag descriptor_table_szproduct_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_szproduct_2eproto = {
     false,
     false,
-    414,
+    420,
     descriptor_table_protodef_szproduct_2eproto,
     "szproduct.proto",
     &descriptor_table_szproduct_2eproto_once,

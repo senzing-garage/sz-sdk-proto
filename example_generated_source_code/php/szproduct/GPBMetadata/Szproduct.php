@@ -16,7 +16,7 @@ class Szproduct
           return;
         }
         $pool->internalAddGeneratedFile(
-            "\x0A\x9E\x03\x0A\x0Fszproduct.proto\x12\x09szproduct\"\x13\x0A\x11GetLicenseRequest\"\$\x0A\x12GetLicenseResponse\x12\x0E\x0A\x06result\x18\x01 \x01(\x09\"\x13\x0A\x11GetVersionRequest\"\$\x0A\x12GetVersionResponse\x12\x0E\x0A\x06result\x18\x01 \x01(\x092\xA5\x01\x0A\x09SzProduct\x12K\x0A\x0AGetLicense\x12\x1C.szproduct.GetLicenseRequest\x1A\x1D.szproduct.GetLicenseResponse\"\x00\x12K\x0A\x0AGetVersion\x12\x1C.szproduct.GetVersionRequest\x1A\x1D.szproduct.GetVersionResponse\"\x00BZ\x0A\x14com.senzing.sdk.grpcB\x0ESzProductProtoZ2github.com/senzing-garage/sz-sdk-go-grpc/szproductb\x06proto3"
+            "\x0A\xA4\x03\x0A\x0Fszproduct.proto\x12\x09szproduct\"\x13\x0A\x11GetLicenseRequest\"\$\x0A\x12GetLicenseResponse\x12\x0E\x0A\x06result\x18\x01 \x01(\x09\"\x13\x0A\x11GetVersionRequest\"\$\x0A\x12GetVersionResponse\x12\x0E\x0A\x06result\x18\x01 \x01(\x092\xA5\x01\x0A\x09SzProduct\x12K\x0A\x0AGetLicense\x12\x1C.szproduct.GetLicenseRequest\x1A\x1D.szproduct.GetLicenseResponse\"\x00\x12K\x0A\x0AGetVersion\x12\x1C.szproduct.GetVersionRequest\x1A\x1D.szproduct.GetVersionResponse\"\x00B`\x0A\x1Acom.senzing.sdk.grpc.protoB\x0ESzProductProtoZ2github.com/senzing-garage/sz-sdk-go-grpc/szproductb\x06proto3"
         , true);
 
         static::$is_initialized = true;

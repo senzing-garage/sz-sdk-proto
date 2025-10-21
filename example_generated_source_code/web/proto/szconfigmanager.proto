@@ -2,7 +2,7 @@ syntax = "proto3";
 package szconfigmanager;
 
 option go_package = "github.com/senzing-garage/sz-sdk-go-grpc/szconfigmanager";
-option java_package = "com.senzing.sdk.grpc";
+option java_package = "com.senzing.sdk.grpc.proto";
 option java_outer_classname = "SzConfigManagerProto";
 
 service SzConfigManager {

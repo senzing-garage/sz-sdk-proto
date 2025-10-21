@@ -70,7 +70,7 @@ dependencies-for-development: venv dependencies-for-development-osarch-specific
 
 
 dependencies-for-nodejs:
-	@npm install -g grpc-tools
+	@npm install -g grpc-tools protoc-gen-ts protoc-gen-grpc-web
 	@npm install -D @grpc/grpc-js @grpc/proto-loader grpc_tools_node_protoc_ts typescript tsx
 
 

@@ -26,28 +26,6 @@ function deserialize_szengine_AddRecordResponse(buffer_arg) {
   return szengine_pb.AddRecordResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
-function serialize_szengine_CloseExportReportRequest(arg) {
-  if (!(arg instanceof szengine_pb.CloseExportReportRequest)) {
-    throw new Error('Expected argument of type szengine.CloseExportReportRequest');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_szengine_CloseExportReportRequest(buffer_arg) {
-  return szengine_pb.CloseExportReportRequest.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-function serialize_szengine_CloseExportReportResponse(arg) {
-  if (!(arg instanceof szengine_pb.CloseExportReportResponse)) {
-    throw new Error('Expected argument of type szengine.CloseExportReportResponse');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_szengine_CloseExportReportResponse(buffer_arg) {
-  return szengine_pb.CloseExportReportResponse.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
 function serialize_szengine_CountRedoRecordsRequest(arg) {
   if (!(arg instanceof szengine_pb.CountRedoRecordsRequest)) {
     throw new Error('Expected argument of type szengine.CountRedoRecordsRequest');
@@ -90,72 +68,6 @@ function serialize_szengine_DeleteRecordResponse(arg) {
 
 function deserialize_szengine_DeleteRecordResponse(buffer_arg) {
   return szengine_pb.DeleteRecordResponse.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-function serialize_szengine_ExportCsvEntityReportRequest(arg) {
-  if (!(arg instanceof szengine_pb.ExportCsvEntityReportRequest)) {
-    throw new Error('Expected argument of type szengine.ExportCsvEntityReportRequest');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_szengine_ExportCsvEntityReportRequest(buffer_arg) {
-  return szengine_pb.ExportCsvEntityReportRequest.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-function serialize_szengine_ExportCsvEntityReportResponse(arg) {
-  if (!(arg instanceof szengine_pb.ExportCsvEntityReportResponse)) {
-    throw new Error('Expected argument of type szengine.ExportCsvEntityReportResponse');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_szengine_ExportCsvEntityReportResponse(buffer_arg) {
-  return szengine_pb.ExportCsvEntityReportResponse.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-function serialize_szengine_ExportJsonEntityReportRequest(arg) {
-  if (!(arg instanceof szengine_pb.ExportJsonEntityReportRequest)) {
-    throw new Error('Expected argument of type szengine.ExportJsonEntityReportRequest');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_szengine_ExportJsonEntityReportRequest(buffer_arg) {
-  return szengine_pb.ExportJsonEntityReportRequest.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-function serialize_szengine_ExportJsonEntityReportResponse(arg) {
-  if (!(arg instanceof szengine_pb.ExportJsonEntityReportResponse)) {
-    throw new Error('Expected argument of type szengine.ExportJsonEntityReportResponse');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_szengine_ExportJsonEntityReportResponse(buffer_arg) {
-  return szengine_pb.ExportJsonEntityReportResponse.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-function serialize_szengine_FetchNextRequest(arg) {
-  if (!(arg instanceof szengine_pb.FetchNextRequest)) {
-    throw new Error('Expected argument of type szengine.FetchNextRequest');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_szengine_FetchNextRequest(buffer_arg) {
-  return szengine_pb.FetchNextRequest.deserializeBinary(new Uint8Array(buffer_arg));
-}
-
-function serialize_szengine_FetchNextResponse(arg) {
-  if (!(arg instanceof szengine_pb.FetchNextResponse)) {
-    throw new Error('Expected argument of type szengine.FetchNextResponse');
-  }
-  return Buffer.from(arg.serializeBinary());
-}
-
-function deserialize_szengine_FetchNextResponse(buffer_arg) {
-  return szengine_pb.FetchNextResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 function serialize_szengine_FindInterestingEntitiesByEntityIdRequest(arg) {
@@ -765,17 +677,6 @@ var SzEngineService = exports.SzEngineService = {
     responseSerialize: serialize_szengine_AddRecordResponse,
     responseDeserialize: deserialize_szengine_AddRecordResponse,
   },
-  closeExportReport: {
-    path: '/szengine.SzEngine/CloseExportReport',
-    requestStream: false,
-    responseStream: false,
-    requestType: szengine_pb.CloseExportReportRequest,
-    responseType: szengine_pb.CloseExportReportResponse,
-    requestSerialize: serialize_szengine_CloseExportReportRequest,
-    requestDeserialize: deserialize_szengine_CloseExportReportRequest,
-    responseSerialize: serialize_szengine_CloseExportReportResponse,
-    responseDeserialize: deserialize_szengine_CloseExportReportResponse,
-  },
   countRedoRecords: {
     path: '/szengine.SzEngine/CountRedoRecords',
     requestStream: false,
@@ -797,39 +698,6 @@ var SzEngineService = exports.SzEngineService = {
     requestDeserialize: deserialize_szengine_DeleteRecordRequest,
     responseSerialize: serialize_szengine_DeleteRecordResponse,
     responseDeserialize: deserialize_szengine_DeleteRecordResponse,
-  },
-  exportCsvEntityReport: {
-    path: '/szengine.SzEngine/ExportCsvEntityReport',
-    requestStream: false,
-    responseStream: false,
-    requestType: szengine_pb.ExportCsvEntityReportRequest,
-    responseType: szengine_pb.ExportCsvEntityReportResponse,
-    requestSerialize: serialize_szengine_ExportCsvEntityReportRequest,
-    requestDeserialize: deserialize_szengine_ExportCsvEntityReportRequest,
-    responseSerialize: serialize_szengine_ExportCsvEntityReportResponse,
-    responseDeserialize: deserialize_szengine_ExportCsvEntityReportResponse,
-  },
-  exportJsonEntityReport: {
-    path: '/szengine.SzEngine/ExportJsonEntityReport',
-    requestStream: false,
-    responseStream: false,
-    requestType: szengine_pb.ExportJsonEntityReportRequest,
-    responseType: szengine_pb.ExportJsonEntityReportResponse,
-    requestSerialize: serialize_szengine_ExportJsonEntityReportRequest,
-    requestDeserialize: deserialize_szengine_ExportJsonEntityReportRequest,
-    responseSerialize: serialize_szengine_ExportJsonEntityReportResponse,
-    responseDeserialize: deserialize_szengine_ExportJsonEntityReportResponse,
-  },
-  fetchNext: {
-    path: '/szengine.SzEngine/FetchNext',
-    requestStream: false,
-    responseStream: false,
-    requestType: szengine_pb.FetchNextRequest,
-    responseType: szengine_pb.FetchNextResponse,
-    requestSerialize: serialize_szengine_FetchNextRequest,
-    requestDeserialize: deserialize_szengine_FetchNextRequest,
-    responseSerialize: serialize_szengine_FetchNextResponse,
-    responseDeserialize: deserialize_szengine_FetchNextResponse,
   },
   findInterestingEntitiesByEntityId: {
     path: '/szengine.SzEngine/FindInterestingEntitiesByEntityId',
@@ -1130,4 +998,4 @@ var SzEngineService = exports.SzEngineService = {
   },
 };
 
-exports.SzEngineClient = grpc.makeGenericClientConstructor(SzEngineService);
+exports.SzEngineClient = grpc.makeGenericClientConstructor(SzEngineService, 'SzEngine');
