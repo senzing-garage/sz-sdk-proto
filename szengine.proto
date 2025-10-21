@@ -7,12 +7,8 @@ option java_outer_classname = "SzEngineProto";
 
 service SzEngine {
   rpc AddRecord(AddRecordRequest) returns (AddRecordResponse) {}
-  rpc CloseExportReport(CloseExportReportRequest) returns (CloseExportReportResponse) {}
   rpc CountRedoRecords(CountRedoRecordsRequest) returns (CountRedoRecordsResponse) {}
   rpc DeleteRecord(DeleteRecordRequest) returns (DeleteRecordResponse) {}
-  rpc ExportCsvEntityReport(ExportCsvEntityReportRequest) returns (ExportCsvEntityReportResponse) {}
-  rpc ExportJsonEntityReport(ExportJsonEntityReportRequest) returns (ExportJsonEntityReportResponse) {}
-  rpc FetchNext(FetchNextRequest) returns (FetchNextResponse) {}
   rpc FindInterestingEntitiesByEntityId(FindInterestingEntitiesByEntityIdRequest) returns (FindInterestingEntitiesByEntityIdResponse) {}
   rpc FindInterestingEntitiesByRecordId(FindInterestingEntitiesByRecordIdRequest) returns (FindInterestingEntitiesByRecordIdResponse) {}
   rpc FindNetworkByEntityId(FindNetworkByEntityIdRequest) returns (FindNetworkByEntityIdResponse) {}
