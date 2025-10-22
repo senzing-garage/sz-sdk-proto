@@ -1,2 +1,2 @@
-grpcio-tools==1.75.1
+grpcio-tools==1.76.0
 protobuf==6.33.0
