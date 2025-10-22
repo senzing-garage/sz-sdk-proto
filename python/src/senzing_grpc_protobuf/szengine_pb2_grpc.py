@@ -5,7 +5,7 @@ import warnings
 
 import szengine_pb2 as szengine__pb2
 
-GRPC_GENERATED_VERSION = '1.73.1'
+GRPC_GENERATED_VERSION = '1.75.1'
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
@@ -39,11 +39,6 @@ class SzEngineStub(object):
                 request_serializer=szengine__pb2.AddRecordRequest.SerializeToString,
                 response_deserializer=szengine__pb2.AddRecordResponse.FromString,
                 _registered_method=True)
-        self.CloseExportReport = channel.unary_unary(
-                '/szengine.SzEngine/CloseExportReport',
-                request_serializer=szengine__pb2.CloseExportReportRequest.SerializeToString,
-                response_deserializer=szengine__pb2.CloseExportReportResponse.FromString,
-                _registered_method=True)
         self.CountRedoRecords = channel.unary_unary(
                 '/szengine.SzEngine/CountRedoRecords',
                 request_serializer=szengine__pb2.CountRedoRecordsRequest.SerializeToString,
@@ -53,21 +48,6 @@ class SzEngineStub(object):
                 '/szengine.SzEngine/DeleteRecord',
                 request_serializer=szengine__pb2.DeleteRecordRequest.SerializeToString,
                 response_deserializer=szengine__pb2.DeleteRecordResponse.FromString,
-                _registered_method=True)
-        self.ExportCsvEntityReport = channel.unary_unary(
-                '/szengine.SzEngine/ExportCsvEntityReport',
-                request_serializer=szengine__pb2.ExportCsvEntityReportRequest.SerializeToString,
-                response_deserializer=szengine__pb2.ExportCsvEntityReportResponse.FromString,
-                _registered_method=True)
-        self.ExportJsonEntityReport = channel.unary_unary(
-                '/szengine.SzEngine/ExportJsonEntityReport',
-                request_serializer=szengine__pb2.ExportJsonEntityReportRequest.SerializeToString,
-                response_deserializer=szengine__pb2.ExportJsonEntityReportResponse.FromString,
-                _registered_method=True)
-        self.FetchNext = channel.unary_unary(
-                '/szengine.SzEngine/FetchNext',
-                request_serializer=szengine__pb2.FetchNextRequest.SerializeToString,
-                response_deserializer=szengine__pb2.FetchNextResponse.FromString,
                 _registered_method=True)
         self.FindInterestingEntitiesByEntityId = channel.unary_unary(
                 '/szengine.SzEngine/FindInterestingEntitiesByEntityId',
@@ -215,12 +195,6 @@ class SzEngineServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def CloseExportReport(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
     def CountRedoRecords(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -228,24 +202,6 @@ class SzEngineServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def DeleteRecord(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def ExportCsvEntityReport(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def ExportJsonEntityReport(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def FetchNext(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -421,11 +377,6 @@ def add_SzEngineServicer_to_server(servicer, server):
                     request_deserializer=szengine__pb2.AddRecordRequest.FromString,
                     response_serializer=szengine__pb2.AddRecordResponse.SerializeToString,
             ),
-            'CloseExportReport': grpc.unary_unary_rpc_method_handler(
-                    servicer.CloseExportReport,
-                    request_deserializer=szengine__pb2.CloseExportReportRequest.FromString,
-                    response_serializer=szengine__pb2.CloseExportReportResponse.SerializeToString,
-            ),
             'CountRedoRecords': grpc.unary_unary_rpc_method_handler(
                     servicer.CountRedoRecords,
                     request_deserializer=szengine__pb2.CountRedoRecordsRequest.FromString,
@@ -435,21 +386,6 @@ def add_SzEngineServicer_to_server(servicer, server):
                     servicer.DeleteRecord,
                     request_deserializer=szengine__pb2.DeleteRecordRequest.FromString,
                     response_serializer=szengine__pb2.DeleteRecordResponse.SerializeToString,
-            ),
-            'ExportCsvEntityReport': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExportCsvEntityReport,
-                    request_deserializer=szengine__pb2.ExportCsvEntityReportRequest.FromString,
-                    response_serializer=szengine__pb2.ExportCsvEntityReportResponse.SerializeToString,
-            ),
-            'ExportJsonEntityReport': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExportJsonEntityReport,
-                    request_deserializer=szengine__pb2.ExportJsonEntityReportRequest.FromString,
-                    response_serializer=szengine__pb2.ExportJsonEntityReportResponse.SerializeToString,
-            ),
-            'FetchNext': grpc.unary_unary_rpc_method_handler(
-                    servicer.FetchNext,
-                    request_deserializer=szengine__pb2.FetchNextRequest.FromString,
-                    response_serializer=szengine__pb2.FetchNextResponse.SerializeToString,
             ),
             'FindInterestingEntitiesByEntityId': grpc.unary_unary_rpc_method_handler(
                     servicer.FindInterestingEntitiesByEntityId,
@@ -625,33 +561,6 @@ class SzEngine(object):
             _registered_method=True)
 
     @staticmethod
-    def CloseExportReport(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(
-            request,
-            target,
-            '/szengine.SzEngine/CloseExportReport',
-            szengine__pb2.CloseExportReportRequest.SerializeToString,
-            szengine__pb2.CloseExportReportResponse.FromString,
-            options,
-            channel_credentials,
-            insecure,
-            call_credentials,
-            compression,
-            wait_for_ready,
-            timeout,
-            metadata,
-            _registered_method=True)
-
-    @staticmethod
     def CountRedoRecords(request,
             target,
             options=(),
@@ -695,87 +604,6 @@ class SzEngine(object):
             '/szengine.SzEngine/DeleteRecord',
             szengine__pb2.DeleteRecordRequest.SerializeToString,
             szengine__pb2.DeleteRecordResponse.FromString,
-            options,
-            channel_credentials,
-            insecure,
-            call_credentials,
-            compression,
-            wait_for_ready,
-            timeout,
-            metadata,
-            _registered_method=True)
-
-    @staticmethod
-    def ExportCsvEntityReport(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(
-            request,
-            target,
-            '/szengine.SzEngine/ExportCsvEntityReport',
-            szengine__pb2.ExportCsvEntityReportRequest.SerializeToString,
-            szengine__pb2.ExportCsvEntityReportResponse.FromString,
-            options,
-            channel_credentials,
-            insecure,
-            call_credentials,
-            compression,
-            wait_for_ready,
-            timeout,
-            metadata,
-            _registered_method=True)
-
-    @staticmethod
-    def ExportJsonEntityReport(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(
-            request,
-            target,
-            '/szengine.SzEngine/ExportJsonEntityReport',
-            szengine__pb2.ExportJsonEntityReportRequest.SerializeToString,
-            szengine__pb2.ExportJsonEntityReportResponse.FromString,
-            options,
-            channel_credentials,
-            insecure,
-            call_credentials,
-            compression,
-            wait_for_ready,
-            timeout,
-            metadata,
-            _registered_method=True)
-
-    @staticmethod
-    def FetchNext(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(
-            request,
-            target,
-            '/szengine.SzEngine/FetchNext',
-            szengine__pb2.FetchNextRequest.SerializeToString,
-            szengine__pb2.FetchNextResponse.FromString,
             options,
             channel_credentials,
             insecure,
