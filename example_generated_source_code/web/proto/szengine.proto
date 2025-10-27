@@ -2,17 +2,13 @@ syntax = "proto3";
 package szengine;
 
 option go_package = "github.com/senzing-garage/sz-sdk-go-grpc/szengine";
-option java_package = "com.senzing.sdk.grpc";
+option java_package = "com.senzing.sdk.grpc.proto";
 option java_outer_classname = "SzEngineProto";
 
 service SzEngine {
   rpc AddRecord(AddRecordRequest) returns (AddRecordResponse) {}
-  rpc CloseExportReport(CloseExportReportRequest) returns (CloseExportReportResponse) {}
   rpc CountRedoRecords(CountRedoRecordsRequest) returns (CountRedoRecordsResponse) {}
   rpc DeleteRecord(DeleteRecordRequest) returns (DeleteRecordResponse) {}
-  rpc ExportCsvEntityReport(ExportCsvEntityReportRequest) returns (ExportCsvEntityReportResponse) {}
-  rpc ExportJsonEntityReport(ExportJsonEntityReportRequest) returns (ExportJsonEntityReportResponse) {}
-  rpc FetchNext(FetchNextRequest) returns (FetchNextResponse) {}
   rpc FindInterestingEntitiesByEntityId(FindInterestingEntitiesByEntityIdRequest) returns (FindInterestingEntitiesByEntityIdResponse) {}
   rpc FindInterestingEntitiesByRecordId(FindInterestingEntitiesByRecordIdRequest) returns (FindInterestingEntitiesByRecordIdResponse) {}
   rpc FindNetworkByEntityId(FindNetworkByEntityIdRequest) returns (FindNetworkByEntityIdResponse) {}
@@ -53,12 +49,6 @@ message AddRecordResponse {
   string result = 1;
 }
 
-message CloseExportReportRequest {
-  int64 export_handle = 1;
-}
-
-message CloseExportReportResponse {}
-
 message CountRedoRecordsRequest {}
 
 message CountRedoRecordsResponse {
@@ -72,31 +62,6 @@ message DeleteRecordRequest {
 }
 
 message DeleteRecordResponse {
-  string result = 1;
-}
-
-message ExportCsvEntityReportRequest {
-  string csv_column_list = 1;
-  int64 flags = 2;
-}
-
-message ExportCsvEntityReportResponse {
-  int64 result = 1;
-}
-
-message ExportJsonEntityReportRequest {
-  int64 flags = 1;
-}
-
-message ExportJsonEntityReportResponse {
-  int64 result = 1;
-}
-
-message FetchNextRequest {
-  int64 export_handle = 1;
-}
-
-message FetchNextResponse {
   string result = 1;
 }
 

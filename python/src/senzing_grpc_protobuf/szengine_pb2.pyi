@@ -22,16 +22,6 @@ class AddRecordResponse(_message.Message):
     result: str
     def __init__(self, result: _Optional[str] = ...) -> None: ...
 
-class CloseExportReportRequest(_message.Message):
-    __slots__ = ("export_handle",)
-    EXPORT_HANDLE_FIELD_NUMBER: _ClassVar[int]
-    export_handle: int
-    def __init__(self, export_handle: _Optional[int] = ...) -> None: ...
-
-class CloseExportReportResponse(_message.Message):
-    __slots__ = ()
-    def __init__(self) -> None: ...
-
 class CountRedoRecordsRequest(_message.Message):
     __slots__ = ()
     def __init__(self) -> None: ...
@@ -53,44 +43,6 @@ class DeleteRecordRequest(_message.Message):
     def __init__(self, data_source_code: _Optional[str] = ..., record_id: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
 
 class DeleteRecordResponse(_message.Message):
-    __slots__ = ("result",)
-    RESULT_FIELD_NUMBER: _ClassVar[int]
-    result: str
-    def __init__(self, result: _Optional[str] = ...) -> None: ...
-
-class ExportCsvEntityReportRequest(_message.Message):
-    __slots__ = ("csv_column_list", "flags")
-    CSV_COLUMN_LIST_FIELD_NUMBER: _ClassVar[int]
-    FLAGS_FIELD_NUMBER: _ClassVar[int]
-    csv_column_list: str
-    flags: int
-    def __init__(self, csv_column_list: _Optional[str] = ..., flags: _Optional[int] = ...) -> None: ...
-
-class ExportCsvEntityReportResponse(_message.Message):
-    __slots__ = ("result",)
-    RESULT_FIELD_NUMBER: _ClassVar[int]
-    result: int
-    def __init__(self, result: _Optional[int] = ...) -> None: ...
-
-class ExportJsonEntityReportRequest(_message.Message):
-    __slots__ = ("flags",)
-    FLAGS_FIELD_NUMBER: _ClassVar[int]
-    flags: int
-    def __init__(self, flags: _Optional[int] = ...) -> None: ...
-
-class ExportJsonEntityReportResponse(_message.Message):
-    __slots__ = ("result",)
-    RESULT_FIELD_NUMBER: _ClassVar[int]
-    result: int
-    def __init__(self, result: _Optional[int] = ...) -> None: ...
-
-class FetchNextRequest(_message.Message):
-    __slots__ = ("export_handle",)
-    EXPORT_HANDLE_FIELD_NUMBER: _ClassVar[int]
-    export_handle: int
-    def __init__(self, export_handle: _Optional[int] = ...) -> None: ...
-
-class FetchNextResponse(_message.Message):
     __slots__ = ("result",)
     RESULT_FIELD_NUMBER: _ClassVar[int]
     result: str
