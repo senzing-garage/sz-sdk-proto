@@ -173,4 +173,4 @@ var SzDiagnosticService = exports.SzDiagnosticService = {
   },
 };
 
-exports.SzDiagnosticClient = grpc.makeGenericClientConstructor(SzDiagnosticService);
+exports.SzDiagnosticClient = grpc.makeGenericClientConstructor(SzDiagnosticService, 'SzDiagnostic');
