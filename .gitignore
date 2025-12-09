@@ -157,6 +157,7 @@ cython_debug/
 .history
 
 .settings
+.claude/settings.local.json
 
 bindings/
 node_modules
