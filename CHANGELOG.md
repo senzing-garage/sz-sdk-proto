@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning].
 
 ## [Unreleased]
 
-- ...
+### Fixed in Unreleased
+
+- Fixed `arm4` typo to `arm64` in `makefiles/osdetect.mk` for Windows ARM64 architecture detection
 
 ## [0.9.0] - 2025-10-21
 
