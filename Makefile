@@ -170,6 +170,15 @@ generate-ruby:
 	done
 
 
+.PHONY: generate-rust
+generate-rust:
+	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
+		OUTPUT_DIR=rust/$${SENZING_COMPONENT}; \
+		mkdir -p $${OUTPUT_DIR}; \
+		protoc --rust_out=$${OUTPUT_DIR} --rust_opt "experimental-codegen=enabled,kernel=cpp" $${SENZING_COMPONENT}.proto; \
+	done
+
+
 # all typescript compilers follow short name abbr name convention
 .PHONY: generate-ts
 generate-ts: generate-typescript
