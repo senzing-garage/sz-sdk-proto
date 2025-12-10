@@ -89,6 +89,7 @@
     ".gitignore",
     ".history/*",
     ".mypy_cache/**",
+    "**/*.cc",
     "**/*.go",
     "**/*.mod",
     "**/*.rs",
