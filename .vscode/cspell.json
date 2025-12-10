@@ -91,6 +91,7 @@
     ".mypy_cache/**",
     "**/*.go",
     "**/*.mod",
+    "**/*.rs",
     "**/*.sum",
     "example_generated_source_code/**",
     "Makefile",
