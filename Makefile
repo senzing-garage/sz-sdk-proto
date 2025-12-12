@@ -95,7 +95,7 @@ setup: generate
 # -----------------------------------------------------------------------------
 
 .PHONY: generate
-generate: generate-csharp generate-go generate-java generate-php generate-python generate-ruby
+generate: generate-csharp generate-go generate-java generate-php generate-python generate-ruby generate-rust
 
 
 .PHONY: generate-csharp
