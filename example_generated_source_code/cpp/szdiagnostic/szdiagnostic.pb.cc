@@ -405,16 +405,16 @@ const char descriptor_table_protodef_szdiagnostic_2eproto[] ABSL_ATTRIBUTE_SECTI
     "sitoryRequest\032%.szdiagnostic.PurgeReposi"
     "toryResponse\"\000\022W\n\014Reinitialize\022!.szdiagn"
     "ostic.ReinitializeRequest\032\".szdiagnostic"
-    ".ReinitializeResponse\"\000B`\n\024com.senzing.s"
-    "dk.grpcB\021SzDiagnosticProtoZ5github.com/s"
-    "enzing-garage/sz-sdk-go-grpc/szdiagnosti"
-    "cb\006proto3"
+    ".ReinitializeResponse\"\000Bf\n\032com.senzing.s"
+    "dk.grpc.protoB\021SzDiagnosticProtoZ5github"
+    ".com/senzing-garage/sz-sdk-go-grpc/szdia"
+    "gnosticb\006proto3"
 };
 static ::absl::once_flag descriptor_table_szdiagnostic_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_szdiagnostic_2eproto = {
     false,
     false,
-    1049,
+    1055,
     descriptor_table_protodef_szdiagnostic_2eproto,
     "szdiagnostic.proto",
     &descriptor_table_szdiagnostic_2eproto_once,

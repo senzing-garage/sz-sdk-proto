@@ -25,6 +25,7 @@ make generate-csharp
 make generate-java
 make generate-php
 make generate-ruby
+make generate-rust
 make generate-nodejs      # Requires: make dependencies-for-nodejs
 make generate-typescript  # or: make generate-ts
 

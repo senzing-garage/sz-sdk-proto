@@ -395,16 +395,16 @@ const char descriptor_table_protodef_szconfig_2eproto[] ABSL_ATTRIBUTE_SECTION_V
     "sterDataSourceRequest\032&.szconfig.Unregis"
     "terDataSourceResponse\"\000\022O\n\014VerifyConfig\022"
     "\035.szconfig.VerifyConfigRequest\032\036.szconfi"
-    "g.VerifyConfigResponse\"\000BX\n\024com.senzing."
-    "sdk.grpcB\rSzConfigProtoZ1github.com/senz"
-    "ing-garage/sz-sdk-go-grpc/szconfigb\006prot"
-    "o3"
+    "g.VerifyConfigResponse\"\000B^\n\032com.senzing."
+    "sdk.grpc.protoB\rSzConfigProtoZ1github.co"
+    "m/senzing-garage/sz-sdk-go-grpc/szconfig"
+    "b\006proto3"
 };
 static ::absl::once_flag descriptor_table_szconfig_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_szconfig_2eproto = {
     false,
     false,
-    1042,
+    1048,
     descriptor_table_protodef_szconfig_2eproto,
     "szconfig.proto",
     &descriptor_table_szconfig_2eproto_once,

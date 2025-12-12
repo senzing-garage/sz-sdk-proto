@@ -2969,16 +2969,16 @@ const char descriptor_table_protodef_szengine_2eproto[] ABSL_ATTRIBUTE_SECTION_V
     "ponse\"\000\022I\n\nWhyRecords\022\033.szengine.WhyReco"
     "rdsRequest\032\034.szengine.WhyRecordsResponse"
     "\"\000\022F\n\tWhySearch\022\032.szengine.WhySearchRequ"
-    "est\032\033.szengine.WhySearchResponse\"\000BX\n\024co"
-    "m.senzing.sdk.grpcB\rSzEngineProtoZ1githu"
-    "b.com/senzing-garage/sz-sdk-go-grpc/szen"
-    "gineb\006proto3"
+    "est\032\033.szengine.WhySearchResponse\"\000B^\n\032co"
+    "m.senzing.sdk.grpc.protoB\rSzEngineProtoZ"
+    "1github.com/senzing-garage/sz-sdk-go-grp"
+    "c/szengineb\006proto3"
 };
 static ::absl::once_flag descriptor_table_szengine_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_szengine_2eproto = {
     false,
     false,
-    7652,
+    7658,
     descriptor_table_protodef_szengine_2eproto,
     "szengine.proto",
     &descriptor_table_szengine_2eproto_once,
