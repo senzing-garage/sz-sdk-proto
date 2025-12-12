@@ -14,11 +14,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "szengine.AddRecordResponse" do
       optional :result, :string, 1
     end
-    add_message "szengine.CloseExportReportRequest" do
-      optional :export_handle, :int64, 1
-    end
-    add_message "szengine.CloseExportReportResponse" do
-    end
     add_message "szengine.CountRedoRecordsRequest" do
     end
     add_message "szengine.CountRedoRecordsResponse" do
@@ -30,25 +25,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :flags, :int64, 3
     end
     add_message "szengine.DeleteRecordResponse" do
-      optional :result, :string, 1
-    end
-    add_message "szengine.ExportCsvEntityReportRequest" do
-      optional :csv_column_list, :string, 1
-      optional :flags, :int64, 2
-    end
-    add_message "szengine.ExportCsvEntityReportResponse" do
-      optional :result, :int64, 1
-    end
-    add_message "szengine.ExportJsonEntityReportRequest" do
-      optional :flags, :int64, 1
-    end
-    add_message "szengine.ExportJsonEntityReportResponse" do
-      optional :result, :int64, 1
-    end
-    add_message "szengine.FetchNextRequest" do
-      optional :export_handle, :int64, 1
-    end
-    add_message "szengine.FetchNextResponse" do
       optional :result, :string, 1
     end
     add_message "szengine.FindInterestingEntitiesByEntityIdRequest" do
@@ -262,18 +238,10 @@ end
 module Szengine
   AddRecordRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.AddRecordRequest").msgclass
   AddRecordResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.AddRecordResponse").msgclass
-  CloseExportReportRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.CloseExportReportRequest").msgclass
-  CloseExportReportResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.CloseExportReportResponse").msgclass
   CountRedoRecordsRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.CountRedoRecordsRequest").msgclass
   CountRedoRecordsResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.CountRedoRecordsResponse").msgclass
   DeleteRecordRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.DeleteRecordRequest").msgclass
   DeleteRecordResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.DeleteRecordResponse").msgclass
-  ExportCsvEntityReportRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.ExportCsvEntityReportRequest").msgclass
-  ExportCsvEntityReportResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.ExportCsvEntityReportResponse").msgclass
-  ExportJsonEntityReportRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.ExportJsonEntityReportRequest").msgclass
-  ExportJsonEntityReportResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.ExportJsonEntityReportResponse").msgclass
-  FetchNextRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.FetchNextRequest").msgclass
-  FetchNextResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.FetchNextResponse").msgclass
   FindInterestingEntitiesByEntityIdRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.FindInterestingEntitiesByEntityIdRequest").msgclass
   FindInterestingEntitiesByEntityIdResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.FindInterestingEntitiesByEntityIdResponse").msgclass
   FindInterestingEntitiesByRecordIdRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("szengine.FindInterestingEntitiesByRecordIdRequest").msgclass
