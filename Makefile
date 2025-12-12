@@ -70,7 +70,7 @@ dependencies-for-development: venv dependencies-for-development-osarch-specific
 
 
 dependencies-for-nodejs:
-	@npm install -g grpc-tools
+	@npm install -g grpc-tools protoc-gen-ts protoc-gen-grpc-web
 	@npm install -D @grpc/grpc-js @grpc/proto-loader grpc_tools_node_protoc_ts typescript tsx
 
 
@@ -95,7 +95,7 @@ setup: generate
 # -----------------------------------------------------------------------------
 
 .PHONY: generate
-generate: generate-csharp generate-go generate-java generate-php generate-python generate-ruby
+generate: generate-csharp generate-go generate-java generate-php generate-python generate-ruby generate-rust
 
 
 .PHONY: generate-csharp
@@ -167,6 +167,15 @@ generate-ruby:
 		OUTPUT_DIR=example_generated_source_code/ruby/$${SENZING_COMPONENT}; \
 		mkdir -p $${OUTPUT_DIR}; \
 		grpc_tools_ruby_protoc --proto_path=. --ruby_out=$${OUTPUT_DIR}  --grpc_out=$${OUTPUT_DIR}  $${SENZING_COMPONENT}.proto; \
+	done
+
+
+.PHONY: generate-rust
+generate-rust:
+	for SENZING_COMPONENT in $(SENZING_COMPONENTS); do \
+		OUTPUT_DIR=rust/$${SENZING_COMPONENT}; \
+		mkdir -p $${OUTPUT_DIR}; \
+		protoc --rust_out=$${OUTPUT_DIR} --rust_opt "experimental-codegen=enabled,kernel=cpp" $${SENZING_COMPONENT}.proto; \
 	done
 
 

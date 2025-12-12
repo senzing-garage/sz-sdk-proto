@@ -653,16 +653,16 @@ const char descriptor_table_protodef_szconfigmanager_2eproto[] ABSL_ATTRIBUTE_SE
     "configmanager.SetDefaultConfigResponse\"\000"
     "\022o\n\022SetDefaultConfigId\022*.szconfigmanager"
     ".SetDefaultConfigIdRequest\032+.szconfigman"
-    "ager.SetDefaultConfigIdResponse\"\000Bf\n\024com"
-    ".senzing.sdk.grpcB\024SzConfigManagerProtoZ"
-    "8github.com/senzing-garage/sz-sdk-go-grp"
-    "c/szconfigmanagerb\006proto3"
+    "ager.SetDefaultConfigIdResponse\"\000Bl\n\032com"
+    ".senzing.sdk.grpc.protoB\024SzConfigManager"
+    "ProtoZ8github.com/senzing-garage/sz-sdk-"
+    "go-grpc/szconfigmanagerb\006proto3"
 };
 static ::absl::once_flag descriptor_table_szconfigmanager_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_szconfigmanager_2eproto = {
     false,
     false,
-    1785,
+    1791,
     descriptor_table_protodef_szconfigmanager_2eproto,
     "szconfigmanager.proto",
     &descriptor_table_szconfigmanager_2eproto_once,
