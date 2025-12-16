@@ -11,6 +11,15 @@ and this project adheres to [Semantic Versioning].
 
 - Fixed `arm4` typo to `arm64` in `makefiles/osdetect.mk` for Windows ARM64 architecture detection
 
+## [0.9.0] - 2025-10-21
+
+### Removed in 0.9.0
+
+- `CloseExportReport`
+- `ExportCsvEntityReport`
+- `ExportJsonEntityReport`
+- `FetchNext`
+
 ## [0.8.8] - 2025-07-07
 
 ### Changed in 0.8.8

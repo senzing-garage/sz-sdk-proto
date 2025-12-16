@@ -272,4 +272,4 @@ var SzConfigManagerService = exports.SzConfigManagerService = {
   },
 };
 
-exports.SzConfigManagerClient = grpc.makeGenericClientConstructor(SzConfigManagerService);
+exports.SzConfigManagerClient = grpc.makeGenericClientConstructor(SzConfigManagerService, 'SzConfigManager');

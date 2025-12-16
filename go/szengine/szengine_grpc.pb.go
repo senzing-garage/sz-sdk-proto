@@ -20,12 +20,8 @@ const _ = grpc.SupportPackageIsVersion9
 
 const (
 	SzEngine_AddRecord_FullMethodName                         = "/szengine.SzEngine/AddRecord"
-	SzEngine_CloseExportReport_FullMethodName                 = "/szengine.SzEngine/CloseExportReport"
 	SzEngine_CountRedoRecords_FullMethodName                  = "/szengine.SzEngine/CountRedoRecords"
 	SzEngine_DeleteRecord_FullMethodName                      = "/szengine.SzEngine/DeleteRecord"
-	SzEngine_ExportCsvEntityReport_FullMethodName             = "/szengine.SzEngine/ExportCsvEntityReport"
-	SzEngine_ExportJsonEntityReport_FullMethodName            = "/szengine.SzEngine/ExportJsonEntityReport"
-	SzEngine_FetchNext_FullMethodName                         = "/szengine.SzEngine/FetchNext"
 	SzEngine_FindInterestingEntitiesByEntityId_FullMethodName = "/szengine.SzEngine/FindInterestingEntitiesByEntityId"
 	SzEngine_FindInterestingEntitiesByRecordId_FullMethodName = "/szengine.SzEngine/FindInterestingEntitiesByRecordId"
 	SzEngine_FindNetworkByEntityId_FullMethodName             = "/szengine.SzEngine/FindNetworkByEntityId"
@@ -60,12 +56,8 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type SzEngineClient interface {
 	AddRecord(ctx context.Context, in *AddRecordRequest, opts ...grpc.CallOption) (*AddRecordResponse, error)
-	CloseExportReport(ctx context.Context, in *CloseExportReportRequest, opts ...grpc.CallOption) (*CloseExportReportResponse, error)
 	CountRedoRecords(ctx context.Context, in *CountRedoRecordsRequest, opts ...grpc.CallOption) (*CountRedoRecordsResponse, error)
 	DeleteRecord(ctx context.Context, in *DeleteRecordRequest, opts ...grpc.CallOption) (*DeleteRecordResponse, error)
-	ExportCsvEntityReport(ctx context.Context, in *ExportCsvEntityReportRequest, opts ...grpc.CallOption) (*ExportCsvEntityReportResponse, error)
-	ExportJsonEntityReport(ctx context.Context, in *ExportJsonEntityReportRequest, opts ...grpc.CallOption) (*ExportJsonEntityReportResponse, error)
-	FetchNext(ctx context.Context, in *FetchNextRequest, opts ...grpc.CallOption) (*FetchNextResponse, error)
 	FindInterestingEntitiesByEntityId(ctx context.Context, in *FindInterestingEntitiesByEntityIdRequest, opts ...grpc.CallOption) (*FindInterestingEntitiesByEntityIdResponse, error)
 	FindInterestingEntitiesByRecordId(ctx context.Context, in *FindInterestingEntitiesByRecordIdRequest, opts ...grpc.CallOption) (*FindInterestingEntitiesByRecordIdResponse, error)
 	FindNetworkByEntityId(ctx context.Context, in *FindNetworkByEntityIdRequest, opts ...grpc.CallOption) (*FindNetworkByEntityIdResponse, error)
@@ -113,16 +105,6 @@ func (c *szEngineClient) AddRecord(ctx context.Context, in *AddRecordRequest, op
 	return out, nil
 }
 
-func (c *szEngineClient) CloseExportReport(ctx context.Context, in *CloseExportReportRequest, opts ...grpc.CallOption) (*CloseExportReportResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(CloseExportReportResponse)
-	err := c.cc.Invoke(ctx, SzEngine_CloseExportReport_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *szEngineClient) CountRedoRecords(ctx context.Context, in *CountRedoRecordsRequest, opts ...grpc.CallOption) (*CountRedoRecordsResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(CountRedoRecordsResponse)
@@ -137,36 +119,6 @@ func (c *szEngineClient) DeleteRecord(ctx context.Context, in *DeleteRecordReque
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(DeleteRecordResponse)
 	err := c.cc.Invoke(ctx, SzEngine_DeleteRecord_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *szEngineClient) ExportCsvEntityReport(ctx context.Context, in *ExportCsvEntityReportRequest, opts ...grpc.CallOption) (*ExportCsvEntityReportResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(ExportCsvEntityReportResponse)
-	err := c.cc.Invoke(ctx, SzEngine_ExportCsvEntityReport_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *szEngineClient) ExportJsonEntityReport(ctx context.Context, in *ExportJsonEntityReportRequest, opts ...grpc.CallOption) (*ExportJsonEntityReportResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(ExportJsonEntityReportResponse)
-	err := c.cc.Invoke(ctx, SzEngine_ExportJsonEntityReport_FullMethodName, in, out, cOpts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *szEngineClient) FetchNext(ctx context.Context, in *FetchNextRequest, opts ...grpc.CallOption) (*FetchNextResponse, error) {
-	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(FetchNextResponse)
-	err := c.cc.Invoke(ctx, SzEngine_FetchNext_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -466,12 +418,8 @@ func (c *szEngineClient) WhySearch(ctx context.Context, in *WhySearchRequest, op
 // for forward compatibility.
 type SzEngineServer interface {
 	AddRecord(context.Context, *AddRecordRequest) (*AddRecordResponse, error)
-	CloseExportReport(context.Context, *CloseExportReportRequest) (*CloseExportReportResponse, error)
 	CountRedoRecords(context.Context, *CountRedoRecordsRequest) (*CountRedoRecordsResponse, error)
 	DeleteRecord(context.Context, *DeleteRecordRequest) (*DeleteRecordResponse, error)
-	ExportCsvEntityReport(context.Context, *ExportCsvEntityReportRequest) (*ExportCsvEntityReportResponse, error)
-	ExportJsonEntityReport(context.Context, *ExportJsonEntityReportRequest) (*ExportJsonEntityReportResponse, error)
-	FetchNext(context.Context, *FetchNextRequest) (*FetchNextResponse, error)
 	FindInterestingEntitiesByEntityId(context.Context, *FindInterestingEntitiesByEntityIdRequest) (*FindInterestingEntitiesByEntityIdResponse, error)
 	FindInterestingEntitiesByRecordId(context.Context, *FindInterestingEntitiesByRecordIdRequest) (*FindInterestingEntitiesByRecordIdResponse, error)
 	FindNetworkByEntityId(context.Context, *FindNetworkByEntityIdRequest) (*FindNetworkByEntityIdResponse, error)
@@ -512,23 +460,11 @@ type UnimplementedSzEngineServer struct{}
 func (UnimplementedSzEngineServer) AddRecord(context.Context, *AddRecordRequest) (*AddRecordResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method AddRecord not implemented")
 }
-func (UnimplementedSzEngineServer) CloseExportReport(context.Context, *CloseExportReportRequest) (*CloseExportReportResponse, error) {
-	return nil, status.Error(codes.Unimplemented, "method CloseExportReport not implemented")
-}
 func (UnimplementedSzEngineServer) CountRedoRecords(context.Context, *CountRedoRecordsRequest) (*CountRedoRecordsResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method CountRedoRecords not implemented")
 }
 func (UnimplementedSzEngineServer) DeleteRecord(context.Context, *DeleteRecordRequest) (*DeleteRecordResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method DeleteRecord not implemented")
-}
-func (UnimplementedSzEngineServer) ExportCsvEntityReport(context.Context, *ExportCsvEntityReportRequest) (*ExportCsvEntityReportResponse, error) {
-	return nil, status.Error(codes.Unimplemented, "method ExportCsvEntityReport not implemented")
-}
-func (UnimplementedSzEngineServer) ExportJsonEntityReport(context.Context, *ExportJsonEntityReportRequest) (*ExportJsonEntityReportResponse, error) {
-	return nil, status.Error(codes.Unimplemented, "method ExportJsonEntityReport not implemented")
-}
-func (UnimplementedSzEngineServer) FetchNext(context.Context, *FetchNextRequest) (*FetchNextResponse, error) {
-	return nil, status.Error(codes.Unimplemented, "method FetchNext not implemented")
 }
 func (UnimplementedSzEngineServer) FindInterestingEntitiesByEntityId(context.Context, *FindInterestingEntitiesByEntityIdRequest) (*FindInterestingEntitiesByEntityIdResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method FindInterestingEntitiesByEntityId not implemented")
@@ -650,24 +586,6 @@ func _SzEngine_AddRecord_Handler(srv interface{}, ctx context.Context, dec func(
 	return interceptor(ctx, in, info, handler)
 }
 
-func _SzEngine_CloseExportReport_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CloseExportReportRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(SzEngineServer).CloseExportReport(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: SzEngine_CloseExportReport_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzEngineServer).CloseExportReport(ctx, req.(*CloseExportReportRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 func _SzEngine_CountRedoRecords_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CountRedoRecordsRequest)
 	if err := dec(in); err != nil {
@@ -700,60 +618,6 @@ func _SzEngine_DeleteRecord_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(SzEngineServer).DeleteRecord(ctx, req.(*DeleteRecordRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _SzEngine_ExportCsvEntityReport_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ExportCsvEntityReportRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(SzEngineServer).ExportCsvEntityReport(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: SzEngine_ExportCsvEntityReport_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzEngineServer).ExportCsvEntityReport(ctx, req.(*ExportCsvEntityReportRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _SzEngine_ExportJsonEntityReport_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ExportJsonEntityReportRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(SzEngineServer).ExportJsonEntityReport(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: SzEngine_ExportJsonEntityReport_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzEngineServer).ExportJsonEntityReport(ctx, req.(*ExportJsonEntityReportRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _SzEngine_FetchNext_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(FetchNextRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(SzEngineServer).FetchNext(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: SzEngine_FetchNext_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SzEngineServer).FetchNext(ctx, req.(*FetchNextRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1242,28 +1106,12 @@ var SzEngine_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _SzEngine_AddRecord_Handler,
 		},
 		{
-			MethodName: "CloseExportReport",
-			Handler:    _SzEngine_CloseExportReport_Handler,
-		},
-		{
 			MethodName: "CountRedoRecords",
 			Handler:    _SzEngine_CountRedoRecords_Handler,
 		},
 		{
 			MethodName: "DeleteRecord",
 			Handler:    _SzEngine_DeleteRecord_Handler,
-		},
-		{
-			MethodName: "ExportCsvEntityReport",
-			Handler:    _SzEngine_ExportCsvEntityReport_Handler,
-		},
-		{
-			MethodName: "ExportJsonEntityReport",
-			Handler:    _SzEngine_ExportJsonEntityReport_Handler,
-		},
-		{
-			MethodName: "FetchNext",
-			Handler:    _SzEngine_FetchNext_Handler,
 		},
 		{
 			MethodName: "FindInterestingEntitiesByEntityId",
