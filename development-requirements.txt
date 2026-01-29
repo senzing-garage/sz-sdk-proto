@@ -8,7 +8,7 @@ grpcio-tools==1.76.0
 isort==7.0.0
 mypy==1.19.1
 orjson==3.11.5
-psutil==7.2.1
+psutil==7.2.2
 pylint-per-file-ignores==3.2.0
 pylint==4.0.4
 pytest-cov==7.0.0
