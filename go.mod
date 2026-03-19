@@ -3,7 +3,7 @@ module github.com/senzing-garage/sz-sdk-proto
 go 1.26.0
 
 require (
-	google.golang.org/grpc v1.79.2
+	google.golang.org/grpc v1.79.3
 	google.golang.org/protobuf v1.36.11
 )
 
