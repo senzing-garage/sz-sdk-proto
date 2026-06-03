@@ -18,17 +18,17 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v6.0.2
         with:
           persist-credentials: false
 
       - name: Make go version tag
         uses: senzing-factory/github-action-make-go-tag@v2
         with:
-          actor: ${{ secrets.SENZING_GITHUB_ACTOR }}
+          actor: ${{ secrets.SENZING_GITHUB_ACTOR }} # zizmor: ignore[secrets-outside-env]
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          gpg_private_key: ${{ secrets.SENZING_GITHUB_GPG_PRIVATE_KEY }}
-          gpg_passphrase: ${{ secrets.SENZING_GITHUB_GPG_PASSPHRASE }}
+          gpg_private_key: ${{ secrets.SENZING_GITHUB_GPG_PRIVATE_KEY }} # zizmor: ignore[secrets-outside-env]
+          gpg_passphrase: ${{ secrets.SENZING_GITHUB_GPG_PASSPHRASE }} # zizmor: ignore[secrets-outside-env]
 
   slack-notification:
     needs: [make-go-tag]
