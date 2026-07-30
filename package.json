@@ -5,7 +5,7 @@
     "grpc_tools_node_protoc_ts": "^5.3.3",
     "grpc-tools": "^1.13.1",
     "tsx": "^4.23.0",
-    "typescript": "^6.0.3"
+    "typescript": "^7.0.2"
   },
   "overrides": {
     "handlebars": "^4.7.9"
