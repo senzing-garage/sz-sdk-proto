@@ -5,9 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog], [markdownlint],
 and this project adheres to [Semantic Versioning].
 
-## [Unreleased]
+## [0.9.0] - 2026-08-12
 
-### Fixed in Unreleased
+### Added in 0.9.0
+
+- Rust gRPC client generation via `make generate-rust`
+
+### Changed in 0.9.0
+
+- **Breaking:** changed `java_package` of generated Java files from `com.senzing.sdk.grpc` to `com.senzing.sdk.grpc.proto`
+- Updated to Go 1.26.0
+- Updated dependencies
+
+### Fixed in 0.9.0
 
 - Fixed `arm4` typo to `arm64` in `makefiles/osdetect.mk` for Windows ARM64 architecture detection
 
