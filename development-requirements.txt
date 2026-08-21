@@ -16,5 +16,5 @@ pytest-schema==0.1.2
 pytest==9.1.1
 senzing-core==1.0.3
 twine==7.0.0
-virtualenv==21.7.0
+virtualenv==21.7.1
 wheel==0.47.0
