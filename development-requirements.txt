@@ -17,4 +17,4 @@ pytest==9.1.1
 senzing-core==1.0.3
 twine==7.0.0
 virtualenv==21.7.4
-wheel==0.47.0
+wheel==0.48.0
