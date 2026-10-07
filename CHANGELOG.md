@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog], [markdownlint],
 and this project adheres to [Semantic Versioning].
 
+## [0.10.0] - 2026-10-07
+
+### Changed in 0.10.0
+
+- Updated to Go 1.27.1
+- Updated dependencies
+
 ## [0.9.0] - 2026-08-12
 
 ### Added in 0.9.0
